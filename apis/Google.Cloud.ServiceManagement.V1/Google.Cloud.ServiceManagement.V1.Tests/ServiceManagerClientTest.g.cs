@@ -44,7 +44,7 @@ namespace Google.Cloud.ServiceManagement.V1.Tests
                 ProducerProjectId = "producer_project_id18d0012a",
             };
             mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null);
+            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null, null);
             ManagedService response = client.GetService(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -65,7 +65,7 @@ namespace Google.Cloud.ServiceManagement.V1.Tests
                 ProducerProjectId = "producer_project_id18d0012a",
             };
             mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ManagedService>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null);
+            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null, null);
             ManagedService responseCallSettings = await client.GetServiceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ManagedService responseCancellationToken = await client.GetServiceAsync(request, st::CancellationToken.None);
@@ -88,7 +88,7 @@ namespace Google.Cloud.ServiceManagement.V1.Tests
                 ProducerProjectId = "producer_project_id18d0012a",
             };
             mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null);
+            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null, null);
             ManagedService response = client.GetService(request.ServiceName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -109,7 +109,7 @@ namespace Google.Cloud.ServiceManagement.V1.Tests
                 ProducerProjectId = "producer_project_id18d0012a",
             };
             mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ManagedService>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null);
+            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null, null);
             ManagedService responseCallSettings = await client.GetServiceAsync(request.ServiceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ManagedService responseCancellationToken = await client.GetServiceAsync(request.ServiceName, st::CancellationToken.None);
@@ -168,7 +168,7 @@ namespace Google.Cloud.ServiceManagement.V1.Tests
                 SourceInfo = new ga::SourceInfo(),
             };
             mockGrpcClient.Setup(x => x.GetServiceConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null);
+            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null, null);
             ga::Service response = client.GetServiceConfig(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -225,7 +225,7 @@ namespace Google.Cloud.ServiceManagement.V1.Tests
                 SourceInfo = new ga::SourceInfo(),
             };
             mockGrpcClient.Setup(x => x.GetServiceConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null);
+            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null, null);
             ga::Service responseCallSettings = await client.GetServiceConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ga::Service responseCancellationToken = await client.GetServiceConfigAsync(request, st::CancellationToken.None);
@@ -284,7 +284,7 @@ namespace Google.Cloud.ServiceManagement.V1.Tests
                 SourceInfo = new ga::SourceInfo(),
             };
             mockGrpcClient.Setup(x => x.GetServiceConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null);
+            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null, null);
             ga::Service response = client.GetServiceConfig(request.ServiceName, request.ConfigId, request.View);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -341,7 +341,7 @@ namespace Google.Cloud.ServiceManagement.V1.Tests
                 SourceInfo = new ga::SourceInfo(),
             };
             mockGrpcClient.Setup(x => x.GetServiceConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null);
+            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null, null);
             ga::Service responseCallSettings = await client.GetServiceConfigAsync(request.ServiceName, request.ConfigId, request.View, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ga::Service responseCancellationToken = await client.GetServiceConfigAsync(request.ServiceName, request.ConfigId, request.View, st::CancellationToken.None);
@@ -399,7 +399,7 @@ namespace Google.Cloud.ServiceManagement.V1.Tests
                 SourceInfo = new ga::SourceInfo(),
             };
             mockGrpcClient.Setup(x => x.CreateServiceConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null);
+            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null, null);
             ga::Service response = client.CreateServiceConfig(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -455,7 +455,7 @@ namespace Google.Cloud.ServiceManagement.V1.Tests
                 SourceInfo = new ga::SourceInfo(),
             };
             mockGrpcClient.Setup(x => x.CreateServiceConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null);
+            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null, null);
             ga::Service responseCallSettings = await client.CreateServiceConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ga::Service responseCancellationToken = await client.CreateServiceConfigAsync(request, st::CancellationToken.None);
@@ -513,7 +513,7 @@ namespace Google.Cloud.ServiceManagement.V1.Tests
                 SourceInfo = new ga::SourceInfo(),
             };
             mockGrpcClient.Setup(x => x.CreateServiceConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null);
+            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null, null);
             ga::Service response = client.CreateServiceConfig(request.ServiceName, request.ServiceConfig);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -569,7 +569,7 @@ namespace Google.Cloud.ServiceManagement.V1.Tests
                 SourceInfo = new ga::SourceInfo(),
             };
             mockGrpcClient.Setup(x => x.CreateServiceConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null);
+            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null, null);
             ga::Service responseCallSettings = await client.CreateServiceConfigAsync(request.ServiceName, request.ServiceConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ga::Service responseCancellationToken = await client.CreateServiceConfigAsync(request.ServiceName, request.ServiceConfig, st::CancellationToken.None);
@@ -598,7 +598,7 @@ namespace Google.Cloud.ServiceManagement.V1.Tests
                 DeleteServiceStrategy = new Rollout.Types.DeleteServiceStrategy(),
             };
             mockGrpcClient.Setup(x => x.GetServiceRollout(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null);
+            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null, null);
             Rollout response = client.GetServiceRollout(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -625,7 +625,7 @@ namespace Google.Cloud.ServiceManagement.V1.Tests
                 DeleteServiceStrategy = new Rollout.Types.DeleteServiceStrategy(),
             };
             mockGrpcClient.Setup(x => x.GetServiceRolloutAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Rollout>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null);
+            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null, null);
             Rollout responseCallSettings = await client.GetServiceRolloutAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Rollout responseCancellationToken = await client.GetServiceRolloutAsync(request, st::CancellationToken.None);
@@ -654,7 +654,7 @@ namespace Google.Cloud.ServiceManagement.V1.Tests
                 DeleteServiceStrategy = new Rollout.Types.DeleteServiceStrategy(),
             };
             mockGrpcClient.Setup(x => x.GetServiceRollout(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null);
+            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null, null);
             Rollout response = client.GetServiceRollout(request.ServiceName, request.RolloutId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -681,7 +681,7 @@ namespace Google.Cloud.ServiceManagement.V1.Tests
                 DeleteServiceStrategy = new Rollout.Types.DeleteServiceStrategy(),
             };
             mockGrpcClient.Setup(x => x.GetServiceRolloutAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Rollout>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null);
+            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null, null);
             Rollout responseCallSettings = await client.GetServiceRolloutAsync(request.ServiceName, request.RolloutId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Rollout responseCancellationToken = await client.GetServiceRolloutAsync(request.ServiceName, request.RolloutId, st::CancellationToken.None);
@@ -707,7 +707,7 @@ namespace Google.Cloud.ServiceManagement.V1.Tests
                 Diagnostics = { new Diagnostic(), },
             };
             mockGrpcClient.Setup(x => x.GenerateConfigReport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null);
+            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null, null);
             GenerateConfigReportResponse response = client.GenerateConfigReport(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -731,7 +731,7 @@ namespace Google.Cloud.ServiceManagement.V1.Tests
                 Diagnostics = { new Diagnostic(), },
             };
             mockGrpcClient.Setup(x => x.GenerateConfigReportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GenerateConfigReportResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null);
+            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null, null);
             GenerateConfigReportResponse responseCallSettings = await client.GenerateConfigReportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GenerateConfigReportResponse responseCancellationToken = await client.GenerateConfigReportAsync(request, st::CancellationToken.None);
@@ -757,7 +757,7 @@ namespace Google.Cloud.ServiceManagement.V1.Tests
                 Diagnostics = { new Diagnostic(), },
             };
             mockGrpcClient.Setup(x => x.GenerateConfigReport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null);
+            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null, null);
             GenerateConfigReportResponse response = client.GenerateConfigReport(request.NewConfig, request.OldConfig);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -781,7 +781,7 @@ namespace Google.Cloud.ServiceManagement.V1.Tests
                 Diagnostics = { new Diagnostic(), },
             };
             mockGrpcClient.Setup(x => x.GenerateConfigReportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GenerateConfigReportResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null);
+            ServiceManagerClient client = new ServiceManagerClientImpl(mockGrpcClient.Object, null, null);
             GenerateConfigReportResponse responseCallSettings = await client.GenerateConfigReportAsync(request.NewConfig, request.OldConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GenerateConfigReportResponse responseCancellationToken = await client.GenerateConfigReportAsync(request.NewConfig, request.OldConfig, st::CancellationToken.None);

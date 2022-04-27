@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -108,9 +108,8 @@ namespace Google.Cloud.VideoIntelligence.V1
         public VideoIntelligenceServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public VideoIntelligenceServiceClientBuilder()
+        public VideoIntelligenceServiceClientBuilder() : base(VideoIntelligenceServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = VideoIntelligenceServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref VideoIntelligenceServiceClient client);
@@ -137,29 +136,18 @@ namespace Google.Cloud.VideoIntelligence.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return VideoIntelligenceServiceClient.Create(callInvoker, Settings);
+            return VideoIntelligenceServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<VideoIntelligenceServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return VideoIntelligenceServiceClient.Create(callInvoker, Settings);
+            return VideoIntelligenceServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => VideoIntelligenceServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => VideoIntelligenceServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => VideoIntelligenceServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>VideoIntelligenceService client wrapper, for convenient use.</summary>
@@ -186,19 +174,10 @@ namespace Google.Cloud.VideoIntelligence.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(VideoIntelligenceService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="VideoIntelligenceServiceClient"/> using the default credentials,
@@ -228,8 +207,9 @@ namespace Google.Cloud.VideoIntelligence.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="VideoIntelligenceServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="VideoIntelligenceServiceClient"/>.</returns>
-        internal static VideoIntelligenceServiceClient Create(grpccore::CallInvoker callInvoker, VideoIntelligenceServiceSettings settings = null)
+        internal static VideoIntelligenceServiceClient Create(grpccore::CallInvoker callInvoker, VideoIntelligenceServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -238,7 +218,7 @@ namespace Google.Cloud.VideoIntelligence.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             VideoIntelligenceService.VideoIntelligenceServiceClient grpcClient = new VideoIntelligenceService.VideoIntelligenceServiceClient(callInvoker);
-            return new VideoIntelligenceServiceClientImpl(grpcClient, settings);
+            return new VideoIntelligenceServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -431,13 +411,14 @@ namespace Google.Cloud.VideoIntelligence.V1
         /// <param name="settings">
         /// The base <see cref="VideoIntelligenceServiceSettings"/> used within this client.
         /// </param>
-        public VideoIntelligenceServiceClientImpl(VideoIntelligenceService.VideoIntelligenceServiceClient grpcClient, VideoIntelligenceServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public VideoIntelligenceServiceClientImpl(VideoIntelligenceService.VideoIntelligenceServiceClient grpcClient, VideoIntelligenceServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             VideoIntelligenceServiceSettings effectiveSettings = settings ?? VideoIntelligenceServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            AnnotateVideoOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AnnotateVideoOperationsSettings);
-            _callAnnotateVideo = clientHelper.BuildApiCall<AnnotateVideoRequest, lro::Operation>(grpcClient.AnnotateVideoAsync, grpcClient.AnnotateVideo, effectiveSettings.AnnotateVideoSettings);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            AnnotateVideoOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AnnotateVideoOperationsSettings, logger);
+            _callAnnotateVideo = clientHelper.BuildApiCall<AnnotateVideoRequest, lro::Operation>("AnnotateVideo", grpcClient.AnnotateVideoAsync, grpcClient.AnnotateVideo, effectiveSettings.AnnotateVideoSettings);
             Modify_ApiCall(ref _callAnnotateVideo);
             Modify_AnnotateVideoApiCall(ref _callAnnotateVideo);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

@@ -46,7 +46,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 WriteMode = WriteStream.Types.WriteMode.Unspecified,
             };
             mockGrpcClient.Setup(x => x.CreateWriteStream(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
+            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null, null);
             WriteStream response = client.CreateWriteStream(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -71,7 +71,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 WriteMode = WriteStream.Types.WriteMode.Unspecified,
             };
             mockGrpcClient.Setup(x => x.CreateWriteStreamAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WriteStream>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
+            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null, null);
             WriteStream responseCallSettings = await client.CreateWriteStreamAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             WriteStream responseCancellationToken = await client.CreateWriteStreamAsync(request, st::CancellationToken.None);
@@ -98,7 +98,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 WriteMode = WriteStream.Types.WriteMode.Unspecified,
             };
             mockGrpcClient.Setup(x => x.CreateWriteStream(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
+            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null, null);
             WriteStream response = client.CreateWriteStream(request.Parent, request.WriteStream);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -123,7 +123,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 WriteMode = WriteStream.Types.WriteMode.Unspecified,
             };
             mockGrpcClient.Setup(x => x.CreateWriteStreamAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WriteStream>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
+            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null, null);
             WriteStream responseCallSettings = await client.CreateWriteStreamAsync(request.Parent, request.WriteStream, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             WriteStream responseCancellationToken = await client.CreateWriteStreamAsync(request.Parent, request.WriteStream, st::CancellationToken.None);
@@ -150,7 +150,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 WriteMode = WriteStream.Types.WriteMode.Unspecified,
             };
             mockGrpcClient.Setup(x => x.CreateWriteStream(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
+            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null, null);
             WriteStream response = client.CreateWriteStream(request.ParentAsTableName, request.WriteStream);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -175,7 +175,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 WriteMode = WriteStream.Types.WriteMode.Unspecified,
             };
             mockGrpcClient.Setup(x => x.CreateWriteStreamAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WriteStream>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
+            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null, null);
             WriteStream responseCallSettings = await client.CreateWriteStreamAsync(request.ParentAsTableName, request.WriteStream, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             WriteStream responseCancellationToken = await client.CreateWriteStreamAsync(request.ParentAsTableName, request.WriteStream, st::CancellationToken.None);
@@ -201,7 +201,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 WriteMode = WriteStream.Types.WriteMode.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetWriteStream(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
+            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null, null);
             WriteStream response = client.GetWriteStream(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -225,7 +225,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 WriteMode = WriteStream.Types.WriteMode.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetWriteStreamAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WriteStream>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
+            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null, null);
             WriteStream responseCallSettings = await client.GetWriteStreamAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             WriteStream responseCancellationToken = await client.GetWriteStreamAsync(request, st::CancellationToken.None);
@@ -251,7 +251,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 WriteMode = WriteStream.Types.WriteMode.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetWriteStream(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
+            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null, null);
             WriteStream response = client.GetWriteStream(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -275,7 +275,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 WriteMode = WriteStream.Types.WriteMode.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetWriteStreamAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WriteStream>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
+            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null, null);
             WriteStream responseCallSettings = await client.GetWriteStreamAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             WriteStream responseCancellationToken = await client.GetWriteStreamAsync(request.Name, st::CancellationToken.None);
@@ -301,7 +301,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 WriteMode = WriteStream.Types.WriteMode.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetWriteStream(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
+            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null, null);
             WriteStream response = client.GetWriteStream(request.WriteStreamName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -325,7 +325,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 WriteMode = WriteStream.Types.WriteMode.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetWriteStreamAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WriteStream>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
+            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null, null);
             WriteStream responseCallSettings = await client.GetWriteStreamAsync(request.WriteStreamName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             WriteStream responseCancellationToken = await client.GetWriteStreamAsync(request.WriteStreamName, st::CancellationToken.None);
@@ -346,7 +346,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 RowCount = 9192966168813313852L,
             };
             mockGrpcClient.Setup(x => x.FinalizeWriteStream(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
+            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null, null);
             FinalizeWriteStreamResponse response = client.FinalizeWriteStream(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -365,7 +365,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 RowCount = 9192966168813313852L,
             };
             mockGrpcClient.Setup(x => x.FinalizeWriteStreamAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FinalizeWriteStreamResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
+            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null, null);
             FinalizeWriteStreamResponse responseCallSettings = await client.FinalizeWriteStreamAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             FinalizeWriteStreamResponse responseCancellationToken = await client.FinalizeWriteStreamAsync(request, st::CancellationToken.None);
@@ -386,7 +386,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 RowCount = 9192966168813313852L,
             };
             mockGrpcClient.Setup(x => x.FinalizeWriteStream(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
+            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null, null);
             FinalizeWriteStreamResponse response = client.FinalizeWriteStream(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -405,7 +405,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 RowCount = 9192966168813313852L,
             };
             mockGrpcClient.Setup(x => x.FinalizeWriteStreamAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FinalizeWriteStreamResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
+            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null, null);
             FinalizeWriteStreamResponse responseCallSettings = await client.FinalizeWriteStreamAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             FinalizeWriteStreamResponse responseCancellationToken = await client.FinalizeWriteStreamAsync(request.Name, st::CancellationToken.None);
@@ -426,7 +426,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 RowCount = 9192966168813313852L,
             };
             mockGrpcClient.Setup(x => x.FinalizeWriteStream(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
+            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null, null);
             FinalizeWriteStreamResponse response = client.FinalizeWriteStream(request.WriteStreamName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -445,7 +445,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 RowCount = 9192966168813313852L,
             };
             mockGrpcClient.Setup(x => x.FinalizeWriteStreamAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FinalizeWriteStreamResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
+            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null, null);
             FinalizeWriteStreamResponse responseCallSettings = await client.FinalizeWriteStreamAsync(request.WriteStreamName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             FinalizeWriteStreamResponse responseCancellationToken = await client.FinalizeWriteStreamAsync(request.WriteStreamName, st::CancellationToken.None);
@@ -471,7 +471,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 StreamErrors = { new StorageError(), },
             };
             mockGrpcClient.Setup(x => x.BatchCommitWriteStreams(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
+            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null, null);
             BatchCommitWriteStreamsResponse response = client.BatchCommitWriteStreams(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -495,7 +495,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 StreamErrors = { new StorageError(), },
             };
             mockGrpcClient.Setup(x => x.BatchCommitWriteStreamsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchCommitWriteStreamsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
+            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null, null);
             BatchCommitWriteStreamsResponse responseCallSettings = await client.BatchCommitWriteStreamsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchCommitWriteStreamsResponse responseCancellationToken = await client.BatchCommitWriteStreamsAsync(request, st::CancellationToken.None);
@@ -517,7 +517,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 StreamErrors = { new StorageError(), },
             };
             mockGrpcClient.Setup(x => x.BatchCommitWriteStreams(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
+            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null, null);
             BatchCommitWriteStreamsResponse response = client.BatchCommitWriteStreams(request.Parent);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -537,7 +537,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 StreamErrors = { new StorageError(), },
             };
             mockGrpcClient.Setup(x => x.BatchCommitWriteStreamsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchCommitWriteStreamsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
+            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null, null);
             BatchCommitWriteStreamsResponse responseCallSettings = await client.BatchCommitWriteStreamsAsync(request.Parent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchCommitWriteStreamsResponse responseCancellationToken = await client.BatchCommitWriteStreamsAsync(request.Parent, st::CancellationToken.None);
@@ -559,7 +559,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 StreamErrors = { new StorageError(), },
             };
             mockGrpcClient.Setup(x => x.BatchCommitWriteStreams(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
+            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null, null);
             BatchCommitWriteStreamsResponse response = client.BatchCommitWriteStreams(request.ParentAsTableName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -579,7 +579,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 StreamErrors = { new StorageError(), },
             };
             mockGrpcClient.Setup(x => x.BatchCommitWriteStreamsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchCommitWriteStreamsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
+            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null, null);
             BatchCommitWriteStreamsResponse responseCallSettings = await client.BatchCommitWriteStreamsAsync(request.ParentAsTableName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchCommitWriteStreamsResponse responseCancellationToken = await client.BatchCommitWriteStreamsAsync(request.ParentAsTableName, st::CancellationToken.None);
@@ -601,7 +601,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 Offset = -4389998161825790342L,
             };
             mockGrpcClient.Setup(x => x.FlushRows(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
+            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null, null);
             FlushRowsResponse response = client.FlushRows(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -621,7 +621,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 Offset = -4389998161825790342L,
             };
             mockGrpcClient.Setup(x => x.FlushRowsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FlushRowsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
+            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null, null);
             FlushRowsResponse responseCallSettings = await client.FlushRowsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             FlushRowsResponse responseCancellationToken = await client.FlushRowsAsync(request, st::CancellationToken.None);
@@ -642,7 +642,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 Offset = -4389998161825790342L,
             };
             mockGrpcClient.Setup(x => x.FlushRows(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
+            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null, null);
             FlushRowsResponse response = client.FlushRows(request.WriteStream);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -661,7 +661,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 Offset = -4389998161825790342L,
             };
             mockGrpcClient.Setup(x => x.FlushRowsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FlushRowsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
+            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null, null);
             FlushRowsResponse responseCallSettings = await client.FlushRowsAsync(request.WriteStream, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             FlushRowsResponse responseCancellationToken = await client.FlushRowsAsync(request.WriteStream, st::CancellationToken.None);
@@ -682,7 +682,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 Offset = -4389998161825790342L,
             };
             mockGrpcClient.Setup(x => x.FlushRows(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
+            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null, null);
             FlushRowsResponse response = client.FlushRows(request.WriteStreamAsWriteStreamName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -701,7 +701,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 Offset = -4389998161825790342L,
             };
             mockGrpcClient.Setup(x => x.FlushRowsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FlushRowsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
+            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null, null);
             FlushRowsResponse responseCallSettings = await client.FlushRowsAsync(request.WriteStreamAsWriteStreamName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             FlushRowsResponse responseCancellationToken = await client.FlushRowsAsync(request.WriteStreamAsWriteStreamName, st::CancellationToken.None);

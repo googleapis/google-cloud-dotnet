@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -331,9 +331,8 @@ namespace Google.Cloud.Dialogflow.V2
         public DocumentsSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public DocumentsClientBuilder()
+        public DocumentsClientBuilder() : base(DocumentsClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = DocumentsClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref DocumentsClient client);
@@ -360,29 +359,18 @@ namespace Google.Cloud.Dialogflow.V2
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return DocumentsClient.Create(callInvoker, Settings);
+            return DocumentsClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<DocumentsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return DocumentsClient.Create(callInvoker, Settings);
+            return DocumentsClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => DocumentsClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => DocumentsClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => DocumentsClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>Documents client wrapper, for convenient use.</summary>
@@ -411,19 +399,10 @@ namespace Google.Cloud.Dialogflow.V2
             "https://www.googleapis.com/auth/dialogflow",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Documents.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="DocumentsClient"/> using the default credentials, endpoint and settings.
@@ -450,8 +429,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="DocumentsSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="DocumentsClient"/>.</returns>
-        internal static DocumentsClient Create(grpccore::CallInvoker callInvoker, DocumentsSettings settings = null)
+        internal static DocumentsClient Create(grpccore::CallInvoker callInvoker, DocumentsSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -460,7 +440,7 @@ namespace Google.Cloud.Dialogflow.V2
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             Documents.DocumentsClient grpcClient = new Documents.DocumentsClient(callInvoker);
-            return new DocumentsClientImpl(grpcClient, settings);
+            return new DocumentsClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1803,39 +1783,40 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="DocumentsSettings"/> used within this client.</param>
-        public DocumentsClientImpl(Documents.DocumentsClient grpcClient, DocumentsSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public DocumentsClientImpl(Documents.DocumentsClient grpcClient, DocumentsSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             DocumentsSettings effectiveSettings = settings ?? DocumentsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateDocumentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateDocumentOperationsSettings);
-            ImportDocumentsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportDocumentsOperationsSettings);
-            DeleteDocumentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDocumentOperationsSettings);
-            UpdateDocumentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDocumentOperationsSettings);
-            ReloadDocumentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ReloadDocumentOperationsSettings);
-            ExportDocumentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportDocumentOperationsSettings);
-            _callListDocuments = clientHelper.BuildApiCall<ListDocumentsRequest, ListDocumentsResponse>(grpcClient.ListDocumentsAsync, grpcClient.ListDocuments, effectiveSettings.ListDocumentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateDocumentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateDocumentOperationsSettings, logger);
+            ImportDocumentsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportDocumentsOperationsSettings, logger);
+            DeleteDocumentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDocumentOperationsSettings, logger);
+            UpdateDocumentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDocumentOperationsSettings, logger);
+            ReloadDocumentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ReloadDocumentOperationsSettings, logger);
+            ExportDocumentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportDocumentOperationsSettings, logger);
+            _callListDocuments = clientHelper.BuildApiCall<ListDocumentsRequest, ListDocumentsResponse>("ListDocuments", grpcClient.ListDocumentsAsync, grpcClient.ListDocuments, effectiveSettings.ListDocumentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDocuments);
             Modify_ListDocumentsApiCall(ref _callListDocuments);
-            _callGetDocument = clientHelper.BuildApiCall<GetDocumentRequest, Document>(grpcClient.GetDocumentAsync, grpcClient.GetDocument, effectiveSettings.GetDocumentSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetDocument = clientHelper.BuildApiCall<GetDocumentRequest, Document>("GetDocument", grpcClient.GetDocumentAsync, grpcClient.GetDocument, effectiveSettings.GetDocumentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDocument);
             Modify_GetDocumentApiCall(ref _callGetDocument);
-            _callCreateDocument = clientHelper.BuildApiCall<CreateDocumentRequest, lro::Operation>(grpcClient.CreateDocumentAsync, grpcClient.CreateDocument, effectiveSettings.CreateDocumentSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateDocument = clientHelper.BuildApiCall<CreateDocumentRequest, lro::Operation>("CreateDocument", grpcClient.CreateDocumentAsync, grpcClient.CreateDocument, effectiveSettings.CreateDocumentSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateDocument);
             Modify_CreateDocumentApiCall(ref _callCreateDocument);
-            _callImportDocuments = clientHelper.BuildApiCall<ImportDocumentsRequest, lro::Operation>(grpcClient.ImportDocumentsAsync, grpcClient.ImportDocuments, effectiveSettings.ImportDocumentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callImportDocuments = clientHelper.BuildApiCall<ImportDocumentsRequest, lro::Operation>("ImportDocuments", grpcClient.ImportDocumentsAsync, grpcClient.ImportDocuments, effectiveSettings.ImportDocumentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callImportDocuments);
             Modify_ImportDocumentsApiCall(ref _callImportDocuments);
-            _callDeleteDocument = clientHelper.BuildApiCall<DeleteDocumentRequest, lro::Operation>(grpcClient.DeleteDocumentAsync, grpcClient.DeleteDocument, effectiveSettings.DeleteDocumentSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteDocument = clientHelper.BuildApiCall<DeleteDocumentRequest, lro::Operation>("DeleteDocument", grpcClient.DeleteDocumentAsync, grpcClient.DeleteDocument, effectiveSettings.DeleteDocumentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteDocument);
             Modify_DeleteDocumentApiCall(ref _callDeleteDocument);
-            _callUpdateDocument = clientHelper.BuildApiCall<UpdateDocumentRequest, lro::Operation>(grpcClient.UpdateDocumentAsync, grpcClient.UpdateDocument, effectiveSettings.UpdateDocumentSettings).WithGoogleRequestParam("document.name", request => request.Document?.Name);
+            _callUpdateDocument = clientHelper.BuildApiCall<UpdateDocumentRequest, lro::Operation>("UpdateDocument", grpcClient.UpdateDocumentAsync, grpcClient.UpdateDocument, effectiveSettings.UpdateDocumentSettings).WithGoogleRequestParam("document.name", request => request.Document?.Name);
             Modify_ApiCall(ref _callUpdateDocument);
             Modify_UpdateDocumentApiCall(ref _callUpdateDocument);
-            _callReloadDocument = clientHelper.BuildApiCall<ReloadDocumentRequest, lro::Operation>(grpcClient.ReloadDocumentAsync, grpcClient.ReloadDocument, effectiveSettings.ReloadDocumentSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callReloadDocument = clientHelper.BuildApiCall<ReloadDocumentRequest, lro::Operation>("ReloadDocument", grpcClient.ReloadDocumentAsync, grpcClient.ReloadDocument, effectiveSettings.ReloadDocumentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callReloadDocument);
             Modify_ReloadDocumentApiCall(ref _callReloadDocument);
-            _callExportDocument = clientHelper.BuildApiCall<ExportDocumentRequest, lro::Operation>(grpcClient.ExportDocumentAsync, grpcClient.ExportDocument, effectiveSettings.ExportDocumentSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callExportDocument = clientHelper.BuildApiCall<ExportDocumentRequest, lro::Operation>("ExportDocument", grpcClient.ExportDocumentAsync, grpcClient.ExportDocument, effectiveSettings.ExportDocumentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callExportDocument);
             Modify_ExportDocumentApiCall(ref _callExportDocument);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

@@ -50,7 +50,7 @@ namespace Google.Cloud.Notebooks.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetRuntime(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ManagedNotebookServiceClient client = new ManagedNotebookServiceClientImpl(mockGrpcClient.Object, null);
+            ManagedNotebookServiceClient client = new ManagedNotebookServiceClientImpl(mockGrpcClient.Object, null, null);
             Runtime response = client.GetRuntime(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -78,7 +78,7 @@ namespace Google.Cloud.Notebooks.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetRuntimeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Runtime>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ManagedNotebookServiceClient client = new ManagedNotebookServiceClientImpl(mockGrpcClient.Object, null);
+            ManagedNotebookServiceClient client = new ManagedNotebookServiceClientImpl(mockGrpcClient.Object, null, null);
             Runtime responseCallSettings = await client.GetRuntimeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Runtime responseCancellationToken = await client.GetRuntimeAsync(request, st::CancellationToken.None);
@@ -108,7 +108,7 @@ namespace Google.Cloud.Notebooks.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetRuntime(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ManagedNotebookServiceClient client = new ManagedNotebookServiceClientImpl(mockGrpcClient.Object, null);
+            ManagedNotebookServiceClient client = new ManagedNotebookServiceClientImpl(mockGrpcClient.Object, null, null);
             Runtime response = client.GetRuntime(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -136,7 +136,7 @@ namespace Google.Cloud.Notebooks.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetRuntimeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Runtime>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ManagedNotebookServiceClient client = new ManagedNotebookServiceClientImpl(mockGrpcClient.Object, null);
+            ManagedNotebookServiceClient client = new ManagedNotebookServiceClientImpl(mockGrpcClient.Object, null, null);
             Runtime responseCallSettings = await client.GetRuntimeAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Runtime responseCancellationToken = await client.GetRuntimeAsync(request.Name, st::CancellationToken.None);
@@ -166,7 +166,7 @@ namespace Google.Cloud.Notebooks.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetRuntime(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ManagedNotebookServiceClient client = new ManagedNotebookServiceClientImpl(mockGrpcClient.Object, null);
+            ManagedNotebookServiceClient client = new ManagedNotebookServiceClientImpl(mockGrpcClient.Object, null, null);
             Runtime response = client.GetRuntime(request.RuntimeName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -194,7 +194,7 @@ namespace Google.Cloud.Notebooks.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetRuntimeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Runtime>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ManagedNotebookServiceClient client = new ManagedNotebookServiceClientImpl(mockGrpcClient.Object, null);
+            ManagedNotebookServiceClient client = new ManagedNotebookServiceClientImpl(mockGrpcClient.Object, null, null);
             Runtime responseCallSettings = await client.GetRuntimeAsync(request.RuntimeName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Runtime responseCancellationToken = await client.GetRuntimeAsync(request.RuntimeName, st::CancellationToken.None);
@@ -218,7 +218,7 @@ namespace Google.Cloud.Notebooks.V1.Tests
                 ExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.RefreshRuntimeTokenInternal(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ManagedNotebookServiceClient client = new ManagedNotebookServiceClientImpl(mockGrpcClient.Object, null);
+            ManagedNotebookServiceClient client = new ManagedNotebookServiceClientImpl(mockGrpcClient.Object, null, null);
             RefreshRuntimeTokenInternalResponse response = client.RefreshRuntimeTokenInternal(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -240,7 +240,7 @@ namespace Google.Cloud.Notebooks.V1.Tests
                 ExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.RefreshRuntimeTokenInternalAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RefreshRuntimeTokenInternalResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ManagedNotebookServiceClient client = new ManagedNotebookServiceClientImpl(mockGrpcClient.Object, null);
+            ManagedNotebookServiceClient client = new ManagedNotebookServiceClientImpl(mockGrpcClient.Object, null, null);
             RefreshRuntimeTokenInternalResponse responseCallSettings = await client.RefreshRuntimeTokenInternalAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             RefreshRuntimeTokenInternalResponse responseCancellationToken = await client.RefreshRuntimeTokenInternalAsync(request, st::CancellationToken.None);
@@ -264,7 +264,7 @@ namespace Google.Cloud.Notebooks.V1.Tests
                 ExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.RefreshRuntimeTokenInternal(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ManagedNotebookServiceClient client = new ManagedNotebookServiceClientImpl(mockGrpcClient.Object, null);
+            ManagedNotebookServiceClient client = new ManagedNotebookServiceClientImpl(mockGrpcClient.Object, null, null);
             RefreshRuntimeTokenInternalResponse response = client.RefreshRuntimeTokenInternal(request.Name, request.VmId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -286,7 +286,7 @@ namespace Google.Cloud.Notebooks.V1.Tests
                 ExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.RefreshRuntimeTokenInternalAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RefreshRuntimeTokenInternalResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ManagedNotebookServiceClient client = new ManagedNotebookServiceClientImpl(mockGrpcClient.Object, null);
+            ManagedNotebookServiceClient client = new ManagedNotebookServiceClientImpl(mockGrpcClient.Object, null, null);
             RefreshRuntimeTokenInternalResponse responseCallSettings = await client.RefreshRuntimeTokenInternalAsync(request.Name, request.VmId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             RefreshRuntimeTokenInternalResponse responseCancellationToken = await client.RefreshRuntimeTokenInternalAsync(request.Name, request.VmId, st::CancellationToken.None);
@@ -310,7 +310,7 @@ namespace Google.Cloud.Notebooks.V1.Tests
                 ExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.RefreshRuntimeTokenInternal(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ManagedNotebookServiceClient client = new ManagedNotebookServiceClientImpl(mockGrpcClient.Object, null);
+            ManagedNotebookServiceClient client = new ManagedNotebookServiceClientImpl(mockGrpcClient.Object, null, null);
             RefreshRuntimeTokenInternalResponse response = client.RefreshRuntimeTokenInternal(request.RuntimeName, request.VmId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -332,7 +332,7 @@ namespace Google.Cloud.Notebooks.V1.Tests
                 ExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.RefreshRuntimeTokenInternalAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RefreshRuntimeTokenInternalResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ManagedNotebookServiceClient client = new ManagedNotebookServiceClientImpl(mockGrpcClient.Object, null);
+            ManagedNotebookServiceClient client = new ManagedNotebookServiceClientImpl(mockGrpcClient.Object, null, null);
             RefreshRuntimeTokenInternalResponse responseCallSettings = await client.RefreshRuntimeTokenInternalAsync(request.RuntimeName, request.VmId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             RefreshRuntimeTokenInternalResponse responseCancellationToken = await client.RefreshRuntimeTokenInternalAsync(request.RuntimeName, request.VmId, st::CancellationToken.None);

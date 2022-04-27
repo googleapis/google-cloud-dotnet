@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -292,9 +292,8 @@ namespace Google.Cloud.Compute.V1
         public NetworkEndpointGroupsSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public NetworkEndpointGroupsClientBuilder()
+        public NetworkEndpointGroupsClientBuilder() : base(NetworkEndpointGroupsClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = NetworkEndpointGroupsClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref NetworkEndpointGroupsClient client);
@@ -321,29 +320,18 @@ namespace Google.Cloud.Compute.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return NetworkEndpointGroupsClient.Create(callInvoker, Settings);
+            return NetworkEndpointGroupsClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<NetworkEndpointGroupsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return NetworkEndpointGroupsClient.Create(callInvoker, Settings);
+            return NetworkEndpointGroupsClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => NetworkEndpointGroupsClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => NetworkEndpointGroupsClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => NetworkEndpointGroupsClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => ComputeRestAdapter.ComputeAdapter;
     }
 
     /// <summary>NetworkEndpointGroups client wrapper, for convenient use.</summary>
@@ -372,19 +360,10 @@ namespace Google.Cloud.Compute.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(NetworkEndpointGroups.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="NetworkEndpointGroupsClient"/> using the default credentials, endpoint
@@ -414,8 +393,9 @@ namespace Google.Cloud.Compute.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="NetworkEndpointGroupsSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="NetworkEndpointGroupsClient"/>.</returns>
-        internal static NetworkEndpointGroupsClient Create(grpccore::CallInvoker callInvoker, NetworkEndpointGroupsSettings settings = null)
+        internal static NetworkEndpointGroupsClient Create(grpccore::CallInvoker callInvoker, NetworkEndpointGroupsSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -424,7 +404,7 @@ namespace Google.Cloud.Compute.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             NetworkEndpointGroups.NetworkEndpointGroupsClient grpcClient = new NetworkEndpointGroups.NetworkEndpointGroupsClient(callInvoker);
-            return new NetworkEndpointGroupsClientImpl(grpcClient, settings);
+            return new NetworkEndpointGroupsClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1379,40 +1359,41 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="NetworkEndpointGroupsSettings"/> used within this client.</param>
-        public NetworkEndpointGroupsClientImpl(NetworkEndpointGroups.NetworkEndpointGroupsClient grpcClient, NetworkEndpointGroupsSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public NetworkEndpointGroupsClientImpl(NetworkEndpointGroups.NetworkEndpointGroupsClient grpcClient, NetworkEndpointGroupsSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             NetworkEndpointGroupsSettings effectiveSettings = settings ?? NetworkEndpointGroupsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            AttachNetworkEndpointsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.AttachNetworkEndpointsOperationsSettings);
-            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.DeleteOperationsSettings);
-            DetachNetworkEndpointsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.DetachNetworkEndpointsOperationsSettings);
-            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.InsertOperationsSettings);
-            _callAggregatedList = clientHelper.BuildApiCall<AggregatedListNetworkEndpointGroupsRequest, NetworkEndpointGroupAggregatedList>(grpcClient.AggregatedListAsync, grpcClient.AggregatedList, effectiveSettings.AggregatedListSettings).WithGoogleRequestParam("project", request => request.Project);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            AttachNetworkEndpointsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.AttachNetworkEndpointsOperationsSettings, logger);
+            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.DeleteOperationsSettings, logger);
+            DetachNetworkEndpointsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.DetachNetworkEndpointsOperationsSettings, logger);
+            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.InsertOperationsSettings, logger);
+            _callAggregatedList = clientHelper.BuildApiCall<AggregatedListNetworkEndpointGroupsRequest, NetworkEndpointGroupAggregatedList>("AggregatedList", grpcClient.AggregatedListAsync, grpcClient.AggregatedList, effectiveSettings.AggregatedListSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callAggregatedList);
             Modify_AggregatedListApiCall(ref _callAggregatedList);
-            _callAttachNetworkEndpoints = clientHelper.BuildApiCall<AttachNetworkEndpointsNetworkEndpointGroupRequest, Operation>(grpcClient.AttachNetworkEndpointsAsync, grpcClient.AttachNetworkEndpoints, effectiveSettings.AttachNetworkEndpointsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("network_endpoint_group", request => request.NetworkEndpointGroup);
+            _callAttachNetworkEndpoints = clientHelper.BuildApiCall<AttachNetworkEndpointsNetworkEndpointGroupRequest, Operation>("AttachNetworkEndpoints", grpcClient.AttachNetworkEndpointsAsync, grpcClient.AttachNetworkEndpoints, effectiveSettings.AttachNetworkEndpointsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("network_endpoint_group", request => request.NetworkEndpointGroup);
             Modify_ApiCall(ref _callAttachNetworkEndpoints);
             Modify_AttachNetworkEndpointsApiCall(ref _callAttachNetworkEndpoints);
-            _callDelete = clientHelper.BuildApiCall<DeleteNetworkEndpointGroupRequest, Operation>(grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("network_endpoint_group", request => request.NetworkEndpointGroup);
+            _callDelete = clientHelper.BuildApiCall<DeleteNetworkEndpointGroupRequest, Operation>("Delete", grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("network_endpoint_group", request => request.NetworkEndpointGroup);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);
-            _callDetachNetworkEndpoints = clientHelper.BuildApiCall<DetachNetworkEndpointsNetworkEndpointGroupRequest, Operation>(grpcClient.DetachNetworkEndpointsAsync, grpcClient.DetachNetworkEndpoints, effectiveSettings.DetachNetworkEndpointsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("network_endpoint_group", request => request.NetworkEndpointGroup);
+            _callDetachNetworkEndpoints = clientHelper.BuildApiCall<DetachNetworkEndpointsNetworkEndpointGroupRequest, Operation>("DetachNetworkEndpoints", grpcClient.DetachNetworkEndpointsAsync, grpcClient.DetachNetworkEndpoints, effectiveSettings.DetachNetworkEndpointsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("network_endpoint_group", request => request.NetworkEndpointGroup);
             Modify_ApiCall(ref _callDetachNetworkEndpoints);
             Modify_DetachNetworkEndpointsApiCall(ref _callDetachNetworkEndpoints);
-            _callGet = clientHelper.BuildApiCall<GetNetworkEndpointGroupRequest, NetworkEndpointGroup>(grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("network_endpoint_group", request => request.NetworkEndpointGroup);
+            _callGet = clientHelper.BuildApiCall<GetNetworkEndpointGroupRequest, NetworkEndpointGroup>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("network_endpoint_group", request => request.NetworkEndpointGroup);
             Modify_ApiCall(ref _callGet);
             Modify_GetApiCall(ref _callGet);
-            _callInsert = clientHelper.BuildApiCall<InsertNetworkEndpointGroupRequest, Operation>(grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone);
+            _callInsert = clientHelper.BuildApiCall<InsertNetworkEndpointGroupRequest, Operation>("Insert", grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone);
             Modify_ApiCall(ref _callInsert);
             Modify_InsertApiCall(ref _callInsert);
-            _callList = clientHelper.BuildApiCall<ListNetworkEndpointGroupsRequest, NetworkEndpointGroupList>(grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone);
+            _callList = clientHelper.BuildApiCall<ListNetworkEndpointGroupsRequest, NetworkEndpointGroupList>("List", grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone);
             Modify_ApiCall(ref _callList);
             Modify_ListApiCall(ref _callList);
-            _callListNetworkEndpoints = clientHelper.BuildApiCall<ListNetworkEndpointsNetworkEndpointGroupsRequest, NetworkEndpointGroupsListNetworkEndpoints>(grpcClient.ListNetworkEndpointsAsync, grpcClient.ListNetworkEndpoints, effectiveSettings.ListNetworkEndpointsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("network_endpoint_group", request => request.NetworkEndpointGroup);
+            _callListNetworkEndpoints = clientHelper.BuildApiCall<ListNetworkEndpointsNetworkEndpointGroupsRequest, NetworkEndpointGroupsListNetworkEndpoints>("ListNetworkEndpoints", grpcClient.ListNetworkEndpointsAsync, grpcClient.ListNetworkEndpoints, effectiveSettings.ListNetworkEndpointsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("network_endpoint_group", request => request.NetworkEndpointGroup);
             Modify_ApiCall(ref _callListNetworkEndpoints);
             Modify_ListNetworkEndpointsApiCall(ref _callListNetworkEndpoints);
-            _callTestIamPermissions = clientHelper.BuildApiCall<TestIamPermissionsNetworkEndpointGroupRequest, TestPermissionsResponse>(grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("resource", request => request.Resource);
+            _callTestIamPermissions = clientHelper.BuildApiCall<TestIamPermissionsNetworkEndpointGroupRequest, TestPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callTestIamPermissions);
             Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

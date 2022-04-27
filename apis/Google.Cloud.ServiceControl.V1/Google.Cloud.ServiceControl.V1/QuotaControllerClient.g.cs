@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -76,9 +76,8 @@ namespace Google.Cloud.ServiceControl.V1
         public QuotaControllerSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public QuotaControllerClientBuilder()
+        public QuotaControllerClientBuilder() : base(QuotaControllerClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = QuotaControllerClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref QuotaControllerClient client);
@@ -105,29 +104,18 @@ namespace Google.Cloud.ServiceControl.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return QuotaControllerClient.Create(callInvoker, Settings);
+            return QuotaControllerClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<QuotaControllerClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return QuotaControllerClient.Create(callInvoker, Settings);
+            return QuotaControllerClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => QuotaControllerClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => QuotaControllerClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => QuotaControllerClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>QuotaController client wrapper, for convenient use.</summary>
@@ -159,19 +147,10 @@ namespace Google.Cloud.ServiceControl.V1
             "https://www.googleapis.com/auth/servicecontrol",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(QuotaController.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="QuotaControllerClient"/> using the default credentials, endpoint and
@@ -198,8 +177,9 @@ namespace Google.Cloud.ServiceControl.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="QuotaControllerSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="QuotaControllerClient"/>.</returns>
-        internal static QuotaControllerClient Create(grpccore::CallInvoker callInvoker, QuotaControllerSettings settings = null)
+        internal static QuotaControllerClient Create(grpccore::CallInvoker callInvoker, QuotaControllerSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -208,7 +188,7 @@ namespace Google.Cloud.ServiceControl.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             QuotaController.QuotaControllerClient grpcClient = new QuotaController.QuotaControllerClient(callInvoker);
-            return new QuotaControllerClientImpl(grpcClient, settings);
+            return new QuotaControllerClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -301,12 +281,13 @@ namespace Google.Cloud.ServiceControl.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="QuotaControllerSettings"/> used within this client.</param>
-        public QuotaControllerClientImpl(QuotaController.QuotaControllerClient grpcClient, QuotaControllerSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public QuotaControllerClientImpl(QuotaController.QuotaControllerClient grpcClient, QuotaControllerSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             QuotaControllerSettings effectiveSettings = settings ?? QuotaControllerSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callAllocateQuota = clientHelper.BuildApiCall<AllocateQuotaRequest, AllocateQuotaResponse>(grpcClient.AllocateQuotaAsync, grpcClient.AllocateQuota, effectiveSettings.AllocateQuotaSettings).WithGoogleRequestParam("service_name", request => request.ServiceName);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callAllocateQuota = clientHelper.BuildApiCall<AllocateQuotaRequest, AllocateQuotaResponse>("AllocateQuota", grpcClient.AllocateQuotaAsync, grpcClient.AllocateQuota, effectiveSettings.AllocateQuotaSettings).WithGoogleRequestParam("service_name", request => request.ServiceName);
             Modify_ApiCall(ref _callAllocateQuota);
             Modify_AllocateQuotaApiCall(ref _callAllocateQuota);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

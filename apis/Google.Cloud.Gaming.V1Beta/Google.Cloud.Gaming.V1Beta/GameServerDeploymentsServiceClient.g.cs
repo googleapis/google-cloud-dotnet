@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -305,9 +305,8 @@ namespace Google.Cloud.Gaming.V1Beta
         public GameServerDeploymentsServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public GameServerDeploymentsServiceClientBuilder()
+        public GameServerDeploymentsServiceClientBuilder() : base(GameServerDeploymentsServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = GameServerDeploymentsServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref GameServerDeploymentsServiceClient client);
@@ -334,29 +333,18 @@ namespace Google.Cloud.Gaming.V1Beta
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return GameServerDeploymentsServiceClient.Create(callInvoker, Settings);
+            return GameServerDeploymentsServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<GameServerDeploymentsServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return GameServerDeploymentsServiceClient.Create(callInvoker, Settings);
+            return GameServerDeploymentsServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => GameServerDeploymentsServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => GameServerDeploymentsServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => GameServerDeploymentsServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>GameServerDeploymentsService client wrapper, for convenient use.</summary>
@@ -384,19 +372,10 @@ namespace Google.Cloud.Gaming.V1Beta
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(GameServerDeploymentsService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="GameServerDeploymentsServiceClient"/> using the default credentials,
@@ -426,8 +405,9 @@ namespace Google.Cloud.Gaming.V1Beta
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="GameServerDeploymentsServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="GameServerDeploymentsServiceClient"/>.</returns>
-        internal static GameServerDeploymentsServiceClient Create(grpccore::CallInvoker callInvoker, GameServerDeploymentsServiceSettings settings = null)
+        internal static GameServerDeploymentsServiceClient Create(grpccore::CallInvoker callInvoker, GameServerDeploymentsServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -436,7 +416,7 @@ namespace Google.Cloud.Gaming.V1Beta
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             GameServerDeploymentsService.GameServerDeploymentsServiceClient grpcClient = new GameServerDeploymentsService.GameServerDeploymentsServiceClient(callInvoker);
-            return new GameServerDeploymentsServiceClientImpl(grpcClient, settings);
+            return new GameServerDeploymentsServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1494,40 +1474,41 @@ namespace Google.Cloud.Gaming.V1Beta
         /// <param name="settings">
         /// The base <see cref="GameServerDeploymentsServiceSettings"/> used within this client.
         /// </param>
-        public GameServerDeploymentsServiceClientImpl(GameServerDeploymentsService.GameServerDeploymentsServiceClient grpcClient, GameServerDeploymentsServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public GameServerDeploymentsServiceClientImpl(GameServerDeploymentsService.GameServerDeploymentsServiceClient grpcClient, GameServerDeploymentsServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             GameServerDeploymentsServiceSettings effectiveSettings = settings ?? GameServerDeploymentsServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateGameServerDeploymentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateGameServerDeploymentOperationsSettings);
-            DeleteGameServerDeploymentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteGameServerDeploymentOperationsSettings);
-            UpdateGameServerDeploymentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateGameServerDeploymentOperationsSettings);
-            UpdateGameServerDeploymentRolloutOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateGameServerDeploymentRolloutOperationsSettings);
-            _callListGameServerDeployments = clientHelper.BuildApiCall<ListGameServerDeploymentsRequest, ListGameServerDeploymentsResponse>(grpcClient.ListGameServerDeploymentsAsync, grpcClient.ListGameServerDeployments, effectiveSettings.ListGameServerDeploymentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateGameServerDeploymentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateGameServerDeploymentOperationsSettings, logger);
+            DeleteGameServerDeploymentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteGameServerDeploymentOperationsSettings, logger);
+            UpdateGameServerDeploymentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateGameServerDeploymentOperationsSettings, logger);
+            UpdateGameServerDeploymentRolloutOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateGameServerDeploymentRolloutOperationsSettings, logger);
+            _callListGameServerDeployments = clientHelper.BuildApiCall<ListGameServerDeploymentsRequest, ListGameServerDeploymentsResponse>("ListGameServerDeployments", grpcClient.ListGameServerDeploymentsAsync, grpcClient.ListGameServerDeployments, effectiveSettings.ListGameServerDeploymentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListGameServerDeployments);
             Modify_ListGameServerDeploymentsApiCall(ref _callListGameServerDeployments);
-            _callGetGameServerDeployment = clientHelper.BuildApiCall<GetGameServerDeploymentRequest, GameServerDeployment>(grpcClient.GetGameServerDeploymentAsync, grpcClient.GetGameServerDeployment, effectiveSettings.GetGameServerDeploymentSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetGameServerDeployment = clientHelper.BuildApiCall<GetGameServerDeploymentRequest, GameServerDeployment>("GetGameServerDeployment", grpcClient.GetGameServerDeploymentAsync, grpcClient.GetGameServerDeployment, effectiveSettings.GetGameServerDeploymentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetGameServerDeployment);
             Modify_GetGameServerDeploymentApiCall(ref _callGetGameServerDeployment);
-            _callCreateGameServerDeployment = clientHelper.BuildApiCall<CreateGameServerDeploymentRequest, lro::Operation>(grpcClient.CreateGameServerDeploymentAsync, grpcClient.CreateGameServerDeployment, effectiveSettings.CreateGameServerDeploymentSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateGameServerDeployment = clientHelper.BuildApiCall<CreateGameServerDeploymentRequest, lro::Operation>("CreateGameServerDeployment", grpcClient.CreateGameServerDeploymentAsync, grpcClient.CreateGameServerDeployment, effectiveSettings.CreateGameServerDeploymentSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateGameServerDeployment);
             Modify_CreateGameServerDeploymentApiCall(ref _callCreateGameServerDeployment);
-            _callDeleteGameServerDeployment = clientHelper.BuildApiCall<DeleteGameServerDeploymentRequest, lro::Operation>(grpcClient.DeleteGameServerDeploymentAsync, grpcClient.DeleteGameServerDeployment, effectiveSettings.DeleteGameServerDeploymentSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteGameServerDeployment = clientHelper.BuildApiCall<DeleteGameServerDeploymentRequest, lro::Operation>("DeleteGameServerDeployment", grpcClient.DeleteGameServerDeploymentAsync, grpcClient.DeleteGameServerDeployment, effectiveSettings.DeleteGameServerDeploymentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteGameServerDeployment);
             Modify_DeleteGameServerDeploymentApiCall(ref _callDeleteGameServerDeployment);
-            _callUpdateGameServerDeployment = clientHelper.BuildApiCall<UpdateGameServerDeploymentRequest, lro::Operation>(grpcClient.UpdateGameServerDeploymentAsync, grpcClient.UpdateGameServerDeployment, effectiveSettings.UpdateGameServerDeploymentSettings).WithGoogleRequestParam("game_server_deployment.name", request => request.GameServerDeployment?.Name);
+            _callUpdateGameServerDeployment = clientHelper.BuildApiCall<UpdateGameServerDeploymentRequest, lro::Operation>("UpdateGameServerDeployment", grpcClient.UpdateGameServerDeploymentAsync, grpcClient.UpdateGameServerDeployment, effectiveSettings.UpdateGameServerDeploymentSettings).WithGoogleRequestParam("game_server_deployment.name", request => request.GameServerDeployment?.Name);
             Modify_ApiCall(ref _callUpdateGameServerDeployment);
             Modify_UpdateGameServerDeploymentApiCall(ref _callUpdateGameServerDeployment);
-            _callGetGameServerDeploymentRollout = clientHelper.BuildApiCall<GetGameServerDeploymentRolloutRequest, GameServerDeploymentRollout>(grpcClient.GetGameServerDeploymentRolloutAsync, grpcClient.GetGameServerDeploymentRollout, effectiveSettings.GetGameServerDeploymentRolloutSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetGameServerDeploymentRollout = clientHelper.BuildApiCall<GetGameServerDeploymentRolloutRequest, GameServerDeploymentRollout>("GetGameServerDeploymentRollout", grpcClient.GetGameServerDeploymentRolloutAsync, grpcClient.GetGameServerDeploymentRollout, effectiveSettings.GetGameServerDeploymentRolloutSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetGameServerDeploymentRollout);
             Modify_GetGameServerDeploymentRolloutApiCall(ref _callGetGameServerDeploymentRollout);
-            _callUpdateGameServerDeploymentRollout = clientHelper.BuildApiCall<UpdateGameServerDeploymentRolloutRequest, lro::Operation>(grpcClient.UpdateGameServerDeploymentRolloutAsync, grpcClient.UpdateGameServerDeploymentRollout, effectiveSettings.UpdateGameServerDeploymentRolloutSettings).WithGoogleRequestParam("rollout.name", request => request.Rollout?.Name);
+            _callUpdateGameServerDeploymentRollout = clientHelper.BuildApiCall<UpdateGameServerDeploymentRolloutRequest, lro::Operation>("UpdateGameServerDeploymentRollout", grpcClient.UpdateGameServerDeploymentRolloutAsync, grpcClient.UpdateGameServerDeploymentRollout, effectiveSettings.UpdateGameServerDeploymentRolloutSettings).WithGoogleRequestParam("rollout.name", request => request.Rollout?.Name);
             Modify_ApiCall(ref _callUpdateGameServerDeploymentRollout);
             Modify_UpdateGameServerDeploymentRolloutApiCall(ref _callUpdateGameServerDeploymentRollout);
-            _callPreviewGameServerDeploymentRollout = clientHelper.BuildApiCall<PreviewGameServerDeploymentRolloutRequest, PreviewGameServerDeploymentRolloutResponse>(grpcClient.PreviewGameServerDeploymentRolloutAsync, grpcClient.PreviewGameServerDeploymentRollout, effectiveSettings.PreviewGameServerDeploymentRolloutSettings).WithGoogleRequestParam("rollout.name", request => request.Rollout?.Name);
+            _callPreviewGameServerDeploymentRollout = clientHelper.BuildApiCall<PreviewGameServerDeploymentRolloutRequest, PreviewGameServerDeploymentRolloutResponse>("PreviewGameServerDeploymentRollout", grpcClient.PreviewGameServerDeploymentRolloutAsync, grpcClient.PreviewGameServerDeploymentRollout, effectiveSettings.PreviewGameServerDeploymentRolloutSettings).WithGoogleRequestParam("rollout.name", request => request.Rollout?.Name);
             Modify_ApiCall(ref _callPreviewGameServerDeploymentRollout);
             Modify_PreviewGameServerDeploymentRolloutApiCall(ref _callPreviewGameServerDeploymentRollout);
-            _callFetchDeploymentState = clientHelper.BuildApiCall<FetchDeploymentStateRequest, FetchDeploymentStateResponse>(grpcClient.FetchDeploymentStateAsync, grpcClient.FetchDeploymentState, effectiveSettings.FetchDeploymentStateSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callFetchDeploymentState = clientHelper.BuildApiCall<FetchDeploymentStateRequest, FetchDeploymentStateResponse>("FetchDeploymentState", grpcClient.FetchDeploymentStateAsync, grpcClient.FetchDeploymentState, effectiveSettings.FetchDeploymentStateSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callFetchDeploymentState);
             Modify_FetchDeploymentStateApiCall(ref _callFetchDeploymentState);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

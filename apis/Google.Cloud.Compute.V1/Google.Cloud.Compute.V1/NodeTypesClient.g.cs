@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -129,9 +129,8 @@ namespace Google.Cloud.Compute.V1
         public NodeTypesSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public NodeTypesClientBuilder()
+        public NodeTypesClientBuilder() : base(NodeTypesClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = NodeTypesClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref NodeTypesClient client);
@@ -158,29 +157,18 @@ namespace Google.Cloud.Compute.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return NodeTypesClient.Create(callInvoker, Settings);
+            return NodeTypesClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<NodeTypesClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return NodeTypesClient.Create(callInvoker, Settings);
+            return NodeTypesClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => NodeTypesClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => NodeTypesClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => NodeTypesClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => ComputeRestAdapter.ComputeAdapter;
     }
 
     /// <summary>NodeTypes client wrapper, for convenient use.</summary>
@@ -211,19 +199,10 @@ namespace Google.Cloud.Compute.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(NodeTypes.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="NodeTypesClient"/> using the default credentials, endpoint and settings.
@@ -250,8 +229,9 @@ namespace Google.Cloud.Compute.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="NodeTypesSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="NodeTypesClient"/>.</returns>
-        internal static NodeTypesClient Create(grpccore::CallInvoker callInvoker, NodeTypesSettings settings = null)
+        internal static NodeTypesClient Create(grpccore::CallInvoker callInvoker, NodeTypesSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -260,7 +240,7 @@ namespace Google.Cloud.Compute.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             NodeTypes.NodeTypesClient grpcClient = new NodeTypes.NodeTypesClient(callInvoker);
-            return new NodeTypesClientImpl(grpcClient, settings);
+            return new NodeTypesClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -529,18 +509,19 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="NodeTypesSettings"/> used within this client.</param>
-        public NodeTypesClientImpl(NodeTypes.NodeTypesClient grpcClient, NodeTypesSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public NodeTypesClientImpl(NodeTypes.NodeTypesClient grpcClient, NodeTypesSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             NodeTypesSettings effectiveSettings = settings ?? NodeTypesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callAggregatedList = clientHelper.BuildApiCall<AggregatedListNodeTypesRequest, NodeTypeAggregatedList>(grpcClient.AggregatedListAsync, grpcClient.AggregatedList, effectiveSettings.AggregatedListSettings).WithGoogleRequestParam("project", request => request.Project);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callAggregatedList = clientHelper.BuildApiCall<AggregatedListNodeTypesRequest, NodeTypeAggregatedList>("AggregatedList", grpcClient.AggregatedListAsync, grpcClient.AggregatedList, effectiveSettings.AggregatedListSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callAggregatedList);
             Modify_AggregatedListApiCall(ref _callAggregatedList);
-            _callGet = clientHelper.BuildApiCall<GetNodeTypeRequest, NodeType>(grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("node_type", request => request.NodeType);
+            _callGet = clientHelper.BuildApiCall<GetNodeTypeRequest, NodeType>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("node_type", request => request.NodeType);
             Modify_ApiCall(ref _callGet);
             Modify_GetApiCall(ref _callGet);
-            _callList = clientHelper.BuildApiCall<ListNodeTypesRequest, NodeTypeList>(grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone);
+            _callList = clientHelper.BuildApiCall<ListNodeTypesRequest, NodeTypeList>("List", grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone);
             Modify_ApiCall(ref _callList);
             Modify_ListApiCall(ref _callList);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

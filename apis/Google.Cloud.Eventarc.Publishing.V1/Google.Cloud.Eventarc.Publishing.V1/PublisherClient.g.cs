@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -89,9 +89,8 @@ namespace Google.Cloud.Eventarc.Publishing.V1
         public PublisherSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public PublisherClientBuilder()
+        public PublisherClientBuilder() : base(PublisherClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = PublisherClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref PublisherClient client);
@@ -118,29 +117,18 @@ namespace Google.Cloud.Eventarc.Publishing.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return PublisherClient.Create(callInvoker, Settings);
+            return PublisherClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<PublisherClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return PublisherClient.Create(callInvoker, Settings);
+            return PublisherClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => PublisherClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => PublisherClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => PublisherClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>Publisher client wrapper, for convenient use.</summary>
@@ -190,19 +178,10 @@ namespace Google.Cloud.Eventarc.Publishing.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Publisher.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="PublisherClient"/> using the default credentials, endpoint and settings.
@@ -229,8 +208,9 @@ namespace Google.Cloud.Eventarc.Publishing.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="PublisherSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="PublisherClient"/>.</returns>
-        internal static PublisherClient Create(grpccore::CallInvoker callInvoker, PublisherSettings settings = null)
+        internal static PublisherClient Create(grpccore::CallInvoker callInvoker, PublisherSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -239,7 +219,7 @@ namespace Google.Cloud.Eventarc.Publishing.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             Publisher.PublisherClient grpcClient = new Publisher.PublisherClient(callInvoker);
-            return new PublisherClientImpl(grpcClient, settings);
+            return new PublisherClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -351,15 +331,16 @@ namespace Google.Cloud.Eventarc.Publishing.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="PublisherSettings"/> used within this client.</param>
-        public PublisherClientImpl(Publisher.PublisherClient grpcClient, PublisherSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public PublisherClientImpl(Publisher.PublisherClient grpcClient, PublisherSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             PublisherSettings effectiveSettings = settings ?? PublisherSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callPublishChannelConnectionEvents = clientHelper.BuildApiCall<PublishChannelConnectionEventsRequest, PublishChannelConnectionEventsResponse>(grpcClient.PublishChannelConnectionEventsAsync, grpcClient.PublishChannelConnectionEvents, effectiveSettings.PublishChannelConnectionEventsSettings).WithGoogleRequestParam("channel_connection", request => request.ChannelConnection);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callPublishChannelConnectionEvents = clientHelper.BuildApiCall<PublishChannelConnectionEventsRequest, PublishChannelConnectionEventsResponse>("PublishChannelConnectionEvents", grpcClient.PublishChannelConnectionEventsAsync, grpcClient.PublishChannelConnectionEvents, effectiveSettings.PublishChannelConnectionEventsSettings).WithGoogleRequestParam("channel_connection", request => request.ChannelConnection);
             Modify_ApiCall(ref _callPublishChannelConnectionEvents);
             Modify_PublishChannelConnectionEventsApiCall(ref _callPublishChannelConnectionEvents);
-            _callPublishEvents = clientHelper.BuildApiCall<PublishEventsRequest, PublishEventsResponse>(grpcClient.PublishEventsAsync, grpcClient.PublishEvents, effectiveSettings.PublishEventsSettings).WithGoogleRequestParam("channel", request => request.Channel);
+            _callPublishEvents = clientHelper.BuildApiCall<PublishEventsRequest, PublishEventsResponse>("PublishEvents", grpcClient.PublishEventsAsync, grpcClient.PublishEvents, effectiveSettings.PublishEventsSettings).WithGoogleRequestParam("channel", request => request.Channel);
             Modify_ApiCall(ref _callPublishEvents);
             Modify_PublishEventsApiCall(ref _callPublishEvents);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -101,9 +101,8 @@ namespace Google.Cloud.Dialogflow.V2
         public FulfillmentsSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public FulfillmentsClientBuilder()
+        public FulfillmentsClientBuilder() : base(FulfillmentsClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = FulfillmentsClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref FulfillmentsClient client);
@@ -130,29 +129,18 @@ namespace Google.Cloud.Dialogflow.V2
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return FulfillmentsClient.Create(callInvoker, Settings);
+            return FulfillmentsClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<FulfillmentsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return FulfillmentsClient.Create(callInvoker, Settings);
+            return FulfillmentsClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => FulfillmentsClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => FulfillmentsClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => FulfillmentsClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>Fulfillments client wrapper, for convenient use.</summary>
@@ -181,19 +169,10 @@ namespace Google.Cloud.Dialogflow.V2
             "https://www.googleapis.com/auth/dialogflow",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Fulfillments.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="FulfillmentsClient"/> using the default credentials, endpoint and
@@ -220,8 +199,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="FulfillmentsSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="FulfillmentsClient"/>.</returns>
-        internal static FulfillmentsClient Create(grpccore::CallInvoker callInvoker, FulfillmentsSettings settings = null)
+        internal static FulfillmentsClient Create(grpccore::CallInvoker callInvoker, FulfillmentsSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -230,7 +210,7 @@ namespace Google.Cloud.Dialogflow.V2
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             Fulfillments.FulfillmentsClient grpcClient = new Fulfillments.FulfillmentsClient(callInvoker);
-            return new FulfillmentsClientImpl(grpcClient, settings);
+            return new FulfillmentsClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -456,15 +436,16 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="FulfillmentsSettings"/> used within this client.</param>
-        public FulfillmentsClientImpl(Fulfillments.FulfillmentsClient grpcClient, FulfillmentsSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public FulfillmentsClientImpl(Fulfillments.FulfillmentsClient grpcClient, FulfillmentsSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             FulfillmentsSettings effectiveSettings = settings ?? FulfillmentsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callGetFulfillment = clientHelper.BuildApiCall<GetFulfillmentRequest, Fulfillment>(grpcClient.GetFulfillmentAsync, grpcClient.GetFulfillment, effectiveSettings.GetFulfillmentSettings).WithGoogleRequestParam("name", request => request.Name);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callGetFulfillment = clientHelper.BuildApiCall<GetFulfillmentRequest, Fulfillment>("GetFulfillment", grpcClient.GetFulfillmentAsync, grpcClient.GetFulfillment, effectiveSettings.GetFulfillmentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetFulfillment);
             Modify_GetFulfillmentApiCall(ref _callGetFulfillment);
-            _callUpdateFulfillment = clientHelper.BuildApiCall<UpdateFulfillmentRequest, Fulfillment>(grpcClient.UpdateFulfillmentAsync, grpcClient.UpdateFulfillment, effectiveSettings.UpdateFulfillmentSettings).WithGoogleRequestParam("fulfillment.name", request => request.Fulfillment?.Name);
+            _callUpdateFulfillment = clientHelper.BuildApiCall<UpdateFulfillmentRequest, Fulfillment>("UpdateFulfillment", grpcClient.UpdateFulfillmentAsync, grpcClient.UpdateFulfillment, effectiveSettings.UpdateFulfillmentSettings).WithGoogleRequestParam("fulfillment.name", request => request.Fulfillment?.Name);
             Modify_ApiCall(ref _callUpdateFulfillment);
             Modify_UpdateFulfillmentApiCall(ref _callUpdateFulfillment);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

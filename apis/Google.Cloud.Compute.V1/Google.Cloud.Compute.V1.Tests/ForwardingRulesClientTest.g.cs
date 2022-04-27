@@ -84,7 +84,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 NetworkTier = "network_tiere6fea951",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ForwardingRulesClient client = new ForwardingRulesClientImpl(mockGrpcClient.Object, null);
+            ForwardingRulesClient client = new ForwardingRulesClientImpl(mockGrpcClient.Object, null, null);
             ForwardingRule response = client.Get(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -147,7 +147,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 NetworkTier = "network_tiere6fea951",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ForwardingRule>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ForwardingRulesClient client = new ForwardingRulesClientImpl(mockGrpcClient.Object, null);
+            ForwardingRulesClient client = new ForwardingRulesClientImpl(mockGrpcClient.Object, null, null);
             ForwardingRule responseCallSettings = await client.GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ForwardingRule responseCancellationToken = await client.GetAsync(request, st::CancellationToken.None);
@@ -212,7 +212,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 NetworkTier = "network_tiere6fea951",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ForwardingRulesClient client = new ForwardingRulesClientImpl(mockGrpcClient.Object, null);
+            ForwardingRulesClient client = new ForwardingRulesClientImpl(mockGrpcClient.Object, null, null);
             ForwardingRule response = client.Get(request.Project, request.Region, request.ForwardingRule);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -275,7 +275,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 NetworkTier = "network_tiere6fea951",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ForwardingRule>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ForwardingRulesClient client = new ForwardingRulesClientImpl(mockGrpcClient.Object, null);
+            ForwardingRulesClient client = new ForwardingRulesClientImpl(mockGrpcClient.Object, null, null);
             ForwardingRule responseCallSettings = await client.GetAsync(request.Project, request.Region, request.ForwardingRule, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ForwardingRule responseCancellationToken = await client.GetAsync(request.Project, request.Region, request.ForwardingRule, st::CancellationToken.None);

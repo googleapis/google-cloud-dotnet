@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -250,9 +250,8 @@ namespace Google.Cloud.Monitoring.V3
         public NotificationChannelServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public NotificationChannelServiceClientBuilder()
+        public NotificationChannelServiceClientBuilder() : base(NotificationChannelServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = NotificationChannelServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref NotificationChannelServiceClient client);
@@ -279,29 +278,18 @@ namespace Google.Cloud.Monitoring.V3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return NotificationChannelServiceClient.Create(callInvoker, Settings);
+            return NotificationChannelServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<NotificationChannelServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return NotificationChannelServiceClient.Create(callInvoker, Settings);
+            return NotificationChannelServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => NotificationChannelServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => NotificationChannelServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => NotificationChannelServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>NotificationChannelService client wrapper, for convenient use.</summary>
@@ -333,19 +321,10 @@ namespace Google.Cloud.Monitoring.V3
             "https://www.googleapis.com/auth/monitoring.read",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(NotificationChannelService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="NotificationChannelServiceClient"/> using the default credentials,
@@ -375,8 +354,9 @@ namespace Google.Cloud.Monitoring.V3
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="NotificationChannelServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="NotificationChannelServiceClient"/>.</returns>
-        internal static NotificationChannelServiceClient Create(grpccore::CallInvoker callInvoker, NotificationChannelServiceSettings settings = null)
+        internal static NotificationChannelServiceClient Create(grpccore::CallInvoker callInvoker, NotificationChannelServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -385,7 +365,7 @@ namespace Google.Cloud.Monitoring.V3
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             NotificationChannelService.NotificationChannelServiceClient grpcClient = new NotificationChannelService.NotificationChannelServiceClient(callInvoker);
-            return new NotificationChannelServiceClientImpl(grpcClient, settings);
+            return new NotificationChannelServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -3106,39 +3086,40 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="settings">
         /// The base <see cref="NotificationChannelServiceSettings"/> used within this client.
         /// </param>
-        public NotificationChannelServiceClientImpl(NotificationChannelService.NotificationChannelServiceClient grpcClient, NotificationChannelServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public NotificationChannelServiceClientImpl(NotificationChannelService.NotificationChannelServiceClient grpcClient, NotificationChannelServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             NotificationChannelServiceSettings effectiveSettings = settings ?? NotificationChannelServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListNotificationChannelDescriptors = clientHelper.BuildApiCall<ListNotificationChannelDescriptorsRequest, ListNotificationChannelDescriptorsResponse>(grpcClient.ListNotificationChannelDescriptorsAsync, grpcClient.ListNotificationChannelDescriptors, effectiveSettings.ListNotificationChannelDescriptorsSettings).WithGoogleRequestParam("name", request => request.Name);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callListNotificationChannelDescriptors = clientHelper.BuildApiCall<ListNotificationChannelDescriptorsRequest, ListNotificationChannelDescriptorsResponse>("ListNotificationChannelDescriptors", grpcClient.ListNotificationChannelDescriptorsAsync, grpcClient.ListNotificationChannelDescriptors, effectiveSettings.ListNotificationChannelDescriptorsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callListNotificationChannelDescriptors);
             Modify_ListNotificationChannelDescriptorsApiCall(ref _callListNotificationChannelDescriptors);
-            _callGetNotificationChannelDescriptor = clientHelper.BuildApiCall<GetNotificationChannelDescriptorRequest, NotificationChannelDescriptor>(grpcClient.GetNotificationChannelDescriptorAsync, grpcClient.GetNotificationChannelDescriptor, effectiveSettings.GetNotificationChannelDescriptorSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetNotificationChannelDescriptor = clientHelper.BuildApiCall<GetNotificationChannelDescriptorRequest, NotificationChannelDescriptor>("GetNotificationChannelDescriptor", grpcClient.GetNotificationChannelDescriptorAsync, grpcClient.GetNotificationChannelDescriptor, effectiveSettings.GetNotificationChannelDescriptorSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetNotificationChannelDescriptor);
             Modify_GetNotificationChannelDescriptorApiCall(ref _callGetNotificationChannelDescriptor);
-            _callListNotificationChannels = clientHelper.BuildApiCall<ListNotificationChannelsRequest, ListNotificationChannelsResponse>(grpcClient.ListNotificationChannelsAsync, grpcClient.ListNotificationChannels, effectiveSettings.ListNotificationChannelsSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callListNotificationChannels = clientHelper.BuildApiCall<ListNotificationChannelsRequest, ListNotificationChannelsResponse>("ListNotificationChannels", grpcClient.ListNotificationChannelsAsync, grpcClient.ListNotificationChannels, effectiveSettings.ListNotificationChannelsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callListNotificationChannels);
             Modify_ListNotificationChannelsApiCall(ref _callListNotificationChannels);
-            _callGetNotificationChannel = clientHelper.BuildApiCall<GetNotificationChannelRequest, NotificationChannel>(grpcClient.GetNotificationChannelAsync, grpcClient.GetNotificationChannel, effectiveSettings.GetNotificationChannelSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetNotificationChannel = clientHelper.BuildApiCall<GetNotificationChannelRequest, NotificationChannel>("GetNotificationChannel", grpcClient.GetNotificationChannelAsync, grpcClient.GetNotificationChannel, effectiveSettings.GetNotificationChannelSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetNotificationChannel);
             Modify_GetNotificationChannelApiCall(ref _callGetNotificationChannel);
-            _callCreateNotificationChannel = clientHelper.BuildApiCall<CreateNotificationChannelRequest, NotificationChannel>(grpcClient.CreateNotificationChannelAsync, grpcClient.CreateNotificationChannel, effectiveSettings.CreateNotificationChannelSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callCreateNotificationChannel = clientHelper.BuildApiCall<CreateNotificationChannelRequest, NotificationChannel>("CreateNotificationChannel", grpcClient.CreateNotificationChannelAsync, grpcClient.CreateNotificationChannel, effectiveSettings.CreateNotificationChannelSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCreateNotificationChannel);
             Modify_CreateNotificationChannelApiCall(ref _callCreateNotificationChannel);
-            _callUpdateNotificationChannel = clientHelper.BuildApiCall<UpdateNotificationChannelRequest, NotificationChannel>(grpcClient.UpdateNotificationChannelAsync, grpcClient.UpdateNotificationChannel, effectiveSettings.UpdateNotificationChannelSettings).WithGoogleRequestParam("notification_channel.name", request => request.NotificationChannel?.Name);
+            _callUpdateNotificationChannel = clientHelper.BuildApiCall<UpdateNotificationChannelRequest, NotificationChannel>("UpdateNotificationChannel", grpcClient.UpdateNotificationChannelAsync, grpcClient.UpdateNotificationChannel, effectiveSettings.UpdateNotificationChannelSettings).WithGoogleRequestParam("notification_channel.name", request => request.NotificationChannel?.Name);
             Modify_ApiCall(ref _callUpdateNotificationChannel);
             Modify_UpdateNotificationChannelApiCall(ref _callUpdateNotificationChannel);
-            _callDeleteNotificationChannel = clientHelper.BuildApiCall<DeleteNotificationChannelRequest, wkt::Empty>(grpcClient.DeleteNotificationChannelAsync, grpcClient.DeleteNotificationChannel, effectiveSettings.DeleteNotificationChannelSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteNotificationChannel = clientHelper.BuildApiCall<DeleteNotificationChannelRequest, wkt::Empty>("DeleteNotificationChannel", grpcClient.DeleteNotificationChannelAsync, grpcClient.DeleteNotificationChannel, effectiveSettings.DeleteNotificationChannelSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteNotificationChannel);
             Modify_DeleteNotificationChannelApiCall(ref _callDeleteNotificationChannel);
-            _callSendNotificationChannelVerificationCode = clientHelper.BuildApiCall<SendNotificationChannelVerificationCodeRequest, wkt::Empty>(grpcClient.SendNotificationChannelVerificationCodeAsync, grpcClient.SendNotificationChannelVerificationCode, effectiveSettings.SendNotificationChannelVerificationCodeSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callSendNotificationChannelVerificationCode = clientHelper.BuildApiCall<SendNotificationChannelVerificationCodeRequest, wkt::Empty>("SendNotificationChannelVerificationCode", grpcClient.SendNotificationChannelVerificationCodeAsync, grpcClient.SendNotificationChannelVerificationCode, effectiveSettings.SendNotificationChannelVerificationCodeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callSendNotificationChannelVerificationCode);
             Modify_SendNotificationChannelVerificationCodeApiCall(ref _callSendNotificationChannelVerificationCode);
-            _callGetNotificationChannelVerificationCode = clientHelper.BuildApiCall<GetNotificationChannelVerificationCodeRequest, GetNotificationChannelVerificationCodeResponse>(grpcClient.GetNotificationChannelVerificationCodeAsync, grpcClient.GetNotificationChannelVerificationCode, effectiveSettings.GetNotificationChannelVerificationCodeSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetNotificationChannelVerificationCode = clientHelper.BuildApiCall<GetNotificationChannelVerificationCodeRequest, GetNotificationChannelVerificationCodeResponse>("GetNotificationChannelVerificationCode", grpcClient.GetNotificationChannelVerificationCodeAsync, grpcClient.GetNotificationChannelVerificationCode, effectiveSettings.GetNotificationChannelVerificationCodeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetNotificationChannelVerificationCode);
             Modify_GetNotificationChannelVerificationCodeApiCall(ref _callGetNotificationChannelVerificationCode);
-            _callVerifyNotificationChannel = clientHelper.BuildApiCall<VerifyNotificationChannelRequest, NotificationChannel>(grpcClient.VerifyNotificationChannelAsync, grpcClient.VerifyNotificationChannel, effectiveSettings.VerifyNotificationChannelSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callVerifyNotificationChannel = clientHelper.BuildApiCall<VerifyNotificationChannelRequest, NotificationChannel>("VerifyNotificationChannel", grpcClient.VerifyNotificationChannelAsync, grpcClient.VerifyNotificationChannel, effectiveSettings.VerifyNotificationChannelSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callVerifyNotificationChannel);
             Modify_VerifyNotificationChannelApiCall(ref _callVerifyNotificationChannel);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

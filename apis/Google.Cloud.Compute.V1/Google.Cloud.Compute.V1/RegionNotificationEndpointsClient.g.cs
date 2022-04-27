@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -175,9 +175,8 @@ namespace Google.Cloud.Compute.V1
         public RegionNotificationEndpointsSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public RegionNotificationEndpointsClientBuilder()
+        public RegionNotificationEndpointsClientBuilder() : base(RegionNotificationEndpointsClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = RegionNotificationEndpointsClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref RegionNotificationEndpointsClient client);
@@ -204,29 +203,18 @@ namespace Google.Cloud.Compute.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return RegionNotificationEndpointsClient.Create(callInvoker, Settings);
+            return RegionNotificationEndpointsClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<RegionNotificationEndpointsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return RegionNotificationEndpointsClient.Create(callInvoker, Settings);
+            return RegionNotificationEndpointsClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => RegionNotificationEndpointsClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => RegionNotificationEndpointsClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => RegionNotificationEndpointsClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => ComputeRestAdapter.ComputeAdapter;
     }
 
     /// <summary>RegionNotificationEndpoints client wrapper, for convenient use.</summary>
@@ -255,19 +243,10 @@ namespace Google.Cloud.Compute.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(RegionNotificationEndpoints.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="RegionNotificationEndpointsClient"/> using the default credentials,
@@ -297,8 +276,9 @@ namespace Google.Cloud.Compute.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="RegionNotificationEndpointsSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="RegionNotificationEndpointsClient"/>.</returns>
-        internal static RegionNotificationEndpointsClient Create(grpccore::CallInvoker callInvoker, RegionNotificationEndpointsSettings settings = null)
+        internal static RegionNotificationEndpointsClient Create(grpccore::CallInvoker callInvoker, RegionNotificationEndpointsSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -307,7 +287,7 @@ namespace Google.Cloud.Compute.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             RegionNotificationEndpoints.RegionNotificationEndpointsClient grpcClient = new RegionNotificationEndpoints.RegionNotificationEndpointsClient(callInvoker);
-            return new RegionNotificationEndpointsClientImpl(grpcClient, settings);
+            return new RegionNotificationEndpointsClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -739,23 +719,24 @@ namespace Google.Cloud.Compute.V1
         /// <param name="settings">
         /// The base <see cref="RegionNotificationEndpointsSettings"/> used within this client.
         /// </param>
-        public RegionNotificationEndpointsClientImpl(RegionNotificationEndpoints.RegionNotificationEndpointsClient grpcClient, RegionNotificationEndpointsSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public RegionNotificationEndpointsClientImpl(RegionNotificationEndpoints.RegionNotificationEndpointsClient grpcClient, RegionNotificationEndpointsSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             RegionNotificationEndpointsSettings effectiveSettings = settings ?? RegionNotificationEndpointsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.DeleteOperationsSettings);
-            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.InsertOperationsSettings);
-            _callDelete = clientHelper.BuildApiCall<DeleteRegionNotificationEndpointRequest, Operation>(grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("notification_endpoint", request => request.NotificationEndpoint);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.DeleteOperationsSettings, logger);
+            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.InsertOperationsSettings, logger);
+            _callDelete = clientHelper.BuildApiCall<DeleteRegionNotificationEndpointRequest, Operation>("Delete", grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("notification_endpoint", request => request.NotificationEndpoint);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);
-            _callGet = clientHelper.BuildApiCall<GetRegionNotificationEndpointRequest, NotificationEndpoint>(grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("notification_endpoint", request => request.NotificationEndpoint);
+            _callGet = clientHelper.BuildApiCall<GetRegionNotificationEndpointRequest, NotificationEndpoint>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("notification_endpoint", request => request.NotificationEndpoint);
             Modify_ApiCall(ref _callGet);
             Modify_GetApiCall(ref _callGet);
-            _callInsert = clientHelper.BuildApiCall<InsertRegionNotificationEndpointRequest, Operation>(grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
+            _callInsert = clientHelper.BuildApiCall<InsertRegionNotificationEndpointRequest, Operation>("Insert", grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
             Modify_ApiCall(ref _callInsert);
             Modify_InsertApiCall(ref _callInsert);
-            _callList = clientHelper.BuildApiCall<ListRegionNotificationEndpointsRequest, NotificationEndpointList>(grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
+            _callList = clientHelper.BuildApiCall<ListRegionNotificationEndpointsRequest, NotificationEndpointList>("List", grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
             Modify_ApiCall(ref _callList);
             Modify_ListApiCall(ref _callList);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

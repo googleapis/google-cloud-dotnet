@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -123,9 +123,8 @@ namespace Google.Cloud.Compute.V1
         public GlobalOrganizationOperationsSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public GlobalOrganizationOperationsClientBuilder()
+        public GlobalOrganizationOperationsClientBuilder() : base(GlobalOrganizationOperationsClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = GlobalOrganizationOperationsClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref GlobalOrganizationOperationsClient client);
@@ -152,29 +151,18 @@ namespace Google.Cloud.Compute.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return GlobalOrganizationOperationsClient.Create(callInvoker, Settings);
+            return GlobalOrganizationOperationsClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<GlobalOrganizationOperationsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return GlobalOrganizationOperationsClient.Create(callInvoker, Settings);
+            return GlobalOrganizationOperationsClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => GlobalOrganizationOperationsClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => GlobalOrganizationOperationsClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => GlobalOrganizationOperationsClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => ComputeRestAdapter.ComputeAdapter;
     }
 
     /// <summary>GlobalOrganizationOperations client wrapper, for convenient use.</summary>
@@ -203,19 +191,10 @@ namespace Google.Cloud.Compute.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(GlobalOrganizationOperations.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="GlobalOrganizationOperationsClient"/> using the default credentials,
@@ -245,8 +224,9 @@ namespace Google.Cloud.Compute.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="GlobalOrganizationOperationsSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="GlobalOrganizationOperationsClient"/>.</returns>
-        internal static GlobalOrganizationOperationsClient Create(grpccore::CallInvoker callInvoker, GlobalOrganizationOperationsSettings settings = null)
+        internal static GlobalOrganizationOperationsClient Create(grpccore::CallInvoker callInvoker, GlobalOrganizationOperationsSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -255,7 +235,7 @@ namespace Google.Cloud.Compute.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             GlobalOrganizationOperations.GlobalOrganizationOperationsClient grpcClient = new GlobalOrganizationOperations.GlobalOrganizationOperationsClient(callInvoker);
-            return new GlobalOrganizationOperationsClientImpl(grpcClient, settings);
+            return new GlobalOrganizationOperationsClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -485,18 +465,19 @@ namespace Google.Cloud.Compute.V1
         /// <param name="settings">
         /// The base <see cref="GlobalOrganizationOperationsSettings"/> used within this client.
         /// </param>
-        public GlobalOrganizationOperationsClientImpl(GlobalOrganizationOperations.GlobalOrganizationOperationsClient grpcClient, GlobalOrganizationOperationsSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public GlobalOrganizationOperationsClientImpl(GlobalOrganizationOperations.GlobalOrganizationOperationsClient grpcClient, GlobalOrganizationOperationsSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             GlobalOrganizationOperationsSettings effectiveSettings = settings ?? GlobalOrganizationOperationsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callDelete = clientHelper.BuildApiCall<DeleteGlobalOrganizationOperationRequest, DeleteGlobalOrganizationOperationResponse>(grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("operation", request => request.Operation);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callDelete = clientHelper.BuildApiCall<DeleteGlobalOrganizationOperationRequest, DeleteGlobalOrganizationOperationResponse>("Delete", grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("operation", request => request.Operation);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);
-            _callGet = clientHelper.BuildApiCall<GetGlobalOrganizationOperationRequest, Operation>(grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("operation", request => request.Operation);
+            _callGet = clientHelper.BuildApiCall<GetGlobalOrganizationOperationRequest, Operation>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("operation", request => request.Operation);
             Modify_ApiCall(ref _callGet);
             Modify_GetApiCall(ref _callGet);
-            _callList = clientHelper.BuildApiCall<ListGlobalOrganizationOperationsRequest, OperationList>(grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings);
+            _callList = clientHelper.BuildApiCall<ListGlobalOrganizationOperationsRequest, OperationList>("List", grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings);
             Modify_ApiCall(ref _callList);
             Modify_ListApiCall(ref _callList);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

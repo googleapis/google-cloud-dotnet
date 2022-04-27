@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -1122,9 +1122,8 @@ namespace Google.Cloud.VMMigration.V1
         public VmMigrationSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public VmMigrationClientBuilder()
+        public VmMigrationClientBuilder() : base(VmMigrationClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = VmMigrationClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref VmMigrationClient client);
@@ -1151,29 +1150,18 @@ namespace Google.Cloud.VMMigration.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return VmMigrationClient.Create(callInvoker, Settings);
+            return VmMigrationClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<VmMigrationClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return VmMigrationClient.Create(callInvoker, Settings);
+            return VmMigrationClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => VmMigrationClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => VmMigrationClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => VmMigrationClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>VmMigration client wrapper, for convenient use.</summary>
@@ -1200,19 +1188,10 @@ namespace Google.Cloud.VMMigration.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(VmMigration.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="VmMigrationClient"/> using the default credentials, endpoint and
@@ -1239,8 +1218,9 @@ namespace Google.Cloud.VMMigration.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="VmMigrationSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="VmMigrationClient"/>.</returns>
-        internal static VmMigrationClient Create(grpccore::CallInvoker callInvoker, VmMigrationSettings settings = null)
+        internal static VmMigrationClient Create(grpccore::CallInvoker callInvoker, VmMigrationSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -1249,7 +1229,7 @@ namespace Google.Cloud.VMMigration.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             VmMigration.VmMigrationClient grpcClient = new VmMigration.VmMigrationClient(callInvoker);
-            return new VmMigrationClientImpl(grpcClient, settings);
+            return new VmMigrationClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -7026,164 +7006,165 @@ namespace Google.Cloud.VMMigration.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="VmMigrationSettings"/> used within this client.</param>
-        public VmMigrationClientImpl(VmMigration.VmMigrationClient grpcClient, VmMigrationSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public VmMigrationClientImpl(VmMigration.VmMigrationClient grpcClient, VmMigrationSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             VmMigrationSettings effectiveSettings = settings ?? VmMigrationSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateSourceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateSourceOperationsSettings);
-            UpdateSourceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateSourceOperationsSettings);
-            DeleteSourceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteSourceOperationsSettings);
-            CreateUtilizationReportOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateUtilizationReportOperationsSettings);
-            DeleteUtilizationReportOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteUtilizationReportOperationsSettings);
-            CreateDatacenterConnectorOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateDatacenterConnectorOperationsSettings);
-            DeleteDatacenterConnectorOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDatacenterConnectorOperationsSettings);
-            CreateMigratingVmOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateMigratingVmOperationsSettings);
-            UpdateMigratingVmOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateMigratingVmOperationsSettings);
-            DeleteMigratingVmOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteMigratingVmOperationsSettings);
-            StartMigrationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StartMigrationOperationsSettings);
-            ResumeMigrationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ResumeMigrationOperationsSettings);
-            PauseMigrationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PauseMigrationOperationsSettings);
-            FinalizeMigrationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.FinalizeMigrationOperationsSettings);
-            CreateCloneJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateCloneJobOperationsSettings);
-            CancelCloneJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CancelCloneJobOperationsSettings);
-            CreateCutoverJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateCutoverJobOperationsSettings);
-            CancelCutoverJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CancelCutoverJobOperationsSettings);
-            CreateGroupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateGroupOperationsSettings);
-            UpdateGroupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateGroupOperationsSettings);
-            DeleteGroupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteGroupOperationsSettings);
-            AddGroupMigrationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AddGroupMigrationOperationsSettings);
-            RemoveGroupMigrationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RemoveGroupMigrationOperationsSettings);
-            CreateTargetProjectOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateTargetProjectOperationsSettings);
-            UpdateTargetProjectOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateTargetProjectOperationsSettings);
-            DeleteTargetProjectOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTargetProjectOperationsSettings);
-            _callListSources = clientHelper.BuildApiCall<ListSourcesRequest, ListSourcesResponse>(grpcClient.ListSourcesAsync, grpcClient.ListSources, effectiveSettings.ListSourcesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateSourceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateSourceOperationsSettings, logger);
+            UpdateSourceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateSourceOperationsSettings, logger);
+            DeleteSourceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteSourceOperationsSettings, logger);
+            CreateUtilizationReportOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateUtilizationReportOperationsSettings, logger);
+            DeleteUtilizationReportOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteUtilizationReportOperationsSettings, logger);
+            CreateDatacenterConnectorOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateDatacenterConnectorOperationsSettings, logger);
+            DeleteDatacenterConnectorOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDatacenterConnectorOperationsSettings, logger);
+            CreateMigratingVmOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateMigratingVmOperationsSettings, logger);
+            UpdateMigratingVmOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateMigratingVmOperationsSettings, logger);
+            DeleteMigratingVmOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteMigratingVmOperationsSettings, logger);
+            StartMigrationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StartMigrationOperationsSettings, logger);
+            ResumeMigrationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ResumeMigrationOperationsSettings, logger);
+            PauseMigrationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PauseMigrationOperationsSettings, logger);
+            FinalizeMigrationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.FinalizeMigrationOperationsSettings, logger);
+            CreateCloneJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateCloneJobOperationsSettings, logger);
+            CancelCloneJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CancelCloneJobOperationsSettings, logger);
+            CreateCutoverJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateCutoverJobOperationsSettings, logger);
+            CancelCutoverJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CancelCutoverJobOperationsSettings, logger);
+            CreateGroupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateGroupOperationsSettings, logger);
+            UpdateGroupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateGroupOperationsSettings, logger);
+            DeleteGroupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteGroupOperationsSettings, logger);
+            AddGroupMigrationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AddGroupMigrationOperationsSettings, logger);
+            RemoveGroupMigrationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RemoveGroupMigrationOperationsSettings, logger);
+            CreateTargetProjectOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateTargetProjectOperationsSettings, logger);
+            UpdateTargetProjectOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateTargetProjectOperationsSettings, logger);
+            DeleteTargetProjectOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTargetProjectOperationsSettings, logger);
+            _callListSources = clientHelper.BuildApiCall<ListSourcesRequest, ListSourcesResponse>("ListSources", grpcClient.ListSourcesAsync, grpcClient.ListSources, effectiveSettings.ListSourcesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListSources);
             Modify_ListSourcesApiCall(ref _callListSources);
-            _callGetSource = clientHelper.BuildApiCall<GetSourceRequest, Source>(grpcClient.GetSourceAsync, grpcClient.GetSource, effectiveSettings.GetSourceSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetSource = clientHelper.BuildApiCall<GetSourceRequest, Source>("GetSource", grpcClient.GetSourceAsync, grpcClient.GetSource, effectiveSettings.GetSourceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetSource);
             Modify_GetSourceApiCall(ref _callGetSource);
-            _callCreateSource = clientHelper.BuildApiCall<CreateSourceRequest, lro::Operation>(grpcClient.CreateSourceAsync, grpcClient.CreateSource, effectiveSettings.CreateSourceSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateSource = clientHelper.BuildApiCall<CreateSourceRequest, lro::Operation>("CreateSource", grpcClient.CreateSourceAsync, grpcClient.CreateSource, effectiveSettings.CreateSourceSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateSource);
             Modify_CreateSourceApiCall(ref _callCreateSource);
-            _callUpdateSource = clientHelper.BuildApiCall<UpdateSourceRequest, lro::Operation>(grpcClient.UpdateSourceAsync, grpcClient.UpdateSource, effectiveSettings.UpdateSourceSettings).WithGoogleRequestParam("source.name", request => request.Source?.Name);
+            _callUpdateSource = clientHelper.BuildApiCall<UpdateSourceRequest, lro::Operation>("UpdateSource", grpcClient.UpdateSourceAsync, grpcClient.UpdateSource, effectiveSettings.UpdateSourceSettings).WithGoogleRequestParam("source.name", request => request.Source?.Name);
             Modify_ApiCall(ref _callUpdateSource);
             Modify_UpdateSourceApiCall(ref _callUpdateSource);
-            _callDeleteSource = clientHelper.BuildApiCall<DeleteSourceRequest, lro::Operation>(grpcClient.DeleteSourceAsync, grpcClient.DeleteSource, effectiveSettings.DeleteSourceSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteSource = clientHelper.BuildApiCall<DeleteSourceRequest, lro::Operation>("DeleteSource", grpcClient.DeleteSourceAsync, grpcClient.DeleteSource, effectiveSettings.DeleteSourceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteSource);
             Modify_DeleteSourceApiCall(ref _callDeleteSource);
-            _callFetchInventory = clientHelper.BuildApiCall<FetchInventoryRequest, FetchInventoryResponse>(grpcClient.FetchInventoryAsync, grpcClient.FetchInventory, effectiveSettings.FetchInventorySettings).WithGoogleRequestParam("source", request => request.Source);
+            _callFetchInventory = clientHelper.BuildApiCall<FetchInventoryRequest, FetchInventoryResponse>("FetchInventory", grpcClient.FetchInventoryAsync, grpcClient.FetchInventory, effectiveSettings.FetchInventorySettings).WithGoogleRequestParam("source", request => request.Source);
             Modify_ApiCall(ref _callFetchInventory);
             Modify_FetchInventoryApiCall(ref _callFetchInventory);
-            _callListUtilizationReports = clientHelper.BuildApiCall<ListUtilizationReportsRequest, ListUtilizationReportsResponse>(grpcClient.ListUtilizationReportsAsync, grpcClient.ListUtilizationReports, effectiveSettings.ListUtilizationReportsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListUtilizationReports = clientHelper.BuildApiCall<ListUtilizationReportsRequest, ListUtilizationReportsResponse>("ListUtilizationReports", grpcClient.ListUtilizationReportsAsync, grpcClient.ListUtilizationReports, effectiveSettings.ListUtilizationReportsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListUtilizationReports);
             Modify_ListUtilizationReportsApiCall(ref _callListUtilizationReports);
-            _callGetUtilizationReport = clientHelper.BuildApiCall<GetUtilizationReportRequest, UtilizationReport>(grpcClient.GetUtilizationReportAsync, grpcClient.GetUtilizationReport, effectiveSettings.GetUtilizationReportSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetUtilizationReport = clientHelper.BuildApiCall<GetUtilizationReportRequest, UtilizationReport>("GetUtilizationReport", grpcClient.GetUtilizationReportAsync, grpcClient.GetUtilizationReport, effectiveSettings.GetUtilizationReportSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetUtilizationReport);
             Modify_GetUtilizationReportApiCall(ref _callGetUtilizationReport);
-            _callCreateUtilizationReport = clientHelper.BuildApiCall<CreateUtilizationReportRequest, lro::Operation>(grpcClient.CreateUtilizationReportAsync, grpcClient.CreateUtilizationReport, effectiveSettings.CreateUtilizationReportSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateUtilizationReport = clientHelper.BuildApiCall<CreateUtilizationReportRequest, lro::Operation>("CreateUtilizationReport", grpcClient.CreateUtilizationReportAsync, grpcClient.CreateUtilizationReport, effectiveSettings.CreateUtilizationReportSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateUtilizationReport);
             Modify_CreateUtilizationReportApiCall(ref _callCreateUtilizationReport);
-            _callDeleteUtilizationReport = clientHelper.BuildApiCall<DeleteUtilizationReportRequest, lro::Operation>(grpcClient.DeleteUtilizationReportAsync, grpcClient.DeleteUtilizationReport, effectiveSettings.DeleteUtilizationReportSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteUtilizationReport = clientHelper.BuildApiCall<DeleteUtilizationReportRequest, lro::Operation>("DeleteUtilizationReport", grpcClient.DeleteUtilizationReportAsync, grpcClient.DeleteUtilizationReport, effectiveSettings.DeleteUtilizationReportSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteUtilizationReport);
             Modify_DeleteUtilizationReportApiCall(ref _callDeleteUtilizationReport);
-            _callListDatacenterConnectors = clientHelper.BuildApiCall<ListDatacenterConnectorsRequest, ListDatacenterConnectorsResponse>(grpcClient.ListDatacenterConnectorsAsync, grpcClient.ListDatacenterConnectors, effectiveSettings.ListDatacenterConnectorsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListDatacenterConnectors = clientHelper.BuildApiCall<ListDatacenterConnectorsRequest, ListDatacenterConnectorsResponse>("ListDatacenterConnectors", grpcClient.ListDatacenterConnectorsAsync, grpcClient.ListDatacenterConnectors, effectiveSettings.ListDatacenterConnectorsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDatacenterConnectors);
             Modify_ListDatacenterConnectorsApiCall(ref _callListDatacenterConnectors);
-            _callGetDatacenterConnector = clientHelper.BuildApiCall<GetDatacenterConnectorRequest, DatacenterConnector>(grpcClient.GetDatacenterConnectorAsync, grpcClient.GetDatacenterConnector, effectiveSettings.GetDatacenterConnectorSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetDatacenterConnector = clientHelper.BuildApiCall<GetDatacenterConnectorRequest, DatacenterConnector>("GetDatacenterConnector", grpcClient.GetDatacenterConnectorAsync, grpcClient.GetDatacenterConnector, effectiveSettings.GetDatacenterConnectorSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDatacenterConnector);
             Modify_GetDatacenterConnectorApiCall(ref _callGetDatacenterConnector);
-            _callCreateDatacenterConnector = clientHelper.BuildApiCall<CreateDatacenterConnectorRequest, lro::Operation>(grpcClient.CreateDatacenterConnectorAsync, grpcClient.CreateDatacenterConnector, effectiveSettings.CreateDatacenterConnectorSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateDatacenterConnector = clientHelper.BuildApiCall<CreateDatacenterConnectorRequest, lro::Operation>("CreateDatacenterConnector", grpcClient.CreateDatacenterConnectorAsync, grpcClient.CreateDatacenterConnector, effectiveSettings.CreateDatacenterConnectorSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateDatacenterConnector);
             Modify_CreateDatacenterConnectorApiCall(ref _callCreateDatacenterConnector);
-            _callDeleteDatacenterConnector = clientHelper.BuildApiCall<DeleteDatacenterConnectorRequest, lro::Operation>(grpcClient.DeleteDatacenterConnectorAsync, grpcClient.DeleteDatacenterConnector, effectiveSettings.DeleteDatacenterConnectorSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteDatacenterConnector = clientHelper.BuildApiCall<DeleteDatacenterConnectorRequest, lro::Operation>("DeleteDatacenterConnector", grpcClient.DeleteDatacenterConnectorAsync, grpcClient.DeleteDatacenterConnector, effectiveSettings.DeleteDatacenterConnectorSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteDatacenterConnector);
             Modify_DeleteDatacenterConnectorApiCall(ref _callDeleteDatacenterConnector);
-            _callCreateMigratingVm = clientHelper.BuildApiCall<CreateMigratingVmRequest, lro::Operation>(grpcClient.CreateMigratingVmAsync, grpcClient.CreateMigratingVm, effectiveSettings.CreateMigratingVmSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateMigratingVm = clientHelper.BuildApiCall<CreateMigratingVmRequest, lro::Operation>("CreateMigratingVm", grpcClient.CreateMigratingVmAsync, grpcClient.CreateMigratingVm, effectiveSettings.CreateMigratingVmSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateMigratingVm);
             Modify_CreateMigratingVmApiCall(ref _callCreateMigratingVm);
-            _callListMigratingVms = clientHelper.BuildApiCall<ListMigratingVmsRequest, ListMigratingVmsResponse>(grpcClient.ListMigratingVmsAsync, grpcClient.ListMigratingVms, effectiveSettings.ListMigratingVmsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListMigratingVms = clientHelper.BuildApiCall<ListMigratingVmsRequest, ListMigratingVmsResponse>("ListMigratingVms", grpcClient.ListMigratingVmsAsync, grpcClient.ListMigratingVms, effectiveSettings.ListMigratingVmsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListMigratingVms);
             Modify_ListMigratingVmsApiCall(ref _callListMigratingVms);
-            _callGetMigratingVm = clientHelper.BuildApiCall<GetMigratingVmRequest, MigratingVm>(grpcClient.GetMigratingVmAsync, grpcClient.GetMigratingVm, effectiveSettings.GetMigratingVmSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetMigratingVm = clientHelper.BuildApiCall<GetMigratingVmRequest, MigratingVm>("GetMigratingVm", grpcClient.GetMigratingVmAsync, grpcClient.GetMigratingVm, effectiveSettings.GetMigratingVmSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetMigratingVm);
             Modify_GetMigratingVmApiCall(ref _callGetMigratingVm);
-            _callUpdateMigratingVm = clientHelper.BuildApiCall<UpdateMigratingVmRequest, lro::Operation>(grpcClient.UpdateMigratingVmAsync, grpcClient.UpdateMigratingVm, effectiveSettings.UpdateMigratingVmSettings).WithGoogleRequestParam("migrating_vm.name", request => request.MigratingVm?.Name);
+            _callUpdateMigratingVm = clientHelper.BuildApiCall<UpdateMigratingVmRequest, lro::Operation>("UpdateMigratingVm", grpcClient.UpdateMigratingVmAsync, grpcClient.UpdateMigratingVm, effectiveSettings.UpdateMigratingVmSettings).WithGoogleRequestParam("migrating_vm.name", request => request.MigratingVm?.Name);
             Modify_ApiCall(ref _callUpdateMigratingVm);
             Modify_UpdateMigratingVmApiCall(ref _callUpdateMigratingVm);
-            _callDeleteMigratingVm = clientHelper.BuildApiCall<DeleteMigratingVmRequest, lro::Operation>(grpcClient.DeleteMigratingVmAsync, grpcClient.DeleteMigratingVm, effectiveSettings.DeleteMigratingVmSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteMigratingVm = clientHelper.BuildApiCall<DeleteMigratingVmRequest, lro::Operation>("DeleteMigratingVm", grpcClient.DeleteMigratingVmAsync, grpcClient.DeleteMigratingVm, effectiveSettings.DeleteMigratingVmSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteMigratingVm);
             Modify_DeleteMigratingVmApiCall(ref _callDeleteMigratingVm);
-            _callStartMigration = clientHelper.BuildApiCall<StartMigrationRequest, lro::Operation>(grpcClient.StartMigrationAsync, grpcClient.StartMigration, effectiveSettings.StartMigrationSettings).WithGoogleRequestParam("migrating_vm", request => request.MigratingVm);
+            _callStartMigration = clientHelper.BuildApiCall<StartMigrationRequest, lro::Operation>("StartMigration", grpcClient.StartMigrationAsync, grpcClient.StartMigration, effectiveSettings.StartMigrationSettings).WithGoogleRequestParam("migrating_vm", request => request.MigratingVm);
             Modify_ApiCall(ref _callStartMigration);
             Modify_StartMigrationApiCall(ref _callStartMigration);
-            _callResumeMigration = clientHelper.BuildApiCall<ResumeMigrationRequest, lro::Operation>(grpcClient.ResumeMigrationAsync, grpcClient.ResumeMigration, effectiveSettings.ResumeMigrationSettings).WithGoogleRequestParam("migrating_vm", request => request.MigratingVm);
+            _callResumeMigration = clientHelper.BuildApiCall<ResumeMigrationRequest, lro::Operation>("ResumeMigration", grpcClient.ResumeMigrationAsync, grpcClient.ResumeMigration, effectiveSettings.ResumeMigrationSettings).WithGoogleRequestParam("migrating_vm", request => request.MigratingVm);
             Modify_ApiCall(ref _callResumeMigration);
             Modify_ResumeMigrationApiCall(ref _callResumeMigration);
-            _callPauseMigration = clientHelper.BuildApiCall<PauseMigrationRequest, lro::Operation>(grpcClient.PauseMigrationAsync, grpcClient.PauseMigration, effectiveSettings.PauseMigrationSettings).WithGoogleRequestParam("migrating_vm", request => request.MigratingVm);
+            _callPauseMigration = clientHelper.BuildApiCall<PauseMigrationRequest, lro::Operation>("PauseMigration", grpcClient.PauseMigrationAsync, grpcClient.PauseMigration, effectiveSettings.PauseMigrationSettings).WithGoogleRequestParam("migrating_vm", request => request.MigratingVm);
             Modify_ApiCall(ref _callPauseMigration);
             Modify_PauseMigrationApiCall(ref _callPauseMigration);
-            _callFinalizeMigration = clientHelper.BuildApiCall<FinalizeMigrationRequest, lro::Operation>(grpcClient.FinalizeMigrationAsync, grpcClient.FinalizeMigration, effectiveSettings.FinalizeMigrationSettings).WithGoogleRequestParam("migrating_vm", request => request.MigratingVm);
+            _callFinalizeMigration = clientHelper.BuildApiCall<FinalizeMigrationRequest, lro::Operation>("FinalizeMigration", grpcClient.FinalizeMigrationAsync, grpcClient.FinalizeMigration, effectiveSettings.FinalizeMigrationSettings).WithGoogleRequestParam("migrating_vm", request => request.MigratingVm);
             Modify_ApiCall(ref _callFinalizeMigration);
             Modify_FinalizeMigrationApiCall(ref _callFinalizeMigration);
-            _callCreateCloneJob = clientHelper.BuildApiCall<CreateCloneJobRequest, lro::Operation>(grpcClient.CreateCloneJobAsync, grpcClient.CreateCloneJob, effectiveSettings.CreateCloneJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateCloneJob = clientHelper.BuildApiCall<CreateCloneJobRequest, lro::Operation>("CreateCloneJob", grpcClient.CreateCloneJobAsync, grpcClient.CreateCloneJob, effectiveSettings.CreateCloneJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateCloneJob);
             Modify_CreateCloneJobApiCall(ref _callCreateCloneJob);
-            _callCancelCloneJob = clientHelper.BuildApiCall<CancelCloneJobRequest, lro::Operation>(grpcClient.CancelCloneJobAsync, grpcClient.CancelCloneJob, effectiveSettings.CancelCloneJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callCancelCloneJob = clientHelper.BuildApiCall<CancelCloneJobRequest, lro::Operation>("CancelCloneJob", grpcClient.CancelCloneJobAsync, grpcClient.CancelCloneJob, effectiveSettings.CancelCloneJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCancelCloneJob);
             Modify_CancelCloneJobApiCall(ref _callCancelCloneJob);
-            _callListCloneJobs = clientHelper.BuildApiCall<ListCloneJobsRequest, ListCloneJobsResponse>(grpcClient.ListCloneJobsAsync, grpcClient.ListCloneJobs, effectiveSettings.ListCloneJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListCloneJobs = clientHelper.BuildApiCall<ListCloneJobsRequest, ListCloneJobsResponse>("ListCloneJobs", grpcClient.ListCloneJobsAsync, grpcClient.ListCloneJobs, effectiveSettings.ListCloneJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListCloneJobs);
             Modify_ListCloneJobsApiCall(ref _callListCloneJobs);
-            _callGetCloneJob = clientHelper.BuildApiCall<GetCloneJobRequest, CloneJob>(grpcClient.GetCloneJobAsync, grpcClient.GetCloneJob, effectiveSettings.GetCloneJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetCloneJob = clientHelper.BuildApiCall<GetCloneJobRequest, CloneJob>("GetCloneJob", grpcClient.GetCloneJobAsync, grpcClient.GetCloneJob, effectiveSettings.GetCloneJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetCloneJob);
             Modify_GetCloneJobApiCall(ref _callGetCloneJob);
-            _callCreateCutoverJob = clientHelper.BuildApiCall<CreateCutoverJobRequest, lro::Operation>(grpcClient.CreateCutoverJobAsync, grpcClient.CreateCutoverJob, effectiveSettings.CreateCutoverJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateCutoverJob = clientHelper.BuildApiCall<CreateCutoverJobRequest, lro::Operation>("CreateCutoverJob", grpcClient.CreateCutoverJobAsync, grpcClient.CreateCutoverJob, effectiveSettings.CreateCutoverJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateCutoverJob);
             Modify_CreateCutoverJobApiCall(ref _callCreateCutoverJob);
-            _callCancelCutoverJob = clientHelper.BuildApiCall<CancelCutoverJobRequest, lro::Operation>(grpcClient.CancelCutoverJobAsync, grpcClient.CancelCutoverJob, effectiveSettings.CancelCutoverJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callCancelCutoverJob = clientHelper.BuildApiCall<CancelCutoverJobRequest, lro::Operation>("CancelCutoverJob", grpcClient.CancelCutoverJobAsync, grpcClient.CancelCutoverJob, effectiveSettings.CancelCutoverJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCancelCutoverJob);
             Modify_CancelCutoverJobApiCall(ref _callCancelCutoverJob);
-            _callListCutoverJobs = clientHelper.BuildApiCall<ListCutoverJobsRequest, ListCutoverJobsResponse>(grpcClient.ListCutoverJobsAsync, grpcClient.ListCutoverJobs, effectiveSettings.ListCutoverJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListCutoverJobs = clientHelper.BuildApiCall<ListCutoverJobsRequest, ListCutoverJobsResponse>("ListCutoverJobs", grpcClient.ListCutoverJobsAsync, grpcClient.ListCutoverJobs, effectiveSettings.ListCutoverJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListCutoverJobs);
             Modify_ListCutoverJobsApiCall(ref _callListCutoverJobs);
-            _callGetCutoverJob = clientHelper.BuildApiCall<GetCutoverJobRequest, CutoverJob>(grpcClient.GetCutoverJobAsync, grpcClient.GetCutoverJob, effectiveSettings.GetCutoverJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetCutoverJob = clientHelper.BuildApiCall<GetCutoverJobRequest, CutoverJob>("GetCutoverJob", grpcClient.GetCutoverJobAsync, grpcClient.GetCutoverJob, effectiveSettings.GetCutoverJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetCutoverJob);
             Modify_GetCutoverJobApiCall(ref _callGetCutoverJob);
-            _callListGroups = clientHelper.BuildApiCall<ListGroupsRequest, ListGroupsResponse>(grpcClient.ListGroupsAsync, grpcClient.ListGroups, effectiveSettings.ListGroupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListGroups = clientHelper.BuildApiCall<ListGroupsRequest, ListGroupsResponse>("ListGroups", grpcClient.ListGroupsAsync, grpcClient.ListGroups, effectiveSettings.ListGroupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListGroups);
             Modify_ListGroupsApiCall(ref _callListGroups);
-            _callGetGroup = clientHelper.BuildApiCall<GetGroupRequest, Group>(grpcClient.GetGroupAsync, grpcClient.GetGroup, effectiveSettings.GetGroupSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetGroup = clientHelper.BuildApiCall<GetGroupRequest, Group>("GetGroup", grpcClient.GetGroupAsync, grpcClient.GetGroup, effectiveSettings.GetGroupSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetGroup);
             Modify_GetGroupApiCall(ref _callGetGroup);
-            _callCreateGroup = clientHelper.BuildApiCall<CreateGroupRequest, lro::Operation>(grpcClient.CreateGroupAsync, grpcClient.CreateGroup, effectiveSettings.CreateGroupSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateGroup = clientHelper.BuildApiCall<CreateGroupRequest, lro::Operation>("CreateGroup", grpcClient.CreateGroupAsync, grpcClient.CreateGroup, effectiveSettings.CreateGroupSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateGroup);
             Modify_CreateGroupApiCall(ref _callCreateGroup);
-            _callUpdateGroup = clientHelper.BuildApiCall<UpdateGroupRequest, lro::Operation>(grpcClient.UpdateGroupAsync, grpcClient.UpdateGroup, effectiveSettings.UpdateGroupSettings).WithGoogleRequestParam("group.name", request => request.Group?.Name);
+            _callUpdateGroup = clientHelper.BuildApiCall<UpdateGroupRequest, lro::Operation>("UpdateGroup", grpcClient.UpdateGroupAsync, grpcClient.UpdateGroup, effectiveSettings.UpdateGroupSettings).WithGoogleRequestParam("group.name", request => request.Group?.Name);
             Modify_ApiCall(ref _callUpdateGroup);
             Modify_UpdateGroupApiCall(ref _callUpdateGroup);
-            _callDeleteGroup = clientHelper.BuildApiCall<DeleteGroupRequest, lro::Operation>(grpcClient.DeleteGroupAsync, grpcClient.DeleteGroup, effectiveSettings.DeleteGroupSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteGroup = clientHelper.BuildApiCall<DeleteGroupRequest, lro::Operation>("DeleteGroup", grpcClient.DeleteGroupAsync, grpcClient.DeleteGroup, effectiveSettings.DeleteGroupSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteGroup);
             Modify_DeleteGroupApiCall(ref _callDeleteGroup);
-            _callAddGroupMigration = clientHelper.BuildApiCall<AddGroupMigrationRequest, lro::Operation>(grpcClient.AddGroupMigrationAsync, grpcClient.AddGroupMigration, effectiveSettings.AddGroupMigrationSettings).WithGoogleRequestParam("group", request => request.Group);
+            _callAddGroupMigration = clientHelper.BuildApiCall<AddGroupMigrationRequest, lro::Operation>("AddGroupMigration", grpcClient.AddGroupMigrationAsync, grpcClient.AddGroupMigration, effectiveSettings.AddGroupMigrationSettings).WithGoogleRequestParam("group", request => request.Group);
             Modify_ApiCall(ref _callAddGroupMigration);
             Modify_AddGroupMigrationApiCall(ref _callAddGroupMigration);
-            _callRemoveGroupMigration = clientHelper.BuildApiCall<RemoveGroupMigrationRequest, lro::Operation>(grpcClient.RemoveGroupMigrationAsync, grpcClient.RemoveGroupMigration, effectiveSettings.RemoveGroupMigrationSettings).WithGoogleRequestParam("group", request => request.Group);
+            _callRemoveGroupMigration = clientHelper.BuildApiCall<RemoveGroupMigrationRequest, lro::Operation>("RemoveGroupMigration", grpcClient.RemoveGroupMigrationAsync, grpcClient.RemoveGroupMigration, effectiveSettings.RemoveGroupMigrationSettings).WithGoogleRequestParam("group", request => request.Group);
             Modify_ApiCall(ref _callRemoveGroupMigration);
             Modify_RemoveGroupMigrationApiCall(ref _callRemoveGroupMigration);
-            _callListTargetProjects = clientHelper.BuildApiCall<ListTargetProjectsRequest, ListTargetProjectsResponse>(grpcClient.ListTargetProjectsAsync, grpcClient.ListTargetProjects, effectiveSettings.ListTargetProjectsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListTargetProjects = clientHelper.BuildApiCall<ListTargetProjectsRequest, ListTargetProjectsResponse>("ListTargetProjects", grpcClient.ListTargetProjectsAsync, grpcClient.ListTargetProjects, effectiveSettings.ListTargetProjectsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListTargetProjects);
             Modify_ListTargetProjectsApiCall(ref _callListTargetProjects);
-            _callGetTargetProject = clientHelper.BuildApiCall<GetTargetProjectRequest, TargetProject>(grpcClient.GetTargetProjectAsync, grpcClient.GetTargetProject, effectiveSettings.GetTargetProjectSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetTargetProject = clientHelper.BuildApiCall<GetTargetProjectRequest, TargetProject>("GetTargetProject", grpcClient.GetTargetProjectAsync, grpcClient.GetTargetProject, effectiveSettings.GetTargetProjectSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetTargetProject);
             Modify_GetTargetProjectApiCall(ref _callGetTargetProject);
-            _callCreateTargetProject = clientHelper.BuildApiCall<CreateTargetProjectRequest, lro::Operation>(grpcClient.CreateTargetProjectAsync, grpcClient.CreateTargetProject, effectiveSettings.CreateTargetProjectSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateTargetProject = clientHelper.BuildApiCall<CreateTargetProjectRequest, lro::Operation>("CreateTargetProject", grpcClient.CreateTargetProjectAsync, grpcClient.CreateTargetProject, effectiveSettings.CreateTargetProjectSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateTargetProject);
             Modify_CreateTargetProjectApiCall(ref _callCreateTargetProject);
-            _callUpdateTargetProject = clientHelper.BuildApiCall<UpdateTargetProjectRequest, lro::Operation>(grpcClient.UpdateTargetProjectAsync, grpcClient.UpdateTargetProject, effectiveSettings.UpdateTargetProjectSettings).WithGoogleRequestParam("target_project.name", request => request.TargetProject?.Name);
+            _callUpdateTargetProject = clientHelper.BuildApiCall<UpdateTargetProjectRequest, lro::Operation>("UpdateTargetProject", grpcClient.UpdateTargetProjectAsync, grpcClient.UpdateTargetProject, effectiveSettings.UpdateTargetProjectSettings).WithGoogleRequestParam("target_project.name", request => request.TargetProject?.Name);
             Modify_ApiCall(ref _callUpdateTargetProject);
             Modify_UpdateTargetProjectApiCall(ref _callUpdateTargetProject);
-            _callDeleteTargetProject = clientHelper.BuildApiCall<DeleteTargetProjectRequest, lro::Operation>(grpcClient.DeleteTargetProjectAsync, grpcClient.DeleteTargetProject, effectiveSettings.DeleteTargetProjectSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteTargetProject = clientHelper.BuildApiCall<DeleteTargetProjectRequest, lro::Operation>("DeleteTargetProject", grpcClient.DeleteTargetProjectAsync, grpcClient.DeleteTargetProject, effectiveSettings.DeleteTargetProjectSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteTargetProject);
             Modify_DeleteTargetProjectApiCall(ref _callDeleteTargetProject);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

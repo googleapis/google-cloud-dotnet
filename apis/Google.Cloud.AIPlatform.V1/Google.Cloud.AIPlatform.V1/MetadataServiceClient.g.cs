@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -628,9 +628,8 @@ namespace Google.Cloud.AIPlatform.V1
         public MetadataServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public MetadataServiceClientBuilder()
+        public MetadataServiceClientBuilder() : base(MetadataServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = MetadataServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref MetadataServiceClient client);
@@ -657,29 +656,18 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return MetadataServiceClient.Create(callInvoker, Settings);
+            return MetadataServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<MetadataServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return MetadataServiceClient.Create(callInvoker, Settings);
+            return MetadataServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => MetadataServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => MetadataServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => MetadataServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>MetadataService client wrapper, for convenient use.</summary>
@@ -706,19 +694,10 @@ namespace Google.Cloud.AIPlatform.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(MetadataService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="MetadataServiceClient"/> using the default credentials, endpoint and
@@ -745,8 +724,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="MetadataServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="MetadataServiceClient"/>.</returns>
-        internal static MetadataServiceClient Create(grpccore::CallInvoker callInvoker, MetadataServiceSettings settings = null)
+        internal static MetadataServiceClient Create(grpccore::CallInvoker callInvoker, MetadataServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -755,7 +735,7 @@ namespace Google.Cloud.AIPlatform.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             MetadataService.MetadataServiceClient grpcClient = new MetadataService.MetadataServiceClient(callInvoker);
-            return new MetadataServiceClientImpl(grpcClient, settings);
+            return new MetadataServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -5465,110 +5445,111 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="MetadataServiceSettings"/> used within this client.</param>
-        public MetadataServiceClientImpl(MetadataService.MetadataServiceClient grpcClient, MetadataServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public MetadataServiceClientImpl(MetadataService.MetadataServiceClient grpcClient, MetadataServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             MetadataServiceSettings effectiveSettings = settings ?? MetadataServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateMetadataStoreOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateMetadataStoreOperationsSettings);
-            DeleteMetadataStoreOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteMetadataStoreOperationsSettings);
-            DeleteArtifactOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteArtifactOperationsSettings);
-            PurgeArtifactsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PurgeArtifactsOperationsSettings);
-            DeleteContextOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteContextOperationsSettings);
-            PurgeContextsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PurgeContextsOperationsSettings);
-            DeleteExecutionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteExecutionOperationsSettings);
-            PurgeExecutionsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PurgeExecutionsOperationsSettings);
-            _callCreateMetadataStore = clientHelper.BuildApiCall<CreateMetadataStoreRequest, lro::Operation>(grpcClient.CreateMetadataStoreAsync, grpcClient.CreateMetadataStore, effectiveSettings.CreateMetadataStoreSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateMetadataStoreOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateMetadataStoreOperationsSettings, logger);
+            DeleteMetadataStoreOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteMetadataStoreOperationsSettings, logger);
+            DeleteArtifactOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteArtifactOperationsSettings, logger);
+            PurgeArtifactsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PurgeArtifactsOperationsSettings, logger);
+            DeleteContextOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteContextOperationsSettings, logger);
+            PurgeContextsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PurgeContextsOperationsSettings, logger);
+            DeleteExecutionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteExecutionOperationsSettings, logger);
+            PurgeExecutionsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PurgeExecutionsOperationsSettings, logger);
+            _callCreateMetadataStore = clientHelper.BuildApiCall<CreateMetadataStoreRequest, lro::Operation>("CreateMetadataStore", grpcClient.CreateMetadataStoreAsync, grpcClient.CreateMetadataStore, effectiveSettings.CreateMetadataStoreSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateMetadataStore);
             Modify_CreateMetadataStoreApiCall(ref _callCreateMetadataStore);
-            _callGetMetadataStore = clientHelper.BuildApiCall<GetMetadataStoreRequest, MetadataStore>(grpcClient.GetMetadataStoreAsync, grpcClient.GetMetadataStore, effectiveSettings.GetMetadataStoreSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetMetadataStore = clientHelper.BuildApiCall<GetMetadataStoreRequest, MetadataStore>("GetMetadataStore", grpcClient.GetMetadataStoreAsync, grpcClient.GetMetadataStore, effectiveSettings.GetMetadataStoreSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetMetadataStore);
             Modify_GetMetadataStoreApiCall(ref _callGetMetadataStore);
-            _callListMetadataStores = clientHelper.BuildApiCall<ListMetadataStoresRequest, ListMetadataStoresResponse>(grpcClient.ListMetadataStoresAsync, grpcClient.ListMetadataStores, effectiveSettings.ListMetadataStoresSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListMetadataStores = clientHelper.BuildApiCall<ListMetadataStoresRequest, ListMetadataStoresResponse>("ListMetadataStores", grpcClient.ListMetadataStoresAsync, grpcClient.ListMetadataStores, effectiveSettings.ListMetadataStoresSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListMetadataStores);
             Modify_ListMetadataStoresApiCall(ref _callListMetadataStores);
-            _callDeleteMetadataStore = clientHelper.BuildApiCall<DeleteMetadataStoreRequest, lro::Operation>(grpcClient.DeleteMetadataStoreAsync, grpcClient.DeleteMetadataStore, effectiveSettings.DeleteMetadataStoreSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteMetadataStore = clientHelper.BuildApiCall<DeleteMetadataStoreRequest, lro::Operation>("DeleteMetadataStore", grpcClient.DeleteMetadataStoreAsync, grpcClient.DeleteMetadataStore, effectiveSettings.DeleteMetadataStoreSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteMetadataStore);
             Modify_DeleteMetadataStoreApiCall(ref _callDeleteMetadataStore);
-            _callCreateArtifact = clientHelper.BuildApiCall<CreateArtifactRequest, Artifact>(grpcClient.CreateArtifactAsync, grpcClient.CreateArtifact, effectiveSettings.CreateArtifactSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateArtifact = clientHelper.BuildApiCall<CreateArtifactRequest, Artifact>("CreateArtifact", grpcClient.CreateArtifactAsync, grpcClient.CreateArtifact, effectiveSettings.CreateArtifactSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateArtifact);
             Modify_CreateArtifactApiCall(ref _callCreateArtifact);
-            _callGetArtifact = clientHelper.BuildApiCall<GetArtifactRequest, Artifact>(grpcClient.GetArtifactAsync, grpcClient.GetArtifact, effectiveSettings.GetArtifactSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetArtifact = clientHelper.BuildApiCall<GetArtifactRequest, Artifact>("GetArtifact", grpcClient.GetArtifactAsync, grpcClient.GetArtifact, effectiveSettings.GetArtifactSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetArtifact);
             Modify_GetArtifactApiCall(ref _callGetArtifact);
-            _callListArtifacts = clientHelper.BuildApiCall<ListArtifactsRequest, ListArtifactsResponse>(grpcClient.ListArtifactsAsync, grpcClient.ListArtifacts, effectiveSettings.ListArtifactsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListArtifacts = clientHelper.BuildApiCall<ListArtifactsRequest, ListArtifactsResponse>("ListArtifacts", grpcClient.ListArtifactsAsync, grpcClient.ListArtifacts, effectiveSettings.ListArtifactsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListArtifacts);
             Modify_ListArtifactsApiCall(ref _callListArtifacts);
-            _callUpdateArtifact = clientHelper.BuildApiCall<UpdateArtifactRequest, Artifact>(grpcClient.UpdateArtifactAsync, grpcClient.UpdateArtifact, effectiveSettings.UpdateArtifactSettings).WithGoogleRequestParam("artifact.name", request => request.Artifact?.Name);
+            _callUpdateArtifact = clientHelper.BuildApiCall<UpdateArtifactRequest, Artifact>("UpdateArtifact", grpcClient.UpdateArtifactAsync, grpcClient.UpdateArtifact, effectiveSettings.UpdateArtifactSettings).WithGoogleRequestParam("artifact.name", request => request.Artifact?.Name);
             Modify_ApiCall(ref _callUpdateArtifact);
             Modify_UpdateArtifactApiCall(ref _callUpdateArtifact);
-            _callDeleteArtifact = clientHelper.BuildApiCall<DeleteArtifactRequest, lro::Operation>(grpcClient.DeleteArtifactAsync, grpcClient.DeleteArtifact, effectiveSettings.DeleteArtifactSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteArtifact = clientHelper.BuildApiCall<DeleteArtifactRequest, lro::Operation>("DeleteArtifact", grpcClient.DeleteArtifactAsync, grpcClient.DeleteArtifact, effectiveSettings.DeleteArtifactSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteArtifact);
             Modify_DeleteArtifactApiCall(ref _callDeleteArtifact);
-            _callPurgeArtifacts = clientHelper.BuildApiCall<PurgeArtifactsRequest, lro::Operation>(grpcClient.PurgeArtifactsAsync, grpcClient.PurgeArtifacts, effectiveSettings.PurgeArtifactsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callPurgeArtifacts = clientHelper.BuildApiCall<PurgeArtifactsRequest, lro::Operation>("PurgeArtifacts", grpcClient.PurgeArtifactsAsync, grpcClient.PurgeArtifacts, effectiveSettings.PurgeArtifactsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callPurgeArtifacts);
             Modify_PurgeArtifactsApiCall(ref _callPurgeArtifacts);
-            _callCreateContext = clientHelper.BuildApiCall<CreateContextRequest, Context>(grpcClient.CreateContextAsync, grpcClient.CreateContext, effectiveSettings.CreateContextSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateContext = clientHelper.BuildApiCall<CreateContextRequest, Context>("CreateContext", grpcClient.CreateContextAsync, grpcClient.CreateContext, effectiveSettings.CreateContextSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateContext);
             Modify_CreateContextApiCall(ref _callCreateContext);
-            _callGetContext = clientHelper.BuildApiCall<GetContextRequest, Context>(grpcClient.GetContextAsync, grpcClient.GetContext, effectiveSettings.GetContextSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetContext = clientHelper.BuildApiCall<GetContextRequest, Context>("GetContext", grpcClient.GetContextAsync, grpcClient.GetContext, effectiveSettings.GetContextSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetContext);
             Modify_GetContextApiCall(ref _callGetContext);
-            _callListContexts = clientHelper.BuildApiCall<ListContextsRequest, ListContextsResponse>(grpcClient.ListContextsAsync, grpcClient.ListContexts, effectiveSettings.ListContextsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListContexts = clientHelper.BuildApiCall<ListContextsRequest, ListContextsResponse>("ListContexts", grpcClient.ListContextsAsync, grpcClient.ListContexts, effectiveSettings.ListContextsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListContexts);
             Modify_ListContextsApiCall(ref _callListContexts);
-            _callUpdateContext = clientHelper.BuildApiCall<UpdateContextRequest, Context>(grpcClient.UpdateContextAsync, grpcClient.UpdateContext, effectiveSettings.UpdateContextSettings).WithGoogleRequestParam("context.name", request => request.Context?.Name);
+            _callUpdateContext = clientHelper.BuildApiCall<UpdateContextRequest, Context>("UpdateContext", grpcClient.UpdateContextAsync, grpcClient.UpdateContext, effectiveSettings.UpdateContextSettings).WithGoogleRequestParam("context.name", request => request.Context?.Name);
             Modify_ApiCall(ref _callUpdateContext);
             Modify_UpdateContextApiCall(ref _callUpdateContext);
-            _callDeleteContext = clientHelper.BuildApiCall<DeleteContextRequest, lro::Operation>(grpcClient.DeleteContextAsync, grpcClient.DeleteContext, effectiveSettings.DeleteContextSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteContext = clientHelper.BuildApiCall<DeleteContextRequest, lro::Operation>("DeleteContext", grpcClient.DeleteContextAsync, grpcClient.DeleteContext, effectiveSettings.DeleteContextSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteContext);
             Modify_DeleteContextApiCall(ref _callDeleteContext);
-            _callPurgeContexts = clientHelper.BuildApiCall<PurgeContextsRequest, lro::Operation>(grpcClient.PurgeContextsAsync, grpcClient.PurgeContexts, effectiveSettings.PurgeContextsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callPurgeContexts = clientHelper.BuildApiCall<PurgeContextsRequest, lro::Operation>("PurgeContexts", grpcClient.PurgeContextsAsync, grpcClient.PurgeContexts, effectiveSettings.PurgeContextsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callPurgeContexts);
             Modify_PurgeContextsApiCall(ref _callPurgeContexts);
-            _callAddContextArtifactsAndExecutions = clientHelper.BuildApiCall<AddContextArtifactsAndExecutionsRequest, AddContextArtifactsAndExecutionsResponse>(grpcClient.AddContextArtifactsAndExecutionsAsync, grpcClient.AddContextArtifactsAndExecutions, effectiveSettings.AddContextArtifactsAndExecutionsSettings).WithGoogleRequestParam("context", request => request.Context);
+            _callAddContextArtifactsAndExecutions = clientHelper.BuildApiCall<AddContextArtifactsAndExecutionsRequest, AddContextArtifactsAndExecutionsResponse>("AddContextArtifactsAndExecutions", grpcClient.AddContextArtifactsAndExecutionsAsync, grpcClient.AddContextArtifactsAndExecutions, effectiveSettings.AddContextArtifactsAndExecutionsSettings).WithGoogleRequestParam("context", request => request.Context);
             Modify_ApiCall(ref _callAddContextArtifactsAndExecutions);
             Modify_AddContextArtifactsAndExecutionsApiCall(ref _callAddContextArtifactsAndExecutions);
-            _callAddContextChildren = clientHelper.BuildApiCall<AddContextChildrenRequest, AddContextChildrenResponse>(grpcClient.AddContextChildrenAsync, grpcClient.AddContextChildren, effectiveSettings.AddContextChildrenSettings).WithGoogleRequestParam("context", request => request.Context);
+            _callAddContextChildren = clientHelper.BuildApiCall<AddContextChildrenRequest, AddContextChildrenResponse>("AddContextChildren", grpcClient.AddContextChildrenAsync, grpcClient.AddContextChildren, effectiveSettings.AddContextChildrenSettings).WithGoogleRequestParam("context", request => request.Context);
             Modify_ApiCall(ref _callAddContextChildren);
             Modify_AddContextChildrenApiCall(ref _callAddContextChildren);
-            _callQueryContextLineageSubgraph = clientHelper.BuildApiCall<QueryContextLineageSubgraphRequest, LineageSubgraph>(grpcClient.QueryContextLineageSubgraphAsync, grpcClient.QueryContextLineageSubgraph, effectiveSettings.QueryContextLineageSubgraphSettings).WithGoogleRequestParam("context", request => request.Context);
+            _callQueryContextLineageSubgraph = clientHelper.BuildApiCall<QueryContextLineageSubgraphRequest, LineageSubgraph>("QueryContextLineageSubgraph", grpcClient.QueryContextLineageSubgraphAsync, grpcClient.QueryContextLineageSubgraph, effectiveSettings.QueryContextLineageSubgraphSettings).WithGoogleRequestParam("context", request => request.Context);
             Modify_ApiCall(ref _callQueryContextLineageSubgraph);
             Modify_QueryContextLineageSubgraphApiCall(ref _callQueryContextLineageSubgraph);
-            _callCreateExecution = clientHelper.BuildApiCall<CreateExecutionRequest, Execution>(grpcClient.CreateExecutionAsync, grpcClient.CreateExecution, effectiveSettings.CreateExecutionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateExecution = clientHelper.BuildApiCall<CreateExecutionRequest, Execution>("CreateExecution", grpcClient.CreateExecutionAsync, grpcClient.CreateExecution, effectiveSettings.CreateExecutionSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateExecution);
             Modify_CreateExecutionApiCall(ref _callCreateExecution);
-            _callGetExecution = clientHelper.BuildApiCall<GetExecutionRequest, Execution>(grpcClient.GetExecutionAsync, grpcClient.GetExecution, effectiveSettings.GetExecutionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetExecution = clientHelper.BuildApiCall<GetExecutionRequest, Execution>("GetExecution", grpcClient.GetExecutionAsync, grpcClient.GetExecution, effectiveSettings.GetExecutionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetExecution);
             Modify_GetExecutionApiCall(ref _callGetExecution);
-            _callListExecutions = clientHelper.BuildApiCall<ListExecutionsRequest, ListExecutionsResponse>(grpcClient.ListExecutionsAsync, grpcClient.ListExecutions, effectiveSettings.ListExecutionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListExecutions = clientHelper.BuildApiCall<ListExecutionsRequest, ListExecutionsResponse>("ListExecutions", grpcClient.ListExecutionsAsync, grpcClient.ListExecutions, effectiveSettings.ListExecutionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListExecutions);
             Modify_ListExecutionsApiCall(ref _callListExecutions);
-            _callUpdateExecution = clientHelper.BuildApiCall<UpdateExecutionRequest, Execution>(grpcClient.UpdateExecutionAsync, grpcClient.UpdateExecution, effectiveSettings.UpdateExecutionSettings).WithGoogleRequestParam("execution.name", request => request.Execution?.Name);
+            _callUpdateExecution = clientHelper.BuildApiCall<UpdateExecutionRequest, Execution>("UpdateExecution", grpcClient.UpdateExecutionAsync, grpcClient.UpdateExecution, effectiveSettings.UpdateExecutionSettings).WithGoogleRequestParam("execution.name", request => request.Execution?.Name);
             Modify_ApiCall(ref _callUpdateExecution);
             Modify_UpdateExecutionApiCall(ref _callUpdateExecution);
-            _callDeleteExecution = clientHelper.BuildApiCall<DeleteExecutionRequest, lro::Operation>(grpcClient.DeleteExecutionAsync, grpcClient.DeleteExecution, effectiveSettings.DeleteExecutionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteExecution = clientHelper.BuildApiCall<DeleteExecutionRequest, lro::Operation>("DeleteExecution", grpcClient.DeleteExecutionAsync, grpcClient.DeleteExecution, effectiveSettings.DeleteExecutionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteExecution);
             Modify_DeleteExecutionApiCall(ref _callDeleteExecution);
-            _callPurgeExecutions = clientHelper.BuildApiCall<PurgeExecutionsRequest, lro::Operation>(grpcClient.PurgeExecutionsAsync, grpcClient.PurgeExecutions, effectiveSettings.PurgeExecutionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callPurgeExecutions = clientHelper.BuildApiCall<PurgeExecutionsRequest, lro::Operation>("PurgeExecutions", grpcClient.PurgeExecutionsAsync, grpcClient.PurgeExecutions, effectiveSettings.PurgeExecutionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callPurgeExecutions);
             Modify_PurgeExecutionsApiCall(ref _callPurgeExecutions);
-            _callAddExecutionEvents = clientHelper.BuildApiCall<AddExecutionEventsRequest, AddExecutionEventsResponse>(grpcClient.AddExecutionEventsAsync, grpcClient.AddExecutionEvents, effectiveSettings.AddExecutionEventsSettings).WithGoogleRequestParam("execution", request => request.Execution);
+            _callAddExecutionEvents = clientHelper.BuildApiCall<AddExecutionEventsRequest, AddExecutionEventsResponse>("AddExecutionEvents", grpcClient.AddExecutionEventsAsync, grpcClient.AddExecutionEvents, effectiveSettings.AddExecutionEventsSettings).WithGoogleRequestParam("execution", request => request.Execution);
             Modify_ApiCall(ref _callAddExecutionEvents);
             Modify_AddExecutionEventsApiCall(ref _callAddExecutionEvents);
-            _callQueryExecutionInputsAndOutputs = clientHelper.BuildApiCall<QueryExecutionInputsAndOutputsRequest, LineageSubgraph>(grpcClient.QueryExecutionInputsAndOutputsAsync, grpcClient.QueryExecutionInputsAndOutputs, effectiveSettings.QueryExecutionInputsAndOutputsSettings).WithGoogleRequestParam("execution", request => request.Execution);
+            _callQueryExecutionInputsAndOutputs = clientHelper.BuildApiCall<QueryExecutionInputsAndOutputsRequest, LineageSubgraph>("QueryExecutionInputsAndOutputs", grpcClient.QueryExecutionInputsAndOutputsAsync, grpcClient.QueryExecutionInputsAndOutputs, effectiveSettings.QueryExecutionInputsAndOutputsSettings).WithGoogleRequestParam("execution", request => request.Execution);
             Modify_ApiCall(ref _callQueryExecutionInputsAndOutputs);
             Modify_QueryExecutionInputsAndOutputsApiCall(ref _callQueryExecutionInputsAndOutputs);
-            _callCreateMetadataSchema = clientHelper.BuildApiCall<CreateMetadataSchemaRequest, MetadataSchema>(grpcClient.CreateMetadataSchemaAsync, grpcClient.CreateMetadataSchema, effectiveSettings.CreateMetadataSchemaSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateMetadataSchema = clientHelper.BuildApiCall<CreateMetadataSchemaRequest, MetadataSchema>("CreateMetadataSchema", grpcClient.CreateMetadataSchemaAsync, grpcClient.CreateMetadataSchema, effectiveSettings.CreateMetadataSchemaSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateMetadataSchema);
             Modify_CreateMetadataSchemaApiCall(ref _callCreateMetadataSchema);
-            _callGetMetadataSchema = clientHelper.BuildApiCall<GetMetadataSchemaRequest, MetadataSchema>(grpcClient.GetMetadataSchemaAsync, grpcClient.GetMetadataSchema, effectiveSettings.GetMetadataSchemaSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetMetadataSchema = clientHelper.BuildApiCall<GetMetadataSchemaRequest, MetadataSchema>("GetMetadataSchema", grpcClient.GetMetadataSchemaAsync, grpcClient.GetMetadataSchema, effectiveSettings.GetMetadataSchemaSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetMetadataSchema);
             Modify_GetMetadataSchemaApiCall(ref _callGetMetadataSchema);
-            _callListMetadataSchemas = clientHelper.BuildApiCall<ListMetadataSchemasRequest, ListMetadataSchemasResponse>(grpcClient.ListMetadataSchemasAsync, grpcClient.ListMetadataSchemas, effectiveSettings.ListMetadataSchemasSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListMetadataSchemas = clientHelper.BuildApiCall<ListMetadataSchemasRequest, ListMetadataSchemasResponse>("ListMetadataSchemas", grpcClient.ListMetadataSchemasAsync, grpcClient.ListMetadataSchemas, effectiveSettings.ListMetadataSchemasSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListMetadataSchemas);
             Modify_ListMetadataSchemasApiCall(ref _callListMetadataSchemas);
-            _callQueryArtifactLineageSubgraph = clientHelper.BuildApiCall<QueryArtifactLineageSubgraphRequest, LineageSubgraph>(grpcClient.QueryArtifactLineageSubgraphAsync, grpcClient.QueryArtifactLineageSubgraph, effectiveSettings.QueryArtifactLineageSubgraphSettings).WithGoogleRequestParam("artifact", request => request.Artifact);
+            _callQueryArtifactLineageSubgraph = clientHelper.BuildApiCall<QueryArtifactLineageSubgraphRequest, LineageSubgraph>("QueryArtifactLineageSubgraph", grpcClient.QueryArtifactLineageSubgraphAsync, grpcClient.QueryArtifactLineageSubgraph, effectiveSettings.QueryArtifactLineageSubgraphSettings).WithGoogleRequestParam("artifact", request => request.Artifact);
             Modify_ApiCall(ref _callQueryArtifactLineageSubgraph);
             Modify_QueryArtifactLineageSubgraphApiCall(ref _callQueryArtifactLineageSubgraph);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

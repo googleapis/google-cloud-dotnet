@@ -54,7 +54,7 @@ namespace Google.Cloud.Dataflow.V1Beta3.Tests
                 Region = "regionedb20d96",
             };
             mockGrpcClient.Setup(x => x.GetSnapshot(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SnapshotsV1Beta3Client client = new SnapshotsV1Beta3ClientImpl(mockGrpcClient.Object, null);
+            SnapshotsV1Beta3Client client = new SnapshotsV1Beta3ClientImpl(mockGrpcClient.Object, null, null);
             Snapshot response = client.GetSnapshot(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -87,7 +87,7 @@ namespace Google.Cloud.Dataflow.V1Beta3.Tests
                 Region = "regionedb20d96",
             };
             mockGrpcClient.Setup(x => x.GetSnapshotAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Snapshot>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SnapshotsV1Beta3Client client = new SnapshotsV1Beta3ClientImpl(mockGrpcClient.Object, null);
+            SnapshotsV1Beta3Client client = new SnapshotsV1Beta3ClientImpl(mockGrpcClient.Object, null, null);
             Snapshot responseCallSettings = await client.GetSnapshotAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Snapshot responseCancellationToken = await client.GetSnapshotAsync(request, st::CancellationToken.None);
@@ -107,7 +107,7 @@ namespace Google.Cloud.Dataflow.V1Beta3.Tests
             };
             DeleteSnapshotResponse expectedResponse = new DeleteSnapshotResponse { };
             mockGrpcClient.Setup(x => x.DeleteSnapshot(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SnapshotsV1Beta3Client client = new SnapshotsV1Beta3ClientImpl(mockGrpcClient.Object, null);
+            SnapshotsV1Beta3Client client = new SnapshotsV1Beta3ClientImpl(mockGrpcClient.Object, null, null);
             DeleteSnapshotResponse response = client.DeleteSnapshot(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -125,7 +125,7 @@ namespace Google.Cloud.Dataflow.V1Beta3.Tests
             };
             DeleteSnapshotResponse expectedResponse = new DeleteSnapshotResponse { };
             mockGrpcClient.Setup(x => x.DeleteSnapshotAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeleteSnapshotResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SnapshotsV1Beta3Client client = new SnapshotsV1Beta3ClientImpl(mockGrpcClient.Object, null);
+            SnapshotsV1Beta3Client client = new SnapshotsV1Beta3ClientImpl(mockGrpcClient.Object, null, null);
             DeleteSnapshotResponse responseCallSettings = await client.DeleteSnapshotAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DeleteSnapshotResponse responseCancellationToken = await client.DeleteSnapshotAsync(request, st::CancellationToken.None);
@@ -148,7 +148,7 @@ namespace Google.Cloud.Dataflow.V1Beta3.Tests
                 Snapshots = { new Snapshot(), },
             };
             mockGrpcClient.Setup(x => x.ListSnapshots(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SnapshotsV1Beta3Client client = new SnapshotsV1Beta3ClientImpl(mockGrpcClient.Object, null);
+            SnapshotsV1Beta3Client client = new SnapshotsV1Beta3ClientImpl(mockGrpcClient.Object, null, null);
             ListSnapshotsResponse response = client.ListSnapshots(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -169,7 +169,7 @@ namespace Google.Cloud.Dataflow.V1Beta3.Tests
                 Snapshots = { new Snapshot(), },
             };
             mockGrpcClient.Setup(x => x.ListSnapshotsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListSnapshotsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SnapshotsV1Beta3Client client = new SnapshotsV1Beta3ClientImpl(mockGrpcClient.Object, null);
+            SnapshotsV1Beta3Client client = new SnapshotsV1Beta3ClientImpl(mockGrpcClient.Object, null, null);
             ListSnapshotsResponse responseCallSettings = await client.ListSnapshotsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ListSnapshotsResponse responseCancellationToken = await client.ListSnapshotsAsync(request, st::CancellationToken.None);

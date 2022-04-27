@@ -55,7 +55,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 Vmware = new VmwareSourceDetails(),
             };
             mockGrpcClient.Setup(x => x.GetSource(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             Source response = client.GetSource(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -86,7 +86,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 Vmware = new VmwareSourceDetails(),
             };
             mockGrpcClient.Setup(x => x.GetSourceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Source>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             Source responseCallSettings = await client.GetSourceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Source responseCancellationToken = await client.GetSourceAsync(request, st::CancellationToken.None);
@@ -119,7 +119,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 Vmware = new VmwareSourceDetails(),
             };
             mockGrpcClient.Setup(x => x.GetSource(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             Source response = client.GetSource(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -150,7 +150,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 Vmware = new VmwareSourceDetails(),
             };
             mockGrpcClient.Setup(x => x.GetSourceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Source>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             Source responseCallSettings = await client.GetSourceAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Source responseCancellationToken = await client.GetSourceAsync(request.Name, st::CancellationToken.None);
@@ -183,7 +183,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 Vmware = new VmwareSourceDetails(),
             };
             mockGrpcClient.Setup(x => x.GetSource(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             Source response = client.GetSource(request.SourceName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -214,7 +214,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 Vmware = new VmwareSourceDetails(),
             };
             mockGrpcClient.Setup(x => x.GetSourceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Source>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             Source responseCallSettings = await client.GetSourceAsync(request.SourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Source responseCancellationToken = await client.GetSourceAsync(request.SourceName, st::CancellationToken.None);
@@ -238,7 +238,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.FetchInventory(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             FetchInventoryResponse response = client.FetchInventory(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -260,7 +260,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.FetchInventoryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FetchInventoryResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             FetchInventoryResponse responseCallSettings = await client.FetchInventoryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             FetchInventoryResponse responseCancellationToken = await client.FetchInventoryAsync(request, st::CancellationToken.None);
@@ -283,7 +283,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.FetchInventory(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             FetchInventoryResponse response = client.FetchInventory(request.Source);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -304,7 +304,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.FetchInventoryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FetchInventoryResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             FetchInventoryResponse responseCallSettings = await client.FetchInventoryAsync(request.Source, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             FetchInventoryResponse responseCancellationToken = await client.FetchInventoryAsync(request.Source, st::CancellationToken.None);
@@ -327,7 +327,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.FetchInventory(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             FetchInventoryResponse response = client.FetchInventory(request.SourceAsSourceName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -348,7 +348,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.FetchInventoryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FetchInventoryResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             FetchInventoryResponse responseCallSettings = await client.FetchInventoryAsync(request.SourceAsSourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             FetchInventoryResponse responseCancellationToken = await client.FetchInventoryAsync(request.SourceAsSourceName, st::CancellationToken.None);
@@ -383,7 +383,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetUtilizationReport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             UtilizationReport response = client.GetUtilizationReport(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -416,7 +416,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetUtilizationReportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UtilizationReport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             UtilizationReport responseCallSettings = await client.GetUtilizationReportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UtilizationReport responseCancellationToken = await client.GetUtilizationReportAsync(request, st::CancellationToken.None);
@@ -450,7 +450,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetUtilizationReport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             UtilizationReport response = client.GetUtilizationReport(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -482,7 +482,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetUtilizationReportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UtilizationReport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             UtilizationReport responseCallSettings = await client.GetUtilizationReportAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UtilizationReport responseCancellationToken = await client.GetUtilizationReportAsync(request.Name, st::CancellationToken.None);
@@ -516,7 +516,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetUtilizationReport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             UtilizationReport response = client.GetUtilizationReport(request.UtilizationReportName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -548,7 +548,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetUtilizationReportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UtilizationReport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             UtilizationReport responseCallSettings = await client.GetUtilizationReportAsync(request.UtilizationReportName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UtilizationReport responseCancellationToken = await client.GetUtilizationReportAsync(request.UtilizationReportName, st::CancellationToken.None);
@@ -579,7 +579,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 RegistrationId = "registration_ided27f5d9",
             };
             mockGrpcClient.Setup(x => x.GetDatacenterConnector(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             DatacenterConnector response = client.GetDatacenterConnector(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -608,7 +608,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 RegistrationId = "registration_ided27f5d9",
             };
             mockGrpcClient.Setup(x => x.GetDatacenterConnectorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DatacenterConnector>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             DatacenterConnector responseCallSettings = await client.GetDatacenterConnectorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DatacenterConnector responseCancellationToken = await client.GetDatacenterConnectorAsync(request, st::CancellationToken.None);
@@ -639,7 +639,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 RegistrationId = "registration_ided27f5d9",
             };
             mockGrpcClient.Setup(x => x.GetDatacenterConnector(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             DatacenterConnector response = client.GetDatacenterConnector(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -668,7 +668,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 RegistrationId = "registration_ided27f5d9",
             };
             mockGrpcClient.Setup(x => x.GetDatacenterConnectorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DatacenterConnector>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             DatacenterConnector responseCallSettings = await client.GetDatacenterConnectorAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DatacenterConnector responseCancellationToken = await client.GetDatacenterConnectorAsync(request.Name, st::CancellationToken.None);
@@ -699,7 +699,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 RegistrationId = "registration_ided27f5d9",
             };
             mockGrpcClient.Setup(x => x.GetDatacenterConnector(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             DatacenterConnector response = client.GetDatacenterConnector(request.DatacenterConnectorName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -728,7 +728,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 RegistrationId = "registration_ided27f5d9",
             };
             mockGrpcClient.Setup(x => x.GetDatacenterConnectorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DatacenterConnector>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             DatacenterConnector responseCallSettings = await client.GetDatacenterConnectorAsync(request.DatacenterConnectorName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DatacenterConnector responseCancellationToken = await client.GetDatacenterConnectorAsync(request.DatacenterConnectorName, st::CancellationToken.None);
@@ -770,7 +770,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 ComputeEngineTargetDefaults = new ComputeEngineTargetDefaults(),
             };
             mockGrpcClient.Setup(x => x.GetMigratingVm(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             MigratingVm response = client.GetMigratingVm(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -810,7 +810,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 ComputeEngineTargetDefaults = new ComputeEngineTargetDefaults(),
             };
             mockGrpcClient.Setup(x => x.GetMigratingVmAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MigratingVm>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             MigratingVm responseCallSettings = await client.GetMigratingVmAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MigratingVm responseCancellationToken = await client.GetMigratingVmAsync(request, st::CancellationToken.None);
@@ -852,7 +852,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 ComputeEngineTargetDefaults = new ComputeEngineTargetDefaults(),
             };
             mockGrpcClient.Setup(x => x.GetMigratingVm(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             MigratingVm response = client.GetMigratingVm(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -892,7 +892,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 ComputeEngineTargetDefaults = new ComputeEngineTargetDefaults(),
             };
             mockGrpcClient.Setup(x => x.GetMigratingVmAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MigratingVm>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             MigratingVm responseCallSettings = await client.GetMigratingVmAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MigratingVm responseCancellationToken = await client.GetMigratingVmAsync(request.Name, st::CancellationToken.None);
@@ -934,7 +934,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 ComputeEngineTargetDefaults = new ComputeEngineTargetDefaults(),
             };
             mockGrpcClient.Setup(x => x.GetMigratingVm(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             MigratingVm response = client.GetMigratingVm(request.MigratingVmName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -974,7 +974,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 ComputeEngineTargetDefaults = new ComputeEngineTargetDefaults(),
             };
             mockGrpcClient.Setup(x => x.GetMigratingVmAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MigratingVm>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             MigratingVm responseCallSettings = await client.GetMigratingVmAsync(request.MigratingVmName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MigratingVm responseCancellationToken = await client.GetMigratingVmAsync(request.MigratingVmName, st::CancellationToken.None);
@@ -1001,7 +1001,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 ComputeEngineTargetDetails = new ComputeEngineTargetDetails(),
             };
             mockGrpcClient.Setup(x => x.GetCloneJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             CloneJob response = client.GetCloneJob(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1026,7 +1026,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 ComputeEngineTargetDetails = new ComputeEngineTargetDetails(),
             };
             mockGrpcClient.Setup(x => x.GetCloneJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CloneJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             CloneJob responseCallSettings = await client.GetCloneJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CloneJob responseCancellationToken = await client.GetCloneJobAsync(request, st::CancellationToken.None);
@@ -1053,7 +1053,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 ComputeEngineTargetDetails = new ComputeEngineTargetDetails(),
             };
             mockGrpcClient.Setup(x => x.GetCloneJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             CloneJob response = client.GetCloneJob(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1078,7 +1078,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 ComputeEngineTargetDetails = new ComputeEngineTargetDetails(),
             };
             mockGrpcClient.Setup(x => x.GetCloneJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CloneJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             CloneJob responseCallSettings = await client.GetCloneJobAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CloneJob responseCancellationToken = await client.GetCloneJobAsync(request.Name, st::CancellationToken.None);
@@ -1105,7 +1105,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 ComputeEngineTargetDetails = new ComputeEngineTargetDetails(),
             };
             mockGrpcClient.Setup(x => x.GetCloneJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             CloneJob response = client.GetCloneJob(request.CloneJobName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1130,7 +1130,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 ComputeEngineTargetDetails = new ComputeEngineTargetDetails(),
             };
             mockGrpcClient.Setup(x => x.GetCloneJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CloneJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             CloneJob responseCallSettings = await client.GetCloneJobAsync(request.CloneJobName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CloneJob responseCancellationToken = await client.GetCloneJobAsync(request.CloneJobName, st::CancellationToken.None);
@@ -1159,7 +1159,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 ComputeEngineTargetDetails = new ComputeEngineTargetDetails(),
             };
             mockGrpcClient.Setup(x => x.GetCutoverJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             CutoverJob response = client.GetCutoverJob(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1186,7 +1186,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 ComputeEngineTargetDetails = new ComputeEngineTargetDetails(),
             };
             mockGrpcClient.Setup(x => x.GetCutoverJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CutoverJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             CutoverJob responseCallSettings = await client.GetCutoverJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CutoverJob responseCancellationToken = await client.GetCutoverJobAsync(request, st::CancellationToken.None);
@@ -1215,7 +1215,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 ComputeEngineTargetDetails = new ComputeEngineTargetDetails(),
             };
             mockGrpcClient.Setup(x => x.GetCutoverJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             CutoverJob response = client.GetCutoverJob(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1242,7 +1242,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 ComputeEngineTargetDetails = new ComputeEngineTargetDetails(),
             };
             mockGrpcClient.Setup(x => x.GetCutoverJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CutoverJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             CutoverJob responseCallSettings = await client.GetCutoverJobAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CutoverJob responseCancellationToken = await client.GetCutoverJobAsync(request.Name, st::CancellationToken.None);
@@ -1271,7 +1271,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 ComputeEngineTargetDetails = new ComputeEngineTargetDetails(),
             };
             mockGrpcClient.Setup(x => x.GetCutoverJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             CutoverJob response = client.GetCutoverJob(request.CutoverJobName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1298,7 +1298,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 ComputeEngineTargetDetails = new ComputeEngineTargetDetails(),
             };
             mockGrpcClient.Setup(x => x.GetCutoverJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CutoverJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             CutoverJob responseCallSettings = await client.GetCutoverJobAsync(request.CutoverJobName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CutoverJob responseCancellationToken = await client.GetCutoverJobAsync(request.CutoverJobName, st::CancellationToken.None);
@@ -1324,7 +1324,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 DisplayName = "display_name137f65c2",
             };
             mockGrpcClient.Setup(x => x.GetGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             Group response = client.GetGroup(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1348,7 +1348,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 DisplayName = "display_name137f65c2",
             };
             mockGrpcClient.Setup(x => x.GetGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Group>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             Group responseCallSettings = await client.GetGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Group responseCancellationToken = await client.GetGroupAsync(request, st::CancellationToken.None);
@@ -1374,7 +1374,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 DisplayName = "display_name137f65c2",
             };
             mockGrpcClient.Setup(x => x.GetGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             Group response = client.GetGroup(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1398,7 +1398,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 DisplayName = "display_name137f65c2",
             };
             mockGrpcClient.Setup(x => x.GetGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Group>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             Group responseCallSettings = await client.GetGroupAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Group responseCancellationToken = await client.GetGroupAsync(request.Name, st::CancellationToken.None);
@@ -1424,7 +1424,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 DisplayName = "display_name137f65c2",
             };
             mockGrpcClient.Setup(x => x.GetGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             Group response = client.GetGroup(request.GroupName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1448,7 +1448,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 DisplayName = "display_name137f65c2",
             };
             mockGrpcClient.Setup(x => x.GetGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Group>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             Group responseCallSettings = await client.GetGroupAsync(request.GroupName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Group responseCancellationToken = await client.GetGroupAsync(request.GroupName, st::CancellationToken.None);
@@ -1474,7 +1474,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetTargetProject(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             TargetProject response = client.GetTargetProject(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1498,7 +1498,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetTargetProjectAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TargetProject>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             TargetProject responseCallSettings = await client.GetTargetProjectAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TargetProject responseCancellationToken = await client.GetTargetProjectAsync(request, st::CancellationToken.None);
@@ -1524,7 +1524,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetTargetProject(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             TargetProject response = client.GetTargetProject(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1548,7 +1548,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetTargetProjectAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TargetProject>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             TargetProject responseCallSettings = await client.GetTargetProjectAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TargetProject responseCancellationToken = await client.GetTargetProjectAsync(request.Name, st::CancellationToken.None);
@@ -1574,7 +1574,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetTargetProject(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             TargetProject response = client.GetTargetProject(request.TargetProjectName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1598,7 +1598,7 @@ namespace Google.Cloud.VMMigration.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetTargetProjectAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TargetProject>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null);
+            VmMigrationClient client = new VmMigrationClientImpl(mockGrpcClient.Object, null, null);
             TargetProject responseCallSettings = await client.GetTargetProjectAsync(request.TargetProjectName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TargetProject responseCancellationToken = await client.GetTargetProjectAsync(request.TargetProjectName, st::CancellationToken.None);

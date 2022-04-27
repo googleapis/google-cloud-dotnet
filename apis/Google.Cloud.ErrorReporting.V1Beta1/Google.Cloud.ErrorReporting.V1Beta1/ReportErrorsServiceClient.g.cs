@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -78,9 +78,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         public ReportErrorsServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public ReportErrorsServiceClientBuilder()
+        public ReportErrorsServiceClientBuilder() : base(ReportErrorsServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = ReportErrorsServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref ReportErrorsServiceClient client);
@@ -107,29 +106,18 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ReportErrorsServiceClient.Create(callInvoker, Settings);
+            return ReportErrorsServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<ReportErrorsServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ReportErrorsServiceClient.Create(callInvoker, Settings);
+            return ReportErrorsServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => ReportErrorsServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => ReportErrorsServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => ReportErrorsServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>ReportErrorsService client wrapper, for convenient use.</summary>
@@ -156,19 +144,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(ReportErrorsService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="ReportErrorsServiceClient"/> using the default credentials, endpoint and
@@ -198,8 +177,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="ReportErrorsServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="ReportErrorsServiceClient"/>.</returns>
-        internal static ReportErrorsServiceClient Create(grpccore::CallInvoker callInvoker, ReportErrorsServiceSettings settings = null)
+        internal static ReportErrorsServiceClient Create(grpccore::CallInvoker callInvoker, ReportErrorsServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -208,7 +188,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             ReportErrorsService.ReportErrorsServiceClient grpcClient = new ReportErrorsService.ReportErrorsServiceClient(callInvoker);
-            return new ReportErrorsServiceClientImpl(grpcClient, settings);
+            return new ReportErrorsServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -543,12 +523,13 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="ReportErrorsServiceSettings"/> used within this client.</param>
-        public ReportErrorsServiceClientImpl(ReportErrorsService.ReportErrorsServiceClient grpcClient, ReportErrorsServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public ReportErrorsServiceClientImpl(ReportErrorsService.ReportErrorsServiceClient grpcClient, ReportErrorsServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             ReportErrorsServiceSettings effectiveSettings = settings ?? ReportErrorsServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callReportErrorEvent = clientHelper.BuildApiCall<ReportErrorEventRequest, ReportErrorEventResponse>(grpcClient.ReportErrorEventAsync, grpcClient.ReportErrorEvent, effectiveSettings.ReportErrorEventSettings).WithGoogleRequestParam("project_name", request => request.ProjectName);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callReportErrorEvent = clientHelper.BuildApiCall<ReportErrorEventRequest, ReportErrorEventResponse>("ReportErrorEvent", grpcClient.ReportErrorEventAsync, grpcClient.ReportErrorEvent, effectiveSettings.ReportErrorEventSettings).WithGoogleRequestParam("project_name", request => request.ProjectName);
             Modify_ApiCall(ref _callReportErrorEvent);
             Modify_ReportErrorEventApiCall(ref _callReportErrorEvent);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

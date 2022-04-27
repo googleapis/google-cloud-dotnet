@@ -67,7 +67,7 @@ namespace Google.Analytics.Data.V1Beta.Tests
                 Kind = "kindf7aa39d9",
             };
             mockGrpcClient.Setup(x => x.RunReport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null);
+            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null, null);
             RunReportResponse response = client.RunReport(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -114,7 +114,7 @@ namespace Google.Analytics.Data.V1Beta.Tests
                 Kind = "kindf7aa39d9",
             };
             mockGrpcClient.Setup(x => x.RunReportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RunReportResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null);
+            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null, null);
             RunReportResponse responseCallSettings = await client.RunReportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             RunReportResponse responseCancellationToken = await client.RunReportAsync(request, st::CancellationToken.None);
@@ -155,7 +155,7 @@ namespace Google.Analytics.Data.V1Beta.Tests
                 Kind = "kindf7aa39d9",
             };
             mockGrpcClient.Setup(x => x.RunPivotReport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null);
+            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null, null);
             RunPivotReportResponse response = client.RunPivotReport(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -194,7 +194,7 @@ namespace Google.Analytics.Data.V1Beta.Tests
                 Kind = "kindf7aa39d9",
             };
             mockGrpcClient.Setup(x => x.RunPivotReportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RunPivotReportResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null);
+            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null, null);
             RunPivotReportResponse responseCallSettings = await client.RunPivotReportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             RunPivotReportResponse responseCancellationToken = await client.RunPivotReportAsync(request, st::CancellationToken.None);
@@ -223,7 +223,7 @@ namespace Google.Analytics.Data.V1Beta.Tests
                 Kind = "kindf7aa39d9",
             };
             mockGrpcClient.Setup(x => x.BatchRunReports(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null);
+            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null, null);
             BatchRunReportsResponse response = client.BatchRunReports(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -250,7 +250,7 @@ namespace Google.Analytics.Data.V1Beta.Tests
                 Kind = "kindf7aa39d9",
             };
             mockGrpcClient.Setup(x => x.BatchRunReportsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchRunReportsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null);
+            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null, null);
             BatchRunReportsResponse responseCallSettings = await client.BatchRunReportsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchRunReportsResponse responseCancellationToken = await client.BatchRunReportsAsync(request, st::CancellationToken.None);
@@ -279,7 +279,7 @@ namespace Google.Analytics.Data.V1Beta.Tests
                 Kind = "kindf7aa39d9",
             };
             mockGrpcClient.Setup(x => x.BatchRunPivotReports(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null);
+            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null, null);
             BatchRunPivotReportsResponse response = client.BatchRunPivotReports(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -306,7 +306,7 @@ namespace Google.Analytics.Data.V1Beta.Tests
                 Kind = "kindf7aa39d9",
             };
             mockGrpcClient.Setup(x => x.BatchRunPivotReportsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchRunPivotReportsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null);
+            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null, null);
             BatchRunPivotReportsResponse responseCallSettings = await client.BatchRunPivotReportsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchRunPivotReportsResponse responseCancellationToken = await client.BatchRunPivotReportsAsync(request, st::CancellationToken.None);
@@ -335,7 +335,7 @@ namespace Google.Analytics.Data.V1Beta.Tests
                 MetadataName = MetadataName.FromProperty("[PROPERTY]"),
             };
             mockGrpcClient.Setup(x => x.GetMetadata(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null);
+            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null, null);
             Metadata response = client.GetMetadata(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -362,7 +362,7 @@ namespace Google.Analytics.Data.V1Beta.Tests
                 MetadataName = MetadataName.FromProperty("[PROPERTY]"),
             };
             mockGrpcClient.Setup(x => x.GetMetadataAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Metadata>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null);
+            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null, null);
             Metadata responseCallSettings = await client.GetMetadataAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Metadata responseCancellationToken = await client.GetMetadataAsync(request, st::CancellationToken.None);
@@ -391,7 +391,7 @@ namespace Google.Analytics.Data.V1Beta.Tests
                 MetadataName = MetadataName.FromProperty("[PROPERTY]"),
             };
             mockGrpcClient.Setup(x => x.GetMetadata(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null);
+            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null, null);
             Metadata response = client.GetMetadata(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -418,7 +418,7 @@ namespace Google.Analytics.Data.V1Beta.Tests
                 MetadataName = MetadataName.FromProperty("[PROPERTY]"),
             };
             mockGrpcClient.Setup(x => x.GetMetadataAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Metadata>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null);
+            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null, null);
             Metadata responseCallSettings = await client.GetMetadataAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Metadata responseCancellationToken = await client.GetMetadataAsync(request.Name, st::CancellationToken.None);
@@ -447,7 +447,7 @@ namespace Google.Analytics.Data.V1Beta.Tests
                 MetadataName = MetadataName.FromProperty("[PROPERTY]"),
             };
             mockGrpcClient.Setup(x => x.GetMetadata(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null);
+            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null, null);
             Metadata response = client.GetMetadata(request.MetadataName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -474,7 +474,7 @@ namespace Google.Analytics.Data.V1Beta.Tests
                 MetadataName = MetadataName.FromProperty("[PROPERTY]"),
             };
             mockGrpcClient.Setup(x => x.GetMetadataAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Metadata>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null);
+            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null, null);
             Metadata responseCallSettings = await client.GetMetadataAsync(request.MetadataName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Metadata responseCancellationToken = await client.GetMetadataAsync(request.MetadataName, st::CancellationToken.None);
@@ -518,7 +518,7 @@ namespace Google.Analytics.Data.V1Beta.Tests
                 Kind = "kindf7aa39d9",
             };
             mockGrpcClient.Setup(x => x.RunRealtimeReport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null);
+            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null, null);
             RunRealtimeReportResponse response = client.RunRealtimeReport(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -560,7 +560,7 @@ namespace Google.Analytics.Data.V1Beta.Tests
                 Kind = "kindf7aa39d9",
             };
             mockGrpcClient.Setup(x => x.RunRealtimeReportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RunRealtimeReportResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null);
+            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null, null);
             RunRealtimeReportResponse responseCallSettings = await client.RunRealtimeReportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             RunRealtimeReportResponse responseCancellationToken = await client.RunRealtimeReportAsync(request, st::CancellationToken.None);
@@ -593,7 +593,7 @@ namespace Google.Analytics.Data.V1Beta.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CheckCompatibility(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null);
+            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null, null);
             CheckCompatibilityResponse response = client.CheckCompatibility(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -624,7 +624,7 @@ namespace Google.Analytics.Data.V1Beta.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CheckCompatibilityAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CheckCompatibilityResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null);
+            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null, null);
             CheckCompatibilityResponse responseCallSettings = await client.CheckCompatibilityAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CheckCompatibilityResponse responseCancellationToken = await client.CheckCompatibilityAsync(request, st::CancellationToken.None);

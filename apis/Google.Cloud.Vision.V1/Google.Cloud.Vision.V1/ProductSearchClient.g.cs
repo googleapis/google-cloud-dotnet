@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -501,9 +501,8 @@ namespace Google.Cloud.Vision.V1
         public ProductSearchSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public ProductSearchClientBuilder()
+        public ProductSearchClientBuilder() : base(ProductSearchClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = ProductSearchClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref ProductSearchClient client);
@@ -530,29 +529,18 @@ namespace Google.Cloud.Vision.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ProductSearchClient.Create(callInvoker, Settings);
+            return ProductSearchClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<ProductSearchClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ProductSearchClient.Create(callInvoker, Settings);
+            return ProductSearchClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => ProductSearchClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => ProductSearchClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => ProductSearchClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>ProductSearch client wrapper, for convenient use.</summary>
@@ -594,19 +582,10 @@ namespace Google.Cloud.Vision.V1
             "https://www.googleapis.com/auth/cloud-vision",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(ProductSearch.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="ProductSearchClient"/> using the default credentials, endpoint and
@@ -633,8 +612,9 @@ namespace Google.Cloud.Vision.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="ProductSearchSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="ProductSearchClient"/>.</returns>
-        internal static ProductSearchClient Create(grpccore::CallInvoker callInvoker, ProductSearchSettings settings = null)
+        internal static ProductSearchClient Create(grpccore::CallInvoker callInvoker, ProductSearchSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -643,7 +623,7 @@ namespace Google.Cloud.Vision.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             ProductSearch.ProductSearchClient grpcClient = new ProductSearch.ProductSearchClient(callInvoker);
-            return new ProductSearchClientImpl(grpcClient, settings);
+            return new ProductSearchClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -4438,68 +4418,69 @@ namespace Google.Cloud.Vision.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="ProductSearchSettings"/> used within this client.</param>
-        public ProductSearchClientImpl(ProductSearch.ProductSearchClient grpcClient, ProductSearchSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public ProductSearchClientImpl(ProductSearch.ProductSearchClient grpcClient, ProductSearchSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             ProductSearchSettings effectiveSettings = settings ?? ProductSearchSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            ImportProductSetsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportProductSetsOperationsSettings);
-            PurgeProductsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PurgeProductsOperationsSettings);
-            _callCreateProductSet = clientHelper.BuildApiCall<CreateProductSetRequest, ProductSet>(grpcClient.CreateProductSetAsync, grpcClient.CreateProductSet, effectiveSettings.CreateProductSetSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            ImportProductSetsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportProductSetsOperationsSettings, logger);
+            PurgeProductsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PurgeProductsOperationsSettings, logger);
+            _callCreateProductSet = clientHelper.BuildApiCall<CreateProductSetRequest, ProductSet>("CreateProductSet", grpcClient.CreateProductSetAsync, grpcClient.CreateProductSet, effectiveSettings.CreateProductSetSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateProductSet);
             Modify_CreateProductSetApiCall(ref _callCreateProductSet);
-            _callListProductSets = clientHelper.BuildApiCall<ListProductSetsRequest, ListProductSetsResponse>(grpcClient.ListProductSetsAsync, grpcClient.ListProductSets, effectiveSettings.ListProductSetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListProductSets = clientHelper.BuildApiCall<ListProductSetsRequest, ListProductSetsResponse>("ListProductSets", grpcClient.ListProductSetsAsync, grpcClient.ListProductSets, effectiveSettings.ListProductSetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListProductSets);
             Modify_ListProductSetsApiCall(ref _callListProductSets);
-            _callGetProductSet = clientHelper.BuildApiCall<GetProductSetRequest, ProductSet>(grpcClient.GetProductSetAsync, grpcClient.GetProductSet, effectiveSettings.GetProductSetSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetProductSet = clientHelper.BuildApiCall<GetProductSetRequest, ProductSet>("GetProductSet", grpcClient.GetProductSetAsync, grpcClient.GetProductSet, effectiveSettings.GetProductSetSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetProductSet);
             Modify_GetProductSetApiCall(ref _callGetProductSet);
-            _callUpdateProductSet = clientHelper.BuildApiCall<UpdateProductSetRequest, ProductSet>(grpcClient.UpdateProductSetAsync, grpcClient.UpdateProductSet, effectiveSettings.UpdateProductSetSettings).WithGoogleRequestParam("product_set.name", request => request.ProductSet?.Name);
+            _callUpdateProductSet = clientHelper.BuildApiCall<UpdateProductSetRequest, ProductSet>("UpdateProductSet", grpcClient.UpdateProductSetAsync, grpcClient.UpdateProductSet, effectiveSettings.UpdateProductSetSettings).WithGoogleRequestParam("product_set.name", request => request.ProductSet?.Name);
             Modify_ApiCall(ref _callUpdateProductSet);
             Modify_UpdateProductSetApiCall(ref _callUpdateProductSet);
-            _callDeleteProductSet = clientHelper.BuildApiCall<DeleteProductSetRequest, wkt::Empty>(grpcClient.DeleteProductSetAsync, grpcClient.DeleteProductSet, effectiveSettings.DeleteProductSetSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteProductSet = clientHelper.BuildApiCall<DeleteProductSetRequest, wkt::Empty>("DeleteProductSet", grpcClient.DeleteProductSetAsync, grpcClient.DeleteProductSet, effectiveSettings.DeleteProductSetSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteProductSet);
             Modify_DeleteProductSetApiCall(ref _callDeleteProductSet);
-            _callCreateProduct = clientHelper.BuildApiCall<CreateProductRequest, Product>(grpcClient.CreateProductAsync, grpcClient.CreateProduct, effectiveSettings.CreateProductSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateProduct = clientHelper.BuildApiCall<CreateProductRequest, Product>("CreateProduct", grpcClient.CreateProductAsync, grpcClient.CreateProduct, effectiveSettings.CreateProductSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateProduct);
             Modify_CreateProductApiCall(ref _callCreateProduct);
-            _callListProducts = clientHelper.BuildApiCall<ListProductsRequest, ListProductsResponse>(grpcClient.ListProductsAsync, grpcClient.ListProducts, effectiveSettings.ListProductsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListProducts = clientHelper.BuildApiCall<ListProductsRequest, ListProductsResponse>("ListProducts", grpcClient.ListProductsAsync, grpcClient.ListProducts, effectiveSettings.ListProductsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListProducts);
             Modify_ListProductsApiCall(ref _callListProducts);
-            _callGetProduct = clientHelper.BuildApiCall<GetProductRequest, Product>(grpcClient.GetProductAsync, grpcClient.GetProduct, effectiveSettings.GetProductSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetProduct = clientHelper.BuildApiCall<GetProductRequest, Product>("GetProduct", grpcClient.GetProductAsync, grpcClient.GetProduct, effectiveSettings.GetProductSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetProduct);
             Modify_GetProductApiCall(ref _callGetProduct);
-            _callUpdateProduct = clientHelper.BuildApiCall<UpdateProductRequest, Product>(grpcClient.UpdateProductAsync, grpcClient.UpdateProduct, effectiveSettings.UpdateProductSettings).WithGoogleRequestParam("product.name", request => request.Product?.Name);
+            _callUpdateProduct = clientHelper.BuildApiCall<UpdateProductRequest, Product>("UpdateProduct", grpcClient.UpdateProductAsync, grpcClient.UpdateProduct, effectiveSettings.UpdateProductSettings).WithGoogleRequestParam("product.name", request => request.Product?.Name);
             Modify_ApiCall(ref _callUpdateProduct);
             Modify_UpdateProductApiCall(ref _callUpdateProduct);
-            _callDeleteProduct = clientHelper.BuildApiCall<DeleteProductRequest, wkt::Empty>(grpcClient.DeleteProductAsync, grpcClient.DeleteProduct, effectiveSettings.DeleteProductSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteProduct = clientHelper.BuildApiCall<DeleteProductRequest, wkt::Empty>("DeleteProduct", grpcClient.DeleteProductAsync, grpcClient.DeleteProduct, effectiveSettings.DeleteProductSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteProduct);
             Modify_DeleteProductApiCall(ref _callDeleteProduct);
-            _callCreateReferenceImage = clientHelper.BuildApiCall<CreateReferenceImageRequest, ReferenceImage>(grpcClient.CreateReferenceImageAsync, grpcClient.CreateReferenceImage, effectiveSettings.CreateReferenceImageSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateReferenceImage = clientHelper.BuildApiCall<CreateReferenceImageRequest, ReferenceImage>("CreateReferenceImage", grpcClient.CreateReferenceImageAsync, grpcClient.CreateReferenceImage, effectiveSettings.CreateReferenceImageSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateReferenceImage);
             Modify_CreateReferenceImageApiCall(ref _callCreateReferenceImage);
-            _callDeleteReferenceImage = clientHelper.BuildApiCall<DeleteReferenceImageRequest, wkt::Empty>(grpcClient.DeleteReferenceImageAsync, grpcClient.DeleteReferenceImage, effectiveSettings.DeleteReferenceImageSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteReferenceImage = clientHelper.BuildApiCall<DeleteReferenceImageRequest, wkt::Empty>("DeleteReferenceImage", grpcClient.DeleteReferenceImageAsync, grpcClient.DeleteReferenceImage, effectiveSettings.DeleteReferenceImageSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteReferenceImage);
             Modify_DeleteReferenceImageApiCall(ref _callDeleteReferenceImage);
-            _callListReferenceImages = clientHelper.BuildApiCall<ListReferenceImagesRequest, ListReferenceImagesResponse>(grpcClient.ListReferenceImagesAsync, grpcClient.ListReferenceImages, effectiveSettings.ListReferenceImagesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListReferenceImages = clientHelper.BuildApiCall<ListReferenceImagesRequest, ListReferenceImagesResponse>("ListReferenceImages", grpcClient.ListReferenceImagesAsync, grpcClient.ListReferenceImages, effectiveSettings.ListReferenceImagesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListReferenceImages);
             Modify_ListReferenceImagesApiCall(ref _callListReferenceImages);
-            _callGetReferenceImage = clientHelper.BuildApiCall<GetReferenceImageRequest, ReferenceImage>(grpcClient.GetReferenceImageAsync, grpcClient.GetReferenceImage, effectiveSettings.GetReferenceImageSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetReferenceImage = clientHelper.BuildApiCall<GetReferenceImageRequest, ReferenceImage>("GetReferenceImage", grpcClient.GetReferenceImageAsync, grpcClient.GetReferenceImage, effectiveSettings.GetReferenceImageSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetReferenceImage);
             Modify_GetReferenceImageApiCall(ref _callGetReferenceImage);
-            _callAddProductToProductSet = clientHelper.BuildApiCall<AddProductToProductSetRequest, wkt::Empty>(grpcClient.AddProductToProductSetAsync, grpcClient.AddProductToProductSet, effectiveSettings.AddProductToProductSetSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callAddProductToProductSet = clientHelper.BuildApiCall<AddProductToProductSetRequest, wkt::Empty>("AddProductToProductSet", grpcClient.AddProductToProductSetAsync, grpcClient.AddProductToProductSet, effectiveSettings.AddProductToProductSetSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callAddProductToProductSet);
             Modify_AddProductToProductSetApiCall(ref _callAddProductToProductSet);
-            _callRemoveProductFromProductSet = clientHelper.BuildApiCall<RemoveProductFromProductSetRequest, wkt::Empty>(grpcClient.RemoveProductFromProductSetAsync, grpcClient.RemoveProductFromProductSet, effectiveSettings.RemoveProductFromProductSetSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callRemoveProductFromProductSet = clientHelper.BuildApiCall<RemoveProductFromProductSetRequest, wkt::Empty>("RemoveProductFromProductSet", grpcClient.RemoveProductFromProductSetAsync, grpcClient.RemoveProductFromProductSet, effectiveSettings.RemoveProductFromProductSetSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callRemoveProductFromProductSet);
             Modify_RemoveProductFromProductSetApiCall(ref _callRemoveProductFromProductSet);
-            _callListProductsInProductSet = clientHelper.BuildApiCall<ListProductsInProductSetRequest, ListProductsInProductSetResponse>(grpcClient.ListProductsInProductSetAsync, grpcClient.ListProductsInProductSet, effectiveSettings.ListProductsInProductSetSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callListProductsInProductSet = clientHelper.BuildApiCall<ListProductsInProductSetRequest, ListProductsInProductSetResponse>("ListProductsInProductSet", grpcClient.ListProductsInProductSetAsync, grpcClient.ListProductsInProductSet, effectiveSettings.ListProductsInProductSetSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callListProductsInProductSet);
             Modify_ListProductsInProductSetApiCall(ref _callListProductsInProductSet);
-            _callImportProductSets = clientHelper.BuildApiCall<ImportProductSetsRequest, lro::Operation>(grpcClient.ImportProductSetsAsync, grpcClient.ImportProductSets, effectiveSettings.ImportProductSetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callImportProductSets = clientHelper.BuildApiCall<ImportProductSetsRequest, lro::Operation>("ImportProductSets", grpcClient.ImportProductSetsAsync, grpcClient.ImportProductSets, effectiveSettings.ImportProductSetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callImportProductSets);
             Modify_ImportProductSetsApiCall(ref _callImportProductSets);
-            _callPurgeProducts = clientHelper.BuildApiCall<PurgeProductsRequest, lro::Operation>(grpcClient.PurgeProductsAsync, grpcClient.PurgeProducts, effectiveSettings.PurgeProductsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callPurgeProducts = clientHelper.BuildApiCall<PurgeProductsRequest, lro::Operation>("PurgeProducts", grpcClient.PurgeProductsAsync, grpcClient.PurgeProducts, effectiveSettings.PurgeProductsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callPurgeProducts);
             Modify_PurgeProductsApiCall(ref _callPurgeProducts);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

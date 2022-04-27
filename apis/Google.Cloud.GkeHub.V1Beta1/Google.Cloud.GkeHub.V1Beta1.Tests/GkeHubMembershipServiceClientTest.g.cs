@@ -62,7 +62,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Tests
                 InfrastructureType = Membership.Types.InfrastructureType.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetMembership(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GkeHubMembershipServiceClient client = new GkeHubMembershipServiceClientImpl(mockGrpcClient.Object, null);
+            GkeHubMembershipServiceClient client = new GkeHubMembershipServiceClientImpl(mockGrpcClient.Object, null, null);
             Membership response = client.GetMembership(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -100,7 +100,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Tests
                 InfrastructureType = Membership.Types.InfrastructureType.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetMembershipAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Membership>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GkeHubMembershipServiceClient client = new GkeHubMembershipServiceClientImpl(mockGrpcClient.Object, null);
+            GkeHubMembershipServiceClient client = new GkeHubMembershipServiceClientImpl(mockGrpcClient.Object, null, null);
             Membership responseCallSettings = await client.GetMembershipAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Membership responseCancellationToken = await client.GetMembershipAsync(request, st::CancellationToken.None);
@@ -140,7 +140,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Tests
                 InfrastructureType = Membership.Types.InfrastructureType.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetMembership(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GkeHubMembershipServiceClient client = new GkeHubMembershipServiceClientImpl(mockGrpcClient.Object, null);
+            GkeHubMembershipServiceClient client = new GkeHubMembershipServiceClientImpl(mockGrpcClient.Object, null, null);
             Membership response = client.GetMembership(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -178,7 +178,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Tests
                 InfrastructureType = Membership.Types.InfrastructureType.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetMembershipAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Membership>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GkeHubMembershipServiceClient client = new GkeHubMembershipServiceClientImpl(mockGrpcClient.Object, null);
+            GkeHubMembershipServiceClient client = new GkeHubMembershipServiceClientImpl(mockGrpcClient.Object, null, null);
             Membership responseCallSettings = await client.GetMembershipAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Membership responseCancellationToken = await client.GetMembershipAsync(request.Name, st::CancellationToken.None);
@@ -208,7 +208,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GenerateConnectManifest(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GkeHubMembershipServiceClient client = new GkeHubMembershipServiceClientImpl(mockGrpcClient.Object, null);
+            GkeHubMembershipServiceClient client = new GkeHubMembershipServiceClientImpl(mockGrpcClient.Object, null, null);
             GenerateConnectManifestResponse response = client.GenerateConnectManifest(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -236,7 +236,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GenerateConnectManifestAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GenerateConnectManifestResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GkeHubMembershipServiceClient client = new GkeHubMembershipServiceClientImpl(mockGrpcClient.Object, null);
+            GkeHubMembershipServiceClient client = new GkeHubMembershipServiceClientImpl(mockGrpcClient.Object, null, null);
             GenerateConnectManifestResponse responseCallSettings = await client.GenerateConnectManifestAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GenerateConnectManifestResponse responseCancellationToken = await client.GenerateConnectManifestAsync(request, st::CancellationToken.None);
@@ -260,7 +260,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Tests
                 Status = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.ValidateExclusivity(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GkeHubMembershipServiceClient client = new GkeHubMembershipServiceClientImpl(mockGrpcClient.Object, null);
+            GkeHubMembershipServiceClient client = new GkeHubMembershipServiceClientImpl(mockGrpcClient.Object, null, null);
             ValidateExclusivityResponse response = client.ValidateExclusivity(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -282,7 +282,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Tests
                 Status = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.ValidateExclusivityAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ValidateExclusivityResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GkeHubMembershipServiceClient client = new GkeHubMembershipServiceClientImpl(mockGrpcClient.Object, null);
+            GkeHubMembershipServiceClient client = new GkeHubMembershipServiceClientImpl(mockGrpcClient.Object, null, null);
             ValidateExclusivityResponse responseCallSettings = await client.ValidateExclusivityAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ValidateExclusivityResponse responseCancellationToken = await client.ValidateExclusivityAsync(request, st::CancellationToken.None);
@@ -307,7 +307,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Tests
                 CrManifest = "cr_manifestdf1378ad",
             };
             mockGrpcClient.Setup(x => x.GenerateExclusivityManifest(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GkeHubMembershipServiceClient client = new GkeHubMembershipServiceClientImpl(mockGrpcClient.Object, null);
+            GkeHubMembershipServiceClient client = new GkeHubMembershipServiceClientImpl(mockGrpcClient.Object, null, null);
             GenerateExclusivityManifestResponse response = client.GenerateExclusivityManifest(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -330,7 +330,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Tests
                 CrManifest = "cr_manifestdf1378ad",
             };
             mockGrpcClient.Setup(x => x.GenerateExclusivityManifestAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GenerateExclusivityManifestResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GkeHubMembershipServiceClient client = new GkeHubMembershipServiceClientImpl(mockGrpcClient.Object, null);
+            GkeHubMembershipServiceClient client = new GkeHubMembershipServiceClientImpl(mockGrpcClient.Object, null, null);
             GenerateExclusivityManifestResponse responseCallSettings = await client.GenerateExclusivityManifestAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GenerateExclusivityManifestResponse responseCancellationToken = await client.GenerateExclusivityManifestAsync(request, st::CancellationToken.None);

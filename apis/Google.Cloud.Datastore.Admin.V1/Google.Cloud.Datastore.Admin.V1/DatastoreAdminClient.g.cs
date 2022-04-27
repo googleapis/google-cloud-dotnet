@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -238,9 +238,8 @@ namespace Google.Cloud.Datastore.Admin.V1
         public DatastoreAdminSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public DatastoreAdminClientBuilder()
+        public DatastoreAdminClientBuilder() : base(DatastoreAdminClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = DatastoreAdminClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref DatastoreAdminClient client);
@@ -267,29 +266,18 @@ namespace Google.Cloud.Datastore.Admin.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return DatastoreAdminClient.Create(callInvoker, Settings);
+            return DatastoreAdminClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<DatastoreAdminClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return DatastoreAdminClient.Create(callInvoker, Settings);
+            return DatastoreAdminClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => DatastoreAdminClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => DatastoreAdminClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => DatastoreAdminClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>DatastoreAdmin client wrapper, for convenient use.</summary>
@@ -378,19 +366,10 @@ namespace Google.Cloud.Datastore.Admin.V1
             "https://www.googleapis.com/auth/datastore",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(DatastoreAdmin.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="DatastoreAdminClient"/> using the default credentials, endpoint and
@@ -417,8 +396,9 @@ namespace Google.Cloud.Datastore.Admin.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="DatastoreAdminSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="DatastoreAdminClient"/>.</returns>
-        internal static DatastoreAdminClient Create(grpccore::CallInvoker callInvoker, DatastoreAdminSettings settings = null)
+        internal static DatastoreAdminClient Create(grpccore::CallInvoker callInvoker, DatastoreAdminSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -427,7 +407,7 @@ namespace Google.Cloud.Datastore.Admin.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             DatastoreAdmin.DatastoreAdminClient grpcClient = new DatastoreAdmin.DatastoreAdminClient(callInvoker);
-            return new DatastoreAdminClientImpl(grpcClient, settings);
+            return new DatastoreAdminClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1175,31 +1155,32 @@ namespace Google.Cloud.Datastore.Admin.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="DatastoreAdminSettings"/> used within this client.</param>
-        public DatastoreAdminClientImpl(DatastoreAdmin.DatastoreAdminClient grpcClient, DatastoreAdminSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public DatastoreAdminClientImpl(DatastoreAdmin.DatastoreAdminClient grpcClient, DatastoreAdminSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             DatastoreAdminSettings effectiveSettings = settings ?? DatastoreAdminSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            ExportEntitiesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportEntitiesOperationsSettings);
-            ImportEntitiesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportEntitiesOperationsSettings);
-            CreateIndexOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateIndexOperationsSettings);
-            DeleteIndexOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteIndexOperationsSettings);
-            _callExportEntities = clientHelper.BuildApiCall<ExportEntitiesRequest, lro::Operation>(grpcClient.ExportEntitiesAsync, grpcClient.ExportEntities, effectiveSettings.ExportEntitiesSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            ExportEntitiesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportEntitiesOperationsSettings, logger);
+            ImportEntitiesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportEntitiesOperationsSettings, logger);
+            CreateIndexOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateIndexOperationsSettings, logger);
+            DeleteIndexOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteIndexOperationsSettings, logger);
+            _callExportEntities = clientHelper.BuildApiCall<ExportEntitiesRequest, lro::Operation>("ExportEntities", grpcClient.ExportEntitiesAsync, grpcClient.ExportEntities, effectiveSettings.ExportEntitiesSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
             Modify_ApiCall(ref _callExportEntities);
             Modify_ExportEntitiesApiCall(ref _callExportEntities);
-            _callImportEntities = clientHelper.BuildApiCall<ImportEntitiesRequest, lro::Operation>(grpcClient.ImportEntitiesAsync, grpcClient.ImportEntities, effectiveSettings.ImportEntitiesSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            _callImportEntities = clientHelper.BuildApiCall<ImportEntitiesRequest, lro::Operation>("ImportEntities", grpcClient.ImportEntitiesAsync, grpcClient.ImportEntities, effectiveSettings.ImportEntitiesSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
             Modify_ApiCall(ref _callImportEntities);
             Modify_ImportEntitiesApiCall(ref _callImportEntities);
-            _callCreateIndex = clientHelper.BuildApiCall<CreateIndexRequest, lro::Operation>(grpcClient.CreateIndexAsync, grpcClient.CreateIndex, effectiveSettings.CreateIndexSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            _callCreateIndex = clientHelper.BuildApiCall<CreateIndexRequest, lro::Operation>("CreateIndex", grpcClient.CreateIndexAsync, grpcClient.CreateIndex, effectiveSettings.CreateIndexSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
             Modify_ApiCall(ref _callCreateIndex);
             Modify_CreateIndexApiCall(ref _callCreateIndex);
-            _callDeleteIndex = clientHelper.BuildApiCall<DeleteIndexRequest, lro::Operation>(grpcClient.DeleteIndexAsync, grpcClient.DeleteIndex, effectiveSettings.DeleteIndexSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("index_id", request => request.IndexId);
+            _callDeleteIndex = clientHelper.BuildApiCall<DeleteIndexRequest, lro::Operation>("DeleteIndex", grpcClient.DeleteIndexAsync, grpcClient.DeleteIndex, effectiveSettings.DeleteIndexSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("index_id", request => request.IndexId);
             Modify_ApiCall(ref _callDeleteIndex);
             Modify_DeleteIndexApiCall(ref _callDeleteIndex);
-            _callGetIndex = clientHelper.BuildApiCall<GetIndexRequest, Index>(grpcClient.GetIndexAsync, grpcClient.GetIndex, effectiveSettings.GetIndexSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("index_id", request => request.IndexId);
+            _callGetIndex = clientHelper.BuildApiCall<GetIndexRequest, Index>("GetIndex", grpcClient.GetIndexAsync, grpcClient.GetIndex, effectiveSettings.GetIndexSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("index_id", request => request.IndexId);
             Modify_ApiCall(ref _callGetIndex);
             Modify_GetIndexApiCall(ref _callGetIndex);
-            _callListIndexes = clientHelper.BuildApiCall<ListIndexesRequest, ListIndexesResponse>(grpcClient.ListIndexesAsync, grpcClient.ListIndexes, effectiveSettings.ListIndexesSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            _callListIndexes = clientHelper.BuildApiCall<ListIndexesRequest, ListIndexesResponse>("ListIndexes", grpcClient.ListIndexesAsync, grpcClient.ListIndexes, effectiveSettings.ListIndexesSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
             Modify_ApiCall(ref _callListIndexes);
             Modify_ListIndexesApiCall(ref _callListIndexes);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

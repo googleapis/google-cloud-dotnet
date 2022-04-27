@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -134,9 +134,8 @@ namespace Google.Cloud.Compute.V1
         public RegionOperationsSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public RegionOperationsClientBuilder()
+        public RegionOperationsClientBuilder() : base(RegionOperationsClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = RegionOperationsClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref RegionOperationsClient client);
@@ -163,29 +162,18 @@ namespace Google.Cloud.Compute.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return RegionOperationsClient.Create(callInvoker, Settings);
+            return RegionOperationsClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<RegionOperationsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return RegionOperationsClient.Create(callInvoker, Settings);
+            return RegionOperationsClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => RegionOperationsClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => RegionOperationsClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => RegionOperationsClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => ComputeRestAdapter.ComputeAdapter;
     }
 
     /// <summary>RegionOperations client wrapper, for convenient use.</summary>
@@ -214,19 +202,10 @@ namespace Google.Cloud.Compute.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(RegionOperations.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="RegionOperationsClient"/> using the default credentials, endpoint and
@@ -253,8 +232,9 @@ namespace Google.Cloud.Compute.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="RegionOperationsSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="RegionOperationsClient"/>.</returns>
-        internal static RegionOperationsClient Create(grpccore::CallInvoker callInvoker, RegionOperationsSettings settings = null)
+        internal static RegionOperationsClient Create(grpccore::CallInvoker callInvoker, RegionOperationsSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -263,7 +243,7 @@ namespace Google.Cloud.Compute.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             RegionOperations.RegionOperationsClient grpcClient = new RegionOperations.RegionOperationsClient(callInvoker);
-            return new RegionOperationsClientImpl(grpcClient, settings);
+            return new RegionOperationsClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -640,21 +620,22 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="RegionOperationsSettings"/> used within this client.</param>
-        public RegionOperationsClientImpl(RegionOperations.RegionOperationsClient grpcClient, RegionOperationsSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public RegionOperationsClientImpl(RegionOperations.RegionOperationsClient grpcClient, RegionOperationsSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             RegionOperationsSettings effectiveSettings = settings ?? RegionOperationsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callDelete = clientHelper.BuildApiCall<DeleteRegionOperationRequest, DeleteRegionOperationResponse>(grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("operation", request => request.Operation);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callDelete = clientHelper.BuildApiCall<DeleteRegionOperationRequest, DeleteRegionOperationResponse>("Delete", grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("operation", request => request.Operation);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);
-            _callGet = clientHelper.BuildApiCall<GetRegionOperationRequest, Operation>(grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("operation", request => request.Operation);
+            _callGet = clientHelper.BuildApiCall<GetRegionOperationRequest, Operation>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("operation", request => request.Operation);
             Modify_ApiCall(ref _callGet);
             Modify_GetApiCall(ref _callGet);
-            _callList = clientHelper.BuildApiCall<ListRegionOperationsRequest, OperationList>(grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
+            _callList = clientHelper.BuildApiCall<ListRegionOperationsRequest, OperationList>("List", grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
             Modify_ApiCall(ref _callList);
             Modify_ListApiCall(ref _callList);
-            _callWait = clientHelper.BuildApiCall<WaitRegionOperationRequest, Operation>(grpcClient.WaitAsync, grpcClient.Wait, effectiveSettings.WaitSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("operation", request => request.Operation);
+            _callWait = clientHelper.BuildApiCall<WaitRegionOperationRequest, Operation>("Wait", grpcClient.WaitAsync, grpcClient.Wait, effectiveSettings.WaitSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("operation", request => request.Operation);
             Modify_ApiCall(ref _callWait);
             Modify_WaitApiCall(ref _callWait);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

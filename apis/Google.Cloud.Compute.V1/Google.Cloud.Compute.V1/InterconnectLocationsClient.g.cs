@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -110,9 +110,8 @@ namespace Google.Cloud.Compute.V1
         public InterconnectLocationsSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public InterconnectLocationsClientBuilder()
+        public InterconnectLocationsClientBuilder() : base(InterconnectLocationsClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = InterconnectLocationsClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref InterconnectLocationsClient client);
@@ -139,29 +138,18 @@ namespace Google.Cloud.Compute.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return InterconnectLocationsClient.Create(callInvoker, Settings);
+            return InterconnectLocationsClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<InterconnectLocationsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return InterconnectLocationsClient.Create(callInvoker, Settings);
+            return InterconnectLocationsClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => InterconnectLocationsClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => InterconnectLocationsClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => InterconnectLocationsClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => ComputeRestAdapter.ComputeAdapter;
     }
 
     /// <summary>InterconnectLocations client wrapper, for convenient use.</summary>
@@ -192,19 +180,10 @@ namespace Google.Cloud.Compute.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(InterconnectLocations.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="InterconnectLocationsClient"/> using the default credentials, endpoint
@@ -234,8 +213,9 @@ namespace Google.Cloud.Compute.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="InterconnectLocationsSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="InterconnectLocationsClient"/>.</returns>
-        internal static InterconnectLocationsClient Create(grpccore::CallInvoker callInvoker, InterconnectLocationsSettings settings = null)
+        internal static InterconnectLocationsClient Create(grpccore::CallInvoker callInvoker, InterconnectLocationsSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -244,7 +224,7 @@ namespace Google.Cloud.Compute.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             InterconnectLocations.InterconnectLocationsClient grpcClient = new InterconnectLocations.InterconnectLocationsClient(callInvoker);
-            return new InterconnectLocationsClientImpl(grpcClient, settings);
+            return new InterconnectLocationsClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -423,15 +403,16 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="InterconnectLocationsSettings"/> used within this client.</param>
-        public InterconnectLocationsClientImpl(InterconnectLocations.InterconnectLocationsClient grpcClient, InterconnectLocationsSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public InterconnectLocationsClientImpl(InterconnectLocations.InterconnectLocationsClient grpcClient, InterconnectLocationsSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             InterconnectLocationsSettings effectiveSettings = settings ?? InterconnectLocationsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callGet = clientHelper.BuildApiCall<GetInterconnectLocationRequest, InterconnectLocation>(grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("interconnect_location", request => request.InterconnectLocation);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callGet = clientHelper.BuildApiCall<GetInterconnectLocationRequest, InterconnectLocation>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("interconnect_location", request => request.InterconnectLocation);
             Modify_ApiCall(ref _callGet);
             Modify_GetApiCall(ref _callGet);
-            _callList = clientHelper.BuildApiCall<ListInterconnectLocationsRequest, InterconnectLocationList>(grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callList = clientHelper.BuildApiCall<ListInterconnectLocationsRequest, InterconnectLocationList>("List", grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callList);
             Modify_ListApiCall(ref _callList);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

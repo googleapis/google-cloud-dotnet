@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gcscv = Google.Cloud.Spanner.Common.V1;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -339,9 +339,8 @@ namespace Google.Cloud.Spanner.V1
         public SpannerSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public SpannerClientBuilder()
+        public SpannerClientBuilder() : base(SpannerClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = SpannerClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref SpannerClient client);
@@ -368,29 +367,18 @@ namespace Google.Cloud.Spanner.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return SpannerClient.Create(callInvoker, Settings);
+            return SpannerClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<SpannerClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return SpannerClient.Create(callInvoker, Settings);
+            return SpannerClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => SpannerClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => SpannerClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => SpannerClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>Spanner client wrapper, for convenient use.</summary>
@@ -424,7 +412,7 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>The service metadata associated with this client type.</summary>
         public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Spanner.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="SpannerClient"/> using the default credentials, endpoint and settings. 
@@ -451,8 +439,9 @@ namespace Google.Cloud.Spanner.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="SpannerSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="SpannerClient"/>.</returns>
-        internal static SpannerClient Create(grpccore::CallInvoker callInvoker, SpannerSettings settings = null)
+        internal static SpannerClient Create(grpccore::CallInvoker callInvoker, SpannerSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -461,7 +450,7 @@ namespace Google.Cloud.Spanner.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             Spanner.SpannerClient grpcClient = new Spanner.SpannerClient(callInvoker);
-            return new SpannerClientImpl(grpcClient, settings);
+            return new SpannerClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -2573,54 +2562,55 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="SpannerSettings"/> used within this client.</param>
-        public SpannerClientImpl(Spanner.SpannerClient grpcClient, SpannerSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public SpannerClientImpl(Spanner.SpannerClient grpcClient, SpannerSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             SpannerSettings effectiveSettings = settings ?? SpannerSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callCreateSession = clientHelper.BuildApiCall<CreateSessionRequest, Session>(grpcClient.CreateSessionAsync, grpcClient.CreateSession, effectiveSettings.CreateSessionSettings).WithGoogleRequestParam("database", request => request.Database);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callCreateSession = clientHelper.BuildApiCall<CreateSessionRequest, Session>("CreateSession", grpcClient.CreateSessionAsync, grpcClient.CreateSession, effectiveSettings.CreateSessionSettings).WithGoogleRequestParam("database", request => request.Database);
             Modify_ApiCall(ref _callCreateSession);
             Modify_CreateSessionApiCall(ref _callCreateSession);
-            _callBatchCreateSessions = clientHelper.BuildApiCall<BatchCreateSessionsRequest, BatchCreateSessionsResponse>(grpcClient.BatchCreateSessionsAsync, grpcClient.BatchCreateSessions, effectiveSettings.BatchCreateSessionsSettings).WithGoogleRequestParam("database", request => request.Database);
+            _callBatchCreateSessions = clientHelper.BuildApiCall<BatchCreateSessionsRequest, BatchCreateSessionsResponse>("BatchCreateSessions", grpcClient.BatchCreateSessionsAsync, grpcClient.BatchCreateSessions, effectiveSettings.BatchCreateSessionsSettings).WithGoogleRequestParam("database", request => request.Database);
             Modify_ApiCall(ref _callBatchCreateSessions);
             Modify_BatchCreateSessionsApiCall(ref _callBatchCreateSessions);
-            _callGetSession = clientHelper.BuildApiCall<GetSessionRequest, Session>(grpcClient.GetSessionAsync, grpcClient.GetSession, effectiveSettings.GetSessionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetSession = clientHelper.BuildApiCall<GetSessionRequest, Session>("GetSession", grpcClient.GetSessionAsync, grpcClient.GetSession, effectiveSettings.GetSessionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetSession);
             Modify_GetSessionApiCall(ref _callGetSession);
-            _callListSessions = clientHelper.BuildApiCall<ListSessionsRequest, ListSessionsResponse>(grpcClient.ListSessionsAsync, grpcClient.ListSessions, effectiveSettings.ListSessionsSettings).WithGoogleRequestParam("database", request => request.Database);
+            _callListSessions = clientHelper.BuildApiCall<ListSessionsRequest, ListSessionsResponse>("ListSessions", grpcClient.ListSessionsAsync, grpcClient.ListSessions, effectiveSettings.ListSessionsSettings).WithGoogleRequestParam("database", request => request.Database);
             Modify_ApiCall(ref _callListSessions);
             Modify_ListSessionsApiCall(ref _callListSessions);
-            _callDeleteSession = clientHelper.BuildApiCall<DeleteSessionRequest, wkt::Empty>(grpcClient.DeleteSessionAsync, grpcClient.DeleteSession, effectiveSettings.DeleteSessionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteSession = clientHelper.BuildApiCall<DeleteSessionRequest, wkt::Empty>("DeleteSession", grpcClient.DeleteSessionAsync, grpcClient.DeleteSession, effectiveSettings.DeleteSessionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteSession);
             Modify_DeleteSessionApiCall(ref _callDeleteSession);
-            _callExecuteSql = clientHelper.BuildApiCall<ExecuteSqlRequest, ResultSet>(grpcClient.ExecuteSqlAsync, grpcClient.ExecuteSql, effectiveSettings.ExecuteSqlSettings).WithGoogleRequestParam("session", request => request.Session);
+            _callExecuteSql = clientHelper.BuildApiCall<ExecuteSqlRequest, ResultSet>("ExecuteSql", grpcClient.ExecuteSqlAsync, grpcClient.ExecuteSql, effectiveSettings.ExecuteSqlSettings).WithGoogleRequestParam("session", request => request.Session);
             Modify_ApiCall(ref _callExecuteSql);
             Modify_ExecuteSqlApiCall(ref _callExecuteSql);
-            _callExecuteStreamingSql = clientHelper.BuildApiCall<ExecuteSqlRequest, PartialResultSet>(grpcClient.ExecuteStreamingSql, effectiveSettings.ExecuteStreamingSqlSettings).WithGoogleRequestParam("session", request => request.Session);
+            _callExecuteStreamingSql = clientHelper.BuildApiCall<ExecuteSqlRequest, PartialResultSet>("ExecuteStreamingSql", grpcClient.ExecuteStreamingSql, effectiveSettings.ExecuteStreamingSqlSettings).WithGoogleRequestParam("session", request => request.Session);
             Modify_ApiCall(ref _callExecuteStreamingSql);
             Modify_ExecuteStreamingSqlApiCall(ref _callExecuteStreamingSql);
-            _callExecuteBatchDml = clientHelper.BuildApiCall<ExecuteBatchDmlRequest, ExecuteBatchDmlResponse>(grpcClient.ExecuteBatchDmlAsync, grpcClient.ExecuteBatchDml, effectiveSettings.ExecuteBatchDmlSettings).WithGoogleRequestParam("session", request => request.Session);
+            _callExecuteBatchDml = clientHelper.BuildApiCall<ExecuteBatchDmlRequest, ExecuteBatchDmlResponse>("ExecuteBatchDml", grpcClient.ExecuteBatchDmlAsync, grpcClient.ExecuteBatchDml, effectiveSettings.ExecuteBatchDmlSettings).WithGoogleRequestParam("session", request => request.Session);
             Modify_ApiCall(ref _callExecuteBatchDml);
             Modify_ExecuteBatchDmlApiCall(ref _callExecuteBatchDml);
-            _callRead = clientHelper.BuildApiCall<ReadRequest, ResultSet>(grpcClient.ReadAsync, grpcClient.Read, effectiveSettings.ReadSettings).WithGoogleRequestParam("session", request => request.Session);
+            _callRead = clientHelper.BuildApiCall<ReadRequest, ResultSet>("Read", grpcClient.ReadAsync, grpcClient.Read, effectiveSettings.ReadSettings).WithGoogleRequestParam("session", request => request.Session);
             Modify_ApiCall(ref _callRead);
             Modify_ReadApiCall(ref _callRead);
-            _callStreamingRead = clientHelper.BuildApiCall<ReadRequest, PartialResultSet>(grpcClient.StreamingRead, effectiveSettings.StreamingReadSettings).WithGoogleRequestParam("session", request => request.Session);
+            _callStreamingRead = clientHelper.BuildApiCall<ReadRequest, PartialResultSet>("StreamingRead", grpcClient.StreamingRead, effectiveSettings.StreamingReadSettings).WithGoogleRequestParam("session", request => request.Session);
             Modify_ApiCall(ref _callStreamingRead);
             Modify_StreamingReadApiCall(ref _callStreamingRead);
-            _callBeginTransaction = clientHelper.BuildApiCall<BeginTransactionRequest, Transaction>(grpcClient.BeginTransactionAsync, grpcClient.BeginTransaction, effectiveSettings.BeginTransactionSettings).WithGoogleRequestParam("session", request => request.Session);
+            _callBeginTransaction = clientHelper.BuildApiCall<BeginTransactionRequest, Transaction>("BeginTransaction", grpcClient.BeginTransactionAsync, grpcClient.BeginTransaction, effectiveSettings.BeginTransactionSettings).WithGoogleRequestParam("session", request => request.Session);
             Modify_ApiCall(ref _callBeginTransaction);
             Modify_BeginTransactionApiCall(ref _callBeginTransaction);
-            _callCommit = clientHelper.BuildApiCall<CommitRequest, CommitResponse>(grpcClient.CommitAsync, grpcClient.Commit, effectiveSettings.CommitSettings).WithGoogleRequestParam("session", request => request.Session);
+            _callCommit = clientHelper.BuildApiCall<CommitRequest, CommitResponse>("Commit", grpcClient.CommitAsync, grpcClient.Commit, effectiveSettings.CommitSettings).WithGoogleRequestParam("session", request => request.Session);
             Modify_ApiCall(ref _callCommit);
             Modify_CommitApiCall(ref _callCommit);
-            _callRollback = clientHelper.BuildApiCall<RollbackRequest, wkt::Empty>(grpcClient.RollbackAsync, grpcClient.Rollback, effectiveSettings.RollbackSettings).WithGoogleRequestParam("session", request => request.Session);
+            _callRollback = clientHelper.BuildApiCall<RollbackRequest, wkt::Empty>("Rollback", grpcClient.RollbackAsync, grpcClient.Rollback, effectiveSettings.RollbackSettings).WithGoogleRequestParam("session", request => request.Session);
             Modify_ApiCall(ref _callRollback);
             Modify_RollbackApiCall(ref _callRollback);
-            _callPartitionQuery = clientHelper.BuildApiCall<PartitionQueryRequest, PartitionResponse>(grpcClient.PartitionQueryAsync, grpcClient.PartitionQuery, effectiveSettings.PartitionQuerySettings).WithGoogleRequestParam("session", request => request.Session);
+            _callPartitionQuery = clientHelper.BuildApiCall<PartitionQueryRequest, PartitionResponse>("PartitionQuery", grpcClient.PartitionQueryAsync, grpcClient.PartitionQuery, effectiveSettings.PartitionQuerySettings).WithGoogleRequestParam("session", request => request.Session);
             Modify_ApiCall(ref _callPartitionQuery);
             Modify_PartitionQueryApiCall(ref _callPartitionQuery);
-            _callPartitionRead = clientHelper.BuildApiCall<PartitionReadRequest, PartitionResponse>(grpcClient.PartitionReadAsync, grpcClient.PartitionRead, effectiveSettings.PartitionReadSettings).WithGoogleRequestParam("session", request => request.Session);
+            _callPartitionRead = clientHelper.BuildApiCall<PartitionReadRequest, PartitionResponse>("PartitionRead", grpcClient.PartitionReadAsync, grpcClient.PartitionRead, effectiveSettings.PartitionReadSettings).WithGoogleRequestParam("session", request => request.Session);
             Modify_ApiCall(ref _callPartitionRead);
             Modify_PartitionReadApiCall(ref _callPartitionRead);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

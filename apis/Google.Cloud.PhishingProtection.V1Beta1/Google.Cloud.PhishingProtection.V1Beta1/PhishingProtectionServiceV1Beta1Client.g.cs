@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -80,9 +80,8 @@ namespace Google.Cloud.PhishingProtection.V1Beta1
         public PhishingProtectionServiceV1Beta1Settings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public PhishingProtectionServiceV1Beta1ClientBuilder()
+        public PhishingProtectionServiceV1Beta1ClientBuilder() : base(PhishingProtectionServiceV1Beta1Client.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = PhishingProtectionServiceV1Beta1Client.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref PhishingProtectionServiceV1Beta1Client client);
@@ -109,30 +108,18 @@ namespace Google.Cloud.PhishingProtection.V1Beta1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return PhishingProtectionServiceV1Beta1Client.Create(callInvoker, Settings);
+            return PhishingProtectionServiceV1Beta1Client.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<PhishingProtectionServiceV1Beta1Client> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return PhishingProtectionServiceV1Beta1Client.Create(callInvoker, Settings);
+            return PhishingProtectionServiceV1Beta1Client.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => PhishingProtectionServiceV1Beta1Client.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() =>
-            PhishingProtectionServiceV1Beta1Client.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => PhishingProtectionServiceV1Beta1Client.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>PhishingProtectionServiceV1Beta1 client wrapper, for convenient use.</summary>
@@ -159,19 +146,10 @@ namespace Google.Cloud.PhishingProtection.V1Beta1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(PhishingProtectionServiceV1Beta1.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="PhishingProtectionServiceV1Beta1Client"/> using the default credentials,
@@ -202,8 +180,9 @@ namespace Google.Cloud.PhishingProtection.V1Beta1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="PhishingProtectionServiceV1Beta1Settings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="PhishingProtectionServiceV1Beta1Client"/>.</returns>
-        internal static PhishingProtectionServiceV1Beta1Client Create(grpccore::CallInvoker callInvoker, PhishingProtectionServiceV1Beta1Settings settings = null)
+        internal static PhishingProtectionServiceV1Beta1Client Create(grpccore::CallInvoker callInvoker, PhishingProtectionServiceV1Beta1Settings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -212,7 +191,7 @@ namespace Google.Cloud.PhishingProtection.V1Beta1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client grpcClient = new PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client(callInvoker);
-            return new PhishingProtectionServiceV1Beta1ClientImpl(grpcClient, settings);
+            return new PhishingProtectionServiceV1Beta1ClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -435,12 +414,13 @@ namespace Google.Cloud.PhishingProtection.V1Beta1
         /// <param name="settings">
         /// The base <see cref="PhishingProtectionServiceV1Beta1Settings"/> used within this client.
         /// </param>
-        public PhishingProtectionServiceV1Beta1ClientImpl(PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client grpcClient, PhishingProtectionServiceV1Beta1Settings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public PhishingProtectionServiceV1Beta1ClientImpl(PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client grpcClient, PhishingProtectionServiceV1Beta1Settings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             PhishingProtectionServiceV1Beta1Settings effectiveSettings = settings ?? PhishingProtectionServiceV1Beta1Settings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callReportPhishing = clientHelper.BuildApiCall<ReportPhishingRequest, ReportPhishingResponse>(grpcClient.ReportPhishingAsync, grpcClient.ReportPhishing, effectiveSettings.ReportPhishingSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callReportPhishing = clientHelper.BuildApiCall<ReportPhishingRequest, ReportPhishingResponse>("ReportPhishing", grpcClient.ReportPhishingAsync, grpcClient.ReportPhishing, effectiveSettings.ReportPhishingSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callReportPhishing);
             Modify_ReportPhishingApiCall(ref _callReportPhishing);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

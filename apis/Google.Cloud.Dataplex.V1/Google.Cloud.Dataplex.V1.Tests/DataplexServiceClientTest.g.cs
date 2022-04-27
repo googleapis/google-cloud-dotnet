@@ -59,7 +59,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 MetastoreStatus = new Lake.Types.MetastoreStatus(),
             };
             mockGrpcClient.Setup(x => x.GetLake(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             Lake response = client.GetLake(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -96,7 +96,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 MetastoreStatus = new Lake.Types.MetastoreStatus(),
             };
             mockGrpcClient.Setup(x => x.GetLakeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Lake>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             Lake responseCallSettings = await client.GetLakeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Lake responseCancellationToken = await client.GetLakeAsync(request, st::CancellationToken.None);
@@ -135,7 +135,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 MetastoreStatus = new Lake.Types.MetastoreStatus(),
             };
             mockGrpcClient.Setup(x => x.GetLake(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             Lake response = client.GetLake(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -172,7 +172,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 MetastoreStatus = new Lake.Types.MetastoreStatus(),
             };
             mockGrpcClient.Setup(x => x.GetLakeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Lake>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             Lake responseCallSettings = await client.GetLakeAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Lake responseCancellationToken = await client.GetLakeAsync(request.Name, st::CancellationToken.None);
@@ -211,7 +211,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 MetastoreStatus = new Lake.Types.MetastoreStatus(),
             };
             mockGrpcClient.Setup(x => x.GetLake(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             Lake response = client.GetLake(request.LakeName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -248,7 +248,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 MetastoreStatus = new Lake.Types.MetastoreStatus(),
             };
             mockGrpcClient.Setup(x => x.GetLakeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Lake>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             Lake responseCallSettings = await client.GetLakeAsync(request.LakeName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Lake responseCancellationToken = await client.GetLakeAsync(request.LakeName, st::CancellationToken.None);
@@ -287,7 +287,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 AssetStatus = new AssetStatus(),
             };
             mockGrpcClient.Setup(x => x.GetZone(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             Zone response = client.GetZone(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -324,7 +324,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 AssetStatus = new AssetStatus(),
             };
             mockGrpcClient.Setup(x => x.GetZoneAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Zone>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             Zone responseCallSettings = await client.GetZoneAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Zone responseCancellationToken = await client.GetZoneAsync(request, st::CancellationToken.None);
@@ -363,7 +363,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 AssetStatus = new AssetStatus(),
             };
             mockGrpcClient.Setup(x => x.GetZone(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             Zone response = client.GetZone(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -400,7 +400,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 AssetStatus = new AssetStatus(),
             };
             mockGrpcClient.Setup(x => x.GetZoneAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Zone>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             Zone responseCallSettings = await client.GetZoneAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Zone responseCancellationToken = await client.GetZoneAsync(request.Name, st::CancellationToken.None);
@@ -439,7 +439,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 AssetStatus = new AssetStatus(),
             };
             mockGrpcClient.Setup(x => x.GetZone(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             Zone response = client.GetZone(request.ZoneName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -476,7 +476,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 AssetStatus = new AssetStatus(),
             };
             mockGrpcClient.Setup(x => x.GetZoneAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Zone>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             Zone responseCallSettings = await client.GetZoneAsync(request.ZoneName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Zone responseCancellationToken = await client.GetZoneAsync(request.ZoneName, st::CancellationToken.None);
@@ -516,7 +516,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 DiscoveryStatus = new Asset.Types.DiscoveryStatus(),
             };
             mockGrpcClient.Setup(x => x.GetAsset(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             Asset response = client.GetAsset(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -554,7 +554,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 DiscoveryStatus = new Asset.Types.DiscoveryStatus(),
             };
             mockGrpcClient.Setup(x => x.GetAssetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Asset>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             Asset responseCallSettings = await client.GetAssetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Asset responseCancellationToken = await client.GetAssetAsync(request, st::CancellationToken.None);
@@ -594,7 +594,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 DiscoveryStatus = new Asset.Types.DiscoveryStatus(),
             };
             mockGrpcClient.Setup(x => x.GetAsset(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             Asset response = client.GetAsset(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -632,7 +632,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 DiscoveryStatus = new Asset.Types.DiscoveryStatus(),
             };
             mockGrpcClient.Setup(x => x.GetAssetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Asset>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             Asset responseCallSettings = await client.GetAssetAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Asset responseCancellationToken = await client.GetAssetAsync(request.Name, st::CancellationToken.None);
@@ -672,7 +672,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 DiscoveryStatus = new Asset.Types.DiscoveryStatus(),
             };
             mockGrpcClient.Setup(x => x.GetAsset(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             Asset response = client.GetAsset(request.AssetName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -710,7 +710,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 DiscoveryStatus = new Asset.Types.DiscoveryStatus(),
             };
             mockGrpcClient.Setup(x => x.GetAssetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Asset>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             Asset responseCallSettings = await client.GetAssetAsync(request.AssetName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Asset responseCancellationToken = await client.GetAssetAsync(request.AssetName, st::CancellationToken.None);
@@ -748,7 +748,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Spark = new Task.Types.SparkTaskConfig(),
             };
             mockGrpcClient.Setup(x => x.GetTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             Task response = client.GetTask(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -784,7 +784,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Spark = new Task.Types.SparkTaskConfig(),
             };
             mockGrpcClient.Setup(x => x.GetTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Task>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             Task responseCallSettings = await client.GetTaskAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Task responseCancellationToken = await client.GetTaskAsync(request, st::CancellationToken.None);
@@ -822,7 +822,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Spark = new Task.Types.SparkTaskConfig(),
             };
             mockGrpcClient.Setup(x => x.GetTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             Task response = client.GetTask(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -858,7 +858,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Spark = new Task.Types.SparkTaskConfig(),
             };
             mockGrpcClient.Setup(x => x.GetTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Task>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             Task responseCallSettings = await client.GetTaskAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Task responseCancellationToken = await client.GetTaskAsync(request.Name, st::CancellationToken.None);
@@ -896,7 +896,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Spark = new Task.Types.SparkTaskConfig(),
             };
             mockGrpcClient.Setup(x => x.GetTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             Task response = client.GetTask(request.TaskName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -932,7 +932,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Spark = new Task.Types.SparkTaskConfig(),
             };
             mockGrpcClient.Setup(x => x.GetTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Task>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             Task responseCallSettings = await client.GetTaskAsync(request.TaskName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Task responseCancellationToken = await client.GetTaskAsync(request.TaskName, st::CancellationToken.None);
@@ -962,7 +962,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Message = "message0231e778",
             };
             mockGrpcClient.Setup(x => x.GetJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             Job response = client.GetJob(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -990,7 +990,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Message = "message0231e778",
             };
             mockGrpcClient.Setup(x => x.GetJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             Job responseCallSettings = await client.GetJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Job responseCancellationToken = await client.GetJobAsync(request, st::CancellationToken.None);
@@ -1020,7 +1020,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Message = "message0231e778",
             };
             mockGrpcClient.Setup(x => x.GetJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             Job response = client.GetJob(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1048,7 +1048,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Message = "message0231e778",
             };
             mockGrpcClient.Setup(x => x.GetJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             Job responseCallSettings = await client.GetJobAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Job responseCancellationToken = await client.GetJobAsync(request.Name, st::CancellationToken.None);
@@ -1078,7 +1078,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Message = "message0231e778",
             };
             mockGrpcClient.Setup(x => x.GetJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             Job response = client.GetJob(request.JobName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1106,7 +1106,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Message = "message0231e778",
             };
             mockGrpcClient.Setup(x => x.GetJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             Job responseCallSettings = await client.GetJobAsync(request.JobName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Job responseCancellationToken = await client.GetJobAsync(request.JobName, st::CancellationToken.None);
@@ -1125,7 +1125,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             client.CancelJob(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1141,7 +1141,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.CancelJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.CancelJobAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1158,7 +1158,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             client.CancelJob(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -1174,7 +1174,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.CancelJobAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.CancelJobAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1191,7 +1191,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             client.CancelJob(request.JobName);
             mockGrpcClient.VerifyAll();
         }
@@ -1207,7 +1207,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.CancelJobAsync(request.JobName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.CancelJobAsync(request.JobName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1244,7 +1244,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Endpoints = new Environment.Types.Endpoints(),
             };
             mockGrpcClient.Setup(x => x.GetEnvironment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             Environment response = client.GetEnvironment(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1281,7 +1281,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Endpoints = new Environment.Types.Endpoints(),
             };
             mockGrpcClient.Setup(x => x.GetEnvironmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Environment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             Environment responseCallSettings = await client.GetEnvironmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Environment responseCancellationToken = await client.GetEnvironmentAsync(request, st::CancellationToken.None);
@@ -1320,7 +1320,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Endpoints = new Environment.Types.Endpoints(),
             };
             mockGrpcClient.Setup(x => x.GetEnvironment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             Environment response = client.GetEnvironment(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1357,7 +1357,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Endpoints = new Environment.Types.Endpoints(),
             };
             mockGrpcClient.Setup(x => x.GetEnvironmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Environment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             Environment responseCallSettings = await client.GetEnvironmentAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Environment responseCancellationToken = await client.GetEnvironmentAsync(request.Name, st::CancellationToken.None);
@@ -1396,7 +1396,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Endpoints = new Environment.Types.Endpoints(),
             };
             mockGrpcClient.Setup(x => x.GetEnvironment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             Environment response = client.GetEnvironment(request.EnvironmentName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1433,7 +1433,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Endpoints = new Environment.Types.Endpoints(),
             };
             mockGrpcClient.Setup(x => x.GetEnvironmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Environment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null, null);
             Environment responseCallSettings = await client.GetEnvironmentAsync(request.EnvironmentName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Environment responseCancellationToken = await client.GetEnvironmentAsync(request.EnvironmentName, st::CancellationToken.None);

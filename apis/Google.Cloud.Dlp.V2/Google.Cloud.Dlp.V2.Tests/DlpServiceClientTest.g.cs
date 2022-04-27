@@ -46,7 +46,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Result = new InspectResult(),
             };
             mockGrpcClient.Setup(x => x.InspectContent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             InspectContentResponse response = client.InspectContent(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -69,7 +69,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Result = new InspectResult(),
             };
             mockGrpcClient.Setup(x => x.InspectContentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InspectContentResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             InspectContentResponse responseCallSettings = await client.InspectContentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             InspectContentResponse responseCancellationToken = await client.InspectContentAsync(request, st::CancellationToken.None);
@@ -100,7 +100,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 InspectResult = new InspectResult(),
             };
             mockGrpcClient.Setup(x => x.RedactImage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             RedactImageResponse response = client.RedactImage(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -129,7 +129,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 InspectResult = new InspectResult(),
             };
             mockGrpcClient.Setup(x => x.RedactImageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RedactImageResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             RedactImageResponse responseCallSettings = await client.RedactImageAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             RedactImageResponse responseCancellationToken = await client.RedactImageAsync(request, st::CancellationToken.None);
@@ -157,7 +157,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Overview = new TransformationOverview(),
             };
             mockGrpcClient.Setup(x => x.DeidentifyContent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DeidentifyContentResponse response = client.DeidentifyContent(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -183,7 +183,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Overview = new TransformationOverview(),
             };
             mockGrpcClient.Setup(x => x.DeidentifyContentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeidentifyContentResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DeidentifyContentResponse responseCallSettings = await client.DeidentifyContentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DeidentifyContentResponse responseCancellationToken = await client.DeidentifyContentAsync(request, st::CancellationToken.None);
@@ -211,7 +211,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Overview = new TransformationOverview(),
             };
             mockGrpcClient.Setup(x => x.ReidentifyContent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             ReidentifyContentResponse response = client.ReidentifyContent(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -237,7 +237,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Overview = new TransformationOverview(),
             };
             mockGrpcClient.Setup(x => x.ReidentifyContentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReidentifyContentResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             ReidentifyContentResponse responseCallSettings = await client.ReidentifyContentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ReidentifyContentResponse responseCancellationToken = await client.ReidentifyContentAsync(request, st::CancellationToken.None);
@@ -264,7 +264,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.ListInfoTypes(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             ListInfoTypesResponse response = client.ListInfoTypes(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -289,7 +289,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.ListInfoTypesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListInfoTypesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             ListInfoTypesResponse responseCallSettings = await client.ListInfoTypesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ListInfoTypesResponse responseCancellationToken = await client.ListInfoTypesAsync(request, st::CancellationToken.None);
@@ -313,7 +313,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.ListInfoTypes(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             ListInfoTypesResponse response = client.ListInfoTypes(request.Parent);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -335,7 +335,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.ListInfoTypesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListInfoTypesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             ListInfoTypesResponse responseCallSettings = await client.ListInfoTypesAsync(request.Parent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ListInfoTypesResponse responseCancellationToken = await client.ListInfoTypesAsync(request.Parent, st::CancellationToken.None);
@@ -364,7 +364,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 InspectConfig = new InspectConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateInspectTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             InspectTemplate response = client.CreateInspectTemplate(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -391,7 +391,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 InspectConfig = new InspectConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateInspectTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InspectTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             InspectTemplate responseCallSettings = await client.CreateInspectTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             InspectTemplate responseCancellationToken = await client.CreateInspectTemplateAsync(request, st::CancellationToken.None);
@@ -418,7 +418,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 InspectConfig = new InspectConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateInspectTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             InspectTemplate response = client.CreateInspectTemplate(request.Parent, request.InspectTemplate);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -443,7 +443,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 InspectConfig = new InspectConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateInspectTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InspectTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             InspectTemplate responseCallSettings = await client.CreateInspectTemplateAsync(request.Parent, request.InspectTemplate, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             InspectTemplate responseCancellationToken = await client.CreateInspectTemplateAsync(request.Parent, request.InspectTemplate, st::CancellationToken.None);
@@ -470,7 +470,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 InspectConfig = new InspectConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateInspectTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             InspectTemplate response = client.CreateInspectTemplate(request.ParentAsOrganizationName, request.InspectTemplate);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -495,7 +495,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 InspectConfig = new InspectConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateInspectTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InspectTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             InspectTemplate responseCallSettings = await client.CreateInspectTemplateAsync(request.ParentAsOrganizationName, request.InspectTemplate, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             InspectTemplate responseCancellationToken = await client.CreateInspectTemplateAsync(request.ParentAsOrganizationName, request.InspectTemplate, st::CancellationToken.None);
@@ -522,7 +522,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 InspectConfig = new InspectConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateInspectTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             InspectTemplate response = client.CreateInspectTemplate(request.ParentAsProjectName, request.InspectTemplate);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -547,7 +547,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 InspectConfig = new InspectConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateInspectTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InspectTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             InspectTemplate responseCallSettings = await client.CreateInspectTemplateAsync(request.ParentAsProjectName, request.InspectTemplate, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             InspectTemplate responseCancellationToken = await client.CreateInspectTemplateAsync(request.ParentAsProjectName, request.InspectTemplate, st::CancellationToken.None);
@@ -574,7 +574,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 InspectConfig = new InspectConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateInspectTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             InspectTemplate response = client.CreateInspectTemplate(request.ParentAsOrganizationLocationName, request.InspectTemplate);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -599,7 +599,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 InspectConfig = new InspectConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateInspectTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InspectTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             InspectTemplate responseCallSettings = await client.CreateInspectTemplateAsync(request.ParentAsOrganizationLocationName, request.InspectTemplate, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             InspectTemplate responseCancellationToken = await client.CreateInspectTemplateAsync(request.ParentAsOrganizationLocationName, request.InspectTemplate, st::CancellationToken.None);
@@ -626,7 +626,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 InspectConfig = new InspectConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateInspectTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             InspectTemplate response = client.CreateInspectTemplate(request.ParentAsLocationName, request.InspectTemplate);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -651,7 +651,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 InspectConfig = new InspectConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateInspectTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InspectTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             InspectTemplate responseCallSettings = await client.CreateInspectTemplateAsync(request.ParentAsLocationName, request.InspectTemplate, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             InspectTemplate responseCancellationToken = await client.CreateInspectTemplateAsync(request.ParentAsLocationName, request.InspectTemplate, st::CancellationToken.None);
@@ -679,7 +679,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 InspectConfig = new InspectConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateInspectTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             InspectTemplate response = client.UpdateInspectTemplate(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -705,7 +705,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 InspectConfig = new InspectConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateInspectTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InspectTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             InspectTemplate responseCallSettings = await client.UpdateInspectTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             InspectTemplate responseCancellationToken = await client.UpdateInspectTemplateAsync(request, st::CancellationToken.None);
@@ -733,7 +733,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 InspectConfig = new InspectConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateInspectTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             InspectTemplate response = client.UpdateInspectTemplate(request.Name, request.InspectTemplate, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -759,7 +759,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 InspectConfig = new InspectConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateInspectTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InspectTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             InspectTemplate responseCallSettings = await client.UpdateInspectTemplateAsync(request.Name, request.InspectTemplate, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             InspectTemplate responseCancellationToken = await client.UpdateInspectTemplateAsync(request.Name, request.InspectTemplate, request.UpdateMask, st::CancellationToken.None);
@@ -787,7 +787,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 InspectConfig = new InspectConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateInspectTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             InspectTemplate response = client.UpdateInspectTemplate(request.InspectTemplateName, request.InspectTemplate, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -813,7 +813,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 InspectConfig = new InspectConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateInspectTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InspectTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             InspectTemplate responseCallSettings = await client.UpdateInspectTemplateAsync(request.InspectTemplateName, request.InspectTemplate, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             InspectTemplate responseCancellationToken = await client.UpdateInspectTemplateAsync(request.InspectTemplateName, request.InspectTemplate, request.UpdateMask, st::CancellationToken.None);
@@ -839,7 +839,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 InspectConfig = new InspectConfig(),
             };
             mockGrpcClient.Setup(x => x.GetInspectTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             InspectTemplate response = client.GetInspectTemplate(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -863,7 +863,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 InspectConfig = new InspectConfig(),
             };
             mockGrpcClient.Setup(x => x.GetInspectTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InspectTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             InspectTemplate responseCallSettings = await client.GetInspectTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             InspectTemplate responseCancellationToken = await client.GetInspectTemplateAsync(request, st::CancellationToken.None);
@@ -889,7 +889,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 InspectConfig = new InspectConfig(),
             };
             mockGrpcClient.Setup(x => x.GetInspectTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             InspectTemplate response = client.GetInspectTemplate(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -913,7 +913,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 InspectConfig = new InspectConfig(),
             };
             mockGrpcClient.Setup(x => x.GetInspectTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InspectTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             InspectTemplate responseCallSettings = await client.GetInspectTemplateAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             InspectTemplate responseCancellationToken = await client.GetInspectTemplateAsync(request.Name, st::CancellationToken.None);
@@ -939,7 +939,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 InspectConfig = new InspectConfig(),
             };
             mockGrpcClient.Setup(x => x.GetInspectTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             InspectTemplate response = client.GetInspectTemplate(request.InspectTemplateName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -963,7 +963,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 InspectConfig = new InspectConfig(),
             };
             mockGrpcClient.Setup(x => x.GetInspectTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InspectTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             InspectTemplate responseCallSettings = await client.GetInspectTemplateAsync(request.InspectTemplateName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             InspectTemplate responseCancellationToken = await client.GetInspectTemplateAsync(request.InspectTemplateName, st::CancellationToken.None);
@@ -981,7 +981,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteInspectTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteInspectTemplate(request);
             mockGrpcClient.VerifyAll();
         }
@@ -996,7 +996,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteInspectTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteInspectTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteInspectTemplateAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1012,7 +1012,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteInspectTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteInspectTemplate(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -1027,7 +1027,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteInspectTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteInspectTemplateAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteInspectTemplateAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1043,7 +1043,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteInspectTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteInspectTemplate(request.InspectTemplateName);
             mockGrpcClient.VerifyAll();
         }
@@ -1058,7 +1058,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteInspectTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteInspectTemplateAsync(request.InspectTemplateName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteInspectTemplateAsync(request.InspectTemplateName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1085,7 +1085,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 DeidentifyConfig = new DeidentifyConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateDeidentifyTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DeidentifyTemplate response = client.CreateDeidentifyTemplate(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1112,7 +1112,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 DeidentifyConfig = new DeidentifyConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateDeidentifyTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeidentifyTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DeidentifyTemplate responseCallSettings = await client.CreateDeidentifyTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DeidentifyTemplate responseCancellationToken = await client.CreateDeidentifyTemplateAsync(request, st::CancellationToken.None);
@@ -1139,7 +1139,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 DeidentifyConfig = new DeidentifyConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateDeidentifyTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DeidentifyTemplate response = client.CreateDeidentifyTemplate(request.Parent, request.DeidentifyTemplate);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1164,7 +1164,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 DeidentifyConfig = new DeidentifyConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateDeidentifyTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeidentifyTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DeidentifyTemplate responseCallSettings = await client.CreateDeidentifyTemplateAsync(request.Parent, request.DeidentifyTemplate, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DeidentifyTemplate responseCancellationToken = await client.CreateDeidentifyTemplateAsync(request.Parent, request.DeidentifyTemplate, st::CancellationToken.None);
@@ -1191,7 +1191,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 DeidentifyConfig = new DeidentifyConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateDeidentifyTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DeidentifyTemplate response = client.CreateDeidentifyTemplate(request.ParentAsOrganizationName, request.DeidentifyTemplate);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1216,7 +1216,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 DeidentifyConfig = new DeidentifyConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateDeidentifyTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeidentifyTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DeidentifyTemplate responseCallSettings = await client.CreateDeidentifyTemplateAsync(request.ParentAsOrganizationName, request.DeidentifyTemplate, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DeidentifyTemplate responseCancellationToken = await client.CreateDeidentifyTemplateAsync(request.ParentAsOrganizationName, request.DeidentifyTemplate, st::CancellationToken.None);
@@ -1243,7 +1243,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 DeidentifyConfig = new DeidentifyConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateDeidentifyTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DeidentifyTemplate response = client.CreateDeidentifyTemplate(request.ParentAsProjectName, request.DeidentifyTemplate);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1268,7 +1268,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 DeidentifyConfig = new DeidentifyConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateDeidentifyTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeidentifyTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DeidentifyTemplate responseCallSettings = await client.CreateDeidentifyTemplateAsync(request.ParentAsProjectName, request.DeidentifyTemplate, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DeidentifyTemplate responseCancellationToken = await client.CreateDeidentifyTemplateAsync(request.ParentAsProjectName, request.DeidentifyTemplate, st::CancellationToken.None);
@@ -1295,7 +1295,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 DeidentifyConfig = new DeidentifyConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateDeidentifyTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DeidentifyTemplate response = client.CreateDeidentifyTemplate(request.ParentAsOrganizationLocationName, request.DeidentifyTemplate);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1320,7 +1320,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 DeidentifyConfig = new DeidentifyConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateDeidentifyTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeidentifyTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DeidentifyTemplate responseCallSettings = await client.CreateDeidentifyTemplateAsync(request.ParentAsOrganizationLocationName, request.DeidentifyTemplate, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DeidentifyTemplate responseCancellationToken = await client.CreateDeidentifyTemplateAsync(request.ParentAsOrganizationLocationName, request.DeidentifyTemplate, st::CancellationToken.None);
@@ -1347,7 +1347,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 DeidentifyConfig = new DeidentifyConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateDeidentifyTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DeidentifyTemplate response = client.CreateDeidentifyTemplate(request.ParentAsLocationName, request.DeidentifyTemplate);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1372,7 +1372,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 DeidentifyConfig = new DeidentifyConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateDeidentifyTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeidentifyTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DeidentifyTemplate responseCallSettings = await client.CreateDeidentifyTemplateAsync(request.ParentAsLocationName, request.DeidentifyTemplate, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DeidentifyTemplate responseCancellationToken = await client.CreateDeidentifyTemplateAsync(request.ParentAsLocationName, request.DeidentifyTemplate, st::CancellationToken.None);
@@ -1400,7 +1400,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 DeidentifyConfig = new DeidentifyConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateDeidentifyTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DeidentifyTemplate response = client.UpdateDeidentifyTemplate(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1426,7 +1426,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 DeidentifyConfig = new DeidentifyConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateDeidentifyTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeidentifyTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DeidentifyTemplate responseCallSettings = await client.UpdateDeidentifyTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DeidentifyTemplate responseCancellationToken = await client.UpdateDeidentifyTemplateAsync(request, st::CancellationToken.None);
@@ -1454,7 +1454,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 DeidentifyConfig = new DeidentifyConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateDeidentifyTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DeidentifyTemplate response = client.UpdateDeidentifyTemplate(request.Name, request.DeidentifyTemplate, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1480,7 +1480,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 DeidentifyConfig = new DeidentifyConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateDeidentifyTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeidentifyTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DeidentifyTemplate responseCallSettings = await client.UpdateDeidentifyTemplateAsync(request.Name, request.DeidentifyTemplate, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DeidentifyTemplate responseCancellationToken = await client.UpdateDeidentifyTemplateAsync(request.Name, request.DeidentifyTemplate, request.UpdateMask, st::CancellationToken.None);
@@ -1508,7 +1508,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 DeidentifyConfig = new DeidentifyConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateDeidentifyTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DeidentifyTemplate response = client.UpdateDeidentifyTemplate(request.DeidentifyTemplateName, request.DeidentifyTemplate, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1534,7 +1534,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 DeidentifyConfig = new DeidentifyConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateDeidentifyTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeidentifyTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DeidentifyTemplate responseCallSettings = await client.UpdateDeidentifyTemplateAsync(request.DeidentifyTemplateName, request.DeidentifyTemplate, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DeidentifyTemplate responseCancellationToken = await client.UpdateDeidentifyTemplateAsync(request.DeidentifyTemplateName, request.DeidentifyTemplate, request.UpdateMask, st::CancellationToken.None);
@@ -1560,7 +1560,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 DeidentifyConfig = new DeidentifyConfig(),
             };
             mockGrpcClient.Setup(x => x.GetDeidentifyTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DeidentifyTemplate response = client.GetDeidentifyTemplate(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1584,7 +1584,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 DeidentifyConfig = new DeidentifyConfig(),
             };
             mockGrpcClient.Setup(x => x.GetDeidentifyTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeidentifyTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DeidentifyTemplate responseCallSettings = await client.GetDeidentifyTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DeidentifyTemplate responseCancellationToken = await client.GetDeidentifyTemplateAsync(request, st::CancellationToken.None);
@@ -1610,7 +1610,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 DeidentifyConfig = new DeidentifyConfig(),
             };
             mockGrpcClient.Setup(x => x.GetDeidentifyTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DeidentifyTemplate response = client.GetDeidentifyTemplate(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1634,7 +1634,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 DeidentifyConfig = new DeidentifyConfig(),
             };
             mockGrpcClient.Setup(x => x.GetDeidentifyTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeidentifyTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DeidentifyTemplate responseCallSettings = await client.GetDeidentifyTemplateAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DeidentifyTemplate responseCancellationToken = await client.GetDeidentifyTemplateAsync(request.Name, st::CancellationToken.None);
@@ -1660,7 +1660,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 DeidentifyConfig = new DeidentifyConfig(),
             };
             mockGrpcClient.Setup(x => x.GetDeidentifyTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DeidentifyTemplate response = client.GetDeidentifyTemplate(request.DeidentifyTemplateName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1684,7 +1684,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 DeidentifyConfig = new DeidentifyConfig(),
             };
             mockGrpcClient.Setup(x => x.GetDeidentifyTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeidentifyTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DeidentifyTemplate responseCallSettings = await client.GetDeidentifyTemplateAsync(request.DeidentifyTemplateName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DeidentifyTemplate responseCancellationToken = await client.GetDeidentifyTemplateAsync(request.DeidentifyTemplateName, st::CancellationToken.None);
@@ -1702,7 +1702,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDeidentifyTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteDeidentifyTemplate(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1717,7 +1717,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDeidentifyTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteDeidentifyTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteDeidentifyTemplateAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1733,7 +1733,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDeidentifyTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteDeidentifyTemplate(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -1748,7 +1748,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDeidentifyTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteDeidentifyTemplateAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteDeidentifyTemplateAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1764,7 +1764,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDeidentifyTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteDeidentifyTemplate(request.DeidentifyTemplateName);
             mockGrpcClient.VerifyAll();
         }
@@ -1779,7 +1779,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDeidentifyTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteDeidentifyTemplateAsync(request.DeidentifyTemplateName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteDeidentifyTemplateAsync(request.DeidentifyTemplateName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1813,7 +1813,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Status = JobTrigger.Types.Status.Paused,
             };
             mockGrpcClient.Setup(x => x.CreateJobTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             JobTrigger response = client.CreateJobTrigger(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1847,7 +1847,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Status = JobTrigger.Types.Status.Paused,
             };
             mockGrpcClient.Setup(x => x.CreateJobTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<JobTrigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             JobTrigger responseCallSettings = await client.CreateJobTriggerAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             JobTrigger responseCancellationToken = await client.CreateJobTriggerAsync(request, st::CancellationToken.None);
@@ -1881,7 +1881,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Status = JobTrigger.Types.Status.Paused,
             };
             mockGrpcClient.Setup(x => x.CreateJobTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             JobTrigger response = client.CreateJobTrigger(request.Parent, request.JobTrigger);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1913,7 +1913,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Status = JobTrigger.Types.Status.Paused,
             };
             mockGrpcClient.Setup(x => x.CreateJobTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<JobTrigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             JobTrigger responseCallSettings = await client.CreateJobTriggerAsync(request.Parent, request.JobTrigger, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             JobTrigger responseCancellationToken = await client.CreateJobTriggerAsync(request.Parent, request.JobTrigger, st::CancellationToken.None);
@@ -1947,7 +1947,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Status = JobTrigger.Types.Status.Paused,
             };
             mockGrpcClient.Setup(x => x.CreateJobTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             JobTrigger response = client.CreateJobTrigger(request.ParentAsProjectName, request.JobTrigger);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1979,7 +1979,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Status = JobTrigger.Types.Status.Paused,
             };
             mockGrpcClient.Setup(x => x.CreateJobTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<JobTrigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             JobTrigger responseCallSettings = await client.CreateJobTriggerAsync(request.ParentAsProjectName, request.JobTrigger, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             JobTrigger responseCancellationToken = await client.CreateJobTriggerAsync(request.ParentAsProjectName, request.JobTrigger, st::CancellationToken.None);
@@ -2013,7 +2013,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Status = JobTrigger.Types.Status.Paused,
             };
             mockGrpcClient.Setup(x => x.CreateJobTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             JobTrigger response = client.CreateJobTrigger(request.ParentAsLocationName, request.JobTrigger);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2045,7 +2045,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Status = JobTrigger.Types.Status.Paused,
             };
             mockGrpcClient.Setup(x => x.CreateJobTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<JobTrigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             JobTrigger responseCallSettings = await client.CreateJobTriggerAsync(request.ParentAsLocationName, request.JobTrigger, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             JobTrigger responseCancellationToken = await client.CreateJobTriggerAsync(request.ParentAsLocationName, request.JobTrigger, st::CancellationToken.None);
@@ -2080,7 +2080,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Status = JobTrigger.Types.Status.Paused,
             };
             mockGrpcClient.Setup(x => x.UpdateJobTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             JobTrigger response = client.UpdateJobTrigger(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2113,7 +2113,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Status = JobTrigger.Types.Status.Paused,
             };
             mockGrpcClient.Setup(x => x.UpdateJobTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<JobTrigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             JobTrigger responseCallSettings = await client.UpdateJobTriggerAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             JobTrigger responseCancellationToken = await client.UpdateJobTriggerAsync(request, st::CancellationToken.None);
@@ -2148,7 +2148,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Status = JobTrigger.Types.Status.Paused,
             };
             mockGrpcClient.Setup(x => x.UpdateJobTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             JobTrigger response = client.UpdateJobTrigger(request.Name, request.JobTrigger, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2181,7 +2181,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Status = JobTrigger.Types.Status.Paused,
             };
             mockGrpcClient.Setup(x => x.UpdateJobTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<JobTrigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             JobTrigger responseCallSettings = await client.UpdateJobTriggerAsync(request.Name, request.JobTrigger, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             JobTrigger responseCancellationToken = await client.UpdateJobTriggerAsync(request.Name, request.JobTrigger, request.UpdateMask, st::CancellationToken.None);
@@ -2216,7 +2216,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Status = JobTrigger.Types.Status.Paused,
             };
             mockGrpcClient.Setup(x => x.UpdateJobTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             JobTrigger response = client.UpdateJobTrigger(request.JobTriggerName, request.JobTrigger, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2249,7 +2249,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Status = JobTrigger.Types.Status.Paused,
             };
             mockGrpcClient.Setup(x => x.UpdateJobTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<JobTrigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             JobTrigger responseCallSettings = await client.UpdateJobTriggerAsync(request.JobTriggerName, request.JobTrigger, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             JobTrigger responseCancellationToken = await client.UpdateJobTriggerAsync(request.JobTriggerName, request.JobTrigger, request.UpdateMask, st::CancellationToken.None);
@@ -2268,7 +2268,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             HybridInspectResponse expectedResponse = new HybridInspectResponse { };
             mockGrpcClient.Setup(x => x.HybridInspectJobTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             HybridInspectResponse response = client.HybridInspectJobTrigger(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2285,7 +2285,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             HybridInspectResponse expectedResponse = new HybridInspectResponse { };
             mockGrpcClient.Setup(x => x.HybridInspectJobTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<HybridInspectResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             HybridInspectResponse responseCallSettings = await client.HybridInspectJobTriggerAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             HybridInspectResponse responseCancellationToken = await client.HybridInspectJobTriggerAsync(request, st::CancellationToken.None);
@@ -2303,7 +2303,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             HybridInspectResponse expectedResponse = new HybridInspectResponse { };
             mockGrpcClient.Setup(x => x.HybridInspectJobTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             HybridInspectResponse response = client.HybridInspectJobTrigger(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2319,7 +2319,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             HybridInspectResponse expectedResponse = new HybridInspectResponse { };
             mockGrpcClient.Setup(x => x.HybridInspectJobTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<HybridInspectResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             HybridInspectResponse responseCallSettings = await client.HybridInspectJobTriggerAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             HybridInspectResponse responseCancellationToken = await client.HybridInspectJobTriggerAsync(request.Name, st::CancellationToken.None);
@@ -2337,7 +2337,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             HybridInspectResponse expectedResponse = new HybridInspectResponse { };
             mockGrpcClient.Setup(x => x.HybridInspectJobTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             HybridInspectResponse response = client.HybridInspectJobTrigger(request.JobTriggerName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2353,7 +2353,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             HybridInspectResponse expectedResponse = new HybridInspectResponse { };
             mockGrpcClient.Setup(x => x.HybridInspectJobTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<HybridInspectResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             HybridInspectResponse responseCallSettings = await client.HybridInspectJobTriggerAsync(request.JobTriggerName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             HybridInspectResponse responseCancellationToken = await client.HybridInspectJobTriggerAsync(request.JobTriggerName, st::CancellationToken.None);
@@ -2386,7 +2386,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Status = JobTrigger.Types.Status.Paused,
             };
             mockGrpcClient.Setup(x => x.GetJobTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             JobTrigger response = client.GetJobTrigger(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2417,7 +2417,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Status = JobTrigger.Types.Status.Paused,
             };
             mockGrpcClient.Setup(x => x.GetJobTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<JobTrigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             JobTrigger responseCallSettings = await client.GetJobTriggerAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             JobTrigger responseCancellationToken = await client.GetJobTriggerAsync(request, st::CancellationToken.None);
@@ -2450,7 +2450,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Status = JobTrigger.Types.Status.Paused,
             };
             mockGrpcClient.Setup(x => x.GetJobTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             JobTrigger response = client.GetJobTrigger(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2481,7 +2481,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Status = JobTrigger.Types.Status.Paused,
             };
             mockGrpcClient.Setup(x => x.GetJobTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<JobTrigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             JobTrigger responseCallSettings = await client.GetJobTriggerAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             JobTrigger responseCancellationToken = await client.GetJobTriggerAsync(request.Name, st::CancellationToken.None);
@@ -2514,7 +2514,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Status = JobTrigger.Types.Status.Paused,
             };
             mockGrpcClient.Setup(x => x.GetJobTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             JobTrigger response = client.GetJobTrigger(request.JobTriggerName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2545,7 +2545,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Status = JobTrigger.Types.Status.Paused,
             };
             mockGrpcClient.Setup(x => x.GetJobTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<JobTrigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             JobTrigger responseCallSettings = await client.GetJobTriggerAsync(request.JobTriggerName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             JobTrigger responseCancellationToken = await client.GetJobTriggerAsync(request.JobTriggerName, st::CancellationToken.None);
@@ -2563,7 +2563,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteJobTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteJobTrigger(request);
             mockGrpcClient.VerifyAll();
         }
@@ -2578,7 +2578,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteJobTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteJobTriggerAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteJobTriggerAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -2594,7 +2594,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteJobTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteJobTrigger(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -2609,7 +2609,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteJobTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteJobTriggerAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteJobTriggerAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -2625,7 +2625,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteJobTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteJobTrigger(request.JobTriggerName);
             mockGrpcClient.VerifyAll();
         }
@@ -2640,7 +2640,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteJobTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteJobTriggerAsync(request.JobTriggerName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteJobTriggerAsync(request.JobTriggerName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -2668,7 +2668,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Errors = { new Error(), },
             };
             mockGrpcClient.Setup(x => x.ActivateJobTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DlpJob response = client.ActivateJobTrigger(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2696,7 +2696,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Errors = { new Error(), },
             };
             mockGrpcClient.Setup(x => x.ActivateJobTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DlpJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DlpJob responseCallSettings = await client.ActivateJobTriggerAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DlpJob responseCancellationToken = await client.ActivateJobTriggerAsync(request, st::CancellationToken.None);
@@ -2730,7 +2730,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Errors = { new Error(), },
             };
             mockGrpcClient.Setup(x => x.CreateDlpJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DlpJob response = client.CreateDlpJob(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2762,7 +2762,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Errors = { new Error(), },
             };
             mockGrpcClient.Setup(x => x.CreateDlpJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DlpJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DlpJob responseCallSettings = await client.CreateDlpJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DlpJob responseCancellationToken = await client.CreateDlpJobAsync(request, st::CancellationToken.None);
@@ -2793,7 +2793,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Errors = { new Error(), },
             };
             mockGrpcClient.Setup(x => x.CreateDlpJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DlpJob response = client.CreateDlpJob(request.Parent, request.InspectJob);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2822,7 +2822,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Errors = { new Error(), },
             };
             mockGrpcClient.Setup(x => x.CreateDlpJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DlpJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DlpJob responseCallSettings = await client.CreateDlpJobAsync(request.Parent, request.InspectJob, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DlpJob responseCancellationToken = await client.CreateDlpJobAsync(request.Parent, request.InspectJob, st::CancellationToken.None);
@@ -2853,7 +2853,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Errors = { new Error(), },
             };
             mockGrpcClient.Setup(x => x.CreateDlpJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DlpJob response = client.CreateDlpJob(request.ParentAsProjectName, request.InspectJob);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2882,7 +2882,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Errors = { new Error(), },
             };
             mockGrpcClient.Setup(x => x.CreateDlpJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DlpJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DlpJob responseCallSettings = await client.CreateDlpJobAsync(request.ParentAsProjectName, request.InspectJob, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DlpJob responseCancellationToken = await client.CreateDlpJobAsync(request.ParentAsProjectName, request.InspectJob, st::CancellationToken.None);
@@ -2913,7 +2913,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Errors = { new Error(), },
             };
             mockGrpcClient.Setup(x => x.CreateDlpJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DlpJob response = client.CreateDlpJob(request.ParentAsLocationName, request.InspectJob);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2942,7 +2942,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Errors = { new Error(), },
             };
             mockGrpcClient.Setup(x => x.CreateDlpJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DlpJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DlpJob responseCallSettings = await client.CreateDlpJobAsync(request.ParentAsLocationName, request.InspectJob, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DlpJob responseCancellationToken = await client.CreateDlpJobAsync(request.ParentAsLocationName, request.InspectJob, st::CancellationToken.None);
@@ -2973,7 +2973,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Errors = { new Error(), },
             };
             mockGrpcClient.Setup(x => x.CreateDlpJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DlpJob response = client.CreateDlpJob(request.Parent, request.RiskJob);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3002,7 +3002,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Errors = { new Error(), },
             };
             mockGrpcClient.Setup(x => x.CreateDlpJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DlpJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DlpJob responseCallSettings = await client.CreateDlpJobAsync(request.Parent, request.RiskJob, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DlpJob responseCancellationToken = await client.CreateDlpJobAsync(request.Parent, request.RiskJob, st::CancellationToken.None);
@@ -3033,7 +3033,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Errors = { new Error(), },
             };
             mockGrpcClient.Setup(x => x.CreateDlpJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DlpJob response = client.CreateDlpJob(request.ParentAsProjectName, request.RiskJob);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3062,7 +3062,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Errors = { new Error(), },
             };
             mockGrpcClient.Setup(x => x.CreateDlpJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DlpJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DlpJob responseCallSettings = await client.CreateDlpJobAsync(request.ParentAsProjectName, request.RiskJob, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DlpJob responseCancellationToken = await client.CreateDlpJobAsync(request.ParentAsProjectName, request.RiskJob, st::CancellationToken.None);
@@ -3093,7 +3093,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Errors = { new Error(), },
             };
             mockGrpcClient.Setup(x => x.CreateDlpJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DlpJob response = client.CreateDlpJob(request.ParentAsLocationName, request.RiskJob);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3122,7 +3122,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Errors = { new Error(), },
             };
             mockGrpcClient.Setup(x => x.CreateDlpJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DlpJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DlpJob responseCallSettings = await client.CreateDlpJobAsync(request.ParentAsLocationName, request.RiskJob, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DlpJob responseCancellationToken = await client.CreateDlpJobAsync(request.ParentAsLocationName, request.RiskJob, st::CancellationToken.None);
@@ -3152,7 +3152,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Errors = { new Error(), },
             };
             mockGrpcClient.Setup(x => x.GetDlpJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DlpJob response = client.GetDlpJob(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3180,7 +3180,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Errors = { new Error(), },
             };
             mockGrpcClient.Setup(x => x.GetDlpJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DlpJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DlpJob responseCallSettings = await client.GetDlpJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DlpJob responseCancellationToken = await client.GetDlpJobAsync(request, st::CancellationToken.None);
@@ -3210,7 +3210,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Errors = { new Error(), },
             };
             mockGrpcClient.Setup(x => x.GetDlpJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DlpJob response = client.GetDlpJob(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3238,7 +3238,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Errors = { new Error(), },
             };
             mockGrpcClient.Setup(x => x.GetDlpJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DlpJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DlpJob responseCallSettings = await client.GetDlpJobAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DlpJob responseCancellationToken = await client.GetDlpJobAsync(request.Name, st::CancellationToken.None);
@@ -3268,7 +3268,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Errors = { new Error(), },
             };
             mockGrpcClient.Setup(x => x.GetDlpJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DlpJob response = client.GetDlpJob(request.DlpJobName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3296,7 +3296,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 Errors = { new Error(), },
             };
             mockGrpcClient.Setup(x => x.GetDlpJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DlpJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             DlpJob responseCallSettings = await client.GetDlpJobAsync(request.DlpJobName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DlpJob responseCancellationToken = await client.GetDlpJobAsync(request.DlpJobName, st::CancellationToken.None);
@@ -3314,7 +3314,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDlpJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteDlpJob(request);
             mockGrpcClient.VerifyAll();
         }
@@ -3329,7 +3329,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDlpJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteDlpJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteDlpJobAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -3345,7 +3345,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDlpJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteDlpJob(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -3360,7 +3360,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDlpJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteDlpJobAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteDlpJobAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -3376,7 +3376,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDlpJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteDlpJob(request.DlpJobName);
             mockGrpcClient.VerifyAll();
         }
@@ -3391,7 +3391,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDlpJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteDlpJobAsync(request.DlpJobName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteDlpJobAsync(request.DlpJobName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -3407,7 +3407,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelDlpJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             client.CancelDlpJob(request);
             mockGrpcClient.VerifyAll();
         }
@@ -3422,7 +3422,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelDlpJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.CancelDlpJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.CancelDlpJobAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -3449,7 +3449,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateStoredInfoType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             StoredInfoType response = client.CreateStoredInfoType(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3476,7 +3476,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateStoredInfoTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<StoredInfoType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             StoredInfoType responseCallSettings = await client.CreateStoredInfoTypeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             StoredInfoType responseCancellationToken = await client.CreateStoredInfoTypeAsync(request, st::CancellationToken.None);
@@ -3503,7 +3503,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateStoredInfoType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             StoredInfoType response = client.CreateStoredInfoType(request.Parent, request.Config);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3528,7 +3528,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateStoredInfoTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<StoredInfoType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             StoredInfoType responseCallSettings = await client.CreateStoredInfoTypeAsync(request.Parent, request.Config, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             StoredInfoType responseCancellationToken = await client.CreateStoredInfoTypeAsync(request.Parent, request.Config, st::CancellationToken.None);
@@ -3555,7 +3555,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateStoredInfoType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             StoredInfoType response = client.CreateStoredInfoType(request.ParentAsOrganizationName, request.Config);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3580,7 +3580,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateStoredInfoTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<StoredInfoType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             StoredInfoType responseCallSettings = await client.CreateStoredInfoTypeAsync(request.ParentAsOrganizationName, request.Config, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             StoredInfoType responseCancellationToken = await client.CreateStoredInfoTypeAsync(request.ParentAsOrganizationName, request.Config, st::CancellationToken.None);
@@ -3607,7 +3607,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateStoredInfoType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             StoredInfoType response = client.CreateStoredInfoType(request.ParentAsProjectName, request.Config);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3632,7 +3632,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateStoredInfoTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<StoredInfoType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             StoredInfoType responseCallSettings = await client.CreateStoredInfoTypeAsync(request.ParentAsProjectName, request.Config, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             StoredInfoType responseCancellationToken = await client.CreateStoredInfoTypeAsync(request.ParentAsProjectName, request.Config, st::CancellationToken.None);
@@ -3659,7 +3659,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateStoredInfoType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             StoredInfoType response = client.CreateStoredInfoType(request.ParentAsOrganizationLocationName, request.Config);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3684,7 +3684,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateStoredInfoTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<StoredInfoType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             StoredInfoType responseCallSettings = await client.CreateStoredInfoTypeAsync(request.ParentAsOrganizationLocationName, request.Config, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             StoredInfoType responseCancellationToken = await client.CreateStoredInfoTypeAsync(request.ParentAsOrganizationLocationName, request.Config, st::CancellationToken.None);
@@ -3711,7 +3711,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateStoredInfoType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             StoredInfoType response = client.CreateStoredInfoType(request.ParentAsLocationName, request.Config);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3736,7 +3736,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateStoredInfoTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<StoredInfoType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             StoredInfoType responseCallSettings = await client.CreateStoredInfoTypeAsync(request.ParentAsLocationName, request.Config, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             StoredInfoType responseCancellationToken = await client.CreateStoredInfoTypeAsync(request.ParentAsLocationName, request.Config, st::CancellationToken.None);
@@ -3764,7 +3764,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateStoredInfoType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             StoredInfoType response = client.UpdateStoredInfoType(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3790,7 +3790,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateStoredInfoTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<StoredInfoType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             StoredInfoType responseCallSettings = await client.UpdateStoredInfoTypeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             StoredInfoType responseCancellationToken = await client.UpdateStoredInfoTypeAsync(request, st::CancellationToken.None);
@@ -3818,7 +3818,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateStoredInfoType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             StoredInfoType response = client.UpdateStoredInfoType(request.Name, request.Config, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3844,7 +3844,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateStoredInfoTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<StoredInfoType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             StoredInfoType responseCallSettings = await client.UpdateStoredInfoTypeAsync(request.Name, request.Config, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             StoredInfoType responseCancellationToken = await client.UpdateStoredInfoTypeAsync(request.Name, request.Config, request.UpdateMask, st::CancellationToken.None);
@@ -3872,7 +3872,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateStoredInfoType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             StoredInfoType response = client.UpdateStoredInfoType(request.StoredInfoTypeName, request.Config, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3898,7 +3898,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateStoredInfoTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<StoredInfoType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             StoredInfoType responseCallSettings = await client.UpdateStoredInfoTypeAsync(request.StoredInfoTypeName, request.Config, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             StoredInfoType responseCancellationToken = await client.UpdateStoredInfoTypeAsync(request.StoredInfoTypeName, request.Config, request.UpdateMask, st::CancellationToken.None);
@@ -3924,7 +3924,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetStoredInfoType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             StoredInfoType response = client.GetStoredInfoType(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3948,7 +3948,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetStoredInfoTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<StoredInfoType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             StoredInfoType responseCallSettings = await client.GetStoredInfoTypeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             StoredInfoType responseCancellationToken = await client.GetStoredInfoTypeAsync(request, st::CancellationToken.None);
@@ -3974,7 +3974,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetStoredInfoType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             StoredInfoType response = client.GetStoredInfoType(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3998,7 +3998,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetStoredInfoTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<StoredInfoType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             StoredInfoType responseCallSettings = await client.GetStoredInfoTypeAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             StoredInfoType responseCancellationToken = await client.GetStoredInfoTypeAsync(request.Name, st::CancellationToken.None);
@@ -4024,7 +4024,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetStoredInfoType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             StoredInfoType response = client.GetStoredInfoType(request.StoredInfoTypeName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -4048,7 +4048,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetStoredInfoTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<StoredInfoType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             StoredInfoType responseCallSettings = await client.GetStoredInfoTypeAsync(request.StoredInfoTypeName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             StoredInfoType responseCancellationToken = await client.GetStoredInfoTypeAsync(request.StoredInfoTypeName, st::CancellationToken.None);
@@ -4066,7 +4066,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteStoredInfoType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteStoredInfoType(request);
             mockGrpcClient.VerifyAll();
         }
@@ -4081,7 +4081,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteStoredInfoTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteStoredInfoTypeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteStoredInfoTypeAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -4097,7 +4097,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteStoredInfoType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteStoredInfoType(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -4112,7 +4112,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteStoredInfoTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteStoredInfoTypeAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteStoredInfoTypeAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -4128,7 +4128,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteStoredInfoType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteStoredInfoType(request.StoredInfoTypeName);
             mockGrpcClient.VerifyAll();
         }
@@ -4143,7 +4143,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteStoredInfoTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteStoredInfoTypeAsync(request.StoredInfoTypeName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteStoredInfoTypeAsync(request.StoredInfoTypeName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -4160,7 +4160,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             HybridInspectResponse expectedResponse = new HybridInspectResponse { };
             mockGrpcClient.Setup(x => x.HybridInspectDlpJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             HybridInspectResponse response = client.HybridInspectDlpJob(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -4177,7 +4177,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             HybridInspectResponse expectedResponse = new HybridInspectResponse { };
             mockGrpcClient.Setup(x => x.HybridInspectDlpJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<HybridInspectResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             HybridInspectResponse responseCallSettings = await client.HybridInspectDlpJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             HybridInspectResponse responseCancellationToken = await client.HybridInspectDlpJobAsync(request, st::CancellationToken.None);
@@ -4195,7 +4195,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             HybridInspectResponse expectedResponse = new HybridInspectResponse { };
             mockGrpcClient.Setup(x => x.HybridInspectDlpJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             HybridInspectResponse response = client.HybridInspectDlpJob(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -4211,7 +4211,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             HybridInspectResponse expectedResponse = new HybridInspectResponse { };
             mockGrpcClient.Setup(x => x.HybridInspectDlpJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<HybridInspectResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             HybridInspectResponse responseCallSettings = await client.HybridInspectDlpJobAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             HybridInspectResponse responseCancellationToken = await client.HybridInspectDlpJobAsync(request.Name, st::CancellationToken.None);
@@ -4229,7 +4229,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             HybridInspectResponse expectedResponse = new HybridInspectResponse { };
             mockGrpcClient.Setup(x => x.HybridInspectDlpJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             HybridInspectResponse response = client.HybridInspectDlpJob(request.DlpJobName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -4245,7 +4245,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             HybridInspectResponse expectedResponse = new HybridInspectResponse { };
             mockGrpcClient.Setup(x => x.HybridInspectDlpJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<HybridInspectResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             HybridInspectResponse responseCallSettings = await client.HybridInspectDlpJobAsync(request.DlpJobName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             HybridInspectResponse responseCancellationToken = await client.HybridInspectDlpJobAsync(request.DlpJobName, st::CancellationToken.None);
@@ -4263,7 +4263,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.FinishDlpJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             client.FinishDlpJob(request);
             mockGrpcClient.VerifyAll();
         }
@@ -4278,7 +4278,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.FinishDlpJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.FinishDlpJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.FinishDlpJobAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();

@@ -55,7 +55,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 CmekSettings = new CmekSettings(),
             };
             mockGrpcClient.Setup(x => x.GetBucket(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogBucket response = client.GetBucket(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -86,7 +86,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 CmekSettings = new CmekSettings(),
             };
             mockGrpcClient.Setup(x => x.GetBucketAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogBucket>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogBucket responseCallSettings = await client.GetBucketAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogBucket responseCancellationToken = await client.GetBucketAsync(request, st::CancellationToken.None);
@@ -121,7 +121,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 CmekSettings = new CmekSettings(),
             };
             mockGrpcClient.Setup(x => x.CreateBucket(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogBucket response = client.CreateBucket(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -154,7 +154,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 CmekSettings = new CmekSettings(),
             };
             mockGrpcClient.Setup(x => x.CreateBucketAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogBucket>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogBucket responseCallSettings = await client.CreateBucketAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogBucket responseCancellationToken = await client.CreateBucketAsync(request, st::CancellationToken.None);
@@ -189,7 +189,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 CmekSettings = new CmekSettings(),
             };
             mockGrpcClient.Setup(x => x.UpdateBucket(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogBucket response = client.UpdateBucket(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -222,7 +222,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 CmekSettings = new CmekSettings(),
             };
             mockGrpcClient.Setup(x => x.UpdateBucketAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogBucket>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogBucket responseCallSettings = await client.UpdateBucketAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogBucket responseCancellationToken = await client.UpdateBucketAsync(request, st::CancellationToken.None);
@@ -241,7 +241,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteBucket(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteBucket(request);
             mockGrpcClient.VerifyAll();
         }
@@ -257,7 +257,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteBucketAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteBucketAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteBucketAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -274,7 +274,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.UndeleteBucket(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             client.UndeleteBucket(request);
             mockGrpcClient.VerifyAll();
         }
@@ -290,7 +290,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.UndeleteBucketAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             await client.UndeleteBucketAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.UndeleteBucketAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -314,7 +314,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Filter = "filtere47ac9b2",
             };
             mockGrpcClient.Setup(x => x.GetView(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogView response = client.GetView(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -338,7 +338,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Filter = "filtere47ac9b2",
             };
             mockGrpcClient.Setup(x => x.GetViewAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogView>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogView responseCallSettings = await client.GetViewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogView responseCancellationToken = await client.GetViewAsync(request, st::CancellationToken.None);
@@ -366,7 +366,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Filter = "filtere47ac9b2",
             };
             mockGrpcClient.Setup(x => x.CreateView(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogView response = client.CreateView(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -392,7 +392,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Filter = "filtere47ac9b2",
             };
             mockGrpcClient.Setup(x => x.CreateViewAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogView>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogView responseCallSettings = await client.CreateViewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogView responseCancellationToken = await client.CreateViewAsync(request, st::CancellationToken.None);
@@ -420,7 +420,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Filter = "filtere47ac9b2",
             };
             mockGrpcClient.Setup(x => x.UpdateView(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogView response = client.UpdateView(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -446,7 +446,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Filter = "filtere47ac9b2",
             };
             mockGrpcClient.Setup(x => x.UpdateViewAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogView>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogView responseCallSettings = await client.UpdateViewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogView responseCancellationToken = await client.UpdateViewAsync(request, st::CancellationToken.None);
@@ -465,7 +465,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteView(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteView(request);
             mockGrpcClient.VerifyAll();
         }
@@ -481,7 +481,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteViewAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteViewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteViewAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -514,7 +514,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.GetSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogSink response = client.GetSink(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -547,7 +547,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.GetSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogSink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogSink responseCallSettings = await client.GetSinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogSink responseCancellationToken = await client.GetSinkAsync(request, st::CancellationToken.None);
@@ -582,7 +582,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.GetSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogSink response = client.GetSink(request.SinkName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -615,7 +615,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.GetSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogSink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogSink responseCallSettings = await client.GetSinkAsync(request.SinkName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogSink responseCancellationToken = await client.GetSinkAsync(request.SinkName, st::CancellationToken.None);
@@ -650,7 +650,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.GetSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogSink response = client.GetSink(request.SinkNameAsLogSinkName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -683,7 +683,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.GetSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogSink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogSink responseCallSettings = await client.GetSinkAsync(request.SinkNameAsLogSinkName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogSink responseCancellationToken = await client.GetSinkAsync(request.SinkNameAsLogSinkName, st::CancellationToken.None);
@@ -720,7 +720,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.CreateSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogSink response = client.CreateSink(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -755,7 +755,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.CreateSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogSink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogSink responseCallSettings = await client.CreateSinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogSink responseCancellationToken = await client.CreateSinkAsync(request, st::CancellationToken.None);
@@ -791,7 +791,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.CreateSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogSink response = client.CreateSink(request.Parent, request.Sink);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -825,7 +825,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.CreateSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogSink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogSink responseCallSettings = await client.CreateSinkAsync(request.Parent, request.Sink, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogSink responseCancellationToken = await client.CreateSinkAsync(request.Parent, request.Sink, st::CancellationToken.None);
@@ -861,7 +861,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.CreateSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogSink response = client.CreateSink(request.ParentAsProjectName, request.Sink);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -895,7 +895,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.CreateSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogSink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogSink responseCallSettings = await client.CreateSinkAsync(request.ParentAsProjectName, request.Sink, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogSink responseCancellationToken = await client.CreateSinkAsync(request.ParentAsProjectName, request.Sink, st::CancellationToken.None);
@@ -931,7 +931,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.CreateSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogSink response = client.CreateSink(request.ParentAsOrganizationName, request.Sink);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -965,7 +965,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.CreateSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogSink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogSink responseCallSettings = await client.CreateSinkAsync(request.ParentAsOrganizationName, request.Sink, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogSink responseCancellationToken = await client.CreateSinkAsync(request.ParentAsOrganizationName, request.Sink, st::CancellationToken.None);
@@ -1001,7 +1001,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.CreateSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogSink response = client.CreateSink(request.ParentAsFolderName, request.Sink);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1035,7 +1035,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.CreateSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogSink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogSink responseCallSettings = await client.CreateSinkAsync(request.ParentAsFolderName, request.Sink, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogSink responseCancellationToken = await client.CreateSinkAsync(request.ParentAsFolderName, request.Sink, st::CancellationToken.None);
@@ -1071,7 +1071,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.CreateSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogSink response = client.CreateSink(request.ParentAsBillingAccountName, request.Sink);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1105,7 +1105,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.CreateSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogSink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogSink responseCallSettings = await client.CreateSinkAsync(request.ParentAsBillingAccountName, request.Sink, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogSink responseCancellationToken = await client.CreateSinkAsync(request.ParentAsBillingAccountName, request.Sink, st::CancellationToken.None);
@@ -1143,7 +1143,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.UpdateSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogSink response = client.UpdateSink(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1179,7 +1179,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.UpdateSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogSink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogSink responseCallSettings = await client.UpdateSinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogSink responseCancellationToken = await client.UpdateSinkAsync(request, st::CancellationToken.None);
@@ -1216,7 +1216,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.UpdateSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogSink response = client.UpdateSink(request.SinkName, request.Sink, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1251,7 +1251,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.UpdateSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogSink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogSink responseCallSettings = await client.UpdateSinkAsync(request.SinkName, request.Sink, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogSink responseCancellationToken = await client.UpdateSinkAsync(request.SinkName, request.Sink, request.UpdateMask, st::CancellationToken.None);
@@ -1288,7 +1288,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.UpdateSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogSink response = client.UpdateSink(request.SinkNameAsLogSinkName, request.Sink, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1323,7 +1323,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.UpdateSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogSink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogSink responseCallSettings = await client.UpdateSinkAsync(request.SinkNameAsLogSinkName, request.Sink, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogSink responseCancellationToken = await client.UpdateSinkAsync(request.SinkNameAsLogSinkName, request.Sink, request.UpdateMask, st::CancellationToken.None);
@@ -1359,7 +1359,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.UpdateSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogSink response = client.UpdateSink(request.SinkName, request.Sink);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1393,7 +1393,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.UpdateSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogSink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogSink responseCallSettings = await client.UpdateSinkAsync(request.SinkName, request.Sink, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogSink responseCancellationToken = await client.UpdateSinkAsync(request.SinkName, request.Sink, st::CancellationToken.None);
@@ -1429,7 +1429,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.UpdateSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogSink response = client.UpdateSink(request.SinkNameAsLogSinkName, request.Sink);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1463,7 +1463,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.UpdateSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogSink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogSink responseCallSettings = await client.UpdateSinkAsync(request.SinkNameAsLogSinkName, request.Sink, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogSink responseCancellationToken = await client.UpdateSinkAsync(request.SinkNameAsLogSinkName, request.Sink, st::CancellationToken.None);
@@ -1482,7 +1482,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteSink(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1498,7 +1498,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteSinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteSinkAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1515,7 +1515,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteSink(request.SinkName);
             mockGrpcClient.VerifyAll();
         }
@@ -1531,7 +1531,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteSinkAsync(request.SinkName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteSinkAsync(request.SinkName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1548,7 +1548,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteSink(request.SinkNameAsLogSinkName);
             mockGrpcClient.VerifyAll();
         }
@@ -1564,7 +1564,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteSinkAsync(request.SinkNameAsLogSinkName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteSinkAsync(request.SinkNameAsLogSinkName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1589,7 +1589,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetExclusion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogExclusion response = client.GetExclusion(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1614,7 +1614,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetExclusionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogExclusion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogExclusion responseCallSettings = await client.GetExclusionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogExclusion responseCancellationToken = await client.GetExclusionAsync(request, st::CancellationToken.None);
@@ -1641,7 +1641,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetExclusion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogExclusion response = client.GetExclusion(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1666,7 +1666,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetExclusionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogExclusion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogExclusion responseCallSettings = await client.GetExclusionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogExclusion responseCancellationToken = await client.GetExclusionAsync(request.Name, st::CancellationToken.None);
@@ -1693,7 +1693,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetExclusion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogExclusion response = client.GetExclusion(request.LogExclusionName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1718,7 +1718,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetExclusionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogExclusion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogExclusion responseCallSettings = await client.GetExclusionAsync(request.LogExclusionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogExclusion responseCancellationToken = await client.GetExclusionAsync(request.LogExclusionName, st::CancellationToken.None);
@@ -1746,7 +1746,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateExclusion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogExclusion response = client.CreateExclusion(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1772,7 +1772,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateExclusionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogExclusion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogExclusion responseCallSettings = await client.CreateExclusionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogExclusion responseCancellationToken = await client.CreateExclusionAsync(request, st::CancellationToken.None);
@@ -1800,7 +1800,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateExclusion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogExclusion response = client.CreateExclusion(request.Parent, request.Exclusion);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1826,7 +1826,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateExclusionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogExclusion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogExclusion responseCallSettings = await client.CreateExclusionAsync(request.Parent, request.Exclusion, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogExclusion responseCancellationToken = await client.CreateExclusionAsync(request.Parent, request.Exclusion, st::CancellationToken.None);
@@ -1854,7 +1854,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateExclusion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogExclusion response = client.CreateExclusion(request.ParentAsProjectName, request.Exclusion);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1880,7 +1880,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateExclusionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogExclusion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogExclusion responseCallSettings = await client.CreateExclusionAsync(request.ParentAsProjectName, request.Exclusion, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogExclusion responseCancellationToken = await client.CreateExclusionAsync(request.ParentAsProjectName, request.Exclusion, st::CancellationToken.None);
@@ -1908,7 +1908,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateExclusion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogExclusion response = client.CreateExclusion(request.ParentAsOrganizationName, request.Exclusion);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1934,7 +1934,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateExclusionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogExclusion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogExclusion responseCallSettings = await client.CreateExclusionAsync(request.ParentAsOrganizationName, request.Exclusion, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogExclusion responseCancellationToken = await client.CreateExclusionAsync(request.ParentAsOrganizationName, request.Exclusion, st::CancellationToken.None);
@@ -1962,7 +1962,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateExclusion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogExclusion response = client.CreateExclusion(request.ParentAsFolderName, request.Exclusion);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1988,7 +1988,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateExclusionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogExclusion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogExclusion responseCallSettings = await client.CreateExclusionAsync(request.ParentAsFolderName, request.Exclusion, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogExclusion responseCancellationToken = await client.CreateExclusionAsync(request.ParentAsFolderName, request.Exclusion, st::CancellationToken.None);
@@ -2016,7 +2016,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateExclusion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogExclusion response = client.CreateExclusion(request.ParentAsBillingAccountName, request.Exclusion);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2042,7 +2042,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateExclusionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogExclusion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogExclusion responseCallSettings = await client.CreateExclusionAsync(request.ParentAsBillingAccountName, request.Exclusion, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogExclusion responseCancellationToken = await client.CreateExclusionAsync(request.ParentAsBillingAccountName, request.Exclusion, st::CancellationToken.None);
@@ -2071,7 +2071,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateExclusion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogExclusion response = client.UpdateExclusion(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2098,7 +2098,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateExclusionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogExclusion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogExclusion responseCallSettings = await client.UpdateExclusionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogExclusion responseCancellationToken = await client.UpdateExclusionAsync(request, st::CancellationToken.None);
@@ -2127,7 +2127,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateExclusion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogExclusion response = client.UpdateExclusion(request.Name, request.Exclusion, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2154,7 +2154,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateExclusionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogExclusion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogExclusion responseCallSettings = await client.UpdateExclusionAsync(request.Name, request.Exclusion, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogExclusion responseCancellationToken = await client.UpdateExclusionAsync(request.Name, request.Exclusion, request.UpdateMask, st::CancellationToken.None);
@@ -2183,7 +2183,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateExclusion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogExclusion response = client.UpdateExclusion(request.LogExclusionName, request.Exclusion, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2210,7 +2210,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateExclusionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogExclusion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogExclusion responseCallSettings = await client.UpdateExclusionAsync(request.LogExclusionName, request.Exclusion, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogExclusion responseCancellationToken = await client.UpdateExclusionAsync(request.LogExclusionName, request.Exclusion, request.UpdateMask, st::CancellationToken.None);
@@ -2229,7 +2229,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteExclusion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteExclusion(request);
             mockGrpcClient.VerifyAll();
         }
@@ -2245,7 +2245,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteExclusionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteExclusionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteExclusionAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -2262,7 +2262,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteExclusion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteExclusion(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -2278,7 +2278,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteExclusionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteExclusionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteExclusionAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -2295,7 +2295,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteExclusion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteExclusion(request.LogExclusionName);
             mockGrpcClient.VerifyAll();
         }
@@ -2311,7 +2311,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteExclusionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteExclusionAsync(request.LogExclusionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteExclusionAsync(request.LogExclusionName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -2333,7 +2333,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 ServiceAccountId = "service_account_idc0b71d2a",
             };
             mockGrpcClient.Setup(x => x.GetCmekSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             CmekSettings response = client.GetCmekSettings(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2355,7 +2355,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 ServiceAccountId = "service_account_idc0b71d2a",
             };
             mockGrpcClient.Setup(x => x.GetCmekSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CmekSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             CmekSettings responseCallSettings = await client.GetCmekSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CmekSettings responseCancellationToken = await client.GetCmekSettingsAsync(request, st::CancellationToken.None);
@@ -2381,7 +2381,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 ServiceAccountId = "service_account_idc0b71d2a",
             };
             mockGrpcClient.Setup(x => x.UpdateCmekSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             CmekSettings response = client.UpdateCmekSettings(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2405,7 +2405,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 ServiceAccountId = "service_account_idc0b71d2a",
             };
             mockGrpcClient.Setup(x => x.UpdateCmekSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CmekSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             CmekSettings responseCallSettings = await client.UpdateCmekSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CmekSettings responseCancellationToken = await client.UpdateCmekSettingsAsync(request, st::CancellationToken.None);
@@ -2431,7 +2431,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 DisableDefaultSink = false,
             };
             mockGrpcClient.Setup(x => x.GetSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             Settings response = client.GetSettings(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2455,7 +2455,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 DisableDefaultSink = false,
             };
             mockGrpcClient.Setup(x => x.GetSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Settings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             Settings responseCallSettings = await client.GetSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Settings responseCancellationToken = await client.GetSettingsAsync(request, st::CancellationToken.None);
@@ -2481,7 +2481,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 DisableDefaultSink = false,
             };
             mockGrpcClient.Setup(x => x.GetSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             Settings response = client.GetSettings(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2505,7 +2505,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 DisableDefaultSink = false,
             };
             mockGrpcClient.Setup(x => x.GetSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Settings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             Settings responseCallSettings = await client.GetSettingsAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Settings responseCancellationToken = await client.GetSettingsAsync(request.Name, st::CancellationToken.None);
@@ -2531,7 +2531,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 DisableDefaultSink = false,
             };
             mockGrpcClient.Setup(x => x.GetSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             Settings response = client.GetSettings(request.SettingsName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2555,7 +2555,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 DisableDefaultSink = false,
             };
             mockGrpcClient.Setup(x => x.GetSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Settings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             Settings responseCallSettings = await client.GetSettingsAsync(request.SettingsName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Settings responseCancellationToken = await client.GetSettingsAsync(request.SettingsName, st::CancellationToken.None);
@@ -2583,7 +2583,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 DisableDefaultSink = false,
             };
             mockGrpcClient.Setup(x => x.UpdateSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             Settings response = client.UpdateSettings(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2609,7 +2609,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 DisableDefaultSink = false,
             };
             mockGrpcClient.Setup(x => x.UpdateSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Settings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             Settings responseCallSettings = await client.UpdateSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Settings responseCancellationToken = await client.UpdateSettingsAsync(request, st::CancellationToken.None);
@@ -2636,7 +2636,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 DisableDefaultSink = false,
             };
             mockGrpcClient.Setup(x => x.UpdateSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             Settings response = client.UpdateSettings(request.Settings, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2661,7 +2661,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 DisableDefaultSink = false,
             };
             mockGrpcClient.Setup(x => x.UpdateSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Settings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             Settings responseCallSettings = await client.UpdateSettingsAsync(request.Settings, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Settings responseCancellationToken = await client.UpdateSettingsAsync(request.Settings, request.UpdateMask, st::CancellationToken.None);

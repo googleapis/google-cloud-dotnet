@@ -50,7 +50,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionNotificationEndpointsClient client = new RegionNotificationEndpointsClientImpl(mockGrpcClient.Object, null);
+            RegionNotificationEndpointsClient client = new RegionNotificationEndpointsClientImpl(mockGrpcClient.Object, null, null);
             NotificationEndpoint response = client.Get(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -79,7 +79,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationEndpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionNotificationEndpointsClient client = new RegionNotificationEndpointsClientImpl(mockGrpcClient.Object, null);
+            RegionNotificationEndpointsClient client = new RegionNotificationEndpointsClientImpl(mockGrpcClient.Object, null, null);
             NotificationEndpoint responseCallSettings = await client.GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             NotificationEndpoint responseCancellationToken = await client.GetAsync(request, st::CancellationToken.None);
@@ -110,7 +110,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionNotificationEndpointsClient client = new RegionNotificationEndpointsClientImpl(mockGrpcClient.Object, null);
+            RegionNotificationEndpointsClient client = new RegionNotificationEndpointsClientImpl(mockGrpcClient.Object, null, null);
             NotificationEndpoint response = client.Get(request.Project, request.Region, request.NotificationEndpoint);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -139,7 +139,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationEndpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionNotificationEndpointsClient client = new RegionNotificationEndpointsClientImpl(mockGrpcClient.Object, null);
+            RegionNotificationEndpointsClient client = new RegionNotificationEndpointsClientImpl(mockGrpcClient.Object, null, null);
             NotificationEndpoint responseCallSettings = await client.GetAsync(request.Project, request.Region, request.NotificationEndpoint, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             NotificationEndpoint responseCancellationToken = await client.GetAsync(request.Project, request.Region, request.NotificationEndpoint, st::CancellationToken.None);

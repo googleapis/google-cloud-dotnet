@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -178,9 +178,8 @@ namespace Google.Cloud.Dialogflow.V2
         public ContextsSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public ContextsClientBuilder()
+        public ContextsClientBuilder() : base(ContextsClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = ContextsClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref ContextsClient client);
@@ -207,29 +206,18 @@ namespace Google.Cloud.Dialogflow.V2
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ContextsClient.Create(callInvoker, Settings);
+            return ContextsClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<ContextsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ContextsClient.Create(callInvoker, Settings);
+            return ContextsClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => ContextsClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => ContextsClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => ContextsClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>Contexts client wrapper, for convenient use.</summary>
@@ -258,19 +246,10 @@ namespace Google.Cloud.Dialogflow.V2
             "https://www.googleapis.com/auth/dialogflow",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Contexts.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="ContextsClient"/> using the default credentials, endpoint and settings. 
@@ -297,8 +276,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="ContextsSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="ContextsClient"/>.</returns>
-        internal static ContextsClient Create(grpccore::CallInvoker callInvoker, ContextsSettings settings = null)
+        internal static ContextsClient Create(grpccore::CallInvoker callInvoker, ContextsSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -307,7 +287,7 @@ namespace Google.Cloud.Dialogflow.V2
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             Contexts.ContextsClient grpcClient = new Contexts.ContextsClient(callInvoker);
-            return new ContextsClientImpl(grpcClient, settings);
+            return new ContextsClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1141,27 +1121,28 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="ContextsSettings"/> used within this client.</param>
-        public ContextsClientImpl(Contexts.ContextsClient grpcClient, ContextsSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public ContextsClientImpl(Contexts.ContextsClient grpcClient, ContextsSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             ContextsSettings effectiveSettings = settings ?? ContextsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListContexts = clientHelper.BuildApiCall<ListContextsRequest, ListContextsResponse>(grpcClient.ListContextsAsync, grpcClient.ListContexts, effectiveSettings.ListContextsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callListContexts = clientHelper.BuildApiCall<ListContextsRequest, ListContextsResponse>("ListContexts", grpcClient.ListContextsAsync, grpcClient.ListContexts, effectiveSettings.ListContextsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListContexts);
             Modify_ListContextsApiCall(ref _callListContexts);
-            _callGetContext = clientHelper.BuildApiCall<GetContextRequest, Context>(grpcClient.GetContextAsync, grpcClient.GetContext, effectiveSettings.GetContextSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetContext = clientHelper.BuildApiCall<GetContextRequest, Context>("GetContext", grpcClient.GetContextAsync, grpcClient.GetContext, effectiveSettings.GetContextSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetContext);
             Modify_GetContextApiCall(ref _callGetContext);
-            _callCreateContext = clientHelper.BuildApiCall<CreateContextRequest, Context>(grpcClient.CreateContextAsync, grpcClient.CreateContext, effectiveSettings.CreateContextSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateContext = clientHelper.BuildApiCall<CreateContextRequest, Context>("CreateContext", grpcClient.CreateContextAsync, grpcClient.CreateContext, effectiveSettings.CreateContextSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateContext);
             Modify_CreateContextApiCall(ref _callCreateContext);
-            _callUpdateContext = clientHelper.BuildApiCall<UpdateContextRequest, Context>(grpcClient.UpdateContextAsync, grpcClient.UpdateContext, effectiveSettings.UpdateContextSettings).WithGoogleRequestParam("context.name", request => request.Context?.Name);
+            _callUpdateContext = clientHelper.BuildApiCall<UpdateContextRequest, Context>("UpdateContext", grpcClient.UpdateContextAsync, grpcClient.UpdateContext, effectiveSettings.UpdateContextSettings).WithGoogleRequestParam("context.name", request => request.Context?.Name);
             Modify_ApiCall(ref _callUpdateContext);
             Modify_UpdateContextApiCall(ref _callUpdateContext);
-            _callDeleteContext = clientHelper.BuildApiCall<DeleteContextRequest, wkt::Empty>(grpcClient.DeleteContextAsync, grpcClient.DeleteContext, effectiveSettings.DeleteContextSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteContext = clientHelper.BuildApiCall<DeleteContextRequest, wkt::Empty>("DeleteContext", grpcClient.DeleteContextAsync, grpcClient.DeleteContext, effectiveSettings.DeleteContextSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteContext);
             Modify_DeleteContextApiCall(ref _callDeleteContext);
-            _callDeleteAllContexts = clientHelper.BuildApiCall<DeleteAllContextsRequest, wkt::Empty>(grpcClient.DeleteAllContextsAsync, grpcClient.DeleteAllContexts, effectiveSettings.DeleteAllContextsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callDeleteAllContexts = clientHelper.BuildApiCall<DeleteAllContextsRequest, wkt::Empty>("DeleteAllContexts", grpcClient.DeleteAllContextsAsync, grpcClient.DeleteAllContexts, effectiveSettings.DeleteAllContextsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callDeleteAllContexts);
             Modify_DeleteAllContextsApiCall(ref _callDeleteAllContexts);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

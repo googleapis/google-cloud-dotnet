@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -77,9 +77,8 @@ namespace Google.Cloud.Dataflow.V1Beta3
         public FlexTemplatesServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public FlexTemplatesServiceClientBuilder()
+        public FlexTemplatesServiceClientBuilder() : base(FlexTemplatesServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = FlexTemplatesServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref FlexTemplatesServiceClient client);
@@ -106,29 +105,18 @@ namespace Google.Cloud.Dataflow.V1Beta3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return FlexTemplatesServiceClient.Create(callInvoker, Settings);
+            return FlexTemplatesServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<FlexTemplatesServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return FlexTemplatesServiceClient.Create(callInvoker, Settings);
+            return FlexTemplatesServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => FlexTemplatesServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => FlexTemplatesServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => FlexTemplatesServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>FlexTemplatesService client wrapper, for convenient use.</summary>
@@ -161,19 +149,10 @@ namespace Google.Cloud.Dataflow.V1Beta3
             "https://www.googleapis.com/auth/userinfo.email",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(FlexTemplatesService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="FlexTemplatesServiceClient"/> using the default credentials, endpoint
@@ -203,8 +182,9 @@ namespace Google.Cloud.Dataflow.V1Beta3
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="FlexTemplatesServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="FlexTemplatesServiceClient"/>.</returns>
-        internal static FlexTemplatesServiceClient Create(grpccore::CallInvoker callInvoker, FlexTemplatesServiceSettings settings = null)
+        internal static FlexTemplatesServiceClient Create(grpccore::CallInvoker callInvoker, FlexTemplatesServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -213,7 +193,7 @@ namespace Google.Cloud.Dataflow.V1Beta3
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             FlexTemplatesService.FlexTemplatesServiceClient grpcClient = new FlexTemplatesService.FlexTemplatesServiceClient(callInvoker);
-            return new FlexTemplatesServiceClientImpl(grpcClient, settings);
+            return new FlexTemplatesServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -274,12 +254,13 @@ namespace Google.Cloud.Dataflow.V1Beta3
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="FlexTemplatesServiceSettings"/> used within this client.</param>
-        public FlexTemplatesServiceClientImpl(FlexTemplatesService.FlexTemplatesServiceClient grpcClient, FlexTemplatesServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public FlexTemplatesServiceClientImpl(FlexTemplatesService.FlexTemplatesServiceClient grpcClient, FlexTemplatesServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             FlexTemplatesServiceSettings effectiveSettings = settings ?? FlexTemplatesServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callLaunchFlexTemplate = clientHelper.BuildApiCall<LaunchFlexTemplateRequest, LaunchFlexTemplateResponse>(grpcClient.LaunchFlexTemplateAsync, grpcClient.LaunchFlexTemplate, effectiveSettings.LaunchFlexTemplateSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("location", request => request.Location);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callLaunchFlexTemplate = clientHelper.BuildApiCall<LaunchFlexTemplateRequest, LaunchFlexTemplateResponse>("LaunchFlexTemplate", grpcClient.LaunchFlexTemplateAsync, grpcClient.LaunchFlexTemplate, effectiveSettings.LaunchFlexTemplateSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("location", request => request.Location);
             Modify_ApiCall(ref _callLaunchFlexTemplate);
             Modify_LaunchFlexTemplateApiCall(ref _callLaunchFlexTemplate);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

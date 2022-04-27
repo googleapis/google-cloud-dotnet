@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -167,9 +167,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         public TransitionRouteGroupsSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public TransitionRouteGroupsClientBuilder()
+        public TransitionRouteGroupsClientBuilder() : base(TransitionRouteGroupsClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = TransitionRouteGroupsClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref TransitionRouteGroupsClient client);
@@ -196,29 +195,18 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return TransitionRouteGroupsClient.Create(callInvoker, Settings);
+            return TransitionRouteGroupsClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<TransitionRouteGroupsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return TransitionRouteGroupsClient.Create(callInvoker, Settings);
+            return TransitionRouteGroupsClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => TransitionRouteGroupsClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => TransitionRouteGroupsClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => TransitionRouteGroupsClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>TransitionRouteGroups client wrapper, for convenient use.</summary>
@@ -247,19 +235,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             "https://www.googleapis.com/auth/dialogflow",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(TransitionRouteGroups.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="TransitionRouteGroupsClient"/> using the default credentials, endpoint
@@ -289,8 +268,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="TransitionRouteGroupsSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="TransitionRouteGroupsClient"/>.</returns>
-        internal static TransitionRouteGroupsClient Create(grpccore::CallInvoker callInvoker, TransitionRouteGroupsSettings settings = null)
+        internal static TransitionRouteGroupsClient Create(grpccore::CallInvoker callInvoker, TransitionRouteGroupsSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -299,7 +279,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             TransitionRouteGroups.TransitionRouteGroupsClient grpcClient = new TransitionRouteGroups.TransitionRouteGroupsClient(callInvoker);
-            return new TransitionRouteGroupsClientImpl(grpcClient, settings);
+            return new TransitionRouteGroupsClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1009,24 +989,25 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="TransitionRouteGroupsSettings"/> used within this client.</param>
-        public TransitionRouteGroupsClientImpl(TransitionRouteGroups.TransitionRouteGroupsClient grpcClient, TransitionRouteGroupsSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public TransitionRouteGroupsClientImpl(TransitionRouteGroups.TransitionRouteGroupsClient grpcClient, TransitionRouteGroupsSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             TransitionRouteGroupsSettings effectiveSettings = settings ?? TransitionRouteGroupsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListTransitionRouteGroups = clientHelper.BuildApiCall<ListTransitionRouteGroupsRequest, ListTransitionRouteGroupsResponse>(grpcClient.ListTransitionRouteGroupsAsync, grpcClient.ListTransitionRouteGroups, effectiveSettings.ListTransitionRouteGroupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callListTransitionRouteGroups = clientHelper.BuildApiCall<ListTransitionRouteGroupsRequest, ListTransitionRouteGroupsResponse>("ListTransitionRouteGroups", grpcClient.ListTransitionRouteGroupsAsync, grpcClient.ListTransitionRouteGroups, effectiveSettings.ListTransitionRouteGroupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListTransitionRouteGroups);
             Modify_ListTransitionRouteGroupsApiCall(ref _callListTransitionRouteGroups);
-            _callGetTransitionRouteGroup = clientHelper.BuildApiCall<GetTransitionRouteGroupRequest, TransitionRouteGroup>(grpcClient.GetTransitionRouteGroupAsync, grpcClient.GetTransitionRouteGroup, effectiveSettings.GetTransitionRouteGroupSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetTransitionRouteGroup = clientHelper.BuildApiCall<GetTransitionRouteGroupRequest, TransitionRouteGroup>("GetTransitionRouteGroup", grpcClient.GetTransitionRouteGroupAsync, grpcClient.GetTransitionRouteGroup, effectiveSettings.GetTransitionRouteGroupSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetTransitionRouteGroup);
             Modify_GetTransitionRouteGroupApiCall(ref _callGetTransitionRouteGroup);
-            _callCreateTransitionRouteGroup = clientHelper.BuildApiCall<CreateTransitionRouteGroupRequest, TransitionRouteGroup>(grpcClient.CreateTransitionRouteGroupAsync, grpcClient.CreateTransitionRouteGroup, effectiveSettings.CreateTransitionRouteGroupSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateTransitionRouteGroup = clientHelper.BuildApiCall<CreateTransitionRouteGroupRequest, TransitionRouteGroup>("CreateTransitionRouteGroup", grpcClient.CreateTransitionRouteGroupAsync, grpcClient.CreateTransitionRouteGroup, effectiveSettings.CreateTransitionRouteGroupSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateTransitionRouteGroup);
             Modify_CreateTransitionRouteGroupApiCall(ref _callCreateTransitionRouteGroup);
-            _callUpdateTransitionRouteGroup = clientHelper.BuildApiCall<UpdateTransitionRouteGroupRequest, TransitionRouteGroup>(grpcClient.UpdateTransitionRouteGroupAsync, grpcClient.UpdateTransitionRouteGroup, effectiveSettings.UpdateTransitionRouteGroupSettings).WithGoogleRequestParam("transition_route_group.name", request => request.TransitionRouteGroup?.Name);
+            _callUpdateTransitionRouteGroup = clientHelper.BuildApiCall<UpdateTransitionRouteGroupRequest, TransitionRouteGroup>("UpdateTransitionRouteGroup", grpcClient.UpdateTransitionRouteGroupAsync, grpcClient.UpdateTransitionRouteGroup, effectiveSettings.UpdateTransitionRouteGroupSettings).WithGoogleRequestParam("transition_route_group.name", request => request.TransitionRouteGroup?.Name);
             Modify_ApiCall(ref _callUpdateTransitionRouteGroup);
             Modify_UpdateTransitionRouteGroupApiCall(ref _callUpdateTransitionRouteGroup);
-            _callDeleteTransitionRouteGroup = clientHelper.BuildApiCall<DeleteTransitionRouteGroupRequest, wkt::Empty>(grpcClient.DeleteTransitionRouteGroupAsync, grpcClient.DeleteTransitionRouteGroup, effectiveSettings.DeleteTransitionRouteGroupSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteTransitionRouteGroup = clientHelper.BuildApiCall<DeleteTransitionRouteGroupRequest, wkt::Empty>("DeleteTransitionRouteGroup", grpcClient.DeleteTransitionRouteGroupAsync, grpcClient.DeleteTransitionRouteGroup, effectiveSettings.DeleteTransitionRouteGroupSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteTransitionRouteGroup);
             Modify_DeleteTransitionRouteGroupApiCall(ref _callDeleteTransitionRouteGroup);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

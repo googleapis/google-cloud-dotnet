@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -640,9 +640,8 @@ namespace Google.Cloud.Kms.V1
         public KeyManagementServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public KeyManagementServiceClientBuilder()
+        public KeyManagementServiceClientBuilder() : base(KeyManagementServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = KeyManagementServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref KeyManagementServiceClient client);
@@ -669,29 +668,18 @@ namespace Google.Cloud.Kms.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return KeyManagementServiceClient.Create(callInvoker, Settings);
+            return KeyManagementServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<KeyManagementServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return KeyManagementServiceClient.Create(callInvoker, Settings);
+            return KeyManagementServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => KeyManagementServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => KeyManagementServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => KeyManagementServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>KeyManagementService client wrapper, for convenient use.</summary>
@@ -731,19 +719,10 @@ namespace Google.Cloud.Kms.V1
             "https://www.googleapis.com/auth/cloudkms",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(KeyManagementService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="KeyManagementServiceClient"/> using the default credentials, endpoint
@@ -773,8 +752,9 @@ namespace Google.Cloud.Kms.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="KeyManagementServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="KeyManagementServiceClient"/>.</returns>
-        internal static KeyManagementServiceClient Create(grpccore::CallInvoker callInvoker, KeyManagementServiceSettings settings = null)
+        internal static KeyManagementServiceClient Create(grpccore::CallInvoker callInvoker, KeyManagementServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -783,7 +763,7 @@ namespace Google.Cloud.Kms.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             KeyManagementService.KeyManagementServiceClient grpcClient = new KeyManagementService.KeyManagementServiceClient(callInvoker);
-            return new KeyManagementServiceClientImpl(grpcClient, settings);
+            return new KeyManagementServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -4990,88 +4970,89 @@ namespace Google.Cloud.Kms.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="KeyManagementServiceSettings"/> used within this client.</param>
-        public KeyManagementServiceClientImpl(KeyManagementService.KeyManagementServiceClient grpcClient, KeyManagementServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public KeyManagementServiceClientImpl(KeyManagementService.KeyManagementServiceClient grpcClient, KeyManagementServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             KeyManagementServiceSettings effectiveSettings = settings ?? KeyManagementServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings);
-            _callListKeyRings = clientHelper.BuildApiCall<ListKeyRingsRequest, ListKeyRingsResponse>(grpcClient.ListKeyRingsAsync, grpcClient.ListKeyRings, effectiveSettings.ListKeyRingsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
+            _callListKeyRings = clientHelper.BuildApiCall<ListKeyRingsRequest, ListKeyRingsResponse>("ListKeyRings", grpcClient.ListKeyRingsAsync, grpcClient.ListKeyRings, effectiveSettings.ListKeyRingsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListKeyRings);
             Modify_ListKeyRingsApiCall(ref _callListKeyRings);
-            _callListCryptoKeys = clientHelper.BuildApiCall<ListCryptoKeysRequest, ListCryptoKeysResponse>(grpcClient.ListCryptoKeysAsync, grpcClient.ListCryptoKeys, effectiveSettings.ListCryptoKeysSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListCryptoKeys = clientHelper.BuildApiCall<ListCryptoKeysRequest, ListCryptoKeysResponse>("ListCryptoKeys", grpcClient.ListCryptoKeysAsync, grpcClient.ListCryptoKeys, effectiveSettings.ListCryptoKeysSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListCryptoKeys);
             Modify_ListCryptoKeysApiCall(ref _callListCryptoKeys);
-            _callListCryptoKeyVersions = clientHelper.BuildApiCall<ListCryptoKeyVersionsRequest, ListCryptoKeyVersionsResponse>(grpcClient.ListCryptoKeyVersionsAsync, grpcClient.ListCryptoKeyVersions, effectiveSettings.ListCryptoKeyVersionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListCryptoKeyVersions = clientHelper.BuildApiCall<ListCryptoKeyVersionsRequest, ListCryptoKeyVersionsResponse>("ListCryptoKeyVersions", grpcClient.ListCryptoKeyVersionsAsync, grpcClient.ListCryptoKeyVersions, effectiveSettings.ListCryptoKeyVersionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListCryptoKeyVersions);
             Modify_ListCryptoKeyVersionsApiCall(ref _callListCryptoKeyVersions);
-            _callListImportJobs = clientHelper.BuildApiCall<ListImportJobsRequest, ListImportJobsResponse>(grpcClient.ListImportJobsAsync, grpcClient.ListImportJobs, effectiveSettings.ListImportJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListImportJobs = clientHelper.BuildApiCall<ListImportJobsRequest, ListImportJobsResponse>("ListImportJobs", grpcClient.ListImportJobsAsync, grpcClient.ListImportJobs, effectiveSettings.ListImportJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListImportJobs);
             Modify_ListImportJobsApiCall(ref _callListImportJobs);
-            _callGetKeyRing = clientHelper.BuildApiCall<GetKeyRingRequest, KeyRing>(grpcClient.GetKeyRingAsync, grpcClient.GetKeyRing, effectiveSettings.GetKeyRingSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetKeyRing = clientHelper.BuildApiCall<GetKeyRingRequest, KeyRing>("GetKeyRing", grpcClient.GetKeyRingAsync, grpcClient.GetKeyRing, effectiveSettings.GetKeyRingSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetKeyRing);
             Modify_GetKeyRingApiCall(ref _callGetKeyRing);
-            _callGetCryptoKey = clientHelper.BuildApiCall<GetCryptoKeyRequest, CryptoKey>(grpcClient.GetCryptoKeyAsync, grpcClient.GetCryptoKey, effectiveSettings.GetCryptoKeySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetCryptoKey = clientHelper.BuildApiCall<GetCryptoKeyRequest, CryptoKey>("GetCryptoKey", grpcClient.GetCryptoKeyAsync, grpcClient.GetCryptoKey, effectiveSettings.GetCryptoKeySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetCryptoKey);
             Modify_GetCryptoKeyApiCall(ref _callGetCryptoKey);
-            _callGetCryptoKeyVersion = clientHelper.BuildApiCall<GetCryptoKeyVersionRequest, CryptoKeyVersion>(grpcClient.GetCryptoKeyVersionAsync, grpcClient.GetCryptoKeyVersion, effectiveSettings.GetCryptoKeyVersionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetCryptoKeyVersion = clientHelper.BuildApiCall<GetCryptoKeyVersionRequest, CryptoKeyVersion>("GetCryptoKeyVersion", grpcClient.GetCryptoKeyVersionAsync, grpcClient.GetCryptoKeyVersion, effectiveSettings.GetCryptoKeyVersionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetCryptoKeyVersion);
             Modify_GetCryptoKeyVersionApiCall(ref _callGetCryptoKeyVersion);
-            _callGetPublicKey = clientHelper.BuildApiCall<GetPublicKeyRequest, PublicKey>(grpcClient.GetPublicKeyAsync, grpcClient.GetPublicKey, effectiveSettings.GetPublicKeySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetPublicKey = clientHelper.BuildApiCall<GetPublicKeyRequest, PublicKey>("GetPublicKey", grpcClient.GetPublicKeyAsync, grpcClient.GetPublicKey, effectiveSettings.GetPublicKeySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetPublicKey);
             Modify_GetPublicKeyApiCall(ref _callGetPublicKey);
-            _callGetImportJob = clientHelper.BuildApiCall<GetImportJobRequest, ImportJob>(grpcClient.GetImportJobAsync, grpcClient.GetImportJob, effectiveSettings.GetImportJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetImportJob = clientHelper.BuildApiCall<GetImportJobRequest, ImportJob>("GetImportJob", grpcClient.GetImportJobAsync, grpcClient.GetImportJob, effectiveSettings.GetImportJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetImportJob);
             Modify_GetImportJobApiCall(ref _callGetImportJob);
-            _callCreateKeyRing = clientHelper.BuildApiCall<CreateKeyRingRequest, KeyRing>(grpcClient.CreateKeyRingAsync, grpcClient.CreateKeyRing, effectiveSettings.CreateKeyRingSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateKeyRing = clientHelper.BuildApiCall<CreateKeyRingRequest, KeyRing>("CreateKeyRing", grpcClient.CreateKeyRingAsync, grpcClient.CreateKeyRing, effectiveSettings.CreateKeyRingSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateKeyRing);
             Modify_CreateKeyRingApiCall(ref _callCreateKeyRing);
-            _callCreateCryptoKey = clientHelper.BuildApiCall<CreateCryptoKeyRequest, CryptoKey>(grpcClient.CreateCryptoKeyAsync, grpcClient.CreateCryptoKey, effectiveSettings.CreateCryptoKeySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateCryptoKey = clientHelper.BuildApiCall<CreateCryptoKeyRequest, CryptoKey>("CreateCryptoKey", grpcClient.CreateCryptoKeyAsync, grpcClient.CreateCryptoKey, effectiveSettings.CreateCryptoKeySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateCryptoKey);
             Modify_CreateCryptoKeyApiCall(ref _callCreateCryptoKey);
-            _callCreateCryptoKeyVersion = clientHelper.BuildApiCall<CreateCryptoKeyVersionRequest, CryptoKeyVersion>(grpcClient.CreateCryptoKeyVersionAsync, grpcClient.CreateCryptoKeyVersion, effectiveSettings.CreateCryptoKeyVersionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateCryptoKeyVersion = clientHelper.BuildApiCall<CreateCryptoKeyVersionRequest, CryptoKeyVersion>("CreateCryptoKeyVersion", grpcClient.CreateCryptoKeyVersionAsync, grpcClient.CreateCryptoKeyVersion, effectiveSettings.CreateCryptoKeyVersionSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateCryptoKeyVersion);
             Modify_CreateCryptoKeyVersionApiCall(ref _callCreateCryptoKeyVersion);
-            _callImportCryptoKeyVersion = clientHelper.BuildApiCall<ImportCryptoKeyVersionRequest, CryptoKeyVersion>(grpcClient.ImportCryptoKeyVersionAsync, grpcClient.ImportCryptoKeyVersion, effectiveSettings.ImportCryptoKeyVersionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callImportCryptoKeyVersion = clientHelper.BuildApiCall<ImportCryptoKeyVersionRequest, CryptoKeyVersion>("ImportCryptoKeyVersion", grpcClient.ImportCryptoKeyVersionAsync, grpcClient.ImportCryptoKeyVersion, effectiveSettings.ImportCryptoKeyVersionSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callImportCryptoKeyVersion);
             Modify_ImportCryptoKeyVersionApiCall(ref _callImportCryptoKeyVersion);
-            _callCreateImportJob = clientHelper.BuildApiCall<CreateImportJobRequest, ImportJob>(grpcClient.CreateImportJobAsync, grpcClient.CreateImportJob, effectiveSettings.CreateImportJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateImportJob = clientHelper.BuildApiCall<CreateImportJobRequest, ImportJob>("CreateImportJob", grpcClient.CreateImportJobAsync, grpcClient.CreateImportJob, effectiveSettings.CreateImportJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateImportJob);
             Modify_CreateImportJobApiCall(ref _callCreateImportJob);
-            _callUpdateCryptoKey = clientHelper.BuildApiCall<UpdateCryptoKeyRequest, CryptoKey>(grpcClient.UpdateCryptoKeyAsync, grpcClient.UpdateCryptoKey, effectiveSettings.UpdateCryptoKeySettings).WithGoogleRequestParam("crypto_key.name", request => request.CryptoKey?.Name);
+            _callUpdateCryptoKey = clientHelper.BuildApiCall<UpdateCryptoKeyRequest, CryptoKey>("UpdateCryptoKey", grpcClient.UpdateCryptoKeyAsync, grpcClient.UpdateCryptoKey, effectiveSettings.UpdateCryptoKeySettings).WithGoogleRequestParam("crypto_key.name", request => request.CryptoKey?.Name);
             Modify_ApiCall(ref _callUpdateCryptoKey);
             Modify_UpdateCryptoKeyApiCall(ref _callUpdateCryptoKey);
-            _callUpdateCryptoKeyVersion = clientHelper.BuildApiCall<UpdateCryptoKeyVersionRequest, CryptoKeyVersion>(grpcClient.UpdateCryptoKeyVersionAsync, grpcClient.UpdateCryptoKeyVersion, effectiveSettings.UpdateCryptoKeyVersionSettings).WithGoogleRequestParam("crypto_key_version.name", request => request.CryptoKeyVersion?.Name);
+            _callUpdateCryptoKeyVersion = clientHelper.BuildApiCall<UpdateCryptoKeyVersionRequest, CryptoKeyVersion>("UpdateCryptoKeyVersion", grpcClient.UpdateCryptoKeyVersionAsync, grpcClient.UpdateCryptoKeyVersion, effectiveSettings.UpdateCryptoKeyVersionSettings).WithGoogleRequestParam("crypto_key_version.name", request => request.CryptoKeyVersion?.Name);
             Modify_ApiCall(ref _callUpdateCryptoKeyVersion);
             Modify_UpdateCryptoKeyVersionApiCall(ref _callUpdateCryptoKeyVersion);
-            _callUpdateCryptoKeyPrimaryVersion = clientHelper.BuildApiCall<UpdateCryptoKeyPrimaryVersionRequest, CryptoKey>(grpcClient.UpdateCryptoKeyPrimaryVersionAsync, grpcClient.UpdateCryptoKeyPrimaryVersion, effectiveSettings.UpdateCryptoKeyPrimaryVersionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUpdateCryptoKeyPrimaryVersion = clientHelper.BuildApiCall<UpdateCryptoKeyPrimaryVersionRequest, CryptoKey>("UpdateCryptoKeyPrimaryVersion", grpcClient.UpdateCryptoKeyPrimaryVersionAsync, grpcClient.UpdateCryptoKeyPrimaryVersion, effectiveSettings.UpdateCryptoKeyPrimaryVersionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUpdateCryptoKeyPrimaryVersion);
             Modify_UpdateCryptoKeyPrimaryVersionApiCall(ref _callUpdateCryptoKeyPrimaryVersion);
-            _callDestroyCryptoKeyVersion = clientHelper.BuildApiCall<DestroyCryptoKeyVersionRequest, CryptoKeyVersion>(grpcClient.DestroyCryptoKeyVersionAsync, grpcClient.DestroyCryptoKeyVersion, effectiveSettings.DestroyCryptoKeyVersionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDestroyCryptoKeyVersion = clientHelper.BuildApiCall<DestroyCryptoKeyVersionRequest, CryptoKeyVersion>("DestroyCryptoKeyVersion", grpcClient.DestroyCryptoKeyVersionAsync, grpcClient.DestroyCryptoKeyVersion, effectiveSettings.DestroyCryptoKeyVersionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDestroyCryptoKeyVersion);
             Modify_DestroyCryptoKeyVersionApiCall(ref _callDestroyCryptoKeyVersion);
-            _callRestoreCryptoKeyVersion = clientHelper.BuildApiCall<RestoreCryptoKeyVersionRequest, CryptoKeyVersion>(grpcClient.RestoreCryptoKeyVersionAsync, grpcClient.RestoreCryptoKeyVersion, effectiveSettings.RestoreCryptoKeyVersionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callRestoreCryptoKeyVersion = clientHelper.BuildApiCall<RestoreCryptoKeyVersionRequest, CryptoKeyVersion>("RestoreCryptoKeyVersion", grpcClient.RestoreCryptoKeyVersionAsync, grpcClient.RestoreCryptoKeyVersion, effectiveSettings.RestoreCryptoKeyVersionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callRestoreCryptoKeyVersion);
             Modify_RestoreCryptoKeyVersionApiCall(ref _callRestoreCryptoKeyVersion);
-            _callEncrypt = clientHelper.BuildApiCall<EncryptRequest, EncryptResponse>(grpcClient.EncryptAsync, grpcClient.Encrypt, effectiveSettings.EncryptSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callEncrypt = clientHelper.BuildApiCall<EncryptRequest, EncryptResponse>("Encrypt", grpcClient.EncryptAsync, grpcClient.Encrypt, effectiveSettings.EncryptSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callEncrypt);
             Modify_EncryptApiCall(ref _callEncrypt);
-            _callDecrypt = clientHelper.BuildApiCall<DecryptRequest, DecryptResponse>(grpcClient.DecryptAsync, grpcClient.Decrypt, effectiveSettings.DecryptSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDecrypt = clientHelper.BuildApiCall<DecryptRequest, DecryptResponse>("Decrypt", grpcClient.DecryptAsync, grpcClient.Decrypt, effectiveSettings.DecryptSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDecrypt);
             Modify_DecryptApiCall(ref _callDecrypt);
-            _callAsymmetricSign = clientHelper.BuildApiCall<AsymmetricSignRequest, AsymmetricSignResponse>(grpcClient.AsymmetricSignAsync, grpcClient.AsymmetricSign, effectiveSettings.AsymmetricSignSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callAsymmetricSign = clientHelper.BuildApiCall<AsymmetricSignRequest, AsymmetricSignResponse>("AsymmetricSign", grpcClient.AsymmetricSignAsync, grpcClient.AsymmetricSign, effectiveSettings.AsymmetricSignSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callAsymmetricSign);
             Modify_AsymmetricSignApiCall(ref _callAsymmetricSign);
-            _callAsymmetricDecrypt = clientHelper.BuildApiCall<AsymmetricDecryptRequest, AsymmetricDecryptResponse>(grpcClient.AsymmetricDecryptAsync, grpcClient.AsymmetricDecrypt, effectiveSettings.AsymmetricDecryptSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callAsymmetricDecrypt = clientHelper.BuildApiCall<AsymmetricDecryptRequest, AsymmetricDecryptResponse>("AsymmetricDecrypt", grpcClient.AsymmetricDecryptAsync, grpcClient.AsymmetricDecrypt, effectiveSettings.AsymmetricDecryptSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callAsymmetricDecrypt);
             Modify_AsymmetricDecryptApiCall(ref _callAsymmetricDecrypt);
-            _callMacSign = clientHelper.BuildApiCall<MacSignRequest, MacSignResponse>(grpcClient.MacSignAsync, grpcClient.MacSign, effectiveSettings.MacSignSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callMacSign = clientHelper.BuildApiCall<MacSignRequest, MacSignResponse>("MacSign", grpcClient.MacSignAsync, grpcClient.MacSign, effectiveSettings.MacSignSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callMacSign);
             Modify_MacSignApiCall(ref _callMacSign);
-            _callMacVerify = clientHelper.BuildApiCall<MacVerifyRequest, MacVerifyResponse>(grpcClient.MacVerifyAsync, grpcClient.MacVerify, effectiveSettings.MacVerifySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callMacVerify = clientHelper.BuildApiCall<MacVerifyRequest, MacVerifyResponse>("MacVerify", grpcClient.MacVerifyAsync, grpcClient.MacVerify, effectiveSettings.MacVerifySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callMacVerify);
             Modify_MacVerifyApiCall(ref _callMacVerify);
-            _callGenerateRandomBytes = clientHelper.BuildApiCall<GenerateRandomBytesRequest, GenerateRandomBytesResponse>(grpcClient.GenerateRandomBytesAsync, grpcClient.GenerateRandomBytes, effectiveSettings.GenerateRandomBytesSettings).WithGoogleRequestParam("location", request => request.Location);
+            _callGenerateRandomBytes = clientHelper.BuildApiCall<GenerateRandomBytesRequest, GenerateRandomBytesResponse>("GenerateRandomBytes", grpcClient.GenerateRandomBytesAsync, grpcClient.GenerateRandomBytes, effectiveSettings.GenerateRandomBytesSettings).WithGoogleRequestParam("location", request => request.Location);
             Modify_ApiCall(ref _callGenerateRandomBytes);
             Modify_GenerateRandomBytesApiCall(ref _callGenerateRandomBytes);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

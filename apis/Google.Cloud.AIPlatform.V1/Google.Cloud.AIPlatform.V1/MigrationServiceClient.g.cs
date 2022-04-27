@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -113,9 +113,8 @@ namespace Google.Cloud.AIPlatform.V1
         public MigrationServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public MigrationServiceClientBuilder()
+        public MigrationServiceClientBuilder() : base(MigrationServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = MigrationServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref MigrationServiceClient client);
@@ -142,29 +141,18 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return MigrationServiceClient.Create(callInvoker, Settings);
+            return MigrationServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<MigrationServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return MigrationServiceClient.Create(callInvoker, Settings);
+            return MigrationServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => MigrationServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => MigrationServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => MigrationServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>MigrationService client wrapper, for convenient use.</summary>
@@ -192,19 +180,10 @@ namespace Google.Cloud.AIPlatform.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(MigrationService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="MigrationServiceClient"/> using the default credentials, endpoint and
@@ -231,8 +210,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="MigrationServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="MigrationServiceClient"/>.</returns>
-        internal static MigrationServiceClient Create(grpccore::CallInvoker callInvoker, MigrationServiceSettings settings = null)
+        internal static MigrationServiceClient Create(grpccore::CallInvoker callInvoker, MigrationServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -241,7 +221,7 @@ namespace Google.Cloud.AIPlatform.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             MigrationService.MigrationServiceClient grpcClient = new MigrationService.MigrationServiceClient(callInvoker);
-            return new MigrationServiceClientImpl(grpcClient, settings);
+            return new MigrationServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -612,16 +592,17 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="MigrationServiceSettings"/> used within this client.</param>
-        public MigrationServiceClientImpl(MigrationService.MigrationServiceClient grpcClient, MigrationServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public MigrationServiceClientImpl(MigrationService.MigrationServiceClient grpcClient, MigrationServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             MigrationServiceSettings effectiveSettings = settings ?? MigrationServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            BatchMigrateResourcesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchMigrateResourcesOperationsSettings);
-            _callSearchMigratableResources = clientHelper.BuildApiCall<SearchMigratableResourcesRequest, SearchMigratableResourcesResponse>(grpcClient.SearchMigratableResourcesAsync, grpcClient.SearchMigratableResources, effectiveSettings.SearchMigratableResourcesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            BatchMigrateResourcesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchMigrateResourcesOperationsSettings, logger);
+            _callSearchMigratableResources = clientHelper.BuildApiCall<SearchMigratableResourcesRequest, SearchMigratableResourcesResponse>("SearchMigratableResources", grpcClient.SearchMigratableResourcesAsync, grpcClient.SearchMigratableResources, effectiveSettings.SearchMigratableResourcesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callSearchMigratableResources);
             Modify_SearchMigratableResourcesApiCall(ref _callSearchMigratableResources);
-            _callBatchMigrateResources = clientHelper.BuildApiCall<BatchMigrateResourcesRequest, lro::Operation>(grpcClient.BatchMigrateResourcesAsync, grpcClient.BatchMigrateResources, effectiveSettings.BatchMigrateResourcesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callBatchMigrateResources = clientHelper.BuildApiCall<BatchMigrateResourcesRequest, lro::Operation>("BatchMigrateResources", grpcClient.BatchMigrateResourcesAsync, grpcClient.BatchMigrateResources, effectiveSettings.BatchMigrateResourcesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callBatchMigrateResources);
             Modify_BatchMigrateResourcesApiCall(ref _callBatchMigrateResources);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

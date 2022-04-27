@@ -102,7 +102,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             Instance response = client.Get(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -183,7 +183,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             Instance responseCallSettings = await client.GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Instance responseCancellationToken = await client.GetAsync(request, st::CancellationToken.None);
@@ -266,7 +266,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             Instance response = client.Get(request.Project, request.Zone, request.Instance);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -347,7 +347,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             Instance responseCallSettings = await client.GetAsync(request.Project, request.Zone, request.Instance, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Instance responseCancellationToken = await client.GetAsync(request.Project, request.Zone, request.Instance, st::CancellationToken.None);
@@ -376,7 +376,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetEffectiveFirewalls(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             InstancesGetEffectiveFirewallsResponse response = client.GetEffectiveFirewalls(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -403,7 +403,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetEffectiveFirewallsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstancesGetEffectiveFirewallsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             InstancesGetEffectiveFirewallsResponse responseCallSettings = await client.GetEffectiveFirewallsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             InstancesGetEffectiveFirewallsResponse responseCancellationToken = await client.GetEffectiveFirewallsAsync(request, st::CancellationToken.None);
@@ -432,7 +432,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetEffectiveFirewalls(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             InstancesGetEffectiveFirewallsResponse response = client.GetEffectiveFirewalls(request.Project, request.Zone, request.Instance, request.NetworkInterface);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -459,7 +459,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetEffectiveFirewallsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstancesGetEffectiveFirewallsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             InstancesGetEffectiveFirewallsResponse responseCallSettings = await client.GetEffectiveFirewallsAsync(request.Project, request.Zone, request.Instance, request.NetworkInterface, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             InstancesGetEffectiveFirewallsResponse responseCancellationToken = await client.GetEffectiveFirewallsAsync(request.Project, request.Zone, request.Instance, request.NetworkInterface, st::CancellationToken.None);
@@ -490,7 +490,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.GetGuestAttributes(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             GuestAttributes response = client.GetGuestAttributes(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -519,7 +519,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.GetGuestAttributesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GuestAttributes>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             GuestAttributes responseCallSettings = await client.GetGuestAttributesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GuestAttributes responseCancellationToken = await client.GetGuestAttributesAsync(request, st::CancellationToken.None);
@@ -548,7 +548,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.GetGuestAttributes(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             GuestAttributes response = client.GetGuestAttributes(request.Project, request.Zone, request.Instance);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -575,7 +575,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.GetGuestAttributesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GuestAttributes>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             GuestAttributes responseCallSettings = await client.GetGuestAttributesAsync(request.Project, request.Zone, request.Instance, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GuestAttributes responseCancellationToken = await client.GetGuestAttributesAsync(request.Project, request.Zone, request.Instance, st::CancellationToken.None);
@@ -605,7 +605,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             Policy response = client.GetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -633,7 +633,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             Policy responseCallSettings = await client.GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Policy responseCancellationToken = await client.GetIamPolicyAsync(request, st::CancellationToken.None);
@@ -662,7 +662,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             Policy response = client.GetIamPolicy(request.Project, request.Zone, request.Resource);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -689,7 +689,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             Policy responseCallSettings = await client.GetIamPolicyAsync(request.Project, request.Zone, request.Resource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Policy responseCancellationToken = await client.GetIamPolicyAsync(request.Project, request.Zone, request.Resource, st::CancellationToken.None);
@@ -714,7 +714,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Contents = "contents8c7dbf98",
             };
             mockGrpcClient.Setup(x => x.GetScreenshot(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             Screenshot response = client.GetScreenshot(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -737,7 +737,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Contents = "contents8c7dbf98",
             };
             mockGrpcClient.Setup(x => x.GetScreenshotAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Screenshot>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             Screenshot responseCallSettings = await client.GetScreenshotAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Screenshot responseCancellationToken = await client.GetScreenshotAsync(request, st::CancellationToken.None);
@@ -762,7 +762,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Contents = "contents8c7dbf98",
             };
             mockGrpcClient.Setup(x => x.GetScreenshot(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             Screenshot response = client.GetScreenshot(request.Project, request.Zone, request.Instance);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -785,7 +785,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Contents = "contents8c7dbf98",
             };
             mockGrpcClient.Setup(x => x.GetScreenshotAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Screenshot>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             Screenshot responseCallSettings = await client.GetScreenshotAsync(request.Project, request.Zone, request.Instance, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Screenshot responseCancellationToken = await client.GetScreenshotAsync(request.Project, request.Zone, request.Instance, st::CancellationToken.None);
@@ -815,7 +815,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Contents = "contents8c7dbf98",
             };
             mockGrpcClient.Setup(x => x.GetSerialPortOutput(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             SerialPortOutput response = client.GetSerialPortOutput(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -843,7 +843,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Contents = "contents8c7dbf98",
             };
             mockGrpcClient.Setup(x => x.GetSerialPortOutputAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SerialPortOutput>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             SerialPortOutput responseCallSettings = await client.GetSerialPortOutputAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SerialPortOutput responseCancellationToken = await client.GetSerialPortOutputAsync(request, st::CancellationToken.None);
@@ -871,7 +871,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Contents = "contents8c7dbf98",
             };
             mockGrpcClient.Setup(x => x.GetSerialPortOutput(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             SerialPortOutput response = client.GetSerialPortOutput(request.Project, request.Zone, request.Instance);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -897,7 +897,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Contents = "contents8c7dbf98",
             };
             mockGrpcClient.Setup(x => x.GetSerialPortOutputAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SerialPortOutput>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             SerialPortOutput responseCallSettings = await client.GetSerialPortOutputAsync(request.Project, request.Zone, request.Instance, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SerialPortOutput responseCancellationToken = await client.GetSerialPortOutputAsync(request.Project, request.Zone, request.Instance, st::CancellationToken.None);
@@ -923,7 +923,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 EncryptionKey = new ShieldedInstanceIdentityEntry(),
             };
             mockGrpcClient.Setup(x => x.GetShieldedInstanceIdentity(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             ShieldedInstanceIdentity response = client.GetShieldedInstanceIdentity(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -947,7 +947,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 EncryptionKey = new ShieldedInstanceIdentityEntry(),
             };
             mockGrpcClient.Setup(x => x.GetShieldedInstanceIdentityAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ShieldedInstanceIdentity>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             ShieldedInstanceIdentity responseCallSettings = await client.GetShieldedInstanceIdentityAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ShieldedInstanceIdentity responseCancellationToken = await client.GetShieldedInstanceIdentityAsync(request, st::CancellationToken.None);
@@ -973,7 +973,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 EncryptionKey = new ShieldedInstanceIdentityEntry(),
             };
             mockGrpcClient.Setup(x => x.GetShieldedInstanceIdentity(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             ShieldedInstanceIdentity response = client.GetShieldedInstanceIdentity(request.Project, request.Zone, request.Instance);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -997,7 +997,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 EncryptionKey = new ShieldedInstanceIdentityEntry(),
             };
             mockGrpcClient.Setup(x => x.GetShieldedInstanceIdentityAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ShieldedInstanceIdentity>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             ShieldedInstanceIdentity responseCallSettings = await client.GetShieldedInstanceIdentityAsync(request.Project, request.Zone, request.Instance, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ShieldedInstanceIdentity responseCancellationToken = await client.GetShieldedInstanceIdentityAsync(request.Project, request.Zone, request.Instance, st::CancellationToken.None);
@@ -1018,7 +1018,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             SendDiagnosticInterruptInstanceResponse expectedResponse = new SendDiagnosticInterruptInstanceResponse { };
             mockGrpcClient.Setup(x => x.SendDiagnosticInterrupt(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             SendDiagnosticInterruptInstanceResponse response = client.SendDiagnosticInterrupt(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1037,7 +1037,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             SendDiagnosticInterruptInstanceResponse expectedResponse = new SendDiagnosticInterruptInstanceResponse { };
             mockGrpcClient.Setup(x => x.SendDiagnosticInterruptAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SendDiagnosticInterruptInstanceResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             SendDiagnosticInterruptInstanceResponse responseCallSettings = await client.SendDiagnosticInterruptAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SendDiagnosticInterruptInstanceResponse responseCancellationToken = await client.SendDiagnosticInterruptAsync(request, st::CancellationToken.None);
@@ -1058,7 +1058,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             SendDiagnosticInterruptInstanceResponse expectedResponse = new SendDiagnosticInterruptInstanceResponse { };
             mockGrpcClient.Setup(x => x.SendDiagnosticInterrupt(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             SendDiagnosticInterruptInstanceResponse response = client.SendDiagnosticInterrupt(request.Project, request.Zone, request.Instance);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1077,7 +1077,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             SendDiagnosticInterruptInstanceResponse expectedResponse = new SendDiagnosticInterruptInstanceResponse { };
             mockGrpcClient.Setup(x => x.SendDiagnosticInterruptAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SendDiagnosticInterruptInstanceResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             SendDiagnosticInterruptInstanceResponse responseCallSettings = await client.SendDiagnosticInterruptAsync(request.Project, request.Zone, request.Instance, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SendDiagnosticInterruptInstanceResponse responseCancellationToken = await client.SendDiagnosticInterruptAsync(request.Project, request.Zone, request.Instance, st::CancellationToken.None);
@@ -1107,7 +1107,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             Policy response = client.SetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1135,7 +1135,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             Policy responseCallSettings = await client.SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Policy responseCancellationToken = await client.SetIamPolicyAsync(request, st::CancellationToken.None);
@@ -1165,7 +1165,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             Policy response = client.SetIamPolicy(request.Project, request.Zone, request.Resource, request.ZoneSetPolicyRequestResource);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1193,7 +1193,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             Policy responseCallSettings = await client.SetIamPolicyAsync(request.Project, request.Zone, request.Resource, request.ZoneSetPolicyRequestResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Policy responseCancellationToken = await client.SetIamPolicyAsync(request.Project, request.Zone, request.Resource, request.ZoneSetPolicyRequestResource, st::CancellationToken.None);
@@ -1221,7 +1221,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             TestPermissionsResponse response = client.TestIamPermissions(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1247,7 +1247,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TestPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             TestPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TestPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request, st::CancellationToken.None);
@@ -1275,7 +1275,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             TestPermissionsResponse response = client.TestIamPermissions(request.Project, request.Zone, request.Resource, request.TestPermissionsRequestResource);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1301,7 +1301,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TestPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null, null);
             TestPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request.Project, request.Zone, request.Resource, request.TestPermissionsRequestResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TestPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request.Project, request.Zone, request.Resource, request.TestPermissionsRequestResource, st::CancellationToken.None);

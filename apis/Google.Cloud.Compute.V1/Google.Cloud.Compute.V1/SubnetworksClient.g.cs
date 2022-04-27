@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -361,9 +361,8 @@ namespace Google.Cloud.Compute.V1
         public SubnetworksSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public SubnetworksClientBuilder()
+        public SubnetworksClientBuilder() : base(SubnetworksClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = SubnetworksClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref SubnetworksClient client);
@@ -390,29 +389,18 @@ namespace Google.Cloud.Compute.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return SubnetworksClient.Create(callInvoker, Settings);
+            return SubnetworksClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<SubnetworksClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return SubnetworksClient.Create(callInvoker, Settings);
+            return SubnetworksClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => SubnetworksClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => SubnetworksClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => SubnetworksClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => ComputeRestAdapter.ComputeAdapter;
     }
 
     /// <summary>Subnetworks client wrapper, for convenient use.</summary>
@@ -441,19 +429,10 @@ namespace Google.Cloud.Compute.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Subnetworks.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="SubnetworksClient"/> using the default credentials, endpoint and
@@ -480,8 +459,9 @@ namespace Google.Cloud.Compute.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="SubnetworksSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="SubnetworksClient"/>.</returns>
-        internal static SubnetworksClient Create(grpccore::CallInvoker callInvoker, SubnetworksSettings settings = null)
+        internal static SubnetworksClient Create(grpccore::CallInvoker callInvoker, SubnetworksSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -490,7 +470,7 @@ namespace Google.Cloud.Compute.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             Subnetworks.SubnetworksClient grpcClient = new Subnetworks.SubnetworksClient(callInvoker);
-            return new SubnetworksClientImpl(grpcClient, settings);
+            return new SubnetworksClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1734,50 +1714,51 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="SubnetworksSettings"/> used within this client.</param>
-        public SubnetworksClientImpl(Subnetworks.SubnetworksClient grpcClient, SubnetworksSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public SubnetworksClientImpl(Subnetworks.SubnetworksClient grpcClient, SubnetworksSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             SubnetworksSettings effectiveSettings = settings ?? SubnetworksSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.DeleteOperationsSettings);
-            ExpandIpCidrRangeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.ExpandIpCidrRangeOperationsSettings);
-            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.InsertOperationsSettings);
-            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.PatchOperationsSettings);
-            SetPrivateIpGoogleAccessOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.SetPrivateIpGoogleAccessOperationsSettings);
-            _callAggregatedList = clientHelper.BuildApiCall<AggregatedListSubnetworksRequest, SubnetworkAggregatedList>(grpcClient.AggregatedListAsync, grpcClient.AggregatedList, effectiveSettings.AggregatedListSettings).WithGoogleRequestParam("project", request => request.Project);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.DeleteOperationsSettings, logger);
+            ExpandIpCidrRangeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.ExpandIpCidrRangeOperationsSettings, logger);
+            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.InsertOperationsSettings, logger);
+            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.PatchOperationsSettings, logger);
+            SetPrivateIpGoogleAccessOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.SetPrivateIpGoogleAccessOperationsSettings, logger);
+            _callAggregatedList = clientHelper.BuildApiCall<AggregatedListSubnetworksRequest, SubnetworkAggregatedList>("AggregatedList", grpcClient.AggregatedListAsync, grpcClient.AggregatedList, effectiveSettings.AggregatedListSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callAggregatedList);
             Modify_AggregatedListApiCall(ref _callAggregatedList);
-            _callDelete = clientHelper.BuildApiCall<DeleteSubnetworkRequest, Operation>(grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("subnetwork", request => request.Subnetwork);
+            _callDelete = clientHelper.BuildApiCall<DeleteSubnetworkRequest, Operation>("Delete", grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("subnetwork", request => request.Subnetwork);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);
-            _callExpandIpCidrRange = clientHelper.BuildApiCall<ExpandIpCidrRangeSubnetworkRequest, Operation>(grpcClient.ExpandIpCidrRangeAsync, grpcClient.ExpandIpCidrRange, effectiveSettings.ExpandIpCidrRangeSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("subnetwork", request => request.Subnetwork);
+            _callExpandIpCidrRange = clientHelper.BuildApiCall<ExpandIpCidrRangeSubnetworkRequest, Operation>("ExpandIpCidrRange", grpcClient.ExpandIpCidrRangeAsync, grpcClient.ExpandIpCidrRange, effectiveSettings.ExpandIpCidrRangeSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("subnetwork", request => request.Subnetwork);
             Modify_ApiCall(ref _callExpandIpCidrRange);
             Modify_ExpandIpCidrRangeApiCall(ref _callExpandIpCidrRange);
-            _callGet = clientHelper.BuildApiCall<GetSubnetworkRequest, Subnetwork>(grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("subnetwork", request => request.Subnetwork);
+            _callGet = clientHelper.BuildApiCall<GetSubnetworkRequest, Subnetwork>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("subnetwork", request => request.Subnetwork);
             Modify_ApiCall(ref _callGet);
             Modify_GetApiCall(ref _callGet);
-            _callGetIamPolicy = clientHelper.BuildApiCall<GetIamPolicySubnetworkRequest, Policy>(grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("resource", request => request.Resource);
+            _callGetIamPolicy = clientHelper.BuildApiCall<GetIamPolicySubnetworkRequest, Policy>("GetIamPolicy", grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callGetIamPolicy);
             Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
-            _callInsert = clientHelper.BuildApiCall<InsertSubnetworkRequest, Operation>(grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
+            _callInsert = clientHelper.BuildApiCall<InsertSubnetworkRequest, Operation>("Insert", grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
             Modify_ApiCall(ref _callInsert);
             Modify_InsertApiCall(ref _callInsert);
-            _callList = clientHelper.BuildApiCall<ListSubnetworksRequest, SubnetworkList>(grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
+            _callList = clientHelper.BuildApiCall<ListSubnetworksRequest, SubnetworkList>("List", grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
             Modify_ApiCall(ref _callList);
             Modify_ListApiCall(ref _callList);
-            _callListUsable = clientHelper.BuildApiCall<ListUsableSubnetworksRequest, UsableSubnetworksAggregatedList>(grpcClient.ListUsableAsync, grpcClient.ListUsable, effectiveSettings.ListUsableSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callListUsable = clientHelper.BuildApiCall<ListUsableSubnetworksRequest, UsableSubnetworksAggregatedList>("ListUsable", grpcClient.ListUsableAsync, grpcClient.ListUsable, effectiveSettings.ListUsableSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callListUsable);
             Modify_ListUsableApiCall(ref _callListUsable);
-            _callPatch = clientHelper.BuildApiCall<PatchSubnetworkRequest, Operation>(grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("subnetwork", request => request.Subnetwork);
+            _callPatch = clientHelper.BuildApiCall<PatchSubnetworkRequest, Operation>("Patch", grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("subnetwork", request => request.Subnetwork);
             Modify_ApiCall(ref _callPatch);
             Modify_PatchApiCall(ref _callPatch);
-            _callSetIamPolicy = clientHelper.BuildApiCall<SetIamPolicySubnetworkRequest, Policy>(grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("resource", request => request.Resource);
+            _callSetIamPolicy = clientHelper.BuildApiCall<SetIamPolicySubnetworkRequest, Policy>("SetIamPolicy", grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callSetIamPolicy);
             Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);
-            _callSetPrivateIpGoogleAccess = clientHelper.BuildApiCall<SetPrivateIpGoogleAccessSubnetworkRequest, Operation>(grpcClient.SetPrivateIpGoogleAccessAsync, grpcClient.SetPrivateIpGoogleAccess, effectiveSettings.SetPrivateIpGoogleAccessSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("subnetwork", request => request.Subnetwork);
+            _callSetPrivateIpGoogleAccess = clientHelper.BuildApiCall<SetPrivateIpGoogleAccessSubnetworkRequest, Operation>("SetPrivateIpGoogleAccess", grpcClient.SetPrivateIpGoogleAccessAsync, grpcClient.SetPrivateIpGoogleAccess, effectiveSettings.SetPrivateIpGoogleAccessSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("subnetwork", request => request.Subnetwork);
             Modify_ApiCall(ref _callSetPrivateIpGoogleAccess);
             Modify_SetPrivateIpGoogleAccessApiCall(ref _callSetPrivateIpGoogleAccess);
-            _callTestIamPermissions = clientHelper.BuildApiCall<TestIamPermissionsSubnetworkRequest, TestPermissionsResponse>(grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("resource", request => request.Resource);
+            _callTestIamPermissions = clientHelper.BuildApiCall<TestIamPermissionsSubnetworkRequest, TestPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callTestIamPermissions);
             Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

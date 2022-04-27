@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -104,9 +104,8 @@ namespace Google.Cloud.Dialogflow.V2
         public AnswerRecordsSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public AnswerRecordsClientBuilder()
+        public AnswerRecordsClientBuilder() : base(AnswerRecordsClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = AnswerRecordsClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref AnswerRecordsClient client);
@@ -133,29 +132,18 @@ namespace Google.Cloud.Dialogflow.V2
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return AnswerRecordsClient.Create(callInvoker, Settings);
+            return AnswerRecordsClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<AnswerRecordsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return AnswerRecordsClient.Create(callInvoker, Settings);
+            return AnswerRecordsClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => AnswerRecordsClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => AnswerRecordsClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => AnswerRecordsClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>AnswerRecords client wrapper, for convenient use.</summary>
@@ -184,19 +172,10 @@ namespace Google.Cloud.Dialogflow.V2
             "https://www.googleapis.com/auth/dialogflow",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(AnswerRecords.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="AnswerRecordsClient"/> using the default credentials, endpoint and
@@ -223,8 +202,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="AnswerRecordsSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="AnswerRecordsClient"/>.</returns>
-        internal static AnswerRecordsClient Create(grpccore::CallInvoker callInvoker, AnswerRecordsSettings settings = null)
+        internal static AnswerRecordsClient Create(grpccore::CallInvoker callInvoker, AnswerRecordsSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -233,7 +213,7 @@ namespace Google.Cloud.Dialogflow.V2
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             AnswerRecords.AnswerRecordsClient grpcClient = new AnswerRecords.AnswerRecordsClient(callInvoker);
-            return new AnswerRecordsClientImpl(grpcClient, settings);
+            return new AnswerRecordsClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -527,15 +507,16 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="AnswerRecordsSettings"/> used within this client.</param>
-        public AnswerRecordsClientImpl(AnswerRecords.AnswerRecordsClient grpcClient, AnswerRecordsSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public AnswerRecordsClientImpl(AnswerRecords.AnswerRecordsClient grpcClient, AnswerRecordsSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             AnswerRecordsSettings effectiveSettings = settings ?? AnswerRecordsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListAnswerRecords = clientHelper.BuildApiCall<ListAnswerRecordsRequest, ListAnswerRecordsResponse>(grpcClient.ListAnswerRecordsAsync, grpcClient.ListAnswerRecords, effectiveSettings.ListAnswerRecordsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callListAnswerRecords = clientHelper.BuildApiCall<ListAnswerRecordsRequest, ListAnswerRecordsResponse>("ListAnswerRecords", grpcClient.ListAnswerRecordsAsync, grpcClient.ListAnswerRecords, effectiveSettings.ListAnswerRecordsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListAnswerRecords);
             Modify_ListAnswerRecordsApiCall(ref _callListAnswerRecords);
-            _callUpdateAnswerRecord = clientHelper.BuildApiCall<UpdateAnswerRecordRequest, AnswerRecord>(grpcClient.UpdateAnswerRecordAsync, grpcClient.UpdateAnswerRecord, effectiveSettings.UpdateAnswerRecordSettings).WithGoogleRequestParam("answer_record.name", request => request.AnswerRecord?.Name);
+            _callUpdateAnswerRecord = clientHelper.BuildApiCall<UpdateAnswerRecordRequest, AnswerRecord>("UpdateAnswerRecord", grpcClient.UpdateAnswerRecordAsync, grpcClient.UpdateAnswerRecord, effectiveSettings.UpdateAnswerRecordSettings).WithGoogleRequestParam("answer_record.name", request => request.AnswerRecord?.Name);
             Modify_ApiCall(ref _callUpdateAnswerRecord);
             Modify_UpdateAnswerRecordApiCall(ref _callUpdateAnswerRecord);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

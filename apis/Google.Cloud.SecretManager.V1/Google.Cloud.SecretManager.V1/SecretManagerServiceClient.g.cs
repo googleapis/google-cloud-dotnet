@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -279,9 +279,8 @@ namespace Google.Cloud.SecretManager.V1
         public SecretManagerServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public SecretManagerServiceClientBuilder()
+        public SecretManagerServiceClientBuilder() : base(SecretManagerServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = SecretManagerServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref SecretManagerServiceClient client);
@@ -308,29 +307,18 @@ namespace Google.Cloud.SecretManager.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return SecretManagerServiceClient.Create(callInvoker, Settings);
+            return SecretManagerServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<SecretManagerServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return SecretManagerServiceClient.Create(callInvoker, Settings);
+            return SecretManagerServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => SecretManagerServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => SecretManagerServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => SecretManagerServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>SecretManagerService client wrapper, for convenient use.</summary>
@@ -363,19 +351,10 @@ namespace Google.Cloud.SecretManager.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(SecretManagerService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="SecretManagerServiceClient"/> using the default credentials, endpoint
@@ -405,8 +384,9 @@ namespace Google.Cloud.SecretManager.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="SecretManagerServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="SecretManagerServiceClient"/>.</returns>
-        internal static SecretManagerServiceClient Create(grpccore::CallInvoker callInvoker, SecretManagerServiceSettings settings = null)
+        internal static SecretManagerServiceClient Create(grpccore::CallInvoker callInvoker, SecretManagerServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -415,7 +395,7 @@ namespace Google.Cloud.SecretManager.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             SecretManagerService.SecretManagerServiceClient grpcClient = new SecretManagerService.SecretManagerServiceClient(callInvoker);
-            return new SecretManagerServiceClientImpl(grpcClient, settings);
+            return new SecretManagerServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -2192,54 +2172,55 @@ namespace Google.Cloud.SecretManager.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="SecretManagerServiceSettings"/> used within this client.</param>
-        public SecretManagerServiceClientImpl(SecretManagerService.SecretManagerServiceClient grpcClient, SecretManagerServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public SecretManagerServiceClientImpl(SecretManagerService.SecretManagerServiceClient grpcClient, SecretManagerServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             SecretManagerServiceSettings effectiveSettings = settings ?? SecretManagerServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListSecrets = clientHelper.BuildApiCall<ListSecretsRequest, ListSecretsResponse>(grpcClient.ListSecretsAsync, grpcClient.ListSecrets, effectiveSettings.ListSecretsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callListSecrets = clientHelper.BuildApiCall<ListSecretsRequest, ListSecretsResponse>("ListSecrets", grpcClient.ListSecretsAsync, grpcClient.ListSecrets, effectiveSettings.ListSecretsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListSecrets);
             Modify_ListSecretsApiCall(ref _callListSecrets);
-            _callCreateSecret = clientHelper.BuildApiCall<CreateSecretRequest, Secret>(grpcClient.CreateSecretAsync, grpcClient.CreateSecret, effectiveSettings.CreateSecretSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateSecret = clientHelper.BuildApiCall<CreateSecretRequest, Secret>("CreateSecret", grpcClient.CreateSecretAsync, grpcClient.CreateSecret, effectiveSettings.CreateSecretSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateSecret);
             Modify_CreateSecretApiCall(ref _callCreateSecret);
-            _callAddSecretVersion = clientHelper.BuildApiCall<AddSecretVersionRequest, SecretVersion>(grpcClient.AddSecretVersionAsync, grpcClient.AddSecretVersion, effectiveSettings.AddSecretVersionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callAddSecretVersion = clientHelper.BuildApiCall<AddSecretVersionRequest, SecretVersion>("AddSecretVersion", grpcClient.AddSecretVersionAsync, grpcClient.AddSecretVersion, effectiveSettings.AddSecretVersionSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callAddSecretVersion);
             Modify_AddSecretVersionApiCall(ref _callAddSecretVersion);
-            _callGetSecret = clientHelper.BuildApiCall<GetSecretRequest, Secret>(grpcClient.GetSecretAsync, grpcClient.GetSecret, effectiveSettings.GetSecretSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetSecret = clientHelper.BuildApiCall<GetSecretRequest, Secret>("GetSecret", grpcClient.GetSecretAsync, grpcClient.GetSecret, effectiveSettings.GetSecretSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetSecret);
             Modify_GetSecretApiCall(ref _callGetSecret);
-            _callUpdateSecret = clientHelper.BuildApiCall<UpdateSecretRequest, Secret>(grpcClient.UpdateSecretAsync, grpcClient.UpdateSecret, effectiveSettings.UpdateSecretSettings).WithGoogleRequestParam("secret.name", request => request.Secret?.Name);
+            _callUpdateSecret = clientHelper.BuildApiCall<UpdateSecretRequest, Secret>("UpdateSecret", grpcClient.UpdateSecretAsync, grpcClient.UpdateSecret, effectiveSettings.UpdateSecretSettings).WithGoogleRequestParam("secret.name", request => request.Secret?.Name);
             Modify_ApiCall(ref _callUpdateSecret);
             Modify_UpdateSecretApiCall(ref _callUpdateSecret);
-            _callDeleteSecret = clientHelper.BuildApiCall<DeleteSecretRequest, wkt::Empty>(grpcClient.DeleteSecretAsync, grpcClient.DeleteSecret, effectiveSettings.DeleteSecretSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteSecret = clientHelper.BuildApiCall<DeleteSecretRequest, wkt::Empty>("DeleteSecret", grpcClient.DeleteSecretAsync, grpcClient.DeleteSecret, effectiveSettings.DeleteSecretSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteSecret);
             Modify_DeleteSecretApiCall(ref _callDeleteSecret);
-            _callListSecretVersions = clientHelper.BuildApiCall<ListSecretVersionsRequest, ListSecretVersionsResponse>(grpcClient.ListSecretVersionsAsync, grpcClient.ListSecretVersions, effectiveSettings.ListSecretVersionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListSecretVersions = clientHelper.BuildApiCall<ListSecretVersionsRequest, ListSecretVersionsResponse>("ListSecretVersions", grpcClient.ListSecretVersionsAsync, grpcClient.ListSecretVersions, effectiveSettings.ListSecretVersionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListSecretVersions);
             Modify_ListSecretVersionsApiCall(ref _callListSecretVersions);
-            _callGetSecretVersion = clientHelper.BuildApiCall<GetSecretVersionRequest, SecretVersion>(grpcClient.GetSecretVersionAsync, grpcClient.GetSecretVersion, effectiveSettings.GetSecretVersionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetSecretVersion = clientHelper.BuildApiCall<GetSecretVersionRequest, SecretVersion>("GetSecretVersion", grpcClient.GetSecretVersionAsync, grpcClient.GetSecretVersion, effectiveSettings.GetSecretVersionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetSecretVersion);
             Modify_GetSecretVersionApiCall(ref _callGetSecretVersion);
-            _callAccessSecretVersion = clientHelper.BuildApiCall<AccessSecretVersionRequest, AccessSecretVersionResponse>(grpcClient.AccessSecretVersionAsync, grpcClient.AccessSecretVersion, effectiveSettings.AccessSecretVersionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callAccessSecretVersion = clientHelper.BuildApiCall<AccessSecretVersionRequest, AccessSecretVersionResponse>("AccessSecretVersion", grpcClient.AccessSecretVersionAsync, grpcClient.AccessSecretVersion, effectiveSettings.AccessSecretVersionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callAccessSecretVersion);
             Modify_AccessSecretVersionApiCall(ref _callAccessSecretVersion);
-            _callDisableSecretVersion = clientHelper.BuildApiCall<DisableSecretVersionRequest, SecretVersion>(grpcClient.DisableSecretVersionAsync, grpcClient.DisableSecretVersion, effectiveSettings.DisableSecretVersionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDisableSecretVersion = clientHelper.BuildApiCall<DisableSecretVersionRequest, SecretVersion>("DisableSecretVersion", grpcClient.DisableSecretVersionAsync, grpcClient.DisableSecretVersion, effectiveSettings.DisableSecretVersionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDisableSecretVersion);
             Modify_DisableSecretVersionApiCall(ref _callDisableSecretVersion);
-            _callEnableSecretVersion = clientHelper.BuildApiCall<EnableSecretVersionRequest, SecretVersion>(grpcClient.EnableSecretVersionAsync, grpcClient.EnableSecretVersion, effectiveSettings.EnableSecretVersionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callEnableSecretVersion = clientHelper.BuildApiCall<EnableSecretVersionRequest, SecretVersion>("EnableSecretVersion", grpcClient.EnableSecretVersionAsync, grpcClient.EnableSecretVersion, effectiveSettings.EnableSecretVersionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callEnableSecretVersion);
             Modify_EnableSecretVersionApiCall(ref _callEnableSecretVersion);
-            _callDestroySecretVersion = clientHelper.BuildApiCall<DestroySecretVersionRequest, SecretVersion>(grpcClient.DestroySecretVersionAsync, grpcClient.DestroySecretVersion, effectiveSettings.DestroySecretVersionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDestroySecretVersion = clientHelper.BuildApiCall<DestroySecretVersionRequest, SecretVersion>("DestroySecretVersion", grpcClient.DestroySecretVersionAsync, grpcClient.DestroySecretVersion, effectiveSettings.DestroySecretVersionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDestroySecretVersion);
             Modify_DestroySecretVersionApiCall(ref _callDestroySecretVersion);
-            _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>(grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>("SetIamPolicy", grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callSetIamPolicy);
             Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);
-            _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>(grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>("GetIamPolicy", grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callGetIamPolicy);
             Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
-            _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>(grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callTestIamPermissions);
             Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

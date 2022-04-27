@@ -46,7 +46,7 @@ namespace Google.Cloud.Datastore.V1.Tests
                 ReadTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.Lookup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
+            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null, null);
             LookupResponse response = client.Lookup(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -70,7 +70,7 @@ namespace Google.Cloud.Datastore.V1.Tests
                 ReadTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.LookupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LookupResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
+            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null, null);
             LookupResponse responseCallSettings = await client.LookupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LookupResponse responseCancellationToken = await client.LookupAsync(request, st::CancellationToken.None);
@@ -96,7 +96,7 @@ namespace Google.Cloud.Datastore.V1.Tests
                 ReadTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.Lookup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
+            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null, null);
             LookupResponse response = client.Lookup(request.ProjectId, request.ReadOptions, request.Keys);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -120,7 +120,7 @@ namespace Google.Cloud.Datastore.V1.Tests
                 ReadTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.LookupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LookupResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
+            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null, null);
             LookupResponse responseCallSettings = await client.LookupAsync(request.ProjectId, request.ReadOptions, request.Keys, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LookupResponse responseCancellationToken = await client.LookupAsync(request.ProjectId, request.ReadOptions, request.Keys, st::CancellationToken.None);
@@ -146,7 +146,7 @@ namespace Google.Cloud.Datastore.V1.Tests
                 Query = new Query(),
             };
             mockGrpcClient.Setup(x => x.RunQuery(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
+            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null, null);
             RunQueryResponse response = client.RunQuery(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -170,7 +170,7 @@ namespace Google.Cloud.Datastore.V1.Tests
                 Query = new Query(),
             };
             mockGrpcClient.Setup(x => x.RunQueryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RunQueryResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
+            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null, null);
             RunQueryResponse responseCallSettings = await client.RunQueryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             RunQueryResponse responseCancellationToken = await client.RunQueryAsync(request, st::CancellationToken.None);
@@ -192,7 +192,7 @@ namespace Google.Cloud.Datastore.V1.Tests
                 Transaction = proto::ByteString.CopyFromUtf8("transaction6ab7d5f4"),
             };
             mockGrpcClient.Setup(x => x.BeginTransaction(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
+            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null, null);
             BeginTransactionResponse response = client.BeginTransaction(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -212,7 +212,7 @@ namespace Google.Cloud.Datastore.V1.Tests
                 Transaction = proto::ByteString.CopyFromUtf8("transaction6ab7d5f4"),
             };
             mockGrpcClient.Setup(x => x.BeginTransactionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BeginTransactionResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
+            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null, null);
             BeginTransactionResponse responseCallSettings = await client.BeginTransactionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BeginTransactionResponse responseCancellationToken = await client.BeginTransactionAsync(request, st::CancellationToken.None);
@@ -233,7 +233,7 @@ namespace Google.Cloud.Datastore.V1.Tests
                 Transaction = proto::ByteString.CopyFromUtf8("transaction6ab7d5f4"),
             };
             mockGrpcClient.Setup(x => x.BeginTransaction(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
+            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null, null);
             BeginTransactionResponse response = client.BeginTransaction(request.ProjectId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -252,7 +252,7 @@ namespace Google.Cloud.Datastore.V1.Tests
                 Transaction = proto::ByteString.CopyFromUtf8("transaction6ab7d5f4"),
             };
             mockGrpcClient.Setup(x => x.BeginTransactionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BeginTransactionResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
+            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null, null);
             BeginTransactionResponse responseCallSettings = await client.BeginTransactionAsync(request.ProjectId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BeginTransactionResponse responseCancellationToken = await client.BeginTransactionAsync(request.ProjectId, st::CancellationToken.None);
@@ -281,7 +281,7 @@ namespace Google.Cloud.Datastore.V1.Tests
                 CommitTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.Commit(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
+            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null, null);
             CommitResponse response = client.Commit(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -308,7 +308,7 @@ namespace Google.Cloud.Datastore.V1.Tests
                 CommitTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CommitAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CommitResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
+            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null, null);
             CommitResponse responseCallSettings = await client.CommitAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CommitResponse responseCancellationToken = await client.CommitAsync(request, st::CancellationToken.None);
@@ -337,7 +337,7 @@ namespace Google.Cloud.Datastore.V1.Tests
                 CommitTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.Commit(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
+            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null, null);
             CommitResponse response = client.Commit(request.ProjectId, request.Mode, request.Transaction, request.Mutations);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -364,7 +364,7 @@ namespace Google.Cloud.Datastore.V1.Tests
                 CommitTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CommitAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CommitResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
+            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null, null);
             CommitResponse responseCallSettings = await client.CommitAsync(request.ProjectId, request.Mode, request.Transaction, request.Mutations, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CommitResponse responseCancellationToken = await client.CommitAsync(request.ProjectId, request.Mode, request.Transaction, request.Mutations, st::CancellationToken.None);
@@ -392,7 +392,7 @@ namespace Google.Cloud.Datastore.V1.Tests
                 CommitTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.Commit(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
+            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null, null);
             CommitResponse response = client.Commit(request.ProjectId, request.Mode, request.Mutations);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -418,7 +418,7 @@ namespace Google.Cloud.Datastore.V1.Tests
                 CommitTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CommitAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CommitResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
+            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null, null);
             CommitResponse responseCallSettings = await client.CommitAsync(request.ProjectId, request.Mode, request.Mutations, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CommitResponse responseCancellationToken = await client.CommitAsync(request.ProjectId, request.Mode, request.Mutations, st::CancellationToken.None);
@@ -437,7 +437,7 @@ namespace Google.Cloud.Datastore.V1.Tests
             };
             RollbackResponse expectedResponse = new RollbackResponse { };
             mockGrpcClient.Setup(x => x.Rollback(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
+            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null, null);
             RollbackResponse response = client.Rollback(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -454,7 +454,7 @@ namespace Google.Cloud.Datastore.V1.Tests
             };
             RollbackResponse expectedResponse = new RollbackResponse { };
             mockGrpcClient.Setup(x => x.RollbackAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RollbackResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
+            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null, null);
             RollbackResponse responseCallSettings = await client.RollbackAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             RollbackResponse responseCancellationToken = await client.RollbackAsync(request, st::CancellationToken.None);
@@ -473,7 +473,7 @@ namespace Google.Cloud.Datastore.V1.Tests
             };
             RollbackResponse expectedResponse = new RollbackResponse { };
             mockGrpcClient.Setup(x => x.Rollback(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
+            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null, null);
             RollbackResponse response = client.Rollback(request.ProjectId, request.Transaction);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -490,7 +490,7 @@ namespace Google.Cloud.Datastore.V1.Tests
             };
             RollbackResponse expectedResponse = new RollbackResponse { };
             mockGrpcClient.Setup(x => x.RollbackAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RollbackResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
+            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null, null);
             RollbackResponse responseCallSettings = await client.RollbackAsync(request.ProjectId, request.Transaction, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             RollbackResponse responseCancellationToken = await client.RollbackAsync(request.ProjectId, request.Transaction, st::CancellationToken.None);
@@ -509,7 +509,7 @@ namespace Google.Cloud.Datastore.V1.Tests
             };
             AllocateIdsResponse expectedResponse = new AllocateIdsResponse { Keys = { new Key(), }, };
             mockGrpcClient.Setup(x => x.AllocateIds(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
+            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null, null);
             AllocateIdsResponse response = client.AllocateIds(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -526,7 +526,7 @@ namespace Google.Cloud.Datastore.V1.Tests
             };
             AllocateIdsResponse expectedResponse = new AllocateIdsResponse { Keys = { new Key(), }, };
             mockGrpcClient.Setup(x => x.AllocateIdsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AllocateIdsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
+            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null, null);
             AllocateIdsResponse responseCallSettings = await client.AllocateIdsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AllocateIdsResponse responseCancellationToken = await client.AllocateIdsAsync(request, st::CancellationToken.None);
@@ -545,7 +545,7 @@ namespace Google.Cloud.Datastore.V1.Tests
             };
             AllocateIdsResponse expectedResponse = new AllocateIdsResponse { Keys = { new Key(), }, };
             mockGrpcClient.Setup(x => x.AllocateIds(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
+            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null, null);
             AllocateIdsResponse response = client.AllocateIds(request.ProjectId, request.Keys);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -562,7 +562,7 @@ namespace Google.Cloud.Datastore.V1.Tests
             };
             AllocateIdsResponse expectedResponse = new AllocateIdsResponse { Keys = { new Key(), }, };
             mockGrpcClient.Setup(x => x.AllocateIdsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AllocateIdsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
+            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null, null);
             AllocateIdsResponse responseCallSettings = await client.AllocateIdsAsync(request.ProjectId, request.Keys, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AllocateIdsResponse responseCancellationToken = await client.AllocateIdsAsync(request.ProjectId, request.Keys, st::CancellationToken.None);
@@ -582,7 +582,7 @@ namespace Google.Cloud.Datastore.V1.Tests
             };
             ReserveIdsResponse expectedResponse = new ReserveIdsResponse { };
             mockGrpcClient.Setup(x => x.ReserveIds(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
+            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null, null);
             ReserveIdsResponse response = client.ReserveIds(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -600,7 +600,7 @@ namespace Google.Cloud.Datastore.V1.Tests
             };
             ReserveIdsResponse expectedResponse = new ReserveIdsResponse { };
             mockGrpcClient.Setup(x => x.ReserveIdsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReserveIdsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
+            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null, null);
             ReserveIdsResponse responseCallSettings = await client.ReserveIdsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ReserveIdsResponse responseCancellationToken = await client.ReserveIdsAsync(request, st::CancellationToken.None);
@@ -619,7 +619,7 @@ namespace Google.Cloud.Datastore.V1.Tests
             };
             ReserveIdsResponse expectedResponse = new ReserveIdsResponse { };
             mockGrpcClient.Setup(x => x.ReserveIds(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
+            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null, null);
             ReserveIdsResponse response = client.ReserveIds(request.ProjectId, request.Keys);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -636,7 +636,7 @@ namespace Google.Cloud.Datastore.V1.Tests
             };
             ReserveIdsResponse expectedResponse = new ReserveIdsResponse { };
             mockGrpcClient.Setup(x => x.ReserveIdsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReserveIdsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
+            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null, null);
             ReserveIdsResponse responseCallSettings = await client.ReserveIdsAsync(request.ProjectId, request.Keys, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ReserveIdsResponse responseCancellationToken = await client.ReserveIdsAsync(request.ProjectId, request.Keys, st::CancellationToken.None);

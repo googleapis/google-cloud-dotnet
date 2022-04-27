@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -93,9 +93,8 @@ namespace Google.Cloud.AIPlatform.V1
         public FeaturestoreOnlineServingServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public FeaturestoreOnlineServingServiceClientBuilder()
+        public FeaturestoreOnlineServingServiceClientBuilder() : base(FeaturestoreOnlineServingServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = FeaturestoreOnlineServingServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref FeaturestoreOnlineServingServiceClient client);
@@ -122,30 +121,18 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return FeaturestoreOnlineServingServiceClient.Create(callInvoker, Settings);
+            return FeaturestoreOnlineServingServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<FeaturestoreOnlineServingServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return FeaturestoreOnlineServingServiceClient.Create(callInvoker, Settings);
+            return FeaturestoreOnlineServingServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => FeaturestoreOnlineServingServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() =>
-            FeaturestoreOnlineServingServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => FeaturestoreOnlineServingServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>FeaturestoreOnlineServingService client wrapper, for convenient use.</summary>
@@ -172,19 +159,10 @@ namespace Google.Cloud.AIPlatform.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(FeaturestoreOnlineServingService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="FeaturestoreOnlineServingServiceClient"/> using the default credentials,
@@ -215,8 +193,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="FeaturestoreOnlineServingServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="FeaturestoreOnlineServingServiceClient"/>.</returns>
-        internal static FeaturestoreOnlineServingServiceClient Create(grpccore::CallInvoker callInvoker, FeaturestoreOnlineServingServiceSettings settings = null)
+        internal static FeaturestoreOnlineServingServiceClient Create(grpccore::CallInvoker callInvoker, FeaturestoreOnlineServingServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -225,7 +204,7 @@ namespace Google.Cloud.AIPlatform.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             FeaturestoreOnlineServingService.FeaturestoreOnlineServingServiceClient grpcClient = new FeaturestoreOnlineServingService.FeaturestoreOnlineServingServiceClient(callInvoker);
-            return new FeaturestoreOnlineServingServiceClientImpl(grpcClient, settings);
+            return new FeaturestoreOnlineServingServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -471,15 +450,16 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="settings">
         /// The base <see cref="FeaturestoreOnlineServingServiceSettings"/> used within this client.
         /// </param>
-        public FeaturestoreOnlineServingServiceClientImpl(FeaturestoreOnlineServingService.FeaturestoreOnlineServingServiceClient grpcClient, FeaturestoreOnlineServingServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public FeaturestoreOnlineServingServiceClientImpl(FeaturestoreOnlineServingService.FeaturestoreOnlineServingServiceClient grpcClient, FeaturestoreOnlineServingServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             FeaturestoreOnlineServingServiceSettings effectiveSettings = settings ?? FeaturestoreOnlineServingServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callReadFeatureValues = clientHelper.BuildApiCall<ReadFeatureValuesRequest, ReadFeatureValuesResponse>(grpcClient.ReadFeatureValuesAsync, grpcClient.ReadFeatureValues, effectiveSettings.ReadFeatureValuesSettings).WithGoogleRequestParam("entity_type", request => request.EntityType);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callReadFeatureValues = clientHelper.BuildApiCall<ReadFeatureValuesRequest, ReadFeatureValuesResponse>("ReadFeatureValues", grpcClient.ReadFeatureValuesAsync, grpcClient.ReadFeatureValues, effectiveSettings.ReadFeatureValuesSettings).WithGoogleRequestParam("entity_type", request => request.EntityType);
             Modify_ApiCall(ref _callReadFeatureValues);
             Modify_ReadFeatureValuesApiCall(ref _callReadFeatureValues);
-            _callStreamingReadFeatureValues = clientHelper.BuildApiCall<StreamingReadFeatureValuesRequest, ReadFeatureValuesResponse>(grpcClient.StreamingReadFeatureValues, effectiveSettings.StreamingReadFeatureValuesSettings).WithGoogleRequestParam("entity_type", request => request.EntityType);
+            _callStreamingReadFeatureValues = clientHelper.BuildApiCall<StreamingReadFeatureValuesRequest, ReadFeatureValuesResponse>("StreamingReadFeatureValues", grpcClient.StreamingReadFeatureValues, effectiveSettings.StreamingReadFeatureValuesSettings).WithGoogleRequestParam("entity_type", request => request.EntityType);
             Modify_ApiCall(ref _callStreamingReadFeatureValues);
             Modify_StreamingReadFeatureValuesApiCall(ref _callStreamingReadFeatureValues);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

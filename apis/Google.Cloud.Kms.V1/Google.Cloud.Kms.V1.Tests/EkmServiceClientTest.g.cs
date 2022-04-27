@@ -49,7 +49,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetEkmConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EkmServiceClient client = new EkmServiceClientImpl(mockGrpcClient.Object, null);
+            EkmServiceClient client = new EkmServiceClientImpl(mockGrpcClient.Object, null, null);
             EkmConnection response = client.GetEkmConnection(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -75,7 +75,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetEkmConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EkmConnection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EkmServiceClient client = new EkmServiceClientImpl(mockGrpcClient.Object, null);
+            EkmServiceClient client = new EkmServiceClientImpl(mockGrpcClient.Object, null, null);
             EkmConnection responseCallSettings = await client.GetEkmConnectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             EkmConnection responseCancellationToken = await client.GetEkmConnectionAsync(request, st::CancellationToken.None);
@@ -103,7 +103,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetEkmConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EkmServiceClient client = new EkmServiceClientImpl(mockGrpcClient.Object, null);
+            EkmServiceClient client = new EkmServiceClientImpl(mockGrpcClient.Object, null, null);
             EkmConnection response = client.GetEkmConnection(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -129,7 +129,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetEkmConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EkmConnection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EkmServiceClient client = new EkmServiceClientImpl(mockGrpcClient.Object, null);
+            EkmServiceClient client = new EkmServiceClientImpl(mockGrpcClient.Object, null, null);
             EkmConnection responseCallSettings = await client.GetEkmConnectionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             EkmConnection responseCancellationToken = await client.GetEkmConnectionAsync(request.Name, st::CancellationToken.None);
@@ -157,7 +157,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetEkmConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EkmServiceClient client = new EkmServiceClientImpl(mockGrpcClient.Object, null);
+            EkmServiceClient client = new EkmServiceClientImpl(mockGrpcClient.Object, null, null);
             EkmConnection response = client.GetEkmConnection(request.EkmConnectionName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -183,7 +183,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetEkmConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EkmConnection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EkmServiceClient client = new EkmServiceClientImpl(mockGrpcClient.Object, null);
+            EkmServiceClient client = new EkmServiceClientImpl(mockGrpcClient.Object, null, null);
             EkmConnection responseCallSettings = await client.GetEkmConnectionAsync(request.EkmConnectionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             EkmConnection responseCancellationToken = await client.GetEkmConnectionAsync(request.EkmConnectionName, st::CancellationToken.None);
@@ -213,7 +213,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.CreateEkmConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EkmServiceClient client = new EkmServiceClientImpl(mockGrpcClient.Object, null);
+            EkmServiceClient client = new EkmServiceClientImpl(mockGrpcClient.Object, null, null);
             EkmConnection response = client.CreateEkmConnection(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -241,7 +241,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.CreateEkmConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EkmConnection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EkmServiceClient client = new EkmServiceClientImpl(mockGrpcClient.Object, null);
+            EkmServiceClient client = new EkmServiceClientImpl(mockGrpcClient.Object, null, null);
             EkmConnection responseCallSettings = await client.CreateEkmConnectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             EkmConnection responseCancellationToken = await client.CreateEkmConnectionAsync(request, st::CancellationToken.None);
@@ -271,7 +271,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.CreateEkmConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EkmServiceClient client = new EkmServiceClientImpl(mockGrpcClient.Object, null);
+            EkmServiceClient client = new EkmServiceClientImpl(mockGrpcClient.Object, null, null);
             EkmConnection response = client.CreateEkmConnection(request.Parent, request.EkmConnectionId, request.EkmConnection);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -299,7 +299,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.CreateEkmConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EkmConnection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EkmServiceClient client = new EkmServiceClientImpl(mockGrpcClient.Object, null);
+            EkmServiceClient client = new EkmServiceClientImpl(mockGrpcClient.Object, null, null);
             EkmConnection responseCallSettings = await client.CreateEkmConnectionAsync(request.Parent, request.EkmConnectionId, request.EkmConnection, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             EkmConnection responseCancellationToken = await client.CreateEkmConnectionAsync(request.Parent, request.EkmConnectionId, request.EkmConnection, st::CancellationToken.None);
@@ -329,7 +329,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.CreateEkmConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EkmServiceClient client = new EkmServiceClientImpl(mockGrpcClient.Object, null);
+            EkmServiceClient client = new EkmServiceClientImpl(mockGrpcClient.Object, null, null);
             EkmConnection response = client.CreateEkmConnection(request.ParentAsLocationName, request.EkmConnectionId, request.EkmConnection);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -357,7 +357,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.CreateEkmConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EkmConnection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EkmServiceClient client = new EkmServiceClientImpl(mockGrpcClient.Object, null);
+            EkmServiceClient client = new EkmServiceClientImpl(mockGrpcClient.Object, null, null);
             EkmConnection responseCallSettings = await client.CreateEkmConnectionAsync(request.ParentAsLocationName, request.EkmConnectionId, request.EkmConnection, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             EkmConnection responseCancellationToken = await client.CreateEkmConnectionAsync(request.ParentAsLocationName, request.EkmConnectionId, request.EkmConnection, st::CancellationToken.None);
@@ -386,7 +386,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.UpdateEkmConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EkmServiceClient client = new EkmServiceClientImpl(mockGrpcClient.Object, null);
+            EkmServiceClient client = new EkmServiceClientImpl(mockGrpcClient.Object, null, null);
             EkmConnection response = client.UpdateEkmConnection(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -413,7 +413,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.UpdateEkmConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EkmConnection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EkmServiceClient client = new EkmServiceClientImpl(mockGrpcClient.Object, null);
+            EkmServiceClient client = new EkmServiceClientImpl(mockGrpcClient.Object, null, null);
             EkmConnection responseCallSettings = await client.UpdateEkmConnectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             EkmConnection responseCancellationToken = await client.UpdateEkmConnectionAsync(request, st::CancellationToken.None);
@@ -442,7 +442,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.UpdateEkmConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EkmServiceClient client = new EkmServiceClientImpl(mockGrpcClient.Object, null);
+            EkmServiceClient client = new EkmServiceClientImpl(mockGrpcClient.Object, null, null);
             EkmConnection response = client.UpdateEkmConnection(request.EkmConnection, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -469,7 +469,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.UpdateEkmConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EkmConnection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EkmServiceClient client = new EkmServiceClientImpl(mockGrpcClient.Object, null);
+            EkmServiceClient client = new EkmServiceClientImpl(mockGrpcClient.Object, null, null);
             EkmConnection responseCallSettings = await client.UpdateEkmConnectionAsync(request.EkmConnection, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             EkmConnection responseCancellationToken = await client.UpdateEkmConnectionAsync(request.EkmConnection, request.UpdateMask, st::CancellationToken.None);

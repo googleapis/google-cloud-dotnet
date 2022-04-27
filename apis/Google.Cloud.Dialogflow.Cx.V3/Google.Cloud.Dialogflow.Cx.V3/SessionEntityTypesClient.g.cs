@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -165,9 +165,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         public SessionEntityTypesSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public SessionEntityTypesClientBuilder()
+        public SessionEntityTypesClientBuilder() : base(SessionEntityTypesClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = SessionEntityTypesClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref SessionEntityTypesClient client);
@@ -194,29 +193,18 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return SessionEntityTypesClient.Create(callInvoker, Settings);
+            return SessionEntityTypesClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<SessionEntityTypesClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return SessionEntityTypesClient.Create(callInvoker, Settings);
+            return SessionEntityTypesClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => SessionEntityTypesClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => SessionEntityTypesClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => SessionEntityTypesClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>SessionEntityTypes client wrapper, for convenient use.</summary>
@@ -245,19 +233,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             "https://www.googleapis.com/auth/dialogflow",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(SessionEntityTypes.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="SessionEntityTypesClient"/> using the default credentials, endpoint and
@@ -287,8 +266,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="SessionEntityTypesSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="SessionEntityTypesClient"/>.</returns>
-        internal static SessionEntityTypesClient Create(grpccore::CallInvoker callInvoker, SessionEntityTypesSettings settings = null)
+        internal static SessionEntityTypesClient Create(grpccore::CallInvoker callInvoker, SessionEntityTypesSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -297,7 +277,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             SessionEntityTypes.SessionEntityTypesClient grpcClient = new SessionEntityTypes.SessionEntityTypesClient(callInvoker);
-            return new SessionEntityTypesClientImpl(grpcClient, settings);
+            return new SessionEntityTypesClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1006,24 +986,25 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="SessionEntityTypesSettings"/> used within this client.</param>
-        public SessionEntityTypesClientImpl(SessionEntityTypes.SessionEntityTypesClient grpcClient, SessionEntityTypesSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public SessionEntityTypesClientImpl(SessionEntityTypes.SessionEntityTypesClient grpcClient, SessionEntityTypesSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             SessionEntityTypesSettings effectiveSettings = settings ?? SessionEntityTypesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListSessionEntityTypes = clientHelper.BuildApiCall<ListSessionEntityTypesRequest, ListSessionEntityTypesResponse>(grpcClient.ListSessionEntityTypesAsync, grpcClient.ListSessionEntityTypes, effectiveSettings.ListSessionEntityTypesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callListSessionEntityTypes = clientHelper.BuildApiCall<ListSessionEntityTypesRequest, ListSessionEntityTypesResponse>("ListSessionEntityTypes", grpcClient.ListSessionEntityTypesAsync, grpcClient.ListSessionEntityTypes, effectiveSettings.ListSessionEntityTypesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListSessionEntityTypes);
             Modify_ListSessionEntityTypesApiCall(ref _callListSessionEntityTypes);
-            _callGetSessionEntityType = clientHelper.BuildApiCall<GetSessionEntityTypeRequest, SessionEntityType>(grpcClient.GetSessionEntityTypeAsync, grpcClient.GetSessionEntityType, effectiveSettings.GetSessionEntityTypeSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetSessionEntityType = clientHelper.BuildApiCall<GetSessionEntityTypeRequest, SessionEntityType>("GetSessionEntityType", grpcClient.GetSessionEntityTypeAsync, grpcClient.GetSessionEntityType, effectiveSettings.GetSessionEntityTypeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetSessionEntityType);
             Modify_GetSessionEntityTypeApiCall(ref _callGetSessionEntityType);
-            _callCreateSessionEntityType = clientHelper.BuildApiCall<CreateSessionEntityTypeRequest, SessionEntityType>(grpcClient.CreateSessionEntityTypeAsync, grpcClient.CreateSessionEntityType, effectiveSettings.CreateSessionEntityTypeSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateSessionEntityType = clientHelper.BuildApiCall<CreateSessionEntityTypeRequest, SessionEntityType>("CreateSessionEntityType", grpcClient.CreateSessionEntityTypeAsync, grpcClient.CreateSessionEntityType, effectiveSettings.CreateSessionEntityTypeSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateSessionEntityType);
             Modify_CreateSessionEntityTypeApiCall(ref _callCreateSessionEntityType);
-            _callUpdateSessionEntityType = clientHelper.BuildApiCall<UpdateSessionEntityTypeRequest, SessionEntityType>(grpcClient.UpdateSessionEntityTypeAsync, grpcClient.UpdateSessionEntityType, effectiveSettings.UpdateSessionEntityTypeSettings).WithGoogleRequestParam("session_entity_type.name", request => request.SessionEntityType?.Name);
+            _callUpdateSessionEntityType = clientHelper.BuildApiCall<UpdateSessionEntityTypeRequest, SessionEntityType>("UpdateSessionEntityType", grpcClient.UpdateSessionEntityTypeAsync, grpcClient.UpdateSessionEntityType, effectiveSettings.UpdateSessionEntityTypeSettings).WithGoogleRequestParam("session_entity_type.name", request => request.SessionEntityType?.Name);
             Modify_ApiCall(ref _callUpdateSessionEntityType);
             Modify_UpdateSessionEntityTypeApiCall(ref _callUpdateSessionEntityType);
-            _callDeleteSessionEntityType = clientHelper.BuildApiCall<DeleteSessionEntityTypeRequest, wkt::Empty>(grpcClient.DeleteSessionEntityTypeAsync, grpcClient.DeleteSessionEntityType, effectiveSettings.DeleteSessionEntityTypeSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteSessionEntityType = clientHelper.BuildApiCall<DeleteSessionEntityTypeRequest, wkt::Empty>("DeleteSessionEntityType", grpcClient.DeleteSessionEntityTypeAsync, grpcClient.DeleteSessionEntityType, effectiveSettings.DeleteSessionEntityTypeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteSessionEntityType);
             Modify_DeleteSessionEntityTypeApiCall(ref _callDeleteSessionEntityType);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

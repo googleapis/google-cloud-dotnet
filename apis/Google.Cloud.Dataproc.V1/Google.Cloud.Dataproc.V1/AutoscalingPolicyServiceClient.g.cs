@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -165,9 +165,8 @@ namespace Google.Cloud.Dataproc.V1
         public AutoscalingPolicyServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public AutoscalingPolicyServiceClientBuilder()
+        public AutoscalingPolicyServiceClientBuilder() : base(AutoscalingPolicyServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = AutoscalingPolicyServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref AutoscalingPolicyServiceClient client);
@@ -194,29 +193,18 @@ namespace Google.Cloud.Dataproc.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return AutoscalingPolicyServiceClient.Create(callInvoker, Settings);
+            return AutoscalingPolicyServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<AutoscalingPolicyServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return AutoscalingPolicyServiceClient.Create(callInvoker, Settings);
+            return AutoscalingPolicyServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => AutoscalingPolicyServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => AutoscalingPolicyServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => AutoscalingPolicyServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>AutoscalingPolicyService client wrapper, for convenient use.</summary>
@@ -244,19 +232,10 @@ namespace Google.Cloud.Dataproc.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(AutoscalingPolicyService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="AutoscalingPolicyServiceClient"/> using the default credentials,
@@ -286,8 +265,9 @@ namespace Google.Cloud.Dataproc.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="AutoscalingPolicyServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="AutoscalingPolicyServiceClient"/>.</returns>
-        internal static AutoscalingPolicyServiceClient Create(grpccore::CallInvoker callInvoker, AutoscalingPolicyServiceSettings settings = null)
+        internal static AutoscalingPolicyServiceClient Create(grpccore::CallInvoker callInvoker, AutoscalingPolicyServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -296,7 +276,7 @@ namespace Google.Cloud.Dataproc.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             AutoscalingPolicyService.AutoscalingPolicyServiceClient grpcClient = new AutoscalingPolicyService.AutoscalingPolicyServiceClient(callInvoker);
-            return new AutoscalingPolicyServiceClientImpl(grpcClient, settings);
+            return new AutoscalingPolicyServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1226,24 +1206,25 @@ namespace Google.Cloud.Dataproc.V1
         /// <param name="settings">
         /// The base <see cref="AutoscalingPolicyServiceSettings"/> used within this client.
         /// </param>
-        public AutoscalingPolicyServiceClientImpl(AutoscalingPolicyService.AutoscalingPolicyServiceClient grpcClient, AutoscalingPolicyServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public AutoscalingPolicyServiceClientImpl(AutoscalingPolicyService.AutoscalingPolicyServiceClient grpcClient, AutoscalingPolicyServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             AutoscalingPolicyServiceSettings effectiveSettings = settings ?? AutoscalingPolicyServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callCreateAutoscalingPolicy = clientHelper.BuildApiCall<CreateAutoscalingPolicyRequest, AutoscalingPolicy>(grpcClient.CreateAutoscalingPolicyAsync, grpcClient.CreateAutoscalingPolicy, effectiveSettings.CreateAutoscalingPolicySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callCreateAutoscalingPolicy = clientHelper.BuildApiCall<CreateAutoscalingPolicyRequest, AutoscalingPolicy>("CreateAutoscalingPolicy", grpcClient.CreateAutoscalingPolicyAsync, grpcClient.CreateAutoscalingPolicy, effectiveSettings.CreateAutoscalingPolicySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateAutoscalingPolicy);
             Modify_CreateAutoscalingPolicyApiCall(ref _callCreateAutoscalingPolicy);
-            _callUpdateAutoscalingPolicy = clientHelper.BuildApiCall<UpdateAutoscalingPolicyRequest, AutoscalingPolicy>(grpcClient.UpdateAutoscalingPolicyAsync, grpcClient.UpdateAutoscalingPolicy, effectiveSettings.UpdateAutoscalingPolicySettings).WithGoogleRequestParam("policy.name", request => request.Policy?.Name);
+            _callUpdateAutoscalingPolicy = clientHelper.BuildApiCall<UpdateAutoscalingPolicyRequest, AutoscalingPolicy>("UpdateAutoscalingPolicy", grpcClient.UpdateAutoscalingPolicyAsync, grpcClient.UpdateAutoscalingPolicy, effectiveSettings.UpdateAutoscalingPolicySettings).WithGoogleRequestParam("policy.name", request => request.Policy?.Name);
             Modify_ApiCall(ref _callUpdateAutoscalingPolicy);
             Modify_UpdateAutoscalingPolicyApiCall(ref _callUpdateAutoscalingPolicy);
-            _callGetAutoscalingPolicy = clientHelper.BuildApiCall<GetAutoscalingPolicyRequest, AutoscalingPolicy>(grpcClient.GetAutoscalingPolicyAsync, grpcClient.GetAutoscalingPolicy, effectiveSettings.GetAutoscalingPolicySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetAutoscalingPolicy = clientHelper.BuildApiCall<GetAutoscalingPolicyRequest, AutoscalingPolicy>("GetAutoscalingPolicy", grpcClient.GetAutoscalingPolicyAsync, grpcClient.GetAutoscalingPolicy, effectiveSettings.GetAutoscalingPolicySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetAutoscalingPolicy);
             Modify_GetAutoscalingPolicyApiCall(ref _callGetAutoscalingPolicy);
-            _callListAutoscalingPolicies = clientHelper.BuildApiCall<ListAutoscalingPoliciesRequest, ListAutoscalingPoliciesResponse>(grpcClient.ListAutoscalingPoliciesAsync, grpcClient.ListAutoscalingPolicies, effectiveSettings.ListAutoscalingPoliciesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListAutoscalingPolicies = clientHelper.BuildApiCall<ListAutoscalingPoliciesRequest, ListAutoscalingPoliciesResponse>("ListAutoscalingPolicies", grpcClient.ListAutoscalingPoliciesAsync, grpcClient.ListAutoscalingPolicies, effectiveSettings.ListAutoscalingPoliciesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListAutoscalingPolicies);
             Modify_ListAutoscalingPoliciesApiCall(ref _callListAutoscalingPolicies);
-            _callDeleteAutoscalingPolicy = clientHelper.BuildApiCall<DeleteAutoscalingPolicyRequest, wkt::Empty>(grpcClient.DeleteAutoscalingPolicyAsync, grpcClient.DeleteAutoscalingPolicy, effectiveSettings.DeleteAutoscalingPolicySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteAutoscalingPolicy = clientHelper.BuildApiCall<DeleteAutoscalingPolicyRequest, wkt::Empty>("DeleteAutoscalingPolicy", grpcClient.DeleteAutoscalingPolicyAsync, grpcClient.DeleteAutoscalingPolicy, effectiveSettings.DeleteAutoscalingPolicySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteAutoscalingPolicy);
             Modify_DeleteAutoscalingPolicyApiCall(ref _callDeleteAutoscalingPolicy);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

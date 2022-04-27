@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -216,9 +216,8 @@ namespace Google.Cloud.Dialogflow.V2
         public ParticipantsSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public ParticipantsClientBuilder()
+        public ParticipantsClientBuilder() : base(ParticipantsClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = ParticipantsClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref ParticipantsClient client);
@@ -245,29 +244,18 @@ namespace Google.Cloud.Dialogflow.V2
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ParticipantsClient.Create(callInvoker, Settings);
+            return ParticipantsClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<ParticipantsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ParticipantsClient.Create(callInvoker, Settings);
+            return ParticipantsClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => ParticipantsClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => ParticipantsClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => ParticipantsClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>Participants client wrapper, for convenient use.</summary>
@@ -296,19 +284,10 @@ namespace Google.Cloud.Dialogflow.V2
             "https://www.googleapis.com/auth/dialogflow",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Participants.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="ParticipantsClient"/> using the default credentials, endpoint and
@@ -335,8 +314,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="ParticipantsSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="ParticipantsClient"/>.</returns>
-        internal static ParticipantsClient Create(grpccore::CallInvoker callInvoker, ParticipantsSettings settings = null)
+        internal static ParticipantsClient Create(grpccore::CallInvoker callInvoker, ParticipantsSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -345,7 +325,7 @@ namespace Google.Cloud.Dialogflow.V2
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             Participants.ParticipantsClient grpcClient = new Participants.ParticipantsClient(callInvoker);
-            return new ParticipantsClientImpl(grpcClient, settings);
+            return new ParticipantsClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1551,33 +1531,34 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="ParticipantsSettings"/> used within this client.</param>
-        public ParticipantsClientImpl(Participants.ParticipantsClient grpcClient, ParticipantsSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public ParticipantsClientImpl(Participants.ParticipantsClient grpcClient, ParticipantsSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             ParticipantsSettings effectiveSettings = settings ?? ParticipantsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callCreateParticipant = clientHelper.BuildApiCall<CreateParticipantRequest, Participant>(grpcClient.CreateParticipantAsync, grpcClient.CreateParticipant, effectiveSettings.CreateParticipantSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callCreateParticipant = clientHelper.BuildApiCall<CreateParticipantRequest, Participant>("CreateParticipant", grpcClient.CreateParticipantAsync, grpcClient.CreateParticipant, effectiveSettings.CreateParticipantSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateParticipant);
             Modify_CreateParticipantApiCall(ref _callCreateParticipant);
-            _callGetParticipant = clientHelper.BuildApiCall<GetParticipantRequest, Participant>(grpcClient.GetParticipantAsync, grpcClient.GetParticipant, effectiveSettings.GetParticipantSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetParticipant = clientHelper.BuildApiCall<GetParticipantRequest, Participant>("GetParticipant", grpcClient.GetParticipantAsync, grpcClient.GetParticipant, effectiveSettings.GetParticipantSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetParticipant);
             Modify_GetParticipantApiCall(ref _callGetParticipant);
-            _callListParticipants = clientHelper.BuildApiCall<ListParticipantsRequest, ListParticipantsResponse>(grpcClient.ListParticipantsAsync, grpcClient.ListParticipants, effectiveSettings.ListParticipantsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListParticipants = clientHelper.BuildApiCall<ListParticipantsRequest, ListParticipantsResponse>("ListParticipants", grpcClient.ListParticipantsAsync, grpcClient.ListParticipants, effectiveSettings.ListParticipantsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListParticipants);
             Modify_ListParticipantsApiCall(ref _callListParticipants);
-            _callUpdateParticipant = clientHelper.BuildApiCall<UpdateParticipantRequest, Participant>(grpcClient.UpdateParticipantAsync, grpcClient.UpdateParticipant, effectiveSettings.UpdateParticipantSettings).WithGoogleRequestParam("participant.name", request => request.Participant?.Name);
+            _callUpdateParticipant = clientHelper.BuildApiCall<UpdateParticipantRequest, Participant>("UpdateParticipant", grpcClient.UpdateParticipantAsync, grpcClient.UpdateParticipant, effectiveSettings.UpdateParticipantSettings).WithGoogleRequestParam("participant.name", request => request.Participant?.Name);
             Modify_ApiCall(ref _callUpdateParticipant);
             Modify_UpdateParticipantApiCall(ref _callUpdateParticipant);
-            _callAnalyzeContent = clientHelper.BuildApiCall<AnalyzeContentRequest, AnalyzeContentResponse>(grpcClient.AnalyzeContentAsync, grpcClient.AnalyzeContent, effectiveSettings.AnalyzeContentSettings).WithGoogleRequestParam("participant", request => request.Participant);
+            _callAnalyzeContent = clientHelper.BuildApiCall<AnalyzeContentRequest, AnalyzeContentResponse>("AnalyzeContent", grpcClient.AnalyzeContentAsync, grpcClient.AnalyzeContent, effectiveSettings.AnalyzeContentSettings).WithGoogleRequestParam("participant", request => request.Participant);
             Modify_ApiCall(ref _callAnalyzeContent);
             Modify_AnalyzeContentApiCall(ref _callAnalyzeContent);
-            _callSuggestArticles = clientHelper.BuildApiCall<SuggestArticlesRequest, SuggestArticlesResponse>(grpcClient.SuggestArticlesAsync, grpcClient.SuggestArticles, effectiveSettings.SuggestArticlesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callSuggestArticles = clientHelper.BuildApiCall<SuggestArticlesRequest, SuggestArticlesResponse>("SuggestArticles", grpcClient.SuggestArticlesAsync, grpcClient.SuggestArticles, effectiveSettings.SuggestArticlesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callSuggestArticles);
             Modify_SuggestArticlesApiCall(ref _callSuggestArticles);
-            _callSuggestFaqAnswers = clientHelper.BuildApiCall<SuggestFaqAnswersRequest, SuggestFaqAnswersResponse>(grpcClient.SuggestFaqAnswersAsync, grpcClient.SuggestFaqAnswers, effectiveSettings.SuggestFaqAnswersSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callSuggestFaqAnswers = clientHelper.BuildApiCall<SuggestFaqAnswersRequest, SuggestFaqAnswersResponse>("SuggestFaqAnswers", grpcClient.SuggestFaqAnswersAsync, grpcClient.SuggestFaqAnswers, effectiveSettings.SuggestFaqAnswersSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callSuggestFaqAnswers);
             Modify_SuggestFaqAnswersApiCall(ref _callSuggestFaqAnswers);
-            _callSuggestSmartReplies = clientHelper.BuildApiCall<SuggestSmartRepliesRequest, SuggestSmartRepliesResponse>(grpcClient.SuggestSmartRepliesAsync, grpcClient.SuggestSmartReplies, effectiveSettings.SuggestSmartRepliesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callSuggestSmartReplies = clientHelper.BuildApiCall<SuggestSmartRepliesRequest, SuggestSmartRepliesResponse>("SuggestSmartReplies", grpcClient.SuggestSmartRepliesAsync, grpcClient.SuggestSmartReplies, effectiveSettings.SuggestSmartRepliesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callSuggestSmartReplies);
             Modify_SuggestSmartRepliesApiCall(ref _callSuggestSmartReplies);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -159,9 +159,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         public WebhooksSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public WebhooksClientBuilder()
+        public WebhooksClientBuilder() : base(WebhooksClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = WebhooksClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref WebhooksClient client);
@@ -188,29 +187,18 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return WebhooksClient.Create(callInvoker, Settings);
+            return WebhooksClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<WebhooksClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return WebhooksClient.Create(callInvoker, Settings);
+            return WebhooksClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => WebhooksClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => WebhooksClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => WebhooksClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>Webhooks client wrapper, for convenient use.</summary>
@@ -239,19 +227,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             "https://www.googleapis.com/auth/dialogflow",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Webhooks.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="WebhooksClient"/> using the default credentials, endpoint and settings. 
@@ -278,8 +257,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="WebhooksSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="WebhooksClient"/>.</returns>
-        internal static WebhooksClient Create(grpccore::CallInvoker callInvoker, WebhooksSettings settings = null)
+        internal static WebhooksClient Create(grpccore::CallInvoker callInvoker, WebhooksSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -288,7 +268,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             Webhooks.WebhooksClient grpcClient = new Webhooks.WebhooksClient(callInvoker);
-            return new WebhooksClientImpl(grpcClient, settings);
+            return new WebhooksClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -894,24 +874,25 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="WebhooksSettings"/> used within this client.</param>
-        public WebhooksClientImpl(Webhooks.WebhooksClient grpcClient, WebhooksSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public WebhooksClientImpl(Webhooks.WebhooksClient grpcClient, WebhooksSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             WebhooksSettings effectiveSettings = settings ?? WebhooksSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListWebhooks = clientHelper.BuildApiCall<ListWebhooksRequest, ListWebhooksResponse>(grpcClient.ListWebhooksAsync, grpcClient.ListWebhooks, effectiveSettings.ListWebhooksSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callListWebhooks = clientHelper.BuildApiCall<ListWebhooksRequest, ListWebhooksResponse>("ListWebhooks", grpcClient.ListWebhooksAsync, grpcClient.ListWebhooks, effectiveSettings.ListWebhooksSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListWebhooks);
             Modify_ListWebhooksApiCall(ref _callListWebhooks);
-            _callGetWebhook = clientHelper.BuildApiCall<GetWebhookRequest, Webhook>(grpcClient.GetWebhookAsync, grpcClient.GetWebhook, effectiveSettings.GetWebhookSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetWebhook = clientHelper.BuildApiCall<GetWebhookRequest, Webhook>("GetWebhook", grpcClient.GetWebhookAsync, grpcClient.GetWebhook, effectiveSettings.GetWebhookSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetWebhook);
             Modify_GetWebhookApiCall(ref _callGetWebhook);
-            _callCreateWebhook = clientHelper.BuildApiCall<CreateWebhookRequest, Webhook>(grpcClient.CreateWebhookAsync, grpcClient.CreateWebhook, effectiveSettings.CreateWebhookSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateWebhook = clientHelper.BuildApiCall<CreateWebhookRequest, Webhook>("CreateWebhook", grpcClient.CreateWebhookAsync, grpcClient.CreateWebhook, effectiveSettings.CreateWebhookSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateWebhook);
             Modify_CreateWebhookApiCall(ref _callCreateWebhook);
-            _callUpdateWebhook = clientHelper.BuildApiCall<UpdateWebhookRequest, Webhook>(grpcClient.UpdateWebhookAsync, grpcClient.UpdateWebhook, effectiveSettings.UpdateWebhookSettings).WithGoogleRequestParam("webhook.name", request => request.Webhook?.Name);
+            _callUpdateWebhook = clientHelper.BuildApiCall<UpdateWebhookRequest, Webhook>("UpdateWebhook", grpcClient.UpdateWebhookAsync, grpcClient.UpdateWebhook, effectiveSettings.UpdateWebhookSettings).WithGoogleRequestParam("webhook.name", request => request.Webhook?.Name);
             Modify_ApiCall(ref _callUpdateWebhook);
             Modify_UpdateWebhookApiCall(ref _callUpdateWebhook);
-            _callDeleteWebhook = clientHelper.BuildApiCall<DeleteWebhookRequest, wkt::Empty>(grpcClient.DeleteWebhookAsync, grpcClient.DeleteWebhook, effectiveSettings.DeleteWebhookSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteWebhook = clientHelper.BuildApiCall<DeleteWebhookRequest, wkt::Empty>("DeleteWebhook", grpcClient.DeleteWebhookAsync, grpcClient.DeleteWebhook, effectiveSettings.DeleteWebhookSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteWebhook);
             Modify_DeleteWebhookApiCall(ref _callDeleteWebhook);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

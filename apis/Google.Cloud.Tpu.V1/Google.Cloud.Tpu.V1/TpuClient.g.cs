@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -301,9 +301,8 @@ namespace Google.Cloud.Tpu.V1
         public TpuSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public TpuClientBuilder()
+        public TpuClientBuilder() : base(TpuClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = TpuClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref TpuClient client);
@@ -330,29 +329,18 @@ namespace Google.Cloud.Tpu.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return TpuClient.Create(callInvoker, Settings);
+            return TpuClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<TpuClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return TpuClient.Create(callInvoker, Settings);
+            return TpuClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => TpuClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => TpuClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => TpuClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>Tpu client wrapper, for convenient use.</summary>
@@ -380,19 +368,10 @@ namespace Google.Cloud.Tpu.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Tpu.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="TpuClient"/> using the default credentials, endpoint and settings. To
@@ -419,8 +398,9 @@ namespace Google.Cloud.Tpu.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="TpuSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="TpuClient"/>.</returns>
-        internal static TpuClient Create(grpccore::CallInvoker callInvoker, TpuSettings settings = null)
+        internal static TpuClient Create(grpccore::CallInvoker callInvoker, TpuSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -429,7 +409,7 @@ namespace Google.Cloud.Tpu.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             Tpu.TpuClient grpcClient = new Tpu.TpuClient(callInvoker);
-            return new TpuClientImpl(grpcClient, settings);
+            return new TpuClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1606,47 +1586,48 @@ namespace Google.Cloud.Tpu.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="TpuSettings"/> used within this client.</param>
-        public TpuClientImpl(Tpu.TpuClient grpcClient, TpuSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public TpuClientImpl(Tpu.TpuClient grpcClient, TpuSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             TpuSettings effectiveSettings = settings ?? TpuSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateNodeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateNodeOperationsSettings);
-            DeleteNodeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteNodeOperationsSettings);
-            ReimageNodeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ReimageNodeOperationsSettings);
-            StopNodeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StopNodeOperationsSettings);
-            StartNodeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StartNodeOperationsSettings);
-            _callListNodes = clientHelper.BuildApiCall<ListNodesRequest, ListNodesResponse>(grpcClient.ListNodesAsync, grpcClient.ListNodes, effectiveSettings.ListNodesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateNodeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateNodeOperationsSettings, logger);
+            DeleteNodeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteNodeOperationsSettings, logger);
+            ReimageNodeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ReimageNodeOperationsSettings, logger);
+            StopNodeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StopNodeOperationsSettings, logger);
+            StartNodeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StartNodeOperationsSettings, logger);
+            _callListNodes = clientHelper.BuildApiCall<ListNodesRequest, ListNodesResponse>("ListNodes", grpcClient.ListNodesAsync, grpcClient.ListNodes, effectiveSettings.ListNodesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListNodes);
             Modify_ListNodesApiCall(ref _callListNodes);
-            _callGetNode = clientHelper.BuildApiCall<GetNodeRequest, Node>(grpcClient.GetNodeAsync, grpcClient.GetNode, effectiveSettings.GetNodeSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetNode = clientHelper.BuildApiCall<GetNodeRequest, Node>("GetNode", grpcClient.GetNodeAsync, grpcClient.GetNode, effectiveSettings.GetNodeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetNode);
             Modify_GetNodeApiCall(ref _callGetNode);
-            _callCreateNode = clientHelper.BuildApiCall<CreateNodeRequest, lro::Operation>(grpcClient.CreateNodeAsync, grpcClient.CreateNode, effectiveSettings.CreateNodeSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateNode = clientHelper.BuildApiCall<CreateNodeRequest, lro::Operation>("CreateNode", grpcClient.CreateNodeAsync, grpcClient.CreateNode, effectiveSettings.CreateNodeSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateNode);
             Modify_CreateNodeApiCall(ref _callCreateNode);
-            _callDeleteNode = clientHelper.BuildApiCall<DeleteNodeRequest, lro::Operation>(grpcClient.DeleteNodeAsync, grpcClient.DeleteNode, effectiveSettings.DeleteNodeSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteNode = clientHelper.BuildApiCall<DeleteNodeRequest, lro::Operation>("DeleteNode", grpcClient.DeleteNodeAsync, grpcClient.DeleteNode, effectiveSettings.DeleteNodeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteNode);
             Modify_DeleteNodeApiCall(ref _callDeleteNode);
-            _callReimageNode = clientHelper.BuildApiCall<ReimageNodeRequest, lro::Operation>(grpcClient.ReimageNodeAsync, grpcClient.ReimageNode, effectiveSettings.ReimageNodeSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callReimageNode = clientHelper.BuildApiCall<ReimageNodeRequest, lro::Operation>("ReimageNode", grpcClient.ReimageNodeAsync, grpcClient.ReimageNode, effectiveSettings.ReimageNodeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callReimageNode);
             Modify_ReimageNodeApiCall(ref _callReimageNode);
-            _callStopNode = clientHelper.BuildApiCall<StopNodeRequest, lro::Operation>(grpcClient.StopNodeAsync, grpcClient.StopNode, effectiveSettings.StopNodeSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callStopNode = clientHelper.BuildApiCall<StopNodeRequest, lro::Operation>("StopNode", grpcClient.StopNodeAsync, grpcClient.StopNode, effectiveSettings.StopNodeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callStopNode);
             Modify_StopNodeApiCall(ref _callStopNode);
-            _callStartNode = clientHelper.BuildApiCall<StartNodeRequest, lro::Operation>(grpcClient.StartNodeAsync, grpcClient.StartNode, effectiveSettings.StartNodeSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callStartNode = clientHelper.BuildApiCall<StartNodeRequest, lro::Operation>("StartNode", grpcClient.StartNodeAsync, grpcClient.StartNode, effectiveSettings.StartNodeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callStartNode);
             Modify_StartNodeApiCall(ref _callStartNode);
-            _callListTensorFlowVersions = clientHelper.BuildApiCall<ListTensorFlowVersionsRequest, ListTensorFlowVersionsResponse>(grpcClient.ListTensorFlowVersionsAsync, grpcClient.ListTensorFlowVersions, effectiveSettings.ListTensorFlowVersionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListTensorFlowVersions = clientHelper.BuildApiCall<ListTensorFlowVersionsRequest, ListTensorFlowVersionsResponse>("ListTensorFlowVersions", grpcClient.ListTensorFlowVersionsAsync, grpcClient.ListTensorFlowVersions, effectiveSettings.ListTensorFlowVersionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListTensorFlowVersions);
             Modify_ListTensorFlowVersionsApiCall(ref _callListTensorFlowVersions);
-            _callGetTensorFlowVersion = clientHelper.BuildApiCall<GetTensorFlowVersionRequest, TensorFlowVersion>(grpcClient.GetTensorFlowVersionAsync, grpcClient.GetTensorFlowVersion, effectiveSettings.GetTensorFlowVersionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetTensorFlowVersion = clientHelper.BuildApiCall<GetTensorFlowVersionRequest, TensorFlowVersion>("GetTensorFlowVersion", grpcClient.GetTensorFlowVersionAsync, grpcClient.GetTensorFlowVersion, effectiveSettings.GetTensorFlowVersionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetTensorFlowVersion);
             Modify_GetTensorFlowVersionApiCall(ref _callGetTensorFlowVersion);
-            _callListAcceleratorTypes = clientHelper.BuildApiCall<ListAcceleratorTypesRequest, ListAcceleratorTypesResponse>(grpcClient.ListAcceleratorTypesAsync, grpcClient.ListAcceleratorTypes, effectiveSettings.ListAcceleratorTypesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListAcceleratorTypes = clientHelper.BuildApiCall<ListAcceleratorTypesRequest, ListAcceleratorTypesResponse>("ListAcceleratorTypes", grpcClient.ListAcceleratorTypesAsync, grpcClient.ListAcceleratorTypes, effectiveSettings.ListAcceleratorTypesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListAcceleratorTypes);
             Modify_ListAcceleratorTypesApiCall(ref _callListAcceleratorTypes);
-            _callGetAcceleratorType = clientHelper.BuildApiCall<GetAcceleratorTypeRequest, AcceleratorType>(grpcClient.GetAcceleratorTypeAsync, grpcClient.GetAcceleratorType, effectiveSettings.GetAcceleratorTypeSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetAcceleratorType = clientHelper.BuildApiCall<GetAcceleratorTypeRequest, AcceleratorType>("GetAcceleratorType", grpcClient.GetAcceleratorTypeAsync, grpcClient.GetAcceleratorType, effectiveSettings.GetAcceleratorTypeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetAcceleratorType);
             Modify_GetAcceleratorTypeApiCall(ref _callGetAcceleratorType);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -224,9 +224,8 @@ namespace Google.Cloud.Dialogflow.V2
         public ConversationDatasetsSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public ConversationDatasetsClientBuilder()
+        public ConversationDatasetsClientBuilder() : base(ConversationDatasetsClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = ConversationDatasetsClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref ConversationDatasetsClient client);
@@ -253,29 +252,18 @@ namespace Google.Cloud.Dialogflow.V2
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ConversationDatasetsClient.Create(callInvoker, Settings);
+            return ConversationDatasetsClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<ConversationDatasetsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ConversationDatasetsClient.Create(callInvoker, Settings);
+            return ConversationDatasetsClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => ConversationDatasetsClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => ConversationDatasetsClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => ConversationDatasetsClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>ConversationDatasets client wrapper, for convenient use.</summary>
@@ -307,19 +295,10 @@ namespace Google.Cloud.Dialogflow.V2
             "https://www.googleapis.com/auth/dialogflow",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(ConversationDatasets.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="ConversationDatasetsClient"/> using the default credentials, endpoint
@@ -349,8 +328,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="ConversationDatasetsSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="ConversationDatasetsClient"/>.</returns>
-        internal static ConversationDatasetsClient Create(grpccore::CallInvoker callInvoker, ConversationDatasetsSettings settings = null)
+        internal static ConversationDatasetsClient Create(grpccore::CallInvoker callInvoker, ConversationDatasetsSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -359,7 +339,7 @@ namespace Google.Cloud.Dialogflow.V2
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             ConversationDatasets.ConversationDatasetsClient grpcClient = new ConversationDatasets.ConversationDatasetsClient(callInvoker);
-            return new ConversationDatasetsClientImpl(grpcClient, settings);
+            return new ConversationDatasetsClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1091,27 +1071,28 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="ConversationDatasetsSettings"/> used within this client.</param>
-        public ConversationDatasetsClientImpl(ConversationDatasets.ConversationDatasetsClient grpcClient, ConversationDatasetsSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public ConversationDatasetsClientImpl(ConversationDatasets.ConversationDatasetsClient grpcClient, ConversationDatasetsSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             ConversationDatasetsSettings effectiveSettings = settings ?? ConversationDatasetsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateConversationDatasetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateConversationDatasetOperationsSettings);
-            DeleteConversationDatasetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteConversationDatasetOperationsSettings);
-            ImportConversationDataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportConversationDataOperationsSettings);
-            _callCreateConversationDataset = clientHelper.BuildApiCall<CreateConversationDatasetRequest, lro::Operation>(grpcClient.CreateConversationDatasetAsync, grpcClient.CreateConversationDataset, effectiveSettings.CreateConversationDatasetSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateConversationDatasetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateConversationDatasetOperationsSettings, logger);
+            DeleteConversationDatasetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteConversationDatasetOperationsSettings, logger);
+            ImportConversationDataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportConversationDataOperationsSettings, logger);
+            _callCreateConversationDataset = clientHelper.BuildApiCall<CreateConversationDatasetRequest, lro::Operation>("CreateConversationDataset", grpcClient.CreateConversationDatasetAsync, grpcClient.CreateConversationDataset, effectiveSettings.CreateConversationDatasetSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateConversationDataset);
             Modify_CreateConversationDatasetApiCall(ref _callCreateConversationDataset);
-            _callGetConversationDataset = clientHelper.BuildApiCall<GetConversationDatasetRequest, ConversationDataset>(grpcClient.GetConversationDatasetAsync, grpcClient.GetConversationDataset, effectiveSettings.GetConversationDatasetSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetConversationDataset = clientHelper.BuildApiCall<GetConversationDatasetRequest, ConversationDataset>("GetConversationDataset", grpcClient.GetConversationDatasetAsync, grpcClient.GetConversationDataset, effectiveSettings.GetConversationDatasetSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetConversationDataset);
             Modify_GetConversationDatasetApiCall(ref _callGetConversationDataset);
-            _callListConversationDatasets = clientHelper.BuildApiCall<ListConversationDatasetsRequest, ListConversationDatasetsResponse>(grpcClient.ListConversationDatasetsAsync, grpcClient.ListConversationDatasets, effectiveSettings.ListConversationDatasetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListConversationDatasets = clientHelper.BuildApiCall<ListConversationDatasetsRequest, ListConversationDatasetsResponse>("ListConversationDatasets", grpcClient.ListConversationDatasetsAsync, grpcClient.ListConversationDatasets, effectiveSettings.ListConversationDatasetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListConversationDatasets);
             Modify_ListConversationDatasetsApiCall(ref _callListConversationDatasets);
-            _callDeleteConversationDataset = clientHelper.BuildApiCall<DeleteConversationDatasetRequest, lro::Operation>(grpcClient.DeleteConversationDatasetAsync, grpcClient.DeleteConversationDataset, effectiveSettings.DeleteConversationDatasetSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteConversationDataset = clientHelper.BuildApiCall<DeleteConversationDatasetRequest, lro::Operation>("DeleteConversationDataset", grpcClient.DeleteConversationDatasetAsync, grpcClient.DeleteConversationDataset, effectiveSettings.DeleteConversationDatasetSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteConversationDataset);
             Modify_DeleteConversationDatasetApiCall(ref _callDeleteConversationDataset);
-            _callImportConversationData = clientHelper.BuildApiCall<ImportConversationDataRequest, lro::Operation>(grpcClient.ImportConversationDataAsync, grpcClient.ImportConversationData, effectiveSettings.ImportConversationDataSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callImportConversationData = clientHelper.BuildApiCall<ImportConversationDataRequest, lro::Operation>("ImportConversationData", grpcClient.ImportConversationDataAsync, grpcClient.ImportConversationData, effectiveSettings.ImportConversationDataSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callImportConversationData);
             Modify_ImportConversationDataApiCall(ref _callImportConversationData);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

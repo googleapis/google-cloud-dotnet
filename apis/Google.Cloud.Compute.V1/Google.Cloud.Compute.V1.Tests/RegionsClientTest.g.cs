@@ -50,7 +50,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Deprecated = new DeprecationStatus(),
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionsClient client = new RegionsClientImpl(mockGrpcClient.Object, null);
+            RegionsClient client = new RegionsClientImpl(mockGrpcClient.Object, null, null);
             Region response = client.Get(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -80,7 +80,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Deprecated = new DeprecationStatus(),
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Region>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionsClient client = new RegionsClientImpl(mockGrpcClient.Object, null);
+            RegionsClient client = new RegionsClientImpl(mockGrpcClient.Object, null, null);
             Region responseCallSettings = await client.GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Region responseCancellationToken = await client.GetAsync(request, st::CancellationToken.None);
@@ -112,7 +112,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Deprecated = new DeprecationStatus(),
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionsClient client = new RegionsClientImpl(mockGrpcClient.Object, null);
+            RegionsClient client = new RegionsClientImpl(mockGrpcClient.Object, null, null);
             Region response = client.Get(request.Project, request.Region);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -142,7 +142,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Deprecated = new DeprecationStatus(),
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Region>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionsClient client = new RegionsClientImpl(mockGrpcClient.Object, null);
+            RegionsClient client = new RegionsClientImpl(mockGrpcClient.Object, null, null);
             Region responseCallSettings = await client.GetAsync(request.Project, request.Region, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Region responseCancellationToken = await client.GetAsync(request.Project, request.Region, st::CancellationToken.None);

@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -443,9 +443,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         public ReservationServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public ReservationServiceClientBuilder()
+        public ReservationServiceClientBuilder() : base(ReservationServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = ReservationServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref ReservationServiceClient client);
@@ -472,29 +471,18 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ReservationServiceClient.Create(callInvoker, Settings);
+            return ReservationServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<ReservationServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ReservationServiceClient.Create(callInvoker, Settings);
+            return ReservationServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => ReservationServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => ReservationServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => ReservationServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>ReservationService client wrapper, for convenient use.</summary>
@@ -537,19 +525,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(ReservationService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="ReservationServiceClient"/> using the default credentials, endpoint and
@@ -579,8 +558,9 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="ReservationServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="ReservationServiceClient"/>.</returns>
-        internal static ReservationServiceClient Create(grpccore::CallInvoker callInvoker, ReservationServiceSettings settings = null)
+        internal static ReservationServiceClient Create(grpccore::CallInvoker callInvoker, ReservationServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -589,7 +569,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             ReservationService.ReservationServiceClient grpcClient = new ReservationService.ReservationServiceClient(callInvoker);
-            return new ReservationServiceClientImpl(grpcClient, settings);
+            return new ReservationServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -4311,74 +4291,75 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="ReservationServiceSettings"/> used within this client.</param>
-        public ReservationServiceClientImpl(ReservationService.ReservationServiceClient grpcClient, ReservationServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public ReservationServiceClientImpl(ReservationService.ReservationServiceClient grpcClient, ReservationServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             ReservationServiceSettings effectiveSettings = settings ?? ReservationServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callCreateReservation = clientHelper.BuildApiCall<CreateReservationRequest, Reservation>(grpcClient.CreateReservationAsync, grpcClient.CreateReservation, effectiveSettings.CreateReservationSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callCreateReservation = clientHelper.BuildApiCall<CreateReservationRequest, Reservation>("CreateReservation", grpcClient.CreateReservationAsync, grpcClient.CreateReservation, effectiveSettings.CreateReservationSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateReservation);
             Modify_CreateReservationApiCall(ref _callCreateReservation);
-            _callListReservations = clientHelper.BuildApiCall<ListReservationsRequest, ListReservationsResponse>(grpcClient.ListReservationsAsync, grpcClient.ListReservations, effectiveSettings.ListReservationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListReservations = clientHelper.BuildApiCall<ListReservationsRequest, ListReservationsResponse>("ListReservations", grpcClient.ListReservationsAsync, grpcClient.ListReservations, effectiveSettings.ListReservationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListReservations);
             Modify_ListReservationsApiCall(ref _callListReservations);
-            _callGetReservation = clientHelper.BuildApiCall<GetReservationRequest, Reservation>(grpcClient.GetReservationAsync, grpcClient.GetReservation, effectiveSettings.GetReservationSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetReservation = clientHelper.BuildApiCall<GetReservationRequest, Reservation>("GetReservation", grpcClient.GetReservationAsync, grpcClient.GetReservation, effectiveSettings.GetReservationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetReservation);
             Modify_GetReservationApiCall(ref _callGetReservation);
-            _callDeleteReservation = clientHelper.BuildApiCall<DeleteReservationRequest, wkt::Empty>(grpcClient.DeleteReservationAsync, grpcClient.DeleteReservation, effectiveSettings.DeleteReservationSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteReservation = clientHelper.BuildApiCall<DeleteReservationRequest, wkt::Empty>("DeleteReservation", grpcClient.DeleteReservationAsync, grpcClient.DeleteReservation, effectiveSettings.DeleteReservationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteReservation);
             Modify_DeleteReservationApiCall(ref _callDeleteReservation);
-            _callUpdateReservation = clientHelper.BuildApiCall<UpdateReservationRequest, Reservation>(grpcClient.UpdateReservationAsync, grpcClient.UpdateReservation, effectiveSettings.UpdateReservationSettings).WithGoogleRequestParam("reservation.name", request => request.Reservation?.Name);
+            _callUpdateReservation = clientHelper.BuildApiCall<UpdateReservationRequest, Reservation>("UpdateReservation", grpcClient.UpdateReservationAsync, grpcClient.UpdateReservation, effectiveSettings.UpdateReservationSettings).WithGoogleRequestParam("reservation.name", request => request.Reservation?.Name);
             Modify_ApiCall(ref _callUpdateReservation);
             Modify_UpdateReservationApiCall(ref _callUpdateReservation);
-            _callCreateCapacityCommitment = clientHelper.BuildApiCall<CreateCapacityCommitmentRequest, CapacityCommitment>(grpcClient.CreateCapacityCommitmentAsync, grpcClient.CreateCapacityCommitment, effectiveSettings.CreateCapacityCommitmentSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateCapacityCommitment = clientHelper.BuildApiCall<CreateCapacityCommitmentRequest, CapacityCommitment>("CreateCapacityCommitment", grpcClient.CreateCapacityCommitmentAsync, grpcClient.CreateCapacityCommitment, effectiveSettings.CreateCapacityCommitmentSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateCapacityCommitment);
             Modify_CreateCapacityCommitmentApiCall(ref _callCreateCapacityCommitment);
-            _callListCapacityCommitments = clientHelper.BuildApiCall<ListCapacityCommitmentsRequest, ListCapacityCommitmentsResponse>(grpcClient.ListCapacityCommitmentsAsync, grpcClient.ListCapacityCommitments, effectiveSettings.ListCapacityCommitmentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListCapacityCommitments = clientHelper.BuildApiCall<ListCapacityCommitmentsRequest, ListCapacityCommitmentsResponse>("ListCapacityCommitments", grpcClient.ListCapacityCommitmentsAsync, grpcClient.ListCapacityCommitments, effectiveSettings.ListCapacityCommitmentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListCapacityCommitments);
             Modify_ListCapacityCommitmentsApiCall(ref _callListCapacityCommitments);
-            _callGetCapacityCommitment = clientHelper.BuildApiCall<GetCapacityCommitmentRequest, CapacityCommitment>(grpcClient.GetCapacityCommitmentAsync, grpcClient.GetCapacityCommitment, effectiveSettings.GetCapacityCommitmentSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetCapacityCommitment = clientHelper.BuildApiCall<GetCapacityCommitmentRequest, CapacityCommitment>("GetCapacityCommitment", grpcClient.GetCapacityCommitmentAsync, grpcClient.GetCapacityCommitment, effectiveSettings.GetCapacityCommitmentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetCapacityCommitment);
             Modify_GetCapacityCommitmentApiCall(ref _callGetCapacityCommitment);
-            _callDeleteCapacityCommitment = clientHelper.BuildApiCall<DeleteCapacityCommitmentRequest, wkt::Empty>(grpcClient.DeleteCapacityCommitmentAsync, grpcClient.DeleteCapacityCommitment, effectiveSettings.DeleteCapacityCommitmentSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteCapacityCommitment = clientHelper.BuildApiCall<DeleteCapacityCommitmentRequest, wkt::Empty>("DeleteCapacityCommitment", grpcClient.DeleteCapacityCommitmentAsync, grpcClient.DeleteCapacityCommitment, effectiveSettings.DeleteCapacityCommitmentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteCapacityCommitment);
             Modify_DeleteCapacityCommitmentApiCall(ref _callDeleteCapacityCommitment);
-            _callUpdateCapacityCommitment = clientHelper.BuildApiCall<UpdateCapacityCommitmentRequest, CapacityCommitment>(grpcClient.UpdateCapacityCommitmentAsync, grpcClient.UpdateCapacityCommitment, effectiveSettings.UpdateCapacityCommitmentSettings).WithGoogleRequestParam("capacity_commitment.name", request => request.CapacityCommitment?.Name);
+            _callUpdateCapacityCommitment = clientHelper.BuildApiCall<UpdateCapacityCommitmentRequest, CapacityCommitment>("UpdateCapacityCommitment", grpcClient.UpdateCapacityCommitmentAsync, grpcClient.UpdateCapacityCommitment, effectiveSettings.UpdateCapacityCommitmentSettings).WithGoogleRequestParam("capacity_commitment.name", request => request.CapacityCommitment?.Name);
             Modify_ApiCall(ref _callUpdateCapacityCommitment);
             Modify_UpdateCapacityCommitmentApiCall(ref _callUpdateCapacityCommitment);
-            _callSplitCapacityCommitment = clientHelper.BuildApiCall<SplitCapacityCommitmentRequest, SplitCapacityCommitmentResponse>(grpcClient.SplitCapacityCommitmentAsync, grpcClient.SplitCapacityCommitment, effectiveSettings.SplitCapacityCommitmentSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callSplitCapacityCommitment = clientHelper.BuildApiCall<SplitCapacityCommitmentRequest, SplitCapacityCommitmentResponse>("SplitCapacityCommitment", grpcClient.SplitCapacityCommitmentAsync, grpcClient.SplitCapacityCommitment, effectiveSettings.SplitCapacityCommitmentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callSplitCapacityCommitment);
             Modify_SplitCapacityCommitmentApiCall(ref _callSplitCapacityCommitment);
-            _callMergeCapacityCommitments = clientHelper.BuildApiCall<MergeCapacityCommitmentsRequest, CapacityCommitment>(grpcClient.MergeCapacityCommitmentsAsync, grpcClient.MergeCapacityCommitments, effectiveSettings.MergeCapacityCommitmentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callMergeCapacityCommitments = clientHelper.BuildApiCall<MergeCapacityCommitmentsRequest, CapacityCommitment>("MergeCapacityCommitments", grpcClient.MergeCapacityCommitmentsAsync, grpcClient.MergeCapacityCommitments, effectiveSettings.MergeCapacityCommitmentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callMergeCapacityCommitments);
             Modify_MergeCapacityCommitmentsApiCall(ref _callMergeCapacityCommitments);
-            _callCreateAssignment = clientHelper.BuildApiCall<CreateAssignmentRequest, Assignment>(grpcClient.CreateAssignmentAsync, grpcClient.CreateAssignment, effectiveSettings.CreateAssignmentSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateAssignment = clientHelper.BuildApiCall<CreateAssignmentRequest, Assignment>("CreateAssignment", grpcClient.CreateAssignmentAsync, grpcClient.CreateAssignment, effectiveSettings.CreateAssignmentSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateAssignment);
             Modify_CreateAssignmentApiCall(ref _callCreateAssignment);
-            _callListAssignments = clientHelper.BuildApiCall<ListAssignmentsRequest, ListAssignmentsResponse>(grpcClient.ListAssignmentsAsync, grpcClient.ListAssignments, effectiveSettings.ListAssignmentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListAssignments = clientHelper.BuildApiCall<ListAssignmentsRequest, ListAssignmentsResponse>("ListAssignments", grpcClient.ListAssignmentsAsync, grpcClient.ListAssignments, effectiveSettings.ListAssignmentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListAssignments);
             Modify_ListAssignmentsApiCall(ref _callListAssignments);
-            _callDeleteAssignment = clientHelper.BuildApiCall<DeleteAssignmentRequest, wkt::Empty>(grpcClient.DeleteAssignmentAsync, grpcClient.DeleteAssignment, effectiveSettings.DeleteAssignmentSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteAssignment = clientHelper.BuildApiCall<DeleteAssignmentRequest, wkt::Empty>("DeleteAssignment", grpcClient.DeleteAssignmentAsync, grpcClient.DeleteAssignment, effectiveSettings.DeleteAssignmentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteAssignment);
             Modify_DeleteAssignmentApiCall(ref _callDeleteAssignment);
 #pragma warning disable CS0612
-            _callSearchAssignments = clientHelper.BuildApiCall<SearchAssignmentsRequest, SearchAssignmentsResponse>(grpcClient.SearchAssignmentsAsync, grpcClient.SearchAssignments, effectiveSettings.SearchAssignmentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callSearchAssignments = clientHelper.BuildApiCall<SearchAssignmentsRequest, SearchAssignmentsResponse>("SearchAssignments", grpcClient.SearchAssignmentsAsync, grpcClient.SearchAssignments, effectiveSettings.SearchAssignmentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
 #pragma warning restore CS0612
             Modify_ApiCall(ref _callSearchAssignments);
             Modify_SearchAssignmentsApiCall(ref _callSearchAssignments);
-            _callSearchAllAssignments = clientHelper.BuildApiCall<SearchAllAssignmentsRequest, SearchAllAssignmentsResponse>(grpcClient.SearchAllAssignmentsAsync, grpcClient.SearchAllAssignments, effectiveSettings.SearchAllAssignmentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callSearchAllAssignments = clientHelper.BuildApiCall<SearchAllAssignmentsRequest, SearchAllAssignmentsResponse>("SearchAllAssignments", grpcClient.SearchAllAssignmentsAsync, grpcClient.SearchAllAssignments, effectiveSettings.SearchAllAssignmentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callSearchAllAssignments);
             Modify_SearchAllAssignmentsApiCall(ref _callSearchAllAssignments);
-            _callMoveAssignment = clientHelper.BuildApiCall<MoveAssignmentRequest, Assignment>(grpcClient.MoveAssignmentAsync, grpcClient.MoveAssignment, effectiveSettings.MoveAssignmentSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callMoveAssignment = clientHelper.BuildApiCall<MoveAssignmentRequest, Assignment>("MoveAssignment", grpcClient.MoveAssignmentAsync, grpcClient.MoveAssignment, effectiveSettings.MoveAssignmentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callMoveAssignment);
             Modify_MoveAssignmentApiCall(ref _callMoveAssignment);
-            _callUpdateAssignment = clientHelper.BuildApiCall<UpdateAssignmentRequest, Assignment>(grpcClient.UpdateAssignmentAsync, grpcClient.UpdateAssignment, effectiveSettings.UpdateAssignmentSettings).WithGoogleRequestParam("assignment.name", request => request.Assignment?.Name);
+            _callUpdateAssignment = clientHelper.BuildApiCall<UpdateAssignmentRequest, Assignment>("UpdateAssignment", grpcClient.UpdateAssignmentAsync, grpcClient.UpdateAssignment, effectiveSettings.UpdateAssignmentSettings).WithGoogleRequestParam("assignment.name", request => request.Assignment?.Name);
             Modify_ApiCall(ref _callUpdateAssignment);
             Modify_UpdateAssignmentApiCall(ref _callUpdateAssignment);
-            _callGetBiReservation = clientHelper.BuildApiCall<GetBiReservationRequest, BiReservation>(grpcClient.GetBiReservationAsync, grpcClient.GetBiReservation, effectiveSettings.GetBiReservationSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetBiReservation = clientHelper.BuildApiCall<GetBiReservationRequest, BiReservation>("GetBiReservation", grpcClient.GetBiReservationAsync, grpcClient.GetBiReservation, effectiveSettings.GetBiReservationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetBiReservation);
             Modify_GetBiReservationApiCall(ref _callGetBiReservation);
-            _callUpdateBiReservation = clientHelper.BuildApiCall<UpdateBiReservationRequest, BiReservation>(grpcClient.UpdateBiReservationAsync, grpcClient.UpdateBiReservation, effectiveSettings.UpdateBiReservationSettings).WithGoogleRequestParam("bi_reservation.name", request => request.BiReservation?.Name);
+            _callUpdateBiReservation = clientHelper.BuildApiCall<UpdateBiReservationRequest, BiReservation>("UpdateBiReservation", grpcClient.UpdateBiReservationAsync, grpcClient.UpdateBiReservation, effectiveSettings.UpdateBiReservationSettings).WithGoogleRequestParam("bi_reservation.name", request => request.BiReservation?.Name);
             Modify_ApiCall(ref _callUpdateBiReservation);
             Modify_UpdateBiReservationApiCall(ref _callUpdateBiReservation);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

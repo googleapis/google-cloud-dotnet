@@ -51,7 +51,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LicenseCodesClient client = new LicenseCodesClientImpl(mockGrpcClient.Object, null);
+            LicenseCodesClient client = new LicenseCodesClientImpl(mockGrpcClient.Object, null, null);
             LicenseCode response = client.Get(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -82,7 +82,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LicenseCode>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LicenseCodesClient client = new LicenseCodesClientImpl(mockGrpcClient.Object, null);
+            LicenseCodesClient client = new LicenseCodesClientImpl(mockGrpcClient.Object, null, null);
             LicenseCode responseCallSettings = await client.GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LicenseCode responseCancellationToken = await client.GetAsync(request, st::CancellationToken.None);
@@ -115,7 +115,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LicenseCodesClient client = new LicenseCodesClientImpl(mockGrpcClient.Object, null);
+            LicenseCodesClient client = new LicenseCodesClientImpl(mockGrpcClient.Object, null, null);
             LicenseCode response = client.Get(request.Project, request.LicenseCode);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -146,7 +146,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LicenseCode>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LicenseCodesClient client = new LicenseCodesClientImpl(mockGrpcClient.Object, null);
+            LicenseCodesClient client = new LicenseCodesClientImpl(mockGrpcClient.Object, null, null);
             LicenseCode responseCallSettings = await client.GetAsync(request.Project, request.LicenseCode, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LicenseCode responseCancellationToken = await client.GetAsync(request.Project, request.LicenseCode, st::CancellationToken.None);
@@ -172,7 +172,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LicenseCodesClient client = new LicenseCodesClientImpl(mockGrpcClient.Object, null);
+            LicenseCodesClient client = new LicenseCodesClientImpl(mockGrpcClient.Object, null, null);
             TestPermissionsResponse response = client.TestIamPermissions(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -196,7 +196,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TestPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LicenseCodesClient client = new LicenseCodesClientImpl(mockGrpcClient.Object, null);
+            LicenseCodesClient client = new LicenseCodesClientImpl(mockGrpcClient.Object, null, null);
             TestPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TestPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request, st::CancellationToken.None);
@@ -222,7 +222,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LicenseCodesClient client = new LicenseCodesClientImpl(mockGrpcClient.Object, null);
+            LicenseCodesClient client = new LicenseCodesClientImpl(mockGrpcClient.Object, null, null);
             TestPermissionsResponse response = client.TestIamPermissions(request.Project, request.Resource, request.TestPermissionsRequestResource);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -246,7 +246,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TestPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LicenseCodesClient client = new LicenseCodesClientImpl(mockGrpcClient.Object, null);
+            LicenseCodesClient client = new LicenseCodesClientImpl(mockGrpcClient.Object, null, null);
             TestPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request.Project, request.Resource, request.TestPermissionsRequestResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TestPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request.Project, request.Resource, request.TestPermissionsRequestResource, st::CancellationToken.None);

@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -368,9 +368,8 @@ namespace Google.Cloud.Compute.V1
         public SecurityPoliciesSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public SecurityPoliciesClientBuilder()
+        public SecurityPoliciesClientBuilder() : base(SecurityPoliciesClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = SecurityPoliciesClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref SecurityPoliciesClient client);
@@ -397,29 +396,18 @@ namespace Google.Cloud.Compute.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return SecurityPoliciesClient.Create(callInvoker, Settings);
+            return SecurityPoliciesClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<SecurityPoliciesClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return SecurityPoliciesClient.Create(callInvoker, Settings);
+            return SecurityPoliciesClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => SecurityPoliciesClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => SecurityPoliciesClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => SecurityPoliciesClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => ComputeRestAdapter.ComputeAdapter;
     }
 
     /// <summary>SecurityPolicies client wrapper, for convenient use.</summary>
@@ -448,19 +436,10 @@ namespace Google.Cloud.Compute.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(SecurityPolicies.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="SecurityPoliciesClient"/> using the default credentials, endpoint and
@@ -487,8 +466,9 @@ namespace Google.Cloud.Compute.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="SecurityPoliciesSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="SecurityPoliciesClient"/>.</returns>
-        internal static SecurityPoliciesClient Create(grpccore::CallInvoker callInvoker, SecurityPoliciesSettings settings = null)
+        internal static SecurityPoliciesClient Create(grpccore::CallInvoker callInvoker, SecurityPoliciesSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -497,7 +477,7 @@ namespace Google.Cloud.Compute.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             SecurityPolicies.SecurityPoliciesClient grpcClient = new SecurityPolicies.SecurityPoliciesClient(callInvoker);
-            return new SecurityPoliciesClientImpl(grpcClient, settings);
+            return new SecurityPoliciesClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1557,48 +1537,49 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="SecurityPoliciesSettings"/> used within this client.</param>
-        public SecurityPoliciesClientImpl(SecurityPolicies.SecurityPoliciesClient grpcClient, SecurityPoliciesSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public SecurityPoliciesClientImpl(SecurityPolicies.SecurityPoliciesClient grpcClient, SecurityPoliciesSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             SecurityPoliciesSettings effectiveSettings = settings ?? SecurityPoliciesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            AddRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.AddRuleOperationsSettings);
-            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings);
-            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings);
-            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchOperationsSettings);
-            PatchRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchRuleOperationsSettings);
-            RemoveRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.RemoveRuleOperationsSettings);
-            _callAddRule = clientHelper.BuildApiCall<AddRuleSecurityPolicyRequest, Operation>(grpcClient.AddRuleAsync, grpcClient.AddRule, effectiveSettings.AddRuleSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("security_policy", request => request.SecurityPolicy);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            AddRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.AddRuleOperationsSettings, logger);
+            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings, logger);
+            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings, logger);
+            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchOperationsSettings, logger);
+            PatchRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchRuleOperationsSettings, logger);
+            RemoveRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.RemoveRuleOperationsSettings, logger);
+            _callAddRule = clientHelper.BuildApiCall<AddRuleSecurityPolicyRequest, Operation>("AddRule", grpcClient.AddRuleAsync, grpcClient.AddRule, effectiveSettings.AddRuleSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("security_policy", request => request.SecurityPolicy);
             Modify_ApiCall(ref _callAddRule);
             Modify_AddRuleApiCall(ref _callAddRule);
-            _callAggregatedList = clientHelper.BuildApiCall<AggregatedListSecurityPoliciesRequest, SecurityPoliciesAggregatedList>(grpcClient.AggregatedListAsync, grpcClient.AggregatedList, effectiveSettings.AggregatedListSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callAggregatedList = clientHelper.BuildApiCall<AggregatedListSecurityPoliciesRequest, SecurityPoliciesAggregatedList>("AggregatedList", grpcClient.AggregatedListAsync, grpcClient.AggregatedList, effectiveSettings.AggregatedListSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callAggregatedList);
             Modify_AggregatedListApiCall(ref _callAggregatedList);
-            _callDelete = clientHelper.BuildApiCall<DeleteSecurityPolicyRequest, Operation>(grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("security_policy", request => request.SecurityPolicy);
+            _callDelete = clientHelper.BuildApiCall<DeleteSecurityPolicyRequest, Operation>("Delete", grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("security_policy", request => request.SecurityPolicy);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);
-            _callGet = clientHelper.BuildApiCall<GetSecurityPolicyRequest, SecurityPolicy>(grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("security_policy", request => request.SecurityPolicy);
+            _callGet = clientHelper.BuildApiCall<GetSecurityPolicyRequest, SecurityPolicy>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("security_policy", request => request.SecurityPolicy);
             Modify_ApiCall(ref _callGet);
             Modify_GetApiCall(ref _callGet);
-            _callGetRule = clientHelper.BuildApiCall<GetRuleSecurityPolicyRequest, SecurityPolicyRule>(grpcClient.GetRuleAsync, grpcClient.GetRule, effectiveSettings.GetRuleSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("security_policy", request => request.SecurityPolicy);
+            _callGetRule = clientHelper.BuildApiCall<GetRuleSecurityPolicyRequest, SecurityPolicyRule>("GetRule", grpcClient.GetRuleAsync, grpcClient.GetRule, effectiveSettings.GetRuleSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("security_policy", request => request.SecurityPolicy);
             Modify_ApiCall(ref _callGetRule);
             Modify_GetRuleApiCall(ref _callGetRule);
-            _callInsert = clientHelper.BuildApiCall<InsertSecurityPolicyRequest, Operation>(grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callInsert = clientHelper.BuildApiCall<InsertSecurityPolicyRequest, Operation>("Insert", grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callInsert);
             Modify_InsertApiCall(ref _callInsert);
-            _callList = clientHelper.BuildApiCall<ListSecurityPoliciesRequest, SecurityPolicyList>(grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callList = clientHelper.BuildApiCall<ListSecurityPoliciesRequest, SecurityPolicyList>("List", grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callList);
             Modify_ListApiCall(ref _callList);
-            _callListPreconfiguredExpressionSets = clientHelper.BuildApiCall<ListPreconfiguredExpressionSetsSecurityPoliciesRequest, SecurityPoliciesListPreconfiguredExpressionSetsResponse>(grpcClient.ListPreconfiguredExpressionSetsAsync, grpcClient.ListPreconfiguredExpressionSets, effectiveSettings.ListPreconfiguredExpressionSetsSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callListPreconfiguredExpressionSets = clientHelper.BuildApiCall<ListPreconfiguredExpressionSetsSecurityPoliciesRequest, SecurityPoliciesListPreconfiguredExpressionSetsResponse>("ListPreconfiguredExpressionSets", grpcClient.ListPreconfiguredExpressionSetsAsync, grpcClient.ListPreconfiguredExpressionSets, effectiveSettings.ListPreconfiguredExpressionSetsSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callListPreconfiguredExpressionSets);
             Modify_ListPreconfiguredExpressionSetsApiCall(ref _callListPreconfiguredExpressionSets);
-            _callPatch = clientHelper.BuildApiCall<PatchSecurityPolicyRequest, Operation>(grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("security_policy", request => request.SecurityPolicy);
+            _callPatch = clientHelper.BuildApiCall<PatchSecurityPolicyRequest, Operation>("Patch", grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("security_policy", request => request.SecurityPolicy);
             Modify_ApiCall(ref _callPatch);
             Modify_PatchApiCall(ref _callPatch);
-            _callPatchRule = clientHelper.BuildApiCall<PatchRuleSecurityPolicyRequest, Operation>(grpcClient.PatchRuleAsync, grpcClient.PatchRule, effectiveSettings.PatchRuleSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("security_policy", request => request.SecurityPolicy);
+            _callPatchRule = clientHelper.BuildApiCall<PatchRuleSecurityPolicyRequest, Operation>("PatchRule", grpcClient.PatchRuleAsync, grpcClient.PatchRule, effectiveSettings.PatchRuleSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("security_policy", request => request.SecurityPolicy);
             Modify_ApiCall(ref _callPatchRule);
             Modify_PatchRuleApiCall(ref _callPatchRule);
-            _callRemoveRule = clientHelper.BuildApiCall<RemoveRuleSecurityPolicyRequest, Operation>(grpcClient.RemoveRuleAsync, grpcClient.RemoveRule, effectiveSettings.RemoveRuleSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("security_policy", request => request.SecurityPolicy);
+            _callRemoveRule = clientHelper.BuildApiCall<RemoveRuleSecurityPolicyRequest, Operation>("RemoveRule", grpcClient.RemoveRuleAsync, grpcClient.RemoveRule, effectiveSettings.RemoveRuleSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("security_policy", request => request.SecurityPolicy);
             Modify_ApiCall(ref _callRemoveRule);
             Modify_RemoveRuleApiCall(ref _callRemoveRule);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
