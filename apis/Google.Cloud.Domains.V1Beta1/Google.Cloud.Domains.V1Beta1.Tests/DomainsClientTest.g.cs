@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
@@ -47,7 +48,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SearchDomains(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null, null);
             SearchDomainsResponse response = client.SearchDomains(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -71,7 +72,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SearchDomainsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SearchDomainsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null, null);
             SearchDomainsResponse responseCallSettings = await client.SearchDomainsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SearchDomainsResponse responseCancellationToken = await client.SearchDomainsAsync(request, st::CancellationToken.None);
@@ -97,7 +98,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SearchDomains(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null, null);
             SearchDomainsResponse response = client.SearchDomains(request.Location, request.Query);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -121,7 +122,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SearchDomainsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SearchDomainsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null, null);
             SearchDomainsResponse responseCallSettings = await client.SearchDomainsAsync(request.Location, request.Query, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SearchDomainsResponse responseCancellationToken = await client.SearchDomainsAsync(request.Location, request.Query, st::CancellationToken.None);
@@ -147,7 +148,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SearchDomains(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null, null);
             SearchDomainsResponse response = client.SearchDomains(request.LocationAsLocationName, request.Query);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -171,7 +172,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SearchDomainsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SearchDomainsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null, null);
             SearchDomainsResponse responseCallSettings = await client.SearchDomainsAsync(request.LocationAsLocationName, request.Query, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SearchDomainsResponse responseCancellationToken = await client.SearchDomainsAsync(request.LocationAsLocationName, request.Query, st::CancellationToken.None);
@@ -194,7 +195,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 RegisterParameters = new RegisterParameters(),
             };
             mockGrpcClient.Setup(x => x.RetrieveRegisterParameters(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null, null);
             RetrieveRegisterParametersResponse response = client.RetrieveRegisterParameters(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -215,7 +216,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 RegisterParameters = new RegisterParameters(),
             };
             mockGrpcClient.Setup(x => x.RetrieveRegisterParametersAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RetrieveRegisterParametersResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null, null);
             RetrieveRegisterParametersResponse responseCallSettings = await client.RetrieveRegisterParametersAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             RetrieveRegisterParametersResponse responseCancellationToken = await client.RetrieveRegisterParametersAsync(request, st::CancellationToken.None);
@@ -238,7 +239,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 RegisterParameters = new RegisterParameters(),
             };
             mockGrpcClient.Setup(x => x.RetrieveRegisterParameters(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null, null);
             RetrieveRegisterParametersResponse response = client.RetrieveRegisterParameters(request.Location, request.DomainName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -259,7 +260,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 RegisterParameters = new RegisterParameters(),
             };
             mockGrpcClient.Setup(x => x.RetrieveRegisterParametersAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RetrieveRegisterParametersResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null, null);
             RetrieveRegisterParametersResponse responseCallSettings = await client.RetrieveRegisterParametersAsync(request.Location, request.DomainName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             RetrieveRegisterParametersResponse responseCancellationToken = await client.RetrieveRegisterParametersAsync(request.Location, request.DomainName, st::CancellationToken.None);
@@ -282,7 +283,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 RegisterParameters = new RegisterParameters(),
             };
             mockGrpcClient.Setup(x => x.RetrieveRegisterParameters(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null, null);
             RetrieveRegisterParametersResponse response = client.RetrieveRegisterParameters(request.LocationAsLocationName, request.DomainName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -303,7 +304,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 RegisterParameters = new RegisterParameters(),
             };
             mockGrpcClient.Setup(x => x.RetrieveRegisterParametersAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RetrieveRegisterParametersResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null, null);
             RetrieveRegisterParametersResponse responseCallSettings = await client.RetrieveRegisterParametersAsync(request.LocationAsLocationName, request.DomainName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             RetrieveRegisterParametersResponse responseCancellationToken = await client.RetrieveRegisterParametersAsync(request.LocationAsLocationName, request.DomainName, st::CancellationToken.None);
@@ -326,7 +327,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 TransferParameters = new TransferParameters(),
             };
             mockGrpcClient.Setup(x => x.RetrieveTransferParameters(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null, null);
             RetrieveTransferParametersResponse response = client.RetrieveTransferParameters(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -347,7 +348,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 TransferParameters = new TransferParameters(),
             };
             mockGrpcClient.Setup(x => x.RetrieveTransferParametersAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RetrieveTransferParametersResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null, null);
             RetrieveTransferParametersResponse responseCallSettings = await client.RetrieveTransferParametersAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             RetrieveTransferParametersResponse responseCancellationToken = await client.RetrieveTransferParametersAsync(request, st::CancellationToken.None);
@@ -370,7 +371,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 TransferParameters = new TransferParameters(),
             };
             mockGrpcClient.Setup(x => x.RetrieveTransferParameters(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null, null);
             RetrieveTransferParametersResponse response = client.RetrieveTransferParameters(request.Location, request.DomainName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -391,7 +392,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 TransferParameters = new TransferParameters(),
             };
             mockGrpcClient.Setup(x => x.RetrieveTransferParametersAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RetrieveTransferParametersResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null, null);
             RetrieveTransferParametersResponse responseCallSettings = await client.RetrieveTransferParametersAsync(request.Location, request.DomainName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             RetrieveTransferParametersResponse responseCancellationToken = await client.RetrieveTransferParametersAsync(request.Location, request.DomainName, st::CancellationToken.None);
@@ -414,7 +415,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 TransferParameters = new TransferParameters(),
             };
             mockGrpcClient.Setup(x => x.RetrieveTransferParameters(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null, null);
             RetrieveTransferParametersResponse response = client.RetrieveTransferParameters(request.LocationAsLocationName, request.DomainName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -435,7 +436,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 TransferParameters = new TransferParameters(),
             };
             mockGrpcClient.Setup(x => x.RetrieveTransferParametersAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RetrieveTransferParametersResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null, null);
             RetrieveTransferParametersResponse responseCallSettings = await client.RetrieveTransferParametersAsync(request.LocationAsLocationName, request.DomainName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             RetrieveTransferParametersResponse responseCancellationToken = await client.RetrieveTransferParametersAsync(request.LocationAsLocationName, request.DomainName, st::CancellationToken.None);
@@ -480,7 +481,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetRegistration(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null, null);
             Registration response = client.GetRegistration(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -523,7 +524,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetRegistrationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Registration>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null, null);
             Registration responseCallSettings = await client.GetRegistrationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Registration responseCancellationToken = await client.GetRegistrationAsync(request, st::CancellationToken.None);
@@ -568,7 +569,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetRegistration(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null, null);
             Registration response = client.GetRegistration(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -611,7 +612,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetRegistrationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Registration>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null, null);
             Registration responseCallSettings = await client.GetRegistrationAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Registration responseCancellationToken = await client.GetRegistrationAsync(request.Name, st::CancellationToken.None);
@@ -656,7 +657,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetRegistration(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null, null);
             Registration response = client.GetRegistration(request.RegistrationName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -699,7 +700,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetRegistrationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Registration>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null, null);
             Registration responseCallSettings = await client.GetRegistrationAsync(request.RegistrationName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Registration responseCancellationToken = await client.GetRegistrationAsync(request.RegistrationName, st::CancellationToken.None);
@@ -721,7 +722,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 Code = "code946733c1",
             };
             mockGrpcClient.Setup(x => x.RetrieveAuthorizationCode(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null, null);
             AuthorizationCode response = client.RetrieveAuthorizationCode(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -741,7 +742,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 Code = "code946733c1",
             };
             mockGrpcClient.Setup(x => x.RetrieveAuthorizationCodeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AuthorizationCode>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null, null);
             AuthorizationCode responseCallSettings = await client.RetrieveAuthorizationCodeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AuthorizationCode responseCancellationToken = await client.RetrieveAuthorizationCodeAsync(request, st::CancellationToken.None);
@@ -763,7 +764,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 Code = "code946733c1",
             };
             mockGrpcClient.Setup(x => x.RetrieveAuthorizationCode(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null, null);
             AuthorizationCode response = client.RetrieveAuthorizationCode(request.Registration);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -783,7 +784,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 Code = "code946733c1",
             };
             mockGrpcClient.Setup(x => x.RetrieveAuthorizationCodeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AuthorizationCode>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null, null);
             AuthorizationCode responseCallSettings = await client.RetrieveAuthorizationCodeAsync(request.Registration, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AuthorizationCode responseCancellationToken = await client.RetrieveAuthorizationCodeAsync(request.Registration, st::CancellationToken.None);
@@ -805,7 +806,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 Code = "code946733c1",
             };
             mockGrpcClient.Setup(x => x.RetrieveAuthorizationCode(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null, null);
             AuthorizationCode response = client.RetrieveAuthorizationCode(request.RegistrationAsRegistrationName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -825,7 +826,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 Code = "code946733c1",
             };
             mockGrpcClient.Setup(x => x.RetrieveAuthorizationCodeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AuthorizationCode>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null, null);
             AuthorizationCode responseCallSettings = await client.RetrieveAuthorizationCodeAsync(request.RegistrationAsRegistrationName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AuthorizationCode responseCancellationToken = await client.RetrieveAuthorizationCodeAsync(request.RegistrationAsRegistrationName, st::CancellationToken.None);
@@ -847,7 +848,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 Code = "code946733c1",
             };
             mockGrpcClient.Setup(x => x.ResetAuthorizationCode(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null, null);
             AuthorizationCode response = client.ResetAuthorizationCode(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -867,7 +868,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 Code = "code946733c1",
             };
             mockGrpcClient.Setup(x => x.ResetAuthorizationCodeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AuthorizationCode>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null, null);
             AuthorizationCode responseCallSettings = await client.ResetAuthorizationCodeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AuthorizationCode responseCancellationToken = await client.ResetAuthorizationCodeAsync(request, st::CancellationToken.None);
@@ -889,7 +890,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 Code = "code946733c1",
             };
             mockGrpcClient.Setup(x => x.ResetAuthorizationCode(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null, null);
             AuthorizationCode response = client.ResetAuthorizationCode(request.Registration);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -909,7 +910,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 Code = "code946733c1",
             };
             mockGrpcClient.Setup(x => x.ResetAuthorizationCodeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AuthorizationCode>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null, null);
             AuthorizationCode responseCallSettings = await client.ResetAuthorizationCodeAsync(request.Registration, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AuthorizationCode responseCancellationToken = await client.ResetAuthorizationCodeAsync(request.Registration, st::CancellationToken.None);
@@ -931,7 +932,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 Code = "code946733c1",
             };
             mockGrpcClient.Setup(x => x.ResetAuthorizationCode(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null, null);
             AuthorizationCode response = client.ResetAuthorizationCode(request.RegistrationAsRegistrationName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -951,7 +952,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 Code = "code946733c1",
             };
             mockGrpcClient.Setup(x => x.ResetAuthorizationCodeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AuthorizationCode>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null, null);
             AuthorizationCode responseCallSettings = await client.ResetAuthorizationCodeAsync(request.RegistrationAsRegistrationName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AuthorizationCode responseCancellationToken = await client.ResetAuthorizationCodeAsync(request.RegistrationAsRegistrationName, st::CancellationToken.None);

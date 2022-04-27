@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gcdcv = Google.Cloud.Dialogflow.Cx.V3;
 using sys = System;

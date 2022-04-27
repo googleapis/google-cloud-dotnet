@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
@@ -48,7 +49,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 Definition = "definition3b8b6130",
             };
             mockGrpcClient.Setup(x => x.CreateSchema(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null);
+            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null, null);
             Schema response = client.CreateSchema(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -72,7 +73,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 Definition = "definition3b8b6130",
             };
             mockGrpcClient.Setup(x => x.CreateSchemaAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Schema>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null);
+            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null, null);
             Schema responseCallSettings = await client.CreateSchemaAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Schema responseCancellationToken = await client.CreateSchemaAsync(request, st::CancellationToken.None);
@@ -98,7 +99,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 Definition = "definition3b8b6130",
             };
             mockGrpcClient.Setup(x => x.CreateSchema(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null);
+            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null, null);
             Schema response = client.CreateSchema(request.Parent, request.Schema, request.SchemaId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -122,7 +123,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 Definition = "definition3b8b6130",
             };
             mockGrpcClient.Setup(x => x.CreateSchemaAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Schema>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null);
+            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null, null);
             Schema responseCallSettings = await client.CreateSchemaAsync(request.Parent, request.Schema, request.SchemaId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Schema responseCancellationToken = await client.CreateSchemaAsync(request.Parent, request.Schema, request.SchemaId, st::CancellationToken.None);
@@ -148,7 +149,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 Definition = "definition3b8b6130",
             };
             mockGrpcClient.Setup(x => x.CreateSchema(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null);
+            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null, null);
             Schema response = client.CreateSchema(request.ParentAsProjectName, request.Schema, request.SchemaId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -172,7 +173,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 Definition = "definition3b8b6130",
             };
             mockGrpcClient.Setup(x => x.CreateSchemaAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Schema>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null);
+            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null, null);
             Schema responseCallSettings = await client.CreateSchemaAsync(request.ParentAsProjectName, request.Schema, request.SchemaId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Schema responseCancellationToken = await client.CreateSchemaAsync(request.ParentAsProjectName, request.Schema, request.SchemaId, st::CancellationToken.None);
@@ -197,7 +198,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 Definition = "definition3b8b6130",
             };
             mockGrpcClient.Setup(x => x.GetSchema(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null);
+            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null, null);
             Schema response = client.GetSchema(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -220,7 +221,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 Definition = "definition3b8b6130",
             };
             mockGrpcClient.Setup(x => x.GetSchemaAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Schema>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null);
+            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null, null);
             Schema responseCallSettings = await client.GetSchemaAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Schema responseCancellationToken = await client.GetSchemaAsync(request, st::CancellationToken.None);
@@ -244,7 +245,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 Definition = "definition3b8b6130",
             };
             mockGrpcClient.Setup(x => x.GetSchema(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null);
+            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null, null);
             Schema response = client.GetSchema(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -266,7 +267,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 Definition = "definition3b8b6130",
             };
             mockGrpcClient.Setup(x => x.GetSchemaAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Schema>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null);
+            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null, null);
             Schema responseCallSettings = await client.GetSchemaAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Schema responseCancellationToken = await client.GetSchemaAsync(request.Name, st::CancellationToken.None);
@@ -290,7 +291,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 Definition = "definition3b8b6130",
             };
             mockGrpcClient.Setup(x => x.GetSchema(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null);
+            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null, null);
             Schema response = client.GetSchema(request.SchemaName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -312,7 +313,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 Definition = "definition3b8b6130",
             };
             mockGrpcClient.Setup(x => x.GetSchemaAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Schema>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null);
+            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null, null);
             Schema responseCallSettings = await client.GetSchemaAsync(request.SchemaName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Schema responseCancellationToken = await client.GetSchemaAsync(request.SchemaName, st::CancellationToken.None);
@@ -331,7 +332,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSchema(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null);
+            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteSchema(request);
             mockGrpcClient.VerifyAll();
         }
@@ -347,7 +348,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSchemaAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null);
+            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteSchemaAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteSchemaAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -364,7 +365,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSchema(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null);
+            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteSchema(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -380,7 +381,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSchemaAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null);
+            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteSchemaAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteSchemaAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -397,7 +398,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSchema(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null);
+            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteSchema(request.SchemaName);
             mockGrpcClient.VerifyAll();
         }
@@ -413,7 +414,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSchemaAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null);
+            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteSchemaAsync(request.SchemaName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteSchemaAsync(request.SchemaName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -431,7 +432,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             ValidateSchemaResponse expectedResponse = new ValidateSchemaResponse { };
             mockGrpcClient.Setup(x => x.ValidateSchema(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null);
+            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null, null);
             ValidateSchemaResponse response = client.ValidateSchema(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -449,7 +450,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             ValidateSchemaResponse expectedResponse = new ValidateSchemaResponse { };
             mockGrpcClient.Setup(x => x.ValidateSchemaAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ValidateSchemaResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null);
+            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null, null);
             ValidateSchemaResponse responseCallSettings = await client.ValidateSchemaAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ValidateSchemaResponse responseCancellationToken = await client.ValidateSchemaAsync(request, st::CancellationToken.None);
@@ -469,7 +470,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             ValidateSchemaResponse expectedResponse = new ValidateSchemaResponse { };
             mockGrpcClient.Setup(x => x.ValidateSchema(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null);
+            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null, null);
             ValidateSchemaResponse response = client.ValidateSchema(request.Parent, request.Schema);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -487,7 +488,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             ValidateSchemaResponse expectedResponse = new ValidateSchemaResponse { };
             mockGrpcClient.Setup(x => x.ValidateSchemaAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ValidateSchemaResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null);
+            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null, null);
             ValidateSchemaResponse responseCallSettings = await client.ValidateSchemaAsync(request.Parent, request.Schema, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ValidateSchemaResponse responseCancellationToken = await client.ValidateSchemaAsync(request.Parent, request.Schema, st::CancellationToken.None);
@@ -507,7 +508,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             ValidateSchemaResponse expectedResponse = new ValidateSchemaResponse { };
             mockGrpcClient.Setup(x => x.ValidateSchema(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null);
+            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null, null);
             ValidateSchemaResponse response = client.ValidateSchema(request.ParentAsProjectName, request.Schema);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -525,7 +526,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             ValidateSchemaResponse expectedResponse = new ValidateSchemaResponse { };
             mockGrpcClient.Setup(x => x.ValidateSchemaAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ValidateSchemaResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null);
+            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null, null);
             ValidateSchemaResponse responseCallSettings = await client.ValidateSchemaAsync(request.ParentAsProjectName, request.Schema, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ValidateSchemaResponse responseCancellationToken = await client.ValidateSchemaAsync(request.ParentAsProjectName, request.Schema, st::CancellationToken.None);
@@ -548,7 +549,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             ValidateMessageResponse expectedResponse = new ValidateMessageResponse { };
             mockGrpcClient.Setup(x => x.ValidateMessage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null);
+            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null, null);
             ValidateMessageResponse response = client.ValidateMessage(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -569,7 +570,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             ValidateMessageResponse expectedResponse = new ValidateMessageResponse { };
             mockGrpcClient.Setup(x => x.ValidateMessageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ValidateMessageResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null);
+            SchemaServiceClient client = new SchemaServiceClientImpl(mockGrpcClient.Object, null, null);
             ValidateMessageResponse responseCallSettings = await client.ValidateMessageAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ValidateMessageResponse responseCancellationToken = await client.ValidateMessageAsync(request, st::CancellationToken.None);

@@ -14,6 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace Google.Cloud.DataFusion.V1.Snippets
 {
     // [START datafusion_v1_generated_DataFusion_ListAvailableVersions_async_flattened]

@@ -14,6 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
 {
     // [START dialogflow_v3_generated_Environments_ListEnvironments_sync_flattened]

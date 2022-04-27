@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
 using grpccore = Grpc.Core;
@@ -38,7 +39,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             };
             ReportErrorEventResponse expectedResponse = new ReportErrorEventResponse { };
             mockGrpcClient.Setup(x => x.ReportErrorEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ReportErrorsServiceClient client = new ReportErrorsServiceClientImpl(mockGrpcClient.Object, null);
+            ReportErrorsServiceClient client = new ReportErrorsServiceClientImpl(mockGrpcClient.Object, null, null);
             ReportErrorEventResponse response = client.ReportErrorEvent(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -55,7 +56,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             };
             ReportErrorEventResponse expectedResponse = new ReportErrorEventResponse { };
             mockGrpcClient.Setup(x => x.ReportErrorEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReportErrorEventResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ReportErrorsServiceClient client = new ReportErrorsServiceClientImpl(mockGrpcClient.Object, null);
+            ReportErrorsServiceClient client = new ReportErrorsServiceClientImpl(mockGrpcClient.Object, null, null);
             ReportErrorEventResponse responseCallSettings = await client.ReportErrorEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ReportErrorEventResponse responseCancellationToken = await client.ReportErrorEventAsync(request, st::CancellationToken.None);
@@ -74,7 +75,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             };
             ReportErrorEventResponse expectedResponse = new ReportErrorEventResponse { };
             mockGrpcClient.Setup(x => x.ReportErrorEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ReportErrorsServiceClient client = new ReportErrorsServiceClientImpl(mockGrpcClient.Object, null);
+            ReportErrorsServiceClient client = new ReportErrorsServiceClientImpl(mockGrpcClient.Object, null, null);
             ReportErrorEventResponse response = client.ReportErrorEvent(request.ProjectName, request.Event);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -91,7 +92,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             };
             ReportErrorEventResponse expectedResponse = new ReportErrorEventResponse { };
             mockGrpcClient.Setup(x => x.ReportErrorEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReportErrorEventResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ReportErrorsServiceClient client = new ReportErrorsServiceClientImpl(mockGrpcClient.Object, null);
+            ReportErrorsServiceClient client = new ReportErrorsServiceClientImpl(mockGrpcClient.Object, null, null);
             ReportErrorEventResponse responseCallSettings = await client.ReportErrorEventAsync(request.ProjectName, request.Event, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ReportErrorEventResponse responseCancellationToken = await client.ReportErrorEventAsync(request.ProjectName, request.Event, st::CancellationToken.None);
@@ -110,7 +111,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             };
             ReportErrorEventResponse expectedResponse = new ReportErrorEventResponse { };
             mockGrpcClient.Setup(x => x.ReportErrorEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ReportErrorsServiceClient client = new ReportErrorsServiceClientImpl(mockGrpcClient.Object, null);
+            ReportErrorsServiceClient client = new ReportErrorsServiceClientImpl(mockGrpcClient.Object, null, null);
             ReportErrorEventResponse response = client.ReportErrorEvent(request.ProjectNameAsProjectName, request.Event);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -127,7 +128,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             };
             ReportErrorEventResponse expectedResponse = new ReportErrorEventResponse { };
             mockGrpcClient.Setup(x => x.ReportErrorEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReportErrorEventResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ReportErrorsServiceClient client = new ReportErrorsServiceClientImpl(mockGrpcClient.Object, null);
+            ReportErrorsServiceClient client = new ReportErrorsServiceClientImpl(mockGrpcClient.Object, null, null);
             ReportErrorEventResponse responseCallSettings = await client.ReportErrorEventAsync(request.ProjectNameAsProjectName, request.Event, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ReportErrorEventResponse responseCancellationToken = await client.ReportErrorEventAsync(request.ProjectNameAsProjectName, request.Event, st::CancellationToken.None);

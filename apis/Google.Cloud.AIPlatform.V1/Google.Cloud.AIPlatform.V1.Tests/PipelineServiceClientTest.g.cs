@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
@@ -65,7 +66,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
             };
             mockGrpcClient.Setup(x => x.CreateTrainingPipeline(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
             TrainingPipeline response = client.CreateTrainingPipeline(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -106,7 +107,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
             };
             mockGrpcClient.Setup(x => x.CreateTrainingPipelineAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TrainingPipeline>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
             TrainingPipeline responseCallSettings = await client.CreateTrainingPipelineAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TrainingPipeline responseCancellationToken = await client.CreateTrainingPipelineAsync(request, st::CancellationToken.None);
@@ -149,7 +150,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
             };
             mockGrpcClient.Setup(x => x.CreateTrainingPipeline(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
             TrainingPipeline response = client.CreateTrainingPipeline(request.Parent, request.TrainingPipeline);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -190,7 +191,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
             };
             mockGrpcClient.Setup(x => x.CreateTrainingPipelineAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TrainingPipeline>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
             TrainingPipeline responseCallSettings = await client.CreateTrainingPipelineAsync(request.Parent, request.TrainingPipeline, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TrainingPipeline responseCancellationToken = await client.CreateTrainingPipelineAsync(request.Parent, request.TrainingPipeline, st::CancellationToken.None);
@@ -233,7 +234,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
             };
             mockGrpcClient.Setup(x => x.CreateTrainingPipeline(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
             TrainingPipeline response = client.CreateTrainingPipeline(request.ParentAsLocationName, request.TrainingPipeline);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -274,7 +275,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
             };
             mockGrpcClient.Setup(x => x.CreateTrainingPipelineAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TrainingPipeline>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
             TrainingPipeline responseCallSettings = await client.CreateTrainingPipelineAsync(request.ParentAsLocationName, request.TrainingPipeline, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TrainingPipeline responseCancellationToken = await client.CreateTrainingPipelineAsync(request.ParentAsLocationName, request.TrainingPipeline, st::CancellationToken.None);
@@ -316,7 +317,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
             };
             mockGrpcClient.Setup(x => x.GetTrainingPipeline(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
             TrainingPipeline response = client.GetTrainingPipeline(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -356,7 +357,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
             };
             mockGrpcClient.Setup(x => x.GetTrainingPipelineAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TrainingPipeline>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
             TrainingPipeline responseCallSettings = await client.GetTrainingPipelineAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TrainingPipeline responseCancellationToken = await client.GetTrainingPipelineAsync(request, st::CancellationToken.None);
@@ -398,7 +399,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
             };
             mockGrpcClient.Setup(x => x.GetTrainingPipeline(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
             TrainingPipeline response = client.GetTrainingPipeline(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -438,7 +439,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
             };
             mockGrpcClient.Setup(x => x.GetTrainingPipelineAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TrainingPipeline>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
             TrainingPipeline responseCallSettings = await client.GetTrainingPipelineAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TrainingPipeline responseCancellationToken = await client.GetTrainingPipelineAsync(request.Name, st::CancellationToken.None);
@@ -480,7 +481,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
             };
             mockGrpcClient.Setup(x => x.GetTrainingPipeline(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
             TrainingPipeline response = client.GetTrainingPipeline(request.TrainingPipelineName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -520,7 +521,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
             };
             mockGrpcClient.Setup(x => x.GetTrainingPipelineAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TrainingPipeline>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
             TrainingPipeline responseCallSettings = await client.GetTrainingPipelineAsync(request.TrainingPipelineName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TrainingPipeline responseCancellationToken = await client.GetTrainingPipelineAsync(request.TrainingPipelineName, st::CancellationToken.None);
@@ -539,7 +540,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelTrainingPipeline(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
             client.CancelTrainingPipeline(request);
             mockGrpcClient.VerifyAll();
         }
@@ -555,7 +556,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelTrainingPipelineAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.CancelTrainingPipelineAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.CancelTrainingPipelineAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -572,7 +573,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelTrainingPipeline(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
             client.CancelTrainingPipeline(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -588,7 +589,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelTrainingPipelineAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.CancelTrainingPipelineAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.CancelTrainingPipelineAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -605,7 +606,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelTrainingPipeline(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
             client.CancelTrainingPipeline(request.TrainingPipelineName);
             mockGrpcClient.VerifyAll();
         }
@@ -621,7 +622,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelTrainingPipelineAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.CancelTrainingPipelineAsync(request.TrainingPipelineName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.CancelTrainingPipelineAsync(request.TrainingPipelineName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -665,7 +666,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 TemplateMetadata = new PipelineTemplateMetadata(),
             };
             mockGrpcClient.Setup(x => x.CreatePipelineJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
             PipelineJob response = client.CreatePipelineJob(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -709,7 +710,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 TemplateMetadata = new PipelineTemplateMetadata(),
             };
             mockGrpcClient.Setup(x => x.CreatePipelineJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PipelineJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
             PipelineJob responseCallSettings = await client.CreatePipelineJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PipelineJob responseCancellationToken = await client.CreatePipelineJobAsync(request, st::CancellationToken.None);
@@ -755,7 +756,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 TemplateMetadata = new PipelineTemplateMetadata(),
             };
             mockGrpcClient.Setup(x => x.CreatePipelineJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
             PipelineJob response = client.CreatePipelineJob(request.Parent, request.PipelineJob, request.PipelineJobId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -799,7 +800,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 TemplateMetadata = new PipelineTemplateMetadata(),
             };
             mockGrpcClient.Setup(x => x.CreatePipelineJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PipelineJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
             PipelineJob responseCallSettings = await client.CreatePipelineJobAsync(request.Parent, request.PipelineJob, request.PipelineJobId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PipelineJob responseCancellationToken = await client.CreatePipelineJobAsync(request.Parent, request.PipelineJob, request.PipelineJobId, st::CancellationToken.None);
@@ -845,7 +846,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 TemplateMetadata = new PipelineTemplateMetadata(),
             };
             mockGrpcClient.Setup(x => x.CreatePipelineJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
             PipelineJob response = client.CreatePipelineJob(request.ParentAsLocationName, request.PipelineJob, request.PipelineJobId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -889,7 +890,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 TemplateMetadata = new PipelineTemplateMetadata(),
             };
             mockGrpcClient.Setup(x => x.CreatePipelineJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PipelineJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
             PipelineJob responseCallSettings = await client.CreatePipelineJobAsync(request.ParentAsLocationName, request.PipelineJob, request.PipelineJobId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PipelineJob responseCancellationToken = await client.CreatePipelineJobAsync(request.ParentAsLocationName, request.PipelineJob, request.PipelineJobId, st::CancellationToken.None);
@@ -933,7 +934,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 TemplateMetadata = new PipelineTemplateMetadata(),
             };
             mockGrpcClient.Setup(x => x.GetPipelineJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
             PipelineJob response = client.GetPipelineJob(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -975,7 +976,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 TemplateMetadata = new PipelineTemplateMetadata(),
             };
             mockGrpcClient.Setup(x => x.GetPipelineJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PipelineJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
             PipelineJob responseCallSettings = await client.GetPipelineJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PipelineJob responseCancellationToken = await client.GetPipelineJobAsync(request, st::CancellationToken.None);
@@ -1019,7 +1020,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 TemplateMetadata = new PipelineTemplateMetadata(),
             };
             mockGrpcClient.Setup(x => x.GetPipelineJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
             PipelineJob response = client.GetPipelineJob(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1061,7 +1062,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 TemplateMetadata = new PipelineTemplateMetadata(),
             };
             mockGrpcClient.Setup(x => x.GetPipelineJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PipelineJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
             PipelineJob responseCallSettings = await client.GetPipelineJobAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PipelineJob responseCancellationToken = await client.GetPipelineJobAsync(request.Name, st::CancellationToken.None);
@@ -1105,7 +1106,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 TemplateMetadata = new PipelineTemplateMetadata(),
             };
             mockGrpcClient.Setup(x => x.GetPipelineJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
             PipelineJob response = client.GetPipelineJob(request.PipelineJobName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1147,7 +1148,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 TemplateMetadata = new PipelineTemplateMetadata(),
             };
             mockGrpcClient.Setup(x => x.GetPipelineJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PipelineJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
             PipelineJob responseCallSettings = await client.GetPipelineJobAsync(request.PipelineJobName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PipelineJob responseCancellationToken = await client.GetPipelineJobAsync(request.PipelineJobName, st::CancellationToken.None);
@@ -1166,7 +1167,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelPipelineJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
             client.CancelPipelineJob(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1182,7 +1183,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelPipelineJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.CancelPipelineJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.CancelPipelineJobAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1199,7 +1200,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelPipelineJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
             client.CancelPipelineJob(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -1215,7 +1216,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelPipelineJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.CancelPipelineJobAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.CancelPipelineJobAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1232,7 +1233,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelPipelineJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
             client.CancelPipelineJob(request.PipelineJobName);
             mockGrpcClient.VerifyAll();
         }
@@ -1248,7 +1249,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelPipelineJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.CancelPipelineJobAsync(request.PipelineJobName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.CancelPipelineJobAsync(request.PipelineJobName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();

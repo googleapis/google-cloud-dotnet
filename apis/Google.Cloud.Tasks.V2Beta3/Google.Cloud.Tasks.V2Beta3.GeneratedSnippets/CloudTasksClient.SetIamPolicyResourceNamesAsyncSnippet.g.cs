@@ -14,6 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace Google.Cloud.Tasks.V2Beta3.Snippets
 {
     // [START cloudtasks_v2beta3_generated_CloudTasks_SetIamPolicy_async_flattened_resourceNames]

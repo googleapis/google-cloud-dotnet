@@ -14,6 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace Google.Cloud.AIPlatform.V1.Snippets
 {
     // [START aiplatform_v1_generated_PredictionService_Predict_async_flattened_resourceNames]

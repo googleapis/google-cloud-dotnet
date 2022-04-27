@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using ga = Google.Api;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
@@ -50,7 +51,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 LaunchStage = ga::LaunchStage.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetMonitoredResourceDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::MonitoredResourceDescriptor response = client.GetMonitoredResourceDescriptor(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -77,7 +78,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 LaunchStage = ga::LaunchStage.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetMonitoredResourceDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::MonitoredResourceDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::MonitoredResourceDescriptor responseCallSettings = await client.GetMonitoredResourceDescriptorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ga::MonitoredResourceDescriptor responseCancellationToken = await client.GetMonitoredResourceDescriptorAsync(request, st::CancellationToken.None);
@@ -106,7 +107,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 LaunchStage = ga::LaunchStage.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetMonitoredResourceDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::MonitoredResourceDescriptor response = client.GetMonitoredResourceDescriptor(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -133,7 +134,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 LaunchStage = ga::LaunchStage.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetMonitoredResourceDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::MonitoredResourceDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::MonitoredResourceDescriptor responseCallSettings = await client.GetMonitoredResourceDescriptorAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ga::MonitoredResourceDescriptor responseCancellationToken = await client.GetMonitoredResourceDescriptorAsync(request.Name, st::CancellationToken.None);
@@ -162,7 +163,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 LaunchStage = ga::LaunchStage.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetMonitoredResourceDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::MonitoredResourceDescriptor response = client.GetMonitoredResourceDescriptor(request.MonitoredResourceDescriptorName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -189,7 +190,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 LaunchStage = ga::LaunchStage.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetMonitoredResourceDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::MonitoredResourceDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::MonitoredResourceDescriptor responseCallSettings = await client.GetMonitoredResourceDescriptorAsync(request.MonitoredResourceDescriptorName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ga::MonitoredResourceDescriptor responseCancellationToken = await client.GetMonitoredResourceDescriptorAsync(request.MonitoredResourceDescriptorName, st::CancellationToken.None);
@@ -218,7 +219,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 LaunchStage = ga::LaunchStage.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetMonitoredResourceDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::MonitoredResourceDescriptor response = client.GetMonitoredResourceDescriptor(request.ResourceName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -245,7 +246,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 LaunchStage = ga::LaunchStage.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetMonitoredResourceDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::MonitoredResourceDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::MonitoredResourceDescriptor responseCallSettings = await client.GetMonitoredResourceDescriptorAsync(request.ResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ga::MonitoredResourceDescriptor responseCancellationToken = await client.GetMonitoredResourceDescriptorAsync(request.ResourceName, st::CancellationToken.None);
@@ -282,7 +283,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::MetricDescriptor response = client.GetMetricDescriptor(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -317,7 +318,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::MetricDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::MetricDescriptor responseCallSettings = await client.GetMetricDescriptorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ga::MetricDescriptor responseCancellationToken = await client.GetMetricDescriptorAsync(request, st::CancellationToken.None);
@@ -354,7 +355,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::MetricDescriptor response = client.GetMetricDescriptor(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -389,7 +390,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::MetricDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::MetricDescriptor responseCallSettings = await client.GetMetricDescriptorAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ga::MetricDescriptor responseCancellationToken = await client.GetMetricDescriptorAsync(request.Name, st::CancellationToken.None);
@@ -426,7 +427,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::MetricDescriptor response = client.GetMetricDescriptor(request.MetricDescriptorName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -461,7 +462,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::MetricDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::MetricDescriptor responseCallSettings = await client.GetMetricDescriptorAsync(request.MetricDescriptorName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ga::MetricDescriptor responseCancellationToken = await client.GetMetricDescriptorAsync(request.MetricDescriptorName, st::CancellationToken.None);
@@ -498,7 +499,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::MetricDescriptor response = client.GetMetricDescriptor(request.ResourceName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -533,7 +534,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::MetricDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::MetricDescriptor responseCallSettings = await client.GetMetricDescriptorAsync(request.ResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ga::MetricDescriptor responseCancellationToken = await client.GetMetricDescriptorAsync(request.ResourceName, st::CancellationToken.None);
@@ -571,7 +572,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::MetricDescriptor response = client.CreateMetricDescriptor(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -607,7 +608,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::MetricDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::MetricDescriptor responseCallSettings = await client.CreateMetricDescriptorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ga::MetricDescriptor responseCancellationToken = await client.CreateMetricDescriptorAsync(request, st::CancellationToken.None);
@@ -645,7 +646,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::MetricDescriptor response = client.CreateMetricDescriptor(request.Name, request.MetricDescriptor);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -681,7 +682,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::MetricDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::MetricDescriptor responseCallSettings = await client.CreateMetricDescriptorAsync(request.Name, request.MetricDescriptor, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ga::MetricDescriptor responseCancellationToken = await client.CreateMetricDescriptorAsync(request.Name, request.MetricDescriptor, st::CancellationToken.None);
@@ -719,7 +720,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::MetricDescriptor response = client.CreateMetricDescriptor(request.ProjectName, request.MetricDescriptor);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -755,7 +756,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::MetricDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::MetricDescriptor responseCallSettings = await client.CreateMetricDescriptorAsync(request.ProjectName, request.MetricDescriptor, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ga::MetricDescriptor responseCancellationToken = await client.CreateMetricDescriptorAsync(request.ProjectName, request.MetricDescriptor, st::CancellationToken.None);
@@ -793,7 +794,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::MetricDescriptor response = client.CreateMetricDescriptor(request.OrganizationName, request.MetricDescriptor);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -829,7 +830,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::MetricDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::MetricDescriptor responseCallSettings = await client.CreateMetricDescriptorAsync(request.OrganizationName, request.MetricDescriptor, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ga::MetricDescriptor responseCancellationToken = await client.CreateMetricDescriptorAsync(request.OrganizationName, request.MetricDescriptor, st::CancellationToken.None);
@@ -867,7 +868,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::MetricDescriptor response = client.CreateMetricDescriptor(request.FolderName, request.MetricDescriptor);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -903,7 +904,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::MetricDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::MetricDescriptor responseCallSettings = await client.CreateMetricDescriptorAsync(request.FolderName, request.MetricDescriptor, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ga::MetricDescriptor responseCancellationToken = await client.CreateMetricDescriptorAsync(request.FolderName, request.MetricDescriptor, st::CancellationToken.None);
@@ -941,7 +942,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::MetricDescriptor response = client.CreateMetricDescriptor(request.ResourceName, request.MetricDescriptor);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -977,7 +978,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::MetricDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::MetricDescriptor responseCallSettings = await client.CreateMetricDescriptorAsync(request.ResourceName, request.MetricDescriptor, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ga::MetricDescriptor responseCancellationToken = await client.CreateMetricDescriptorAsync(request.ResourceName, request.MetricDescriptor, st::CancellationToken.None);
@@ -995,7 +996,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteMetricDescriptor(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1010,7 +1011,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteMetricDescriptorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteMetricDescriptorAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1026,7 +1027,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteMetricDescriptor(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -1041,7 +1042,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteMetricDescriptorAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteMetricDescriptorAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1057,7 +1058,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteMetricDescriptor(request.MetricDescriptorName);
             mockGrpcClient.VerifyAll();
         }
@@ -1072,7 +1073,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteMetricDescriptorAsync(request.MetricDescriptorName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteMetricDescriptorAsync(request.MetricDescriptorName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1088,7 +1089,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteMetricDescriptor(request.ResourceName);
             mockGrpcClient.VerifyAll();
         }
@@ -1103,7 +1104,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteMetricDescriptorAsync(request.ResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteMetricDescriptorAsync(request.ResourceName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1120,7 +1121,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CreateTimeSeries(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             client.CreateTimeSeries(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1136,7 +1137,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CreateTimeSeriesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.CreateTimeSeriesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.CreateTimeSeriesAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1153,7 +1154,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CreateTimeSeries(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             client.CreateTimeSeries(request.Name, request.TimeSeries);
             mockGrpcClient.VerifyAll();
         }
@@ -1169,7 +1170,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CreateTimeSeriesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.CreateTimeSeriesAsync(request.Name, request.TimeSeries, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.CreateTimeSeriesAsync(request.Name, request.TimeSeries, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1186,7 +1187,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CreateTimeSeries(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             client.CreateTimeSeries(request.ProjectName, request.TimeSeries);
             mockGrpcClient.VerifyAll();
         }
@@ -1202,7 +1203,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CreateTimeSeriesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.CreateTimeSeriesAsync(request.ProjectName, request.TimeSeries, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.CreateTimeSeriesAsync(request.ProjectName, request.TimeSeries, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1219,7 +1220,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CreateServiceTimeSeries(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             client.CreateServiceTimeSeries(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1235,7 +1236,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CreateServiceTimeSeriesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.CreateServiceTimeSeriesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.CreateServiceTimeSeriesAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1252,7 +1253,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CreateServiceTimeSeries(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             client.CreateServiceTimeSeries(request.Name, request.TimeSeries);
             mockGrpcClient.VerifyAll();
         }
@@ -1268,7 +1269,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CreateServiceTimeSeriesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.CreateServiceTimeSeriesAsync(request.Name, request.TimeSeries, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.CreateServiceTimeSeriesAsync(request.Name, request.TimeSeries, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1285,7 +1286,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CreateServiceTimeSeries(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             client.CreateServiceTimeSeries(request.ProjectName, request.TimeSeries);
             mockGrpcClient.VerifyAll();
         }
@@ -1301,7 +1302,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CreateServiceTimeSeriesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.CreateServiceTimeSeriesAsync(request.ProjectName, request.TimeSeries, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.CreateServiceTimeSeriesAsync(request.ProjectName, request.TimeSeries, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();

@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -51,7 +52,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Deprecated = new DeprecationStatus(),
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DiskTypesClient client = new DiskTypesClientImpl(mockGrpcClient.Object, null);
+            DiskTypesClient client = new DiskTypesClientImpl(mockGrpcClient.Object, null, null);
             DiskType response = client.Get(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -82,7 +83,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Deprecated = new DeprecationStatus(),
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DiskType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DiskTypesClient client = new DiskTypesClientImpl(mockGrpcClient.Object, null);
+            DiskTypesClient client = new DiskTypesClientImpl(mockGrpcClient.Object, null, null);
             DiskType responseCallSettings = await client.GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DiskType responseCancellationToken = await client.GetAsync(request, st::CancellationToken.None);
@@ -115,7 +116,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Deprecated = new DeprecationStatus(),
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DiskTypesClient client = new DiskTypesClientImpl(mockGrpcClient.Object, null);
+            DiskTypesClient client = new DiskTypesClientImpl(mockGrpcClient.Object, null, null);
             DiskType response = client.Get(request.Project, request.Zone, request.DiskType);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -146,7 +147,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Deprecated = new DeprecationStatus(),
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DiskType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DiskTypesClient client = new DiskTypesClientImpl(mockGrpcClient.Object, null);
+            DiskTypesClient client = new DiskTypesClientImpl(mockGrpcClient.Object, null, null);
             DiskType responseCallSettings = await client.GetAsync(request.Project, request.Zone, request.DiskType, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DiskType responseCancellationToken = await client.GetAsync(request.Project, request.Zone, request.DiskType, st::CancellationToken.None);

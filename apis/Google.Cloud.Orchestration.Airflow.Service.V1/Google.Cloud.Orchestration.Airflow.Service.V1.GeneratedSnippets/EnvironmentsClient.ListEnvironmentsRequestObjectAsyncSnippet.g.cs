@@ -14,6 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
 {
     // [START composer_v1_generated_Environments_ListEnvironments_async]

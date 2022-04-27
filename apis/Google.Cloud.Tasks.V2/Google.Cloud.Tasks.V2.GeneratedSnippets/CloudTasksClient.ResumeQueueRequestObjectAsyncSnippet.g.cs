@@ -14,6 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace Google.Cloud.Tasks.V2.Snippets
 {
     // [START cloudtasks_v2_generated_CloudTasks_ResumeQueue_async]

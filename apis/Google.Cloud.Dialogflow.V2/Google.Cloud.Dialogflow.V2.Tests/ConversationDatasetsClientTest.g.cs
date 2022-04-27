@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -48,7 +49,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ConversationCount = 5485630355032729838L,
             };
             mockGrpcClient.Setup(x => x.GetConversationDataset(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConversationDatasetsClient client = new ConversationDatasetsClientImpl(mockGrpcClient.Object, null);
+            ConversationDatasetsClient client = new ConversationDatasetsClientImpl(mockGrpcClient.Object, null, null);
             ConversationDataset response = client.GetConversationDataset(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -74,7 +75,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ConversationCount = 5485630355032729838L,
             };
             mockGrpcClient.Setup(x => x.GetConversationDatasetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversationDataset>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConversationDatasetsClient client = new ConversationDatasetsClientImpl(mockGrpcClient.Object, null);
+            ConversationDatasetsClient client = new ConversationDatasetsClientImpl(mockGrpcClient.Object, null, null);
             ConversationDataset responseCallSettings = await client.GetConversationDatasetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ConversationDataset responseCancellationToken = await client.GetConversationDatasetAsync(request, st::CancellationToken.None);
@@ -102,7 +103,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ConversationCount = 5485630355032729838L,
             };
             mockGrpcClient.Setup(x => x.GetConversationDataset(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConversationDatasetsClient client = new ConversationDatasetsClientImpl(mockGrpcClient.Object, null);
+            ConversationDatasetsClient client = new ConversationDatasetsClientImpl(mockGrpcClient.Object, null, null);
             ConversationDataset response = client.GetConversationDataset(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -128,7 +129,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ConversationCount = 5485630355032729838L,
             };
             mockGrpcClient.Setup(x => x.GetConversationDatasetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversationDataset>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConversationDatasetsClient client = new ConversationDatasetsClientImpl(mockGrpcClient.Object, null);
+            ConversationDatasetsClient client = new ConversationDatasetsClientImpl(mockGrpcClient.Object, null, null);
             ConversationDataset responseCallSettings = await client.GetConversationDatasetAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ConversationDataset responseCancellationToken = await client.GetConversationDatasetAsync(request.Name, st::CancellationToken.None);
@@ -156,7 +157,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ConversationCount = 5485630355032729838L,
             };
             mockGrpcClient.Setup(x => x.GetConversationDataset(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConversationDatasetsClient client = new ConversationDatasetsClientImpl(mockGrpcClient.Object, null);
+            ConversationDatasetsClient client = new ConversationDatasetsClientImpl(mockGrpcClient.Object, null, null);
             ConversationDataset response = client.GetConversationDataset(request.ConversationDatasetName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -182,7 +183,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ConversationCount = 5485630355032729838L,
             };
             mockGrpcClient.Setup(x => x.GetConversationDatasetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversationDataset>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConversationDatasetsClient client = new ConversationDatasetsClientImpl(mockGrpcClient.Object, null);
+            ConversationDatasetsClient client = new ConversationDatasetsClientImpl(mockGrpcClient.Object, null, null);
             ConversationDataset responseCallSettings = await client.GetConversationDatasetAsync(request.ConversationDatasetName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ConversationDataset responseCancellationToken = await client.GetConversationDatasetAsync(request.ConversationDatasetName, st::CancellationToken.None);

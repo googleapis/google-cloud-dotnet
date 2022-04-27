@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gcbcv = Google.Cloud.Bigtable.Common.V2;
 
 namespace Google.Cloud.Bigtable.V2

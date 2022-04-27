@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using grpccore = Grpc.Core;
@@ -95,7 +96,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Backends = { new Backend(), },
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
+            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null, null);
             BackendService response = client.Get(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -169,7 +170,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Backends = { new Backend(), },
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BackendService>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
+            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null, null);
             BackendService responseCallSettings = await client.GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BackendService responseCancellationToken = await client.GetAsync(request, st::CancellationToken.None);
@@ -245,7 +246,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Backends = { new Backend(), },
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
+            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null, null);
             BackendService response = client.Get(request.Project, request.Region, request.BackendService);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -319,7 +320,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Backends = { new Backend(), },
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BackendService>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
+            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null, null);
             BackendService responseCallSettings = await client.GetAsync(request.Project, request.Region, request.BackendService, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BackendService responseCancellationToken = await client.GetAsync(request.Project, request.Region, request.BackendService, st::CancellationToken.None);
@@ -352,7 +353,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 HealthStatus = { new HealthStatus(), },
             };
             mockGrpcClient.Setup(x => x.GetHealth(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
+            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null, null);
             BackendServiceGroupHealth response = client.GetHealth(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -383,7 +384,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 HealthStatus = { new HealthStatus(), },
             };
             mockGrpcClient.Setup(x => x.GetHealthAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BackendServiceGroupHealth>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
+            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null, null);
             BackendServiceGroupHealth responseCallSettings = await client.GetHealthAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BackendServiceGroupHealth responseCancellationToken = await client.GetHealthAsync(request, st::CancellationToken.None);
@@ -416,7 +417,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 HealthStatus = { new HealthStatus(), },
             };
             mockGrpcClient.Setup(x => x.GetHealth(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
+            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null, null);
             BackendServiceGroupHealth response = client.GetHealth(request.Project, request.Region, request.BackendService, request.ResourceGroupReferenceResource);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -447,7 +448,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 HealthStatus = { new HealthStatus(), },
             };
             mockGrpcClient.Setup(x => x.GetHealthAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BackendServiceGroupHealth>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
+            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null, null);
             BackendServiceGroupHealth responseCallSettings = await client.GetHealthAsync(request.Project, request.Region, request.BackendService, request.ResourceGroupReferenceResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BackendServiceGroupHealth responseCancellationToken = await client.GetHealthAsync(request.Project, request.Region, request.BackendService, request.ResourceGroupReferenceResource, st::CancellationToken.None);

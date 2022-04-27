@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -37,7 +38,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             DeleteGlobalOrganizationOperationResponse expectedResponse = new DeleteGlobalOrganizationOperationResponse { };
             mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GlobalOrganizationOperationsClient client = new GlobalOrganizationOperationsClientImpl(mockGrpcClient.Object, null);
+            GlobalOrganizationOperationsClient client = new GlobalOrganizationOperationsClientImpl(mockGrpcClient.Object, null, null);
             DeleteGlobalOrganizationOperationResponse response = client.Delete(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -54,7 +55,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             DeleteGlobalOrganizationOperationResponse expectedResponse = new DeleteGlobalOrganizationOperationResponse { };
             mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeleteGlobalOrganizationOperationResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GlobalOrganizationOperationsClient client = new GlobalOrganizationOperationsClientImpl(mockGrpcClient.Object, null);
+            GlobalOrganizationOperationsClient client = new GlobalOrganizationOperationsClientImpl(mockGrpcClient.Object, null, null);
             DeleteGlobalOrganizationOperationResponse responseCallSettings = await client.DeleteAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DeleteGlobalOrganizationOperationResponse responseCancellationToken = await client.DeleteAsync(request, st::CancellationToken.None);
@@ -72,7 +73,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             DeleteGlobalOrganizationOperationResponse expectedResponse = new DeleteGlobalOrganizationOperationResponse { };
             mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GlobalOrganizationOperationsClient client = new GlobalOrganizationOperationsClientImpl(mockGrpcClient.Object, null);
+            GlobalOrganizationOperationsClient client = new GlobalOrganizationOperationsClientImpl(mockGrpcClient.Object, null, null);
             DeleteGlobalOrganizationOperationResponse response = client.Delete(request.Operation);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -88,7 +89,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             DeleteGlobalOrganizationOperationResponse expectedResponse = new DeleteGlobalOrganizationOperationResponse { };
             mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeleteGlobalOrganizationOperationResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GlobalOrganizationOperationsClient client = new GlobalOrganizationOperationsClientImpl(mockGrpcClient.Object, null);
+            GlobalOrganizationOperationsClient client = new GlobalOrganizationOperationsClientImpl(mockGrpcClient.Object, null, null);
             DeleteGlobalOrganizationOperationResponse responseCallSettings = await client.DeleteAsync(request.Operation, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DeleteGlobalOrganizationOperationResponse responseCancellationToken = await client.DeleteAsync(request.Operation, st::CancellationToken.None);
@@ -133,7 +134,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GlobalOrganizationOperationsClient client = new GlobalOrganizationOperationsClientImpl(mockGrpcClient.Object, null);
+            GlobalOrganizationOperationsClient client = new GlobalOrganizationOperationsClientImpl(mockGrpcClient.Object, null, null);
             Operation response = client.Get(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -176,7 +177,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GlobalOrganizationOperationsClient client = new GlobalOrganizationOperationsClientImpl(mockGrpcClient.Object, null);
+            GlobalOrganizationOperationsClient client = new GlobalOrganizationOperationsClientImpl(mockGrpcClient.Object, null, null);
             Operation responseCallSettings = await client.GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Operation responseCancellationToken = await client.GetAsync(request, st::CancellationToken.None);
@@ -220,7 +221,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GlobalOrganizationOperationsClient client = new GlobalOrganizationOperationsClientImpl(mockGrpcClient.Object, null);
+            GlobalOrganizationOperationsClient client = new GlobalOrganizationOperationsClientImpl(mockGrpcClient.Object, null, null);
             Operation response = client.Get(request.Operation);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -262,7 +263,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GlobalOrganizationOperationsClient client = new GlobalOrganizationOperationsClientImpl(mockGrpcClient.Object, null);
+            GlobalOrganizationOperationsClient client = new GlobalOrganizationOperationsClientImpl(mockGrpcClient.Object, null, null);
             Operation responseCallSettings = await client.GetAsync(request.Operation, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Operation responseCancellationToken = await client.GetAsync(request.Operation, st::CancellationToken.None);

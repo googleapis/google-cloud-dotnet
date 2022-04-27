@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using wkt = Google.Protobuf.WellKnownTypes;
 using gr = Google.Rpc;
@@ -94,7 +95,7 @@ namespace Google.Cloud.Dataflow.V1Beta3.Tests
                 SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.CreateJobFromTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TemplatesServiceClient client = new TemplatesServiceClientImpl(mockGrpcClient.Object, null);
+            TemplatesServiceClient client = new TemplatesServiceClientImpl(mockGrpcClient.Object, null, null);
             Job response = client.CreateJobFromTemplate(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -166,7 +167,7 @@ namespace Google.Cloud.Dataflow.V1Beta3.Tests
                 SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.CreateJobFromTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TemplatesServiceClient client = new TemplatesServiceClientImpl(mockGrpcClient.Object, null);
+            TemplatesServiceClient client = new TemplatesServiceClientImpl(mockGrpcClient.Object, null, null);
             Job responseCallSettings = await client.CreateJobFromTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Job responseCancellationToken = await client.CreateJobFromTemplateAsync(request, st::CancellationToken.None);
@@ -189,7 +190,7 @@ namespace Google.Cloud.Dataflow.V1Beta3.Tests
             };
             LaunchTemplateResponse expectedResponse = new LaunchTemplateResponse { Job = new Job(), };
             mockGrpcClient.Setup(x => x.LaunchTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TemplatesServiceClient client = new TemplatesServiceClientImpl(mockGrpcClient.Object, null);
+            TemplatesServiceClient client = new TemplatesServiceClientImpl(mockGrpcClient.Object, null, null);
             LaunchTemplateResponse response = client.LaunchTemplate(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -210,7 +211,7 @@ namespace Google.Cloud.Dataflow.V1Beta3.Tests
             };
             LaunchTemplateResponse expectedResponse = new LaunchTemplateResponse { Job = new Job(), };
             mockGrpcClient.Setup(x => x.LaunchTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LaunchTemplateResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TemplatesServiceClient client = new TemplatesServiceClientImpl(mockGrpcClient.Object, null);
+            TemplatesServiceClient client = new TemplatesServiceClientImpl(mockGrpcClient.Object, null, null);
             LaunchTemplateResponse responseCallSettings = await client.LaunchTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LaunchTemplateResponse responseCancellationToken = await client.LaunchTemplateAsync(request, st::CancellationToken.None);
@@ -237,7 +238,7 @@ namespace Google.Cloud.Dataflow.V1Beta3.Tests
                 RuntimeMetadata = new RuntimeMetadata(),
             };
             mockGrpcClient.Setup(x => x.GetTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TemplatesServiceClient client = new TemplatesServiceClientImpl(mockGrpcClient.Object, null);
+            TemplatesServiceClient client = new TemplatesServiceClientImpl(mockGrpcClient.Object, null, null);
             GetTemplateResponse response = client.GetTemplate(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -262,7 +263,7 @@ namespace Google.Cloud.Dataflow.V1Beta3.Tests
                 RuntimeMetadata = new RuntimeMetadata(),
             };
             mockGrpcClient.Setup(x => x.GetTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GetTemplateResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TemplatesServiceClient client = new TemplatesServiceClientImpl(mockGrpcClient.Object, null);
+            TemplatesServiceClient client = new TemplatesServiceClientImpl(mockGrpcClient.Object, null, null);
             GetTemplateResponse responseCallSettings = await client.GetTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GetTemplateResponse responseCancellationToken = await client.GetTemplateAsync(request, st::CancellationToken.None);

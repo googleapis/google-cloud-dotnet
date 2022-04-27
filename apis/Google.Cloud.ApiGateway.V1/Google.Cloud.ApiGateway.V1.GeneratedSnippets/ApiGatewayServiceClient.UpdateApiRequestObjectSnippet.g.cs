@@ -14,6 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace Google.Cloud.ApiGateway.V1.Snippets
 {
     // [START apigateway_v1_generated_ApiGatewayService_UpdateApi_sync]

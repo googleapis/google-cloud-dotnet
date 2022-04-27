@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -53,7 +54,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetPage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null);
+            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null, null);
             Page response = client.GetPage(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -85,7 +86,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetPageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Page>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null);
+            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null, null);
             Page responseCallSettings = await client.GetPageAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Page responseCancellationToken = await client.GetPageAsync(request, st::CancellationToken.None);
@@ -118,7 +119,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetPage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null);
+            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null, null);
             Page response = client.GetPage(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -149,7 +150,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetPageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Page>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null);
+            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null, null);
             Page responseCallSettings = await client.GetPageAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Page responseCancellationToken = await client.GetPageAsync(request.Name, st::CancellationToken.None);
@@ -182,7 +183,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetPage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null);
+            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null, null);
             Page response = client.GetPage(request.PageName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -213,7 +214,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetPageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Page>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null);
+            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null, null);
             Page responseCallSettings = await client.GetPageAsync(request.PageName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Page responseCancellationToken = await client.GetPageAsync(request.PageName, st::CancellationToken.None);
@@ -248,7 +249,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreatePage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null);
+            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null, null);
             Page response = client.CreatePage(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -281,7 +282,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreatePageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Page>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null);
+            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null, null);
             Page responseCallSettings = await client.CreatePageAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Page responseCancellationToken = await client.CreatePageAsync(request, st::CancellationToken.None);
@@ -315,7 +316,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreatePage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null);
+            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null, null);
             Page response = client.CreatePage(request.Parent, request.Page);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -347,7 +348,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreatePageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Page>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null);
+            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null, null);
             Page responseCallSettings = await client.CreatePageAsync(request.Parent, request.Page, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Page responseCancellationToken = await client.CreatePageAsync(request.Parent, request.Page, st::CancellationToken.None);
@@ -381,7 +382,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreatePage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null);
+            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null, null);
             Page response = client.CreatePage(request.ParentAsFlowName, request.Page);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -413,7 +414,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreatePageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Page>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null);
+            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null, null);
             Page responseCallSettings = await client.CreatePageAsync(request.ParentAsFlowName, request.Page, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Page responseCancellationToken = await client.CreatePageAsync(request.ParentAsFlowName, request.Page, st::CancellationToken.None);
@@ -448,7 +449,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdatePage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null);
+            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null, null);
             Page response = client.UpdatePage(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -481,7 +482,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdatePageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Page>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null);
+            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null, null);
             Page responseCallSettings = await client.UpdatePageAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Page responseCancellationToken = await client.UpdatePageAsync(request, st::CancellationToken.None);
@@ -515,7 +516,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdatePage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null);
+            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null, null);
             Page response = client.UpdatePage(request.Page, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -547,7 +548,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdatePageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Page>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null);
+            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null, null);
             Page responseCallSettings = await client.UpdatePageAsync(request.Page, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Page responseCancellationToken = await client.UpdatePageAsync(request.Page, request.UpdateMask, st::CancellationToken.None);
@@ -566,7 +567,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null);
+            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null, null);
             client.DeletePage(request);
             mockGrpcClient.VerifyAll();
         }
@@ -582,7 +583,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null);
+            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null, null);
             await client.DeletePageAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeletePageAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -598,7 +599,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null);
+            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null, null);
             client.DeletePage(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -613,7 +614,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null);
+            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null, null);
             await client.DeletePageAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeletePageAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -629,7 +630,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null);
+            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null, null);
             client.DeletePage(request.PageName);
             mockGrpcClient.VerifyAll();
         }
@@ -644,7 +645,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null);
+            PagesClient client = new PagesClientImpl(mockGrpcClient.Object, null, null);
             await client.DeletePageAsync(request.PageName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeletePageAsync(request.PageName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();

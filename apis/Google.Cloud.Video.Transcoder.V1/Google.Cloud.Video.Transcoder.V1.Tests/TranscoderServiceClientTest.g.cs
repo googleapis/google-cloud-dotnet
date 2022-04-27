@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -53,7 +54,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
+            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
             Job response = client.CreateJob(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -83,7 +84,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
+            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
             Job responseCallSettings = await client.CreateJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Job responseCancellationToken = await client.CreateJobAsync(request, st::CancellationToken.None);
@@ -115,7 +116,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
+            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
             Job response = client.CreateJob(request.Parent, request.Job);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -145,7 +146,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
+            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
             Job responseCallSettings = await client.CreateJobAsync(request.Parent, request.Job, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Job responseCancellationToken = await client.CreateJobAsync(request.Parent, request.Job, st::CancellationToken.None);
@@ -177,7 +178,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
+            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
             Job response = client.CreateJob(request.ParentAsLocationName, request.Job);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -207,7 +208,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
+            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
             Job responseCallSettings = await client.CreateJobAsync(request.ParentAsLocationName, request.Job, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Job responseCancellationToken = await client.CreateJobAsync(request.ParentAsLocationName, request.Job, st::CancellationToken.None);
@@ -238,7 +239,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
+            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
             Job response = client.GetJob(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -267,7 +268,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
+            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
             Job responseCallSettings = await client.GetJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Job responseCancellationToken = await client.GetJobAsync(request, st::CancellationToken.None);
@@ -298,7 +299,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
+            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
             Job response = client.GetJob(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -327,7 +328,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
+            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
             Job responseCallSettings = await client.GetJobAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Job responseCancellationToken = await client.GetJobAsync(request.Name, st::CancellationToken.None);
@@ -358,7 +359,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
+            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
             Job response = client.GetJob(request.JobName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -387,7 +388,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
+            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
             Job responseCallSettings = await client.GetJobAsync(request.JobName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Job responseCancellationToken = await client.GetJobAsync(request.JobName, st::CancellationToken.None);
@@ -406,7 +407,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
+            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteJob(request);
             mockGrpcClient.VerifyAll();
         }
@@ -422,7 +423,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
+            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteJobAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -438,7 +439,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
+            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteJob(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -453,7 +454,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
+            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteJobAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteJobAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -469,7 +470,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
+            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteJob(request.JobName);
             mockGrpcClient.VerifyAll();
         }
@@ -484,7 +485,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
+            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteJobAsync(request.JobName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteJobAsync(request.JobName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -506,7 +507,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
                 Config = new JobConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateJobTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
+            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
             JobTemplate response = client.CreateJobTemplate(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -528,7 +529,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
                 Config = new JobConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateJobTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<JobTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
+            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
             JobTemplate responseCallSettings = await client.CreateJobTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             JobTemplate responseCancellationToken = await client.CreateJobTemplateAsync(request, st::CancellationToken.None);
@@ -552,7 +553,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
                 Config = new JobConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateJobTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
+            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
             JobTemplate response = client.CreateJobTemplate(request.Parent, request.JobTemplate, request.JobTemplateId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -574,7 +575,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
                 Config = new JobConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateJobTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<JobTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
+            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
             JobTemplate responseCallSettings = await client.CreateJobTemplateAsync(request.Parent, request.JobTemplate, request.JobTemplateId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             JobTemplate responseCancellationToken = await client.CreateJobTemplateAsync(request.Parent, request.JobTemplate, request.JobTemplateId, st::CancellationToken.None);
@@ -598,7 +599,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
                 Config = new JobConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateJobTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
+            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
             JobTemplate response = client.CreateJobTemplate(request.ParentAsLocationName, request.JobTemplate, request.JobTemplateId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -620,7 +621,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
                 Config = new JobConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateJobTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<JobTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
+            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
             JobTemplate responseCallSettings = await client.CreateJobTemplateAsync(request.ParentAsLocationName, request.JobTemplate, request.JobTemplateId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             JobTemplate responseCancellationToken = await client.CreateJobTemplateAsync(request.ParentAsLocationName, request.JobTemplate, request.JobTemplateId, st::CancellationToken.None);
@@ -642,7 +643,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
                 Config = new JobConfig(),
             };
             mockGrpcClient.Setup(x => x.GetJobTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
+            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
             JobTemplate response = client.GetJobTemplate(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -662,7 +663,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
                 Config = new JobConfig(),
             };
             mockGrpcClient.Setup(x => x.GetJobTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<JobTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
+            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
             JobTemplate responseCallSettings = await client.GetJobTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             JobTemplate responseCancellationToken = await client.GetJobTemplateAsync(request, st::CancellationToken.None);
@@ -684,7 +685,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
                 Config = new JobConfig(),
             };
             mockGrpcClient.Setup(x => x.GetJobTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
+            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
             JobTemplate response = client.GetJobTemplate(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -704,7 +705,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
                 Config = new JobConfig(),
             };
             mockGrpcClient.Setup(x => x.GetJobTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<JobTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
+            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
             JobTemplate responseCallSettings = await client.GetJobTemplateAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             JobTemplate responseCancellationToken = await client.GetJobTemplateAsync(request.Name, st::CancellationToken.None);
@@ -726,7 +727,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
                 Config = new JobConfig(),
             };
             mockGrpcClient.Setup(x => x.GetJobTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
+            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
             JobTemplate response = client.GetJobTemplate(request.JobTemplateName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -746,7 +747,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
                 Config = new JobConfig(),
             };
             mockGrpcClient.Setup(x => x.GetJobTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<JobTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
+            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
             JobTemplate responseCallSettings = await client.GetJobTemplateAsync(request.JobTemplateName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             JobTemplate responseCancellationToken = await client.GetJobTemplateAsync(request.JobTemplateName, st::CancellationToken.None);
@@ -765,7 +766,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteJobTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
+            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteJobTemplate(request);
             mockGrpcClient.VerifyAll();
         }
@@ -781,7 +782,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteJobTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
+            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteJobTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteJobTemplateAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -797,7 +798,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteJobTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
+            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteJobTemplate(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -812,7 +813,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteJobTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
+            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteJobTemplateAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteJobTemplateAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -828,7 +829,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteJobTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
+            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteJobTemplate(request.JobTemplateName);
             mockGrpcClient.VerifyAll();
         }
@@ -843,7 +844,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteJobTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
+            TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteJobTemplateAsync(request.JobTemplateName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteJobTemplateAsync(request.JobTemplateName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();

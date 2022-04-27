@@ -14,6 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace Google.Cloud.MediaTranslation.V1Beta1.Tests
 {
     /// <summary>Generated unit tests.</summary>

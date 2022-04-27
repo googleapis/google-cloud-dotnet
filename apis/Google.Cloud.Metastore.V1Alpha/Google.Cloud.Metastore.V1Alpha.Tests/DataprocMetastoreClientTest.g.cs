@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -67,7 +68,7 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 DatabaseType = Service.Types.DatabaseType.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
+            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null, null);
             Service response = client.GetService(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -112,7 +113,7 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 DatabaseType = Service.Types.DatabaseType.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
+            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null, null);
             Service responseCallSettings = await client.GetServiceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Service responseCancellationToken = await client.GetServiceAsync(request, st::CancellationToken.None);
@@ -159,7 +160,7 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 DatabaseType = Service.Types.DatabaseType.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
+            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null, null);
             Service response = client.GetService(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -204,7 +205,7 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 DatabaseType = Service.Types.DatabaseType.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
+            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null, null);
             Service responseCallSettings = await client.GetServiceAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Service responseCancellationToken = await client.GetServiceAsync(request.Name, st::CancellationToken.None);
@@ -251,7 +252,7 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 DatabaseType = Service.Types.DatabaseType.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
+            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null, null);
             Service response = client.GetService(request.ServiceName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -296,7 +297,7 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 DatabaseType = Service.Types.DatabaseType.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
+            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null, null);
             Service responseCallSettings = await client.GetServiceAsync(request.ServiceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Service responseCancellationToken = await client.GetServiceAsync(request.ServiceName, st::CancellationToken.None);
@@ -324,7 +325,7 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 EndTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetMetadataImport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
+            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null, null);
             MetadataImport response = client.GetMetadataImport(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -350,7 +351,7 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 EndTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetMetadataImportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MetadataImport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
+            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null, null);
             MetadataImport responseCallSettings = await client.GetMetadataImportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MetadataImport responseCancellationToken = await client.GetMetadataImportAsync(request, st::CancellationToken.None);
@@ -378,7 +379,7 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 EndTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetMetadataImport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
+            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null, null);
             MetadataImport response = client.GetMetadataImport(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -404,7 +405,7 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 EndTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetMetadataImportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MetadataImport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
+            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null, null);
             MetadataImport responseCallSettings = await client.GetMetadataImportAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MetadataImport responseCancellationToken = await client.GetMetadataImportAsync(request.Name, st::CancellationToken.None);
@@ -432,7 +433,7 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 EndTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetMetadataImport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
+            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null, null);
             MetadataImport response = client.GetMetadataImport(request.MetadataImportName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -458,7 +459,7 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 EndTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetMetadataImportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MetadataImport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
+            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null, null);
             MetadataImport responseCallSettings = await client.GetMetadataImportAsync(request.MetadataImportName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MetadataImport responseCancellationToken = await client.GetMetadataImportAsync(request.MetadataImportName, st::CancellationToken.None);
@@ -489,7 +490,7 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
+            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null, null);
             Backup response = client.GetBackup(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -518,7 +519,7 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
+            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null, null);
             Backup responseCallSettings = await client.GetBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Backup responseCancellationToken = await client.GetBackupAsync(request, st::CancellationToken.None);
@@ -549,7 +550,7 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
+            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null, null);
             Backup response = client.GetBackup(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -578,7 +579,7 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
+            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null, null);
             Backup responseCallSettings = await client.GetBackupAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Backup responseCancellationToken = await client.GetBackupAsync(request.Name, st::CancellationToken.None);
@@ -609,7 +610,7 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
+            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null, null);
             Backup response = client.GetBackup(request.BackupName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -638,7 +639,7 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
+            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null, null);
             Backup responseCallSettings = await client.GetBackupAsync(request.BackupName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Backup responseCancellationToken = await client.GetBackupAsync(request.BackupName, st::CancellationToken.None);

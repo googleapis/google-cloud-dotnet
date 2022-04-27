@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gcbav = Google.Cloud.Bigtable.Admin.V2;
 using gcbcv = Google.Cloud.Bigtable.Common.V2;

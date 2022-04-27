@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gcnv = Google.Cloud.NetworkManagement.V1;
 using sys = System;

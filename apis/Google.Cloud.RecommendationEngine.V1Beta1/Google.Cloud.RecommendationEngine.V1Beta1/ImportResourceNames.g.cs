@@ -14,6 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace Google.Cloud.RecommendationEngine.V1Beta1
 {
     public partial class ImportCatalogItemsRequest

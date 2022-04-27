@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -47,7 +48,7 @@ namespace Google.Cloud.Speech.V1.Tests
                 TotalBilledTime = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.Recognize(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SpeechClient client = new SpeechClientImpl(mockGrpcClient.Object, null);
+            SpeechClient client = new SpeechClientImpl(mockGrpcClient.Object, null, null);
             RecognizeResponse response = client.Recognize(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -72,7 +73,7 @@ namespace Google.Cloud.Speech.V1.Tests
                 TotalBilledTime = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.RecognizeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RecognizeResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SpeechClient client = new SpeechClientImpl(mockGrpcClient.Object, null);
+            SpeechClient client = new SpeechClientImpl(mockGrpcClient.Object, null, null);
             RecognizeResponse responseCallSettings = await client.RecognizeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             RecognizeResponse responseCancellationToken = await client.RecognizeAsync(request, st::CancellationToken.None);
@@ -99,7 +100,7 @@ namespace Google.Cloud.Speech.V1.Tests
                 TotalBilledTime = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.Recognize(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SpeechClient client = new SpeechClientImpl(mockGrpcClient.Object, null);
+            SpeechClient client = new SpeechClientImpl(mockGrpcClient.Object, null, null);
             RecognizeResponse response = client.Recognize(request.Config, request.Audio);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -124,7 +125,7 @@ namespace Google.Cloud.Speech.V1.Tests
                 TotalBilledTime = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.RecognizeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RecognizeResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SpeechClient client = new SpeechClientImpl(mockGrpcClient.Object, null);
+            SpeechClient client = new SpeechClientImpl(mockGrpcClient.Object, null, null);
             RecognizeResponse responseCallSettings = await client.RecognizeAsync(request.Config, request.Audio, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             RecognizeResponse responseCancellationToken = await client.RecognizeAsync(request.Config, request.Audio, st::CancellationToken.None);

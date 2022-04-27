@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gccv = Google.Cloud.Channel.V1;
 
 namespace Google.Cloud.Channel.V1

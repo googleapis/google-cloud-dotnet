@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using grpccore = Grpc.Core;
@@ -60,7 +61,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 QuicOverride = "quic_override6404d0e0",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TargetHttpsProxiesClient client = new TargetHttpsProxiesClientImpl(mockGrpcClient.Object, null);
+            TargetHttpsProxiesClient client = new TargetHttpsProxiesClientImpl(mockGrpcClient.Object, null, null);
             TargetHttpsProxy response = client.Get(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -99,7 +100,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 QuicOverride = "quic_override6404d0e0",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TargetHttpsProxy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TargetHttpsProxiesClient client = new TargetHttpsProxiesClientImpl(mockGrpcClient.Object, null);
+            TargetHttpsProxiesClient client = new TargetHttpsProxiesClientImpl(mockGrpcClient.Object, null, null);
             TargetHttpsProxy responseCallSettings = await client.GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TargetHttpsProxy responseCancellationToken = await client.GetAsync(request, st::CancellationToken.None);
@@ -140,7 +141,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 QuicOverride = "quic_override6404d0e0",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TargetHttpsProxiesClient client = new TargetHttpsProxiesClientImpl(mockGrpcClient.Object, null);
+            TargetHttpsProxiesClient client = new TargetHttpsProxiesClientImpl(mockGrpcClient.Object, null, null);
             TargetHttpsProxy response = client.Get(request.Project, request.TargetHttpsProxy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -179,7 +180,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 QuicOverride = "quic_override6404d0e0",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TargetHttpsProxy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TargetHttpsProxiesClient client = new TargetHttpsProxiesClientImpl(mockGrpcClient.Object, null);
+            TargetHttpsProxiesClient client = new TargetHttpsProxiesClientImpl(mockGrpcClient.Object, null, null);
             TargetHttpsProxy responseCallSettings = await client.GetAsync(request.Project, request.TargetHttpsProxy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TargetHttpsProxy responseCancellationToken = await client.GetAsync(request.Project, request.TargetHttpsProxy, st::CancellationToken.None);

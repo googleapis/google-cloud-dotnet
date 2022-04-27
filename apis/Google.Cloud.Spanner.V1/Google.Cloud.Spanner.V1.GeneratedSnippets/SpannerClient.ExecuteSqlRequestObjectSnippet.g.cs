@@ -14,6 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace Google.Cloud.Spanner.V1.Snippets
 {
     // [START spanner_v1_generated_Spanner_ExecuteSql_sync]

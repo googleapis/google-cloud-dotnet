@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using grpccore = Grpc.Core;
@@ -55,7 +56,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetSpecialistPool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SpecialistPoolServiceClient client = new SpecialistPoolServiceClientImpl(mockGrpcClient.Object, null);
+            SpecialistPoolServiceClient client = new SpecialistPoolServiceClientImpl(mockGrpcClient.Object, null, null);
             SpecialistPool response = client.GetSpecialistPool(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -89,7 +90,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetSpecialistPoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SpecialistPool>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SpecialistPoolServiceClient client = new SpecialistPoolServiceClientImpl(mockGrpcClient.Object, null);
+            SpecialistPoolServiceClient client = new SpecialistPoolServiceClientImpl(mockGrpcClient.Object, null, null);
             SpecialistPool responseCallSettings = await client.GetSpecialistPoolAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SpecialistPool responseCancellationToken = await client.GetSpecialistPoolAsync(request, st::CancellationToken.None);
@@ -125,7 +126,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetSpecialistPool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SpecialistPoolServiceClient client = new SpecialistPoolServiceClientImpl(mockGrpcClient.Object, null);
+            SpecialistPoolServiceClient client = new SpecialistPoolServiceClientImpl(mockGrpcClient.Object, null, null);
             SpecialistPool response = client.GetSpecialistPool(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -159,7 +160,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetSpecialistPoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SpecialistPool>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SpecialistPoolServiceClient client = new SpecialistPoolServiceClientImpl(mockGrpcClient.Object, null);
+            SpecialistPoolServiceClient client = new SpecialistPoolServiceClientImpl(mockGrpcClient.Object, null, null);
             SpecialistPool responseCallSettings = await client.GetSpecialistPoolAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SpecialistPool responseCancellationToken = await client.GetSpecialistPoolAsync(request.Name, st::CancellationToken.None);
@@ -195,7 +196,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetSpecialistPool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SpecialistPoolServiceClient client = new SpecialistPoolServiceClientImpl(mockGrpcClient.Object, null);
+            SpecialistPoolServiceClient client = new SpecialistPoolServiceClientImpl(mockGrpcClient.Object, null, null);
             SpecialistPool response = client.GetSpecialistPool(request.SpecialistPoolName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -229,7 +230,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetSpecialistPoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SpecialistPool>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SpecialistPoolServiceClient client = new SpecialistPoolServiceClientImpl(mockGrpcClient.Object, null);
+            SpecialistPoolServiceClient client = new SpecialistPoolServiceClientImpl(mockGrpcClient.Object, null, null);
             SpecialistPool responseCallSettings = await client.GetSpecialistPoolAsync(request.SpecialistPoolName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SpecialistPool responseCancellationToken = await client.GetSpecialistPoolAsync(request.SpecialistPoolName, st::CancellationToken.None);

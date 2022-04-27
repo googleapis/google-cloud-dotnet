@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gciv = Google.Cloud.Iam.V1;
@@ -94,7 +95,7 @@ namespace Google.Cloud.Functions.V1.Tests
                 DockerRepositoryAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
             };
             mockGrpcClient.Setup(x => x.GetFunction(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null);
+            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null, null);
             CloudFunction response = client.GetFunction(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -163,7 +164,7 @@ namespace Google.Cloud.Functions.V1.Tests
                 DockerRepositoryAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
             };
             mockGrpcClient.Setup(x => x.GetFunctionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CloudFunction>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null);
+            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null, null);
             CloudFunction responseCallSettings = await client.GetFunctionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CloudFunction responseCancellationToken = await client.GetFunctionAsync(request, st::CancellationToken.None);
@@ -234,7 +235,7 @@ namespace Google.Cloud.Functions.V1.Tests
                 DockerRepositoryAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
             };
             mockGrpcClient.Setup(x => x.GetFunction(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null);
+            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null, null);
             CloudFunction response = client.GetFunction(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -303,7 +304,7 @@ namespace Google.Cloud.Functions.V1.Tests
                 DockerRepositoryAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
             };
             mockGrpcClient.Setup(x => x.GetFunctionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CloudFunction>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null);
+            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null, null);
             CloudFunction responseCallSettings = await client.GetFunctionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CloudFunction responseCancellationToken = await client.GetFunctionAsync(request.Name, st::CancellationToken.None);
@@ -374,7 +375,7 @@ namespace Google.Cloud.Functions.V1.Tests
                 DockerRepositoryAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
             };
             mockGrpcClient.Setup(x => x.GetFunction(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null);
+            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null, null);
             CloudFunction response = client.GetFunction(request.CloudFunctionName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -443,7 +444,7 @@ namespace Google.Cloud.Functions.V1.Tests
                 DockerRepositoryAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
             };
             mockGrpcClient.Setup(x => x.GetFunctionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CloudFunction>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null);
+            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null, null);
             CloudFunction responseCallSettings = await client.GetFunctionAsync(request.CloudFunctionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CloudFunction responseCancellationToken = await client.GetFunctionAsync(request.CloudFunctionName, st::CancellationToken.None);
@@ -468,7 +469,7 @@ namespace Google.Cloud.Functions.V1.Tests
                 Error = "error0e105ecb",
             };
             mockGrpcClient.Setup(x => x.CallFunction(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null);
+            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null, null);
             CallFunctionResponse response = client.CallFunction(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -491,7 +492,7 @@ namespace Google.Cloud.Functions.V1.Tests
                 Error = "error0e105ecb",
             };
             mockGrpcClient.Setup(x => x.CallFunctionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CallFunctionResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null);
+            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null, null);
             CallFunctionResponse responseCallSettings = await client.CallFunctionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CallFunctionResponse responseCancellationToken = await client.CallFunctionAsync(request, st::CancellationToken.None);
@@ -516,7 +517,7 @@ namespace Google.Cloud.Functions.V1.Tests
                 Error = "error0e105ecb",
             };
             mockGrpcClient.Setup(x => x.CallFunction(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null);
+            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null, null);
             CallFunctionResponse response = client.CallFunction(request.Name, request.Data);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -539,7 +540,7 @@ namespace Google.Cloud.Functions.V1.Tests
                 Error = "error0e105ecb",
             };
             mockGrpcClient.Setup(x => x.CallFunctionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CallFunctionResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null);
+            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null, null);
             CallFunctionResponse responseCallSettings = await client.CallFunctionAsync(request.Name, request.Data, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CallFunctionResponse responseCancellationToken = await client.CallFunctionAsync(request.Name, request.Data, st::CancellationToken.None);
@@ -564,7 +565,7 @@ namespace Google.Cloud.Functions.V1.Tests
                 Error = "error0e105ecb",
             };
             mockGrpcClient.Setup(x => x.CallFunction(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null);
+            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null, null);
             CallFunctionResponse response = client.CallFunction(request.CloudFunctionName, request.Data);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -587,7 +588,7 @@ namespace Google.Cloud.Functions.V1.Tests
                 Error = "error0e105ecb",
             };
             mockGrpcClient.Setup(x => x.CallFunctionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CallFunctionResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null);
+            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null, null);
             CallFunctionResponse responseCallSettings = await client.CallFunctionAsync(request.CloudFunctionName, request.Data, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CallFunctionResponse responseCancellationToken = await client.CallFunctionAsync(request.CloudFunctionName, request.Data, st::CancellationToken.None);
@@ -609,7 +610,7 @@ namespace Google.Cloud.Functions.V1.Tests
                 UploadUrl = "upload_url333fbc45",
             };
             mockGrpcClient.Setup(x => x.GenerateUploadUrl(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null);
+            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null, null);
             GenerateUploadUrlResponse response = client.GenerateUploadUrl(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -629,7 +630,7 @@ namespace Google.Cloud.Functions.V1.Tests
                 UploadUrl = "upload_url333fbc45",
             };
             mockGrpcClient.Setup(x => x.GenerateUploadUrlAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GenerateUploadUrlResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null);
+            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null, null);
             GenerateUploadUrlResponse responseCallSettings = await client.GenerateUploadUrlAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GenerateUploadUrlResponse responseCancellationToken = await client.GenerateUploadUrlAsync(request, st::CancellationToken.None);
@@ -652,7 +653,7 @@ namespace Google.Cloud.Functions.V1.Tests
                 DownloadUrl = "download_url0ffcbc1c",
             };
             mockGrpcClient.Setup(x => x.GenerateDownloadUrl(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null);
+            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null, null);
             GenerateDownloadUrlResponse response = client.GenerateDownloadUrl(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -673,7 +674,7 @@ namespace Google.Cloud.Functions.V1.Tests
                 DownloadUrl = "download_url0ffcbc1c",
             };
             mockGrpcClient.Setup(x => x.GenerateDownloadUrlAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GenerateDownloadUrlResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null);
+            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null, null);
             GenerateDownloadUrlResponse responseCallSettings = await client.GenerateDownloadUrlAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GenerateDownloadUrlResponse responseCancellationToken = await client.GenerateDownloadUrlAsync(request, st::CancellationToken.None);
@@ -706,7 +707,7 @@ namespace Google.Cloud.Functions.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null);
+            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.SetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -737,7 +738,7 @@ namespace Google.Cloud.Functions.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null);
+            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request, st::CancellationToken.None);
@@ -769,7 +770,7 @@ namespace Google.Cloud.Functions.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null);
+            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.GetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -799,7 +800,7 @@ namespace Google.Cloud.Functions.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null);
+            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request, st::CancellationToken.None);
@@ -828,7 +829,7 @@ namespace Google.Cloud.Functions.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null);
+            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -855,7 +856,7 @@ namespace Google.Cloud.Functions.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null);
+            CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request, st::CancellationToken.None);

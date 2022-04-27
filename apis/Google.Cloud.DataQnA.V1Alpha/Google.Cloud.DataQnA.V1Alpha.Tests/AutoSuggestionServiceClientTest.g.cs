@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
 using grpccore = Grpc.Core;
@@ -46,7 +47,7 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 Suggestions = { new Suggestion(), },
             };
             mockGrpcClient.Setup(x => x.SuggestQueries(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AutoSuggestionServiceClient client = new AutoSuggestionServiceClientImpl(mockGrpcClient.Object, null);
+            AutoSuggestionServiceClient client = new AutoSuggestionServiceClientImpl(mockGrpcClient.Object, null, null);
             SuggestQueriesResponse response = client.SuggestQueries(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -71,7 +72,7 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 Suggestions = { new Suggestion(), },
             };
             mockGrpcClient.Setup(x => x.SuggestQueriesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SuggestQueriesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AutoSuggestionServiceClient client = new AutoSuggestionServiceClientImpl(mockGrpcClient.Object, null);
+            AutoSuggestionServiceClient client = new AutoSuggestionServiceClientImpl(mockGrpcClient.Object, null, null);
             SuggestQueriesResponse responseCallSettings = await client.SuggestQueriesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SuggestQueriesResponse responseCancellationToken = await client.SuggestQueriesAsync(request, st::CancellationToken.None);

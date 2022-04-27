@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -49,7 +50,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Deprecated = new DeprecationStatus(),
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AcceleratorTypesClient client = new AcceleratorTypesClientImpl(mockGrpcClient.Object, null);
+            AcceleratorTypesClient client = new AcceleratorTypesClientImpl(mockGrpcClient.Object, null, null);
             AcceleratorType response = client.Get(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -78,7 +79,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Deprecated = new DeprecationStatus(),
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AcceleratorType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AcceleratorTypesClient client = new AcceleratorTypesClientImpl(mockGrpcClient.Object, null);
+            AcceleratorTypesClient client = new AcceleratorTypesClientImpl(mockGrpcClient.Object, null, null);
             AcceleratorType responseCallSettings = await client.GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AcceleratorType responseCancellationToken = await client.GetAsync(request, st::CancellationToken.None);
@@ -109,7 +110,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Deprecated = new DeprecationStatus(),
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AcceleratorTypesClient client = new AcceleratorTypesClientImpl(mockGrpcClient.Object, null);
+            AcceleratorTypesClient client = new AcceleratorTypesClientImpl(mockGrpcClient.Object, null, null);
             AcceleratorType response = client.Get(request.Project, request.Zone, request.AcceleratorType);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -138,7 +139,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Deprecated = new DeprecationStatus(),
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AcceleratorType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AcceleratorTypesClient client = new AcceleratorTypesClientImpl(mockGrpcClient.Object, null);
+            AcceleratorTypesClient client = new AcceleratorTypesClientImpl(mockGrpcClient.Object, null, null);
             AcceleratorType responseCallSettings = await client.GetAsync(request.Project, request.Zone, request.AcceleratorType, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AcceleratorType responseCancellationToken = await client.GetAsync(request.Project, request.Zone, request.AcceleratorType, st::CancellationToken.None);

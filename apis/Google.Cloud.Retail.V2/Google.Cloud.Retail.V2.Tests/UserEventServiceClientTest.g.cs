@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using ga = Google.Api;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
@@ -79,7 +80,7 @@ namespace Google.Cloud.Retail.V2.Tests
                 CompletionDetail = new CompletionDetail(),
             };
             mockGrpcClient.Setup(x => x.WriteUserEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null);
+            UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null, null);
             UserEvent response = client.WriteUserEvent(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -134,7 +135,7 @@ namespace Google.Cloud.Retail.V2.Tests
                 CompletionDetail = new CompletionDetail(),
             };
             mockGrpcClient.Setup(x => x.WriteUserEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UserEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null);
+            UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null, null);
             UserEvent responseCallSettings = await client.WriteUserEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UserEvent responseCancellationToken = await client.WriteUserEventAsync(request, st::CancellationToken.None);
@@ -161,7 +162,7 @@ namespace Google.Cloud.Retail.V2.Tests
                 Extensions = { new wkt::Any(), },
             };
             mockGrpcClient.Setup(x => x.CollectUserEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null);
+            UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::HttpBody response = client.CollectUserEvent(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -186,7 +187,7 @@ namespace Google.Cloud.Retail.V2.Tests
                 Extensions = { new wkt::Any(), },
             };
             mockGrpcClient.Setup(x => x.CollectUserEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::HttpBody>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null);
+            UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::HttpBody responseCallSettings = await client.CollectUserEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ga::HttpBody responseCancellationToken = await client.CollectUserEventAsync(request, st::CancellationToken.None);

@@ -14,6 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace Google.Cloud.Datastore.Admin.V1.Snippets
 {
     // [START datastore_v1_generated_DatastoreAdmin_ListIndexes_sync]

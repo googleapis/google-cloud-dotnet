@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -54,7 +55,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 Redact = true,
             };
             mockGrpcClient.Setup(x => x.GetEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
+            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null, null);
             EntityType response = client.GetEntityType(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -87,7 +88,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 Redact = true,
             };
             mockGrpcClient.Setup(x => x.GetEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
+            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null, null);
             EntityType responseCallSettings = await client.GetEntityTypeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             EntityType responseCancellationToken = await client.GetEntityTypeAsync(request, st::CancellationToken.None);
@@ -121,7 +122,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 Redact = true,
             };
             mockGrpcClient.Setup(x => x.GetEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
+            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null, null);
             EntityType response = client.GetEntityType(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -153,7 +154,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 Redact = true,
             };
             mockGrpcClient.Setup(x => x.GetEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
+            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null, null);
             EntityType responseCallSettings = await client.GetEntityTypeAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             EntityType responseCancellationToken = await client.GetEntityTypeAsync(request.Name, st::CancellationToken.None);
@@ -187,7 +188,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 Redact = true,
             };
             mockGrpcClient.Setup(x => x.GetEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
+            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null, null);
             EntityType response = client.GetEntityType(request.EntityTypeName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -219,7 +220,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 Redact = true,
             };
             mockGrpcClient.Setup(x => x.GetEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
+            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null, null);
             EntityType responseCallSettings = await client.GetEntityTypeAsync(request.EntityTypeName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             EntityType responseCancellationToken = await client.GetEntityTypeAsync(request.EntityTypeName, st::CancellationToken.None);
@@ -255,7 +256,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 Redact = true,
             };
             mockGrpcClient.Setup(x => x.CreateEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
+            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null, null);
             EntityType response = client.CreateEntityType(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -289,7 +290,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 Redact = true,
             };
             mockGrpcClient.Setup(x => x.CreateEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
+            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null, null);
             EntityType responseCallSettings = await client.CreateEntityTypeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             EntityType responseCancellationToken = await client.CreateEntityTypeAsync(request, st::CancellationToken.None);
@@ -324,7 +325,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 Redact = true,
             };
             mockGrpcClient.Setup(x => x.CreateEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
+            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null, null);
             EntityType response = client.CreateEntityType(request.Parent, request.EntityType);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -357,7 +358,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 Redact = true,
             };
             mockGrpcClient.Setup(x => x.CreateEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
+            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null, null);
             EntityType responseCallSettings = await client.CreateEntityTypeAsync(request.Parent, request.EntityType, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             EntityType responseCancellationToken = await client.CreateEntityTypeAsync(request.Parent, request.EntityType, st::CancellationToken.None);
@@ -392,7 +393,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 Redact = true,
             };
             mockGrpcClient.Setup(x => x.CreateEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
+            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null, null);
             EntityType response = client.CreateEntityType(request.ParentAsAgentName, request.EntityType);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -425,7 +426,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 Redact = true,
             };
             mockGrpcClient.Setup(x => x.CreateEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
+            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null, null);
             EntityType responseCallSettings = await client.CreateEntityTypeAsync(request.ParentAsAgentName, request.EntityType, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             EntityType responseCancellationToken = await client.CreateEntityTypeAsync(request.ParentAsAgentName, request.EntityType, st::CancellationToken.None);
@@ -461,7 +462,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 Redact = true,
             };
             mockGrpcClient.Setup(x => x.UpdateEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
+            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null, null);
             EntityType response = client.UpdateEntityType(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -495,7 +496,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 Redact = true,
             };
             mockGrpcClient.Setup(x => x.UpdateEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
+            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null, null);
             EntityType responseCallSettings = await client.UpdateEntityTypeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             EntityType responseCancellationToken = await client.UpdateEntityTypeAsync(request, st::CancellationToken.None);
@@ -530,7 +531,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 Redact = true,
             };
             mockGrpcClient.Setup(x => x.UpdateEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
+            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null, null);
             EntityType response = client.UpdateEntityType(request.EntityType, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -563,7 +564,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 Redact = true,
             };
             mockGrpcClient.Setup(x => x.UpdateEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
+            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null, null);
             EntityType responseCallSettings = await client.UpdateEntityTypeAsync(request.EntityType, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             EntityType responseCancellationToken = await client.UpdateEntityTypeAsync(request.EntityType, request.UpdateMask, st::CancellationToken.None);
@@ -582,7 +583,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
+            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteEntityType(request);
             mockGrpcClient.VerifyAll();
         }
@@ -598,7 +599,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
+            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteEntityTypeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteEntityTypeAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -614,7 +615,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
+            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteEntityType(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -629,7 +630,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
+            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteEntityTypeAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteEntityTypeAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -645,7 +646,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
+            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteEntityType(request.EntityTypeName);
             mockGrpcClient.VerifyAll();
         }
@@ -660,7 +661,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
+            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteEntityTypeAsync(request.EntityTypeName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteEntityTypeAsync(request.EntityTypeName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();

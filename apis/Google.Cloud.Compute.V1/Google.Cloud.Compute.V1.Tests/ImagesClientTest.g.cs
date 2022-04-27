@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using grpccore = Grpc.Core;
@@ -90,7 +91,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SourceDiskEncryptionKey = new CustomerEncryptionKey(),
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
+            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null, null);
             Image response = client.Get(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -159,7 +160,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SourceDiskEncryptionKey = new CustomerEncryptionKey(),
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Image>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
+            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null, null);
             Image responseCallSettings = await client.GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Image responseCancellationToken = await client.GetAsync(request, st::CancellationToken.None);
@@ -230,7 +231,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SourceDiskEncryptionKey = new CustomerEncryptionKey(),
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
+            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null, null);
             Image response = client.Get(request.Project, request.Image);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -299,7 +300,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SourceDiskEncryptionKey = new CustomerEncryptionKey(),
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Image>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
+            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null, null);
             Image responseCallSettings = await client.GetAsync(request.Project, request.Image, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Image responseCancellationToken = await client.GetAsync(request.Project, request.Image, st::CancellationToken.None);
@@ -370,7 +371,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SourceDiskEncryptionKey = new CustomerEncryptionKey(),
             };
             mockGrpcClient.Setup(x => x.GetFromFamily(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
+            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null, null);
             Image response = client.GetFromFamily(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -439,7 +440,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SourceDiskEncryptionKey = new CustomerEncryptionKey(),
             };
             mockGrpcClient.Setup(x => x.GetFromFamilyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Image>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
+            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null, null);
             Image responseCallSettings = await client.GetFromFamilyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Image responseCancellationToken = await client.GetFromFamilyAsync(request, st::CancellationToken.None);
@@ -510,7 +511,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SourceDiskEncryptionKey = new CustomerEncryptionKey(),
             };
             mockGrpcClient.Setup(x => x.GetFromFamily(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
+            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null, null);
             Image response = client.GetFromFamily(request.Project, request.Family);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -579,7 +580,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SourceDiskEncryptionKey = new CustomerEncryptionKey(),
             };
             mockGrpcClient.Setup(x => x.GetFromFamilyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Image>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
+            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null, null);
             Image responseCallSettings = await client.GetFromFamilyAsync(request.Project, request.Family, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Image responseCancellationToken = await client.GetFromFamilyAsync(request.Project, request.Family, st::CancellationToken.None);
@@ -608,7 +609,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
+            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null, null);
             Policy response = client.GetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -635,7 +636,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
+            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null, null);
             Policy responseCallSettings = await client.GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Policy responseCancellationToken = await client.GetIamPolicyAsync(request, st::CancellationToken.None);
@@ -663,7 +664,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
+            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null, null);
             Policy response = client.GetIamPolicy(request.Project, request.Resource);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -689,7 +690,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
+            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null, null);
             Policy responseCallSettings = await client.GetIamPolicyAsync(request.Project, request.Resource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Policy responseCancellationToken = await client.GetIamPolicyAsync(request.Project, request.Resource, st::CancellationToken.None);
@@ -718,7 +719,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
+            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null, null);
             Policy response = client.SetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -745,7 +746,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
+            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null, null);
             Policy responseCallSettings = await client.SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Policy responseCancellationToken = await client.SetIamPolicyAsync(request, st::CancellationToken.None);
@@ -774,7 +775,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
+            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null, null);
             Policy response = client.SetIamPolicy(request.Project, request.Resource, request.GlobalSetPolicyRequestResource);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -801,7 +802,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
+            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null, null);
             Policy responseCallSettings = await client.SetIamPolicyAsync(request.Project, request.Resource, request.GlobalSetPolicyRequestResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Policy responseCancellationToken = await client.SetIamPolicyAsync(request.Project, request.Resource, request.GlobalSetPolicyRequestResource, st::CancellationToken.None);
@@ -828,7 +829,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
+            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null, null);
             TestPermissionsResponse response = client.TestIamPermissions(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -853,7 +854,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TestPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
+            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null, null);
             TestPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TestPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request, st::CancellationToken.None);
@@ -880,7 +881,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
+            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null, null);
             TestPermissionsResponse response = client.TestIamPermissions(request.Project, request.Resource, request.TestPermissionsRequestResource);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -905,7 +906,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TestPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
+            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null, null);
             TestPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request.Project, request.Resource, request.TestPermissionsRequestResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TestPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request.Project, request.Resource, request.TestPermissionsRequestResource, st::CancellationToken.None);

@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -45,7 +46,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetTable(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null, null);
             Table response = client.GetTable(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -69,7 +70,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetTableAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Table>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null, null);
             Table responseCallSettings = await client.GetTableAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Table responseCancellationToken = await client.GetTableAsync(request, st::CancellationToken.None);
@@ -95,7 +96,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetTable(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null, null);
             Table response = client.GetTable(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -119,7 +120,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetTableAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Table>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null, null);
             Table responseCallSettings = await client.GetTableAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Table responseCancellationToken = await client.GetTableAsync(request.Name, st::CancellationToken.None);
@@ -145,7 +146,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetTable(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null, null);
             Table response = client.GetTable(request.TableName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -169,7 +170,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetTableAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Table>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null, null);
             Table responseCallSettings = await client.GetTableAsync(request.TableName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Table responseCancellationToken = await client.GetTableAsync(request.TableName, st::CancellationToken.None);
@@ -192,7 +193,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
                 Tables = { new Table(), },
             };
             mockGrpcClient.Setup(x => x.GetWorkspace(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null, null);
             Workspace response = client.GetWorkspace(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -213,7 +214,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
                 Tables = { new Table(), },
             };
             mockGrpcClient.Setup(x => x.GetWorkspaceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Workspace>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null, null);
             Workspace responseCallSettings = await client.GetWorkspaceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Workspace responseCancellationToken = await client.GetWorkspaceAsync(request, st::CancellationToken.None);
@@ -236,7 +237,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
                 Tables = { new Table(), },
             };
             mockGrpcClient.Setup(x => x.GetWorkspace(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null, null);
             Workspace response = client.GetWorkspace(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -257,7 +258,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
                 Tables = { new Table(), },
             };
             mockGrpcClient.Setup(x => x.GetWorkspaceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Workspace>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null, null);
             Workspace responseCallSettings = await client.GetWorkspaceAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Workspace responseCancellationToken = await client.GetWorkspaceAsync(request.Name, st::CancellationToken.None);
@@ -280,7 +281,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
                 Tables = { new Table(), },
             };
             mockGrpcClient.Setup(x => x.GetWorkspace(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null, null);
             Workspace response = client.GetWorkspace(request.WorkspaceName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -301,7 +302,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
                 Tables = { new Table(), },
             };
             mockGrpcClient.Setup(x => x.GetWorkspaceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Workspace>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null, null);
             Workspace responseCallSettings = await client.GetWorkspaceAsync(request.WorkspaceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Workspace responseCancellationToken = await client.GetWorkspaceAsync(request.WorkspaceName, st::CancellationToken.None);
@@ -330,7 +331,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null, null);
             Row response = client.GetRow(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -357,7 +358,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Row>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null, null);
             Row responseCallSettings = await client.GetRowAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Row responseCancellationToken = await client.GetRowAsync(request, st::CancellationToken.None);
@@ -385,7 +386,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null, null);
             Row response = client.GetRow(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -411,7 +412,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Row>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null, null);
             Row responseCallSettings = await client.GetRowAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Row responseCancellationToken = await client.GetRowAsync(request.Name, st::CancellationToken.None);
@@ -439,7 +440,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null, null);
             Row response = client.GetRow(request.RowName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -465,7 +466,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Row>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null, null);
             Row responseCallSettings = await client.GetRowAsync(request.RowName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Row responseCancellationToken = await client.GetRowAsync(request.RowName, st::CancellationToken.None);
@@ -495,7 +496,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null, null);
             Row response = client.CreateRow(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -523,7 +524,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Row>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null, null);
             Row responseCallSettings = await client.CreateRowAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Row responseCancellationToken = await client.CreateRowAsync(request, st::CancellationToken.None);
@@ -552,7 +553,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null, null);
             Row response = client.CreateRow(request.Parent, request.Row);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -579,7 +580,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Row>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null, null);
             Row responseCallSettings = await client.CreateRowAsync(request.Parent, request.Row, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Row responseCancellationToken = await client.CreateRowAsync(request.Parent, request.Row, st::CancellationToken.None);
@@ -601,7 +602,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
             };
             BatchCreateRowsResponse expectedResponse = new BatchCreateRowsResponse { Rows = { new Row(), }, };
             mockGrpcClient.Setup(x => x.BatchCreateRows(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchCreateRowsResponse response = client.BatchCreateRows(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -621,7 +622,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
             };
             BatchCreateRowsResponse expectedResponse = new BatchCreateRowsResponse { Rows = { new Row(), }, };
             mockGrpcClient.Setup(x => x.BatchCreateRowsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchCreateRowsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchCreateRowsResponse responseCallSettings = await client.BatchCreateRowsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchCreateRowsResponse responseCancellationToken = await client.BatchCreateRowsAsync(request, st::CancellationToken.None);
@@ -651,7 +652,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null, null);
             Row response = client.UpdateRow(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -679,7 +680,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Row>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null, null);
             Row responseCallSettings = await client.UpdateRowAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Row responseCancellationToken = await client.UpdateRowAsync(request, st::CancellationToken.None);
@@ -708,7 +709,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null, null);
             Row response = client.UpdateRow(request.Row, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -735,7 +736,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Row>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null, null);
             Row responseCallSettings = await client.UpdateRowAsync(request.Row, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Row responseCancellationToken = await client.UpdateRowAsync(request.Row, request.UpdateMask, st::CancellationToken.None);
@@ -757,7 +758,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
             };
             BatchUpdateRowsResponse expectedResponse = new BatchUpdateRowsResponse { Rows = { new Row(), }, };
             mockGrpcClient.Setup(x => x.BatchUpdateRows(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchUpdateRowsResponse response = client.BatchUpdateRows(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -777,7 +778,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
             };
             BatchUpdateRowsResponse expectedResponse = new BatchUpdateRowsResponse { Rows = { new Row(), }, };
             mockGrpcClient.Setup(x => x.BatchUpdateRowsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchUpdateRowsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchUpdateRowsResponse responseCallSettings = await client.BatchUpdateRowsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchUpdateRowsResponse responseCancellationToken = await client.BatchUpdateRowsAsync(request, st::CancellationToken.None);
@@ -795,7 +796,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteRow(request);
             mockGrpcClient.VerifyAll();
         }
@@ -810,7 +811,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteRowAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteRowAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -826,7 +827,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteRow(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -841,7 +842,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteRowAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteRowAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -857,7 +858,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteRow(request.RowName);
             mockGrpcClient.VerifyAll();
         }
@@ -872,7 +873,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteRowAsync(request.RowName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteRowAsync(request.RowName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -892,7 +893,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.BatchDeleteRows(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null, null);
             client.BatchDeleteRows(request);
             mockGrpcClient.VerifyAll();
         }
@@ -911,7 +912,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.BatchDeleteRowsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.BatchDeleteRowsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.BatchDeleteRowsAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
