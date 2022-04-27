@@ -33,7 +33,6 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
 
         public PubsubFixture()
         {
-            GrpcInfo.EnableSubchannelCounting();
             _projectNumber = new Lazy<Task<string>>(async () =>
             {
                 var cred = await GoogleCredential.GetApplicationDefaultAsync().ConfigureAwait(false);
