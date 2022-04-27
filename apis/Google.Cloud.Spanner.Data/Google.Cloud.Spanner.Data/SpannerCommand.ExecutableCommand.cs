@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using Google.Cloud.Spanner.Admin.Database.V1;
 using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1;
@@ -228,15 +229,20 @@ namespace Google.Cloud.Spanner.Data
                 var builder = Connection.Builder;
                 var channelOptions = new SpannerClientCreationOptions(builder);
                 var credentials = await channelOptions.GetCredentialsAsync().ConfigureAwait(false);
-                var channel = new DatabaseAdminClientBuilder().CreateChannel(channelOptions.Endpoint, credentials);
+
+                // Create the builder separately from actually building, so we can note the channel that it created.
+                // (This is fairly unpleasant, but we'll try to improve this in the next version of GAX.)
+                var databaseAdminClientBuilder = new DatabaseAdminClientBuilder
+                {
+                    // Note: deliberately not copying EmulatorDetection, as that's handled in SpannerClientCreationOptions
+                    Settings = s_databaseAdminSettings,
+                    Endpoint = channelOptions.Endpoint,
+                    ChannelCredentials = credentials
+                };
+                var databaseAdminClient = databaseAdminClientBuilder.Build();
+                var channel = databaseAdminClientBuilder.LastCreatedChannel;
                 try
                 {
-                    var databaseAdminClient = new DatabaseAdminClientBuilder
-                    {
-                        // Note: deliberately not copying EmulatorDetection, as that's handled in SpannerClientCreationOptions
-                        CallInvoker = channel?.CreateCallInvoker(),
-                        Settings = s_databaseAdminSettings,
-                    }.Build();
                     if (CommandTextBuilder.IsCreateDatabaseCommand)
                     {
                         var parent = new InstanceName(Connection.Project, Connection.SpannerInstance);
@@ -292,7 +298,7 @@ namespace Google.Cloud.Spanner.Data
                 }
                 finally
                 {
-                    await channel.ShutdownAsync().ConfigureAwait(false);
+                    channel?.Shutdown();
                 }
 
                 return 0;
