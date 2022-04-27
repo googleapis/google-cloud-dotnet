@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -57,7 +58,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetAuthorizationPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NetworkSecurityClient client = new NetworkSecurityClientImpl(mockGrpcClient.Object, null);
+            NetworkSecurityClient client = new NetworkSecurityClientImpl(mockGrpcClient.Object, null, null);
             AuthorizationPolicy response = client.GetAuthorizationPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -92,7 +93,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetAuthorizationPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AuthorizationPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NetworkSecurityClient client = new NetworkSecurityClientImpl(mockGrpcClient.Object, null);
+            NetworkSecurityClient client = new NetworkSecurityClientImpl(mockGrpcClient.Object, null, null);
             AuthorizationPolicy responseCallSettings = await client.GetAuthorizationPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AuthorizationPolicy responseCancellationToken = await client.GetAuthorizationPolicyAsync(request, st::CancellationToken.None);
@@ -129,7 +130,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetAuthorizationPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NetworkSecurityClient client = new NetworkSecurityClientImpl(mockGrpcClient.Object, null);
+            NetworkSecurityClient client = new NetworkSecurityClientImpl(mockGrpcClient.Object, null, null);
             AuthorizationPolicy response = client.GetAuthorizationPolicy(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -164,7 +165,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetAuthorizationPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AuthorizationPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NetworkSecurityClient client = new NetworkSecurityClientImpl(mockGrpcClient.Object, null);
+            NetworkSecurityClient client = new NetworkSecurityClientImpl(mockGrpcClient.Object, null, null);
             AuthorizationPolicy responseCallSettings = await client.GetAuthorizationPolicyAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AuthorizationPolicy responseCancellationToken = await client.GetAuthorizationPolicyAsync(request.Name, st::CancellationToken.None);
@@ -201,7 +202,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetAuthorizationPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NetworkSecurityClient client = new NetworkSecurityClientImpl(mockGrpcClient.Object, null);
+            NetworkSecurityClient client = new NetworkSecurityClientImpl(mockGrpcClient.Object, null, null);
             AuthorizationPolicy response = client.GetAuthorizationPolicy(request.AuthorizationPolicyName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -236,7 +237,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetAuthorizationPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AuthorizationPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NetworkSecurityClient client = new NetworkSecurityClientImpl(mockGrpcClient.Object, null);
+            NetworkSecurityClient client = new NetworkSecurityClientImpl(mockGrpcClient.Object, null, null);
             AuthorizationPolicy responseCallSettings = await client.GetAuthorizationPolicyAsync(request.AuthorizationPolicyName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AuthorizationPolicy responseCancellationToken = await client.GetAuthorizationPolicyAsync(request.AuthorizationPolicyName, st::CancellationToken.None);
@@ -271,7 +272,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Tests
                 MtlsPolicy = new ServerTlsPolicy.Types.MTLSPolicy(),
             };
             mockGrpcClient.Setup(x => x.GetServerTlsPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NetworkSecurityClient client = new NetworkSecurityClientImpl(mockGrpcClient.Object, null);
+            NetworkSecurityClient client = new NetworkSecurityClientImpl(mockGrpcClient.Object, null, null);
             ServerTlsPolicy response = client.GetServerTlsPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -304,7 +305,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Tests
                 MtlsPolicy = new ServerTlsPolicy.Types.MTLSPolicy(),
             };
             mockGrpcClient.Setup(x => x.GetServerTlsPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServerTlsPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NetworkSecurityClient client = new NetworkSecurityClientImpl(mockGrpcClient.Object, null);
+            NetworkSecurityClient client = new NetworkSecurityClientImpl(mockGrpcClient.Object, null, null);
             ServerTlsPolicy responseCallSettings = await client.GetServerTlsPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ServerTlsPolicy responseCancellationToken = await client.GetServerTlsPolicyAsync(request, st::CancellationToken.None);
@@ -339,7 +340,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Tests
                 MtlsPolicy = new ServerTlsPolicy.Types.MTLSPolicy(),
             };
             mockGrpcClient.Setup(x => x.GetServerTlsPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NetworkSecurityClient client = new NetworkSecurityClientImpl(mockGrpcClient.Object, null);
+            NetworkSecurityClient client = new NetworkSecurityClientImpl(mockGrpcClient.Object, null, null);
             ServerTlsPolicy response = client.GetServerTlsPolicy(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -372,7 +373,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Tests
                 MtlsPolicy = new ServerTlsPolicy.Types.MTLSPolicy(),
             };
             mockGrpcClient.Setup(x => x.GetServerTlsPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServerTlsPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NetworkSecurityClient client = new NetworkSecurityClientImpl(mockGrpcClient.Object, null);
+            NetworkSecurityClient client = new NetworkSecurityClientImpl(mockGrpcClient.Object, null, null);
             ServerTlsPolicy responseCallSettings = await client.GetServerTlsPolicyAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ServerTlsPolicy responseCancellationToken = await client.GetServerTlsPolicyAsync(request.Name, st::CancellationToken.None);
@@ -407,7 +408,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Tests
                 MtlsPolicy = new ServerTlsPolicy.Types.MTLSPolicy(),
             };
             mockGrpcClient.Setup(x => x.GetServerTlsPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NetworkSecurityClient client = new NetworkSecurityClientImpl(mockGrpcClient.Object, null);
+            NetworkSecurityClient client = new NetworkSecurityClientImpl(mockGrpcClient.Object, null, null);
             ServerTlsPolicy response = client.GetServerTlsPolicy(request.ServerTlsPolicyName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -440,7 +441,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Tests
                 MtlsPolicy = new ServerTlsPolicy.Types.MTLSPolicy(),
             };
             mockGrpcClient.Setup(x => x.GetServerTlsPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServerTlsPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NetworkSecurityClient client = new NetworkSecurityClientImpl(mockGrpcClient.Object, null);
+            NetworkSecurityClient client = new NetworkSecurityClientImpl(mockGrpcClient.Object, null, null);
             ServerTlsPolicy responseCallSettings = await client.GetServerTlsPolicyAsync(request.ServerTlsPolicyName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ServerTlsPolicy responseCancellationToken = await client.GetServerTlsPolicyAsync(request.ServerTlsPolicyName, st::CancellationToken.None);
@@ -475,7 +476,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Tests
                 ServerValidationCa = { new ValidationCA(), },
             };
             mockGrpcClient.Setup(x => x.GetClientTlsPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NetworkSecurityClient client = new NetworkSecurityClientImpl(mockGrpcClient.Object, null);
+            NetworkSecurityClient client = new NetworkSecurityClientImpl(mockGrpcClient.Object, null, null);
             ClientTlsPolicy response = client.GetClientTlsPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -508,7 +509,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Tests
                 ServerValidationCa = { new ValidationCA(), },
             };
             mockGrpcClient.Setup(x => x.GetClientTlsPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ClientTlsPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NetworkSecurityClient client = new NetworkSecurityClientImpl(mockGrpcClient.Object, null);
+            NetworkSecurityClient client = new NetworkSecurityClientImpl(mockGrpcClient.Object, null, null);
             ClientTlsPolicy responseCallSettings = await client.GetClientTlsPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ClientTlsPolicy responseCancellationToken = await client.GetClientTlsPolicyAsync(request, st::CancellationToken.None);
@@ -543,7 +544,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Tests
                 ServerValidationCa = { new ValidationCA(), },
             };
             mockGrpcClient.Setup(x => x.GetClientTlsPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NetworkSecurityClient client = new NetworkSecurityClientImpl(mockGrpcClient.Object, null);
+            NetworkSecurityClient client = new NetworkSecurityClientImpl(mockGrpcClient.Object, null, null);
             ClientTlsPolicy response = client.GetClientTlsPolicy(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -576,7 +577,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Tests
                 ServerValidationCa = { new ValidationCA(), },
             };
             mockGrpcClient.Setup(x => x.GetClientTlsPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ClientTlsPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NetworkSecurityClient client = new NetworkSecurityClientImpl(mockGrpcClient.Object, null);
+            NetworkSecurityClient client = new NetworkSecurityClientImpl(mockGrpcClient.Object, null, null);
             ClientTlsPolicy responseCallSettings = await client.GetClientTlsPolicyAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ClientTlsPolicy responseCancellationToken = await client.GetClientTlsPolicyAsync(request.Name, st::CancellationToken.None);
@@ -611,7 +612,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Tests
                 ServerValidationCa = { new ValidationCA(), },
             };
             mockGrpcClient.Setup(x => x.GetClientTlsPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NetworkSecurityClient client = new NetworkSecurityClientImpl(mockGrpcClient.Object, null);
+            NetworkSecurityClient client = new NetworkSecurityClientImpl(mockGrpcClient.Object, null, null);
             ClientTlsPolicy response = client.GetClientTlsPolicy(request.ClientTlsPolicyName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -644,7 +645,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Tests
                 ServerValidationCa = { new ValidationCA(), },
             };
             mockGrpcClient.Setup(x => x.GetClientTlsPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ClientTlsPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NetworkSecurityClient client = new NetworkSecurityClientImpl(mockGrpcClient.Object, null);
+            NetworkSecurityClient client = new NetworkSecurityClientImpl(mockGrpcClient.Object, null, null);
             ClientTlsPolicy responseCallSettings = await client.GetClientTlsPolicyAsync(request.ClientTlsPolicyName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ClientTlsPolicy responseCancellationToken = await client.GetClientTlsPolicyAsync(request.ClientTlsPolicyName, st::CancellationToken.None);

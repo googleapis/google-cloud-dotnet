@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gcoc = Google.Cloud.OsLogin.Common;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -38,7 +39,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePosixAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeletePosixAccount(request);
             mockGrpcClient.VerifyAll();
         }
@@ -53,7 +54,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePosixAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeletePosixAccountAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeletePosixAccountAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -69,7 +70,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePosixAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeletePosixAccount(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -84,7 +85,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePosixAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeletePosixAccountAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeletePosixAccountAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -100,7 +101,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePosixAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeletePosixAccount(request.PosixAccountName);
             mockGrpcClient.VerifyAll();
         }
@@ -115,7 +116,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePosixAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeletePosixAccountAsync(request.PosixAccountName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeletePosixAccountAsync(request.PosixAccountName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -131,7 +132,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteSshPublicKey(request);
             mockGrpcClient.VerifyAll();
         }
@@ -146,7 +147,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteSshPublicKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteSshPublicKeyAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -162,7 +163,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteSshPublicKey(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -177,7 +178,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteSshPublicKeyAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteSshPublicKeyAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -193,7 +194,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteSshPublicKey(request.SshPublicKeyName);
             mockGrpcClient.VerifyAll();
         }
@@ -208,7 +209,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteSshPublicKeyAsync(request.SshPublicKeyName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteSshPublicKeyAsync(request.SshPublicKeyName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -240,7 +241,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetLoginProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             LoginProfile response = client.GetLoginProfile(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -272,7 +273,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetLoginProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LoginProfile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             LoginProfile responseCallSettings = await client.GetLoginProfileAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LoginProfile responseCancellationToken = await client.GetLoginProfileAsync(request, st::CancellationToken.None);
@@ -304,7 +305,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetLoginProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             LoginProfile response = client.GetLoginProfile(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -334,7 +335,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetLoginProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LoginProfile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             LoginProfile responseCallSettings = await client.GetLoginProfileAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LoginProfile responseCancellationToken = await client.GetLoginProfileAsync(request.Name, st::CancellationToken.None);
@@ -366,7 +367,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetLoginProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             LoginProfile response = client.GetLoginProfile(request.UserName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -396,7 +397,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetLoginProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LoginProfile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             LoginProfile responseCallSettings = await client.GetLoginProfileAsync(request.UserName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LoginProfile responseCancellationToken = await client.GetLoginProfileAsync(request.UserName, st::CancellationToken.None);
@@ -420,7 +421,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
                 SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.GetSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             gcoc::SshPublicKey response = client.GetSshPublicKey(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -442,7 +443,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
                 SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.GetSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gcoc::SshPublicKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             gcoc::SshPublicKey responseCallSettings = await client.GetSshPublicKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gcoc::SshPublicKey responseCancellationToken = await client.GetSshPublicKeyAsync(request, st::CancellationToken.None);
@@ -466,7 +467,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
                 SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.GetSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             gcoc::SshPublicKey response = client.GetSshPublicKey(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -488,7 +489,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
                 SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.GetSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gcoc::SshPublicKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             gcoc::SshPublicKey responseCallSettings = await client.GetSshPublicKeyAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gcoc::SshPublicKey responseCancellationToken = await client.GetSshPublicKeyAsync(request.Name, st::CancellationToken.None);
@@ -512,7 +513,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
                 SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.GetSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             gcoc::SshPublicKey response = client.GetSshPublicKey(request.SshPublicKeyName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -534,7 +535,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
                 SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.GetSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gcoc::SshPublicKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             gcoc::SshPublicKey responseCallSettings = await client.GetSshPublicKeyAsync(request.SshPublicKeyName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gcoc::SshPublicKey responseCancellationToken = await client.GetSshPublicKeyAsync(request.SshPublicKeyName, st::CancellationToken.None);
@@ -557,7 +558,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
                 LoginProfile = new LoginProfile(),
             };
             mockGrpcClient.Setup(x => x.ImportSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             ImportSshPublicKeyResponse response = client.ImportSshPublicKey(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -578,7 +579,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
                 LoginProfile = new LoginProfile(),
             };
             mockGrpcClient.Setup(x => x.ImportSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ImportSshPublicKeyResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             ImportSshPublicKeyResponse responseCallSettings = await client.ImportSshPublicKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ImportSshPublicKeyResponse responseCancellationToken = await client.ImportSshPublicKeyAsync(request, st::CancellationToken.None);
@@ -600,7 +601,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
                 LoginProfile = new LoginProfile(),
             };
             mockGrpcClient.Setup(x => x.ImportSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             ImportSshPublicKeyResponse response = client.ImportSshPublicKey(request.Parent, request.SshPublicKey);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -620,7 +621,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
                 LoginProfile = new LoginProfile(),
             };
             mockGrpcClient.Setup(x => x.ImportSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ImportSshPublicKeyResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             ImportSshPublicKeyResponse responseCallSettings = await client.ImportSshPublicKeyAsync(request.Parent, request.SshPublicKey, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ImportSshPublicKeyResponse responseCancellationToken = await client.ImportSshPublicKeyAsync(request.Parent, request.SshPublicKey, st::CancellationToken.None);
@@ -642,7 +643,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
                 LoginProfile = new LoginProfile(),
             };
             mockGrpcClient.Setup(x => x.ImportSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             ImportSshPublicKeyResponse response = client.ImportSshPublicKey(request.ParentAsUserName, request.SshPublicKey);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -662,7 +663,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
                 LoginProfile = new LoginProfile(),
             };
             mockGrpcClient.Setup(x => x.ImportSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ImportSshPublicKeyResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             ImportSshPublicKeyResponse responseCallSettings = await client.ImportSshPublicKeyAsync(request.ParentAsUserName, request.SshPublicKey, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ImportSshPublicKeyResponse responseCancellationToken = await client.ImportSshPublicKeyAsync(request.ParentAsUserName, request.SshPublicKey, st::CancellationToken.None);
@@ -685,7 +686,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
                 LoginProfile = new LoginProfile(),
             };
             mockGrpcClient.Setup(x => x.ImportSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             ImportSshPublicKeyResponse response = client.ImportSshPublicKey(request.Parent, request.SshPublicKey, request.ProjectId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -706,7 +707,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
                 LoginProfile = new LoginProfile(),
             };
             mockGrpcClient.Setup(x => x.ImportSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ImportSshPublicKeyResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             ImportSshPublicKeyResponse responseCallSettings = await client.ImportSshPublicKeyAsync(request.Parent, request.SshPublicKey, request.ProjectId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ImportSshPublicKeyResponse responseCancellationToken = await client.ImportSshPublicKeyAsync(request.Parent, request.SshPublicKey, request.ProjectId, st::CancellationToken.None);
@@ -729,7 +730,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
                 LoginProfile = new LoginProfile(),
             };
             mockGrpcClient.Setup(x => x.ImportSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             ImportSshPublicKeyResponse response = client.ImportSshPublicKey(request.ParentAsUserName, request.SshPublicKey, request.ProjectId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -750,7 +751,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
                 LoginProfile = new LoginProfile(),
             };
             mockGrpcClient.Setup(x => x.ImportSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ImportSshPublicKeyResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             ImportSshPublicKeyResponse responseCallSettings = await client.ImportSshPublicKeyAsync(request.ParentAsUserName, request.SshPublicKey, request.ProjectId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ImportSshPublicKeyResponse responseCancellationToken = await client.ImportSshPublicKeyAsync(request.ParentAsUserName, request.SshPublicKey, request.ProjectId, st::CancellationToken.None);
@@ -776,7 +777,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
                 SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.UpdateSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             gcoc::SshPublicKey response = client.UpdateSshPublicKey(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -800,7 +801,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
                 SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.UpdateSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gcoc::SshPublicKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             gcoc::SshPublicKey responseCallSettings = await client.UpdateSshPublicKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gcoc::SshPublicKey responseCancellationToken = await client.UpdateSshPublicKeyAsync(request, st::CancellationToken.None);
@@ -825,7 +826,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
                 SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.UpdateSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             gcoc::SshPublicKey response = client.UpdateSshPublicKey(request.Name, request.SshPublicKey);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -848,7 +849,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
                 SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.UpdateSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gcoc::SshPublicKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             gcoc::SshPublicKey responseCallSettings = await client.UpdateSshPublicKeyAsync(request.Name, request.SshPublicKey, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gcoc::SshPublicKey responseCancellationToken = await client.UpdateSshPublicKeyAsync(request.Name, request.SshPublicKey, st::CancellationToken.None);
@@ -873,7 +874,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
                 SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.UpdateSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             gcoc::SshPublicKey response = client.UpdateSshPublicKey(request.SshPublicKeyName, request.SshPublicKey);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -896,7 +897,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
                 SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.UpdateSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gcoc::SshPublicKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             gcoc::SshPublicKey responseCallSettings = await client.UpdateSshPublicKeyAsync(request.SshPublicKeyName, request.SshPublicKey, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gcoc::SshPublicKey responseCancellationToken = await client.UpdateSshPublicKeyAsync(request.SshPublicKeyName, request.SshPublicKey, st::CancellationToken.None);
@@ -922,7 +923,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
                 SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.UpdateSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             gcoc::SshPublicKey response = client.UpdateSshPublicKey(request.Name, request.SshPublicKey, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -946,7 +947,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
                 SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.UpdateSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gcoc::SshPublicKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             gcoc::SshPublicKey responseCallSettings = await client.UpdateSshPublicKeyAsync(request.Name, request.SshPublicKey, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gcoc::SshPublicKey responseCancellationToken = await client.UpdateSshPublicKeyAsync(request.Name, request.SshPublicKey, request.UpdateMask, st::CancellationToken.None);
@@ -972,7 +973,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
                 SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.UpdateSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             gcoc::SshPublicKey response = client.UpdateSshPublicKey(request.SshPublicKeyName, request.SshPublicKey, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -996,7 +997,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
                 SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.UpdateSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gcoc::SshPublicKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null, null);
             gcoc::SshPublicKey responseCallSettings = await client.UpdateSshPublicKeyAsync(request.SshPublicKeyName, request.SshPublicKey, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gcoc::SshPublicKey responseCancellationToken = await client.UpdateSshPublicKeyAsync(request.SshPublicKeyName, request.SshPublicKey, request.UpdateMask, st::CancellationToken.None);

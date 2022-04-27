@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -43,7 +44,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 AgentAssistantRecord = new AgentAssistantRecord(),
             };
             mockGrpcClient.Setup(x => x.UpdateAnswerRecord(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnswerRecordsClient client = new AnswerRecordsClientImpl(mockGrpcClient.Object, null);
+            AnswerRecordsClient client = new AnswerRecordsClientImpl(mockGrpcClient.Object, null, null);
             AnswerRecord response = client.UpdateAnswerRecord(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -65,7 +66,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 AgentAssistantRecord = new AgentAssistantRecord(),
             };
             mockGrpcClient.Setup(x => x.UpdateAnswerRecordAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnswerRecord>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnswerRecordsClient client = new AnswerRecordsClientImpl(mockGrpcClient.Object, null);
+            AnswerRecordsClient client = new AnswerRecordsClientImpl(mockGrpcClient.Object, null, null);
             AnswerRecord responseCallSettings = await client.UpdateAnswerRecordAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AnswerRecord responseCancellationToken = await client.UpdateAnswerRecordAsync(request, st::CancellationToken.None);
@@ -89,7 +90,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 AgentAssistantRecord = new AgentAssistantRecord(),
             };
             mockGrpcClient.Setup(x => x.UpdateAnswerRecord(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnswerRecordsClient client = new AnswerRecordsClientImpl(mockGrpcClient.Object, null);
+            AnswerRecordsClient client = new AnswerRecordsClientImpl(mockGrpcClient.Object, null, null);
             AnswerRecord response = client.UpdateAnswerRecord(request.AnswerRecord, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -111,7 +112,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 AgentAssistantRecord = new AgentAssistantRecord(),
             };
             mockGrpcClient.Setup(x => x.UpdateAnswerRecordAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnswerRecord>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnswerRecordsClient client = new AnswerRecordsClientImpl(mockGrpcClient.Object, null);
+            AnswerRecordsClient client = new AnswerRecordsClientImpl(mockGrpcClient.Object, null, null);
             AnswerRecord responseCallSettings = await client.UpdateAnswerRecordAsync(request.AnswerRecord, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AnswerRecord responseCancellationToken = await client.UpdateAnswerRecordAsync(request.AnswerRecord, request.UpdateMask, st::CancellationToken.None);

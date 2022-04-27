@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
@@ -46,7 +47,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetKeyRing(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             KeyRing response = client.GetKeyRing(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -67,7 +68,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetKeyRingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<KeyRing>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             KeyRing responseCallSettings = await client.GetKeyRingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             KeyRing responseCancellationToken = await client.GetKeyRingAsync(request, st::CancellationToken.None);
@@ -90,7 +91,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetKeyRing(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             KeyRing response = client.GetKeyRing(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -111,7 +112,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetKeyRingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<KeyRing>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             KeyRing responseCallSettings = await client.GetKeyRingAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             KeyRing responseCancellationToken = await client.GetKeyRingAsync(request.Name, st::CancellationToken.None);
@@ -134,7 +135,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetKeyRing(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             KeyRing response = client.GetKeyRing(request.KeyRingName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -155,7 +156,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetKeyRingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<KeyRing>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             KeyRing responseCallSettings = await client.GetKeyRingAsync(request.KeyRingName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             KeyRing responseCancellationToken = await client.GetKeyRingAsync(request.KeyRingName, st::CancellationToken.None);
@@ -193,7 +194,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.GetCryptoKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKey response = client.GetCryptoKey(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -229,7 +230,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.GetCryptoKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKey responseCallSettings = await client.GetCryptoKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CryptoKey responseCancellationToken = await client.GetCryptoKeyAsync(request, st::CancellationToken.None);
@@ -267,7 +268,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.GetCryptoKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKey response = client.GetCryptoKey(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -303,7 +304,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.GetCryptoKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKey responseCallSettings = await client.GetCryptoKeyAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CryptoKey responseCancellationToken = await client.GetCryptoKeyAsync(request.Name, st::CancellationToken.None);
@@ -341,7 +342,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.GetCryptoKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKey response = client.GetCryptoKey(request.CryptoKeyName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -377,7 +378,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.GetCryptoKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKey responseCallSettings = await client.GetCryptoKeyAsync(request.CryptoKeyName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CryptoKey responseCancellationToken = await client.GetCryptoKeyAsync(request.CryptoKeyName, st::CancellationToken.None);
@@ -412,7 +413,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.GetCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKeyVersion response = client.GetCryptoKeyVersion(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -445,7 +446,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.GetCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKeyVersion responseCallSettings = await client.GetCryptoKeyVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CryptoKeyVersion responseCancellationToken = await client.GetCryptoKeyVersionAsync(request, st::CancellationToken.None);
@@ -480,7 +481,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.GetCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKeyVersion response = client.GetCryptoKeyVersion(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -513,7 +514,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.GetCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKeyVersion responseCallSettings = await client.GetCryptoKeyVersionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CryptoKeyVersion responseCancellationToken = await client.GetCryptoKeyVersionAsync(request.Name, st::CancellationToken.None);
@@ -548,7 +549,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.GetCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKeyVersion response = client.GetCryptoKeyVersion(request.CryptoKeyVersionName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -581,7 +582,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.GetCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKeyVersion responseCallSettings = await client.GetCryptoKeyVersionAsync(request.CryptoKeyVersionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CryptoKeyVersion responseCancellationToken = await client.GetCryptoKeyVersionAsync(request.CryptoKeyVersionName, st::CancellationToken.None);
@@ -607,7 +608,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.GetPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             PublicKey response = client.GetPublicKey(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -631,7 +632,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.GetPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PublicKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             PublicKey responseCallSettings = await client.GetPublicKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PublicKey responseCancellationToken = await client.GetPublicKeyAsync(request, st::CancellationToken.None);
@@ -657,7 +658,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.GetPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             PublicKey response = client.GetPublicKey(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -681,7 +682,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.GetPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PublicKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             PublicKey responseCallSettings = await client.GetPublicKeyAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PublicKey responseCancellationToken = await client.GetPublicKeyAsync(request.Name, st::CancellationToken.None);
@@ -707,7 +708,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.GetPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             PublicKey response = client.GetPublicKey(request.CryptoKeyVersionName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -731,7 +732,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.GetPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PublicKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             PublicKey responseCallSettings = await client.GetPublicKeyAsync(request.CryptoKeyVersionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PublicKey responseCancellationToken = await client.GetPublicKeyAsync(request.CryptoKeyVersionName, st::CancellationToken.None);
@@ -762,7 +763,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ExpireEventTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetImportJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             ImportJob response = client.GetImportJob(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -791,7 +792,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ExpireEventTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetImportJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ImportJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             ImportJob responseCallSettings = await client.GetImportJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ImportJob responseCancellationToken = await client.GetImportJobAsync(request, st::CancellationToken.None);
@@ -822,7 +823,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ExpireEventTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetImportJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             ImportJob response = client.GetImportJob(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -851,7 +852,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ExpireEventTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetImportJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ImportJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             ImportJob responseCallSettings = await client.GetImportJobAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ImportJob responseCancellationToken = await client.GetImportJobAsync(request.Name, st::CancellationToken.None);
@@ -882,7 +883,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ExpireEventTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetImportJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             ImportJob response = client.GetImportJob(request.ImportJobName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -911,7 +912,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ExpireEventTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetImportJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ImportJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             ImportJob responseCallSettings = await client.GetImportJobAsync(request.ImportJobName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ImportJob responseCancellationToken = await client.GetImportJobAsync(request.ImportJobName, st::CancellationToken.None);
@@ -936,7 +937,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateKeyRing(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             KeyRing response = client.CreateKeyRing(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -959,7 +960,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateKeyRingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<KeyRing>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             KeyRing responseCallSettings = await client.CreateKeyRingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             KeyRing responseCancellationToken = await client.CreateKeyRingAsync(request, st::CancellationToken.None);
@@ -984,7 +985,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateKeyRing(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             KeyRing response = client.CreateKeyRing(request.Parent, request.KeyRingId, request.KeyRing);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1007,7 +1008,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateKeyRingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<KeyRing>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             KeyRing responseCallSettings = await client.CreateKeyRingAsync(request.Parent, request.KeyRingId, request.KeyRing, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             KeyRing responseCancellationToken = await client.CreateKeyRingAsync(request.Parent, request.KeyRingId, request.KeyRing, st::CancellationToken.None);
@@ -1032,7 +1033,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateKeyRing(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             KeyRing response = client.CreateKeyRing(request.ParentAsLocationName, request.KeyRingId, request.KeyRing);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1055,7 +1056,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateKeyRingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<KeyRing>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             KeyRing responseCallSettings = await client.CreateKeyRingAsync(request.ParentAsLocationName, request.KeyRingId, request.KeyRing, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             KeyRing responseCancellationToken = await client.CreateKeyRingAsync(request.ParentAsLocationName, request.KeyRingId, request.KeyRing, st::CancellationToken.None);
@@ -1096,7 +1097,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKey response = client.CreateCryptoKey(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1135,7 +1136,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKey responseCallSettings = await client.CreateCryptoKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CryptoKey responseCancellationToken = await client.CreateCryptoKeyAsync(request, st::CancellationToken.None);
@@ -1175,7 +1176,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKey response = client.CreateCryptoKey(request.Parent, request.CryptoKeyId, request.CryptoKey);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1213,7 +1214,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKey responseCallSettings = await client.CreateCryptoKeyAsync(request.Parent, request.CryptoKeyId, request.CryptoKey, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CryptoKey responseCancellationToken = await client.CreateCryptoKeyAsync(request.Parent, request.CryptoKeyId, request.CryptoKey, st::CancellationToken.None);
@@ -1253,7 +1254,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKey response = client.CreateCryptoKey(request.ParentAsKeyRingName, request.CryptoKeyId, request.CryptoKey);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1291,7 +1292,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKey responseCallSettings = await client.CreateCryptoKeyAsync(request.ParentAsKeyRingName, request.CryptoKeyId, request.CryptoKey, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CryptoKey responseCancellationToken = await client.CreateCryptoKeyAsync(request.ParentAsKeyRingName, request.CryptoKeyId, request.CryptoKey, st::CancellationToken.None);
@@ -1327,7 +1328,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKeyVersion response = client.CreateCryptoKeyVersion(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1361,7 +1362,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKeyVersion responseCallSettings = await client.CreateCryptoKeyVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CryptoKeyVersion responseCancellationToken = await client.CreateCryptoKeyVersionAsync(request, st::CancellationToken.None);
@@ -1397,7 +1398,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKeyVersion response = client.CreateCryptoKeyVersion(request.Parent, request.CryptoKeyVersion);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1431,7 +1432,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKeyVersion responseCallSettings = await client.CreateCryptoKeyVersionAsync(request.Parent, request.CryptoKeyVersion, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CryptoKeyVersion responseCancellationToken = await client.CreateCryptoKeyVersionAsync(request.Parent, request.CryptoKeyVersion, st::CancellationToken.None);
@@ -1467,7 +1468,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKeyVersion response = client.CreateCryptoKeyVersion(request.ParentAsCryptoKeyName, request.CryptoKeyVersion);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1501,7 +1502,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKeyVersion responseCallSettings = await client.CreateCryptoKeyVersionAsync(request.ParentAsCryptoKeyName, request.CryptoKeyVersion, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CryptoKeyVersion responseCancellationToken = await client.CreateCryptoKeyVersionAsync(request.ParentAsCryptoKeyName, request.CryptoKeyVersion, st::CancellationToken.None);
@@ -1540,7 +1541,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.ImportCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKeyVersion response = client.ImportCryptoKeyVersion(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1577,7 +1578,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.ImportCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKeyVersion responseCallSettings = await client.ImportCryptoKeyVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CryptoKeyVersion responseCancellationToken = await client.ImportCryptoKeyVersionAsync(request, st::CancellationToken.None);
@@ -1610,7 +1611,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ExpireEventTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateImportJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             ImportJob response = client.CreateImportJob(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1641,7 +1642,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ExpireEventTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateImportJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ImportJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             ImportJob responseCallSettings = await client.CreateImportJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ImportJob responseCancellationToken = await client.CreateImportJobAsync(request, st::CancellationToken.None);
@@ -1674,7 +1675,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ExpireEventTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateImportJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             ImportJob response = client.CreateImportJob(request.Parent, request.ImportJobId, request.ImportJob);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1705,7 +1706,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ExpireEventTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateImportJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ImportJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             ImportJob responseCallSettings = await client.CreateImportJobAsync(request.Parent, request.ImportJobId, request.ImportJob, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ImportJob responseCancellationToken = await client.CreateImportJobAsync(request.Parent, request.ImportJobId, request.ImportJob, st::CancellationToken.None);
@@ -1738,7 +1739,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ExpireEventTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateImportJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             ImportJob response = client.CreateImportJob(request.ParentAsKeyRingName, request.ImportJobId, request.ImportJob);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1769,7 +1770,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ExpireEventTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateImportJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ImportJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             ImportJob responseCallSettings = await client.CreateImportJobAsync(request.ParentAsKeyRingName, request.ImportJobId, request.ImportJob, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ImportJob responseCancellationToken = await client.CreateImportJobAsync(request.ParentAsKeyRingName, request.ImportJobId, request.ImportJob, st::CancellationToken.None);
@@ -1808,7 +1809,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKey response = client.UpdateCryptoKey(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1845,7 +1846,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKey responseCallSettings = await client.UpdateCryptoKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CryptoKey responseCancellationToken = await client.UpdateCryptoKeyAsync(request, st::CancellationToken.None);
@@ -1884,7 +1885,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKey response = client.UpdateCryptoKey(request.CryptoKey, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1921,7 +1922,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKey responseCallSettings = await client.UpdateCryptoKeyAsync(request.CryptoKey, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CryptoKey responseCancellationToken = await client.UpdateCryptoKeyAsync(request.CryptoKey, request.UpdateMask, st::CancellationToken.None);
@@ -1957,7 +1958,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKeyVersion response = client.UpdateCryptoKeyVersion(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1991,7 +1992,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKeyVersion responseCallSettings = await client.UpdateCryptoKeyVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CryptoKeyVersion responseCancellationToken = await client.UpdateCryptoKeyVersionAsync(request, st::CancellationToken.None);
@@ -2027,7 +2028,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKeyVersion response = client.UpdateCryptoKeyVersion(request.CryptoKeyVersion, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2061,7 +2062,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKeyVersion responseCallSettings = await client.UpdateCryptoKeyVersionAsync(request.CryptoKeyVersion, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CryptoKeyVersion responseCancellationToken = await client.UpdateCryptoKeyVersionAsync(request.CryptoKeyVersion, request.UpdateMask, st::CancellationToken.None);
@@ -2100,7 +2101,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyPrimaryVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKey response = client.UpdateCryptoKeyPrimaryVersion(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2137,7 +2138,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyPrimaryVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKey responseCallSettings = await client.UpdateCryptoKeyPrimaryVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CryptoKey responseCancellationToken = await client.UpdateCryptoKeyPrimaryVersionAsync(request, st::CancellationToken.None);
@@ -2176,7 +2177,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyPrimaryVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKey response = client.UpdateCryptoKeyPrimaryVersion(request.Name, request.CryptoKeyVersionId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2213,7 +2214,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyPrimaryVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKey responseCallSettings = await client.UpdateCryptoKeyPrimaryVersionAsync(request.Name, request.CryptoKeyVersionId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CryptoKey responseCancellationToken = await client.UpdateCryptoKeyPrimaryVersionAsync(request.Name, request.CryptoKeyVersionId, st::CancellationToken.None);
@@ -2252,7 +2253,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyPrimaryVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKey response = client.UpdateCryptoKeyPrimaryVersion(request.CryptoKeyName, request.CryptoKeyVersionId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2289,7 +2290,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyPrimaryVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKey responseCallSettings = await client.UpdateCryptoKeyPrimaryVersionAsync(request.CryptoKeyName, request.CryptoKeyVersionId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CryptoKey responseCancellationToken = await client.UpdateCryptoKeyPrimaryVersionAsync(request.CryptoKeyName, request.CryptoKeyVersionId, st::CancellationToken.None);
@@ -2324,7 +2325,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.DestroyCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKeyVersion response = client.DestroyCryptoKeyVersion(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2357,7 +2358,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.DestroyCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKeyVersion responseCallSettings = await client.DestroyCryptoKeyVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CryptoKeyVersion responseCancellationToken = await client.DestroyCryptoKeyVersionAsync(request, st::CancellationToken.None);
@@ -2392,7 +2393,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.DestroyCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKeyVersion response = client.DestroyCryptoKeyVersion(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2425,7 +2426,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.DestroyCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKeyVersion responseCallSettings = await client.DestroyCryptoKeyVersionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CryptoKeyVersion responseCancellationToken = await client.DestroyCryptoKeyVersionAsync(request.Name, st::CancellationToken.None);
@@ -2460,7 +2461,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.DestroyCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKeyVersion response = client.DestroyCryptoKeyVersion(request.CryptoKeyVersionName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2493,7 +2494,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.DestroyCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKeyVersion responseCallSettings = await client.DestroyCryptoKeyVersionAsync(request.CryptoKeyVersionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CryptoKeyVersion responseCancellationToken = await client.DestroyCryptoKeyVersionAsync(request.CryptoKeyVersionName, st::CancellationToken.None);
@@ -2528,7 +2529,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.RestoreCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKeyVersion response = client.RestoreCryptoKeyVersion(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2561,7 +2562,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.RestoreCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKeyVersion responseCallSettings = await client.RestoreCryptoKeyVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CryptoKeyVersion responseCancellationToken = await client.RestoreCryptoKeyVersionAsync(request, st::CancellationToken.None);
@@ -2596,7 +2597,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.RestoreCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKeyVersion response = client.RestoreCryptoKeyVersion(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2629,7 +2630,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.RestoreCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKeyVersion responseCallSettings = await client.RestoreCryptoKeyVersionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CryptoKeyVersion responseCancellationToken = await client.RestoreCryptoKeyVersionAsync(request.Name, st::CancellationToken.None);
@@ -2664,7 +2665,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.RestoreCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKeyVersion response = client.RestoreCryptoKeyVersion(request.CryptoKeyVersionName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2697,7 +2698,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.RestoreCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             CryptoKeyVersion responseCallSettings = await client.RestoreCryptoKeyVersionAsync(request.CryptoKeyVersionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CryptoKeyVersion responseCancellationToken = await client.RestoreCryptoKeyVersionAsync(request.CryptoKeyVersionName, st::CancellationToken.None);
@@ -2728,7 +2729,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.Encrypt(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             EncryptResponse response = client.Encrypt(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2757,7 +2758,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.EncryptAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EncryptResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             EncryptResponse responseCallSettings = await client.EncryptAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             EncryptResponse responseCancellationToken = await client.EncryptAsync(request, st::CancellationToken.None);
@@ -2785,7 +2786,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.Encrypt(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             EncryptResponse response = client.Encrypt(request.Name, request.Plaintext);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2811,7 +2812,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.EncryptAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EncryptResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             EncryptResponse responseCallSettings = await client.EncryptAsync(request.Name, request.Plaintext, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             EncryptResponse responseCancellationToken = await client.EncryptAsync(request.Name, request.Plaintext, st::CancellationToken.None);
@@ -2839,7 +2840,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.Encrypt(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             EncryptResponse response = client.Encrypt(request.ResourceName, request.Plaintext);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2865,7 +2866,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.EncryptAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EncryptResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             EncryptResponse responseCallSettings = await client.EncryptAsync(request.ResourceName, request.Plaintext, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             EncryptResponse responseCancellationToken = await client.EncryptAsync(request.ResourceName, request.Plaintext, st::CancellationToken.None);
@@ -2894,7 +2895,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.Decrypt(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             DecryptResponse response = client.Decrypt(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2921,7 +2922,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.DecryptAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DecryptResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             DecryptResponse responseCallSettings = await client.DecryptAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DecryptResponse responseCancellationToken = await client.DecryptAsync(request, st::CancellationToken.None);
@@ -2947,7 +2948,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.Decrypt(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             DecryptResponse response = client.Decrypt(request.Name, request.Ciphertext);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2971,7 +2972,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.DecryptAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DecryptResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             DecryptResponse responseCallSettings = await client.DecryptAsync(request.Name, request.Ciphertext, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DecryptResponse responseCancellationToken = await client.DecryptAsync(request.Name, request.Ciphertext, st::CancellationToken.None);
@@ -2997,7 +2998,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.Decrypt(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             DecryptResponse response = client.Decrypt(request.CryptoKeyName, request.Ciphertext);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3021,7 +3022,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.DecryptAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DecryptResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             DecryptResponse responseCallSettings = await client.DecryptAsync(request.CryptoKeyName, request.Ciphertext, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DecryptResponse responseCancellationToken = await client.DecryptAsync(request.CryptoKeyName, request.Ciphertext, st::CancellationToken.None);
@@ -3052,7 +3053,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.AsymmetricSign(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             AsymmetricSignResponse response = client.AsymmetricSign(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3081,7 +3082,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.AsymmetricSignAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AsymmetricSignResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             AsymmetricSignResponse responseCallSettings = await client.AsymmetricSignAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AsymmetricSignResponse responseCancellationToken = await client.AsymmetricSignAsync(request, st::CancellationToken.None);
@@ -3109,7 +3110,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.AsymmetricSign(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             AsymmetricSignResponse response = client.AsymmetricSign(request.Name, request.Digest);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3135,7 +3136,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.AsymmetricSignAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AsymmetricSignResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             AsymmetricSignResponse responseCallSettings = await client.AsymmetricSignAsync(request.Name, request.Digest, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AsymmetricSignResponse responseCancellationToken = await client.AsymmetricSignAsync(request.Name, request.Digest, st::CancellationToken.None);
@@ -3163,7 +3164,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.AsymmetricSign(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             AsymmetricSignResponse response = client.AsymmetricSign(request.CryptoKeyVersionName, request.Digest);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3189,7 +3190,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.AsymmetricSignAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AsymmetricSignResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             AsymmetricSignResponse responseCallSettings = await client.AsymmetricSignAsync(request.CryptoKeyVersionName, request.Digest, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AsymmetricSignResponse responseCancellationToken = await client.AsymmetricSignAsync(request.CryptoKeyVersionName, request.Digest, st::CancellationToken.None);
@@ -3216,7 +3217,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.AsymmetricDecrypt(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             AsymmetricDecryptResponse response = client.AsymmetricDecrypt(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3241,7 +3242,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.AsymmetricDecryptAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AsymmetricDecryptResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             AsymmetricDecryptResponse responseCallSettings = await client.AsymmetricDecryptAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AsymmetricDecryptResponse responseCancellationToken = await client.AsymmetricDecryptAsync(request, st::CancellationToken.None);
@@ -3267,7 +3268,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.AsymmetricDecrypt(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             AsymmetricDecryptResponse response = client.AsymmetricDecrypt(request.Name, request.Ciphertext);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3291,7 +3292,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.AsymmetricDecryptAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AsymmetricDecryptResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             AsymmetricDecryptResponse responseCallSettings = await client.AsymmetricDecryptAsync(request.Name, request.Ciphertext, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AsymmetricDecryptResponse responseCancellationToken = await client.AsymmetricDecryptAsync(request.Name, request.Ciphertext, st::CancellationToken.None);
@@ -3317,7 +3318,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.AsymmetricDecrypt(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             AsymmetricDecryptResponse response = client.AsymmetricDecrypt(request.CryptoKeyVersionName, request.Ciphertext);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3341,7 +3342,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.AsymmetricDecryptAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AsymmetricDecryptResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             AsymmetricDecryptResponse responseCallSettings = await client.AsymmetricDecryptAsync(request.CryptoKeyVersionName, request.Ciphertext, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AsymmetricDecryptResponse responseCancellationToken = await client.AsymmetricDecryptAsync(request.CryptoKeyVersionName, request.Ciphertext, st::CancellationToken.None);
@@ -3369,7 +3370,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.MacSign(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             MacSignResponse response = client.MacSign(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3395,7 +3396,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.MacSignAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MacSignResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             MacSignResponse responseCallSettings = await client.MacSignAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MacSignResponse responseCancellationToken = await client.MacSignAsync(request, st::CancellationToken.None);
@@ -3422,7 +3423,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.MacSign(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             MacSignResponse response = client.MacSign(request.Name, request.Data);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3447,7 +3448,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.MacSignAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MacSignResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             MacSignResponse responseCallSettings = await client.MacSignAsync(request.Name, request.Data, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MacSignResponse responseCancellationToken = await client.MacSignAsync(request.Name, request.Data, st::CancellationToken.None);
@@ -3474,7 +3475,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.MacSign(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             MacSignResponse response = client.MacSign(request.CryptoKeyVersionName, request.Data);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3499,7 +3500,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.MacSignAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MacSignResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             MacSignResponse responseCallSettings = await client.MacSignAsync(request.CryptoKeyVersionName, request.Data, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MacSignResponse responseCancellationToken = await client.MacSignAsync(request.CryptoKeyVersionName, request.Data, st::CancellationToken.None);
@@ -3530,7 +3531,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.MacVerify(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             MacVerifyResponse response = client.MacVerify(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3559,7 +3560,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.MacVerifyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MacVerifyResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             MacVerifyResponse responseCallSettings = await client.MacVerifyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MacVerifyResponse responseCancellationToken = await client.MacVerifyAsync(request, st::CancellationToken.None);
@@ -3588,7 +3589,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.MacVerify(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             MacVerifyResponse response = client.MacVerify(request.Name, request.Data, request.Mac);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3615,7 +3616,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.MacVerifyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MacVerifyResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             MacVerifyResponse responseCallSettings = await client.MacVerifyAsync(request.Name, request.Data, request.Mac, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MacVerifyResponse responseCancellationToken = await client.MacVerifyAsync(request.Name, request.Data, request.Mac, st::CancellationToken.None);
@@ -3644,7 +3645,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.MacVerify(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             MacVerifyResponse response = client.MacVerify(request.CryptoKeyVersionName, request.Data, request.Mac);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3671,7 +3672,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.MacVerifyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MacVerifyResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             MacVerifyResponse responseCallSettings = await client.MacVerifyAsync(request.CryptoKeyVersionName, request.Data, request.Mac, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MacVerifyResponse responseCancellationToken = await client.MacVerifyAsync(request.CryptoKeyVersionName, request.Data, request.Mac, st::CancellationToken.None);
@@ -3696,7 +3697,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 DataCrc32C = 7692496952697975269L,
             };
             mockGrpcClient.Setup(x => x.GenerateRandomBytes(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             GenerateRandomBytesResponse response = client.GenerateRandomBytes(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3719,7 +3720,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 DataCrc32C = 7692496952697975269L,
             };
             mockGrpcClient.Setup(x => x.GenerateRandomBytesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GenerateRandomBytesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             GenerateRandomBytesResponse responseCallSettings = await client.GenerateRandomBytesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GenerateRandomBytesResponse responseCancellationToken = await client.GenerateRandomBytesAsync(request, st::CancellationToken.None);
@@ -3744,7 +3745,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 DataCrc32C = 7692496952697975269L,
             };
             mockGrpcClient.Setup(x => x.GenerateRandomBytes(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             GenerateRandomBytesResponse response = client.GenerateRandomBytes(request.Location, request.LengthBytes, request.ProtectionLevel);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3767,7 +3768,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 DataCrc32C = 7692496952697975269L,
             };
             mockGrpcClient.Setup(x => x.GenerateRandomBytesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GenerateRandomBytesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null, null);
             GenerateRandomBytesResponse responseCallSettings = await client.GenerateRandomBytesAsync(request.Location, request.LengthBytes, request.ProtectionLevel, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GenerateRandomBytesResponse responseCancellationToken = await client.GenerateRandomBytesAsync(request.Location, request.LengthBytes, request.ProtectionLevel, st::CancellationToken.None);

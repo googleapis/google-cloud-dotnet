@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -58,7 +59,7 @@ namespace Google.Cloud.Eventarc.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
             Trigger response = client.GetTrigger(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -94,7 +95,7 @@ namespace Google.Cloud.Eventarc.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Trigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
             Trigger responseCallSettings = await client.GetTriggerAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Trigger responseCancellationToken = await client.GetTriggerAsync(request, st::CancellationToken.None);
@@ -132,7 +133,7 @@ namespace Google.Cloud.Eventarc.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
             Trigger response = client.GetTrigger(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -168,7 +169,7 @@ namespace Google.Cloud.Eventarc.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Trigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
             Trigger responseCallSettings = await client.GetTriggerAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Trigger responseCancellationToken = await client.GetTriggerAsync(request.Name, st::CancellationToken.None);
@@ -206,7 +207,7 @@ namespace Google.Cloud.Eventarc.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
             Trigger response = client.GetTrigger(request.TriggerName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -242,7 +243,7 @@ namespace Google.Cloud.Eventarc.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Trigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
             Trigger responseCallSettings = await client.GetTriggerAsync(request.TriggerName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Trigger responseCancellationToken = await client.GetTriggerAsync(request.TriggerName, st::CancellationToken.None);
@@ -271,7 +272,7 @@ namespace Google.Cloud.Eventarc.V1.Tests
                 ActivationToken = "activation_token8b38ce39",
             };
             mockGrpcClient.Setup(x => x.GetChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
             Channel response = client.GetChannel(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -298,7 +299,7 @@ namespace Google.Cloud.Eventarc.V1.Tests
                 ActivationToken = "activation_token8b38ce39",
             };
             mockGrpcClient.Setup(x => x.GetChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Channel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
             Channel responseCallSettings = await client.GetChannelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Channel responseCancellationToken = await client.GetChannelAsync(request, st::CancellationToken.None);
@@ -327,7 +328,7 @@ namespace Google.Cloud.Eventarc.V1.Tests
                 ActivationToken = "activation_token8b38ce39",
             };
             mockGrpcClient.Setup(x => x.GetChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
             Channel response = client.GetChannel(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -354,7 +355,7 @@ namespace Google.Cloud.Eventarc.V1.Tests
                 ActivationToken = "activation_token8b38ce39",
             };
             mockGrpcClient.Setup(x => x.GetChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Channel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
             Channel responseCallSettings = await client.GetChannelAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Channel responseCancellationToken = await client.GetChannelAsync(request.Name, st::CancellationToken.None);
@@ -383,7 +384,7 @@ namespace Google.Cloud.Eventarc.V1.Tests
                 ActivationToken = "activation_token8b38ce39",
             };
             mockGrpcClient.Setup(x => x.GetChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
             Channel response = client.GetChannel(request.ChannelName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -410,7 +411,7 @@ namespace Google.Cloud.Eventarc.V1.Tests
                 ActivationToken = "activation_token8b38ce39",
             };
             mockGrpcClient.Setup(x => x.GetChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Channel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
             Channel responseCallSettings = await client.GetChannelAsync(request.ChannelName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Channel responseCancellationToken = await client.GetChannelAsync(request.ChannelName, st::CancellationToken.None);
@@ -434,7 +435,7 @@ namespace Google.Cloud.Eventarc.V1.Tests
                 EventTypes = { new EventType(), },
             };
             mockGrpcClient.Setup(x => x.GetProvider(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
             Provider response = client.GetProvider(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -456,7 +457,7 @@ namespace Google.Cloud.Eventarc.V1.Tests
                 EventTypes = { new EventType(), },
             };
             mockGrpcClient.Setup(x => x.GetProviderAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Provider>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
             Provider responseCallSettings = await client.GetProviderAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Provider responseCancellationToken = await client.GetProviderAsync(request, st::CancellationToken.None);
@@ -480,7 +481,7 @@ namespace Google.Cloud.Eventarc.V1.Tests
                 EventTypes = { new EventType(), },
             };
             mockGrpcClient.Setup(x => x.GetProvider(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
             Provider response = client.GetProvider(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -502,7 +503,7 @@ namespace Google.Cloud.Eventarc.V1.Tests
                 EventTypes = { new EventType(), },
             };
             mockGrpcClient.Setup(x => x.GetProviderAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Provider>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
             Provider responseCallSettings = await client.GetProviderAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Provider responseCancellationToken = await client.GetProviderAsync(request.Name, st::CancellationToken.None);
@@ -526,7 +527,7 @@ namespace Google.Cloud.Eventarc.V1.Tests
                 EventTypes = { new EventType(), },
             };
             mockGrpcClient.Setup(x => x.GetProvider(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
             Provider response = client.GetProvider(request.ProviderName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -548,7 +549,7 @@ namespace Google.Cloud.Eventarc.V1.Tests
                 EventTypes = { new EventType(), },
             };
             mockGrpcClient.Setup(x => x.GetProviderAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Provider>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
             Provider responseCallSettings = await client.GetProviderAsync(request.ProviderName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Provider responseCancellationToken = await client.GetProviderAsync(request.ProviderName, st::CancellationToken.None);
@@ -575,7 +576,7 @@ namespace Google.Cloud.Eventarc.V1.Tests
                 ActivationToken = "activation_token8b38ce39",
             };
             mockGrpcClient.Setup(x => x.GetChannelConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
             ChannelConnection response = client.GetChannelConnection(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -600,7 +601,7 @@ namespace Google.Cloud.Eventarc.V1.Tests
                 ActivationToken = "activation_token8b38ce39",
             };
             mockGrpcClient.Setup(x => x.GetChannelConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ChannelConnection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
             ChannelConnection responseCallSettings = await client.GetChannelConnectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ChannelConnection responseCancellationToken = await client.GetChannelConnectionAsync(request, st::CancellationToken.None);
@@ -627,7 +628,7 @@ namespace Google.Cloud.Eventarc.V1.Tests
                 ActivationToken = "activation_token8b38ce39",
             };
             mockGrpcClient.Setup(x => x.GetChannelConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
             ChannelConnection response = client.GetChannelConnection(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -652,7 +653,7 @@ namespace Google.Cloud.Eventarc.V1.Tests
                 ActivationToken = "activation_token8b38ce39",
             };
             mockGrpcClient.Setup(x => x.GetChannelConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ChannelConnection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
             ChannelConnection responseCallSettings = await client.GetChannelConnectionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ChannelConnection responseCancellationToken = await client.GetChannelConnectionAsync(request.Name, st::CancellationToken.None);
@@ -679,7 +680,7 @@ namespace Google.Cloud.Eventarc.V1.Tests
                 ActivationToken = "activation_token8b38ce39",
             };
             mockGrpcClient.Setup(x => x.GetChannelConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
             ChannelConnection response = client.GetChannelConnection(request.ChannelConnectionName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -704,7 +705,7 @@ namespace Google.Cloud.Eventarc.V1.Tests
                 ActivationToken = "activation_token8b38ce39",
             };
             mockGrpcClient.Setup(x => x.GetChannelConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ChannelConnection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null, null);
             ChannelConnection responseCallSettings = await client.GetChannelConnectionAsync(request.ChannelConnectionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ChannelConnection responseCancellationToken = await client.GetChannelConnectionAsync(request.ChannelConnectionName, st::CancellationToken.None);

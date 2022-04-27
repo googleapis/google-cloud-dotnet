@@ -14,6 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace Google.Cloud.Tasks.V2Beta3.Snippets
 {
     using Google.Api.Gax;

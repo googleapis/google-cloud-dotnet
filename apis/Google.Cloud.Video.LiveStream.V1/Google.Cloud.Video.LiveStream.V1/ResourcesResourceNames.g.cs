@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gcvlv = Google.Cloud.Video.LiveStream.V1;
 using sys = System;

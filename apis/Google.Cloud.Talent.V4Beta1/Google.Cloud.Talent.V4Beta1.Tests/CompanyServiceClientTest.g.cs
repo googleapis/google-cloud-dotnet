@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -56,7 +57,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Suspended = true,
             };
             mockGrpcClient.Setup(x => x.CreateCompany(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
+            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null, null);
             Company response = client.CreateCompany(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -91,7 +92,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Suspended = true,
             };
             mockGrpcClient.Setup(x => x.CreateCompanyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Company>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
+            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null, null);
             Company responseCallSettings = await client.CreateCompanyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Company responseCancellationToken = await client.CreateCompanyAsync(request, st::CancellationToken.None);
@@ -128,7 +129,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Suspended = true,
             };
             mockGrpcClient.Setup(x => x.CreateCompany(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
+            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null, null);
             Company response = client.CreateCompany(request.Parent, request.Company);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -163,7 +164,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Suspended = true,
             };
             mockGrpcClient.Setup(x => x.CreateCompanyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Company>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
+            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null, null);
             Company responseCallSettings = await client.CreateCompanyAsync(request.Parent, request.Company, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Company responseCancellationToken = await client.CreateCompanyAsync(request.Parent, request.Company, st::CancellationToken.None);
@@ -200,7 +201,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Suspended = true,
             };
             mockGrpcClient.Setup(x => x.CreateCompany(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
+            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null, null);
             Company response = client.CreateCompany(request.ParentAsTenantName, request.Company);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -235,7 +236,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Suspended = true,
             };
             mockGrpcClient.Setup(x => x.CreateCompanyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Company>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
+            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null, null);
             Company responseCallSettings = await client.CreateCompanyAsync(request.ParentAsTenantName, request.Company, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Company responseCancellationToken = await client.CreateCompanyAsync(request.ParentAsTenantName, request.Company, st::CancellationToken.None);
@@ -272,7 +273,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Suspended = true,
             };
             mockGrpcClient.Setup(x => x.CreateCompany(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
+            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null, null);
             Company response = client.CreateCompany(request.ParentAsProjectName, request.Company);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -307,7 +308,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Suspended = true,
             };
             mockGrpcClient.Setup(x => x.CreateCompanyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Company>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
+            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null, null);
             Company responseCallSettings = await client.CreateCompanyAsync(request.ParentAsProjectName, request.Company, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Company responseCancellationToken = await client.CreateCompanyAsync(request.ParentAsProjectName, request.Company, st::CancellationToken.None);
@@ -343,7 +344,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Suspended = true,
             };
             mockGrpcClient.Setup(x => x.GetCompany(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
+            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null, null);
             Company response = client.GetCompany(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -377,7 +378,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Suspended = true,
             };
             mockGrpcClient.Setup(x => x.GetCompanyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Company>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
+            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null, null);
             Company responseCallSettings = await client.GetCompanyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Company responseCancellationToken = await client.GetCompanyAsync(request, st::CancellationToken.None);
@@ -413,7 +414,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Suspended = true,
             };
             mockGrpcClient.Setup(x => x.GetCompany(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
+            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null, null);
             Company response = client.GetCompany(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -447,7 +448,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Suspended = true,
             };
             mockGrpcClient.Setup(x => x.GetCompanyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Company>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
+            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null, null);
             Company responseCallSettings = await client.GetCompanyAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Company responseCancellationToken = await client.GetCompanyAsync(request.Name, st::CancellationToken.None);
@@ -483,7 +484,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Suspended = true,
             };
             mockGrpcClient.Setup(x => x.GetCompany(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
+            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null, null);
             Company response = client.GetCompany(request.CompanyName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -517,7 +518,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Suspended = true,
             };
             mockGrpcClient.Setup(x => x.GetCompanyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Company>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
+            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null, null);
             Company responseCallSettings = await client.GetCompanyAsync(request.CompanyName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Company responseCancellationToken = await client.GetCompanyAsync(request.CompanyName, st::CancellationToken.None);
@@ -554,7 +555,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Suspended = true,
             };
             mockGrpcClient.Setup(x => x.UpdateCompany(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
+            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null, null);
             Company response = client.UpdateCompany(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -589,7 +590,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Suspended = true,
             };
             mockGrpcClient.Setup(x => x.UpdateCompanyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Company>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
+            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null, null);
             Company responseCallSettings = await client.UpdateCompanyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Company responseCancellationToken = await client.UpdateCompanyAsync(request, st::CancellationToken.None);
@@ -625,7 +626,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Suspended = true,
             };
             mockGrpcClient.Setup(x => x.UpdateCompany(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
+            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null, null);
             Company response = client.UpdateCompany(request.Company);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -659,7 +660,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Suspended = true,
             };
             mockGrpcClient.Setup(x => x.UpdateCompanyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Company>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
+            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null, null);
             Company responseCallSettings = await client.UpdateCompanyAsync(request.Company, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Company responseCancellationToken = await client.UpdateCompanyAsync(request.Company, st::CancellationToken.None);
@@ -677,7 +678,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteCompany(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
+            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteCompany(request);
             mockGrpcClient.VerifyAll();
         }
@@ -692,7 +693,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteCompanyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
+            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteCompanyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteCompanyAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -708,7 +709,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteCompany(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
+            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteCompany(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -723,7 +724,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteCompanyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
+            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteCompanyAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteCompanyAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -739,7 +740,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteCompany(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
+            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteCompany(request.CompanyName);
             mockGrpcClient.VerifyAll();
         }
@@ -754,7 +755,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteCompanyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
+            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteCompanyAsync(request.CompanyName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteCompanyAsync(request.CompanyName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();

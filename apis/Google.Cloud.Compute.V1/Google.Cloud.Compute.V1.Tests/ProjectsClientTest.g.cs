@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using grpccore = Grpc.Core;
@@ -56,7 +57,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 DefaultNetworkTier = "default_network_tier69d9d1a9",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
+            ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null, null);
             Project response = client.Get(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -91,7 +92,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 DefaultNetworkTier = "default_network_tier69d9d1a9",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Project>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
+            ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null, null);
             Project responseCallSettings = await client.GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Project responseCancellationToken = await client.GetAsync(request, st::CancellationToken.None);
@@ -128,7 +129,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 DefaultNetworkTier = "default_network_tier69d9d1a9",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
+            ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null, null);
             Project response = client.Get(request.Project);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -163,7 +164,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 DefaultNetworkTier = "default_network_tier69d9d1a9",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Project>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
+            ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null, null);
             Project responseCallSettings = await client.GetAsync(request.Project, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Project responseCancellationToken = await client.GetAsync(request.Project, st::CancellationToken.None);
@@ -200,7 +201,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 DefaultNetworkTier = "default_network_tier69d9d1a9",
             };
             mockGrpcClient.Setup(x => x.GetXpnHost(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
+            ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null, null);
             Project response = client.GetXpnHost(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -235,7 +236,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 DefaultNetworkTier = "default_network_tier69d9d1a9",
             };
             mockGrpcClient.Setup(x => x.GetXpnHostAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Project>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
+            ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null, null);
             Project responseCallSettings = await client.GetXpnHostAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Project responseCancellationToken = await client.GetXpnHostAsync(request, st::CancellationToken.None);
@@ -272,7 +273,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 DefaultNetworkTier = "default_network_tier69d9d1a9",
             };
             mockGrpcClient.Setup(x => x.GetXpnHost(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
+            ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null, null);
             Project response = client.GetXpnHost(request.Project);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -307,7 +308,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 DefaultNetworkTier = "default_network_tier69d9d1a9",
             };
             mockGrpcClient.Setup(x => x.GetXpnHostAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Project>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
+            ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null, null);
             Project responseCallSettings = await client.GetXpnHostAsync(request.Project, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Project responseCancellationToken = await client.GetXpnHostAsync(request.Project, st::CancellationToken.None);

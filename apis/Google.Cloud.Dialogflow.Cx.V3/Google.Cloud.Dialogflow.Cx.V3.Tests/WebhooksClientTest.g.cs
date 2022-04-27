@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -45,7 +46,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ServiceDirectory = new Webhook.Types.ServiceDirectoryConfig(),
             };
             mockGrpcClient.Setup(x => x.GetWebhook(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null);
+            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null, null);
             Webhook response = client.GetWebhook(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -69,7 +70,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ServiceDirectory = new Webhook.Types.ServiceDirectoryConfig(),
             };
             mockGrpcClient.Setup(x => x.GetWebhookAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Webhook>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null);
+            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null, null);
             Webhook responseCallSettings = await client.GetWebhookAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Webhook responseCancellationToken = await client.GetWebhookAsync(request, st::CancellationToken.None);
@@ -95,7 +96,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ServiceDirectory = new Webhook.Types.ServiceDirectoryConfig(),
             };
             mockGrpcClient.Setup(x => x.GetWebhook(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null);
+            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null, null);
             Webhook response = client.GetWebhook(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -119,7 +120,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ServiceDirectory = new Webhook.Types.ServiceDirectoryConfig(),
             };
             mockGrpcClient.Setup(x => x.GetWebhookAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Webhook>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null);
+            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null, null);
             Webhook responseCallSettings = await client.GetWebhookAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Webhook responseCancellationToken = await client.GetWebhookAsync(request.Name, st::CancellationToken.None);
@@ -145,7 +146,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ServiceDirectory = new Webhook.Types.ServiceDirectoryConfig(),
             };
             mockGrpcClient.Setup(x => x.GetWebhook(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null);
+            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null, null);
             Webhook response = client.GetWebhook(request.WebhookName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -169,7 +170,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ServiceDirectory = new Webhook.Types.ServiceDirectoryConfig(),
             };
             mockGrpcClient.Setup(x => x.GetWebhookAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Webhook>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null);
+            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null, null);
             Webhook responseCallSettings = await client.GetWebhookAsync(request.WebhookName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Webhook responseCancellationToken = await client.GetWebhookAsync(request.WebhookName, st::CancellationToken.None);
@@ -196,7 +197,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ServiceDirectory = new Webhook.Types.ServiceDirectoryConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateWebhook(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null);
+            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null, null);
             Webhook response = client.CreateWebhook(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -221,7 +222,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ServiceDirectory = new Webhook.Types.ServiceDirectoryConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateWebhookAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Webhook>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null);
+            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null, null);
             Webhook responseCallSettings = await client.CreateWebhookAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Webhook responseCancellationToken = await client.CreateWebhookAsync(request, st::CancellationToken.None);
@@ -248,7 +249,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ServiceDirectory = new Webhook.Types.ServiceDirectoryConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateWebhook(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null);
+            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null, null);
             Webhook response = client.CreateWebhook(request.Parent, request.Webhook);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -273,7 +274,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ServiceDirectory = new Webhook.Types.ServiceDirectoryConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateWebhookAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Webhook>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null);
+            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null, null);
             Webhook responseCallSettings = await client.CreateWebhookAsync(request.Parent, request.Webhook, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Webhook responseCancellationToken = await client.CreateWebhookAsync(request.Parent, request.Webhook, st::CancellationToken.None);
@@ -300,7 +301,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ServiceDirectory = new Webhook.Types.ServiceDirectoryConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateWebhook(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null);
+            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null, null);
             Webhook response = client.CreateWebhook(request.ParentAsAgentName, request.Webhook);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -325,7 +326,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ServiceDirectory = new Webhook.Types.ServiceDirectoryConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateWebhookAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Webhook>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null);
+            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null, null);
             Webhook responseCallSettings = await client.CreateWebhookAsync(request.ParentAsAgentName, request.Webhook, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Webhook responseCancellationToken = await client.CreateWebhookAsync(request.ParentAsAgentName, request.Webhook, st::CancellationToken.None);
@@ -352,7 +353,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ServiceDirectory = new Webhook.Types.ServiceDirectoryConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateWebhook(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null);
+            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null, null);
             Webhook response = client.UpdateWebhook(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -377,7 +378,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ServiceDirectory = new Webhook.Types.ServiceDirectoryConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateWebhookAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Webhook>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null);
+            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null, null);
             Webhook responseCallSettings = await client.UpdateWebhookAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Webhook responseCancellationToken = await client.UpdateWebhookAsync(request, st::CancellationToken.None);
@@ -404,7 +405,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ServiceDirectory = new Webhook.Types.ServiceDirectoryConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateWebhook(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null);
+            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null, null);
             Webhook response = client.UpdateWebhook(request.Webhook, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -429,7 +430,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ServiceDirectory = new Webhook.Types.ServiceDirectoryConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateWebhookAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Webhook>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null);
+            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null, null);
             Webhook responseCallSettings = await client.UpdateWebhookAsync(request.Webhook, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Webhook responseCancellationToken = await client.UpdateWebhookAsync(request.Webhook, request.UpdateMask, st::CancellationToken.None);
@@ -448,7 +449,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteWebhook(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null);
+            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteWebhook(request);
             mockGrpcClient.VerifyAll();
         }
@@ -464,7 +465,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteWebhookAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null);
+            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteWebhookAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteWebhookAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -480,7 +481,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteWebhook(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null);
+            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteWebhook(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -495,7 +496,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteWebhookAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null);
+            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteWebhookAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteWebhookAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -511,7 +512,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteWebhook(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null);
+            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteWebhook(request.WebhookName);
             mockGrpcClient.VerifyAll();
         }
@@ -526,7 +527,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteWebhookAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null);
+            WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteWebhookAsync(request.WebhookName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteWebhookAsync(request.WebhookName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();

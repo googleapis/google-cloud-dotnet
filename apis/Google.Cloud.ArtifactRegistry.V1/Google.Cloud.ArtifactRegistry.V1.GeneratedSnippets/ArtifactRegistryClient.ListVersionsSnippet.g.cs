@@ -14,6 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 {
     // [START artifactregistry_v1_generated_ArtifactRegistry_ListVersions_sync_flattened]

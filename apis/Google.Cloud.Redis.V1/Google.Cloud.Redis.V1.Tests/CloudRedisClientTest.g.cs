@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -86,7 +87,7 @@ namespace Google.Cloud.Redis.V1.Tests
                 ReadReplicasMode = Instance.Types.ReadReplicasMode.ReadReplicasEnabled,
             };
             mockGrpcClient.Setup(x => x.GetInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null);
+            CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null, null);
             Instance response = client.GetInstance(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -150,7 +151,7 @@ namespace Google.Cloud.Redis.V1.Tests
                 ReadReplicasMode = Instance.Types.ReadReplicasMode.ReadReplicasEnabled,
             };
             mockGrpcClient.Setup(x => x.GetInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null);
+            CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null, null);
             Instance responseCallSettings = await client.GetInstanceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Instance responseCancellationToken = await client.GetInstanceAsync(request, st::CancellationToken.None);
@@ -216,7 +217,7 @@ namespace Google.Cloud.Redis.V1.Tests
                 ReadReplicasMode = Instance.Types.ReadReplicasMode.ReadReplicasEnabled,
             };
             mockGrpcClient.Setup(x => x.GetInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null);
+            CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null, null);
             Instance response = client.GetInstance(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -280,7 +281,7 @@ namespace Google.Cloud.Redis.V1.Tests
                 ReadReplicasMode = Instance.Types.ReadReplicasMode.ReadReplicasEnabled,
             };
             mockGrpcClient.Setup(x => x.GetInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null);
+            CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null, null);
             Instance responseCallSettings = await client.GetInstanceAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Instance responseCancellationToken = await client.GetInstanceAsync(request.Name, st::CancellationToken.None);
@@ -346,7 +347,7 @@ namespace Google.Cloud.Redis.V1.Tests
                 ReadReplicasMode = Instance.Types.ReadReplicasMode.ReadReplicasEnabled,
             };
             mockGrpcClient.Setup(x => x.GetInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null);
+            CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null, null);
             Instance response = client.GetInstance(request.InstanceName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -410,7 +411,7 @@ namespace Google.Cloud.Redis.V1.Tests
                 ReadReplicasMode = Instance.Types.ReadReplicasMode.ReadReplicasEnabled,
             };
             mockGrpcClient.Setup(x => x.GetInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null);
+            CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null, null);
             Instance responseCallSettings = await client.GetInstanceAsync(request.InstanceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Instance responseCancellationToken = await client.GetInstanceAsync(request.InstanceName, st::CancellationToken.None);
@@ -432,7 +433,7 @@ namespace Google.Cloud.Redis.V1.Tests
                 AuthString = "auth_string7b7a4b11",
             };
             mockGrpcClient.Setup(x => x.GetInstanceAuthString(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null);
+            CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null, null);
             InstanceAuthString response = client.GetInstanceAuthString(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -452,7 +453,7 @@ namespace Google.Cloud.Redis.V1.Tests
                 AuthString = "auth_string7b7a4b11",
             };
             mockGrpcClient.Setup(x => x.GetInstanceAuthStringAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstanceAuthString>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null);
+            CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null, null);
             InstanceAuthString responseCallSettings = await client.GetInstanceAuthStringAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             InstanceAuthString responseCancellationToken = await client.GetInstanceAuthStringAsync(request, st::CancellationToken.None);
@@ -474,7 +475,7 @@ namespace Google.Cloud.Redis.V1.Tests
                 AuthString = "auth_string7b7a4b11",
             };
             mockGrpcClient.Setup(x => x.GetInstanceAuthString(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null);
+            CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null, null);
             InstanceAuthString response = client.GetInstanceAuthString(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -494,7 +495,7 @@ namespace Google.Cloud.Redis.V1.Tests
                 AuthString = "auth_string7b7a4b11",
             };
             mockGrpcClient.Setup(x => x.GetInstanceAuthStringAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstanceAuthString>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null);
+            CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null, null);
             InstanceAuthString responseCallSettings = await client.GetInstanceAuthStringAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             InstanceAuthString responseCancellationToken = await client.GetInstanceAuthStringAsync(request.Name, st::CancellationToken.None);
@@ -516,7 +517,7 @@ namespace Google.Cloud.Redis.V1.Tests
                 AuthString = "auth_string7b7a4b11",
             };
             mockGrpcClient.Setup(x => x.GetInstanceAuthString(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null);
+            CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null, null);
             InstanceAuthString response = client.GetInstanceAuthString(request.InstanceName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -536,7 +537,7 @@ namespace Google.Cloud.Redis.V1.Tests
                 AuthString = "auth_string7b7a4b11",
             };
             mockGrpcClient.Setup(x => x.GetInstanceAuthStringAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstanceAuthString>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null);
+            CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null, null);
             InstanceAuthString responseCallSettings = await client.GetInstanceAuthStringAsync(request.InstanceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             InstanceAuthString responseCancellationToken = await client.GetInstanceAuthStringAsync(request.InstanceName, st::CancellationToken.None);

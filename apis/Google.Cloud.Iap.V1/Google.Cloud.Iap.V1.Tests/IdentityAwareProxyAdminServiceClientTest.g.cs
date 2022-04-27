@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gciv = Google.Cloud.Iam.V1;
@@ -54,7 +55,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.SetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -84,7 +85,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request, st::CancellationToken.None);
@@ -115,7 +116,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.GetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -144,7 +145,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request, st::CancellationToken.None);
@@ -172,7 +173,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -198,7 +199,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request, st::CancellationToken.None);
@@ -221,7 +222,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 ApplicationSettings = new ApplicationSettings(),
             };
             mockGrpcClient.Setup(x => x.GetIapSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             IapSettings response = client.GetIapSettings(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -242,7 +243,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 ApplicationSettings = new ApplicationSettings(),
             };
             mockGrpcClient.Setup(x => x.GetIapSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<IapSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             IapSettings responseCallSettings = await client.GetIapSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             IapSettings responseCancellationToken = await client.GetIapSettingsAsync(request, st::CancellationToken.None);
@@ -266,7 +267,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 ApplicationSettings = new ApplicationSettings(),
             };
             mockGrpcClient.Setup(x => x.UpdateIapSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             IapSettings response = client.UpdateIapSettings(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -288,7 +289,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 ApplicationSettings = new ApplicationSettings(),
             };
             mockGrpcClient.Setup(x => x.UpdateIapSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<IapSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             IapSettings responseCallSettings = await client.UpdateIapSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             IapSettings responseCancellationToken = await client.UpdateIapSettingsAsync(request, st::CancellationToken.None);
@@ -313,7 +314,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 Fqdns = { "fqdns28ae1f7a", },
             };
             mockGrpcClient.Setup(x => x.CreateTunnelDestGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             TunnelDestGroup response = client.CreateTunnelDestGroup(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -336,7 +337,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 Fqdns = { "fqdns28ae1f7a", },
             };
             mockGrpcClient.Setup(x => x.CreateTunnelDestGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TunnelDestGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             TunnelDestGroup responseCallSettings = await client.CreateTunnelDestGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TunnelDestGroup responseCancellationToken = await client.CreateTunnelDestGroupAsync(request, st::CancellationToken.None);
@@ -361,7 +362,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 Fqdns = { "fqdns28ae1f7a", },
             };
             mockGrpcClient.Setup(x => x.CreateTunnelDestGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             TunnelDestGroup response = client.CreateTunnelDestGroup(request.Parent, request.TunnelDestGroup, request.TunnelDestGroupId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -384,7 +385,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 Fqdns = { "fqdns28ae1f7a", },
             };
             mockGrpcClient.Setup(x => x.CreateTunnelDestGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TunnelDestGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             TunnelDestGroup responseCallSettings = await client.CreateTunnelDestGroupAsync(request.Parent, request.TunnelDestGroup, request.TunnelDestGroupId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TunnelDestGroup responseCancellationToken = await client.CreateTunnelDestGroupAsync(request.Parent, request.TunnelDestGroup, request.TunnelDestGroupId, st::CancellationToken.None);
@@ -409,7 +410,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 Fqdns = { "fqdns28ae1f7a", },
             };
             mockGrpcClient.Setup(x => x.CreateTunnelDestGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             TunnelDestGroup response = client.CreateTunnelDestGroup(request.ParentAsTunnelLocationName, request.TunnelDestGroup, request.TunnelDestGroupId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -432,7 +433,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 Fqdns = { "fqdns28ae1f7a", },
             };
             mockGrpcClient.Setup(x => x.CreateTunnelDestGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TunnelDestGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             TunnelDestGroup responseCallSettings = await client.CreateTunnelDestGroupAsync(request.ParentAsTunnelLocationName, request.TunnelDestGroup, request.TunnelDestGroupId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TunnelDestGroup responseCancellationToken = await client.CreateTunnelDestGroupAsync(request.ParentAsTunnelLocationName, request.TunnelDestGroup, request.TunnelDestGroupId, st::CancellationToken.None);
@@ -455,7 +456,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 Fqdns = { "fqdns28ae1f7a", },
             };
             mockGrpcClient.Setup(x => x.GetTunnelDestGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             TunnelDestGroup response = client.GetTunnelDestGroup(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -476,7 +477,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 Fqdns = { "fqdns28ae1f7a", },
             };
             mockGrpcClient.Setup(x => x.GetTunnelDestGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TunnelDestGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             TunnelDestGroup responseCallSettings = await client.GetTunnelDestGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TunnelDestGroup responseCancellationToken = await client.GetTunnelDestGroupAsync(request, st::CancellationToken.None);
@@ -499,7 +500,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 Fqdns = { "fqdns28ae1f7a", },
             };
             mockGrpcClient.Setup(x => x.GetTunnelDestGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             TunnelDestGroup response = client.GetTunnelDestGroup(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -520,7 +521,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 Fqdns = { "fqdns28ae1f7a", },
             };
             mockGrpcClient.Setup(x => x.GetTunnelDestGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TunnelDestGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             TunnelDestGroup responseCallSettings = await client.GetTunnelDestGroupAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TunnelDestGroup responseCancellationToken = await client.GetTunnelDestGroupAsync(request.Name, st::CancellationToken.None);
@@ -543,7 +544,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 Fqdns = { "fqdns28ae1f7a", },
             };
             mockGrpcClient.Setup(x => x.GetTunnelDestGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             TunnelDestGroup response = client.GetTunnelDestGroup(request.TunnelDestGroupName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -564,7 +565,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 Fqdns = { "fqdns28ae1f7a", },
             };
             mockGrpcClient.Setup(x => x.GetTunnelDestGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TunnelDestGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             TunnelDestGroup responseCallSettings = await client.GetTunnelDestGroupAsync(request.TunnelDestGroupName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TunnelDestGroup responseCancellationToken = await client.GetTunnelDestGroupAsync(request.TunnelDestGroupName, st::CancellationToken.None);
@@ -582,7 +583,7 @@ namespace Google.Cloud.Iap.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTunnelDestGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteTunnelDestGroup(request);
             mockGrpcClient.VerifyAll();
         }
@@ -597,7 +598,7 @@ namespace Google.Cloud.Iap.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTunnelDestGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteTunnelDestGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteTunnelDestGroupAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -613,7 +614,7 @@ namespace Google.Cloud.Iap.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTunnelDestGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteTunnelDestGroup(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -628,7 +629,7 @@ namespace Google.Cloud.Iap.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTunnelDestGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteTunnelDestGroupAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteTunnelDestGroupAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -644,7 +645,7 @@ namespace Google.Cloud.Iap.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTunnelDestGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteTunnelDestGroup(request.TunnelDestGroupName);
             mockGrpcClient.VerifyAll();
         }
@@ -659,7 +660,7 @@ namespace Google.Cloud.Iap.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTunnelDestGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteTunnelDestGroupAsync(request.TunnelDestGroupName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteTunnelDestGroupAsync(request.TunnelDestGroupName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -681,7 +682,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 Fqdns = { "fqdns28ae1f7a", },
             };
             mockGrpcClient.Setup(x => x.UpdateTunnelDestGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             TunnelDestGroup response = client.UpdateTunnelDestGroup(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -703,7 +704,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 Fqdns = { "fqdns28ae1f7a", },
             };
             mockGrpcClient.Setup(x => x.UpdateTunnelDestGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TunnelDestGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             TunnelDestGroup responseCallSettings = await client.UpdateTunnelDestGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TunnelDestGroup responseCancellationToken = await client.UpdateTunnelDestGroupAsync(request, st::CancellationToken.None);
@@ -727,7 +728,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 Fqdns = { "fqdns28ae1f7a", },
             };
             mockGrpcClient.Setup(x => x.UpdateTunnelDestGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             TunnelDestGroup response = client.UpdateTunnelDestGroup(request.TunnelDestGroup, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -749,7 +750,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 Fqdns = { "fqdns28ae1f7a", },
             };
             mockGrpcClient.Setup(x => x.UpdateTunnelDestGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TunnelDestGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             TunnelDestGroup responseCallSettings = await client.UpdateTunnelDestGroupAsync(request.TunnelDestGroup, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TunnelDestGroup responseCancellationToken = await client.UpdateTunnelDestGroupAsync(request.TunnelDestGroup, request.UpdateMask, st::CancellationToken.None);

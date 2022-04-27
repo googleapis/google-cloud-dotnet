@@ -14,6 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace Google.Cloud.Dataplex.V1.Snippets
 {
     // [START dataplex_v1_generated_DataplexService_UpdateLake_async]

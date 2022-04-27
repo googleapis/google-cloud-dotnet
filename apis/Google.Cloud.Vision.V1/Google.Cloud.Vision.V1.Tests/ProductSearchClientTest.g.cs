@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
@@ -49,7 +50,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 IndexError = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             ProductSet response = client.CreateProductSet(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -74,7 +75,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 IndexError = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ProductSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             ProductSet responseCallSettings = await client.CreateProductSetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ProductSet responseCancellationToken = await client.CreateProductSetAsync(request, st::CancellationToken.None);
@@ -101,7 +102,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 IndexError = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             ProductSet response = client.CreateProductSet(request.Parent, request.ProductSet, request.ProductSetId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -126,7 +127,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 IndexError = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ProductSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             ProductSet responseCallSettings = await client.CreateProductSetAsync(request.Parent, request.ProductSet, request.ProductSetId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ProductSet responseCancellationToken = await client.CreateProductSetAsync(request.Parent, request.ProductSet, request.ProductSetId, st::CancellationToken.None);
@@ -153,7 +154,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 IndexError = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             ProductSet response = client.CreateProductSet(request.ParentAsLocationName, request.ProductSet, request.ProductSetId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -178,7 +179,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 IndexError = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ProductSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             ProductSet responseCallSettings = await client.CreateProductSetAsync(request.ParentAsLocationName, request.ProductSet, request.ProductSetId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ProductSet responseCancellationToken = await client.CreateProductSetAsync(request.ParentAsLocationName, request.ProductSet, request.ProductSetId, st::CancellationToken.None);
@@ -203,7 +204,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 IndexError = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             ProductSet response = client.GetProductSet(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -226,7 +227,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 IndexError = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ProductSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             ProductSet responseCallSettings = await client.GetProductSetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ProductSet responseCancellationToken = await client.GetProductSetAsync(request, st::CancellationToken.None);
@@ -251,7 +252,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 IndexError = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             ProductSet response = client.GetProductSet(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -274,7 +275,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 IndexError = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ProductSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             ProductSet responseCallSettings = await client.GetProductSetAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ProductSet responseCancellationToken = await client.GetProductSetAsync(request.Name, st::CancellationToken.None);
@@ -299,7 +300,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 IndexError = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             ProductSet response = client.GetProductSet(request.ProductSetName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -322,7 +323,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 IndexError = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ProductSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             ProductSet responseCallSettings = await client.GetProductSetAsync(request.ProductSetName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ProductSet responseCancellationToken = await client.GetProductSetAsync(request.ProductSetName, st::CancellationToken.None);
@@ -348,7 +349,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 IndexError = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.UpdateProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             ProductSet response = client.UpdateProductSet(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -372,7 +373,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 IndexError = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.UpdateProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ProductSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             ProductSet responseCallSettings = await client.UpdateProductSetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ProductSet responseCancellationToken = await client.UpdateProductSetAsync(request, st::CancellationToken.None);
@@ -398,7 +399,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 IndexError = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.UpdateProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             ProductSet response = client.UpdateProductSet(request.ProductSet, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -422,7 +423,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 IndexError = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.UpdateProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ProductSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             ProductSet responseCallSettings = await client.UpdateProductSetAsync(request.ProductSet, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ProductSet responseCancellationToken = await client.UpdateProductSetAsync(request.ProductSet, request.UpdateMask, st::CancellationToken.None);
@@ -441,7 +442,7 @@ namespace Google.Cloud.Vision.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteProductSet(request);
             mockGrpcClient.VerifyAll();
         }
@@ -457,7 +458,7 @@ namespace Google.Cloud.Vision.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteProductSetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteProductSetAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -474,7 +475,7 @@ namespace Google.Cloud.Vision.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteProductSet(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -490,7 +491,7 @@ namespace Google.Cloud.Vision.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteProductSetAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteProductSetAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -507,7 +508,7 @@ namespace Google.Cloud.Vision.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteProductSet(request.ProductSetName);
             mockGrpcClient.VerifyAll();
         }
@@ -523,7 +524,7 @@ namespace Google.Cloud.Vision.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteProductSetAsync(request.ProductSetName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteProductSetAsync(request.ProductSetName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -552,7 +553,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             Product response = client.CreateProduct(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -581,7 +582,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             Product responseCallSettings = await client.CreateProductAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Product responseCancellationToken = await client.CreateProductAsync(request, st::CancellationToken.None);
@@ -612,7 +613,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             Product response = client.CreateProduct(request.Parent, request.Product, request.ProductId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -641,7 +642,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             Product responseCallSettings = await client.CreateProductAsync(request.Parent, request.Product, request.ProductId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Product responseCancellationToken = await client.CreateProductAsync(request.Parent, request.Product, request.ProductId, st::CancellationToken.None);
@@ -672,7 +673,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             Product response = client.CreateProduct(request.ParentAsLocationName, request.Product, request.ProductId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -701,7 +702,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             Product responseCallSettings = await client.CreateProductAsync(request.ParentAsLocationName, request.Product, request.ProductId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Product responseCancellationToken = await client.CreateProductAsync(request.ParentAsLocationName, request.Product, request.ProductId, st::CancellationToken.None);
@@ -730,7 +731,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             Product response = client.GetProduct(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -757,7 +758,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             Product responseCallSettings = await client.GetProductAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Product responseCancellationToken = await client.GetProductAsync(request, st::CancellationToken.None);
@@ -786,7 +787,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             Product response = client.GetProduct(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -813,7 +814,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             Product responseCallSettings = await client.GetProductAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Product responseCancellationToken = await client.GetProductAsync(request.Name, st::CancellationToken.None);
@@ -842,7 +843,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             Product response = client.GetProduct(request.ProductName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -869,7 +870,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             Product responseCallSettings = await client.GetProductAsync(request.ProductName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Product responseCancellationToken = await client.GetProductAsync(request.ProductName, st::CancellationToken.None);
@@ -899,7 +900,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             Product response = client.UpdateProduct(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -927,7 +928,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             Product responseCallSettings = await client.UpdateProductAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Product responseCancellationToken = await client.UpdateProductAsync(request, st::CancellationToken.None);
@@ -957,7 +958,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             Product response = client.UpdateProduct(request.Product, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -985,7 +986,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             Product responseCallSettings = await client.UpdateProductAsync(request.Product, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Product responseCancellationToken = await client.UpdateProductAsync(request.Product, request.UpdateMask, st::CancellationToken.None);
@@ -1004,7 +1005,7 @@ namespace Google.Cloud.Vision.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteProduct(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1020,7 +1021,7 @@ namespace Google.Cloud.Vision.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteProductAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteProductAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1037,7 +1038,7 @@ namespace Google.Cloud.Vision.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteProduct(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -1053,7 +1054,7 @@ namespace Google.Cloud.Vision.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteProductAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteProductAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1070,7 +1071,7 @@ namespace Google.Cloud.Vision.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteProduct(request.ProductName);
             mockGrpcClient.VerifyAll();
         }
@@ -1086,7 +1087,7 @@ namespace Google.Cloud.Vision.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteProductAsync(request.ProductName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteProductAsync(request.ProductName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1110,7 +1111,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 BoundingPolys = { new BoundingPoly(), },
             };
             mockGrpcClient.Setup(x => x.CreateReferenceImage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             ReferenceImage response = client.CreateReferenceImage(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1134,7 +1135,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 BoundingPolys = { new BoundingPoly(), },
             };
             mockGrpcClient.Setup(x => x.CreateReferenceImageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReferenceImage>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             ReferenceImage responseCallSettings = await client.CreateReferenceImageAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ReferenceImage responseCancellationToken = await client.CreateReferenceImageAsync(request, st::CancellationToken.None);
@@ -1160,7 +1161,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 BoundingPolys = { new BoundingPoly(), },
             };
             mockGrpcClient.Setup(x => x.CreateReferenceImage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             ReferenceImage response = client.CreateReferenceImage(request.Parent, request.ReferenceImage, request.ReferenceImageId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1184,7 +1185,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 BoundingPolys = { new BoundingPoly(), },
             };
             mockGrpcClient.Setup(x => x.CreateReferenceImageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReferenceImage>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             ReferenceImage responseCallSettings = await client.CreateReferenceImageAsync(request.Parent, request.ReferenceImage, request.ReferenceImageId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ReferenceImage responseCancellationToken = await client.CreateReferenceImageAsync(request.Parent, request.ReferenceImage, request.ReferenceImageId, st::CancellationToken.None);
@@ -1210,7 +1211,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 BoundingPolys = { new BoundingPoly(), },
             };
             mockGrpcClient.Setup(x => x.CreateReferenceImage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             ReferenceImage response = client.CreateReferenceImage(request.ParentAsProductName, request.ReferenceImage, request.ReferenceImageId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1234,7 +1235,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 BoundingPolys = { new BoundingPoly(), },
             };
             mockGrpcClient.Setup(x => x.CreateReferenceImageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReferenceImage>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             ReferenceImage responseCallSettings = await client.CreateReferenceImageAsync(request.ParentAsProductName, request.ReferenceImage, request.ReferenceImageId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ReferenceImage responseCancellationToken = await client.CreateReferenceImageAsync(request.ParentAsProductName, request.ReferenceImage, request.ReferenceImageId, st::CancellationToken.None);
@@ -1253,7 +1254,7 @@ namespace Google.Cloud.Vision.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteReferenceImage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteReferenceImage(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1269,7 +1270,7 @@ namespace Google.Cloud.Vision.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteReferenceImageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteReferenceImageAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteReferenceImageAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1286,7 +1287,7 @@ namespace Google.Cloud.Vision.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteReferenceImage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteReferenceImage(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -1302,7 +1303,7 @@ namespace Google.Cloud.Vision.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteReferenceImageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteReferenceImageAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteReferenceImageAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1319,7 +1320,7 @@ namespace Google.Cloud.Vision.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteReferenceImage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteReferenceImage(request.ReferenceImageName);
             mockGrpcClient.VerifyAll();
         }
@@ -1335,7 +1336,7 @@ namespace Google.Cloud.Vision.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteReferenceImageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteReferenceImageAsync(request.ReferenceImageName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteReferenceImageAsync(request.ReferenceImageName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1357,7 +1358,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 BoundingPolys = { new BoundingPoly(), },
             };
             mockGrpcClient.Setup(x => x.GetReferenceImage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             ReferenceImage response = client.GetReferenceImage(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1379,7 +1380,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 BoundingPolys = { new BoundingPoly(), },
             };
             mockGrpcClient.Setup(x => x.GetReferenceImageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReferenceImage>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             ReferenceImage responseCallSettings = await client.GetReferenceImageAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ReferenceImage responseCancellationToken = await client.GetReferenceImageAsync(request, st::CancellationToken.None);
@@ -1403,7 +1404,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 BoundingPolys = { new BoundingPoly(), },
             };
             mockGrpcClient.Setup(x => x.GetReferenceImage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             ReferenceImage response = client.GetReferenceImage(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1425,7 +1426,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 BoundingPolys = { new BoundingPoly(), },
             };
             mockGrpcClient.Setup(x => x.GetReferenceImageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReferenceImage>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             ReferenceImage responseCallSettings = await client.GetReferenceImageAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ReferenceImage responseCancellationToken = await client.GetReferenceImageAsync(request.Name, st::CancellationToken.None);
@@ -1449,7 +1450,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 BoundingPolys = { new BoundingPoly(), },
             };
             mockGrpcClient.Setup(x => x.GetReferenceImage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             ReferenceImage response = client.GetReferenceImage(request.ReferenceImageName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1471,7 +1472,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 BoundingPolys = { new BoundingPoly(), },
             };
             mockGrpcClient.Setup(x => x.GetReferenceImageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReferenceImage>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             ReferenceImage responseCallSettings = await client.GetReferenceImageAsync(request.ReferenceImageName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ReferenceImage responseCancellationToken = await client.GetReferenceImageAsync(request.ReferenceImageName, st::CancellationToken.None);
@@ -1491,7 +1492,7 @@ namespace Google.Cloud.Vision.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.AddProductToProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             client.AddProductToProductSet(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1508,7 +1509,7 @@ namespace Google.Cloud.Vision.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.AddProductToProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             await client.AddProductToProductSetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.AddProductToProductSetAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1526,7 +1527,7 @@ namespace Google.Cloud.Vision.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.AddProductToProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             client.AddProductToProductSet(request.Name, request.Product);
             mockGrpcClient.VerifyAll();
         }
@@ -1543,7 +1544,7 @@ namespace Google.Cloud.Vision.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.AddProductToProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             await client.AddProductToProductSetAsync(request.Name, request.Product, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.AddProductToProductSetAsync(request.Name, request.Product, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1561,7 +1562,7 @@ namespace Google.Cloud.Vision.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.AddProductToProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             client.AddProductToProductSet(request.ProductSetName, request.ProductAsProductName);
             mockGrpcClient.VerifyAll();
         }
@@ -1578,7 +1579,7 @@ namespace Google.Cloud.Vision.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.AddProductToProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             await client.AddProductToProductSetAsync(request.ProductSetName, request.ProductAsProductName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.AddProductToProductSetAsync(request.ProductSetName, request.ProductAsProductName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1596,7 +1597,7 @@ namespace Google.Cloud.Vision.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.RemoveProductFromProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             client.RemoveProductFromProductSet(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1613,7 +1614,7 @@ namespace Google.Cloud.Vision.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.RemoveProductFromProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             await client.RemoveProductFromProductSetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.RemoveProductFromProductSetAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1631,7 +1632,7 @@ namespace Google.Cloud.Vision.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.RemoveProductFromProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             client.RemoveProductFromProductSet(request.Name, request.Product);
             mockGrpcClient.VerifyAll();
         }
@@ -1648,7 +1649,7 @@ namespace Google.Cloud.Vision.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.RemoveProductFromProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             await client.RemoveProductFromProductSetAsync(request.Name, request.Product, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.RemoveProductFromProductSetAsync(request.Name, request.Product, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1666,7 +1667,7 @@ namespace Google.Cloud.Vision.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.RemoveProductFromProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             client.RemoveProductFromProductSet(request.ProductSetName, request.ProductAsProductName);
             mockGrpcClient.VerifyAll();
         }
@@ -1683,7 +1684,7 @@ namespace Google.Cloud.Vision.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.RemoveProductFromProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null, null);
             await client.RemoveProductFromProductSetAsync(request.ProductSetName, request.ProductAsProductName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.RemoveProductFromProductSetAsync(request.ProductSetName, request.ProductAsProductName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();

@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gctv = Google.Cloud.Talent.V4Beta1;
 
 namespace Google.Cloud.Talent.V4Beta1

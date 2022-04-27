@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -61,7 +62,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
                 Scope = Certificate.Types.Scope.EdgeCache,
             };
             mockGrpcClient.Setup(x => x.GetCertificate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null);
+            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null, null);
             Certificate response = client.GetCertificate(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -100,7 +101,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
                 Scope = Certificate.Types.Scope.EdgeCache,
             };
             mockGrpcClient.Setup(x => x.GetCertificateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Certificate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null);
+            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null, null);
             Certificate responseCallSettings = await client.GetCertificateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Certificate responseCancellationToken = await client.GetCertificateAsync(request, st::CancellationToken.None);
@@ -141,7 +142,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
                 Scope = Certificate.Types.Scope.EdgeCache,
             };
             mockGrpcClient.Setup(x => x.GetCertificate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null);
+            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null, null);
             Certificate response = client.GetCertificate(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -180,7 +181,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
                 Scope = Certificate.Types.Scope.EdgeCache,
             };
             mockGrpcClient.Setup(x => x.GetCertificateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Certificate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null);
+            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null, null);
             Certificate responseCallSettings = await client.GetCertificateAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Certificate responseCancellationToken = await client.GetCertificateAsync(request.Name, st::CancellationToken.None);
@@ -221,7 +222,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
                 Scope = Certificate.Types.Scope.EdgeCache,
             };
             mockGrpcClient.Setup(x => x.GetCertificate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null);
+            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null, null);
             Certificate response = client.GetCertificate(request.CertificateName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -260,7 +261,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
                 Scope = Certificate.Types.Scope.EdgeCache,
             };
             mockGrpcClient.Setup(x => x.GetCertificateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Certificate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null);
+            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null, null);
             Certificate responseCallSettings = await client.GetCertificateAsync(request.CertificateName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Certificate responseCancellationToken = await client.GetCertificateAsync(request.CertificateName, st::CancellationToken.None);
@@ -296,7 +297,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetCertificateMap(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null);
+            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null, null);
             CertificateMap response = client.GetCertificateMap(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -330,7 +331,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetCertificateMapAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CertificateMap>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null);
+            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null, null);
             CertificateMap responseCallSettings = await client.GetCertificateMapAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CertificateMap responseCancellationToken = await client.GetCertificateMapAsync(request, st::CancellationToken.None);
@@ -366,7 +367,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetCertificateMap(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null);
+            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null, null);
             CertificateMap response = client.GetCertificateMap(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -400,7 +401,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetCertificateMapAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CertificateMap>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null);
+            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null, null);
             CertificateMap responseCallSettings = await client.GetCertificateMapAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CertificateMap responseCancellationToken = await client.GetCertificateMapAsync(request.Name, st::CancellationToken.None);
@@ -436,7 +437,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetCertificateMap(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null);
+            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null, null);
             CertificateMap response = client.GetCertificateMap(request.CertificateMapName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -470,7 +471,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetCertificateMapAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CertificateMap>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null);
+            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null, null);
             CertificateMap responseCallSettings = await client.GetCertificateMapAsync(request.CertificateMapName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CertificateMap responseCancellationToken = await client.GetCertificateMapAsync(request.CertificateMapName, st::CancellationToken.None);
@@ -509,7 +510,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
                 Matcher = CertificateMapEntry.Types.Matcher.Primary,
             };
             mockGrpcClient.Setup(x => x.GetCertificateMapEntry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null);
+            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null, null);
             CertificateMapEntry response = client.GetCertificateMapEntry(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -546,7 +547,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
                 Matcher = CertificateMapEntry.Types.Matcher.Primary,
             };
             mockGrpcClient.Setup(x => x.GetCertificateMapEntryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CertificateMapEntry>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null);
+            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null, null);
             CertificateMapEntry responseCallSettings = await client.GetCertificateMapEntryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CertificateMapEntry responseCancellationToken = await client.GetCertificateMapEntryAsync(request, st::CancellationToken.None);
@@ -585,7 +586,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
                 Matcher = CertificateMapEntry.Types.Matcher.Primary,
             };
             mockGrpcClient.Setup(x => x.GetCertificateMapEntry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null);
+            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null, null);
             CertificateMapEntry response = client.GetCertificateMapEntry(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -622,7 +623,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
                 Matcher = CertificateMapEntry.Types.Matcher.Primary,
             };
             mockGrpcClient.Setup(x => x.GetCertificateMapEntryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CertificateMapEntry>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null);
+            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null, null);
             CertificateMapEntry responseCallSettings = await client.GetCertificateMapEntryAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CertificateMapEntry responseCancellationToken = await client.GetCertificateMapEntryAsync(request.Name, st::CancellationToken.None);
@@ -661,7 +662,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
                 Matcher = CertificateMapEntry.Types.Matcher.Primary,
             };
             mockGrpcClient.Setup(x => x.GetCertificateMapEntry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null);
+            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null, null);
             CertificateMapEntry response = client.GetCertificateMapEntry(request.CertificateMapEntryName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -698,7 +699,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
                 Matcher = CertificateMapEntry.Types.Matcher.Primary,
             };
             mockGrpcClient.Setup(x => x.GetCertificateMapEntryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CertificateMapEntry>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null);
+            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null, null);
             CertificateMapEntry responseCallSettings = await client.GetCertificateMapEntryAsync(request.CertificateMapEntryName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CertificateMapEntry responseCancellationToken = await client.GetCertificateMapEntryAsync(request.CertificateMapEntryName, st::CancellationToken.None);
@@ -732,7 +733,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
                 DnsResourceRecord = new DnsAuthorization.Types.DnsResourceRecord(),
             };
             mockGrpcClient.Setup(x => x.GetDnsAuthorization(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null);
+            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null, null);
             DnsAuthorization response = client.GetDnsAuthorization(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -764,7 +765,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
                 DnsResourceRecord = new DnsAuthorization.Types.DnsResourceRecord(),
             };
             mockGrpcClient.Setup(x => x.GetDnsAuthorizationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DnsAuthorization>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null);
+            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null, null);
             DnsAuthorization responseCallSettings = await client.GetDnsAuthorizationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DnsAuthorization responseCancellationToken = await client.GetDnsAuthorizationAsync(request, st::CancellationToken.None);
@@ -798,7 +799,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
                 DnsResourceRecord = new DnsAuthorization.Types.DnsResourceRecord(),
             };
             mockGrpcClient.Setup(x => x.GetDnsAuthorization(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null);
+            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null, null);
             DnsAuthorization response = client.GetDnsAuthorization(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -830,7 +831,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
                 DnsResourceRecord = new DnsAuthorization.Types.DnsResourceRecord(),
             };
             mockGrpcClient.Setup(x => x.GetDnsAuthorizationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DnsAuthorization>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null);
+            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null, null);
             DnsAuthorization responseCallSettings = await client.GetDnsAuthorizationAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DnsAuthorization responseCancellationToken = await client.GetDnsAuthorizationAsync(request.Name, st::CancellationToken.None);
@@ -864,7 +865,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
                 DnsResourceRecord = new DnsAuthorization.Types.DnsResourceRecord(),
             };
             mockGrpcClient.Setup(x => x.GetDnsAuthorization(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null);
+            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null, null);
             DnsAuthorization response = client.GetDnsAuthorization(request.DnsAuthorizationName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -896,7 +897,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
                 DnsResourceRecord = new DnsAuthorization.Types.DnsResourceRecord(),
             };
             mockGrpcClient.Setup(x => x.GetDnsAuthorizationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DnsAuthorization>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null);
+            CertificateManagerClient client = new CertificateManagerClientImpl(mockGrpcClient.Object, null, null);
             DnsAuthorization responseCallSettings = await client.GetDnsAuthorizationAsync(request.DnsAuthorizationName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DnsAuthorization responseCancellationToken = await client.GetDnsAuthorizationAsync(request.DnsAuthorizationName, st::CancellationToken.None);

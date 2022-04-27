@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -68,7 +69,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
                 SaaEnrollmentResponse = new Workload.Types.SaaEnrollmentResponse(),
             };
             mockGrpcClient.Setup(x => x.UpdateWorkload(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
+            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
             Workload response = client.UpdateWorkload(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -114,7 +115,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
                 SaaEnrollmentResponse = new Workload.Types.SaaEnrollmentResponse(),
             };
             mockGrpcClient.Setup(x => x.UpdateWorkloadAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Workload>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
+            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
             Workload responseCallSettings = await client.UpdateWorkloadAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Workload responseCancellationToken = await client.UpdateWorkloadAsync(request, st::CancellationToken.None);
@@ -162,7 +163,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
                 SaaEnrollmentResponse = new Workload.Types.SaaEnrollmentResponse(),
             };
             mockGrpcClient.Setup(x => x.UpdateWorkload(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
+            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
             Workload response = client.UpdateWorkload(request.Workload, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -208,7 +209,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
                 SaaEnrollmentResponse = new Workload.Types.SaaEnrollmentResponse(),
             };
             mockGrpcClient.Setup(x => x.UpdateWorkloadAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Workload>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
+            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
             Workload responseCallSettings = await client.UpdateWorkloadAsync(request.Workload, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Workload responseCancellationToken = await client.UpdateWorkloadAsync(request.Workload, request.UpdateMask, st::CancellationToken.None);
@@ -228,7 +229,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteWorkload(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
+            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteWorkload(request);
             mockGrpcClient.VerifyAll();
         }
@@ -245,7 +246,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteWorkloadAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
+            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteWorkloadAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteWorkloadAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -262,7 +263,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteWorkload(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
+            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteWorkload(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -278,7 +279,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteWorkloadAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
+            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteWorkloadAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteWorkloadAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -295,7 +296,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteWorkload(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
+            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteWorkload(request.WorkloadName);
             mockGrpcClient.VerifyAll();
         }
@@ -311,7 +312,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteWorkloadAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
+            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteWorkloadAsync(request.WorkloadName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteWorkloadAsync(request.WorkloadName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -356,7 +357,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
                 SaaEnrollmentResponse = new Workload.Types.SaaEnrollmentResponse(),
             };
             mockGrpcClient.Setup(x => x.GetWorkload(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
+            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
             Workload response = client.GetWorkload(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -401,7 +402,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
                 SaaEnrollmentResponse = new Workload.Types.SaaEnrollmentResponse(),
             };
             mockGrpcClient.Setup(x => x.GetWorkloadAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Workload>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
+            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
             Workload responseCallSettings = await client.GetWorkloadAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Workload responseCancellationToken = await client.GetWorkloadAsync(request, st::CancellationToken.None);
@@ -448,7 +449,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
                 SaaEnrollmentResponse = new Workload.Types.SaaEnrollmentResponse(),
             };
             mockGrpcClient.Setup(x => x.GetWorkload(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
+            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
             Workload response = client.GetWorkload(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -493,7 +494,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
                 SaaEnrollmentResponse = new Workload.Types.SaaEnrollmentResponse(),
             };
             mockGrpcClient.Setup(x => x.GetWorkloadAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Workload>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
+            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
             Workload responseCallSettings = await client.GetWorkloadAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Workload responseCancellationToken = await client.GetWorkloadAsync(request.Name, st::CancellationToken.None);
@@ -540,7 +541,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
                 SaaEnrollmentResponse = new Workload.Types.SaaEnrollmentResponse(),
             };
             mockGrpcClient.Setup(x => x.GetWorkload(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
+            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
             Workload response = client.GetWorkload(request.WorkloadName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -585,7 +586,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
                 SaaEnrollmentResponse = new Workload.Types.SaaEnrollmentResponse(),
             };
             mockGrpcClient.Setup(x => x.GetWorkloadAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Workload>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
+            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
             Workload responseCallSettings = await client.GetWorkloadAsync(request.WorkloadName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Workload responseCancellationToken = await client.GetWorkloadAsync(request.WorkloadName, st::CancellationToken.None);

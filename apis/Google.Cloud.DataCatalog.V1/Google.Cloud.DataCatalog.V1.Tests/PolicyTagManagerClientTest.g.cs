@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
@@ -53,7 +54,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateTaxonomy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             Taxonomy response = client.CreateTaxonomy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -81,7 +82,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateTaxonomyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Taxonomy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             Taxonomy responseCallSettings = await client.CreateTaxonomyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Taxonomy responseCancellationToken = await client.CreateTaxonomyAsync(request, st::CancellationToken.None);
@@ -111,7 +112,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateTaxonomy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             Taxonomy response = client.CreateTaxonomy(request.Parent, request.Taxonomy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -139,7 +140,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateTaxonomyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Taxonomy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             Taxonomy responseCallSettings = await client.CreateTaxonomyAsync(request.Parent, request.Taxonomy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Taxonomy responseCancellationToken = await client.CreateTaxonomyAsync(request.Parent, request.Taxonomy, st::CancellationToken.None);
@@ -169,7 +170,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateTaxonomy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             Taxonomy response = client.CreateTaxonomy(request.ParentAsLocationName, request.Taxonomy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -197,7 +198,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateTaxonomyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Taxonomy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             Taxonomy responseCallSettings = await client.CreateTaxonomyAsync(request.ParentAsLocationName, request.Taxonomy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Taxonomy responseCancellationToken = await client.CreateTaxonomyAsync(request.ParentAsLocationName, request.Taxonomy, st::CancellationToken.None);
@@ -215,7 +216,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTaxonomy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteTaxonomy(request);
             mockGrpcClient.VerifyAll();
         }
@@ -230,7 +231,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTaxonomyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteTaxonomyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteTaxonomyAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -246,7 +247,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTaxonomy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteTaxonomy(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -261,7 +262,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTaxonomyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteTaxonomyAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteTaxonomyAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -277,7 +278,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTaxonomy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteTaxonomy(request.TaxonomyName);
             mockGrpcClient.VerifyAll();
         }
@@ -292,7 +293,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTaxonomyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteTaxonomyAsync(request.TaxonomyName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteTaxonomyAsync(request.TaxonomyName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -320,7 +321,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateTaxonomy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             Taxonomy response = client.UpdateTaxonomy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -348,7 +349,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateTaxonomyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Taxonomy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             Taxonomy responseCallSettings = await client.UpdateTaxonomyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Taxonomy responseCancellationToken = await client.UpdateTaxonomyAsync(request, st::CancellationToken.None);
@@ -377,7 +378,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateTaxonomy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             Taxonomy response = client.UpdateTaxonomy(request.Taxonomy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -404,7 +405,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateTaxonomyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Taxonomy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             Taxonomy responseCallSettings = await client.UpdateTaxonomyAsync(request.Taxonomy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Taxonomy responseCancellationToken = await client.UpdateTaxonomyAsync(request.Taxonomy, st::CancellationToken.None);
@@ -433,7 +434,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetTaxonomy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             Taxonomy response = client.GetTaxonomy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -460,7 +461,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetTaxonomyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Taxonomy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             Taxonomy responseCallSettings = await client.GetTaxonomyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Taxonomy responseCancellationToken = await client.GetTaxonomyAsync(request, st::CancellationToken.None);
@@ -489,7 +490,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetTaxonomy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             Taxonomy response = client.GetTaxonomy(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -516,7 +517,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetTaxonomyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Taxonomy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             Taxonomy responseCallSettings = await client.GetTaxonomyAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Taxonomy responseCancellationToken = await client.GetTaxonomyAsync(request.Name, st::CancellationToken.None);
@@ -545,7 +546,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetTaxonomy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             Taxonomy response = client.GetTaxonomy(request.TaxonomyName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -572,7 +573,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetTaxonomyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Taxonomy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             Taxonomy responseCallSettings = await client.GetTaxonomyAsync(request.TaxonomyName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Taxonomy responseCancellationToken = await client.GetTaxonomyAsync(request.TaxonomyName, st::CancellationToken.None);
@@ -601,7 +602,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreatePolicyTag(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             PolicyTag response = client.CreatePolicyTag(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -628,7 +629,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreatePolicyTagAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PolicyTag>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             PolicyTag responseCallSettings = await client.CreatePolicyTagAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PolicyTag responseCancellationToken = await client.CreatePolicyTagAsync(request, st::CancellationToken.None);
@@ -657,7 +658,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreatePolicyTag(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             PolicyTag response = client.CreatePolicyTag(request.Parent, request.PolicyTag);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -684,7 +685,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreatePolicyTagAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PolicyTag>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             PolicyTag responseCallSettings = await client.CreatePolicyTagAsync(request.Parent, request.PolicyTag, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PolicyTag responseCancellationToken = await client.CreatePolicyTagAsync(request.Parent, request.PolicyTag, st::CancellationToken.None);
@@ -713,7 +714,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreatePolicyTag(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             PolicyTag response = client.CreatePolicyTag(request.ParentAsTaxonomyName, request.PolicyTag);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -740,7 +741,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreatePolicyTagAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PolicyTag>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             PolicyTag responseCallSettings = await client.CreatePolicyTagAsync(request.ParentAsTaxonomyName, request.PolicyTag, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PolicyTag responseCancellationToken = await client.CreatePolicyTagAsync(request.ParentAsTaxonomyName, request.PolicyTag, st::CancellationToken.None);
@@ -758,7 +759,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePolicyTag(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             client.DeletePolicyTag(request);
             mockGrpcClient.VerifyAll();
         }
@@ -773,7 +774,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePolicyTagAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             await client.DeletePolicyTagAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeletePolicyTagAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -789,7 +790,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePolicyTag(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             client.DeletePolicyTag(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -804,7 +805,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePolicyTagAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             await client.DeletePolicyTagAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeletePolicyTagAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -820,7 +821,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePolicyTag(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             client.DeletePolicyTag(request.PolicyTagName);
             mockGrpcClient.VerifyAll();
         }
@@ -835,7 +836,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePolicyTagAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             await client.DeletePolicyTagAsync(request.PolicyTagName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeletePolicyTagAsync(request.PolicyTagName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -862,7 +863,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdatePolicyTag(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             PolicyTag response = client.UpdatePolicyTag(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -889,7 +890,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdatePolicyTagAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PolicyTag>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             PolicyTag responseCallSettings = await client.UpdatePolicyTagAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PolicyTag responseCancellationToken = await client.UpdatePolicyTagAsync(request, st::CancellationToken.None);
@@ -917,7 +918,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdatePolicyTag(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             PolicyTag response = client.UpdatePolicyTag(request.PolicyTag);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -943,7 +944,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdatePolicyTagAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PolicyTag>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             PolicyTag responseCallSettings = await client.UpdatePolicyTagAsync(request.PolicyTag, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PolicyTag responseCancellationToken = await client.UpdatePolicyTagAsync(request.PolicyTag, st::CancellationToken.None);
@@ -971,7 +972,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetPolicyTag(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             PolicyTag response = client.GetPolicyTag(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -997,7 +998,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetPolicyTagAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PolicyTag>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             PolicyTag responseCallSettings = await client.GetPolicyTagAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PolicyTag responseCancellationToken = await client.GetPolicyTagAsync(request, st::CancellationToken.None);
@@ -1025,7 +1026,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetPolicyTag(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             PolicyTag response = client.GetPolicyTag(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1051,7 +1052,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetPolicyTagAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PolicyTag>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             PolicyTag responseCallSettings = await client.GetPolicyTagAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PolicyTag responseCancellationToken = await client.GetPolicyTagAsync(request.Name, st::CancellationToken.None);
@@ -1079,7 +1080,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetPolicyTag(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             PolicyTag response = client.GetPolicyTag(request.PolicyTagName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1105,7 +1106,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetPolicyTagAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PolicyTag>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             PolicyTag responseCallSettings = await client.GetPolicyTagAsync(request.PolicyTagName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PolicyTag responseCancellationToken = await client.GetPolicyTagAsync(request.PolicyTagName, st::CancellationToken.None);
@@ -1136,7 +1137,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.GetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1165,7 +1166,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request, st::CancellationToken.None);
@@ -1197,7 +1198,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.SetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1227,7 +1228,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request, st::CancellationToken.None);
@@ -1255,7 +1256,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1281,7 +1282,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerClient client = new PolicyTagManagerClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request, st::CancellationToken.None);

@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -86,7 +87,7 @@ namespace Google.Cloud.DataFusion.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataFusionClient client = new DataFusionClientImpl(mockGrpcClient.Object, null);
+            DataFusionClient client = new DataFusionClientImpl(mockGrpcClient.Object, null, null);
             Instance response = client.GetInstance(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -150,7 +151,7 @@ namespace Google.Cloud.DataFusion.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataFusionClient client = new DataFusionClientImpl(mockGrpcClient.Object, null);
+            DataFusionClient client = new DataFusionClientImpl(mockGrpcClient.Object, null, null);
             Instance responseCallSettings = await client.GetInstanceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Instance responseCancellationToken = await client.GetInstanceAsync(request, st::CancellationToken.None);

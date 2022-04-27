@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gcnv = Google.Cloud.Notebooks.V1;
 
 namespace Google.Cloud.Notebooks.V1

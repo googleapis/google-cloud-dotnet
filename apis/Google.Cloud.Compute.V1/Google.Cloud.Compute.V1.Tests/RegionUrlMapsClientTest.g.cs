@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using grpccore = Grpc.Core;
@@ -57,7 +58,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionUrlMapsClient client = new RegionUrlMapsClientImpl(mockGrpcClient.Object, null);
+            RegionUrlMapsClient client = new RegionUrlMapsClientImpl(mockGrpcClient.Object, null, null);
             UrlMap response = client.Get(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -93,7 +94,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UrlMap>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionUrlMapsClient client = new RegionUrlMapsClientImpl(mockGrpcClient.Object, null);
+            RegionUrlMapsClient client = new RegionUrlMapsClientImpl(mockGrpcClient.Object, null, null);
             UrlMap responseCallSettings = await client.GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UrlMap responseCancellationToken = await client.GetAsync(request, st::CancellationToken.None);
@@ -131,7 +132,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionUrlMapsClient client = new RegionUrlMapsClientImpl(mockGrpcClient.Object, null);
+            RegionUrlMapsClient client = new RegionUrlMapsClientImpl(mockGrpcClient.Object, null, null);
             UrlMap response = client.Get(request.Project, request.Region, request.UrlMap);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -167,7 +168,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UrlMap>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionUrlMapsClient client = new RegionUrlMapsClientImpl(mockGrpcClient.Object, null);
+            RegionUrlMapsClient client = new RegionUrlMapsClientImpl(mockGrpcClient.Object, null, null);
             UrlMap responseCallSettings = await client.GetAsync(request.Project, request.Region, request.UrlMap, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UrlMap responseCancellationToken = await client.GetAsync(request.Project, request.Region, request.UrlMap, st::CancellationToken.None);
@@ -192,7 +193,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Result = new UrlMapValidationResult(),
             };
             mockGrpcClient.Setup(x => x.Validate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionUrlMapsClient client = new RegionUrlMapsClientImpl(mockGrpcClient.Object, null);
+            RegionUrlMapsClient client = new RegionUrlMapsClientImpl(mockGrpcClient.Object, null, null);
             UrlMapsValidateResponse response = client.Validate(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -215,7 +216,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Result = new UrlMapValidationResult(),
             };
             mockGrpcClient.Setup(x => x.ValidateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UrlMapsValidateResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionUrlMapsClient client = new RegionUrlMapsClientImpl(mockGrpcClient.Object, null);
+            RegionUrlMapsClient client = new RegionUrlMapsClientImpl(mockGrpcClient.Object, null, null);
             UrlMapsValidateResponse responseCallSettings = await client.ValidateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UrlMapsValidateResponse responseCancellationToken = await client.ValidateAsync(request, st::CancellationToken.None);
@@ -240,7 +241,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Result = new UrlMapValidationResult(),
             };
             mockGrpcClient.Setup(x => x.Validate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionUrlMapsClient client = new RegionUrlMapsClientImpl(mockGrpcClient.Object, null);
+            RegionUrlMapsClient client = new RegionUrlMapsClientImpl(mockGrpcClient.Object, null, null);
             UrlMapsValidateResponse response = client.Validate(request.Project, request.Region, request.UrlMap, request.RegionUrlMapsValidateRequestResource);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -263,7 +264,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Result = new UrlMapValidationResult(),
             };
             mockGrpcClient.Setup(x => x.ValidateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UrlMapsValidateResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionUrlMapsClient client = new RegionUrlMapsClientImpl(mockGrpcClient.Object, null);
+            RegionUrlMapsClient client = new RegionUrlMapsClientImpl(mockGrpcClient.Object, null, null);
             UrlMapsValidateResponse responseCallSettings = await client.ValidateAsync(request.Project, request.Region, request.UrlMap, request.RegionUrlMapsValidateRequestResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UrlMapsValidateResponse responseCancellationToken = await client.ValidateAsync(request.Project, request.Region, request.UrlMap, request.RegionUrlMapsValidateRequestResource, st::CancellationToken.None);

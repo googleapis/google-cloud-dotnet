@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
@@ -67,7 +68,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             Secret response = client.CreateSecret(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -109,7 +110,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Secret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             Secret responseCallSettings = await client.CreateSecretAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Secret responseCancellationToken = await client.CreateSecretAsync(request, st::CancellationToken.None);
@@ -153,7 +154,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             Secret response = client.CreateSecret(request.Parent, request.SecretId, request.Secret);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -195,7 +196,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Secret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             Secret responseCallSettings = await client.CreateSecretAsync(request.Parent, request.SecretId, request.Secret, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Secret responseCancellationToken = await client.CreateSecretAsync(request.Parent, request.SecretId, request.Secret, st::CancellationToken.None);
@@ -239,7 +240,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             Secret response = client.CreateSecret(request.ParentAsProjectName, request.SecretId, request.Secret);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -281,7 +282,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Secret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             Secret responseCallSettings = await client.CreateSecretAsync(request.ParentAsProjectName, request.SecretId, request.Secret, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Secret responseCancellationToken = await client.CreateSecretAsync(request.ParentAsProjectName, request.SecretId, request.Secret, st::CancellationToken.None);
@@ -309,7 +310,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 ClientSpecifiedPayloadChecksum = false,
             };
             mockGrpcClient.Setup(x => x.AddSecretVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             SecretVersion response = client.AddSecretVersion(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -335,7 +336,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 ClientSpecifiedPayloadChecksum = false,
             };
             mockGrpcClient.Setup(x => x.AddSecretVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecretVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             SecretVersion responseCallSettings = await client.AddSecretVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecretVersion responseCancellationToken = await client.AddSecretVersionAsync(request, st::CancellationToken.None);
@@ -363,7 +364,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 ClientSpecifiedPayloadChecksum = false,
             };
             mockGrpcClient.Setup(x => x.AddSecretVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             SecretVersion response = client.AddSecretVersion(request.Parent, request.Payload);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -389,7 +390,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 ClientSpecifiedPayloadChecksum = false,
             };
             mockGrpcClient.Setup(x => x.AddSecretVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecretVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             SecretVersion responseCallSettings = await client.AddSecretVersionAsync(request.Parent, request.Payload, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecretVersion responseCancellationToken = await client.AddSecretVersionAsync(request.Parent, request.Payload, st::CancellationToken.None);
@@ -417,7 +418,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 ClientSpecifiedPayloadChecksum = false,
             };
             mockGrpcClient.Setup(x => x.AddSecretVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             SecretVersion response = client.AddSecretVersion(request.ParentAsSecretName, request.Payload);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -443,7 +444,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 ClientSpecifiedPayloadChecksum = false,
             };
             mockGrpcClient.Setup(x => x.AddSecretVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecretVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             SecretVersion responseCallSettings = await client.AddSecretVersionAsync(request.ParentAsSecretName, request.Payload, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecretVersion responseCancellationToken = await client.AddSecretVersionAsync(request.ParentAsSecretName, request.Payload, st::CancellationToken.None);
@@ -485,7 +486,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             Secret response = client.GetSecret(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -525,7 +526,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Secret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             Secret responseCallSettings = await client.GetSecretAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Secret responseCancellationToken = await client.GetSecretAsync(request, st::CancellationToken.None);
@@ -567,7 +568,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             Secret response = client.GetSecret(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -607,7 +608,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Secret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             Secret responseCallSettings = await client.GetSecretAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Secret responseCancellationToken = await client.GetSecretAsync(request.Name, st::CancellationToken.None);
@@ -649,7 +650,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             Secret response = client.GetSecret(request.SecretName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -689,7 +690,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Secret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             Secret responseCallSettings = await client.GetSecretAsync(request.SecretName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Secret responseCancellationToken = await client.GetSecretAsync(request.SecretName, st::CancellationToken.None);
@@ -732,7 +733,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             Secret response = client.UpdateSecret(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -773,7 +774,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Secret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             Secret responseCallSettings = await client.UpdateSecretAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Secret responseCancellationToken = await client.UpdateSecretAsync(request, st::CancellationToken.None);
@@ -816,7 +817,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             Secret response = client.UpdateSecret(request.Secret, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -857,7 +858,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Secret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             Secret responseCallSettings = await client.UpdateSecretAsync(request.Secret, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Secret responseCancellationToken = await client.UpdateSecretAsync(request.Secret, request.UpdateMask, st::CancellationToken.None);
@@ -876,7 +877,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteSecret(request);
             mockGrpcClient.VerifyAll();
         }
@@ -892,7 +893,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteSecretAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteSecretAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -908,7 +909,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteSecret(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -923,7 +924,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteSecretAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteSecretAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -939,7 +940,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteSecret(request.SecretName);
             mockGrpcClient.VerifyAll();
         }
@@ -954,7 +955,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteSecretAsync(request.SecretName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteSecretAsync(request.SecretName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -979,7 +980,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 ClientSpecifiedPayloadChecksum = false,
             };
             mockGrpcClient.Setup(x => x.GetSecretVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             SecretVersion response = client.GetSecretVersion(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1004,7 +1005,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 ClientSpecifiedPayloadChecksum = false,
             };
             mockGrpcClient.Setup(x => x.GetSecretVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecretVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             SecretVersion responseCallSettings = await client.GetSecretVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecretVersion responseCancellationToken = await client.GetSecretVersionAsync(request, st::CancellationToken.None);
@@ -1031,7 +1032,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 ClientSpecifiedPayloadChecksum = false,
             };
             mockGrpcClient.Setup(x => x.GetSecretVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             SecretVersion response = client.GetSecretVersion(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1056,7 +1057,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 ClientSpecifiedPayloadChecksum = false,
             };
             mockGrpcClient.Setup(x => x.GetSecretVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecretVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             SecretVersion responseCallSettings = await client.GetSecretVersionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecretVersion responseCancellationToken = await client.GetSecretVersionAsync(request.Name, st::CancellationToken.None);
@@ -1083,7 +1084,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 ClientSpecifiedPayloadChecksum = false,
             };
             mockGrpcClient.Setup(x => x.GetSecretVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             SecretVersion response = client.GetSecretVersion(request.SecretVersionName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1108,7 +1109,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 ClientSpecifiedPayloadChecksum = false,
             };
             mockGrpcClient.Setup(x => x.GetSecretVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecretVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             SecretVersion responseCallSettings = await client.GetSecretVersionAsync(request.SecretVersionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecretVersion responseCancellationToken = await client.GetSecretVersionAsync(request.SecretVersionName, st::CancellationToken.None);
@@ -1130,7 +1131,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 Payload = new SecretPayload(),
             };
             mockGrpcClient.Setup(x => x.AccessSecretVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             AccessSecretVersionResponse response = client.AccessSecretVersion(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1150,7 +1151,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 Payload = new SecretPayload(),
             };
             mockGrpcClient.Setup(x => x.AccessSecretVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AccessSecretVersionResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             AccessSecretVersionResponse responseCallSettings = await client.AccessSecretVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AccessSecretVersionResponse responseCancellationToken = await client.AccessSecretVersionAsync(request, st::CancellationToken.None);
@@ -1172,7 +1173,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 Payload = new SecretPayload(),
             };
             mockGrpcClient.Setup(x => x.AccessSecretVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             AccessSecretVersionResponse response = client.AccessSecretVersion(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1192,7 +1193,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 Payload = new SecretPayload(),
             };
             mockGrpcClient.Setup(x => x.AccessSecretVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AccessSecretVersionResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             AccessSecretVersionResponse responseCallSettings = await client.AccessSecretVersionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AccessSecretVersionResponse responseCancellationToken = await client.AccessSecretVersionAsync(request.Name, st::CancellationToken.None);
@@ -1214,7 +1215,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 Payload = new SecretPayload(),
             };
             mockGrpcClient.Setup(x => x.AccessSecretVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             AccessSecretVersionResponse response = client.AccessSecretVersion(request.SecretVersionName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1234,7 +1235,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 Payload = new SecretPayload(),
             };
             mockGrpcClient.Setup(x => x.AccessSecretVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AccessSecretVersionResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             AccessSecretVersionResponse responseCallSettings = await client.AccessSecretVersionAsync(request.SecretVersionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AccessSecretVersionResponse responseCancellationToken = await client.AccessSecretVersionAsync(request.SecretVersionName, st::CancellationToken.None);
@@ -1262,7 +1263,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 ClientSpecifiedPayloadChecksum = false,
             };
             mockGrpcClient.Setup(x => x.DisableSecretVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             SecretVersion response = client.DisableSecretVersion(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1288,7 +1289,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 ClientSpecifiedPayloadChecksum = false,
             };
             mockGrpcClient.Setup(x => x.DisableSecretVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecretVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             SecretVersion responseCallSettings = await client.DisableSecretVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecretVersion responseCancellationToken = await client.DisableSecretVersionAsync(request, st::CancellationToken.None);
@@ -1315,7 +1316,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 ClientSpecifiedPayloadChecksum = false,
             };
             mockGrpcClient.Setup(x => x.DisableSecretVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             SecretVersion response = client.DisableSecretVersion(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1340,7 +1341,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 ClientSpecifiedPayloadChecksum = false,
             };
             mockGrpcClient.Setup(x => x.DisableSecretVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecretVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             SecretVersion responseCallSettings = await client.DisableSecretVersionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecretVersion responseCancellationToken = await client.DisableSecretVersionAsync(request.Name, st::CancellationToken.None);
@@ -1367,7 +1368,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 ClientSpecifiedPayloadChecksum = false,
             };
             mockGrpcClient.Setup(x => x.DisableSecretVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             SecretVersion response = client.DisableSecretVersion(request.SecretVersionName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1392,7 +1393,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 ClientSpecifiedPayloadChecksum = false,
             };
             mockGrpcClient.Setup(x => x.DisableSecretVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecretVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             SecretVersion responseCallSettings = await client.DisableSecretVersionAsync(request.SecretVersionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecretVersion responseCancellationToken = await client.DisableSecretVersionAsync(request.SecretVersionName, st::CancellationToken.None);
@@ -1420,7 +1421,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 ClientSpecifiedPayloadChecksum = false,
             };
             mockGrpcClient.Setup(x => x.EnableSecretVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             SecretVersion response = client.EnableSecretVersion(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1446,7 +1447,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 ClientSpecifiedPayloadChecksum = false,
             };
             mockGrpcClient.Setup(x => x.EnableSecretVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecretVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             SecretVersion responseCallSettings = await client.EnableSecretVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecretVersion responseCancellationToken = await client.EnableSecretVersionAsync(request, st::CancellationToken.None);
@@ -1473,7 +1474,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 ClientSpecifiedPayloadChecksum = false,
             };
             mockGrpcClient.Setup(x => x.EnableSecretVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             SecretVersion response = client.EnableSecretVersion(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1498,7 +1499,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 ClientSpecifiedPayloadChecksum = false,
             };
             mockGrpcClient.Setup(x => x.EnableSecretVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecretVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             SecretVersion responseCallSettings = await client.EnableSecretVersionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecretVersion responseCancellationToken = await client.EnableSecretVersionAsync(request.Name, st::CancellationToken.None);
@@ -1525,7 +1526,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 ClientSpecifiedPayloadChecksum = false,
             };
             mockGrpcClient.Setup(x => x.EnableSecretVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             SecretVersion response = client.EnableSecretVersion(request.SecretVersionName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1550,7 +1551,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 ClientSpecifiedPayloadChecksum = false,
             };
             mockGrpcClient.Setup(x => x.EnableSecretVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecretVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             SecretVersion responseCallSettings = await client.EnableSecretVersionAsync(request.SecretVersionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecretVersion responseCancellationToken = await client.EnableSecretVersionAsync(request.SecretVersionName, st::CancellationToken.None);
@@ -1578,7 +1579,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 ClientSpecifiedPayloadChecksum = false,
             };
             mockGrpcClient.Setup(x => x.DestroySecretVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             SecretVersion response = client.DestroySecretVersion(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1604,7 +1605,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 ClientSpecifiedPayloadChecksum = false,
             };
             mockGrpcClient.Setup(x => x.DestroySecretVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecretVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             SecretVersion responseCallSettings = await client.DestroySecretVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecretVersion responseCancellationToken = await client.DestroySecretVersionAsync(request, st::CancellationToken.None);
@@ -1631,7 +1632,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 ClientSpecifiedPayloadChecksum = false,
             };
             mockGrpcClient.Setup(x => x.DestroySecretVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             SecretVersion response = client.DestroySecretVersion(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1656,7 +1657,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 ClientSpecifiedPayloadChecksum = false,
             };
             mockGrpcClient.Setup(x => x.DestroySecretVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecretVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             SecretVersion responseCallSettings = await client.DestroySecretVersionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecretVersion responseCancellationToken = await client.DestroySecretVersionAsync(request.Name, st::CancellationToken.None);
@@ -1683,7 +1684,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 ClientSpecifiedPayloadChecksum = false,
             };
             mockGrpcClient.Setup(x => x.DestroySecretVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             SecretVersion response = client.DestroySecretVersion(request.SecretVersionName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1708,7 +1709,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 ClientSpecifiedPayloadChecksum = false,
             };
             mockGrpcClient.Setup(x => x.DestroySecretVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecretVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             SecretVersion responseCallSettings = await client.DestroySecretVersionAsync(request.SecretVersionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecretVersion responseCancellationToken = await client.DestroySecretVersionAsync(request.SecretVersionName, st::CancellationToken.None);
@@ -1740,7 +1741,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.SetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1770,7 +1771,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request, st::CancellationToken.None);
@@ -1801,7 +1802,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.GetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1830,7 +1831,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request, st::CancellationToken.None);
@@ -1858,7 +1859,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1884,7 +1885,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
+            SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request, st::CancellationToken.None);

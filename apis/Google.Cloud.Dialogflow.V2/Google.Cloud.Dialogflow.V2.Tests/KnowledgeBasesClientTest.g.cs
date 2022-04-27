@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -43,7 +44,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
             };
             mockGrpcClient.Setup(x => x.GetKnowledgeBase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null);
+            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null, null);
             KnowledgeBase response = client.GetKnowledgeBase(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -64,7 +65,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
             };
             mockGrpcClient.Setup(x => x.GetKnowledgeBaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<KnowledgeBase>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null);
+            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null, null);
             KnowledgeBase responseCallSettings = await client.GetKnowledgeBaseAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             KnowledgeBase responseCancellationToken = await client.GetKnowledgeBaseAsync(request, st::CancellationToken.None);
@@ -87,7 +88,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
             };
             mockGrpcClient.Setup(x => x.GetKnowledgeBase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null);
+            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null, null);
             KnowledgeBase response = client.GetKnowledgeBase(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -108,7 +109,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
             };
             mockGrpcClient.Setup(x => x.GetKnowledgeBaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<KnowledgeBase>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null);
+            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null, null);
             KnowledgeBase responseCallSettings = await client.GetKnowledgeBaseAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             KnowledgeBase responseCancellationToken = await client.GetKnowledgeBaseAsync(request.Name, st::CancellationToken.None);
@@ -131,7 +132,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
             };
             mockGrpcClient.Setup(x => x.GetKnowledgeBase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null);
+            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null, null);
             KnowledgeBase response = client.GetKnowledgeBase(request.KnowledgeBaseName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -152,7 +153,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
             };
             mockGrpcClient.Setup(x => x.GetKnowledgeBaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<KnowledgeBase>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null);
+            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null, null);
             KnowledgeBase responseCallSettings = await client.GetKnowledgeBaseAsync(request.KnowledgeBaseName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             KnowledgeBase responseCancellationToken = await client.GetKnowledgeBaseAsync(request.KnowledgeBaseName, st::CancellationToken.None);
@@ -176,7 +177,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
             };
             mockGrpcClient.Setup(x => x.CreateKnowledgeBase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null);
+            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null, null);
             KnowledgeBase response = client.CreateKnowledgeBase(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -198,7 +199,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
             };
             mockGrpcClient.Setup(x => x.CreateKnowledgeBaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<KnowledgeBase>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null);
+            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null, null);
             KnowledgeBase responseCallSettings = await client.CreateKnowledgeBaseAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             KnowledgeBase responseCancellationToken = await client.CreateKnowledgeBaseAsync(request, st::CancellationToken.None);
@@ -222,7 +223,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
             };
             mockGrpcClient.Setup(x => x.CreateKnowledgeBase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null);
+            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null, null);
             KnowledgeBase response = client.CreateKnowledgeBase(request.Parent, request.KnowledgeBase);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -244,7 +245,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
             };
             mockGrpcClient.Setup(x => x.CreateKnowledgeBaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<KnowledgeBase>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null);
+            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null, null);
             KnowledgeBase responseCallSettings = await client.CreateKnowledgeBaseAsync(request.Parent, request.KnowledgeBase, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             KnowledgeBase responseCancellationToken = await client.CreateKnowledgeBaseAsync(request.Parent, request.KnowledgeBase, st::CancellationToken.None);
@@ -268,7 +269,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
             };
             mockGrpcClient.Setup(x => x.CreateKnowledgeBase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null);
+            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null, null);
             KnowledgeBase response = client.CreateKnowledgeBase(request.ParentAsProjectName, request.KnowledgeBase);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -290,7 +291,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
             };
             mockGrpcClient.Setup(x => x.CreateKnowledgeBaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<KnowledgeBase>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null);
+            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null, null);
             KnowledgeBase responseCallSettings = await client.CreateKnowledgeBaseAsync(request.ParentAsProjectName, request.KnowledgeBase, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             KnowledgeBase responseCancellationToken = await client.CreateKnowledgeBaseAsync(request.ParentAsProjectName, request.KnowledgeBase, st::CancellationToken.None);
@@ -314,7 +315,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
             };
             mockGrpcClient.Setup(x => x.CreateKnowledgeBase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null);
+            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null, null);
             KnowledgeBase response = client.CreateKnowledgeBase(request.ParentAsLocationName, request.KnowledgeBase);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -336,7 +337,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
             };
             mockGrpcClient.Setup(x => x.CreateKnowledgeBaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<KnowledgeBase>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null);
+            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null, null);
             KnowledgeBase responseCallSettings = await client.CreateKnowledgeBaseAsync(request.ParentAsLocationName, request.KnowledgeBase, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             KnowledgeBase responseCancellationToken = await client.CreateKnowledgeBaseAsync(request.ParentAsLocationName, request.KnowledgeBase, st::CancellationToken.None);
@@ -355,7 +356,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteKnowledgeBase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null);
+            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteKnowledgeBase(request);
             mockGrpcClient.VerifyAll();
         }
@@ -371,7 +372,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteKnowledgeBaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null);
+            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteKnowledgeBaseAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteKnowledgeBaseAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -387,7 +388,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteKnowledgeBase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null);
+            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteKnowledgeBase(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -402,7 +403,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteKnowledgeBaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null);
+            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteKnowledgeBaseAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteKnowledgeBaseAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -418,7 +419,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteKnowledgeBase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null);
+            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteKnowledgeBase(request.KnowledgeBaseName);
             mockGrpcClient.VerifyAll();
         }
@@ -433,7 +434,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteKnowledgeBaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null);
+            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteKnowledgeBaseAsync(request.KnowledgeBaseName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteKnowledgeBaseAsync(request.KnowledgeBaseName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -455,7 +456,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
             };
             mockGrpcClient.Setup(x => x.UpdateKnowledgeBase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null);
+            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null, null);
             KnowledgeBase response = client.UpdateKnowledgeBase(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -477,7 +478,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
             };
             mockGrpcClient.Setup(x => x.UpdateKnowledgeBaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<KnowledgeBase>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null);
+            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null, null);
             KnowledgeBase responseCallSettings = await client.UpdateKnowledgeBaseAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             KnowledgeBase responseCancellationToken = await client.UpdateKnowledgeBaseAsync(request, st::CancellationToken.None);
@@ -501,7 +502,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
             };
             mockGrpcClient.Setup(x => x.UpdateKnowledgeBase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null);
+            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null, null);
             KnowledgeBase response = client.UpdateKnowledgeBase(request.KnowledgeBase, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -523,7 +524,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
             };
             mockGrpcClient.Setup(x => x.UpdateKnowledgeBaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<KnowledgeBase>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null);
+            KnowledgeBasesClient client = new KnowledgeBasesClientImpl(mockGrpcClient.Object, null, null);
             KnowledgeBase responseCallSettings = await client.UpdateKnowledgeBaseAsync(request.KnowledgeBase, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             KnowledgeBase responseCancellationToken = await client.UpdateKnowledgeBaseAsync(request.KnowledgeBase, request.UpdateMask, st::CancellationToken.None);

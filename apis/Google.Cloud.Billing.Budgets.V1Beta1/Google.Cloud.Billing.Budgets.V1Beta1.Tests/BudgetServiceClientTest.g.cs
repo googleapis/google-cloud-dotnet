@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -51,7 +52,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.CreateBudget(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BudgetServiceClient client = new BudgetServiceClientImpl(mockGrpcClient.Object, null);
+            BudgetServiceClient client = new BudgetServiceClientImpl(mockGrpcClient.Object, null, null);
             Budget response = client.CreateBudget(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -80,7 +81,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.CreateBudgetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Budget>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BudgetServiceClient client = new BudgetServiceClientImpl(mockGrpcClient.Object, null);
+            BudgetServiceClient client = new BudgetServiceClientImpl(mockGrpcClient.Object, null, null);
             Budget responseCallSettings = await client.CreateBudgetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Budget responseCancellationToken = await client.CreateBudgetAsync(request, st::CancellationToken.None);
@@ -111,7 +112,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.UpdateBudget(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BudgetServiceClient client = new BudgetServiceClientImpl(mockGrpcClient.Object, null);
+            BudgetServiceClient client = new BudgetServiceClientImpl(mockGrpcClient.Object, null, null);
             Budget response = client.UpdateBudget(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -140,7 +141,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.UpdateBudgetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Budget>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BudgetServiceClient client = new BudgetServiceClientImpl(mockGrpcClient.Object, null);
+            BudgetServiceClient client = new BudgetServiceClientImpl(mockGrpcClient.Object, null, null);
             Budget responseCallSettings = await client.UpdateBudgetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Budget responseCancellationToken = await client.UpdateBudgetAsync(request, st::CancellationToken.None);
@@ -170,7 +171,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetBudget(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BudgetServiceClient client = new BudgetServiceClientImpl(mockGrpcClient.Object, null);
+            BudgetServiceClient client = new BudgetServiceClientImpl(mockGrpcClient.Object, null, null);
             Budget response = client.GetBudget(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -198,7 +199,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetBudgetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Budget>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BudgetServiceClient client = new BudgetServiceClientImpl(mockGrpcClient.Object, null);
+            BudgetServiceClient client = new BudgetServiceClientImpl(mockGrpcClient.Object, null, null);
             Budget responseCallSettings = await client.GetBudgetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Budget responseCancellationToken = await client.GetBudgetAsync(request, st::CancellationToken.None);
@@ -216,7 +217,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteBudget(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BudgetServiceClient client = new BudgetServiceClientImpl(mockGrpcClient.Object, null);
+            BudgetServiceClient client = new BudgetServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteBudget(request);
             mockGrpcClient.VerifyAll();
         }
@@ -231,7 +232,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteBudgetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BudgetServiceClient client = new BudgetServiceClientImpl(mockGrpcClient.Object, null);
+            BudgetServiceClient client = new BudgetServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteBudgetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteBudgetAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();

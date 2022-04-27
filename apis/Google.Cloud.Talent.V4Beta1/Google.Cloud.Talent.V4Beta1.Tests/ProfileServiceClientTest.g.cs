@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -98,7 +99,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
+            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null, null);
             Profile response = client.CreateProfile(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -175,7 +176,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Profile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
+            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null, null);
             Profile responseCallSettings = await client.CreateProfileAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Profile responseCancellationToken = await client.CreateProfileAsync(request, st::CancellationToken.None);
@@ -254,7 +255,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
+            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null, null);
             Profile response = client.CreateProfile(request.Parent, request.Profile);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -331,7 +332,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Profile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
+            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null, null);
             Profile responseCallSettings = await client.CreateProfileAsync(request.Parent, request.Profile, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Profile responseCancellationToken = await client.CreateProfileAsync(request.Parent, request.Profile, st::CancellationToken.None);
@@ -410,7 +411,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
+            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null, null);
             Profile response = client.CreateProfile(request.ParentAsTenantName, request.Profile);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -487,7 +488,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Profile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
+            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null, null);
             Profile responseCallSettings = await client.CreateProfileAsync(request.ParentAsTenantName, request.Profile, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Profile responseCancellationToken = await client.CreateProfileAsync(request.ParentAsTenantName, request.Profile, st::CancellationToken.None);
@@ -565,7 +566,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
+            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null, null);
             Profile response = client.GetProfile(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -641,7 +642,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Profile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
+            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null, null);
             Profile responseCallSettings = await client.GetProfileAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Profile responseCancellationToken = await client.GetProfileAsync(request, st::CancellationToken.None);
@@ -719,7 +720,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
+            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null, null);
             Profile response = client.GetProfile(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -795,7 +796,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Profile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
+            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null, null);
             Profile responseCallSettings = await client.GetProfileAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Profile responseCancellationToken = await client.GetProfileAsync(request.Name, st::CancellationToken.None);
@@ -873,7 +874,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
+            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null, null);
             Profile response = client.GetProfile(request.ProfileName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -949,7 +950,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Profile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
+            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null, null);
             Profile responseCallSettings = await client.GetProfileAsync(request.ProfileName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Profile responseCancellationToken = await client.GetProfileAsync(request.ProfileName, st::CancellationToken.None);
@@ -1028,7 +1029,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
+            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null, null);
             Profile response = client.UpdateProfile(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1105,7 +1106,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Profile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
+            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null, null);
             Profile responseCallSettings = await client.UpdateProfileAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Profile responseCancellationToken = await client.UpdateProfileAsync(request, st::CancellationToken.None);
@@ -1183,7 +1184,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
+            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null, null);
             Profile response = client.UpdateProfile(request.Profile);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1259,7 +1260,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Profile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
+            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null, null);
             Profile responseCallSettings = await client.UpdateProfileAsync(request.Profile, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Profile responseCancellationToken = await client.UpdateProfileAsync(request.Profile, st::CancellationToken.None);
@@ -1277,7 +1278,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
+            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteProfile(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1292,7 +1293,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
+            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteProfileAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteProfileAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1308,7 +1309,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
+            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteProfile(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -1323,7 +1324,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
+            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteProfileAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteProfileAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1339,7 +1340,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
+            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteProfile(request.ProfileName);
             mockGrpcClient.VerifyAll();
         }
@@ -1354,7 +1355,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
+            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteProfileAsync(request.ProfileName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteProfileAsync(request.ProfileName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1399,7 +1400,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 ResultSetId = "result_set_id6cf58a14",
             };
             mockGrpcClient.Setup(x => x.SearchProfiles(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
+            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null, null);
             SearchProfilesResponse response = client.SearchProfiles(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1444,7 +1445,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 ResultSetId = "result_set_id6cf58a14",
             };
             mockGrpcClient.Setup(x => x.SearchProfilesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SearchProfilesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
+            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null, null);
             SearchProfilesResponse responseCallSettings = await client.SearchProfilesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SearchProfilesResponse responseCancellationToken = await client.SearchProfilesAsync(request, st::CancellationToken.None);

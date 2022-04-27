@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gcoc = Google.Cloud.OsLogin.Common;
 
 namespace Google.Cloud.OsLogin.V1

@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -72,7 +73,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 PredictRequestResponseLoggingConfig = new PredictRequestResponseLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.GetEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EndpointServiceClient client = new EndpointServiceClientImpl(mockGrpcClient.Object, null);
+            EndpointServiceClient client = new EndpointServiceClientImpl(mockGrpcClient.Object, null, null);
             Endpoint response = client.GetEndpoint(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -122,7 +123,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 PredictRequestResponseLoggingConfig = new PredictRequestResponseLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.GetEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Endpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EndpointServiceClient client = new EndpointServiceClientImpl(mockGrpcClient.Object, null);
+            EndpointServiceClient client = new EndpointServiceClientImpl(mockGrpcClient.Object, null, null);
             Endpoint responseCallSettings = await client.GetEndpointAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Endpoint responseCancellationToken = await client.GetEndpointAsync(request, st::CancellationToken.None);
@@ -174,7 +175,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 PredictRequestResponseLoggingConfig = new PredictRequestResponseLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.GetEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EndpointServiceClient client = new EndpointServiceClientImpl(mockGrpcClient.Object, null);
+            EndpointServiceClient client = new EndpointServiceClientImpl(mockGrpcClient.Object, null, null);
             Endpoint response = client.GetEndpoint(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -224,7 +225,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 PredictRequestResponseLoggingConfig = new PredictRequestResponseLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.GetEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Endpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EndpointServiceClient client = new EndpointServiceClientImpl(mockGrpcClient.Object, null);
+            EndpointServiceClient client = new EndpointServiceClientImpl(mockGrpcClient.Object, null, null);
             Endpoint responseCallSettings = await client.GetEndpointAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Endpoint responseCancellationToken = await client.GetEndpointAsync(request.Name, st::CancellationToken.None);
@@ -276,7 +277,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 PredictRequestResponseLoggingConfig = new PredictRequestResponseLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.GetEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EndpointServiceClient client = new EndpointServiceClientImpl(mockGrpcClient.Object, null);
+            EndpointServiceClient client = new EndpointServiceClientImpl(mockGrpcClient.Object, null, null);
             Endpoint response = client.GetEndpoint(request.EndpointName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -326,7 +327,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 PredictRequestResponseLoggingConfig = new PredictRequestResponseLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.GetEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Endpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EndpointServiceClient client = new EndpointServiceClientImpl(mockGrpcClient.Object, null);
+            EndpointServiceClient client = new EndpointServiceClientImpl(mockGrpcClient.Object, null, null);
             Endpoint responseCallSettings = await client.GetEndpointAsync(request.EndpointName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Endpoint responseCancellationToken = await client.GetEndpointAsync(request.EndpointName, st::CancellationToken.None);
@@ -379,7 +380,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 PredictRequestResponseLoggingConfig = new PredictRequestResponseLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EndpointServiceClient client = new EndpointServiceClientImpl(mockGrpcClient.Object, null);
+            EndpointServiceClient client = new EndpointServiceClientImpl(mockGrpcClient.Object, null, null);
             Endpoint response = client.UpdateEndpoint(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -430,7 +431,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 PredictRequestResponseLoggingConfig = new PredictRequestResponseLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Endpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EndpointServiceClient client = new EndpointServiceClientImpl(mockGrpcClient.Object, null);
+            EndpointServiceClient client = new EndpointServiceClientImpl(mockGrpcClient.Object, null, null);
             Endpoint responseCallSettings = await client.UpdateEndpointAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Endpoint responseCancellationToken = await client.UpdateEndpointAsync(request, st::CancellationToken.None);
@@ -483,7 +484,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 PredictRequestResponseLoggingConfig = new PredictRequestResponseLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EndpointServiceClient client = new EndpointServiceClientImpl(mockGrpcClient.Object, null);
+            EndpointServiceClient client = new EndpointServiceClientImpl(mockGrpcClient.Object, null, null);
             Endpoint response = client.UpdateEndpoint(request.Endpoint, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -534,7 +535,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 PredictRequestResponseLoggingConfig = new PredictRequestResponseLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Endpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EndpointServiceClient client = new EndpointServiceClientImpl(mockGrpcClient.Object, null);
+            EndpointServiceClient client = new EndpointServiceClientImpl(mockGrpcClient.Object, null, null);
             Endpoint responseCallSettings = await client.UpdateEndpointAsync(request.Endpoint, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Endpoint responseCancellationToken = await client.UpdateEndpointAsync(request.Endpoint, request.UpdateMask, st::CancellationToken.None);

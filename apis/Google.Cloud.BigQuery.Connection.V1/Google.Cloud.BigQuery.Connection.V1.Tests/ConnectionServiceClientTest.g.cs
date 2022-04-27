@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
@@ -55,7 +56,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 CloudResource = new CloudResourceProperties(),
             };
             mockGrpcClient.Setup(x => x.CreateConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             Connection response = client.CreateConnection(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -85,7 +86,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 CloudResource = new CloudResourceProperties(),
             };
             mockGrpcClient.Setup(x => x.CreateConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Connection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             Connection responseCallSettings = await client.CreateConnectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Connection responseCancellationToken = await client.CreateConnectionAsync(request, st::CancellationToken.None);
@@ -117,7 +118,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 CloudResource = new CloudResourceProperties(),
             };
             mockGrpcClient.Setup(x => x.CreateConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             Connection response = client.CreateConnection(request.Parent, request.Connection, request.ConnectionId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -147,7 +148,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 CloudResource = new CloudResourceProperties(),
             };
             mockGrpcClient.Setup(x => x.CreateConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Connection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             Connection responseCallSettings = await client.CreateConnectionAsync(request.Parent, request.Connection, request.ConnectionId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Connection responseCancellationToken = await client.CreateConnectionAsync(request.Parent, request.Connection, request.ConnectionId, st::CancellationToken.None);
@@ -179,7 +180,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 CloudResource = new CloudResourceProperties(),
             };
             mockGrpcClient.Setup(x => x.CreateConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             Connection response = client.CreateConnection(request.ParentAsLocationName, request.Connection, request.ConnectionId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -209,7 +210,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 CloudResource = new CloudResourceProperties(),
             };
             mockGrpcClient.Setup(x => x.CreateConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Connection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             Connection responseCallSettings = await client.CreateConnectionAsync(request.ParentAsLocationName, request.Connection, request.ConnectionId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Connection responseCancellationToken = await client.CreateConnectionAsync(request.ParentAsLocationName, request.Connection, request.ConnectionId, st::CancellationToken.None);
@@ -239,7 +240,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 CloudResource = new CloudResourceProperties(),
             };
             mockGrpcClient.Setup(x => x.GetConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             Connection response = client.GetConnection(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -267,7 +268,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 CloudResource = new CloudResourceProperties(),
             };
             mockGrpcClient.Setup(x => x.GetConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Connection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             Connection responseCallSettings = await client.GetConnectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Connection responseCancellationToken = await client.GetConnectionAsync(request, st::CancellationToken.None);
@@ -297,7 +298,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 CloudResource = new CloudResourceProperties(),
             };
             mockGrpcClient.Setup(x => x.GetConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             Connection response = client.GetConnection(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -325,7 +326,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 CloudResource = new CloudResourceProperties(),
             };
             mockGrpcClient.Setup(x => x.GetConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Connection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             Connection responseCallSettings = await client.GetConnectionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Connection responseCancellationToken = await client.GetConnectionAsync(request.Name, st::CancellationToken.None);
@@ -355,7 +356,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 CloudResource = new CloudResourceProperties(),
             };
             mockGrpcClient.Setup(x => x.GetConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             Connection response = client.GetConnection(request.ConnectionName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -383,7 +384,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 CloudResource = new CloudResourceProperties(),
             };
             mockGrpcClient.Setup(x => x.GetConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Connection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             Connection responseCallSettings = await client.GetConnectionAsync(request.ConnectionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Connection responseCancellationToken = await client.GetConnectionAsync(request.ConnectionName, st::CancellationToken.None);
@@ -415,7 +416,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 CloudResource = new CloudResourceProperties(),
             };
             mockGrpcClient.Setup(x => x.UpdateConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             Connection response = client.UpdateConnection(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -445,7 +446,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 CloudResource = new CloudResourceProperties(),
             };
             mockGrpcClient.Setup(x => x.UpdateConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Connection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             Connection responseCallSettings = await client.UpdateConnectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Connection responseCancellationToken = await client.UpdateConnectionAsync(request, st::CancellationToken.None);
@@ -477,7 +478,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 CloudResource = new CloudResourceProperties(),
             };
             mockGrpcClient.Setup(x => x.UpdateConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             Connection response = client.UpdateConnection(request.Name, request.Connection, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -507,7 +508,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 CloudResource = new CloudResourceProperties(),
             };
             mockGrpcClient.Setup(x => x.UpdateConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Connection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             Connection responseCallSettings = await client.UpdateConnectionAsync(request.Name, request.Connection, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Connection responseCancellationToken = await client.UpdateConnectionAsync(request.Name, request.Connection, request.UpdateMask, st::CancellationToken.None);
@@ -539,7 +540,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 CloudResource = new CloudResourceProperties(),
             };
             mockGrpcClient.Setup(x => x.UpdateConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             Connection response = client.UpdateConnection(request.ConnectionName, request.Connection, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -569,7 +570,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 CloudResource = new CloudResourceProperties(),
             };
             mockGrpcClient.Setup(x => x.UpdateConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Connection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             Connection responseCallSettings = await client.UpdateConnectionAsync(request.ConnectionName, request.Connection, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Connection responseCancellationToken = await client.UpdateConnectionAsync(request.ConnectionName, request.Connection, request.UpdateMask, st::CancellationToken.None);
@@ -587,7 +588,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteConnection(request);
             mockGrpcClient.VerifyAll();
         }
@@ -602,7 +603,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteConnectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteConnectionAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -618,7 +619,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteConnection(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -633,7 +634,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteConnectionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteConnectionAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -649,7 +650,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteConnection(request.ConnectionName);
             mockGrpcClient.VerifyAll();
         }
@@ -664,7 +665,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteConnectionAsync(request.ConnectionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteConnectionAsync(request.ConnectionName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -693,7 +694,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.GetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -722,7 +723,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request, st::CancellationToken.None);
@@ -753,7 +754,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.GetIamPolicy(request.Resource, request.Options);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -782,7 +783,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request.Resource, request.Options, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request.Resource, request.Options, st::CancellationToken.None);
@@ -813,7 +814,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.GetIamPolicy(request.ResourceAsResourceName, request.Options);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -842,7 +843,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request.ResourceAsResourceName, request.Options, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request.ResourceAsResourceName, request.Options, st::CancellationToken.None);
@@ -874,7 +875,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.SetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -904,7 +905,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request, st::CancellationToken.None);
@@ -935,7 +936,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.SetIamPolicy(request.Resource, request.Policy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -964,7 +965,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request.Resource, request.Policy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request.Resource, request.Policy, st::CancellationToken.None);
@@ -995,7 +996,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.SetIamPolicy(request.ResourceAsResourceName, request.Policy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1024,7 +1025,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request.ResourceAsResourceName, request.Policy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request.ResourceAsResourceName, request.Policy, st::CancellationToken.None);
@@ -1052,7 +1053,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1078,7 +1079,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request, st::CancellationToken.None);
@@ -1106,7 +1107,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request.Resource, request.Permissions);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1132,7 +1133,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request.Resource, request.Permissions, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request.Resource, request.Permissions, st::CancellationToken.None);
@@ -1160,7 +1161,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request.ResourceAsResourceName, request.Permissions);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1186,7 +1187,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
+            ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request.ResourceAsResourceName, request.Permissions, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request.ResourceAsResourceName, request.Permissions, st::CancellationToken.None);

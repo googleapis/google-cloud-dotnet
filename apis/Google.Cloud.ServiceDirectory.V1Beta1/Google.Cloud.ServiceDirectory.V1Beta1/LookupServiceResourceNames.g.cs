@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gcsv = Google.Cloud.ServiceDirectory.V1Beta1;
 
 namespace Google.Cloud.ServiceDirectory.V1Beta1

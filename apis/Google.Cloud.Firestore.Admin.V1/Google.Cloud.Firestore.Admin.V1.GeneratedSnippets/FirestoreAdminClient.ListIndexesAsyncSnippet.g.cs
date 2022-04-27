@@ -14,6 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace Google.Cloud.Firestore.Admin.V1.Snippets
 {
     // [START firestore_v1_generated_FirestoreAdmin_ListIndexes_async_flattened]

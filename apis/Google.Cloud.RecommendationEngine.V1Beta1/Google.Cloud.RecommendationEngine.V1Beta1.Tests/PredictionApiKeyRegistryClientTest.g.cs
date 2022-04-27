@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -41,7 +42,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 ApiKey = "api_key30288039",
             };
             mockGrpcClient.Setup(x => x.CreatePredictionApiKeyRegistration(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PredictionApiKeyRegistryClient client = new PredictionApiKeyRegistryClientImpl(mockGrpcClient.Object, null);
+            PredictionApiKeyRegistryClient client = new PredictionApiKeyRegistryClientImpl(mockGrpcClient.Object, null, null);
             PredictionApiKeyRegistration response = client.CreatePredictionApiKeyRegistration(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -61,7 +62,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 ApiKey = "api_key30288039",
             };
             mockGrpcClient.Setup(x => x.CreatePredictionApiKeyRegistrationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PredictionApiKeyRegistration>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PredictionApiKeyRegistryClient client = new PredictionApiKeyRegistryClientImpl(mockGrpcClient.Object, null);
+            PredictionApiKeyRegistryClient client = new PredictionApiKeyRegistryClientImpl(mockGrpcClient.Object, null, null);
             PredictionApiKeyRegistration responseCallSettings = await client.CreatePredictionApiKeyRegistrationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PredictionApiKeyRegistration responseCancellationToken = await client.CreatePredictionApiKeyRegistrationAsync(request, st::CancellationToken.None);
@@ -83,7 +84,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 ApiKey = "api_key30288039",
             };
             mockGrpcClient.Setup(x => x.CreatePredictionApiKeyRegistration(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PredictionApiKeyRegistryClient client = new PredictionApiKeyRegistryClientImpl(mockGrpcClient.Object, null);
+            PredictionApiKeyRegistryClient client = new PredictionApiKeyRegistryClientImpl(mockGrpcClient.Object, null, null);
             PredictionApiKeyRegistration response = client.CreatePredictionApiKeyRegistration(request.Parent, request.PredictionApiKeyRegistration);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -103,7 +104,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 ApiKey = "api_key30288039",
             };
             mockGrpcClient.Setup(x => x.CreatePredictionApiKeyRegistrationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PredictionApiKeyRegistration>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PredictionApiKeyRegistryClient client = new PredictionApiKeyRegistryClientImpl(mockGrpcClient.Object, null);
+            PredictionApiKeyRegistryClient client = new PredictionApiKeyRegistryClientImpl(mockGrpcClient.Object, null, null);
             PredictionApiKeyRegistration responseCallSettings = await client.CreatePredictionApiKeyRegistrationAsync(request.Parent, request.PredictionApiKeyRegistration, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PredictionApiKeyRegistration responseCancellationToken = await client.CreatePredictionApiKeyRegistrationAsync(request.Parent, request.PredictionApiKeyRegistration, st::CancellationToken.None);
@@ -125,7 +126,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 ApiKey = "api_key30288039",
             };
             mockGrpcClient.Setup(x => x.CreatePredictionApiKeyRegistration(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PredictionApiKeyRegistryClient client = new PredictionApiKeyRegistryClientImpl(mockGrpcClient.Object, null);
+            PredictionApiKeyRegistryClient client = new PredictionApiKeyRegistryClientImpl(mockGrpcClient.Object, null, null);
             PredictionApiKeyRegistration response = client.CreatePredictionApiKeyRegistration(request.ParentAsEventStoreName, request.PredictionApiKeyRegistration);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -145,7 +146,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 ApiKey = "api_key30288039",
             };
             mockGrpcClient.Setup(x => x.CreatePredictionApiKeyRegistrationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PredictionApiKeyRegistration>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PredictionApiKeyRegistryClient client = new PredictionApiKeyRegistryClientImpl(mockGrpcClient.Object, null);
+            PredictionApiKeyRegistryClient client = new PredictionApiKeyRegistryClientImpl(mockGrpcClient.Object, null, null);
             PredictionApiKeyRegistration responseCallSettings = await client.CreatePredictionApiKeyRegistrationAsync(request.ParentAsEventStoreName, request.PredictionApiKeyRegistration, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PredictionApiKeyRegistration responseCancellationToken = await client.CreatePredictionApiKeyRegistrationAsync(request.ParentAsEventStoreName, request.PredictionApiKeyRegistration, st::CancellationToken.None);
@@ -163,7 +164,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePredictionApiKeyRegistration(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PredictionApiKeyRegistryClient client = new PredictionApiKeyRegistryClientImpl(mockGrpcClient.Object, null);
+            PredictionApiKeyRegistryClient client = new PredictionApiKeyRegistryClientImpl(mockGrpcClient.Object, null, null);
             client.DeletePredictionApiKeyRegistration(request);
             mockGrpcClient.VerifyAll();
         }
@@ -178,7 +179,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePredictionApiKeyRegistrationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PredictionApiKeyRegistryClient client = new PredictionApiKeyRegistryClientImpl(mockGrpcClient.Object, null);
+            PredictionApiKeyRegistryClient client = new PredictionApiKeyRegistryClientImpl(mockGrpcClient.Object, null, null);
             await client.DeletePredictionApiKeyRegistrationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeletePredictionApiKeyRegistrationAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -194,7 +195,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePredictionApiKeyRegistration(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PredictionApiKeyRegistryClient client = new PredictionApiKeyRegistryClientImpl(mockGrpcClient.Object, null);
+            PredictionApiKeyRegistryClient client = new PredictionApiKeyRegistryClientImpl(mockGrpcClient.Object, null, null);
             client.DeletePredictionApiKeyRegistration(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -209,7 +210,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePredictionApiKeyRegistrationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PredictionApiKeyRegistryClient client = new PredictionApiKeyRegistryClientImpl(mockGrpcClient.Object, null);
+            PredictionApiKeyRegistryClient client = new PredictionApiKeyRegistryClientImpl(mockGrpcClient.Object, null, null);
             await client.DeletePredictionApiKeyRegistrationAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeletePredictionApiKeyRegistrationAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -225,7 +226,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePredictionApiKeyRegistration(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PredictionApiKeyRegistryClient client = new PredictionApiKeyRegistryClientImpl(mockGrpcClient.Object, null);
+            PredictionApiKeyRegistryClient client = new PredictionApiKeyRegistryClientImpl(mockGrpcClient.Object, null, null);
             client.DeletePredictionApiKeyRegistration(request.PredictionApiKeyRegistrationName);
             mockGrpcClient.VerifyAll();
         }
@@ -240,7 +241,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePredictionApiKeyRegistrationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PredictionApiKeyRegistryClient client = new PredictionApiKeyRegistryClientImpl(mockGrpcClient.Object, null);
+            PredictionApiKeyRegistryClient client = new PredictionApiKeyRegistryClientImpl(mockGrpcClient.Object, null, null);
             await client.DeletePredictionApiKeyRegistrationAsync(request.PredictionApiKeyRegistrationName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeletePredictionApiKeyRegistrationAsync(request.PredictionApiKeyRegistrationName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();

@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -43,7 +44,7 @@ namespace Google.Cloud.Retail.V2.Tests
                 ProductLevelConfig = new ProductLevelConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateCatalog(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             Catalog response = client.UpdateCatalog(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -65,7 +66,7 @@ namespace Google.Cloud.Retail.V2.Tests
                 ProductLevelConfig = new ProductLevelConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateCatalogAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Catalog>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             Catalog responseCallSettings = await client.UpdateCatalogAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Catalog responseCancellationToken = await client.UpdateCatalogAsync(request, st::CancellationToken.None);
@@ -89,7 +90,7 @@ namespace Google.Cloud.Retail.V2.Tests
                 ProductLevelConfig = new ProductLevelConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateCatalog(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             Catalog response = client.UpdateCatalog(request.Catalog, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -111,7 +112,7 @@ namespace Google.Cloud.Retail.V2.Tests
                 ProductLevelConfig = new ProductLevelConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateCatalogAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Catalog>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             Catalog responseCallSettings = await client.UpdateCatalogAsync(request.Catalog, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Catalog responseCancellationToken = await client.UpdateCatalogAsync(request.Catalog, request.UpdateMask, st::CancellationToken.None);
@@ -132,7 +133,7 @@ namespace Google.Cloud.Retail.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.SetDefaultBranch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             client.SetDefaultBranch(request);
             mockGrpcClient.VerifyAll();
         }
@@ -150,7 +151,7 @@ namespace Google.Cloud.Retail.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.SetDefaultBranchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.SetDefaultBranchAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.SetDefaultBranchAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -166,7 +167,7 @@ namespace Google.Cloud.Retail.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.SetDefaultBranch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             client.SetDefaultBranch(request.Catalog);
             mockGrpcClient.VerifyAll();
         }
@@ -181,7 +182,7 @@ namespace Google.Cloud.Retail.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.SetDefaultBranchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.SetDefaultBranchAsync(request.Catalog, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.SetDefaultBranchAsync(request.Catalog, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -197,7 +198,7 @@ namespace Google.Cloud.Retail.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.SetDefaultBranch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             client.SetDefaultBranch(request.CatalogAsCatalogName);
             mockGrpcClient.VerifyAll();
         }
@@ -212,7 +213,7 @@ namespace Google.Cloud.Retail.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.SetDefaultBranchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.SetDefaultBranchAsync(request.CatalogAsCatalogName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.SetDefaultBranchAsync(request.CatalogAsCatalogName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -233,7 +234,7 @@ namespace Google.Cloud.Retail.V2.Tests
                 Note = "noteca53d6aa",
             };
             mockGrpcClient.Setup(x => x.GetDefaultBranch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             GetDefaultBranchResponse response = client.GetDefaultBranch(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -254,7 +255,7 @@ namespace Google.Cloud.Retail.V2.Tests
                 Note = "noteca53d6aa",
             };
             mockGrpcClient.Setup(x => x.GetDefaultBranchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GetDefaultBranchResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             GetDefaultBranchResponse responseCallSettings = await client.GetDefaultBranchAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GetDefaultBranchResponse responseCancellationToken = await client.GetDefaultBranchAsync(request, st::CancellationToken.None);
@@ -277,7 +278,7 @@ namespace Google.Cloud.Retail.V2.Tests
                 Note = "noteca53d6aa",
             };
             mockGrpcClient.Setup(x => x.GetDefaultBranch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             GetDefaultBranchResponse response = client.GetDefaultBranch(request.Catalog);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -298,7 +299,7 @@ namespace Google.Cloud.Retail.V2.Tests
                 Note = "noteca53d6aa",
             };
             mockGrpcClient.Setup(x => x.GetDefaultBranchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GetDefaultBranchResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             GetDefaultBranchResponse responseCallSettings = await client.GetDefaultBranchAsync(request.Catalog, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GetDefaultBranchResponse responseCancellationToken = await client.GetDefaultBranchAsync(request.Catalog, st::CancellationToken.None);
@@ -321,7 +322,7 @@ namespace Google.Cloud.Retail.V2.Tests
                 Note = "noteca53d6aa",
             };
             mockGrpcClient.Setup(x => x.GetDefaultBranch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             GetDefaultBranchResponse response = client.GetDefaultBranch(request.CatalogAsCatalogName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -342,7 +343,7 @@ namespace Google.Cloud.Retail.V2.Tests
                 Note = "noteca53d6aa",
             };
             mockGrpcClient.Setup(x => x.GetDefaultBranchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GetDefaultBranchResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             GetDefaultBranchResponse responseCallSettings = await client.GetDefaultBranchAsync(request.CatalogAsCatalogName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GetDefaultBranchResponse responseCancellationToken = await client.GetDefaultBranchAsync(request.CatalogAsCatalogName, st::CancellationToken.None);

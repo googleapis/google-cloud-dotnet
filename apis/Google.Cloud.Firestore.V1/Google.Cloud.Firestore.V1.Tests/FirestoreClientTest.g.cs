@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -59,7 +60,7 @@ namespace Google.Cloud.Firestore.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetDocument(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null, null);
             Document response = client.GetDocument(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -90,7 +91,7 @@ namespace Google.Cloud.Firestore.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetDocumentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Document>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null, null);
             Document responseCallSettings = await client.GetDocumentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Document responseCancellationToken = await client.GetDocumentAsync(request, st::CancellationToken.None);
@@ -123,7 +124,7 @@ namespace Google.Cloud.Firestore.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateDocument(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null, null);
             Document response = client.UpdateDocument(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -154,7 +155,7 @@ namespace Google.Cloud.Firestore.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateDocumentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Document>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null, null);
             Document responseCallSettings = await client.UpdateDocumentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Document responseCancellationToken = await client.UpdateDocumentAsync(request, st::CancellationToken.None);
@@ -185,7 +186,7 @@ namespace Google.Cloud.Firestore.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateDocument(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null, null);
             Document response = client.UpdateDocument(request.Document, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -214,7 +215,7 @@ namespace Google.Cloud.Firestore.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateDocumentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Document>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null, null);
             Document responseCallSettings = await client.UpdateDocumentAsync(request.Document, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Document responseCancellationToken = await client.UpdateDocumentAsync(request.Document, request.UpdateMask, st::CancellationToken.None);
@@ -233,7 +234,7 @@ namespace Google.Cloud.Firestore.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDocument(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteDocument(request);
             mockGrpcClient.VerifyAll();
         }
@@ -249,7 +250,7 @@ namespace Google.Cloud.Firestore.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDocumentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteDocumentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteDocumentAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -265,7 +266,7 @@ namespace Google.Cloud.Firestore.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDocument(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteDocument(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -280,7 +281,7 @@ namespace Google.Cloud.Firestore.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDocumentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteDocumentAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteDocumentAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -300,7 +301,7 @@ namespace Google.Cloud.Firestore.V1.Tests
                 Transaction = proto::ByteString.CopyFromUtf8("transaction6ab7d5f4"),
             };
             mockGrpcClient.Setup(x => x.BeginTransaction(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null, null);
             BeginTransactionResponse response = client.BeginTransaction(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -320,7 +321,7 @@ namespace Google.Cloud.Firestore.V1.Tests
                 Transaction = proto::ByteString.CopyFromUtf8("transaction6ab7d5f4"),
             };
             mockGrpcClient.Setup(x => x.BeginTransactionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BeginTransactionResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null, null);
             BeginTransactionResponse responseCallSettings = await client.BeginTransactionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BeginTransactionResponse responseCancellationToken = await client.BeginTransactionAsync(request, st::CancellationToken.None);
@@ -341,7 +342,7 @@ namespace Google.Cloud.Firestore.V1.Tests
                 Transaction = proto::ByteString.CopyFromUtf8("transaction6ab7d5f4"),
             };
             mockGrpcClient.Setup(x => x.BeginTransaction(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null, null);
             BeginTransactionResponse response = client.BeginTransaction(request.Database);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -360,7 +361,7 @@ namespace Google.Cloud.Firestore.V1.Tests
                 Transaction = proto::ByteString.CopyFromUtf8("transaction6ab7d5f4"),
             };
             mockGrpcClient.Setup(x => x.BeginTransactionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BeginTransactionResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null, null);
             BeginTransactionResponse responseCallSettings = await client.BeginTransactionAsync(request.Database, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BeginTransactionResponse responseCancellationToken = await client.BeginTransactionAsync(request.Database, st::CancellationToken.None);
@@ -384,7 +385,7 @@ namespace Google.Cloud.Firestore.V1.Tests
                 CommitTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.Commit(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null, null);
             CommitResponse response = client.Commit(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -406,7 +407,7 @@ namespace Google.Cloud.Firestore.V1.Tests
                 CommitTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CommitAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CommitResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null, null);
             CommitResponse responseCallSettings = await client.CommitAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CommitResponse responseCancellationToken = await client.CommitAsync(request, st::CancellationToken.None);
@@ -429,7 +430,7 @@ namespace Google.Cloud.Firestore.V1.Tests
                 CommitTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.Commit(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null, null);
             CommitResponse response = client.Commit(request.Database, request.Writes);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -450,7 +451,7 @@ namespace Google.Cloud.Firestore.V1.Tests
                 CommitTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CommitAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CommitResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null, null);
             CommitResponse responseCallSettings = await client.CommitAsync(request.Database, request.Writes, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CommitResponse responseCancellationToken = await client.CommitAsync(request.Database, request.Writes, st::CancellationToken.None);
@@ -469,7 +470,7 @@ namespace Google.Cloud.Firestore.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.Rollback(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null, null);
             client.Rollback(request);
             mockGrpcClient.VerifyAll();
         }
@@ -485,7 +486,7 @@ namespace Google.Cloud.Firestore.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.RollbackAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null, null);
             await client.RollbackAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.RollbackAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -502,7 +503,7 @@ namespace Google.Cloud.Firestore.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.Rollback(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null, null);
             client.Rollback(request.Database, request.Transaction);
             mockGrpcClient.VerifyAll();
         }
@@ -518,7 +519,7 @@ namespace Google.Cloud.Firestore.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.RollbackAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null, null);
             await client.RollbackAsync(request.Database, request.Transaction, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.RollbackAsync(request.Database, request.Transaction, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -546,7 +547,7 @@ namespace Google.Cloud.Firestore.V1.Tests
                 Status = { new gr::Status(), },
             };
             mockGrpcClient.Setup(x => x.BatchWrite(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null, null);
             BatchWriteResponse response = client.BatchWrite(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -574,7 +575,7 @@ namespace Google.Cloud.Firestore.V1.Tests
                 Status = { new gr::Status(), },
             };
             mockGrpcClient.Setup(x => x.BatchWriteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchWriteResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null, null);
             BatchWriteResponse responseCallSettings = await client.BatchWriteAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchWriteResponse responseCancellationToken = await client.BatchWriteAsync(request, st::CancellationToken.None);
@@ -608,7 +609,7 @@ namespace Google.Cloud.Firestore.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateDocument(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null, null);
             Document response = client.CreateDocument(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -640,7 +641,7 @@ namespace Google.Cloud.Firestore.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateDocumentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Document>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null, null);
             Document responseCallSettings = await client.CreateDocumentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Document responseCancellationToken = await client.CreateDocumentAsync(request, st::CancellationToken.None);

@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -44,7 +45,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Status = Version.Types.VersionStatus.Ready,
             };
             mockGrpcClient.Setup(x => x.GetVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null);
+            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null, null);
             Version response = client.GetVersion(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -67,7 +68,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Status = Version.Types.VersionStatus.Ready,
             };
             mockGrpcClient.Setup(x => x.GetVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Version>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null);
+            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null, null);
             Version responseCallSettings = await client.GetVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Version responseCancellationToken = await client.GetVersionAsync(request, st::CancellationToken.None);
@@ -92,7 +93,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Status = Version.Types.VersionStatus.Ready,
             };
             mockGrpcClient.Setup(x => x.GetVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null);
+            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null, null);
             Version response = client.GetVersion(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -115,7 +116,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Status = Version.Types.VersionStatus.Ready,
             };
             mockGrpcClient.Setup(x => x.GetVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Version>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null);
+            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null, null);
             Version responseCallSettings = await client.GetVersionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Version responseCancellationToken = await client.GetVersionAsync(request.Name, st::CancellationToken.None);
@@ -140,7 +141,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Status = Version.Types.VersionStatus.Ready,
             };
             mockGrpcClient.Setup(x => x.GetVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null);
+            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null, null);
             Version response = client.GetVersion(request.VersionName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -163,7 +164,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Status = Version.Types.VersionStatus.Ready,
             };
             mockGrpcClient.Setup(x => x.GetVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Version>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null);
+            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null, null);
             Version responseCallSettings = await client.GetVersionAsync(request.VersionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Version responseCancellationToken = await client.GetVersionAsync(request.VersionName, st::CancellationToken.None);
@@ -189,7 +190,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Status = Version.Types.VersionStatus.Ready,
             };
             mockGrpcClient.Setup(x => x.CreateVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null);
+            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null, null);
             Version response = client.CreateVersion(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -213,7 +214,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Status = Version.Types.VersionStatus.Ready,
             };
             mockGrpcClient.Setup(x => x.CreateVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Version>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null);
+            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null, null);
             Version responseCallSettings = await client.CreateVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Version responseCancellationToken = await client.CreateVersionAsync(request, st::CancellationToken.None);
@@ -239,7 +240,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Status = Version.Types.VersionStatus.Ready,
             };
             mockGrpcClient.Setup(x => x.CreateVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null);
+            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null, null);
             Version response = client.CreateVersion(request.Parent, request.Version);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -263,7 +264,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Status = Version.Types.VersionStatus.Ready,
             };
             mockGrpcClient.Setup(x => x.CreateVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Version>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null);
+            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null, null);
             Version responseCallSettings = await client.CreateVersionAsync(request.Parent, request.Version, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Version responseCancellationToken = await client.CreateVersionAsync(request.Parent, request.Version, st::CancellationToken.None);
@@ -289,7 +290,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Status = Version.Types.VersionStatus.Ready,
             };
             mockGrpcClient.Setup(x => x.CreateVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null);
+            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null, null);
             Version response = client.CreateVersion(request.ParentAsAgentName, request.Version);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -313,7 +314,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Status = Version.Types.VersionStatus.Ready,
             };
             mockGrpcClient.Setup(x => x.CreateVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Version>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null);
+            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null, null);
             Version responseCallSettings = await client.CreateVersionAsync(request.ParentAsAgentName, request.Version, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Version responseCancellationToken = await client.CreateVersionAsync(request.ParentAsAgentName, request.Version, st::CancellationToken.None);
@@ -339,7 +340,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Status = Version.Types.VersionStatus.Ready,
             };
             mockGrpcClient.Setup(x => x.UpdateVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null);
+            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null, null);
             Version response = client.UpdateVersion(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -363,7 +364,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Status = Version.Types.VersionStatus.Ready,
             };
             mockGrpcClient.Setup(x => x.UpdateVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Version>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null);
+            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null, null);
             Version responseCallSettings = await client.UpdateVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Version responseCancellationToken = await client.UpdateVersionAsync(request, st::CancellationToken.None);
@@ -389,7 +390,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Status = Version.Types.VersionStatus.Ready,
             };
             mockGrpcClient.Setup(x => x.UpdateVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null);
+            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null, null);
             Version response = client.UpdateVersion(request.Version, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -413,7 +414,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Status = Version.Types.VersionStatus.Ready,
             };
             mockGrpcClient.Setup(x => x.UpdateVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Version>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null);
+            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null, null);
             Version responseCallSettings = await client.UpdateVersionAsync(request.Version, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Version responseCancellationToken = await client.UpdateVersionAsync(request.Version, request.UpdateMask, st::CancellationToken.None);
@@ -431,7 +432,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null);
+            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteVersion(request);
             mockGrpcClient.VerifyAll();
         }
@@ -446,7 +447,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null);
+            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteVersionAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -462,7 +463,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null);
+            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteVersion(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -477,7 +478,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null);
+            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteVersionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteVersionAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -493,7 +494,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null);
+            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteVersion(request.VersionName);
             mockGrpcClient.VerifyAll();
         }
@@ -508,7 +509,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null);
+            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteVersionAsync(request.VersionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteVersionAsync(request.VersionName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();

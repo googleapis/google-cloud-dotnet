@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -65,7 +66,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 AlertStrategy = new AlertPolicy.Types.AlertStrategy(),
             };
             mockGrpcClient.Setup(x => x.GetAlertPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AlertPolicy response = client.GetAlertPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -107,7 +108,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 AlertStrategy = new AlertPolicy.Types.AlertStrategy(),
             };
             mockGrpcClient.Setup(x => x.GetAlertPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AlertPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AlertPolicy responseCallSettings = await client.GetAlertPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AlertPolicy responseCancellationToken = await client.GetAlertPolicyAsync(request, st::CancellationToken.None);
@@ -151,7 +152,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 AlertStrategy = new AlertPolicy.Types.AlertStrategy(),
             };
             mockGrpcClient.Setup(x => x.GetAlertPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AlertPolicy response = client.GetAlertPolicy(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -193,7 +194,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 AlertStrategy = new AlertPolicy.Types.AlertStrategy(),
             };
             mockGrpcClient.Setup(x => x.GetAlertPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AlertPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AlertPolicy responseCallSettings = await client.GetAlertPolicyAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AlertPolicy responseCancellationToken = await client.GetAlertPolicyAsync(request.Name, st::CancellationToken.None);
@@ -237,7 +238,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 AlertStrategy = new AlertPolicy.Types.AlertStrategy(),
             };
             mockGrpcClient.Setup(x => x.GetAlertPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AlertPolicy response = client.GetAlertPolicy(request.AlertPolicyName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -279,7 +280,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 AlertStrategy = new AlertPolicy.Types.AlertStrategy(),
             };
             mockGrpcClient.Setup(x => x.GetAlertPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AlertPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AlertPolicy responseCallSettings = await client.GetAlertPolicyAsync(request.AlertPolicyName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AlertPolicy responseCancellationToken = await client.GetAlertPolicyAsync(request.AlertPolicyName, st::CancellationToken.None);
@@ -323,7 +324,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 AlertStrategy = new AlertPolicy.Types.AlertStrategy(),
             };
             mockGrpcClient.Setup(x => x.GetAlertPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AlertPolicy response = client.GetAlertPolicy(request.ResourceName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -365,7 +366,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 AlertStrategy = new AlertPolicy.Types.AlertStrategy(),
             };
             mockGrpcClient.Setup(x => x.GetAlertPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AlertPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AlertPolicy responseCallSettings = await client.GetAlertPolicyAsync(request.ResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AlertPolicy responseCancellationToken = await client.GetAlertPolicyAsync(request.ResourceName, st::CancellationToken.None);
@@ -410,7 +411,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 AlertStrategy = new AlertPolicy.Types.AlertStrategy(),
             };
             mockGrpcClient.Setup(x => x.CreateAlertPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AlertPolicy response = client.CreateAlertPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -453,7 +454,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 AlertStrategy = new AlertPolicy.Types.AlertStrategy(),
             };
             mockGrpcClient.Setup(x => x.CreateAlertPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AlertPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AlertPolicy responseCallSettings = await client.CreateAlertPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AlertPolicy responseCancellationToken = await client.CreateAlertPolicyAsync(request, st::CancellationToken.None);
@@ -498,7 +499,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 AlertStrategy = new AlertPolicy.Types.AlertStrategy(),
             };
             mockGrpcClient.Setup(x => x.CreateAlertPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AlertPolicy response = client.CreateAlertPolicy(request.Name, request.AlertPolicy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -541,7 +542,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 AlertStrategy = new AlertPolicy.Types.AlertStrategy(),
             };
             mockGrpcClient.Setup(x => x.CreateAlertPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AlertPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AlertPolicy responseCallSettings = await client.CreateAlertPolicyAsync(request.Name, request.AlertPolicy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AlertPolicy responseCancellationToken = await client.CreateAlertPolicyAsync(request.Name, request.AlertPolicy, st::CancellationToken.None);
@@ -586,7 +587,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 AlertStrategy = new AlertPolicy.Types.AlertStrategy(),
             };
             mockGrpcClient.Setup(x => x.CreateAlertPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AlertPolicy response = client.CreateAlertPolicy(request.ProjectName, request.AlertPolicy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -629,7 +630,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 AlertStrategy = new AlertPolicy.Types.AlertStrategy(),
             };
             mockGrpcClient.Setup(x => x.CreateAlertPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AlertPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AlertPolicy responseCallSettings = await client.CreateAlertPolicyAsync(request.ProjectName, request.AlertPolicy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AlertPolicy responseCancellationToken = await client.CreateAlertPolicyAsync(request.ProjectName, request.AlertPolicy, st::CancellationToken.None);
@@ -674,7 +675,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 AlertStrategy = new AlertPolicy.Types.AlertStrategy(),
             };
             mockGrpcClient.Setup(x => x.CreateAlertPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AlertPolicy response = client.CreateAlertPolicy(request.OrganizationName, request.AlertPolicy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -717,7 +718,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 AlertStrategy = new AlertPolicy.Types.AlertStrategy(),
             };
             mockGrpcClient.Setup(x => x.CreateAlertPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AlertPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AlertPolicy responseCallSettings = await client.CreateAlertPolicyAsync(request.OrganizationName, request.AlertPolicy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AlertPolicy responseCancellationToken = await client.CreateAlertPolicyAsync(request.OrganizationName, request.AlertPolicy, st::CancellationToken.None);
@@ -762,7 +763,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 AlertStrategy = new AlertPolicy.Types.AlertStrategy(),
             };
             mockGrpcClient.Setup(x => x.CreateAlertPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AlertPolicy response = client.CreateAlertPolicy(request.FolderName, request.AlertPolicy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -805,7 +806,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 AlertStrategy = new AlertPolicy.Types.AlertStrategy(),
             };
             mockGrpcClient.Setup(x => x.CreateAlertPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AlertPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AlertPolicy responseCallSettings = await client.CreateAlertPolicyAsync(request.FolderName, request.AlertPolicy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AlertPolicy responseCancellationToken = await client.CreateAlertPolicyAsync(request.FolderName, request.AlertPolicy, st::CancellationToken.None);
@@ -850,7 +851,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 AlertStrategy = new AlertPolicy.Types.AlertStrategy(),
             };
             mockGrpcClient.Setup(x => x.CreateAlertPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AlertPolicy response = client.CreateAlertPolicy(request.ResourceName, request.AlertPolicy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -893,7 +894,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 AlertStrategy = new AlertPolicy.Types.AlertStrategy(),
             };
             mockGrpcClient.Setup(x => x.CreateAlertPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AlertPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AlertPolicy responseCallSettings = await client.CreateAlertPolicyAsync(request.ResourceName, request.AlertPolicy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AlertPolicy responseCancellationToken = await client.CreateAlertPolicyAsync(request.ResourceName, request.AlertPolicy, st::CancellationToken.None);
@@ -911,7 +912,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAlertPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteAlertPolicy(request);
             mockGrpcClient.VerifyAll();
         }
@@ -926,7 +927,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAlertPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteAlertPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteAlertPolicyAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -942,7 +943,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAlertPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteAlertPolicy(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -957,7 +958,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAlertPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteAlertPolicyAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteAlertPolicyAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -973,7 +974,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAlertPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteAlertPolicy(request.AlertPolicyName);
             mockGrpcClient.VerifyAll();
         }
@@ -988,7 +989,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAlertPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteAlertPolicyAsync(request.AlertPolicyName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteAlertPolicyAsync(request.AlertPolicyName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1004,7 +1005,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAlertPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteAlertPolicy(request.ResourceName);
             mockGrpcClient.VerifyAll();
         }
@@ -1019,7 +1020,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAlertPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteAlertPolicyAsync(request.ResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteAlertPolicyAsync(request.ResourceName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1062,7 +1063,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 AlertStrategy = new AlertPolicy.Types.AlertStrategy(),
             };
             mockGrpcClient.Setup(x => x.UpdateAlertPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AlertPolicy response = client.UpdateAlertPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1105,7 +1106,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 AlertStrategy = new AlertPolicy.Types.AlertStrategy(),
             };
             mockGrpcClient.Setup(x => x.UpdateAlertPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AlertPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AlertPolicy responseCallSettings = await client.UpdateAlertPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AlertPolicy responseCancellationToken = await client.UpdateAlertPolicyAsync(request, st::CancellationToken.None);
@@ -1150,7 +1151,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 AlertStrategy = new AlertPolicy.Types.AlertStrategy(),
             };
             mockGrpcClient.Setup(x => x.UpdateAlertPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AlertPolicy response = client.UpdateAlertPolicy(request.UpdateMask, request.AlertPolicy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1193,7 +1194,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 AlertStrategy = new AlertPolicy.Types.AlertStrategy(),
             };
             mockGrpcClient.Setup(x => x.UpdateAlertPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AlertPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AlertPolicy responseCallSettings = await client.UpdateAlertPolicyAsync(request.UpdateMask, request.AlertPolicy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AlertPolicy responseCancellationToken = await client.UpdateAlertPolicyAsync(request.UpdateMask, request.AlertPolicy, st::CancellationToken.None);

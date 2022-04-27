@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -103,7 +104,7 @@ namespace Google.Cloud.AppEngine.V1.Tests
                 AppEngineApis = false,
             };
             mockGrpcClient.Setup(x => x.GetVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null);
+            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null, null);
             Version response = client.GetVersion(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -184,7 +185,7 @@ namespace Google.Cloud.AppEngine.V1.Tests
                 AppEngineApis = false,
             };
             mockGrpcClient.Setup(x => x.GetVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Version>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null);
+            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null, null);
             Version responseCallSettings = await client.GetVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Version responseCancellationToken = await client.GetVersionAsync(request, st::CancellationToken.None);

@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -68,7 +69,7 @@ namespace Google.Cloud.Retail.V2.Tests
                 ValidateOnly = true,
             };
             mockGrpcClient.Setup(x => x.Predict(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
+            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null, null);
             PredictResponse response = client.Predict(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -115,7 +116,7 @@ namespace Google.Cloud.Retail.V2.Tests
                 ValidateOnly = true,
             };
             mockGrpcClient.Setup(x => x.PredictAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PredictResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
+            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null, null);
             PredictResponse responseCallSettings = await client.PredictAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PredictResponse responseCancellationToken = await client.PredictAsync(request, st::CancellationToken.None);

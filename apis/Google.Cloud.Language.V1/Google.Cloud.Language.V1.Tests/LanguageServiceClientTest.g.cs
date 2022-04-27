@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -42,7 +43,7 @@ namespace Google.Cloud.Language.V1.Tests
                 Sentences = { new Sentence(), },
             };
             mockGrpcClient.Setup(x => x.AnalyzeSentiment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
+            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null, null);
             AnalyzeSentimentResponse response = client.AnalyzeSentiment(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -64,7 +65,7 @@ namespace Google.Cloud.Language.V1.Tests
                 Sentences = { new Sentence(), },
             };
             mockGrpcClient.Setup(x => x.AnalyzeSentimentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnalyzeSentimentResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
+            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null, null);
             AnalyzeSentimentResponse responseCallSettings = await client.AnalyzeSentimentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AnalyzeSentimentResponse responseCancellationToken = await client.AnalyzeSentimentAsync(request, st::CancellationToken.None);
@@ -88,7 +89,7 @@ namespace Google.Cloud.Language.V1.Tests
                 Sentences = { new Sentence(), },
             };
             mockGrpcClient.Setup(x => x.AnalyzeSentiment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
+            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null, null);
             AnalyzeSentimentResponse response = client.AnalyzeSentiment(request.Document, request.EncodingType);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -110,7 +111,7 @@ namespace Google.Cloud.Language.V1.Tests
                 Sentences = { new Sentence(), },
             };
             mockGrpcClient.Setup(x => x.AnalyzeSentimentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnalyzeSentimentResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
+            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null, null);
             AnalyzeSentimentResponse responseCallSettings = await client.AnalyzeSentimentAsync(request.Document, request.EncodingType, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AnalyzeSentimentResponse responseCancellationToken = await client.AnalyzeSentimentAsync(request.Document, request.EncodingType, st::CancellationToken.None);
@@ -133,7 +134,7 @@ namespace Google.Cloud.Language.V1.Tests
                 Sentences = { new Sentence(), },
             };
             mockGrpcClient.Setup(x => x.AnalyzeSentiment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
+            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null, null);
             AnalyzeSentimentResponse response = client.AnalyzeSentiment(request.Document);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -154,7 +155,7 @@ namespace Google.Cloud.Language.V1.Tests
                 Sentences = { new Sentence(), },
             };
             mockGrpcClient.Setup(x => x.AnalyzeSentimentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnalyzeSentimentResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
+            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null, null);
             AnalyzeSentimentResponse responseCallSettings = await client.AnalyzeSentimentAsync(request.Document, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AnalyzeSentimentResponse responseCancellationToken = await client.AnalyzeSentimentAsync(request.Document, st::CancellationToken.None);
@@ -177,7 +178,7 @@ namespace Google.Cloud.Language.V1.Tests
                 Language = "language7dae1285",
             };
             mockGrpcClient.Setup(x => x.AnalyzeEntities(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
+            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null, null);
             AnalyzeEntitiesResponse response = client.AnalyzeEntities(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -198,7 +199,7 @@ namespace Google.Cloud.Language.V1.Tests
                 Language = "language7dae1285",
             };
             mockGrpcClient.Setup(x => x.AnalyzeEntitiesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnalyzeEntitiesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
+            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null, null);
             AnalyzeEntitiesResponse responseCallSettings = await client.AnalyzeEntitiesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AnalyzeEntitiesResponse responseCancellationToken = await client.AnalyzeEntitiesAsync(request, st::CancellationToken.None);
@@ -221,7 +222,7 @@ namespace Google.Cloud.Language.V1.Tests
                 Language = "language7dae1285",
             };
             mockGrpcClient.Setup(x => x.AnalyzeEntities(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
+            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null, null);
             AnalyzeEntitiesResponse response = client.AnalyzeEntities(request.Document, request.EncodingType);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -242,7 +243,7 @@ namespace Google.Cloud.Language.V1.Tests
                 Language = "language7dae1285",
             };
             mockGrpcClient.Setup(x => x.AnalyzeEntitiesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnalyzeEntitiesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
+            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null, null);
             AnalyzeEntitiesResponse responseCallSettings = await client.AnalyzeEntitiesAsync(request.Document, request.EncodingType, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AnalyzeEntitiesResponse responseCancellationToken = await client.AnalyzeEntitiesAsync(request.Document, request.EncodingType, st::CancellationToken.None);
@@ -265,7 +266,7 @@ namespace Google.Cloud.Language.V1.Tests
                 Language = "language7dae1285",
             };
             mockGrpcClient.Setup(x => x.AnalyzeEntitySentiment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
+            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null, null);
             AnalyzeEntitySentimentResponse response = client.AnalyzeEntitySentiment(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -286,7 +287,7 @@ namespace Google.Cloud.Language.V1.Tests
                 Language = "language7dae1285",
             };
             mockGrpcClient.Setup(x => x.AnalyzeEntitySentimentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnalyzeEntitySentimentResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
+            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null, null);
             AnalyzeEntitySentimentResponse responseCallSettings = await client.AnalyzeEntitySentimentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AnalyzeEntitySentimentResponse responseCancellationToken = await client.AnalyzeEntitySentimentAsync(request, st::CancellationToken.None);
@@ -309,7 +310,7 @@ namespace Google.Cloud.Language.V1.Tests
                 Language = "language7dae1285",
             };
             mockGrpcClient.Setup(x => x.AnalyzeEntitySentiment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
+            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null, null);
             AnalyzeEntitySentimentResponse response = client.AnalyzeEntitySentiment(request.Document, request.EncodingType);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -330,7 +331,7 @@ namespace Google.Cloud.Language.V1.Tests
                 Language = "language7dae1285",
             };
             mockGrpcClient.Setup(x => x.AnalyzeEntitySentimentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnalyzeEntitySentimentResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
+            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null, null);
             AnalyzeEntitySentimentResponse responseCallSettings = await client.AnalyzeEntitySentimentAsync(request.Document, request.EncodingType, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AnalyzeEntitySentimentResponse responseCancellationToken = await client.AnalyzeEntitySentimentAsync(request.Document, request.EncodingType, st::CancellationToken.None);
@@ -354,7 +355,7 @@ namespace Google.Cloud.Language.V1.Tests
                 Language = "language7dae1285",
             };
             mockGrpcClient.Setup(x => x.AnalyzeSyntax(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
+            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null, null);
             AnalyzeSyntaxResponse response = client.AnalyzeSyntax(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -376,7 +377,7 @@ namespace Google.Cloud.Language.V1.Tests
                 Language = "language7dae1285",
             };
             mockGrpcClient.Setup(x => x.AnalyzeSyntaxAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnalyzeSyntaxResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
+            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null, null);
             AnalyzeSyntaxResponse responseCallSettings = await client.AnalyzeSyntaxAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AnalyzeSyntaxResponse responseCancellationToken = await client.AnalyzeSyntaxAsync(request, st::CancellationToken.None);
@@ -400,7 +401,7 @@ namespace Google.Cloud.Language.V1.Tests
                 Language = "language7dae1285",
             };
             mockGrpcClient.Setup(x => x.AnalyzeSyntax(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
+            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null, null);
             AnalyzeSyntaxResponse response = client.AnalyzeSyntax(request.Document, request.EncodingType);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -422,7 +423,7 @@ namespace Google.Cloud.Language.V1.Tests
                 Language = "language7dae1285",
             };
             mockGrpcClient.Setup(x => x.AnalyzeSyntaxAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnalyzeSyntaxResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
+            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null, null);
             AnalyzeSyntaxResponse responseCallSettings = await client.AnalyzeSyntaxAsync(request.Document, request.EncodingType, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AnalyzeSyntaxResponse responseCancellationToken = await client.AnalyzeSyntaxAsync(request.Document, request.EncodingType, st::CancellationToken.None);
@@ -446,7 +447,7 @@ namespace Google.Cloud.Language.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.ClassifyText(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
+            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null, null);
             ClassifyTextResponse response = client.ClassifyText(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -468,7 +469,7 @@ namespace Google.Cloud.Language.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.ClassifyTextAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ClassifyTextResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
+            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null, null);
             ClassifyTextResponse responseCallSettings = await client.ClassifyTextAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ClassifyTextResponse responseCancellationToken = await client.ClassifyTextAsync(request, st::CancellationToken.None);
@@ -492,7 +493,7 @@ namespace Google.Cloud.Language.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.ClassifyText(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
+            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null, null);
             ClassifyTextResponse response = client.ClassifyText(request.Document);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -514,7 +515,7 @@ namespace Google.Cloud.Language.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.ClassifyTextAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ClassifyTextResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
+            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null, null);
             ClassifyTextResponse responseCallSettings = await client.ClassifyTextAsync(request.Document, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ClassifyTextResponse responseCancellationToken = await client.ClassifyTextAsync(request.Document, st::CancellationToken.None);
@@ -545,7 +546,7 @@ namespace Google.Cloud.Language.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.AnnotateText(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
+            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null, null);
             AnnotateTextResponse response = client.AnnotateText(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -574,7 +575,7 @@ namespace Google.Cloud.Language.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.AnnotateTextAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnnotateTextResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
+            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null, null);
             AnnotateTextResponse responseCallSettings = await client.AnnotateTextAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AnnotateTextResponse responseCancellationToken = await client.AnnotateTextAsync(request, st::CancellationToken.None);
@@ -605,7 +606,7 @@ namespace Google.Cloud.Language.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.AnnotateText(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
+            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null, null);
             AnnotateTextResponse response = client.AnnotateText(request.Document, request.Features, request.EncodingType);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -634,7 +635,7 @@ namespace Google.Cloud.Language.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.AnnotateTextAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnnotateTextResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
+            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null, null);
             AnnotateTextResponse responseCallSettings = await client.AnnotateTextAsync(request.Document, request.Features, request.EncodingType, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AnnotateTextResponse responseCancellationToken = await client.AnnotateTextAsync(request.Document, request.Features, request.EncodingType, st::CancellationToken.None);

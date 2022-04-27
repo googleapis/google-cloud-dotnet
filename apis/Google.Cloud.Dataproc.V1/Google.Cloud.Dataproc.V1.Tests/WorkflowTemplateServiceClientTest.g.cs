@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -61,7 +62,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 DagTimeout = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.CreateWorkflowTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
+            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null, null);
             WorkflowTemplate response = client.CreateWorkflowTemplate(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -100,7 +101,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 DagTimeout = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.CreateWorkflowTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WorkflowTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
+            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null, null);
             WorkflowTemplate responseCallSettings = await client.CreateWorkflowTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             WorkflowTemplate responseCancellationToken = await client.CreateWorkflowTemplateAsync(request, st::CancellationToken.None);
@@ -141,7 +142,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 DagTimeout = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.CreateWorkflowTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
+            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null, null);
             WorkflowTemplate response = client.CreateWorkflowTemplate(request.Parent, request.Template);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -180,7 +181,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 DagTimeout = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.CreateWorkflowTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WorkflowTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
+            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null, null);
             WorkflowTemplate responseCallSettings = await client.CreateWorkflowTemplateAsync(request.Parent, request.Template, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             WorkflowTemplate responseCancellationToken = await client.CreateWorkflowTemplateAsync(request.Parent, request.Template, st::CancellationToken.None);
@@ -221,7 +222,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 DagTimeout = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.CreateWorkflowTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
+            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null, null);
             WorkflowTemplate response = client.CreateWorkflowTemplate(request.ParentAsRegionName, request.Template);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -260,7 +261,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 DagTimeout = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.CreateWorkflowTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WorkflowTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
+            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null, null);
             WorkflowTemplate responseCallSettings = await client.CreateWorkflowTemplateAsync(request.ParentAsRegionName, request.Template, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             WorkflowTemplate responseCancellationToken = await client.CreateWorkflowTemplateAsync(request.ParentAsRegionName, request.Template, st::CancellationToken.None);
@@ -301,7 +302,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 DagTimeout = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.CreateWorkflowTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
+            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null, null);
             WorkflowTemplate response = client.CreateWorkflowTemplate(request.ParentAsLocationName, request.Template);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -340,7 +341,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 DagTimeout = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.CreateWorkflowTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WorkflowTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
+            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null, null);
             WorkflowTemplate responseCallSettings = await client.CreateWorkflowTemplateAsync(request.ParentAsLocationName, request.Template, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             WorkflowTemplate responseCancellationToken = await client.CreateWorkflowTemplateAsync(request.ParentAsLocationName, request.Template, st::CancellationToken.None);
@@ -381,7 +382,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 DagTimeout = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.GetWorkflowTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
+            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null, null);
             WorkflowTemplate response = client.GetWorkflowTemplate(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -420,7 +421,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 DagTimeout = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.GetWorkflowTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WorkflowTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
+            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null, null);
             WorkflowTemplate responseCallSettings = await client.GetWorkflowTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             WorkflowTemplate responseCancellationToken = await client.GetWorkflowTemplateAsync(request, st::CancellationToken.None);
@@ -460,7 +461,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 DagTimeout = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.GetWorkflowTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
+            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null, null);
             WorkflowTemplate response = client.GetWorkflowTemplate(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -498,7 +499,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 DagTimeout = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.GetWorkflowTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WorkflowTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
+            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null, null);
             WorkflowTemplate responseCallSettings = await client.GetWorkflowTemplateAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             WorkflowTemplate responseCancellationToken = await client.GetWorkflowTemplateAsync(request.Name, st::CancellationToken.None);
@@ -538,7 +539,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 DagTimeout = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.GetWorkflowTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
+            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null, null);
             WorkflowTemplate response = client.GetWorkflowTemplate(request.WorkflowTemplateName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -576,7 +577,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 DagTimeout = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.GetWorkflowTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WorkflowTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
+            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null, null);
             WorkflowTemplate responseCallSettings = await client.GetWorkflowTemplateAsync(request.WorkflowTemplateName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             WorkflowTemplate responseCancellationToken = await client.GetWorkflowTemplateAsync(request.WorkflowTemplateName, st::CancellationToken.None);
@@ -616,7 +617,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 DagTimeout = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.UpdateWorkflowTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
+            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null, null);
             WorkflowTemplate response = client.UpdateWorkflowTemplate(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -654,7 +655,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 DagTimeout = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.UpdateWorkflowTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WorkflowTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
+            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null, null);
             WorkflowTemplate responseCallSettings = await client.UpdateWorkflowTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             WorkflowTemplate responseCancellationToken = await client.UpdateWorkflowTemplateAsync(request, st::CancellationToken.None);
@@ -694,7 +695,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 DagTimeout = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.UpdateWorkflowTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
+            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null, null);
             WorkflowTemplate response = client.UpdateWorkflowTemplate(request.Template);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -732,7 +733,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 DagTimeout = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.UpdateWorkflowTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WorkflowTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
+            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null, null);
             WorkflowTemplate responseCallSettings = await client.UpdateWorkflowTemplateAsync(request.Template, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             WorkflowTemplate responseCancellationToken = await client.UpdateWorkflowTemplateAsync(request.Template, st::CancellationToken.None);
@@ -752,7 +753,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteWorkflowTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
+            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteWorkflowTemplate(request);
             mockGrpcClient.VerifyAll();
         }
@@ -769,7 +770,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteWorkflowTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
+            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteWorkflowTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteWorkflowTemplateAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -786,7 +787,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteWorkflowTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
+            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteWorkflowTemplate(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -802,7 +803,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteWorkflowTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
+            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteWorkflowTemplateAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteWorkflowTemplateAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -819,7 +820,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteWorkflowTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
+            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteWorkflowTemplate(request.WorkflowTemplateName);
             mockGrpcClient.VerifyAll();
         }
@@ -835,7 +836,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteWorkflowTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
+            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteWorkflowTemplateAsync(request.WorkflowTemplateName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteWorkflowTemplateAsync(request.WorkflowTemplateName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();

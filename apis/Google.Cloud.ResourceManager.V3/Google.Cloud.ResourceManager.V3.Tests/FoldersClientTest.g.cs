@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
@@ -53,7 +54,7 @@ namespace Google.Cloud.ResourceManager.V3.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetFolder(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null);
+            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null, null);
             Folder response = client.GetFolder(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -80,7 +81,7 @@ namespace Google.Cloud.ResourceManager.V3.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetFolderAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Folder>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null);
+            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null, null);
             Folder responseCallSettings = await client.GetFolderAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Folder responseCancellationToken = await client.GetFolderAsync(request, st::CancellationToken.None);
@@ -109,7 +110,7 @@ namespace Google.Cloud.ResourceManager.V3.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetFolder(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null);
+            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null, null);
             Folder response = client.GetFolder(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -136,7 +137,7 @@ namespace Google.Cloud.ResourceManager.V3.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetFolderAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Folder>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null);
+            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null, null);
             Folder responseCallSettings = await client.GetFolderAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Folder responseCancellationToken = await client.GetFolderAsync(request.Name, st::CancellationToken.None);
@@ -165,7 +166,7 @@ namespace Google.Cloud.ResourceManager.V3.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetFolder(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null);
+            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null, null);
             Folder response = client.GetFolder(request.FolderName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -192,7 +193,7 @@ namespace Google.Cloud.ResourceManager.V3.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetFolderAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Folder>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null);
+            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null, null);
             Folder responseCallSettings = await client.GetFolderAsync(request.FolderName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Folder responseCancellationToken = await client.GetFolderAsync(request.FolderName, st::CancellationToken.None);
@@ -224,7 +225,7 @@ namespace Google.Cloud.ResourceManager.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null);
+            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.GetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -254,7 +255,7 @@ namespace Google.Cloud.ResourceManager.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null);
+            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request, st::CancellationToken.None);
@@ -285,7 +286,7 @@ namespace Google.Cloud.ResourceManager.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null);
+            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.GetIamPolicy(request.Resource);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -314,7 +315,7 @@ namespace Google.Cloud.ResourceManager.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null);
+            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request.Resource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request.Resource, st::CancellationToken.None);
@@ -345,7 +346,7 @@ namespace Google.Cloud.ResourceManager.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null);
+            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.GetIamPolicy(request.ResourceAsResourceName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -374,7 +375,7 @@ namespace Google.Cloud.ResourceManager.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null);
+            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request.ResourceAsResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request.ResourceAsResourceName, st::CancellationToken.None);
@@ -407,7 +408,7 @@ namespace Google.Cloud.ResourceManager.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null);
+            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.SetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -438,7 +439,7 @@ namespace Google.Cloud.ResourceManager.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null);
+            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request, st::CancellationToken.None);
@@ -470,7 +471,7 @@ namespace Google.Cloud.ResourceManager.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null);
+            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.SetIamPolicy(request.Resource, request.Policy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -500,7 +501,7 @@ namespace Google.Cloud.ResourceManager.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null);
+            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request.Resource, request.Policy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request.Resource, request.Policy, st::CancellationToken.None);
@@ -532,7 +533,7 @@ namespace Google.Cloud.ResourceManager.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null);
+            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.SetIamPolicy(request.ResourceAsResourceName, request.Policy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -562,7 +563,7 @@ namespace Google.Cloud.ResourceManager.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null);
+            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request.ResourceAsResourceName, request.Policy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request.ResourceAsResourceName, request.Policy, st::CancellationToken.None);
@@ -591,7 +592,7 @@ namespace Google.Cloud.ResourceManager.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null);
+            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -618,7 +619,7 @@ namespace Google.Cloud.ResourceManager.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null);
+            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request, st::CancellationToken.None);
@@ -647,7 +648,7 @@ namespace Google.Cloud.ResourceManager.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null);
+            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request.Resource, request.Permissions);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -674,7 +675,7 @@ namespace Google.Cloud.ResourceManager.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null);
+            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request.Resource, request.Permissions, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request.Resource, request.Permissions, st::CancellationToken.None);
@@ -703,7 +704,7 @@ namespace Google.Cloud.ResourceManager.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null);
+            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request.ResourceAsResourceName, request.Permissions);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -730,7 +731,7 @@ namespace Google.Cloud.ResourceManager.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null);
+            FoldersClient client = new FoldersClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request.ResourceAsResourceName, request.Permissions, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request.ResourceAsResourceName, request.Permissions, st::CancellationToken.None);

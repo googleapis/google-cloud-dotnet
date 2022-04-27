@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -82,7 +83,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ArtifactUri = "artifact_uri469c7020",
             };
             mockGrpcClient.Setup(x => x.GetModel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
             Model response = client.GetModel(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -142,7 +143,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ArtifactUri = "artifact_uri469c7020",
             };
             mockGrpcClient.Setup(x => x.GetModelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Model>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
             Model responseCallSettings = await client.GetModelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Model responseCancellationToken = await client.GetModelAsync(request, st::CancellationToken.None);
@@ -204,7 +205,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ArtifactUri = "artifact_uri469c7020",
             };
             mockGrpcClient.Setup(x => x.GetModel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
             Model response = client.GetModel(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -264,7 +265,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ArtifactUri = "artifact_uri469c7020",
             };
             mockGrpcClient.Setup(x => x.GetModelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Model>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
             Model responseCallSettings = await client.GetModelAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Model responseCancellationToken = await client.GetModelAsync(request.Name, st::CancellationToken.None);
@@ -326,7 +327,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ArtifactUri = "artifact_uri469c7020",
             };
             mockGrpcClient.Setup(x => x.GetModel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
             Model response = client.GetModel(request.ModelName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -386,7 +387,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ArtifactUri = "artifact_uri469c7020",
             };
             mockGrpcClient.Setup(x => x.GetModelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Model>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
             Model responseCallSettings = await client.GetModelAsync(request.ModelName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Model responseCancellationToken = await client.GetModelAsync(request.ModelName, st::CancellationToken.None);
@@ -449,7 +450,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ArtifactUri = "artifact_uri469c7020",
             };
             mockGrpcClient.Setup(x => x.UpdateModel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
             Model response = client.UpdateModel(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -510,7 +511,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ArtifactUri = "artifact_uri469c7020",
             };
             mockGrpcClient.Setup(x => x.UpdateModelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Model>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
             Model responseCallSettings = await client.UpdateModelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Model responseCancellationToken = await client.UpdateModelAsync(request, st::CancellationToken.None);
@@ -573,7 +574,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ArtifactUri = "artifact_uri469c7020",
             };
             mockGrpcClient.Setup(x => x.UpdateModel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
             Model response = client.UpdateModel(request.Model, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -634,7 +635,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ArtifactUri = "artifact_uri469c7020",
             };
             mockGrpcClient.Setup(x => x.UpdateModelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Model>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
             Model responseCallSettings = await client.UpdateModelAsync(request.Model, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Model responseCancellationToken = await client.UpdateModelAsync(request.Model, request.UpdateMask, st::CancellationToken.None);
@@ -673,7 +674,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Metadata = new wkt::Value(),
             };
             mockGrpcClient.Setup(x => x.ImportModelEvaluation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
             ModelEvaluation response = client.ImportModelEvaluation(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -710,7 +711,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Metadata = new wkt::Value(),
             };
             mockGrpcClient.Setup(x => x.ImportModelEvaluationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ModelEvaluation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
             ModelEvaluation responseCallSettings = await client.ImportModelEvaluationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ModelEvaluation responseCancellationToken = await client.ImportModelEvaluationAsync(request, st::CancellationToken.None);
@@ -749,7 +750,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Metadata = new wkt::Value(),
             };
             mockGrpcClient.Setup(x => x.ImportModelEvaluation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
             ModelEvaluation response = client.ImportModelEvaluation(request.Parent, request.ModelEvaluation);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -786,7 +787,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Metadata = new wkt::Value(),
             };
             mockGrpcClient.Setup(x => x.ImportModelEvaluationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ModelEvaluation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
             ModelEvaluation responseCallSettings = await client.ImportModelEvaluationAsync(request.Parent, request.ModelEvaluation, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ModelEvaluation responseCancellationToken = await client.ImportModelEvaluationAsync(request.Parent, request.ModelEvaluation, st::CancellationToken.None);
@@ -825,7 +826,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Metadata = new wkt::Value(),
             };
             mockGrpcClient.Setup(x => x.ImportModelEvaluation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
             ModelEvaluation response = client.ImportModelEvaluation(request.ParentAsModelName, request.ModelEvaluation);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -862,7 +863,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Metadata = new wkt::Value(),
             };
             mockGrpcClient.Setup(x => x.ImportModelEvaluationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ModelEvaluation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
             ModelEvaluation responseCallSettings = await client.ImportModelEvaluationAsync(request.ParentAsModelName, request.ModelEvaluation, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ModelEvaluation responseCancellationToken = await client.ImportModelEvaluationAsync(request.ParentAsModelName, request.ModelEvaluation, st::CancellationToken.None);
@@ -900,7 +901,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Metadata = new wkt::Value(),
             };
             mockGrpcClient.Setup(x => x.GetModelEvaluation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
             ModelEvaluation response = client.GetModelEvaluation(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -936,7 +937,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Metadata = new wkt::Value(),
             };
             mockGrpcClient.Setup(x => x.GetModelEvaluationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ModelEvaluation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
             ModelEvaluation responseCallSettings = await client.GetModelEvaluationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ModelEvaluation responseCancellationToken = await client.GetModelEvaluationAsync(request, st::CancellationToken.None);
@@ -974,7 +975,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Metadata = new wkt::Value(),
             };
             mockGrpcClient.Setup(x => x.GetModelEvaluation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
             ModelEvaluation response = client.GetModelEvaluation(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1010,7 +1011,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Metadata = new wkt::Value(),
             };
             mockGrpcClient.Setup(x => x.GetModelEvaluationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ModelEvaluation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
             ModelEvaluation responseCallSettings = await client.GetModelEvaluationAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ModelEvaluation responseCancellationToken = await client.GetModelEvaluationAsync(request.Name, st::CancellationToken.None);
@@ -1048,7 +1049,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Metadata = new wkt::Value(),
             };
             mockGrpcClient.Setup(x => x.GetModelEvaluation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
             ModelEvaluation response = client.GetModelEvaluation(request.ModelEvaluationName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1084,7 +1085,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Metadata = new wkt::Value(),
             };
             mockGrpcClient.Setup(x => x.GetModelEvaluationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ModelEvaluation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
             ModelEvaluation responseCallSettings = await client.GetModelEvaluationAsync(request.ModelEvaluationName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ModelEvaluation responseCancellationToken = await client.GetModelEvaluationAsync(request.ModelEvaluationName, st::CancellationToken.None);
@@ -1110,7 +1111,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetModelEvaluationSlice(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
             ModelEvaluationSlice response = client.GetModelEvaluationSlice(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1134,7 +1135,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetModelEvaluationSliceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ModelEvaluationSlice>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
             ModelEvaluationSlice responseCallSettings = await client.GetModelEvaluationSliceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ModelEvaluationSlice responseCancellationToken = await client.GetModelEvaluationSliceAsync(request, st::CancellationToken.None);
@@ -1160,7 +1161,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetModelEvaluationSlice(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
             ModelEvaluationSlice response = client.GetModelEvaluationSlice(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1184,7 +1185,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetModelEvaluationSliceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ModelEvaluationSlice>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
             ModelEvaluationSlice responseCallSettings = await client.GetModelEvaluationSliceAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ModelEvaluationSlice responseCancellationToken = await client.GetModelEvaluationSliceAsync(request.Name, st::CancellationToken.None);
@@ -1210,7 +1211,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetModelEvaluationSlice(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
             ModelEvaluationSlice response = client.GetModelEvaluationSlice(request.ModelEvaluationSliceName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1234,7 +1235,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetModelEvaluationSliceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ModelEvaluationSlice>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
             ModelEvaluationSlice responseCallSettings = await client.GetModelEvaluationSliceAsync(request.ModelEvaluationSliceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ModelEvaluationSlice responseCancellationToken = await client.GetModelEvaluationSliceAsync(request.ModelEvaluationSliceName, st::CancellationToken.None);
