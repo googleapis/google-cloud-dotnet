@@ -21,7 +21,6 @@ using Google.Cloud.Logging.Type;
 using Google.Cloud.Logging.V2;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.TestHost;
@@ -514,8 +513,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
             {
                 return new object[][]
                 {
-                    new object[] { GetTestServer<ObsoleteNoBufferWarningLoggerExternalTraceTestApplication>() },
-                    new object[] { GetTestServer<ObsoleteExternalTracingTestApplication>() },
                     new object[] { GetTestServer<NoBufferWarningLoggerExternalTraceTestApplication>() },
                     new object[] { GetTestServer<ExternalTracingTestApplication>() }
                 };
@@ -649,29 +646,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
                 // These are empty strings instead of null.
                 Assert.Equal("", entry.Trace);
                 Assert.Equal("", entry.SpanId);
-            });
-        }
-
-        [Fact]
-        public async Task Logging_Factory_Labels()
-        {
-            string testId = IdGenerator.FromGuid();
-            DateTime startTime = DateTime.UtcNow;
-
-            using (var server = GetTestServer<WarningWithLabelsFactoryLoggerTestApplication>())
-            using (var client = server.CreateClient())
-            {
-                await client.GetAsync($"/Main/Warning/{testId}");
-            }
-
-            _fixture.AddValidator(testId, results =>
-            {
-                var entry = results.Single();
-                Assert.Equal(4, entry.Labels.Count);
-                Assert.Equal("some-value", entry.Labels["some-key"]);
-                Assert.Equal("Hello, World!", entry.Labels["Foo"]);
-                Assert.Equal("Hello, World!", entry.Labels["Bar"]);
-                Assert.NotEmpty(entry.Labels["trace_identifier"]);
             });
         }
 
@@ -869,24 +843,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
         }
     }
 
-    public class ObsoleteExternalTracingTestApplication : BaseStartup
-    {
-        protected readonly string _projectId = TestEnvironment.GetTestProjectId();
-
-        public override void ConfigureServices(IServiceCollection services) =>
-            base.ConfigureServices(services
-                .AddHttpContextAccessor()
-#pragma warning disable CS0618 // Type or member is obsolete
-                .AddSingleton<IExternalTraceProvider, SpanCountingExternalTraceProvider>());
-#pragma warning restore CS0618 // Type or member is obsolete
-
-        public override void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory) =>
-#pragma warning disable CS0618 // Type or member is obsolete
-            base.Configure(app, loggerFactory.AddGoogle(
-                app.ApplicationServices, _projectId, LoggerOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer())));
-#pragma warning restore CS0618 // Type or member is obsolete
-    }
-
     public class ExternalTracingTestApplication : LoggerNoTracingActivatedTestApplication
     {
         public override void ConfigureServices(IServiceCollection services) =>
@@ -964,20 +920,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
         { }
     }
 
-    public class ObsoleteNoBufferWarningLoggerExternalTraceTestApplication : LoggerTestApplication
-    {
-        public override void ConfigureServices(IServiceCollection services) =>
-#pragma warning disable CS0618 // Type or member is obsolete
-            base.ConfigureServices(services.AddSingleton<IExternalTraceProvider>(new SpanCountingExternalTraceProvider()));
-#pragma warning restore CS0618 // Type or member is obsolete
-
-        public override void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory) =>
-#pragma warning disable CS0618 // Type or member is obsolete
-            base.Configure(app, loggerFactory.AddGoogle(
-                app.ApplicationServices, _projectId, LoggerOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer())));
-#pragma warning restore CS0618 // Type or member is obsolete
-    }
-
     public class NoBufferWarningLoggerExternalTraceTestApplication : NoBufferWarningLoggerTestApplication
     {
         public override void ConfigureServices(IServiceCollection services) =>
@@ -1013,35 +955,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
             }));
             base.ConfigureServices(services);
         }
-    }
-
-    /// <summary>
-    /// An application that has a <see cref="GoogleLogger"/> and a <see cref="Common.ILogEntryLabelProvider"/>,
-    /// that accept all logs of level warning or above.
-    /// </summary>
-    public class WarningWithLabelsFactoryLoggerTestApplication : LoggerTestApplication
-    {
-        public override void ConfigureServices(IServiceCollection services)
-        {
-#pragma warning disable CS0618 // Type or member is obsolete
-            services
-                .AddLogEntryLabelProviderSingleton<FooLogEntryLabelProvider>()
-                .AddSingleton<ILogEntryLabelProvider, BarLogEntryLabelProvider>();
-#pragma warning restore CS0618 // Type or member is obsolete
-            LoggingExtensions.AddLogEntryLabelProviderSingleton<TraceIdLogEntryLabelProvider>(services);
-            base.ConfigureServices(services);
-        }
-
-        public override void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory) =>
-#pragma warning disable CS0618 // Type or member is obsolete
-            base.Configure(app, loggerFactory.AddGoogle(
-                app.ApplicationServices,
-                _projectId,
-                LoggerOptions.Create(
-                    logLevel: LogLevel.Warning,
-                    labels: new Dictionary<string, string> { { "some-key", "some-value" } },
-                    bufferOptions: BufferOptions.NoBuffer())));
-#pragma warning restore CS0618 // Type or member is obsolete
     }
 
     public class WarningWithLabelsBuilderLoggerTestApplication : LoggerTestApplication
@@ -1292,23 +1205,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
         }
     }
 
-    internal class FooLogEntryLabelProvider : Common.ILogEntryLabelProvider
-    {
-        public void Invoke(Dictionary<string, string> labels)
-        {
-            labels["Foo"] = "Hello, World!";
-        }
-    }
-
-    [Obsolete("Added to test that we still support the obsolete Google.Cloud.Diagnostics.AspNetCore.ILogEntryLabelProvider.")]
-    internal class BarLogEntryLabelProvider : ILogEntryLabelProvider
-    {
-        public void Invoke(Dictionary<string, string> labels)
-        {
-            labels["Bar"] = "Hello, World!";
-        }
-    }
-
     internal class SpanCountingITraceContextFactory
     {
         public SpanCountingITraceContextFactory(int startAt) => _callCount = startAt;
@@ -1316,13 +1212,4 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
         internal ITraceContext GetCurrentTraceContext() =>
             new SimpleTraceContext("105445aa7843bc8bf206b12000100f00", Convert.ToUInt64(Interlocked.Increment(ref _callCount)), false);
     }
-
-#pragma warning disable CS0618 // Type or member is obsolete
-    internal class SpanCountingExternalTraceProvider : IExternalTraceProvider
-    {
-        internal int _callCount = 0;
-        public TraceContextForLogEntry GetCurrentTraceContext(IServiceProvider serviceProvider) =>
-            new TraceContextForLogEntry("105445aa7843bc8bf206b12000100f00", $"{Convert.ToUInt64(Interlocked.Increment(ref _callCount)):x16}");
-    }
-#pragma warning restore CS0618 // Type or member is obsolete
 }

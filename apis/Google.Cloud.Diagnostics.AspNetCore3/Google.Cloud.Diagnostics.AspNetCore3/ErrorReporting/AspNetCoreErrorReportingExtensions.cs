@@ -16,7 +16,6 @@ using Google.Cloud.Diagnostics.Common;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
-using System;
 
 namespace Google.Cloud.Diagnostics.AspNetCore3
 {
@@ -29,14 +28,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3
         /// Configures Google Cloud Error Reporting for ASP .NET Core applications./>.
         /// </summary>
         public static IServiceCollection AddGoogleErrorReportingForAspNetCore(
-            this IServiceCollection services, Common.ErrorReportingServiceOptions options = null) =>
-#pragma warning disable CS0618 // Type or member is obsolete
-            services.AddGoogleErrorReportingForAspNetCore(true, options);
-#pragma warning restore CS0618 // Type or member is obsolete
-
-        [Obsolete("Added for avoiding code duplication while we made old methods obsolete and included substitutes")]
-        internal static IServiceCollection AddGoogleErrorReportingForAspNetCore(
-            this IServiceCollection services, bool registerMiddleware, Common.ErrorReportingServiceOptions options)
+            this IServiceCollection services, ErrorReportingServiceOptions options = null)
         {
             services.AddGoogleErrorReporting(options);
             services.AddHttpContextAccessor();
@@ -44,11 +36,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore3
                 sp.GetRequiredService<IContextExceptionLogger>(),
                 sp.GetRequiredService<IHttpContextAccessor>()));
 
-            if (registerMiddleware)
-            {
-                // This registers the trace middleware so users don't have to.
-                services.AddSingleton<IStartupFilter, AspNetCoreErrorReportingStartupFilter>();
-            }
+            // This registers the trace middleware so users don't have to.
+            services.AddSingleton<IStartupFilter, AspNetCoreErrorReportingStartupFilter>();
 
             return services;
         }

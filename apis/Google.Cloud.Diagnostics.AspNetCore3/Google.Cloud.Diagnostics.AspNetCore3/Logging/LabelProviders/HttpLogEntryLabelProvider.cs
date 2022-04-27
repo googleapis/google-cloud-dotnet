@@ -12,19 +12,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
-using System.Collections.Generic;
 using Google.Api.Gax;
+using Google.Cloud.Diagnostics.Common;
 using Microsoft.AspNetCore.Http;
+using System.Collections.Generic;
 
 namespace Google.Cloud.Diagnostics.AspNetCore3
 {
     /// <summary>
     /// Base class for <see cref="ILogEntryLabelProvider"/> implementations which needs an <see cref="HttpContext"/> instance.
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
-    public abstract class HttpLogEntryLabelProvider : ILogEntryLabelProvider, Common.ILogEntryLabelProvider
-#pragma warning restore CS0618 // Type or member is obsolete
+    public abstract class HttpLogEntryLabelProvider : ILogEntryLabelProvider
     {
         private readonly IHttpContextAccessor _httpContextAccessor;
 
