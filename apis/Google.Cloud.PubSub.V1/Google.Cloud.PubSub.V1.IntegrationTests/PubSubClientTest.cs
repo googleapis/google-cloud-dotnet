@@ -460,6 +460,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             Console.WriteLine("pub+sub completed.");
         }
 
+#if NET462_OR_GREATER
         [SkippableFact]
         public async Task SeparateSubchannels()
         {
@@ -496,6 +497,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             int subchannelsCreated = GrpcInfo.SubchannelCount - originalSubchannelCount;
             Assert.Equal(7, subchannelsCreated);
         }
+#endif
 
         [Fact]
         public async Task DeadLetterQueueAndDeliveryAttempt()

@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+#if NET462_OR_GREATER
 using Grpc.Core;
 using Grpc.Core.Logging;
 using System;
@@ -112,3 +113,4 @@ namespace Google.Cloud.ClientTesting
         }
     }
 }
+#endif
