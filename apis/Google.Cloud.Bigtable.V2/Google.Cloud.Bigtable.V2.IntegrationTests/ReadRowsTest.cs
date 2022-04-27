@@ -32,14 +32,11 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
 
         public ReadRowsTest(BigtableFixture fixture) => _fixture = fixture;
 
-        [Fact(Skip = "Server doesn't support cell splitting yet")]
+        [SkippableFact(Skip = "Server doesn't support cell splitting yet")]
         public async Task SplitCell()
         {
-            if (_fixture.EmulatorCallInvoker != null)
-            {
-                // Don't run the test on the emulator.
-                return;
-            }
+            // Don't run the test on the emulator.
+            Skip.If(_fixture.RunningAgainstEmulator);
 
             var tableName = _fixture.TableName;
             var client = _fixture.TableClient;
