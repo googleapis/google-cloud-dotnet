@@ -29,13 +29,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3
         /// <summary>
         /// Configures Google Cloud Tracing for ASP .NET Core applications./>.
         /// </summary>
-        public static IServiceCollection AddGoogleTraceForAspNetCore(this IServiceCollection services, AspNetCoreTraceOptions options = null) =>
-#pragma warning disable CS0618 // Type or member is obsolete
-            services.AddGoogleTraceForAspNetCore(true, options);
-#pragma warning restore CS0618 // Type or member is obsolete
-
-        [Obsolete("This was added to avoid code duplication between the obsolete extension methods and the new one.")]
-        internal static IServiceCollection AddGoogleTraceForAspNetCore(this IServiceCollection services, bool registerMiddleware, AspNetCoreTraceOptions options)
+        public static IServiceCollection AddGoogleTraceForAspNetCore(this IServiceCollection services, AspNetCoreTraceOptions options = null)
         {
             services.AddGoogleTrace(options?.ServiceOptions);
 
@@ -44,20 +38,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore3
             // We use TryAdd... here to allow user code to inject their own trace context provider
             // and matching trace context response propagator. We use Google trace header otherwise.
             services.TryAddGoogleTraceContextProvider();
-            services.TryAddSingleton<Action<HttpResponse, ITraceContext>>(PropagateGoogleTraceHeaders);
-
-            // Obsolete: Adding this for backwards compatibility in case someone is using the old factory type.
-            // The new and prefered factory type is Func<ITraceContext, IManagedTracer> which is being added by Common.
-            services.AddSingleton<Func<TraceHeaderContext, IManagedTracer>>(sp => sp.GetRequiredService<Func<ITraceContext, IManagedTracer>>());
+            services.TryAddSingleton(PropagateGoogleTraceHeaders);
 
             services.AddHttpContextAccessor();
             services.AddTransient<ICloudTraceNameProvider, DefaultCloudTraceNameProvider>();
 
-            if (registerMiddleware)
-            {
-                // This registers the trace middleware so users don't have to.
-                services.AddSingleton<IStartupFilter, AspNetCoreTraceStartupFilter>();
-            }
+            // This registers the trace middleware so users don't have to.
+            services.AddSingleton<IStartupFilter, AspNetCoreTraceStartupFilter>();
 
             return services;
         }

@@ -31,7 +31,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3
         /// obtained from the environment if running on GCP. This means that this overload
         /// can only be used when running on GCP. If you are not running on GCP or need to specify
         /// the Google Cloud Project ID, you can use any of
-        /// <see cref="AddGoogleDiagnosticsForAspNetCore(IServiceCollection, AspNetCoreTraceOptions, LoggingServiceOptions, Common.ErrorReportingServiceOptions)"/>
+        /// <see cref="AddGoogleDiagnosticsForAspNetCore(IServiceCollection, AspNetCoreTraceOptions, LoggingServiceOptions, ErrorReportingServiceOptions)"/>
         /// or 
         /// <see cref="AddGoogleDiagnosticsForAspNetCore(IServiceCollection, string, string, string, TraceOptions, LoggingOptions, ErrorReportingOptions)"/>.
         /// </remarks>
@@ -50,7 +50,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3
             this IServiceCollection services,
             AspNetCoreTraceOptions traceOptions = null,
             LoggingServiceOptions loggingOptions = null,
-            Common.ErrorReportingServiceOptions errorReportingOptions = null) =>
+            ErrorReportingServiceOptions errorReportingOptions = null) =>
             services
                 .AddLogEntryLabelProviderSingleton<TraceIdLogEntryLabelProvider>()
                 .AddGoogleTraceForAspNetCore(traceOptions)
@@ -88,7 +88,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3
                     ServiceName = serviceName,
                     Version = serviceVersion
                 },
-                new Common.ErrorReportingServiceOptions
+                new ErrorReportingServiceOptions
                 {
                     Options = errorReportingOptions,
                     ProjectId = projectId,
