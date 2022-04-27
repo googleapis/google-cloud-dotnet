@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-using Google.Cloud.Diagnostics.Common;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Threading.Tasks;

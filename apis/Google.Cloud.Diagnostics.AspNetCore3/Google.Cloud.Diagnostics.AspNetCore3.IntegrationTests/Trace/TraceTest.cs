@@ -621,8 +621,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
         private static void ConfigureCustomTraceContext(IWebHostBuilder hostBuilder) =>
             hostBuilder.ConfigureServices(services => services
                 .AddScoped(CustomTraceContextProvider)
-                .AddSingleton<Action<HttpResponse, ITraceContext>>(CustomTraceContextResponsePropagator)
-                .AddSingleton<Action<HttpRequestMessage, ITraceContext>>(CustomTraceContextOutgoingPropagator));
+                .AddSingleton(CustomTraceContextResponsePropagator)
+                .AddSingleton(CustomTraceContextOutgoingPropagator));
     }
 
     /// <summary>
