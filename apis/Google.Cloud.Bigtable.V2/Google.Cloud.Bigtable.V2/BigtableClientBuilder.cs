@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using System;
 using System.Threading;
@@ -19,13 +20,26 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.Bigtable.V2
 {
-    // TODO: Add emulator support in the same way as FirestoreClient etc.
-
     /// <summary>
     /// Builder class for <see cref="BigtableClient"/> to provide simple configuration of credentials, endpoint etc.
     /// </summary>
     public sealed partial class BigtableClientBuilder : ClientBuilderBase<BigtableClient>
     {
+        // Note: emulator support is actually provided by BigtableServiceApiClientBuilder; this proxies through.
+
+        /// <summary>
+        /// Specifies how the builder responds to the presence of emulator environment variables.
+        /// </summary>
+        /// <remarks>
+        /// This property defaults to <see cref="EmulatorDetection.None"/>, meaning that
+        /// environment variables are ignored.
+        /// </remarks>
+        public new EmulatorDetection EmulatorDetection
+        {
+            get => base.EmulatorDetection;
+            set => base.EmulatorDetection = value;
+        }
+
         /// <summary>
         /// The settings to use for RPCs, or null for the default settings.
         /// </summary>
