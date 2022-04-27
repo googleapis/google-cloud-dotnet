@@ -43,6 +43,8 @@ jobs:
       env:
           SPANNER_EMULATOR_HOST: localhost:9010
           TEST_PROJECT: emulator-test-project
+          # Temporary measure until we can get Grpc.Net.Client working with the emulator
+          GRPC_DEFAULT_ADAPTER_OVERRIDE: Grpc.Core
       run: |
         dotnet test -c Release ./apis/Google.Cloud.Spanner.Data/Google.Cloud.Spanner.Data.IntegrationTests
         dotnet test -c Release ./apis/Google.Cloud.Spanner.Data/Google.Cloud.Spanner.Data.Snippets
