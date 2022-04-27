@@ -40,14 +40,18 @@ namespace Google.Cloud.Bigtable.V2
         public override BigtableClient Build()
         {
             var builder = new BigtableServiceApiClientBuilder(this);
-            return BigtableClient.Create(builder.Build());
+            var client = BigtableClient.Create(builder.Build());
+            LastCreatedChannel = builder.LastCreatedChannel;
+            return client;
         }
 
         /// <inheritdoc />
         public override async Task<BigtableClient> BuildAsync(CancellationToken cancellationToken = default)
         {
             var builder = new BigtableServiceApiClientBuilder(this);
-            return BigtableClient.Create(await builder.BuildAsync(cancellationToken).ConfigureAwait(false));
+            var client = BigtableClient.Create(await builder.BuildAsync(cancellationToken).ConfigureAwait(false));
+            LastCreatedChannel = builder.LastCreatedChannel;
+            return client;
         }
 
         // Overrides for abstract methods that will never actually be called.
