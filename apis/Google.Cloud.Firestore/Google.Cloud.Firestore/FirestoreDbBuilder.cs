@@ -90,9 +90,12 @@ namespace Google.Cloud.Firestore
             var emulatorBuilder = MaybeUseEmulator();
             if (emulatorBuilder is object)
             {
-                return emulatorBuilder.Build();
+                var ret = emulatorBuilder.Build();
+                LastCreatedChannel = emulatorBuilder.LastCreatedChannel;
+                return ret;
             }
 
+            LastCreatedChannel = null;
             var projectId = ProjectId ?? Platform.Instance().ProjectId;
             var client = Client;
             if (client == null)
@@ -100,6 +103,7 @@ namespace Google.Cloud.Firestore
                 var clientBuilder = FirestoreClientBuilder.FromOtherBuilder(this);
                 clientBuilder.Settings = GetEffectiveSettings();
                 client = clientBuilder.Build();
+                LastCreatedChannel = clientBuilder.LastCreatedChannel;
             }
             return BuildFromClient(projectId, client);
         }
@@ -110,17 +114,20 @@ namespace Google.Cloud.Firestore
             var emulatorBuilder = MaybeUseEmulator();
             if (emulatorBuilder is object)
             {
-                return await emulatorBuilder.BuildAsync(cancellationToken).ConfigureAwait(false);
+                var ret = await emulatorBuilder.BuildAsync(cancellationToken).ConfigureAwait(false);
+                LastCreatedChannel = emulatorBuilder.LastCreatedChannel;
+                return ret;
             }
 
+            LastCreatedChannel = null;
             var projectId = ProjectId ?? (await Platform.InstanceAsync().ConfigureAwait(false)).ProjectId;
-
             var client = Client;
             if (client == null)
             {
                 var clientBuilder = FirestoreClientBuilder.FromOtherBuilder(this);
                 clientBuilder.Settings = GetEffectiveSettings();
                 client = await clientBuilder.BuildAsync(cancellationToken).ConfigureAwait(false);
+                LastCreatedChannel = clientBuilder.LastCreatedChannel;
             }
             return BuildFromClient(projectId, client);
         }
