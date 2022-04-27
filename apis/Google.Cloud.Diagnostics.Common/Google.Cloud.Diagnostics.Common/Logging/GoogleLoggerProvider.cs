@@ -17,7 +17,6 @@ using Google.Cloud.Logging.V2;
 using Google.Protobuf.WellKnownTypes;
 using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
 
 namespace Google.Cloud.Diagnostics.Common
 {
@@ -86,14 +85,6 @@ namespace Google.Cloud.Diagnostics.Common
 
             return provider;
         }
-
-        /// <summary>
-        /// Creates a <see cref="GoogleLogger"/> with the given log name.
-        /// </summary>
-        [Obsolete("Added for backward compatibility only when moving GoogleLogger to Common.")]
-        public GoogleLogger CreateLogger(
-            string logName, Action<IServiceProvider, Dictionary<string, string>> obsoleteLabelsGetter, Action<IServiceProvider, LogEntry, TraceTarget> obsoleteTraceContextGetter) =>
-            new GoogleLogger(_consumer, _logTarget, _serviceContext, _loggerOptions, logName, obsoleteLabelsGetter, obsoleteTraceContextGetter, serviceProvider: _serviceProvider);
 
         /// <summary>
         /// Creates a <see cref="GoogleLogger"/> with the given log name.
