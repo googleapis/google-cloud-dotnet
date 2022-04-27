@@ -15,6 +15,7 @@
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Bigtable.Common.V2;
+using Grpc.Core;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -197,6 +198,49 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 request.RowKeyPrefix = rowKeyPrefix.Value;
             }
             return request;
+        }
+    }
+
+    public partial class BigtableTableAdminClientBuilder
+    {
+        private const string s_emulatorHostEnvironmentVariable = "BIGTABLE_EMULATOR_HOST";
+        private static readonly string[] s_emulatorEnvironmentVariables = { s_emulatorHostEnvironmentVariable };
+
+        /// <summary>
+        /// Specifies how the builder responds to the presence of emulator environment variables.
+        /// </summary>
+        /// <remarks>
+        /// This property defaults to <see cref="EmulatorDetection.None"/>, meaning that
+        /// environment variables are ignored.
+        /// </remarks>
+        public new EmulatorDetection EmulatorDetection
+        {
+            get => base.EmulatorDetection;
+            set => base.EmulatorDetection = value;
+        }
+
+        partial void InterceptBuild(ref BigtableTableAdminClient client) => client = MaybeCreateEmulatorClientBuilder()?.Build();
+
+        partial void InterceptBuildAsync(CancellationToken cancellationToken, ref Task<BigtableTableAdminClient> task) =>
+            task = MaybeCreateEmulatorClientBuilder()?.BuildAsync(cancellationToken);
+
+        private BigtableTableAdminClientBuilder MaybeCreateEmulatorClientBuilder()
+        {
+            var emulatorEnvironment = GetEmulatorEnvironment(s_emulatorEnvironmentVariables, s_emulatorEnvironmentVariables);
+            if (emulatorEnvironment is null)
+            {
+                return null;
+            }
+            // We don't set the EmulatorDetection property here to avoid recursively calling
+            // MaybeCreateEmulatorClientBuilder().
+            var builder = new BigtableTableAdminClientBuilder
+            {
+                Settings = Settings,
+                Endpoint = emulatorEnvironment[s_emulatorHostEnvironmentVariable],
+                ChannelCredentials = ChannelCredentials.Insecure
+            };
+            builder.CopySettingsForEmulator(this);
+            return builder;
         }
     }
 }

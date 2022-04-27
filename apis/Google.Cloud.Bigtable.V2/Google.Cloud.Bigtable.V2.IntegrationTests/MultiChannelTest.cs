@@ -26,13 +26,10 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
 
         public MultiChannelTest(BigtableFixture fixture) => _fixture = fixture;
 
-        [Fact(Skip = "See issue 2675")]
+        [SkippableFact(Skip = "See issue 2675")]
         public async Task SeparateSubchannels()
         {
-            if (_fixture.EmulatorCallInvoker != null)
-            {
-                return;
-            }
+            Skip.If(_fixture.RunningAgainstEmulator);
 
             int originalSubchannelCount = GrpcInfo.SubchannelCount;
             int clientCount = 2;

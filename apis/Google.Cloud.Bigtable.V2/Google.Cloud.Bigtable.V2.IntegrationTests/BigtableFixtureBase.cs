@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Api.Gax.ResourceNames;
 using Google.Cloud.Bigtable.Admin.V2;
 using Google.Cloud.Bigtable.Common.V2;
@@ -34,32 +35,25 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         public InstanceName InstanceName { get; private set; }
         public TableName TableName { get; private set; }
 
-        public BigtableInstanceAdminClient InstanceAdminClient { get; private set; }
         public BigtableTableAdminClient TableAdminClient { get; private set; }
         public BigtableClient TableClient { get; private set; }
 
         public List<TableName> CreatedTables { get; } = new List<TableName>();
-        public CallInvoker EmulatorCallInvoker { get; }
+        public bool RunningAgainstEmulator { get; }
 
         public BigtableFixtureBase()
         {
             GrpcInfo.EnableSubchannelCounting();
 
-            string emulatorHost = Environment.GetEnvironmentVariable(EmulatorEnvironmentVariable);
+            RunningAgainstEmulator = !string.IsNullOrEmpty(Environment.GetEnvironmentVariable(EmulatorEnvironmentVariable));
 
             string projectId;
             string instanceId;
-            if (!string.IsNullOrEmpty(emulatorHost))
+            if (RunningAgainstEmulator)
             {
                 // TODO: Use BigtableClientBuilder emulator support to when it exists...
                 projectId = "emulator-test-project";
                 instanceId = "doesnt-matter";
-
-                EmulatorCallInvoker = new BigtableServiceApiClientBuilder
-                {
-                    Endpoint = emulatorHost,
-                    ChannelCredentials = ChannelCredentials.Insecure
-                }.CreateGcpCallInvoker();
             }
             else
             {
@@ -99,25 +93,20 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
 
         private async Task InitBigtableInstanceAndTable()
         {
-            if (EmulatorCallInvoker == null)
-            {
-                InstanceAdminClient = BigtableInstanceAdminClient.Create();
-                TableAdminClient = BigtableTableAdminClient.Create();
-                TableClient = BigtableClient.Create();
+            TableAdminClient = new BigtableTableAdminClientBuilder { EmulatorDetection = EmulatorDetection.EmulatorOrProduction }.Build();
+            TableClient = new BigtableClientBuilder { EmulatorDetection = EmulatorDetection.EmulatorOrProduction }.Build();
 
+            if (!RunningAgainstEmulator)
+            {
+                var instanceAdminClient = BigtableInstanceAdminClient.Create();
                 try
                 {
-                    await InstanceAdminClient.GetInstanceAsync(InstanceName);
+                    await instanceAdminClient.GetInstanceAsync(InstanceName);
                 }
                 catch (RpcException e) when (e.Status.StatusCode == StatusCode.NotFound)
                 {
                     Assert.True(false, $"The Bigtable instance for testing does not exist: {InstanceName}");
                 }
-            }
-            else
-            {
-                TableAdminClient = new BigtableTableAdminClientBuilder { CallInvoker = EmulatorCallInvoker }.Build();
-                TableClient = new BigtableClientBuilder { CallInvoker = EmulatorCallInvoker }.Build();
             }
 
             TableName = await CreateTable();
