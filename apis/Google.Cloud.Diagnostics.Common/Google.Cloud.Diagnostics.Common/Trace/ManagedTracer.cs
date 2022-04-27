@@ -40,21 +40,6 @@ namespace Google.Cloud.Diagnostics.Common
         }
 
         /// <summary>
-        /// Create a factory to generate an <see cref="IManagedTracer"/> from a <see cref="TraceHeaderContext"/>.
-        /// </summary>
-        /// <param name="projectId">The Google Cloud Platform project ID. Must not be null</param>
-        /// <param name="consumer">The trace consumer.  Must not be null.</param>
-        /// <param name="options">Trace options. Must not be null.</param>
-        /// <remarks>
-        /// This method has been made obsolete. You should use <see cref="CreateFactory(string, IConsumer{TraceProto}, TraceOptions)"/>
-        /// instead. The function returned by <see cref="CreateFactory(string, IConsumer{TraceProto}, TraceOptions)"/>
-        /// will accept any <see cref="ITraceContext"/> as input and not just <see cref="TraceHeaderContext"/>.
-        /// </remarks>
-        [Obsolete("Please use Google.Cloud.Diagnostics.Common.ManagedTracer.CreateFactory instead which only differs in that the returned factory will accept any ITraceContext as input.")]
-        public static Func<TraceHeaderContext, IManagedTracer> CreateTracerFactory(string projectId, IConsumer<TraceProto> consumer, TraceOptions options) =>
-            CreateFactory(projectId, consumer, options);
-
-        /// <summary>
         /// Create a factory to generate an <see cref="IManagedTracer"/> from an <see cref="ITraceContext"/>.
         /// </summary>
         /// <param name="projectId">The Google Cloud Platform project ID. Must not be null</param>

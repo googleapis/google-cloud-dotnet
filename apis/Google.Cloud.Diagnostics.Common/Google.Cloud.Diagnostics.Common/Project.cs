@@ -121,7 +121,6 @@ namespace Google.Cloud.Diagnostics.Common
                     return GetLabel(resource, "project_id");
                 default: return null;
             }
-
         }
 
         private static string GetServiceNameFromResource(MonitoredResource resource)
