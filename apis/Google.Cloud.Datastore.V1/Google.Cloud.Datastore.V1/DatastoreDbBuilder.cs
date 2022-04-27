@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Grpc.Core;
 using System;
 using System.Collections.Generic;
 using System.Threading;
@@ -67,11 +68,22 @@ namespace Google.Cloud.Datastore.V1
         public string NamespaceId { get; set; }
 
         /// <inheritdoc />
-        public override DatastoreDb Build() => PrepareBuilder().Build();
+        public override DatastoreDb Build()
+        {
+            var builder = PrepareBuilder();
+            var db = builder.Build();
+            LastCreatedChannel = builder.LastCreatedChannel;
+            return db;
+        }
 
         /// <inheritdoc />
-        public override Task<DatastoreDb> BuildAsync(CancellationToken cancellationToken = default) =>
-            PrepareBuilder().BuildAsync(cancellationToken);
+        public override async Task<DatastoreDb> BuildAsync(CancellationToken cancellationToken = default)
+        {
+            var builder = PrepareBuilder();
+            var db = await builder.BuildAsync(cancellationToken).ConfigureAwait(false);
+            LastCreatedChannel = builder.LastCreatedChannel;
+            return db;
+        }
 
         // We never end up using this method, at least with the current implementation
         /// <inheritdoc />
@@ -112,6 +124,8 @@ namespace Google.Cloud.Datastore.V1
             private string _projectId;
             private string _namespaceId;
             private DatastoreClientBuilder _clientBuilder;
+
+            internal ChannelBase LastCreatedChannel => _clientBuilder.LastCreatedChannel;
 
             internal ConfiguredBuilder(string projectId, string namespaceId, DatastoreClientBuilder clientBuilder)
             {
