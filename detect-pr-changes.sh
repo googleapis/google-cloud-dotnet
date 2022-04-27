@@ -78,7 +78,7 @@ do
   then
     echo "$api was deleted"
   else
-    dotnet run --no-build -p tools/Google.Cloud.Tools.CompareVersions -- --file1=tmpgit/old/$api.dll --file2=tmpgit/new/$api.dll
+    dotnet run --no-build --project tools/Google.Cloud.Tools.CompareVersions -- --file1=tmpgit/old/$api.dll --file2=tmpgit/new/$api.dll
   fi
 done  
 
@@ -87,4 +87,4 @@ log_header "Checking compatibility with previous releases"
 # Make sure all the tags are available for checking compatibility
 git fetch --tags -q
 
-dotnet run --no-build -p tools/Google.Cloud.Tools.ReleaseManager -- check-version-compatibility $apis || maybe_fail
+dotnet run --no-build --project tools/Google.Cloud.Tools.ReleaseManager -- check-version-compatibility $apis || maybe_fail
