@@ -50,13 +50,11 @@ namespace Google.Cloud.Diagnostics.Common
 
         internal class OutgoingGoogleTraceHandlerFactory
         {
-#pragma warning disable CS0618 // Type or member is obsolete
             internal UnchainedTraceHeaderPropagatingHandler Create(IServiceProvider serviceProvider, Func<IServiceProvider, IDictionary<string, string>> labelsProvider) =>
                 new UnchainedTraceHeaderPropagatingHandler(
                     ContextTracerManager.GetCurrentTracer,
                     serviceProvider.GetService<Action<HttpRequestMessage, ITraceContext>>(),
                     labelsProvider?.Invoke(serviceProvider));
-#pragma warning restore CS0618 // Type or member is obsolete
         }
     }
 }
