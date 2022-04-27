@@ -33,5 +33,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Google.Cloud.Spanner.Data.CommonTesting\Google.Cloud.Spanner.Data.CommonTesting.csproj" />
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
+    <!-- Temporary measure until we can get Grpc.Net.Client working with the emulator -->
+    <PackageReference Include="Grpc.Core" Version="2.39.1" />
   </ItemGroup>
 </Project>
