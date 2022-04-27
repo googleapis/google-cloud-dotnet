@@ -146,6 +146,9 @@ namespace Google.Cloud.Bigtable.V2
 
     public sealed partial class BigtableServiceApiClientBuilder : ClientBuilderBase<BigtableServiceApiClient>
     {
+        private const string s_emulatorHostEnvironmentVariable = "BIGTABLE_EMULATOR_HOST";
+        private static readonly string[] s_emulatorEnvironmentVariables = { s_emulatorHostEnvironmentVariable };
+
         private static readonly GrpcChannelOptions s_bigtableDefaultOptions = DefaultOptions
             .WithPrimaryUserAgent(BigtableClient.UserAgent)
             // Note: these were previously -1, which was treated as infinity by Grpc.Core, but is treated
@@ -155,10 +158,47 @@ namespace Google.Cloud.Bigtable.V2
             .WithMaxReceiveMessageSize(int.MaxValue)
             .WithKeepAliveTime(TimeSpan.FromSeconds(30));
 
+        /// <summary>
+        /// Specifies how the builder responds to the presence of emulator environment variables.
+        /// </summary>
+        /// <remarks>
+        /// This property defaults to <see cref="EmulatorDetection.None"/>, meaning that
+        /// environment variables are ignored.
+        /// </remarks>
+        public new EmulatorDetection EmulatorDetection
+        {
+            get => base.EmulatorDetection;
+            set => base.EmulatorDetection = value;
+        }
+
         internal BigtableServiceApiClientBuilder(BigtableClientBuilder builder) : base(BigtableServiceApiClient.ServiceMetadata)
         {
             Settings = builder.Settings;
             CopyCommonSettings(builder);
+        }
+
+        partial void InterceptBuild(ref BigtableServiceApiClient client) => client = MaybeCreateEmulatorClientBuilder()?.Build();
+
+        partial void InterceptBuildAsync(CancellationToken cancellationToken, ref Task<BigtableServiceApiClient> task) =>
+            task = MaybeCreateEmulatorClientBuilder()?.BuildAsync(cancellationToken);
+
+        private BigtableServiceApiClientBuilder MaybeCreateEmulatorClientBuilder()
+        {
+            var emulatorEnvironment = GetEmulatorEnvironment(s_emulatorEnvironmentVariables, s_emulatorEnvironmentVariables);
+            if (emulatorEnvironment is null)
+            {
+                return null;
+            }
+            // We don't set the EmulatorDetection property here to avoid recursively calling
+            // MaybeCreateEmulatorClientBuilder().
+            var builder = new BigtableServiceApiClientBuilder
+            {
+                Settings = Settings,
+                Endpoint = emulatorEnvironment[s_emulatorHostEnvironmentVariable],
+                ChannelCredentials = ChannelCredentials.Insecure
+            };
+            builder.CopySettingsForEmulator(this);
+            return builder;
         }
 
         /// <inheritdoc />
