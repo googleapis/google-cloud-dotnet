@@ -167,7 +167,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
                         ServiceName = EntryData.Service,
                         Version = EntryData.Version,
                         // This is just so that our validator finds the log entries associated to errors.
-                        Options = ErrorReportingOptions.CreateInstance(
+                        Options = ErrorReportingOptions.Create(
                             logName: "aspnetcore",
                             bufferOptions: BufferOptions.NoBuffer(),
                             retryOptions: RetryOptions.NoRetry(ExceptionHandling.Propagate))
@@ -190,7 +190,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
                             Credential = GoogleCredential.FromAccessToken("very_bad_token")
                         }.Build(),
                         // This is just so that our validator finds the log entries associated to errors.
-                        Options = ErrorReportingOptions.CreateInstance(
+                        Options = ErrorReportingOptions.Create(
                             logName: "aspnetcore",
                             bufferOptions: BufferOptions.NoBuffer(),
                             retryOptions: RetryOptions.NoRetry(ExceptionHandling.Propagate))

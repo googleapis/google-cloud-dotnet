@@ -48,16 +48,9 @@ namespace Google.Cloud.Diagnostics.Common
             RetryOptions = GaxPreconditions.CheckNotNull(retryOptions, nameof(retryOptions));
         }
 
-        // TODO: Consider making this obsolete and creating a new Create now that we don't have the overload ambiguity.
         /// <summary>
         /// Creates an <see cref="ErrorReportingOptions"/>.
         /// </summary>
-        /// <remarks>
-        /// The naming of this method <see cref="CreateInstance(string, MonitoredResource, BufferOptions, RetryOptions)"/>
-        /// is not consistent with the naming of similar methods in other options classes to avoid taking
-        /// a breaking change. The semantics of this method is the same as all other Create methods in option classes like
-        /// <see cref="LoggingOptions.Create(Microsoft.Extensions.Logging.LogLevel, string, System.Collections.Generic.Dictionary{string, string}, MonitoredResource, BufferOptions, RetryOptions)"/>.
-        /// </remarks>
         /// <param name="logName">The log name to log to. May be null, in which case, a default name will be used.</param>
         /// <param name="resource">The monitored resource. May be null, in which case an attempt will be made to 
         /// automatically detected it. If it is not detected, it will default to the global resource.
@@ -65,7 +58,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// <param name="bufferOptions">The buffer options for the error reporter. Defaults to no buffer.</param>
         /// <param name="retryOptions">The retry options for the error reporter. Defaults to no retry.</param>
         /// <returns>A new <see cref="ErrorReportingOptions"/> instance with the specified parameters or defaults.</returns>
-        public static ErrorReportingOptions CreateInstance(
+        public static ErrorReportingOptions Create(
             string logName = null, MonitoredResource resource = null, BufferOptions bufferOptions = null, RetryOptions retryOptions = null) =>
             new ErrorReportingOptions(
                 logName ?? LogNameDefault,
