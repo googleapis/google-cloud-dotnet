@@ -43,7 +43,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
         }
 
         [SkippableFact]
-        public async Task UseGoogleDiagnostics_ConfiguresServices_Default()
+        public async Task AddGoogleDiagnosticsForAspNetCore_ConfiguresServices_Default()
         {
             Skip.If((await Platform.InstanceAsync()).Type == PlatformType.Unknown,
                 "Default configuration can only be used when running on GCP.");
@@ -63,7 +63,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
         }
 
         [Fact]
-        public void UseGoogleDiagnostics_ConfiguresServices()
+        public void AddGoogleDiagnosticsForAspNetCore_ConfiguresServices()
         {
             var hostBuilder = GetHostBuilder(webHostBuilder => webHostBuilder.ConfigureServices(
                 services => services.AddGoogleDiagnosticsForAspNetCore("tmp", "app", "1.0.0")));
@@ -81,7 +81,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
         }
 
         [Fact]
-        public async Task UseGoogleDiagnostics_ConfiguresComponents()
+        public async Task AddGoogleDiagnosticsForAspNetCore_ConfiguresComponents()
         {
             var testId = IdGenerator.FromDateTime();
             var startTime = DateTime.UtcNow;
@@ -99,7 +99,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
         }
 
         [Fact]
-        public async Task UseGoogleDiagnostics_ValidateDependencyInjection()
+        public async Task AddGoogleDiagnosticsForAspNetCore_ValidateDependencyInjection()
         {
             var testId = IdGenerator.FromDateTime();
             var startTime = DateTime.UtcNow;
@@ -122,7 +122,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
         }
 
         [Fact]
-        public async Task UseGoogleDiagnostics_ConfiguresComponentsFromHostBuilderContext()
+        public async Task AddGoogleDiagnosticsForAspNetCore_ConfiguresComponentsFromHostBuilderContext()
         {
             var testId = IdGenerator.FromDateTime();
             var startTime = DateTime.UtcNow;

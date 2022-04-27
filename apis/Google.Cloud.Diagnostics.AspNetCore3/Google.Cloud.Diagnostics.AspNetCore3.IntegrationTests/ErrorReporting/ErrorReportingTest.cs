@@ -29,7 +29,7 @@ using Xunit;
 namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
 {
     using static TestServerHelpers;
-    using TraceOptions = Common.TraceOptions;
+    using TraceOptions = TraceOptions;
 
     public class ErrorReportingTest : IClassFixture<LogValidatingFixture>
     {
@@ -47,8 +47,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
             RateLimiter.Reset();
 
             _testId = IdGenerator.FromDateTime();
-
-            
 
             _fixture = fixture;
         }
@@ -163,7 +161,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
                                 double.PositiveInfinity, BufferOptions.NoBuffer(), RetryOptions.NoRetry(ExceptionHandling.Propagate))
                         }
                     })
-                    .AddGoogleErrorReportingForAspNetCore(new Common.ErrorReportingServiceOptions
+                    .AddGoogleErrorReportingForAspNetCore(new ErrorReportingServiceOptions
                     {
                         ProjectId = ProjectId,
                         ServiceName = EntryData.Service,
@@ -182,7 +180,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
 
             public override void ConfigureServices(IServiceCollection services) =>
                 base.ConfigureServices(services
-                    .AddGoogleErrorReportingForAspNetCore(new Common.ErrorReportingServiceOptions
+                    .AddGoogleErrorReportingForAspNetCore(new ErrorReportingServiceOptions
                     {
                         ProjectId = ProjectId,
                         ServiceName = EntryData.Service,

@@ -15,6 +15,7 @@
 using System.Collections.Generic;
 using System.Security.Claims;
 using System.Security.Principal;
+using Google.Cloud.Diagnostics.Common;
 using Microsoft.AspNetCore.Http;
 
 namespace Google.Cloud.Diagnostics.AspNetCore3
