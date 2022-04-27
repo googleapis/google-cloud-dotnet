@@ -55,7 +55,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
             };
             mockGrpcClient.Setup(x => x.GetFeaturestore(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
+            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null, null);
             Featurestore response = client.GetFeaturestore(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -88,7 +88,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
             };
             mockGrpcClient.Setup(x => x.GetFeaturestoreAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Featurestore>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
+            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null, null);
             Featurestore responseCallSettings = await client.GetFeaturestoreAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Featurestore responseCancellationToken = await client.GetFeaturestoreAsync(request, st::CancellationToken.None);
@@ -123,7 +123,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
             };
             mockGrpcClient.Setup(x => x.GetFeaturestore(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
+            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null, null);
             Featurestore response = client.GetFeaturestore(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -156,7 +156,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
             };
             mockGrpcClient.Setup(x => x.GetFeaturestoreAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Featurestore>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
+            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null, null);
             Featurestore responseCallSettings = await client.GetFeaturestoreAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Featurestore responseCancellationToken = await client.GetFeaturestoreAsync(request.Name, st::CancellationToken.None);
@@ -191,7 +191,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
             };
             mockGrpcClient.Setup(x => x.GetFeaturestore(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
+            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null, null);
             Featurestore response = client.GetFeaturestore(request.FeaturestoreName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -224,7 +224,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
             };
             mockGrpcClient.Setup(x => x.GetFeaturestoreAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Featurestore>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
+            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null, null);
             Featurestore responseCallSettings = await client.GetFeaturestoreAsync(request.FeaturestoreName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Featurestore responseCancellationToken = await client.GetFeaturestoreAsync(request.FeaturestoreName, st::CancellationToken.None);
@@ -258,7 +258,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 MonitoringConfig = new FeaturestoreMonitoringConfig(),
             };
             mockGrpcClient.Setup(x => x.GetEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
+            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null, null);
             EntityType response = client.GetEntityType(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -290,7 +290,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 MonitoringConfig = new FeaturestoreMonitoringConfig(),
             };
             mockGrpcClient.Setup(x => x.GetEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
+            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null, null);
             EntityType responseCallSettings = await client.GetEntityTypeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             EntityType responseCancellationToken = await client.GetEntityTypeAsync(request, st::CancellationToken.None);
@@ -324,7 +324,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 MonitoringConfig = new FeaturestoreMonitoringConfig(),
             };
             mockGrpcClient.Setup(x => x.GetEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
+            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null, null);
             EntityType response = client.GetEntityType(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -356,7 +356,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 MonitoringConfig = new FeaturestoreMonitoringConfig(),
             };
             mockGrpcClient.Setup(x => x.GetEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
+            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null, null);
             EntityType responseCallSettings = await client.GetEntityTypeAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             EntityType responseCancellationToken = await client.GetEntityTypeAsync(request.Name, st::CancellationToken.None);
@@ -390,7 +390,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 MonitoringConfig = new FeaturestoreMonitoringConfig(),
             };
             mockGrpcClient.Setup(x => x.GetEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
+            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null, null);
             EntityType response = client.GetEntityType(request.EntityTypeName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -422,7 +422,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 MonitoringConfig = new FeaturestoreMonitoringConfig(),
             };
             mockGrpcClient.Setup(x => x.GetEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
+            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null, null);
             EntityType responseCallSettings = await client.GetEntityTypeAsync(request.EntityTypeName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             EntityType responseCancellationToken = await client.GetEntityTypeAsync(request.EntityTypeName, st::CancellationToken.None);
@@ -457,7 +457,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 MonitoringConfig = new FeaturestoreMonitoringConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
+            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null, null);
             EntityType response = client.UpdateEntityType(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -490,7 +490,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 MonitoringConfig = new FeaturestoreMonitoringConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
+            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null, null);
             EntityType responseCallSettings = await client.UpdateEntityTypeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             EntityType responseCancellationToken = await client.UpdateEntityTypeAsync(request, st::CancellationToken.None);
@@ -525,7 +525,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 MonitoringConfig = new FeaturestoreMonitoringConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
+            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null, null);
             EntityType response = client.UpdateEntityType(request.EntityType, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -558,7 +558,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 MonitoringConfig = new FeaturestoreMonitoringConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
+            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null, null);
             EntityType responseCallSettings = await client.UpdateEntityTypeAsync(request.EntityType, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             EntityType responseCancellationToken = await client.UpdateEntityTypeAsync(request.EntityType, request.UpdateMask, st::CancellationToken.None);
@@ -597,7 +597,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DisableMonitoring = true,
             };
             mockGrpcClient.Setup(x => x.GetFeature(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
+            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null, null);
             Feature response = client.GetFeature(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -634,7 +634,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DisableMonitoring = true,
             };
             mockGrpcClient.Setup(x => x.GetFeatureAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Feature>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
+            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null, null);
             Feature responseCallSettings = await client.GetFeatureAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Feature responseCancellationToken = await client.GetFeatureAsync(request, st::CancellationToken.None);
@@ -673,7 +673,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DisableMonitoring = true,
             };
             mockGrpcClient.Setup(x => x.GetFeature(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
+            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null, null);
             Feature response = client.GetFeature(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -710,7 +710,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DisableMonitoring = true,
             };
             mockGrpcClient.Setup(x => x.GetFeatureAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Feature>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
+            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null, null);
             Feature responseCallSettings = await client.GetFeatureAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Feature responseCancellationToken = await client.GetFeatureAsync(request.Name, st::CancellationToken.None);
@@ -749,7 +749,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DisableMonitoring = true,
             };
             mockGrpcClient.Setup(x => x.GetFeature(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
+            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null, null);
             Feature response = client.GetFeature(request.FeatureName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -786,7 +786,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DisableMonitoring = true,
             };
             mockGrpcClient.Setup(x => x.GetFeatureAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Feature>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
+            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null, null);
             Feature responseCallSettings = await client.GetFeatureAsync(request.FeatureName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Feature responseCancellationToken = await client.GetFeatureAsync(request.FeatureName, st::CancellationToken.None);
@@ -826,7 +826,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DisableMonitoring = true,
             };
             mockGrpcClient.Setup(x => x.UpdateFeature(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
+            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null, null);
             Feature response = client.UpdateFeature(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -864,7 +864,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DisableMonitoring = true,
             };
             mockGrpcClient.Setup(x => x.UpdateFeatureAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Feature>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
+            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null, null);
             Feature responseCallSettings = await client.UpdateFeatureAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Feature responseCancellationToken = await client.UpdateFeatureAsync(request, st::CancellationToken.None);
@@ -904,7 +904,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DisableMonitoring = true,
             };
             mockGrpcClient.Setup(x => x.UpdateFeature(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
+            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null, null);
             Feature response = client.UpdateFeature(request.Feature, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -942,7 +942,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DisableMonitoring = true,
             };
             mockGrpcClient.Setup(x => x.UpdateFeatureAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Feature>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
+            FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null, null);
             Feature responseCallSettings = await client.UpdateFeatureAsync(request.Feature, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Feature responseCancellationToken = await client.UpdateFeatureAsync(request.Feature, request.UpdateMask, st::CancellationToken.None);

@@ -66,7 +66,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 CloudFunction = new NetworkEndpointGroupCloudFunction(),
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NetworkEndpointGroupsClient client = new NetworkEndpointGroupsClientImpl(mockGrpcClient.Object, null);
+            NetworkEndpointGroupsClient client = new NetworkEndpointGroupsClientImpl(mockGrpcClient.Object, null, null);
             NetworkEndpointGroup response = client.Get(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -111,7 +111,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 CloudFunction = new NetworkEndpointGroupCloudFunction(),
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NetworkEndpointGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NetworkEndpointGroupsClient client = new NetworkEndpointGroupsClientImpl(mockGrpcClient.Object, null);
+            NetworkEndpointGroupsClient client = new NetworkEndpointGroupsClientImpl(mockGrpcClient.Object, null, null);
             NetworkEndpointGroup responseCallSettings = await client.GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             NetworkEndpointGroup responseCancellationToken = await client.GetAsync(request, st::CancellationToken.None);
@@ -158,7 +158,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 CloudFunction = new NetworkEndpointGroupCloudFunction(),
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NetworkEndpointGroupsClient client = new NetworkEndpointGroupsClientImpl(mockGrpcClient.Object, null);
+            NetworkEndpointGroupsClient client = new NetworkEndpointGroupsClientImpl(mockGrpcClient.Object, null, null);
             NetworkEndpointGroup response = client.Get(request.Project, request.Zone, request.NetworkEndpointGroup);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -203,7 +203,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 CloudFunction = new NetworkEndpointGroupCloudFunction(),
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NetworkEndpointGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NetworkEndpointGroupsClient client = new NetworkEndpointGroupsClientImpl(mockGrpcClient.Object, null);
+            NetworkEndpointGroupsClient client = new NetworkEndpointGroupsClientImpl(mockGrpcClient.Object, null, null);
             NetworkEndpointGroup responseCallSettings = await client.GetAsync(request.Project, request.Zone, request.NetworkEndpointGroup, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             NetworkEndpointGroup responseCancellationToken = await client.GetAsync(request.Project, request.Zone, request.NetworkEndpointGroup, st::CancellationToken.None);
@@ -231,7 +231,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NetworkEndpointGroupsClient client = new NetworkEndpointGroupsClientImpl(mockGrpcClient.Object, null);
+            NetworkEndpointGroupsClient client = new NetworkEndpointGroupsClientImpl(mockGrpcClient.Object, null, null);
             TestPermissionsResponse response = client.TestIamPermissions(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -257,7 +257,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TestPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NetworkEndpointGroupsClient client = new NetworkEndpointGroupsClientImpl(mockGrpcClient.Object, null);
+            NetworkEndpointGroupsClient client = new NetworkEndpointGroupsClientImpl(mockGrpcClient.Object, null, null);
             TestPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TestPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request, st::CancellationToken.None);
@@ -285,7 +285,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NetworkEndpointGroupsClient client = new NetworkEndpointGroupsClientImpl(mockGrpcClient.Object, null);
+            NetworkEndpointGroupsClient client = new NetworkEndpointGroupsClientImpl(mockGrpcClient.Object, null, null);
             TestPermissionsResponse response = client.TestIamPermissions(request.Project, request.Zone, request.Resource, request.TestPermissionsRequestResource);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -311,7 +311,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TestPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NetworkEndpointGroupsClient client = new NetworkEndpointGroupsClientImpl(mockGrpcClient.Object, null);
+            NetworkEndpointGroupsClient client = new NetworkEndpointGroupsClientImpl(mockGrpcClient.Object, null, null);
             TestPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request.Project, request.Zone, request.Resource, request.TestPermissionsRequestResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TestPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request.Project, request.Zone, request.Resource, request.TestPermissionsRequestResource, st::CancellationToken.None);

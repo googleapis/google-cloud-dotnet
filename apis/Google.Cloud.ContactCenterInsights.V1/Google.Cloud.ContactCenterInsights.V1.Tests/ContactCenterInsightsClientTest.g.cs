@@ -78,7 +78,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 ObfuscatedUserId = "obfuscated_user_ida61668af",
             };
             mockGrpcClient.Setup(x => x.CreateConversation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Conversation response = client.CreateConversation(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -133,7 +133,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 ObfuscatedUserId = "obfuscated_user_ida61668af",
             };
             mockGrpcClient.Setup(x => x.CreateConversationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Conversation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Conversation responseCallSettings = await client.CreateConversationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Conversation responseCancellationToken = await client.CreateConversationAsync(request, st::CancellationToken.None);
@@ -190,7 +190,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 ObfuscatedUserId = "obfuscated_user_ida61668af",
             };
             mockGrpcClient.Setup(x => x.CreateConversation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Conversation response = client.CreateConversation(request.Parent, request.Conversation, request.ConversationId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -245,7 +245,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 ObfuscatedUserId = "obfuscated_user_ida61668af",
             };
             mockGrpcClient.Setup(x => x.CreateConversationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Conversation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Conversation responseCallSettings = await client.CreateConversationAsync(request.Parent, request.Conversation, request.ConversationId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Conversation responseCancellationToken = await client.CreateConversationAsync(request.Parent, request.Conversation, request.ConversationId, st::CancellationToken.None);
@@ -302,7 +302,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 ObfuscatedUserId = "obfuscated_user_ida61668af",
             };
             mockGrpcClient.Setup(x => x.CreateConversation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Conversation response = client.CreateConversation(request.ParentAsLocationName, request.Conversation, request.ConversationId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -357,7 +357,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 ObfuscatedUserId = "obfuscated_user_ida61668af",
             };
             mockGrpcClient.Setup(x => x.CreateConversationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Conversation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Conversation responseCallSettings = await client.CreateConversationAsync(request.ParentAsLocationName, request.Conversation, request.ConversationId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Conversation responseCancellationToken = await client.CreateConversationAsync(request.ParentAsLocationName, request.Conversation, request.ConversationId, st::CancellationToken.None);
@@ -413,7 +413,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 ObfuscatedUserId = "obfuscated_user_ida61668af",
             };
             mockGrpcClient.Setup(x => x.UpdateConversation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Conversation response = client.UpdateConversation(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -467,7 +467,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 ObfuscatedUserId = "obfuscated_user_ida61668af",
             };
             mockGrpcClient.Setup(x => x.UpdateConversationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Conversation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Conversation responseCallSettings = await client.UpdateConversationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Conversation responseCancellationToken = await client.UpdateConversationAsync(request, st::CancellationToken.None);
@@ -523,7 +523,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 ObfuscatedUserId = "obfuscated_user_ida61668af",
             };
             mockGrpcClient.Setup(x => x.UpdateConversation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Conversation response = client.UpdateConversation(request.Conversation, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -577,7 +577,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 ObfuscatedUserId = "obfuscated_user_ida61668af",
             };
             mockGrpcClient.Setup(x => x.UpdateConversationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Conversation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Conversation responseCallSettings = await client.UpdateConversationAsync(request.Conversation, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Conversation responseCancellationToken = await client.UpdateConversationAsync(request.Conversation, request.UpdateMask, st::CancellationToken.None);
@@ -633,7 +633,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 ObfuscatedUserId = "obfuscated_user_ida61668af",
             };
             mockGrpcClient.Setup(x => x.GetConversation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Conversation response = client.GetConversation(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -687,7 +687,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 ObfuscatedUserId = "obfuscated_user_ida61668af",
             };
             mockGrpcClient.Setup(x => x.GetConversationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Conversation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Conversation responseCallSettings = await client.GetConversationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Conversation responseCancellationToken = await client.GetConversationAsync(request, st::CancellationToken.None);
@@ -742,7 +742,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 ObfuscatedUserId = "obfuscated_user_ida61668af",
             };
             mockGrpcClient.Setup(x => x.GetConversation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Conversation response = client.GetConversation(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -795,7 +795,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 ObfuscatedUserId = "obfuscated_user_ida61668af",
             };
             mockGrpcClient.Setup(x => x.GetConversationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Conversation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Conversation responseCallSettings = await client.GetConversationAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Conversation responseCancellationToken = await client.GetConversationAsync(request.Name, st::CancellationToken.None);
@@ -850,7 +850,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 ObfuscatedUserId = "obfuscated_user_ida61668af",
             };
             mockGrpcClient.Setup(x => x.GetConversation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Conversation response = client.GetConversation(request.ConversationName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -903,7 +903,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 ObfuscatedUserId = "obfuscated_user_ida61668af",
             };
             mockGrpcClient.Setup(x => x.GetConversationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Conversation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Conversation responseCallSettings = await client.GetConversationAsync(request.ConversationName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Conversation responseCancellationToken = await client.GetConversationAsync(request.ConversationName, st::CancellationToken.None);
@@ -923,7 +923,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteConversation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteConversation(request);
             mockGrpcClient.VerifyAll();
         }
@@ -940,7 +940,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteConversationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteConversationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteConversationAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -957,7 +957,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteConversation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteConversation(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -973,7 +973,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteConversationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteConversationAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteConversationAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -990,7 +990,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteConversation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteConversation(request.ConversationName);
             mockGrpcClient.VerifyAll();
         }
@@ -1006,7 +1006,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteConversationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteConversationAsync(request.ConversationName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteConversationAsync(request.ConversationName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1029,7 +1029,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 AnalysisResult = new AnalysisResult(),
             };
             mockGrpcClient.Setup(x => x.GetAnalysis(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Analysis response = client.GetAnalysis(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1052,7 +1052,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 AnalysisResult = new AnalysisResult(),
             };
             mockGrpcClient.Setup(x => x.GetAnalysisAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Analysis>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Analysis responseCallSettings = await client.GetAnalysisAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Analysis responseCancellationToken = await client.GetAnalysisAsync(request, st::CancellationToken.None);
@@ -1077,7 +1077,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 AnalysisResult = new AnalysisResult(),
             };
             mockGrpcClient.Setup(x => x.GetAnalysis(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Analysis response = client.GetAnalysis(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1100,7 +1100,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 AnalysisResult = new AnalysisResult(),
             };
             mockGrpcClient.Setup(x => x.GetAnalysisAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Analysis>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Analysis responseCallSettings = await client.GetAnalysisAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Analysis responseCancellationToken = await client.GetAnalysisAsync(request.Name, st::CancellationToken.None);
@@ -1125,7 +1125,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 AnalysisResult = new AnalysisResult(),
             };
             mockGrpcClient.Setup(x => x.GetAnalysis(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Analysis response = client.GetAnalysis(request.AnalysisName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1148,7 +1148,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 AnalysisResult = new AnalysisResult(),
             };
             mockGrpcClient.Setup(x => x.GetAnalysisAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Analysis>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Analysis responseCallSettings = await client.GetAnalysisAsync(request.AnalysisName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Analysis responseCancellationToken = await client.GetAnalysisAsync(request.AnalysisName, st::CancellationToken.None);
@@ -1167,7 +1167,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAnalysis(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteAnalysis(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1183,7 +1183,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAnalysisAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteAnalysisAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteAnalysisAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1200,7 +1200,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAnalysis(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteAnalysis(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -1216,7 +1216,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAnalysisAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteAnalysisAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteAnalysisAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1233,7 +1233,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAnalysis(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteAnalysis(request.AnalysisName);
             mockGrpcClient.VerifyAll();
         }
@@ -1249,7 +1249,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAnalysisAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteAnalysisAsync(request.AnalysisName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteAnalysisAsync(request.AnalysisName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1276,7 +1276,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 TrainingStats = new IssueModelLabelStats(),
             };
             mockGrpcClient.Setup(x => x.UpdateIssueModel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             IssueModel response = client.UpdateIssueModel(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1303,7 +1303,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 TrainingStats = new IssueModelLabelStats(),
             };
             mockGrpcClient.Setup(x => x.UpdateIssueModelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<IssueModel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             IssueModel responseCallSettings = await client.UpdateIssueModelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             IssueModel responseCancellationToken = await client.UpdateIssueModelAsync(request, st::CancellationToken.None);
@@ -1332,7 +1332,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 TrainingStats = new IssueModelLabelStats(),
             };
             mockGrpcClient.Setup(x => x.UpdateIssueModel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             IssueModel response = client.UpdateIssueModel(request.IssueModel, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1359,7 +1359,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 TrainingStats = new IssueModelLabelStats(),
             };
             mockGrpcClient.Setup(x => x.UpdateIssueModelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<IssueModel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             IssueModel responseCallSettings = await client.UpdateIssueModelAsync(request.IssueModel, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             IssueModel responseCancellationToken = await client.UpdateIssueModelAsync(request.IssueModel, request.UpdateMask, st::CancellationToken.None);
@@ -1387,7 +1387,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 TrainingStats = new IssueModelLabelStats(),
             };
             mockGrpcClient.Setup(x => x.GetIssueModel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             IssueModel response = client.GetIssueModel(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1413,7 +1413,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 TrainingStats = new IssueModelLabelStats(),
             };
             mockGrpcClient.Setup(x => x.GetIssueModelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<IssueModel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             IssueModel responseCallSettings = await client.GetIssueModelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             IssueModel responseCancellationToken = await client.GetIssueModelAsync(request, st::CancellationToken.None);
@@ -1441,7 +1441,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 TrainingStats = new IssueModelLabelStats(),
             };
             mockGrpcClient.Setup(x => x.GetIssueModel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             IssueModel response = client.GetIssueModel(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1467,7 +1467,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 TrainingStats = new IssueModelLabelStats(),
             };
             mockGrpcClient.Setup(x => x.GetIssueModelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<IssueModel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             IssueModel responseCallSettings = await client.GetIssueModelAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             IssueModel responseCancellationToken = await client.GetIssueModelAsync(request.Name, st::CancellationToken.None);
@@ -1495,7 +1495,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 TrainingStats = new IssueModelLabelStats(),
             };
             mockGrpcClient.Setup(x => x.GetIssueModel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             IssueModel response = client.GetIssueModel(request.IssueModelName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1521,7 +1521,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 TrainingStats = new IssueModelLabelStats(),
             };
             mockGrpcClient.Setup(x => x.GetIssueModelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<IssueModel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             IssueModel responseCallSettings = await client.GetIssueModelAsync(request.IssueModelName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             IssueModel responseCancellationToken = await client.GetIssueModelAsync(request.IssueModelName, st::CancellationToken.None);
@@ -1543,7 +1543,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 IssueModels = { new IssueModel(), },
             };
             mockGrpcClient.Setup(x => x.ListIssueModels(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             ListIssueModelsResponse response = client.ListIssueModels(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1563,7 +1563,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 IssueModels = { new IssueModel(), },
             };
             mockGrpcClient.Setup(x => x.ListIssueModelsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListIssueModelsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             ListIssueModelsResponse responseCallSettings = await client.ListIssueModelsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ListIssueModelsResponse responseCancellationToken = await client.ListIssueModelsAsync(request, st::CancellationToken.None);
@@ -1585,7 +1585,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 IssueModels = { new IssueModel(), },
             };
             mockGrpcClient.Setup(x => x.ListIssueModels(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             ListIssueModelsResponse response = client.ListIssueModels(request.Parent);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1605,7 +1605,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 IssueModels = { new IssueModel(), },
             };
             mockGrpcClient.Setup(x => x.ListIssueModelsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListIssueModelsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             ListIssueModelsResponse responseCallSettings = await client.ListIssueModelsAsync(request.Parent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ListIssueModelsResponse responseCancellationToken = await client.ListIssueModelsAsync(request.Parent, st::CancellationToken.None);
@@ -1627,7 +1627,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 IssueModels = { new IssueModel(), },
             };
             mockGrpcClient.Setup(x => x.ListIssueModels(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             ListIssueModelsResponse response = client.ListIssueModels(request.ParentAsLocationName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1647,7 +1647,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 IssueModels = { new IssueModel(), },
             };
             mockGrpcClient.Setup(x => x.ListIssueModelsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListIssueModelsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             ListIssueModelsResponse responseCallSettings = await client.ListIssueModelsAsync(request.ParentAsLocationName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ListIssueModelsResponse responseCancellationToken = await client.ListIssueModelsAsync(request.ParentAsLocationName, st::CancellationToken.None);
@@ -1672,7 +1672,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetIssue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Issue response = client.GetIssue(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1695,7 +1695,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetIssueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Issue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Issue responseCallSettings = await client.GetIssueAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Issue responseCancellationToken = await client.GetIssueAsync(request, st::CancellationToken.None);
@@ -1720,7 +1720,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetIssue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Issue response = client.GetIssue(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1743,7 +1743,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetIssueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Issue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Issue responseCallSettings = await client.GetIssueAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Issue responseCancellationToken = await client.GetIssueAsync(request.Name, st::CancellationToken.None);
@@ -1768,7 +1768,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetIssue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Issue response = client.GetIssue(request.IssueName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1791,7 +1791,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetIssueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Issue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Issue responseCallSettings = await client.GetIssueAsync(request.IssueName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Issue responseCancellationToken = await client.GetIssueAsync(request.IssueName, st::CancellationToken.None);
@@ -1813,7 +1813,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 Issues = { new Issue(), },
             };
             mockGrpcClient.Setup(x => x.ListIssues(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             ListIssuesResponse response = client.ListIssues(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1833,7 +1833,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 Issues = { new Issue(), },
             };
             mockGrpcClient.Setup(x => x.ListIssuesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListIssuesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             ListIssuesResponse responseCallSettings = await client.ListIssuesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ListIssuesResponse responseCancellationToken = await client.ListIssuesAsync(request, st::CancellationToken.None);
@@ -1855,7 +1855,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 Issues = { new Issue(), },
             };
             mockGrpcClient.Setup(x => x.ListIssues(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             ListIssuesResponse response = client.ListIssues(request.Parent);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1875,7 +1875,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 Issues = { new Issue(), },
             };
             mockGrpcClient.Setup(x => x.ListIssuesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListIssuesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             ListIssuesResponse responseCallSettings = await client.ListIssuesAsync(request.Parent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ListIssuesResponse responseCancellationToken = await client.ListIssuesAsync(request.Parent, st::CancellationToken.None);
@@ -1897,7 +1897,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 Issues = { new Issue(), },
             };
             mockGrpcClient.Setup(x => x.ListIssues(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             ListIssuesResponse response = client.ListIssues(request.ParentAsIssueModelName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1917,7 +1917,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 Issues = { new Issue(), },
             };
             mockGrpcClient.Setup(x => x.ListIssuesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListIssuesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             ListIssuesResponse responseCallSettings = await client.ListIssuesAsync(request.ParentAsIssueModelName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ListIssuesResponse responseCancellationToken = await client.ListIssuesAsync(request.ParentAsIssueModelName, st::CancellationToken.None);
@@ -1943,7 +1943,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateIssue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Issue response = client.UpdateIssue(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1967,7 +1967,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateIssueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Issue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Issue responseCallSettings = await client.UpdateIssueAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Issue responseCancellationToken = await client.UpdateIssueAsync(request, st::CancellationToken.None);
@@ -1993,7 +1993,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateIssue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Issue response = client.UpdateIssue(request.Issue, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2017,7 +2017,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateIssueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Issue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Issue responseCallSettings = await client.UpdateIssueAsync(request.Issue, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Issue responseCancellationToken = await client.UpdateIssueAsync(request.Issue, request.UpdateMask, st::CancellationToken.None);
@@ -2039,7 +2039,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 CurrentStats = new IssueModelLabelStats(),
             };
             mockGrpcClient.Setup(x => x.CalculateIssueModelStats(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             CalculateIssueModelStatsResponse response = client.CalculateIssueModelStats(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2059,7 +2059,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 CurrentStats = new IssueModelLabelStats(),
             };
             mockGrpcClient.Setup(x => x.CalculateIssueModelStatsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CalculateIssueModelStatsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             CalculateIssueModelStatsResponse responseCallSettings = await client.CalculateIssueModelStatsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CalculateIssueModelStatsResponse responseCancellationToken = await client.CalculateIssueModelStatsAsync(request, st::CancellationToken.None);
@@ -2081,7 +2081,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 CurrentStats = new IssueModelLabelStats(),
             };
             mockGrpcClient.Setup(x => x.CalculateIssueModelStats(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             CalculateIssueModelStatsResponse response = client.CalculateIssueModelStats(request.IssueModel);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2101,7 +2101,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 CurrentStats = new IssueModelLabelStats(),
             };
             mockGrpcClient.Setup(x => x.CalculateIssueModelStatsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CalculateIssueModelStatsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             CalculateIssueModelStatsResponse responseCallSettings = await client.CalculateIssueModelStatsAsync(request.IssueModel, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CalculateIssueModelStatsResponse responseCancellationToken = await client.CalculateIssueModelStatsAsync(request.IssueModel, st::CancellationToken.None);
@@ -2123,7 +2123,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 CurrentStats = new IssueModelLabelStats(),
             };
             mockGrpcClient.Setup(x => x.CalculateIssueModelStats(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             CalculateIssueModelStatsResponse response = client.CalculateIssueModelStats(request.IssueModelAsIssueModelName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2143,7 +2143,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 CurrentStats = new IssueModelLabelStats(),
             };
             mockGrpcClient.Setup(x => x.CalculateIssueModelStatsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CalculateIssueModelStatsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             CalculateIssueModelStatsResponse responseCallSettings = await client.CalculateIssueModelStatsAsync(request.IssueModelAsIssueModelName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CalculateIssueModelStatsResponse responseCancellationToken = await client.CalculateIssueModelStatsAsync(request.IssueModelAsIssueModelName, st::CancellationToken.None);
@@ -2179,7 +2179,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreatePhraseMatcher(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             PhraseMatcher response = client.CreatePhraseMatcher(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2213,7 +2213,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreatePhraseMatcherAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PhraseMatcher>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             PhraseMatcher responseCallSettings = await client.CreatePhraseMatcherAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PhraseMatcher responseCancellationToken = await client.CreatePhraseMatcherAsync(request, st::CancellationToken.None);
@@ -2249,7 +2249,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreatePhraseMatcher(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             PhraseMatcher response = client.CreatePhraseMatcher(request.Parent, request.PhraseMatcher);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2283,7 +2283,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreatePhraseMatcherAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PhraseMatcher>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             PhraseMatcher responseCallSettings = await client.CreatePhraseMatcherAsync(request.Parent, request.PhraseMatcher, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PhraseMatcher responseCancellationToken = await client.CreatePhraseMatcherAsync(request.Parent, request.PhraseMatcher, st::CancellationToken.None);
@@ -2319,7 +2319,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreatePhraseMatcher(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             PhraseMatcher response = client.CreatePhraseMatcher(request.ParentAsLocationName, request.PhraseMatcher);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2353,7 +2353,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreatePhraseMatcherAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PhraseMatcher>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             PhraseMatcher responseCallSettings = await client.CreatePhraseMatcherAsync(request.ParentAsLocationName, request.PhraseMatcher, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PhraseMatcher responseCancellationToken = await client.CreatePhraseMatcherAsync(request.ParentAsLocationName, request.PhraseMatcher, st::CancellationToken.None);
@@ -2388,7 +2388,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetPhraseMatcher(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             PhraseMatcher response = client.GetPhraseMatcher(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2421,7 +2421,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetPhraseMatcherAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PhraseMatcher>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             PhraseMatcher responseCallSettings = await client.GetPhraseMatcherAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PhraseMatcher responseCancellationToken = await client.GetPhraseMatcherAsync(request, st::CancellationToken.None);
@@ -2456,7 +2456,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetPhraseMatcher(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             PhraseMatcher response = client.GetPhraseMatcher(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2489,7 +2489,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetPhraseMatcherAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PhraseMatcher>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             PhraseMatcher responseCallSettings = await client.GetPhraseMatcherAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PhraseMatcher responseCancellationToken = await client.GetPhraseMatcherAsync(request.Name, st::CancellationToken.None);
@@ -2524,7 +2524,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetPhraseMatcher(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             PhraseMatcher response = client.GetPhraseMatcher(request.PhraseMatcherName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2557,7 +2557,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetPhraseMatcherAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PhraseMatcher>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             PhraseMatcher responseCallSettings = await client.GetPhraseMatcherAsync(request.PhraseMatcherName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PhraseMatcher responseCancellationToken = await client.GetPhraseMatcherAsync(request.PhraseMatcherName, st::CancellationToken.None);
@@ -2576,7 +2576,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePhraseMatcher(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             client.DeletePhraseMatcher(request);
             mockGrpcClient.VerifyAll();
         }
@@ -2592,7 +2592,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePhraseMatcherAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             await client.DeletePhraseMatcherAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeletePhraseMatcherAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -2609,7 +2609,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePhraseMatcher(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             client.DeletePhraseMatcher(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -2625,7 +2625,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePhraseMatcherAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             await client.DeletePhraseMatcherAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeletePhraseMatcherAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -2642,7 +2642,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePhraseMatcher(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             client.DeletePhraseMatcher(request.PhraseMatcherName);
             mockGrpcClient.VerifyAll();
         }
@@ -2658,7 +2658,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePhraseMatcherAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             await client.DeletePhraseMatcherAsync(request.PhraseMatcherName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeletePhraseMatcherAsync(request.PhraseMatcherName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -2692,7 +2692,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdatePhraseMatcher(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             PhraseMatcher response = client.UpdatePhraseMatcher(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2726,7 +2726,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdatePhraseMatcherAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PhraseMatcher>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             PhraseMatcher responseCallSettings = await client.UpdatePhraseMatcherAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PhraseMatcher responseCancellationToken = await client.UpdatePhraseMatcherAsync(request, st::CancellationToken.None);
@@ -2762,7 +2762,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdatePhraseMatcher(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             PhraseMatcher response = client.UpdatePhraseMatcher(request.PhraseMatcher, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2796,7 +2796,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdatePhraseMatcherAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PhraseMatcher>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             PhraseMatcher responseCallSettings = await client.UpdatePhraseMatcherAsync(request.PhraseMatcher, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PhraseMatcher responseCancellationToken = await client.UpdatePhraseMatcherAsync(request.PhraseMatcher, request.UpdateMask, st::CancellationToken.None);
@@ -2852,7 +2852,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CalculateStats(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             CalculateStatsResponse response = client.CalculateStats(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2906,7 +2906,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CalculateStatsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CalculateStatsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             CalculateStatsResponse responseCallSettings = await client.CalculateStatsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CalculateStatsResponse responseCancellationToken = await client.CalculateStatsAsync(request, st::CancellationToken.None);
@@ -2961,7 +2961,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CalculateStats(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             CalculateStatsResponse response = client.CalculateStats(request.Location);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3014,7 +3014,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CalculateStatsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CalculateStatsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             CalculateStatsResponse responseCallSettings = await client.CalculateStatsAsync(request.Location, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CalculateStatsResponse responseCancellationToken = await client.CalculateStatsAsync(request.Location, st::CancellationToken.None);
@@ -3069,7 +3069,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CalculateStats(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             CalculateStatsResponse response = client.CalculateStats(request.LocationAsLocationName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3122,7 +3122,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CalculateStatsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CalculateStatsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             CalculateStatsResponse responseCallSettings = await client.CalculateStatsAsync(request.LocationAsLocationName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CalculateStatsResponse responseCancellationToken = await client.CalculateStatsAsync(request.LocationAsLocationName, st::CancellationToken.None);
@@ -3156,7 +3156,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 AnalysisConfig = new Settings.Types.AnalysisConfig(),
             };
             mockGrpcClient.Setup(x => x.GetSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Settings response = client.GetSettings(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3188,7 +3188,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 AnalysisConfig = new Settings.Types.AnalysisConfig(),
             };
             mockGrpcClient.Setup(x => x.GetSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Settings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Settings responseCallSettings = await client.GetSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Settings responseCancellationToken = await client.GetSettingsAsync(request, st::CancellationToken.None);
@@ -3222,7 +3222,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 AnalysisConfig = new Settings.Types.AnalysisConfig(),
             };
             mockGrpcClient.Setup(x => x.GetSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Settings response = client.GetSettings(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3254,7 +3254,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 AnalysisConfig = new Settings.Types.AnalysisConfig(),
             };
             mockGrpcClient.Setup(x => x.GetSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Settings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Settings responseCallSettings = await client.GetSettingsAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Settings responseCancellationToken = await client.GetSettingsAsync(request.Name, st::CancellationToken.None);
@@ -3288,7 +3288,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 AnalysisConfig = new Settings.Types.AnalysisConfig(),
             };
             mockGrpcClient.Setup(x => x.GetSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Settings response = client.GetSettings(request.SettingsName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3320,7 +3320,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 AnalysisConfig = new Settings.Types.AnalysisConfig(),
             };
             mockGrpcClient.Setup(x => x.GetSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Settings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Settings responseCallSettings = await client.GetSettingsAsync(request.SettingsName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Settings responseCancellationToken = await client.GetSettingsAsync(request.SettingsName, st::CancellationToken.None);
@@ -3355,7 +3355,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 AnalysisConfig = new Settings.Types.AnalysisConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Settings response = client.UpdateSettings(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3388,7 +3388,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 AnalysisConfig = new Settings.Types.AnalysisConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Settings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Settings responseCallSettings = await client.UpdateSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Settings responseCancellationToken = await client.UpdateSettingsAsync(request, st::CancellationToken.None);
@@ -3423,7 +3423,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 AnalysisConfig = new Settings.Types.AnalysisConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Settings response = client.UpdateSettings(request.Settings, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3456,7 +3456,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 AnalysisConfig = new Settings.Types.AnalysisConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Settings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             Settings responseCallSettings = await client.UpdateSettingsAsync(request.Settings, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Settings responseCancellationToken = await client.UpdateSettingsAsync(request.Settings, request.UpdateMask, st::CancellationToken.None);
@@ -3483,7 +3483,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 Value = "value60c16320",
             };
             mockGrpcClient.Setup(x => x.CreateView(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             View response = client.CreateView(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3508,7 +3508,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 Value = "value60c16320",
             };
             mockGrpcClient.Setup(x => x.CreateViewAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<View>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             View responseCallSettings = await client.CreateViewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             View responseCancellationToken = await client.CreateViewAsync(request, st::CancellationToken.None);
@@ -3535,7 +3535,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 Value = "value60c16320",
             };
             mockGrpcClient.Setup(x => x.CreateView(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             View response = client.CreateView(request.Parent, request.View);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3560,7 +3560,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 Value = "value60c16320",
             };
             mockGrpcClient.Setup(x => x.CreateViewAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<View>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             View responseCallSettings = await client.CreateViewAsync(request.Parent, request.View, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             View responseCancellationToken = await client.CreateViewAsync(request.Parent, request.View, st::CancellationToken.None);
@@ -3587,7 +3587,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 Value = "value60c16320",
             };
             mockGrpcClient.Setup(x => x.CreateView(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             View response = client.CreateView(request.ParentAsLocationName, request.View);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3612,7 +3612,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 Value = "value60c16320",
             };
             mockGrpcClient.Setup(x => x.CreateViewAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<View>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             View responseCallSettings = await client.CreateViewAsync(request.ParentAsLocationName, request.View, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             View responseCancellationToken = await client.CreateViewAsync(request.ParentAsLocationName, request.View, st::CancellationToken.None);
@@ -3638,7 +3638,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 Value = "value60c16320",
             };
             mockGrpcClient.Setup(x => x.GetView(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             View response = client.GetView(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3662,7 +3662,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 Value = "value60c16320",
             };
             mockGrpcClient.Setup(x => x.GetViewAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<View>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             View responseCallSettings = await client.GetViewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             View responseCancellationToken = await client.GetViewAsync(request, st::CancellationToken.None);
@@ -3688,7 +3688,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 Value = "value60c16320",
             };
             mockGrpcClient.Setup(x => x.GetView(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             View response = client.GetView(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3712,7 +3712,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 Value = "value60c16320",
             };
             mockGrpcClient.Setup(x => x.GetViewAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<View>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             View responseCallSettings = await client.GetViewAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             View responseCancellationToken = await client.GetViewAsync(request.Name, st::CancellationToken.None);
@@ -3738,7 +3738,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 Value = "value60c16320",
             };
             mockGrpcClient.Setup(x => x.GetView(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             View response = client.GetView(request.ViewName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3762,7 +3762,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 Value = "value60c16320",
             };
             mockGrpcClient.Setup(x => x.GetViewAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<View>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             View responseCallSettings = await client.GetViewAsync(request.ViewName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             View responseCancellationToken = await client.GetViewAsync(request.ViewName, st::CancellationToken.None);
@@ -3789,7 +3789,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 Value = "value60c16320",
             };
             mockGrpcClient.Setup(x => x.UpdateView(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             View response = client.UpdateView(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3814,7 +3814,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 Value = "value60c16320",
             };
             mockGrpcClient.Setup(x => x.UpdateViewAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<View>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             View responseCallSettings = await client.UpdateViewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             View responseCancellationToken = await client.UpdateViewAsync(request, st::CancellationToken.None);
@@ -3841,7 +3841,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 Value = "value60c16320",
             };
             mockGrpcClient.Setup(x => x.UpdateView(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             View response = client.UpdateView(request.View, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3866,7 +3866,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 Value = "value60c16320",
             };
             mockGrpcClient.Setup(x => x.UpdateViewAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<View>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             View responseCallSettings = await client.UpdateViewAsync(request.View, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             View responseCancellationToken = await client.UpdateViewAsync(request.View, request.UpdateMask, st::CancellationToken.None);
@@ -3885,7 +3885,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteView(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteView(request);
             mockGrpcClient.VerifyAll();
         }
@@ -3901,7 +3901,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteViewAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteViewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteViewAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -3918,7 +3918,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteView(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteView(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -3934,7 +3934,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteViewAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteViewAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteViewAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -3951,7 +3951,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteView(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteView(request.ViewName);
             mockGrpcClient.VerifyAll();
         }
@@ -3967,7 +3967,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteViewAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteViewAsync(request.ViewName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteViewAsync(request.ViewName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();

@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -159,9 +159,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         public PagesSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public PagesClientBuilder()
+        public PagesClientBuilder() : base(PagesClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = PagesClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref PagesClient client);
@@ -188,29 +187,18 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return PagesClient.Create(callInvoker, Settings);
+            return PagesClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<PagesClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return PagesClient.Create(callInvoker, Settings);
+            return PagesClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => PagesClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => PagesClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => PagesClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>Pages client wrapper, for convenient use.</summary>
@@ -239,19 +227,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             "https://www.googleapis.com/auth/dialogflow",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Pages.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="PagesClient"/> using the default credentials, endpoint and settings. To
@@ -278,8 +257,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="PagesSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="PagesClient"/>.</returns>
-        internal static PagesClient Create(grpccore::CallInvoker callInvoker, PagesSettings settings = null)
+        internal static PagesClient Create(grpccore::CallInvoker callInvoker, PagesSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -288,7 +268,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             Pages.PagesClient grpcClient = new Pages.PagesClient(callInvoker);
-            return new PagesClientImpl(grpcClient, settings);
+            return new PagesClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1000,24 +980,25 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="PagesSettings"/> used within this client.</param>
-        public PagesClientImpl(Pages.PagesClient grpcClient, PagesSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public PagesClientImpl(Pages.PagesClient grpcClient, PagesSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             PagesSettings effectiveSettings = settings ?? PagesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListPages = clientHelper.BuildApiCall<ListPagesRequest, ListPagesResponse>(grpcClient.ListPagesAsync, grpcClient.ListPages, effectiveSettings.ListPagesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callListPages = clientHelper.BuildApiCall<ListPagesRequest, ListPagesResponse>("ListPages", grpcClient.ListPagesAsync, grpcClient.ListPages, effectiveSettings.ListPagesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListPages);
             Modify_ListPagesApiCall(ref _callListPages);
-            _callGetPage = clientHelper.BuildApiCall<GetPageRequest, Page>(grpcClient.GetPageAsync, grpcClient.GetPage, effectiveSettings.GetPageSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetPage = clientHelper.BuildApiCall<GetPageRequest, Page>("GetPage", grpcClient.GetPageAsync, grpcClient.GetPage, effectiveSettings.GetPageSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetPage);
             Modify_GetPageApiCall(ref _callGetPage);
-            _callCreatePage = clientHelper.BuildApiCall<CreatePageRequest, Page>(grpcClient.CreatePageAsync, grpcClient.CreatePage, effectiveSettings.CreatePageSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreatePage = clientHelper.BuildApiCall<CreatePageRequest, Page>("CreatePage", grpcClient.CreatePageAsync, grpcClient.CreatePage, effectiveSettings.CreatePageSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreatePage);
             Modify_CreatePageApiCall(ref _callCreatePage);
-            _callUpdatePage = clientHelper.BuildApiCall<UpdatePageRequest, Page>(grpcClient.UpdatePageAsync, grpcClient.UpdatePage, effectiveSettings.UpdatePageSettings).WithGoogleRequestParam("page.name", request => request.Page?.Name);
+            _callUpdatePage = clientHelper.BuildApiCall<UpdatePageRequest, Page>("UpdatePage", grpcClient.UpdatePageAsync, grpcClient.UpdatePage, effectiveSettings.UpdatePageSettings).WithGoogleRequestParam("page.name", request => request.Page?.Name);
             Modify_ApiCall(ref _callUpdatePage);
             Modify_UpdatePageApiCall(ref _callUpdatePage);
-            _callDeletePage = clientHelper.BuildApiCall<DeletePageRequest, wkt::Empty>(grpcClient.DeletePageAsync, grpcClient.DeletePage, effectiveSettings.DeletePageSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeletePage = clientHelper.BuildApiCall<DeletePageRequest, wkt::Empty>("DeletePage", grpcClient.DeletePageAsync, grpcClient.DeletePage, effectiveSettings.DeletePageSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeletePage);
             Modify_DeletePageApiCall(ref _callDeletePage);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

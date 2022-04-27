@@ -55,7 +55,7 @@ namespace Google.Cloud.ApiGateway.V1.Tests
                 DefaultHostname = "default_hostname0ebd0627",
             };
             mockGrpcClient.Setup(x => x.GetGateway(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ApiGatewayServiceClient client = new ApiGatewayServiceClientImpl(mockGrpcClient.Object, null);
+            ApiGatewayServiceClient client = new ApiGatewayServiceClientImpl(mockGrpcClient.Object, null, null);
             Gateway response = client.GetGateway(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -88,7 +88,7 @@ namespace Google.Cloud.ApiGateway.V1.Tests
                 DefaultHostname = "default_hostname0ebd0627",
             };
             mockGrpcClient.Setup(x => x.GetGatewayAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Gateway>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ApiGatewayServiceClient client = new ApiGatewayServiceClientImpl(mockGrpcClient.Object, null);
+            ApiGatewayServiceClient client = new ApiGatewayServiceClientImpl(mockGrpcClient.Object, null, null);
             Gateway responseCallSettings = await client.GetGatewayAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Gateway responseCancellationToken = await client.GetGatewayAsync(request, st::CancellationToken.None);
@@ -123,7 +123,7 @@ namespace Google.Cloud.ApiGateway.V1.Tests
                 DefaultHostname = "default_hostname0ebd0627",
             };
             mockGrpcClient.Setup(x => x.GetGateway(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ApiGatewayServiceClient client = new ApiGatewayServiceClientImpl(mockGrpcClient.Object, null);
+            ApiGatewayServiceClient client = new ApiGatewayServiceClientImpl(mockGrpcClient.Object, null, null);
             Gateway response = client.GetGateway(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -156,7 +156,7 @@ namespace Google.Cloud.ApiGateway.V1.Tests
                 DefaultHostname = "default_hostname0ebd0627",
             };
             mockGrpcClient.Setup(x => x.GetGatewayAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Gateway>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ApiGatewayServiceClient client = new ApiGatewayServiceClientImpl(mockGrpcClient.Object, null);
+            ApiGatewayServiceClient client = new ApiGatewayServiceClientImpl(mockGrpcClient.Object, null, null);
             Gateway responseCallSettings = await client.GetGatewayAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Gateway responseCancellationToken = await client.GetGatewayAsync(request.Name, st::CancellationToken.None);
@@ -191,7 +191,7 @@ namespace Google.Cloud.ApiGateway.V1.Tests
                 DefaultHostname = "default_hostname0ebd0627",
             };
             mockGrpcClient.Setup(x => x.GetGateway(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ApiGatewayServiceClient client = new ApiGatewayServiceClientImpl(mockGrpcClient.Object, null);
+            ApiGatewayServiceClient client = new ApiGatewayServiceClientImpl(mockGrpcClient.Object, null, null);
             Gateway response = client.GetGateway(request.GatewayName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -224,7 +224,7 @@ namespace Google.Cloud.ApiGateway.V1.Tests
                 DefaultHostname = "default_hostname0ebd0627",
             };
             mockGrpcClient.Setup(x => x.GetGatewayAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Gateway>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ApiGatewayServiceClient client = new ApiGatewayServiceClientImpl(mockGrpcClient.Object, null);
+            ApiGatewayServiceClient client = new ApiGatewayServiceClientImpl(mockGrpcClient.Object, null, null);
             Gateway responseCallSettings = await client.GetGatewayAsync(request.GatewayName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Gateway responseCancellationToken = await client.GetGatewayAsync(request.GatewayName, st::CancellationToken.None);
@@ -258,7 +258,7 @@ namespace Google.Cloud.ApiGateway.V1.Tests
                 State = Api.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetApi(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ApiGatewayServiceClient client = new ApiGatewayServiceClientImpl(mockGrpcClient.Object, null);
+            ApiGatewayServiceClient client = new ApiGatewayServiceClientImpl(mockGrpcClient.Object, null, null);
             Api response = client.GetApi(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -290,7 +290,7 @@ namespace Google.Cloud.ApiGateway.V1.Tests
                 State = Api.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetApiAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Api>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ApiGatewayServiceClient client = new ApiGatewayServiceClientImpl(mockGrpcClient.Object, null);
+            ApiGatewayServiceClient client = new ApiGatewayServiceClientImpl(mockGrpcClient.Object, null, null);
             Api responseCallSettings = await client.GetApiAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Api responseCancellationToken = await client.GetApiAsync(request, st::CancellationToken.None);
@@ -324,7 +324,7 @@ namespace Google.Cloud.ApiGateway.V1.Tests
                 State = Api.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetApi(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ApiGatewayServiceClient client = new ApiGatewayServiceClientImpl(mockGrpcClient.Object, null);
+            ApiGatewayServiceClient client = new ApiGatewayServiceClientImpl(mockGrpcClient.Object, null, null);
             Api response = client.GetApi(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -356,7 +356,7 @@ namespace Google.Cloud.ApiGateway.V1.Tests
                 State = Api.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetApiAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Api>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ApiGatewayServiceClient client = new ApiGatewayServiceClientImpl(mockGrpcClient.Object, null);
+            ApiGatewayServiceClient client = new ApiGatewayServiceClientImpl(mockGrpcClient.Object, null, null);
             Api responseCallSettings = await client.GetApiAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Api responseCancellationToken = await client.GetApiAsync(request.Name, st::CancellationToken.None);
@@ -390,7 +390,7 @@ namespace Google.Cloud.ApiGateway.V1.Tests
                 State = Api.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetApi(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ApiGatewayServiceClient client = new ApiGatewayServiceClientImpl(mockGrpcClient.Object, null);
+            ApiGatewayServiceClient client = new ApiGatewayServiceClientImpl(mockGrpcClient.Object, null, null);
             Api response = client.GetApi(request.ApiName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -422,7 +422,7 @@ namespace Google.Cloud.ApiGateway.V1.Tests
                 State = Api.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetApiAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Api>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ApiGatewayServiceClient client = new ApiGatewayServiceClientImpl(mockGrpcClient.Object, null);
+            ApiGatewayServiceClient client = new ApiGatewayServiceClientImpl(mockGrpcClient.Object, null, null);
             Api responseCallSettings = await client.GetApiAsync(request.ApiName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Api responseCancellationToken = await client.GetApiAsync(request.ApiName, st::CancellationToken.None);
@@ -470,7 +470,7 @@ namespace Google.Cloud.ApiGateway.V1.Tests
                 GatewayServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
             };
             mockGrpcClient.Setup(x => x.GetApiConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ApiGatewayServiceClient client = new ApiGatewayServiceClientImpl(mockGrpcClient.Object, null);
+            ApiGatewayServiceClient client = new ApiGatewayServiceClientImpl(mockGrpcClient.Object, null, null);
             ApiConfig response = client.GetApiConfig(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -516,7 +516,7 @@ namespace Google.Cloud.ApiGateway.V1.Tests
                 GatewayServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
             };
             mockGrpcClient.Setup(x => x.GetApiConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ApiConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ApiGatewayServiceClient client = new ApiGatewayServiceClientImpl(mockGrpcClient.Object, null);
+            ApiGatewayServiceClient client = new ApiGatewayServiceClientImpl(mockGrpcClient.Object, null, null);
             ApiConfig responseCallSettings = await client.GetApiConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ApiConfig responseCancellationToken = await client.GetApiConfigAsync(request, st::CancellationToken.None);
@@ -563,7 +563,7 @@ namespace Google.Cloud.ApiGateway.V1.Tests
                 GatewayServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
             };
             mockGrpcClient.Setup(x => x.GetApiConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ApiGatewayServiceClient client = new ApiGatewayServiceClientImpl(mockGrpcClient.Object, null);
+            ApiGatewayServiceClient client = new ApiGatewayServiceClientImpl(mockGrpcClient.Object, null, null);
             ApiConfig response = client.GetApiConfig(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -608,7 +608,7 @@ namespace Google.Cloud.ApiGateway.V1.Tests
                 GatewayServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
             };
             mockGrpcClient.Setup(x => x.GetApiConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ApiConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ApiGatewayServiceClient client = new ApiGatewayServiceClientImpl(mockGrpcClient.Object, null);
+            ApiGatewayServiceClient client = new ApiGatewayServiceClientImpl(mockGrpcClient.Object, null, null);
             ApiConfig responseCallSettings = await client.GetApiConfigAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ApiConfig responseCancellationToken = await client.GetApiConfigAsync(request.Name, st::CancellationToken.None);
@@ -655,7 +655,7 @@ namespace Google.Cloud.ApiGateway.V1.Tests
                 GatewayServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
             };
             mockGrpcClient.Setup(x => x.GetApiConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ApiGatewayServiceClient client = new ApiGatewayServiceClientImpl(mockGrpcClient.Object, null);
+            ApiGatewayServiceClient client = new ApiGatewayServiceClientImpl(mockGrpcClient.Object, null, null);
             ApiConfig response = client.GetApiConfig(request.ApiConfigName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -700,7 +700,7 @@ namespace Google.Cloud.ApiGateway.V1.Tests
                 GatewayServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
             };
             mockGrpcClient.Setup(x => x.GetApiConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ApiConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ApiGatewayServiceClient client = new ApiGatewayServiceClientImpl(mockGrpcClient.Object, null);
+            ApiGatewayServiceClient client = new ApiGatewayServiceClientImpl(mockGrpcClient.Object, null, null);
             ApiConfig responseCallSettings = await client.GetApiConfigAsync(request.ApiConfigName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ApiConfig responseCancellationToken = await client.GetApiConfigAsync(request.ApiConfigName, st::CancellationToken.None);

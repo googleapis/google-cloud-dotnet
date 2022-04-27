@@ -45,7 +45,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetSessionEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
+            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null, null);
             SessionEntityType response = client.GetSessionEntityType(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -69,7 +69,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetSessionEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SessionEntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
+            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null, null);
             SessionEntityType responseCallSettings = await client.GetSessionEntityTypeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SessionEntityType responseCancellationToken = await client.GetSessionEntityTypeAsync(request, st::CancellationToken.None);
@@ -95,7 +95,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetSessionEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
+            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null, null);
             SessionEntityType response = client.GetSessionEntityType(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -119,7 +119,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetSessionEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SessionEntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
+            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null, null);
             SessionEntityType responseCallSettings = await client.GetSessionEntityTypeAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SessionEntityType responseCancellationToken = await client.GetSessionEntityTypeAsync(request.Name, st::CancellationToken.None);
@@ -145,7 +145,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetSessionEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
+            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null, null);
             SessionEntityType response = client.GetSessionEntityType(request.SessionEntityTypeName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -169,7 +169,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetSessionEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SessionEntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
+            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null, null);
             SessionEntityType responseCallSettings = await client.GetSessionEntityTypeAsync(request.SessionEntityTypeName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SessionEntityType responseCancellationToken = await client.GetSessionEntityTypeAsync(request.SessionEntityTypeName, st::CancellationToken.None);
@@ -196,7 +196,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateSessionEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
+            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null, null);
             SessionEntityType response = client.CreateSessionEntityType(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -221,7 +221,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateSessionEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SessionEntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
+            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null, null);
             SessionEntityType responseCallSettings = await client.CreateSessionEntityTypeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SessionEntityType responseCancellationToken = await client.CreateSessionEntityTypeAsync(request, st::CancellationToken.None);
@@ -248,7 +248,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateSessionEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
+            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null, null);
             SessionEntityType response = client.CreateSessionEntityType(request.Parent, request.SessionEntityType);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -273,7 +273,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateSessionEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SessionEntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
+            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null, null);
             SessionEntityType responseCallSettings = await client.CreateSessionEntityTypeAsync(request.Parent, request.SessionEntityType, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SessionEntityType responseCancellationToken = await client.CreateSessionEntityTypeAsync(request.Parent, request.SessionEntityType, st::CancellationToken.None);
@@ -300,7 +300,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateSessionEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
+            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null, null);
             SessionEntityType response = client.CreateSessionEntityType(request.ParentAsSessionName, request.SessionEntityType);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -325,7 +325,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateSessionEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SessionEntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
+            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null, null);
             SessionEntityType responseCallSettings = await client.CreateSessionEntityTypeAsync(request.ParentAsSessionName, request.SessionEntityType, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SessionEntityType responseCancellationToken = await client.CreateSessionEntityTypeAsync(request.ParentAsSessionName, request.SessionEntityType, st::CancellationToken.None);
@@ -352,7 +352,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateSessionEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
+            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null, null);
             SessionEntityType response = client.UpdateSessionEntityType(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -377,7 +377,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateSessionEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SessionEntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
+            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null, null);
             SessionEntityType responseCallSettings = await client.UpdateSessionEntityTypeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SessionEntityType responseCancellationToken = await client.UpdateSessionEntityTypeAsync(request, st::CancellationToken.None);
@@ -403,7 +403,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateSessionEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
+            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null, null);
             SessionEntityType response = client.UpdateSessionEntityType(request.SessionEntityType);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -427,7 +427,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateSessionEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SessionEntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
+            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null, null);
             SessionEntityType responseCallSettings = await client.UpdateSessionEntityTypeAsync(request.SessionEntityType, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SessionEntityType responseCancellationToken = await client.UpdateSessionEntityTypeAsync(request.SessionEntityType, st::CancellationToken.None);
@@ -454,7 +454,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateSessionEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
+            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null, null);
             SessionEntityType response = client.UpdateSessionEntityType(request.SessionEntityType, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -479,7 +479,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateSessionEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SessionEntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
+            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null, null);
             SessionEntityType responseCallSettings = await client.UpdateSessionEntityTypeAsync(request.SessionEntityType, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SessionEntityType responseCancellationToken = await client.UpdateSessionEntityTypeAsync(request.SessionEntityType, request.UpdateMask, st::CancellationToken.None);
@@ -497,7 +497,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSessionEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
+            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteSessionEntityType(request);
             mockGrpcClient.VerifyAll();
         }
@@ -512,7 +512,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSessionEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
+            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteSessionEntityTypeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteSessionEntityTypeAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -528,7 +528,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSessionEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
+            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteSessionEntityType(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -543,7 +543,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSessionEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
+            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteSessionEntityTypeAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteSessionEntityTypeAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -559,7 +559,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSessionEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
+            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteSessionEntityType(request.SessionEntityTypeName);
             mockGrpcClient.VerifyAll();
         }
@@ -574,7 +574,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSessionEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
+            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteSessionEntityTypeAsync(request.SessionEntityTypeName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteSessionEntityTypeAsync(request.SessionEntityTypeName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();

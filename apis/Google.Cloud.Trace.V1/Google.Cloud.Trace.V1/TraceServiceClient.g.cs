@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -130,9 +130,8 @@ namespace Google.Cloud.Trace.V1
         public TraceServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public TraceServiceClientBuilder()
+        public TraceServiceClientBuilder() : base(TraceServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = TraceServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref TraceServiceClient client);
@@ -159,29 +158,18 @@ namespace Google.Cloud.Trace.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return TraceServiceClient.Create(callInvoker, Settings);
+            return TraceServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<TraceServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return TraceServiceClient.Create(callInvoker, Settings);
+            return TraceServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => TraceServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => TraceServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => TraceServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>TraceService client wrapper, for convenient use.</summary>
@@ -216,19 +204,10 @@ namespace Google.Cloud.Trace.V1
             "https://www.googleapis.com/auth/trace.readonly",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(TraceService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="TraceServiceClient"/> using the default credentials, endpoint and
@@ -255,8 +234,9 @@ namespace Google.Cloud.Trace.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="TraceServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="TraceServiceClient"/>.</returns>
-        internal static TraceServiceClient Create(grpccore::CallInvoker callInvoker, TraceServiceSettings settings = null)
+        internal static TraceServiceClient Create(grpccore::CallInvoker callInvoker, TraceServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -265,7 +245,7 @@ namespace Google.Cloud.Trace.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             TraceService.TraceServiceClient grpcClient = new TraceService.TraceServiceClient(callInvoker);
-            return new TraceServiceClientImpl(grpcClient, settings);
+            return new TraceServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -550,18 +530,19 @@ namespace Google.Cloud.Trace.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="TraceServiceSettings"/> used within this client.</param>
-        public TraceServiceClientImpl(TraceService.TraceServiceClient grpcClient, TraceServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public TraceServiceClientImpl(TraceService.TraceServiceClient grpcClient, TraceServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             TraceServiceSettings effectiveSettings = settings ?? TraceServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListTraces = clientHelper.BuildApiCall<ListTracesRequest, ListTracesResponse>(grpcClient.ListTracesAsync, grpcClient.ListTraces, effectiveSettings.ListTracesSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callListTraces = clientHelper.BuildApiCall<ListTracesRequest, ListTracesResponse>("ListTraces", grpcClient.ListTracesAsync, grpcClient.ListTraces, effectiveSettings.ListTracesSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
             Modify_ApiCall(ref _callListTraces);
             Modify_ListTracesApiCall(ref _callListTraces);
-            _callGetTrace = clientHelper.BuildApiCall<GetTraceRequest, Trace>(grpcClient.GetTraceAsync, grpcClient.GetTrace, effectiveSettings.GetTraceSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("trace_id", request => request.TraceId);
+            _callGetTrace = clientHelper.BuildApiCall<GetTraceRequest, Trace>("GetTrace", grpcClient.GetTraceAsync, grpcClient.GetTrace, effectiveSettings.GetTraceSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("trace_id", request => request.TraceId);
             Modify_ApiCall(ref _callGetTrace);
             Modify_GetTraceApiCall(ref _callGetTrace);
-            _callPatchTraces = clientHelper.BuildApiCall<PatchTracesRequest, wkt::Empty>(grpcClient.PatchTracesAsync, grpcClient.PatchTraces, effectiveSettings.PatchTracesSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            _callPatchTraces = clientHelper.BuildApiCall<PatchTracesRequest, wkt::Empty>("PatchTraces", grpcClient.PatchTracesAsync, grpcClient.PatchTraces, effectiveSettings.PatchTracesSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
             Modify_ApiCall(ref _callPatchTraces);
             Modify_PatchTracesApiCall(ref _callPatchTraces);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

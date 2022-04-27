@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -97,9 +97,8 @@ namespace Google.Cloud.Compute.V1
         public LicenseCodesSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public LicenseCodesClientBuilder()
+        public LicenseCodesClientBuilder() : base(LicenseCodesClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = LicenseCodesClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref LicenseCodesClient client);
@@ -126,29 +125,18 @@ namespace Google.Cloud.Compute.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return LicenseCodesClient.Create(callInvoker, Settings);
+            return LicenseCodesClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<LicenseCodesClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return LicenseCodesClient.Create(callInvoker, Settings);
+            return LicenseCodesClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => LicenseCodesClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => LicenseCodesClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => LicenseCodesClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => ComputeRestAdapter.ComputeAdapter;
     }
 
     /// <summary>LicenseCodes client wrapper, for convenient use.</summary>
@@ -179,19 +167,10 @@ namespace Google.Cloud.Compute.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(LicenseCodes.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="LicenseCodesClient"/> using the default credentials, endpoint and
@@ -218,8 +197,9 @@ namespace Google.Cloud.Compute.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="LicenseCodesSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="LicenseCodesClient"/>.</returns>
-        internal static LicenseCodesClient Create(grpccore::CallInvoker callInvoker, LicenseCodesSettings settings = null)
+        internal static LicenseCodesClient Create(grpccore::CallInvoker callInvoker, LicenseCodesSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -228,7 +208,7 @@ namespace Google.Cloud.Compute.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             LicenseCodes.LicenseCodesClient grpcClient = new LicenseCodes.LicenseCodesClient(callInvoker);
-            return new LicenseCodesClientImpl(grpcClient, settings);
+            return new LicenseCodesClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -428,15 +408,16 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="LicenseCodesSettings"/> used within this client.</param>
-        public LicenseCodesClientImpl(LicenseCodes.LicenseCodesClient grpcClient, LicenseCodesSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public LicenseCodesClientImpl(LicenseCodes.LicenseCodesClient grpcClient, LicenseCodesSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             LicenseCodesSettings effectiveSettings = settings ?? LicenseCodesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callGet = clientHelper.BuildApiCall<GetLicenseCodeRequest, LicenseCode>(grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("license_code", request => request.LicenseCode);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callGet = clientHelper.BuildApiCall<GetLicenseCodeRequest, LicenseCode>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("license_code", request => request.LicenseCode);
             Modify_ApiCall(ref _callGet);
             Modify_GetApiCall(ref _callGet);
-            _callTestIamPermissions = clientHelper.BuildApiCall<TestIamPermissionsLicenseCodeRequest, TestPermissionsResponse>(grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("resource", request => request.Resource);
+            _callTestIamPermissions = clientHelper.BuildApiCall<TestIamPermissionsLicenseCodeRequest, TestPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callTestIamPermissions);
             Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

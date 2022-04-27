@@ -64,7 +64,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 RoutingConfig = new NetworkRoutingConfig(),
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NetworksClient client = new NetworksClientImpl(mockGrpcClient.Object, null);
+            NetworksClient client = new NetworksClientImpl(mockGrpcClient.Object, null, null);
             Network response = client.Get(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -107,7 +107,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 RoutingConfig = new NetworkRoutingConfig(),
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Network>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NetworksClient client = new NetworksClientImpl(mockGrpcClient.Object, null);
+            NetworksClient client = new NetworksClientImpl(mockGrpcClient.Object, null, null);
             Network responseCallSettings = await client.GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Network responseCancellationToken = await client.GetAsync(request, st::CancellationToken.None);
@@ -152,7 +152,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 RoutingConfig = new NetworkRoutingConfig(),
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NetworksClient client = new NetworksClientImpl(mockGrpcClient.Object, null);
+            NetworksClient client = new NetworksClientImpl(mockGrpcClient.Object, null, null);
             Network response = client.Get(request.Project, request.Network);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -195,7 +195,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 RoutingConfig = new NetworkRoutingConfig(),
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Network>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NetworksClient client = new NetworksClientImpl(mockGrpcClient.Object, null);
+            NetworksClient client = new NetworksClientImpl(mockGrpcClient.Object, null, null);
             Network responseCallSettings = await client.GetAsync(request.Project, request.Network, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Network responseCancellationToken = await client.GetAsync(request.Project, request.Network, st::CancellationToken.None);
@@ -222,7 +222,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetEffectiveFirewalls(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NetworksClient client = new NetworksClientImpl(mockGrpcClient.Object, null);
+            NetworksClient client = new NetworksClientImpl(mockGrpcClient.Object, null, null);
             NetworksGetEffectiveFirewallsResponse response = client.GetEffectiveFirewalls(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -247,7 +247,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetEffectiveFirewallsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NetworksGetEffectiveFirewallsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NetworksClient client = new NetworksClientImpl(mockGrpcClient.Object, null);
+            NetworksClient client = new NetworksClientImpl(mockGrpcClient.Object, null, null);
             NetworksGetEffectiveFirewallsResponse responseCallSettings = await client.GetEffectiveFirewallsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             NetworksGetEffectiveFirewallsResponse responseCancellationToken = await client.GetEffectiveFirewallsAsync(request, st::CancellationToken.None);
@@ -274,7 +274,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetEffectiveFirewalls(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NetworksClient client = new NetworksClientImpl(mockGrpcClient.Object, null);
+            NetworksClient client = new NetworksClientImpl(mockGrpcClient.Object, null, null);
             NetworksGetEffectiveFirewallsResponse response = client.GetEffectiveFirewalls(request.Project, request.Network);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -299,7 +299,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetEffectiveFirewallsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NetworksGetEffectiveFirewallsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NetworksClient client = new NetworksClientImpl(mockGrpcClient.Object, null);
+            NetworksClient client = new NetworksClientImpl(mockGrpcClient.Object, null, null);
             NetworksGetEffectiveFirewallsResponse responseCallSettings = await client.GetEffectiveFirewallsAsync(request.Project, request.Network, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             NetworksGetEffectiveFirewallsResponse responseCancellationToken = await client.GetEffectiveFirewallsAsync(request.Project, request.Network, st::CancellationToken.None);

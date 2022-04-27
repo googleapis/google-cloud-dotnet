@@ -63,7 +63,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 Condition = new PipelineCondition(),
             };
             mockGrpcClient.Setup(x => x.GetDeliveryPipeline(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
             DeliveryPipeline response = client.GetDeliveryPipeline(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -104,7 +104,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 Condition = new PipelineCondition(),
             };
             mockGrpcClient.Setup(x => x.GetDeliveryPipelineAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeliveryPipeline>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
             DeliveryPipeline responseCallSettings = await client.GetDeliveryPipelineAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DeliveryPipeline responseCancellationToken = await client.GetDeliveryPipelineAsync(request, st::CancellationToken.None);
@@ -147,7 +147,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 Condition = new PipelineCondition(),
             };
             mockGrpcClient.Setup(x => x.GetDeliveryPipeline(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
             DeliveryPipeline response = client.GetDeliveryPipeline(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -188,7 +188,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 Condition = new PipelineCondition(),
             };
             mockGrpcClient.Setup(x => x.GetDeliveryPipelineAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeliveryPipeline>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
             DeliveryPipeline responseCallSettings = await client.GetDeliveryPipelineAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DeliveryPipeline responseCancellationToken = await client.GetDeliveryPipelineAsync(request.Name, st::CancellationToken.None);
@@ -231,7 +231,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 Condition = new PipelineCondition(),
             };
             mockGrpcClient.Setup(x => x.GetDeliveryPipeline(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
             DeliveryPipeline response = client.GetDeliveryPipeline(request.DeliveryPipelineName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -272,7 +272,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 Condition = new PipelineCondition(),
             };
             mockGrpcClient.Setup(x => x.GetDeliveryPipelineAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeliveryPipeline>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
             DeliveryPipeline responseCallSettings = await client.GetDeliveryPipelineAsync(request.DeliveryPipelineName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DeliveryPipeline responseCancellationToken = await client.GetDeliveryPipelineAsync(request.DeliveryPipelineName, st::CancellationToken.None);
@@ -321,7 +321,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 AnthosCluster = new AnthosCluster(),
             };
             mockGrpcClient.Setup(x => x.GetTarget(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
             Target response = client.GetTarget(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -368,7 +368,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 AnthosCluster = new AnthosCluster(),
             };
             mockGrpcClient.Setup(x => x.GetTargetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Target>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
             Target responseCallSettings = await client.GetTargetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Target responseCancellationToken = await client.GetTargetAsync(request, st::CancellationToken.None);
@@ -417,7 +417,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 AnthosCluster = new AnthosCluster(),
             };
             mockGrpcClient.Setup(x => x.GetTarget(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
             Target response = client.GetTarget(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -464,7 +464,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 AnthosCluster = new AnthosCluster(),
             };
             mockGrpcClient.Setup(x => x.GetTargetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Target>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
             Target responseCallSettings = await client.GetTargetAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Target responseCancellationToken = await client.GetTargetAsync(request.Name, st::CancellationToken.None);
@@ -513,7 +513,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 AnthosCluster = new AnthosCluster(),
             };
             mockGrpcClient.Setup(x => x.GetTarget(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
             Target response = client.GetTarget(request.TargetName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -560,7 +560,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 AnthosCluster = new AnthosCluster(),
             };
             mockGrpcClient.Setup(x => x.GetTargetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Target>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
             Target responseCallSettings = await client.GetTargetAsync(request.TargetName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Target responseCancellationToken = await client.GetTargetAsync(request.TargetName, st::CancellationToken.None);
@@ -626,7 +626,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetRelease(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
             Release response = client.GetRelease(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -690,7 +690,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetReleaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Release>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
             Release responseCallSettings = await client.GetReleaseAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Release responseCancellationToken = await client.GetReleaseAsync(request, st::CancellationToken.None);
@@ -756,7 +756,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetRelease(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
             Release response = client.GetRelease(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -820,7 +820,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetReleaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Release>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
             Release responseCallSettings = await client.GetReleaseAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Release responseCancellationToken = await client.GetReleaseAsync(request.Name, st::CancellationToken.None);
@@ -886,7 +886,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetRelease(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
             Release response = client.GetRelease(request.ReleaseName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -950,7 +950,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetReleaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Release>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
             Release responseCallSettings = await client.GetReleaseAsync(request.ReleaseName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Release responseCancellationToken = await client.GetReleaseAsync(request.ReleaseName, st::CancellationToken.None);
@@ -970,7 +970,7 @@ namespace Google.Cloud.Deploy.V1.Tests
             };
             ApproveRolloutResponse expectedResponse = new ApproveRolloutResponse { };
             mockGrpcClient.Setup(x => x.ApproveRollout(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
             ApproveRolloutResponse response = client.ApproveRollout(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -988,7 +988,7 @@ namespace Google.Cloud.Deploy.V1.Tests
             };
             ApproveRolloutResponse expectedResponse = new ApproveRolloutResponse { };
             mockGrpcClient.Setup(x => x.ApproveRolloutAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ApproveRolloutResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
             ApproveRolloutResponse responseCallSettings = await client.ApproveRolloutAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ApproveRolloutResponse responseCancellationToken = await client.ApproveRolloutAsync(request, st::CancellationToken.None);
@@ -1007,7 +1007,7 @@ namespace Google.Cloud.Deploy.V1.Tests
             };
             ApproveRolloutResponse expectedResponse = new ApproveRolloutResponse { };
             mockGrpcClient.Setup(x => x.ApproveRollout(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
             ApproveRolloutResponse response = client.ApproveRollout(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1024,7 +1024,7 @@ namespace Google.Cloud.Deploy.V1.Tests
             };
             ApproveRolloutResponse expectedResponse = new ApproveRolloutResponse { };
             mockGrpcClient.Setup(x => x.ApproveRolloutAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ApproveRolloutResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
             ApproveRolloutResponse responseCallSettings = await client.ApproveRolloutAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ApproveRolloutResponse responseCancellationToken = await client.ApproveRolloutAsync(request.Name, st::CancellationToken.None);
@@ -1043,7 +1043,7 @@ namespace Google.Cloud.Deploy.V1.Tests
             };
             ApproveRolloutResponse expectedResponse = new ApproveRolloutResponse { };
             mockGrpcClient.Setup(x => x.ApproveRollout(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
             ApproveRolloutResponse response = client.ApproveRollout(request.RolloutName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1060,7 +1060,7 @@ namespace Google.Cloud.Deploy.V1.Tests
             };
             ApproveRolloutResponse expectedResponse = new ApproveRolloutResponse { };
             mockGrpcClient.Setup(x => x.ApproveRolloutAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ApproveRolloutResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
             ApproveRolloutResponse responseCallSettings = await client.ApproveRolloutAsync(request.RolloutName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ApproveRolloutResponse responseCancellationToken = await client.ApproveRolloutAsync(request.RolloutName, st::CancellationToken.None);
@@ -1110,7 +1110,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 DeployFailureCause = Rollout.Types.FailureCause.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetRollout(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
             Rollout response = client.GetRollout(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1158,7 +1158,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 DeployFailureCause = Rollout.Types.FailureCause.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetRolloutAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Rollout>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
             Rollout responseCallSettings = await client.GetRolloutAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Rollout responseCancellationToken = await client.GetRolloutAsync(request, st::CancellationToken.None);
@@ -1208,7 +1208,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 DeployFailureCause = Rollout.Types.FailureCause.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetRollout(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
             Rollout response = client.GetRollout(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1256,7 +1256,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 DeployFailureCause = Rollout.Types.FailureCause.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetRolloutAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Rollout>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
             Rollout responseCallSettings = await client.GetRolloutAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Rollout responseCancellationToken = await client.GetRolloutAsync(request.Name, st::CancellationToken.None);
@@ -1306,7 +1306,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 DeployFailureCause = Rollout.Types.FailureCause.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetRollout(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
             Rollout response = client.GetRollout(request.RolloutName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1354,7 +1354,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 DeployFailureCause = Rollout.Types.FailureCause.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetRolloutAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Rollout>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
             Rollout responseCallSettings = await client.GetRolloutAsync(request.RolloutName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Rollout responseCancellationToken = await client.GetRolloutAsync(request.RolloutName, st::CancellationToken.None);
@@ -1381,7 +1381,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 DefaultSkaffoldVersion = "default_skaffold_versioncb9ecadf",
             };
             mockGrpcClient.Setup(x => x.GetConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
             Config response = client.GetConfig(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1406,7 +1406,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 DefaultSkaffoldVersion = "default_skaffold_versioncb9ecadf",
             };
             mockGrpcClient.Setup(x => x.GetConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Config>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
             Config responseCallSettings = await client.GetConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Config responseCancellationToken = await client.GetConfigAsync(request, st::CancellationToken.None);
@@ -1433,7 +1433,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 DefaultSkaffoldVersion = "default_skaffold_versioncb9ecadf",
             };
             mockGrpcClient.Setup(x => x.GetConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
             Config response = client.GetConfig(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1458,7 +1458,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 DefaultSkaffoldVersion = "default_skaffold_versioncb9ecadf",
             };
             mockGrpcClient.Setup(x => x.GetConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Config>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
             Config responseCallSettings = await client.GetConfigAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Config responseCancellationToken = await client.GetConfigAsync(request.Name, st::CancellationToken.None);
@@ -1485,7 +1485,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 DefaultSkaffoldVersion = "default_skaffold_versioncb9ecadf",
             };
             mockGrpcClient.Setup(x => x.GetConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
             Config response = client.GetConfig(request.ConfigName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1510,7 +1510,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 DefaultSkaffoldVersion = "default_skaffold_versioncb9ecadf",
             };
             mockGrpcClient.Setup(x => x.GetConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Config>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
+            CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null, null);
             Config responseCallSettings = await client.GetConfigAsync(request.ConfigName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Config responseCancellationToken = await client.GetConfigAsync(request.ConfigName, st::CancellationToken.None);

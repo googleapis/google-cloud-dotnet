@@ -58,7 +58,7 @@ namespace Google.Cloud.Ids.V1.Tests
                 TrafficLogs = true,
             };
             mockGrpcClient.Setup(x => x.GetEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IDSClient client = new IDSClientImpl(mockGrpcClient.Object, null);
+            IDSClient client = new IDSClientImpl(mockGrpcClient.Object, null, null);
             Endpoint response = client.GetEndpoint(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -94,7 +94,7 @@ namespace Google.Cloud.Ids.V1.Tests
                 TrafficLogs = true,
             };
             mockGrpcClient.Setup(x => x.GetEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Endpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IDSClient client = new IDSClientImpl(mockGrpcClient.Object, null);
+            IDSClient client = new IDSClientImpl(mockGrpcClient.Object, null, null);
             Endpoint responseCallSettings = await client.GetEndpointAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Endpoint responseCancellationToken = await client.GetEndpointAsync(request, st::CancellationToken.None);
@@ -132,7 +132,7 @@ namespace Google.Cloud.Ids.V1.Tests
                 TrafficLogs = true,
             };
             mockGrpcClient.Setup(x => x.GetEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IDSClient client = new IDSClientImpl(mockGrpcClient.Object, null);
+            IDSClient client = new IDSClientImpl(mockGrpcClient.Object, null, null);
             Endpoint response = client.GetEndpoint(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -168,7 +168,7 @@ namespace Google.Cloud.Ids.V1.Tests
                 TrafficLogs = true,
             };
             mockGrpcClient.Setup(x => x.GetEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Endpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IDSClient client = new IDSClientImpl(mockGrpcClient.Object, null);
+            IDSClient client = new IDSClientImpl(mockGrpcClient.Object, null, null);
             Endpoint responseCallSettings = await client.GetEndpointAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Endpoint responseCancellationToken = await client.GetEndpointAsync(request.Name, st::CancellationToken.None);
@@ -206,7 +206,7 @@ namespace Google.Cloud.Ids.V1.Tests
                 TrafficLogs = true,
             };
             mockGrpcClient.Setup(x => x.GetEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IDSClient client = new IDSClientImpl(mockGrpcClient.Object, null);
+            IDSClient client = new IDSClientImpl(mockGrpcClient.Object, null, null);
             Endpoint response = client.GetEndpoint(request.EndpointName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -242,7 +242,7 @@ namespace Google.Cloud.Ids.V1.Tests
                 TrafficLogs = true,
             };
             mockGrpcClient.Setup(x => x.GetEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Endpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IDSClient client = new IDSClientImpl(mockGrpcClient.Object, null);
+            IDSClient client = new IDSClientImpl(mockGrpcClient.Object, null, null);
             Endpoint responseCallSettings = await client.GetEndpointAsync(request.EndpointName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Endpoint responseCancellationToken = await client.GetEndpointAsync(request.EndpointName, st::CancellationToken.None);

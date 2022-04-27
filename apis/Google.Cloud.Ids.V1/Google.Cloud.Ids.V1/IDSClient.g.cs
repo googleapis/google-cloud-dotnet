@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -168,9 +168,8 @@ namespace Google.Cloud.Ids.V1
         public IDSSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public IDSClientBuilder()
+        public IDSClientBuilder() : base(IDSClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = IDSClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref IDSClient client);
@@ -197,29 +196,18 @@ namespace Google.Cloud.Ids.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return IDSClient.Create(callInvoker, Settings);
+            return IDSClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<IDSClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return IDSClient.Create(callInvoker, Settings);
+            return IDSClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => IDSClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => IDSClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => IDSClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>IDS client wrapper, for convenient use.</summary>
@@ -245,19 +233,10 @@ namespace Google.Cloud.Ids.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(IDS.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="IDSClient"/> using the default credentials, endpoint and settings. To
@@ -284,8 +263,9 @@ namespace Google.Cloud.Ids.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="IDSSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="IDSClient"/>.</returns>
-        internal static IDSClient Create(grpccore::CallInvoker callInvoker, IDSSettings settings = null)
+        internal static IDSClient Create(grpccore::CallInvoker callInvoker, IDSSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -294,7 +274,7 @@ namespace Google.Cloud.Ids.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             IDS.IDSClient grpcClient = new IDS.IDSClient(callInvoker);
-            return new IDSClientImpl(grpcClient, settings);
+            return new IDSClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -894,23 +874,24 @@ namespace Google.Cloud.Ids.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="IDSSettings"/> used within this client.</param>
-        public IDSClientImpl(IDS.IDSClient grpcClient, IDSSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public IDSClientImpl(IDS.IDSClient grpcClient, IDSSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             IDSSettings effectiveSettings = settings ?? IDSSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateEndpointOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateEndpointOperationsSettings);
-            DeleteEndpointOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteEndpointOperationsSettings);
-            _callListEndpoints = clientHelper.BuildApiCall<ListEndpointsRequest, ListEndpointsResponse>(grpcClient.ListEndpointsAsync, grpcClient.ListEndpoints, effectiveSettings.ListEndpointsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateEndpointOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateEndpointOperationsSettings, logger);
+            DeleteEndpointOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteEndpointOperationsSettings, logger);
+            _callListEndpoints = clientHelper.BuildApiCall<ListEndpointsRequest, ListEndpointsResponse>("ListEndpoints", grpcClient.ListEndpointsAsync, grpcClient.ListEndpoints, effectiveSettings.ListEndpointsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListEndpoints);
             Modify_ListEndpointsApiCall(ref _callListEndpoints);
-            _callGetEndpoint = clientHelper.BuildApiCall<GetEndpointRequest, Endpoint>(grpcClient.GetEndpointAsync, grpcClient.GetEndpoint, effectiveSettings.GetEndpointSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetEndpoint = clientHelper.BuildApiCall<GetEndpointRequest, Endpoint>("GetEndpoint", grpcClient.GetEndpointAsync, grpcClient.GetEndpoint, effectiveSettings.GetEndpointSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetEndpoint);
             Modify_GetEndpointApiCall(ref _callGetEndpoint);
-            _callCreateEndpoint = clientHelper.BuildApiCall<CreateEndpointRequest, lro::Operation>(grpcClient.CreateEndpointAsync, grpcClient.CreateEndpoint, effectiveSettings.CreateEndpointSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateEndpoint = clientHelper.BuildApiCall<CreateEndpointRequest, lro::Operation>("CreateEndpoint", grpcClient.CreateEndpointAsync, grpcClient.CreateEndpoint, effectiveSettings.CreateEndpointSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateEndpoint);
             Modify_CreateEndpointApiCall(ref _callCreateEndpoint);
-            _callDeleteEndpoint = clientHelper.BuildApiCall<DeleteEndpointRequest, lro::Operation>(grpcClient.DeleteEndpointAsync, grpcClient.DeleteEndpoint, effectiveSettings.DeleteEndpointSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteEndpoint = clientHelper.BuildApiCall<DeleteEndpointRequest, lro::Operation>("DeleteEndpoint", grpcClient.DeleteEndpointAsync, grpcClient.DeleteEndpoint, effectiveSettings.DeleteEndpointSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteEndpoint);
             Modify_DeleteEndpointApiCall(ref _callDeleteEndpoint);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

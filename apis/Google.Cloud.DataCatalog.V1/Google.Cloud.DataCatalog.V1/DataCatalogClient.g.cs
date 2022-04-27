@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -531,9 +531,8 @@ namespace Google.Cloud.DataCatalog.V1
         public DataCatalogSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public DataCatalogClientBuilder()
+        public DataCatalogClientBuilder() : base(DataCatalogClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = DataCatalogClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref DataCatalogClient client);
@@ -560,29 +559,18 @@ namespace Google.Cloud.DataCatalog.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return DataCatalogClient.Create(callInvoker, Settings);
+            return DataCatalogClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<DataCatalogClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return DataCatalogClient.Create(callInvoker, Settings);
+            return DataCatalogClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => DataCatalogClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => DataCatalogClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => DataCatalogClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>DataCatalog client wrapper, for convenient use.</summary>
@@ -610,19 +598,10 @@ namespace Google.Cloud.DataCatalog.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(DataCatalog.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="DataCatalogClient"/> using the default credentials, endpoint and
@@ -649,8 +628,9 @@ namespace Google.Cloud.DataCatalog.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="DataCatalogSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="DataCatalogClient"/>.</returns>
-        internal static DataCatalogClient Create(grpccore::CallInvoker callInvoker, DataCatalogSettings settings = null)
+        internal static DataCatalogClient Create(grpccore::CallInvoker callInvoker, DataCatalogSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -659,7 +639,7 @@ namespace Google.Cloud.DataCatalog.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             DataCatalog.DataCatalogClient grpcClient = new DataCatalog.DataCatalogClient(callInvoker);
-            return new DataCatalogClientImpl(grpcClient, settings);
+            return new DataCatalogClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -6471,105 +6451,106 @@ namespace Google.Cloud.DataCatalog.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="DataCatalogSettings"/> used within this client.</param>
-        public DataCatalogClientImpl(DataCatalog.DataCatalogClient grpcClient, DataCatalogSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public DataCatalogClientImpl(DataCatalog.DataCatalogClient grpcClient, DataCatalogSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             DataCatalogSettings effectiveSettings = settings ?? DataCatalogSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callSearchCatalog = clientHelper.BuildApiCall<SearchCatalogRequest, SearchCatalogResponse>(grpcClient.SearchCatalogAsync, grpcClient.SearchCatalog, effectiveSettings.SearchCatalogSettings);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callSearchCatalog = clientHelper.BuildApiCall<SearchCatalogRequest, SearchCatalogResponse>("SearchCatalog", grpcClient.SearchCatalogAsync, grpcClient.SearchCatalog, effectiveSettings.SearchCatalogSettings);
             Modify_ApiCall(ref _callSearchCatalog);
             Modify_SearchCatalogApiCall(ref _callSearchCatalog);
-            _callCreateEntryGroup = clientHelper.BuildApiCall<CreateEntryGroupRequest, EntryGroup>(grpcClient.CreateEntryGroupAsync, grpcClient.CreateEntryGroup, effectiveSettings.CreateEntryGroupSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateEntryGroup = clientHelper.BuildApiCall<CreateEntryGroupRequest, EntryGroup>("CreateEntryGroup", grpcClient.CreateEntryGroupAsync, grpcClient.CreateEntryGroup, effectiveSettings.CreateEntryGroupSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateEntryGroup);
             Modify_CreateEntryGroupApiCall(ref _callCreateEntryGroup);
-            _callGetEntryGroup = clientHelper.BuildApiCall<GetEntryGroupRequest, EntryGroup>(grpcClient.GetEntryGroupAsync, grpcClient.GetEntryGroup, effectiveSettings.GetEntryGroupSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetEntryGroup = clientHelper.BuildApiCall<GetEntryGroupRequest, EntryGroup>("GetEntryGroup", grpcClient.GetEntryGroupAsync, grpcClient.GetEntryGroup, effectiveSettings.GetEntryGroupSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetEntryGroup);
             Modify_GetEntryGroupApiCall(ref _callGetEntryGroup);
-            _callUpdateEntryGroup = clientHelper.BuildApiCall<UpdateEntryGroupRequest, EntryGroup>(grpcClient.UpdateEntryGroupAsync, grpcClient.UpdateEntryGroup, effectiveSettings.UpdateEntryGroupSettings).WithGoogleRequestParam("entry_group.name", request => request.EntryGroup?.Name);
+            _callUpdateEntryGroup = clientHelper.BuildApiCall<UpdateEntryGroupRequest, EntryGroup>("UpdateEntryGroup", grpcClient.UpdateEntryGroupAsync, grpcClient.UpdateEntryGroup, effectiveSettings.UpdateEntryGroupSettings).WithGoogleRequestParam("entry_group.name", request => request.EntryGroup?.Name);
             Modify_ApiCall(ref _callUpdateEntryGroup);
             Modify_UpdateEntryGroupApiCall(ref _callUpdateEntryGroup);
-            _callDeleteEntryGroup = clientHelper.BuildApiCall<DeleteEntryGroupRequest, wkt::Empty>(grpcClient.DeleteEntryGroupAsync, grpcClient.DeleteEntryGroup, effectiveSettings.DeleteEntryGroupSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteEntryGroup = clientHelper.BuildApiCall<DeleteEntryGroupRequest, wkt::Empty>("DeleteEntryGroup", grpcClient.DeleteEntryGroupAsync, grpcClient.DeleteEntryGroup, effectiveSettings.DeleteEntryGroupSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteEntryGroup);
             Modify_DeleteEntryGroupApiCall(ref _callDeleteEntryGroup);
-            _callListEntryGroups = clientHelper.BuildApiCall<ListEntryGroupsRequest, ListEntryGroupsResponse>(grpcClient.ListEntryGroupsAsync, grpcClient.ListEntryGroups, effectiveSettings.ListEntryGroupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListEntryGroups = clientHelper.BuildApiCall<ListEntryGroupsRequest, ListEntryGroupsResponse>("ListEntryGroups", grpcClient.ListEntryGroupsAsync, grpcClient.ListEntryGroups, effectiveSettings.ListEntryGroupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListEntryGroups);
             Modify_ListEntryGroupsApiCall(ref _callListEntryGroups);
-            _callCreateEntry = clientHelper.BuildApiCall<CreateEntryRequest, Entry>(grpcClient.CreateEntryAsync, grpcClient.CreateEntry, effectiveSettings.CreateEntrySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateEntry = clientHelper.BuildApiCall<CreateEntryRequest, Entry>("CreateEntry", grpcClient.CreateEntryAsync, grpcClient.CreateEntry, effectiveSettings.CreateEntrySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateEntry);
             Modify_CreateEntryApiCall(ref _callCreateEntry);
-            _callUpdateEntry = clientHelper.BuildApiCall<UpdateEntryRequest, Entry>(grpcClient.UpdateEntryAsync, grpcClient.UpdateEntry, effectiveSettings.UpdateEntrySettings).WithGoogleRequestParam("entry.name", request => request.Entry?.Name);
+            _callUpdateEntry = clientHelper.BuildApiCall<UpdateEntryRequest, Entry>("UpdateEntry", grpcClient.UpdateEntryAsync, grpcClient.UpdateEntry, effectiveSettings.UpdateEntrySettings).WithGoogleRequestParam("entry.name", request => request.Entry?.Name);
             Modify_ApiCall(ref _callUpdateEntry);
             Modify_UpdateEntryApiCall(ref _callUpdateEntry);
-            _callDeleteEntry = clientHelper.BuildApiCall<DeleteEntryRequest, wkt::Empty>(grpcClient.DeleteEntryAsync, grpcClient.DeleteEntry, effectiveSettings.DeleteEntrySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteEntry = clientHelper.BuildApiCall<DeleteEntryRequest, wkt::Empty>("DeleteEntry", grpcClient.DeleteEntryAsync, grpcClient.DeleteEntry, effectiveSettings.DeleteEntrySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteEntry);
             Modify_DeleteEntryApiCall(ref _callDeleteEntry);
-            _callGetEntry = clientHelper.BuildApiCall<GetEntryRequest, Entry>(grpcClient.GetEntryAsync, grpcClient.GetEntry, effectiveSettings.GetEntrySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetEntry = clientHelper.BuildApiCall<GetEntryRequest, Entry>("GetEntry", grpcClient.GetEntryAsync, grpcClient.GetEntry, effectiveSettings.GetEntrySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetEntry);
             Modify_GetEntryApiCall(ref _callGetEntry);
-            _callLookupEntry = clientHelper.BuildApiCall<LookupEntryRequest, Entry>(grpcClient.LookupEntryAsync, grpcClient.LookupEntry, effectiveSettings.LookupEntrySettings);
+            _callLookupEntry = clientHelper.BuildApiCall<LookupEntryRequest, Entry>("LookupEntry", grpcClient.LookupEntryAsync, grpcClient.LookupEntry, effectiveSettings.LookupEntrySettings);
             Modify_ApiCall(ref _callLookupEntry);
             Modify_LookupEntryApiCall(ref _callLookupEntry);
-            _callListEntries = clientHelper.BuildApiCall<ListEntriesRequest, ListEntriesResponse>(grpcClient.ListEntriesAsync, grpcClient.ListEntries, effectiveSettings.ListEntriesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListEntries = clientHelper.BuildApiCall<ListEntriesRequest, ListEntriesResponse>("ListEntries", grpcClient.ListEntriesAsync, grpcClient.ListEntries, effectiveSettings.ListEntriesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListEntries);
             Modify_ListEntriesApiCall(ref _callListEntries);
-            _callModifyEntryOverview = clientHelper.BuildApiCall<ModifyEntryOverviewRequest, EntryOverview>(grpcClient.ModifyEntryOverviewAsync, grpcClient.ModifyEntryOverview, effectiveSettings.ModifyEntryOverviewSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callModifyEntryOverview = clientHelper.BuildApiCall<ModifyEntryOverviewRequest, EntryOverview>("ModifyEntryOverview", grpcClient.ModifyEntryOverviewAsync, grpcClient.ModifyEntryOverview, effectiveSettings.ModifyEntryOverviewSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callModifyEntryOverview);
             Modify_ModifyEntryOverviewApiCall(ref _callModifyEntryOverview);
-            _callModifyEntryContacts = clientHelper.BuildApiCall<ModifyEntryContactsRequest, Contacts>(grpcClient.ModifyEntryContactsAsync, grpcClient.ModifyEntryContacts, effectiveSettings.ModifyEntryContactsSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callModifyEntryContacts = clientHelper.BuildApiCall<ModifyEntryContactsRequest, Contacts>("ModifyEntryContacts", grpcClient.ModifyEntryContactsAsync, grpcClient.ModifyEntryContacts, effectiveSettings.ModifyEntryContactsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callModifyEntryContacts);
             Modify_ModifyEntryContactsApiCall(ref _callModifyEntryContacts);
-            _callCreateTagTemplate = clientHelper.BuildApiCall<CreateTagTemplateRequest, TagTemplate>(grpcClient.CreateTagTemplateAsync, grpcClient.CreateTagTemplate, effectiveSettings.CreateTagTemplateSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateTagTemplate = clientHelper.BuildApiCall<CreateTagTemplateRequest, TagTemplate>("CreateTagTemplate", grpcClient.CreateTagTemplateAsync, grpcClient.CreateTagTemplate, effectiveSettings.CreateTagTemplateSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateTagTemplate);
             Modify_CreateTagTemplateApiCall(ref _callCreateTagTemplate);
-            _callGetTagTemplate = clientHelper.BuildApiCall<GetTagTemplateRequest, TagTemplate>(grpcClient.GetTagTemplateAsync, grpcClient.GetTagTemplate, effectiveSettings.GetTagTemplateSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetTagTemplate = clientHelper.BuildApiCall<GetTagTemplateRequest, TagTemplate>("GetTagTemplate", grpcClient.GetTagTemplateAsync, grpcClient.GetTagTemplate, effectiveSettings.GetTagTemplateSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetTagTemplate);
             Modify_GetTagTemplateApiCall(ref _callGetTagTemplate);
-            _callUpdateTagTemplate = clientHelper.BuildApiCall<UpdateTagTemplateRequest, TagTemplate>(grpcClient.UpdateTagTemplateAsync, grpcClient.UpdateTagTemplate, effectiveSettings.UpdateTagTemplateSettings).WithGoogleRequestParam("tag_template.name", request => request.TagTemplate?.Name);
+            _callUpdateTagTemplate = clientHelper.BuildApiCall<UpdateTagTemplateRequest, TagTemplate>("UpdateTagTemplate", grpcClient.UpdateTagTemplateAsync, grpcClient.UpdateTagTemplate, effectiveSettings.UpdateTagTemplateSettings).WithGoogleRequestParam("tag_template.name", request => request.TagTemplate?.Name);
             Modify_ApiCall(ref _callUpdateTagTemplate);
             Modify_UpdateTagTemplateApiCall(ref _callUpdateTagTemplate);
-            _callDeleteTagTemplate = clientHelper.BuildApiCall<DeleteTagTemplateRequest, wkt::Empty>(grpcClient.DeleteTagTemplateAsync, grpcClient.DeleteTagTemplate, effectiveSettings.DeleteTagTemplateSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteTagTemplate = clientHelper.BuildApiCall<DeleteTagTemplateRequest, wkt::Empty>("DeleteTagTemplate", grpcClient.DeleteTagTemplateAsync, grpcClient.DeleteTagTemplate, effectiveSettings.DeleteTagTemplateSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteTagTemplate);
             Modify_DeleteTagTemplateApiCall(ref _callDeleteTagTemplate);
-            _callCreateTagTemplateField = clientHelper.BuildApiCall<CreateTagTemplateFieldRequest, TagTemplateField>(grpcClient.CreateTagTemplateFieldAsync, grpcClient.CreateTagTemplateField, effectiveSettings.CreateTagTemplateFieldSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateTagTemplateField = clientHelper.BuildApiCall<CreateTagTemplateFieldRequest, TagTemplateField>("CreateTagTemplateField", grpcClient.CreateTagTemplateFieldAsync, grpcClient.CreateTagTemplateField, effectiveSettings.CreateTagTemplateFieldSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateTagTemplateField);
             Modify_CreateTagTemplateFieldApiCall(ref _callCreateTagTemplateField);
-            _callUpdateTagTemplateField = clientHelper.BuildApiCall<UpdateTagTemplateFieldRequest, TagTemplateField>(grpcClient.UpdateTagTemplateFieldAsync, grpcClient.UpdateTagTemplateField, effectiveSettings.UpdateTagTemplateFieldSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUpdateTagTemplateField = clientHelper.BuildApiCall<UpdateTagTemplateFieldRequest, TagTemplateField>("UpdateTagTemplateField", grpcClient.UpdateTagTemplateFieldAsync, grpcClient.UpdateTagTemplateField, effectiveSettings.UpdateTagTemplateFieldSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUpdateTagTemplateField);
             Modify_UpdateTagTemplateFieldApiCall(ref _callUpdateTagTemplateField);
-            _callRenameTagTemplateField = clientHelper.BuildApiCall<RenameTagTemplateFieldRequest, TagTemplateField>(grpcClient.RenameTagTemplateFieldAsync, grpcClient.RenameTagTemplateField, effectiveSettings.RenameTagTemplateFieldSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callRenameTagTemplateField = clientHelper.BuildApiCall<RenameTagTemplateFieldRequest, TagTemplateField>("RenameTagTemplateField", grpcClient.RenameTagTemplateFieldAsync, grpcClient.RenameTagTemplateField, effectiveSettings.RenameTagTemplateFieldSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callRenameTagTemplateField);
             Modify_RenameTagTemplateFieldApiCall(ref _callRenameTagTemplateField);
-            _callRenameTagTemplateFieldEnumValue = clientHelper.BuildApiCall<RenameTagTemplateFieldEnumValueRequest, TagTemplateField>(grpcClient.RenameTagTemplateFieldEnumValueAsync, grpcClient.RenameTagTemplateFieldEnumValue, effectiveSettings.RenameTagTemplateFieldEnumValueSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callRenameTagTemplateFieldEnumValue = clientHelper.BuildApiCall<RenameTagTemplateFieldEnumValueRequest, TagTemplateField>("RenameTagTemplateFieldEnumValue", grpcClient.RenameTagTemplateFieldEnumValueAsync, grpcClient.RenameTagTemplateFieldEnumValue, effectiveSettings.RenameTagTemplateFieldEnumValueSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callRenameTagTemplateFieldEnumValue);
             Modify_RenameTagTemplateFieldEnumValueApiCall(ref _callRenameTagTemplateFieldEnumValue);
-            _callDeleteTagTemplateField = clientHelper.BuildApiCall<DeleteTagTemplateFieldRequest, wkt::Empty>(grpcClient.DeleteTagTemplateFieldAsync, grpcClient.DeleteTagTemplateField, effectiveSettings.DeleteTagTemplateFieldSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteTagTemplateField = clientHelper.BuildApiCall<DeleteTagTemplateFieldRequest, wkt::Empty>("DeleteTagTemplateField", grpcClient.DeleteTagTemplateFieldAsync, grpcClient.DeleteTagTemplateField, effectiveSettings.DeleteTagTemplateFieldSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteTagTemplateField);
             Modify_DeleteTagTemplateFieldApiCall(ref _callDeleteTagTemplateField);
-            _callCreateTag = clientHelper.BuildApiCall<CreateTagRequest, Tag>(grpcClient.CreateTagAsync, grpcClient.CreateTag, effectiveSettings.CreateTagSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateTag = clientHelper.BuildApiCall<CreateTagRequest, Tag>("CreateTag", grpcClient.CreateTagAsync, grpcClient.CreateTag, effectiveSettings.CreateTagSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateTag);
             Modify_CreateTagApiCall(ref _callCreateTag);
-            _callUpdateTag = clientHelper.BuildApiCall<UpdateTagRequest, Tag>(grpcClient.UpdateTagAsync, grpcClient.UpdateTag, effectiveSettings.UpdateTagSettings).WithGoogleRequestParam("tag.name", request => request.Tag?.Name);
+            _callUpdateTag = clientHelper.BuildApiCall<UpdateTagRequest, Tag>("UpdateTag", grpcClient.UpdateTagAsync, grpcClient.UpdateTag, effectiveSettings.UpdateTagSettings).WithGoogleRequestParam("tag.name", request => request.Tag?.Name);
             Modify_ApiCall(ref _callUpdateTag);
             Modify_UpdateTagApiCall(ref _callUpdateTag);
-            _callDeleteTag = clientHelper.BuildApiCall<DeleteTagRequest, wkt::Empty>(grpcClient.DeleteTagAsync, grpcClient.DeleteTag, effectiveSettings.DeleteTagSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteTag = clientHelper.BuildApiCall<DeleteTagRequest, wkt::Empty>("DeleteTag", grpcClient.DeleteTagAsync, grpcClient.DeleteTag, effectiveSettings.DeleteTagSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteTag);
             Modify_DeleteTagApiCall(ref _callDeleteTag);
-            _callListTags = clientHelper.BuildApiCall<ListTagsRequest, ListTagsResponse>(grpcClient.ListTagsAsync, grpcClient.ListTags, effectiveSettings.ListTagsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListTags = clientHelper.BuildApiCall<ListTagsRequest, ListTagsResponse>("ListTags", grpcClient.ListTagsAsync, grpcClient.ListTags, effectiveSettings.ListTagsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListTags);
             Modify_ListTagsApiCall(ref _callListTags);
-            _callStarEntry = clientHelper.BuildApiCall<StarEntryRequest, StarEntryResponse>(grpcClient.StarEntryAsync, grpcClient.StarEntry, effectiveSettings.StarEntrySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callStarEntry = clientHelper.BuildApiCall<StarEntryRequest, StarEntryResponse>("StarEntry", grpcClient.StarEntryAsync, grpcClient.StarEntry, effectiveSettings.StarEntrySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callStarEntry);
             Modify_StarEntryApiCall(ref _callStarEntry);
-            _callUnstarEntry = clientHelper.BuildApiCall<UnstarEntryRequest, UnstarEntryResponse>(grpcClient.UnstarEntryAsync, grpcClient.UnstarEntry, effectiveSettings.UnstarEntrySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUnstarEntry = clientHelper.BuildApiCall<UnstarEntryRequest, UnstarEntryResponse>("UnstarEntry", grpcClient.UnstarEntryAsync, grpcClient.UnstarEntry, effectiveSettings.UnstarEntrySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUnstarEntry);
             Modify_UnstarEntryApiCall(ref _callUnstarEntry);
-            _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>(grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>("SetIamPolicy", grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callSetIamPolicy);
             Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);
-            _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>(grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>("GetIamPolicy", grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callGetIamPolicy);
             Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
-            _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>(grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callTestIamPermissions);
             Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

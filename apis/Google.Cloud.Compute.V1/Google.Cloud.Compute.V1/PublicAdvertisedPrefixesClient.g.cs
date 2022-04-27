@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -207,9 +207,8 @@ namespace Google.Cloud.Compute.V1
         public PublicAdvertisedPrefixesSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public PublicAdvertisedPrefixesClientBuilder()
+        public PublicAdvertisedPrefixesClientBuilder() : base(PublicAdvertisedPrefixesClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = PublicAdvertisedPrefixesClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref PublicAdvertisedPrefixesClient client);
@@ -236,29 +235,18 @@ namespace Google.Cloud.Compute.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return PublicAdvertisedPrefixesClient.Create(callInvoker, Settings);
+            return PublicAdvertisedPrefixesClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<PublicAdvertisedPrefixesClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return PublicAdvertisedPrefixesClient.Create(callInvoker, Settings);
+            return PublicAdvertisedPrefixesClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => PublicAdvertisedPrefixesClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => PublicAdvertisedPrefixesClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => PublicAdvertisedPrefixesClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => ComputeRestAdapter.ComputeAdapter;
     }
 
     /// <summary>PublicAdvertisedPrefixes client wrapper, for convenient use.</summary>
@@ -287,19 +275,10 @@ namespace Google.Cloud.Compute.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(PublicAdvertisedPrefixes.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="PublicAdvertisedPrefixesClient"/> using the default credentials,
@@ -329,8 +308,9 @@ namespace Google.Cloud.Compute.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="PublicAdvertisedPrefixesSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="PublicAdvertisedPrefixesClient"/>.</returns>
-        internal static PublicAdvertisedPrefixesClient Create(grpccore::CallInvoker callInvoker, PublicAdvertisedPrefixesSettings settings = null)
+        internal static PublicAdvertisedPrefixesClient Create(grpccore::CallInvoker callInvoker, PublicAdvertisedPrefixesSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -339,7 +319,7 @@ namespace Google.Cloud.Compute.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             PublicAdvertisedPrefixes.PublicAdvertisedPrefixesClient grpcClient = new PublicAdvertisedPrefixes.PublicAdvertisedPrefixesClient(callInvoker);
-            return new PublicAdvertisedPrefixesClientImpl(grpcClient, settings);
+            return new PublicAdvertisedPrefixesClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -846,27 +826,28 @@ namespace Google.Cloud.Compute.V1
         /// <param name="settings">
         /// The base <see cref="PublicAdvertisedPrefixesSettings"/> used within this client.
         /// </param>
-        public PublicAdvertisedPrefixesClientImpl(PublicAdvertisedPrefixes.PublicAdvertisedPrefixesClient grpcClient, PublicAdvertisedPrefixesSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public PublicAdvertisedPrefixesClientImpl(PublicAdvertisedPrefixes.PublicAdvertisedPrefixesClient grpcClient, PublicAdvertisedPrefixesSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             PublicAdvertisedPrefixesSettings effectiveSettings = settings ?? PublicAdvertisedPrefixesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings);
-            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings);
-            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchOperationsSettings);
-            _callDelete = clientHelper.BuildApiCall<DeletePublicAdvertisedPrefixeRequest, Operation>(grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("public_advertised_prefix", request => request.PublicAdvertisedPrefix);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings, logger);
+            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings, logger);
+            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchOperationsSettings, logger);
+            _callDelete = clientHelper.BuildApiCall<DeletePublicAdvertisedPrefixeRequest, Operation>("Delete", grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("public_advertised_prefix", request => request.PublicAdvertisedPrefix);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);
-            _callGet = clientHelper.BuildApiCall<GetPublicAdvertisedPrefixeRequest, PublicAdvertisedPrefix>(grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("public_advertised_prefix", request => request.PublicAdvertisedPrefix);
+            _callGet = clientHelper.BuildApiCall<GetPublicAdvertisedPrefixeRequest, PublicAdvertisedPrefix>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("public_advertised_prefix", request => request.PublicAdvertisedPrefix);
             Modify_ApiCall(ref _callGet);
             Modify_GetApiCall(ref _callGet);
-            _callInsert = clientHelper.BuildApiCall<InsertPublicAdvertisedPrefixeRequest, Operation>(grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callInsert = clientHelper.BuildApiCall<InsertPublicAdvertisedPrefixeRequest, Operation>("Insert", grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callInsert);
             Modify_InsertApiCall(ref _callInsert);
-            _callList = clientHelper.BuildApiCall<ListPublicAdvertisedPrefixesRequest, PublicAdvertisedPrefixList>(grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callList = clientHelper.BuildApiCall<ListPublicAdvertisedPrefixesRequest, PublicAdvertisedPrefixList>("List", grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callList);
             Modify_ListApiCall(ref _callList);
-            _callPatch = clientHelper.BuildApiCall<PatchPublicAdvertisedPrefixeRequest, Operation>(grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("public_advertised_prefix", request => request.PublicAdvertisedPrefix);
+            _callPatch = clientHelper.BuildApiCall<PatchPublicAdvertisedPrefixeRequest, Operation>("Patch", grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("public_advertised_prefix", request => request.PublicAdvertisedPrefix);
             Modify_ApiCall(ref _callPatch);
             Modify_PatchApiCall(ref _callPatch);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

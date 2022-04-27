@@ -48,7 +48,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateTenant(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
+            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null, null);
             Tenant response = client.CreateTenant(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -74,7 +74,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateTenantAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Tenant>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
+            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null, null);
             Tenant responseCallSettings = await client.CreateTenantAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Tenant responseCancellationToken = await client.CreateTenantAsync(request, st::CancellationToken.None);
@@ -102,7 +102,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateTenant(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
+            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null, null);
             Tenant response = client.CreateTenant(request.Parent, request.Tenant);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -128,7 +128,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateTenantAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Tenant>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
+            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null, null);
             Tenant responseCallSettings = await client.CreateTenantAsync(request.Parent, request.Tenant, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Tenant responseCancellationToken = await client.CreateTenantAsync(request.Parent, request.Tenant, st::CancellationToken.None);
@@ -156,7 +156,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateTenant(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
+            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null, null);
             Tenant response = client.CreateTenant(request.ParentAsProjectName, request.Tenant);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -182,7 +182,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateTenantAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Tenant>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
+            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null, null);
             Tenant responseCallSettings = await client.CreateTenantAsync(request.ParentAsProjectName, request.Tenant, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Tenant responseCancellationToken = await client.CreateTenantAsync(request.ParentAsProjectName, request.Tenant, st::CancellationToken.None);
@@ -209,7 +209,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetTenant(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
+            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null, null);
             Tenant response = client.GetTenant(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -234,7 +234,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetTenantAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Tenant>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
+            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null, null);
             Tenant responseCallSettings = await client.GetTenantAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Tenant responseCancellationToken = await client.GetTenantAsync(request, st::CancellationToken.None);
@@ -261,7 +261,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetTenant(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
+            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null, null);
             Tenant response = client.GetTenant(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -286,7 +286,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetTenantAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Tenant>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
+            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null, null);
             Tenant responseCallSettings = await client.GetTenantAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Tenant responseCancellationToken = await client.GetTenantAsync(request.Name, st::CancellationToken.None);
@@ -313,7 +313,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetTenant(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
+            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null, null);
             Tenant response = client.GetTenant(request.TenantName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -338,7 +338,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetTenantAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Tenant>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
+            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null, null);
             Tenant responseCallSettings = await client.GetTenantAsync(request.TenantName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Tenant responseCancellationToken = await client.GetTenantAsync(request.TenantName, st::CancellationToken.None);
@@ -366,7 +366,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateTenant(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
+            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null, null);
             Tenant response = client.UpdateTenant(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -392,7 +392,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateTenantAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Tenant>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
+            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null, null);
             Tenant responseCallSettings = await client.UpdateTenantAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Tenant responseCancellationToken = await client.UpdateTenantAsync(request, st::CancellationToken.None);
@@ -419,7 +419,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateTenant(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
+            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null, null);
             Tenant response = client.UpdateTenant(request.Tenant);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -444,7 +444,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateTenantAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Tenant>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
+            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null, null);
             Tenant responseCallSettings = await client.UpdateTenantAsync(request.Tenant, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Tenant responseCancellationToken = await client.UpdateTenantAsync(request.Tenant, st::CancellationToken.None);
@@ -462,7 +462,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTenant(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
+            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteTenant(request);
             mockGrpcClient.VerifyAll();
         }
@@ -477,7 +477,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTenantAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
+            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteTenantAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteTenantAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -493,7 +493,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTenant(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
+            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteTenant(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -508,7 +508,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTenantAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
+            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteTenantAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteTenantAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -524,7 +524,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTenant(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
+            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteTenant(request.TenantName);
             mockGrpcClient.VerifyAll();
         }
@@ -539,7 +539,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTenantAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
+            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteTenantAsync(request.TenantName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteTenantAsync(request.TenantName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();

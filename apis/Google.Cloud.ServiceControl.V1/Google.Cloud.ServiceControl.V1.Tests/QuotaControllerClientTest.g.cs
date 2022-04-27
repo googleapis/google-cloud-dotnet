@@ -47,7 +47,7 @@ namespace Google.Cloud.ServiceControl.V1.Tests
                 ServiceConfigId = "service_config_id1616022f",
             };
             mockGrpcClient.Setup(x => x.AllocateQuota(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            QuotaControllerClient client = new QuotaControllerClientImpl(mockGrpcClient.Object, null);
+            QuotaControllerClient client = new QuotaControllerClientImpl(mockGrpcClient.Object, null, null);
             AllocateQuotaResponse response = client.AllocateQuota(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -74,7 +74,7 @@ namespace Google.Cloud.ServiceControl.V1.Tests
                 ServiceConfigId = "service_config_id1616022f",
             };
             mockGrpcClient.Setup(x => x.AllocateQuotaAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AllocateQuotaResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            QuotaControllerClient client = new QuotaControllerClientImpl(mockGrpcClient.Object, null);
+            QuotaControllerClient client = new QuotaControllerClientImpl(mockGrpcClient.Object, null, null);
             AllocateQuotaResponse responseCallSettings = await client.AllocateQuotaAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AllocateQuotaResponse responseCancellationToken = await client.AllocateQuotaAsync(request, st::CancellationToken.None);

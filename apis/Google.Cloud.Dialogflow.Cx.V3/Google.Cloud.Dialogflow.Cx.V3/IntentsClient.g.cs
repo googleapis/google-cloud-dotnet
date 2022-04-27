@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -159,9 +159,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         public IntentsSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public IntentsClientBuilder()
+        public IntentsClientBuilder() : base(IntentsClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = IntentsClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref IntentsClient client);
@@ -188,29 +187,18 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return IntentsClient.Create(callInvoker, Settings);
+            return IntentsClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<IntentsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return IntentsClient.Create(callInvoker, Settings);
+            return IntentsClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => IntentsClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => IntentsClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => IntentsClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>Intents client wrapper, for convenient use.</summary>
@@ -239,19 +227,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             "https://www.googleapis.com/auth/dialogflow",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Intents.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="IntentsClient"/> using the default credentials, endpoint and settings. 
@@ -278,8 +257,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="IntentsSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="IntentsClient"/>.</returns>
-        internal static IntentsClient Create(grpccore::CallInvoker callInvoker, IntentsSettings settings = null)
+        internal static IntentsClient Create(grpccore::CallInvoker callInvoker, IntentsSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -288,7 +268,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             Intents.IntentsClient grpcClient = new Intents.IntentsClient(callInvoker);
-            return new IntentsClientImpl(grpcClient, settings);
+            return new IntentsClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -990,24 +970,25 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="IntentsSettings"/> used within this client.</param>
-        public IntentsClientImpl(Intents.IntentsClient grpcClient, IntentsSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public IntentsClientImpl(Intents.IntentsClient grpcClient, IntentsSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             IntentsSettings effectiveSettings = settings ?? IntentsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListIntents = clientHelper.BuildApiCall<ListIntentsRequest, ListIntentsResponse>(grpcClient.ListIntentsAsync, grpcClient.ListIntents, effectiveSettings.ListIntentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callListIntents = clientHelper.BuildApiCall<ListIntentsRequest, ListIntentsResponse>("ListIntents", grpcClient.ListIntentsAsync, grpcClient.ListIntents, effectiveSettings.ListIntentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListIntents);
             Modify_ListIntentsApiCall(ref _callListIntents);
-            _callGetIntent = clientHelper.BuildApiCall<GetIntentRequest, Intent>(grpcClient.GetIntentAsync, grpcClient.GetIntent, effectiveSettings.GetIntentSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetIntent = clientHelper.BuildApiCall<GetIntentRequest, Intent>("GetIntent", grpcClient.GetIntentAsync, grpcClient.GetIntent, effectiveSettings.GetIntentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetIntent);
             Modify_GetIntentApiCall(ref _callGetIntent);
-            _callCreateIntent = clientHelper.BuildApiCall<CreateIntentRequest, Intent>(grpcClient.CreateIntentAsync, grpcClient.CreateIntent, effectiveSettings.CreateIntentSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateIntent = clientHelper.BuildApiCall<CreateIntentRequest, Intent>("CreateIntent", grpcClient.CreateIntentAsync, grpcClient.CreateIntent, effectiveSettings.CreateIntentSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateIntent);
             Modify_CreateIntentApiCall(ref _callCreateIntent);
-            _callUpdateIntent = clientHelper.BuildApiCall<UpdateIntentRequest, Intent>(grpcClient.UpdateIntentAsync, grpcClient.UpdateIntent, effectiveSettings.UpdateIntentSettings).WithGoogleRequestParam("intent.name", request => request.Intent?.Name);
+            _callUpdateIntent = clientHelper.BuildApiCall<UpdateIntentRequest, Intent>("UpdateIntent", grpcClient.UpdateIntentAsync, grpcClient.UpdateIntent, effectiveSettings.UpdateIntentSettings).WithGoogleRequestParam("intent.name", request => request.Intent?.Name);
             Modify_ApiCall(ref _callUpdateIntent);
             Modify_UpdateIntentApiCall(ref _callUpdateIntent);
-            _callDeleteIntent = clientHelper.BuildApiCall<DeleteIntentRequest, wkt::Empty>(grpcClient.DeleteIntentAsync, grpcClient.DeleteIntent, effectiveSettings.DeleteIntentSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteIntent = clientHelper.BuildApiCall<DeleteIntentRequest, wkt::Empty>("DeleteIntent", grpcClient.DeleteIntentAsync, grpcClient.DeleteIntent, effectiveSettings.DeleteIntentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteIntent);
             Modify_DeleteIntentApiCall(ref _callDeleteIntent);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -153,9 +153,8 @@ namespace Google.Cloud.Monitoring.V3
         public AlertPolicyServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public AlertPolicyServiceClientBuilder()
+        public AlertPolicyServiceClientBuilder() : base(AlertPolicyServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = AlertPolicyServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref AlertPolicyServiceClient client);
@@ -182,29 +181,18 @@ namespace Google.Cloud.Monitoring.V3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return AlertPolicyServiceClient.Create(callInvoker, Settings);
+            return AlertPolicyServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<AlertPolicyServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return AlertPolicyServiceClient.Create(callInvoker, Settings);
+            return AlertPolicyServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => AlertPolicyServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => AlertPolicyServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => AlertPolicyServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>AlertPolicyService client wrapper, for convenient use.</summary>
@@ -243,19 +231,10 @@ namespace Google.Cloud.Monitoring.V3
             "https://www.googleapis.com/auth/monitoring.read",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(AlertPolicyService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="AlertPolicyServiceClient"/> using the default credentials, endpoint and
@@ -285,8 +264,9 @@ namespace Google.Cloud.Monitoring.V3
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="AlertPolicyServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="AlertPolicyServiceClient"/>.</returns>
-        internal static AlertPolicyServiceClient Create(grpccore::CallInvoker callInvoker, AlertPolicyServiceSettings settings = null)
+        internal static AlertPolicyServiceClient Create(grpccore::CallInvoker callInvoker, AlertPolicyServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -295,7 +275,7 @@ namespace Google.Cloud.Monitoring.V3
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             AlertPolicyService.AlertPolicyServiceClient grpcClient = new AlertPolicyService.AlertPolicyServiceClient(callInvoker);
-            return new AlertPolicyServiceClientImpl(grpcClient, settings);
+            return new AlertPolicyServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1670,24 +1650,25 @@ namespace Google.Cloud.Monitoring.V3
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="AlertPolicyServiceSettings"/> used within this client.</param>
-        public AlertPolicyServiceClientImpl(AlertPolicyService.AlertPolicyServiceClient grpcClient, AlertPolicyServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public AlertPolicyServiceClientImpl(AlertPolicyService.AlertPolicyServiceClient grpcClient, AlertPolicyServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             AlertPolicyServiceSettings effectiveSettings = settings ?? AlertPolicyServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListAlertPolicies = clientHelper.BuildApiCall<ListAlertPoliciesRequest, ListAlertPoliciesResponse>(grpcClient.ListAlertPoliciesAsync, grpcClient.ListAlertPolicies, effectiveSettings.ListAlertPoliciesSettings).WithGoogleRequestParam("name", request => request.Name);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callListAlertPolicies = clientHelper.BuildApiCall<ListAlertPoliciesRequest, ListAlertPoliciesResponse>("ListAlertPolicies", grpcClient.ListAlertPoliciesAsync, grpcClient.ListAlertPolicies, effectiveSettings.ListAlertPoliciesSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callListAlertPolicies);
             Modify_ListAlertPoliciesApiCall(ref _callListAlertPolicies);
-            _callGetAlertPolicy = clientHelper.BuildApiCall<GetAlertPolicyRequest, AlertPolicy>(grpcClient.GetAlertPolicyAsync, grpcClient.GetAlertPolicy, effectiveSettings.GetAlertPolicySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetAlertPolicy = clientHelper.BuildApiCall<GetAlertPolicyRequest, AlertPolicy>("GetAlertPolicy", grpcClient.GetAlertPolicyAsync, grpcClient.GetAlertPolicy, effectiveSettings.GetAlertPolicySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetAlertPolicy);
             Modify_GetAlertPolicyApiCall(ref _callGetAlertPolicy);
-            _callCreateAlertPolicy = clientHelper.BuildApiCall<CreateAlertPolicyRequest, AlertPolicy>(grpcClient.CreateAlertPolicyAsync, grpcClient.CreateAlertPolicy, effectiveSettings.CreateAlertPolicySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callCreateAlertPolicy = clientHelper.BuildApiCall<CreateAlertPolicyRequest, AlertPolicy>("CreateAlertPolicy", grpcClient.CreateAlertPolicyAsync, grpcClient.CreateAlertPolicy, effectiveSettings.CreateAlertPolicySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCreateAlertPolicy);
             Modify_CreateAlertPolicyApiCall(ref _callCreateAlertPolicy);
-            _callDeleteAlertPolicy = clientHelper.BuildApiCall<DeleteAlertPolicyRequest, wkt::Empty>(grpcClient.DeleteAlertPolicyAsync, grpcClient.DeleteAlertPolicy, effectiveSettings.DeleteAlertPolicySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteAlertPolicy = clientHelper.BuildApiCall<DeleteAlertPolicyRequest, wkt::Empty>("DeleteAlertPolicy", grpcClient.DeleteAlertPolicyAsync, grpcClient.DeleteAlertPolicy, effectiveSettings.DeleteAlertPolicySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteAlertPolicy);
             Modify_DeleteAlertPolicyApiCall(ref _callDeleteAlertPolicy);
-            _callUpdateAlertPolicy = clientHelper.BuildApiCall<UpdateAlertPolicyRequest, AlertPolicy>(grpcClient.UpdateAlertPolicyAsync, grpcClient.UpdateAlertPolicy, effectiveSettings.UpdateAlertPolicySettings).WithGoogleRequestParam("alert_policy.name", request => request.AlertPolicy?.Name);
+            _callUpdateAlertPolicy = clientHelper.BuildApiCall<UpdateAlertPolicyRequest, AlertPolicy>("UpdateAlertPolicy", grpcClient.UpdateAlertPolicyAsync, grpcClient.UpdateAlertPolicy, effectiveSettings.UpdateAlertPolicySettings).WithGoogleRequestParam("alert_policy.name", request => request.AlertPolicy?.Name);
             Modify_ApiCall(ref _callUpdateAlertPolicy);
             Modify_UpdateAlertPolicyApiCall(ref _callUpdateAlertPolicy);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

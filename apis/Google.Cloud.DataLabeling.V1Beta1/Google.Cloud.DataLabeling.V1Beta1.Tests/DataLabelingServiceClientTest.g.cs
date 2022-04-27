@@ -53,7 +53,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 DataItemCount = -1298706410089620484L,
             };
             mockGrpcClient.Setup(x => x.CreateDataset(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             Dataset response = client.CreateDataset(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -83,7 +83,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 DataItemCount = -1298706410089620484L,
             };
             mockGrpcClient.Setup(x => x.CreateDatasetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Dataset>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             Dataset responseCallSettings = await client.CreateDatasetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Dataset responseCancellationToken = await client.CreateDatasetAsync(request, st::CancellationToken.None);
@@ -115,7 +115,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 DataItemCount = -1298706410089620484L,
             };
             mockGrpcClient.Setup(x => x.CreateDataset(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             Dataset response = client.CreateDataset(request.Parent, request.Dataset);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -145,7 +145,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 DataItemCount = -1298706410089620484L,
             };
             mockGrpcClient.Setup(x => x.CreateDatasetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Dataset>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             Dataset responseCallSettings = await client.CreateDatasetAsync(request.Parent, request.Dataset, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Dataset responseCancellationToken = await client.CreateDatasetAsync(request.Parent, request.Dataset, st::CancellationToken.None);
@@ -177,7 +177,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 DataItemCount = -1298706410089620484L,
             };
             mockGrpcClient.Setup(x => x.CreateDataset(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             Dataset response = client.CreateDataset(request.ParentAsProjectName, request.Dataset);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -207,7 +207,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 DataItemCount = -1298706410089620484L,
             };
             mockGrpcClient.Setup(x => x.CreateDatasetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Dataset>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             Dataset responseCallSettings = await client.CreateDatasetAsync(request.ParentAsProjectName, request.Dataset, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Dataset responseCancellationToken = await client.CreateDatasetAsync(request.ParentAsProjectName, request.Dataset, st::CancellationToken.None);
@@ -238,7 +238,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 DataItemCount = -1298706410089620484L,
             };
             mockGrpcClient.Setup(x => x.GetDataset(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             Dataset response = client.GetDataset(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -267,7 +267,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 DataItemCount = -1298706410089620484L,
             };
             mockGrpcClient.Setup(x => x.GetDatasetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Dataset>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             Dataset responseCallSettings = await client.GetDatasetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Dataset responseCancellationToken = await client.GetDatasetAsync(request, st::CancellationToken.None);
@@ -298,7 +298,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 DataItemCount = -1298706410089620484L,
             };
             mockGrpcClient.Setup(x => x.GetDataset(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             Dataset response = client.GetDataset(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -327,7 +327,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 DataItemCount = -1298706410089620484L,
             };
             mockGrpcClient.Setup(x => x.GetDatasetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Dataset>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             Dataset responseCallSettings = await client.GetDatasetAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Dataset responseCancellationToken = await client.GetDatasetAsync(request.Name, st::CancellationToken.None);
@@ -358,7 +358,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 DataItemCount = -1298706410089620484L,
             };
             mockGrpcClient.Setup(x => x.GetDataset(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             Dataset response = client.GetDataset(request.DatasetName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -387,7 +387,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 DataItemCount = -1298706410089620484L,
             };
             mockGrpcClient.Setup(x => x.GetDatasetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Dataset>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             Dataset responseCallSettings = await client.GetDatasetAsync(request.DatasetName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Dataset responseCancellationToken = await client.GetDatasetAsync(request.DatasetName, st::CancellationToken.None);
@@ -406,7 +406,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDataset(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteDataset(request);
             mockGrpcClient.VerifyAll();
         }
@@ -422,7 +422,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDatasetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteDatasetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteDatasetAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -439,7 +439,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDataset(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteDataset(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -455,7 +455,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDatasetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteDatasetAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteDatasetAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -472,7 +472,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDataset(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteDataset(request.DatasetName);
             mockGrpcClient.VerifyAll();
         }
@@ -488,7 +488,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDatasetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteDatasetAsync(request.DatasetName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteDatasetAsync(request.DatasetName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -511,7 +511,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 VideoPayload = new VideoPayload(),
             };
             mockGrpcClient.Setup(x => x.GetDataItem(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             DataItem response = client.GetDataItem(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -534,7 +534,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 VideoPayload = new VideoPayload(),
             };
             mockGrpcClient.Setup(x => x.GetDataItemAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataItem>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             DataItem responseCallSettings = await client.GetDataItemAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DataItem responseCancellationToken = await client.GetDataItemAsync(request, st::CancellationToken.None);
@@ -559,7 +559,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 VideoPayload = new VideoPayload(),
             };
             mockGrpcClient.Setup(x => x.GetDataItem(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             DataItem response = client.GetDataItem(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -582,7 +582,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 VideoPayload = new VideoPayload(),
             };
             mockGrpcClient.Setup(x => x.GetDataItemAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataItem>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             DataItem responseCallSettings = await client.GetDataItemAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DataItem responseCancellationToken = await client.GetDataItemAsync(request.Name, st::CancellationToken.None);
@@ -607,7 +607,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 VideoPayload = new VideoPayload(),
             };
             mockGrpcClient.Setup(x => x.GetDataItem(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             DataItem response = client.GetDataItem(request.DataItemName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -630,7 +630,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 VideoPayload = new VideoPayload(),
             };
             mockGrpcClient.Setup(x => x.GetDataItemAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataItem>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             DataItem responseCallSettings = await client.GetDataItemAsync(request.DataItemName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DataItem responseCancellationToken = await client.GetDataItemAsync(request.DataItemName, st::CancellationToken.None);
@@ -665,7 +665,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetAnnotatedDataset(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             AnnotatedDataset response = client.GetAnnotatedDataset(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -698,7 +698,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetAnnotatedDatasetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnnotatedDataset>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             AnnotatedDataset responseCallSettings = await client.GetAnnotatedDatasetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AnnotatedDataset responseCancellationToken = await client.GetAnnotatedDatasetAsync(request, st::CancellationToken.None);
@@ -733,7 +733,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetAnnotatedDataset(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             AnnotatedDataset response = client.GetAnnotatedDataset(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -766,7 +766,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetAnnotatedDatasetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnnotatedDataset>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             AnnotatedDataset responseCallSettings = await client.GetAnnotatedDatasetAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AnnotatedDataset responseCancellationToken = await client.GetAnnotatedDatasetAsync(request.Name, st::CancellationToken.None);
@@ -801,7 +801,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetAnnotatedDataset(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             AnnotatedDataset response = client.GetAnnotatedDataset(request.AnnotatedDatasetName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -834,7 +834,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetAnnotatedDatasetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnnotatedDataset>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             AnnotatedDataset responseCallSettings = await client.GetAnnotatedDatasetAsync(request.AnnotatedDatasetName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AnnotatedDataset responseCancellationToken = await client.GetAnnotatedDatasetAsync(request.AnnotatedDatasetName, st::CancellationToken.None);
@@ -853,7 +853,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAnnotatedDataset(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteAnnotatedDataset(request);
             mockGrpcClient.VerifyAll();
         }
@@ -869,7 +869,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAnnotatedDatasetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteAnnotatedDatasetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteAnnotatedDatasetAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -894,7 +894,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 VideoPayload = new VideoPayload(),
             };
             mockGrpcClient.Setup(x => x.GetExample(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             Example response = client.GetExample(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -919,7 +919,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 VideoPayload = new VideoPayload(),
             };
             mockGrpcClient.Setup(x => x.GetExampleAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Example>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             Example responseCallSettings = await client.GetExampleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Example responseCancellationToken = await client.GetExampleAsync(request, st::CancellationToken.None);
@@ -946,7 +946,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 VideoPayload = new VideoPayload(),
             };
             mockGrpcClient.Setup(x => x.GetExample(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             Example response = client.GetExample(request.Name, request.Filter);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -971,7 +971,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 VideoPayload = new VideoPayload(),
             };
             mockGrpcClient.Setup(x => x.GetExampleAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Example>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             Example responseCallSettings = await client.GetExampleAsync(request.Name, request.Filter, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Example responseCancellationToken = await client.GetExampleAsync(request.Name, request.Filter, st::CancellationToken.None);
@@ -998,7 +998,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 VideoPayload = new VideoPayload(),
             };
             mockGrpcClient.Setup(x => x.GetExample(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             Example response = client.GetExample(request.ExampleName, request.Filter);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1023,7 +1023,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 VideoPayload = new VideoPayload(),
             };
             mockGrpcClient.Setup(x => x.GetExampleAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Example>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             Example responseCallSettings = await client.GetExampleAsync(request.ExampleName, request.Filter, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Example responseCancellationToken = await client.GetExampleAsync(request.ExampleName, request.Filter, st::CancellationToken.None);
@@ -1056,7 +1056,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateAnnotationSpecSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             AnnotationSpecSet response = client.CreateAnnotationSpecSet(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1087,7 +1087,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateAnnotationSpecSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnnotationSpecSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             AnnotationSpecSet responseCallSettings = await client.CreateAnnotationSpecSetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AnnotationSpecSet responseCancellationToken = await client.CreateAnnotationSpecSetAsync(request, st::CancellationToken.None);
@@ -1120,7 +1120,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateAnnotationSpecSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             AnnotationSpecSet response = client.CreateAnnotationSpecSet(request.Parent, request.AnnotationSpecSet);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1151,7 +1151,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateAnnotationSpecSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnnotationSpecSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             AnnotationSpecSet responseCallSettings = await client.CreateAnnotationSpecSetAsync(request.Parent, request.AnnotationSpecSet, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AnnotationSpecSet responseCancellationToken = await client.CreateAnnotationSpecSetAsync(request.Parent, request.AnnotationSpecSet, st::CancellationToken.None);
@@ -1184,7 +1184,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateAnnotationSpecSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             AnnotationSpecSet response = client.CreateAnnotationSpecSet(request.ParentAsProjectName, request.AnnotationSpecSet);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1215,7 +1215,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateAnnotationSpecSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnnotationSpecSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             AnnotationSpecSet responseCallSettings = await client.CreateAnnotationSpecSetAsync(request.ParentAsProjectName, request.AnnotationSpecSet, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AnnotationSpecSet responseCancellationToken = await client.CreateAnnotationSpecSetAsync(request.ParentAsProjectName, request.AnnotationSpecSet, st::CancellationToken.None);
@@ -1247,7 +1247,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetAnnotationSpecSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             AnnotationSpecSet response = client.GetAnnotationSpecSet(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1277,7 +1277,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetAnnotationSpecSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnnotationSpecSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             AnnotationSpecSet responseCallSettings = await client.GetAnnotationSpecSetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AnnotationSpecSet responseCancellationToken = await client.GetAnnotationSpecSetAsync(request, st::CancellationToken.None);
@@ -1309,7 +1309,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetAnnotationSpecSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             AnnotationSpecSet response = client.GetAnnotationSpecSet(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1339,7 +1339,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetAnnotationSpecSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnnotationSpecSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             AnnotationSpecSet responseCallSettings = await client.GetAnnotationSpecSetAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AnnotationSpecSet responseCancellationToken = await client.GetAnnotationSpecSetAsync(request.Name, st::CancellationToken.None);
@@ -1371,7 +1371,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetAnnotationSpecSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             AnnotationSpecSet response = client.GetAnnotationSpecSet(request.AnnotationSpecSetName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1401,7 +1401,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetAnnotationSpecSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnnotationSpecSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             AnnotationSpecSet responseCallSettings = await client.GetAnnotationSpecSetAsync(request.AnnotationSpecSetName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AnnotationSpecSet responseCancellationToken = await client.GetAnnotationSpecSetAsync(request.AnnotationSpecSetName, st::CancellationToken.None);
@@ -1420,7 +1420,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAnnotationSpecSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteAnnotationSpecSet(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1436,7 +1436,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAnnotationSpecSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteAnnotationSpecSetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteAnnotationSpecSetAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1453,7 +1453,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAnnotationSpecSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteAnnotationSpecSet(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -1469,7 +1469,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAnnotationSpecSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteAnnotationSpecSetAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteAnnotationSpecSetAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1486,7 +1486,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAnnotationSpecSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteAnnotationSpecSet(request.AnnotationSpecSetName);
             mockGrpcClient.VerifyAll();
         }
@@ -1502,7 +1502,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAnnotationSpecSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteAnnotationSpecSetAsync(request.AnnotationSpecSetName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteAnnotationSpecSetAsync(request.AnnotationSpecSetName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1535,7 +1535,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetInstruction(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             Instruction response = client.GetInstruction(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1568,7 +1568,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetInstructionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instruction>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             Instruction responseCallSettings = await client.GetInstructionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Instruction responseCancellationToken = await client.GetInstructionAsync(request, st::CancellationToken.None);
@@ -1603,7 +1603,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetInstruction(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             Instruction response = client.GetInstruction(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1636,7 +1636,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetInstructionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instruction>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             Instruction responseCallSettings = await client.GetInstructionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Instruction responseCancellationToken = await client.GetInstructionAsync(request.Name, st::CancellationToken.None);
@@ -1671,7 +1671,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetInstruction(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             Instruction response = client.GetInstruction(request.InstructionName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1704,7 +1704,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetInstructionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instruction>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             Instruction responseCallSettings = await client.GetInstructionAsync(request.InstructionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Instruction responseCancellationToken = await client.GetInstructionAsync(request.InstructionName, st::CancellationToken.None);
@@ -1723,7 +1723,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteInstruction(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteInstruction(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1739,7 +1739,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteInstructionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteInstructionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteInstructionAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1756,7 +1756,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteInstruction(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteInstruction(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -1772,7 +1772,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteInstructionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteInstructionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteInstructionAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1789,7 +1789,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteInstruction(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteInstruction(request.InstructionName);
             mockGrpcClient.VerifyAll();
         }
@@ -1805,7 +1805,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteInstructionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteInstructionAsync(request.InstructionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteInstructionAsync(request.InstructionName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1831,7 +1831,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 EvaluatedItemCount = -6593700645137490122L,
             };
             mockGrpcClient.Setup(x => x.GetEvaluation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             Evaluation response = client.GetEvaluation(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1857,7 +1857,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 EvaluatedItemCount = -6593700645137490122L,
             };
             mockGrpcClient.Setup(x => x.GetEvaluationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Evaluation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             Evaluation responseCallSettings = await client.GetEvaluationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Evaluation responseCancellationToken = await client.GetEvaluationAsync(request, st::CancellationToken.None);
@@ -1885,7 +1885,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 EvaluatedItemCount = -6593700645137490122L,
             };
             mockGrpcClient.Setup(x => x.GetEvaluation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             Evaluation response = client.GetEvaluation(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1911,7 +1911,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 EvaluatedItemCount = -6593700645137490122L,
             };
             mockGrpcClient.Setup(x => x.GetEvaluationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Evaluation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             Evaluation responseCallSettings = await client.GetEvaluationAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Evaluation responseCancellationToken = await client.GetEvaluationAsync(request.Name, st::CancellationToken.None);
@@ -1939,7 +1939,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 EvaluatedItemCount = -6593700645137490122L,
             };
             mockGrpcClient.Setup(x => x.GetEvaluation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             Evaluation response = client.GetEvaluation(request.EvaluationName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1965,7 +1965,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 EvaluatedItemCount = -6593700645137490122L,
             };
             mockGrpcClient.Setup(x => x.GetEvaluationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Evaluation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             Evaluation responseCallSettings = await client.GetEvaluationAsync(request.EvaluationName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Evaluation responseCancellationToken = await client.GetEvaluationAsync(request.EvaluationName, st::CancellationToken.None);
@@ -1997,7 +1997,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateEvaluationJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             EvaluationJob response = client.CreateEvaluationJob(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2027,7 +2027,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateEvaluationJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EvaluationJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             EvaluationJob responseCallSettings = await client.CreateEvaluationJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             EvaluationJob responseCancellationToken = await client.CreateEvaluationJobAsync(request, st::CancellationToken.None);
@@ -2059,7 +2059,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateEvaluationJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             EvaluationJob response = client.CreateEvaluationJob(request.Parent, request.Job);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2089,7 +2089,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateEvaluationJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EvaluationJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             EvaluationJob responseCallSettings = await client.CreateEvaluationJobAsync(request.Parent, request.Job, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             EvaluationJob responseCancellationToken = await client.CreateEvaluationJobAsync(request.Parent, request.Job, st::CancellationToken.None);
@@ -2121,7 +2121,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateEvaluationJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             EvaluationJob response = client.CreateEvaluationJob(request.ParentAsProjectName, request.Job);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2151,7 +2151,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateEvaluationJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EvaluationJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             EvaluationJob responseCallSettings = await client.CreateEvaluationJobAsync(request.ParentAsProjectName, request.Job, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             EvaluationJob responseCancellationToken = await client.CreateEvaluationJobAsync(request.ParentAsProjectName, request.Job, st::CancellationToken.None);
@@ -2183,7 +2183,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateEvaluationJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             EvaluationJob response = client.UpdateEvaluationJob(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2213,7 +2213,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateEvaluationJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EvaluationJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             EvaluationJob responseCallSettings = await client.UpdateEvaluationJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             EvaluationJob responseCancellationToken = await client.UpdateEvaluationJobAsync(request, st::CancellationToken.None);
@@ -2245,7 +2245,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateEvaluationJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             EvaluationJob response = client.UpdateEvaluationJob(request.EvaluationJob, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2275,7 +2275,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateEvaluationJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EvaluationJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             EvaluationJob responseCallSettings = await client.UpdateEvaluationJobAsync(request.EvaluationJob, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             EvaluationJob responseCancellationToken = await client.UpdateEvaluationJobAsync(request.EvaluationJob, request.UpdateMask, st::CancellationToken.None);
@@ -2306,7 +2306,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetEvaluationJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             EvaluationJob response = client.GetEvaluationJob(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2335,7 +2335,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetEvaluationJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EvaluationJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             EvaluationJob responseCallSettings = await client.GetEvaluationJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             EvaluationJob responseCancellationToken = await client.GetEvaluationJobAsync(request, st::CancellationToken.None);
@@ -2366,7 +2366,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetEvaluationJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             EvaluationJob response = client.GetEvaluationJob(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2395,7 +2395,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetEvaluationJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EvaluationJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             EvaluationJob responseCallSettings = await client.GetEvaluationJobAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             EvaluationJob responseCancellationToken = await client.GetEvaluationJobAsync(request.Name, st::CancellationToken.None);
@@ -2426,7 +2426,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetEvaluationJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             EvaluationJob response = client.GetEvaluationJob(request.EvaluationJobName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2455,7 +2455,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetEvaluationJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EvaluationJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             EvaluationJob responseCallSettings = await client.GetEvaluationJobAsync(request.EvaluationJobName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             EvaluationJob responseCancellationToken = await client.GetEvaluationJobAsync(request.EvaluationJobName, st::CancellationToken.None);
@@ -2474,7 +2474,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.PauseEvaluationJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             client.PauseEvaluationJob(request);
             mockGrpcClient.VerifyAll();
         }
@@ -2490,7 +2490,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.PauseEvaluationJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.PauseEvaluationJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.PauseEvaluationJobAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -2507,7 +2507,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.PauseEvaluationJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             client.PauseEvaluationJob(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -2523,7 +2523,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.PauseEvaluationJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.PauseEvaluationJobAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.PauseEvaluationJobAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -2540,7 +2540,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.PauseEvaluationJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             client.PauseEvaluationJob(request.EvaluationJobName);
             mockGrpcClient.VerifyAll();
         }
@@ -2556,7 +2556,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.PauseEvaluationJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.PauseEvaluationJobAsync(request.EvaluationJobName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.PauseEvaluationJobAsync(request.EvaluationJobName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -2573,7 +2573,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ResumeEvaluationJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             client.ResumeEvaluationJob(request);
             mockGrpcClient.VerifyAll();
         }
@@ -2589,7 +2589,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ResumeEvaluationJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.ResumeEvaluationJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.ResumeEvaluationJobAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -2606,7 +2606,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ResumeEvaluationJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             client.ResumeEvaluationJob(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -2622,7 +2622,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ResumeEvaluationJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.ResumeEvaluationJobAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.ResumeEvaluationJobAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -2639,7 +2639,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ResumeEvaluationJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             client.ResumeEvaluationJob(request.EvaluationJobName);
             mockGrpcClient.VerifyAll();
         }
@@ -2655,7 +2655,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ResumeEvaluationJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.ResumeEvaluationJobAsync(request.EvaluationJobName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.ResumeEvaluationJobAsync(request.EvaluationJobName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -2672,7 +2672,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteEvaluationJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteEvaluationJob(request);
             mockGrpcClient.VerifyAll();
         }
@@ -2688,7 +2688,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteEvaluationJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteEvaluationJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteEvaluationJobAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -2705,7 +2705,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteEvaluationJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteEvaluationJob(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -2721,7 +2721,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteEvaluationJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteEvaluationJobAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteEvaluationJobAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -2738,7 +2738,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteEvaluationJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteEvaluationJob(request.EvaluationJobName);
             mockGrpcClient.VerifyAll();
         }
@@ -2754,7 +2754,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteEvaluationJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
+            DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteEvaluationJobAsync(request.EvaluationJobName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteEvaluationJobAsync(request.EvaluationJobName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();

@@ -55,7 +55,7 @@ namespace Google.Cloud.AppEngine.V1.Tests
                 DomainMappingsCount = 1489673528,
             };
             mockGrpcClient.Setup(x => x.GetAuthorizedCertificate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AuthorizedCertificatesClient client = new AuthorizedCertificatesClientImpl(mockGrpcClient.Object, null);
+            AuthorizedCertificatesClient client = new AuthorizedCertificatesClientImpl(mockGrpcClient.Object, null, null);
             AuthorizedCertificate response = client.GetAuthorizedCertificate(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -89,7 +89,7 @@ namespace Google.Cloud.AppEngine.V1.Tests
                 DomainMappingsCount = 1489673528,
             };
             mockGrpcClient.Setup(x => x.GetAuthorizedCertificateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AuthorizedCertificate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AuthorizedCertificatesClient client = new AuthorizedCertificatesClientImpl(mockGrpcClient.Object, null);
+            AuthorizedCertificatesClient client = new AuthorizedCertificatesClientImpl(mockGrpcClient.Object, null, null);
             AuthorizedCertificate responseCallSettings = await client.GetAuthorizedCertificateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AuthorizedCertificate responseCancellationToken = await client.GetAuthorizedCertificateAsync(request, st::CancellationToken.None);
@@ -125,7 +125,7 @@ namespace Google.Cloud.AppEngine.V1.Tests
                 DomainMappingsCount = 1489673528,
             };
             mockGrpcClient.Setup(x => x.CreateAuthorizedCertificate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AuthorizedCertificatesClient client = new AuthorizedCertificatesClientImpl(mockGrpcClient.Object, null);
+            AuthorizedCertificatesClient client = new AuthorizedCertificatesClientImpl(mockGrpcClient.Object, null, null);
             AuthorizedCertificate response = client.CreateAuthorizedCertificate(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -159,7 +159,7 @@ namespace Google.Cloud.AppEngine.V1.Tests
                 DomainMappingsCount = 1489673528,
             };
             mockGrpcClient.Setup(x => x.CreateAuthorizedCertificateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AuthorizedCertificate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AuthorizedCertificatesClient client = new AuthorizedCertificatesClientImpl(mockGrpcClient.Object, null);
+            AuthorizedCertificatesClient client = new AuthorizedCertificatesClientImpl(mockGrpcClient.Object, null, null);
             AuthorizedCertificate responseCallSettings = await client.CreateAuthorizedCertificateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AuthorizedCertificate responseCancellationToken = await client.CreateAuthorizedCertificateAsync(request, st::CancellationToken.None);
@@ -196,7 +196,7 @@ namespace Google.Cloud.AppEngine.V1.Tests
                 DomainMappingsCount = 1489673528,
             };
             mockGrpcClient.Setup(x => x.UpdateAuthorizedCertificate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AuthorizedCertificatesClient client = new AuthorizedCertificatesClientImpl(mockGrpcClient.Object, null);
+            AuthorizedCertificatesClient client = new AuthorizedCertificatesClientImpl(mockGrpcClient.Object, null, null);
             AuthorizedCertificate response = client.UpdateAuthorizedCertificate(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -231,7 +231,7 @@ namespace Google.Cloud.AppEngine.V1.Tests
                 DomainMappingsCount = 1489673528,
             };
             mockGrpcClient.Setup(x => x.UpdateAuthorizedCertificateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AuthorizedCertificate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AuthorizedCertificatesClient client = new AuthorizedCertificatesClientImpl(mockGrpcClient.Object, null);
+            AuthorizedCertificatesClient client = new AuthorizedCertificatesClientImpl(mockGrpcClient.Object, null, null);
             AuthorizedCertificate responseCallSettings = await client.UpdateAuthorizedCertificateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AuthorizedCertificate responseCancellationToken = await client.UpdateAuthorizedCertificateAsync(request, st::CancellationToken.None);
@@ -249,7 +249,7 @@ namespace Google.Cloud.AppEngine.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAuthorizedCertificate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AuthorizedCertificatesClient client = new AuthorizedCertificatesClientImpl(mockGrpcClient.Object, null);
+            AuthorizedCertificatesClient client = new AuthorizedCertificatesClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteAuthorizedCertificate(request);
             mockGrpcClient.VerifyAll();
         }
@@ -264,7 +264,7 @@ namespace Google.Cloud.AppEngine.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAuthorizedCertificateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AuthorizedCertificatesClient client = new AuthorizedCertificatesClientImpl(mockGrpcClient.Object, null);
+            AuthorizedCertificatesClient client = new AuthorizedCertificatesClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteAuthorizedCertificateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteAuthorizedCertificateAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();

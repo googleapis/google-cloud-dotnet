@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -134,9 +134,8 @@ namespace Google.Cloud.ResourceSettings.V1
         public ResourceSettingsServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public ResourceSettingsServiceClientBuilder()
+        public ResourceSettingsServiceClientBuilder() : base(ResourceSettingsServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = ResourceSettingsServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref ResourceSettingsServiceClient client);
@@ -163,29 +162,18 @@ namespace Google.Cloud.ResourceSettings.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ResourceSettingsServiceClient.Create(callInvoker, Settings);
+            return ResourceSettingsServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<ResourceSettingsServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ResourceSettingsServiceClient.Create(callInvoker, Settings);
+            return ResourceSettingsServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => ResourceSettingsServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => ResourceSettingsServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => ResourceSettingsServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>ResourceSettingsService client wrapper, for convenient use.</summary>
@@ -223,19 +211,10 @@ namespace Google.Cloud.ResourceSettings.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(ResourceSettingsService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="ResourceSettingsServiceClient"/> using the default credentials, endpoint
@@ -265,8 +244,9 @@ namespace Google.Cloud.ResourceSettings.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="ResourceSettingsServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="ResourceSettingsServiceClient"/>.</returns>
-        internal static ResourceSettingsServiceClient Create(grpccore::CallInvoker callInvoker, ResourceSettingsServiceSettings settings = null)
+        internal static ResourceSettingsServiceClient Create(grpccore::CallInvoker callInvoker, ResourceSettingsServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -275,7 +255,7 @@ namespace Google.Cloud.ResourceSettings.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             ResourceSettingsService.ResourceSettingsServiceClient grpcClient = new ResourceSettingsService.ResourceSettingsServiceClient(callInvoker);
-            return new ResourceSettingsServiceClientImpl(grpcClient, settings);
+            return new ResourceSettingsServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -674,18 +654,19 @@ namespace Google.Cloud.ResourceSettings.V1
         /// <param name="settings">
         /// The base <see cref="ResourceSettingsServiceSettings"/> used within this client.
         /// </param>
-        public ResourceSettingsServiceClientImpl(ResourceSettingsService.ResourceSettingsServiceClient grpcClient, ResourceSettingsServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public ResourceSettingsServiceClientImpl(ResourceSettingsService.ResourceSettingsServiceClient grpcClient, ResourceSettingsServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             ResourceSettingsServiceSettings effectiveSettings = settings ?? ResourceSettingsServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListSettings = clientHelper.BuildApiCall<ListSettingsRequest, ListSettingsResponse>(grpcClient.ListSettingsAsync, grpcClient.ListSettings, effectiveSettings.ListSettingsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callListSettings = clientHelper.BuildApiCall<ListSettingsRequest, ListSettingsResponse>("ListSettings", grpcClient.ListSettingsAsync, grpcClient.ListSettings, effectiveSettings.ListSettingsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListSettings);
             Modify_ListSettingsApiCall(ref _callListSettings);
-            _callGetSetting = clientHelper.BuildApiCall<GetSettingRequest, Setting>(grpcClient.GetSettingAsync, grpcClient.GetSetting, effectiveSettings.GetSettingSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetSetting = clientHelper.BuildApiCall<GetSettingRequest, Setting>("GetSetting", grpcClient.GetSettingAsync, grpcClient.GetSetting, effectiveSettings.GetSettingSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetSetting);
             Modify_GetSettingApiCall(ref _callGetSetting);
-            _callUpdateSetting = clientHelper.BuildApiCall<UpdateSettingRequest, Setting>(grpcClient.UpdateSettingAsync, grpcClient.UpdateSetting, effectiveSettings.UpdateSettingSettings).WithGoogleRequestParam("setting.name", request => request.Setting?.Name);
+            _callUpdateSetting = clientHelper.BuildApiCall<UpdateSettingRequest, Setting>("UpdateSetting", grpcClient.UpdateSettingAsync, grpcClient.UpdateSetting, effectiveSettings.UpdateSettingSettings).WithGoogleRequestParam("setting.name", request => request.Setting?.Name);
             Modify_ApiCall(ref _callUpdateSetting);
             Modify_UpdateSettingApiCall(ref _callUpdateSetting);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

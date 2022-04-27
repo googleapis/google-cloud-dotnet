@@ -73,7 +73,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 DistributionPolicy = new DistributionPolicy(),
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InstanceGroupManagersClient client = new InstanceGroupManagersClientImpl(mockGrpcClient.Object, null);
+            InstanceGroupManagersClient client = new InstanceGroupManagersClientImpl(mockGrpcClient.Object, null, null);
             InstanceGroupManager response = client.Get(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -125,7 +125,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 DistributionPolicy = new DistributionPolicy(),
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstanceGroupManager>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InstanceGroupManagersClient client = new InstanceGroupManagersClientImpl(mockGrpcClient.Object, null);
+            InstanceGroupManagersClient client = new InstanceGroupManagersClientImpl(mockGrpcClient.Object, null, null);
             InstanceGroupManager responseCallSettings = await client.GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             InstanceGroupManager responseCancellationToken = await client.GetAsync(request, st::CancellationToken.None);
@@ -179,7 +179,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 DistributionPolicy = new DistributionPolicy(),
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InstanceGroupManagersClient client = new InstanceGroupManagersClientImpl(mockGrpcClient.Object, null);
+            InstanceGroupManagersClient client = new InstanceGroupManagersClientImpl(mockGrpcClient.Object, null, null);
             InstanceGroupManager response = client.Get(request.Project, request.Zone, request.InstanceGroupManager);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -231,7 +231,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 DistributionPolicy = new DistributionPolicy(),
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstanceGroupManager>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InstanceGroupManagersClient client = new InstanceGroupManagersClientImpl(mockGrpcClient.Object, null);
+            InstanceGroupManagersClient client = new InstanceGroupManagersClientImpl(mockGrpcClient.Object, null, null);
             InstanceGroupManager responseCallSettings = await client.GetAsync(request.Project, request.Zone, request.InstanceGroupManager, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             InstanceGroupManager responseCancellationToken = await client.GetAsync(request.Project, request.Zone, request.InstanceGroupManager, st::CancellationToken.None);

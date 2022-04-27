@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -341,9 +341,8 @@ namespace Google.Cloud.ManagedIdentities.V1
         public ManagedIdentitiesServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public ManagedIdentitiesServiceClientBuilder()
+        public ManagedIdentitiesServiceClientBuilder() : base(ManagedIdentitiesServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = ManagedIdentitiesServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref ManagedIdentitiesServiceClient client);
@@ -370,29 +369,18 @@ namespace Google.Cloud.ManagedIdentities.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ManagedIdentitiesServiceClient.Create(callInvoker, Settings);
+            return ManagedIdentitiesServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<ManagedIdentitiesServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ManagedIdentitiesServiceClient.Create(callInvoker, Settings);
+            return ManagedIdentitiesServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => ManagedIdentitiesServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => ManagedIdentitiesServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => ManagedIdentitiesServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>ManagedIdentitiesService client wrapper, for convenient use.</summary>
@@ -450,19 +438,10 @@ namespace Google.Cloud.ManagedIdentities.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(ManagedIdentitiesService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="ManagedIdentitiesServiceClient"/> using the default credentials,
@@ -492,8 +471,9 @@ namespace Google.Cloud.ManagedIdentities.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="ManagedIdentitiesServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="ManagedIdentitiesServiceClient"/>.</returns>
-        internal static ManagedIdentitiesServiceClient Create(grpccore::CallInvoker callInvoker, ManagedIdentitiesServiceSettings settings = null)
+        internal static ManagedIdentitiesServiceClient Create(grpccore::CallInvoker callInvoker, ManagedIdentitiesServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -502,7 +482,7 @@ namespace Google.Cloud.ManagedIdentities.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             ManagedIdentitiesService.ManagedIdentitiesServiceClient grpcClient = new ManagedIdentitiesService.ManagedIdentitiesServiceClient(callInvoker);
-            return new ManagedIdentitiesServiceClientImpl(grpcClient, settings);
+            return new ManagedIdentitiesServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -2124,46 +2104,47 @@ namespace Google.Cloud.ManagedIdentities.V1
         /// <param name="settings">
         /// The base <see cref="ManagedIdentitiesServiceSettings"/> used within this client.
         /// </param>
-        public ManagedIdentitiesServiceClientImpl(ManagedIdentitiesService.ManagedIdentitiesServiceClient grpcClient, ManagedIdentitiesServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public ManagedIdentitiesServiceClientImpl(ManagedIdentitiesService.ManagedIdentitiesServiceClient grpcClient, ManagedIdentitiesServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             ManagedIdentitiesServiceSettings effectiveSettings = settings ?? ManagedIdentitiesServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateMicrosoftAdDomainOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateMicrosoftAdDomainOperationsSettings);
-            UpdateDomainOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDomainOperationsSettings);
-            DeleteDomainOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDomainOperationsSettings);
-            AttachTrustOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AttachTrustOperationsSettings);
-            ReconfigureTrustOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ReconfigureTrustOperationsSettings);
-            DetachTrustOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DetachTrustOperationsSettings);
-            ValidateTrustOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ValidateTrustOperationsSettings);
-            _callCreateMicrosoftAdDomain = clientHelper.BuildApiCall<CreateMicrosoftAdDomainRequest, lro::Operation>(grpcClient.CreateMicrosoftAdDomainAsync, grpcClient.CreateMicrosoftAdDomain, effectiveSettings.CreateMicrosoftAdDomainSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateMicrosoftAdDomainOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateMicrosoftAdDomainOperationsSettings, logger);
+            UpdateDomainOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDomainOperationsSettings, logger);
+            DeleteDomainOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDomainOperationsSettings, logger);
+            AttachTrustOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AttachTrustOperationsSettings, logger);
+            ReconfigureTrustOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ReconfigureTrustOperationsSettings, logger);
+            DetachTrustOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DetachTrustOperationsSettings, logger);
+            ValidateTrustOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ValidateTrustOperationsSettings, logger);
+            _callCreateMicrosoftAdDomain = clientHelper.BuildApiCall<CreateMicrosoftAdDomainRequest, lro::Operation>("CreateMicrosoftAdDomain", grpcClient.CreateMicrosoftAdDomainAsync, grpcClient.CreateMicrosoftAdDomain, effectiveSettings.CreateMicrosoftAdDomainSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateMicrosoftAdDomain);
             Modify_CreateMicrosoftAdDomainApiCall(ref _callCreateMicrosoftAdDomain);
-            _callResetAdminPassword = clientHelper.BuildApiCall<ResetAdminPasswordRequest, ResetAdminPasswordResponse>(grpcClient.ResetAdminPasswordAsync, grpcClient.ResetAdminPassword, effectiveSettings.ResetAdminPasswordSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callResetAdminPassword = clientHelper.BuildApiCall<ResetAdminPasswordRequest, ResetAdminPasswordResponse>("ResetAdminPassword", grpcClient.ResetAdminPasswordAsync, grpcClient.ResetAdminPassword, effectiveSettings.ResetAdminPasswordSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callResetAdminPassword);
             Modify_ResetAdminPasswordApiCall(ref _callResetAdminPassword);
-            _callListDomains = clientHelper.BuildApiCall<ListDomainsRequest, ListDomainsResponse>(grpcClient.ListDomainsAsync, grpcClient.ListDomains, effectiveSettings.ListDomainsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListDomains = clientHelper.BuildApiCall<ListDomainsRequest, ListDomainsResponse>("ListDomains", grpcClient.ListDomainsAsync, grpcClient.ListDomains, effectiveSettings.ListDomainsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDomains);
             Modify_ListDomainsApiCall(ref _callListDomains);
-            _callGetDomain = clientHelper.BuildApiCall<GetDomainRequest, Domain>(grpcClient.GetDomainAsync, grpcClient.GetDomain, effectiveSettings.GetDomainSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetDomain = clientHelper.BuildApiCall<GetDomainRequest, Domain>("GetDomain", grpcClient.GetDomainAsync, grpcClient.GetDomain, effectiveSettings.GetDomainSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDomain);
             Modify_GetDomainApiCall(ref _callGetDomain);
-            _callUpdateDomain = clientHelper.BuildApiCall<UpdateDomainRequest, lro::Operation>(grpcClient.UpdateDomainAsync, grpcClient.UpdateDomain, effectiveSettings.UpdateDomainSettings).WithGoogleRequestParam("domain.name", request => request.Domain?.Name);
+            _callUpdateDomain = clientHelper.BuildApiCall<UpdateDomainRequest, lro::Operation>("UpdateDomain", grpcClient.UpdateDomainAsync, grpcClient.UpdateDomain, effectiveSettings.UpdateDomainSettings).WithGoogleRequestParam("domain.name", request => request.Domain?.Name);
             Modify_ApiCall(ref _callUpdateDomain);
             Modify_UpdateDomainApiCall(ref _callUpdateDomain);
-            _callDeleteDomain = clientHelper.BuildApiCall<DeleteDomainRequest, lro::Operation>(grpcClient.DeleteDomainAsync, grpcClient.DeleteDomain, effectiveSettings.DeleteDomainSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteDomain = clientHelper.BuildApiCall<DeleteDomainRequest, lro::Operation>("DeleteDomain", grpcClient.DeleteDomainAsync, grpcClient.DeleteDomain, effectiveSettings.DeleteDomainSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteDomain);
             Modify_DeleteDomainApiCall(ref _callDeleteDomain);
-            _callAttachTrust = clientHelper.BuildApiCall<AttachTrustRequest, lro::Operation>(grpcClient.AttachTrustAsync, grpcClient.AttachTrust, effectiveSettings.AttachTrustSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callAttachTrust = clientHelper.BuildApiCall<AttachTrustRequest, lro::Operation>("AttachTrust", grpcClient.AttachTrustAsync, grpcClient.AttachTrust, effectiveSettings.AttachTrustSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callAttachTrust);
             Modify_AttachTrustApiCall(ref _callAttachTrust);
-            _callReconfigureTrust = clientHelper.BuildApiCall<ReconfigureTrustRequest, lro::Operation>(grpcClient.ReconfigureTrustAsync, grpcClient.ReconfigureTrust, effectiveSettings.ReconfigureTrustSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callReconfigureTrust = clientHelper.BuildApiCall<ReconfigureTrustRequest, lro::Operation>("ReconfigureTrust", grpcClient.ReconfigureTrustAsync, grpcClient.ReconfigureTrust, effectiveSettings.ReconfigureTrustSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callReconfigureTrust);
             Modify_ReconfigureTrustApiCall(ref _callReconfigureTrust);
-            _callDetachTrust = clientHelper.BuildApiCall<DetachTrustRequest, lro::Operation>(grpcClient.DetachTrustAsync, grpcClient.DetachTrust, effectiveSettings.DetachTrustSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDetachTrust = clientHelper.BuildApiCall<DetachTrustRequest, lro::Operation>("DetachTrust", grpcClient.DetachTrustAsync, grpcClient.DetachTrust, effectiveSettings.DetachTrustSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDetachTrust);
             Modify_DetachTrustApiCall(ref _callDetachTrust);
-            _callValidateTrust = clientHelper.BuildApiCall<ValidateTrustRequest, lro::Operation>(grpcClient.ValidateTrustAsync, grpcClient.ValidateTrust, effectiveSettings.ValidateTrustSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callValidateTrust = clientHelper.BuildApiCall<ValidateTrustRequest, lro::Operation>("ValidateTrust", grpcClient.ValidateTrustAsync, grpcClient.ValidateTrust, effectiveSettings.ValidateTrustSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callValidateTrust);
             Modify_ValidateTrustApiCall(ref _callValidateTrust);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

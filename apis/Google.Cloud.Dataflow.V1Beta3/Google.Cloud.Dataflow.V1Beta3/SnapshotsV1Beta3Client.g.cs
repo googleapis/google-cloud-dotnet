@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -102,9 +102,8 @@ namespace Google.Cloud.Dataflow.V1Beta3
         public SnapshotsV1Beta3Settings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public SnapshotsV1Beta3ClientBuilder()
+        public SnapshotsV1Beta3ClientBuilder() : base(SnapshotsV1Beta3Client.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = SnapshotsV1Beta3Client.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref SnapshotsV1Beta3Client client);
@@ -131,29 +130,18 @@ namespace Google.Cloud.Dataflow.V1Beta3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return SnapshotsV1Beta3Client.Create(callInvoker, Settings);
+            return SnapshotsV1Beta3Client.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<SnapshotsV1Beta3Client> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return SnapshotsV1Beta3Client.Create(callInvoker, Settings);
+            return SnapshotsV1Beta3Client.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => SnapshotsV1Beta3Client.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => SnapshotsV1Beta3Client.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => SnapshotsV1Beta3Client.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>SnapshotsV1Beta3 client wrapper, for convenient use.</summary>
@@ -186,19 +174,10 @@ namespace Google.Cloud.Dataflow.V1Beta3
             "https://www.googleapis.com/auth/userinfo.email",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(SnapshotsV1Beta3.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="SnapshotsV1Beta3Client"/> using the default credentials, endpoint and
@@ -225,8 +204,9 @@ namespace Google.Cloud.Dataflow.V1Beta3
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="SnapshotsV1Beta3Settings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="SnapshotsV1Beta3Client"/>.</returns>
-        internal static SnapshotsV1Beta3Client Create(grpccore::CallInvoker callInvoker, SnapshotsV1Beta3Settings settings = null)
+        internal static SnapshotsV1Beta3Client Create(grpccore::CallInvoker callInvoker, SnapshotsV1Beta3Settings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -235,7 +215,7 @@ namespace Google.Cloud.Dataflow.V1Beta3
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             SnapshotsV1Beta3.SnapshotsV1Beta3Client grpcClient = new SnapshotsV1Beta3.SnapshotsV1Beta3Client(callInvoker);
-            return new SnapshotsV1Beta3ClientImpl(grpcClient, settings);
+            return new SnapshotsV1Beta3ClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -353,18 +333,19 @@ namespace Google.Cloud.Dataflow.V1Beta3
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="SnapshotsV1Beta3Settings"/> used within this client.</param>
-        public SnapshotsV1Beta3ClientImpl(SnapshotsV1Beta3.SnapshotsV1Beta3Client grpcClient, SnapshotsV1Beta3Settings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public SnapshotsV1Beta3ClientImpl(SnapshotsV1Beta3.SnapshotsV1Beta3Client grpcClient, SnapshotsV1Beta3Settings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             SnapshotsV1Beta3Settings effectiveSettings = settings ?? SnapshotsV1Beta3Settings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callGetSnapshot = clientHelper.BuildApiCall<GetSnapshotRequest, Snapshot>(grpcClient.GetSnapshotAsync, grpcClient.GetSnapshot, effectiveSettings.GetSnapshotSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("location", request => request.Location).WithGoogleRequestParam("snapshot_id", request => request.SnapshotId);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callGetSnapshot = clientHelper.BuildApiCall<GetSnapshotRequest, Snapshot>("GetSnapshot", grpcClient.GetSnapshotAsync, grpcClient.GetSnapshot, effectiveSettings.GetSnapshotSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("location", request => request.Location).WithGoogleRequestParam("snapshot_id", request => request.SnapshotId);
             Modify_ApiCall(ref _callGetSnapshot);
             Modify_GetSnapshotApiCall(ref _callGetSnapshot);
-            _callDeleteSnapshot = clientHelper.BuildApiCall<DeleteSnapshotRequest, DeleteSnapshotResponse>(grpcClient.DeleteSnapshotAsync, grpcClient.DeleteSnapshot, effectiveSettings.DeleteSnapshotSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("location", request => request.Location).WithGoogleRequestParam("snapshot_id", request => request.SnapshotId);
+            _callDeleteSnapshot = clientHelper.BuildApiCall<DeleteSnapshotRequest, DeleteSnapshotResponse>("DeleteSnapshot", grpcClient.DeleteSnapshotAsync, grpcClient.DeleteSnapshot, effectiveSettings.DeleteSnapshotSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("location", request => request.Location).WithGoogleRequestParam("snapshot_id", request => request.SnapshotId);
             Modify_ApiCall(ref _callDeleteSnapshot);
             Modify_DeleteSnapshotApiCall(ref _callDeleteSnapshot);
-            _callListSnapshots = clientHelper.BuildApiCall<ListSnapshotsRequest, ListSnapshotsResponse>(grpcClient.ListSnapshotsAsync, grpcClient.ListSnapshots, effectiveSettings.ListSnapshotsSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("location", request => request.Location).WithGoogleRequestParam("job_id", request => request.JobId);
+            _callListSnapshots = clientHelper.BuildApiCall<ListSnapshotsRequest, ListSnapshotsResponse>("ListSnapshots", grpcClient.ListSnapshotsAsync, grpcClient.ListSnapshots, effectiveSettings.ListSnapshotsSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("location", request => request.Location).WithGoogleRequestParam("job_id", request => request.JobId);
             Modify_ApiCall(ref _callListSnapshots);
             Modify_ListSnapshotsApiCall(ref _callListSnapshots);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

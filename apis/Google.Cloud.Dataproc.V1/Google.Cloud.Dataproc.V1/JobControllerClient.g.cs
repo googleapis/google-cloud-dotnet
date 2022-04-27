@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -227,9 +227,8 @@ namespace Google.Cloud.Dataproc.V1
         public JobControllerSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public JobControllerClientBuilder()
+        public JobControllerClientBuilder() : base(JobControllerClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = JobControllerClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref JobControllerClient client);
@@ -256,29 +255,18 @@ namespace Google.Cloud.Dataproc.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return JobControllerClient.Create(callInvoker, Settings);
+            return JobControllerClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<JobControllerClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return JobControllerClient.Create(callInvoker, Settings);
+            return JobControllerClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => JobControllerClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => JobControllerClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => JobControllerClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>JobController client wrapper, for convenient use.</summary>
@@ -305,19 +293,10 @@ namespace Google.Cloud.Dataproc.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(JobController.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="JobControllerClient"/> using the default credentials, endpoint and
@@ -344,8 +323,9 @@ namespace Google.Cloud.Dataproc.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="JobControllerSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="JobControllerClient"/>.</returns>
-        internal static JobControllerClient Create(grpccore::CallInvoker callInvoker, JobControllerSettings settings = null)
+        internal static JobControllerClient Create(grpccore::CallInvoker callInvoker, JobControllerSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -354,7 +334,7 @@ namespace Google.Cloud.Dataproc.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             JobController.JobControllerClient grpcClient = new JobController.JobControllerClient(callInvoker);
-            return new JobControllerClientImpl(grpcClient, settings);
+            return new JobControllerClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1106,31 +1086,32 @@ namespace Google.Cloud.Dataproc.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="JobControllerSettings"/> used within this client.</param>
-        public JobControllerClientImpl(JobController.JobControllerClient grpcClient, JobControllerSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public JobControllerClientImpl(JobController.JobControllerClient grpcClient, JobControllerSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             JobControllerSettings effectiveSettings = settings ?? JobControllerSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            SubmitJobAsOperationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SubmitJobAsOperationOperationsSettings);
-            _callSubmitJob = clientHelper.BuildApiCall<SubmitJobRequest, Job>(grpcClient.SubmitJobAsync, grpcClient.SubmitJob, effectiveSettings.SubmitJobSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            SubmitJobAsOperationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SubmitJobAsOperationOperationsSettings, logger);
+            _callSubmitJob = clientHelper.BuildApiCall<SubmitJobRequest, Job>("SubmitJob", grpcClient.SubmitJobAsync, grpcClient.SubmitJob, effectiveSettings.SubmitJobSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region);
             Modify_ApiCall(ref _callSubmitJob);
             Modify_SubmitJobApiCall(ref _callSubmitJob);
-            _callSubmitJobAsOperation = clientHelper.BuildApiCall<SubmitJobRequest, lro::Operation>(grpcClient.SubmitJobAsOperationAsync, grpcClient.SubmitJobAsOperation, effectiveSettings.SubmitJobAsOperationSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region);
+            _callSubmitJobAsOperation = clientHelper.BuildApiCall<SubmitJobRequest, lro::Operation>("SubmitJobAsOperation", grpcClient.SubmitJobAsOperationAsync, grpcClient.SubmitJobAsOperation, effectiveSettings.SubmitJobAsOperationSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region);
             Modify_ApiCall(ref _callSubmitJobAsOperation);
             Modify_SubmitJobAsOperationApiCall(ref _callSubmitJobAsOperation);
-            _callGetJob = clientHelper.BuildApiCall<GetJobRequest, Job>(grpcClient.GetJobAsync, grpcClient.GetJob, effectiveSettings.GetJobSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("job_id", request => request.JobId);
+            _callGetJob = clientHelper.BuildApiCall<GetJobRequest, Job>("GetJob", grpcClient.GetJobAsync, grpcClient.GetJob, effectiveSettings.GetJobSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("job_id", request => request.JobId);
             Modify_ApiCall(ref _callGetJob);
             Modify_GetJobApiCall(ref _callGetJob);
-            _callListJobs = clientHelper.BuildApiCall<ListJobsRequest, ListJobsResponse>(grpcClient.ListJobsAsync, grpcClient.ListJobs, effectiveSettings.ListJobsSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region);
+            _callListJobs = clientHelper.BuildApiCall<ListJobsRequest, ListJobsResponse>("ListJobs", grpcClient.ListJobsAsync, grpcClient.ListJobs, effectiveSettings.ListJobsSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region);
             Modify_ApiCall(ref _callListJobs);
             Modify_ListJobsApiCall(ref _callListJobs);
-            _callUpdateJob = clientHelper.BuildApiCall<UpdateJobRequest, Job>(grpcClient.UpdateJobAsync, grpcClient.UpdateJob, effectiveSettings.UpdateJobSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("job_id", request => request.JobId);
+            _callUpdateJob = clientHelper.BuildApiCall<UpdateJobRequest, Job>("UpdateJob", grpcClient.UpdateJobAsync, grpcClient.UpdateJob, effectiveSettings.UpdateJobSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("job_id", request => request.JobId);
             Modify_ApiCall(ref _callUpdateJob);
             Modify_UpdateJobApiCall(ref _callUpdateJob);
-            _callCancelJob = clientHelper.BuildApiCall<CancelJobRequest, Job>(grpcClient.CancelJobAsync, grpcClient.CancelJob, effectiveSettings.CancelJobSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("job_id", request => request.JobId);
+            _callCancelJob = clientHelper.BuildApiCall<CancelJobRequest, Job>("CancelJob", grpcClient.CancelJobAsync, grpcClient.CancelJob, effectiveSettings.CancelJobSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("job_id", request => request.JobId);
             Modify_ApiCall(ref _callCancelJob);
             Modify_CancelJobApiCall(ref _callCancelJob);
-            _callDeleteJob = clientHelper.BuildApiCall<DeleteJobRequest, wkt::Empty>(grpcClient.DeleteJobAsync, grpcClient.DeleteJob, effectiveSettings.DeleteJobSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("job_id", request => request.JobId);
+            _callDeleteJob = clientHelper.BuildApiCall<DeleteJobRequest, wkt::Empty>("DeleteJob", grpcClient.DeleteJobAsync, grpcClient.DeleteJob, effectiveSettings.DeleteJobSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("job_id", request => request.JobId);
             Modify_ApiCall(ref _callDeleteJob);
             Modify_DeleteJobApiCall(ref _callDeleteJob);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gcbcv = Google.Cloud.Bigtable.Common.V2;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -167,9 +167,8 @@ namespace Google.Cloud.Bigtable.V2
         public BigtableServiceApiSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public BigtableServiceApiClientBuilder()
+        public BigtableServiceApiClientBuilder() : base(BigtableServiceApiClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = BigtableServiceApiClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref BigtableServiceApiClient client);
@@ -196,29 +195,18 @@ namespace Google.Cloud.Bigtable.V2
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return BigtableServiceApiClient.Create(callInvoker, Settings);
+            return BigtableServiceApiClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<BigtableServiceApiClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return BigtableServiceApiClient.Create(callInvoker, Settings);
+            return BigtableServiceApiClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => BigtableServiceApiClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => BigtableServiceApiClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => BigtableServiceApiClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>BigtableServiceApi client wrapper, for convenient use.</summary>
@@ -258,6 +246,8 @@ namespace Google.Cloud.Bigtable.V2
         /// <summary>The service metadata associated with this client type.</summary>
         public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Bigtable.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
+
         /// <summary>
         /// Asynchronously creates a <see cref="BigtableServiceApiClient"/> using the default credentials, endpoint and
         /// settings. To specify custom credentials or other settings, use <see cref="BigtableServiceApiClientBuilder"/>
@@ -286,8 +276,9 @@ namespace Google.Cloud.Bigtable.V2
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="BigtableServiceApiSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="BigtableServiceApiClient"/>.</returns>
-        internal static BigtableServiceApiClient Create(grpccore::CallInvoker callInvoker, BigtableServiceApiSettings settings = null)
+        internal static BigtableServiceApiClient Create(grpccore::CallInvoker callInvoker, BigtableServiceApiSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -296,7 +287,7 @@ namespace Google.Cloud.Bigtable.V2
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             Bigtable.BigtableClient grpcClient = new Bigtable.BigtableClient(callInvoker);
-            return new BigtableServiceApiClientImpl(grpcClient, settings);
+            return new BigtableServiceApiClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -310,7 +301,7 @@ namespace Google.Cloud.Bigtable.V2
         /// by another call to this method.
         /// </remarks>
         /// <returns>A task representing the asynchronous shutdown operation.</returns>
-        public static stt::Task ShutdownDefaultChannelsAsync() => CallInvokerPool.ShutdownChannelsAsync();
+        public static stt::Task ShutdownDefaultChannelsAsync() => ChannelPool.ShutdownChannelsAsync();
 
         /// <summary>The underlying gRPC BigtableServiceApi client</summary>
         public virtual Bigtable.BigtableClient GrpcClient => throw new sys::NotImplementedException();
@@ -2362,30 +2353,31 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="BigtableServiceApiSettings"/> used within this client.</param>
-        public BigtableServiceApiClientImpl(Bigtable.BigtableClient grpcClient, BigtableServiceApiSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public BigtableServiceApiClientImpl(Bigtable.BigtableClient grpcClient, BigtableServiceApiSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             BigtableServiceApiSettings effectiveSettings = settings ?? BigtableServiceApiSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callReadRows = clientHelper.BuildApiCall<ReadRowsRequest, ReadRowsResponse>(grpcClient.ReadRows, effectiveSettings.ReadRowsSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<ReadRowsRequest>().WithExtractedParameter("table_name", "^(projects/[^/]+/instances/[^/]+/tables/[^/]+)/?$", request => request.TableName).WithExtractedParameter("app_profile_id", "^(.+)$", request => request.AppProfileId));
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callReadRows = clientHelper.BuildApiCall<ReadRowsRequest, ReadRowsResponse>("ReadRows", grpcClient.ReadRows, effectiveSettings.ReadRowsSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<ReadRowsRequest>().WithExtractedParameter("table_name", "^(projects/[^/]+/instances/[^/]+/tables/[^/]+)/?$", request => request.TableName).WithExtractedParameter("app_profile_id", "^(.+)$", request => request.AppProfileId));
             Modify_ApiCall(ref _callReadRows);
             Modify_ReadRowsApiCall(ref _callReadRows);
-            _callSampleRowKeys = clientHelper.BuildApiCall<SampleRowKeysRequest, SampleRowKeysResponse>(grpcClient.SampleRowKeys, effectiveSettings.SampleRowKeysSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<SampleRowKeysRequest>().WithExtractedParameter("table_name", "^(projects/[^/]+/instances/[^/]+/tables/[^/]+)/?$", request => request.TableName).WithExtractedParameter("app_profile_id", "^(.+)$", request => request.AppProfileId));
+            _callSampleRowKeys = clientHelper.BuildApiCall<SampleRowKeysRequest, SampleRowKeysResponse>("SampleRowKeys", grpcClient.SampleRowKeys, effectiveSettings.SampleRowKeysSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<SampleRowKeysRequest>().WithExtractedParameter("table_name", "^(projects/[^/]+/instances/[^/]+/tables/[^/]+)/?$", request => request.TableName).WithExtractedParameter("app_profile_id", "^(.+)$", request => request.AppProfileId));
             Modify_ApiCall(ref _callSampleRowKeys);
             Modify_SampleRowKeysApiCall(ref _callSampleRowKeys);
-            _callMutateRow = clientHelper.BuildApiCall<MutateRowRequest, MutateRowResponse>(grpcClient.MutateRowAsync, grpcClient.MutateRow, effectiveSettings.MutateRowSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<MutateRowRequest>().WithExtractedParameter("table_name", "^(projects/[^/]+/instances/[^/]+/tables/[^/]+)/?$", request => request.TableName).WithExtractedParameter("app_profile_id", "^(.+)$", request => request.AppProfileId));
+            _callMutateRow = clientHelper.BuildApiCall<MutateRowRequest, MutateRowResponse>("MutateRow", grpcClient.MutateRowAsync, grpcClient.MutateRow, effectiveSettings.MutateRowSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<MutateRowRequest>().WithExtractedParameter("table_name", "^(projects/[^/]+/instances/[^/]+/tables/[^/]+)/?$", request => request.TableName).WithExtractedParameter("app_profile_id", "^(.+)$", request => request.AppProfileId));
             Modify_ApiCall(ref _callMutateRow);
             Modify_MutateRowApiCall(ref _callMutateRow);
-            _callMutateRows = clientHelper.BuildApiCall<MutateRowsRequest, MutateRowsResponse>(grpcClient.MutateRows, effectiveSettings.MutateRowsSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<MutateRowsRequest>().WithExtractedParameter("table_name", "^(projects/[^/]+/instances/[^/]+/tables/[^/]+)/?$", request => request.TableName).WithExtractedParameter("app_profile_id", "^(.+)$", request => request.AppProfileId));
+            _callMutateRows = clientHelper.BuildApiCall<MutateRowsRequest, MutateRowsResponse>("MutateRows", grpcClient.MutateRows, effectiveSettings.MutateRowsSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<MutateRowsRequest>().WithExtractedParameter("table_name", "^(projects/[^/]+/instances/[^/]+/tables/[^/]+)/?$", request => request.TableName).WithExtractedParameter("app_profile_id", "^(.+)$", request => request.AppProfileId));
             Modify_ApiCall(ref _callMutateRows);
             Modify_MutateRowsApiCall(ref _callMutateRows);
-            _callCheckAndMutateRow = clientHelper.BuildApiCall<CheckAndMutateRowRequest, CheckAndMutateRowResponse>(grpcClient.CheckAndMutateRowAsync, grpcClient.CheckAndMutateRow, effectiveSettings.CheckAndMutateRowSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<CheckAndMutateRowRequest>().WithExtractedParameter("table_name", "^(projects/[^/]+/instances/[^/]+/tables/[^/]+)/?$", request => request.TableName).WithExtractedParameter("app_profile_id", "^(.+)$", request => request.AppProfileId));
+            _callCheckAndMutateRow = clientHelper.BuildApiCall<CheckAndMutateRowRequest, CheckAndMutateRowResponse>("CheckAndMutateRow", grpcClient.CheckAndMutateRowAsync, grpcClient.CheckAndMutateRow, effectiveSettings.CheckAndMutateRowSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<CheckAndMutateRowRequest>().WithExtractedParameter("table_name", "^(projects/[^/]+/instances/[^/]+/tables/[^/]+)/?$", request => request.TableName).WithExtractedParameter("app_profile_id", "^(.+)$", request => request.AppProfileId));
             Modify_ApiCall(ref _callCheckAndMutateRow);
             Modify_CheckAndMutateRowApiCall(ref _callCheckAndMutateRow);
-            _callPingAndWarm = clientHelper.BuildApiCall<PingAndWarmRequest, PingAndWarmResponse>(grpcClient.PingAndWarmAsync, grpcClient.PingAndWarm, effectiveSettings.PingAndWarmSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<PingAndWarmRequest>().WithExtractedParameter("name", "^(projects/[^/]+/instances/[^/]+)/?$", request => request.Name).WithExtractedParameter("app_profile_id", "^(.+)$", request => request.AppProfileId));
+            _callPingAndWarm = clientHelper.BuildApiCall<PingAndWarmRequest, PingAndWarmResponse>("PingAndWarm", grpcClient.PingAndWarmAsync, grpcClient.PingAndWarm, effectiveSettings.PingAndWarmSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<PingAndWarmRequest>().WithExtractedParameter("name", "^(projects/[^/]+/instances/[^/]+)/?$", request => request.Name).WithExtractedParameter("app_profile_id", "^(.+)$", request => request.AppProfileId));
             Modify_ApiCall(ref _callPingAndWarm);
             Modify_PingAndWarmApiCall(ref _callPingAndWarm);
-            _callReadModifyWriteRow = clientHelper.BuildApiCall<ReadModifyWriteRowRequest, ReadModifyWriteRowResponse>(grpcClient.ReadModifyWriteRowAsync, grpcClient.ReadModifyWriteRow, effectiveSettings.ReadModifyWriteRowSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<ReadModifyWriteRowRequest>().WithExtractedParameter("table_name", "^(projects/[^/]+/instances/[^/]+/tables/[^/]+)/?$", request => request.TableName).WithExtractedParameter("app_profile_id", "^(.+)$", request => request.AppProfileId));
+            _callReadModifyWriteRow = clientHelper.BuildApiCall<ReadModifyWriteRowRequest, ReadModifyWriteRowResponse>("ReadModifyWriteRow", grpcClient.ReadModifyWriteRowAsync, grpcClient.ReadModifyWriteRow, effectiveSettings.ReadModifyWriteRowSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<ReadModifyWriteRowRequest>().WithExtractedParameter("table_name", "^(projects/[^/]+/instances/[^/]+/tables/[^/]+)/?$", request => request.TableName).WithExtractedParameter("app_profile_id", "^(.+)$", request => request.AppProfileId));
             Modify_ApiCall(ref _callReadModifyWriteRow);
             Modify_ReadModifyWriteRowApiCall(ref _callReadModifyWriteRow);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

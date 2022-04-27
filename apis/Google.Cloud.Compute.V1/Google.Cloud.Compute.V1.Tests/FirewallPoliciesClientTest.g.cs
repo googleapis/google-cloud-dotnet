@@ -61,7 +61,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
+            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null, null);
             FirewallPolicy response = client.Get(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -101,7 +101,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FirewallPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
+            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null, null);
             FirewallPolicy responseCallSettings = await client.GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             FirewallPolicy responseCancellationToken = await client.GetAsync(request, st::CancellationToken.None);
@@ -143,7 +143,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
+            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null, null);
             FirewallPolicy response = client.Get(request.FirewallPolicy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -183,7 +183,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FirewallPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
+            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null, null);
             FirewallPolicy responseCallSettings = await client.GetAsync(request.FirewallPolicy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             FirewallPolicy responseCancellationToken = await client.GetAsync(request.FirewallPolicy, st::CancellationToken.None);
@@ -210,7 +210,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 ShortName = "short_namec7ba9846",
             };
             mockGrpcClient.Setup(x => x.GetAssociation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
+            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null, null);
             FirewallPolicyAssociation response = client.GetAssociation(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -235,7 +235,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 ShortName = "short_namec7ba9846",
             };
             mockGrpcClient.Setup(x => x.GetAssociationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FirewallPolicyAssociation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
+            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null, null);
             FirewallPolicyAssociation responseCallSettings = await client.GetAssociationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             FirewallPolicyAssociation responseCancellationToken = await client.GetAssociationAsync(request, st::CancellationToken.None);
@@ -261,7 +261,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 ShortName = "short_namec7ba9846",
             };
             mockGrpcClient.Setup(x => x.GetAssociation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
+            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null, null);
             FirewallPolicyAssociation response = client.GetAssociation(request.FirewallPolicy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -285,7 +285,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 ShortName = "short_namec7ba9846",
             };
             mockGrpcClient.Setup(x => x.GetAssociationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FirewallPolicyAssociation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
+            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null, null);
             FirewallPolicyAssociation responseCallSettings = await client.GetAssociationAsync(request.FirewallPolicy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             FirewallPolicyAssociation responseCancellationToken = await client.GetAssociationAsync(request.FirewallPolicy, st::CancellationToken.None);
@@ -313,7 +313,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
+            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null, null);
             Policy response = client.GetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -339,7 +339,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
+            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null, null);
             Policy responseCallSettings = await client.GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Policy responseCancellationToken = await client.GetIamPolicyAsync(request, st::CancellationToken.None);
@@ -366,7 +366,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
+            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null, null);
             Policy response = client.GetIamPolicy(request.Resource);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -391,7 +391,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
+            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null, null);
             Policy responseCallSettings = await client.GetIamPolicyAsync(request.Resource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Policy responseCancellationToken = await client.GetIamPolicyAsync(request.Resource, st::CancellationToken.None);
@@ -435,7 +435,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetRule(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
+            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null, null);
             FirewallPolicyRule response = client.GetRule(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -477,7 +477,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetRuleAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FirewallPolicyRule>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
+            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null, null);
             FirewallPolicyRule responseCallSettings = await client.GetRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             FirewallPolicyRule responseCancellationToken = await client.GetRuleAsync(request, st::CancellationToken.None);
@@ -520,7 +520,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetRule(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
+            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null, null);
             FirewallPolicyRule response = client.GetRule(request.FirewallPolicy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -561,7 +561,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetRuleAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FirewallPolicyRule>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
+            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null, null);
             FirewallPolicyRule responseCallSettings = await client.GetRuleAsync(request.FirewallPolicy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             FirewallPolicyRule responseCancellationToken = await client.GetRuleAsync(request.FirewallPolicy, st::CancellationToken.None);
@@ -587,7 +587,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.ListAssociations(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
+            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null, null);
             FirewallPoliciesListAssociationsResponse response = client.ListAssociations(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -611,7 +611,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.ListAssociationsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FirewallPoliciesListAssociationsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
+            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null, null);
             FirewallPoliciesListAssociationsResponse responseCallSettings = await client.ListAssociationsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             FirewallPoliciesListAssociationsResponse responseCancellationToken = await client.ListAssociationsAsync(request, st::CancellationToken.None);
@@ -634,7 +634,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.ListAssociations(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
+            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null, null);
             FirewallPoliciesListAssociationsResponse response = client.ListAssociations();
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -655,7 +655,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.ListAssociationsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FirewallPoliciesListAssociationsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
+            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null, null);
             FirewallPoliciesListAssociationsResponse responseCallSettings = await client.ListAssociationsAsync(gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             FirewallPoliciesListAssociationsResponse responseCancellationToken = await client.ListAssociationsAsync(st::CancellationToken.None);
@@ -683,7 +683,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
+            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null, null);
             Policy response = client.SetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -709,7 +709,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
+            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null, null);
             Policy responseCallSettings = await client.SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Policy responseCancellationToken = await client.SetIamPolicyAsync(request, st::CancellationToken.None);
@@ -737,7 +737,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
+            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null, null);
             Policy response = client.SetIamPolicy(request.Resource, request.GlobalOrganizationSetPolicyRequestResource);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -763,7 +763,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
+            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null, null);
             Policy responseCallSettings = await client.SetIamPolicyAsync(request.Resource, request.GlobalOrganizationSetPolicyRequestResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Policy responseCancellationToken = await client.SetIamPolicyAsync(request.Resource, request.GlobalOrganizationSetPolicyRequestResource, st::CancellationToken.None);
@@ -789,7 +789,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
+            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null, null);
             TestPermissionsResponse response = client.TestIamPermissions(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -813,7 +813,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TestPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
+            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null, null);
             TestPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TestPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request, st::CancellationToken.None);
@@ -839,7 +839,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
+            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null, null);
             TestPermissionsResponse response = client.TestIamPermissions(request.Resource, request.TestPermissionsRequestResource);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -863,7 +863,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TestPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
+            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null, null);
             TestPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request.Resource, request.TestPermissionsRequestResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TestPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request.Resource, request.TestPermissionsRequestResource, st::CancellationToken.None);

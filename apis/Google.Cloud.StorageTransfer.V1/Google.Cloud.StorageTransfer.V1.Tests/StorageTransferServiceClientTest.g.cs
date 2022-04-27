@@ -43,7 +43,7 @@ namespace Google.Cloud.StorageTransfer.V1.Tests
                 SubjectId = "subject_idd1a1abff",
             };
             mockGrpcClient.Setup(x => x.GetGoogleServiceAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null);
+            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null, null);
             GoogleServiceAccount response = client.GetGoogleServiceAccount(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -64,7 +64,7 @@ namespace Google.Cloud.StorageTransfer.V1.Tests
                 SubjectId = "subject_idd1a1abff",
             };
             mockGrpcClient.Setup(x => x.GetGoogleServiceAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GoogleServiceAccount>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null);
+            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null, null);
             GoogleServiceAccount responseCallSettings = await client.GetGoogleServiceAccountAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GoogleServiceAccount responseCancellationToken = await client.GetGoogleServiceAccountAsync(request, st::CancellationToken.None);
@@ -97,7 +97,7 @@ namespace Google.Cloud.StorageTransfer.V1.Tests
                 LoggingConfig = new LoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateTransferJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null);
+            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null, null);
             TransferJob response = client.CreateTransferJob(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -128,7 +128,7 @@ namespace Google.Cloud.StorageTransfer.V1.Tests
                 LoggingConfig = new LoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateTransferJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransferJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null);
+            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null, null);
             TransferJob responseCallSettings = await client.CreateTransferJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TransferJob responseCancellationToken = await client.CreateTransferJobAsync(request, st::CancellationToken.None);
@@ -164,7 +164,7 @@ namespace Google.Cloud.StorageTransfer.V1.Tests
                 LoggingConfig = new LoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateTransferJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null);
+            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null, null);
             TransferJob response = client.UpdateTransferJob(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -198,7 +198,7 @@ namespace Google.Cloud.StorageTransfer.V1.Tests
                 LoggingConfig = new LoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateTransferJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransferJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null);
+            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null, null);
             TransferJob responseCallSettings = await client.UpdateTransferJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TransferJob responseCancellationToken = await client.UpdateTransferJobAsync(request, st::CancellationToken.None);
@@ -232,7 +232,7 @@ namespace Google.Cloud.StorageTransfer.V1.Tests
                 LoggingConfig = new LoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.GetTransferJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null);
+            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null, null);
             TransferJob response = client.GetTransferJob(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -264,7 +264,7 @@ namespace Google.Cloud.StorageTransfer.V1.Tests
                 LoggingConfig = new LoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.GetTransferJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransferJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null);
+            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null, null);
             TransferJob responseCallSettings = await client.GetTransferJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TransferJob responseCancellationToken = await client.GetTransferJobAsync(request, st::CancellationToken.None);
@@ -283,7 +283,7 @@ namespace Google.Cloud.StorageTransfer.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.PauseTransferOperation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null);
+            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null, null);
             client.PauseTransferOperation(request);
             mockGrpcClient.VerifyAll();
         }
@@ -299,7 +299,7 @@ namespace Google.Cloud.StorageTransfer.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.PauseTransferOperationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null);
+            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.PauseTransferOperationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.PauseTransferOperationAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -316,7 +316,7 @@ namespace Google.Cloud.StorageTransfer.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ResumeTransferOperation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null);
+            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null, null);
             client.ResumeTransferOperation(request);
             mockGrpcClient.VerifyAll();
         }
@@ -332,7 +332,7 @@ namespace Google.Cloud.StorageTransfer.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ResumeTransferOperationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null);
+            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.ResumeTransferOperationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.ResumeTransferOperationAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -357,7 +357,7 @@ namespace Google.Cloud.StorageTransfer.V1.Tests
                 BandwidthLimit = new AgentPool.Types.BandwidthLimit(),
             };
             mockGrpcClient.Setup(x => x.CreateAgentPool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null);
+            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null, null);
             AgentPool response = client.CreateAgentPool(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -382,7 +382,7 @@ namespace Google.Cloud.StorageTransfer.V1.Tests
                 BandwidthLimit = new AgentPool.Types.BandwidthLimit(),
             };
             mockGrpcClient.Setup(x => x.CreateAgentPoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AgentPool>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null);
+            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null, null);
             AgentPool responseCallSettings = await client.CreateAgentPoolAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AgentPool responseCancellationToken = await client.CreateAgentPoolAsync(request, st::CancellationToken.None);
@@ -409,7 +409,7 @@ namespace Google.Cloud.StorageTransfer.V1.Tests
                 BandwidthLimit = new AgentPool.Types.BandwidthLimit(),
             };
             mockGrpcClient.Setup(x => x.CreateAgentPool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null);
+            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null, null);
             AgentPool response = client.CreateAgentPool(request.ProjectId, request.AgentPool, request.AgentPoolId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -434,7 +434,7 @@ namespace Google.Cloud.StorageTransfer.V1.Tests
                 BandwidthLimit = new AgentPool.Types.BandwidthLimit(),
             };
             mockGrpcClient.Setup(x => x.CreateAgentPoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AgentPool>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null);
+            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null, null);
             AgentPool responseCallSettings = await client.CreateAgentPoolAsync(request.ProjectId, request.AgentPool, request.AgentPoolId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AgentPool responseCancellationToken = await client.CreateAgentPoolAsync(request.ProjectId, request.AgentPool, request.AgentPoolId, st::CancellationToken.None);
@@ -460,7 +460,7 @@ namespace Google.Cloud.StorageTransfer.V1.Tests
                 BandwidthLimit = new AgentPool.Types.BandwidthLimit(),
             };
             mockGrpcClient.Setup(x => x.UpdateAgentPool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null);
+            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null, null);
             AgentPool response = client.UpdateAgentPool(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -484,7 +484,7 @@ namespace Google.Cloud.StorageTransfer.V1.Tests
                 BandwidthLimit = new AgentPool.Types.BandwidthLimit(),
             };
             mockGrpcClient.Setup(x => x.UpdateAgentPoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AgentPool>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null);
+            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null, null);
             AgentPool responseCallSettings = await client.UpdateAgentPoolAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AgentPool responseCancellationToken = await client.UpdateAgentPoolAsync(request, st::CancellationToken.None);
@@ -510,7 +510,7 @@ namespace Google.Cloud.StorageTransfer.V1.Tests
                 BandwidthLimit = new AgentPool.Types.BandwidthLimit(),
             };
             mockGrpcClient.Setup(x => x.UpdateAgentPool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null);
+            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null, null);
             AgentPool response = client.UpdateAgentPool(request.AgentPool, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -534,7 +534,7 @@ namespace Google.Cloud.StorageTransfer.V1.Tests
                 BandwidthLimit = new AgentPool.Types.BandwidthLimit(),
             };
             mockGrpcClient.Setup(x => x.UpdateAgentPoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AgentPool>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null);
+            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null, null);
             AgentPool responseCallSettings = await client.UpdateAgentPoolAsync(request.AgentPool, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AgentPool responseCancellationToken = await client.UpdateAgentPoolAsync(request.AgentPool, request.UpdateMask, st::CancellationToken.None);
@@ -559,7 +559,7 @@ namespace Google.Cloud.StorageTransfer.V1.Tests
                 BandwidthLimit = new AgentPool.Types.BandwidthLimit(),
             };
             mockGrpcClient.Setup(x => x.GetAgentPool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null);
+            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null, null);
             AgentPool response = client.GetAgentPool(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -582,7 +582,7 @@ namespace Google.Cloud.StorageTransfer.V1.Tests
                 BandwidthLimit = new AgentPool.Types.BandwidthLimit(),
             };
             mockGrpcClient.Setup(x => x.GetAgentPoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AgentPool>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null);
+            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null, null);
             AgentPool responseCallSettings = await client.GetAgentPoolAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AgentPool responseCancellationToken = await client.GetAgentPoolAsync(request, st::CancellationToken.None);
@@ -607,7 +607,7 @@ namespace Google.Cloud.StorageTransfer.V1.Tests
                 BandwidthLimit = new AgentPool.Types.BandwidthLimit(),
             };
             mockGrpcClient.Setup(x => x.GetAgentPool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null);
+            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null, null);
             AgentPool response = client.GetAgentPool(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -630,7 +630,7 @@ namespace Google.Cloud.StorageTransfer.V1.Tests
                 BandwidthLimit = new AgentPool.Types.BandwidthLimit(),
             };
             mockGrpcClient.Setup(x => x.GetAgentPoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AgentPool>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null);
+            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null, null);
             AgentPool responseCallSettings = await client.GetAgentPoolAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AgentPool responseCancellationToken = await client.GetAgentPoolAsync(request.Name, st::CancellationToken.None);
@@ -649,7 +649,7 @@ namespace Google.Cloud.StorageTransfer.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAgentPool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null);
+            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteAgentPool(request);
             mockGrpcClient.VerifyAll();
         }
@@ -665,7 +665,7 @@ namespace Google.Cloud.StorageTransfer.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAgentPoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null);
+            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteAgentPoolAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteAgentPoolAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -682,7 +682,7 @@ namespace Google.Cloud.StorageTransfer.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAgentPool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null);
+            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteAgentPool(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -698,7 +698,7 @@ namespace Google.Cloud.StorageTransfer.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAgentPoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null);
+            StorageTransferServiceClient client = new StorageTransferServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteAgentPoolAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteAgentPoolAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();

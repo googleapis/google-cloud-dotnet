@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -192,9 +192,8 @@ namespace Google.Cloud.Vision.V1
         public ImageAnnotatorSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public ImageAnnotatorClientBuilder()
+        public ImageAnnotatorClientBuilder() : base(ImageAnnotatorClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = ImageAnnotatorClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref ImageAnnotatorClient client);
@@ -221,29 +220,18 @@ namespace Google.Cloud.Vision.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ImageAnnotatorClient.Create(callInvoker, Settings);
+            return ImageAnnotatorClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<ImageAnnotatorClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ImageAnnotatorClient.Create(callInvoker, Settings);
+            return ImageAnnotatorClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => ImageAnnotatorClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => ImageAnnotatorClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => ImageAnnotatorClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>ImageAnnotator client wrapper, for convenient use.</summary>
@@ -274,19 +262,10 @@ namespace Google.Cloud.Vision.V1
             "https://www.googleapis.com/auth/cloud-vision",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(ImageAnnotator.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="ImageAnnotatorClient"/> using the default credentials, endpoint and
@@ -313,8 +292,9 @@ namespace Google.Cloud.Vision.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="ImageAnnotatorSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="ImageAnnotatorClient"/>.</returns>
-        internal static ImageAnnotatorClient Create(grpccore::CallInvoker callInvoker, ImageAnnotatorSettings settings = null)
+        internal static ImageAnnotatorClient Create(grpccore::CallInvoker callInvoker, ImageAnnotatorSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -323,7 +303,7 @@ namespace Google.Cloud.Vision.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             ImageAnnotator.ImageAnnotatorClient grpcClient = new ImageAnnotator.ImageAnnotatorClient(callInvoker);
-            return new ImageAnnotatorClientImpl(grpcClient, settings);
+            return new ImageAnnotatorClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -834,23 +814,24 @@ namespace Google.Cloud.Vision.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="ImageAnnotatorSettings"/> used within this client.</param>
-        public ImageAnnotatorClientImpl(ImageAnnotator.ImageAnnotatorClient grpcClient, ImageAnnotatorSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public ImageAnnotatorClientImpl(ImageAnnotator.ImageAnnotatorClient grpcClient, ImageAnnotatorSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             ImageAnnotatorSettings effectiveSettings = settings ?? ImageAnnotatorSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            AsyncBatchAnnotateImagesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AsyncBatchAnnotateImagesOperationsSettings);
-            AsyncBatchAnnotateFilesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AsyncBatchAnnotateFilesOperationsSettings);
-            _callBatchAnnotateImages = clientHelper.BuildApiCall<BatchAnnotateImagesRequest, BatchAnnotateImagesResponse>(grpcClient.BatchAnnotateImagesAsync, grpcClient.BatchAnnotateImages, effectiveSettings.BatchAnnotateImagesSettings);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            AsyncBatchAnnotateImagesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AsyncBatchAnnotateImagesOperationsSettings, logger);
+            AsyncBatchAnnotateFilesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AsyncBatchAnnotateFilesOperationsSettings, logger);
+            _callBatchAnnotateImages = clientHelper.BuildApiCall<BatchAnnotateImagesRequest, BatchAnnotateImagesResponse>("BatchAnnotateImages", grpcClient.BatchAnnotateImagesAsync, grpcClient.BatchAnnotateImages, effectiveSettings.BatchAnnotateImagesSettings);
             Modify_ApiCall(ref _callBatchAnnotateImages);
             Modify_BatchAnnotateImagesApiCall(ref _callBatchAnnotateImages);
-            _callBatchAnnotateFiles = clientHelper.BuildApiCall<BatchAnnotateFilesRequest, BatchAnnotateFilesResponse>(grpcClient.BatchAnnotateFilesAsync, grpcClient.BatchAnnotateFiles, effectiveSettings.BatchAnnotateFilesSettings);
+            _callBatchAnnotateFiles = clientHelper.BuildApiCall<BatchAnnotateFilesRequest, BatchAnnotateFilesResponse>("BatchAnnotateFiles", grpcClient.BatchAnnotateFilesAsync, grpcClient.BatchAnnotateFiles, effectiveSettings.BatchAnnotateFilesSettings);
             Modify_ApiCall(ref _callBatchAnnotateFiles);
             Modify_BatchAnnotateFilesApiCall(ref _callBatchAnnotateFiles);
-            _callAsyncBatchAnnotateImages = clientHelper.BuildApiCall<AsyncBatchAnnotateImagesRequest, lro::Operation>(grpcClient.AsyncBatchAnnotateImagesAsync, grpcClient.AsyncBatchAnnotateImages, effectiveSettings.AsyncBatchAnnotateImagesSettings);
+            _callAsyncBatchAnnotateImages = clientHelper.BuildApiCall<AsyncBatchAnnotateImagesRequest, lro::Operation>("AsyncBatchAnnotateImages", grpcClient.AsyncBatchAnnotateImagesAsync, grpcClient.AsyncBatchAnnotateImages, effectiveSettings.AsyncBatchAnnotateImagesSettings);
             Modify_ApiCall(ref _callAsyncBatchAnnotateImages);
             Modify_AsyncBatchAnnotateImagesApiCall(ref _callAsyncBatchAnnotateImages);
-            _callAsyncBatchAnnotateFiles = clientHelper.BuildApiCall<AsyncBatchAnnotateFilesRequest, lro::Operation>(grpcClient.AsyncBatchAnnotateFilesAsync, grpcClient.AsyncBatchAnnotateFiles, effectiveSettings.AsyncBatchAnnotateFilesSettings);
+            _callAsyncBatchAnnotateFiles = clientHelper.BuildApiCall<AsyncBatchAnnotateFilesRequest, lro::Operation>("AsyncBatchAnnotateFiles", grpcClient.AsyncBatchAnnotateFilesAsync, grpcClient.AsyncBatchAnnotateFiles, effectiveSettings.AsyncBatchAnnotateFilesSettings);
             Modify_ApiCall(ref _callAsyncBatchAnnotateFiles);
             Modify_AsyncBatchAnnotateFilesApiCall(ref _callAsyncBatchAnnotateFiles);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

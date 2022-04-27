@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -227,9 +227,8 @@ namespace Google.Cloud.Compute.V1
         public InterconnectsSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public InterconnectsClientBuilder()
+        public InterconnectsClientBuilder() : base(InterconnectsClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = InterconnectsClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref InterconnectsClient client);
@@ -256,29 +255,18 @@ namespace Google.Cloud.Compute.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return InterconnectsClient.Create(callInvoker, Settings);
+            return InterconnectsClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<InterconnectsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return InterconnectsClient.Create(callInvoker, Settings);
+            return InterconnectsClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => InterconnectsClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => InterconnectsClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => InterconnectsClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => ComputeRestAdapter.ComputeAdapter;
     }
 
     /// <summary>Interconnects client wrapper, for convenient use.</summary>
@@ -307,19 +295,10 @@ namespace Google.Cloud.Compute.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Interconnects.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="InterconnectsClient"/> using the default credentials, endpoint and
@@ -346,8 +325,9 @@ namespace Google.Cloud.Compute.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="InterconnectsSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="InterconnectsClient"/>.</returns>
-        internal static InterconnectsClient Create(grpccore::CallInvoker callInvoker, InterconnectsSettings settings = null)
+        internal static InterconnectsClient Create(grpccore::CallInvoker callInvoker, InterconnectsSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -356,7 +336,7 @@ namespace Google.Cloud.Compute.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             Interconnects.InterconnectsClient grpcClient = new Interconnects.InterconnectsClient(callInvoker);
-            return new InterconnectsClientImpl(grpcClient, settings);
+            return new InterconnectsClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -939,30 +919,31 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="InterconnectsSettings"/> used within this client.</param>
-        public InterconnectsClientImpl(Interconnects.InterconnectsClient grpcClient, InterconnectsSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public InterconnectsClientImpl(Interconnects.InterconnectsClient grpcClient, InterconnectsSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             InterconnectsSettings effectiveSettings = settings ?? InterconnectsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings);
-            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings);
-            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchOperationsSettings);
-            _callDelete = clientHelper.BuildApiCall<DeleteInterconnectRequest, Operation>(grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("interconnect", request => request.Interconnect);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings, logger);
+            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings, logger);
+            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchOperationsSettings, logger);
+            _callDelete = clientHelper.BuildApiCall<DeleteInterconnectRequest, Operation>("Delete", grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("interconnect", request => request.Interconnect);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);
-            _callGet = clientHelper.BuildApiCall<GetInterconnectRequest, Interconnect>(grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("interconnect", request => request.Interconnect);
+            _callGet = clientHelper.BuildApiCall<GetInterconnectRequest, Interconnect>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("interconnect", request => request.Interconnect);
             Modify_ApiCall(ref _callGet);
             Modify_GetApiCall(ref _callGet);
-            _callGetDiagnostics = clientHelper.BuildApiCall<GetDiagnosticsInterconnectRequest, InterconnectsGetDiagnosticsResponse>(grpcClient.GetDiagnosticsAsync, grpcClient.GetDiagnostics, effectiveSettings.GetDiagnosticsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("interconnect", request => request.Interconnect);
+            _callGetDiagnostics = clientHelper.BuildApiCall<GetDiagnosticsInterconnectRequest, InterconnectsGetDiagnosticsResponse>("GetDiagnostics", grpcClient.GetDiagnosticsAsync, grpcClient.GetDiagnostics, effectiveSettings.GetDiagnosticsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("interconnect", request => request.Interconnect);
             Modify_ApiCall(ref _callGetDiagnostics);
             Modify_GetDiagnosticsApiCall(ref _callGetDiagnostics);
-            _callInsert = clientHelper.BuildApiCall<InsertInterconnectRequest, Operation>(grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callInsert = clientHelper.BuildApiCall<InsertInterconnectRequest, Operation>("Insert", grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callInsert);
             Modify_InsertApiCall(ref _callInsert);
-            _callList = clientHelper.BuildApiCall<ListInterconnectsRequest, InterconnectList>(grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callList = clientHelper.BuildApiCall<ListInterconnectsRequest, InterconnectList>("List", grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callList);
             Modify_ListApiCall(ref _callList);
-            _callPatch = clientHelper.BuildApiCall<PatchInterconnectRequest, Operation>(grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("interconnect", request => request.Interconnect);
+            _callPatch = clientHelper.BuildApiCall<PatchInterconnectRequest, Operation>("Patch", grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("interconnect", request => request.Interconnect);
             Modify_ApiCall(ref _callPatch);
             Modify_PatchApiCall(ref _callPatch);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

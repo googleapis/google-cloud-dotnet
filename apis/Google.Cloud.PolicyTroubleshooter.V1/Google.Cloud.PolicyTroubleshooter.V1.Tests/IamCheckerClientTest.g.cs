@@ -43,7 +43,7 @@ namespace Google.Cloud.PolicyTroubleshooter.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TroubleshootIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IamCheckerClient client = new IamCheckerClientImpl(mockGrpcClient.Object, null);
+            IamCheckerClient client = new IamCheckerClientImpl(mockGrpcClient.Object, null, null);
             TroubleshootIamPolicyResponse response = client.TroubleshootIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -66,7 +66,7 @@ namespace Google.Cloud.PolicyTroubleshooter.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TroubleshootIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TroubleshootIamPolicyResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IamCheckerClient client = new IamCheckerClientImpl(mockGrpcClient.Object, null);
+            IamCheckerClient client = new IamCheckerClientImpl(mockGrpcClient.Object, null, null);
             TroubleshootIamPolicyResponse responseCallSettings = await client.TroubleshootIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TroubleshootIamPolicyResponse responseCancellationToken = await client.TroubleshootIamPolicyAsync(request, st::CancellationToken.None);

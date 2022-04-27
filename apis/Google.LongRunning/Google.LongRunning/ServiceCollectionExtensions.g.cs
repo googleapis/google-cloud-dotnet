@@ -23,7 +23,7 @@ using scg = System.Collections.Generic;
 namespace Microsoft.Extensions.DependencyInjection
 {
     /// <summary>Static class to provide extension methods to configure API clients.</summary>
-    public static class ServiceCollectionExtensions
+    public static partial class ServiceCollectionExtensions
     {
         /// <summary>Adds a singleton <see cref="lro::OperationsClient"/> to <paramref name="services"/>.</summary>
         /// <param name="services">

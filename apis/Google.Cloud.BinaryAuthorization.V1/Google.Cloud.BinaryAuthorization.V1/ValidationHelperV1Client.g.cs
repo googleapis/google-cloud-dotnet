@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -77,9 +77,8 @@ namespace Google.Cloud.BinaryAuthorization.V1
         public ValidationHelperV1Settings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public ValidationHelperV1ClientBuilder()
+        public ValidationHelperV1ClientBuilder() : base(ValidationHelperV1Client.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = ValidationHelperV1Client.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref ValidationHelperV1Client client);
@@ -106,29 +105,18 @@ namespace Google.Cloud.BinaryAuthorization.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ValidationHelperV1Client.Create(callInvoker, Settings);
+            return ValidationHelperV1Client.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<ValidationHelperV1Client> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ValidationHelperV1Client.Create(callInvoker, Settings);
+            return ValidationHelperV1Client.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => ValidationHelperV1Client.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => ValidationHelperV1Client.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => ValidationHelperV1Client.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>ValidationHelperV1 client wrapper, for convenient use.</summary>
@@ -155,19 +143,10 @@ namespace Google.Cloud.BinaryAuthorization.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(ValidationHelperV1.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="ValidationHelperV1Client"/> using the default credentials, endpoint and
@@ -197,8 +176,9 @@ namespace Google.Cloud.BinaryAuthorization.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="ValidationHelperV1Settings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="ValidationHelperV1Client"/>.</returns>
-        internal static ValidationHelperV1Client Create(grpccore::CallInvoker callInvoker, ValidationHelperV1Settings settings = null)
+        internal static ValidationHelperV1Client Create(grpccore::CallInvoker callInvoker, ValidationHelperV1Settings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -207,7 +187,7 @@ namespace Google.Cloud.BinaryAuthorization.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             ValidationHelperV1.ValidationHelperV1Client grpcClient = new ValidationHelperV1.ValidationHelperV1Client(callInvoker);
-            return new ValidationHelperV1ClientImpl(grpcClient, settings);
+            return new ValidationHelperV1ClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -270,12 +250,13 @@ namespace Google.Cloud.BinaryAuthorization.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="ValidationHelperV1Settings"/> used within this client.</param>
-        public ValidationHelperV1ClientImpl(ValidationHelperV1.ValidationHelperV1Client grpcClient, ValidationHelperV1Settings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public ValidationHelperV1ClientImpl(ValidationHelperV1.ValidationHelperV1Client grpcClient, ValidationHelperV1Settings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             ValidationHelperV1Settings effectiveSettings = settings ?? ValidationHelperV1Settings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callValidateAttestationOccurrence = clientHelper.BuildApiCall<ValidateAttestationOccurrenceRequest, ValidateAttestationOccurrenceResponse>(grpcClient.ValidateAttestationOccurrenceAsync, grpcClient.ValidateAttestationOccurrence, effectiveSettings.ValidateAttestationOccurrenceSettings).WithGoogleRequestParam("attestor", request => request.Attestor);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callValidateAttestationOccurrence = clientHelper.BuildApiCall<ValidateAttestationOccurrenceRequest, ValidateAttestationOccurrenceResponse>("ValidateAttestationOccurrence", grpcClient.ValidateAttestationOccurrenceAsync, grpcClient.ValidateAttestationOccurrence, effectiveSettings.ValidateAttestationOccurrenceSettings).WithGoogleRequestParam("attestor", request => request.Attestor);
             Modify_ApiCall(ref _callValidateAttestationOccurrence);
             Modify_ValidateAttestationOccurrenceApiCall(ref _callValidateAttestationOccurrence);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

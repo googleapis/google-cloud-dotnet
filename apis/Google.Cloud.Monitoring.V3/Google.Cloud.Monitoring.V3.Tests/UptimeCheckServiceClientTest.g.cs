@@ -68,7 +68,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null, null);
             UptimeCheckConfig response = client.GetUptimeCheckConfig(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -113,7 +113,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UptimeCheckConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null, null);
             UptimeCheckConfig responseCallSettings = await client.GetUptimeCheckConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UptimeCheckConfig responseCancellationToken = await client.GetUptimeCheckConfigAsync(request, st::CancellationToken.None);
@@ -160,7 +160,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null, null);
             UptimeCheckConfig response = client.GetUptimeCheckConfig(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -205,7 +205,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UptimeCheckConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null, null);
             UptimeCheckConfig responseCallSettings = await client.GetUptimeCheckConfigAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UptimeCheckConfig responseCancellationToken = await client.GetUptimeCheckConfigAsync(request.Name, st::CancellationToken.None);
@@ -252,7 +252,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null, null);
             UptimeCheckConfig response = client.GetUptimeCheckConfig(request.UptimeCheckConfigName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -297,7 +297,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UptimeCheckConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null, null);
             UptimeCheckConfig responseCallSettings = await client.GetUptimeCheckConfigAsync(request.UptimeCheckConfigName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UptimeCheckConfig responseCancellationToken = await client.GetUptimeCheckConfigAsync(request.UptimeCheckConfigName, st::CancellationToken.None);
@@ -344,7 +344,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null, null);
             UptimeCheckConfig response = client.GetUptimeCheckConfig(request.ResourceName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -389,7 +389,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UptimeCheckConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null, null);
             UptimeCheckConfig responseCallSettings = await client.GetUptimeCheckConfigAsync(request.ResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UptimeCheckConfig responseCancellationToken = await client.GetUptimeCheckConfigAsync(request.ResourceName, st::CancellationToken.None);
@@ -437,7 +437,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreateUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null, null);
             UptimeCheckConfig response = client.CreateUptimeCheckConfig(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -483,7 +483,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreateUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UptimeCheckConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null, null);
             UptimeCheckConfig responseCallSettings = await client.CreateUptimeCheckConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UptimeCheckConfig responseCancellationToken = await client.CreateUptimeCheckConfigAsync(request, st::CancellationToken.None);
@@ -531,7 +531,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreateUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null, null);
             UptimeCheckConfig response = client.CreateUptimeCheckConfig(request.Parent, request.UptimeCheckConfig);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -577,7 +577,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreateUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UptimeCheckConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null, null);
             UptimeCheckConfig responseCallSettings = await client.CreateUptimeCheckConfigAsync(request.Parent, request.UptimeCheckConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UptimeCheckConfig responseCancellationToken = await client.CreateUptimeCheckConfigAsync(request.Parent, request.UptimeCheckConfig, st::CancellationToken.None);
@@ -625,7 +625,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreateUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null, null);
             UptimeCheckConfig response = client.CreateUptimeCheckConfig(request.ParentAsProjectName, request.UptimeCheckConfig);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -671,7 +671,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreateUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UptimeCheckConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null, null);
             UptimeCheckConfig responseCallSettings = await client.CreateUptimeCheckConfigAsync(request.ParentAsProjectName, request.UptimeCheckConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UptimeCheckConfig responseCancellationToken = await client.CreateUptimeCheckConfigAsync(request.ParentAsProjectName, request.UptimeCheckConfig, st::CancellationToken.None);
@@ -719,7 +719,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreateUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null, null);
             UptimeCheckConfig response = client.CreateUptimeCheckConfig(request.ParentAsOrganizationName, request.UptimeCheckConfig);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -765,7 +765,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreateUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UptimeCheckConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null, null);
             UptimeCheckConfig responseCallSettings = await client.CreateUptimeCheckConfigAsync(request.ParentAsOrganizationName, request.UptimeCheckConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UptimeCheckConfig responseCancellationToken = await client.CreateUptimeCheckConfigAsync(request.ParentAsOrganizationName, request.UptimeCheckConfig, st::CancellationToken.None);
@@ -813,7 +813,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreateUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null, null);
             UptimeCheckConfig response = client.CreateUptimeCheckConfig(request.ParentAsFolderName, request.UptimeCheckConfig);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -859,7 +859,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreateUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UptimeCheckConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null, null);
             UptimeCheckConfig responseCallSettings = await client.CreateUptimeCheckConfigAsync(request.ParentAsFolderName, request.UptimeCheckConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UptimeCheckConfig responseCancellationToken = await client.CreateUptimeCheckConfigAsync(request.ParentAsFolderName, request.UptimeCheckConfig, st::CancellationToken.None);
@@ -907,7 +907,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreateUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null, null);
             UptimeCheckConfig response = client.CreateUptimeCheckConfig(request.ParentAsResourceName, request.UptimeCheckConfig);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -953,7 +953,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreateUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UptimeCheckConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null, null);
             UptimeCheckConfig responseCallSettings = await client.CreateUptimeCheckConfigAsync(request.ParentAsResourceName, request.UptimeCheckConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UptimeCheckConfig responseCancellationToken = await client.CreateUptimeCheckConfigAsync(request.ParentAsResourceName, request.UptimeCheckConfig, st::CancellationToken.None);
@@ -1001,7 +1001,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.UpdateUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null, null);
             UptimeCheckConfig response = client.UpdateUptimeCheckConfig(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1047,7 +1047,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.UpdateUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UptimeCheckConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null, null);
             UptimeCheckConfig responseCallSettings = await client.UpdateUptimeCheckConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UptimeCheckConfig responseCancellationToken = await client.UpdateUptimeCheckConfigAsync(request, st::CancellationToken.None);
@@ -1094,7 +1094,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.UpdateUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null, null);
             UptimeCheckConfig response = client.UpdateUptimeCheckConfig(request.UptimeCheckConfig);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1139,7 +1139,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.UpdateUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UptimeCheckConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null, null);
             UptimeCheckConfig responseCallSettings = await client.UpdateUptimeCheckConfigAsync(request.UptimeCheckConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UptimeCheckConfig responseCancellationToken = await client.UpdateUptimeCheckConfigAsync(request.UptimeCheckConfig, st::CancellationToken.None);
@@ -1157,7 +1157,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteUptimeCheckConfig(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1172,7 +1172,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteUptimeCheckConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteUptimeCheckConfigAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1188,7 +1188,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteUptimeCheckConfig(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -1203,7 +1203,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteUptimeCheckConfigAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteUptimeCheckConfigAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1219,7 +1219,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteUptimeCheckConfig(request.UptimeCheckConfigName);
             mockGrpcClient.VerifyAll();
         }
@@ -1234,7 +1234,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteUptimeCheckConfigAsync(request.UptimeCheckConfigName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteUptimeCheckConfigAsync(request.UptimeCheckConfigName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1250,7 +1250,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteUptimeCheckConfig(request.ResourceName);
             mockGrpcClient.VerifyAll();
         }
@@ -1265,7 +1265,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteUptimeCheckConfigAsync(request.ResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteUptimeCheckConfigAsync(request.ResourceName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();

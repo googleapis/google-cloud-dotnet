@@ -47,7 +47,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 AccountDefenderAssessment = new AccountDefenderAssessment(),
             };
             mockGrpcClient.Setup(x => x.CreateAssessment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null, null);
             Assessment response = client.CreateAssessment(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -71,7 +71,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 AccountDefenderAssessment = new AccountDefenderAssessment(),
             };
             mockGrpcClient.Setup(x => x.CreateAssessmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Assessment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null, null);
             Assessment responseCallSettings = await client.CreateAssessmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Assessment responseCancellationToken = await client.CreateAssessmentAsync(request, st::CancellationToken.None);
@@ -97,7 +97,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 AccountDefenderAssessment = new AccountDefenderAssessment(),
             };
             mockGrpcClient.Setup(x => x.CreateAssessment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null, null);
             Assessment response = client.CreateAssessment(request.Parent, request.Assessment);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -121,7 +121,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 AccountDefenderAssessment = new AccountDefenderAssessment(),
             };
             mockGrpcClient.Setup(x => x.CreateAssessmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Assessment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null, null);
             Assessment responseCallSettings = await client.CreateAssessmentAsync(request.Parent, request.Assessment, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Assessment responseCancellationToken = await client.CreateAssessmentAsync(request.Parent, request.Assessment, st::CancellationToken.None);
@@ -147,7 +147,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 AccountDefenderAssessment = new AccountDefenderAssessment(),
             };
             mockGrpcClient.Setup(x => x.CreateAssessment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null, null);
             Assessment response = client.CreateAssessment(request.ParentAsProjectName, request.Assessment);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -171,7 +171,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 AccountDefenderAssessment = new AccountDefenderAssessment(),
             };
             mockGrpcClient.Setup(x => x.CreateAssessmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Assessment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null, null);
             Assessment responseCallSettings = await client.CreateAssessmentAsync(request.ParentAsProjectName, request.Assessment, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Assessment responseCancellationToken = await client.CreateAssessmentAsync(request.ParentAsProjectName, request.Assessment, st::CancellationToken.None);
@@ -195,7 +195,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
             };
             AnnotateAssessmentResponse expectedResponse = new AnnotateAssessmentResponse { };
             mockGrpcClient.Setup(x => x.AnnotateAssessment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null, null);
             AnnotateAssessmentResponse response = client.AnnotateAssessment(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -217,7 +217,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
             };
             AnnotateAssessmentResponse expectedResponse = new AnnotateAssessmentResponse { };
             mockGrpcClient.Setup(x => x.AnnotateAssessmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnnotateAssessmentResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null, null);
             AnnotateAssessmentResponse responseCallSettings = await client.AnnotateAssessmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AnnotateAssessmentResponse responseCancellationToken = await client.AnnotateAssessmentAsync(request, st::CancellationToken.None);
@@ -236,7 +236,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
             };
             AnnotateAssessmentResponse expectedResponse = new AnnotateAssessmentResponse { };
             mockGrpcClient.Setup(x => x.AnnotateAssessment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null, null);
             AnnotateAssessmentResponse response = client.AnnotateAssessment(request.Name, request.Annotation);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -253,7 +253,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
             };
             AnnotateAssessmentResponse expectedResponse = new AnnotateAssessmentResponse { };
             mockGrpcClient.Setup(x => x.AnnotateAssessmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnnotateAssessmentResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null, null);
             AnnotateAssessmentResponse responseCallSettings = await client.AnnotateAssessmentAsync(request.Name, request.Annotation, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AnnotateAssessmentResponse responseCancellationToken = await client.AnnotateAssessmentAsync(request.Name, request.Annotation, st::CancellationToken.None);
@@ -272,7 +272,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
             };
             AnnotateAssessmentResponse expectedResponse = new AnnotateAssessmentResponse { };
             mockGrpcClient.Setup(x => x.AnnotateAssessment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null, null);
             AnnotateAssessmentResponse response = client.AnnotateAssessment(request.AssessmentName, request.Annotation);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -289,7 +289,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
             };
             AnnotateAssessmentResponse expectedResponse = new AnnotateAssessmentResponse { };
             mockGrpcClient.Setup(x => x.AnnotateAssessmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnnotateAssessmentResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null, null);
             AnnotateAssessmentResponse responseCallSettings = await client.AnnotateAssessmentAsync(request.AssessmentName, request.Annotation, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AnnotateAssessmentResponse responseCancellationToken = await client.AnnotateAssessmentAsync(request.AssessmentName, request.Annotation, st::CancellationToken.None);
@@ -325,7 +325,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 WafSettings = new WafSettings(),
             };
             mockGrpcClient.Setup(x => x.CreateKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null, null);
             Key response = client.CreateKey(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -359,7 +359,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 WafSettings = new WafSettings(),
             };
             mockGrpcClient.Setup(x => x.CreateKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Key>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null, null);
             Key responseCallSettings = await client.CreateKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Key responseCancellationToken = await client.CreateKeyAsync(request, st::CancellationToken.None);
@@ -394,7 +394,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 WafSettings = new WafSettings(),
             };
             mockGrpcClient.Setup(x => x.GetKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null, null);
             Key response = client.GetKey(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -427,7 +427,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 WafSettings = new WafSettings(),
             };
             mockGrpcClient.Setup(x => x.GetKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Key>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null, null);
             Key responseCallSettings = await client.GetKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Key responseCancellationToken = await client.GetKeyAsync(request, st::CancellationToken.None);
@@ -463,7 +463,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 WafSettings = new WafSettings(),
             };
             mockGrpcClient.Setup(x => x.UpdateKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null, null);
             Key response = client.UpdateKey(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -497,7 +497,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 WafSettings = new WafSettings(),
             };
             mockGrpcClient.Setup(x => x.UpdateKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Key>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null, null);
             Key responseCallSettings = await client.UpdateKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Key responseCancellationToken = await client.UpdateKeyAsync(request, st::CancellationToken.None);
@@ -515,7 +515,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteKey(request);
             mockGrpcClient.VerifyAll();
         }
@@ -530,7 +530,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteKeyAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -563,7 +563,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 WafSettings = new WafSettings(),
             };
             mockGrpcClient.Setup(x => x.MigrateKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null, null);
             Key response = client.MigrateKey(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -596,7 +596,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 WafSettings = new WafSettings(),
             };
             mockGrpcClient.Setup(x => x.MigrateKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Key>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null, null);
             Key responseCallSettings = await client.MigrateKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Key responseCancellationToken = await client.MigrateKeyAsync(request, st::CancellationToken.None);
@@ -623,7 +623,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 MetricsName = MetricsName.FromProjectKey("[PROJECT]", "[KEY]"),
             };
             mockGrpcClient.Setup(x => x.GetMetrics(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null, null);
             Metrics response = client.GetMetrics(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -648,7 +648,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 MetricsName = MetricsName.FromProjectKey("[PROJECT]", "[KEY]"),
             };
             mockGrpcClient.Setup(x => x.GetMetricsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Metrics>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null, null);
             Metrics responseCallSettings = await client.GetMetricsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Metrics responseCancellationToken = await client.GetMetricsAsync(request, st::CancellationToken.None);
@@ -675,7 +675,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 MetricsName = MetricsName.FromProjectKey("[PROJECT]", "[KEY]"),
             };
             mockGrpcClient.Setup(x => x.GetMetrics(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null, null);
             Metrics response = client.GetMetrics(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -700,7 +700,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 MetricsName = MetricsName.FromProjectKey("[PROJECT]", "[KEY]"),
             };
             mockGrpcClient.Setup(x => x.GetMetricsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Metrics>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null, null);
             Metrics responseCallSettings = await client.GetMetricsAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Metrics responseCancellationToken = await client.GetMetricsAsync(request.Name, st::CancellationToken.None);
@@ -727,7 +727,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 MetricsName = MetricsName.FromProjectKey("[PROJECT]", "[KEY]"),
             };
             mockGrpcClient.Setup(x => x.GetMetrics(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null, null);
             Metrics response = client.GetMetrics(request.MetricsName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -752,7 +752,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 MetricsName = MetricsName.FromProjectKey("[PROJECT]", "[KEY]"),
             };
             mockGrpcClient.Setup(x => x.GetMetricsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Metrics>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null, null);
             Metrics responseCallSettings = await client.GetMetricsAsync(request.MetricsName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Metrics responseCancellationToken = await client.GetMetricsAsync(request.MetricsName, st::CancellationToken.None);

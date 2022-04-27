@@ -58,7 +58,7 @@ namespace Google.Cloud.Retail.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CompleteQuery(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CompletionServiceClient client = new CompletionServiceClientImpl(mockGrpcClient.Object, null);
+            CompletionServiceClient client = new CompletionServiceClientImpl(mockGrpcClient.Object, null, null);
             CompleteQueryResponse response = client.CompleteQuery(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -95,7 +95,7 @@ namespace Google.Cloud.Retail.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CompleteQueryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CompleteQueryResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CompletionServiceClient client = new CompletionServiceClientImpl(mockGrpcClient.Object, null);
+            CompletionServiceClient client = new CompletionServiceClientImpl(mockGrpcClient.Object, null, null);
             CompleteQueryResponse responseCallSettings = await client.CompleteQueryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CompleteQueryResponse responseCancellationToken = await client.CompleteQueryAsync(request, st::CancellationToken.None);

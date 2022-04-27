@@ -83,7 +83,7 @@ namespace Google.Cloud.Optimization.V1.Tests
                 Metrics = new OptimizeToursResponse.Types.Metrics(),
             };
             mockGrpcClient.Setup(x => x.OptimizeTours(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FleetRoutingClient client = new FleetRoutingClientImpl(mockGrpcClient.Object, null);
+            FleetRoutingClient client = new FleetRoutingClientImpl(mockGrpcClient.Object, null, null);
             OptimizeToursResponse response = client.OptimizeTours(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -144,7 +144,7 @@ namespace Google.Cloud.Optimization.V1.Tests
                 Metrics = new OptimizeToursResponse.Types.Metrics(),
             };
             mockGrpcClient.Setup(x => x.OptimizeToursAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<OptimizeToursResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FleetRoutingClient client = new FleetRoutingClientImpl(mockGrpcClient.Object, null);
+            FleetRoutingClient client = new FleetRoutingClientImpl(mockGrpcClient.Object, null, null);
             OptimizeToursResponse responseCallSettings = await client.OptimizeToursAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             OptimizeToursResponse responseCancellationToken = await client.OptimizeToursAsync(request, st::CancellationToken.None);

@@ -50,7 +50,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.CreateSource(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             Source response = client.CreateSource(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -74,7 +74,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.CreateSourceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Source>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             Source responseCallSettings = await client.CreateSourceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Source responseCancellationToken = await client.CreateSourceAsync(request, st::CancellationToken.None);
@@ -100,7 +100,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.CreateSource(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             Source response = client.CreateSource(request.Parent, request.Source);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -124,7 +124,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.CreateSourceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Source>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             Source responseCallSettings = await client.CreateSourceAsync(request.Parent, request.Source, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Source responseCancellationToken = await client.CreateSourceAsync(request.Parent, request.Source, st::CancellationToken.None);
@@ -150,7 +150,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.CreateSource(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             Source response = client.CreateSource(request.ParentAsOrganizationName, request.Source);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -174,7 +174,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.CreateSourceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Source>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             Source responseCallSettings = await client.CreateSourceAsync(request.ParentAsOrganizationName, request.Source, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Source responseCancellationToken = await client.CreateSourceAsync(request.ParentAsOrganizationName, request.Source, st::CancellationToken.None);
@@ -234,7 +234,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 NextSteps = "next_stepsc5904826",
             };
             mockGrpcClient.Setup(x => x.CreateFinding(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             Finding response = client.CreateFinding(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -292,7 +292,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 NextSteps = "next_stepsc5904826",
             };
             mockGrpcClient.Setup(x => x.CreateFindingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             Finding responseCallSettings = await client.CreateFindingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Finding responseCancellationToken = await client.CreateFindingAsync(request, st::CancellationToken.None);
@@ -352,7 +352,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 NextSteps = "next_stepsc5904826",
             };
             mockGrpcClient.Setup(x => x.CreateFinding(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             Finding response = client.CreateFinding(request.Parent, request.FindingId, request.Finding);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -410,7 +410,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 NextSteps = "next_stepsc5904826",
             };
             mockGrpcClient.Setup(x => x.CreateFindingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             Finding responseCallSettings = await client.CreateFindingAsync(request.Parent, request.FindingId, request.Finding, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Finding responseCancellationToken = await client.CreateFindingAsync(request.Parent, request.FindingId, request.Finding, st::CancellationToken.None);
@@ -470,7 +470,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 NextSteps = "next_stepsc5904826",
             };
             mockGrpcClient.Setup(x => x.CreateFinding(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             Finding response = client.CreateFinding(request.ParentAsSourceName, request.FindingId, request.Finding);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -528,7 +528,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 NextSteps = "next_stepsc5904826",
             };
             mockGrpcClient.Setup(x => x.CreateFindingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             Finding responseCallSettings = await client.CreateFindingAsync(request.ParentAsSourceName, request.FindingId, request.Finding, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Finding responseCancellationToken = await client.CreateFindingAsync(request.ParentAsSourceName, request.FindingId, request.Finding, st::CancellationToken.None);
@@ -560,7 +560,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MostRecentEditor = "most_recent_editor37631565",
             };
             mockGrpcClient.Setup(x => x.CreateMuteConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             MuteConfig response = client.CreateMuteConfig(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -590,7 +590,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MostRecentEditor = "most_recent_editor37631565",
             };
             mockGrpcClient.Setup(x => x.CreateMuteConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MuteConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             MuteConfig responseCallSettings = await client.CreateMuteConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MuteConfig responseCancellationToken = await client.CreateMuteConfigAsync(request, st::CancellationToken.None);
@@ -621,7 +621,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MostRecentEditor = "most_recent_editor37631565",
             };
             mockGrpcClient.Setup(x => x.CreateMuteConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             MuteConfig response = client.CreateMuteConfig(request.Parent, request.MuteConfig);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -650,7 +650,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MostRecentEditor = "most_recent_editor37631565",
             };
             mockGrpcClient.Setup(x => x.CreateMuteConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MuteConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             MuteConfig responseCallSettings = await client.CreateMuteConfigAsync(request.Parent, request.MuteConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MuteConfig responseCancellationToken = await client.CreateMuteConfigAsync(request.Parent, request.MuteConfig, st::CancellationToken.None);
@@ -681,7 +681,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MostRecentEditor = "most_recent_editor37631565",
             };
             mockGrpcClient.Setup(x => x.CreateMuteConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             MuteConfig response = client.CreateMuteConfig(request.ParentAsOrganizationName, request.MuteConfig);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -710,7 +710,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MostRecentEditor = "most_recent_editor37631565",
             };
             mockGrpcClient.Setup(x => x.CreateMuteConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MuteConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             MuteConfig responseCallSettings = await client.CreateMuteConfigAsync(request.ParentAsOrganizationName, request.MuteConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MuteConfig responseCancellationToken = await client.CreateMuteConfigAsync(request.ParentAsOrganizationName, request.MuteConfig, st::CancellationToken.None);
@@ -741,7 +741,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MostRecentEditor = "most_recent_editor37631565",
             };
             mockGrpcClient.Setup(x => x.CreateMuteConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             MuteConfig response = client.CreateMuteConfig(request.ParentAsFolderName, request.MuteConfig);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -770,7 +770,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MostRecentEditor = "most_recent_editor37631565",
             };
             mockGrpcClient.Setup(x => x.CreateMuteConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MuteConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             MuteConfig responseCallSettings = await client.CreateMuteConfigAsync(request.ParentAsFolderName, request.MuteConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MuteConfig responseCancellationToken = await client.CreateMuteConfigAsync(request.ParentAsFolderName, request.MuteConfig, st::CancellationToken.None);
@@ -801,7 +801,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MostRecentEditor = "most_recent_editor37631565",
             };
             mockGrpcClient.Setup(x => x.CreateMuteConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             MuteConfig response = client.CreateMuteConfig(request.ParentAsProjectName, request.MuteConfig);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -830,7 +830,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MostRecentEditor = "most_recent_editor37631565",
             };
             mockGrpcClient.Setup(x => x.CreateMuteConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MuteConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             MuteConfig responseCallSettings = await client.CreateMuteConfigAsync(request.ParentAsProjectName, request.MuteConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MuteConfig responseCancellationToken = await client.CreateMuteConfigAsync(request.ParentAsProjectName, request.MuteConfig, st::CancellationToken.None);
@@ -862,7 +862,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MostRecentEditor = "most_recent_editor37631565",
             };
             mockGrpcClient.Setup(x => x.CreateMuteConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             MuteConfig response = client.CreateMuteConfig(request.Parent, request.MuteConfig, request.MuteConfigId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -892,7 +892,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MostRecentEditor = "most_recent_editor37631565",
             };
             mockGrpcClient.Setup(x => x.CreateMuteConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MuteConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             MuteConfig responseCallSettings = await client.CreateMuteConfigAsync(request.Parent, request.MuteConfig, request.MuteConfigId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MuteConfig responseCancellationToken = await client.CreateMuteConfigAsync(request.Parent, request.MuteConfig, request.MuteConfigId, st::CancellationToken.None);
@@ -924,7 +924,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MostRecentEditor = "most_recent_editor37631565",
             };
             mockGrpcClient.Setup(x => x.CreateMuteConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             MuteConfig response = client.CreateMuteConfig(request.ParentAsOrganizationName, request.MuteConfig, request.MuteConfigId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -954,7 +954,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MostRecentEditor = "most_recent_editor37631565",
             };
             mockGrpcClient.Setup(x => x.CreateMuteConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MuteConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             MuteConfig responseCallSettings = await client.CreateMuteConfigAsync(request.ParentAsOrganizationName, request.MuteConfig, request.MuteConfigId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MuteConfig responseCancellationToken = await client.CreateMuteConfigAsync(request.ParentAsOrganizationName, request.MuteConfig, request.MuteConfigId, st::CancellationToken.None);
@@ -986,7 +986,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MostRecentEditor = "most_recent_editor37631565",
             };
             mockGrpcClient.Setup(x => x.CreateMuteConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             MuteConfig response = client.CreateMuteConfig(request.ParentAsFolderName, request.MuteConfig, request.MuteConfigId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1016,7 +1016,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MostRecentEditor = "most_recent_editor37631565",
             };
             mockGrpcClient.Setup(x => x.CreateMuteConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MuteConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             MuteConfig responseCallSettings = await client.CreateMuteConfigAsync(request.ParentAsFolderName, request.MuteConfig, request.MuteConfigId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MuteConfig responseCancellationToken = await client.CreateMuteConfigAsync(request.ParentAsFolderName, request.MuteConfig, request.MuteConfigId, st::CancellationToken.None);
@@ -1048,7 +1048,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MostRecentEditor = "most_recent_editor37631565",
             };
             mockGrpcClient.Setup(x => x.CreateMuteConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             MuteConfig response = client.CreateMuteConfig(request.ParentAsProjectName, request.MuteConfig, request.MuteConfigId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1078,7 +1078,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MostRecentEditor = "most_recent_editor37631565",
             };
             mockGrpcClient.Setup(x => x.CreateMuteConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MuteConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             MuteConfig responseCallSettings = await client.CreateMuteConfigAsync(request.ParentAsProjectName, request.MuteConfig, request.MuteConfigId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MuteConfig responseCancellationToken = await client.CreateMuteConfigAsync(request.ParentAsProjectName, request.MuteConfig, request.MuteConfigId, st::CancellationToken.None);
@@ -1106,7 +1106,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateNotificationConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             NotificationConfig response = client.CreateNotificationConfig(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1132,7 +1132,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateNotificationConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             NotificationConfig responseCallSettings = await client.CreateNotificationConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             NotificationConfig responseCancellationToken = await client.CreateNotificationConfigAsync(request, st::CancellationToken.None);
@@ -1160,7 +1160,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateNotificationConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             NotificationConfig response = client.CreateNotificationConfig(request.Parent, request.ConfigId, request.NotificationConfig);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1186,7 +1186,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateNotificationConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             NotificationConfig responseCallSettings = await client.CreateNotificationConfigAsync(request.Parent, request.ConfigId, request.NotificationConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             NotificationConfig responseCancellationToken = await client.CreateNotificationConfigAsync(request.Parent, request.ConfigId, request.NotificationConfig, st::CancellationToken.None);
@@ -1214,7 +1214,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateNotificationConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             NotificationConfig response = client.CreateNotificationConfig(request.ParentAsOrganizationName, request.ConfigId, request.NotificationConfig);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1240,7 +1240,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateNotificationConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             NotificationConfig responseCallSettings = await client.CreateNotificationConfigAsync(request.ParentAsOrganizationName, request.ConfigId, request.NotificationConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             NotificationConfig responseCancellationToken = await client.CreateNotificationConfigAsync(request.ParentAsOrganizationName, request.ConfigId, request.NotificationConfig, st::CancellationToken.None);
@@ -1267,7 +1267,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateNotificationConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             NotificationConfig response = client.CreateNotificationConfig(request.Parent, request.NotificationConfig);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1292,7 +1292,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateNotificationConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             NotificationConfig responseCallSettings = await client.CreateNotificationConfigAsync(request.Parent, request.NotificationConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             NotificationConfig responseCancellationToken = await client.CreateNotificationConfigAsync(request.Parent, request.NotificationConfig, st::CancellationToken.None);
@@ -1319,7 +1319,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateNotificationConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             NotificationConfig response = client.CreateNotificationConfig(request.ParentAsOrganizationName, request.NotificationConfig);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1344,7 +1344,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateNotificationConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             NotificationConfig responseCallSettings = await client.CreateNotificationConfigAsync(request.ParentAsOrganizationName, request.NotificationConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             NotificationConfig responseCancellationToken = await client.CreateNotificationConfigAsync(request.ParentAsOrganizationName, request.NotificationConfig, st::CancellationToken.None);
@@ -1363,7 +1363,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteMuteConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteMuteConfig(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1379,7 +1379,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteMuteConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteMuteConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteMuteConfigAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1396,7 +1396,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteMuteConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteMuteConfig(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -1412,7 +1412,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteMuteConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteMuteConfigAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteMuteConfigAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1429,7 +1429,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteMuteConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteMuteConfig(request.MuteConfigName);
             mockGrpcClient.VerifyAll();
         }
@@ -1445,7 +1445,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteMuteConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteMuteConfigAsync(request.MuteConfigName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteMuteConfigAsync(request.MuteConfigName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1462,7 +1462,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteNotificationConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteNotificationConfig(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1478,7 +1478,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteNotificationConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteNotificationConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteNotificationConfigAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1495,7 +1495,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteNotificationConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteNotificationConfig(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -1511,7 +1511,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteNotificationConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteNotificationConfigAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteNotificationConfigAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1528,7 +1528,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteNotificationConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteNotificationConfig(request.NotificationConfigName);
             mockGrpcClient.VerifyAll();
         }
@@ -1544,7 +1544,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteNotificationConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteNotificationConfigAsync(request.NotificationConfigName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteNotificationConfigAsync(request.NotificationConfigName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1571,7 +1571,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Principal = "principala915d7e7",
             };
             mockGrpcClient.Setup(x => x.GetBigQueryExport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             BigQueryExport response = client.GetBigQueryExport(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1598,7 +1598,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Principal = "principala915d7e7",
             };
             mockGrpcClient.Setup(x => x.GetBigQueryExportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BigQueryExport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             BigQueryExport responseCallSettings = await client.GetBigQueryExportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BigQueryExport responseCancellationToken = await client.GetBigQueryExportAsync(request, st::CancellationToken.None);
@@ -1627,7 +1627,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Principal = "principala915d7e7",
             };
             mockGrpcClient.Setup(x => x.GetBigQueryExport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             BigQueryExport response = client.GetBigQueryExport(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1654,7 +1654,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Principal = "principala915d7e7",
             };
             mockGrpcClient.Setup(x => x.GetBigQueryExportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BigQueryExport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             BigQueryExport responseCallSettings = await client.GetBigQueryExportAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BigQueryExport responseCancellationToken = await client.GetBigQueryExportAsync(request.Name, st::CancellationToken.None);
@@ -1683,7 +1683,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Principal = "principala915d7e7",
             };
             mockGrpcClient.Setup(x => x.GetBigQueryExport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             BigQueryExport response = client.GetBigQueryExport(request.BigQueryExportName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1710,7 +1710,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Principal = "principala915d7e7",
             };
             mockGrpcClient.Setup(x => x.GetBigQueryExportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BigQueryExport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             BigQueryExport responseCallSettings = await client.GetBigQueryExportAsync(request.BigQueryExportName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BigQueryExport responseCancellationToken = await client.GetBigQueryExportAsync(request.BigQueryExportName, st::CancellationToken.None);
@@ -1742,7 +1742,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.GetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1772,7 +1772,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request, st::CancellationToken.None);
@@ -1803,7 +1803,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.GetIamPolicy(request.Resource);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1832,7 +1832,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request.Resource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request.Resource, st::CancellationToken.None);
@@ -1863,7 +1863,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.GetIamPolicy(request.ResourceAsResourceName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1892,7 +1892,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request.ResourceAsResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request.ResourceAsResourceName, st::CancellationToken.None);
@@ -1922,7 +1922,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MostRecentEditor = "most_recent_editor37631565",
             };
             mockGrpcClient.Setup(x => x.GetMuteConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             MuteConfig response = client.GetMuteConfig(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1950,7 +1950,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MostRecentEditor = "most_recent_editor37631565",
             };
             mockGrpcClient.Setup(x => x.GetMuteConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MuteConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             MuteConfig responseCallSettings = await client.GetMuteConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MuteConfig responseCancellationToken = await client.GetMuteConfigAsync(request, st::CancellationToken.None);
@@ -1980,7 +1980,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MostRecentEditor = "most_recent_editor37631565",
             };
             mockGrpcClient.Setup(x => x.GetMuteConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             MuteConfig response = client.GetMuteConfig(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2008,7 +2008,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MostRecentEditor = "most_recent_editor37631565",
             };
             mockGrpcClient.Setup(x => x.GetMuteConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MuteConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             MuteConfig responseCallSettings = await client.GetMuteConfigAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MuteConfig responseCancellationToken = await client.GetMuteConfigAsync(request.Name, st::CancellationToken.None);
@@ -2038,7 +2038,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MostRecentEditor = "most_recent_editor37631565",
             };
             mockGrpcClient.Setup(x => x.GetMuteConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             MuteConfig response = client.GetMuteConfig(request.MuteConfigName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2066,7 +2066,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MostRecentEditor = "most_recent_editor37631565",
             };
             mockGrpcClient.Setup(x => x.GetMuteConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MuteConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             MuteConfig responseCallSettings = await client.GetMuteConfigAsync(request.MuteConfigName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MuteConfig responseCancellationToken = await client.GetMuteConfigAsync(request.MuteConfigName, st::CancellationToken.None);
@@ -2092,7 +2092,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
             mockGrpcClient.Setup(x => x.GetNotificationConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             NotificationConfig response = client.GetNotificationConfig(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2116,7 +2116,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
             mockGrpcClient.Setup(x => x.GetNotificationConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             NotificationConfig responseCallSettings = await client.GetNotificationConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             NotificationConfig responseCancellationToken = await client.GetNotificationConfigAsync(request, st::CancellationToken.None);
@@ -2142,7 +2142,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
             mockGrpcClient.Setup(x => x.GetNotificationConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             NotificationConfig response = client.GetNotificationConfig(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2166,7 +2166,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
             mockGrpcClient.Setup(x => x.GetNotificationConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             NotificationConfig responseCallSettings = await client.GetNotificationConfigAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             NotificationConfig responseCancellationToken = await client.GetNotificationConfigAsync(request.Name, st::CancellationToken.None);
@@ -2192,7 +2192,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
             mockGrpcClient.Setup(x => x.GetNotificationConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             NotificationConfig response = client.GetNotificationConfig(request.NotificationConfigName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2216,7 +2216,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
             mockGrpcClient.Setup(x => x.GetNotificationConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             NotificationConfig responseCallSettings = await client.GetNotificationConfigAsync(request.NotificationConfigName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             NotificationConfig responseCancellationToken = await client.GetNotificationConfigAsync(request.NotificationConfigName, st::CancellationToken.None);
@@ -2240,7 +2240,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 AssetDiscoveryConfig = new OrganizationSettings.Types.AssetDiscoveryConfig(),
             };
             mockGrpcClient.Setup(x => x.GetOrganizationSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             OrganizationSettings response = client.GetOrganizationSettings(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2262,7 +2262,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 AssetDiscoveryConfig = new OrganizationSettings.Types.AssetDiscoveryConfig(),
             };
             mockGrpcClient.Setup(x => x.GetOrganizationSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<OrganizationSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             OrganizationSettings responseCallSettings = await client.GetOrganizationSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             OrganizationSettings responseCancellationToken = await client.GetOrganizationSettingsAsync(request, st::CancellationToken.None);
@@ -2286,7 +2286,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 AssetDiscoveryConfig = new OrganizationSettings.Types.AssetDiscoveryConfig(),
             };
             mockGrpcClient.Setup(x => x.GetOrganizationSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             OrganizationSettings response = client.GetOrganizationSettings(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2308,7 +2308,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 AssetDiscoveryConfig = new OrganizationSettings.Types.AssetDiscoveryConfig(),
             };
             mockGrpcClient.Setup(x => x.GetOrganizationSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<OrganizationSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             OrganizationSettings responseCallSettings = await client.GetOrganizationSettingsAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             OrganizationSettings responseCancellationToken = await client.GetOrganizationSettingsAsync(request.Name, st::CancellationToken.None);
@@ -2332,7 +2332,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 AssetDiscoveryConfig = new OrganizationSettings.Types.AssetDiscoveryConfig(),
             };
             mockGrpcClient.Setup(x => x.GetOrganizationSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             OrganizationSettings response = client.GetOrganizationSettings(request.OrganizationSettingsName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2354,7 +2354,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 AssetDiscoveryConfig = new OrganizationSettings.Types.AssetDiscoveryConfig(),
             };
             mockGrpcClient.Setup(x => x.GetOrganizationSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<OrganizationSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             OrganizationSettings responseCallSettings = await client.GetOrganizationSettingsAsync(request.OrganizationSettingsName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             OrganizationSettings responseCancellationToken = await client.GetOrganizationSettingsAsync(request.OrganizationSettingsName, st::CancellationToken.None);
@@ -2379,7 +2379,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.GetSource(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             Source response = client.GetSource(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2402,7 +2402,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.GetSourceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Source>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             Source responseCallSettings = await client.GetSourceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Source responseCancellationToken = await client.GetSourceAsync(request, st::CancellationToken.None);
@@ -2427,7 +2427,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.GetSource(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             Source response = client.GetSource(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2450,7 +2450,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.GetSourceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Source>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             Source responseCallSettings = await client.GetSourceAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Source responseCancellationToken = await client.GetSourceAsync(request.Name, st::CancellationToken.None);
@@ -2475,7 +2475,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.GetSource(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             Source response = client.GetSource(request.SourceName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2498,7 +2498,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.GetSourceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Source>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             Source responseCallSettings = await client.GetSourceAsync(request.SourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Source responseCancellationToken = await client.GetSourceAsync(request.SourceName, st::CancellationToken.None);
@@ -2558,7 +2558,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 NextSteps = "next_stepsc5904826",
             };
             mockGrpcClient.Setup(x => x.SetFindingState(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             Finding response = client.SetFindingState(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2616,7 +2616,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 NextSteps = "next_stepsc5904826",
             };
             mockGrpcClient.Setup(x => x.SetFindingStateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             Finding responseCallSettings = await client.SetFindingStateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Finding responseCancellationToken = await client.SetFindingStateAsync(request, st::CancellationToken.None);
@@ -2676,7 +2676,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 NextSteps = "next_stepsc5904826",
             };
             mockGrpcClient.Setup(x => x.SetFindingState(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             Finding response = client.SetFindingState(request.Name, request.State, request.StartTime);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2734,7 +2734,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 NextSteps = "next_stepsc5904826",
             };
             mockGrpcClient.Setup(x => x.SetFindingStateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             Finding responseCallSettings = await client.SetFindingStateAsync(request.Name, request.State, request.StartTime, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Finding responseCancellationToken = await client.SetFindingStateAsync(request.Name, request.State, request.StartTime, st::CancellationToken.None);
@@ -2794,7 +2794,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 NextSteps = "next_stepsc5904826",
             };
             mockGrpcClient.Setup(x => x.SetFindingState(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             Finding response = client.SetFindingState(request.FindingName, request.State, request.StartTime);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2852,7 +2852,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 NextSteps = "next_stepsc5904826",
             };
             mockGrpcClient.Setup(x => x.SetFindingStateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             Finding responseCallSettings = await client.SetFindingStateAsync(request.FindingName, request.State, request.StartTime, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Finding responseCancellationToken = await client.SetFindingStateAsync(request.FindingName, request.State, request.StartTime, st::CancellationToken.None);
@@ -2911,7 +2911,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 NextSteps = "next_stepsc5904826",
             };
             mockGrpcClient.Setup(x => x.SetMute(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             Finding response = client.SetMute(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2968,7 +2968,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 NextSteps = "next_stepsc5904826",
             };
             mockGrpcClient.Setup(x => x.SetMuteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             Finding responseCallSettings = await client.SetMuteAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Finding responseCancellationToken = await client.SetMuteAsync(request, st::CancellationToken.None);
@@ -3027,7 +3027,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 NextSteps = "next_stepsc5904826",
             };
             mockGrpcClient.Setup(x => x.SetMute(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             Finding response = client.SetMute(request.Name, request.Mute);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3084,7 +3084,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 NextSteps = "next_stepsc5904826",
             };
             mockGrpcClient.Setup(x => x.SetMuteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             Finding responseCallSettings = await client.SetMuteAsync(request.Name, request.Mute, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Finding responseCancellationToken = await client.SetMuteAsync(request.Name, request.Mute, st::CancellationToken.None);
@@ -3143,7 +3143,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 NextSteps = "next_stepsc5904826",
             };
             mockGrpcClient.Setup(x => x.SetMute(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             Finding response = client.SetMute(request.FindingName, request.Mute);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3200,7 +3200,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 NextSteps = "next_stepsc5904826",
             };
             mockGrpcClient.Setup(x => x.SetMuteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             Finding responseCallSettings = await client.SetMuteAsync(request.FindingName, request.Mute, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Finding responseCancellationToken = await client.SetMuteAsync(request.FindingName, request.Mute, st::CancellationToken.None);
@@ -3233,7 +3233,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.SetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3264,7 +3264,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request, st::CancellationToken.None);
@@ -3296,7 +3296,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.SetIamPolicy(request.Resource, request.Policy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3326,7 +3326,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request.Resource, request.Policy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request.Resource, request.Policy, st::CancellationToken.None);
@@ -3358,7 +3358,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.SetIamPolicy(request.ResourceAsResourceName, request.Policy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3388,7 +3388,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request.ResourceAsResourceName, request.Policy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request.ResourceAsResourceName, request.Policy, st::CancellationToken.None);
@@ -3417,7 +3417,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3444,7 +3444,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request, st::CancellationToken.None);
@@ -3473,7 +3473,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request.Resource, request.Permissions);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3500,7 +3500,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request.Resource, request.Permissions, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request.Resource, request.Permissions, st::CancellationToken.None);
@@ -3529,7 +3529,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request.ResourceAsResourceName, request.Permissions);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3556,7 +3556,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request.ResourceAsResourceName, request.Permissions, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request.ResourceAsResourceName, request.Permissions, st::CancellationToken.None);
@@ -3586,7 +3586,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 ExternalSystemUpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateExternalSystem(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             ExternalSystem response = client.UpdateExternalSystem(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3614,7 +3614,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 ExternalSystemUpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateExternalSystemAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ExternalSystem>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             ExternalSystem responseCallSettings = await client.UpdateExternalSystemAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ExternalSystem responseCancellationToken = await client.UpdateExternalSystemAsync(request, st::CancellationToken.None);
@@ -3644,7 +3644,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 ExternalSystemUpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateExternalSystem(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             ExternalSystem response = client.UpdateExternalSystem(request.ExternalSystem, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3672,7 +3672,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 ExternalSystemUpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateExternalSystemAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ExternalSystem>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             ExternalSystem responseCallSettings = await client.UpdateExternalSystemAsync(request.ExternalSystem, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ExternalSystem responseCancellationToken = await client.UpdateExternalSystemAsync(request.ExternalSystem, request.UpdateMask, st::CancellationToken.None);
@@ -3731,7 +3731,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 NextSteps = "next_stepsc5904826",
             };
             mockGrpcClient.Setup(x => x.UpdateFinding(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             Finding response = client.UpdateFinding(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3788,7 +3788,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 NextSteps = "next_stepsc5904826",
             };
             mockGrpcClient.Setup(x => x.UpdateFindingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             Finding responseCallSettings = await client.UpdateFindingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Finding responseCancellationToken = await client.UpdateFindingAsync(request, st::CancellationToken.None);
@@ -3846,7 +3846,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 NextSteps = "next_stepsc5904826",
             };
             mockGrpcClient.Setup(x => x.UpdateFinding(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             Finding response = client.UpdateFinding(request.Finding);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3902,7 +3902,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 NextSteps = "next_stepsc5904826",
             };
             mockGrpcClient.Setup(x => x.UpdateFindingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             Finding responseCallSettings = await client.UpdateFindingAsync(request.Finding, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Finding responseCancellationToken = await client.UpdateFindingAsync(request.Finding, st::CancellationToken.None);
@@ -3933,7 +3933,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MostRecentEditor = "most_recent_editor37631565",
             };
             mockGrpcClient.Setup(x => x.UpdateMuteConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             MuteConfig response = client.UpdateMuteConfig(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3962,7 +3962,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MostRecentEditor = "most_recent_editor37631565",
             };
             mockGrpcClient.Setup(x => x.UpdateMuteConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MuteConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             MuteConfig responseCallSettings = await client.UpdateMuteConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MuteConfig responseCancellationToken = await client.UpdateMuteConfigAsync(request, st::CancellationToken.None);
@@ -3993,7 +3993,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MostRecentEditor = "most_recent_editor37631565",
             };
             mockGrpcClient.Setup(x => x.UpdateMuteConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             MuteConfig response = client.UpdateMuteConfig(request.MuteConfig, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -4022,7 +4022,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MostRecentEditor = "most_recent_editor37631565",
             };
             mockGrpcClient.Setup(x => x.UpdateMuteConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MuteConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             MuteConfig responseCallSettings = await client.UpdateMuteConfigAsync(request.MuteConfig, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MuteConfig responseCancellationToken = await client.UpdateMuteConfigAsync(request.MuteConfig, request.UpdateMask, st::CancellationToken.None);
@@ -4049,7 +4049,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateNotificationConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             NotificationConfig response = client.UpdateNotificationConfig(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -4074,7 +4074,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateNotificationConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             NotificationConfig responseCallSettings = await client.UpdateNotificationConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             NotificationConfig responseCancellationToken = await client.UpdateNotificationConfigAsync(request, st::CancellationToken.None);
@@ -4100,7 +4100,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateNotificationConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             NotificationConfig response = client.UpdateNotificationConfig(request.NotificationConfig);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -4124,7 +4124,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateNotificationConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             NotificationConfig responseCallSettings = await client.UpdateNotificationConfigAsync(request.NotificationConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             NotificationConfig responseCancellationToken = await client.UpdateNotificationConfigAsync(request.NotificationConfig, st::CancellationToken.None);
@@ -4151,7 +4151,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateNotificationConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             NotificationConfig response = client.UpdateNotificationConfig(request.NotificationConfig, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -4176,7 +4176,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateNotificationConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             NotificationConfig responseCallSettings = await client.UpdateNotificationConfigAsync(request.NotificationConfig, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             NotificationConfig responseCancellationToken = await client.UpdateNotificationConfigAsync(request.NotificationConfig, request.UpdateMask, st::CancellationToken.None);
@@ -4201,7 +4201,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 AssetDiscoveryConfig = new OrganizationSettings.Types.AssetDiscoveryConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateOrganizationSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             OrganizationSettings response = client.UpdateOrganizationSettings(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -4224,7 +4224,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 AssetDiscoveryConfig = new OrganizationSettings.Types.AssetDiscoveryConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateOrganizationSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<OrganizationSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             OrganizationSettings responseCallSettings = await client.UpdateOrganizationSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             OrganizationSettings responseCancellationToken = await client.UpdateOrganizationSettingsAsync(request, st::CancellationToken.None);
@@ -4248,7 +4248,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 AssetDiscoveryConfig = new OrganizationSettings.Types.AssetDiscoveryConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateOrganizationSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             OrganizationSettings response = client.UpdateOrganizationSettings(request.OrganizationSettings);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -4270,7 +4270,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 AssetDiscoveryConfig = new OrganizationSettings.Types.AssetDiscoveryConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateOrganizationSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<OrganizationSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             OrganizationSettings responseCallSettings = await client.UpdateOrganizationSettingsAsync(request.OrganizationSettings, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             OrganizationSettings responseCancellationToken = await client.UpdateOrganizationSettingsAsync(request.OrganizationSettings, st::CancellationToken.None);
@@ -4296,7 +4296,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.UpdateSource(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             Source response = client.UpdateSource(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -4320,7 +4320,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.UpdateSourceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Source>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             Source responseCallSettings = await client.UpdateSourceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Source responseCancellationToken = await client.UpdateSourceAsync(request, st::CancellationToken.None);
@@ -4345,7 +4345,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.UpdateSource(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             Source response = client.UpdateSource(request.Source);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -4368,7 +4368,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.UpdateSourceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Source>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             Source responseCallSettings = await client.UpdateSourceAsync(request.Source, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Source responseCancellationToken = await client.UpdateSourceAsync(request.Source, st::CancellationToken.None);
@@ -4400,7 +4400,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.UpdateSecurityMarks(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             SecurityMarks response = client.UpdateSecurityMarks(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -4430,7 +4430,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.UpdateSecurityMarksAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecurityMarks>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             SecurityMarks responseCallSettings = await client.UpdateSecurityMarksAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecurityMarks responseCancellationToken = await client.UpdateSecurityMarksAsync(request, st::CancellationToken.None);
@@ -4460,7 +4460,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.UpdateSecurityMarks(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             SecurityMarks response = client.UpdateSecurityMarks(request.SecurityMarks);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -4488,7 +4488,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.UpdateSecurityMarksAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecurityMarks>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             SecurityMarks responseCallSettings = await client.UpdateSecurityMarksAsync(request.SecurityMarks, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecurityMarks responseCancellationToken = await client.UpdateSecurityMarksAsync(request.SecurityMarks, st::CancellationToken.None);
@@ -4519,7 +4519,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Principal = "principala915d7e7",
             };
             mockGrpcClient.Setup(x => x.CreateBigQueryExport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             BigQueryExport response = client.CreateBigQueryExport(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -4548,7 +4548,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Principal = "principala915d7e7",
             };
             mockGrpcClient.Setup(x => x.CreateBigQueryExportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BigQueryExport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             BigQueryExport responseCallSettings = await client.CreateBigQueryExportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BigQueryExport responseCancellationToken = await client.CreateBigQueryExportAsync(request, st::CancellationToken.None);
@@ -4579,7 +4579,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Principal = "principala915d7e7",
             };
             mockGrpcClient.Setup(x => x.CreateBigQueryExport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             BigQueryExport response = client.CreateBigQueryExport(request.Parent, request.BigQueryExport, request.BigQueryExportId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -4608,7 +4608,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Principal = "principala915d7e7",
             };
             mockGrpcClient.Setup(x => x.CreateBigQueryExportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BigQueryExport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             BigQueryExport responseCallSettings = await client.CreateBigQueryExportAsync(request.Parent, request.BigQueryExport, request.BigQueryExportId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BigQueryExport responseCancellationToken = await client.CreateBigQueryExportAsync(request.Parent, request.BigQueryExport, request.BigQueryExportId, st::CancellationToken.None);
@@ -4639,7 +4639,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Principal = "principala915d7e7",
             };
             mockGrpcClient.Setup(x => x.CreateBigQueryExport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             BigQueryExport response = client.CreateBigQueryExport(request.ParentAsOrganizationName, request.BigQueryExport, request.BigQueryExportId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -4668,7 +4668,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Principal = "principala915d7e7",
             };
             mockGrpcClient.Setup(x => x.CreateBigQueryExportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BigQueryExport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             BigQueryExport responseCallSettings = await client.CreateBigQueryExportAsync(request.ParentAsOrganizationName, request.BigQueryExport, request.BigQueryExportId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BigQueryExport responseCancellationToken = await client.CreateBigQueryExportAsync(request.ParentAsOrganizationName, request.BigQueryExport, request.BigQueryExportId, st::CancellationToken.None);
@@ -4699,7 +4699,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Principal = "principala915d7e7",
             };
             mockGrpcClient.Setup(x => x.CreateBigQueryExport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             BigQueryExport response = client.CreateBigQueryExport(request.ParentAsFolderName, request.BigQueryExport, request.BigQueryExportId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -4728,7 +4728,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Principal = "principala915d7e7",
             };
             mockGrpcClient.Setup(x => x.CreateBigQueryExportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BigQueryExport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             BigQueryExport responseCallSettings = await client.CreateBigQueryExportAsync(request.ParentAsFolderName, request.BigQueryExport, request.BigQueryExportId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BigQueryExport responseCancellationToken = await client.CreateBigQueryExportAsync(request.ParentAsFolderName, request.BigQueryExport, request.BigQueryExportId, st::CancellationToken.None);
@@ -4759,7 +4759,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Principal = "principala915d7e7",
             };
             mockGrpcClient.Setup(x => x.CreateBigQueryExport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             BigQueryExport response = client.CreateBigQueryExport(request.ParentAsProjectName, request.BigQueryExport, request.BigQueryExportId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -4788,7 +4788,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Principal = "principala915d7e7",
             };
             mockGrpcClient.Setup(x => x.CreateBigQueryExportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BigQueryExport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             BigQueryExport responseCallSettings = await client.CreateBigQueryExportAsync(request.ParentAsProjectName, request.BigQueryExport, request.BigQueryExportId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BigQueryExport responseCancellationToken = await client.CreateBigQueryExportAsync(request.ParentAsProjectName, request.BigQueryExport, request.BigQueryExportId, st::CancellationToken.None);
@@ -4807,7 +4807,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteBigQueryExport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteBigQueryExport(request);
             mockGrpcClient.VerifyAll();
         }
@@ -4823,7 +4823,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteBigQueryExportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteBigQueryExportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteBigQueryExportAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -4840,7 +4840,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteBigQueryExport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteBigQueryExport(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -4856,7 +4856,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteBigQueryExportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteBigQueryExportAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteBigQueryExportAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -4873,7 +4873,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteBigQueryExport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteBigQueryExport(request.BigQueryExportName);
             mockGrpcClient.VerifyAll();
         }
@@ -4889,7 +4889,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteBigQueryExportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteBigQueryExportAsync(request.BigQueryExportName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteBigQueryExportAsync(request.BigQueryExportName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -4917,7 +4917,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Principal = "principala915d7e7",
             };
             mockGrpcClient.Setup(x => x.UpdateBigQueryExport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             BigQueryExport response = client.UpdateBigQueryExport(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -4945,7 +4945,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Principal = "principala915d7e7",
             };
             mockGrpcClient.Setup(x => x.UpdateBigQueryExportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BigQueryExport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             BigQueryExport responseCallSettings = await client.UpdateBigQueryExportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BigQueryExport responseCancellationToken = await client.UpdateBigQueryExportAsync(request, st::CancellationToken.None);
@@ -4975,7 +4975,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Principal = "principala915d7e7",
             };
             mockGrpcClient.Setup(x => x.UpdateBigQueryExport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             BigQueryExport response = client.UpdateBigQueryExport(request.BigQueryExport, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -5003,7 +5003,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Principal = "principala915d7e7",
             };
             mockGrpcClient.Setup(x => x.UpdateBigQueryExportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BigQueryExport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null, null);
             BigQueryExport responseCallSettings = await client.UpdateBigQueryExportAsync(request.BigQueryExport, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BigQueryExport responseCancellationToken = await client.UpdateBigQueryExportAsync(request.BigQueryExport, request.UpdateMask, st::CancellationToken.None);

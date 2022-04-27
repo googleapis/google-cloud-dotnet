@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -514,9 +514,8 @@ namespace Google.Cloud.ApiGateway.V1
         public ApiGatewayServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public ApiGatewayServiceClientBuilder()
+        public ApiGatewayServiceClientBuilder() : base(ApiGatewayServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = ApiGatewayServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref ApiGatewayServiceClient client);
@@ -543,29 +542,18 @@ namespace Google.Cloud.ApiGateway.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ApiGatewayServiceClient.Create(callInvoker, Settings);
+            return ApiGatewayServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<ApiGatewayServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ApiGatewayServiceClient.Create(callInvoker, Settings);
+            return ApiGatewayServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => ApiGatewayServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => ApiGatewayServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => ApiGatewayServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>ApiGatewayService client wrapper, for convenient use.</summary>
@@ -592,19 +580,10 @@ namespace Google.Cloud.ApiGateway.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(ApiGatewayService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="ApiGatewayServiceClient"/> using the default credentials, endpoint and
@@ -631,8 +610,9 @@ namespace Google.Cloud.ApiGateway.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="ApiGatewayServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="ApiGatewayServiceClient"/>.</returns>
-        internal static ApiGatewayServiceClient Create(grpccore::CallInvoker callInvoker, ApiGatewayServiceSettings settings = null)
+        internal static ApiGatewayServiceClient Create(grpccore::CallInvoker callInvoker, ApiGatewayServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -641,7 +621,7 @@ namespace Google.Cloud.ApiGateway.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             ApiGatewayService.ApiGatewayServiceClient grpcClient = new ApiGatewayService.ApiGatewayServiceClient(callInvoker);
-            return new ApiGatewayServiceClientImpl(grpcClient, settings);
+            return new ApiGatewayServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -2706,63 +2686,64 @@ namespace Google.Cloud.ApiGateway.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="ApiGatewayServiceSettings"/> used within this client.</param>
-        public ApiGatewayServiceClientImpl(ApiGatewayService.ApiGatewayServiceClient grpcClient, ApiGatewayServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public ApiGatewayServiceClientImpl(ApiGatewayService.ApiGatewayServiceClient grpcClient, ApiGatewayServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             ApiGatewayServiceSettings effectiveSettings = settings ?? ApiGatewayServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateGatewayOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateGatewayOperationsSettings);
-            UpdateGatewayOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateGatewayOperationsSettings);
-            DeleteGatewayOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteGatewayOperationsSettings);
-            CreateApiOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateApiOperationsSettings);
-            UpdateApiOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateApiOperationsSettings);
-            DeleteApiOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteApiOperationsSettings);
-            CreateApiConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateApiConfigOperationsSettings);
-            UpdateApiConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateApiConfigOperationsSettings);
-            DeleteApiConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteApiConfigOperationsSettings);
-            _callListGateways = clientHelper.BuildApiCall<ListGatewaysRequest, ListGatewaysResponse>(grpcClient.ListGatewaysAsync, grpcClient.ListGateways, effectiveSettings.ListGatewaysSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateGatewayOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateGatewayOperationsSettings, logger);
+            UpdateGatewayOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateGatewayOperationsSettings, logger);
+            DeleteGatewayOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteGatewayOperationsSettings, logger);
+            CreateApiOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateApiOperationsSettings, logger);
+            UpdateApiOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateApiOperationsSettings, logger);
+            DeleteApiOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteApiOperationsSettings, logger);
+            CreateApiConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateApiConfigOperationsSettings, logger);
+            UpdateApiConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateApiConfigOperationsSettings, logger);
+            DeleteApiConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteApiConfigOperationsSettings, logger);
+            _callListGateways = clientHelper.BuildApiCall<ListGatewaysRequest, ListGatewaysResponse>("ListGateways", grpcClient.ListGatewaysAsync, grpcClient.ListGateways, effectiveSettings.ListGatewaysSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListGateways);
             Modify_ListGatewaysApiCall(ref _callListGateways);
-            _callGetGateway = clientHelper.BuildApiCall<GetGatewayRequest, Gateway>(grpcClient.GetGatewayAsync, grpcClient.GetGateway, effectiveSettings.GetGatewaySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetGateway = clientHelper.BuildApiCall<GetGatewayRequest, Gateway>("GetGateway", grpcClient.GetGatewayAsync, grpcClient.GetGateway, effectiveSettings.GetGatewaySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetGateway);
             Modify_GetGatewayApiCall(ref _callGetGateway);
-            _callCreateGateway = clientHelper.BuildApiCall<CreateGatewayRequest, lro::Operation>(grpcClient.CreateGatewayAsync, grpcClient.CreateGateway, effectiveSettings.CreateGatewaySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateGateway = clientHelper.BuildApiCall<CreateGatewayRequest, lro::Operation>("CreateGateway", grpcClient.CreateGatewayAsync, grpcClient.CreateGateway, effectiveSettings.CreateGatewaySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateGateway);
             Modify_CreateGatewayApiCall(ref _callCreateGateway);
-            _callUpdateGateway = clientHelper.BuildApiCall<UpdateGatewayRequest, lro::Operation>(grpcClient.UpdateGatewayAsync, grpcClient.UpdateGateway, effectiveSettings.UpdateGatewaySettings).WithGoogleRequestParam("gateway.name", request => request.Gateway?.Name);
+            _callUpdateGateway = clientHelper.BuildApiCall<UpdateGatewayRequest, lro::Operation>("UpdateGateway", grpcClient.UpdateGatewayAsync, grpcClient.UpdateGateway, effectiveSettings.UpdateGatewaySettings).WithGoogleRequestParam("gateway.name", request => request.Gateway?.Name);
             Modify_ApiCall(ref _callUpdateGateway);
             Modify_UpdateGatewayApiCall(ref _callUpdateGateway);
-            _callDeleteGateway = clientHelper.BuildApiCall<DeleteGatewayRequest, lro::Operation>(grpcClient.DeleteGatewayAsync, grpcClient.DeleteGateway, effectiveSettings.DeleteGatewaySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteGateway = clientHelper.BuildApiCall<DeleteGatewayRequest, lro::Operation>("DeleteGateway", grpcClient.DeleteGatewayAsync, grpcClient.DeleteGateway, effectiveSettings.DeleteGatewaySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteGateway);
             Modify_DeleteGatewayApiCall(ref _callDeleteGateway);
-            _callListApis = clientHelper.BuildApiCall<ListApisRequest, ListApisResponse>(grpcClient.ListApisAsync, grpcClient.ListApis, effectiveSettings.ListApisSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListApis = clientHelper.BuildApiCall<ListApisRequest, ListApisResponse>("ListApis", grpcClient.ListApisAsync, grpcClient.ListApis, effectiveSettings.ListApisSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListApis);
             Modify_ListApisApiCall(ref _callListApis);
-            _callGetApi = clientHelper.BuildApiCall<GetApiRequest, Api>(grpcClient.GetApiAsync, grpcClient.GetApi, effectiveSettings.GetApiSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetApi = clientHelper.BuildApiCall<GetApiRequest, Api>("GetApi", grpcClient.GetApiAsync, grpcClient.GetApi, effectiveSettings.GetApiSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetApi);
             Modify_GetApiApiCall(ref _callGetApi);
-            _callCreateApi = clientHelper.BuildApiCall<CreateApiRequest, lro::Operation>(grpcClient.CreateApiAsync, grpcClient.CreateApi, effectiveSettings.CreateApiSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateApi = clientHelper.BuildApiCall<CreateApiRequest, lro::Operation>("CreateApi", grpcClient.CreateApiAsync, grpcClient.CreateApi, effectiveSettings.CreateApiSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateApi);
             Modify_CreateApiApiCall(ref _callCreateApi);
-            _callUpdateApi = clientHelper.BuildApiCall<UpdateApiRequest, lro::Operation>(grpcClient.UpdateApiAsync, grpcClient.UpdateApi, effectiveSettings.UpdateApiSettings).WithGoogleRequestParam("api.name", request => request.Api?.Name);
+            _callUpdateApi = clientHelper.BuildApiCall<UpdateApiRequest, lro::Operation>("UpdateApi", grpcClient.UpdateApiAsync, grpcClient.UpdateApi, effectiveSettings.UpdateApiSettings).WithGoogleRequestParam("api.name", request => request.Api?.Name);
             Modify_ApiCall(ref _callUpdateApi);
             Modify_UpdateApiApiCall(ref _callUpdateApi);
-            _callDeleteApi = clientHelper.BuildApiCall<DeleteApiRequest, lro::Operation>(grpcClient.DeleteApiAsync, grpcClient.DeleteApi, effectiveSettings.DeleteApiSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteApi = clientHelper.BuildApiCall<DeleteApiRequest, lro::Operation>("DeleteApi", grpcClient.DeleteApiAsync, grpcClient.DeleteApi, effectiveSettings.DeleteApiSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteApi);
             Modify_DeleteApiApiCall(ref _callDeleteApi);
-            _callListApiConfigs = clientHelper.BuildApiCall<ListApiConfigsRequest, ListApiConfigsResponse>(grpcClient.ListApiConfigsAsync, grpcClient.ListApiConfigs, effectiveSettings.ListApiConfigsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListApiConfigs = clientHelper.BuildApiCall<ListApiConfigsRequest, ListApiConfigsResponse>("ListApiConfigs", grpcClient.ListApiConfigsAsync, grpcClient.ListApiConfigs, effectiveSettings.ListApiConfigsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListApiConfigs);
             Modify_ListApiConfigsApiCall(ref _callListApiConfigs);
-            _callGetApiConfig = clientHelper.BuildApiCall<GetApiConfigRequest, ApiConfig>(grpcClient.GetApiConfigAsync, grpcClient.GetApiConfig, effectiveSettings.GetApiConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetApiConfig = clientHelper.BuildApiCall<GetApiConfigRequest, ApiConfig>("GetApiConfig", grpcClient.GetApiConfigAsync, grpcClient.GetApiConfig, effectiveSettings.GetApiConfigSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetApiConfig);
             Modify_GetApiConfigApiCall(ref _callGetApiConfig);
-            _callCreateApiConfig = clientHelper.BuildApiCall<CreateApiConfigRequest, lro::Operation>(grpcClient.CreateApiConfigAsync, grpcClient.CreateApiConfig, effectiveSettings.CreateApiConfigSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateApiConfig = clientHelper.BuildApiCall<CreateApiConfigRequest, lro::Operation>("CreateApiConfig", grpcClient.CreateApiConfigAsync, grpcClient.CreateApiConfig, effectiveSettings.CreateApiConfigSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateApiConfig);
             Modify_CreateApiConfigApiCall(ref _callCreateApiConfig);
-            _callUpdateApiConfig = clientHelper.BuildApiCall<UpdateApiConfigRequest, lro::Operation>(grpcClient.UpdateApiConfigAsync, grpcClient.UpdateApiConfig, effectiveSettings.UpdateApiConfigSettings).WithGoogleRequestParam("api_config.name", request => request.ApiConfig?.Name);
+            _callUpdateApiConfig = clientHelper.BuildApiCall<UpdateApiConfigRequest, lro::Operation>("UpdateApiConfig", grpcClient.UpdateApiConfigAsync, grpcClient.UpdateApiConfig, effectiveSettings.UpdateApiConfigSettings).WithGoogleRequestParam("api_config.name", request => request.ApiConfig?.Name);
             Modify_ApiCall(ref _callUpdateApiConfig);
             Modify_UpdateApiConfigApiCall(ref _callUpdateApiConfig);
-            _callDeleteApiConfig = clientHelper.BuildApiCall<DeleteApiConfigRequest, lro::Operation>(grpcClient.DeleteApiConfigAsync, grpcClient.DeleteApiConfig, effectiveSettings.DeleteApiConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteApiConfig = clientHelper.BuildApiCall<DeleteApiConfigRequest, lro::Operation>("DeleteApiConfig", grpcClient.DeleteApiConfigAsync, grpcClient.DeleteApiConfig, effectiveSettings.DeleteApiConfigSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteApiConfig);
             Modify_DeleteApiConfigApiCall(ref _callDeleteApiConfig);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

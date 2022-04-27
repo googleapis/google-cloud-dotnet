@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -95,9 +95,8 @@ namespace Google.Cloud.ServiceControl.V1
         public ServiceControllerSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public ServiceControllerClientBuilder()
+        public ServiceControllerClientBuilder() : base(ServiceControllerClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = ServiceControllerClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref ServiceControllerClient client);
@@ -124,29 +123,18 @@ namespace Google.Cloud.ServiceControl.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ServiceControllerClient.Create(callInvoker, Settings);
+            return ServiceControllerClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<ServiceControllerClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ServiceControllerClient.Create(callInvoker, Settings);
+            return ServiceControllerClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => ServiceControllerClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => ServiceControllerClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => ServiceControllerClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>ServiceController client wrapper, for convenient use.</summary>
@@ -178,19 +166,10 @@ namespace Google.Cloud.ServiceControl.V1
             "https://www.googleapis.com/auth/servicecontrol",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(ServiceController.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="ServiceControllerClient"/> using the default credentials, endpoint and
@@ -217,8 +196,9 @@ namespace Google.Cloud.ServiceControl.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="ServiceControllerSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="ServiceControllerClient"/>.</returns>
-        internal static ServiceControllerClient Create(grpccore::CallInvoker callInvoker, ServiceControllerSettings settings = null)
+        internal static ServiceControllerClient Create(grpccore::CallInvoker callInvoker, ServiceControllerSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -227,7 +207,7 @@ namespace Google.Cloud.ServiceControl.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             ServiceController.ServiceControllerClient grpcClient = new ServiceController.ServiceControllerClient(callInvoker);
-            return new ServiceControllerClientImpl(grpcClient, settings);
+            return new ServiceControllerClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -409,15 +389,16 @@ namespace Google.Cloud.ServiceControl.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="ServiceControllerSettings"/> used within this client.</param>
-        public ServiceControllerClientImpl(ServiceController.ServiceControllerClient grpcClient, ServiceControllerSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public ServiceControllerClientImpl(ServiceController.ServiceControllerClient grpcClient, ServiceControllerSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             ServiceControllerSettings effectiveSettings = settings ?? ServiceControllerSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callCheck = clientHelper.BuildApiCall<CheckRequest, CheckResponse>(grpcClient.CheckAsync, grpcClient.Check, effectiveSettings.CheckSettings).WithGoogleRequestParam("service_name", request => request.ServiceName);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callCheck = clientHelper.BuildApiCall<CheckRequest, CheckResponse>("Check", grpcClient.CheckAsync, grpcClient.Check, effectiveSettings.CheckSettings).WithGoogleRequestParam("service_name", request => request.ServiceName);
             Modify_ApiCall(ref _callCheck);
             Modify_CheckApiCall(ref _callCheck);
-            _callReport = clientHelper.BuildApiCall<ReportRequest, ReportResponse>(grpcClient.ReportAsync, grpcClient.Report, effectiveSettings.ReportSettings).WithGoogleRequestParam("service_name", request => request.ServiceName);
+            _callReport = clientHelper.BuildApiCall<ReportRequest, ReportResponse>("Report", grpcClient.ReportAsync, grpcClient.Report, effectiveSettings.ReportSettings).WithGoogleRequestParam("service_name", request => request.ServiceName);
             Modify_ApiCall(ref _callReport);
             Modify_ReportApiCall(ref _callReport);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

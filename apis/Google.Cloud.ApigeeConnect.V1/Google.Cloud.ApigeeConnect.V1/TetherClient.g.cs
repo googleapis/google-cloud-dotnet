@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -83,9 +83,8 @@ namespace Google.Cloud.ApigeeConnect.V1
         public TetherSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public TetherClientBuilder()
+        public TetherClientBuilder() : base(TetherClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = TetherClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref TetherClient client);
@@ -112,29 +111,18 @@ namespace Google.Cloud.ApigeeConnect.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return TetherClient.Create(callInvoker, Settings);
+            return TetherClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<TetherClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return TetherClient.Create(callInvoker, Settings);
+            return TetherClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => TetherClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => TetherClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => TetherClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>Tether client wrapper, for convenient use.</summary>
@@ -163,19 +151,10 @@ namespace Google.Cloud.ApigeeConnect.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Tether.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="TetherClient"/> using the default credentials, endpoint and settings. To
@@ -202,8 +181,9 @@ namespace Google.Cloud.ApigeeConnect.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="TetherSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="TetherClient"/>.</returns>
-        internal static TetherClient Create(grpccore::CallInvoker callInvoker, TetherSettings settings = null)
+        internal static TetherClient Create(grpccore::CallInvoker callInvoker, TetherSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -212,7 +192,7 @@ namespace Google.Cloud.ApigeeConnect.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             Tether.TetherClient grpcClient = new Tether.TetherClient(callInvoker);
-            return new TetherClientImpl(grpcClient, settings);
+            return new TetherClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -270,12 +250,13 @@ namespace Google.Cloud.ApigeeConnect.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="TetherSettings"/> used within this client.</param>
-        public TetherClientImpl(Tether.TetherClient grpcClient, TetherSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public TetherClientImpl(Tether.TetherClient grpcClient, TetherSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             TetherSettings effectiveSettings = settings ?? TetherSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callEgress = clientHelper.BuildApiCall<EgressResponse, EgressRequest>(grpcClient.Egress, effectiveSettings.EgressSettings, effectiveSettings.EgressStreamingSettings);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callEgress = clientHelper.BuildApiCall<EgressResponse, EgressRequest>("Egress", grpcClient.Egress, effectiveSettings.EgressSettings, effectiveSettings.EgressStreamingSettings);
             Modify_ApiCall(ref _callEgress);
             Modify_EgressApiCall(ref _callEgress);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

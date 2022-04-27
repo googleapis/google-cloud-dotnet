@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -206,9 +206,8 @@ namespace Google.Cloud.Recommender.V1
         public RecommenderSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public RecommenderClientBuilder()
+        public RecommenderClientBuilder() : base(RecommenderClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = RecommenderClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref RecommenderClient client);
@@ -235,29 +234,18 @@ namespace Google.Cloud.Recommender.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return RecommenderClient.Create(callInvoker, Settings);
+            return RecommenderClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<RecommenderClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return RecommenderClient.Create(callInvoker, Settings);
+            return RecommenderClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => RecommenderClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => RecommenderClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => RecommenderClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>Recommender client wrapper, for convenient use.</summary>
@@ -287,19 +275,10 @@ namespace Google.Cloud.Recommender.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Recommender.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="RecommenderClient"/> using the default credentials, endpoint and
@@ -326,8 +305,9 @@ namespace Google.Cloud.Recommender.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="RecommenderSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="RecommenderClient"/>.</returns>
-        internal static RecommenderClient Create(grpccore::CallInvoker callInvoker, RecommenderSettings settings = null)
+        internal static RecommenderClient Create(grpccore::CallInvoker callInvoker, RecommenderSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -336,7 +316,7 @@ namespace Google.Cloud.Recommender.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             Recommender.RecommenderClient grpcClient = new Recommender.RecommenderClient(callInvoker);
-            return new RecommenderClientImpl(grpcClient, settings);
+            return new RecommenderClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -2252,33 +2232,34 @@ namespace Google.Cloud.Recommender.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="RecommenderSettings"/> used within this client.</param>
-        public RecommenderClientImpl(Recommender.RecommenderClient grpcClient, RecommenderSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public RecommenderClientImpl(Recommender.RecommenderClient grpcClient, RecommenderSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             RecommenderSettings effectiveSettings = settings ?? RecommenderSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListInsights = clientHelper.BuildApiCall<ListInsightsRequest, ListInsightsResponse>(grpcClient.ListInsightsAsync, grpcClient.ListInsights, effectiveSettings.ListInsightsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callListInsights = clientHelper.BuildApiCall<ListInsightsRequest, ListInsightsResponse>("ListInsights", grpcClient.ListInsightsAsync, grpcClient.ListInsights, effectiveSettings.ListInsightsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListInsights);
             Modify_ListInsightsApiCall(ref _callListInsights);
-            _callGetInsight = clientHelper.BuildApiCall<GetInsightRequest, Insight>(grpcClient.GetInsightAsync, grpcClient.GetInsight, effectiveSettings.GetInsightSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetInsight = clientHelper.BuildApiCall<GetInsightRequest, Insight>("GetInsight", grpcClient.GetInsightAsync, grpcClient.GetInsight, effectiveSettings.GetInsightSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetInsight);
             Modify_GetInsightApiCall(ref _callGetInsight);
-            _callMarkInsightAccepted = clientHelper.BuildApiCall<MarkInsightAcceptedRequest, Insight>(grpcClient.MarkInsightAcceptedAsync, grpcClient.MarkInsightAccepted, effectiveSettings.MarkInsightAcceptedSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callMarkInsightAccepted = clientHelper.BuildApiCall<MarkInsightAcceptedRequest, Insight>("MarkInsightAccepted", grpcClient.MarkInsightAcceptedAsync, grpcClient.MarkInsightAccepted, effectiveSettings.MarkInsightAcceptedSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callMarkInsightAccepted);
             Modify_MarkInsightAcceptedApiCall(ref _callMarkInsightAccepted);
-            _callListRecommendations = clientHelper.BuildApiCall<ListRecommendationsRequest, ListRecommendationsResponse>(grpcClient.ListRecommendationsAsync, grpcClient.ListRecommendations, effectiveSettings.ListRecommendationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListRecommendations = clientHelper.BuildApiCall<ListRecommendationsRequest, ListRecommendationsResponse>("ListRecommendations", grpcClient.ListRecommendationsAsync, grpcClient.ListRecommendations, effectiveSettings.ListRecommendationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListRecommendations);
             Modify_ListRecommendationsApiCall(ref _callListRecommendations);
-            _callGetRecommendation = clientHelper.BuildApiCall<GetRecommendationRequest, Recommendation>(grpcClient.GetRecommendationAsync, grpcClient.GetRecommendation, effectiveSettings.GetRecommendationSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetRecommendation = clientHelper.BuildApiCall<GetRecommendationRequest, Recommendation>("GetRecommendation", grpcClient.GetRecommendationAsync, grpcClient.GetRecommendation, effectiveSettings.GetRecommendationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetRecommendation);
             Modify_GetRecommendationApiCall(ref _callGetRecommendation);
-            _callMarkRecommendationClaimed = clientHelper.BuildApiCall<MarkRecommendationClaimedRequest, Recommendation>(grpcClient.MarkRecommendationClaimedAsync, grpcClient.MarkRecommendationClaimed, effectiveSettings.MarkRecommendationClaimedSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callMarkRecommendationClaimed = clientHelper.BuildApiCall<MarkRecommendationClaimedRequest, Recommendation>("MarkRecommendationClaimed", grpcClient.MarkRecommendationClaimedAsync, grpcClient.MarkRecommendationClaimed, effectiveSettings.MarkRecommendationClaimedSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callMarkRecommendationClaimed);
             Modify_MarkRecommendationClaimedApiCall(ref _callMarkRecommendationClaimed);
-            _callMarkRecommendationSucceeded = clientHelper.BuildApiCall<MarkRecommendationSucceededRequest, Recommendation>(grpcClient.MarkRecommendationSucceededAsync, grpcClient.MarkRecommendationSucceeded, effectiveSettings.MarkRecommendationSucceededSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callMarkRecommendationSucceeded = clientHelper.BuildApiCall<MarkRecommendationSucceededRequest, Recommendation>("MarkRecommendationSucceeded", grpcClient.MarkRecommendationSucceededAsync, grpcClient.MarkRecommendationSucceeded, effectiveSettings.MarkRecommendationSucceededSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callMarkRecommendationSucceeded);
             Modify_MarkRecommendationSucceededApiCall(ref _callMarkRecommendationSucceeded);
-            _callMarkRecommendationFailed = clientHelper.BuildApiCall<MarkRecommendationFailedRequest, Recommendation>(grpcClient.MarkRecommendationFailedAsync, grpcClient.MarkRecommendationFailed, effectiveSettings.MarkRecommendationFailedSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callMarkRecommendationFailed = clientHelper.BuildApiCall<MarkRecommendationFailedRequest, Recommendation>("MarkRecommendationFailed", grpcClient.MarkRecommendationFailedAsync, grpcClient.MarkRecommendationFailed, effectiveSettings.MarkRecommendationFailedSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callMarkRecommendationFailed);
             Modify_MarkRecommendationFailedApiCall(ref _callMarkRecommendationFailed);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

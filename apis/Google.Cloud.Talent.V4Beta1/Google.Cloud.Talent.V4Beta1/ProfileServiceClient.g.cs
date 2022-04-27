@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -170,9 +170,8 @@ namespace Google.Cloud.Talent.V4Beta1
         public ProfileServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public ProfileServiceClientBuilder()
+        public ProfileServiceClientBuilder() : base(ProfileServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = ProfileServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref ProfileServiceClient client);
@@ -199,29 +198,18 @@ namespace Google.Cloud.Talent.V4Beta1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ProfileServiceClient.Create(callInvoker, Settings);
+            return ProfileServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<ProfileServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ProfileServiceClient.Create(callInvoker, Settings);
+            return ProfileServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => ProfileServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => ProfileServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => ProfileServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>ProfileService client wrapper, for convenient use.</summary>
@@ -251,19 +239,10 @@ namespace Google.Cloud.Talent.V4Beta1
             "https://www.googleapis.com/auth/jobs",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(ProfileService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="ProfileServiceClient"/> using the default credentials, endpoint and
@@ -290,8 +269,9 @@ namespace Google.Cloud.Talent.V4Beta1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="ProfileServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="ProfileServiceClient"/>.</returns>
-        internal static ProfileServiceClient Create(grpccore::CallInvoker callInvoker, ProfileServiceSettings settings = null)
+        internal static ProfileServiceClient Create(grpccore::CallInvoker callInvoker, ProfileServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -300,7 +280,7 @@ namespace Google.Cloud.Talent.V4Beta1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             ProfileService.ProfileServiceClient grpcClient = new ProfileService.ProfileServiceClient(callInvoker);
-            return new ProfileServiceClientImpl(grpcClient, settings);
+            return new ProfileServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -999,27 +979,28 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="ProfileServiceSettings"/> used within this client.</param>
-        public ProfileServiceClientImpl(ProfileService.ProfileServiceClient grpcClient, ProfileServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public ProfileServiceClientImpl(ProfileService.ProfileServiceClient grpcClient, ProfileServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             ProfileServiceSettings effectiveSettings = settings ?? ProfileServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListProfiles = clientHelper.BuildApiCall<ListProfilesRequest, ListProfilesResponse>(grpcClient.ListProfilesAsync, grpcClient.ListProfiles, effectiveSettings.ListProfilesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callListProfiles = clientHelper.BuildApiCall<ListProfilesRequest, ListProfilesResponse>("ListProfiles", grpcClient.ListProfilesAsync, grpcClient.ListProfiles, effectiveSettings.ListProfilesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListProfiles);
             Modify_ListProfilesApiCall(ref _callListProfiles);
-            _callCreateProfile = clientHelper.BuildApiCall<CreateProfileRequest, Profile>(grpcClient.CreateProfileAsync, grpcClient.CreateProfile, effectiveSettings.CreateProfileSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateProfile = clientHelper.BuildApiCall<CreateProfileRequest, Profile>("CreateProfile", grpcClient.CreateProfileAsync, grpcClient.CreateProfile, effectiveSettings.CreateProfileSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateProfile);
             Modify_CreateProfileApiCall(ref _callCreateProfile);
-            _callGetProfile = clientHelper.BuildApiCall<GetProfileRequest, Profile>(grpcClient.GetProfileAsync, grpcClient.GetProfile, effectiveSettings.GetProfileSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetProfile = clientHelper.BuildApiCall<GetProfileRequest, Profile>("GetProfile", grpcClient.GetProfileAsync, grpcClient.GetProfile, effectiveSettings.GetProfileSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetProfile);
             Modify_GetProfileApiCall(ref _callGetProfile);
-            _callUpdateProfile = clientHelper.BuildApiCall<UpdateProfileRequest, Profile>(grpcClient.UpdateProfileAsync, grpcClient.UpdateProfile, effectiveSettings.UpdateProfileSettings).WithGoogleRequestParam("profile.name", request => request.Profile?.Name);
+            _callUpdateProfile = clientHelper.BuildApiCall<UpdateProfileRequest, Profile>("UpdateProfile", grpcClient.UpdateProfileAsync, grpcClient.UpdateProfile, effectiveSettings.UpdateProfileSettings).WithGoogleRequestParam("profile.name", request => request.Profile?.Name);
             Modify_ApiCall(ref _callUpdateProfile);
             Modify_UpdateProfileApiCall(ref _callUpdateProfile);
-            _callDeleteProfile = clientHelper.BuildApiCall<DeleteProfileRequest, wkt::Empty>(grpcClient.DeleteProfileAsync, grpcClient.DeleteProfile, effectiveSettings.DeleteProfileSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteProfile = clientHelper.BuildApiCall<DeleteProfileRequest, wkt::Empty>("DeleteProfile", grpcClient.DeleteProfileAsync, grpcClient.DeleteProfile, effectiveSettings.DeleteProfileSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteProfile);
             Modify_DeleteProfileApiCall(ref _callDeleteProfile);
-            _callSearchProfiles = clientHelper.BuildApiCall<SearchProfilesRequest, SearchProfilesResponse>(grpcClient.SearchProfilesAsync, grpcClient.SearchProfiles, effectiveSettings.SearchProfilesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callSearchProfiles = clientHelper.BuildApiCall<SearchProfilesRequest, SearchProfilesResponse>("SearchProfiles", grpcClient.SearchProfilesAsync, grpcClient.SearchProfiles, effectiveSettings.SearchProfilesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callSearchProfiles);
             Modify_SearchProfilesApiCall(ref _callSearchProfiles);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

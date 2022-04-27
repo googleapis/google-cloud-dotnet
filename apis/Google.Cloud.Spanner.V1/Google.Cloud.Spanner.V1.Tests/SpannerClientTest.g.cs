@@ -53,7 +53,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 ApproximateLastUseTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             Session response = client.CreateSession(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -82,7 +82,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 ApproximateLastUseTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Session>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             Session responseCallSettings = await client.CreateSessionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Session responseCancellationToken = await client.CreateSessionAsync(request, st::CancellationToken.None);
@@ -112,7 +112,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 ApproximateLastUseTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             Session response = client.CreateSession(request.Database);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -140,7 +140,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 ApproximateLastUseTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Session>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             Session responseCallSettings = await client.CreateSessionAsync(request.Database, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Session responseCancellationToken = await client.CreateSessionAsync(request.Database, st::CancellationToken.None);
@@ -170,7 +170,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 ApproximateLastUseTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             Session response = client.CreateSession(request.DatabaseAsDatabaseName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -198,7 +198,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 ApproximateLastUseTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Session>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             Session responseCallSettings = await client.CreateSessionAsync(request.DatabaseAsDatabaseName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Session responseCancellationToken = await client.CreateSessionAsync(request.DatabaseAsDatabaseName, st::CancellationToken.None);
@@ -221,7 +221,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 Session = { new Session(), },
             };
             mockGrpcClient.Setup(x => x.BatchCreateSessions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             BatchCreateSessionsResponse response = client.BatchCreateSessions(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -242,7 +242,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 Session = { new Session(), },
             };
             mockGrpcClient.Setup(x => x.BatchCreateSessionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchCreateSessionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             BatchCreateSessionsResponse responseCallSettings = await client.BatchCreateSessionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchCreateSessionsResponse responseCancellationToken = await client.BatchCreateSessionsAsync(request, st::CancellationToken.None);
@@ -264,7 +264,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 Session = { new Session(), },
             };
             mockGrpcClient.Setup(x => x.BatchCreateSessions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             BatchCreateSessionsResponse response = client.BatchCreateSessions(request.Database, request.SessionCount);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -284,7 +284,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 Session = { new Session(), },
             };
             mockGrpcClient.Setup(x => x.BatchCreateSessionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchCreateSessionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             BatchCreateSessionsResponse responseCallSettings = await client.BatchCreateSessionsAsync(request.Database, request.SessionCount, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchCreateSessionsResponse responseCancellationToken = await client.BatchCreateSessionsAsync(request.Database, request.SessionCount, st::CancellationToken.None);
@@ -306,7 +306,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 Session = { new Session(), },
             };
             mockGrpcClient.Setup(x => x.BatchCreateSessions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             BatchCreateSessionsResponse response = client.BatchCreateSessions(request.DatabaseAsDatabaseName, request.SessionCount);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -326,7 +326,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 Session = { new Session(), },
             };
             mockGrpcClient.Setup(x => x.BatchCreateSessionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchCreateSessionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             BatchCreateSessionsResponse responseCallSettings = await client.BatchCreateSessionsAsync(request.DatabaseAsDatabaseName, request.SessionCount, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchCreateSessionsResponse responseCancellationToken = await client.BatchCreateSessionsAsync(request.DatabaseAsDatabaseName, request.SessionCount, st::CancellationToken.None);
@@ -356,7 +356,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 ApproximateLastUseTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             Session response = client.GetSession(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -384,7 +384,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 ApproximateLastUseTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Session>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             Session responseCallSettings = await client.GetSessionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Session responseCancellationToken = await client.GetSessionAsync(request, st::CancellationToken.None);
@@ -414,7 +414,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 ApproximateLastUseTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             Session response = client.GetSession(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -442,7 +442,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 ApproximateLastUseTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Session>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             Session responseCallSettings = await client.GetSessionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Session responseCancellationToken = await client.GetSessionAsync(request.Name, st::CancellationToken.None);
@@ -472,7 +472,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 ApproximateLastUseTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             Session response = client.GetSession(request.SessionName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -500,7 +500,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 ApproximateLastUseTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Session>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             Session responseCallSettings = await client.GetSessionAsync(request.SessionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Session responseCancellationToken = await client.GetSessionAsync(request.SessionName, st::CancellationToken.None);
@@ -518,7 +518,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteSession(request);
             mockGrpcClient.VerifyAll();
         }
@@ -533,7 +533,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteSessionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteSessionAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -549,7 +549,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteSession(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -564,7 +564,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteSessionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteSessionAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -580,7 +580,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteSession(request.SessionName);
             mockGrpcClient.VerifyAll();
         }
@@ -595,7 +595,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteSessionAsync(request.SessionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteSessionAsync(request.SessionName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -635,7 +635,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 Stats = new ResultSetStats(),
             };
             mockGrpcClient.Setup(x => x.ExecuteSql(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             ResultSet response = client.ExecuteSql(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -675,7 +675,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 Stats = new ResultSetStats(),
             };
             mockGrpcClient.Setup(x => x.ExecuteSqlAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ResultSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             ResultSet responseCallSettings = await client.ExecuteSqlAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ResultSet responseCancellationToken = await client.ExecuteSqlAsync(request, st::CancellationToken.None);
@@ -704,7 +704,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 Status = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.ExecuteBatchDml(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             ExecuteBatchDmlResponse response = client.ExecuteBatchDml(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -731,7 +731,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 Status = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.ExecuteBatchDmlAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ExecuteBatchDmlResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             ExecuteBatchDmlResponse responseCallSettings = await client.ExecuteBatchDmlAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ExecuteBatchDmlResponse responseCancellationToken = await client.ExecuteBatchDmlAsync(request, st::CancellationToken.None);
@@ -766,7 +766,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 Stats = new ResultSetStats(),
             };
             mockGrpcClient.Setup(x => x.Read(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             ResultSet response = client.Read(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -799,7 +799,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 Stats = new ResultSetStats(),
             };
             mockGrpcClient.Setup(x => x.ReadAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ResultSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             ResultSet responseCallSettings = await client.ReadAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ResultSet responseCancellationToken = await client.ReadAsync(request, st::CancellationToken.None);
@@ -823,7 +823,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 ReadTimestamp = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.BeginTransaction(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             Transaction response = client.BeginTransaction(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -845,7 +845,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 ReadTimestamp = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.BeginTransactionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Transaction>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             Transaction responseCallSettings = await client.BeginTransactionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Transaction responseCancellationToken = await client.BeginTransactionAsync(request, st::CancellationToken.None);
@@ -868,7 +868,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 ReadTimestamp = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.BeginTransaction(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             Transaction response = client.BeginTransaction(request.Session, request.Options);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -889,7 +889,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 ReadTimestamp = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.BeginTransactionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Transaction>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             Transaction responseCallSettings = await client.BeginTransactionAsync(request.Session, request.Options, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Transaction responseCancellationToken = await client.BeginTransactionAsync(request.Session, request.Options, st::CancellationToken.None);
@@ -912,7 +912,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 ReadTimestamp = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.BeginTransaction(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             Transaction response = client.BeginTransaction(request.SessionAsSessionName, request.Options);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -933,7 +933,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 ReadTimestamp = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.BeginTransactionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Transaction>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             Transaction responseCallSettings = await client.BeginTransactionAsync(request.SessionAsSessionName, request.Options, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Transaction responseCancellationToken = await client.BeginTransactionAsync(request.SessionAsSessionName, request.Options, st::CancellationToken.None);
@@ -960,7 +960,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 CommitStats = new CommitResponse.Types.CommitStats(),
             };
             mockGrpcClient.Setup(x => x.Commit(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             CommitResponse response = client.Commit(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -985,7 +985,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 CommitStats = new CommitResponse.Types.CommitStats(),
             };
             mockGrpcClient.Setup(x => x.CommitAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CommitResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             CommitResponse responseCallSettings = await client.CommitAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CommitResponse responseCancellationToken = await client.CommitAsync(request, st::CancellationToken.None);
@@ -1009,7 +1009,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 CommitStats = new CommitResponse.Types.CommitStats(),
             };
             mockGrpcClient.Setup(x => x.Commit(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             CommitResponse response = client.Commit(request.Session, request.TransactionId, request.Mutations);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1031,7 +1031,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 CommitStats = new CommitResponse.Types.CommitStats(),
             };
             mockGrpcClient.Setup(x => x.CommitAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CommitResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             CommitResponse responseCallSettings = await client.CommitAsync(request.Session, request.TransactionId, request.Mutations, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CommitResponse responseCancellationToken = await client.CommitAsync(request.Session, request.TransactionId, request.Mutations, st::CancellationToken.None);
@@ -1055,7 +1055,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 CommitStats = new CommitResponse.Types.CommitStats(),
             };
             mockGrpcClient.Setup(x => x.Commit(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             CommitResponse response = client.Commit(request.SessionAsSessionName, request.TransactionId, request.Mutations);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1077,7 +1077,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 CommitStats = new CommitResponse.Types.CommitStats(),
             };
             mockGrpcClient.Setup(x => x.CommitAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CommitResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             CommitResponse responseCallSettings = await client.CommitAsync(request.SessionAsSessionName, request.TransactionId, request.Mutations, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CommitResponse responseCancellationToken = await client.CommitAsync(request.SessionAsSessionName, request.TransactionId, request.Mutations, st::CancellationToken.None);
@@ -1101,7 +1101,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 CommitStats = new CommitResponse.Types.CommitStats(),
             };
             mockGrpcClient.Setup(x => x.Commit(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             CommitResponse response = client.Commit(request.Session, request.SingleUseTransaction, request.Mutations);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1123,7 +1123,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 CommitStats = new CommitResponse.Types.CommitStats(),
             };
             mockGrpcClient.Setup(x => x.CommitAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CommitResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             CommitResponse responseCallSettings = await client.CommitAsync(request.Session, request.SingleUseTransaction, request.Mutations, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CommitResponse responseCancellationToken = await client.CommitAsync(request.Session, request.SingleUseTransaction, request.Mutations, st::CancellationToken.None);
@@ -1147,7 +1147,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 CommitStats = new CommitResponse.Types.CommitStats(),
             };
             mockGrpcClient.Setup(x => x.Commit(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             CommitResponse response = client.Commit(request.SessionAsSessionName, request.SingleUseTransaction, request.Mutations);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1169,7 +1169,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 CommitStats = new CommitResponse.Types.CommitStats(),
             };
             mockGrpcClient.Setup(x => x.CommitAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CommitResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             CommitResponse responseCallSettings = await client.CommitAsync(request.SessionAsSessionName, request.SingleUseTransaction, request.Mutations, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CommitResponse responseCancellationToken = await client.CommitAsync(request.SessionAsSessionName, request.SingleUseTransaction, request.Mutations, st::CancellationToken.None);
@@ -1188,7 +1188,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.Rollback(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             client.Rollback(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1204,7 +1204,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.RollbackAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             await client.RollbackAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.RollbackAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1221,7 +1221,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.Rollback(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             client.Rollback(request.Session, request.TransactionId);
             mockGrpcClient.VerifyAll();
         }
@@ -1237,7 +1237,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.RollbackAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             await client.RollbackAsync(request.Session, request.TransactionId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.RollbackAsync(request.Session, request.TransactionId, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1254,7 +1254,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.Rollback(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             client.Rollback(request.SessionAsSessionName, request.TransactionId);
             mockGrpcClient.VerifyAll();
         }
@@ -1270,7 +1270,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.RollbackAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             await client.RollbackAsync(request.SessionAsSessionName, request.TransactionId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.RollbackAsync(request.SessionAsSessionName, request.TransactionId, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1301,7 +1301,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 Transaction = new Transaction(),
             };
             mockGrpcClient.Setup(x => x.PartitionQuery(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             PartitionResponse response = client.PartitionQuery(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1332,7 +1332,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 Transaction = new Transaction(),
             };
             mockGrpcClient.Setup(x => x.PartitionQueryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PartitionResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             PartitionResponse responseCallSettings = await client.PartitionQueryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PartitionResponse responseCancellationToken = await client.PartitionQueryAsync(request, st::CancellationToken.None);
@@ -1360,7 +1360,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 Transaction = new Transaction(),
             };
             mockGrpcClient.Setup(x => x.PartitionRead(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             PartitionResponse response = client.PartitionRead(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1386,7 +1386,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 Transaction = new Transaction(),
             };
             mockGrpcClient.Setup(x => x.PartitionReadAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PartitionResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null, null);
             PartitionResponse responseCallSettings = await client.PartitionReadAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PartitionResponse responseCancellationToken = await client.PartitionReadAsync(request, st::CancellationToken.None);

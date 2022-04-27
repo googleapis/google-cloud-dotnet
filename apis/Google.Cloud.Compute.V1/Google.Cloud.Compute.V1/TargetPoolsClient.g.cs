@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -367,9 +367,8 @@ namespace Google.Cloud.Compute.V1
         public TargetPoolsSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public TargetPoolsClientBuilder()
+        public TargetPoolsClientBuilder() : base(TargetPoolsClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = TargetPoolsClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref TargetPoolsClient client);
@@ -396,29 +395,18 @@ namespace Google.Cloud.Compute.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return TargetPoolsClient.Create(callInvoker, Settings);
+            return TargetPoolsClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<TargetPoolsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return TargetPoolsClient.Create(callInvoker, Settings);
+            return TargetPoolsClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => TargetPoolsClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => TargetPoolsClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => TargetPoolsClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => ComputeRestAdapter.ComputeAdapter;
     }
 
     /// <summary>TargetPools client wrapper, for convenient use.</summary>
@@ -447,19 +435,10 @@ namespace Google.Cloud.Compute.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(TargetPools.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="TargetPoolsClient"/> using the default credentials, endpoint and
@@ -486,8 +465,9 @@ namespace Google.Cloud.Compute.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="TargetPoolsSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="TargetPoolsClient"/>.</returns>
-        internal static TargetPoolsClient Create(grpccore::CallInvoker callInvoker, TargetPoolsSettings settings = null)
+        internal static TargetPoolsClient Create(grpccore::CallInvoker callInvoker, TargetPoolsSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -496,7 +476,7 @@ namespace Google.Cloud.Compute.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             TargetPools.TargetPoolsClient grpcClient = new TargetPools.TargetPoolsClient(callInvoker);
-            return new TargetPoolsClientImpl(grpcClient, settings);
+            return new TargetPoolsClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1734,49 +1714,50 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="TargetPoolsSettings"/> used within this client.</param>
-        public TargetPoolsClientImpl(TargetPools.TargetPoolsClient grpcClient, TargetPoolsSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public TargetPoolsClientImpl(TargetPools.TargetPoolsClient grpcClient, TargetPoolsSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             TargetPoolsSettings effectiveSettings = settings ?? TargetPoolsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            AddHealthCheckOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.AddHealthCheckOperationsSettings);
-            AddInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.AddInstanceOperationsSettings);
-            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.DeleteOperationsSettings);
-            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.InsertOperationsSettings);
-            RemoveHealthCheckOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.RemoveHealthCheckOperationsSettings);
-            RemoveInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.RemoveInstanceOperationsSettings);
-            SetBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.SetBackupOperationsSettings);
-            _callAddHealthCheck = clientHelper.BuildApiCall<AddHealthCheckTargetPoolRequest, Operation>(grpcClient.AddHealthCheckAsync, grpcClient.AddHealthCheck, effectiveSettings.AddHealthCheckSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("target_pool", request => request.TargetPool);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            AddHealthCheckOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.AddHealthCheckOperationsSettings, logger);
+            AddInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.AddInstanceOperationsSettings, logger);
+            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.DeleteOperationsSettings, logger);
+            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.InsertOperationsSettings, logger);
+            RemoveHealthCheckOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.RemoveHealthCheckOperationsSettings, logger);
+            RemoveInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.RemoveInstanceOperationsSettings, logger);
+            SetBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.SetBackupOperationsSettings, logger);
+            _callAddHealthCheck = clientHelper.BuildApiCall<AddHealthCheckTargetPoolRequest, Operation>("AddHealthCheck", grpcClient.AddHealthCheckAsync, grpcClient.AddHealthCheck, effectiveSettings.AddHealthCheckSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("target_pool", request => request.TargetPool);
             Modify_ApiCall(ref _callAddHealthCheck);
             Modify_AddHealthCheckApiCall(ref _callAddHealthCheck);
-            _callAddInstance = clientHelper.BuildApiCall<AddInstanceTargetPoolRequest, Operation>(grpcClient.AddInstanceAsync, grpcClient.AddInstance, effectiveSettings.AddInstanceSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("target_pool", request => request.TargetPool);
+            _callAddInstance = clientHelper.BuildApiCall<AddInstanceTargetPoolRequest, Operation>("AddInstance", grpcClient.AddInstanceAsync, grpcClient.AddInstance, effectiveSettings.AddInstanceSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("target_pool", request => request.TargetPool);
             Modify_ApiCall(ref _callAddInstance);
             Modify_AddInstanceApiCall(ref _callAddInstance);
-            _callAggregatedList = clientHelper.BuildApiCall<AggregatedListTargetPoolsRequest, TargetPoolAggregatedList>(grpcClient.AggregatedListAsync, grpcClient.AggregatedList, effectiveSettings.AggregatedListSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callAggregatedList = clientHelper.BuildApiCall<AggregatedListTargetPoolsRequest, TargetPoolAggregatedList>("AggregatedList", grpcClient.AggregatedListAsync, grpcClient.AggregatedList, effectiveSettings.AggregatedListSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callAggregatedList);
             Modify_AggregatedListApiCall(ref _callAggregatedList);
-            _callDelete = clientHelper.BuildApiCall<DeleteTargetPoolRequest, Operation>(grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("target_pool", request => request.TargetPool);
+            _callDelete = clientHelper.BuildApiCall<DeleteTargetPoolRequest, Operation>("Delete", grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("target_pool", request => request.TargetPool);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);
-            _callGet = clientHelper.BuildApiCall<GetTargetPoolRequest, TargetPool>(grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("target_pool", request => request.TargetPool);
+            _callGet = clientHelper.BuildApiCall<GetTargetPoolRequest, TargetPool>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("target_pool", request => request.TargetPool);
             Modify_ApiCall(ref _callGet);
             Modify_GetApiCall(ref _callGet);
-            _callGetHealth = clientHelper.BuildApiCall<GetHealthTargetPoolRequest, TargetPoolInstanceHealth>(grpcClient.GetHealthAsync, grpcClient.GetHealth, effectiveSettings.GetHealthSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("target_pool", request => request.TargetPool);
+            _callGetHealth = clientHelper.BuildApiCall<GetHealthTargetPoolRequest, TargetPoolInstanceHealth>("GetHealth", grpcClient.GetHealthAsync, grpcClient.GetHealth, effectiveSettings.GetHealthSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("target_pool", request => request.TargetPool);
             Modify_ApiCall(ref _callGetHealth);
             Modify_GetHealthApiCall(ref _callGetHealth);
-            _callInsert = clientHelper.BuildApiCall<InsertTargetPoolRequest, Operation>(grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
+            _callInsert = clientHelper.BuildApiCall<InsertTargetPoolRequest, Operation>("Insert", grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
             Modify_ApiCall(ref _callInsert);
             Modify_InsertApiCall(ref _callInsert);
-            _callList = clientHelper.BuildApiCall<ListTargetPoolsRequest, TargetPoolList>(grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
+            _callList = clientHelper.BuildApiCall<ListTargetPoolsRequest, TargetPoolList>("List", grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
             Modify_ApiCall(ref _callList);
             Modify_ListApiCall(ref _callList);
-            _callRemoveHealthCheck = clientHelper.BuildApiCall<RemoveHealthCheckTargetPoolRequest, Operation>(grpcClient.RemoveHealthCheckAsync, grpcClient.RemoveHealthCheck, effectiveSettings.RemoveHealthCheckSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("target_pool", request => request.TargetPool);
+            _callRemoveHealthCheck = clientHelper.BuildApiCall<RemoveHealthCheckTargetPoolRequest, Operation>("RemoveHealthCheck", grpcClient.RemoveHealthCheckAsync, grpcClient.RemoveHealthCheck, effectiveSettings.RemoveHealthCheckSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("target_pool", request => request.TargetPool);
             Modify_ApiCall(ref _callRemoveHealthCheck);
             Modify_RemoveHealthCheckApiCall(ref _callRemoveHealthCheck);
-            _callRemoveInstance = clientHelper.BuildApiCall<RemoveInstanceTargetPoolRequest, Operation>(grpcClient.RemoveInstanceAsync, grpcClient.RemoveInstance, effectiveSettings.RemoveInstanceSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("target_pool", request => request.TargetPool);
+            _callRemoveInstance = clientHelper.BuildApiCall<RemoveInstanceTargetPoolRequest, Operation>("RemoveInstance", grpcClient.RemoveInstanceAsync, grpcClient.RemoveInstance, effectiveSettings.RemoveInstanceSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("target_pool", request => request.TargetPool);
             Modify_ApiCall(ref _callRemoveInstance);
             Modify_RemoveInstanceApiCall(ref _callRemoveInstance);
-            _callSetBackup = clientHelper.BuildApiCall<SetBackupTargetPoolRequest, Operation>(grpcClient.SetBackupAsync, grpcClient.SetBackup, effectiveSettings.SetBackupSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("target_pool", request => request.TargetPool);
+            _callSetBackup = clientHelper.BuildApiCall<SetBackupTargetPoolRequest, Operation>("SetBackup", grpcClient.SetBackupAsync, grpcClient.SetBackup, effectiveSettings.SetBackupSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("target_pool", request => request.TargetPool);
             Modify_ApiCall(ref _callSetBackup);
             Modify_SetBackupApiCall(ref _callSetBackup);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

@@ -60,7 +60,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 State = Document.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetDocument(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DocumentsClient client = new DocumentsClientImpl(mockGrpcClient.Object, null);
+            DocumentsClient client = new DocumentsClientImpl(mockGrpcClient.Object, null, null);
             Document response = client.GetDocument(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -98,7 +98,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 State = Document.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetDocumentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Document>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DocumentsClient client = new DocumentsClientImpl(mockGrpcClient.Object, null);
+            DocumentsClient client = new DocumentsClientImpl(mockGrpcClient.Object, null, null);
             Document responseCallSettings = await client.GetDocumentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Document responseCancellationToken = await client.GetDocumentAsync(request, st::CancellationToken.None);
@@ -138,7 +138,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 State = Document.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetDocument(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DocumentsClient client = new DocumentsClientImpl(mockGrpcClient.Object, null);
+            DocumentsClient client = new DocumentsClientImpl(mockGrpcClient.Object, null, null);
             Document response = client.GetDocument(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -176,7 +176,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 State = Document.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetDocumentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Document>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DocumentsClient client = new DocumentsClientImpl(mockGrpcClient.Object, null);
+            DocumentsClient client = new DocumentsClientImpl(mockGrpcClient.Object, null, null);
             Document responseCallSettings = await client.GetDocumentAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Document responseCancellationToken = await client.GetDocumentAsync(request.Name, st::CancellationToken.None);
@@ -216,7 +216,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 State = Document.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetDocument(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DocumentsClient client = new DocumentsClientImpl(mockGrpcClient.Object, null);
+            DocumentsClient client = new DocumentsClientImpl(mockGrpcClient.Object, null, null);
             Document response = client.GetDocument(request.DocumentName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -254,7 +254,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 State = Document.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetDocumentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Document>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DocumentsClient client = new DocumentsClientImpl(mockGrpcClient.Object, null);
+            DocumentsClient client = new DocumentsClientImpl(mockGrpcClient.Object, null, null);
             Document responseCallSettings = await client.GetDocumentAsync(request.DocumentName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Document responseCancellationToken = await client.GetDocumentAsync(request.DocumentName, st::CancellationToken.None);
