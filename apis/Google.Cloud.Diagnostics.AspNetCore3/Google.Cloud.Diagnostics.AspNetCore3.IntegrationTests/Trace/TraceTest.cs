@@ -176,29 +176,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
                 });
         }
 
-        [Fact]
-        public async Task Trace_OutGoing()
-        {
-            // We don't test custom trace context with TraceHeaderPropagatingHandler because it's
-            // pre IHttpClientFactory and has associated lifetime issues.
-            var uri = $"/Trace/{nameof(TraceController.TraceOutgoing)}/{_testId}";
-            var childSpanName = EntryData.GetMessage(nameof(TraceController.TraceOutgoing), _testId);
-            var outgoingSpanName = "https://google.com/";
-
-            using var server = GetTestServer<TraceTestNoBufferHighQpsApplication>(
-                builder => builder.ConfigureServices(
-                    services => services.TryAddSingleton(
-#pragma warning disable CS0618 // Type or member is obsolete
-                        new TraceHeaderPropagatingHandler(ContextTracerManager.GetCurrentTracer))));
-#pragma warning restore CS0618 // Type or member is obsolete
-            using var client = server.CreateClient();
-            await client.GetAsync(uri);
-
-            var trace = TraceEntryPolling.Default.GetTrace(uri, _startTime);
-
-            TraceEntryVerifiers.AssertParentChildSpan(trace, uri, childSpanName, outgoingSpanName);
-        }
-
         [Theory]
         [MemberData(nameof(ConfigurationData))]
         public async Task Trace_OutGoingClientFactory(Action<IWebHostBuilder> testServerConfigurator)
@@ -869,19 +846,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
             {
                 var httpClient = httpClientFactory.CreateClient("outgoing_with_labels");
                 await httpClient.GetAsync("");
-            }
-            return message;
-        }
-
-#pragma warning disable CS0618 // Type or member is obsolete
-        public async Task<string> TraceOutgoing(string id, [FromServices] IManagedTracer tracer, [FromServices] TraceHeaderPropagatingHandler propagatingHandler)
-#pragma warning restore CS0618 // Type or member is obsolete
-        {
-            string message = EntryData.GetMessage(nameof(TraceOutgoing), id);
-            using (tracer.StartSpan(message))
-            using (var httpClient = new HttpClient(propagatingHandler))
-            {
-                await httpClient.GetAsync("https://google.com/");
             }
             return message;
         }

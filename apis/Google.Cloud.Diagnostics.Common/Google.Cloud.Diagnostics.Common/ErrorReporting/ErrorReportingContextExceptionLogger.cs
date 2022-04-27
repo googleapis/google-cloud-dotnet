@@ -64,15 +64,9 @@ namespace Google.Cloud.Diagnostics.Common
             var errorReportingOptions = options.Options ?? ErrorReportingOptions.CreateInstance();
 
             var eventTarget = options.EventTarget
-#pragma warning disable CS0618 // Type or member is obsolete
-                ?? errorReportingOptions.EventTarget
-#pragma warning restore CS0618 // Type or member is obsolete
                 ?? EventTarget.ForProject(Project.GetAndCheckProjectId(null, errorReportingOptions.MonitoredResource));
 
             var client = options.Client
-#pragma warning disable CS0618 // Type or member is obsolete
-                ?? eventTarget.LoggingClient
-#pragma warning restore CS0618 // Type or member is obsolete
                 ?? LoggingServiceV2Client.Create();
 
             var serviceContext = CreateServiceContext(
@@ -184,7 +178,7 @@ namespace Google.Cloud.Diagnostics.Common
                 Severity = LogSeverity.Error,
                 Timestamp = timestamp,
                 JsonPayload = errorEvent
-            }.SetTraceAndSpanIfAny(_traceTarget, _serviceProvider, null);
+            }.SetTraceAndSpanIfAny(_traceTarget, _serviceProvider);
         }
     }
 }

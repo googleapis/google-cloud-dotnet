@@ -34,25 +34,11 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>The monitored resource. See: https://cloud.google.com/logging/docs/api/v2/resource-list </summary>
         public MonitoredResource MonitoredResource { get; }
 
-        /// <summary>
-        /// Where the error events should be sent.
-        /// </summary>
-        [Obsolete("Please use Google.Cloud.Diagnostics.Common.ErrorReportingServiceOptions.EventTarget instead.")]
-        public EventTarget EventTarget { get; }
-
         /// <summary>The buffer options for the error reporter.</summary>
         public BufferOptions BufferOptions { get; }
 
         /// <summary>The retry options for the error reporter.</summary>
         public RetryOptions RetryOptions { get; }
-
-        [Obsolete("EventTarget has moved to ErrorReportingServiceOptions now.")]
-        private ErrorReportingOptions(EventTarget eventTarget, BufferOptions bufferOptions, RetryOptions retryOptions)
-            : this(GaxPreconditions.CheckNotNull(eventTarget, nameof(eventTarget)).LogName ?? LogNameDefault,
-                 eventTarget.MonitoredResource ?? MonitoredResourceBuilder.FromPlatform(),
-                 bufferOptions,
-                 retryOptions) =>
-            EventTarget = eventTarget;
 
         private ErrorReportingOptions(string logName, MonitoredResource resource, BufferOptions bufferOptions, RetryOptions retryOptions)
         {
@@ -62,6 +48,7 @@ namespace Google.Cloud.Diagnostics.Common
             RetryOptions = GaxPreconditions.CheckNotNull(retryOptions, nameof(retryOptions));
         }
 
+        // TODO: Consider making this obsolete and creating a new Create now that we don't have the overload ambiguity.
         /// <summary>
         /// Creates an <see cref="ErrorReportingOptions"/>.
         /// </summary>
@@ -69,8 +56,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// The naming of this method <see cref="CreateInstance(string, MonitoredResource, BufferOptions, RetryOptions)"/>
         /// is not consistent with the naming of similar methods in other options classes to avoid taking
         /// a breaking change. The semantics of this method is the same as all other Create methods in option classes like
-        /// <see cref="LoggingOptions.Create(Microsoft.Extensions.Logging.LogLevel, string, System.Collections.Generic.Dictionary{string, string}, MonitoredResource, BufferOptions, RetryOptions)"/>
-        /// or even the Obsolete <see cref="Create(string, BufferOptions, RetryOptions)"/>.
+        /// <see cref="LoggingOptions.Create(Microsoft.Extensions.Logging.LogLevel, string, System.Collections.Generic.Dictionary{string, string}, MonitoredResource, BufferOptions, RetryOptions)"/>.
         /// </remarks>
         /// <param name="logName">The log name to log to. May be null, in which case, a default name will be used.</param>
         /// <param name="resource">The monitored resource. May be null, in which case an attempt will be made to 
@@ -86,30 +72,5 @@ namespace Google.Cloud.Diagnostics.Common
                 resource ?? MonitoredResourceBuilder.FromPlatform(),
                 bufferOptions ?? BufferOptions.NoBuffer(),
                 retryOptions ?? RetryOptions.NoRetry());
-
-        /// <summary>
-        /// Creates an <see cref="ErrorReportingOptions"/>.
-        /// </summary>
-        /// <param name="eventTarget">Where the error events should be sent. Must not be null.</param>
-        /// <param name="bufferOptions">The buffer options for the error reporter. Defaults to no buffer.</param>
-        /// <param name="retryOptions">The retry options for the error reporter. Defaults to no retry.</param>
-        [Obsolete("Please use CreateInstance(string, MonitoredResource, BufferOptions, RetryOptions) instead.")]
-        public static ErrorReportingOptions Create(
-            EventTarget eventTarget, BufferOptions bufferOptions = null, RetryOptions retryOptions = null) =>
-            new ErrorReportingOptions(eventTarget, bufferOptions ?? BufferOptions.NoBuffer(), retryOptions ?? RetryOptions.NoRetry());
-
-        /// <summary>
-        /// Creates an <see cref="ErrorReportingOptions"/> that will send error events to the
-        /// Google Cloud Logging API.
-        /// </summary>
-        /// <param name="projectId">Optional if running on Google App Engine or Google Compute Engine.
-        ///     The Google Cloud Platform project ID. If running on GAE or GCE the project ID will be
-        ///     detected from the platform.</param>
-        /// <param name="bufferOptions">The buffer options for the error reporter. Defaults to no buffer.</param>
-        /// <param name="retryOptions">The retry options for the error reporter. Defaults to no retry.</param>
-        [Obsolete("Please use CreateInstance(string, MonitoredResource, BufferOptions, RetryOptions) instead.")]
-        public static ErrorReportingOptions Create(
-            string projectId = null, BufferOptions bufferOptions = null, RetryOptions retryOptions = null) =>
-                Create(EventTarget.ForLogging(projectId), bufferOptions, retryOptions);
     }
 }
