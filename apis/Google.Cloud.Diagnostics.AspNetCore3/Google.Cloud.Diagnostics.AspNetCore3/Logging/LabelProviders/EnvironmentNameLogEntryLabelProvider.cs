@@ -12,19 +12,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
-using System.Collections.Generic;
 using Google.Api.Gax;
+using Google.Cloud.Diagnostics.Common;
 using Microsoft.AspNetCore.Hosting;
+using System.Collections.Generic;
 
 namespace Google.Cloud.Diagnostics.AspNetCore3
 {
     /// <summary>
     /// A <see cref="ILogEntryLabelProvider"/> implementation which adds the <see cref="IHostingEnvironment.EnvironmentName"/> to the log entry labels.
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
-    public class EnvironmentNameLogEntryLabelProvider : ILogEntryLabelProvider, Common.ILogEntryLabelProvider
-#pragma warning restore CS0618 // Type or member is obsolete
+    public class EnvironmentNameLogEntryLabelProvider : ILogEntryLabelProvider
     {
         private readonly IWebHostEnvironment _hostingEnvironment;
 

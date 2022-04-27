@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using System.Collections.Generic;
+using Google.Cloud.Diagnostics.Common;
 using Microsoft.AspNetCore.Http;
 
 namespace Google.Cloud.Diagnostics.AspNetCore3
