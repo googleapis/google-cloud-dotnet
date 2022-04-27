@@ -25,7 +25,7 @@ using TraceProto = Google.Cloud.Trace.V1.Trace;
 
 namespace Google.Cloud.Diagnostics.Common.IntegrationTests
 {
-    public class TraceHeaderPropagatingHandlerTest : IDisposable
+    public class UnchainedTraceHeaderPropagatingHandlerTest : IDisposable
     {
         private static readonly TraceIdFactory _traceIdFactory = TraceIdFactory.Create();
 
@@ -36,7 +36,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
 
         private readonly DateTimeOffset _startTime;
 
-        public TraceHeaderPropagatingHandlerTest()
+        public UnchainedTraceHeaderPropagatingHandlerTest()
         {
             _testId = IdGenerator.FromDateTime();
 
@@ -45,6 +45,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
 
             _startTime = DateTimeOffset.UtcNow;
         }
+
 
         [Fact]
         public async Task TraceOutGoing()
@@ -111,9 +112,10 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         private async Task TraceOutGoingRequest(string rootSpanName, string uri, bool exceptionExpected)
         {
             using (_tracer.StartSpan(rootSpanName))
-#pragma warning disable CS0618 // Type or member is obsolete
-            using (var traceHeaderHandler = new TraceHeaderPropagatingHandler(() => _tracer))
-#pragma warning restore CS0618 // Type or member is obsolete
+            using (var traceHeaderHandler = new UnchainedTraceHeaderPropagatingHandler(() => _tracer)
+            {
+                InnerHandler = new HttpClientHandler()
+            })
             using (var httpClient = new HttpClient(traceHeaderHandler))
             {
                 try
@@ -121,7 +123,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
                     await httpClient.GetAsync(uri);
                     Assert.False(exceptionExpected);
                 }
-                catch (Exception e) when (exceptionExpected && !(e is Xunit.Sdk.XunitException))
+                catch (Exception e) when (exceptionExpected && e is not Xunit.Sdk.XunitException)
                 {
                 }
             }

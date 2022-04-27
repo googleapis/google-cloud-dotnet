@@ -37,12 +37,6 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             Assert.NotNull(eventTarget.LogTarget);
             Assert.Equal(LogTargetKind.Project, eventTarget.LogTarget.Kind);
             Assert.Equal(_projectId, eventTarget.LogTarget.ProjectId);
-
-#pragma warning disable CS0618 // Type or member is obsolete
-            Assert.Null(eventTarget.LoggingClient);
-            Assert.Null(eventTarget.LogName);
-            Assert.Null(eventTarget.MonitoredResource);
-#pragma warning restore CS0618 // Type or member is obsolete
         }
 
         [Fact]
@@ -53,46 +47,6 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
             Assert.Equal(EventTargetKind.Logging, eventTarget.Kind);
             Assert.Same(logTarget, eventTarget.LogTarget);
-
-#pragma warning disable CS0618 // Type or member is obsolete
-            Assert.Null(eventTarget.LoggingClient);
-            Assert.Null(eventTarget.LogName);
-            Assert.Null(eventTarget.MonitoredResource);
-#pragma warning restore CS0618 // Type or member is obsolete
-        }
-
-        [Fact]
-        [Obsolete("EventTarget.ForLogging and some of the EventTarget properties are obsolete.")]
-        public void Logging_ProjectId()
-        {
-            var logName = "another-log";
-            var eventTarget = EventTarget.ForLogging(
-                _projectId, logName, _loggingClient, MonitoredResourceBuilder.GlobalResource);
-
-            Assert.Equal(EventTargetKind.Logging, eventTarget.Kind);
-            Assert.Equal(_projectId, eventTarget.ProjectId);
-            Assert.Equal(_loggingClient, eventTarget.LoggingClient);
-            Assert.NotNull(eventTarget.LogTarget);
-            Assert.Equal(LogTargetKind.Project, eventTarget.LogTarget.Kind);
-            Assert.Equal(_projectId, eventTarget.LogTarget.ProjectId);
-            Assert.Equal(logName, eventTarget.LogName);
-            Assert.Equal(MonitoredResourceBuilder.GlobalResource, eventTarget.MonitoredResource);
-        }
-
-        [Fact]
-        [Obsolete("EventTarget.ForLogging and some of the EventTarget properties are obsolete.")]
-        public void Logging_LogTarget()
-        {
-            var logTarget = LogTarget.ForOrganization(_organizationId);
-            var logName = "another-log";
-            var monitoredResource = new MonitoredResource { Type = "not_global" };
-            var eventTarget = EventTarget.ForLogging(logTarget, logName, _loggingClient, monitoredResource);
-
-            Assert.Equal(EventTargetKind.Logging, eventTarget.Kind);
-            Assert.Equal(_loggingClient, eventTarget.LoggingClient);
-            Assert.Equal(logTarget, eventTarget.LogTarget);
-            Assert.Equal(logName, eventTarget.LogName);
-            Assert.Equal(monitoredResource, eventTarget.MonitoredResource);
         }
     }
 }
