@@ -68,7 +68,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
                         services.AddGoogleDiagnostics(ProjectId, Service, Version,
                             TraceOptions.Create(retryOptions: RetryOptions.NoRetry(ExceptionHandling.Propagate)),
                             LoggingOptions.Create(retryOptions: RetryOptions.NoRetry(ExceptionHandling.Propagate)),
-                            ErrorReportingOptions.CreateInstance(retryOptions: RetryOptions.NoRetry(ExceptionHandling.Propagate))));
+                            ErrorReportingOptions.Create(retryOptions: RetryOptions.NoRetry(ExceptionHandling.Propagate))));
         }
 
         private static class WithServiceOptionsHostBuilder
@@ -98,7 +98,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
                                 ProjectId = ProjectId,
                                 ServiceName = Service,
                                 Version = Version,
-                                Options = ErrorReportingOptions.CreateInstance(retryOptions: RetryOptions.NoRetry(ExceptionHandling.Propagate))
+                                Options = ErrorReportingOptions.Create(retryOptions: RetryOptions.NoRetry(ExceptionHandling.Propagate))
                             });
                     });
         }
