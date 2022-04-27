@@ -68,7 +68,7 @@ namespace Google.Cloud.Diagnostics.Common.Snippets
                             // Configure the three components to use no buffer.
                             traceOptions: TraceOptions.Create(bufferOptions: BufferOptions.NoBuffer()),
                             loggingOptions: LoggingOptions.Create(bufferOptions: BufferOptions.NoBuffer()),
-                            errorReportingOptions: ErrorReportingOptions.CreateInstance(bufferOptions: BufferOptions.NoBuffer()));
+                            errorReportingOptions: ErrorReportingOptions.Create(bufferOptions: BufferOptions.NoBuffer()));
                         // Register other services here if you need them.
                     });
             // End sample

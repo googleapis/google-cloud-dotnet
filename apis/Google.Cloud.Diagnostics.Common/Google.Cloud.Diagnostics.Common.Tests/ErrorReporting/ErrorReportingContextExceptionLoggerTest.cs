@@ -54,7 +54,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void Log()
         {
             var eventTarget = EventTarget.ForProject("pid");
-            var options = ErrorReportingOptions.CreateInstance();
+            var options = ErrorReportingOptions.Create();
             var consumer = new FakeConsumer();
 
             IContextExceptionLogger logger = new ErrorReportingContextExceptionLogger(
@@ -68,7 +68,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void Log_Simple()
         {
             var eventTarget = EventTarget.ForProject("pid");
-            var options = ErrorReportingOptions.CreateInstance();
+            var options = ErrorReportingOptions.Create();
             var consumer = new FakeConsumer();
 
             IContextExceptionLogger logger = new ErrorReportingContextExceptionLogger(
@@ -82,7 +82,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public async Task LogAsync()
         {
             var eventTarget = EventTarget.ForProject("pid");
-            var options = ErrorReportingOptions.CreateInstance();
+            var options = ErrorReportingOptions.Create();
             var consumer = new FakeConsumer();
 
             IContextExceptionLogger logger = new ErrorReportingContextExceptionLogger(
