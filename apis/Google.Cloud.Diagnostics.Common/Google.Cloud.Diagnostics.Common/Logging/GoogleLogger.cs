@@ -60,24 +60,11 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>The service provider to resolve additional services from.</summary>
         private readonly IServiceProvider _serviceProvider;
 
-        private readonly Action<IServiceProvider, LogEntry, TraceTarget> _obsoleteTraceContextGetter;
-
         private readonly AmbientScopeManager _ambientScopeManager;
 
         internal GoogleLogger(
             IConsumer<LogEntry> consumer, LogTarget logTarget, Struct serviceContext, LoggingOptions loggerOptions,
             string logName, IClock clock = null, IServiceProvider serviceProvider = null)
-#pragma warning disable CS0618 // Type or member is obsolete
-            : this (consumer, logTarget, serviceContext, loggerOptions, logName, null, null, clock, serviceProvider)
-#pragma warning restore CS0618 // Type or member is obsolete
-        {
-        }
-
-        [Obsolete("Added for backward compatibility only when moving GoogleLogger to Common.")]
-        internal GoogleLogger(IConsumer<LogEntry> consumer, LogTarget logTarget, Struct serviceContext, LoggingOptions loggerOptions, string logName,
-            Action<IServiceProvider, Dictionary<string, string>> obsoleteLabelsGetter,
-            Action<IServiceProvider, LogEntry, TraceTarget> obsoleteTraceContextGetter,
-            IClock clock = null, IServiceProvider serviceProvider = null)
         {
             _logTarget = GaxPreconditions.CheckNotNull(logTarget, nameof(logTarget));
             _traceTarget = logTarget.Kind == LogTargetKind.Project ?
@@ -89,8 +76,7 @@ namespace Google.Cloud.Diagnostics.Common
             _fullLogName = logTarget.GetFullLogName(_loggerOptions.LogName);
             _serviceProvider = serviceProvider;
             _clock = clock ?? SystemClock.Instance;
-            _obsoleteTraceContextGetter = obsoleteTraceContextGetter;
-            _ambientScopeManager = new AmbientScopeManager(_loggerOptions, _serviceProvider, obsoleteLabelsGetter);
+            _ambientScopeManager = new AmbientScopeManager(_loggerOptions, _serviceProvider);
         }
 
         /// <inheritdoc />
@@ -128,7 +114,7 @@ namespace Google.Cloud.Diagnostics.Common
 
                 _ambientScopeManager.GetCurrentScope()?.ApplyTo(entry);
                 GoogleLoggerScope.Current?.ApplyTo(entry);
-                entry.SetTraceAndSpanIfAny(_traceTarget, _serviceProvider, _obsoleteTraceContextGetter);
+                entry.SetTraceAndSpanIfAny(_traceTarget, _serviceProvider);
 
                 _consumer.Receive(new[] { entry });
             }
@@ -252,13 +238,11 @@ namespace Google.Cloud.Diagnostics.Common
         {
             private readonly GoogleLoggerScope _permanentParent;
             private readonly IServiceProvider _serviceProvider;
-            private readonly Action<IServiceProvider, Dictionary<string, string>> _obsoleteLabelsGetter;
 
-            internal AmbientScopeManager(LoggingOptions options, IServiceProvider serviceProvider, Action<IServiceProvider, Dictionary<string, string>> obsoleteLabelsGetter)
+            internal AmbientScopeManager(LoggingOptions options, IServiceProvider serviceProvider)
             {
                 _permanentParent = options?.Labels is null ? null : GoogleLoggerScope.CreateScope(new LabellingScopeState(options.Labels), null);
                 _serviceProvider = serviceProvider;
-                _obsoleteLabelsGetter = obsoleteLabelsGetter;
             }
 
             public GoogleLoggerScope GetCurrentScope()
@@ -266,14 +250,13 @@ namespace Google.Cloud.Diagnostics.Common
                 var current = _permanentParent;
                 var labels = new Dictionary<string, string>();
 
-                if (_serviceProvider?.GetService<IEnumerable<ILogEntryLabelProvider>>() is IEnumerable<ILogEntryLabelProvider> providers)                
+                if (_serviceProvider?.GetService<IEnumerable<ILogEntryLabelProvider>>() is IEnumerable<ILogEntryLabelProvider> providers)
                 {
                     foreach (var provider in providers)
                     {
                         provider.Invoke(labels);
                     }
                 }
-                _obsoleteLabelsGetter?.Invoke(_serviceProvider, labels);
 
                 if (labels.Count > 0)
                 {

@@ -58,7 +58,6 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                 () => ConsumerFactory<int>.GetConsumer(new IntConsumer(), ConstantSizer<int>.GetSize, bufferOptions, retryOptions));
         }
 
-
         [Fact]
         public void GetConsumer_InvalidOptions_Null()
         {
