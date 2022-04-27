@@ -48,7 +48,7 @@ namespace Google.Cloud.Speech.V1.Tests
                 Boost = 7.584708E+17F,
             };
             mockGrpcClient.Setup(x => x.CreatePhraseSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             PhraseSet response = client.CreatePhraseSet(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -74,7 +74,7 @@ namespace Google.Cloud.Speech.V1.Tests
                 Boost = 7.584708E+17F,
             };
             mockGrpcClient.Setup(x => x.CreatePhraseSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PhraseSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             PhraseSet responseCallSettings = await client.CreatePhraseSetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PhraseSet responseCancellationToken = await client.CreatePhraseSetAsync(request, st::CancellationToken.None);
@@ -102,7 +102,7 @@ namespace Google.Cloud.Speech.V1.Tests
                 Boost = 7.584708E+17F,
             };
             mockGrpcClient.Setup(x => x.CreatePhraseSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             PhraseSet response = client.CreatePhraseSet(request.Parent, request.PhraseSet, request.PhraseSetId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -128,7 +128,7 @@ namespace Google.Cloud.Speech.V1.Tests
                 Boost = 7.584708E+17F,
             };
             mockGrpcClient.Setup(x => x.CreatePhraseSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PhraseSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             PhraseSet responseCallSettings = await client.CreatePhraseSetAsync(request.Parent, request.PhraseSet, request.PhraseSetId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PhraseSet responseCancellationToken = await client.CreatePhraseSetAsync(request.Parent, request.PhraseSet, request.PhraseSetId, st::CancellationToken.None);
@@ -156,7 +156,7 @@ namespace Google.Cloud.Speech.V1.Tests
                 Boost = 7.584708E+17F,
             };
             mockGrpcClient.Setup(x => x.CreatePhraseSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             PhraseSet response = client.CreatePhraseSet(request.ParentAsLocationName, request.PhraseSet, request.PhraseSetId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -182,7 +182,7 @@ namespace Google.Cloud.Speech.V1.Tests
                 Boost = 7.584708E+17F,
             };
             mockGrpcClient.Setup(x => x.CreatePhraseSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PhraseSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             PhraseSet responseCallSettings = await client.CreatePhraseSetAsync(request.ParentAsLocationName, request.PhraseSet, request.PhraseSetId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PhraseSet responseCancellationToken = await client.CreatePhraseSetAsync(request.ParentAsLocationName, request.PhraseSet, request.PhraseSetId, st::CancellationToken.None);
@@ -208,7 +208,7 @@ namespace Google.Cloud.Speech.V1.Tests
                 Boost = 7.584708E+17F,
             };
             mockGrpcClient.Setup(x => x.GetPhraseSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             PhraseSet response = client.GetPhraseSet(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -232,7 +232,7 @@ namespace Google.Cloud.Speech.V1.Tests
                 Boost = 7.584708E+17F,
             };
             mockGrpcClient.Setup(x => x.GetPhraseSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PhraseSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             PhraseSet responseCallSettings = await client.GetPhraseSetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PhraseSet responseCancellationToken = await client.GetPhraseSetAsync(request, st::CancellationToken.None);
@@ -258,7 +258,7 @@ namespace Google.Cloud.Speech.V1.Tests
                 Boost = 7.584708E+17F,
             };
             mockGrpcClient.Setup(x => x.GetPhraseSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             PhraseSet response = client.GetPhraseSet(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -282,7 +282,7 @@ namespace Google.Cloud.Speech.V1.Tests
                 Boost = 7.584708E+17F,
             };
             mockGrpcClient.Setup(x => x.GetPhraseSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PhraseSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             PhraseSet responseCallSettings = await client.GetPhraseSetAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PhraseSet responseCancellationToken = await client.GetPhraseSetAsync(request.Name, st::CancellationToken.None);
@@ -308,7 +308,7 @@ namespace Google.Cloud.Speech.V1.Tests
                 Boost = 7.584708E+17F,
             };
             mockGrpcClient.Setup(x => x.GetPhraseSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             PhraseSet response = client.GetPhraseSet(request.PhraseSetName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -332,7 +332,7 @@ namespace Google.Cloud.Speech.V1.Tests
                 Boost = 7.584708E+17F,
             };
             mockGrpcClient.Setup(x => x.GetPhraseSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PhraseSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             PhraseSet responseCallSettings = await client.GetPhraseSetAsync(request.PhraseSetName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PhraseSet responseCancellationToken = await client.GetPhraseSetAsync(request.PhraseSetName, st::CancellationToken.None);
@@ -359,7 +359,7 @@ namespace Google.Cloud.Speech.V1.Tests
                 Boost = 7.584708E+17F,
             };
             mockGrpcClient.Setup(x => x.UpdatePhraseSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             PhraseSet response = client.UpdatePhraseSet(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -384,7 +384,7 @@ namespace Google.Cloud.Speech.V1.Tests
                 Boost = 7.584708E+17F,
             };
             mockGrpcClient.Setup(x => x.UpdatePhraseSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PhraseSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             PhraseSet responseCallSettings = await client.UpdatePhraseSetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PhraseSet responseCancellationToken = await client.UpdatePhraseSetAsync(request, st::CancellationToken.None);
@@ -411,7 +411,7 @@ namespace Google.Cloud.Speech.V1.Tests
                 Boost = 7.584708E+17F,
             };
             mockGrpcClient.Setup(x => x.UpdatePhraseSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             PhraseSet response = client.UpdatePhraseSet(request.PhraseSet, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -436,7 +436,7 @@ namespace Google.Cloud.Speech.V1.Tests
                 Boost = 7.584708E+17F,
             };
             mockGrpcClient.Setup(x => x.UpdatePhraseSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PhraseSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             PhraseSet responseCallSettings = await client.UpdatePhraseSetAsync(request.PhraseSet, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PhraseSet responseCancellationToken = await client.UpdatePhraseSetAsync(request.PhraseSet, request.UpdateMask, st::CancellationToken.None);
@@ -454,7 +454,7 @@ namespace Google.Cloud.Speech.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePhraseSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             client.DeletePhraseSet(request);
             mockGrpcClient.VerifyAll();
         }
@@ -469,7 +469,7 @@ namespace Google.Cloud.Speech.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePhraseSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             await client.DeletePhraseSetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeletePhraseSetAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -485,7 +485,7 @@ namespace Google.Cloud.Speech.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePhraseSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             client.DeletePhraseSet(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -500,7 +500,7 @@ namespace Google.Cloud.Speech.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePhraseSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             await client.DeletePhraseSetAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeletePhraseSetAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -516,7 +516,7 @@ namespace Google.Cloud.Speech.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePhraseSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             client.DeletePhraseSet(request.PhraseSetName);
             mockGrpcClient.VerifyAll();
         }
@@ -531,7 +531,7 @@ namespace Google.Cloud.Speech.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePhraseSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             await client.DeletePhraseSetAsync(request.PhraseSetName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeletePhraseSetAsync(request.PhraseSetName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -557,7 +557,7 @@ namespace Google.Cloud.Speech.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateCustomClass(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             CustomClass response = client.CreateCustomClass(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -583,7 +583,7 @@ namespace Google.Cloud.Speech.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateCustomClassAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomClass>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             CustomClass responseCallSettings = await client.CreateCustomClassAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CustomClass responseCancellationToken = await client.CreateCustomClassAsync(request, st::CancellationToken.None);
@@ -611,7 +611,7 @@ namespace Google.Cloud.Speech.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateCustomClass(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             CustomClass response = client.CreateCustomClass(request.Parent, request.CustomClass, request.CustomClassId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -637,7 +637,7 @@ namespace Google.Cloud.Speech.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateCustomClassAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomClass>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             CustomClass responseCallSettings = await client.CreateCustomClassAsync(request.Parent, request.CustomClass, request.CustomClassId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CustomClass responseCancellationToken = await client.CreateCustomClassAsync(request.Parent, request.CustomClass, request.CustomClassId, st::CancellationToken.None);
@@ -665,7 +665,7 @@ namespace Google.Cloud.Speech.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateCustomClass(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             CustomClass response = client.CreateCustomClass(request.ParentAsLocationName, request.CustomClass, request.CustomClassId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -691,7 +691,7 @@ namespace Google.Cloud.Speech.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateCustomClassAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomClass>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             CustomClass responseCallSettings = await client.CreateCustomClassAsync(request.ParentAsLocationName, request.CustomClass, request.CustomClassId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CustomClass responseCancellationToken = await client.CreateCustomClassAsync(request.ParentAsLocationName, request.CustomClass, request.CustomClassId, st::CancellationToken.None);
@@ -717,7 +717,7 @@ namespace Google.Cloud.Speech.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetCustomClass(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             CustomClass response = client.GetCustomClass(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -741,7 +741,7 @@ namespace Google.Cloud.Speech.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetCustomClassAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomClass>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             CustomClass responseCallSettings = await client.GetCustomClassAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CustomClass responseCancellationToken = await client.GetCustomClassAsync(request, st::CancellationToken.None);
@@ -767,7 +767,7 @@ namespace Google.Cloud.Speech.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetCustomClass(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             CustomClass response = client.GetCustomClass(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -791,7 +791,7 @@ namespace Google.Cloud.Speech.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetCustomClassAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomClass>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             CustomClass responseCallSettings = await client.GetCustomClassAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CustomClass responseCancellationToken = await client.GetCustomClassAsync(request.Name, st::CancellationToken.None);
@@ -817,7 +817,7 @@ namespace Google.Cloud.Speech.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetCustomClass(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             CustomClass response = client.GetCustomClass(request.CustomClassName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -841,7 +841,7 @@ namespace Google.Cloud.Speech.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetCustomClassAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomClass>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             CustomClass responseCallSettings = await client.GetCustomClassAsync(request.CustomClassName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CustomClass responseCancellationToken = await client.GetCustomClassAsync(request.CustomClassName, st::CancellationToken.None);
@@ -868,7 +868,7 @@ namespace Google.Cloud.Speech.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateCustomClass(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             CustomClass response = client.UpdateCustomClass(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -893,7 +893,7 @@ namespace Google.Cloud.Speech.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateCustomClassAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomClass>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             CustomClass responseCallSettings = await client.UpdateCustomClassAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CustomClass responseCancellationToken = await client.UpdateCustomClassAsync(request, st::CancellationToken.None);
@@ -920,7 +920,7 @@ namespace Google.Cloud.Speech.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateCustomClass(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             CustomClass response = client.UpdateCustomClass(request.CustomClass, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -945,7 +945,7 @@ namespace Google.Cloud.Speech.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateCustomClassAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomClass>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             CustomClass responseCallSettings = await client.UpdateCustomClassAsync(request.CustomClass, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CustomClass responseCancellationToken = await client.UpdateCustomClassAsync(request.CustomClass, request.UpdateMask, st::CancellationToken.None);
@@ -963,7 +963,7 @@ namespace Google.Cloud.Speech.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteCustomClass(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteCustomClass(request);
             mockGrpcClient.VerifyAll();
         }
@@ -978,7 +978,7 @@ namespace Google.Cloud.Speech.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteCustomClassAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteCustomClassAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteCustomClassAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -994,7 +994,7 @@ namespace Google.Cloud.Speech.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteCustomClass(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteCustomClass(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -1009,7 +1009,7 @@ namespace Google.Cloud.Speech.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteCustomClassAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteCustomClassAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteCustomClassAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1025,7 +1025,7 @@ namespace Google.Cloud.Speech.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteCustomClass(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteCustomClass(request.CustomClassName);
             mockGrpcClient.VerifyAll();
         }
@@ -1040,7 +1040,7 @@ namespace Google.Cloud.Speech.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteCustomClassAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteCustomClassAsync(request.CustomClassName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteCustomClassAsync(request.CustomClassName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();

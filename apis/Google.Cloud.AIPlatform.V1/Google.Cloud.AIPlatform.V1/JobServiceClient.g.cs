@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -557,9 +557,8 @@ namespace Google.Cloud.AIPlatform.V1
         public JobServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public JobServiceClientBuilder()
+        public JobServiceClientBuilder() : base(JobServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = JobServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref JobServiceClient client);
@@ -586,29 +585,18 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return JobServiceClient.Create(callInvoker, Settings);
+            return JobServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<JobServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return JobServiceClient.Create(callInvoker, Settings);
+            return JobServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => JobServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => JobServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => JobServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>JobService client wrapper, for convenient use.</summary>
@@ -635,19 +623,10 @@ namespace Google.Cloud.AIPlatform.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(JobService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="JobServiceClient"/> using the default credentials, endpoint and
@@ -674,8 +653,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="JobServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="JobServiceClient"/>.</returns>
-        internal static JobServiceClient Create(grpccore::CallInvoker callInvoker, JobServiceSettings settings = null)
+        internal static JobServiceClient Create(grpccore::CallInvoker callInvoker, JobServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -684,7 +664,7 @@ namespace Google.Cloud.AIPlatform.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             JobService.JobServiceClient grpcClient = new JobService.JobServiceClient(callInvoker);
-            return new JobServiceClientImpl(grpcClient, settings);
+            return new JobServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -4680,99 +4660,100 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="JobServiceSettings"/> used within this client.</param>
-        public JobServiceClientImpl(JobService.JobServiceClient grpcClient, JobServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public JobServiceClientImpl(JobService.JobServiceClient grpcClient, JobServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             JobServiceSettings effectiveSettings = settings ?? JobServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            DeleteCustomJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteCustomJobOperationsSettings);
-            DeleteDataLabelingJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDataLabelingJobOperationsSettings);
-            DeleteHyperparameterTuningJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteHyperparameterTuningJobOperationsSettings);
-            DeleteBatchPredictionJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBatchPredictionJobOperationsSettings);
-            UpdateModelDeploymentMonitoringJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateModelDeploymentMonitoringJobOperationsSettings);
-            DeleteModelDeploymentMonitoringJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteModelDeploymentMonitoringJobOperationsSettings);
-            _callCreateCustomJob = clientHelper.BuildApiCall<CreateCustomJobRequest, CustomJob>(grpcClient.CreateCustomJobAsync, grpcClient.CreateCustomJob, effectiveSettings.CreateCustomJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            DeleteCustomJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteCustomJobOperationsSettings, logger);
+            DeleteDataLabelingJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDataLabelingJobOperationsSettings, logger);
+            DeleteHyperparameterTuningJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteHyperparameterTuningJobOperationsSettings, logger);
+            DeleteBatchPredictionJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBatchPredictionJobOperationsSettings, logger);
+            UpdateModelDeploymentMonitoringJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateModelDeploymentMonitoringJobOperationsSettings, logger);
+            DeleteModelDeploymentMonitoringJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteModelDeploymentMonitoringJobOperationsSettings, logger);
+            _callCreateCustomJob = clientHelper.BuildApiCall<CreateCustomJobRequest, CustomJob>("CreateCustomJob", grpcClient.CreateCustomJobAsync, grpcClient.CreateCustomJob, effectiveSettings.CreateCustomJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateCustomJob);
             Modify_CreateCustomJobApiCall(ref _callCreateCustomJob);
-            _callGetCustomJob = clientHelper.BuildApiCall<GetCustomJobRequest, CustomJob>(grpcClient.GetCustomJobAsync, grpcClient.GetCustomJob, effectiveSettings.GetCustomJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetCustomJob = clientHelper.BuildApiCall<GetCustomJobRequest, CustomJob>("GetCustomJob", grpcClient.GetCustomJobAsync, grpcClient.GetCustomJob, effectiveSettings.GetCustomJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetCustomJob);
             Modify_GetCustomJobApiCall(ref _callGetCustomJob);
-            _callListCustomJobs = clientHelper.BuildApiCall<ListCustomJobsRequest, ListCustomJobsResponse>(grpcClient.ListCustomJobsAsync, grpcClient.ListCustomJobs, effectiveSettings.ListCustomJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListCustomJobs = clientHelper.BuildApiCall<ListCustomJobsRequest, ListCustomJobsResponse>("ListCustomJobs", grpcClient.ListCustomJobsAsync, grpcClient.ListCustomJobs, effectiveSettings.ListCustomJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListCustomJobs);
             Modify_ListCustomJobsApiCall(ref _callListCustomJobs);
-            _callDeleteCustomJob = clientHelper.BuildApiCall<DeleteCustomJobRequest, lro::Operation>(grpcClient.DeleteCustomJobAsync, grpcClient.DeleteCustomJob, effectiveSettings.DeleteCustomJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteCustomJob = clientHelper.BuildApiCall<DeleteCustomJobRequest, lro::Operation>("DeleteCustomJob", grpcClient.DeleteCustomJobAsync, grpcClient.DeleteCustomJob, effectiveSettings.DeleteCustomJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteCustomJob);
             Modify_DeleteCustomJobApiCall(ref _callDeleteCustomJob);
-            _callCancelCustomJob = clientHelper.BuildApiCall<CancelCustomJobRequest, wkt::Empty>(grpcClient.CancelCustomJobAsync, grpcClient.CancelCustomJob, effectiveSettings.CancelCustomJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callCancelCustomJob = clientHelper.BuildApiCall<CancelCustomJobRequest, wkt::Empty>("CancelCustomJob", grpcClient.CancelCustomJobAsync, grpcClient.CancelCustomJob, effectiveSettings.CancelCustomJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCancelCustomJob);
             Modify_CancelCustomJobApiCall(ref _callCancelCustomJob);
-            _callCreateDataLabelingJob = clientHelper.BuildApiCall<CreateDataLabelingJobRequest, DataLabelingJob>(grpcClient.CreateDataLabelingJobAsync, grpcClient.CreateDataLabelingJob, effectiveSettings.CreateDataLabelingJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateDataLabelingJob = clientHelper.BuildApiCall<CreateDataLabelingJobRequest, DataLabelingJob>("CreateDataLabelingJob", grpcClient.CreateDataLabelingJobAsync, grpcClient.CreateDataLabelingJob, effectiveSettings.CreateDataLabelingJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateDataLabelingJob);
             Modify_CreateDataLabelingJobApiCall(ref _callCreateDataLabelingJob);
-            _callGetDataLabelingJob = clientHelper.BuildApiCall<GetDataLabelingJobRequest, DataLabelingJob>(grpcClient.GetDataLabelingJobAsync, grpcClient.GetDataLabelingJob, effectiveSettings.GetDataLabelingJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetDataLabelingJob = clientHelper.BuildApiCall<GetDataLabelingJobRequest, DataLabelingJob>("GetDataLabelingJob", grpcClient.GetDataLabelingJobAsync, grpcClient.GetDataLabelingJob, effectiveSettings.GetDataLabelingJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDataLabelingJob);
             Modify_GetDataLabelingJobApiCall(ref _callGetDataLabelingJob);
-            _callListDataLabelingJobs = clientHelper.BuildApiCall<ListDataLabelingJobsRequest, ListDataLabelingJobsResponse>(grpcClient.ListDataLabelingJobsAsync, grpcClient.ListDataLabelingJobs, effectiveSettings.ListDataLabelingJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListDataLabelingJobs = clientHelper.BuildApiCall<ListDataLabelingJobsRequest, ListDataLabelingJobsResponse>("ListDataLabelingJobs", grpcClient.ListDataLabelingJobsAsync, grpcClient.ListDataLabelingJobs, effectiveSettings.ListDataLabelingJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDataLabelingJobs);
             Modify_ListDataLabelingJobsApiCall(ref _callListDataLabelingJobs);
-            _callDeleteDataLabelingJob = clientHelper.BuildApiCall<DeleteDataLabelingJobRequest, lro::Operation>(grpcClient.DeleteDataLabelingJobAsync, grpcClient.DeleteDataLabelingJob, effectiveSettings.DeleteDataLabelingJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteDataLabelingJob = clientHelper.BuildApiCall<DeleteDataLabelingJobRequest, lro::Operation>("DeleteDataLabelingJob", grpcClient.DeleteDataLabelingJobAsync, grpcClient.DeleteDataLabelingJob, effectiveSettings.DeleteDataLabelingJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteDataLabelingJob);
             Modify_DeleteDataLabelingJobApiCall(ref _callDeleteDataLabelingJob);
-            _callCancelDataLabelingJob = clientHelper.BuildApiCall<CancelDataLabelingJobRequest, wkt::Empty>(grpcClient.CancelDataLabelingJobAsync, grpcClient.CancelDataLabelingJob, effectiveSettings.CancelDataLabelingJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callCancelDataLabelingJob = clientHelper.BuildApiCall<CancelDataLabelingJobRequest, wkt::Empty>("CancelDataLabelingJob", grpcClient.CancelDataLabelingJobAsync, grpcClient.CancelDataLabelingJob, effectiveSettings.CancelDataLabelingJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCancelDataLabelingJob);
             Modify_CancelDataLabelingJobApiCall(ref _callCancelDataLabelingJob);
-            _callCreateHyperparameterTuningJob = clientHelper.BuildApiCall<CreateHyperparameterTuningJobRequest, HyperparameterTuningJob>(grpcClient.CreateHyperparameterTuningJobAsync, grpcClient.CreateHyperparameterTuningJob, effectiveSettings.CreateHyperparameterTuningJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateHyperparameterTuningJob = clientHelper.BuildApiCall<CreateHyperparameterTuningJobRequest, HyperparameterTuningJob>("CreateHyperparameterTuningJob", grpcClient.CreateHyperparameterTuningJobAsync, grpcClient.CreateHyperparameterTuningJob, effectiveSettings.CreateHyperparameterTuningJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateHyperparameterTuningJob);
             Modify_CreateHyperparameterTuningJobApiCall(ref _callCreateHyperparameterTuningJob);
-            _callGetHyperparameterTuningJob = clientHelper.BuildApiCall<GetHyperparameterTuningJobRequest, HyperparameterTuningJob>(grpcClient.GetHyperparameterTuningJobAsync, grpcClient.GetHyperparameterTuningJob, effectiveSettings.GetHyperparameterTuningJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetHyperparameterTuningJob = clientHelper.BuildApiCall<GetHyperparameterTuningJobRequest, HyperparameterTuningJob>("GetHyperparameterTuningJob", grpcClient.GetHyperparameterTuningJobAsync, grpcClient.GetHyperparameterTuningJob, effectiveSettings.GetHyperparameterTuningJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetHyperparameterTuningJob);
             Modify_GetHyperparameterTuningJobApiCall(ref _callGetHyperparameterTuningJob);
-            _callListHyperparameterTuningJobs = clientHelper.BuildApiCall<ListHyperparameterTuningJobsRequest, ListHyperparameterTuningJobsResponse>(grpcClient.ListHyperparameterTuningJobsAsync, grpcClient.ListHyperparameterTuningJobs, effectiveSettings.ListHyperparameterTuningJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListHyperparameterTuningJobs = clientHelper.BuildApiCall<ListHyperparameterTuningJobsRequest, ListHyperparameterTuningJobsResponse>("ListHyperparameterTuningJobs", grpcClient.ListHyperparameterTuningJobsAsync, grpcClient.ListHyperparameterTuningJobs, effectiveSettings.ListHyperparameterTuningJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListHyperparameterTuningJobs);
             Modify_ListHyperparameterTuningJobsApiCall(ref _callListHyperparameterTuningJobs);
-            _callDeleteHyperparameterTuningJob = clientHelper.BuildApiCall<DeleteHyperparameterTuningJobRequest, lro::Operation>(grpcClient.DeleteHyperparameterTuningJobAsync, grpcClient.DeleteHyperparameterTuningJob, effectiveSettings.DeleteHyperparameterTuningJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteHyperparameterTuningJob = clientHelper.BuildApiCall<DeleteHyperparameterTuningJobRequest, lro::Operation>("DeleteHyperparameterTuningJob", grpcClient.DeleteHyperparameterTuningJobAsync, grpcClient.DeleteHyperparameterTuningJob, effectiveSettings.DeleteHyperparameterTuningJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteHyperparameterTuningJob);
             Modify_DeleteHyperparameterTuningJobApiCall(ref _callDeleteHyperparameterTuningJob);
-            _callCancelHyperparameterTuningJob = clientHelper.BuildApiCall<CancelHyperparameterTuningJobRequest, wkt::Empty>(grpcClient.CancelHyperparameterTuningJobAsync, grpcClient.CancelHyperparameterTuningJob, effectiveSettings.CancelHyperparameterTuningJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callCancelHyperparameterTuningJob = clientHelper.BuildApiCall<CancelHyperparameterTuningJobRequest, wkt::Empty>("CancelHyperparameterTuningJob", grpcClient.CancelHyperparameterTuningJobAsync, grpcClient.CancelHyperparameterTuningJob, effectiveSettings.CancelHyperparameterTuningJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCancelHyperparameterTuningJob);
             Modify_CancelHyperparameterTuningJobApiCall(ref _callCancelHyperparameterTuningJob);
-            _callCreateBatchPredictionJob = clientHelper.BuildApiCall<CreateBatchPredictionJobRequest, BatchPredictionJob>(grpcClient.CreateBatchPredictionJobAsync, grpcClient.CreateBatchPredictionJob, effectiveSettings.CreateBatchPredictionJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateBatchPredictionJob = clientHelper.BuildApiCall<CreateBatchPredictionJobRequest, BatchPredictionJob>("CreateBatchPredictionJob", grpcClient.CreateBatchPredictionJobAsync, grpcClient.CreateBatchPredictionJob, effectiveSettings.CreateBatchPredictionJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateBatchPredictionJob);
             Modify_CreateBatchPredictionJobApiCall(ref _callCreateBatchPredictionJob);
-            _callGetBatchPredictionJob = clientHelper.BuildApiCall<GetBatchPredictionJobRequest, BatchPredictionJob>(grpcClient.GetBatchPredictionJobAsync, grpcClient.GetBatchPredictionJob, effectiveSettings.GetBatchPredictionJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetBatchPredictionJob = clientHelper.BuildApiCall<GetBatchPredictionJobRequest, BatchPredictionJob>("GetBatchPredictionJob", grpcClient.GetBatchPredictionJobAsync, grpcClient.GetBatchPredictionJob, effectiveSettings.GetBatchPredictionJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetBatchPredictionJob);
             Modify_GetBatchPredictionJobApiCall(ref _callGetBatchPredictionJob);
-            _callListBatchPredictionJobs = clientHelper.BuildApiCall<ListBatchPredictionJobsRequest, ListBatchPredictionJobsResponse>(grpcClient.ListBatchPredictionJobsAsync, grpcClient.ListBatchPredictionJobs, effectiveSettings.ListBatchPredictionJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListBatchPredictionJobs = clientHelper.BuildApiCall<ListBatchPredictionJobsRequest, ListBatchPredictionJobsResponse>("ListBatchPredictionJobs", grpcClient.ListBatchPredictionJobsAsync, grpcClient.ListBatchPredictionJobs, effectiveSettings.ListBatchPredictionJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListBatchPredictionJobs);
             Modify_ListBatchPredictionJobsApiCall(ref _callListBatchPredictionJobs);
-            _callDeleteBatchPredictionJob = clientHelper.BuildApiCall<DeleteBatchPredictionJobRequest, lro::Operation>(grpcClient.DeleteBatchPredictionJobAsync, grpcClient.DeleteBatchPredictionJob, effectiveSettings.DeleteBatchPredictionJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteBatchPredictionJob = clientHelper.BuildApiCall<DeleteBatchPredictionJobRequest, lro::Operation>("DeleteBatchPredictionJob", grpcClient.DeleteBatchPredictionJobAsync, grpcClient.DeleteBatchPredictionJob, effectiveSettings.DeleteBatchPredictionJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteBatchPredictionJob);
             Modify_DeleteBatchPredictionJobApiCall(ref _callDeleteBatchPredictionJob);
-            _callCancelBatchPredictionJob = clientHelper.BuildApiCall<CancelBatchPredictionJobRequest, wkt::Empty>(grpcClient.CancelBatchPredictionJobAsync, grpcClient.CancelBatchPredictionJob, effectiveSettings.CancelBatchPredictionJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callCancelBatchPredictionJob = clientHelper.BuildApiCall<CancelBatchPredictionJobRequest, wkt::Empty>("CancelBatchPredictionJob", grpcClient.CancelBatchPredictionJobAsync, grpcClient.CancelBatchPredictionJob, effectiveSettings.CancelBatchPredictionJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCancelBatchPredictionJob);
             Modify_CancelBatchPredictionJobApiCall(ref _callCancelBatchPredictionJob);
-            _callCreateModelDeploymentMonitoringJob = clientHelper.BuildApiCall<CreateModelDeploymentMonitoringJobRequest, ModelDeploymentMonitoringJob>(grpcClient.CreateModelDeploymentMonitoringJobAsync, grpcClient.CreateModelDeploymentMonitoringJob, effectiveSettings.CreateModelDeploymentMonitoringJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateModelDeploymentMonitoringJob = clientHelper.BuildApiCall<CreateModelDeploymentMonitoringJobRequest, ModelDeploymentMonitoringJob>("CreateModelDeploymentMonitoringJob", grpcClient.CreateModelDeploymentMonitoringJobAsync, grpcClient.CreateModelDeploymentMonitoringJob, effectiveSettings.CreateModelDeploymentMonitoringJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateModelDeploymentMonitoringJob);
             Modify_CreateModelDeploymentMonitoringJobApiCall(ref _callCreateModelDeploymentMonitoringJob);
-            _callSearchModelDeploymentMonitoringStatsAnomalies = clientHelper.BuildApiCall<SearchModelDeploymentMonitoringStatsAnomaliesRequest, SearchModelDeploymentMonitoringStatsAnomaliesResponse>(grpcClient.SearchModelDeploymentMonitoringStatsAnomaliesAsync, grpcClient.SearchModelDeploymentMonitoringStatsAnomalies, effectiveSettings.SearchModelDeploymentMonitoringStatsAnomaliesSettings).WithGoogleRequestParam("model_deployment_monitoring_job", request => request.ModelDeploymentMonitoringJob);
+            _callSearchModelDeploymentMonitoringStatsAnomalies = clientHelper.BuildApiCall<SearchModelDeploymentMonitoringStatsAnomaliesRequest, SearchModelDeploymentMonitoringStatsAnomaliesResponse>("SearchModelDeploymentMonitoringStatsAnomalies", grpcClient.SearchModelDeploymentMonitoringStatsAnomaliesAsync, grpcClient.SearchModelDeploymentMonitoringStatsAnomalies, effectiveSettings.SearchModelDeploymentMonitoringStatsAnomaliesSettings).WithGoogleRequestParam("model_deployment_monitoring_job", request => request.ModelDeploymentMonitoringJob);
             Modify_ApiCall(ref _callSearchModelDeploymentMonitoringStatsAnomalies);
             Modify_SearchModelDeploymentMonitoringStatsAnomaliesApiCall(ref _callSearchModelDeploymentMonitoringStatsAnomalies);
-            _callGetModelDeploymentMonitoringJob = clientHelper.BuildApiCall<GetModelDeploymentMonitoringJobRequest, ModelDeploymentMonitoringJob>(grpcClient.GetModelDeploymentMonitoringJobAsync, grpcClient.GetModelDeploymentMonitoringJob, effectiveSettings.GetModelDeploymentMonitoringJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetModelDeploymentMonitoringJob = clientHelper.BuildApiCall<GetModelDeploymentMonitoringJobRequest, ModelDeploymentMonitoringJob>("GetModelDeploymentMonitoringJob", grpcClient.GetModelDeploymentMonitoringJobAsync, grpcClient.GetModelDeploymentMonitoringJob, effectiveSettings.GetModelDeploymentMonitoringJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetModelDeploymentMonitoringJob);
             Modify_GetModelDeploymentMonitoringJobApiCall(ref _callGetModelDeploymentMonitoringJob);
-            _callListModelDeploymentMonitoringJobs = clientHelper.BuildApiCall<ListModelDeploymentMonitoringJobsRequest, ListModelDeploymentMonitoringJobsResponse>(grpcClient.ListModelDeploymentMonitoringJobsAsync, grpcClient.ListModelDeploymentMonitoringJobs, effectiveSettings.ListModelDeploymentMonitoringJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListModelDeploymentMonitoringJobs = clientHelper.BuildApiCall<ListModelDeploymentMonitoringJobsRequest, ListModelDeploymentMonitoringJobsResponse>("ListModelDeploymentMonitoringJobs", grpcClient.ListModelDeploymentMonitoringJobsAsync, grpcClient.ListModelDeploymentMonitoringJobs, effectiveSettings.ListModelDeploymentMonitoringJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListModelDeploymentMonitoringJobs);
             Modify_ListModelDeploymentMonitoringJobsApiCall(ref _callListModelDeploymentMonitoringJobs);
-            _callUpdateModelDeploymentMonitoringJob = clientHelper.BuildApiCall<UpdateModelDeploymentMonitoringJobRequest, lro::Operation>(grpcClient.UpdateModelDeploymentMonitoringJobAsync, grpcClient.UpdateModelDeploymentMonitoringJob, effectiveSettings.UpdateModelDeploymentMonitoringJobSettings).WithGoogleRequestParam("model_deployment_monitoring_job.name", request => request.ModelDeploymentMonitoringJob?.Name);
+            _callUpdateModelDeploymentMonitoringJob = clientHelper.BuildApiCall<UpdateModelDeploymentMonitoringJobRequest, lro::Operation>("UpdateModelDeploymentMonitoringJob", grpcClient.UpdateModelDeploymentMonitoringJobAsync, grpcClient.UpdateModelDeploymentMonitoringJob, effectiveSettings.UpdateModelDeploymentMonitoringJobSettings).WithGoogleRequestParam("model_deployment_monitoring_job.name", request => request.ModelDeploymentMonitoringJob?.Name);
             Modify_ApiCall(ref _callUpdateModelDeploymentMonitoringJob);
             Modify_UpdateModelDeploymentMonitoringJobApiCall(ref _callUpdateModelDeploymentMonitoringJob);
-            _callDeleteModelDeploymentMonitoringJob = clientHelper.BuildApiCall<DeleteModelDeploymentMonitoringJobRequest, lro::Operation>(grpcClient.DeleteModelDeploymentMonitoringJobAsync, grpcClient.DeleteModelDeploymentMonitoringJob, effectiveSettings.DeleteModelDeploymentMonitoringJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteModelDeploymentMonitoringJob = clientHelper.BuildApiCall<DeleteModelDeploymentMonitoringJobRequest, lro::Operation>("DeleteModelDeploymentMonitoringJob", grpcClient.DeleteModelDeploymentMonitoringJobAsync, grpcClient.DeleteModelDeploymentMonitoringJob, effectiveSettings.DeleteModelDeploymentMonitoringJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteModelDeploymentMonitoringJob);
             Modify_DeleteModelDeploymentMonitoringJobApiCall(ref _callDeleteModelDeploymentMonitoringJob);
-            _callPauseModelDeploymentMonitoringJob = clientHelper.BuildApiCall<PauseModelDeploymentMonitoringJobRequest, wkt::Empty>(grpcClient.PauseModelDeploymentMonitoringJobAsync, grpcClient.PauseModelDeploymentMonitoringJob, effectiveSettings.PauseModelDeploymentMonitoringJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callPauseModelDeploymentMonitoringJob = clientHelper.BuildApiCall<PauseModelDeploymentMonitoringJobRequest, wkt::Empty>("PauseModelDeploymentMonitoringJob", grpcClient.PauseModelDeploymentMonitoringJobAsync, grpcClient.PauseModelDeploymentMonitoringJob, effectiveSettings.PauseModelDeploymentMonitoringJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callPauseModelDeploymentMonitoringJob);
             Modify_PauseModelDeploymentMonitoringJobApiCall(ref _callPauseModelDeploymentMonitoringJob);
-            _callResumeModelDeploymentMonitoringJob = clientHelper.BuildApiCall<ResumeModelDeploymentMonitoringJobRequest, wkt::Empty>(grpcClient.ResumeModelDeploymentMonitoringJobAsync, grpcClient.ResumeModelDeploymentMonitoringJob, effectiveSettings.ResumeModelDeploymentMonitoringJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callResumeModelDeploymentMonitoringJob = clientHelper.BuildApiCall<ResumeModelDeploymentMonitoringJobRequest, wkt::Empty>("ResumeModelDeploymentMonitoringJob", grpcClient.ResumeModelDeploymentMonitoringJobAsync, grpcClient.ResumeModelDeploymentMonitoringJob, effectiveSettings.ResumeModelDeploymentMonitoringJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callResumeModelDeploymentMonitoringJob);
             Modify_ResumeModelDeploymentMonitoringJobApiCall(ref _callResumeModelDeploymentMonitoringJob);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

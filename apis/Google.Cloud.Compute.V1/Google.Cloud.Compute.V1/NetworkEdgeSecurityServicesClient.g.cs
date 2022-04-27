@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -208,9 +208,8 @@ namespace Google.Cloud.Compute.V1
         public NetworkEdgeSecurityServicesSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public NetworkEdgeSecurityServicesClientBuilder()
+        public NetworkEdgeSecurityServicesClientBuilder() : base(NetworkEdgeSecurityServicesClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = NetworkEdgeSecurityServicesClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref NetworkEdgeSecurityServicesClient client);
@@ -237,29 +236,18 @@ namespace Google.Cloud.Compute.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return NetworkEdgeSecurityServicesClient.Create(callInvoker, Settings);
+            return NetworkEdgeSecurityServicesClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<NetworkEdgeSecurityServicesClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return NetworkEdgeSecurityServicesClient.Create(callInvoker, Settings);
+            return NetworkEdgeSecurityServicesClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => NetworkEdgeSecurityServicesClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => NetworkEdgeSecurityServicesClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => NetworkEdgeSecurityServicesClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => ComputeRestAdapter.ComputeAdapter;
     }
 
     /// <summary>NetworkEdgeSecurityServices client wrapper, for convenient use.</summary>
@@ -288,19 +276,10 @@ namespace Google.Cloud.Compute.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(NetworkEdgeSecurityServices.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="NetworkEdgeSecurityServicesClient"/> using the default credentials,
@@ -330,8 +309,9 @@ namespace Google.Cloud.Compute.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="NetworkEdgeSecurityServicesSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="NetworkEdgeSecurityServicesClient"/>.</returns>
-        internal static NetworkEdgeSecurityServicesClient Create(grpccore::CallInvoker callInvoker, NetworkEdgeSecurityServicesSettings settings = null)
+        internal static NetworkEdgeSecurityServicesClient Create(grpccore::CallInvoker callInvoker, NetworkEdgeSecurityServicesSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -340,7 +320,7 @@ namespace Google.Cloud.Compute.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             NetworkEdgeSecurityServices.NetworkEdgeSecurityServicesClient grpcClient = new NetworkEdgeSecurityServices.NetworkEdgeSecurityServicesClient(callInvoker);
-            return new NetworkEdgeSecurityServicesClientImpl(grpcClient, settings);
+            return new NetworkEdgeSecurityServicesClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -895,27 +875,28 @@ namespace Google.Cloud.Compute.V1
         /// <param name="settings">
         /// The base <see cref="NetworkEdgeSecurityServicesSettings"/> used within this client.
         /// </param>
-        public NetworkEdgeSecurityServicesClientImpl(NetworkEdgeSecurityServices.NetworkEdgeSecurityServicesClient grpcClient, NetworkEdgeSecurityServicesSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public NetworkEdgeSecurityServicesClientImpl(NetworkEdgeSecurityServices.NetworkEdgeSecurityServicesClient grpcClient, NetworkEdgeSecurityServicesSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             NetworkEdgeSecurityServicesSettings effectiveSettings = settings ?? NetworkEdgeSecurityServicesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.DeleteOperationsSettings);
-            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.InsertOperationsSettings);
-            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.PatchOperationsSettings);
-            _callAggregatedList = clientHelper.BuildApiCall<AggregatedListNetworkEdgeSecurityServicesRequest, NetworkEdgeSecurityServiceAggregatedList>(grpcClient.AggregatedListAsync, grpcClient.AggregatedList, effectiveSettings.AggregatedListSettings).WithGoogleRequestParam("project", request => request.Project);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.DeleteOperationsSettings, logger);
+            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.InsertOperationsSettings, logger);
+            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.PatchOperationsSettings, logger);
+            _callAggregatedList = clientHelper.BuildApiCall<AggregatedListNetworkEdgeSecurityServicesRequest, NetworkEdgeSecurityServiceAggregatedList>("AggregatedList", grpcClient.AggregatedListAsync, grpcClient.AggregatedList, effectiveSettings.AggregatedListSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callAggregatedList);
             Modify_AggregatedListApiCall(ref _callAggregatedList);
-            _callDelete = clientHelper.BuildApiCall<DeleteNetworkEdgeSecurityServiceRequest, Operation>(grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("network_edge_security_service", request => request.NetworkEdgeSecurityService);
+            _callDelete = clientHelper.BuildApiCall<DeleteNetworkEdgeSecurityServiceRequest, Operation>("Delete", grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("network_edge_security_service", request => request.NetworkEdgeSecurityService);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);
-            _callGet = clientHelper.BuildApiCall<GetNetworkEdgeSecurityServiceRequest, NetworkEdgeSecurityService>(grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("network_edge_security_service", request => request.NetworkEdgeSecurityService);
+            _callGet = clientHelper.BuildApiCall<GetNetworkEdgeSecurityServiceRequest, NetworkEdgeSecurityService>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("network_edge_security_service", request => request.NetworkEdgeSecurityService);
             Modify_ApiCall(ref _callGet);
             Modify_GetApiCall(ref _callGet);
-            _callInsert = clientHelper.BuildApiCall<InsertNetworkEdgeSecurityServiceRequest, Operation>(grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
+            _callInsert = clientHelper.BuildApiCall<InsertNetworkEdgeSecurityServiceRequest, Operation>("Insert", grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
             Modify_ApiCall(ref _callInsert);
             Modify_InsertApiCall(ref _callInsert);
-            _callPatch = clientHelper.BuildApiCall<PatchNetworkEdgeSecurityServiceRequest, Operation>(grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("network_edge_security_service", request => request.NetworkEdgeSecurityService);
+            _callPatch = clientHelper.BuildApiCall<PatchNetworkEdgeSecurityServiceRequest, Operation>("Patch", grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("network_edge_security_service", request => request.NetworkEdgeSecurityService);
             Modify_ApiCall(ref _callPatch);
             Modify_PatchApiCall(ref _callPatch);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

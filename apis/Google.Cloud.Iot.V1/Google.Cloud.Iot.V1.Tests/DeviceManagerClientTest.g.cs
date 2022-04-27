@@ -59,7 +59,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 LogLevel = LogLevel.Info,
             };
             mockGrpcClient.Setup(x => x.CreateDeviceRegistry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             DeviceRegistry response = client.CreateDeviceRegistry(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -92,7 +92,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 LogLevel = LogLevel.Info,
             };
             mockGrpcClient.Setup(x => x.CreateDeviceRegistryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeviceRegistry>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             DeviceRegistry responseCallSettings = await client.CreateDeviceRegistryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DeviceRegistry responseCancellationToken = await client.CreateDeviceRegistryAsync(request, st::CancellationToken.None);
@@ -127,7 +127,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 LogLevel = LogLevel.Info,
             };
             mockGrpcClient.Setup(x => x.CreateDeviceRegistry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             DeviceRegistry response = client.CreateDeviceRegistry(request.Parent, request.DeviceRegistry);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -160,7 +160,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 LogLevel = LogLevel.Info,
             };
             mockGrpcClient.Setup(x => x.CreateDeviceRegistryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeviceRegistry>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             DeviceRegistry responseCallSettings = await client.CreateDeviceRegistryAsync(request.Parent, request.DeviceRegistry, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DeviceRegistry responseCancellationToken = await client.CreateDeviceRegistryAsync(request.Parent, request.DeviceRegistry, st::CancellationToken.None);
@@ -195,7 +195,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 LogLevel = LogLevel.Info,
             };
             mockGrpcClient.Setup(x => x.CreateDeviceRegistry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             DeviceRegistry response = client.CreateDeviceRegistry(request.ParentAsLocationName, request.DeviceRegistry);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -228,7 +228,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 LogLevel = LogLevel.Info,
             };
             mockGrpcClient.Setup(x => x.CreateDeviceRegistryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeviceRegistry>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             DeviceRegistry responseCallSettings = await client.CreateDeviceRegistryAsync(request.ParentAsLocationName, request.DeviceRegistry, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DeviceRegistry responseCancellationToken = await client.CreateDeviceRegistryAsync(request.ParentAsLocationName, request.DeviceRegistry, st::CancellationToken.None);
@@ -262,7 +262,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 LogLevel = LogLevel.Info,
             };
             mockGrpcClient.Setup(x => x.GetDeviceRegistry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             DeviceRegistry response = client.GetDeviceRegistry(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -294,7 +294,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 LogLevel = LogLevel.Info,
             };
             mockGrpcClient.Setup(x => x.GetDeviceRegistryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeviceRegistry>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             DeviceRegistry responseCallSettings = await client.GetDeviceRegistryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DeviceRegistry responseCancellationToken = await client.GetDeviceRegistryAsync(request, st::CancellationToken.None);
@@ -328,7 +328,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 LogLevel = LogLevel.Info,
             };
             mockGrpcClient.Setup(x => x.GetDeviceRegistry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             DeviceRegistry response = client.GetDeviceRegistry(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -360,7 +360,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 LogLevel = LogLevel.Info,
             };
             mockGrpcClient.Setup(x => x.GetDeviceRegistryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeviceRegistry>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             DeviceRegistry responseCallSettings = await client.GetDeviceRegistryAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DeviceRegistry responseCancellationToken = await client.GetDeviceRegistryAsync(request.Name, st::CancellationToken.None);
@@ -394,7 +394,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 LogLevel = LogLevel.Info,
             };
             mockGrpcClient.Setup(x => x.GetDeviceRegistry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             DeviceRegistry response = client.GetDeviceRegistry(request.RegistryName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -426,7 +426,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 LogLevel = LogLevel.Info,
             };
             mockGrpcClient.Setup(x => x.GetDeviceRegistryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeviceRegistry>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             DeviceRegistry responseCallSettings = await client.GetDeviceRegistryAsync(request.RegistryName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DeviceRegistry responseCancellationToken = await client.GetDeviceRegistryAsync(request.RegistryName, st::CancellationToken.None);
@@ -461,7 +461,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 LogLevel = LogLevel.Info,
             };
             mockGrpcClient.Setup(x => x.UpdateDeviceRegistry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             DeviceRegistry response = client.UpdateDeviceRegistry(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -494,7 +494,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 LogLevel = LogLevel.Info,
             };
             mockGrpcClient.Setup(x => x.UpdateDeviceRegistryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeviceRegistry>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             DeviceRegistry responseCallSettings = await client.UpdateDeviceRegistryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DeviceRegistry responseCancellationToken = await client.UpdateDeviceRegistryAsync(request, st::CancellationToken.None);
@@ -529,7 +529,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 LogLevel = LogLevel.Info,
             };
             mockGrpcClient.Setup(x => x.UpdateDeviceRegistry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             DeviceRegistry response = client.UpdateDeviceRegistry(request.DeviceRegistry, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -562,7 +562,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 LogLevel = LogLevel.Info,
             };
             mockGrpcClient.Setup(x => x.UpdateDeviceRegistryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeviceRegistry>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             DeviceRegistry responseCallSettings = await client.UpdateDeviceRegistryAsync(request.DeviceRegistry, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DeviceRegistry responseCancellationToken = await client.UpdateDeviceRegistryAsync(request.DeviceRegistry, request.UpdateMask, st::CancellationToken.None);
@@ -580,7 +580,7 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDeviceRegistry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteDeviceRegistry(request);
             mockGrpcClient.VerifyAll();
         }
@@ -595,7 +595,7 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDeviceRegistryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteDeviceRegistryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteDeviceRegistryAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -611,7 +611,7 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDeviceRegistry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteDeviceRegistry(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -626,7 +626,7 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDeviceRegistryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteDeviceRegistryAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteDeviceRegistryAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -642,7 +642,7 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDeviceRegistry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteDeviceRegistry(request.RegistryName);
             mockGrpcClient.VerifyAll();
         }
@@ -657,7 +657,7 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDeviceRegistryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteDeviceRegistryAsync(request.RegistryName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteDeviceRegistryAsync(request.RegistryName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -702,7 +702,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 GatewayConfig = new GatewayConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateDevice(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             Device response = client.CreateDevice(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -747,7 +747,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 GatewayConfig = new GatewayConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateDeviceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Device>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             Device responseCallSettings = await client.CreateDeviceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Device responseCancellationToken = await client.CreateDeviceAsync(request, st::CancellationToken.None);
@@ -794,7 +794,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 GatewayConfig = new GatewayConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateDevice(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             Device response = client.CreateDevice(request.Parent, request.Device);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -839,7 +839,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 GatewayConfig = new GatewayConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateDeviceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Device>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             Device responseCallSettings = await client.CreateDeviceAsync(request.Parent, request.Device, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Device responseCancellationToken = await client.CreateDeviceAsync(request.Parent, request.Device, st::CancellationToken.None);
@@ -886,7 +886,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 GatewayConfig = new GatewayConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateDevice(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             Device response = client.CreateDevice(request.ParentAsRegistryName, request.Device);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -931,7 +931,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 GatewayConfig = new GatewayConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateDeviceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Device>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             Device responseCallSettings = await client.CreateDeviceAsync(request.ParentAsRegistryName, request.Device, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Device responseCancellationToken = await client.CreateDeviceAsync(request.ParentAsRegistryName, request.Device, st::CancellationToken.None);
@@ -978,7 +978,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 GatewayConfig = new GatewayConfig(),
             };
             mockGrpcClient.Setup(x => x.GetDevice(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             Device response = client.GetDevice(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1023,7 +1023,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 GatewayConfig = new GatewayConfig(),
             };
             mockGrpcClient.Setup(x => x.GetDeviceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Device>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             Device responseCallSettings = await client.GetDeviceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Device responseCancellationToken = await client.GetDeviceAsync(request, st::CancellationToken.None);
@@ -1069,7 +1069,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 GatewayConfig = new GatewayConfig(),
             };
             mockGrpcClient.Setup(x => x.GetDevice(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             Device response = client.GetDevice(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1113,7 +1113,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 GatewayConfig = new GatewayConfig(),
             };
             mockGrpcClient.Setup(x => x.GetDeviceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Device>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             Device responseCallSettings = await client.GetDeviceAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Device responseCancellationToken = await client.GetDeviceAsync(request.Name, st::CancellationToken.None);
@@ -1159,7 +1159,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 GatewayConfig = new GatewayConfig(),
             };
             mockGrpcClient.Setup(x => x.GetDevice(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             Device response = client.GetDevice(request.DeviceName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1203,7 +1203,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 GatewayConfig = new GatewayConfig(),
             };
             mockGrpcClient.Setup(x => x.GetDeviceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Device>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             Device responseCallSettings = await client.GetDeviceAsync(request.DeviceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Device responseCancellationToken = await client.GetDeviceAsync(request.DeviceName, st::CancellationToken.None);
@@ -1250,7 +1250,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 GatewayConfig = new GatewayConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateDevice(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             Device response = client.UpdateDevice(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1295,7 +1295,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 GatewayConfig = new GatewayConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateDeviceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Device>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             Device responseCallSettings = await client.UpdateDeviceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Device responseCancellationToken = await client.UpdateDeviceAsync(request, st::CancellationToken.None);
@@ -1342,7 +1342,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 GatewayConfig = new GatewayConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateDevice(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             Device response = client.UpdateDevice(request.Device, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1387,7 +1387,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 GatewayConfig = new GatewayConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateDeviceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Device>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             Device responseCallSettings = await client.UpdateDeviceAsync(request.Device, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Device responseCancellationToken = await client.UpdateDeviceAsync(request.Device, request.UpdateMask, st::CancellationToken.None);
@@ -1405,7 +1405,7 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDevice(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteDevice(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1420,7 +1420,7 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDeviceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteDeviceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteDeviceAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1436,7 +1436,7 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDevice(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteDevice(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -1451,7 +1451,7 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDeviceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteDeviceAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteDeviceAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1467,7 +1467,7 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDevice(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteDevice(request.DeviceName);
             mockGrpcClient.VerifyAll();
         }
@@ -1482,7 +1482,7 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDeviceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteDeviceAsync(request.DeviceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteDeviceAsync(request.DeviceName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1506,7 +1506,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
             };
             mockGrpcClient.Setup(x => x.ModifyCloudToDeviceConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             DeviceConfig response = client.ModifyCloudToDeviceConfig(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1530,7 +1530,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
             };
             mockGrpcClient.Setup(x => x.ModifyCloudToDeviceConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeviceConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             DeviceConfig responseCallSettings = await client.ModifyCloudToDeviceConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DeviceConfig responseCancellationToken = await client.ModifyCloudToDeviceConfigAsync(request, st::CancellationToken.None);
@@ -1555,7 +1555,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
             };
             mockGrpcClient.Setup(x => x.ModifyCloudToDeviceConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             DeviceConfig response = client.ModifyCloudToDeviceConfig(request.Name, request.BinaryData);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1578,7 +1578,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
             };
             mockGrpcClient.Setup(x => x.ModifyCloudToDeviceConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeviceConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             DeviceConfig responseCallSettings = await client.ModifyCloudToDeviceConfigAsync(request.Name, request.BinaryData, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DeviceConfig responseCancellationToken = await client.ModifyCloudToDeviceConfigAsync(request.Name, request.BinaryData, st::CancellationToken.None);
@@ -1603,7 +1603,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
             };
             mockGrpcClient.Setup(x => x.ModifyCloudToDeviceConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             DeviceConfig response = client.ModifyCloudToDeviceConfig(request.DeviceName, request.BinaryData);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1626,7 +1626,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
             };
             mockGrpcClient.Setup(x => x.ModifyCloudToDeviceConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeviceConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             DeviceConfig responseCallSettings = await client.ModifyCloudToDeviceConfigAsync(request.DeviceName, request.BinaryData, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DeviceConfig responseCancellationToken = await client.ModifyCloudToDeviceConfigAsync(request.DeviceName, request.BinaryData, st::CancellationToken.None);
@@ -1648,7 +1648,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 DeviceConfigs = { new DeviceConfig(), },
             };
             mockGrpcClient.Setup(x => x.ListDeviceConfigVersions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             ListDeviceConfigVersionsResponse response = client.ListDeviceConfigVersions(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1668,7 +1668,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 DeviceConfigs = { new DeviceConfig(), },
             };
             mockGrpcClient.Setup(x => x.ListDeviceConfigVersionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListDeviceConfigVersionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             ListDeviceConfigVersionsResponse responseCallSettings = await client.ListDeviceConfigVersionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ListDeviceConfigVersionsResponse responseCancellationToken = await client.ListDeviceConfigVersionsAsync(request, st::CancellationToken.None);
@@ -1689,7 +1689,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 DeviceConfigs = { new DeviceConfig(), },
             };
             mockGrpcClient.Setup(x => x.ListDeviceConfigVersions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             ListDeviceConfigVersionsResponse response = client.ListDeviceConfigVersions(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1708,7 +1708,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 DeviceConfigs = { new DeviceConfig(), },
             };
             mockGrpcClient.Setup(x => x.ListDeviceConfigVersionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListDeviceConfigVersionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             ListDeviceConfigVersionsResponse responseCallSettings = await client.ListDeviceConfigVersionsAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ListDeviceConfigVersionsResponse responseCancellationToken = await client.ListDeviceConfigVersionsAsync(request.Name, st::CancellationToken.None);
@@ -1729,7 +1729,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 DeviceConfigs = { new DeviceConfig(), },
             };
             mockGrpcClient.Setup(x => x.ListDeviceConfigVersions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             ListDeviceConfigVersionsResponse response = client.ListDeviceConfigVersions(request.DeviceName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1748,7 +1748,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 DeviceConfigs = { new DeviceConfig(), },
             };
             mockGrpcClient.Setup(x => x.ListDeviceConfigVersionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListDeviceConfigVersionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             ListDeviceConfigVersionsResponse responseCallSettings = await client.ListDeviceConfigVersionsAsync(request.DeviceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ListDeviceConfigVersionsResponse responseCancellationToken = await client.ListDeviceConfigVersionsAsync(request.DeviceName, st::CancellationToken.None);
@@ -1770,7 +1770,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 DeviceStates = { new DeviceState(), },
             };
             mockGrpcClient.Setup(x => x.ListDeviceStates(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             ListDeviceStatesResponse response = client.ListDeviceStates(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1790,7 +1790,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 DeviceStates = { new DeviceState(), },
             };
             mockGrpcClient.Setup(x => x.ListDeviceStatesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListDeviceStatesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             ListDeviceStatesResponse responseCallSettings = await client.ListDeviceStatesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ListDeviceStatesResponse responseCancellationToken = await client.ListDeviceStatesAsync(request, st::CancellationToken.None);
@@ -1811,7 +1811,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 DeviceStates = { new DeviceState(), },
             };
             mockGrpcClient.Setup(x => x.ListDeviceStates(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             ListDeviceStatesResponse response = client.ListDeviceStates(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1830,7 +1830,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 DeviceStates = { new DeviceState(), },
             };
             mockGrpcClient.Setup(x => x.ListDeviceStatesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListDeviceStatesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             ListDeviceStatesResponse responseCallSettings = await client.ListDeviceStatesAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ListDeviceStatesResponse responseCancellationToken = await client.ListDeviceStatesAsync(request.Name, st::CancellationToken.None);
@@ -1851,7 +1851,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 DeviceStates = { new DeviceState(), },
             };
             mockGrpcClient.Setup(x => x.ListDeviceStates(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             ListDeviceStatesResponse response = client.ListDeviceStates(request.DeviceName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1870,7 +1870,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 DeviceStates = { new DeviceState(), },
             };
             mockGrpcClient.Setup(x => x.ListDeviceStatesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListDeviceStatesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             ListDeviceStatesResponse responseCallSettings = await client.ListDeviceStatesAsync(request.DeviceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ListDeviceStatesResponse responseCancellationToken = await client.ListDeviceStatesAsync(request.DeviceName, st::CancellationToken.None);
@@ -1902,7 +1902,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.SetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1932,7 +1932,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request, st::CancellationToken.None);
@@ -1963,7 +1963,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.SetIamPolicy(request.Resource, request.Policy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1992,7 +1992,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request.Resource, request.Policy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request.Resource, request.Policy, st::CancellationToken.None);
@@ -2023,7 +2023,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.SetIamPolicy(request.ResourceAsResourceName, request.Policy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2052,7 +2052,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request.ResourceAsResourceName, request.Policy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request.ResourceAsResourceName, request.Policy, st::CancellationToken.None);
@@ -2083,7 +2083,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.GetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2112,7 +2112,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request, st::CancellationToken.None);
@@ -2142,7 +2142,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.GetIamPolicy(request.Resource);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2170,7 +2170,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request.Resource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request.Resource, st::CancellationToken.None);
@@ -2200,7 +2200,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.GetIamPolicy(request.ResourceAsResourceName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2228,7 +2228,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request.ResourceAsResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request.ResourceAsResourceName, st::CancellationToken.None);
@@ -2256,7 +2256,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2282,7 +2282,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request, st::CancellationToken.None);
@@ -2310,7 +2310,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request.Resource, request.Permissions);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2336,7 +2336,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request.Resource, request.Permissions, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request.Resource, request.Permissions, st::CancellationToken.None);
@@ -2364,7 +2364,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request.ResourceAsResourceName, request.Permissions);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2390,7 +2390,7 @@ namespace Google.Cloud.Iot.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request.ResourceAsResourceName, request.Permissions, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request.ResourceAsResourceName, request.Permissions, st::CancellationToken.None);
@@ -2410,7 +2410,7 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             SendCommandToDeviceResponse expectedResponse = new SendCommandToDeviceResponse { };
             mockGrpcClient.Setup(x => x.SendCommandToDevice(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             SendCommandToDeviceResponse response = client.SendCommandToDevice(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2428,7 +2428,7 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             SendCommandToDeviceResponse expectedResponse = new SendCommandToDeviceResponse { };
             mockGrpcClient.Setup(x => x.SendCommandToDeviceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SendCommandToDeviceResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             SendCommandToDeviceResponse responseCallSettings = await client.SendCommandToDeviceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SendCommandToDeviceResponse responseCancellationToken = await client.SendCommandToDeviceAsync(request, st::CancellationToken.None);
@@ -2447,7 +2447,7 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             SendCommandToDeviceResponse expectedResponse = new SendCommandToDeviceResponse { };
             mockGrpcClient.Setup(x => x.SendCommandToDevice(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             SendCommandToDeviceResponse response = client.SendCommandToDevice(request.Name, request.BinaryData);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2464,7 +2464,7 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             SendCommandToDeviceResponse expectedResponse = new SendCommandToDeviceResponse { };
             mockGrpcClient.Setup(x => x.SendCommandToDeviceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SendCommandToDeviceResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             SendCommandToDeviceResponse responseCallSettings = await client.SendCommandToDeviceAsync(request.Name, request.BinaryData, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SendCommandToDeviceResponse responseCancellationToken = await client.SendCommandToDeviceAsync(request.Name, request.BinaryData, st::CancellationToken.None);
@@ -2483,7 +2483,7 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             SendCommandToDeviceResponse expectedResponse = new SendCommandToDeviceResponse { };
             mockGrpcClient.Setup(x => x.SendCommandToDevice(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             SendCommandToDeviceResponse response = client.SendCommandToDevice(request.DeviceName, request.BinaryData);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2500,7 +2500,7 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             SendCommandToDeviceResponse expectedResponse = new SendCommandToDeviceResponse { };
             mockGrpcClient.Setup(x => x.SendCommandToDeviceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SendCommandToDeviceResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             SendCommandToDeviceResponse responseCallSettings = await client.SendCommandToDeviceAsync(request.DeviceName, request.BinaryData, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SendCommandToDeviceResponse responseCancellationToken = await client.SendCommandToDeviceAsync(request.DeviceName, request.BinaryData, st::CancellationToken.None);
@@ -2520,7 +2520,7 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             SendCommandToDeviceResponse expectedResponse = new SendCommandToDeviceResponse { };
             mockGrpcClient.Setup(x => x.SendCommandToDevice(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             SendCommandToDeviceResponse response = client.SendCommandToDevice(request.Name, request.BinaryData, request.Subfolder);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2538,7 +2538,7 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             SendCommandToDeviceResponse expectedResponse = new SendCommandToDeviceResponse { };
             mockGrpcClient.Setup(x => x.SendCommandToDeviceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SendCommandToDeviceResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             SendCommandToDeviceResponse responseCallSettings = await client.SendCommandToDeviceAsync(request.Name, request.BinaryData, request.Subfolder, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SendCommandToDeviceResponse responseCancellationToken = await client.SendCommandToDeviceAsync(request.Name, request.BinaryData, request.Subfolder, st::CancellationToken.None);
@@ -2558,7 +2558,7 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             SendCommandToDeviceResponse expectedResponse = new SendCommandToDeviceResponse { };
             mockGrpcClient.Setup(x => x.SendCommandToDevice(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             SendCommandToDeviceResponse response = client.SendCommandToDevice(request.DeviceName, request.BinaryData, request.Subfolder);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2576,7 +2576,7 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             SendCommandToDeviceResponse expectedResponse = new SendCommandToDeviceResponse { };
             mockGrpcClient.Setup(x => x.SendCommandToDeviceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SendCommandToDeviceResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             SendCommandToDeviceResponse responseCallSettings = await client.SendCommandToDeviceAsync(request.DeviceName, request.BinaryData, request.Subfolder, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SendCommandToDeviceResponse responseCancellationToken = await client.SendCommandToDeviceAsync(request.DeviceName, request.BinaryData, request.Subfolder, st::CancellationToken.None);
@@ -2596,7 +2596,7 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             BindDeviceToGatewayResponse expectedResponse = new BindDeviceToGatewayResponse { };
             mockGrpcClient.Setup(x => x.BindDeviceToGateway(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             BindDeviceToGatewayResponse response = client.BindDeviceToGateway(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2614,7 +2614,7 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             BindDeviceToGatewayResponse expectedResponse = new BindDeviceToGatewayResponse { };
             mockGrpcClient.Setup(x => x.BindDeviceToGatewayAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BindDeviceToGatewayResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             BindDeviceToGatewayResponse responseCallSettings = await client.BindDeviceToGatewayAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BindDeviceToGatewayResponse responseCancellationToken = await client.BindDeviceToGatewayAsync(request, st::CancellationToken.None);
@@ -2634,7 +2634,7 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             BindDeviceToGatewayResponse expectedResponse = new BindDeviceToGatewayResponse { };
             mockGrpcClient.Setup(x => x.BindDeviceToGateway(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             BindDeviceToGatewayResponse response = client.BindDeviceToGateway(request.Parent, request.GatewayId, request.DeviceId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2652,7 +2652,7 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             BindDeviceToGatewayResponse expectedResponse = new BindDeviceToGatewayResponse { };
             mockGrpcClient.Setup(x => x.BindDeviceToGatewayAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BindDeviceToGatewayResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             BindDeviceToGatewayResponse responseCallSettings = await client.BindDeviceToGatewayAsync(request.Parent, request.GatewayId, request.DeviceId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BindDeviceToGatewayResponse responseCancellationToken = await client.BindDeviceToGatewayAsync(request.Parent, request.GatewayId, request.DeviceId, st::CancellationToken.None);
@@ -2672,7 +2672,7 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             BindDeviceToGatewayResponse expectedResponse = new BindDeviceToGatewayResponse { };
             mockGrpcClient.Setup(x => x.BindDeviceToGateway(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             BindDeviceToGatewayResponse response = client.BindDeviceToGateway(request.ParentAsRegistryName, request.GatewayId, request.DeviceId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2690,7 +2690,7 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             BindDeviceToGatewayResponse expectedResponse = new BindDeviceToGatewayResponse { };
             mockGrpcClient.Setup(x => x.BindDeviceToGatewayAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BindDeviceToGatewayResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             BindDeviceToGatewayResponse responseCallSettings = await client.BindDeviceToGatewayAsync(request.ParentAsRegistryName, request.GatewayId, request.DeviceId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BindDeviceToGatewayResponse responseCancellationToken = await client.BindDeviceToGatewayAsync(request.ParentAsRegistryName, request.GatewayId, request.DeviceId, st::CancellationToken.None);
@@ -2710,7 +2710,7 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             UnbindDeviceFromGatewayResponse expectedResponse = new UnbindDeviceFromGatewayResponse { };
             mockGrpcClient.Setup(x => x.UnbindDeviceFromGateway(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             UnbindDeviceFromGatewayResponse response = client.UnbindDeviceFromGateway(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2728,7 +2728,7 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             UnbindDeviceFromGatewayResponse expectedResponse = new UnbindDeviceFromGatewayResponse { };
             mockGrpcClient.Setup(x => x.UnbindDeviceFromGatewayAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UnbindDeviceFromGatewayResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             UnbindDeviceFromGatewayResponse responseCallSettings = await client.UnbindDeviceFromGatewayAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UnbindDeviceFromGatewayResponse responseCancellationToken = await client.UnbindDeviceFromGatewayAsync(request, st::CancellationToken.None);
@@ -2748,7 +2748,7 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             UnbindDeviceFromGatewayResponse expectedResponse = new UnbindDeviceFromGatewayResponse { };
             mockGrpcClient.Setup(x => x.UnbindDeviceFromGateway(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             UnbindDeviceFromGatewayResponse response = client.UnbindDeviceFromGateway(request.Parent, request.GatewayId, request.DeviceId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2766,7 +2766,7 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             UnbindDeviceFromGatewayResponse expectedResponse = new UnbindDeviceFromGatewayResponse { };
             mockGrpcClient.Setup(x => x.UnbindDeviceFromGatewayAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UnbindDeviceFromGatewayResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             UnbindDeviceFromGatewayResponse responseCallSettings = await client.UnbindDeviceFromGatewayAsync(request.Parent, request.GatewayId, request.DeviceId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UnbindDeviceFromGatewayResponse responseCancellationToken = await client.UnbindDeviceFromGatewayAsync(request.Parent, request.GatewayId, request.DeviceId, st::CancellationToken.None);
@@ -2786,7 +2786,7 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             UnbindDeviceFromGatewayResponse expectedResponse = new UnbindDeviceFromGatewayResponse { };
             mockGrpcClient.Setup(x => x.UnbindDeviceFromGateway(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             UnbindDeviceFromGatewayResponse response = client.UnbindDeviceFromGateway(request.ParentAsRegistryName, request.GatewayId, request.DeviceId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2804,7 +2804,7 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             UnbindDeviceFromGatewayResponse expectedResponse = new UnbindDeviceFromGatewayResponse { };
             mockGrpcClient.Setup(x => x.UnbindDeviceFromGatewayAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UnbindDeviceFromGatewayResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
+            DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null, null);
             UnbindDeviceFromGatewayResponse responseCallSettings = await client.UnbindDeviceFromGatewayAsync(request.ParentAsRegistryName, request.GatewayId, request.DeviceId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UnbindDeviceFromGatewayResponse responseCancellationToken = await client.UnbindDeviceFromGatewayAsync(request.ParentAsRegistryName, request.GatewayId, request.DeviceId, st::CancellationToken.None);

@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -678,9 +678,8 @@ namespace Google.Cloud.GkeBackup.V1
         public BackupForGKESettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public BackupForGKEClientBuilder()
+        public BackupForGKEClientBuilder() : base(BackupForGKEClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = BackupForGKEClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref BackupForGKEClient client);
@@ -707,29 +706,18 @@ namespace Google.Cloud.GkeBackup.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return BackupForGKEClient.Create(callInvoker, Settings);
+            return BackupForGKEClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<BackupForGKEClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return BackupForGKEClient.Create(callInvoker, Settings);
+            return BackupForGKEClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => BackupForGKEClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => BackupForGKEClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => BackupForGKEClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>BackupForGKE client wrapper, for convenient use.</summary>
@@ -757,19 +745,10 @@ namespace Google.Cloud.GkeBackup.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(BackupForGKE.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="BackupForGKEClient"/> using the default credentials, endpoint and
@@ -796,8 +775,9 @@ namespace Google.Cloud.GkeBackup.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="BackupForGKESettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="BackupForGKEClient"/>.</returns>
-        internal static BackupForGKEClient Create(grpccore::CallInvoker callInvoker, BackupForGKESettings settings = null)
+        internal static BackupForGKEClient Create(grpccore::CallInvoker callInvoker, BackupForGKESettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -806,7 +786,7 @@ namespace Google.Cloud.GkeBackup.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             BackupForGKE.BackupForGKEClient grpcClient = new BackupForGKE.BackupForGKEClient(callInvoker);
-            return new BackupForGKEClientImpl(grpcClient, settings);
+            return new BackupForGKEClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -4214,93 +4194,94 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="BackupForGKESettings"/> used within this client.</param>
-        public BackupForGKEClientImpl(BackupForGKE.BackupForGKEClient grpcClient, BackupForGKESettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public BackupForGKEClientImpl(BackupForGKE.BackupForGKEClient grpcClient, BackupForGKESettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             BackupForGKESettings effectiveSettings = settings ?? BackupForGKESettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateBackupPlanOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBackupPlanOperationsSettings);
-            UpdateBackupPlanOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateBackupPlanOperationsSettings);
-            DeleteBackupPlanOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBackupPlanOperationsSettings);
-            CreateBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBackupOperationsSettings);
-            UpdateBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateBackupOperationsSettings);
-            DeleteBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBackupOperationsSettings);
-            CreateRestorePlanOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateRestorePlanOperationsSettings);
-            UpdateRestorePlanOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateRestorePlanOperationsSettings);
-            DeleteRestorePlanOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRestorePlanOperationsSettings);
-            CreateRestoreOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateRestoreOperationsSettings);
-            UpdateRestoreOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateRestoreOperationsSettings);
-            DeleteRestoreOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRestoreOperationsSettings);
-            _callCreateBackupPlan = clientHelper.BuildApiCall<CreateBackupPlanRequest, lro::Operation>(grpcClient.CreateBackupPlanAsync, grpcClient.CreateBackupPlan, effectiveSettings.CreateBackupPlanSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateBackupPlanOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBackupPlanOperationsSettings, logger);
+            UpdateBackupPlanOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateBackupPlanOperationsSettings, logger);
+            DeleteBackupPlanOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBackupPlanOperationsSettings, logger);
+            CreateBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBackupOperationsSettings, logger);
+            UpdateBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateBackupOperationsSettings, logger);
+            DeleteBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBackupOperationsSettings, logger);
+            CreateRestorePlanOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateRestorePlanOperationsSettings, logger);
+            UpdateRestorePlanOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateRestorePlanOperationsSettings, logger);
+            DeleteRestorePlanOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRestorePlanOperationsSettings, logger);
+            CreateRestoreOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateRestoreOperationsSettings, logger);
+            UpdateRestoreOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateRestoreOperationsSettings, logger);
+            DeleteRestoreOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRestoreOperationsSettings, logger);
+            _callCreateBackupPlan = clientHelper.BuildApiCall<CreateBackupPlanRequest, lro::Operation>("CreateBackupPlan", grpcClient.CreateBackupPlanAsync, grpcClient.CreateBackupPlan, effectiveSettings.CreateBackupPlanSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateBackupPlan);
             Modify_CreateBackupPlanApiCall(ref _callCreateBackupPlan);
-            _callListBackupPlans = clientHelper.BuildApiCall<ListBackupPlansRequest, ListBackupPlansResponse>(grpcClient.ListBackupPlansAsync, grpcClient.ListBackupPlans, effectiveSettings.ListBackupPlansSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListBackupPlans = clientHelper.BuildApiCall<ListBackupPlansRequest, ListBackupPlansResponse>("ListBackupPlans", grpcClient.ListBackupPlansAsync, grpcClient.ListBackupPlans, effectiveSettings.ListBackupPlansSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListBackupPlans);
             Modify_ListBackupPlansApiCall(ref _callListBackupPlans);
-            _callGetBackupPlan = clientHelper.BuildApiCall<GetBackupPlanRequest, BackupPlan>(grpcClient.GetBackupPlanAsync, grpcClient.GetBackupPlan, effectiveSettings.GetBackupPlanSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetBackupPlan = clientHelper.BuildApiCall<GetBackupPlanRequest, BackupPlan>("GetBackupPlan", grpcClient.GetBackupPlanAsync, grpcClient.GetBackupPlan, effectiveSettings.GetBackupPlanSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetBackupPlan);
             Modify_GetBackupPlanApiCall(ref _callGetBackupPlan);
-            _callUpdateBackupPlan = clientHelper.BuildApiCall<UpdateBackupPlanRequest, lro::Operation>(grpcClient.UpdateBackupPlanAsync, grpcClient.UpdateBackupPlan, effectiveSettings.UpdateBackupPlanSettings).WithGoogleRequestParam("backup_plan.name", request => request.BackupPlan?.Name);
+            _callUpdateBackupPlan = clientHelper.BuildApiCall<UpdateBackupPlanRequest, lro::Operation>("UpdateBackupPlan", grpcClient.UpdateBackupPlanAsync, grpcClient.UpdateBackupPlan, effectiveSettings.UpdateBackupPlanSettings).WithGoogleRequestParam("backup_plan.name", request => request.BackupPlan?.Name);
             Modify_ApiCall(ref _callUpdateBackupPlan);
             Modify_UpdateBackupPlanApiCall(ref _callUpdateBackupPlan);
-            _callDeleteBackupPlan = clientHelper.BuildApiCall<DeleteBackupPlanRequest, lro::Operation>(grpcClient.DeleteBackupPlanAsync, grpcClient.DeleteBackupPlan, effectiveSettings.DeleteBackupPlanSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteBackupPlan = clientHelper.BuildApiCall<DeleteBackupPlanRequest, lro::Operation>("DeleteBackupPlan", grpcClient.DeleteBackupPlanAsync, grpcClient.DeleteBackupPlan, effectiveSettings.DeleteBackupPlanSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteBackupPlan);
             Modify_DeleteBackupPlanApiCall(ref _callDeleteBackupPlan);
-            _callCreateBackup = clientHelper.BuildApiCall<CreateBackupRequest, lro::Operation>(grpcClient.CreateBackupAsync, grpcClient.CreateBackup, effectiveSettings.CreateBackupSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateBackup = clientHelper.BuildApiCall<CreateBackupRequest, lro::Operation>("CreateBackup", grpcClient.CreateBackupAsync, grpcClient.CreateBackup, effectiveSettings.CreateBackupSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateBackup);
             Modify_CreateBackupApiCall(ref _callCreateBackup);
-            _callListBackups = clientHelper.BuildApiCall<ListBackupsRequest, ListBackupsResponse>(grpcClient.ListBackupsAsync, grpcClient.ListBackups, effectiveSettings.ListBackupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListBackups = clientHelper.BuildApiCall<ListBackupsRequest, ListBackupsResponse>("ListBackups", grpcClient.ListBackupsAsync, grpcClient.ListBackups, effectiveSettings.ListBackupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListBackups);
             Modify_ListBackupsApiCall(ref _callListBackups);
-            _callGetBackup = clientHelper.BuildApiCall<GetBackupRequest, Backup>(grpcClient.GetBackupAsync, grpcClient.GetBackup, effectiveSettings.GetBackupSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetBackup = clientHelper.BuildApiCall<GetBackupRequest, Backup>("GetBackup", grpcClient.GetBackupAsync, grpcClient.GetBackup, effectiveSettings.GetBackupSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetBackup);
             Modify_GetBackupApiCall(ref _callGetBackup);
-            _callUpdateBackup = clientHelper.BuildApiCall<UpdateBackupRequest, lro::Operation>(grpcClient.UpdateBackupAsync, grpcClient.UpdateBackup, effectiveSettings.UpdateBackupSettings).WithGoogleRequestParam("backup.name", request => request.Backup?.Name);
+            _callUpdateBackup = clientHelper.BuildApiCall<UpdateBackupRequest, lro::Operation>("UpdateBackup", grpcClient.UpdateBackupAsync, grpcClient.UpdateBackup, effectiveSettings.UpdateBackupSettings).WithGoogleRequestParam("backup.name", request => request.Backup?.Name);
             Modify_ApiCall(ref _callUpdateBackup);
             Modify_UpdateBackupApiCall(ref _callUpdateBackup);
-            _callDeleteBackup = clientHelper.BuildApiCall<DeleteBackupRequest, lro::Operation>(grpcClient.DeleteBackupAsync, grpcClient.DeleteBackup, effectiveSettings.DeleteBackupSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteBackup = clientHelper.BuildApiCall<DeleteBackupRequest, lro::Operation>("DeleteBackup", grpcClient.DeleteBackupAsync, grpcClient.DeleteBackup, effectiveSettings.DeleteBackupSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteBackup);
             Modify_DeleteBackupApiCall(ref _callDeleteBackup);
-            _callListVolumeBackups = clientHelper.BuildApiCall<ListVolumeBackupsRequest, ListVolumeBackupsResponse>(grpcClient.ListVolumeBackupsAsync, grpcClient.ListVolumeBackups, effectiveSettings.ListVolumeBackupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListVolumeBackups = clientHelper.BuildApiCall<ListVolumeBackupsRequest, ListVolumeBackupsResponse>("ListVolumeBackups", grpcClient.ListVolumeBackupsAsync, grpcClient.ListVolumeBackups, effectiveSettings.ListVolumeBackupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListVolumeBackups);
             Modify_ListVolumeBackupsApiCall(ref _callListVolumeBackups);
-            _callGetVolumeBackup = clientHelper.BuildApiCall<GetVolumeBackupRequest, VolumeBackup>(grpcClient.GetVolumeBackupAsync, grpcClient.GetVolumeBackup, effectiveSettings.GetVolumeBackupSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetVolumeBackup = clientHelper.BuildApiCall<GetVolumeBackupRequest, VolumeBackup>("GetVolumeBackup", grpcClient.GetVolumeBackupAsync, grpcClient.GetVolumeBackup, effectiveSettings.GetVolumeBackupSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetVolumeBackup);
             Modify_GetVolumeBackupApiCall(ref _callGetVolumeBackup);
-            _callCreateRestorePlan = clientHelper.BuildApiCall<CreateRestorePlanRequest, lro::Operation>(grpcClient.CreateRestorePlanAsync, grpcClient.CreateRestorePlan, effectiveSettings.CreateRestorePlanSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateRestorePlan = clientHelper.BuildApiCall<CreateRestorePlanRequest, lro::Operation>("CreateRestorePlan", grpcClient.CreateRestorePlanAsync, grpcClient.CreateRestorePlan, effectiveSettings.CreateRestorePlanSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateRestorePlan);
             Modify_CreateRestorePlanApiCall(ref _callCreateRestorePlan);
-            _callListRestorePlans = clientHelper.BuildApiCall<ListRestorePlansRequest, ListRestorePlansResponse>(grpcClient.ListRestorePlansAsync, grpcClient.ListRestorePlans, effectiveSettings.ListRestorePlansSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListRestorePlans = clientHelper.BuildApiCall<ListRestorePlansRequest, ListRestorePlansResponse>("ListRestorePlans", grpcClient.ListRestorePlansAsync, grpcClient.ListRestorePlans, effectiveSettings.ListRestorePlansSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListRestorePlans);
             Modify_ListRestorePlansApiCall(ref _callListRestorePlans);
-            _callGetRestorePlan = clientHelper.BuildApiCall<GetRestorePlanRequest, RestorePlan>(grpcClient.GetRestorePlanAsync, grpcClient.GetRestorePlan, effectiveSettings.GetRestorePlanSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetRestorePlan = clientHelper.BuildApiCall<GetRestorePlanRequest, RestorePlan>("GetRestorePlan", grpcClient.GetRestorePlanAsync, grpcClient.GetRestorePlan, effectiveSettings.GetRestorePlanSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetRestorePlan);
             Modify_GetRestorePlanApiCall(ref _callGetRestorePlan);
-            _callUpdateRestorePlan = clientHelper.BuildApiCall<UpdateRestorePlanRequest, lro::Operation>(grpcClient.UpdateRestorePlanAsync, grpcClient.UpdateRestorePlan, effectiveSettings.UpdateRestorePlanSettings).WithGoogleRequestParam("restore_plan.name", request => request.RestorePlan?.Name);
+            _callUpdateRestorePlan = clientHelper.BuildApiCall<UpdateRestorePlanRequest, lro::Operation>("UpdateRestorePlan", grpcClient.UpdateRestorePlanAsync, grpcClient.UpdateRestorePlan, effectiveSettings.UpdateRestorePlanSettings).WithGoogleRequestParam("restore_plan.name", request => request.RestorePlan?.Name);
             Modify_ApiCall(ref _callUpdateRestorePlan);
             Modify_UpdateRestorePlanApiCall(ref _callUpdateRestorePlan);
-            _callDeleteRestorePlan = clientHelper.BuildApiCall<DeleteRestorePlanRequest, lro::Operation>(grpcClient.DeleteRestorePlanAsync, grpcClient.DeleteRestorePlan, effectiveSettings.DeleteRestorePlanSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteRestorePlan = clientHelper.BuildApiCall<DeleteRestorePlanRequest, lro::Operation>("DeleteRestorePlan", grpcClient.DeleteRestorePlanAsync, grpcClient.DeleteRestorePlan, effectiveSettings.DeleteRestorePlanSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteRestorePlan);
             Modify_DeleteRestorePlanApiCall(ref _callDeleteRestorePlan);
-            _callCreateRestore = clientHelper.BuildApiCall<CreateRestoreRequest, lro::Operation>(grpcClient.CreateRestoreAsync, grpcClient.CreateRestore, effectiveSettings.CreateRestoreSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateRestore = clientHelper.BuildApiCall<CreateRestoreRequest, lro::Operation>("CreateRestore", grpcClient.CreateRestoreAsync, grpcClient.CreateRestore, effectiveSettings.CreateRestoreSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateRestore);
             Modify_CreateRestoreApiCall(ref _callCreateRestore);
-            _callListRestores = clientHelper.BuildApiCall<ListRestoresRequest, ListRestoresResponse>(grpcClient.ListRestoresAsync, grpcClient.ListRestores, effectiveSettings.ListRestoresSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListRestores = clientHelper.BuildApiCall<ListRestoresRequest, ListRestoresResponse>("ListRestores", grpcClient.ListRestoresAsync, grpcClient.ListRestores, effectiveSettings.ListRestoresSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListRestores);
             Modify_ListRestoresApiCall(ref _callListRestores);
-            _callGetRestore = clientHelper.BuildApiCall<GetRestoreRequest, Restore>(grpcClient.GetRestoreAsync, grpcClient.GetRestore, effectiveSettings.GetRestoreSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetRestore = clientHelper.BuildApiCall<GetRestoreRequest, Restore>("GetRestore", grpcClient.GetRestoreAsync, grpcClient.GetRestore, effectiveSettings.GetRestoreSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetRestore);
             Modify_GetRestoreApiCall(ref _callGetRestore);
-            _callUpdateRestore = clientHelper.BuildApiCall<UpdateRestoreRequest, lro::Operation>(grpcClient.UpdateRestoreAsync, grpcClient.UpdateRestore, effectiveSettings.UpdateRestoreSettings).WithGoogleRequestParam("restore.name", request => request.Restore?.Name);
+            _callUpdateRestore = clientHelper.BuildApiCall<UpdateRestoreRequest, lro::Operation>("UpdateRestore", grpcClient.UpdateRestoreAsync, grpcClient.UpdateRestore, effectiveSettings.UpdateRestoreSettings).WithGoogleRequestParam("restore.name", request => request.Restore?.Name);
             Modify_ApiCall(ref _callUpdateRestore);
             Modify_UpdateRestoreApiCall(ref _callUpdateRestore);
-            _callDeleteRestore = clientHelper.BuildApiCall<DeleteRestoreRequest, lro::Operation>(grpcClient.DeleteRestoreAsync, grpcClient.DeleteRestore, effectiveSettings.DeleteRestoreSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteRestore = clientHelper.BuildApiCall<DeleteRestoreRequest, lro::Operation>("DeleteRestore", grpcClient.DeleteRestoreAsync, grpcClient.DeleteRestore, effectiveSettings.DeleteRestoreSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteRestore);
             Modify_DeleteRestoreApiCall(ref _callDeleteRestore);
-            _callListVolumeRestores = clientHelper.BuildApiCall<ListVolumeRestoresRequest, ListVolumeRestoresResponse>(grpcClient.ListVolumeRestoresAsync, grpcClient.ListVolumeRestores, effectiveSettings.ListVolumeRestoresSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListVolumeRestores = clientHelper.BuildApiCall<ListVolumeRestoresRequest, ListVolumeRestoresResponse>("ListVolumeRestores", grpcClient.ListVolumeRestoresAsync, grpcClient.ListVolumeRestores, effectiveSettings.ListVolumeRestoresSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListVolumeRestores);
             Modify_ListVolumeRestoresApiCall(ref _callListVolumeRestores);
-            _callGetVolumeRestore = clientHelper.BuildApiCall<GetVolumeRestoreRequest, VolumeRestore>(grpcClient.GetVolumeRestoreAsync, grpcClient.GetVolumeRestore, effectiveSettings.GetVolumeRestoreSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetVolumeRestore = clientHelper.BuildApiCall<GetVolumeRestoreRequest, VolumeRestore>("GetVolumeRestore", grpcClient.GetVolumeRestoreAsync, grpcClient.GetVolumeRestore, effectiveSettings.GetVolumeRestoreSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetVolumeRestore);
             Modify_GetVolumeRestoreApiCall(ref _callGetVolumeRestore);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

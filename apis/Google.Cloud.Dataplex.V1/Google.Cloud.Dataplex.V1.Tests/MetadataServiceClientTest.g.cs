@@ -57,7 +57,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Schema = new Schema(),
             };
             mockGrpcClient.Setup(x => x.CreateEntity(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
             Entity response = client.CreateEntity(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -93,7 +93,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Schema = new Schema(),
             };
             mockGrpcClient.Setup(x => x.CreateEntityAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Entity>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
             Entity responseCallSettings = await client.CreateEntityAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Entity responseCancellationToken = await client.CreateEntityAsync(request, st::CancellationToken.None);
@@ -130,7 +130,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Schema = new Schema(),
             };
             mockGrpcClient.Setup(x => x.CreateEntity(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
             Entity response = client.CreateEntity(request.Parent, request.Entity);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -165,7 +165,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Schema = new Schema(),
             };
             mockGrpcClient.Setup(x => x.CreateEntityAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Entity>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
             Entity responseCallSettings = await client.CreateEntityAsync(request.Parent, request.Entity, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Entity responseCancellationToken = await client.CreateEntityAsync(request.Parent, request.Entity, st::CancellationToken.None);
@@ -202,7 +202,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Schema = new Schema(),
             };
             mockGrpcClient.Setup(x => x.CreateEntity(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
             Entity response = client.CreateEntity(request.ParentAsZoneName, request.Entity);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -237,7 +237,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Schema = new Schema(),
             };
             mockGrpcClient.Setup(x => x.CreateEntityAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Entity>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
             Entity responseCallSettings = await client.CreateEntityAsync(request.ParentAsZoneName, request.Entity, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Entity responseCancellationToken = await client.CreateEntityAsync(request.ParentAsZoneName, request.Entity, st::CancellationToken.None);
@@ -274,7 +274,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Schema = new Schema(),
             };
             mockGrpcClient.Setup(x => x.UpdateEntity(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
             Entity response = client.UpdateEntity(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -309,7 +309,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Schema = new Schema(),
             };
             mockGrpcClient.Setup(x => x.UpdateEntityAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Entity>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
             Entity responseCallSettings = await client.UpdateEntityAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Entity responseCancellationToken = await client.UpdateEntityAsync(request, st::CancellationToken.None);
@@ -328,7 +328,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteEntity(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteEntity(request);
             mockGrpcClient.VerifyAll();
         }
@@ -344,7 +344,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteEntityAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteEntityAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteEntityAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -360,7 +360,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteEntity(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteEntity(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -375,7 +375,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteEntityAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteEntityAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteEntityAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -391,7 +391,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteEntity(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteEntity(request.EntityName);
             mockGrpcClient.VerifyAll();
         }
@@ -406,7 +406,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteEntityAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteEntityAsync(request.EntityName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteEntityAsync(request.EntityName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -441,7 +441,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Schema = new Schema(),
             };
             mockGrpcClient.Setup(x => x.GetEntity(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
             Entity response = client.GetEntity(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -476,7 +476,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Schema = new Schema(),
             };
             mockGrpcClient.Setup(x => x.GetEntityAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Entity>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
             Entity responseCallSettings = await client.GetEntityAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Entity responseCancellationToken = await client.GetEntityAsync(request, st::CancellationToken.None);
@@ -512,7 +512,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Schema = new Schema(),
             };
             mockGrpcClient.Setup(x => x.GetEntity(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
             Entity response = client.GetEntity(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -546,7 +546,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Schema = new Schema(),
             };
             mockGrpcClient.Setup(x => x.GetEntityAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Entity>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
             Entity responseCallSettings = await client.GetEntityAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Entity responseCancellationToken = await client.GetEntityAsync(request.Name, st::CancellationToken.None);
@@ -582,7 +582,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Schema = new Schema(),
             };
             mockGrpcClient.Setup(x => x.GetEntity(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
             Entity response = client.GetEntity(request.EntityName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -616,7 +616,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Schema = new Schema(),
             };
             mockGrpcClient.Setup(x => x.GetEntityAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Entity>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
             Entity responseCallSettings = await client.GetEntityAsync(request.EntityName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Entity responseCancellationToken = await client.GetEntityAsync(request.EntityName, st::CancellationToken.None);
@@ -644,7 +644,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreatePartition(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
             Partition response = client.CreatePartition(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -670,7 +670,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreatePartitionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Partition>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
             Partition responseCallSettings = await client.CreatePartitionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Partition responseCancellationToken = await client.CreatePartitionAsync(request, st::CancellationToken.None);
@@ -697,7 +697,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreatePartition(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
             Partition response = client.CreatePartition(request.Parent, request.Partition);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -722,7 +722,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreatePartitionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Partition>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
             Partition responseCallSettings = await client.CreatePartitionAsync(request.Parent, request.Partition, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Partition responseCancellationToken = await client.CreatePartitionAsync(request.Parent, request.Partition, st::CancellationToken.None);
@@ -749,7 +749,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreatePartition(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
             Partition response = client.CreatePartition(request.ParentAsEntityName, request.Partition);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -774,7 +774,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreatePartitionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Partition>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
             Partition responseCallSettings = await client.CreatePartitionAsync(request.ParentAsEntityName, request.Partition, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Partition responseCancellationToken = await client.CreatePartitionAsync(request.ParentAsEntityName, request.Partition, st::CancellationToken.None);
@@ -795,7 +795,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePartition(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeletePartition(request);
             mockGrpcClient.VerifyAll();
         }
@@ -813,7 +813,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePartitionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeletePartitionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeletePartitionAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -829,7 +829,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePartition(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeletePartition(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -844,7 +844,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePartitionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeletePartitionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeletePartitionAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -860,7 +860,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePartition(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeletePartition(request.PartitionName);
             mockGrpcClient.VerifyAll();
         }
@@ -875,7 +875,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePartitionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeletePartitionAsync(request.PartitionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeletePartitionAsync(request.PartitionName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -899,7 +899,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetPartition(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
             Partition response = client.GetPartition(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -923,7 +923,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetPartitionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Partition>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
             Partition responseCallSettings = await client.GetPartitionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Partition responseCancellationToken = await client.GetPartitionAsync(request, st::CancellationToken.None);
@@ -949,7 +949,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetPartition(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
             Partition response = client.GetPartition(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -973,7 +973,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetPartitionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Partition>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
             Partition responseCallSettings = await client.GetPartitionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Partition responseCancellationToken = await client.GetPartitionAsync(request.Name, st::CancellationToken.None);
@@ -999,7 +999,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetPartition(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
             Partition response = client.GetPartition(request.PartitionName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1023,7 +1023,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetPartitionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Partition>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null);
+            MetadataServiceClient client = new MetadataServiceClientImpl(mockGrpcClient.Object, null, null);
             Partition responseCallSettings = await client.GetPartitionAsync(request.PartitionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Partition responseCancellationToken = await client.GetPartitionAsync(request.PartitionName, st::CancellationToken.None);

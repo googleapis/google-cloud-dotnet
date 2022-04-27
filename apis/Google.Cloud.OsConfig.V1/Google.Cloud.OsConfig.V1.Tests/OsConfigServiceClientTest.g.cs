@@ -62,7 +62,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 Rollout = new PatchRollout(),
             };
             mockGrpcClient.Setup(x => x.ExecutePatchJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             PatchJob response = client.ExecutePatchJob(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -102,7 +102,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 Rollout = new PatchRollout(),
             };
             mockGrpcClient.Setup(x => x.ExecutePatchJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             PatchJob responseCallSettings = await client.ExecutePatchJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PatchJob responseCancellationToken = await client.ExecutePatchJobAsync(request, st::CancellationToken.None);
@@ -137,7 +137,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 Rollout = new PatchRollout(),
             };
             mockGrpcClient.Setup(x => x.GetPatchJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             PatchJob response = client.GetPatchJob(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -170,7 +170,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 Rollout = new PatchRollout(),
             };
             mockGrpcClient.Setup(x => x.GetPatchJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             PatchJob responseCallSettings = await client.GetPatchJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PatchJob responseCancellationToken = await client.GetPatchJobAsync(request, st::CancellationToken.None);
@@ -205,7 +205,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 Rollout = new PatchRollout(),
             };
             mockGrpcClient.Setup(x => x.GetPatchJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             PatchJob response = client.GetPatchJob(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -238,7 +238,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 Rollout = new PatchRollout(),
             };
             mockGrpcClient.Setup(x => x.GetPatchJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             PatchJob responseCallSettings = await client.GetPatchJobAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PatchJob responseCancellationToken = await client.GetPatchJobAsync(request.Name, st::CancellationToken.None);
@@ -273,7 +273,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 Rollout = new PatchRollout(),
             };
             mockGrpcClient.Setup(x => x.GetPatchJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             PatchJob response = client.GetPatchJob(request.PatchJobName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -306,7 +306,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 Rollout = new PatchRollout(),
             };
             mockGrpcClient.Setup(x => x.GetPatchJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             PatchJob responseCallSettings = await client.GetPatchJobAsync(request.PatchJobName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PatchJob responseCancellationToken = await client.GetPatchJobAsync(request.PatchJobName, st::CancellationToken.None);
@@ -341,7 +341,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 Rollout = new PatchRollout(),
             };
             mockGrpcClient.Setup(x => x.CancelPatchJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             PatchJob response = client.CancelPatchJob(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -374,7 +374,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 Rollout = new PatchRollout(),
             };
             mockGrpcClient.Setup(x => x.CancelPatchJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             PatchJob responseCallSettings = await client.CancelPatchJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PatchJob responseCancellationToken = await client.CancelPatchJobAsync(request, st::CancellationToken.None);
@@ -408,7 +408,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.CreatePatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             PatchDeployment response = client.CreatePatchDeployment(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -440,7 +440,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.CreatePatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             PatchDeployment responseCallSettings = await client.CreatePatchDeploymentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PatchDeployment responseCancellationToken = await client.CreatePatchDeploymentAsync(request, st::CancellationToken.None);
@@ -474,7 +474,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.CreatePatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             PatchDeployment response = client.CreatePatchDeployment(request.Parent, request.PatchDeployment, request.PatchDeploymentId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -506,7 +506,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.CreatePatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             PatchDeployment responseCallSettings = await client.CreatePatchDeploymentAsync(request.Parent, request.PatchDeployment, request.PatchDeploymentId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PatchDeployment responseCancellationToken = await client.CreatePatchDeploymentAsync(request.Parent, request.PatchDeployment, request.PatchDeploymentId, st::CancellationToken.None);
@@ -540,7 +540,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.CreatePatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             PatchDeployment response = client.CreatePatchDeployment(request.ParentAsProjectName, request.PatchDeployment, request.PatchDeploymentId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -572,7 +572,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.CreatePatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             PatchDeployment responseCallSettings = await client.CreatePatchDeploymentAsync(request.ParentAsProjectName, request.PatchDeployment, request.PatchDeploymentId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PatchDeployment responseCancellationToken = await client.CreatePatchDeploymentAsync(request.ParentAsProjectName, request.PatchDeployment, request.PatchDeploymentId, st::CancellationToken.None);
@@ -604,7 +604,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetPatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             PatchDeployment response = client.GetPatchDeployment(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -634,7 +634,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetPatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             PatchDeployment responseCallSettings = await client.GetPatchDeploymentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PatchDeployment responseCancellationToken = await client.GetPatchDeploymentAsync(request, st::CancellationToken.None);
@@ -666,7 +666,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetPatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             PatchDeployment response = client.GetPatchDeployment(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -696,7 +696,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetPatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             PatchDeployment responseCallSettings = await client.GetPatchDeploymentAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PatchDeployment responseCancellationToken = await client.GetPatchDeploymentAsync(request.Name, st::CancellationToken.None);
@@ -728,7 +728,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetPatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             PatchDeployment response = client.GetPatchDeployment(request.PatchDeploymentName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -758,7 +758,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetPatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             PatchDeployment responseCallSettings = await client.GetPatchDeploymentAsync(request.PatchDeploymentName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PatchDeployment responseCancellationToken = await client.GetPatchDeploymentAsync(request.PatchDeploymentName, st::CancellationToken.None);
@@ -776,7 +776,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeletePatchDeployment(request);
             mockGrpcClient.VerifyAll();
         }
@@ -791,7 +791,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeletePatchDeploymentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeletePatchDeploymentAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -807,7 +807,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeletePatchDeployment(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -822,7 +822,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeletePatchDeploymentAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeletePatchDeploymentAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -838,7 +838,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeletePatchDeployment(request.PatchDeploymentName);
             mockGrpcClient.VerifyAll();
         }
@@ -853,7 +853,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeletePatchDeploymentAsync(request.PatchDeploymentName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeletePatchDeploymentAsync(request.PatchDeploymentName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -884,7 +884,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.UpdatePatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             PatchDeployment response = client.UpdatePatchDeployment(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -915,7 +915,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.UpdatePatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             PatchDeployment responseCallSettings = await client.UpdatePatchDeploymentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PatchDeployment responseCancellationToken = await client.UpdatePatchDeploymentAsync(request, st::CancellationToken.None);
@@ -948,7 +948,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.UpdatePatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             PatchDeployment response = client.UpdatePatchDeployment(request.PatchDeployment, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -979,7 +979,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.UpdatePatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             PatchDeployment responseCallSettings = await client.UpdatePatchDeploymentAsync(request.PatchDeployment, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PatchDeployment responseCancellationToken = await client.UpdatePatchDeploymentAsync(request.PatchDeployment, request.UpdateMask, st::CancellationToken.None);
@@ -1011,7 +1011,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.PausePatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             PatchDeployment response = client.PausePatchDeployment(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1041,7 +1041,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.PausePatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             PatchDeployment responseCallSettings = await client.PausePatchDeploymentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PatchDeployment responseCancellationToken = await client.PausePatchDeploymentAsync(request, st::CancellationToken.None);
@@ -1073,7 +1073,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.PausePatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             PatchDeployment response = client.PausePatchDeployment(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1103,7 +1103,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.PausePatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             PatchDeployment responseCallSettings = await client.PausePatchDeploymentAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PatchDeployment responseCancellationToken = await client.PausePatchDeploymentAsync(request.Name, st::CancellationToken.None);
@@ -1135,7 +1135,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.PausePatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             PatchDeployment response = client.PausePatchDeployment(request.PatchDeploymentName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1165,7 +1165,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.PausePatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             PatchDeployment responseCallSettings = await client.PausePatchDeploymentAsync(request.PatchDeploymentName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PatchDeployment responseCancellationToken = await client.PausePatchDeploymentAsync(request.PatchDeploymentName, st::CancellationToken.None);
@@ -1197,7 +1197,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.ResumePatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             PatchDeployment response = client.ResumePatchDeployment(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1227,7 +1227,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.ResumePatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             PatchDeployment responseCallSettings = await client.ResumePatchDeploymentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PatchDeployment responseCancellationToken = await client.ResumePatchDeploymentAsync(request, st::CancellationToken.None);
@@ -1259,7 +1259,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.ResumePatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             PatchDeployment response = client.ResumePatchDeployment(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1289,7 +1289,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.ResumePatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             PatchDeployment responseCallSettings = await client.ResumePatchDeploymentAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PatchDeployment responseCancellationToken = await client.ResumePatchDeploymentAsync(request.Name, st::CancellationToken.None);
@@ -1321,7 +1321,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.ResumePatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             PatchDeployment response = client.ResumePatchDeployment(request.PatchDeploymentName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1351,7 +1351,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.ResumePatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null, null);
             PatchDeployment responseCallSettings = await client.ResumePatchDeploymentAsync(request.PatchDeploymentName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PatchDeployment responseCancellationToken = await client.ResumePatchDeploymentAsync(request.PatchDeploymentName, st::CancellationToken.None);

@@ -11,316 +11,6 @@
   },
   "snippets": [
     {
-      "regionTag": "automl_v1_generated_PredictionService_Predict_sync",
-      "title": "PredictRequestObject",
-      "description": "Snippet for Predict",
-      "file": "PredictionServiceClient.PredictRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "Predict",
-        "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient.Predict",
-        "resultType": "Google.Cloud.AutoML.V1.PredictResponse",
-        "client": {
-          "shortName": "PredictionServiceClient",
-          "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient"
-        },
-        "method": {
-          "shortName": "Predict",
-          "fullName": "google.cloud.automl.v1.PredictionService.Predict",
-          "service": {
-            "shortName": "PredictionService",
-            "fullName": "google.cloud.automl.v1.PredictionService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "automl_v1_generated_PredictionService_Predict_async",
-      "title": "PredictRequestObjectAsync",
-      "description": "Snippet for PredictAsync",
-      "file": "PredictionServiceClient.PredictRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "PredictAsync",
-        "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient.PredictAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AutoML.V1.PredictResponse>",
-        "client": {
-          "shortName": "PredictionServiceClient",
-          "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient"
-        },
-        "method": {
-          "shortName": "Predict",
-          "fullName": "google.cloud.automl.v1.PredictionService.Predict",
-          "service": {
-            "shortName": "PredictionService",
-            "fullName": "google.cloud.automl.v1.PredictionService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "automl_v1_generated_PredictionService_Predict_sync_flattened",
-      "title": "Predict",
-      "description": "Snippet for Predict",
-      "file": "PredictionServiceClient.PredictSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "Predict",
-        "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient.Predict",
-        "resultType": "Google.Cloud.AutoML.V1.PredictResponse",
-        "client": {
-          "shortName": "PredictionServiceClient",
-          "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient"
-        },
-        "method": {
-          "shortName": "Predict",
-          "fullName": "google.cloud.automl.v1.PredictionService.Predict",
-          "service": {
-            "shortName": "PredictionService",
-            "fullName": "google.cloud.automl.v1.PredictionService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "automl_v1_generated_PredictionService_Predict_async_flattened",
-      "title": "PredictAsync",
-      "description": "Snippet for PredictAsync",
-      "file": "PredictionServiceClient.PredictAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "PredictAsync",
-        "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient.PredictAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AutoML.V1.PredictResponse>",
-        "client": {
-          "shortName": "PredictionServiceClient",
-          "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient"
-        },
-        "method": {
-          "shortName": "Predict",
-          "fullName": "google.cloud.automl.v1.PredictionService.Predict",
-          "service": {
-            "shortName": "PredictionService",
-            "fullName": "google.cloud.automl.v1.PredictionService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "automl_v1_generated_PredictionService_Predict_sync_flattened_resourceNames",
-      "title": "PredictResourceNames",
-      "description": "Snippet for Predict",
-      "file": "PredictionServiceClient.PredictResourceNamesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "Predict",
-        "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient.Predict",
-        "resultType": "Google.Cloud.AutoML.V1.PredictResponse",
-        "client": {
-          "shortName": "PredictionServiceClient",
-          "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient"
-        },
-        "method": {
-          "shortName": "Predict",
-          "fullName": "google.cloud.automl.v1.PredictionService.Predict",
-          "service": {
-            "shortName": "PredictionService",
-            "fullName": "google.cloud.automl.v1.PredictionService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "automl_v1_generated_PredictionService_Predict_async_flattened_resourceNames",
-      "title": "PredictResourceNamesAsync",
-      "description": "Snippet for PredictAsync",
-      "file": "PredictionServiceClient.PredictResourceNamesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "PredictAsync",
-        "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient.PredictAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AutoML.V1.PredictResponse>",
-        "client": {
-          "shortName": "PredictionServiceClient",
-          "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient"
-        },
-        "method": {
-          "shortName": "Predict",
-          "fullName": "google.cloud.automl.v1.PredictionService.Predict",
-          "service": {
-            "shortName": "PredictionService",
-            "fullName": "google.cloud.automl.v1.PredictionService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "automl_v1_generated_PredictionService_BatchPredict_sync",
-      "title": "BatchPredictRequestObject",
-      "description": "Snippet for BatchPredict",
-      "file": "PredictionServiceClient.BatchPredictRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "BatchPredict",
-        "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient.BatchPredict",
-        "resultType": "Google.LongRunning.Operation<Google.Cloud.AutoML.V1.BatchPredictResult, Google.Cloud.AutoML.V1.OperationMetadata>",
-        "client": {
-          "shortName": "PredictionServiceClient",
-          "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient"
-        },
-        "method": {
-          "shortName": "BatchPredict",
-          "fullName": "google.cloud.automl.v1.PredictionService.BatchPredict",
-          "service": {
-            "shortName": "PredictionService",
-            "fullName": "google.cloud.automl.v1.PredictionService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "automl_v1_generated_PredictionService_BatchPredict_async",
-      "title": "BatchPredictRequestObjectAsync",
-      "description": "Snippet for BatchPredictAsync",
-      "file": "PredictionServiceClient.BatchPredictRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "BatchPredictAsync",
-        "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient.BatchPredictAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AutoML.V1.BatchPredictResult, Google.Cloud.AutoML.V1.OperationMetadata>>",
-        "client": {
-          "shortName": "PredictionServiceClient",
-          "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient"
-        },
-        "method": {
-          "shortName": "BatchPredict",
-          "fullName": "google.cloud.automl.v1.PredictionService.BatchPredict",
-          "service": {
-            "shortName": "PredictionService",
-            "fullName": "google.cloud.automl.v1.PredictionService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "automl_v1_generated_PredictionService_BatchPredict_sync_flattened",
-      "title": "BatchPredict",
-      "description": "Snippet for BatchPredict",
-      "file": "PredictionServiceClient.BatchPredictSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "BatchPredict",
-        "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient.BatchPredict",
-        "resultType": "Google.LongRunning.Operation<Google.Cloud.AutoML.V1.BatchPredictResult, Google.Cloud.AutoML.V1.OperationMetadata>",
-        "client": {
-          "shortName": "PredictionServiceClient",
-          "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient"
-        },
-        "method": {
-          "shortName": "BatchPredict",
-          "fullName": "google.cloud.automl.v1.PredictionService.BatchPredict",
-          "service": {
-            "shortName": "PredictionService",
-            "fullName": "google.cloud.automl.v1.PredictionService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "automl_v1_generated_PredictionService_BatchPredict_async_flattened",
-      "title": "BatchPredictAsync",
-      "description": "Snippet for BatchPredictAsync",
-      "file": "PredictionServiceClient.BatchPredictAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "BatchPredictAsync",
-        "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient.BatchPredictAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AutoML.V1.BatchPredictResult, Google.Cloud.AutoML.V1.OperationMetadata>>",
-        "client": {
-          "shortName": "PredictionServiceClient",
-          "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient"
-        },
-        "method": {
-          "shortName": "BatchPredict",
-          "fullName": "google.cloud.automl.v1.PredictionService.BatchPredict",
-          "service": {
-            "shortName": "PredictionService",
-            "fullName": "google.cloud.automl.v1.PredictionService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "automl_v1_generated_PredictionService_BatchPredict_sync_flattened_resourceNames",
-      "title": "BatchPredictResourceNames",
-      "description": "Snippet for BatchPredict",
-      "file": "PredictionServiceClient.BatchPredictResourceNamesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "BatchPredict",
-        "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient.BatchPredict",
-        "resultType": "Google.LongRunning.Operation<Google.Cloud.AutoML.V1.BatchPredictResult, Google.Cloud.AutoML.V1.OperationMetadata>",
-        "client": {
-          "shortName": "PredictionServiceClient",
-          "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient"
-        },
-        "method": {
-          "shortName": "BatchPredict",
-          "fullName": "google.cloud.automl.v1.PredictionService.BatchPredict",
-          "service": {
-            "shortName": "PredictionService",
-            "fullName": "google.cloud.automl.v1.PredictionService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "automl_v1_generated_PredictionService_BatchPredict_async_flattened_resourceNames",
-      "title": "BatchPredictResourceNamesAsync",
-      "description": "Snippet for BatchPredictAsync",
-      "file": "PredictionServiceClient.BatchPredictResourceNamesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "BatchPredictAsync",
-        "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient.BatchPredictAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AutoML.V1.BatchPredictResult, Google.Cloud.AutoML.V1.OperationMetadata>>",
-        "client": {
-          "shortName": "PredictionServiceClient",
-          "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient"
-        },
-        "method": {
-          "shortName": "BatchPredict",
-          "fullName": "google.cloud.automl.v1.PredictionService.BatchPredict",
-          "service": {
-            "shortName": "PredictionService",
-            "fullName": "google.cloud.automl.v1.PredictionService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
       "regionTag": "automl_v1_generated_AutoMl_CreateDataset_sync",
       "title": "CreateDatasetRequestObject",
       "description": "Snippet for CreateDataset",
@@ -3003,6 +2693,316 @@
           "service": {
             "shortName": "AutoMl",
             "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "automl_v1_generated_PredictionService_Predict_sync",
+      "title": "PredictRequestObject",
+      "description": "Snippet for Predict",
+      "file": "PredictionServiceClient.PredictRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Predict",
+        "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient.Predict",
+        "resultType": "Google.Cloud.AutoML.V1.PredictResponse",
+        "client": {
+          "shortName": "PredictionServiceClient",
+          "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient"
+        },
+        "method": {
+          "shortName": "Predict",
+          "fullName": "google.cloud.automl.v1.PredictionService.Predict",
+          "service": {
+            "shortName": "PredictionService",
+            "fullName": "google.cloud.automl.v1.PredictionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "automl_v1_generated_PredictionService_Predict_async",
+      "title": "PredictRequestObjectAsync",
+      "description": "Snippet for PredictAsync",
+      "file": "PredictionServiceClient.PredictRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PredictAsync",
+        "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient.PredictAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AutoML.V1.PredictResponse>",
+        "client": {
+          "shortName": "PredictionServiceClient",
+          "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient"
+        },
+        "method": {
+          "shortName": "Predict",
+          "fullName": "google.cloud.automl.v1.PredictionService.Predict",
+          "service": {
+            "shortName": "PredictionService",
+            "fullName": "google.cloud.automl.v1.PredictionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "automl_v1_generated_PredictionService_Predict_sync_flattened",
+      "title": "Predict",
+      "description": "Snippet for Predict",
+      "file": "PredictionServiceClient.PredictSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Predict",
+        "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient.Predict",
+        "resultType": "Google.Cloud.AutoML.V1.PredictResponse",
+        "client": {
+          "shortName": "PredictionServiceClient",
+          "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient"
+        },
+        "method": {
+          "shortName": "Predict",
+          "fullName": "google.cloud.automl.v1.PredictionService.Predict",
+          "service": {
+            "shortName": "PredictionService",
+            "fullName": "google.cloud.automl.v1.PredictionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "automl_v1_generated_PredictionService_Predict_async_flattened",
+      "title": "PredictAsync",
+      "description": "Snippet for PredictAsync",
+      "file": "PredictionServiceClient.PredictAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PredictAsync",
+        "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient.PredictAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AutoML.V1.PredictResponse>",
+        "client": {
+          "shortName": "PredictionServiceClient",
+          "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient"
+        },
+        "method": {
+          "shortName": "Predict",
+          "fullName": "google.cloud.automl.v1.PredictionService.Predict",
+          "service": {
+            "shortName": "PredictionService",
+            "fullName": "google.cloud.automl.v1.PredictionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "automl_v1_generated_PredictionService_Predict_sync_flattened_resourceNames",
+      "title": "PredictResourceNames",
+      "description": "Snippet for Predict",
+      "file": "PredictionServiceClient.PredictResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Predict",
+        "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient.Predict",
+        "resultType": "Google.Cloud.AutoML.V1.PredictResponse",
+        "client": {
+          "shortName": "PredictionServiceClient",
+          "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient"
+        },
+        "method": {
+          "shortName": "Predict",
+          "fullName": "google.cloud.automl.v1.PredictionService.Predict",
+          "service": {
+            "shortName": "PredictionService",
+            "fullName": "google.cloud.automl.v1.PredictionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "automl_v1_generated_PredictionService_Predict_async_flattened_resourceNames",
+      "title": "PredictResourceNamesAsync",
+      "description": "Snippet for PredictAsync",
+      "file": "PredictionServiceClient.PredictResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PredictAsync",
+        "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient.PredictAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AutoML.V1.PredictResponse>",
+        "client": {
+          "shortName": "PredictionServiceClient",
+          "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient"
+        },
+        "method": {
+          "shortName": "Predict",
+          "fullName": "google.cloud.automl.v1.PredictionService.Predict",
+          "service": {
+            "shortName": "PredictionService",
+            "fullName": "google.cloud.automl.v1.PredictionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "automl_v1_generated_PredictionService_BatchPredict_sync",
+      "title": "BatchPredictRequestObject",
+      "description": "Snippet for BatchPredict",
+      "file": "PredictionServiceClient.BatchPredictRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchPredict",
+        "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient.BatchPredict",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AutoML.V1.BatchPredictResult, Google.Cloud.AutoML.V1.OperationMetadata>",
+        "client": {
+          "shortName": "PredictionServiceClient",
+          "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient"
+        },
+        "method": {
+          "shortName": "BatchPredict",
+          "fullName": "google.cloud.automl.v1.PredictionService.BatchPredict",
+          "service": {
+            "shortName": "PredictionService",
+            "fullName": "google.cloud.automl.v1.PredictionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "automl_v1_generated_PredictionService_BatchPredict_async",
+      "title": "BatchPredictRequestObjectAsync",
+      "description": "Snippet for BatchPredictAsync",
+      "file": "PredictionServiceClient.BatchPredictRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchPredictAsync",
+        "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient.BatchPredictAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AutoML.V1.BatchPredictResult, Google.Cloud.AutoML.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "PredictionServiceClient",
+          "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient"
+        },
+        "method": {
+          "shortName": "BatchPredict",
+          "fullName": "google.cloud.automl.v1.PredictionService.BatchPredict",
+          "service": {
+            "shortName": "PredictionService",
+            "fullName": "google.cloud.automl.v1.PredictionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "automl_v1_generated_PredictionService_BatchPredict_sync_flattened",
+      "title": "BatchPredict",
+      "description": "Snippet for BatchPredict",
+      "file": "PredictionServiceClient.BatchPredictSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchPredict",
+        "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient.BatchPredict",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AutoML.V1.BatchPredictResult, Google.Cloud.AutoML.V1.OperationMetadata>",
+        "client": {
+          "shortName": "PredictionServiceClient",
+          "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient"
+        },
+        "method": {
+          "shortName": "BatchPredict",
+          "fullName": "google.cloud.automl.v1.PredictionService.BatchPredict",
+          "service": {
+            "shortName": "PredictionService",
+            "fullName": "google.cloud.automl.v1.PredictionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "automl_v1_generated_PredictionService_BatchPredict_async_flattened",
+      "title": "BatchPredictAsync",
+      "description": "Snippet for BatchPredictAsync",
+      "file": "PredictionServiceClient.BatchPredictAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchPredictAsync",
+        "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient.BatchPredictAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AutoML.V1.BatchPredictResult, Google.Cloud.AutoML.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "PredictionServiceClient",
+          "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient"
+        },
+        "method": {
+          "shortName": "BatchPredict",
+          "fullName": "google.cloud.automl.v1.PredictionService.BatchPredict",
+          "service": {
+            "shortName": "PredictionService",
+            "fullName": "google.cloud.automl.v1.PredictionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "automl_v1_generated_PredictionService_BatchPredict_sync_flattened_resourceNames",
+      "title": "BatchPredictResourceNames",
+      "description": "Snippet for BatchPredict",
+      "file": "PredictionServiceClient.BatchPredictResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchPredict",
+        "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient.BatchPredict",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AutoML.V1.BatchPredictResult, Google.Cloud.AutoML.V1.OperationMetadata>",
+        "client": {
+          "shortName": "PredictionServiceClient",
+          "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient"
+        },
+        "method": {
+          "shortName": "BatchPredict",
+          "fullName": "google.cloud.automl.v1.PredictionService.BatchPredict",
+          "service": {
+            "shortName": "PredictionService",
+            "fullName": "google.cloud.automl.v1.PredictionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "automl_v1_generated_PredictionService_BatchPredict_async_flattened_resourceNames",
+      "title": "BatchPredictResourceNamesAsync",
+      "description": "Snippet for BatchPredictAsync",
+      "file": "PredictionServiceClient.BatchPredictResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchPredictAsync",
+        "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient.BatchPredictAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AutoML.V1.BatchPredictResult, Google.Cloud.AutoML.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "PredictionServiceClient",
+          "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient"
+        },
+        "method": {
+          "shortName": "BatchPredict",
+          "fullName": "google.cloud.automl.v1.PredictionService.BatchPredict",
+          "service": {
+            "shortName": "PredictionService",
+            "fullName": "google.cloud.automl.v1.PredictionService"
           }
         }
       },

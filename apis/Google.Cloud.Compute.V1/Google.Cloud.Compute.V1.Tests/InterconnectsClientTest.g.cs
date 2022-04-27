@@ -73,7 +73,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 GoogleReferenceId = "google_reference_id815b6ab4",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InterconnectsClient client = new InterconnectsClientImpl(mockGrpcClient.Object, null);
+            InterconnectsClient client = new InterconnectsClientImpl(mockGrpcClient.Object, null, null);
             Interconnect response = client.Get(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -125,7 +125,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 GoogleReferenceId = "google_reference_id815b6ab4",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Interconnect>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InterconnectsClient client = new InterconnectsClientImpl(mockGrpcClient.Object, null);
+            InterconnectsClient client = new InterconnectsClientImpl(mockGrpcClient.Object, null, null);
             Interconnect responseCallSettings = await client.GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Interconnect responseCancellationToken = await client.GetAsync(request, st::CancellationToken.None);
@@ -179,7 +179,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 GoogleReferenceId = "google_reference_id815b6ab4",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InterconnectsClient client = new InterconnectsClientImpl(mockGrpcClient.Object, null);
+            InterconnectsClient client = new InterconnectsClientImpl(mockGrpcClient.Object, null, null);
             Interconnect response = client.Get(request.Project, request.Interconnect);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -231,7 +231,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 GoogleReferenceId = "google_reference_id815b6ab4",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Interconnect>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InterconnectsClient client = new InterconnectsClientImpl(mockGrpcClient.Object, null);
+            InterconnectsClient client = new InterconnectsClientImpl(mockGrpcClient.Object, null, null);
             Interconnect responseCallSettings = await client.GetAsync(request.Project, request.Interconnect, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Interconnect responseCancellationToken = await client.GetAsync(request.Project, request.Interconnect, st::CancellationToken.None);
@@ -254,7 +254,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Result = new InterconnectDiagnostics(),
             };
             mockGrpcClient.Setup(x => x.GetDiagnostics(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InterconnectsClient client = new InterconnectsClientImpl(mockGrpcClient.Object, null);
+            InterconnectsClient client = new InterconnectsClientImpl(mockGrpcClient.Object, null, null);
             InterconnectsGetDiagnosticsResponse response = client.GetDiagnostics(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -275,7 +275,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Result = new InterconnectDiagnostics(),
             };
             mockGrpcClient.Setup(x => x.GetDiagnosticsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InterconnectsGetDiagnosticsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InterconnectsClient client = new InterconnectsClientImpl(mockGrpcClient.Object, null);
+            InterconnectsClient client = new InterconnectsClientImpl(mockGrpcClient.Object, null, null);
             InterconnectsGetDiagnosticsResponse responseCallSettings = await client.GetDiagnosticsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             InterconnectsGetDiagnosticsResponse responseCancellationToken = await client.GetDiagnosticsAsync(request, st::CancellationToken.None);
@@ -298,7 +298,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Result = new InterconnectDiagnostics(),
             };
             mockGrpcClient.Setup(x => x.GetDiagnostics(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InterconnectsClient client = new InterconnectsClientImpl(mockGrpcClient.Object, null);
+            InterconnectsClient client = new InterconnectsClientImpl(mockGrpcClient.Object, null, null);
             InterconnectsGetDiagnosticsResponse response = client.GetDiagnostics(request.Project, request.Interconnect);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -319,7 +319,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Result = new InterconnectDiagnostics(),
             };
             mockGrpcClient.Setup(x => x.GetDiagnosticsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InterconnectsGetDiagnosticsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InterconnectsClient client = new InterconnectsClientImpl(mockGrpcClient.Object, null);
+            InterconnectsClient client = new InterconnectsClientImpl(mockGrpcClient.Object, null, null);
             InterconnectsGetDiagnosticsResponse responseCallSettings = await client.GetDiagnosticsAsync(request.Project, request.Interconnect, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             InterconnectsGetDiagnosticsResponse responseCancellationToken = await client.GetDiagnosticsAsync(request.Project, request.Interconnect, st::CancellationToken.None);

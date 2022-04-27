@@ -50,7 +50,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TargetTcpProxiesClient client = new TargetTcpProxiesClientImpl(mockGrpcClient.Object, null);
+            TargetTcpProxiesClient client = new TargetTcpProxiesClientImpl(mockGrpcClient.Object, null, null);
             TargetTcpProxy response = client.Get(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -79,7 +79,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TargetTcpProxy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TargetTcpProxiesClient client = new TargetTcpProxiesClientImpl(mockGrpcClient.Object, null);
+            TargetTcpProxiesClient client = new TargetTcpProxiesClientImpl(mockGrpcClient.Object, null, null);
             TargetTcpProxy responseCallSettings = await client.GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TargetTcpProxy responseCancellationToken = await client.GetAsync(request, st::CancellationToken.None);
@@ -110,7 +110,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TargetTcpProxiesClient client = new TargetTcpProxiesClientImpl(mockGrpcClient.Object, null);
+            TargetTcpProxiesClient client = new TargetTcpProxiesClientImpl(mockGrpcClient.Object, null, null);
             TargetTcpProxy response = client.Get(request.Project, request.TargetTcpProxy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -139,7 +139,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TargetTcpProxy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TargetTcpProxiesClient client = new TargetTcpProxiesClientImpl(mockGrpcClient.Object, null);
+            TargetTcpProxiesClient client = new TargetTcpProxiesClientImpl(mockGrpcClient.Object, null, null);
             TargetTcpProxy responseCallSettings = await client.GetAsync(request.Project, request.TargetTcpProxy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TargetTcpProxy responseCancellationToken = await client.GetAsync(request.Project, request.TargetTcpProxy, st::CancellationToken.None);

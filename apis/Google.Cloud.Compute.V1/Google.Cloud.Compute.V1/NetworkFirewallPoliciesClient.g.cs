@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -496,9 +496,8 @@ namespace Google.Cloud.Compute.V1
         public NetworkFirewallPoliciesSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public NetworkFirewallPoliciesClientBuilder()
+        public NetworkFirewallPoliciesClientBuilder() : base(NetworkFirewallPoliciesClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = NetworkFirewallPoliciesClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref NetworkFirewallPoliciesClient client);
@@ -525,29 +524,18 @@ namespace Google.Cloud.Compute.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return NetworkFirewallPoliciesClient.Create(callInvoker, Settings);
+            return NetworkFirewallPoliciesClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<NetworkFirewallPoliciesClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return NetworkFirewallPoliciesClient.Create(callInvoker, Settings);
+            return NetworkFirewallPoliciesClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => NetworkFirewallPoliciesClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => NetworkFirewallPoliciesClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => NetworkFirewallPoliciesClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => ComputeRestAdapter.ComputeAdapter;
     }
 
     /// <summary>NetworkFirewallPolicies client wrapper, for convenient use.</summary>
@@ -576,19 +564,10 @@ namespace Google.Cloud.Compute.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(NetworkFirewallPolicies.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="NetworkFirewallPoliciesClient"/> using the default credentials, endpoint
@@ -618,8 +597,9 @@ namespace Google.Cloud.Compute.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="NetworkFirewallPoliciesSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="NetworkFirewallPoliciesClient"/>.</returns>
-        internal static NetworkFirewallPoliciesClient Create(grpccore::CallInvoker callInvoker, NetworkFirewallPoliciesSettings settings = null)
+        internal static NetworkFirewallPoliciesClient Create(grpccore::CallInvoker callInvoker, NetworkFirewallPoliciesSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -628,7 +608,7 @@ namespace Google.Cloud.Compute.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             NetworkFirewallPolicies.NetworkFirewallPoliciesClient grpcClient = new NetworkFirewallPolicies.NetworkFirewallPoliciesClient(callInvoker);
-            return new NetworkFirewallPoliciesClientImpl(grpcClient, settings);
+            return new NetworkFirewallPoliciesClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -2216,66 +2196,67 @@ namespace Google.Cloud.Compute.V1
         /// <param name="settings">
         /// The base <see cref="NetworkFirewallPoliciesSettings"/> used within this client.
         /// </param>
-        public NetworkFirewallPoliciesClientImpl(NetworkFirewallPolicies.NetworkFirewallPoliciesClient grpcClient, NetworkFirewallPoliciesSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public NetworkFirewallPoliciesClientImpl(NetworkFirewallPolicies.NetworkFirewallPoliciesClient grpcClient, NetworkFirewallPoliciesSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             NetworkFirewallPoliciesSettings effectiveSettings = settings ?? NetworkFirewallPoliciesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            AddAssociationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.AddAssociationOperationsSettings);
-            AddRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.AddRuleOperationsSettings);
-            CloneRulesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.CloneRulesOperationsSettings);
-            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings);
-            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings);
-            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchOperationsSettings);
-            PatchRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchRuleOperationsSettings);
-            RemoveAssociationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.RemoveAssociationOperationsSettings);
-            RemoveRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.RemoveRuleOperationsSettings);
-            _callAddAssociation = clientHelper.BuildApiCall<AddAssociationNetworkFirewallPolicyRequest, Operation>(grpcClient.AddAssociationAsync, grpcClient.AddAssociation, effectiveSettings.AddAssociationSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("firewall_policy", request => request.FirewallPolicy);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            AddAssociationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.AddAssociationOperationsSettings, logger);
+            AddRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.AddRuleOperationsSettings, logger);
+            CloneRulesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.CloneRulesOperationsSettings, logger);
+            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings, logger);
+            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings, logger);
+            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchOperationsSettings, logger);
+            PatchRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchRuleOperationsSettings, logger);
+            RemoveAssociationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.RemoveAssociationOperationsSettings, logger);
+            RemoveRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.RemoveRuleOperationsSettings, logger);
+            _callAddAssociation = clientHelper.BuildApiCall<AddAssociationNetworkFirewallPolicyRequest, Operation>("AddAssociation", grpcClient.AddAssociationAsync, grpcClient.AddAssociation, effectiveSettings.AddAssociationSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("firewall_policy", request => request.FirewallPolicy);
             Modify_ApiCall(ref _callAddAssociation);
             Modify_AddAssociationApiCall(ref _callAddAssociation);
-            _callAddRule = clientHelper.BuildApiCall<AddRuleNetworkFirewallPolicyRequest, Operation>(grpcClient.AddRuleAsync, grpcClient.AddRule, effectiveSettings.AddRuleSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("firewall_policy", request => request.FirewallPolicy);
+            _callAddRule = clientHelper.BuildApiCall<AddRuleNetworkFirewallPolicyRequest, Operation>("AddRule", grpcClient.AddRuleAsync, grpcClient.AddRule, effectiveSettings.AddRuleSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("firewall_policy", request => request.FirewallPolicy);
             Modify_ApiCall(ref _callAddRule);
             Modify_AddRuleApiCall(ref _callAddRule);
-            _callCloneRules = clientHelper.BuildApiCall<CloneRulesNetworkFirewallPolicyRequest, Operation>(grpcClient.CloneRulesAsync, grpcClient.CloneRules, effectiveSettings.CloneRulesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("firewall_policy", request => request.FirewallPolicy);
+            _callCloneRules = clientHelper.BuildApiCall<CloneRulesNetworkFirewallPolicyRequest, Operation>("CloneRules", grpcClient.CloneRulesAsync, grpcClient.CloneRules, effectiveSettings.CloneRulesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("firewall_policy", request => request.FirewallPolicy);
             Modify_ApiCall(ref _callCloneRules);
             Modify_CloneRulesApiCall(ref _callCloneRules);
-            _callDelete = clientHelper.BuildApiCall<DeleteNetworkFirewallPolicyRequest, Operation>(grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("firewall_policy", request => request.FirewallPolicy);
+            _callDelete = clientHelper.BuildApiCall<DeleteNetworkFirewallPolicyRequest, Operation>("Delete", grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("firewall_policy", request => request.FirewallPolicy);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);
-            _callGet = clientHelper.BuildApiCall<GetNetworkFirewallPolicyRequest, FirewallPolicy>(grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("firewall_policy", request => request.FirewallPolicy);
+            _callGet = clientHelper.BuildApiCall<GetNetworkFirewallPolicyRequest, FirewallPolicy>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("firewall_policy", request => request.FirewallPolicy);
             Modify_ApiCall(ref _callGet);
             Modify_GetApiCall(ref _callGet);
-            _callGetAssociation = clientHelper.BuildApiCall<GetAssociationNetworkFirewallPolicyRequest, FirewallPolicyAssociation>(grpcClient.GetAssociationAsync, grpcClient.GetAssociation, effectiveSettings.GetAssociationSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("firewall_policy", request => request.FirewallPolicy);
+            _callGetAssociation = clientHelper.BuildApiCall<GetAssociationNetworkFirewallPolicyRequest, FirewallPolicyAssociation>("GetAssociation", grpcClient.GetAssociationAsync, grpcClient.GetAssociation, effectiveSettings.GetAssociationSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("firewall_policy", request => request.FirewallPolicy);
             Modify_ApiCall(ref _callGetAssociation);
             Modify_GetAssociationApiCall(ref _callGetAssociation);
-            _callGetIamPolicy = clientHelper.BuildApiCall<GetIamPolicyNetworkFirewallPolicyRequest, Policy>(grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("resource", request => request.Resource);
+            _callGetIamPolicy = clientHelper.BuildApiCall<GetIamPolicyNetworkFirewallPolicyRequest, Policy>("GetIamPolicy", grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callGetIamPolicy);
             Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
-            _callGetRule = clientHelper.BuildApiCall<GetRuleNetworkFirewallPolicyRequest, FirewallPolicyRule>(grpcClient.GetRuleAsync, grpcClient.GetRule, effectiveSettings.GetRuleSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("firewall_policy", request => request.FirewallPolicy);
+            _callGetRule = clientHelper.BuildApiCall<GetRuleNetworkFirewallPolicyRequest, FirewallPolicyRule>("GetRule", grpcClient.GetRuleAsync, grpcClient.GetRule, effectiveSettings.GetRuleSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("firewall_policy", request => request.FirewallPolicy);
             Modify_ApiCall(ref _callGetRule);
             Modify_GetRuleApiCall(ref _callGetRule);
-            _callInsert = clientHelper.BuildApiCall<InsertNetworkFirewallPolicyRequest, Operation>(grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callInsert = clientHelper.BuildApiCall<InsertNetworkFirewallPolicyRequest, Operation>("Insert", grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callInsert);
             Modify_InsertApiCall(ref _callInsert);
-            _callList = clientHelper.BuildApiCall<ListNetworkFirewallPoliciesRequest, FirewallPolicyList>(grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callList = clientHelper.BuildApiCall<ListNetworkFirewallPoliciesRequest, FirewallPolicyList>("List", grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callList);
             Modify_ListApiCall(ref _callList);
-            _callPatch = clientHelper.BuildApiCall<PatchNetworkFirewallPolicyRequest, Operation>(grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("firewall_policy", request => request.FirewallPolicy);
+            _callPatch = clientHelper.BuildApiCall<PatchNetworkFirewallPolicyRequest, Operation>("Patch", grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("firewall_policy", request => request.FirewallPolicy);
             Modify_ApiCall(ref _callPatch);
             Modify_PatchApiCall(ref _callPatch);
-            _callPatchRule = clientHelper.BuildApiCall<PatchRuleNetworkFirewallPolicyRequest, Operation>(grpcClient.PatchRuleAsync, grpcClient.PatchRule, effectiveSettings.PatchRuleSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("firewall_policy", request => request.FirewallPolicy);
+            _callPatchRule = clientHelper.BuildApiCall<PatchRuleNetworkFirewallPolicyRequest, Operation>("PatchRule", grpcClient.PatchRuleAsync, grpcClient.PatchRule, effectiveSettings.PatchRuleSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("firewall_policy", request => request.FirewallPolicy);
             Modify_ApiCall(ref _callPatchRule);
             Modify_PatchRuleApiCall(ref _callPatchRule);
-            _callRemoveAssociation = clientHelper.BuildApiCall<RemoveAssociationNetworkFirewallPolicyRequest, Operation>(grpcClient.RemoveAssociationAsync, grpcClient.RemoveAssociation, effectiveSettings.RemoveAssociationSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("firewall_policy", request => request.FirewallPolicy);
+            _callRemoveAssociation = clientHelper.BuildApiCall<RemoveAssociationNetworkFirewallPolicyRequest, Operation>("RemoveAssociation", grpcClient.RemoveAssociationAsync, grpcClient.RemoveAssociation, effectiveSettings.RemoveAssociationSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("firewall_policy", request => request.FirewallPolicy);
             Modify_ApiCall(ref _callRemoveAssociation);
             Modify_RemoveAssociationApiCall(ref _callRemoveAssociation);
-            _callRemoveRule = clientHelper.BuildApiCall<RemoveRuleNetworkFirewallPolicyRequest, Operation>(grpcClient.RemoveRuleAsync, grpcClient.RemoveRule, effectiveSettings.RemoveRuleSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("firewall_policy", request => request.FirewallPolicy);
+            _callRemoveRule = clientHelper.BuildApiCall<RemoveRuleNetworkFirewallPolicyRequest, Operation>("RemoveRule", grpcClient.RemoveRuleAsync, grpcClient.RemoveRule, effectiveSettings.RemoveRuleSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("firewall_policy", request => request.FirewallPolicy);
             Modify_ApiCall(ref _callRemoveRule);
             Modify_RemoveRuleApiCall(ref _callRemoveRule);
-            _callSetIamPolicy = clientHelper.BuildApiCall<SetIamPolicyNetworkFirewallPolicyRequest, Policy>(grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("resource", request => request.Resource);
+            _callSetIamPolicy = clientHelper.BuildApiCall<SetIamPolicyNetworkFirewallPolicyRequest, Policy>("SetIamPolicy", grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callSetIamPolicy);
             Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);
-            _callTestIamPermissions = clientHelper.BuildApiCall<TestIamPermissionsNetworkFirewallPolicyRequest, TestPermissionsResponse>(grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("resource", request => request.Resource);
+            _callTestIamPermissions = clientHelper.BuildApiCall<TestIamPermissionsNetworkFirewallPolicyRequest, TestPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callTestIamPermissions);
             Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

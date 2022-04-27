@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -179,9 +179,8 @@ namespace Google.Cloud.Iap.V1
         public IdentityAwareProxyOAuthServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public IdentityAwareProxyOAuthServiceClientBuilder()
+        public IdentityAwareProxyOAuthServiceClientBuilder() : base(IdentityAwareProxyOAuthServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = IdentityAwareProxyOAuthServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref IdentityAwareProxyOAuthServiceClient client);
@@ -208,30 +207,18 @@ namespace Google.Cloud.Iap.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return IdentityAwareProxyOAuthServiceClient.Create(callInvoker, Settings);
+            return IdentityAwareProxyOAuthServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<IdentityAwareProxyOAuthServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return IdentityAwareProxyOAuthServiceClient.Create(callInvoker, Settings);
+            return IdentityAwareProxyOAuthServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => IdentityAwareProxyOAuthServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() =>
-            IdentityAwareProxyOAuthServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => IdentityAwareProxyOAuthServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>IdentityAwareProxyOAuthService client wrapper, for convenient use.</summary>
@@ -260,19 +247,10 @@ namespace Google.Cloud.Iap.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(IdentityAwareProxyOAuthService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="IdentityAwareProxyOAuthServiceClient"/> using the default credentials,
@@ -303,8 +281,9 @@ namespace Google.Cloud.Iap.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="IdentityAwareProxyOAuthServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="IdentityAwareProxyOAuthServiceClient"/>.</returns>
-        internal static IdentityAwareProxyOAuthServiceClient Create(grpccore::CallInvoker callInvoker, IdentityAwareProxyOAuthServiceSettings settings = null)
+        internal static IdentityAwareProxyOAuthServiceClient Create(grpccore::CallInvoker callInvoker, IdentityAwareProxyOAuthServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -313,7 +292,7 @@ namespace Google.Cloud.Iap.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             IdentityAwareProxyOAuthService.IdentityAwareProxyOAuthServiceClient grpcClient = new IdentityAwareProxyOAuthService.IdentityAwareProxyOAuthServiceClient(callInvoker);
-            return new IdentityAwareProxyOAuthServiceClientImpl(grpcClient, settings);
+            return new IdentityAwareProxyOAuthServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -611,33 +590,34 @@ namespace Google.Cloud.Iap.V1
         /// <param name="settings">
         /// The base <see cref="IdentityAwareProxyOAuthServiceSettings"/> used within this client.
         /// </param>
-        public IdentityAwareProxyOAuthServiceClientImpl(IdentityAwareProxyOAuthService.IdentityAwareProxyOAuthServiceClient grpcClient, IdentityAwareProxyOAuthServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public IdentityAwareProxyOAuthServiceClientImpl(IdentityAwareProxyOAuthService.IdentityAwareProxyOAuthServiceClient grpcClient, IdentityAwareProxyOAuthServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             IdentityAwareProxyOAuthServiceSettings effectiveSettings = settings ?? IdentityAwareProxyOAuthServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListBrands = clientHelper.BuildApiCall<ListBrandsRequest, ListBrandsResponse>(grpcClient.ListBrandsAsync, grpcClient.ListBrands, effectiveSettings.ListBrandsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callListBrands = clientHelper.BuildApiCall<ListBrandsRequest, ListBrandsResponse>("ListBrands", grpcClient.ListBrandsAsync, grpcClient.ListBrands, effectiveSettings.ListBrandsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListBrands);
             Modify_ListBrandsApiCall(ref _callListBrands);
-            _callCreateBrand = clientHelper.BuildApiCall<CreateBrandRequest, Brand>(grpcClient.CreateBrandAsync, grpcClient.CreateBrand, effectiveSettings.CreateBrandSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateBrand = clientHelper.BuildApiCall<CreateBrandRequest, Brand>("CreateBrand", grpcClient.CreateBrandAsync, grpcClient.CreateBrand, effectiveSettings.CreateBrandSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateBrand);
             Modify_CreateBrandApiCall(ref _callCreateBrand);
-            _callGetBrand = clientHelper.BuildApiCall<GetBrandRequest, Brand>(grpcClient.GetBrandAsync, grpcClient.GetBrand, effectiveSettings.GetBrandSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetBrand = clientHelper.BuildApiCall<GetBrandRequest, Brand>("GetBrand", grpcClient.GetBrandAsync, grpcClient.GetBrand, effectiveSettings.GetBrandSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetBrand);
             Modify_GetBrandApiCall(ref _callGetBrand);
-            _callCreateIdentityAwareProxyClient = clientHelper.BuildApiCall<CreateIdentityAwareProxyClientRequest, IdentityAwareProxyClient>(grpcClient.CreateIdentityAwareProxyClientAsync, grpcClient.CreateIdentityAwareProxyClient, effectiveSettings.CreateIdentityAwareProxyClientSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateIdentityAwareProxyClient = clientHelper.BuildApiCall<CreateIdentityAwareProxyClientRequest, IdentityAwareProxyClient>("CreateIdentityAwareProxyClient", grpcClient.CreateIdentityAwareProxyClientAsync, grpcClient.CreateIdentityAwareProxyClient, effectiveSettings.CreateIdentityAwareProxyClientSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateIdentityAwareProxyClient);
             Modify_CreateIdentityAwareProxyClientApiCall(ref _callCreateIdentityAwareProxyClient);
-            _callListIdentityAwareProxyClients = clientHelper.BuildApiCall<ListIdentityAwareProxyClientsRequest, ListIdentityAwareProxyClientsResponse>(grpcClient.ListIdentityAwareProxyClientsAsync, grpcClient.ListIdentityAwareProxyClients, effectiveSettings.ListIdentityAwareProxyClientsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListIdentityAwareProxyClients = clientHelper.BuildApiCall<ListIdentityAwareProxyClientsRequest, ListIdentityAwareProxyClientsResponse>("ListIdentityAwareProxyClients", grpcClient.ListIdentityAwareProxyClientsAsync, grpcClient.ListIdentityAwareProxyClients, effectiveSettings.ListIdentityAwareProxyClientsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListIdentityAwareProxyClients);
             Modify_ListIdentityAwareProxyClientsApiCall(ref _callListIdentityAwareProxyClients);
-            _callGetIdentityAwareProxyClient = clientHelper.BuildApiCall<GetIdentityAwareProxyClientRequest, IdentityAwareProxyClient>(grpcClient.GetIdentityAwareProxyClientAsync, grpcClient.GetIdentityAwareProxyClient, effectiveSettings.GetIdentityAwareProxyClientSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetIdentityAwareProxyClient = clientHelper.BuildApiCall<GetIdentityAwareProxyClientRequest, IdentityAwareProxyClient>("GetIdentityAwareProxyClient", grpcClient.GetIdentityAwareProxyClientAsync, grpcClient.GetIdentityAwareProxyClient, effectiveSettings.GetIdentityAwareProxyClientSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetIdentityAwareProxyClient);
             Modify_GetIdentityAwareProxyClientApiCall(ref _callGetIdentityAwareProxyClient);
-            _callResetIdentityAwareProxyClientSecret = clientHelper.BuildApiCall<ResetIdentityAwareProxyClientSecretRequest, IdentityAwareProxyClient>(grpcClient.ResetIdentityAwareProxyClientSecretAsync, grpcClient.ResetIdentityAwareProxyClientSecret, effectiveSettings.ResetIdentityAwareProxyClientSecretSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callResetIdentityAwareProxyClientSecret = clientHelper.BuildApiCall<ResetIdentityAwareProxyClientSecretRequest, IdentityAwareProxyClient>("ResetIdentityAwareProxyClientSecret", grpcClient.ResetIdentityAwareProxyClientSecretAsync, grpcClient.ResetIdentityAwareProxyClientSecret, effectiveSettings.ResetIdentityAwareProxyClientSecretSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callResetIdentityAwareProxyClientSecret);
             Modify_ResetIdentityAwareProxyClientSecretApiCall(ref _callResetIdentityAwareProxyClientSecret);
-            _callDeleteIdentityAwareProxyClient = clientHelper.BuildApiCall<DeleteIdentityAwareProxyClientRequest, wkt::Empty>(grpcClient.DeleteIdentityAwareProxyClientAsync, grpcClient.DeleteIdentityAwareProxyClient, effectiveSettings.DeleteIdentityAwareProxyClientSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteIdentityAwareProxyClient = clientHelper.BuildApiCall<DeleteIdentityAwareProxyClientRequest, wkt::Empty>("DeleteIdentityAwareProxyClient", grpcClient.DeleteIdentityAwareProxyClientAsync, grpcClient.DeleteIdentityAwareProxyClient, effectiveSettings.DeleteIdentityAwareProxyClientSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteIdentityAwareProxyClient);
             Modify_DeleteIdentityAwareProxyClientApiCall(ref _callDeleteIdentityAwareProxyClient);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

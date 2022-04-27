@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -372,9 +372,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         public AwsClustersSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public AwsClustersClientBuilder()
+        public AwsClustersClientBuilder() : base(AwsClustersClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = AwsClustersClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref AwsClustersClient client);
@@ -401,29 +400,18 @@ namespace Google.Cloud.GkeMultiCloud.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return AwsClustersClient.Create(callInvoker, Settings);
+            return AwsClustersClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<AwsClustersClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return AwsClustersClient.Create(callInvoker, Settings);
+            return AwsClustersClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => AwsClustersClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => AwsClustersClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => AwsClustersClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>AwsClusters client wrapper, for convenient use.</summary>
@@ -451,19 +439,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(AwsClusters.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="AwsClustersClient"/> using the default credentials, endpoint and
@@ -490,8 +469,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="AwsClustersSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="AwsClustersClient"/>.</returns>
-        internal static AwsClustersClient Create(grpccore::CallInvoker callInvoker, AwsClustersSettings settings = null)
+        internal static AwsClustersClient Create(grpccore::CallInvoker callInvoker, AwsClustersSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -500,7 +480,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             AwsClusters.AwsClustersClient grpcClient = new AwsClusters.AwsClustersClient(callInvoker);
-            return new AwsClustersClientImpl(grpcClient, settings);
+            return new AwsClustersClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -2647,51 +2627,52 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="AwsClustersSettings"/> used within this client.</param>
-        public AwsClustersClientImpl(AwsClusters.AwsClustersClient grpcClient, AwsClustersSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public AwsClustersClientImpl(AwsClusters.AwsClustersClient grpcClient, AwsClustersSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             AwsClustersSettings effectiveSettings = settings ?? AwsClustersSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateAwsClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAwsClusterOperationsSettings);
-            UpdateAwsClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAwsClusterOperationsSettings);
-            DeleteAwsClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAwsClusterOperationsSettings);
-            CreateAwsNodePoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAwsNodePoolOperationsSettings);
-            UpdateAwsNodePoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAwsNodePoolOperationsSettings);
-            DeleteAwsNodePoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAwsNodePoolOperationsSettings);
-            _callCreateAwsCluster = clientHelper.BuildApiCall<CreateAwsClusterRequest, lro::Operation>(grpcClient.CreateAwsClusterAsync, grpcClient.CreateAwsCluster, effectiveSettings.CreateAwsClusterSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateAwsClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAwsClusterOperationsSettings, logger);
+            UpdateAwsClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAwsClusterOperationsSettings, logger);
+            DeleteAwsClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAwsClusterOperationsSettings, logger);
+            CreateAwsNodePoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAwsNodePoolOperationsSettings, logger);
+            UpdateAwsNodePoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAwsNodePoolOperationsSettings, logger);
+            DeleteAwsNodePoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAwsNodePoolOperationsSettings, logger);
+            _callCreateAwsCluster = clientHelper.BuildApiCall<CreateAwsClusterRequest, lro::Operation>("CreateAwsCluster", grpcClient.CreateAwsClusterAsync, grpcClient.CreateAwsCluster, effectiveSettings.CreateAwsClusterSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateAwsCluster);
             Modify_CreateAwsClusterApiCall(ref _callCreateAwsCluster);
-            _callUpdateAwsCluster = clientHelper.BuildApiCall<UpdateAwsClusterRequest, lro::Operation>(grpcClient.UpdateAwsClusterAsync, grpcClient.UpdateAwsCluster, effectiveSettings.UpdateAwsClusterSettings).WithGoogleRequestParam("aws_cluster.name", request => request.AwsCluster?.Name);
+            _callUpdateAwsCluster = clientHelper.BuildApiCall<UpdateAwsClusterRequest, lro::Operation>("UpdateAwsCluster", grpcClient.UpdateAwsClusterAsync, grpcClient.UpdateAwsCluster, effectiveSettings.UpdateAwsClusterSettings).WithGoogleRequestParam("aws_cluster.name", request => request.AwsCluster?.Name);
             Modify_ApiCall(ref _callUpdateAwsCluster);
             Modify_UpdateAwsClusterApiCall(ref _callUpdateAwsCluster);
-            _callGetAwsCluster = clientHelper.BuildApiCall<GetAwsClusterRequest, AwsCluster>(grpcClient.GetAwsClusterAsync, grpcClient.GetAwsCluster, effectiveSettings.GetAwsClusterSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetAwsCluster = clientHelper.BuildApiCall<GetAwsClusterRequest, AwsCluster>("GetAwsCluster", grpcClient.GetAwsClusterAsync, grpcClient.GetAwsCluster, effectiveSettings.GetAwsClusterSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetAwsCluster);
             Modify_GetAwsClusterApiCall(ref _callGetAwsCluster);
-            _callListAwsClusters = clientHelper.BuildApiCall<ListAwsClustersRequest, ListAwsClustersResponse>(grpcClient.ListAwsClustersAsync, grpcClient.ListAwsClusters, effectiveSettings.ListAwsClustersSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListAwsClusters = clientHelper.BuildApiCall<ListAwsClustersRequest, ListAwsClustersResponse>("ListAwsClusters", grpcClient.ListAwsClustersAsync, grpcClient.ListAwsClusters, effectiveSettings.ListAwsClustersSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListAwsClusters);
             Modify_ListAwsClustersApiCall(ref _callListAwsClusters);
-            _callDeleteAwsCluster = clientHelper.BuildApiCall<DeleteAwsClusterRequest, lro::Operation>(grpcClient.DeleteAwsClusterAsync, grpcClient.DeleteAwsCluster, effectiveSettings.DeleteAwsClusterSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteAwsCluster = clientHelper.BuildApiCall<DeleteAwsClusterRequest, lro::Operation>("DeleteAwsCluster", grpcClient.DeleteAwsClusterAsync, grpcClient.DeleteAwsCluster, effectiveSettings.DeleteAwsClusterSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteAwsCluster);
             Modify_DeleteAwsClusterApiCall(ref _callDeleteAwsCluster);
-            _callGenerateAwsAccessToken = clientHelper.BuildApiCall<GenerateAwsAccessTokenRequest, GenerateAwsAccessTokenResponse>(grpcClient.GenerateAwsAccessTokenAsync, grpcClient.GenerateAwsAccessToken, effectiveSettings.GenerateAwsAccessTokenSettings).WithGoogleRequestParam("aws_cluster", request => request.AwsCluster);
+            _callGenerateAwsAccessToken = clientHelper.BuildApiCall<GenerateAwsAccessTokenRequest, GenerateAwsAccessTokenResponse>("GenerateAwsAccessToken", grpcClient.GenerateAwsAccessTokenAsync, grpcClient.GenerateAwsAccessToken, effectiveSettings.GenerateAwsAccessTokenSettings).WithGoogleRequestParam("aws_cluster", request => request.AwsCluster);
             Modify_ApiCall(ref _callGenerateAwsAccessToken);
             Modify_GenerateAwsAccessTokenApiCall(ref _callGenerateAwsAccessToken);
-            _callCreateAwsNodePool = clientHelper.BuildApiCall<CreateAwsNodePoolRequest, lro::Operation>(grpcClient.CreateAwsNodePoolAsync, grpcClient.CreateAwsNodePool, effectiveSettings.CreateAwsNodePoolSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateAwsNodePool = clientHelper.BuildApiCall<CreateAwsNodePoolRequest, lro::Operation>("CreateAwsNodePool", grpcClient.CreateAwsNodePoolAsync, grpcClient.CreateAwsNodePool, effectiveSettings.CreateAwsNodePoolSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateAwsNodePool);
             Modify_CreateAwsNodePoolApiCall(ref _callCreateAwsNodePool);
-            _callUpdateAwsNodePool = clientHelper.BuildApiCall<UpdateAwsNodePoolRequest, lro::Operation>(grpcClient.UpdateAwsNodePoolAsync, grpcClient.UpdateAwsNodePool, effectiveSettings.UpdateAwsNodePoolSettings).WithGoogleRequestParam("aws_node_pool.name", request => request.AwsNodePool?.Name);
+            _callUpdateAwsNodePool = clientHelper.BuildApiCall<UpdateAwsNodePoolRequest, lro::Operation>("UpdateAwsNodePool", grpcClient.UpdateAwsNodePoolAsync, grpcClient.UpdateAwsNodePool, effectiveSettings.UpdateAwsNodePoolSettings).WithGoogleRequestParam("aws_node_pool.name", request => request.AwsNodePool?.Name);
             Modify_ApiCall(ref _callUpdateAwsNodePool);
             Modify_UpdateAwsNodePoolApiCall(ref _callUpdateAwsNodePool);
-            _callGetAwsNodePool = clientHelper.BuildApiCall<GetAwsNodePoolRequest, AwsNodePool>(grpcClient.GetAwsNodePoolAsync, grpcClient.GetAwsNodePool, effectiveSettings.GetAwsNodePoolSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetAwsNodePool = clientHelper.BuildApiCall<GetAwsNodePoolRequest, AwsNodePool>("GetAwsNodePool", grpcClient.GetAwsNodePoolAsync, grpcClient.GetAwsNodePool, effectiveSettings.GetAwsNodePoolSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetAwsNodePool);
             Modify_GetAwsNodePoolApiCall(ref _callGetAwsNodePool);
-            _callListAwsNodePools = clientHelper.BuildApiCall<ListAwsNodePoolsRequest, ListAwsNodePoolsResponse>(grpcClient.ListAwsNodePoolsAsync, grpcClient.ListAwsNodePools, effectiveSettings.ListAwsNodePoolsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListAwsNodePools = clientHelper.BuildApiCall<ListAwsNodePoolsRequest, ListAwsNodePoolsResponse>("ListAwsNodePools", grpcClient.ListAwsNodePoolsAsync, grpcClient.ListAwsNodePools, effectiveSettings.ListAwsNodePoolsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListAwsNodePools);
             Modify_ListAwsNodePoolsApiCall(ref _callListAwsNodePools);
-            _callDeleteAwsNodePool = clientHelper.BuildApiCall<DeleteAwsNodePoolRequest, lro::Operation>(grpcClient.DeleteAwsNodePoolAsync, grpcClient.DeleteAwsNodePool, effectiveSettings.DeleteAwsNodePoolSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteAwsNodePool = clientHelper.BuildApiCall<DeleteAwsNodePoolRequest, lro::Operation>("DeleteAwsNodePool", grpcClient.DeleteAwsNodePoolAsync, grpcClient.DeleteAwsNodePool, effectiveSettings.DeleteAwsNodePoolSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteAwsNodePool);
             Modify_DeleteAwsNodePoolApiCall(ref _callDeleteAwsNodePool);
-            _callGetAwsServerConfig = clientHelper.BuildApiCall<GetAwsServerConfigRequest, AwsServerConfig>(grpcClient.GetAwsServerConfigAsync, grpcClient.GetAwsServerConfig, effectiveSettings.GetAwsServerConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetAwsServerConfig = clientHelper.BuildApiCall<GetAwsServerConfigRequest, AwsServerConfig>("GetAwsServerConfig", grpcClient.GetAwsServerConfigAsync, grpcClient.GetAwsServerConfig, effectiveSettings.GetAwsServerConfigSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetAwsServerConfig);
             Modify_GetAwsServerConfigApiCall(ref _callGetAwsServerConfig);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

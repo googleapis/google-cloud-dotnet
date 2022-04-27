@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -463,9 +463,8 @@ namespace Google.Cloud.Video.LiveStream.V1
         public LivestreamServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public LivestreamServiceClientBuilder()
+        public LivestreamServiceClientBuilder() : base(LivestreamServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = LivestreamServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref LivestreamServiceClient client);
@@ -492,29 +491,18 @@ namespace Google.Cloud.Video.LiveStream.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return LivestreamServiceClient.Create(callInvoker, Settings);
+            return LivestreamServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<LivestreamServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return LivestreamServiceClient.Create(callInvoker, Settings);
+            return LivestreamServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => LivestreamServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => LivestreamServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => LivestreamServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>LivestreamService client wrapper, for convenient use.</summary>
@@ -545,19 +533,10 @@ namespace Google.Cloud.Video.LiveStream.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(LivestreamService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="LivestreamServiceClient"/> using the default credentials, endpoint and
@@ -584,8 +563,9 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="LivestreamServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="LivestreamServiceClient"/>.</returns>
-        internal static LivestreamServiceClient Create(grpccore::CallInvoker callInvoker, LivestreamServiceSettings settings = null)
+        internal static LivestreamServiceClient Create(grpccore::CallInvoker callInvoker, LivestreamServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -594,7 +574,7 @@ namespace Google.Cloud.Video.LiveStream.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             LivestreamService.LivestreamServiceClient grpcClient = new LivestreamService.LivestreamServiceClient(callInvoker);
-            return new LivestreamServiceClientImpl(grpcClient, settings);
+            return new LivestreamServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -2847,65 +2827,66 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="LivestreamServiceSettings"/> used within this client.</param>
-        public LivestreamServiceClientImpl(LivestreamService.LivestreamServiceClient grpcClient, LivestreamServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public LivestreamServiceClientImpl(LivestreamService.LivestreamServiceClient grpcClient, LivestreamServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             LivestreamServiceSettings effectiveSettings = settings ?? LivestreamServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateChannelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateChannelOperationsSettings);
-            DeleteChannelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteChannelOperationsSettings);
-            UpdateChannelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateChannelOperationsSettings);
-            StartChannelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StartChannelOperationsSettings);
-            StopChannelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StopChannelOperationsSettings);
-            CreateInputOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateInputOperationsSettings);
-            DeleteInputOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteInputOperationsSettings);
-            UpdateInputOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateInputOperationsSettings);
-            _callCreateChannel = clientHelper.BuildApiCall<CreateChannelRequest, lro::Operation>(grpcClient.CreateChannelAsync, grpcClient.CreateChannel, effectiveSettings.CreateChannelSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateChannelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateChannelOperationsSettings, logger);
+            DeleteChannelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteChannelOperationsSettings, logger);
+            UpdateChannelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateChannelOperationsSettings, logger);
+            StartChannelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StartChannelOperationsSettings, logger);
+            StopChannelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StopChannelOperationsSettings, logger);
+            CreateInputOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateInputOperationsSettings, logger);
+            DeleteInputOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteInputOperationsSettings, logger);
+            UpdateInputOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateInputOperationsSettings, logger);
+            _callCreateChannel = clientHelper.BuildApiCall<CreateChannelRequest, lro::Operation>("CreateChannel", grpcClient.CreateChannelAsync, grpcClient.CreateChannel, effectiveSettings.CreateChannelSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateChannel);
             Modify_CreateChannelApiCall(ref _callCreateChannel);
-            _callListChannels = clientHelper.BuildApiCall<ListChannelsRequest, ListChannelsResponse>(grpcClient.ListChannelsAsync, grpcClient.ListChannels, effectiveSettings.ListChannelsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListChannels = clientHelper.BuildApiCall<ListChannelsRequest, ListChannelsResponse>("ListChannels", grpcClient.ListChannelsAsync, grpcClient.ListChannels, effectiveSettings.ListChannelsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListChannels);
             Modify_ListChannelsApiCall(ref _callListChannels);
-            _callGetChannel = clientHelper.BuildApiCall<GetChannelRequest, Channel>(grpcClient.GetChannelAsync, grpcClient.GetChannel, effectiveSettings.GetChannelSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetChannel = clientHelper.BuildApiCall<GetChannelRequest, Channel>("GetChannel", grpcClient.GetChannelAsync, grpcClient.GetChannel, effectiveSettings.GetChannelSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetChannel);
             Modify_GetChannelApiCall(ref _callGetChannel);
-            _callDeleteChannel = clientHelper.BuildApiCall<DeleteChannelRequest, lro::Operation>(grpcClient.DeleteChannelAsync, grpcClient.DeleteChannel, effectiveSettings.DeleteChannelSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteChannel = clientHelper.BuildApiCall<DeleteChannelRequest, lro::Operation>("DeleteChannel", grpcClient.DeleteChannelAsync, grpcClient.DeleteChannel, effectiveSettings.DeleteChannelSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteChannel);
             Modify_DeleteChannelApiCall(ref _callDeleteChannel);
-            _callUpdateChannel = clientHelper.BuildApiCall<UpdateChannelRequest, lro::Operation>(grpcClient.UpdateChannelAsync, grpcClient.UpdateChannel, effectiveSettings.UpdateChannelSettings).WithGoogleRequestParam("channel.name", request => request.Channel?.Name);
+            _callUpdateChannel = clientHelper.BuildApiCall<UpdateChannelRequest, lro::Operation>("UpdateChannel", grpcClient.UpdateChannelAsync, grpcClient.UpdateChannel, effectiveSettings.UpdateChannelSettings).WithGoogleRequestParam("channel.name", request => request.Channel?.Name);
             Modify_ApiCall(ref _callUpdateChannel);
             Modify_UpdateChannelApiCall(ref _callUpdateChannel);
-            _callStartChannel = clientHelper.BuildApiCall<StartChannelRequest, lro::Operation>(grpcClient.StartChannelAsync, grpcClient.StartChannel, effectiveSettings.StartChannelSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callStartChannel = clientHelper.BuildApiCall<StartChannelRequest, lro::Operation>("StartChannel", grpcClient.StartChannelAsync, grpcClient.StartChannel, effectiveSettings.StartChannelSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callStartChannel);
             Modify_StartChannelApiCall(ref _callStartChannel);
-            _callStopChannel = clientHelper.BuildApiCall<StopChannelRequest, lro::Operation>(grpcClient.StopChannelAsync, grpcClient.StopChannel, effectiveSettings.StopChannelSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callStopChannel = clientHelper.BuildApiCall<StopChannelRequest, lro::Operation>("StopChannel", grpcClient.StopChannelAsync, grpcClient.StopChannel, effectiveSettings.StopChannelSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callStopChannel);
             Modify_StopChannelApiCall(ref _callStopChannel);
-            _callCreateInput = clientHelper.BuildApiCall<CreateInputRequest, lro::Operation>(grpcClient.CreateInputAsync, grpcClient.CreateInput, effectiveSettings.CreateInputSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateInput = clientHelper.BuildApiCall<CreateInputRequest, lro::Operation>("CreateInput", grpcClient.CreateInputAsync, grpcClient.CreateInput, effectiveSettings.CreateInputSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateInput);
             Modify_CreateInputApiCall(ref _callCreateInput);
-            _callListInputs = clientHelper.BuildApiCall<ListInputsRequest, ListInputsResponse>(grpcClient.ListInputsAsync, grpcClient.ListInputs, effectiveSettings.ListInputsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListInputs = clientHelper.BuildApiCall<ListInputsRequest, ListInputsResponse>("ListInputs", grpcClient.ListInputsAsync, grpcClient.ListInputs, effectiveSettings.ListInputsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListInputs);
             Modify_ListInputsApiCall(ref _callListInputs);
-            _callGetInput = clientHelper.BuildApiCall<GetInputRequest, Input>(grpcClient.GetInputAsync, grpcClient.GetInput, effectiveSettings.GetInputSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetInput = clientHelper.BuildApiCall<GetInputRequest, Input>("GetInput", grpcClient.GetInputAsync, grpcClient.GetInput, effectiveSettings.GetInputSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetInput);
             Modify_GetInputApiCall(ref _callGetInput);
-            _callDeleteInput = clientHelper.BuildApiCall<DeleteInputRequest, lro::Operation>(grpcClient.DeleteInputAsync, grpcClient.DeleteInput, effectiveSettings.DeleteInputSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteInput = clientHelper.BuildApiCall<DeleteInputRequest, lro::Operation>("DeleteInput", grpcClient.DeleteInputAsync, grpcClient.DeleteInput, effectiveSettings.DeleteInputSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteInput);
             Modify_DeleteInputApiCall(ref _callDeleteInput);
-            _callUpdateInput = clientHelper.BuildApiCall<UpdateInputRequest, lro::Operation>(grpcClient.UpdateInputAsync, grpcClient.UpdateInput, effectiveSettings.UpdateInputSettings).WithGoogleRequestParam("input.name", request => request.Input?.Name);
+            _callUpdateInput = clientHelper.BuildApiCall<UpdateInputRequest, lro::Operation>("UpdateInput", grpcClient.UpdateInputAsync, grpcClient.UpdateInput, effectiveSettings.UpdateInputSettings).WithGoogleRequestParam("input.name", request => request.Input?.Name);
             Modify_ApiCall(ref _callUpdateInput);
             Modify_UpdateInputApiCall(ref _callUpdateInput);
-            _callCreateEvent = clientHelper.BuildApiCall<CreateEventRequest, Event>(grpcClient.CreateEventAsync, grpcClient.CreateEvent, effectiveSettings.CreateEventSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateEvent = clientHelper.BuildApiCall<CreateEventRequest, Event>("CreateEvent", grpcClient.CreateEventAsync, grpcClient.CreateEvent, effectiveSettings.CreateEventSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateEvent);
             Modify_CreateEventApiCall(ref _callCreateEvent);
-            _callListEvents = clientHelper.BuildApiCall<ListEventsRequest, ListEventsResponse>(grpcClient.ListEventsAsync, grpcClient.ListEvents, effectiveSettings.ListEventsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListEvents = clientHelper.BuildApiCall<ListEventsRequest, ListEventsResponse>("ListEvents", grpcClient.ListEventsAsync, grpcClient.ListEvents, effectiveSettings.ListEventsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListEvents);
             Modify_ListEventsApiCall(ref _callListEvents);
-            _callGetEvent = clientHelper.BuildApiCall<GetEventRequest, Event>(grpcClient.GetEventAsync, grpcClient.GetEvent, effectiveSettings.GetEventSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetEvent = clientHelper.BuildApiCall<GetEventRequest, Event>("GetEvent", grpcClient.GetEventAsync, grpcClient.GetEvent, effectiveSettings.GetEventSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetEvent);
             Modify_GetEventApiCall(ref _callGetEvent);
-            _callDeleteEvent = clientHelper.BuildApiCall<DeleteEventRequest, wkt::Empty>(grpcClient.DeleteEventAsync, grpcClient.DeleteEvent, effectiveSettings.DeleteEventSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteEvent = clientHelper.BuildApiCall<DeleteEventRequest, wkt::Empty>("DeleteEvent", grpcClient.DeleteEventAsync, grpcClient.DeleteEvent, effectiveSettings.DeleteEventSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteEvent);
             Modify_DeleteEventApiCall(ref _callDeleteEvent);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

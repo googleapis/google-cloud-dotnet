@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -851,9 +851,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
         public ContactCenterInsightsSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public ContactCenterInsightsClientBuilder()
+        public ContactCenterInsightsClientBuilder() : base(ContactCenterInsightsClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = ContactCenterInsightsClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref ContactCenterInsightsClient client);
@@ -880,29 +879,18 @@ namespace Google.Cloud.ContactCenterInsights.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ContactCenterInsightsClient.Create(callInvoker, Settings);
+            return ContactCenterInsightsClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<ContactCenterInsightsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ContactCenterInsightsClient.Create(callInvoker, Settings);
+            return ContactCenterInsightsClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => ContactCenterInsightsClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => ContactCenterInsightsClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => ContactCenterInsightsClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>ContactCenterInsights client wrapper, for convenient use.</summary>
@@ -929,19 +917,10 @@ namespace Google.Cloud.ContactCenterInsights.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(ContactCenterInsights.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="ContactCenterInsightsClient"/> using the default credentials, endpoint
@@ -971,8 +950,9 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="ContactCenterInsightsSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="ContactCenterInsightsClient"/>.</returns>
-        internal static ContactCenterInsightsClient Create(grpccore::CallInvoker callInvoker, ContactCenterInsightsSettings settings = null)
+        internal static ContactCenterInsightsClient Create(grpccore::CallInvoker callInvoker, ContactCenterInsightsSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -981,7 +961,7 @@ namespace Google.Cloud.ContactCenterInsights.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             ContactCenterInsights.ContactCenterInsightsClient grpcClient = new ContactCenterInsights.ContactCenterInsightsClient(callInvoker);
-            return new ContactCenterInsightsClientImpl(grpcClient, settings);
+            return new ContactCenterInsightsClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -4902,117 +4882,118 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="ContactCenterInsightsSettings"/> used within this client.</param>
-        public ContactCenterInsightsClientImpl(ContactCenterInsights.ContactCenterInsightsClient grpcClient, ContactCenterInsightsSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public ContactCenterInsightsClientImpl(ContactCenterInsights.ContactCenterInsightsClient grpcClient, ContactCenterInsightsSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             ContactCenterInsightsSettings effectiveSettings = settings ?? ContactCenterInsightsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateAnalysisOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAnalysisOperationsSettings);
-            ExportInsightsDataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportInsightsDataOperationsSettings);
-            CreateIssueModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateIssueModelOperationsSettings);
-            DeleteIssueModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteIssueModelOperationsSettings);
-            DeployIssueModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeployIssueModelOperationsSettings);
-            UndeployIssueModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UndeployIssueModelOperationsSettings);
-            _callCreateConversation = clientHelper.BuildApiCall<CreateConversationRequest, Conversation>(grpcClient.CreateConversationAsync, grpcClient.CreateConversation, effectiveSettings.CreateConversationSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateAnalysisOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAnalysisOperationsSettings, logger);
+            ExportInsightsDataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportInsightsDataOperationsSettings, logger);
+            CreateIssueModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateIssueModelOperationsSettings, logger);
+            DeleteIssueModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteIssueModelOperationsSettings, logger);
+            DeployIssueModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeployIssueModelOperationsSettings, logger);
+            UndeployIssueModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UndeployIssueModelOperationsSettings, logger);
+            _callCreateConversation = clientHelper.BuildApiCall<CreateConversationRequest, Conversation>("CreateConversation", grpcClient.CreateConversationAsync, grpcClient.CreateConversation, effectiveSettings.CreateConversationSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateConversation);
             Modify_CreateConversationApiCall(ref _callCreateConversation);
-            _callUpdateConversation = clientHelper.BuildApiCall<UpdateConversationRequest, Conversation>(grpcClient.UpdateConversationAsync, grpcClient.UpdateConversation, effectiveSettings.UpdateConversationSettings).WithGoogleRequestParam("conversation.name", request => request.Conversation?.Name);
+            _callUpdateConversation = clientHelper.BuildApiCall<UpdateConversationRequest, Conversation>("UpdateConversation", grpcClient.UpdateConversationAsync, grpcClient.UpdateConversation, effectiveSettings.UpdateConversationSettings).WithGoogleRequestParam("conversation.name", request => request.Conversation?.Name);
             Modify_ApiCall(ref _callUpdateConversation);
             Modify_UpdateConversationApiCall(ref _callUpdateConversation);
-            _callGetConversation = clientHelper.BuildApiCall<GetConversationRequest, Conversation>(grpcClient.GetConversationAsync, grpcClient.GetConversation, effectiveSettings.GetConversationSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetConversation = clientHelper.BuildApiCall<GetConversationRequest, Conversation>("GetConversation", grpcClient.GetConversationAsync, grpcClient.GetConversation, effectiveSettings.GetConversationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetConversation);
             Modify_GetConversationApiCall(ref _callGetConversation);
-            _callListConversations = clientHelper.BuildApiCall<ListConversationsRequest, ListConversationsResponse>(grpcClient.ListConversationsAsync, grpcClient.ListConversations, effectiveSettings.ListConversationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListConversations = clientHelper.BuildApiCall<ListConversationsRequest, ListConversationsResponse>("ListConversations", grpcClient.ListConversationsAsync, grpcClient.ListConversations, effectiveSettings.ListConversationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListConversations);
             Modify_ListConversationsApiCall(ref _callListConversations);
-            _callDeleteConversation = clientHelper.BuildApiCall<DeleteConversationRequest, wkt::Empty>(grpcClient.DeleteConversationAsync, grpcClient.DeleteConversation, effectiveSettings.DeleteConversationSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteConversation = clientHelper.BuildApiCall<DeleteConversationRequest, wkt::Empty>("DeleteConversation", grpcClient.DeleteConversationAsync, grpcClient.DeleteConversation, effectiveSettings.DeleteConversationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteConversation);
             Modify_DeleteConversationApiCall(ref _callDeleteConversation);
-            _callCreateAnalysis = clientHelper.BuildApiCall<CreateAnalysisRequest, lro::Operation>(grpcClient.CreateAnalysisAsync, grpcClient.CreateAnalysis, effectiveSettings.CreateAnalysisSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateAnalysis = clientHelper.BuildApiCall<CreateAnalysisRequest, lro::Operation>("CreateAnalysis", grpcClient.CreateAnalysisAsync, grpcClient.CreateAnalysis, effectiveSettings.CreateAnalysisSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateAnalysis);
             Modify_CreateAnalysisApiCall(ref _callCreateAnalysis);
-            _callGetAnalysis = clientHelper.BuildApiCall<GetAnalysisRequest, Analysis>(grpcClient.GetAnalysisAsync, grpcClient.GetAnalysis, effectiveSettings.GetAnalysisSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetAnalysis = clientHelper.BuildApiCall<GetAnalysisRequest, Analysis>("GetAnalysis", grpcClient.GetAnalysisAsync, grpcClient.GetAnalysis, effectiveSettings.GetAnalysisSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetAnalysis);
             Modify_GetAnalysisApiCall(ref _callGetAnalysis);
-            _callListAnalyses = clientHelper.BuildApiCall<ListAnalysesRequest, ListAnalysesResponse>(grpcClient.ListAnalysesAsync, grpcClient.ListAnalyses, effectiveSettings.ListAnalysesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListAnalyses = clientHelper.BuildApiCall<ListAnalysesRequest, ListAnalysesResponse>("ListAnalyses", grpcClient.ListAnalysesAsync, grpcClient.ListAnalyses, effectiveSettings.ListAnalysesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListAnalyses);
             Modify_ListAnalysesApiCall(ref _callListAnalyses);
-            _callDeleteAnalysis = clientHelper.BuildApiCall<DeleteAnalysisRequest, wkt::Empty>(grpcClient.DeleteAnalysisAsync, grpcClient.DeleteAnalysis, effectiveSettings.DeleteAnalysisSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteAnalysis = clientHelper.BuildApiCall<DeleteAnalysisRequest, wkt::Empty>("DeleteAnalysis", grpcClient.DeleteAnalysisAsync, grpcClient.DeleteAnalysis, effectiveSettings.DeleteAnalysisSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteAnalysis);
             Modify_DeleteAnalysisApiCall(ref _callDeleteAnalysis);
-            _callExportInsightsData = clientHelper.BuildApiCall<ExportInsightsDataRequest, lro::Operation>(grpcClient.ExportInsightsDataAsync, grpcClient.ExportInsightsData, effectiveSettings.ExportInsightsDataSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callExportInsightsData = clientHelper.BuildApiCall<ExportInsightsDataRequest, lro::Operation>("ExportInsightsData", grpcClient.ExportInsightsDataAsync, grpcClient.ExportInsightsData, effectiveSettings.ExportInsightsDataSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callExportInsightsData);
             Modify_ExportInsightsDataApiCall(ref _callExportInsightsData);
-            _callCreateIssueModel = clientHelper.BuildApiCall<CreateIssueModelRequest, lro::Operation>(grpcClient.CreateIssueModelAsync, grpcClient.CreateIssueModel, effectiveSettings.CreateIssueModelSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateIssueModel = clientHelper.BuildApiCall<CreateIssueModelRequest, lro::Operation>("CreateIssueModel", grpcClient.CreateIssueModelAsync, grpcClient.CreateIssueModel, effectiveSettings.CreateIssueModelSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateIssueModel);
             Modify_CreateIssueModelApiCall(ref _callCreateIssueModel);
-            _callUpdateIssueModel = clientHelper.BuildApiCall<UpdateIssueModelRequest, IssueModel>(grpcClient.UpdateIssueModelAsync, grpcClient.UpdateIssueModel, effectiveSettings.UpdateIssueModelSettings).WithGoogleRequestParam("issue_model.name", request => request.IssueModel?.Name);
+            _callUpdateIssueModel = clientHelper.BuildApiCall<UpdateIssueModelRequest, IssueModel>("UpdateIssueModel", grpcClient.UpdateIssueModelAsync, grpcClient.UpdateIssueModel, effectiveSettings.UpdateIssueModelSettings).WithGoogleRequestParam("issue_model.name", request => request.IssueModel?.Name);
             Modify_ApiCall(ref _callUpdateIssueModel);
             Modify_UpdateIssueModelApiCall(ref _callUpdateIssueModel);
-            _callGetIssueModel = clientHelper.BuildApiCall<GetIssueModelRequest, IssueModel>(grpcClient.GetIssueModelAsync, grpcClient.GetIssueModel, effectiveSettings.GetIssueModelSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetIssueModel = clientHelper.BuildApiCall<GetIssueModelRequest, IssueModel>("GetIssueModel", grpcClient.GetIssueModelAsync, grpcClient.GetIssueModel, effectiveSettings.GetIssueModelSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetIssueModel);
             Modify_GetIssueModelApiCall(ref _callGetIssueModel);
-            _callListIssueModels = clientHelper.BuildApiCall<ListIssueModelsRequest, ListIssueModelsResponse>(grpcClient.ListIssueModelsAsync, grpcClient.ListIssueModels, effectiveSettings.ListIssueModelsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListIssueModels = clientHelper.BuildApiCall<ListIssueModelsRequest, ListIssueModelsResponse>("ListIssueModels", grpcClient.ListIssueModelsAsync, grpcClient.ListIssueModels, effectiveSettings.ListIssueModelsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListIssueModels);
             Modify_ListIssueModelsApiCall(ref _callListIssueModels);
-            _callDeleteIssueModel = clientHelper.BuildApiCall<DeleteIssueModelRequest, lro::Operation>(grpcClient.DeleteIssueModelAsync, grpcClient.DeleteIssueModel, effectiveSettings.DeleteIssueModelSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteIssueModel = clientHelper.BuildApiCall<DeleteIssueModelRequest, lro::Operation>("DeleteIssueModel", grpcClient.DeleteIssueModelAsync, grpcClient.DeleteIssueModel, effectiveSettings.DeleteIssueModelSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteIssueModel);
             Modify_DeleteIssueModelApiCall(ref _callDeleteIssueModel);
-            _callDeployIssueModel = clientHelper.BuildApiCall<DeployIssueModelRequest, lro::Operation>(grpcClient.DeployIssueModelAsync, grpcClient.DeployIssueModel, effectiveSettings.DeployIssueModelSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeployIssueModel = clientHelper.BuildApiCall<DeployIssueModelRequest, lro::Operation>("DeployIssueModel", grpcClient.DeployIssueModelAsync, grpcClient.DeployIssueModel, effectiveSettings.DeployIssueModelSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeployIssueModel);
             Modify_DeployIssueModelApiCall(ref _callDeployIssueModel);
-            _callUndeployIssueModel = clientHelper.BuildApiCall<UndeployIssueModelRequest, lro::Operation>(grpcClient.UndeployIssueModelAsync, grpcClient.UndeployIssueModel, effectiveSettings.UndeployIssueModelSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUndeployIssueModel = clientHelper.BuildApiCall<UndeployIssueModelRequest, lro::Operation>("UndeployIssueModel", grpcClient.UndeployIssueModelAsync, grpcClient.UndeployIssueModel, effectiveSettings.UndeployIssueModelSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUndeployIssueModel);
             Modify_UndeployIssueModelApiCall(ref _callUndeployIssueModel);
-            _callGetIssue = clientHelper.BuildApiCall<GetIssueRequest, Issue>(grpcClient.GetIssueAsync, grpcClient.GetIssue, effectiveSettings.GetIssueSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetIssue = clientHelper.BuildApiCall<GetIssueRequest, Issue>("GetIssue", grpcClient.GetIssueAsync, grpcClient.GetIssue, effectiveSettings.GetIssueSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetIssue);
             Modify_GetIssueApiCall(ref _callGetIssue);
-            _callListIssues = clientHelper.BuildApiCall<ListIssuesRequest, ListIssuesResponse>(grpcClient.ListIssuesAsync, grpcClient.ListIssues, effectiveSettings.ListIssuesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListIssues = clientHelper.BuildApiCall<ListIssuesRequest, ListIssuesResponse>("ListIssues", grpcClient.ListIssuesAsync, grpcClient.ListIssues, effectiveSettings.ListIssuesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListIssues);
             Modify_ListIssuesApiCall(ref _callListIssues);
-            _callUpdateIssue = clientHelper.BuildApiCall<UpdateIssueRequest, Issue>(grpcClient.UpdateIssueAsync, grpcClient.UpdateIssue, effectiveSettings.UpdateIssueSettings).WithGoogleRequestParam("issue.name", request => request.Issue?.Name);
+            _callUpdateIssue = clientHelper.BuildApiCall<UpdateIssueRequest, Issue>("UpdateIssue", grpcClient.UpdateIssueAsync, grpcClient.UpdateIssue, effectiveSettings.UpdateIssueSettings).WithGoogleRequestParam("issue.name", request => request.Issue?.Name);
             Modify_ApiCall(ref _callUpdateIssue);
             Modify_UpdateIssueApiCall(ref _callUpdateIssue);
-            _callCalculateIssueModelStats = clientHelper.BuildApiCall<CalculateIssueModelStatsRequest, CalculateIssueModelStatsResponse>(grpcClient.CalculateIssueModelStatsAsync, grpcClient.CalculateIssueModelStats, effectiveSettings.CalculateIssueModelStatsSettings).WithGoogleRequestParam("issue_model", request => request.IssueModel);
+            _callCalculateIssueModelStats = clientHelper.BuildApiCall<CalculateIssueModelStatsRequest, CalculateIssueModelStatsResponse>("CalculateIssueModelStats", grpcClient.CalculateIssueModelStatsAsync, grpcClient.CalculateIssueModelStats, effectiveSettings.CalculateIssueModelStatsSettings).WithGoogleRequestParam("issue_model", request => request.IssueModel);
             Modify_ApiCall(ref _callCalculateIssueModelStats);
             Modify_CalculateIssueModelStatsApiCall(ref _callCalculateIssueModelStats);
-            _callCreatePhraseMatcher = clientHelper.BuildApiCall<CreatePhraseMatcherRequest, PhraseMatcher>(grpcClient.CreatePhraseMatcherAsync, grpcClient.CreatePhraseMatcher, effectiveSettings.CreatePhraseMatcherSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreatePhraseMatcher = clientHelper.BuildApiCall<CreatePhraseMatcherRequest, PhraseMatcher>("CreatePhraseMatcher", grpcClient.CreatePhraseMatcherAsync, grpcClient.CreatePhraseMatcher, effectiveSettings.CreatePhraseMatcherSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreatePhraseMatcher);
             Modify_CreatePhraseMatcherApiCall(ref _callCreatePhraseMatcher);
-            _callGetPhraseMatcher = clientHelper.BuildApiCall<GetPhraseMatcherRequest, PhraseMatcher>(grpcClient.GetPhraseMatcherAsync, grpcClient.GetPhraseMatcher, effectiveSettings.GetPhraseMatcherSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetPhraseMatcher = clientHelper.BuildApiCall<GetPhraseMatcherRequest, PhraseMatcher>("GetPhraseMatcher", grpcClient.GetPhraseMatcherAsync, grpcClient.GetPhraseMatcher, effectiveSettings.GetPhraseMatcherSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetPhraseMatcher);
             Modify_GetPhraseMatcherApiCall(ref _callGetPhraseMatcher);
-            _callListPhraseMatchers = clientHelper.BuildApiCall<ListPhraseMatchersRequest, ListPhraseMatchersResponse>(grpcClient.ListPhraseMatchersAsync, grpcClient.ListPhraseMatchers, effectiveSettings.ListPhraseMatchersSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListPhraseMatchers = clientHelper.BuildApiCall<ListPhraseMatchersRequest, ListPhraseMatchersResponse>("ListPhraseMatchers", grpcClient.ListPhraseMatchersAsync, grpcClient.ListPhraseMatchers, effectiveSettings.ListPhraseMatchersSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListPhraseMatchers);
             Modify_ListPhraseMatchersApiCall(ref _callListPhraseMatchers);
-            _callDeletePhraseMatcher = clientHelper.BuildApiCall<DeletePhraseMatcherRequest, wkt::Empty>(grpcClient.DeletePhraseMatcherAsync, grpcClient.DeletePhraseMatcher, effectiveSettings.DeletePhraseMatcherSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeletePhraseMatcher = clientHelper.BuildApiCall<DeletePhraseMatcherRequest, wkt::Empty>("DeletePhraseMatcher", grpcClient.DeletePhraseMatcherAsync, grpcClient.DeletePhraseMatcher, effectiveSettings.DeletePhraseMatcherSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeletePhraseMatcher);
             Modify_DeletePhraseMatcherApiCall(ref _callDeletePhraseMatcher);
-            _callUpdatePhraseMatcher = clientHelper.BuildApiCall<UpdatePhraseMatcherRequest, PhraseMatcher>(grpcClient.UpdatePhraseMatcherAsync, grpcClient.UpdatePhraseMatcher, effectiveSettings.UpdatePhraseMatcherSettings).WithGoogleRequestParam("phrase_matcher.name", request => request.PhraseMatcher?.Name);
+            _callUpdatePhraseMatcher = clientHelper.BuildApiCall<UpdatePhraseMatcherRequest, PhraseMatcher>("UpdatePhraseMatcher", grpcClient.UpdatePhraseMatcherAsync, grpcClient.UpdatePhraseMatcher, effectiveSettings.UpdatePhraseMatcherSettings).WithGoogleRequestParam("phrase_matcher.name", request => request.PhraseMatcher?.Name);
             Modify_ApiCall(ref _callUpdatePhraseMatcher);
             Modify_UpdatePhraseMatcherApiCall(ref _callUpdatePhraseMatcher);
-            _callCalculateStats = clientHelper.BuildApiCall<CalculateStatsRequest, CalculateStatsResponse>(grpcClient.CalculateStatsAsync, grpcClient.CalculateStats, effectiveSettings.CalculateStatsSettings).WithGoogleRequestParam("location", request => request.Location);
+            _callCalculateStats = clientHelper.BuildApiCall<CalculateStatsRequest, CalculateStatsResponse>("CalculateStats", grpcClient.CalculateStatsAsync, grpcClient.CalculateStats, effectiveSettings.CalculateStatsSettings).WithGoogleRequestParam("location", request => request.Location);
             Modify_ApiCall(ref _callCalculateStats);
             Modify_CalculateStatsApiCall(ref _callCalculateStats);
-            _callGetSettings = clientHelper.BuildApiCall<GetSettingsRequest, Settings>(grpcClient.GetSettingsAsync, grpcClient.GetSettings, effectiveSettings.GetSettingsSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetSettings = clientHelper.BuildApiCall<GetSettingsRequest, Settings>("GetSettings", grpcClient.GetSettingsAsync, grpcClient.GetSettings, effectiveSettings.GetSettingsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetSettings);
             Modify_GetSettingsApiCall(ref _callGetSettings);
-            _callUpdateSettings = clientHelper.BuildApiCall<UpdateSettingsRequest, Settings>(grpcClient.UpdateSettingsAsync, grpcClient.UpdateSettings, effectiveSettings.UpdateSettingsSettings).WithGoogleRequestParam("settings.name", request => request.Settings?.Name);
+            _callUpdateSettings = clientHelper.BuildApiCall<UpdateSettingsRequest, Settings>("UpdateSettings", grpcClient.UpdateSettingsAsync, grpcClient.UpdateSettings, effectiveSettings.UpdateSettingsSettings).WithGoogleRequestParam("settings.name", request => request.Settings?.Name);
             Modify_ApiCall(ref _callUpdateSettings);
             Modify_UpdateSettingsApiCall(ref _callUpdateSettings);
-            _callCreateView = clientHelper.BuildApiCall<CreateViewRequest, View>(grpcClient.CreateViewAsync, grpcClient.CreateView, effectiveSettings.CreateViewSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateView = clientHelper.BuildApiCall<CreateViewRequest, View>("CreateView", grpcClient.CreateViewAsync, grpcClient.CreateView, effectiveSettings.CreateViewSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateView);
             Modify_CreateViewApiCall(ref _callCreateView);
-            _callGetView = clientHelper.BuildApiCall<GetViewRequest, View>(grpcClient.GetViewAsync, grpcClient.GetView, effectiveSettings.GetViewSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetView = clientHelper.BuildApiCall<GetViewRequest, View>("GetView", grpcClient.GetViewAsync, grpcClient.GetView, effectiveSettings.GetViewSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetView);
             Modify_GetViewApiCall(ref _callGetView);
-            _callListViews = clientHelper.BuildApiCall<ListViewsRequest, ListViewsResponse>(grpcClient.ListViewsAsync, grpcClient.ListViews, effectiveSettings.ListViewsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListViews = clientHelper.BuildApiCall<ListViewsRequest, ListViewsResponse>("ListViews", grpcClient.ListViewsAsync, grpcClient.ListViews, effectiveSettings.ListViewsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListViews);
             Modify_ListViewsApiCall(ref _callListViews);
-            _callUpdateView = clientHelper.BuildApiCall<UpdateViewRequest, View>(grpcClient.UpdateViewAsync, grpcClient.UpdateView, effectiveSettings.UpdateViewSettings).WithGoogleRequestParam("view.name", request => request.View?.Name);
+            _callUpdateView = clientHelper.BuildApiCall<UpdateViewRequest, View>("UpdateView", grpcClient.UpdateViewAsync, grpcClient.UpdateView, effectiveSettings.UpdateViewSettings).WithGoogleRequestParam("view.name", request => request.View?.Name);
             Modify_ApiCall(ref _callUpdateView);
             Modify_UpdateViewApiCall(ref _callUpdateView);
-            _callDeleteView = clientHelper.BuildApiCall<DeleteViewRequest, wkt::Empty>(grpcClient.DeleteViewAsync, grpcClient.DeleteView, effectiveSettings.DeleteViewSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteView = clientHelper.BuildApiCall<DeleteViewRequest, wkt::Empty>("DeleteView", grpcClient.DeleteViewAsync, grpcClient.DeleteView, effectiveSettings.DeleteViewSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteView);
             Modify_DeleteViewApiCall(ref _callDeleteView);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

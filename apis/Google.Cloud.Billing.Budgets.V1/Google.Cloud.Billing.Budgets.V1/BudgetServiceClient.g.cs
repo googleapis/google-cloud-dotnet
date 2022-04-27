@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -167,9 +167,8 @@ namespace Google.Cloud.Billing.Budgets.V1
         public BudgetServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public BudgetServiceClientBuilder()
+        public BudgetServiceClientBuilder() : base(BudgetServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = BudgetServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref BudgetServiceClient client);
@@ -196,29 +195,18 @@ namespace Google.Cloud.Billing.Budgets.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return BudgetServiceClient.Create(callInvoker, Settings);
+            return BudgetServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<BudgetServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return BudgetServiceClient.Create(callInvoker, Settings);
+            return BudgetServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => BudgetServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => BudgetServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => BudgetServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>BudgetService client wrapper, for convenient use.</summary>
@@ -248,19 +236,10 @@ namespace Google.Cloud.Billing.Budgets.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(BudgetService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="BudgetServiceClient"/> using the default credentials, endpoint and
@@ -287,8 +266,9 @@ namespace Google.Cloud.Billing.Budgets.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="BudgetServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="BudgetServiceClient"/>.</returns>
-        internal static BudgetServiceClient Create(grpccore::CallInvoker callInvoker, BudgetServiceSettings settings = null)
+        internal static BudgetServiceClient Create(grpccore::CallInvoker callInvoker, BudgetServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -297,7 +277,7 @@ namespace Google.Cloud.Billing.Budgets.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             BudgetService.BudgetServiceClient grpcClient = new BudgetService.BudgetServiceClient(callInvoker);
-            return new BudgetServiceClientImpl(grpcClient, settings);
+            return new BudgetServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1024,24 +1004,25 @@ namespace Google.Cloud.Billing.Budgets.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="BudgetServiceSettings"/> used within this client.</param>
-        public BudgetServiceClientImpl(BudgetService.BudgetServiceClient grpcClient, BudgetServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public BudgetServiceClientImpl(BudgetService.BudgetServiceClient grpcClient, BudgetServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             BudgetServiceSettings effectiveSettings = settings ?? BudgetServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callCreateBudget = clientHelper.BuildApiCall<CreateBudgetRequest, Budget>(grpcClient.CreateBudgetAsync, grpcClient.CreateBudget, effectiveSettings.CreateBudgetSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callCreateBudget = clientHelper.BuildApiCall<CreateBudgetRequest, Budget>("CreateBudget", grpcClient.CreateBudgetAsync, grpcClient.CreateBudget, effectiveSettings.CreateBudgetSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateBudget);
             Modify_CreateBudgetApiCall(ref _callCreateBudget);
-            _callUpdateBudget = clientHelper.BuildApiCall<UpdateBudgetRequest, Budget>(grpcClient.UpdateBudgetAsync, grpcClient.UpdateBudget, effectiveSettings.UpdateBudgetSettings).WithGoogleRequestParam("budget.name", request => request.Budget?.Name);
+            _callUpdateBudget = clientHelper.BuildApiCall<UpdateBudgetRequest, Budget>("UpdateBudget", grpcClient.UpdateBudgetAsync, grpcClient.UpdateBudget, effectiveSettings.UpdateBudgetSettings).WithGoogleRequestParam("budget.name", request => request.Budget?.Name);
             Modify_ApiCall(ref _callUpdateBudget);
             Modify_UpdateBudgetApiCall(ref _callUpdateBudget);
-            _callGetBudget = clientHelper.BuildApiCall<GetBudgetRequest, Budget>(grpcClient.GetBudgetAsync, grpcClient.GetBudget, effectiveSettings.GetBudgetSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetBudget = clientHelper.BuildApiCall<GetBudgetRequest, Budget>("GetBudget", grpcClient.GetBudgetAsync, grpcClient.GetBudget, effectiveSettings.GetBudgetSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetBudget);
             Modify_GetBudgetApiCall(ref _callGetBudget);
-            _callListBudgets = clientHelper.BuildApiCall<ListBudgetsRequest, ListBudgetsResponse>(grpcClient.ListBudgetsAsync, grpcClient.ListBudgets, effectiveSettings.ListBudgetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListBudgets = clientHelper.BuildApiCall<ListBudgetsRequest, ListBudgetsResponse>("ListBudgets", grpcClient.ListBudgetsAsync, grpcClient.ListBudgets, effectiveSettings.ListBudgetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListBudgets);
             Modify_ListBudgetsApiCall(ref _callListBudgets);
-            _callDeleteBudget = clientHelper.BuildApiCall<DeleteBudgetRequest, wkt::Empty>(grpcClient.DeleteBudgetAsync, grpcClient.DeleteBudget, effectiveSettings.DeleteBudgetSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteBudget = clientHelper.BuildApiCall<DeleteBudgetRequest, wkt::Empty>("DeleteBudget", grpcClient.DeleteBudgetAsync, grpcClient.DeleteBudget, effectiveSettings.DeleteBudgetSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteBudget);
             Modify_DeleteBudgetApiCall(ref _callDeleteBudget);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

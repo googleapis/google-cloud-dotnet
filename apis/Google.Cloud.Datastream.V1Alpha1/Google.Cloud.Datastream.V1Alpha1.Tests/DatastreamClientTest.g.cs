@@ -60,7 +60,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
                 PrivateConnectivity = new PrivateConnectivity(),
             };
             mockGrpcClient.Setup(x => x.GetConnectionProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null);
+            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null, null);
             ConnectionProfile response = client.GetConnectionProfile(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -97,7 +97,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
                 PrivateConnectivity = new PrivateConnectivity(),
             };
             mockGrpcClient.Setup(x => x.GetConnectionProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConnectionProfile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null);
+            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null, null);
             ConnectionProfile responseCallSettings = await client.GetConnectionProfileAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ConnectionProfile responseCancellationToken = await client.GetConnectionProfileAsync(request, st::CancellationToken.None);
@@ -136,7 +136,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
                 PrivateConnectivity = new PrivateConnectivity(),
             };
             mockGrpcClient.Setup(x => x.GetConnectionProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null);
+            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null, null);
             ConnectionProfile response = client.GetConnectionProfile(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -173,7 +173,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
                 PrivateConnectivity = new PrivateConnectivity(),
             };
             mockGrpcClient.Setup(x => x.GetConnectionProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConnectionProfile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null);
+            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null, null);
             ConnectionProfile responseCallSettings = await client.GetConnectionProfileAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ConnectionProfile responseCancellationToken = await client.GetConnectionProfileAsync(request.Name, st::CancellationToken.None);
@@ -212,7 +212,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
                 PrivateConnectivity = new PrivateConnectivity(),
             };
             mockGrpcClient.Setup(x => x.GetConnectionProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null);
+            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null, null);
             ConnectionProfile response = client.GetConnectionProfile(request.ConnectionProfileName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -249,7 +249,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
                 PrivateConnectivity = new PrivateConnectivity(),
             };
             mockGrpcClient.Setup(x => x.GetConnectionProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConnectionProfile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null);
+            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null, null);
             ConnectionProfile responseCallSettings = await client.GetConnectionProfileAsync(request.ConnectionProfileName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ConnectionProfile responseCancellationToken = await client.GetConnectionProfileAsync(request.ConnectionProfileName, st::CancellationToken.None);
@@ -278,7 +278,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
                 MysqlRdbms = new MysqlRdbms(),
             };
             mockGrpcClient.Setup(x => x.DiscoverConnectionProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null);
+            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null, null);
             DiscoverConnectionProfileResponse response = client.DiscoverConnectionProfile(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -305,7 +305,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
                 MysqlRdbms = new MysqlRdbms(),
             };
             mockGrpcClient.Setup(x => x.DiscoverConnectionProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DiscoverConnectionProfileResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null);
+            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null, null);
             DiscoverConnectionProfileResponse responseCallSettings = await client.DiscoverConnectionProfileAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DiscoverConnectionProfileResponse responseCancellationToken = await client.DiscoverConnectionProfileAsync(request, st::CancellationToken.None);
@@ -343,7 +343,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
                 BackfillNone = new Stream.Types.BackfillNoneStrategy(),
             };
             mockGrpcClient.Setup(x => x.GetStream(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null);
+            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null, null);
             Stream response = client.GetStream(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -379,7 +379,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
                 BackfillNone = new Stream.Types.BackfillNoneStrategy(),
             };
             mockGrpcClient.Setup(x => x.GetStreamAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Stream>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null);
+            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null, null);
             Stream responseCallSettings = await client.GetStreamAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Stream responseCancellationToken = await client.GetStreamAsync(request, st::CancellationToken.None);
@@ -417,7 +417,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
                 BackfillNone = new Stream.Types.BackfillNoneStrategy(),
             };
             mockGrpcClient.Setup(x => x.GetStream(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null);
+            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null, null);
             Stream response = client.GetStream(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -453,7 +453,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
                 BackfillNone = new Stream.Types.BackfillNoneStrategy(),
             };
             mockGrpcClient.Setup(x => x.GetStreamAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Stream>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null);
+            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null, null);
             Stream responseCallSettings = await client.GetStreamAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Stream responseCancellationToken = await client.GetStreamAsync(request.Name, st::CancellationToken.None);
@@ -491,7 +491,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
                 BackfillNone = new Stream.Types.BackfillNoneStrategy(),
             };
             mockGrpcClient.Setup(x => x.GetStream(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null);
+            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null, null);
             Stream response = client.GetStream(request.StreamName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -527,7 +527,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
                 BackfillNone = new Stream.Types.BackfillNoneStrategy(),
             };
             mockGrpcClient.Setup(x => x.GetStreamAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Stream>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null);
+            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null, null);
             Stream responseCallSettings = await client.GetStreamAsync(request.StreamName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Stream responseCancellationToken = await client.GetStreamAsync(request.StreamName, st::CancellationToken.None);
@@ -562,7 +562,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
                 VpcPeeringConfig = new VpcPeeringConfig(),
             };
             mockGrpcClient.Setup(x => x.GetPrivateConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null);
+            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null, null);
             PrivateConnection response = client.GetPrivateConnection(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -595,7 +595,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
                 VpcPeeringConfig = new VpcPeeringConfig(),
             };
             mockGrpcClient.Setup(x => x.GetPrivateConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PrivateConnection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null);
+            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null, null);
             PrivateConnection responseCallSettings = await client.GetPrivateConnectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PrivateConnection responseCancellationToken = await client.GetPrivateConnectionAsync(request, st::CancellationToken.None);
@@ -630,7 +630,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
                 VpcPeeringConfig = new VpcPeeringConfig(),
             };
             mockGrpcClient.Setup(x => x.GetPrivateConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null);
+            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null, null);
             PrivateConnection response = client.GetPrivateConnection(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -663,7 +663,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
                 VpcPeeringConfig = new VpcPeeringConfig(),
             };
             mockGrpcClient.Setup(x => x.GetPrivateConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PrivateConnection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null);
+            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null, null);
             PrivateConnection responseCallSettings = await client.GetPrivateConnectionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PrivateConnection responseCancellationToken = await client.GetPrivateConnectionAsync(request.Name, st::CancellationToken.None);
@@ -698,7 +698,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
                 VpcPeeringConfig = new VpcPeeringConfig(),
             };
             mockGrpcClient.Setup(x => x.GetPrivateConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null);
+            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null, null);
             PrivateConnection response = client.GetPrivateConnection(request.PrivateConnectionName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -731,7 +731,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
                 VpcPeeringConfig = new VpcPeeringConfig(),
             };
             mockGrpcClient.Setup(x => x.GetPrivateConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PrivateConnection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null);
+            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null, null);
             PrivateConnection responseCallSettings = await client.GetPrivateConnectionAsync(request.PrivateConnectionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PrivateConnection responseCancellationToken = await client.GetPrivateConnectionAsync(request.PrivateConnectionName, st::CancellationToken.None);
@@ -765,7 +765,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
                 DestinationPort = -91432045,
             };
             mockGrpcClient.Setup(x => x.GetRoute(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null);
+            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null, null);
             Route response = client.GetRoute(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -797,7 +797,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
                 DestinationPort = -91432045,
             };
             mockGrpcClient.Setup(x => x.GetRouteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Route>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null);
+            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null, null);
             Route responseCallSettings = await client.GetRouteAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Route responseCancellationToken = await client.GetRouteAsync(request, st::CancellationToken.None);
@@ -831,7 +831,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
                 DestinationPort = -91432045,
             };
             mockGrpcClient.Setup(x => x.GetRoute(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null);
+            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null, null);
             Route response = client.GetRoute(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -863,7 +863,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
                 DestinationPort = -91432045,
             };
             mockGrpcClient.Setup(x => x.GetRouteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Route>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null);
+            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null, null);
             Route responseCallSettings = await client.GetRouteAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Route responseCancellationToken = await client.GetRouteAsync(request.Name, st::CancellationToken.None);
@@ -897,7 +897,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
                 DestinationPort = -91432045,
             };
             mockGrpcClient.Setup(x => x.GetRoute(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null);
+            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null, null);
             Route response = client.GetRoute(request.RouteName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -929,7 +929,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
                 DestinationPort = -91432045,
             };
             mockGrpcClient.Setup(x => x.GetRouteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Route>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null);
+            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null, null);
             Route responseCallSettings = await client.GetRouteAsync(request.RouteName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Route responseCancellationToken = await client.GetRouteAsync(request.RouteName, st::CancellationToken.None);

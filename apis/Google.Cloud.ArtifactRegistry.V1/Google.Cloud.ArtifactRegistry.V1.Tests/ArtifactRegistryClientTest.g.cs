@@ -51,7 +51,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 BuildTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetDockerImage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             DockerImage response = client.GetDockerImage(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -77,7 +77,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 BuildTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetDockerImageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DockerImage>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             DockerImage responseCallSettings = await client.GetDockerImageAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DockerImage responseCancellationToken = await client.GetDockerImageAsync(request, st::CancellationToken.None);
@@ -105,7 +105,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 BuildTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetDockerImage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             DockerImage response = client.GetDockerImage(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -131,7 +131,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 BuildTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetDockerImageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DockerImage>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             DockerImage responseCallSettings = await client.GetDockerImageAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DockerImage responseCancellationToken = await client.GetDockerImageAsync(request.Name, st::CancellationToken.None);
@@ -159,7 +159,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 BuildTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetDockerImage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             DockerImage response = client.GetDockerImage(request.DockerImageName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -185,7 +185,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 BuildTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetDockerImageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DockerImage>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             DockerImage responseCallSettings = await client.GetDockerImageAsync(request.DockerImageName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DockerImage responseCancellationToken = await client.GetDockerImageAsync(request.DockerImageName, st::CancellationToken.None);
@@ -220,7 +220,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 MavenConfig = new Repository.Types.MavenRepositoryConfig(),
             };
             mockGrpcClient.Setup(x => x.GetRepository(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             Repository response = client.GetRepository(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -253,7 +253,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 MavenConfig = new Repository.Types.MavenRepositoryConfig(),
             };
             mockGrpcClient.Setup(x => x.GetRepositoryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Repository>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             Repository responseCallSettings = await client.GetRepositoryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Repository responseCancellationToken = await client.GetRepositoryAsync(request, st::CancellationToken.None);
@@ -288,7 +288,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 MavenConfig = new Repository.Types.MavenRepositoryConfig(),
             };
             mockGrpcClient.Setup(x => x.GetRepository(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             Repository response = client.GetRepository(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -321,7 +321,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 MavenConfig = new Repository.Types.MavenRepositoryConfig(),
             };
             mockGrpcClient.Setup(x => x.GetRepositoryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Repository>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             Repository responseCallSettings = await client.GetRepositoryAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Repository responseCancellationToken = await client.GetRepositoryAsync(request.Name, st::CancellationToken.None);
@@ -356,7 +356,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 MavenConfig = new Repository.Types.MavenRepositoryConfig(),
             };
             mockGrpcClient.Setup(x => x.GetRepository(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             Repository response = client.GetRepository(request.RepositoryName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -389,7 +389,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 MavenConfig = new Repository.Types.MavenRepositoryConfig(),
             };
             mockGrpcClient.Setup(x => x.GetRepositoryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Repository>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             Repository responseCallSettings = await client.GetRepositoryAsync(request.RepositoryName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Repository responseCancellationToken = await client.GetRepositoryAsync(request.RepositoryName, st::CancellationToken.None);
@@ -425,7 +425,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 MavenConfig = new Repository.Types.MavenRepositoryConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateRepository(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             Repository response = client.UpdateRepository(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -459,7 +459,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 MavenConfig = new Repository.Types.MavenRepositoryConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateRepositoryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Repository>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             Repository responseCallSettings = await client.UpdateRepositoryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Repository responseCancellationToken = await client.UpdateRepositoryAsync(request, st::CancellationToken.None);
@@ -495,7 +495,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 MavenConfig = new Repository.Types.MavenRepositoryConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateRepository(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             Repository response = client.UpdateRepository(request.Repository, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -529,7 +529,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 MavenConfig = new Repository.Types.MavenRepositoryConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateRepositoryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Repository>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             Repository responseCallSettings = await client.UpdateRepositoryAsync(request.Repository, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Repository responseCancellationToken = await client.UpdateRepositoryAsync(request.Repository, request.UpdateMask, st::CancellationToken.None);
@@ -554,7 +554,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetPackage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             Package response = client.GetPackage(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -577,7 +577,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetPackageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Package>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             Package responseCallSettings = await client.GetPackageAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Package responseCancellationToken = await client.GetPackageAsync(request, st::CancellationToken.None);
@@ -602,7 +602,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetPackage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             Package response = client.GetPackage(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -625,7 +625,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetPackageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Package>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             Package responseCallSettings = await client.GetPackageAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Package responseCancellationToken = await client.GetPackageAsync(request.Name, st::CancellationToken.None);
@@ -653,7 +653,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 Metadata = new wkt::Struct(),
             };
             mockGrpcClient.Setup(x => x.GetVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             Version response = client.GetVersion(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -679,7 +679,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 Metadata = new wkt::Struct(),
             };
             mockGrpcClient.Setup(x => x.GetVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Version>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             Version responseCallSettings = await client.GetVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Version responseCancellationToken = await client.GetVersionAsync(request, st::CancellationToken.None);
@@ -706,7 +706,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 Metadata = new wkt::Struct(),
             };
             mockGrpcClient.Setup(x => x.GetVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             Version response = client.GetVersion(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -731,7 +731,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 Metadata = new wkt::Struct(),
             };
             mockGrpcClient.Setup(x => x.GetVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Version>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             Version responseCallSettings = await client.GetVersionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Version responseCancellationToken = await client.GetVersionAsync(request.Name, st::CancellationToken.None);
@@ -758,7 +758,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 Owner = "ownere92c1272",
             };
             mockGrpcClient.Setup(x => x.GetFile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             File response = client.GetFile(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -783,7 +783,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 Owner = "ownere92c1272",
             };
             mockGrpcClient.Setup(x => x.GetFileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<File>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             File responseCallSettings = await client.GetFileAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             File responseCancellationToken = await client.GetFileAsync(request, st::CancellationToken.None);
@@ -810,7 +810,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 Owner = "ownere92c1272",
             };
             mockGrpcClient.Setup(x => x.GetFile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             File response = client.GetFile(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -835,7 +835,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 Owner = "ownere92c1272",
             };
             mockGrpcClient.Setup(x => x.GetFileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<File>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             File responseCallSettings = await client.GetFileAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             File responseCancellationToken = await client.GetFileAsync(request.Name, st::CancellationToken.None);
@@ -858,7 +858,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 Version = "version102ff72a",
             };
             mockGrpcClient.Setup(x => x.GetTag(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             Tag response = client.GetTag(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -879,7 +879,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 Version = "version102ff72a",
             };
             mockGrpcClient.Setup(x => x.GetTagAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Tag>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             Tag responseCallSettings = await client.GetTagAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Tag responseCancellationToken = await client.GetTagAsync(request, st::CancellationToken.None);
@@ -902,7 +902,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 Version = "version102ff72a",
             };
             mockGrpcClient.Setup(x => x.GetTag(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             Tag response = client.GetTag(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -923,7 +923,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 Version = "version102ff72a",
             };
             mockGrpcClient.Setup(x => x.GetTagAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Tag>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             Tag responseCallSettings = await client.GetTagAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Tag responseCancellationToken = await client.GetTagAsync(request.Name, st::CancellationToken.None);
@@ -948,7 +948,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 Version = "version102ff72a",
             };
             mockGrpcClient.Setup(x => x.CreateTag(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             Tag response = client.CreateTag(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -971,7 +971,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 Version = "version102ff72a",
             };
             mockGrpcClient.Setup(x => x.CreateTagAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Tag>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             Tag responseCallSettings = await client.CreateTagAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Tag responseCancellationToken = await client.CreateTagAsync(request, st::CancellationToken.None);
@@ -996,7 +996,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 Version = "version102ff72a",
             };
             mockGrpcClient.Setup(x => x.CreateTag(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             Tag response = client.CreateTag(request.Parent, request.Tag, request.TagId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1019,7 +1019,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 Version = "version102ff72a",
             };
             mockGrpcClient.Setup(x => x.CreateTagAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Tag>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             Tag responseCallSettings = await client.CreateTagAsync(request.Parent, request.Tag, request.TagId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Tag responseCancellationToken = await client.CreateTagAsync(request.Parent, request.Tag, request.TagId, st::CancellationToken.None);
@@ -1043,7 +1043,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 Version = "version102ff72a",
             };
             mockGrpcClient.Setup(x => x.UpdateTag(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             Tag response = client.UpdateTag(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1065,7 +1065,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 Version = "version102ff72a",
             };
             mockGrpcClient.Setup(x => x.UpdateTagAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Tag>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             Tag responseCallSettings = await client.UpdateTagAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Tag responseCancellationToken = await client.UpdateTagAsync(request, st::CancellationToken.None);
@@ -1089,7 +1089,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 Version = "version102ff72a",
             };
             mockGrpcClient.Setup(x => x.UpdateTag(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             Tag response = client.UpdateTag(request.Tag, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1111,7 +1111,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 Version = "version102ff72a",
             };
             mockGrpcClient.Setup(x => x.UpdateTagAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Tag>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             Tag responseCallSettings = await client.UpdateTagAsync(request.Tag, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Tag responseCancellationToken = await client.UpdateTagAsync(request.Tag, request.UpdateMask, st::CancellationToken.None);
@@ -1130,7 +1130,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTag(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteTag(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1146,7 +1146,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTagAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteTagAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteTagAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1163,7 +1163,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTag(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteTag(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -1179,7 +1179,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTagAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteTagAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteTagAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1210,7 +1210,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.SetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1241,7 +1241,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request, st::CancellationToken.None);
@@ -1273,7 +1273,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.GetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1303,7 +1303,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request, st::CancellationToken.None);
@@ -1332,7 +1332,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1359,7 +1359,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request, st::CancellationToken.None);
@@ -1382,7 +1382,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 LegacyRedirectionState = ProjectSettings.Types.RedirectionState.RedirectionFromGcrIoDisabled,
             };
             mockGrpcClient.Setup(x => x.GetProjectSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             ProjectSettings response = client.GetProjectSettings(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1403,7 +1403,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 LegacyRedirectionState = ProjectSettings.Types.RedirectionState.RedirectionFromGcrIoDisabled,
             };
             mockGrpcClient.Setup(x => x.GetProjectSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ProjectSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             ProjectSettings responseCallSettings = await client.GetProjectSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ProjectSettings responseCancellationToken = await client.GetProjectSettingsAsync(request, st::CancellationToken.None);
@@ -1426,7 +1426,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 LegacyRedirectionState = ProjectSettings.Types.RedirectionState.RedirectionFromGcrIoDisabled,
             };
             mockGrpcClient.Setup(x => x.GetProjectSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             ProjectSettings response = client.GetProjectSettings(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1447,7 +1447,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 LegacyRedirectionState = ProjectSettings.Types.RedirectionState.RedirectionFromGcrIoDisabled,
             };
             mockGrpcClient.Setup(x => x.GetProjectSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ProjectSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             ProjectSettings responseCallSettings = await client.GetProjectSettingsAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ProjectSettings responseCancellationToken = await client.GetProjectSettingsAsync(request.Name, st::CancellationToken.None);
@@ -1470,7 +1470,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 LegacyRedirectionState = ProjectSettings.Types.RedirectionState.RedirectionFromGcrIoDisabled,
             };
             mockGrpcClient.Setup(x => x.GetProjectSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             ProjectSettings response = client.GetProjectSettings(request.ProjectSettingsName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1491,7 +1491,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 LegacyRedirectionState = ProjectSettings.Types.RedirectionState.RedirectionFromGcrIoDisabled,
             };
             mockGrpcClient.Setup(x => x.GetProjectSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ProjectSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             ProjectSettings responseCallSettings = await client.GetProjectSettingsAsync(request.ProjectSettingsName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ProjectSettings responseCancellationToken = await client.GetProjectSettingsAsync(request.ProjectSettingsName, st::CancellationToken.None);
@@ -1515,7 +1515,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 LegacyRedirectionState = ProjectSettings.Types.RedirectionState.RedirectionFromGcrIoDisabled,
             };
             mockGrpcClient.Setup(x => x.UpdateProjectSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             ProjectSettings response = client.UpdateProjectSettings(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1537,7 +1537,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 LegacyRedirectionState = ProjectSettings.Types.RedirectionState.RedirectionFromGcrIoDisabled,
             };
             mockGrpcClient.Setup(x => x.UpdateProjectSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ProjectSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             ProjectSettings responseCallSettings = await client.UpdateProjectSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ProjectSettings responseCancellationToken = await client.UpdateProjectSettingsAsync(request, st::CancellationToken.None);
@@ -1561,7 +1561,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 LegacyRedirectionState = ProjectSettings.Types.RedirectionState.RedirectionFromGcrIoDisabled,
             };
             mockGrpcClient.Setup(x => x.UpdateProjectSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             ProjectSettings response = client.UpdateProjectSettings(request.ProjectSettings, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1583,7 +1583,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Tests
                 LegacyRedirectionState = ProjectSettings.Types.RedirectionState.RedirectionFromGcrIoDisabled,
             };
             mockGrpcClient.Setup(x => x.UpdateProjectSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ProjectSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
+            ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null, null);
             ProjectSettings responseCallSettings = await client.UpdateProjectSettingsAsync(request.ProjectSettings, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ProjectSettings responseCancellationToken = await client.UpdateProjectSettingsAsync(request.ProjectSettings, request.UpdateMask, st::CancellationToken.None);

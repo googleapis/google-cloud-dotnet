@@ -58,7 +58,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
             };
             mockGrpcClient.Setup(x => x.GetTensorboard(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             Tensorboard response = client.GetTensorboard(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -93,7 +93,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
             };
             mockGrpcClient.Setup(x => x.GetTensorboardAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Tensorboard>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             Tensorboard responseCallSettings = await client.GetTensorboardAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Tensorboard responseCancellationToken = await client.GetTensorboardAsync(request, st::CancellationToken.None);
@@ -130,7 +130,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
             };
             mockGrpcClient.Setup(x => x.GetTensorboard(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             Tensorboard response = client.GetTensorboard(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -165,7 +165,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
             };
             mockGrpcClient.Setup(x => x.GetTensorboardAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Tensorboard>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             Tensorboard responseCallSettings = await client.GetTensorboardAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Tensorboard responseCancellationToken = await client.GetTensorboardAsync(request.Name, st::CancellationToken.None);
@@ -202,7 +202,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
             };
             mockGrpcClient.Setup(x => x.GetTensorboard(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             Tensorboard response = client.GetTensorboard(request.TensorboardName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -237,7 +237,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
             };
             mockGrpcClient.Setup(x => x.GetTensorboardAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Tensorboard>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             Tensorboard responseCallSettings = await client.GetTensorboardAsync(request.TensorboardName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Tensorboard responseCancellationToken = await client.GetTensorboardAsync(request.TensorboardName, st::CancellationToken.None);
@@ -274,7 +274,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Source = "sourcef438cd36",
             };
             mockGrpcClient.Setup(x => x.CreateTensorboardExperiment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardExperiment response = client.CreateTensorboardExperiment(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -309,7 +309,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Source = "sourcef438cd36",
             };
             mockGrpcClient.Setup(x => x.CreateTensorboardExperimentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TensorboardExperiment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardExperiment responseCallSettings = await client.CreateTensorboardExperimentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TensorboardExperiment responseCancellationToken = await client.CreateTensorboardExperimentAsync(request, st::CancellationToken.None);
@@ -346,7 +346,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Source = "sourcef438cd36",
             };
             mockGrpcClient.Setup(x => x.CreateTensorboardExperiment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardExperiment response = client.CreateTensorboardExperiment(request.Parent, request.TensorboardExperiment, request.TensorboardExperimentId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -381,7 +381,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Source = "sourcef438cd36",
             };
             mockGrpcClient.Setup(x => x.CreateTensorboardExperimentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TensorboardExperiment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardExperiment responseCallSettings = await client.CreateTensorboardExperimentAsync(request.Parent, request.TensorboardExperiment, request.TensorboardExperimentId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TensorboardExperiment responseCancellationToken = await client.CreateTensorboardExperimentAsync(request.Parent, request.TensorboardExperiment, request.TensorboardExperimentId, st::CancellationToken.None);
@@ -418,7 +418,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Source = "sourcef438cd36",
             };
             mockGrpcClient.Setup(x => x.CreateTensorboardExperiment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardExperiment response = client.CreateTensorboardExperiment(request.ParentAsTensorboardExperimentName, request.TensorboardExperiment, request.TensorboardExperimentId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -453,7 +453,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Source = "sourcef438cd36",
             };
             mockGrpcClient.Setup(x => x.CreateTensorboardExperimentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TensorboardExperiment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardExperiment responseCallSettings = await client.CreateTensorboardExperimentAsync(request.ParentAsTensorboardExperimentName, request.TensorboardExperiment, request.TensorboardExperimentId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TensorboardExperiment responseCancellationToken = await client.CreateTensorboardExperimentAsync(request.ParentAsTensorboardExperimentName, request.TensorboardExperiment, request.TensorboardExperimentId, st::CancellationToken.None);
@@ -488,7 +488,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Source = "sourcef438cd36",
             };
             mockGrpcClient.Setup(x => x.GetTensorboardExperiment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardExperiment response = client.GetTensorboardExperiment(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -521,7 +521,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Source = "sourcef438cd36",
             };
             mockGrpcClient.Setup(x => x.GetTensorboardExperimentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TensorboardExperiment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardExperiment responseCallSettings = await client.GetTensorboardExperimentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TensorboardExperiment responseCancellationToken = await client.GetTensorboardExperimentAsync(request, st::CancellationToken.None);
@@ -556,7 +556,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Source = "sourcef438cd36",
             };
             mockGrpcClient.Setup(x => x.GetTensorboardExperiment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardExperiment response = client.GetTensorboardExperiment(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -589,7 +589,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Source = "sourcef438cd36",
             };
             mockGrpcClient.Setup(x => x.GetTensorboardExperimentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TensorboardExperiment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardExperiment responseCallSettings = await client.GetTensorboardExperimentAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TensorboardExperiment responseCancellationToken = await client.GetTensorboardExperimentAsync(request.Name, st::CancellationToken.None);
@@ -624,7 +624,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Source = "sourcef438cd36",
             };
             mockGrpcClient.Setup(x => x.GetTensorboardExperiment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardExperiment response = client.GetTensorboardExperiment(request.TensorboardExperimentName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -657,7 +657,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Source = "sourcef438cd36",
             };
             mockGrpcClient.Setup(x => x.GetTensorboardExperimentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TensorboardExperiment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardExperiment responseCallSettings = await client.GetTensorboardExperimentAsync(request.TensorboardExperimentName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TensorboardExperiment responseCancellationToken = await client.GetTensorboardExperimentAsync(request.TensorboardExperimentName, st::CancellationToken.None);
@@ -693,7 +693,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Source = "sourcef438cd36",
             };
             mockGrpcClient.Setup(x => x.UpdateTensorboardExperiment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardExperiment response = client.UpdateTensorboardExperiment(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -727,7 +727,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Source = "sourcef438cd36",
             };
             mockGrpcClient.Setup(x => x.UpdateTensorboardExperimentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TensorboardExperiment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardExperiment responseCallSettings = await client.UpdateTensorboardExperimentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TensorboardExperiment responseCancellationToken = await client.UpdateTensorboardExperimentAsync(request, st::CancellationToken.None);
@@ -763,7 +763,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Source = "sourcef438cd36",
             };
             mockGrpcClient.Setup(x => x.UpdateTensorboardExperiment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardExperiment response = client.UpdateTensorboardExperiment(request.TensorboardExperiment, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -797,7 +797,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Source = "sourcef438cd36",
             };
             mockGrpcClient.Setup(x => x.UpdateTensorboardExperimentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TensorboardExperiment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardExperiment responseCallSettings = await client.UpdateTensorboardExperimentAsync(request.TensorboardExperiment, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TensorboardExperiment responseCancellationToken = await client.UpdateTensorboardExperimentAsync(request.TensorboardExperiment, request.UpdateMask, st::CancellationToken.None);
@@ -833,7 +833,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.CreateTensorboardRun(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardRun response = client.CreateTensorboardRun(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -867,7 +867,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.CreateTensorboardRunAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TensorboardRun>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardRun responseCallSettings = await client.CreateTensorboardRunAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TensorboardRun responseCancellationToken = await client.CreateTensorboardRunAsync(request, st::CancellationToken.None);
@@ -903,7 +903,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.CreateTensorboardRun(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardRun response = client.CreateTensorboardRun(request.Parent, request.TensorboardRun, request.TensorboardRunId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -937,7 +937,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.CreateTensorboardRunAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TensorboardRun>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardRun responseCallSettings = await client.CreateTensorboardRunAsync(request.Parent, request.TensorboardRun, request.TensorboardRunId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TensorboardRun responseCancellationToken = await client.CreateTensorboardRunAsync(request.Parent, request.TensorboardRun, request.TensorboardRunId, st::CancellationToken.None);
@@ -973,7 +973,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.CreateTensorboardRun(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardRun response = client.CreateTensorboardRun(request.ParentAsTensorboardRunName, request.TensorboardRun, request.TensorboardRunId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1007,7 +1007,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.CreateTensorboardRunAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TensorboardRun>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardRun responseCallSettings = await client.CreateTensorboardRunAsync(request.ParentAsTensorboardRunName, request.TensorboardRun, request.TensorboardRunId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TensorboardRun responseCancellationToken = await client.CreateTensorboardRunAsync(request.ParentAsTensorboardRunName, request.TensorboardRun, request.TensorboardRunId, st::CancellationToken.None);
@@ -1036,7 +1036,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.BatchCreateTensorboardRuns(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchCreateTensorboardRunsResponse response = client.BatchCreateTensorboardRuns(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1063,7 +1063,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.BatchCreateTensorboardRunsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchCreateTensorboardRunsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchCreateTensorboardRunsResponse responseCallSettings = await client.BatchCreateTensorboardRunsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchCreateTensorboardRunsResponse responseCancellationToken = await client.BatchCreateTensorboardRunsAsync(request, st::CancellationToken.None);
@@ -1092,7 +1092,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.BatchCreateTensorboardRuns(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchCreateTensorboardRunsResponse response = client.BatchCreateTensorboardRuns(request.Parent, request.Requests);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1119,7 +1119,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.BatchCreateTensorboardRunsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchCreateTensorboardRunsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchCreateTensorboardRunsResponse responseCallSettings = await client.BatchCreateTensorboardRunsAsync(request.Parent, request.Requests, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchCreateTensorboardRunsResponse responseCancellationToken = await client.BatchCreateTensorboardRunsAsync(request.Parent, request.Requests, st::CancellationToken.None);
@@ -1148,7 +1148,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.BatchCreateTensorboardRuns(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchCreateTensorboardRunsResponse response = client.BatchCreateTensorboardRuns(request.ParentAsTensorboardExperimentName, request.Requests);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1175,7 +1175,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.BatchCreateTensorboardRunsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchCreateTensorboardRunsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchCreateTensorboardRunsResponse responseCallSettings = await client.BatchCreateTensorboardRunsAsync(request.ParentAsTensorboardExperimentName, request.Requests, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchCreateTensorboardRunsResponse responseCancellationToken = await client.BatchCreateTensorboardRunsAsync(request.ParentAsTensorboardExperimentName, request.Requests, st::CancellationToken.None);
@@ -1209,7 +1209,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetTensorboardRun(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardRun response = client.GetTensorboardRun(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1241,7 +1241,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetTensorboardRunAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TensorboardRun>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardRun responseCallSettings = await client.GetTensorboardRunAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TensorboardRun responseCancellationToken = await client.GetTensorboardRunAsync(request, st::CancellationToken.None);
@@ -1275,7 +1275,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetTensorboardRun(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardRun response = client.GetTensorboardRun(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1307,7 +1307,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetTensorboardRunAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TensorboardRun>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardRun responseCallSettings = await client.GetTensorboardRunAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TensorboardRun responseCancellationToken = await client.GetTensorboardRunAsync(request.Name, st::CancellationToken.None);
@@ -1341,7 +1341,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetTensorboardRun(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardRun response = client.GetTensorboardRun(request.TensorboardRunName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1373,7 +1373,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetTensorboardRunAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TensorboardRun>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardRun responseCallSettings = await client.GetTensorboardRunAsync(request.TensorboardRunName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TensorboardRun responseCancellationToken = await client.GetTensorboardRunAsync(request.TensorboardRunName, st::CancellationToken.None);
@@ -1408,7 +1408,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.UpdateTensorboardRun(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardRun response = client.UpdateTensorboardRun(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1441,7 +1441,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.UpdateTensorboardRunAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TensorboardRun>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardRun responseCallSettings = await client.UpdateTensorboardRunAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TensorboardRun responseCancellationToken = await client.UpdateTensorboardRunAsync(request, st::CancellationToken.None);
@@ -1476,7 +1476,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.UpdateTensorboardRun(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardRun response = client.UpdateTensorboardRun(request.TensorboardRun, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1509,7 +1509,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.UpdateTensorboardRunAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TensorboardRun>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardRun responseCallSettings = await client.UpdateTensorboardRunAsync(request.TensorboardRun, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TensorboardRun responseCancellationToken = await client.UpdateTensorboardRunAsync(request.TensorboardRun, request.UpdateMask, st::CancellationToken.None);
@@ -1538,7 +1538,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.BatchCreateTensorboardTimeSeries(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchCreateTensorboardTimeSeriesResponse response = client.BatchCreateTensorboardTimeSeries(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1565,7 +1565,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.BatchCreateTensorboardTimeSeriesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchCreateTensorboardTimeSeriesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchCreateTensorboardTimeSeriesResponse responseCallSettings = await client.BatchCreateTensorboardTimeSeriesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchCreateTensorboardTimeSeriesResponse responseCancellationToken = await client.BatchCreateTensorboardTimeSeriesAsync(request, st::CancellationToken.None);
@@ -1594,7 +1594,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.BatchCreateTensorboardTimeSeries(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchCreateTensorboardTimeSeriesResponse response = client.BatchCreateTensorboardTimeSeries(request.Parent, request.Requests);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1621,7 +1621,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.BatchCreateTensorboardTimeSeriesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchCreateTensorboardTimeSeriesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchCreateTensorboardTimeSeriesResponse responseCallSettings = await client.BatchCreateTensorboardTimeSeriesAsync(request.Parent, request.Requests, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchCreateTensorboardTimeSeriesResponse responseCancellationToken = await client.BatchCreateTensorboardTimeSeriesAsync(request.Parent, request.Requests, st::CancellationToken.None);
@@ -1650,7 +1650,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.BatchCreateTensorboardTimeSeries(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchCreateTensorboardTimeSeriesResponse response = client.BatchCreateTensorboardTimeSeries(request.ParentAsTensorboardExperimentName, request.Requests);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1677,7 +1677,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.BatchCreateTensorboardTimeSeriesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchCreateTensorboardTimeSeriesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchCreateTensorboardTimeSeriesResponse responseCallSettings = await client.BatchCreateTensorboardTimeSeriesAsync(request.ParentAsTensorboardExperimentName, request.Requests, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchCreateTensorboardTimeSeriesResponse responseCancellationToken = await client.BatchCreateTensorboardTimeSeriesAsync(request.ParentAsTensorboardExperimentName, request.Requests, st::CancellationToken.None);
@@ -1710,7 +1710,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Metadata = new TensorboardTimeSeries.Types.Metadata(),
             };
             mockGrpcClient.Setup(x => x.CreateTensorboardTimeSeries(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardTimeSeries response = client.CreateTensorboardTimeSeries(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1741,7 +1741,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Metadata = new TensorboardTimeSeries.Types.Metadata(),
             };
             mockGrpcClient.Setup(x => x.CreateTensorboardTimeSeriesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TensorboardTimeSeries>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardTimeSeries responseCallSettings = await client.CreateTensorboardTimeSeriesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TensorboardTimeSeries responseCancellationToken = await client.CreateTensorboardTimeSeriesAsync(request, st::CancellationToken.None);
@@ -1773,7 +1773,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Metadata = new TensorboardTimeSeries.Types.Metadata(),
             };
             mockGrpcClient.Setup(x => x.CreateTensorboardTimeSeries(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardTimeSeries response = client.CreateTensorboardTimeSeries(request.Parent, request.TensorboardTimeSeries);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1803,7 +1803,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Metadata = new TensorboardTimeSeries.Types.Metadata(),
             };
             mockGrpcClient.Setup(x => x.CreateTensorboardTimeSeriesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TensorboardTimeSeries>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardTimeSeries responseCallSettings = await client.CreateTensorboardTimeSeriesAsync(request.Parent, request.TensorboardTimeSeries, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TensorboardTimeSeries responseCancellationToken = await client.CreateTensorboardTimeSeriesAsync(request.Parent, request.TensorboardTimeSeries, st::CancellationToken.None);
@@ -1835,7 +1835,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Metadata = new TensorboardTimeSeries.Types.Metadata(),
             };
             mockGrpcClient.Setup(x => x.CreateTensorboardTimeSeries(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardTimeSeries response = client.CreateTensorboardTimeSeries(request.ParentAsTensorboardTimeSeriesName, request.TensorboardTimeSeries);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1865,7 +1865,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Metadata = new TensorboardTimeSeries.Types.Metadata(),
             };
             mockGrpcClient.Setup(x => x.CreateTensorboardTimeSeriesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TensorboardTimeSeries>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardTimeSeries responseCallSettings = await client.CreateTensorboardTimeSeriesAsync(request.ParentAsTensorboardTimeSeriesName, request.TensorboardTimeSeries, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TensorboardTimeSeries responseCancellationToken = await client.CreateTensorboardTimeSeriesAsync(request.ParentAsTensorboardTimeSeriesName, request.TensorboardTimeSeries, st::CancellationToken.None);
@@ -1896,7 +1896,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Metadata = new TensorboardTimeSeries.Types.Metadata(),
             };
             mockGrpcClient.Setup(x => x.GetTensorboardTimeSeries(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardTimeSeries response = client.GetTensorboardTimeSeries(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1925,7 +1925,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Metadata = new TensorboardTimeSeries.Types.Metadata(),
             };
             mockGrpcClient.Setup(x => x.GetTensorboardTimeSeriesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TensorboardTimeSeries>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardTimeSeries responseCallSettings = await client.GetTensorboardTimeSeriesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TensorboardTimeSeries responseCancellationToken = await client.GetTensorboardTimeSeriesAsync(request, st::CancellationToken.None);
@@ -1956,7 +1956,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Metadata = new TensorboardTimeSeries.Types.Metadata(),
             };
             mockGrpcClient.Setup(x => x.GetTensorboardTimeSeries(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardTimeSeries response = client.GetTensorboardTimeSeries(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1985,7 +1985,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Metadata = new TensorboardTimeSeries.Types.Metadata(),
             };
             mockGrpcClient.Setup(x => x.GetTensorboardTimeSeriesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TensorboardTimeSeries>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardTimeSeries responseCallSettings = await client.GetTensorboardTimeSeriesAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TensorboardTimeSeries responseCancellationToken = await client.GetTensorboardTimeSeriesAsync(request.Name, st::CancellationToken.None);
@@ -2016,7 +2016,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Metadata = new TensorboardTimeSeries.Types.Metadata(),
             };
             mockGrpcClient.Setup(x => x.GetTensorboardTimeSeries(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardTimeSeries response = client.GetTensorboardTimeSeries(request.TensorboardTimeSeriesName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2045,7 +2045,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Metadata = new TensorboardTimeSeries.Types.Metadata(),
             };
             mockGrpcClient.Setup(x => x.GetTensorboardTimeSeriesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TensorboardTimeSeries>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardTimeSeries responseCallSettings = await client.GetTensorboardTimeSeriesAsync(request.TensorboardTimeSeriesName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TensorboardTimeSeries responseCancellationToken = await client.GetTensorboardTimeSeriesAsync(request.TensorboardTimeSeriesName, st::CancellationToken.None);
@@ -2077,7 +2077,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Metadata = new TensorboardTimeSeries.Types.Metadata(),
             };
             mockGrpcClient.Setup(x => x.UpdateTensorboardTimeSeries(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardTimeSeries response = client.UpdateTensorboardTimeSeries(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2107,7 +2107,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Metadata = new TensorboardTimeSeries.Types.Metadata(),
             };
             mockGrpcClient.Setup(x => x.UpdateTensorboardTimeSeriesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TensorboardTimeSeries>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardTimeSeries responseCallSettings = await client.UpdateTensorboardTimeSeriesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TensorboardTimeSeries responseCancellationToken = await client.UpdateTensorboardTimeSeriesAsync(request, st::CancellationToken.None);
@@ -2139,7 +2139,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Metadata = new TensorboardTimeSeries.Types.Metadata(),
             };
             mockGrpcClient.Setup(x => x.UpdateTensorboardTimeSeries(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardTimeSeries response = client.UpdateTensorboardTimeSeries(request.TensorboardTimeSeries, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2169,7 +2169,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Metadata = new TensorboardTimeSeries.Types.Metadata(),
             };
             mockGrpcClient.Setup(x => x.UpdateTensorboardTimeSeriesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TensorboardTimeSeries>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             TensorboardTimeSeries responseCallSettings = await client.UpdateTensorboardTimeSeriesAsync(request.TensorboardTimeSeries, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TensorboardTimeSeries responseCancellationToken = await client.UpdateTensorboardTimeSeriesAsync(request.TensorboardTimeSeries, request.UpdateMask, st::CancellationToken.None);
@@ -2198,7 +2198,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.BatchReadTensorboardTimeSeriesData(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchReadTensorboardTimeSeriesDataResponse response = client.BatchReadTensorboardTimeSeriesData(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2225,7 +2225,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.BatchReadTensorboardTimeSeriesDataAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchReadTensorboardTimeSeriesDataResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchReadTensorboardTimeSeriesDataResponse responseCallSettings = await client.BatchReadTensorboardTimeSeriesDataAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchReadTensorboardTimeSeriesDataResponse responseCancellationToken = await client.BatchReadTensorboardTimeSeriesDataAsync(request, st::CancellationToken.None);
@@ -2250,7 +2250,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.BatchReadTensorboardTimeSeriesData(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchReadTensorboardTimeSeriesDataResponse response = client.BatchReadTensorboardTimeSeriesData(request.Tensorboard);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2273,7 +2273,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.BatchReadTensorboardTimeSeriesDataAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchReadTensorboardTimeSeriesDataResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchReadTensorboardTimeSeriesDataResponse responseCallSettings = await client.BatchReadTensorboardTimeSeriesDataAsync(request.Tensorboard, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchReadTensorboardTimeSeriesDataResponse responseCancellationToken = await client.BatchReadTensorboardTimeSeriesDataAsync(request.Tensorboard, st::CancellationToken.None);
@@ -2298,7 +2298,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.BatchReadTensorboardTimeSeriesData(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchReadTensorboardTimeSeriesDataResponse response = client.BatchReadTensorboardTimeSeriesData(request.TensorboardAsTensorboardName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2321,7 +2321,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.BatchReadTensorboardTimeSeriesDataAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchReadTensorboardTimeSeriesDataResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchReadTensorboardTimeSeriesDataResponse responseCallSettings = await client.BatchReadTensorboardTimeSeriesDataAsync(request.TensorboardAsTensorboardName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchReadTensorboardTimeSeriesDataResponse responseCancellationToken = await client.BatchReadTensorboardTimeSeriesDataAsync(request.TensorboardAsTensorboardName, st::CancellationToken.None);
@@ -2345,7 +2345,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 TimeSeriesData = new TimeSeriesData(),
             };
             mockGrpcClient.Setup(x => x.ReadTensorboardTimeSeriesData(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             ReadTensorboardTimeSeriesDataResponse response = client.ReadTensorboardTimeSeriesData(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2367,7 +2367,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 TimeSeriesData = new TimeSeriesData(),
             };
             mockGrpcClient.Setup(x => x.ReadTensorboardTimeSeriesDataAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReadTensorboardTimeSeriesDataResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             ReadTensorboardTimeSeriesDataResponse responseCallSettings = await client.ReadTensorboardTimeSeriesDataAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ReadTensorboardTimeSeriesDataResponse responseCancellationToken = await client.ReadTensorboardTimeSeriesDataAsync(request, st::CancellationToken.None);
@@ -2389,7 +2389,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 TimeSeriesData = new TimeSeriesData(),
             };
             mockGrpcClient.Setup(x => x.ReadTensorboardTimeSeriesData(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             ReadTensorboardTimeSeriesDataResponse response = client.ReadTensorboardTimeSeriesData(request.TensorboardTimeSeries);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2409,7 +2409,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 TimeSeriesData = new TimeSeriesData(),
             };
             mockGrpcClient.Setup(x => x.ReadTensorboardTimeSeriesDataAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReadTensorboardTimeSeriesDataResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             ReadTensorboardTimeSeriesDataResponse responseCallSettings = await client.ReadTensorboardTimeSeriesDataAsync(request.TensorboardTimeSeries, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ReadTensorboardTimeSeriesDataResponse responseCancellationToken = await client.ReadTensorboardTimeSeriesDataAsync(request.TensorboardTimeSeries, st::CancellationToken.None);
@@ -2431,7 +2431,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 TimeSeriesData = new TimeSeriesData(),
             };
             mockGrpcClient.Setup(x => x.ReadTensorboardTimeSeriesData(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             ReadTensorboardTimeSeriesDataResponse response = client.ReadTensorboardTimeSeriesData(request.TensorboardTimeSeriesAsTensorboardTimeSeriesName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2451,7 +2451,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 TimeSeriesData = new TimeSeriesData(),
             };
             mockGrpcClient.Setup(x => x.ReadTensorboardTimeSeriesDataAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReadTensorboardTimeSeriesDataResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             ReadTensorboardTimeSeriesDataResponse responseCallSettings = await client.ReadTensorboardTimeSeriesDataAsync(request.TensorboardTimeSeriesAsTensorboardTimeSeriesName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ReadTensorboardTimeSeriesDataResponse responseCancellationToken = await client.ReadTensorboardTimeSeriesDataAsync(request.TensorboardTimeSeriesAsTensorboardTimeSeriesName, st::CancellationToken.None);
@@ -2474,7 +2474,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             WriteTensorboardExperimentDataResponse expectedResponse = new WriteTensorboardExperimentDataResponse { };
             mockGrpcClient.Setup(x => x.WriteTensorboardExperimentData(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             WriteTensorboardExperimentDataResponse response = client.WriteTensorboardExperimentData(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2495,7 +2495,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             WriteTensorboardExperimentDataResponse expectedResponse = new WriteTensorboardExperimentDataResponse { };
             mockGrpcClient.Setup(x => x.WriteTensorboardExperimentDataAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WriteTensorboardExperimentDataResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             WriteTensorboardExperimentDataResponse responseCallSettings = await client.WriteTensorboardExperimentDataAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             WriteTensorboardExperimentDataResponse responseCancellationToken = await client.WriteTensorboardExperimentDataAsync(request, st::CancellationToken.None);
@@ -2518,7 +2518,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             WriteTensorboardExperimentDataResponse expectedResponse = new WriteTensorboardExperimentDataResponse { };
             mockGrpcClient.Setup(x => x.WriteTensorboardExperimentData(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             WriteTensorboardExperimentDataResponse response = client.WriteTensorboardExperimentData(request.TensorboardExperiment, request.WriteRunDataRequests);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2539,7 +2539,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             WriteTensorboardExperimentDataResponse expectedResponse = new WriteTensorboardExperimentDataResponse { };
             mockGrpcClient.Setup(x => x.WriteTensorboardExperimentDataAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WriteTensorboardExperimentDataResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             WriteTensorboardExperimentDataResponse responseCallSettings = await client.WriteTensorboardExperimentDataAsync(request.TensorboardExperiment, request.WriteRunDataRequests, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             WriteTensorboardExperimentDataResponse responseCancellationToken = await client.WriteTensorboardExperimentDataAsync(request.TensorboardExperiment, request.WriteRunDataRequests, st::CancellationToken.None);
@@ -2562,7 +2562,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             WriteTensorboardExperimentDataResponse expectedResponse = new WriteTensorboardExperimentDataResponse { };
             mockGrpcClient.Setup(x => x.WriteTensorboardExperimentData(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             WriteTensorboardExperimentDataResponse response = client.WriteTensorboardExperimentData(request.TensorboardExperimentAsTensorboardExperimentName, request.WriteRunDataRequests);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2583,7 +2583,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             WriteTensorboardExperimentDataResponse expectedResponse = new WriteTensorboardExperimentDataResponse { };
             mockGrpcClient.Setup(x => x.WriteTensorboardExperimentDataAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WriteTensorboardExperimentDataResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             WriteTensorboardExperimentDataResponse responseCallSettings = await client.WriteTensorboardExperimentDataAsync(request.TensorboardExperimentAsTensorboardExperimentName, request.WriteRunDataRequests, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             WriteTensorboardExperimentDataResponse responseCancellationToken = await client.WriteTensorboardExperimentDataAsync(request.TensorboardExperimentAsTensorboardExperimentName, request.WriteRunDataRequests, st::CancellationToken.None);
@@ -2606,7 +2606,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             WriteTensorboardRunDataResponse expectedResponse = new WriteTensorboardRunDataResponse { };
             mockGrpcClient.Setup(x => x.WriteTensorboardRunData(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             WriteTensorboardRunDataResponse response = client.WriteTensorboardRunData(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2627,7 +2627,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             WriteTensorboardRunDataResponse expectedResponse = new WriteTensorboardRunDataResponse { };
             mockGrpcClient.Setup(x => x.WriteTensorboardRunDataAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WriteTensorboardRunDataResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             WriteTensorboardRunDataResponse responseCallSettings = await client.WriteTensorboardRunDataAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             WriteTensorboardRunDataResponse responseCancellationToken = await client.WriteTensorboardRunDataAsync(request, st::CancellationToken.None);
@@ -2650,7 +2650,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             WriteTensorboardRunDataResponse expectedResponse = new WriteTensorboardRunDataResponse { };
             mockGrpcClient.Setup(x => x.WriteTensorboardRunData(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             WriteTensorboardRunDataResponse response = client.WriteTensorboardRunData(request.TensorboardRun, request.TimeSeriesData);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2671,7 +2671,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             WriteTensorboardRunDataResponse expectedResponse = new WriteTensorboardRunDataResponse { };
             mockGrpcClient.Setup(x => x.WriteTensorboardRunDataAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WriteTensorboardRunDataResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             WriteTensorboardRunDataResponse responseCallSettings = await client.WriteTensorboardRunDataAsync(request.TensorboardRun, request.TimeSeriesData, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             WriteTensorboardRunDataResponse responseCancellationToken = await client.WriteTensorboardRunDataAsync(request.TensorboardRun, request.TimeSeriesData, st::CancellationToken.None);
@@ -2694,7 +2694,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             WriteTensorboardRunDataResponse expectedResponse = new WriteTensorboardRunDataResponse { };
             mockGrpcClient.Setup(x => x.WriteTensorboardRunData(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             WriteTensorboardRunDataResponse response = client.WriteTensorboardRunData(request.TensorboardRunAsTensorboardRunName, request.TimeSeriesData);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2715,7 +2715,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             WriteTensorboardRunDataResponse expectedResponse = new WriteTensorboardRunDataResponse { };
             mockGrpcClient.Setup(x => x.WriteTensorboardRunDataAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WriteTensorboardRunDataResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null);
+            TensorboardServiceClient client = new TensorboardServiceClientImpl(mockGrpcClient.Object, null, null);
             WriteTensorboardRunDataResponse responseCallSettings = await client.WriteTensorboardRunDataAsync(request.TensorboardRunAsTensorboardRunName, request.TimeSeriesData, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             WriteTensorboardRunDataResponse responseCancellationToken = await client.WriteTensorboardRunDataAsync(request.TensorboardRunAsTensorboardRunName, request.TimeSeriesData, st::CancellationToken.None);

@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -206,9 +206,8 @@ namespace Google.Cloud.Dataplex.V1
         public MetadataServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public MetadataServiceClientBuilder()
+        public MetadataServiceClientBuilder() : base(MetadataServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = MetadataServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref MetadataServiceClient client);
@@ -235,29 +234,18 @@ namespace Google.Cloud.Dataplex.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return MetadataServiceClient.Create(callInvoker, Settings);
+            return MetadataServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<MetadataServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return MetadataServiceClient.Create(callInvoker, Settings);
+            return MetadataServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => MetadataServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => MetadataServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => MetadataServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>MetadataService client wrapper, for convenient use.</summary>
@@ -285,19 +273,10 @@ namespace Google.Cloud.Dataplex.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(MetadataService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="MetadataServiceClient"/> using the default credentials, endpoint and
@@ -324,8 +303,9 @@ namespace Google.Cloud.Dataplex.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="MetadataServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="MetadataServiceClient"/>.</returns>
-        internal static MetadataServiceClient Create(grpccore::CallInvoker callInvoker, MetadataServiceSettings settings = null)
+        internal static MetadataServiceClient Create(grpccore::CallInvoker callInvoker, MetadataServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -334,7 +314,7 @@ namespace Google.Cloud.Dataplex.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             MetadataService.MetadataServiceClient grpcClient = new MetadataService.MetadataServiceClient(callInvoker);
-            return new MetadataServiceClientImpl(grpcClient, settings);
+            return new MetadataServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1387,36 +1367,37 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="MetadataServiceSettings"/> used within this client.</param>
-        public MetadataServiceClientImpl(MetadataService.MetadataServiceClient grpcClient, MetadataServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public MetadataServiceClientImpl(MetadataService.MetadataServiceClient grpcClient, MetadataServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             MetadataServiceSettings effectiveSettings = settings ?? MetadataServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callCreateEntity = clientHelper.BuildApiCall<CreateEntityRequest, Entity>(grpcClient.CreateEntityAsync, grpcClient.CreateEntity, effectiveSettings.CreateEntitySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callCreateEntity = clientHelper.BuildApiCall<CreateEntityRequest, Entity>("CreateEntity", grpcClient.CreateEntityAsync, grpcClient.CreateEntity, effectiveSettings.CreateEntitySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateEntity);
             Modify_CreateEntityApiCall(ref _callCreateEntity);
-            _callUpdateEntity = clientHelper.BuildApiCall<UpdateEntityRequest, Entity>(grpcClient.UpdateEntityAsync, grpcClient.UpdateEntity, effectiveSettings.UpdateEntitySettings).WithGoogleRequestParam("entity.name", request => request.Entity?.Name);
+            _callUpdateEntity = clientHelper.BuildApiCall<UpdateEntityRequest, Entity>("UpdateEntity", grpcClient.UpdateEntityAsync, grpcClient.UpdateEntity, effectiveSettings.UpdateEntitySettings).WithGoogleRequestParam("entity.name", request => request.Entity?.Name);
             Modify_ApiCall(ref _callUpdateEntity);
             Modify_UpdateEntityApiCall(ref _callUpdateEntity);
-            _callDeleteEntity = clientHelper.BuildApiCall<DeleteEntityRequest, wkt::Empty>(grpcClient.DeleteEntityAsync, grpcClient.DeleteEntity, effectiveSettings.DeleteEntitySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteEntity = clientHelper.BuildApiCall<DeleteEntityRequest, wkt::Empty>("DeleteEntity", grpcClient.DeleteEntityAsync, grpcClient.DeleteEntity, effectiveSettings.DeleteEntitySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteEntity);
             Modify_DeleteEntityApiCall(ref _callDeleteEntity);
-            _callGetEntity = clientHelper.BuildApiCall<GetEntityRequest, Entity>(grpcClient.GetEntityAsync, grpcClient.GetEntity, effectiveSettings.GetEntitySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetEntity = clientHelper.BuildApiCall<GetEntityRequest, Entity>("GetEntity", grpcClient.GetEntityAsync, grpcClient.GetEntity, effectiveSettings.GetEntitySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetEntity);
             Modify_GetEntityApiCall(ref _callGetEntity);
-            _callListEntities = clientHelper.BuildApiCall<ListEntitiesRequest, ListEntitiesResponse>(grpcClient.ListEntitiesAsync, grpcClient.ListEntities, effectiveSettings.ListEntitiesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListEntities = clientHelper.BuildApiCall<ListEntitiesRequest, ListEntitiesResponse>("ListEntities", grpcClient.ListEntitiesAsync, grpcClient.ListEntities, effectiveSettings.ListEntitiesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListEntities);
             Modify_ListEntitiesApiCall(ref _callListEntities);
-            _callCreatePartition = clientHelper.BuildApiCall<CreatePartitionRequest, Partition>(grpcClient.CreatePartitionAsync, grpcClient.CreatePartition, effectiveSettings.CreatePartitionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreatePartition = clientHelper.BuildApiCall<CreatePartitionRequest, Partition>("CreatePartition", grpcClient.CreatePartitionAsync, grpcClient.CreatePartition, effectiveSettings.CreatePartitionSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreatePartition);
             Modify_CreatePartitionApiCall(ref _callCreatePartition);
-            _callDeletePartition = clientHelper.BuildApiCall<DeletePartitionRequest, wkt::Empty>(grpcClient.DeletePartitionAsync, grpcClient.DeletePartition, effectiveSettings.DeletePartitionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeletePartition = clientHelper.BuildApiCall<DeletePartitionRequest, wkt::Empty>("DeletePartition", grpcClient.DeletePartitionAsync, grpcClient.DeletePartition, effectiveSettings.DeletePartitionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeletePartition);
             Modify_DeletePartitionApiCall(ref _callDeletePartition);
-            _callGetPartition = clientHelper.BuildApiCall<GetPartitionRequest, Partition>(grpcClient.GetPartitionAsync, grpcClient.GetPartition, effectiveSettings.GetPartitionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetPartition = clientHelper.BuildApiCall<GetPartitionRequest, Partition>("GetPartition", grpcClient.GetPartitionAsync, grpcClient.GetPartition, effectiveSettings.GetPartitionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetPartition);
             Modify_GetPartitionApiCall(ref _callGetPartition);
-            _callListPartitions = clientHelper.BuildApiCall<ListPartitionsRequest, ListPartitionsResponse>(grpcClient.ListPartitionsAsync, grpcClient.ListPartitions, effectiveSettings.ListPartitionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListPartitions = clientHelper.BuildApiCall<ListPartitionsRequest, ListPartitionsResponse>("ListPartitions", grpcClient.ListPartitionsAsync, grpcClient.ListPartitions, effectiveSettings.ListPartitionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListPartitions);
             Modify_ListPartitionsApiCall(ref _callListPartitions);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

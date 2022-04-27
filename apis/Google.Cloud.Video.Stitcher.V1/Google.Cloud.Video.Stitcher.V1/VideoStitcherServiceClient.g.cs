@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -334,9 +334,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         public VideoStitcherServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public VideoStitcherServiceClientBuilder()
+        public VideoStitcherServiceClientBuilder() : base(VideoStitcherServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = VideoStitcherServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref VideoStitcherServiceClient client);
@@ -363,29 +362,18 @@ namespace Google.Cloud.Video.Stitcher.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return VideoStitcherServiceClient.Create(callInvoker, Settings);
+            return VideoStitcherServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<VideoStitcherServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return VideoStitcherServiceClient.Create(callInvoker, Settings);
+            return VideoStitcherServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => VideoStitcherServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => VideoStitcherServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => VideoStitcherServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>VideoStitcherService client wrapper, for convenient use.</summary>
@@ -416,19 +404,10 @@ namespace Google.Cloud.Video.Stitcher.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(VideoStitcherService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="VideoStitcherServiceClient"/> using the default credentials, endpoint
@@ -458,8 +437,9 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="VideoStitcherServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="VideoStitcherServiceClient"/>.</returns>
-        internal static VideoStitcherServiceClient Create(grpccore::CallInvoker callInvoker, VideoStitcherServiceSettings settings = null)
+        internal static VideoStitcherServiceClient Create(grpccore::CallInvoker callInvoker, VideoStitcherServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -468,7 +448,7 @@ namespace Google.Cloud.Video.Stitcher.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             VideoStitcherService.VideoStitcherServiceClient grpcClient = new VideoStitcherService.VideoStitcherServiceClient(callInvoker);
-            return new VideoStitcherServiceClientImpl(grpcClient, settings);
+            return new VideoStitcherServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -2997,69 +2977,70 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="VideoStitcherServiceSettings"/> used within this client.</param>
-        public VideoStitcherServiceClientImpl(VideoStitcherService.VideoStitcherServiceClient grpcClient, VideoStitcherServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public VideoStitcherServiceClientImpl(VideoStitcherService.VideoStitcherServiceClient grpcClient, VideoStitcherServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             VideoStitcherServiceSettings effectiveSettings = settings ?? VideoStitcherServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callCreateCdnKey = clientHelper.BuildApiCall<CreateCdnKeyRequest, CdnKey>(grpcClient.CreateCdnKeyAsync, grpcClient.CreateCdnKey, effectiveSettings.CreateCdnKeySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callCreateCdnKey = clientHelper.BuildApiCall<CreateCdnKeyRequest, CdnKey>("CreateCdnKey", grpcClient.CreateCdnKeyAsync, grpcClient.CreateCdnKey, effectiveSettings.CreateCdnKeySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateCdnKey);
             Modify_CreateCdnKeyApiCall(ref _callCreateCdnKey);
-            _callListCdnKeys = clientHelper.BuildApiCall<ListCdnKeysRequest, ListCdnKeysResponse>(grpcClient.ListCdnKeysAsync, grpcClient.ListCdnKeys, effectiveSettings.ListCdnKeysSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListCdnKeys = clientHelper.BuildApiCall<ListCdnKeysRequest, ListCdnKeysResponse>("ListCdnKeys", grpcClient.ListCdnKeysAsync, grpcClient.ListCdnKeys, effectiveSettings.ListCdnKeysSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListCdnKeys);
             Modify_ListCdnKeysApiCall(ref _callListCdnKeys);
-            _callGetCdnKey = clientHelper.BuildApiCall<GetCdnKeyRequest, CdnKey>(grpcClient.GetCdnKeyAsync, grpcClient.GetCdnKey, effectiveSettings.GetCdnKeySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetCdnKey = clientHelper.BuildApiCall<GetCdnKeyRequest, CdnKey>("GetCdnKey", grpcClient.GetCdnKeyAsync, grpcClient.GetCdnKey, effectiveSettings.GetCdnKeySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetCdnKey);
             Modify_GetCdnKeyApiCall(ref _callGetCdnKey);
-            _callDeleteCdnKey = clientHelper.BuildApiCall<DeleteCdnKeyRequest, wkt::Empty>(grpcClient.DeleteCdnKeyAsync, grpcClient.DeleteCdnKey, effectiveSettings.DeleteCdnKeySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteCdnKey = clientHelper.BuildApiCall<DeleteCdnKeyRequest, wkt::Empty>("DeleteCdnKey", grpcClient.DeleteCdnKeyAsync, grpcClient.DeleteCdnKey, effectiveSettings.DeleteCdnKeySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteCdnKey);
             Modify_DeleteCdnKeyApiCall(ref _callDeleteCdnKey);
-            _callUpdateCdnKey = clientHelper.BuildApiCall<UpdateCdnKeyRequest, CdnKey>(grpcClient.UpdateCdnKeyAsync, grpcClient.UpdateCdnKey, effectiveSettings.UpdateCdnKeySettings).WithGoogleRequestParam("cdn_key.name", request => request.CdnKey?.Name);
+            _callUpdateCdnKey = clientHelper.BuildApiCall<UpdateCdnKeyRequest, CdnKey>("UpdateCdnKey", grpcClient.UpdateCdnKeyAsync, grpcClient.UpdateCdnKey, effectiveSettings.UpdateCdnKeySettings).WithGoogleRequestParam("cdn_key.name", request => request.CdnKey?.Name);
             Modify_ApiCall(ref _callUpdateCdnKey);
             Modify_UpdateCdnKeyApiCall(ref _callUpdateCdnKey);
-            _callCreateVodSession = clientHelper.BuildApiCall<CreateVodSessionRequest, VodSession>(grpcClient.CreateVodSessionAsync, grpcClient.CreateVodSession, effectiveSettings.CreateVodSessionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateVodSession = clientHelper.BuildApiCall<CreateVodSessionRequest, VodSession>("CreateVodSession", grpcClient.CreateVodSessionAsync, grpcClient.CreateVodSession, effectiveSettings.CreateVodSessionSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateVodSession);
             Modify_CreateVodSessionApiCall(ref _callCreateVodSession);
-            _callGetVodSession = clientHelper.BuildApiCall<GetVodSessionRequest, VodSession>(grpcClient.GetVodSessionAsync, grpcClient.GetVodSession, effectiveSettings.GetVodSessionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetVodSession = clientHelper.BuildApiCall<GetVodSessionRequest, VodSession>("GetVodSession", grpcClient.GetVodSessionAsync, grpcClient.GetVodSession, effectiveSettings.GetVodSessionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetVodSession);
             Modify_GetVodSessionApiCall(ref _callGetVodSession);
-            _callListVodStitchDetails = clientHelper.BuildApiCall<ListVodStitchDetailsRequest, ListVodStitchDetailsResponse>(grpcClient.ListVodStitchDetailsAsync, grpcClient.ListVodStitchDetails, effectiveSettings.ListVodStitchDetailsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListVodStitchDetails = clientHelper.BuildApiCall<ListVodStitchDetailsRequest, ListVodStitchDetailsResponse>("ListVodStitchDetails", grpcClient.ListVodStitchDetailsAsync, grpcClient.ListVodStitchDetails, effectiveSettings.ListVodStitchDetailsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListVodStitchDetails);
             Modify_ListVodStitchDetailsApiCall(ref _callListVodStitchDetails);
-            _callGetVodStitchDetail = clientHelper.BuildApiCall<GetVodStitchDetailRequest, VodStitchDetail>(grpcClient.GetVodStitchDetailAsync, grpcClient.GetVodStitchDetail, effectiveSettings.GetVodStitchDetailSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetVodStitchDetail = clientHelper.BuildApiCall<GetVodStitchDetailRequest, VodStitchDetail>("GetVodStitchDetail", grpcClient.GetVodStitchDetailAsync, grpcClient.GetVodStitchDetail, effectiveSettings.GetVodStitchDetailSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetVodStitchDetail);
             Modify_GetVodStitchDetailApiCall(ref _callGetVodStitchDetail);
-            _callListVodAdTagDetails = clientHelper.BuildApiCall<ListVodAdTagDetailsRequest, ListVodAdTagDetailsResponse>(grpcClient.ListVodAdTagDetailsAsync, grpcClient.ListVodAdTagDetails, effectiveSettings.ListVodAdTagDetailsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListVodAdTagDetails = clientHelper.BuildApiCall<ListVodAdTagDetailsRequest, ListVodAdTagDetailsResponse>("ListVodAdTagDetails", grpcClient.ListVodAdTagDetailsAsync, grpcClient.ListVodAdTagDetails, effectiveSettings.ListVodAdTagDetailsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListVodAdTagDetails);
             Modify_ListVodAdTagDetailsApiCall(ref _callListVodAdTagDetails);
-            _callGetVodAdTagDetail = clientHelper.BuildApiCall<GetVodAdTagDetailRequest, VodAdTagDetail>(grpcClient.GetVodAdTagDetailAsync, grpcClient.GetVodAdTagDetail, effectiveSettings.GetVodAdTagDetailSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetVodAdTagDetail = clientHelper.BuildApiCall<GetVodAdTagDetailRequest, VodAdTagDetail>("GetVodAdTagDetail", grpcClient.GetVodAdTagDetailAsync, grpcClient.GetVodAdTagDetail, effectiveSettings.GetVodAdTagDetailSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetVodAdTagDetail);
             Modify_GetVodAdTagDetailApiCall(ref _callGetVodAdTagDetail);
-            _callListLiveAdTagDetails = clientHelper.BuildApiCall<ListLiveAdTagDetailsRequest, ListLiveAdTagDetailsResponse>(grpcClient.ListLiveAdTagDetailsAsync, grpcClient.ListLiveAdTagDetails, effectiveSettings.ListLiveAdTagDetailsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListLiveAdTagDetails = clientHelper.BuildApiCall<ListLiveAdTagDetailsRequest, ListLiveAdTagDetailsResponse>("ListLiveAdTagDetails", grpcClient.ListLiveAdTagDetailsAsync, grpcClient.ListLiveAdTagDetails, effectiveSettings.ListLiveAdTagDetailsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListLiveAdTagDetails);
             Modify_ListLiveAdTagDetailsApiCall(ref _callListLiveAdTagDetails);
-            _callGetLiveAdTagDetail = clientHelper.BuildApiCall<GetLiveAdTagDetailRequest, LiveAdTagDetail>(grpcClient.GetLiveAdTagDetailAsync, grpcClient.GetLiveAdTagDetail, effectiveSettings.GetLiveAdTagDetailSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetLiveAdTagDetail = clientHelper.BuildApiCall<GetLiveAdTagDetailRequest, LiveAdTagDetail>("GetLiveAdTagDetail", grpcClient.GetLiveAdTagDetailAsync, grpcClient.GetLiveAdTagDetail, effectiveSettings.GetLiveAdTagDetailSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetLiveAdTagDetail);
             Modify_GetLiveAdTagDetailApiCall(ref _callGetLiveAdTagDetail);
-            _callCreateSlate = clientHelper.BuildApiCall<CreateSlateRequest, Slate>(grpcClient.CreateSlateAsync, grpcClient.CreateSlate, effectiveSettings.CreateSlateSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateSlate = clientHelper.BuildApiCall<CreateSlateRequest, Slate>("CreateSlate", grpcClient.CreateSlateAsync, grpcClient.CreateSlate, effectiveSettings.CreateSlateSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateSlate);
             Modify_CreateSlateApiCall(ref _callCreateSlate);
-            _callListSlates = clientHelper.BuildApiCall<ListSlatesRequest, ListSlatesResponse>(grpcClient.ListSlatesAsync, grpcClient.ListSlates, effectiveSettings.ListSlatesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListSlates = clientHelper.BuildApiCall<ListSlatesRequest, ListSlatesResponse>("ListSlates", grpcClient.ListSlatesAsync, grpcClient.ListSlates, effectiveSettings.ListSlatesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListSlates);
             Modify_ListSlatesApiCall(ref _callListSlates);
-            _callGetSlate = clientHelper.BuildApiCall<GetSlateRequest, Slate>(grpcClient.GetSlateAsync, grpcClient.GetSlate, effectiveSettings.GetSlateSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetSlate = clientHelper.BuildApiCall<GetSlateRequest, Slate>("GetSlate", grpcClient.GetSlateAsync, grpcClient.GetSlate, effectiveSettings.GetSlateSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetSlate);
             Modify_GetSlateApiCall(ref _callGetSlate);
-            _callUpdateSlate = clientHelper.BuildApiCall<UpdateSlateRequest, Slate>(grpcClient.UpdateSlateAsync, grpcClient.UpdateSlate, effectiveSettings.UpdateSlateSettings).WithGoogleRequestParam("slate.name", request => request.Slate?.Name);
+            _callUpdateSlate = clientHelper.BuildApiCall<UpdateSlateRequest, Slate>("UpdateSlate", grpcClient.UpdateSlateAsync, grpcClient.UpdateSlate, effectiveSettings.UpdateSlateSettings).WithGoogleRequestParam("slate.name", request => request.Slate?.Name);
             Modify_ApiCall(ref _callUpdateSlate);
             Modify_UpdateSlateApiCall(ref _callUpdateSlate);
-            _callDeleteSlate = clientHelper.BuildApiCall<DeleteSlateRequest, wkt::Empty>(grpcClient.DeleteSlateAsync, grpcClient.DeleteSlate, effectiveSettings.DeleteSlateSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteSlate = clientHelper.BuildApiCall<DeleteSlateRequest, wkt::Empty>("DeleteSlate", grpcClient.DeleteSlateAsync, grpcClient.DeleteSlate, effectiveSettings.DeleteSlateSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteSlate);
             Modify_DeleteSlateApiCall(ref _callDeleteSlate);
-            _callCreateLiveSession = clientHelper.BuildApiCall<CreateLiveSessionRequest, LiveSession>(grpcClient.CreateLiveSessionAsync, grpcClient.CreateLiveSession, effectiveSettings.CreateLiveSessionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateLiveSession = clientHelper.BuildApiCall<CreateLiveSessionRequest, LiveSession>("CreateLiveSession", grpcClient.CreateLiveSessionAsync, grpcClient.CreateLiveSession, effectiveSettings.CreateLiveSessionSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateLiveSession);
             Modify_CreateLiveSessionApiCall(ref _callCreateLiveSession);
-            _callGetLiveSession = clientHelper.BuildApiCall<GetLiveSessionRequest, LiveSession>(grpcClient.GetLiveSessionAsync, grpcClient.GetLiveSession, effectiveSettings.GetLiveSessionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetLiveSession = clientHelper.BuildApiCall<GetLiveSessionRequest, LiveSession>("GetLiveSession", grpcClient.GetLiveSessionAsync, grpcClient.GetLiveSession, effectiveSettings.GetLiveSessionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetLiveSession);
             Modify_GetLiveSessionApiCall(ref _callGetLiveSession);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

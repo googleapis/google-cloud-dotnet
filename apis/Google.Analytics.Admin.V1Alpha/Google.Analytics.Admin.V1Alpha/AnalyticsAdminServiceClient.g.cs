@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -1692,9 +1692,8 @@ namespace Google.Analytics.Admin.V1Alpha
         public AnalyticsAdminServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public AnalyticsAdminServiceClientBuilder()
+        public AnalyticsAdminServiceClientBuilder() : base(AnalyticsAdminServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = AnalyticsAdminServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref AnalyticsAdminServiceClient client);
@@ -1721,29 +1720,18 @@ namespace Google.Analytics.Admin.V1Alpha
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return AnalyticsAdminServiceClient.Create(callInvoker, Settings);
+            return AnalyticsAdminServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<AnalyticsAdminServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return AnalyticsAdminServiceClient.Create(callInvoker, Settings);
+            return AnalyticsAdminServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => AnalyticsAdminServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => AnalyticsAdminServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => AnalyticsAdminServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>AnalyticsAdminService client wrapper, for convenient use.</summary>
@@ -1776,19 +1764,10 @@ namespace Google.Analytics.Admin.V1Alpha
             "https://www.googleapis.com/auth/analytics.readonly",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(AnalyticsAdminService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="AnalyticsAdminServiceClient"/> using the default credentials, endpoint
@@ -1818,8 +1797,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="AnalyticsAdminServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="AnalyticsAdminServiceClient"/>.</returns>
-        internal static AnalyticsAdminServiceClient Create(grpccore::CallInvoker callInvoker, AnalyticsAdminServiceSettings settings = null)
+        internal static AnalyticsAdminServiceClient Create(grpccore::CallInvoker callInvoker, AnalyticsAdminServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -1828,7 +1808,7 @@ namespace Google.Analytics.Admin.V1Alpha
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             AnalyticsAdminService.AnalyticsAdminServiceClient grpcClient = new AnalyticsAdminService.AnalyticsAdminServiceClient(callInvoker);
-            return new AnalyticsAdminServiceClientImpl(grpcClient, settings);
+            return new AnalyticsAdminServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -9187,222 +9167,223 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="AnalyticsAdminServiceSettings"/> used within this client.</param>
-        public AnalyticsAdminServiceClientImpl(AnalyticsAdminService.AnalyticsAdminServiceClient grpcClient, AnalyticsAdminServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public AnalyticsAdminServiceClientImpl(AnalyticsAdminService.AnalyticsAdminServiceClient grpcClient, AnalyticsAdminServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             AnalyticsAdminServiceSettings effectiveSettings = settings ?? AnalyticsAdminServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callGetAccount = clientHelper.BuildApiCall<GetAccountRequest, Account>(grpcClient.GetAccountAsync, grpcClient.GetAccount, effectiveSettings.GetAccountSettings).WithGoogleRequestParam("name", request => request.Name);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callGetAccount = clientHelper.BuildApiCall<GetAccountRequest, Account>("GetAccount", grpcClient.GetAccountAsync, grpcClient.GetAccount, effectiveSettings.GetAccountSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetAccount);
             Modify_GetAccountApiCall(ref _callGetAccount);
-            _callListAccounts = clientHelper.BuildApiCall<ListAccountsRequest, ListAccountsResponse>(grpcClient.ListAccountsAsync, grpcClient.ListAccounts, effectiveSettings.ListAccountsSettings);
+            _callListAccounts = clientHelper.BuildApiCall<ListAccountsRequest, ListAccountsResponse>("ListAccounts", grpcClient.ListAccountsAsync, grpcClient.ListAccounts, effectiveSettings.ListAccountsSettings);
             Modify_ApiCall(ref _callListAccounts);
             Modify_ListAccountsApiCall(ref _callListAccounts);
-            _callDeleteAccount = clientHelper.BuildApiCall<DeleteAccountRequest, wkt::Empty>(grpcClient.DeleteAccountAsync, grpcClient.DeleteAccount, effectiveSettings.DeleteAccountSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteAccount = clientHelper.BuildApiCall<DeleteAccountRequest, wkt::Empty>("DeleteAccount", grpcClient.DeleteAccountAsync, grpcClient.DeleteAccount, effectiveSettings.DeleteAccountSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteAccount);
             Modify_DeleteAccountApiCall(ref _callDeleteAccount);
-            _callUpdateAccount = clientHelper.BuildApiCall<UpdateAccountRequest, Account>(grpcClient.UpdateAccountAsync, grpcClient.UpdateAccount, effectiveSettings.UpdateAccountSettings).WithGoogleRequestParam("account.name", request => request.Account?.Name);
+            _callUpdateAccount = clientHelper.BuildApiCall<UpdateAccountRequest, Account>("UpdateAccount", grpcClient.UpdateAccountAsync, grpcClient.UpdateAccount, effectiveSettings.UpdateAccountSettings).WithGoogleRequestParam("account.name", request => request.Account?.Name);
             Modify_ApiCall(ref _callUpdateAccount);
             Modify_UpdateAccountApiCall(ref _callUpdateAccount);
-            _callProvisionAccountTicket = clientHelper.BuildApiCall<ProvisionAccountTicketRequest, ProvisionAccountTicketResponse>(grpcClient.ProvisionAccountTicketAsync, grpcClient.ProvisionAccountTicket, effectiveSettings.ProvisionAccountTicketSettings);
+            _callProvisionAccountTicket = clientHelper.BuildApiCall<ProvisionAccountTicketRequest, ProvisionAccountTicketResponse>("ProvisionAccountTicket", grpcClient.ProvisionAccountTicketAsync, grpcClient.ProvisionAccountTicket, effectiveSettings.ProvisionAccountTicketSettings);
             Modify_ApiCall(ref _callProvisionAccountTicket);
             Modify_ProvisionAccountTicketApiCall(ref _callProvisionAccountTicket);
-            _callListAccountSummaries = clientHelper.BuildApiCall<ListAccountSummariesRequest, ListAccountSummariesResponse>(grpcClient.ListAccountSummariesAsync, grpcClient.ListAccountSummaries, effectiveSettings.ListAccountSummariesSettings);
+            _callListAccountSummaries = clientHelper.BuildApiCall<ListAccountSummariesRequest, ListAccountSummariesResponse>("ListAccountSummaries", grpcClient.ListAccountSummariesAsync, grpcClient.ListAccountSummaries, effectiveSettings.ListAccountSummariesSettings);
             Modify_ApiCall(ref _callListAccountSummaries);
             Modify_ListAccountSummariesApiCall(ref _callListAccountSummaries);
-            _callGetProperty = clientHelper.BuildApiCall<GetPropertyRequest, Property>(grpcClient.GetPropertyAsync, grpcClient.GetProperty, effectiveSettings.GetPropertySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetProperty = clientHelper.BuildApiCall<GetPropertyRequest, Property>("GetProperty", grpcClient.GetPropertyAsync, grpcClient.GetProperty, effectiveSettings.GetPropertySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetProperty);
             Modify_GetPropertyApiCall(ref _callGetProperty);
-            _callListProperties = clientHelper.BuildApiCall<ListPropertiesRequest, ListPropertiesResponse>(grpcClient.ListPropertiesAsync, grpcClient.ListProperties, effectiveSettings.ListPropertiesSettings);
+            _callListProperties = clientHelper.BuildApiCall<ListPropertiesRequest, ListPropertiesResponse>("ListProperties", grpcClient.ListPropertiesAsync, grpcClient.ListProperties, effectiveSettings.ListPropertiesSettings);
             Modify_ApiCall(ref _callListProperties);
             Modify_ListPropertiesApiCall(ref _callListProperties);
-            _callCreateProperty = clientHelper.BuildApiCall<CreatePropertyRequest, Property>(grpcClient.CreatePropertyAsync, grpcClient.CreateProperty, effectiveSettings.CreatePropertySettings);
+            _callCreateProperty = clientHelper.BuildApiCall<CreatePropertyRequest, Property>("CreateProperty", grpcClient.CreatePropertyAsync, grpcClient.CreateProperty, effectiveSettings.CreatePropertySettings);
             Modify_ApiCall(ref _callCreateProperty);
             Modify_CreatePropertyApiCall(ref _callCreateProperty);
-            _callDeleteProperty = clientHelper.BuildApiCall<DeletePropertyRequest, Property>(grpcClient.DeletePropertyAsync, grpcClient.DeleteProperty, effectiveSettings.DeletePropertySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteProperty = clientHelper.BuildApiCall<DeletePropertyRequest, Property>("DeleteProperty", grpcClient.DeletePropertyAsync, grpcClient.DeleteProperty, effectiveSettings.DeletePropertySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteProperty);
             Modify_DeletePropertyApiCall(ref _callDeleteProperty);
-            _callUpdateProperty = clientHelper.BuildApiCall<UpdatePropertyRequest, Property>(grpcClient.UpdatePropertyAsync, grpcClient.UpdateProperty, effectiveSettings.UpdatePropertySettings).WithGoogleRequestParam("property.name", request => request.Property?.Name);
+            _callUpdateProperty = clientHelper.BuildApiCall<UpdatePropertyRequest, Property>("UpdateProperty", grpcClient.UpdatePropertyAsync, grpcClient.UpdateProperty, effectiveSettings.UpdatePropertySettings).WithGoogleRequestParam("property.name", request => request.Property?.Name);
             Modify_ApiCall(ref _callUpdateProperty);
             Modify_UpdatePropertyApiCall(ref _callUpdateProperty);
-            _callGetUserLink = clientHelper.BuildApiCall<GetUserLinkRequest, UserLink>(grpcClient.GetUserLinkAsync, grpcClient.GetUserLink, effectiveSettings.GetUserLinkSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetUserLink = clientHelper.BuildApiCall<GetUserLinkRequest, UserLink>("GetUserLink", grpcClient.GetUserLinkAsync, grpcClient.GetUserLink, effectiveSettings.GetUserLinkSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetUserLink);
             Modify_GetUserLinkApiCall(ref _callGetUserLink);
-            _callBatchGetUserLinks = clientHelper.BuildApiCall<BatchGetUserLinksRequest, BatchGetUserLinksResponse>(grpcClient.BatchGetUserLinksAsync, grpcClient.BatchGetUserLinks, effectiveSettings.BatchGetUserLinksSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callBatchGetUserLinks = clientHelper.BuildApiCall<BatchGetUserLinksRequest, BatchGetUserLinksResponse>("BatchGetUserLinks", grpcClient.BatchGetUserLinksAsync, grpcClient.BatchGetUserLinks, effectiveSettings.BatchGetUserLinksSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callBatchGetUserLinks);
             Modify_BatchGetUserLinksApiCall(ref _callBatchGetUserLinks);
-            _callListUserLinks = clientHelper.BuildApiCall<ListUserLinksRequest, ListUserLinksResponse>(grpcClient.ListUserLinksAsync, grpcClient.ListUserLinks, effectiveSettings.ListUserLinksSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListUserLinks = clientHelper.BuildApiCall<ListUserLinksRequest, ListUserLinksResponse>("ListUserLinks", grpcClient.ListUserLinksAsync, grpcClient.ListUserLinks, effectiveSettings.ListUserLinksSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListUserLinks);
             Modify_ListUserLinksApiCall(ref _callListUserLinks);
-            _callAuditUserLinks = clientHelper.BuildApiCall<AuditUserLinksRequest, AuditUserLinksResponse>(grpcClient.AuditUserLinksAsync, grpcClient.AuditUserLinks, effectiveSettings.AuditUserLinksSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callAuditUserLinks = clientHelper.BuildApiCall<AuditUserLinksRequest, AuditUserLinksResponse>("AuditUserLinks", grpcClient.AuditUserLinksAsync, grpcClient.AuditUserLinks, effectiveSettings.AuditUserLinksSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callAuditUserLinks);
             Modify_AuditUserLinksApiCall(ref _callAuditUserLinks);
-            _callCreateUserLink = clientHelper.BuildApiCall<CreateUserLinkRequest, UserLink>(grpcClient.CreateUserLinkAsync, grpcClient.CreateUserLink, effectiveSettings.CreateUserLinkSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateUserLink = clientHelper.BuildApiCall<CreateUserLinkRequest, UserLink>("CreateUserLink", grpcClient.CreateUserLinkAsync, grpcClient.CreateUserLink, effectiveSettings.CreateUserLinkSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateUserLink);
             Modify_CreateUserLinkApiCall(ref _callCreateUserLink);
-            _callBatchCreateUserLinks = clientHelper.BuildApiCall<BatchCreateUserLinksRequest, BatchCreateUserLinksResponse>(grpcClient.BatchCreateUserLinksAsync, grpcClient.BatchCreateUserLinks, effectiveSettings.BatchCreateUserLinksSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callBatchCreateUserLinks = clientHelper.BuildApiCall<BatchCreateUserLinksRequest, BatchCreateUserLinksResponse>("BatchCreateUserLinks", grpcClient.BatchCreateUserLinksAsync, grpcClient.BatchCreateUserLinks, effectiveSettings.BatchCreateUserLinksSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callBatchCreateUserLinks);
             Modify_BatchCreateUserLinksApiCall(ref _callBatchCreateUserLinks);
-            _callUpdateUserLink = clientHelper.BuildApiCall<UpdateUserLinkRequest, UserLink>(grpcClient.UpdateUserLinkAsync, grpcClient.UpdateUserLink, effectiveSettings.UpdateUserLinkSettings).WithGoogleRequestParam("user_link.name", request => request.UserLink?.Name);
+            _callUpdateUserLink = clientHelper.BuildApiCall<UpdateUserLinkRequest, UserLink>("UpdateUserLink", grpcClient.UpdateUserLinkAsync, grpcClient.UpdateUserLink, effectiveSettings.UpdateUserLinkSettings).WithGoogleRequestParam("user_link.name", request => request.UserLink?.Name);
             Modify_ApiCall(ref _callUpdateUserLink);
             Modify_UpdateUserLinkApiCall(ref _callUpdateUserLink);
-            _callBatchUpdateUserLinks = clientHelper.BuildApiCall<BatchUpdateUserLinksRequest, BatchUpdateUserLinksResponse>(grpcClient.BatchUpdateUserLinksAsync, grpcClient.BatchUpdateUserLinks, effectiveSettings.BatchUpdateUserLinksSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callBatchUpdateUserLinks = clientHelper.BuildApiCall<BatchUpdateUserLinksRequest, BatchUpdateUserLinksResponse>("BatchUpdateUserLinks", grpcClient.BatchUpdateUserLinksAsync, grpcClient.BatchUpdateUserLinks, effectiveSettings.BatchUpdateUserLinksSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callBatchUpdateUserLinks);
             Modify_BatchUpdateUserLinksApiCall(ref _callBatchUpdateUserLinks);
-            _callDeleteUserLink = clientHelper.BuildApiCall<DeleteUserLinkRequest, wkt::Empty>(grpcClient.DeleteUserLinkAsync, grpcClient.DeleteUserLink, effectiveSettings.DeleteUserLinkSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteUserLink = clientHelper.BuildApiCall<DeleteUserLinkRequest, wkt::Empty>("DeleteUserLink", grpcClient.DeleteUserLinkAsync, grpcClient.DeleteUserLink, effectiveSettings.DeleteUserLinkSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteUserLink);
             Modify_DeleteUserLinkApiCall(ref _callDeleteUserLink);
-            _callBatchDeleteUserLinks = clientHelper.BuildApiCall<BatchDeleteUserLinksRequest, wkt::Empty>(grpcClient.BatchDeleteUserLinksAsync, grpcClient.BatchDeleteUserLinks, effectiveSettings.BatchDeleteUserLinksSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callBatchDeleteUserLinks = clientHelper.BuildApiCall<BatchDeleteUserLinksRequest, wkt::Empty>("BatchDeleteUserLinks", grpcClient.BatchDeleteUserLinksAsync, grpcClient.BatchDeleteUserLinks, effectiveSettings.BatchDeleteUserLinksSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callBatchDeleteUserLinks);
             Modify_BatchDeleteUserLinksApiCall(ref _callBatchDeleteUserLinks);
-            _callCreateFirebaseLink = clientHelper.BuildApiCall<CreateFirebaseLinkRequest, FirebaseLink>(grpcClient.CreateFirebaseLinkAsync, grpcClient.CreateFirebaseLink, effectiveSettings.CreateFirebaseLinkSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateFirebaseLink = clientHelper.BuildApiCall<CreateFirebaseLinkRequest, FirebaseLink>("CreateFirebaseLink", grpcClient.CreateFirebaseLinkAsync, grpcClient.CreateFirebaseLink, effectiveSettings.CreateFirebaseLinkSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateFirebaseLink);
             Modify_CreateFirebaseLinkApiCall(ref _callCreateFirebaseLink);
-            _callDeleteFirebaseLink = clientHelper.BuildApiCall<DeleteFirebaseLinkRequest, wkt::Empty>(grpcClient.DeleteFirebaseLinkAsync, grpcClient.DeleteFirebaseLink, effectiveSettings.DeleteFirebaseLinkSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteFirebaseLink = clientHelper.BuildApiCall<DeleteFirebaseLinkRequest, wkt::Empty>("DeleteFirebaseLink", grpcClient.DeleteFirebaseLinkAsync, grpcClient.DeleteFirebaseLink, effectiveSettings.DeleteFirebaseLinkSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteFirebaseLink);
             Modify_DeleteFirebaseLinkApiCall(ref _callDeleteFirebaseLink);
-            _callListFirebaseLinks = clientHelper.BuildApiCall<ListFirebaseLinksRequest, ListFirebaseLinksResponse>(grpcClient.ListFirebaseLinksAsync, grpcClient.ListFirebaseLinks, effectiveSettings.ListFirebaseLinksSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListFirebaseLinks = clientHelper.BuildApiCall<ListFirebaseLinksRequest, ListFirebaseLinksResponse>("ListFirebaseLinks", grpcClient.ListFirebaseLinksAsync, grpcClient.ListFirebaseLinks, effectiveSettings.ListFirebaseLinksSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListFirebaseLinks);
             Modify_ListFirebaseLinksApiCall(ref _callListFirebaseLinks);
-            _callGetGlobalSiteTag = clientHelper.BuildApiCall<GetGlobalSiteTagRequest, GlobalSiteTag>(grpcClient.GetGlobalSiteTagAsync, grpcClient.GetGlobalSiteTag, effectiveSettings.GetGlobalSiteTagSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetGlobalSiteTag = clientHelper.BuildApiCall<GetGlobalSiteTagRequest, GlobalSiteTag>("GetGlobalSiteTag", grpcClient.GetGlobalSiteTagAsync, grpcClient.GetGlobalSiteTag, effectiveSettings.GetGlobalSiteTagSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetGlobalSiteTag);
             Modify_GetGlobalSiteTagApiCall(ref _callGetGlobalSiteTag);
-            _callCreateGoogleAdsLink = clientHelper.BuildApiCall<CreateGoogleAdsLinkRequest, GoogleAdsLink>(grpcClient.CreateGoogleAdsLinkAsync, grpcClient.CreateGoogleAdsLink, effectiveSettings.CreateGoogleAdsLinkSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateGoogleAdsLink = clientHelper.BuildApiCall<CreateGoogleAdsLinkRequest, GoogleAdsLink>("CreateGoogleAdsLink", grpcClient.CreateGoogleAdsLinkAsync, grpcClient.CreateGoogleAdsLink, effectiveSettings.CreateGoogleAdsLinkSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateGoogleAdsLink);
             Modify_CreateGoogleAdsLinkApiCall(ref _callCreateGoogleAdsLink);
-            _callUpdateGoogleAdsLink = clientHelper.BuildApiCall<UpdateGoogleAdsLinkRequest, GoogleAdsLink>(grpcClient.UpdateGoogleAdsLinkAsync, grpcClient.UpdateGoogleAdsLink, effectiveSettings.UpdateGoogleAdsLinkSettings).WithGoogleRequestParam("google_ads_link.name", request => request.GoogleAdsLink?.Name);
+            _callUpdateGoogleAdsLink = clientHelper.BuildApiCall<UpdateGoogleAdsLinkRequest, GoogleAdsLink>("UpdateGoogleAdsLink", grpcClient.UpdateGoogleAdsLinkAsync, grpcClient.UpdateGoogleAdsLink, effectiveSettings.UpdateGoogleAdsLinkSettings).WithGoogleRequestParam("google_ads_link.name", request => request.GoogleAdsLink?.Name);
             Modify_ApiCall(ref _callUpdateGoogleAdsLink);
             Modify_UpdateGoogleAdsLinkApiCall(ref _callUpdateGoogleAdsLink);
-            _callDeleteGoogleAdsLink = clientHelper.BuildApiCall<DeleteGoogleAdsLinkRequest, wkt::Empty>(grpcClient.DeleteGoogleAdsLinkAsync, grpcClient.DeleteGoogleAdsLink, effectiveSettings.DeleteGoogleAdsLinkSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteGoogleAdsLink = clientHelper.BuildApiCall<DeleteGoogleAdsLinkRequest, wkt::Empty>("DeleteGoogleAdsLink", grpcClient.DeleteGoogleAdsLinkAsync, grpcClient.DeleteGoogleAdsLink, effectiveSettings.DeleteGoogleAdsLinkSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteGoogleAdsLink);
             Modify_DeleteGoogleAdsLinkApiCall(ref _callDeleteGoogleAdsLink);
-            _callListGoogleAdsLinks = clientHelper.BuildApiCall<ListGoogleAdsLinksRequest, ListGoogleAdsLinksResponse>(grpcClient.ListGoogleAdsLinksAsync, grpcClient.ListGoogleAdsLinks, effectiveSettings.ListGoogleAdsLinksSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListGoogleAdsLinks = clientHelper.BuildApiCall<ListGoogleAdsLinksRequest, ListGoogleAdsLinksResponse>("ListGoogleAdsLinks", grpcClient.ListGoogleAdsLinksAsync, grpcClient.ListGoogleAdsLinks, effectiveSettings.ListGoogleAdsLinksSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListGoogleAdsLinks);
             Modify_ListGoogleAdsLinksApiCall(ref _callListGoogleAdsLinks);
-            _callGetDataSharingSettings = clientHelper.BuildApiCall<GetDataSharingSettingsRequest, DataSharingSettings>(grpcClient.GetDataSharingSettingsAsync, grpcClient.GetDataSharingSettings, effectiveSettings.GetDataSharingSettingsSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetDataSharingSettings = clientHelper.BuildApiCall<GetDataSharingSettingsRequest, DataSharingSettings>("GetDataSharingSettings", grpcClient.GetDataSharingSettingsAsync, grpcClient.GetDataSharingSettings, effectiveSettings.GetDataSharingSettingsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDataSharingSettings);
             Modify_GetDataSharingSettingsApiCall(ref _callGetDataSharingSettings);
-            _callGetMeasurementProtocolSecret = clientHelper.BuildApiCall<GetMeasurementProtocolSecretRequest, MeasurementProtocolSecret>(grpcClient.GetMeasurementProtocolSecretAsync, grpcClient.GetMeasurementProtocolSecret, effectiveSettings.GetMeasurementProtocolSecretSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetMeasurementProtocolSecret = clientHelper.BuildApiCall<GetMeasurementProtocolSecretRequest, MeasurementProtocolSecret>("GetMeasurementProtocolSecret", grpcClient.GetMeasurementProtocolSecretAsync, grpcClient.GetMeasurementProtocolSecret, effectiveSettings.GetMeasurementProtocolSecretSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetMeasurementProtocolSecret);
             Modify_GetMeasurementProtocolSecretApiCall(ref _callGetMeasurementProtocolSecret);
-            _callListMeasurementProtocolSecrets = clientHelper.BuildApiCall<ListMeasurementProtocolSecretsRequest, ListMeasurementProtocolSecretsResponse>(grpcClient.ListMeasurementProtocolSecretsAsync, grpcClient.ListMeasurementProtocolSecrets, effectiveSettings.ListMeasurementProtocolSecretsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListMeasurementProtocolSecrets = clientHelper.BuildApiCall<ListMeasurementProtocolSecretsRequest, ListMeasurementProtocolSecretsResponse>("ListMeasurementProtocolSecrets", grpcClient.ListMeasurementProtocolSecretsAsync, grpcClient.ListMeasurementProtocolSecrets, effectiveSettings.ListMeasurementProtocolSecretsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListMeasurementProtocolSecrets);
             Modify_ListMeasurementProtocolSecretsApiCall(ref _callListMeasurementProtocolSecrets);
-            _callCreateMeasurementProtocolSecret = clientHelper.BuildApiCall<CreateMeasurementProtocolSecretRequest, MeasurementProtocolSecret>(grpcClient.CreateMeasurementProtocolSecretAsync, grpcClient.CreateMeasurementProtocolSecret, effectiveSettings.CreateMeasurementProtocolSecretSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateMeasurementProtocolSecret = clientHelper.BuildApiCall<CreateMeasurementProtocolSecretRequest, MeasurementProtocolSecret>("CreateMeasurementProtocolSecret", grpcClient.CreateMeasurementProtocolSecretAsync, grpcClient.CreateMeasurementProtocolSecret, effectiveSettings.CreateMeasurementProtocolSecretSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateMeasurementProtocolSecret);
             Modify_CreateMeasurementProtocolSecretApiCall(ref _callCreateMeasurementProtocolSecret);
-            _callDeleteMeasurementProtocolSecret = clientHelper.BuildApiCall<DeleteMeasurementProtocolSecretRequest, wkt::Empty>(grpcClient.DeleteMeasurementProtocolSecretAsync, grpcClient.DeleteMeasurementProtocolSecret, effectiveSettings.DeleteMeasurementProtocolSecretSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteMeasurementProtocolSecret = clientHelper.BuildApiCall<DeleteMeasurementProtocolSecretRequest, wkt::Empty>("DeleteMeasurementProtocolSecret", grpcClient.DeleteMeasurementProtocolSecretAsync, grpcClient.DeleteMeasurementProtocolSecret, effectiveSettings.DeleteMeasurementProtocolSecretSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteMeasurementProtocolSecret);
             Modify_DeleteMeasurementProtocolSecretApiCall(ref _callDeleteMeasurementProtocolSecret);
-            _callUpdateMeasurementProtocolSecret = clientHelper.BuildApiCall<UpdateMeasurementProtocolSecretRequest, MeasurementProtocolSecret>(grpcClient.UpdateMeasurementProtocolSecretAsync, grpcClient.UpdateMeasurementProtocolSecret, effectiveSettings.UpdateMeasurementProtocolSecretSettings).WithGoogleRequestParam("measurement_protocol_secret.name", request => request.MeasurementProtocolSecret?.Name);
+            _callUpdateMeasurementProtocolSecret = clientHelper.BuildApiCall<UpdateMeasurementProtocolSecretRequest, MeasurementProtocolSecret>("UpdateMeasurementProtocolSecret", grpcClient.UpdateMeasurementProtocolSecretAsync, grpcClient.UpdateMeasurementProtocolSecret, effectiveSettings.UpdateMeasurementProtocolSecretSettings).WithGoogleRequestParam("measurement_protocol_secret.name", request => request.MeasurementProtocolSecret?.Name);
             Modify_ApiCall(ref _callUpdateMeasurementProtocolSecret);
             Modify_UpdateMeasurementProtocolSecretApiCall(ref _callUpdateMeasurementProtocolSecret);
-            _callAcknowledgeUserDataCollection = clientHelper.BuildApiCall<AcknowledgeUserDataCollectionRequest, AcknowledgeUserDataCollectionResponse>(grpcClient.AcknowledgeUserDataCollectionAsync, grpcClient.AcknowledgeUserDataCollection, effectiveSettings.AcknowledgeUserDataCollectionSettings).WithGoogleRequestParam("property", request => request.Property);
+            _callAcknowledgeUserDataCollection = clientHelper.BuildApiCall<AcknowledgeUserDataCollectionRequest, AcknowledgeUserDataCollectionResponse>("AcknowledgeUserDataCollection", grpcClient.AcknowledgeUserDataCollectionAsync, grpcClient.AcknowledgeUserDataCollection, effectiveSettings.AcknowledgeUserDataCollectionSettings).WithGoogleRequestParam("property", request => request.Property);
             Modify_ApiCall(ref _callAcknowledgeUserDataCollection);
             Modify_AcknowledgeUserDataCollectionApiCall(ref _callAcknowledgeUserDataCollection);
-            _callSearchChangeHistoryEvents = clientHelper.BuildApiCall<SearchChangeHistoryEventsRequest, SearchChangeHistoryEventsResponse>(grpcClient.SearchChangeHistoryEventsAsync, grpcClient.SearchChangeHistoryEvents, effectiveSettings.SearchChangeHistoryEventsSettings).WithGoogleRequestParam("account", request => request.Account);
+            _callSearchChangeHistoryEvents = clientHelper.BuildApiCall<SearchChangeHistoryEventsRequest, SearchChangeHistoryEventsResponse>("SearchChangeHistoryEvents", grpcClient.SearchChangeHistoryEventsAsync, grpcClient.SearchChangeHistoryEvents, effectiveSettings.SearchChangeHistoryEventsSettings).WithGoogleRequestParam("account", request => request.Account);
             Modify_ApiCall(ref _callSearchChangeHistoryEvents);
             Modify_SearchChangeHistoryEventsApiCall(ref _callSearchChangeHistoryEvents);
-            _callGetGoogleSignalsSettings = clientHelper.BuildApiCall<GetGoogleSignalsSettingsRequest, GoogleSignalsSettings>(grpcClient.GetGoogleSignalsSettingsAsync, grpcClient.GetGoogleSignalsSettings, effectiveSettings.GetGoogleSignalsSettingsSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetGoogleSignalsSettings = clientHelper.BuildApiCall<GetGoogleSignalsSettingsRequest, GoogleSignalsSettings>("GetGoogleSignalsSettings", grpcClient.GetGoogleSignalsSettingsAsync, grpcClient.GetGoogleSignalsSettings, effectiveSettings.GetGoogleSignalsSettingsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetGoogleSignalsSettings);
             Modify_GetGoogleSignalsSettingsApiCall(ref _callGetGoogleSignalsSettings);
-            _callUpdateGoogleSignalsSettings = clientHelper.BuildApiCall<UpdateGoogleSignalsSettingsRequest, GoogleSignalsSettings>(grpcClient.UpdateGoogleSignalsSettingsAsync, grpcClient.UpdateGoogleSignalsSettings, effectiveSettings.UpdateGoogleSignalsSettingsSettings).WithGoogleRequestParam("google_signals_settings.name", request => request.GoogleSignalsSettings?.Name);
+            _callUpdateGoogleSignalsSettings = clientHelper.BuildApiCall<UpdateGoogleSignalsSettingsRequest, GoogleSignalsSettings>("UpdateGoogleSignalsSettings", grpcClient.UpdateGoogleSignalsSettingsAsync, grpcClient.UpdateGoogleSignalsSettings, effectiveSettings.UpdateGoogleSignalsSettingsSettings).WithGoogleRequestParam("google_signals_settings.name", request => request.GoogleSignalsSettings?.Name);
             Modify_ApiCall(ref _callUpdateGoogleSignalsSettings);
             Modify_UpdateGoogleSignalsSettingsApiCall(ref _callUpdateGoogleSignalsSettings);
-            _callCreateConversionEvent = clientHelper.BuildApiCall<CreateConversionEventRequest, ConversionEvent>(grpcClient.CreateConversionEventAsync, grpcClient.CreateConversionEvent, effectiveSettings.CreateConversionEventSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateConversionEvent = clientHelper.BuildApiCall<CreateConversionEventRequest, ConversionEvent>("CreateConversionEvent", grpcClient.CreateConversionEventAsync, grpcClient.CreateConversionEvent, effectiveSettings.CreateConversionEventSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateConversionEvent);
             Modify_CreateConversionEventApiCall(ref _callCreateConversionEvent);
-            _callGetConversionEvent = clientHelper.BuildApiCall<GetConversionEventRequest, ConversionEvent>(grpcClient.GetConversionEventAsync, grpcClient.GetConversionEvent, effectiveSettings.GetConversionEventSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetConversionEvent = clientHelper.BuildApiCall<GetConversionEventRequest, ConversionEvent>("GetConversionEvent", grpcClient.GetConversionEventAsync, grpcClient.GetConversionEvent, effectiveSettings.GetConversionEventSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetConversionEvent);
             Modify_GetConversionEventApiCall(ref _callGetConversionEvent);
-            _callDeleteConversionEvent = clientHelper.BuildApiCall<DeleteConversionEventRequest, wkt::Empty>(grpcClient.DeleteConversionEventAsync, grpcClient.DeleteConversionEvent, effectiveSettings.DeleteConversionEventSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteConversionEvent = clientHelper.BuildApiCall<DeleteConversionEventRequest, wkt::Empty>("DeleteConversionEvent", grpcClient.DeleteConversionEventAsync, grpcClient.DeleteConversionEvent, effectiveSettings.DeleteConversionEventSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteConversionEvent);
             Modify_DeleteConversionEventApiCall(ref _callDeleteConversionEvent);
-            _callListConversionEvents = clientHelper.BuildApiCall<ListConversionEventsRequest, ListConversionEventsResponse>(grpcClient.ListConversionEventsAsync, grpcClient.ListConversionEvents, effectiveSettings.ListConversionEventsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListConversionEvents = clientHelper.BuildApiCall<ListConversionEventsRequest, ListConversionEventsResponse>("ListConversionEvents", grpcClient.ListConversionEventsAsync, grpcClient.ListConversionEvents, effectiveSettings.ListConversionEventsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListConversionEvents);
             Modify_ListConversionEventsApiCall(ref _callListConversionEvents);
-            _callGetDisplayVideo360AdvertiserLink = clientHelper.BuildApiCall<GetDisplayVideo360AdvertiserLinkRequest, DisplayVideo360AdvertiserLink>(grpcClient.GetDisplayVideo360AdvertiserLinkAsync, grpcClient.GetDisplayVideo360AdvertiserLink, effectiveSettings.GetDisplayVideo360AdvertiserLinkSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetDisplayVideo360AdvertiserLink = clientHelper.BuildApiCall<GetDisplayVideo360AdvertiserLinkRequest, DisplayVideo360AdvertiserLink>("GetDisplayVideo360AdvertiserLink", grpcClient.GetDisplayVideo360AdvertiserLinkAsync, grpcClient.GetDisplayVideo360AdvertiserLink, effectiveSettings.GetDisplayVideo360AdvertiserLinkSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDisplayVideo360AdvertiserLink);
             Modify_GetDisplayVideo360AdvertiserLinkApiCall(ref _callGetDisplayVideo360AdvertiserLink);
-            _callListDisplayVideo360AdvertiserLinks = clientHelper.BuildApiCall<ListDisplayVideo360AdvertiserLinksRequest, ListDisplayVideo360AdvertiserLinksResponse>(grpcClient.ListDisplayVideo360AdvertiserLinksAsync, grpcClient.ListDisplayVideo360AdvertiserLinks, effectiveSettings.ListDisplayVideo360AdvertiserLinksSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListDisplayVideo360AdvertiserLinks = clientHelper.BuildApiCall<ListDisplayVideo360AdvertiserLinksRequest, ListDisplayVideo360AdvertiserLinksResponse>("ListDisplayVideo360AdvertiserLinks", grpcClient.ListDisplayVideo360AdvertiserLinksAsync, grpcClient.ListDisplayVideo360AdvertiserLinks, effectiveSettings.ListDisplayVideo360AdvertiserLinksSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDisplayVideo360AdvertiserLinks);
             Modify_ListDisplayVideo360AdvertiserLinksApiCall(ref _callListDisplayVideo360AdvertiserLinks);
-            _callCreateDisplayVideo360AdvertiserLink = clientHelper.BuildApiCall<CreateDisplayVideo360AdvertiserLinkRequest, DisplayVideo360AdvertiserLink>(grpcClient.CreateDisplayVideo360AdvertiserLinkAsync, grpcClient.CreateDisplayVideo360AdvertiserLink, effectiveSettings.CreateDisplayVideo360AdvertiserLinkSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateDisplayVideo360AdvertiserLink = clientHelper.BuildApiCall<CreateDisplayVideo360AdvertiserLinkRequest, DisplayVideo360AdvertiserLink>("CreateDisplayVideo360AdvertiserLink", grpcClient.CreateDisplayVideo360AdvertiserLinkAsync, grpcClient.CreateDisplayVideo360AdvertiserLink, effectiveSettings.CreateDisplayVideo360AdvertiserLinkSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateDisplayVideo360AdvertiserLink);
             Modify_CreateDisplayVideo360AdvertiserLinkApiCall(ref _callCreateDisplayVideo360AdvertiserLink);
-            _callDeleteDisplayVideo360AdvertiserLink = clientHelper.BuildApiCall<DeleteDisplayVideo360AdvertiserLinkRequest, wkt::Empty>(grpcClient.DeleteDisplayVideo360AdvertiserLinkAsync, grpcClient.DeleteDisplayVideo360AdvertiserLink, effectiveSettings.DeleteDisplayVideo360AdvertiserLinkSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteDisplayVideo360AdvertiserLink = clientHelper.BuildApiCall<DeleteDisplayVideo360AdvertiserLinkRequest, wkt::Empty>("DeleteDisplayVideo360AdvertiserLink", grpcClient.DeleteDisplayVideo360AdvertiserLinkAsync, grpcClient.DeleteDisplayVideo360AdvertiserLink, effectiveSettings.DeleteDisplayVideo360AdvertiserLinkSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteDisplayVideo360AdvertiserLink);
             Modify_DeleteDisplayVideo360AdvertiserLinkApiCall(ref _callDeleteDisplayVideo360AdvertiserLink);
-            _callUpdateDisplayVideo360AdvertiserLink = clientHelper.BuildApiCall<UpdateDisplayVideo360AdvertiserLinkRequest, DisplayVideo360AdvertiserLink>(grpcClient.UpdateDisplayVideo360AdvertiserLinkAsync, grpcClient.UpdateDisplayVideo360AdvertiserLink, effectiveSettings.UpdateDisplayVideo360AdvertiserLinkSettings).WithGoogleRequestParam("display_video_360_advertiser_link.name", request => request.DisplayVideo360AdvertiserLink?.Name);
+            _callUpdateDisplayVideo360AdvertiserLink = clientHelper.BuildApiCall<UpdateDisplayVideo360AdvertiserLinkRequest, DisplayVideo360AdvertiserLink>("UpdateDisplayVideo360AdvertiserLink", grpcClient.UpdateDisplayVideo360AdvertiserLinkAsync, grpcClient.UpdateDisplayVideo360AdvertiserLink, effectiveSettings.UpdateDisplayVideo360AdvertiserLinkSettings).WithGoogleRequestParam("display_video_360_advertiser_link.name", request => request.DisplayVideo360AdvertiserLink?.Name);
             Modify_ApiCall(ref _callUpdateDisplayVideo360AdvertiserLink);
             Modify_UpdateDisplayVideo360AdvertiserLinkApiCall(ref _callUpdateDisplayVideo360AdvertiserLink);
-            _callGetDisplayVideo360AdvertiserLinkProposal = clientHelper.BuildApiCall<GetDisplayVideo360AdvertiserLinkProposalRequest, DisplayVideo360AdvertiserLinkProposal>(grpcClient.GetDisplayVideo360AdvertiserLinkProposalAsync, grpcClient.GetDisplayVideo360AdvertiserLinkProposal, effectiveSettings.GetDisplayVideo360AdvertiserLinkProposalSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetDisplayVideo360AdvertiserLinkProposal = clientHelper.BuildApiCall<GetDisplayVideo360AdvertiserLinkProposalRequest, DisplayVideo360AdvertiserLinkProposal>("GetDisplayVideo360AdvertiserLinkProposal", grpcClient.GetDisplayVideo360AdvertiserLinkProposalAsync, grpcClient.GetDisplayVideo360AdvertiserLinkProposal, effectiveSettings.GetDisplayVideo360AdvertiserLinkProposalSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDisplayVideo360AdvertiserLinkProposal);
             Modify_GetDisplayVideo360AdvertiserLinkProposalApiCall(ref _callGetDisplayVideo360AdvertiserLinkProposal);
-            _callListDisplayVideo360AdvertiserLinkProposals = clientHelper.BuildApiCall<ListDisplayVideo360AdvertiserLinkProposalsRequest, ListDisplayVideo360AdvertiserLinkProposalsResponse>(grpcClient.ListDisplayVideo360AdvertiserLinkProposalsAsync, grpcClient.ListDisplayVideo360AdvertiserLinkProposals, effectiveSettings.ListDisplayVideo360AdvertiserLinkProposalsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListDisplayVideo360AdvertiserLinkProposals = clientHelper.BuildApiCall<ListDisplayVideo360AdvertiserLinkProposalsRequest, ListDisplayVideo360AdvertiserLinkProposalsResponse>("ListDisplayVideo360AdvertiserLinkProposals", grpcClient.ListDisplayVideo360AdvertiserLinkProposalsAsync, grpcClient.ListDisplayVideo360AdvertiserLinkProposals, effectiveSettings.ListDisplayVideo360AdvertiserLinkProposalsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDisplayVideo360AdvertiserLinkProposals);
             Modify_ListDisplayVideo360AdvertiserLinkProposalsApiCall(ref _callListDisplayVideo360AdvertiserLinkProposals);
-            _callCreateDisplayVideo360AdvertiserLinkProposal = clientHelper.BuildApiCall<CreateDisplayVideo360AdvertiserLinkProposalRequest, DisplayVideo360AdvertiserLinkProposal>(grpcClient.CreateDisplayVideo360AdvertiserLinkProposalAsync, grpcClient.CreateDisplayVideo360AdvertiserLinkProposal, effectiveSettings.CreateDisplayVideo360AdvertiserLinkProposalSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateDisplayVideo360AdvertiserLinkProposal = clientHelper.BuildApiCall<CreateDisplayVideo360AdvertiserLinkProposalRequest, DisplayVideo360AdvertiserLinkProposal>("CreateDisplayVideo360AdvertiserLinkProposal", grpcClient.CreateDisplayVideo360AdvertiserLinkProposalAsync, grpcClient.CreateDisplayVideo360AdvertiserLinkProposal, effectiveSettings.CreateDisplayVideo360AdvertiserLinkProposalSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateDisplayVideo360AdvertiserLinkProposal);
             Modify_CreateDisplayVideo360AdvertiserLinkProposalApiCall(ref _callCreateDisplayVideo360AdvertiserLinkProposal);
-            _callDeleteDisplayVideo360AdvertiserLinkProposal = clientHelper.BuildApiCall<DeleteDisplayVideo360AdvertiserLinkProposalRequest, wkt::Empty>(grpcClient.DeleteDisplayVideo360AdvertiserLinkProposalAsync, grpcClient.DeleteDisplayVideo360AdvertiserLinkProposal, effectiveSettings.DeleteDisplayVideo360AdvertiserLinkProposalSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteDisplayVideo360AdvertiserLinkProposal = clientHelper.BuildApiCall<DeleteDisplayVideo360AdvertiserLinkProposalRequest, wkt::Empty>("DeleteDisplayVideo360AdvertiserLinkProposal", grpcClient.DeleteDisplayVideo360AdvertiserLinkProposalAsync, grpcClient.DeleteDisplayVideo360AdvertiserLinkProposal, effectiveSettings.DeleteDisplayVideo360AdvertiserLinkProposalSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteDisplayVideo360AdvertiserLinkProposal);
             Modify_DeleteDisplayVideo360AdvertiserLinkProposalApiCall(ref _callDeleteDisplayVideo360AdvertiserLinkProposal);
-            _callApproveDisplayVideo360AdvertiserLinkProposal = clientHelper.BuildApiCall<ApproveDisplayVideo360AdvertiserLinkProposalRequest, ApproveDisplayVideo360AdvertiserLinkProposalResponse>(grpcClient.ApproveDisplayVideo360AdvertiserLinkProposalAsync, grpcClient.ApproveDisplayVideo360AdvertiserLinkProposal, effectiveSettings.ApproveDisplayVideo360AdvertiserLinkProposalSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callApproveDisplayVideo360AdvertiserLinkProposal = clientHelper.BuildApiCall<ApproveDisplayVideo360AdvertiserLinkProposalRequest, ApproveDisplayVideo360AdvertiserLinkProposalResponse>("ApproveDisplayVideo360AdvertiserLinkProposal", grpcClient.ApproveDisplayVideo360AdvertiserLinkProposalAsync, grpcClient.ApproveDisplayVideo360AdvertiserLinkProposal, effectiveSettings.ApproveDisplayVideo360AdvertiserLinkProposalSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callApproveDisplayVideo360AdvertiserLinkProposal);
             Modify_ApproveDisplayVideo360AdvertiserLinkProposalApiCall(ref _callApproveDisplayVideo360AdvertiserLinkProposal);
-            _callCancelDisplayVideo360AdvertiserLinkProposal = clientHelper.BuildApiCall<CancelDisplayVideo360AdvertiserLinkProposalRequest, DisplayVideo360AdvertiserLinkProposal>(grpcClient.CancelDisplayVideo360AdvertiserLinkProposalAsync, grpcClient.CancelDisplayVideo360AdvertiserLinkProposal, effectiveSettings.CancelDisplayVideo360AdvertiserLinkProposalSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callCancelDisplayVideo360AdvertiserLinkProposal = clientHelper.BuildApiCall<CancelDisplayVideo360AdvertiserLinkProposalRequest, DisplayVideo360AdvertiserLinkProposal>("CancelDisplayVideo360AdvertiserLinkProposal", grpcClient.CancelDisplayVideo360AdvertiserLinkProposalAsync, grpcClient.CancelDisplayVideo360AdvertiserLinkProposal, effectiveSettings.CancelDisplayVideo360AdvertiserLinkProposalSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCancelDisplayVideo360AdvertiserLinkProposal);
             Modify_CancelDisplayVideo360AdvertiserLinkProposalApiCall(ref _callCancelDisplayVideo360AdvertiserLinkProposal);
-            _callCreateCustomDimension = clientHelper.BuildApiCall<CreateCustomDimensionRequest, CustomDimension>(grpcClient.CreateCustomDimensionAsync, grpcClient.CreateCustomDimension, effectiveSettings.CreateCustomDimensionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateCustomDimension = clientHelper.BuildApiCall<CreateCustomDimensionRequest, CustomDimension>("CreateCustomDimension", grpcClient.CreateCustomDimensionAsync, grpcClient.CreateCustomDimension, effectiveSettings.CreateCustomDimensionSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateCustomDimension);
             Modify_CreateCustomDimensionApiCall(ref _callCreateCustomDimension);
-            _callUpdateCustomDimension = clientHelper.BuildApiCall<UpdateCustomDimensionRequest, CustomDimension>(grpcClient.UpdateCustomDimensionAsync, grpcClient.UpdateCustomDimension, effectiveSettings.UpdateCustomDimensionSettings).WithGoogleRequestParam("custom_dimension.name", request => request.CustomDimension?.Name);
+            _callUpdateCustomDimension = clientHelper.BuildApiCall<UpdateCustomDimensionRequest, CustomDimension>("UpdateCustomDimension", grpcClient.UpdateCustomDimensionAsync, grpcClient.UpdateCustomDimension, effectiveSettings.UpdateCustomDimensionSettings).WithGoogleRequestParam("custom_dimension.name", request => request.CustomDimension?.Name);
             Modify_ApiCall(ref _callUpdateCustomDimension);
             Modify_UpdateCustomDimensionApiCall(ref _callUpdateCustomDimension);
-            _callListCustomDimensions = clientHelper.BuildApiCall<ListCustomDimensionsRequest, ListCustomDimensionsResponse>(grpcClient.ListCustomDimensionsAsync, grpcClient.ListCustomDimensions, effectiveSettings.ListCustomDimensionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListCustomDimensions = clientHelper.BuildApiCall<ListCustomDimensionsRequest, ListCustomDimensionsResponse>("ListCustomDimensions", grpcClient.ListCustomDimensionsAsync, grpcClient.ListCustomDimensions, effectiveSettings.ListCustomDimensionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListCustomDimensions);
             Modify_ListCustomDimensionsApiCall(ref _callListCustomDimensions);
-            _callArchiveCustomDimension = clientHelper.BuildApiCall<ArchiveCustomDimensionRequest, wkt::Empty>(grpcClient.ArchiveCustomDimensionAsync, grpcClient.ArchiveCustomDimension, effectiveSettings.ArchiveCustomDimensionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callArchiveCustomDimension = clientHelper.BuildApiCall<ArchiveCustomDimensionRequest, wkt::Empty>("ArchiveCustomDimension", grpcClient.ArchiveCustomDimensionAsync, grpcClient.ArchiveCustomDimension, effectiveSettings.ArchiveCustomDimensionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callArchiveCustomDimension);
             Modify_ArchiveCustomDimensionApiCall(ref _callArchiveCustomDimension);
-            _callGetCustomDimension = clientHelper.BuildApiCall<GetCustomDimensionRequest, CustomDimension>(grpcClient.GetCustomDimensionAsync, grpcClient.GetCustomDimension, effectiveSettings.GetCustomDimensionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetCustomDimension = clientHelper.BuildApiCall<GetCustomDimensionRequest, CustomDimension>("GetCustomDimension", grpcClient.GetCustomDimensionAsync, grpcClient.GetCustomDimension, effectiveSettings.GetCustomDimensionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetCustomDimension);
             Modify_GetCustomDimensionApiCall(ref _callGetCustomDimension);
-            _callCreateCustomMetric = clientHelper.BuildApiCall<CreateCustomMetricRequest, CustomMetric>(grpcClient.CreateCustomMetricAsync, grpcClient.CreateCustomMetric, effectiveSettings.CreateCustomMetricSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateCustomMetric = clientHelper.BuildApiCall<CreateCustomMetricRequest, CustomMetric>("CreateCustomMetric", grpcClient.CreateCustomMetricAsync, grpcClient.CreateCustomMetric, effectiveSettings.CreateCustomMetricSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateCustomMetric);
             Modify_CreateCustomMetricApiCall(ref _callCreateCustomMetric);
-            _callUpdateCustomMetric = clientHelper.BuildApiCall<UpdateCustomMetricRequest, CustomMetric>(grpcClient.UpdateCustomMetricAsync, grpcClient.UpdateCustomMetric, effectiveSettings.UpdateCustomMetricSettings).WithGoogleRequestParam("custom_metric.name", request => request.CustomMetric?.Name);
+            _callUpdateCustomMetric = clientHelper.BuildApiCall<UpdateCustomMetricRequest, CustomMetric>("UpdateCustomMetric", grpcClient.UpdateCustomMetricAsync, grpcClient.UpdateCustomMetric, effectiveSettings.UpdateCustomMetricSettings).WithGoogleRequestParam("custom_metric.name", request => request.CustomMetric?.Name);
             Modify_ApiCall(ref _callUpdateCustomMetric);
             Modify_UpdateCustomMetricApiCall(ref _callUpdateCustomMetric);
-            _callListCustomMetrics = clientHelper.BuildApiCall<ListCustomMetricsRequest, ListCustomMetricsResponse>(grpcClient.ListCustomMetricsAsync, grpcClient.ListCustomMetrics, effectiveSettings.ListCustomMetricsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListCustomMetrics = clientHelper.BuildApiCall<ListCustomMetricsRequest, ListCustomMetricsResponse>("ListCustomMetrics", grpcClient.ListCustomMetricsAsync, grpcClient.ListCustomMetrics, effectiveSettings.ListCustomMetricsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListCustomMetrics);
             Modify_ListCustomMetricsApiCall(ref _callListCustomMetrics);
-            _callArchiveCustomMetric = clientHelper.BuildApiCall<ArchiveCustomMetricRequest, wkt::Empty>(grpcClient.ArchiveCustomMetricAsync, grpcClient.ArchiveCustomMetric, effectiveSettings.ArchiveCustomMetricSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callArchiveCustomMetric = clientHelper.BuildApiCall<ArchiveCustomMetricRequest, wkt::Empty>("ArchiveCustomMetric", grpcClient.ArchiveCustomMetricAsync, grpcClient.ArchiveCustomMetric, effectiveSettings.ArchiveCustomMetricSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callArchiveCustomMetric);
             Modify_ArchiveCustomMetricApiCall(ref _callArchiveCustomMetric);
-            _callGetCustomMetric = clientHelper.BuildApiCall<GetCustomMetricRequest, CustomMetric>(grpcClient.GetCustomMetricAsync, grpcClient.GetCustomMetric, effectiveSettings.GetCustomMetricSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetCustomMetric = clientHelper.BuildApiCall<GetCustomMetricRequest, CustomMetric>("GetCustomMetric", grpcClient.GetCustomMetricAsync, grpcClient.GetCustomMetric, effectiveSettings.GetCustomMetricSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetCustomMetric);
             Modify_GetCustomMetricApiCall(ref _callGetCustomMetric);
-            _callGetDataRetentionSettings = clientHelper.BuildApiCall<GetDataRetentionSettingsRequest, DataRetentionSettings>(grpcClient.GetDataRetentionSettingsAsync, grpcClient.GetDataRetentionSettings, effectiveSettings.GetDataRetentionSettingsSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetDataRetentionSettings = clientHelper.BuildApiCall<GetDataRetentionSettingsRequest, DataRetentionSettings>("GetDataRetentionSettings", grpcClient.GetDataRetentionSettingsAsync, grpcClient.GetDataRetentionSettings, effectiveSettings.GetDataRetentionSettingsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDataRetentionSettings);
             Modify_GetDataRetentionSettingsApiCall(ref _callGetDataRetentionSettings);
-            _callUpdateDataRetentionSettings = clientHelper.BuildApiCall<UpdateDataRetentionSettingsRequest, DataRetentionSettings>(grpcClient.UpdateDataRetentionSettingsAsync, grpcClient.UpdateDataRetentionSettings, effectiveSettings.UpdateDataRetentionSettingsSettings).WithGoogleRequestParam("data_retention_settings.name", request => request.DataRetentionSettings?.Name);
+            _callUpdateDataRetentionSettings = clientHelper.BuildApiCall<UpdateDataRetentionSettingsRequest, DataRetentionSettings>("UpdateDataRetentionSettings", grpcClient.UpdateDataRetentionSettingsAsync, grpcClient.UpdateDataRetentionSettings, effectiveSettings.UpdateDataRetentionSettingsSettings).WithGoogleRequestParam("data_retention_settings.name", request => request.DataRetentionSettings?.Name);
             Modify_ApiCall(ref _callUpdateDataRetentionSettings);
             Modify_UpdateDataRetentionSettingsApiCall(ref _callUpdateDataRetentionSettings);
-            _callCreateDataStream = clientHelper.BuildApiCall<CreateDataStreamRequest, DataStream>(grpcClient.CreateDataStreamAsync, grpcClient.CreateDataStream, effectiveSettings.CreateDataStreamSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateDataStream = clientHelper.BuildApiCall<CreateDataStreamRequest, DataStream>("CreateDataStream", grpcClient.CreateDataStreamAsync, grpcClient.CreateDataStream, effectiveSettings.CreateDataStreamSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateDataStream);
             Modify_CreateDataStreamApiCall(ref _callCreateDataStream);
-            _callDeleteDataStream = clientHelper.BuildApiCall<DeleteDataStreamRequest, wkt::Empty>(grpcClient.DeleteDataStreamAsync, grpcClient.DeleteDataStream, effectiveSettings.DeleteDataStreamSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteDataStream = clientHelper.BuildApiCall<DeleteDataStreamRequest, wkt::Empty>("DeleteDataStream", grpcClient.DeleteDataStreamAsync, grpcClient.DeleteDataStream, effectiveSettings.DeleteDataStreamSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteDataStream);
             Modify_DeleteDataStreamApiCall(ref _callDeleteDataStream);
-            _callUpdateDataStream = clientHelper.BuildApiCall<UpdateDataStreamRequest, DataStream>(grpcClient.UpdateDataStreamAsync, grpcClient.UpdateDataStream, effectiveSettings.UpdateDataStreamSettings).WithGoogleRequestParam("data_stream.name", request => request.DataStream?.Name);
+            _callUpdateDataStream = clientHelper.BuildApiCall<UpdateDataStreamRequest, DataStream>("UpdateDataStream", grpcClient.UpdateDataStreamAsync, grpcClient.UpdateDataStream, effectiveSettings.UpdateDataStreamSettings).WithGoogleRequestParam("data_stream.name", request => request.DataStream?.Name);
             Modify_ApiCall(ref _callUpdateDataStream);
             Modify_UpdateDataStreamApiCall(ref _callUpdateDataStream);
-            _callListDataStreams = clientHelper.BuildApiCall<ListDataStreamsRequest, ListDataStreamsResponse>(grpcClient.ListDataStreamsAsync, grpcClient.ListDataStreams, effectiveSettings.ListDataStreamsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListDataStreams = clientHelper.BuildApiCall<ListDataStreamsRequest, ListDataStreamsResponse>("ListDataStreams", grpcClient.ListDataStreamsAsync, grpcClient.ListDataStreams, effectiveSettings.ListDataStreamsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDataStreams);
             Modify_ListDataStreamsApiCall(ref _callListDataStreams);
-            _callGetDataStream = clientHelper.BuildApiCall<GetDataStreamRequest, DataStream>(grpcClient.GetDataStreamAsync, grpcClient.GetDataStream, effectiveSettings.GetDataStreamSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetDataStream = clientHelper.BuildApiCall<GetDataStreamRequest, DataStream>("GetDataStream", grpcClient.GetDataStreamAsync, grpcClient.GetDataStream, effectiveSettings.GetDataStreamSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDataStream);
             Modify_GetDataStreamApiCall(ref _callGetDataStream);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

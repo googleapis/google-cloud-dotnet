@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -476,9 +476,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         public AzureClustersSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public AzureClustersClientBuilder()
+        public AzureClustersClientBuilder() : base(AzureClustersClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = AzureClustersClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref AzureClustersClient client);
@@ -505,29 +504,18 @@ namespace Google.Cloud.GkeMultiCloud.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return AzureClustersClient.Create(callInvoker, Settings);
+            return AzureClustersClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<AzureClustersClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return AzureClustersClient.Create(callInvoker, Settings);
+            return AzureClustersClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => AzureClustersClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => AzureClustersClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => AzureClustersClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>AzureClusters client wrapper, for convenient use.</summary>
@@ -555,19 +543,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(AzureClusters.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="AzureClustersClient"/> using the default credentials, endpoint and
@@ -594,8 +573,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="AzureClustersSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="AzureClustersClient"/>.</returns>
-        internal static AzureClustersClient Create(grpccore::CallInvoker callInvoker, AzureClustersSettings settings = null)
+        internal static AzureClustersClient Create(grpccore::CallInvoker callInvoker, AzureClustersSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -604,7 +584,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             AzureClusters.AzureClustersClient grpcClient = new AzureClusters.AzureClustersClient(callInvoker);
-            return new AzureClustersClientImpl(grpcClient, settings);
+            return new AzureClustersClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -3541,65 +3521,66 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="AzureClustersSettings"/> used within this client.</param>
-        public AzureClustersClientImpl(AzureClusters.AzureClustersClient grpcClient, AzureClustersSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public AzureClustersClientImpl(AzureClusters.AzureClustersClient grpcClient, AzureClustersSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             AzureClustersSettings effectiveSettings = settings ?? AzureClustersSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateAzureClientOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAzureClientOperationsSettings);
-            DeleteAzureClientOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAzureClientOperationsSettings);
-            CreateAzureClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAzureClusterOperationsSettings);
-            UpdateAzureClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAzureClusterOperationsSettings);
-            DeleteAzureClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAzureClusterOperationsSettings);
-            CreateAzureNodePoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAzureNodePoolOperationsSettings);
-            UpdateAzureNodePoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAzureNodePoolOperationsSettings);
-            DeleteAzureNodePoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAzureNodePoolOperationsSettings);
-            _callCreateAzureClient = clientHelper.BuildApiCall<CreateAzureClientRequest, lro::Operation>(grpcClient.CreateAzureClientAsync, grpcClient.CreateAzureClient, effectiveSettings.CreateAzureClientSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateAzureClientOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAzureClientOperationsSettings, logger);
+            DeleteAzureClientOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAzureClientOperationsSettings, logger);
+            CreateAzureClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAzureClusterOperationsSettings, logger);
+            UpdateAzureClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAzureClusterOperationsSettings, logger);
+            DeleteAzureClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAzureClusterOperationsSettings, logger);
+            CreateAzureNodePoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAzureNodePoolOperationsSettings, logger);
+            UpdateAzureNodePoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAzureNodePoolOperationsSettings, logger);
+            DeleteAzureNodePoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAzureNodePoolOperationsSettings, logger);
+            _callCreateAzureClient = clientHelper.BuildApiCall<CreateAzureClientRequest, lro::Operation>("CreateAzureClient", grpcClient.CreateAzureClientAsync, grpcClient.CreateAzureClient, effectiveSettings.CreateAzureClientSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateAzureClient);
             Modify_CreateAzureClientApiCall(ref _callCreateAzureClient);
-            _callGetAzureClient = clientHelper.BuildApiCall<GetAzureClientRequest, AzureClient>(grpcClient.GetAzureClientAsync, grpcClient.GetAzureClient, effectiveSettings.GetAzureClientSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetAzureClient = clientHelper.BuildApiCall<GetAzureClientRequest, AzureClient>("GetAzureClient", grpcClient.GetAzureClientAsync, grpcClient.GetAzureClient, effectiveSettings.GetAzureClientSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetAzureClient);
             Modify_GetAzureClientApiCall(ref _callGetAzureClient);
-            _callListAzureClients = clientHelper.BuildApiCall<ListAzureClientsRequest, ListAzureClientsResponse>(grpcClient.ListAzureClientsAsync, grpcClient.ListAzureClients, effectiveSettings.ListAzureClientsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListAzureClients = clientHelper.BuildApiCall<ListAzureClientsRequest, ListAzureClientsResponse>("ListAzureClients", grpcClient.ListAzureClientsAsync, grpcClient.ListAzureClients, effectiveSettings.ListAzureClientsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListAzureClients);
             Modify_ListAzureClientsApiCall(ref _callListAzureClients);
-            _callDeleteAzureClient = clientHelper.BuildApiCall<DeleteAzureClientRequest, lro::Operation>(grpcClient.DeleteAzureClientAsync, grpcClient.DeleteAzureClient, effectiveSettings.DeleteAzureClientSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteAzureClient = clientHelper.BuildApiCall<DeleteAzureClientRequest, lro::Operation>("DeleteAzureClient", grpcClient.DeleteAzureClientAsync, grpcClient.DeleteAzureClient, effectiveSettings.DeleteAzureClientSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteAzureClient);
             Modify_DeleteAzureClientApiCall(ref _callDeleteAzureClient);
-            _callCreateAzureCluster = clientHelper.BuildApiCall<CreateAzureClusterRequest, lro::Operation>(grpcClient.CreateAzureClusterAsync, grpcClient.CreateAzureCluster, effectiveSettings.CreateAzureClusterSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateAzureCluster = clientHelper.BuildApiCall<CreateAzureClusterRequest, lro::Operation>("CreateAzureCluster", grpcClient.CreateAzureClusterAsync, grpcClient.CreateAzureCluster, effectiveSettings.CreateAzureClusterSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateAzureCluster);
             Modify_CreateAzureClusterApiCall(ref _callCreateAzureCluster);
-            _callUpdateAzureCluster = clientHelper.BuildApiCall<UpdateAzureClusterRequest, lro::Operation>(grpcClient.UpdateAzureClusterAsync, grpcClient.UpdateAzureCluster, effectiveSettings.UpdateAzureClusterSettings).WithGoogleRequestParam("azure_cluster.name", request => request.AzureCluster?.Name);
+            _callUpdateAzureCluster = clientHelper.BuildApiCall<UpdateAzureClusterRequest, lro::Operation>("UpdateAzureCluster", grpcClient.UpdateAzureClusterAsync, grpcClient.UpdateAzureCluster, effectiveSettings.UpdateAzureClusterSettings).WithGoogleRequestParam("azure_cluster.name", request => request.AzureCluster?.Name);
             Modify_ApiCall(ref _callUpdateAzureCluster);
             Modify_UpdateAzureClusterApiCall(ref _callUpdateAzureCluster);
-            _callGetAzureCluster = clientHelper.BuildApiCall<GetAzureClusterRequest, AzureCluster>(grpcClient.GetAzureClusterAsync, grpcClient.GetAzureCluster, effectiveSettings.GetAzureClusterSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetAzureCluster = clientHelper.BuildApiCall<GetAzureClusterRequest, AzureCluster>("GetAzureCluster", grpcClient.GetAzureClusterAsync, grpcClient.GetAzureCluster, effectiveSettings.GetAzureClusterSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetAzureCluster);
             Modify_GetAzureClusterApiCall(ref _callGetAzureCluster);
-            _callListAzureClusters = clientHelper.BuildApiCall<ListAzureClustersRequest, ListAzureClustersResponse>(grpcClient.ListAzureClustersAsync, grpcClient.ListAzureClusters, effectiveSettings.ListAzureClustersSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListAzureClusters = clientHelper.BuildApiCall<ListAzureClustersRequest, ListAzureClustersResponse>("ListAzureClusters", grpcClient.ListAzureClustersAsync, grpcClient.ListAzureClusters, effectiveSettings.ListAzureClustersSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListAzureClusters);
             Modify_ListAzureClustersApiCall(ref _callListAzureClusters);
-            _callDeleteAzureCluster = clientHelper.BuildApiCall<DeleteAzureClusterRequest, lro::Operation>(grpcClient.DeleteAzureClusterAsync, grpcClient.DeleteAzureCluster, effectiveSettings.DeleteAzureClusterSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteAzureCluster = clientHelper.BuildApiCall<DeleteAzureClusterRequest, lro::Operation>("DeleteAzureCluster", grpcClient.DeleteAzureClusterAsync, grpcClient.DeleteAzureCluster, effectiveSettings.DeleteAzureClusterSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteAzureCluster);
             Modify_DeleteAzureClusterApiCall(ref _callDeleteAzureCluster);
-            _callGenerateAzureAccessToken = clientHelper.BuildApiCall<GenerateAzureAccessTokenRequest, GenerateAzureAccessTokenResponse>(grpcClient.GenerateAzureAccessTokenAsync, grpcClient.GenerateAzureAccessToken, effectiveSettings.GenerateAzureAccessTokenSettings).WithGoogleRequestParam("azure_cluster", request => request.AzureCluster);
+            _callGenerateAzureAccessToken = clientHelper.BuildApiCall<GenerateAzureAccessTokenRequest, GenerateAzureAccessTokenResponse>("GenerateAzureAccessToken", grpcClient.GenerateAzureAccessTokenAsync, grpcClient.GenerateAzureAccessToken, effectiveSettings.GenerateAzureAccessTokenSettings).WithGoogleRequestParam("azure_cluster", request => request.AzureCluster);
             Modify_ApiCall(ref _callGenerateAzureAccessToken);
             Modify_GenerateAzureAccessTokenApiCall(ref _callGenerateAzureAccessToken);
-            _callCreateAzureNodePool = clientHelper.BuildApiCall<CreateAzureNodePoolRequest, lro::Operation>(grpcClient.CreateAzureNodePoolAsync, grpcClient.CreateAzureNodePool, effectiveSettings.CreateAzureNodePoolSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateAzureNodePool = clientHelper.BuildApiCall<CreateAzureNodePoolRequest, lro::Operation>("CreateAzureNodePool", grpcClient.CreateAzureNodePoolAsync, grpcClient.CreateAzureNodePool, effectiveSettings.CreateAzureNodePoolSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateAzureNodePool);
             Modify_CreateAzureNodePoolApiCall(ref _callCreateAzureNodePool);
-            _callUpdateAzureNodePool = clientHelper.BuildApiCall<UpdateAzureNodePoolRequest, lro::Operation>(grpcClient.UpdateAzureNodePoolAsync, grpcClient.UpdateAzureNodePool, effectiveSettings.UpdateAzureNodePoolSettings).WithGoogleRequestParam("azure_node_pool.name", request => request.AzureNodePool?.Name);
+            _callUpdateAzureNodePool = clientHelper.BuildApiCall<UpdateAzureNodePoolRequest, lro::Operation>("UpdateAzureNodePool", grpcClient.UpdateAzureNodePoolAsync, grpcClient.UpdateAzureNodePool, effectiveSettings.UpdateAzureNodePoolSettings).WithGoogleRequestParam("azure_node_pool.name", request => request.AzureNodePool?.Name);
             Modify_ApiCall(ref _callUpdateAzureNodePool);
             Modify_UpdateAzureNodePoolApiCall(ref _callUpdateAzureNodePool);
-            _callGetAzureNodePool = clientHelper.BuildApiCall<GetAzureNodePoolRequest, AzureNodePool>(grpcClient.GetAzureNodePoolAsync, grpcClient.GetAzureNodePool, effectiveSettings.GetAzureNodePoolSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetAzureNodePool = clientHelper.BuildApiCall<GetAzureNodePoolRequest, AzureNodePool>("GetAzureNodePool", grpcClient.GetAzureNodePoolAsync, grpcClient.GetAzureNodePool, effectiveSettings.GetAzureNodePoolSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetAzureNodePool);
             Modify_GetAzureNodePoolApiCall(ref _callGetAzureNodePool);
-            _callListAzureNodePools = clientHelper.BuildApiCall<ListAzureNodePoolsRequest, ListAzureNodePoolsResponse>(grpcClient.ListAzureNodePoolsAsync, grpcClient.ListAzureNodePools, effectiveSettings.ListAzureNodePoolsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListAzureNodePools = clientHelper.BuildApiCall<ListAzureNodePoolsRequest, ListAzureNodePoolsResponse>("ListAzureNodePools", grpcClient.ListAzureNodePoolsAsync, grpcClient.ListAzureNodePools, effectiveSettings.ListAzureNodePoolsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListAzureNodePools);
             Modify_ListAzureNodePoolsApiCall(ref _callListAzureNodePools);
-            _callDeleteAzureNodePool = clientHelper.BuildApiCall<DeleteAzureNodePoolRequest, lro::Operation>(grpcClient.DeleteAzureNodePoolAsync, grpcClient.DeleteAzureNodePool, effectiveSettings.DeleteAzureNodePoolSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteAzureNodePool = clientHelper.BuildApiCall<DeleteAzureNodePoolRequest, lro::Operation>("DeleteAzureNodePool", grpcClient.DeleteAzureNodePoolAsync, grpcClient.DeleteAzureNodePool, effectiveSettings.DeleteAzureNodePoolSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteAzureNodePool);
             Modify_DeleteAzureNodePoolApiCall(ref _callDeleteAzureNodePool);
-            _callGetAzureServerConfig = clientHelper.BuildApiCall<GetAzureServerConfigRequest, AzureServerConfig>(grpcClient.GetAzureServerConfigAsync, grpcClient.GetAzureServerConfig, effectiveSettings.GetAzureServerConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetAzureServerConfig = clientHelper.BuildApiCall<GetAzureServerConfigRequest, AzureServerConfig>("GetAzureServerConfig", grpcClient.GetAzureServerConfigAsync, grpcClient.GetAzureServerConfig, effectiveSettings.GetAzureServerConfigSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetAzureServerConfig);
             Modify_GetAzureServerConfigApiCall(ref _callGetAzureServerConfig);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

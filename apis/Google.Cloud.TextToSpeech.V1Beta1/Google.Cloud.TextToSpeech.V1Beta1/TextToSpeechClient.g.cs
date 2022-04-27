@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -106,9 +106,8 @@ namespace Google.Cloud.TextToSpeech.V1Beta1
         public TextToSpeechSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public TextToSpeechClientBuilder()
+        public TextToSpeechClientBuilder() : base(TextToSpeechClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = TextToSpeechClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref TextToSpeechClient client);
@@ -135,29 +134,18 @@ namespace Google.Cloud.TextToSpeech.V1Beta1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return TextToSpeechClient.Create(callInvoker, Settings);
+            return TextToSpeechClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<TextToSpeechClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return TextToSpeechClient.Create(callInvoker, Settings);
+            return TextToSpeechClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => TextToSpeechClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => TextToSpeechClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => TextToSpeechClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>TextToSpeech client wrapper, for convenient use.</summary>
@@ -184,19 +172,10 @@ namespace Google.Cloud.TextToSpeech.V1Beta1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(TextToSpeech.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="TextToSpeechClient"/> using the default credentials, endpoint and
@@ -223,8 +202,9 @@ namespace Google.Cloud.TextToSpeech.V1Beta1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="TextToSpeechSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="TextToSpeechClient"/>.</returns>
-        internal static TextToSpeechClient Create(grpccore::CallInvoker callInvoker, TextToSpeechSettings settings = null)
+        internal static TextToSpeechClient Create(grpccore::CallInvoker callInvoker, TextToSpeechSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -233,7 +213,7 @@ namespace Google.Cloud.TextToSpeech.V1Beta1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             TextToSpeech.TextToSpeechClient grpcClient = new TextToSpeech.TextToSpeechClient(callInvoker);
-            return new TextToSpeechClientImpl(grpcClient, settings);
+            return new TextToSpeechClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -449,15 +429,16 @@ namespace Google.Cloud.TextToSpeech.V1Beta1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="TextToSpeechSettings"/> used within this client.</param>
-        public TextToSpeechClientImpl(TextToSpeech.TextToSpeechClient grpcClient, TextToSpeechSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public TextToSpeechClientImpl(TextToSpeech.TextToSpeechClient grpcClient, TextToSpeechSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             TextToSpeechSettings effectiveSettings = settings ?? TextToSpeechSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListVoices = clientHelper.BuildApiCall<ListVoicesRequest, ListVoicesResponse>(grpcClient.ListVoicesAsync, grpcClient.ListVoices, effectiveSettings.ListVoicesSettings);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callListVoices = clientHelper.BuildApiCall<ListVoicesRequest, ListVoicesResponse>("ListVoices", grpcClient.ListVoicesAsync, grpcClient.ListVoices, effectiveSettings.ListVoicesSettings);
             Modify_ApiCall(ref _callListVoices);
             Modify_ListVoicesApiCall(ref _callListVoices);
-            _callSynthesizeSpeech = clientHelper.BuildApiCall<SynthesizeSpeechRequest, SynthesizeSpeechResponse>(grpcClient.SynthesizeSpeechAsync, grpcClient.SynthesizeSpeech, effectiveSettings.SynthesizeSpeechSettings);
+            _callSynthesizeSpeech = clientHelper.BuildApiCall<SynthesizeSpeechRequest, SynthesizeSpeechResponse>("SynthesizeSpeech", grpcClient.SynthesizeSpeechAsync, grpcClient.SynthesizeSpeech, effectiveSettings.SynthesizeSpeechSettings);
             Modify_ApiCall(ref _callSynthesizeSpeech);
             Modify_SynthesizeSpeechApiCall(ref _callSynthesizeSpeech);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

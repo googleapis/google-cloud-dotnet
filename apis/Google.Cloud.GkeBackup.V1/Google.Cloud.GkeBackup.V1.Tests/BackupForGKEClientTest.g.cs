@@ -60,7 +60,7 @@ namespace Google.Cloud.GkeBackup.V1.Tests
                 ProtectedPodCount = -665447518,
             };
             mockGrpcClient.Setup(x => x.GetBackupPlan(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null);
+            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null, null);
             BackupPlan response = client.GetBackupPlan(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -98,7 +98,7 @@ namespace Google.Cloud.GkeBackup.V1.Tests
                 ProtectedPodCount = -665447518,
             };
             mockGrpcClient.Setup(x => x.GetBackupPlanAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BackupPlan>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null);
+            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null, null);
             BackupPlan responseCallSettings = await client.GetBackupPlanAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BackupPlan responseCancellationToken = await client.GetBackupPlanAsync(request, st::CancellationToken.None);
@@ -138,7 +138,7 @@ namespace Google.Cloud.GkeBackup.V1.Tests
                 ProtectedPodCount = -665447518,
             };
             mockGrpcClient.Setup(x => x.GetBackupPlan(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null);
+            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null, null);
             BackupPlan response = client.GetBackupPlan(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -176,7 +176,7 @@ namespace Google.Cloud.GkeBackup.V1.Tests
                 ProtectedPodCount = -665447518,
             };
             mockGrpcClient.Setup(x => x.GetBackupPlanAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BackupPlan>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null);
+            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null, null);
             BackupPlan responseCallSettings = await client.GetBackupPlanAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BackupPlan responseCancellationToken = await client.GetBackupPlanAsync(request.Name, st::CancellationToken.None);
@@ -216,7 +216,7 @@ namespace Google.Cloud.GkeBackup.V1.Tests
                 ProtectedPodCount = -665447518,
             };
             mockGrpcClient.Setup(x => x.GetBackupPlan(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null);
+            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null, null);
             BackupPlan response = client.GetBackupPlan(request.BackupPlanName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -254,7 +254,7 @@ namespace Google.Cloud.GkeBackup.V1.Tests
                 ProtectedPodCount = -665447518,
             };
             mockGrpcClient.Setup(x => x.GetBackupPlanAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BackupPlan>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null);
+            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null, null);
             BackupPlan responseCallSettings = await client.GetBackupPlanAsync(request.BackupPlanName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BackupPlan responseCancellationToken = await client.GetBackupPlanAsync(request.BackupPlanName, st::CancellationToken.None);
@@ -308,7 +308,7 @@ namespace Google.Cloud.GkeBackup.V1.Tests
                 ConfigBackupSizeBytes = 4446168126582654344L,
             };
             mockGrpcClient.Setup(x => x.GetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null);
+            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null, null);
             Backup response = client.GetBackup(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -360,7 +360,7 @@ namespace Google.Cloud.GkeBackup.V1.Tests
                 ConfigBackupSizeBytes = 4446168126582654344L,
             };
             mockGrpcClient.Setup(x => x.GetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null);
+            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null, null);
             Backup responseCallSettings = await client.GetBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Backup responseCancellationToken = await client.GetBackupAsync(request, st::CancellationToken.None);
@@ -414,7 +414,7 @@ namespace Google.Cloud.GkeBackup.V1.Tests
                 ConfigBackupSizeBytes = 4446168126582654344L,
             };
             mockGrpcClient.Setup(x => x.GetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null);
+            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null, null);
             Backup response = client.GetBackup(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -466,7 +466,7 @@ namespace Google.Cloud.GkeBackup.V1.Tests
                 ConfigBackupSizeBytes = 4446168126582654344L,
             };
             mockGrpcClient.Setup(x => x.GetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null);
+            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null, null);
             Backup responseCallSettings = await client.GetBackupAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Backup responseCancellationToken = await client.GetBackupAsync(request.Name, st::CancellationToken.None);
@@ -520,7 +520,7 @@ namespace Google.Cloud.GkeBackup.V1.Tests
                 ConfigBackupSizeBytes = 4446168126582654344L,
             };
             mockGrpcClient.Setup(x => x.GetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null);
+            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null, null);
             Backup response = client.GetBackup(request.BackupName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -572,7 +572,7 @@ namespace Google.Cloud.GkeBackup.V1.Tests
                 ConfigBackupSizeBytes = 4446168126582654344L,
             };
             mockGrpcClient.Setup(x => x.GetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null);
+            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null, null);
             Backup responseCallSettings = await client.GetBackupAsync(request.BackupName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Backup responseCancellationToken = await client.GetBackupAsync(request.BackupName, st::CancellationToken.None);
@@ -606,7 +606,7 @@ namespace Google.Cloud.GkeBackup.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetVolumeBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null);
+            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null, null);
             VolumeBackup response = client.GetVolumeBackup(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -638,7 +638,7 @@ namespace Google.Cloud.GkeBackup.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetVolumeBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<VolumeBackup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null);
+            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null, null);
             VolumeBackup responseCallSettings = await client.GetVolumeBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             VolumeBackup responseCancellationToken = await client.GetVolumeBackupAsync(request, st::CancellationToken.None);
@@ -672,7 +672,7 @@ namespace Google.Cloud.GkeBackup.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetVolumeBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null);
+            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null, null);
             VolumeBackup response = client.GetVolumeBackup(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -704,7 +704,7 @@ namespace Google.Cloud.GkeBackup.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetVolumeBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<VolumeBackup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null);
+            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null, null);
             VolumeBackup responseCallSettings = await client.GetVolumeBackupAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             VolumeBackup responseCancellationToken = await client.GetVolumeBackupAsync(request.Name, st::CancellationToken.None);
@@ -738,7 +738,7 @@ namespace Google.Cloud.GkeBackup.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetVolumeBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null);
+            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null, null);
             VolumeBackup response = client.GetVolumeBackup(request.VolumeBackupName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -770,7 +770,7 @@ namespace Google.Cloud.GkeBackup.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetVolumeBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<VolumeBackup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null);
+            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null, null);
             VolumeBackup responseCallSettings = await client.GetVolumeBackupAsync(request.VolumeBackupName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             VolumeBackup responseCancellationToken = await client.GetVolumeBackupAsync(request.VolumeBackupName, st::CancellationToken.None);
@@ -807,7 +807,7 @@ namespace Google.Cloud.GkeBackup.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetRestorePlan(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null);
+            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null, null);
             RestorePlan response = client.GetRestorePlan(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -842,7 +842,7 @@ namespace Google.Cloud.GkeBackup.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetRestorePlanAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RestorePlan>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null);
+            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null, null);
             RestorePlan responseCallSettings = await client.GetRestorePlanAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             RestorePlan responseCancellationToken = await client.GetRestorePlanAsync(request, st::CancellationToken.None);
@@ -879,7 +879,7 @@ namespace Google.Cloud.GkeBackup.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetRestorePlan(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null);
+            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null, null);
             RestorePlan response = client.GetRestorePlan(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -914,7 +914,7 @@ namespace Google.Cloud.GkeBackup.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetRestorePlanAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RestorePlan>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null);
+            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null, null);
             RestorePlan responseCallSettings = await client.GetRestorePlanAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             RestorePlan responseCancellationToken = await client.GetRestorePlanAsync(request.Name, st::CancellationToken.None);
@@ -951,7 +951,7 @@ namespace Google.Cloud.GkeBackup.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetRestorePlan(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null);
+            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null, null);
             RestorePlan response = client.GetRestorePlan(request.RestorePlanName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -986,7 +986,7 @@ namespace Google.Cloud.GkeBackup.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetRestorePlanAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RestorePlan>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null);
+            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null, null);
             RestorePlan responseCallSettings = await client.GetRestorePlanAsync(request.RestorePlanName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             RestorePlan responseCancellationToken = await client.GetRestorePlanAsync(request.RestorePlanName, st::CancellationToken.None);
@@ -1030,7 +1030,7 @@ namespace Google.Cloud.GkeBackup.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetRestore(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null);
+            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null, null);
             Restore response = client.GetRestore(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1072,7 +1072,7 @@ namespace Google.Cloud.GkeBackup.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetRestoreAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Restore>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null);
+            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null, null);
             Restore responseCallSettings = await client.GetRestoreAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Restore responseCancellationToken = await client.GetRestoreAsync(request, st::CancellationToken.None);
@@ -1116,7 +1116,7 @@ namespace Google.Cloud.GkeBackup.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetRestore(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null);
+            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null, null);
             Restore response = client.GetRestore(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1158,7 +1158,7 @@ namespace Google.Cloud.GkeBackup.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetRestoreAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Restore>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null);
+            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null, null);
             Restore responseCallSettings = await client.GetRestoreAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Restore responseCancellationToken = await client.GetRestoreAsync(request.Name, st::CancellationToken.None);
@@ -1202,7 +1202,7 @@ namespace Google.Cloud.GkeBackup.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetRestore(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null);
+            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null, null);
             Restore response = client.GetRestore(request.RestoreName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1244,7 +1244,7 @@ namespace Google.Cloud.GkeBackup.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetRestoreAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Restore>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null);
+            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null, null);
             Restore responseCallSettings = await client.GetRestoreAsync(request.RestoreName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Restore responseCancellationToken = await client.GetRestoreAsync(request.RestoreName, st::CancellationToken.None);
@@ -1277,7 +1277,7 @@ namespace Google.Cloud.GkeBackup.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetVolumeRestore(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null);
+            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null, null);
             VolumeRestore response = client.GetVolumeRestore(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1308,7 +1308,7 @@ namespace Google.Cloud.GkeBackup.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetVolumeRestoreAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<VolumeRestore>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null);
+            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null, null);
             VolumeRestore responseCallSettings = await client.GetVolumeRestoreAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             VolumeRestore responseCancellationToken = await client.GetVolumeRestoreAsync(request, st::CancellationToken.None);
@@ -1341,7 +1341,7 @@ namespace Google.Cloud.GkeBackup.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetVolumeRestore(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null);
+            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null, null);
             VolumeRestore response = client.GetVolumeRestore(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1372,7 +1372,7 @@ namespace Google.Cloud.GkeBackup.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetVolumeRestoreAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<VolumeRestore>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null);
+            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null, null);
             VolumeRestore responseCallSettings = await client.GetVolumeRestoreAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             VolumeRestore responseCancellationToken = await client.GetVolumeRestoreAsync(request.Name, st::CancellationToken.None);
@@ -1405,7 +1405,7 @@ namespace Google.Cloud.GkeBackup.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetVolumeRestore(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null);
+            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null, null);
             VolumeRestore response = client.GetVolumeRestore(request.VolumeRestoreName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1436,7 +1436,7 @@ namespace Google.Cloud.GkeBackup.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetVolumeRestoreAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<VolumeRestore>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null);
+            BackupForGKEClient client = new BackupForGKEClientImpl(mockGrpcClient.Object, null, null);
             VolumeRestore responseCallSettings = await client.GetVolumeRestoreAsync(request.VolumeRestoreName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             VolumeRestore responseCancellationToken = await client.GetVolumeRestoreAsync(request.VolumeRestoreName, st::CancellationToken.None);

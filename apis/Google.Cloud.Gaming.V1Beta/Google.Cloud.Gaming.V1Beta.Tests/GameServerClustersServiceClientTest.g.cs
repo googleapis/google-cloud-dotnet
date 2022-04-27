@@ -54,7 +54,7 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetGameServerCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GameServerClustersServiceClient client = new GameServerClustersServiceClientImpl(mockGrpcClient.Object, null);
+            GameServerClustersServiceClient client = new GameServerClustersServiceClientImpl(mockGrpcClient.Object, null, null);
             GameServerCluster response = client.GetGameServerCluster(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -86,7 +86,7 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetGameServerClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GameServerCluster>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GameServerClustersServiceClient client = new GameServerClustersServiceClientImpl(mockGrpcClient.Object, null);
+            GameServerClustersServiceClient client = new GameServerClustersServiceClientImpl(mockGrpcClient.Object, null, null);
             GameServerCluster responseCallSettings = await client.GetGameServerClusterAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GameServerCluster responseCancellationToken = await client.GetGameServerClusterAsync(request, st::CancellationToken.None);
@@ -120,7 +120,7 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetGameServerCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GameServerClustersServiceClient client = new GameServerClustersServiceClientImpl(mockGrpcClient.Object, null);
+            GameServerClustersServiceClient client = new GameServerClustersServiceClientImpl(mockGrpcClient.Object, null, null);
             GameServerCluster response = client.GetGameServerCluster(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -152,7 +152,7 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetGameServerClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GameServerCluster>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GameServerClustersServiceClient client = new GameServerClustersServiceClientImpl(mockGrpcClient.Object, null);
+            GameServerClustersServiceClient client = new GameServerClustersServiceClientImpl(mockGrpcClient.Object, null, null);
             GameServerCluster responseCallSettings = await client.GetGameServerClusterAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GameServerCluster responseCancellationToken = await client.GetGameServerClusterAsync(request.Name, st::CancellationToken.None);
@@ -186,7 +186,7 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetGameServerCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GameServerClustersServiceClient client = new GameServerClustersServiceClientImpl(mockGrpcClient.Object, null);
+            GameServerClustersServiceClient client = new GameServerClustersServiceClientImpl(mockGrpcClient.Object, null, null);
             GameServerCluster response = client.GetGameServerCluster(request.GameServerClusterName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -218,7 +218,7 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetGameServerClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GameServerCluster>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GameServerClustersServiceClient client = new GameServerClustersServiceClientImpl(mockGrpcClient.Object, null);
+            GameServerClustersServiceClient client = new GameServerClustersServiceClientImpl(mockGrpcClient.Object, null, null);
             GameServerCluster responseCallSettings = await client.GetGameServerClusterAsync(request.GameServerClusterName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GameServerCluster responseCancellationToken = await client.GetGameServerClusterAsync(request.GameServerClusterName, st::CancellationToken.None);
@@ -244,7 +244,7 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
                 TargetState = new TargetState(),
             };
             mockGrpcClient.Setup(x => x.PreviewCreateGameServerCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GameServerClustersServiceClient client = new GameServerClustersServiceClientImpl(mockGrpcClient.Object, null);
+            GameServerClustersServiceClient client = new GameServerClustersServiceClientImpl(mockGrpcClient.Object, null, null);
             PreviewCreateGameServerClusterResponse response = client.PreviewCreateGameServerCluster(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -268,7 +268,7 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
                 TargetState = new TargetState(),
             };
             mockGrpcClient.Setup(x => x.PreviewCreateGameServerClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PreviewCreateGameServerClusterResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GameServerClustersServiceClient client = new GameServerClustersServiceClientImpl(mockGrpcClient.Object, null);
+            GameServerClustersServiceClient client = new GameServerClustersServiceClientImpl(mockGrpcClient.Object, null, null);
             PreviewCreateGameServerClusterResponse responseCallSettings = await client.PreviewCreateGameServerClusterAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PreviewCreateGameServerClusterResponse responseCancellationToken = await client.PreviewCreateGameServerClusterAsync(request, st::CancellationToken.None);
@@ -292,7 +292,7 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
                 TargetState = new TargetState(),
             };
             mockGrpcClient.Setup(x => x.PreviewDeleteGameServerCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GameServerClustersServiceClient client = new GameServerClustersServiceClientImpl(mockGrpcClient.Object, null);
+            GameServerClustersServiceClient client = new GameServerClustersServiceClientImpl(mockGrpcClient.Object, null, null);
             PreviewDeleteGameServerClusterResponse response = client.PreviewDeleteGameServerCluster(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -314,7 +314,7 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
                 TargetState = new TargetState(),
             };
             mockGrpcClient.Setup(x => x.PreviewDeleteGameServerClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PreviewDeleteGameServerClusterResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GameServerClustersServiceClient client = new GameServerClustersServiceClientImpl(mockGrpcClient.Object, null);
+            GameServerClustersServiceClient client = new GameServerClustersServiceClientImpl(mockGrpcClient.Object, null, null);
             PreviewDeleteGameServerClusterResponse responseCallSettings = await client.PreviewDeleteGameServerClusterAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PreviewDeleteGameServerClusterResponse responseCancellationToken = await client.PreviewDeleteGameServerClusterAsync(request, st::CancellationToken.None);
@@ -339,7 +339,7 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
                 TargetState = new TargetState(),
             };
             mockGrpcClient.Setup(x => x.PreviewUpdateGameServerCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GameServerClustersServiceClient client = new GameServerClustersServiceClientImpl(mockGrpcClient.Object, null);
+            GameServerClustersServiceClient client = new GameServerClustersServiceClientImpl(mockGrpcClient.Object, null, null);
             PreviewUpdateGameServerClusterResponse response = client.PreviewUpdateGameServerCluster(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -362,7 +362,7 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
                 TargetState = new TargetState(),
             };
             mockGrpcClient.Setup(x => x.PreviewUpdateGameServerClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PreviewUpdateGameServerClusterResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GameServerClustersServiceClient client = new GameServerClustersServiceClientImpl(mockGrpcClient.Object, null);
+            GameServerClustersServiceClient client = new GameServerClustersServiceClientImpl(mockGrpcClient.Object, null, null);
             PreviewUpdateGameServerClusterResponse responseCallSettings = await client.PreviewUpdateGameServerClusterAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PreviewUpdateGameServerClusterResponse responseCancellationToken = await client.PreviewUpdateGameServerClusterAsync(request, st::CancellationToken.None);

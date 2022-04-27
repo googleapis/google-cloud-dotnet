@@ -61,7 +61,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RoutersClient client = new RoutersClientImpl(mockGrpcClient.Object, null);
+            RoutersClient client = new RoutersClientImpl(mockGrpcClient.Object, null, null);
             Router response = client.Get(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -101,7 +101,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Router>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RoutersClient client = new RoutersClientImpl(mockGrpcClient.Object, null);
+            RoutersClient client = new RoutersClientImpl(mockGrpcClient.Object, null, null);
             Router responseCallSettings = await client.GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Router responseCancellationToken = await client.GetAsync(request, st::CancellationToken.None);
@@ -143,7 +143,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RoutersClient client = new RoutersClientImpl(mockGrpcClient.Object, null);
+            RoutersClient client = new RoutersClientImpl(mockGrpcClient.Object, null, null);
             Router response = client.Get(request.Project, request.Region, request.Router);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -183,7 +183,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Router>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RoutersClient client = new RoutersClientImpl(mockGrpcClient.Object, null);
+            RoutersClient client = new RoutersClientImpl(mockGrpcClient.Object, null, null);
             Router responseCallSettings = await client.GetAsync(request.Project, request.Region, request.Router, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Router responseCancellationToken = await client.GetAsync(request.Project, request.Region, request.Router, st::CancellationToken.None);
@@ -208,7 +208,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Result = new RouterStatus(),
             };
             mockGrpcClient.Setup(x => x.GetRouterStatus(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RoutersClient client = new RoutersClientImpl(mockGrpcClient.Object, null);
+            RoutersClient client = new RoutersClientImpl(mockGrpcClient.Object, null, null);
             RouterStatusResponse response = client.GetRouterStatus(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -231,7 +231,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Result = new RouterStatus(),
             };
             mockGrpcClient.Setup(x => x.GetRouterStatusAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RouterStatusResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RoutersClient client = new RoutersClientImpl(mockGrpcClient.Object, null);
+            RoutersClient client = new RoutersClientImpl(mockGrpcClient.Object, null, null);
             RouterStatusResponse responseCallSettings = await client.GetRouterStatusAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             RouterStatusResponse responseCancellationToken = await client.GetRouterStatusAsync(request, st::CancellationToken.None);
@@ -256,7 +256,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Result = new RouterStatus(),
             };
             mockGrpcClient.Setup(x => x.GetRouterStatus(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RoutersClient client = new RoutersClientImpl(mockGrpcClient.Object, null);
+            RoutersClient client = new RoutersClientImpl(mockGrpcClient.Object, null, null);
             RouterStatusResponse response = client.GetRouterStatus(request.Project, request.Region, request.Router);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -279,7 +279,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Result = new RouterStatus(),
             };
             mockGrpcClient.Setup(x => x.GetRouterStatusAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RouterStatusResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RoutersClient client = new RoutersClientImpl(mockGrpcClient.Object, null);
+            RoutersClient client = new RoutersClientImpl(mockGrpcClient.Object, null, null);
             RouterStatusResponse responseCallSettings = await client.GetRouterStatusAsync(request.Project, request.Region, request.Router, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             RouterStatusResponse responseCancellationToken = await client.GetRouterStatusAsync(request.Project, request.Region, request.Router, st::CancellationToken.None);
@@ -304,7 +304,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Resource = new Router(),
             };
             mockGrpcClient.Setup(x => x.Preview(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RoutersClient client = new RoutersClientImpl(mockGrpcClient.Object, null);
+            RoutersClient client = new RoutersClientImpl(mockGrpcClient.Object, null, null);
             RoutersPreviewResponse response = client.Preview(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -327,7 +327,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Resource = new Router(),
             };
             mockGrpcClient.Setup(x => x.PreviewAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RoutersPreviewResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RoutersClient client = new RoutersClientImpl(mockGrpcClient.Object, null);
+            RoutersClient client = new RoutersClientImpl(mockGrpcClient.Object, null, null);
             RoutersPreviewResponse responseCallSettings = await client.PreviewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             RoutersPreviewResponse responseCancellationToken = await client.PreviewAsync(request, st::CancellationToken.None);
@@ -352,7 +352,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Resource = new Router(),
             };
             mockGrpcClient.Setup(x => x.Preview(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RoutersClient client = new RoutersClientImpl(mockGrpcClient.Object, null);
+            RoutersClient client = new RoutersClientImpl(mockGrpcClient.Object, null, null);
             RoutersPreviewResponse response = client.Preview(request.Project, request.Region, request.Router, request.RouterResource);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -375,7 +375,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Resource = new Router(),
             };
             mockGrpcClient.Setup(x => x.PreviewAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RoutersPreviewResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RoutersClient client = new RoutersClientImpl(mockGrpcClient.Object, null);
+            RoutersClient client = new RoutersClientImpl(mockGrpcClient.Object, null, null);
             RoutersPreviewResponse responseCallSettings = await client.PreviewAsync(request.Project, request.Region, request.Router, request.RouterResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             RoutersPreviewResponse responseCancellationToken = await client.PreviewAsync(request.Project, request.Region, request.Router, request.RouterResource, st::CancellationToken.None);

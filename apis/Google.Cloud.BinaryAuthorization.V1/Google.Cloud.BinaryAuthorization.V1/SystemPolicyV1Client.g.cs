@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -76,9 +76,8 @@ namespace Google.Cloud.BinaryAuthorization.V1
         public SystemPolicyV1Settings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public SystemPolicyV1ClientBuilder()
+        public SystemPolicyV1ClientBuilder() : base(SystemPolicyV1Client.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = SystemPolicyV1Client.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref SystemPolicyV1Client client);
@@ -105,29 +104,18 @@ namespace Google.Cloud.BinaryAuthorization.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return SystemPolicyV1Client.Create(callInvoker, Settings);
+            return SystemPolicyV1Client.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<SystemPolicyV1Client> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return SystemPolicyV1Client.Create(callInvoker, Settings);
+            return SystemPolicyV1Client.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => SystemPolicyV1Client.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => SystemPolicyV1Client.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => SystemPolicyV1Client.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>SystemPolicyV1 client wrapper, for convenient use.</summary>
@@ -154,19 +142,10 @@ namespace Google.Cloud.BinaryAuthorization.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(SystemPolicyV1.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="SystemPolicyV1Client"/> using the default credentials, endpoint and
@@ -193,8 +172,9 @@ namespace Google.Cloud.BinaryAuthorization.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="SystemPolicyV1Settings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="SystemPolicyV1Client"/>.</returns>
-        internal static SystemPolicyV1Client Create(grpccore::CallInvoker callInvoker, SystemPolicyV1Settings settings = null)
+        internal static SystemPolicyV1Client Create(grpccore::CallInvoker callInvoker, SystemPolicyV1Settings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -203,7 +183,7 @@ namespace Google.Cloud.BinaryAuthorization.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             SystemPolicyV1.SystemPolicyV1Client grpcClient = new SystemPolicyV1.SystemPolicyV1Client(callInvoker);
-            return new SystemPolicyV1ClientImpl(grpcClient, settings);
+            return new SystemPolicyV1ClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -347,12 +327,13 @@ namespace Google.Cloud.BinaryAuthorization.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="SystemPolicyV1Settings"/> used within this client.</param>
-        public SystemPolicyV1ClientImpl(SystemPolicyV1.SystemPolicyV1Client grpcClient, SystemPolicyV1Settings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public SystemPolicyV1ClientImpl(SystemPolicyV1.SystemPolicyV1Client grpcClient, SystemPolicyV1Settings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             SystemPolicyV1Settings effectiveSettings = settings ?? SystemPolicyV1Settings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callGetSystemPolicy = clientHelper.BuildApiCall<GetSystemPolicyRequest, Policy>(grpcClient.GetSystemPolicyAsync, grpcClient.GetSystemPolicy, effectiveSettings.GetSystemPolicySettings).WithGoogleRequestParam("name", request => request.Name);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callGetSystemPolicy = clientHelper.BuildApiCall<GetSystemPolicyRequest, Policy>("GetSystemPolicy", grpcClient.GetSystemPolicyAsync, grpcClient.GetSystemPolicy, effectiveSettings.GetSystemPolicySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetSystemPolicy);
             Modify_GetSystemPolicyApiCall(ref _callGetSystemPolicy);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

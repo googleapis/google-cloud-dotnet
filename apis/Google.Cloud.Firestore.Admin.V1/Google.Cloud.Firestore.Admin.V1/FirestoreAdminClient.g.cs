@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -363,9 +363,8 @@ namespace Google.Cloud.Firestore.Admin.V1
         public FirestoreAdminSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public FirestoreAdminClientBuilder()
+        public FirestoreAdminClientBuilder() : base(FirestoreAdminClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = FirestoreAdminClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref FirestoreAdminClient client);
@@ -392,29 +391,18 @@ namespace Google.Cloud.Firestore.Admin.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return FirestoreAdminClient.Create(callInvoker, Settings);
+            return FirestoreAdminClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<FirestoreAdminClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return FirestoreAdminClient.Create(callInvoker, Settings);
+            return FirestoreAdminClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => FirestoreAdminClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => FirestoreAdminClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => FirestoreAdminClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>FirestoreAdmin client wrapper, for convenient use.</summary>
@@ -470,19 +458,10 @@ namespace Google.Cloud.Firestore.Admin.V1
             "https://www.googleapis.com/auth/datastore",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(FirestoreAdmin.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="FirestoreAdminClient"/> using the default credentials, endpoint and
@@ -509,8 +488,9 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="FirestoreAdminSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="FirestoreAdminClient"/>.</returns>
-        internal static FirestoreAdminClient Create(grpccore::CallInvoker callInvoker, FirestoreAdminSettings settings = null)
+        internal static FirestoreAdminClient Create(grpccore::CallInvoker callInvoker, FirestoreAdminSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -519,7 +499,7 @@ namespace Google.Cloud.Firestore.Admin.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             FirestoreAdmin.FirestoreAdminClient grpcClient = new FirestoreAdmin.FirestoreAdminClient(callInvoker);
-            return new FirestoreAdminClientImpl(grpcClient, settings);
+            return new FirestoreAdminClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -2266,50 +2246,51 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="FirestoreAdminSettings"/> used within this client.</param>
-        public FirestoreAdminClientImpl(FirestoreAdmin.FirestoreAdminClient grpcClient, FirestoreAdminSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public FirestoreAdminClientImpl(FirestoreAdmin.FirestoreAdminClient grpcClient, FirestoreAdminSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             FirestoreAdminSettings effectiveSettings = settings ?? FirestoreAdminSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateIndexOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateIndexOperationsSettings);
-            UpdateFieldOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateFieldOperationsSettings);
-            ExportDocumentsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportDocumentsOperationsSettings);
-            ImportDocumentsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportDocumentsOperationsSettings);
-            UpdateDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDatabaseOperationsSettings);
-            _callCreateIndex = clientHelper.BuildApiCall<CreateIndexRequest, lro::Operation>(grpcClient.CreateIndexAsync, grpcClient.CreateIndex, effectiveSettings.CreateIndexSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateIndexOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateIndexOperationsSettings, logger);
+            UpdateFieldOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateFieldOperationsSettings, logger);
+            ExportDocumentsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportDocumentsOperationsSettings, logger);
+            ImportDocumentsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportDocumentsOperationsSettings, logger);
+            UpdateDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDatabaseOperationsSettings, logger);
+            _callCreateIndex = clientHelper.BuildApiCall<CreateIndexRequest, lro::Operation>("CreateIndex", grpcClient.CreateIndexAsync, grpcClient.CreateIndex, effectiveSettings.CreateIndexSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateIndex);
             Modify_CreateIndexApiCall(ref _callCreateIndex);
-            _callListIndexes = clientHelper.BuildApiCall<ListIndexesRequest, ListIndexesResponse>(grpcClient.ListIndexesAsync, grpcClient.ListIndexes, effectiveSettings.ListIndexesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListIndexes = clientHelper.BuildApiCall<ListIndexesRequest, ListIndexesResponse>("ListIndexes", grpcClient.ListIndexesAsync, grpcClient.ListIndexes, effectiveSettings.ListIndexesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListIndexes);
             Modify_ListIndexesApiCall(ref _callListIndexes);
-            _callGetIndex = clientHelper.BuildApiCall<GetIndexRequest, Index>(grpcClient.GetIndexAsync, grpcClient.GetIndex, effectiveSettings.GetIndexSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetIndex = clientHelper.BuildApiCall<GetIndexRequest, Index>("GetIndex", grpcClient.GetIndexAsync, grpcClient.GetIndex, effectiveSettings.GetIndexSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetIndex);
             Modify_GetIndexApiCall(ref _callGetIndex);
-            _callDeleteIndex = clientHelper.BuildApiCall<DeleteIndexRequest, wkt::Empty>(grpcClient.DeleteIndexAsync, grpcClient.DeleteIndex, effectiveSettings.DeleteIndexSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteIndex = clientHelper.BuildApiCall<DeleteIndexRequest, wkt::Empty>("DeleteIndex", grpcClient.DeleteIndexAsync, grpcClient.DeleteIndex, effectiveSettings.DeleteIndexSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteIndex);
             Modify_DeleteIndexApiCall(ref _callDeleteIndex);
-            _callGetField = clientHelper.BuildApiCall<GetFieldRequest, Field>(grpcClient.GetFieldAsync, grpcClient.GetField, effectiveSettings.GetFieldSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetField = clientHelper.BuildApiCall<GetFieldRequest, Field>("GetField", grpcClient.GetFieldAsync, grpcClient.GetField, effectiveSettings.GetFieldSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetField);
             Modify_GetFieldApiCall(ref _callGetField);
-            _callUpdateField = clientHelper.BuildApiCall<UpdateFieldRequest, lro::Operation>(grpcClient.UpdateFieldAsync, grpcClient.UpdateField, effectiveSettings.UpdateFieldSettings).WithGoogleRequestParam("field.name", request => request.Field?.Name);
+            _callUpdateField = clientHelper.BuildApiCall<UpdateFieldRequest, lro::Operation>("UpdateField", grpcClient.UpdateFieldAsync, grpcClient.UpdateField, effectiveSettings.UpdateFieldSettings).WithGoogleRequestParam("field.name", request => request.Field?.Name);
             Modify_ApiCall(ref _callUpdateField);
             Modify_UpdateFieldApiCall(ref _callUpdateField);
-            _callListFields = clientHelper.BuildApiCall<ListFieldsRequest, ListFieldsResponse>(grpcClient.ListFieldsAsync, grpcClient.ListFields, effectiveSettings.ListFieldsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListFields = clientHelper.BuildApiCall<ListFieldsRequest, ListFieldsResponse>("ListFields", grpcClient.ListFieldsAsync, grpcClient.ListFields, effectiveSettings.ListFieldsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListFields);
             Modify_ListFieldsApiCall(ref _callListFields);
-            _callExportDocuments = clientHelper.BuildApiCall<ExportDocumentsRequest, lro::Operation>(grpcClient.ExportDocumentsAsync, grpcClient.ExportDocuments, effectiveSettings.ExportDocumentsSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callExportDocuments = clientHelper.BuildApiCall<ExportDocumentsRequest, lro::Operation>("ExportDocuments", grpcClient.ExportDocumentsAsync, grpcClient.ExportDocuments, effectiveSettings.ExportDocumentsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callExportDocuments);
             Modify_ExportDocumentsApiCall(ref _callExportDocuments);
-            _callImportDocuments = clientHelper.BuildApiCall<ImportDocumentsRequest, lro::Operation>(grpcClient.ImportDocumentsAsync, grpcClient.ImportDocuments, effectiveSettings.ImportDocumentsSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callImportDocuments = clientHelper.BuildApiCall<ImportDocumentsRequest, lro::Operation>("ImportDocuments", grpcClient.ImportDocumentsAsync, grpcClient.ImportDocuments, effectiveSettings.ImportDocumentsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callImportDocuments);
             Modify_ImportDocumentsApiCall(ref _callImportDocuments);
-            _callGetDatabase = clientHelper.BuildApiCall<GetDatabaseRequest, Database>(grpcClient.GetDatabaseAsync, grpcClient.GetDatabase, effectiveSettings.GetDatabaseSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetDatabase = clientHelper.BuildApiCall<GetDatabaseRequest, Database>("GetDatabase", grpcClient.GetDatabaseAsync, grpcClient.GetDatabase, effectiveSettings.GetDatabaseSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDatabase);
             Modify_GetDatabaseApiCall(ref _callGetDatabase);
-            _callListDatabases = clientHelper.BuildApiCall<ListDatabasesRequest, ListDatabasesResponse>(grpcClient.ListDatabasesAsync, grpcClient.ListDatabases, effectiveSettings.ListDatabasesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListDatabases = clientHelper.BuildApiCall<ListDatabasesRequest, ListDatabasesResponse>("ListDatabases", grpcClient.ListDatabasesAsync, grpcClient.ListDatabases, effectiveSettings.ListDatabasesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDatabases);
             Modify_ListDatabasesApiCall(ref _callListDatabases);
-            _callUpdateDatabase = clientHelper.BuildApiCall<UpdateDatabaseRequest, lro::Operation>(grpcClient.UpdateDatabaseAsync, grpcClient.UpdateDatabase, effectiveSettings.UpdateDatabaseSettings).WithGoogleRequestParam("database.name", request => request.Database?.Name);
+            _callUpdateDatabase = clientHelper.BuildApiCall<UpdateDatabaseRequest, lro::Operation>("UpdateDatabase", grpcClient.UpdateDatabaseAsync, grpcClient.UpdateDatabase, effectiveSettings.UpdateDatabaseSettings).WithGoogleRequestParam("database.name", request => request.Database?.Name);
             Modify_ApiCall(ref _callUpdateDatabase);
             Modify_UpdateDatabaseApiCall(ref _callUpdateDatabase);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

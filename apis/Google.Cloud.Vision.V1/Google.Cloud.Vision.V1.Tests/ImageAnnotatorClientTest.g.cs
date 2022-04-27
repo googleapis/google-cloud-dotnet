@@ -48,7 +48,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.BatchAnnotateImages(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ImageAnnotatorClient client = new ImageAnnotatorClientImpl(mockGrpcClient.Object, null);
+            ImageAnnotatorClient client = new ImageAnnotatorClientImpl(mockGrpcClient.Object, null, null);
             BatchAnnotateImagesResponse response = client.BatchAnnotateImages(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -75,7 +75,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.BatchAnnotateImagesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchAnnotateImagesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ImageAnnotatorClient client = new ImageAnnotatorClientImpl(mockGrpcClient.Object, null);
+            ImageAnnotatorClient client = new ImageAnnotatorClientImpl(mockGrpcClient.Object, null, null);
             BatchAnnotateImagesResponse responseCallSettings = await client.BatchAnnotateImagesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchAnnotateImagesResponse responseCancellationToken = await client.BatchAnnotateImagesAsync(request, st::CancellationToken.None);
@@ -103,7 +103,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.BatchAnnotateImages(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ImageAnnotatorClient client = new ImageAnnotatorClientImpl(mockGrpcClient.Object, null);
+            ImageAnnotatorClient client = new ImageAnnotatorClientImpl(mockGrpcClient.Object, null, null);
             BatchAnnotateImagesResponse response = client.BatchAnnotateImages(request.Requests);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -129,7 +129,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.BatchAnnotateImagesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchAnnotateImagesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ImageAnnotatorClient client = new ImageAnnotatorClientImpl(mockGrpcClient.Object, null);
+            ImageAnnotatorClient client = new ImageAnnotatorClientImpl(mockGrpcClient.Object, null, null);
             BatchAnnotateImagesResponse responseCallSettings = await client.BatchAnnotateImagesAsync(request.Requests, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchAnnotateImagesResponse responseCancellationToken = await client.BatchAnnotateImagesAsync(request.Requests, st::CancellationToken.None);
@@ -158,7 +158,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.BatchAnnotateFiles(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ImageAnnotatorClient client = new ImageAnnotatorClientImpl(mockGrpcClient.Object, null);
+            ImageAnnotatorClient client = new ImageAnnotatorClientImpl(mockGrpcClient.Object, null, null);
             BatchAnnotateFilesResponse response = client.BatchAnnotateFiles(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -185,7 +185,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.BatchAnnotateFilesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchAnnotateFilesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ImageAnnotatorClient client = new ImageAnnotatorClientImpl(mockGrpcClient.Object, null);
+            ImageAnnotatorClient client = new ImageAnnotatorClientImpl(mockGrpcClient.Object, null, null);
             BatchAnnotateFilesResponse responseCallSettings = await client.BatchAnnotateFilesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchAnnotateFilesResponse responseCancellationToken = await client.BatchAnnotateFilesAsync(request, st::CancellationToken.None);
@@ -213,7 +213,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.BatchAnnotateFiles(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ImageAnnotatorClient client = new ImageAnnotatorClientImpl(mockGrpcClient.Object, null);
+            ImageAnnotatorClient client = new ImageAnnotatorClientImpl(mockGrpcClient.Object, null, null);
             BatchAnnotateFilesResponse response = client.BatchAnnotateFiles(request.Requests);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -239,7 +239,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.BatchAnnotateFilesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchAnnotateFilesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ImageAnnotatorClient client = new ImageAnnotatorClientImpl(mockGrpcClient.Object, null);
+            ImageAnnotatorClient client = new ImageAnnotatorClientImpl(mockGrpcClient.Object, null, null);
             BatchAnnotateFilesResponse responseCallSettings = await client.BatchAnnotateFilesAsync(request.Requests, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchAnnotateFilesResponse responseCancellationToken = await client.BatchAnnotateFilesAsync(request.Requests, st::CancellationToken.None);

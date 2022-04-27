@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gcwcv = Google.Cloud.Workflows.Common.V1Beta;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -116,9 +116,8 @@ namespace Google.Cloud.Workflows.Executions.V1Beta
         public ExecutionsSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public ExecutionsClientBuilder()
+        public ExecutionsClientBuilder() : base(ExecutionsClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = ExecutionsClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref ExecutionsClient client);
@@ -145,29 +144,18 @@ namespace Google.Cloud.Workflows.Executions.V1Beta
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ExecutionsClient.Create(callInvoker, Settings);
+            return ExecutionsClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<ExecutionsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ExecutionsClient.Create(callInvoker, Settings);
+            return ExecutionsClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => ExecutionsClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => ExecutionsClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => ExecutionsClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>Executions client wrapper, for convenient use.</summary>
@@ -195,19 +183,10 @@ namespace Google.Cloud.Workflows.Executions.V1Beta
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Executions.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="ExecutionsClient"/> using the default credentials, endpoint and
@@ -234,8 +213,9 @@ namespace Google.Cloud.Workflows.Executions.V1Beta
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="ExecutionsSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="ExecutionsClient"/>.</returns>
-        internal static ExecutionsClient Create(grpccore::CallInvoker callInvoker, ExecutionsSettings settings = null)
+        internal static ExecutionsClient Create(grpccore::CallInvoker callInvoker, ExecutionsSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -244,7 +224,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             Executions.ExecutionsClient grpcClient = new Executions.ExecutionsClient(callInvoker);
-            return new ExecutionsClientImpl(grpcClient, settings);
+            return new ExecutionsClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -793,21 +773,22 @@ namespace Google.Cloud.Workflows.Executions.V1Beta
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="ExecutionsSettings"/> used within this client.</param>
-        public ExecutionsClientImpl(Executions.ExecutionsClient grpcClient, ExecutionsSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public ExecutionsClientImpl(Executions.ExecutionsClient grpcClient, ExecutionsSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             ExecutionsSettings effectiveSettings = settings ?? ExecutionsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListExecutions = clientHelper.BuildApiCall<ListExecutionsRequest, ListExecutionsResponse>(grpcClient.ListExecutionsAsync, grpcClient.ListExecutions, effectiveSettings.ListExecutionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callListExecutions = clientHelper.BuildApiCall<ListExecutionsRequest, ListExecutionsResponse>("ListExecutions", grpcClient.ListExecutionsAsync, grpcClient.ListExecutions, effectiveSettings.ListExecutionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListExecutions);
             Modify_ListExecutionsApiCall(ref _callListExecutions);
-            _callCreateExecution = clientHelper.BuildApiCall<CreateExecutionRequest, Execution>(grpcClient.CreateExecutionAsync, grpcClient.CreateExecution, effectiveSettings.CreateExecutionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateExecution = clientHelper.BuildApiCall<CreateExecutionRequest, Execution>("CreateExecution", grpcClient.CreateExecutionAsync, grpcClient.CreateExecution, effectiveSettings.CreateExecutionSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateExecution);
             Modify_CreateExecutionApiCall(ref _callCreateExecution);
-            _callGetExecution = clientHelper.BuildApiCall<GetExecutionRequest, Execution>(grpcClient.GetExecutionAsync, grpcClient.GetExecution, effectiveSettings.GetExecutionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetExecution = clientHelper.BuildApiCall<GetExecutionRequest, Execution>("GetExecution", grpcClient.GetExecutionAsync, grpcClient.GetExecution, effectiveSettings.GetExecutionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetExecution);
             Modify_GetExecutionApiCall(ref _callGetExecution);
-            _callCancelExecution = clientHelper.BuildApiCall<CancelExecutionRequest, Execution>(grpcClient.CancelExecutionAsync, grpcClient.CancelExecution, effectiveSettings.CancelExecutionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callCancelExecution = clientHelper.BuildApiCall<CancelExecutionRequest, Execution>("CancelExecution", grpcClient.CancelExecutionAsync, grpcClient.CancelExecution, effectiveSettings.CancelExecutionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCancelExecution);
             Modify_CancelExecutionApiCall(ref _callCancelExecution);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

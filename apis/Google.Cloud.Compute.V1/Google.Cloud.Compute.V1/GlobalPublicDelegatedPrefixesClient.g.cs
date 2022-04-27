@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -209,9 +209,8 @@ namespace Google.Cloud.Compute.V1
         public GlobalPublicDelegatedPrefixesSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public GlobalPublicDelegatedPrefixesClientBuilder()
+        public GlobalPublicDelegatedPrefixesClientBuilder() : base(GlobalPublicDelegatedPrefixesClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = GlobalPublicDelegatedPrefixesClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref GlobalPublicDelegatedPrefixesClient client);
@@ -238,30 +237,18 @@ namespace Google.Cloud.Compute.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return GlobalPublicDelegatedPrefixesClient.Create(callInvoker, Settings);
+            return GlobalPublicDelegatedPrefixesClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<GlobalPublicDelegatedPrefixesClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return GlobalPublicDelegatedPrefixesClient.Create(callInvoker, Settings);
+            return GlobalPublicDelegatedPrefixesClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => GlobalPublicDelegatedPrefixesClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() =>
-            GlobalPublicDelegatedPrefixesClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => GlobalPublicDelegatedPrefixesClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => ComputeRestAdapter.ComputeAdapter;
     }
 
     /// <summary>GlobalPublicDelegatedPrefixes client wrapper, for convenient use.</summary>
@@ -290,19 +277,10 @@ namespace Google.Cloud.Compute.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(GlobalPublicDelegatedPrefixes.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="GlobalPublicDelegatedPrefixesClient"/> using the default credentials,
@@ -333,8 +311,9 @@ namespace Google.Cloud.Compute.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="GlobalPublicDelegatedPrefixesSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="GlobalPublicDelegatedPrefixesClient"/>.</returns>
-        internal static GlobalPublicDelegatedPrefixesClient Create(grpccore::CallInvoker callInvoker, GlobalPublicDelegatedPrefixesSettings settings = null)
+        internal static GlobalPublicDelegatedPrefixesClient Create(grpccore::CallInvoker callInvoker, GlobalPublicDelegatedPrefixesSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -343,7 +322,7 @@ namespace Google.Cloud.Compute.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             GlobalPublicDelegatedPrefixes.GlobalPublicDelegatedPrefixesClient grpcClient = new GlobalPublicDelegatedPrefixes.GlobalPublicDelegatedPrefixesClient(callInvoker);
-            return new GlobalPublicDelegatedPrefixesClientImpl(grpcClient, settings);
+            return new GlobalPublicDelegatedPrefixesClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -850,27 +829,28 @@ namespace Google.Cloud.Compute.V1
         /// <param name="settings">
         /// The base <see cref="GlobalPublicDelegatedPrefixesSettings"/> used within this client.
         /// </param>
-        public GlobalPublicDelegatedPrefixesClientImpl(GlobalPublicDelegatedPrefixes.GlobalPublicDelegatedPrefixesClient grpcClient, GlobalPublicDelegatedPrefixesSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public GlobalPublicDelegatedPrefixesClientImpl(GlobalPublicDelegatedPrefixes.GlobalPublicDelegatedPrefixesClient grpcClient, GlobalPublicDelegatedPrefixesSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             GlobalPublicDelegatedPrefixesSettings effectiveSettings = settings ?? GlobalPublicDelegatedPrefixesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings);
-            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings);
-            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchOperationsSettings);
-            _callDelete = clientHelper.BuildApiCall<DeleteGlobalPublicDelegatedPrefixeRequest, Operation>(grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("public_delegated_prefix", request => request.PublicDelegatedPrefix);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings, logger);
+            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings, logger);
+            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchOperationsSettings, logger);
+            _callDelete = clientHelper.BuildApiCall<DeleteGlobalPublicDelegatedPrefixeRequest, Operation>("Delete", grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("public_delegated_prefix", request => request.PublicDelegatedPrefix);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);
-            _callGet = clientHelper.BuildApiCall<GetGlobalPublicDelegatedPrefixeRequest, PublicDelegatedPrefix>(grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("public_delegated_prefix", request => request.PublicDelegatedPrefix);
+            _callGet = clientHelper.BuildApiCall<GetGlobalPublicDelegatedPrefixeRequest, PublicDelegatedPrefix>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("public_delegated_prefix", request => request.PublicDelegatedPrefix);
             Modify_ApiCall(ref _callGet);
             Modify_GetApiCall(ref _callGet);
-            _callInsert = clientHelper.BuildApiCall<InsertGlobalPublicDelegatedPrefixeRequest, Operation>(grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callInsert = clientHelper.BuildApiCall<InsertGlobalPublicDelegatedPrefixeRequest, Operation>("Insert", grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callInsert);
             Modify_InsertApiCall(ref _callInsert);
-            _callList = clientHelper.BuildApiCall<ListGlobalPublicDelegatedPrefixesRequest, PublicDelegatedPrefixList>(grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callList = clientHelper.BuildApiCall<ListGlobalPublicDelegatedPrefixesRequest, PublicDelegatedPrefixList>("List", grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callList);
             Modify_ListApiCall(ref _callList);
-            _callPatch = clientHelper.BuildApiCall<PatchGlobalPublicDelegatedPrefixeRequest, Operation>(grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("public_delegated_prefix", request => request.PublicDelegatedPrefix);
+            _callPatch = clientHelper.BuildApiCall<PatchGlobalPublicDelegatedPrefixeRequest, Operation>("Patch", grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("public_delegated_prefix", request => request.PublicDelegatedPrefix);
             Modify_ApiCall(ref _callPatch);
             Modify_PatchApiCall(ref _callPatch);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

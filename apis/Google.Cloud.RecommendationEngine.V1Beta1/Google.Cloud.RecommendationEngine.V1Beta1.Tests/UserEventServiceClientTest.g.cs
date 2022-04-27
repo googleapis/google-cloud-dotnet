@@ -50,7 +50,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 EventSource = UserEvent.Types.EventSource.Automl,
             };
             mockGrpcClient.Setup(x => x.WriteUserEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null);
+            UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null, null);
             UserEvent response = client.WriteUserEvent(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -76,7 +76,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 EventSource = UserEvent.Types.EventSource.Automl,
             };
             mockGrpcClient.Setup(x => x.WriteUserEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UserEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null);
+            UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null, null);
             UserEvent responseCallSettings = await client.WriteUserEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UserEvent responseCancellationToken = await client.WriteUserEventAsync(request, st::CancellationToken.None);
@@ -104,7 +104,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 EventSource = UserEvent.Types.EventSource.Automl,
             };
             mockGrpcClient.Setup(x => x.WriteUserEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null);
+            UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null, null);
             UserEvent response = client.WriteUserEvent(request.Parent, request.UserEvent);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -130,7 +130,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 EventSource = UserEvent.Types.EventSource.Automl,
             };
             mockGrpcClient.Setup(x => x.WriteUserEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UserEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null);
+            UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null, null);
             UserEvent responseCallSettings = await client.WriteUserEventAsync(request.Parent, request.UserEvent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UserEvent responseCancellationToken = await client.WriteUserEventAsync(request.Parent, request.UserEvent, st::CancellationToken.None);
@@ -158,7 +158,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 EventSource = UserEvent.Types.EventSource.Automl,
             };
             mockGrpcClient.Setup(x => x.WriteUserEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null);
+            UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null, null);
             UserEvent response = client.WriteUserEvent(request.ParentAsEventStoreName, request.UserEvent);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -184,7 +184,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 EventSource = UserEvent.Types.EventSource.Automl,
             };
             mockGrpcClient.Setup(x => x.WriteUserEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UserEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null);
+            UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null, null);
             UserEvent responseCallSettings = await client.WriteUserEventAsync(request.ParentAsEventStoreName, request.UserEvent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UserEvent responseCancellationToken = await client.WriteUserEventAsync(request.ParentAsEventStoreName, request.UserEvent, st::CancellationToken.None);
@@ -211,7 +211,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 Extensions = { new wkt::Any(), },
             };
             mockGrpcClient.Setup(x => x.CollectUserEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null);
+            UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::HttpBody response = client.CollectUserEvent(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -236,7 +236,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 Extensions = { new wkt::Any(), },
             };
             mockGrpcClient.Setup(x => x.CollectUserEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::HttpBody>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null);
+            UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::HttpBody responseCallSettings = await client.CollectUserEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ga::HttpBody responseCancellationToken = await client.CollectUserEventAsync(request, st::CancellationToken.None);
@@ -263,7 +263,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 Extensions = { new wkt::Any(), },
             };
             mockGrpcClient.Setup(x => x.CollectUserEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null);
+            UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::HttpBody response = client.CollectUserEvent(request.Parent, request.UserEvent, request.Uri, request.Ets);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -288,7 +288,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 Extensions = { new wkt::Any(), },
             };
             mockGrpcClient.Setup(x => x.CollectUserEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::HttpBody>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null);
+            UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::HttpBody responseCallSettings = await client.CollectUserEventAsync(request.Parent, request.UserEvent, request.Uri, request.Ets, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ga::HttpBody responseCancellationToken = await client.CollectUserEventAsync(request.Parent, request.UserEvent, request.Uri, request.Ets, st::CancellationToken.None);
@@ -315,7 +315,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 Extensions = { new wkt::Any(), },
             };
             mockGrpcClient.Setup(x => x.CollectUserEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null);
+            UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::HttpBody response = client.CollectUserEvent(request.ParentAsEventStoreName, request.UserEvent, request.Uri, request.Ets);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -340,7 +340,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 Extensions = { new wkt::Any(), },
             };
             mockGrpcClient.Setup(x => x.CollectUserEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::HttpBody>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null);
+            UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::HttpBody responseCallSettings = await client.CollectUserEventAsync(request.ParentAsEventStoreName, request.UserEvent, request.Uri, request.Ets, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ga::HttpBody responseCancellationToken = await client.CollectUserEventAsync(request.ParentAsEventStoreName, request.UserEvent, request.Uri, request.Ets, st::CancellationToken.None);

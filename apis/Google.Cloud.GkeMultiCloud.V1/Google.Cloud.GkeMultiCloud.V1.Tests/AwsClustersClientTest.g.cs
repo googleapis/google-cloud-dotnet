@@ -65,7 +65,7 @@ namespace Google.Cloud.GkeMultiCloud.V1.Tests
                 LoggingConfig = new LoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.GetAwsCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null);
+            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null, null);
             AwsCluster response = client.GetAwsCluster(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -108,7 +108,7 @@ namespace Google.Cloud.GkeMultiCloud.V1.Tests
                 LoggingConfig = new LoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.GetAwsClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AwsCluster>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null);
+            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null, null);
             AwsCluster responseCallSettings = await client.GetAwsClusterAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AwsCluster responseCancellationToken = await client.GetAwsClusterAsync(request, st::CancellationToken.None);
@@ -153,7 +153,7 @@ namespace Google.Cloud.GkeMultiCloud.V1.Tests
                 LoggingConfig = new LoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.GetAwsCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null);
+            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null, null);
             AwsCluster response = client.GetAwsCluster(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -196,7 +196,7 @@ namespace Google.Cloud.GkeMultiCloud.V1.Tests
                 LoggingConfig = new LoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.GetAwsClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AwsCluster>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null);
+            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null, null);
             AwsCluster responseCallSettings = await client.GetAwsClusterAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AwsCluster responseCancellationToken = await client.GetAwsClusterAsync(request.Name, st::CancellationToken.None);
@@ -241,7 +241,7 @@ namespace Google.Cloud.GkeMultiCloud.V1.Tests
                 LoggingConfig = new LoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.GetAwsCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null);
+            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null, null);
             AwsCluster response = client.GetAwsCluster(request.AwsClusterName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -284,7 +284,7 @@ namespace Google.Cloud.GkeMultiCloud.V1.Tests
                 LoggingConfig = new LoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.GetAwsClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AwsCluster>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null);
+            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null, null);
             AwsCluster responseCallSettings = await client.GetAwsClusterAsync(request.AwsClusterName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AwsCluster responseCancellationToken = await client.GetAwsClusterAsync(request.AwsClusterName, st::CancellationToken.None);
@@ -307,7 +307,7 @@ namespace Google.Cloud.GkeMultiCloud.V1.Tests
                 ExpirationTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GenerateAwsAccessToken(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null);
+            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null, null);
             GenerateAwsAccessTokenResponse response = client.GenerateAwsAccessToken(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -328,7 +328,7 @@ namespace Google.Cloud.GkeMultiCloud.V1.Tests
                 ExpirationTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GenerateAwsAccessTokenAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GenerateAwsAccessTokenResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null);
+            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null, null);
             GenerateAwsAccessTokenResponse responseCallSettings = await client.GenerateAwsAccessTokenAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GenerateAwsAccessTokenResponse responseCancellationToken = await client.GenerateAwsAccessTokenAsync(request, st::CancellationToken.None);
@@ -368,7 +368,7 @@ namespace Google.Cloud.GkeMultiCloud.V1.Tests
                 Config = new AwsNodeConfig(),
             };
             mockGrpcClient.Setup(x => x.GetAwsNodePool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null);
+            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null, null);
             AwsNodePool response = client.GetAwsNodePool(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -406,7 +406,7 @@ namespace Google.Cloud.GkeMultiCloud.V1.Tests
                 Config = new AwsNodeConfig(),
             };
             mockGrpcClient.Setup(x => x.GetAwsNodePoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AwsNodePool>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null);
+            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null, null);
             AwsNodePool responseCallSettings = await client.GetAwsNodePoolAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AwsNodePool responseCancellationToken = await client.GetAwsNodePoolAsync(request, st::CancellationToken.None);
@@ -446,7 +446,7 @@ namespace Google.Cloud.GkeMultiCloud.V1.Tests
                 Config = new AwsNodeConfig(),
             };
             mockGrpcClient.Setup(x => x.GetAwsNodePool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null);
+            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null, null);
             AwsNodePool response = client.GetAwsNodePool(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -484,7 +484,7 @@ namespace Google.Cloud.GkeMultiCloud.V1.Tests
                 Config = new AwsNodeConfig(),
             };
             mockGrpcClient.Setup(x => x.GetAwsNodePoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AwsNodePool>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null);
+            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null, null);
             AwsNodePool responseCallSettings = await client.GetAwsNodePoolAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AwsNodePool responseCancellationToken = await client.GetAwsNodePoolAsync(request.Name, st::CancellationToken.None);
@@ -524,7 +524,7 @@ namespace Google.Cloud.GkeMultiCloud.V1.Tests
                 Config = new AwsNodeConfig(),
             };
             mockGrpcClient.Setup(x => x.GetAwsNodePool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null);
+            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null, null);
             AwsNodePool response = client.GetAwsNodePool(request.AwsNodePoolName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -562,7 +562,7 @@ namespace Google.Cloud.GkeMultiCloud.V1.Tests
                 Config = new AwsNodeConfig(),
             };
             mockGrpcClient.Setup(x => x.GetAwsNodePoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AwsNodePool>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null);
+            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null, null);
             AwsNodePool responseCallSettings = await client.GetAwsNodePoolAsync(request.AwsNodePoolName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AwsNodePool responseCancellationToken = await client.GetAwsNodePoolAsync(request.AwsNodePoolName, st::CancellationToken.None);
@@ -592,7 +592,7 @@ namespace Google.Cloud.GkeMultiCloud.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetAwsServerConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null);
+            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null, null);
             AwsServerConfig response = client.GetAwsServerConfig(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -620,7 +620,7 @@ namespace Google.Cloud.GkeMultiCloud.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetAwsServerConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AwsServerConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null);
+            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null, null);
             AwsServerConfig responseCallSettings = await client.GetAwsServerConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AwsServerConfig responseCancellationToken = await client.GetAwsServerConfigAsync(request, st::CancellationToken.None);
@@ -650,7 +650,7 @@ namespace Google.Cloud.GkeMultiCloud.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetAwsServerConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null);
+            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null, null);
             AwsServerConfig response = client.GetAwsServerConfig(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -678,7 +678,7 @@ namespace Google.Cloud.GkeMultiCloud.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetAwsServerConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AwsServerConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null);
+            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null, null);
             AwsServerConfig responseCallSettings = await client.GetAwsServerConfigAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AwsServerConfig responseCancellationToken = await client.GetAwsServerConfigAsync(request.Name, st::CancellationToken.None);
@@ -708,7 +708,7 @@ namespace Google.Cloud.GkeMultiCloud.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetAwsServerConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null);
+            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null, null);
             AwsServerConfig response = client.GetAwsServerConfig(request.AwsServerConfigName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -736,7 +736,7 @@ namespace Google.Cloud.GkeMultiCloud.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetAwsServerConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AwsServerConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null);
+            AwsClustersClient client = new AwsClustersClientImpl(mockGrpcClient.Object, null, null);
             AwsServerConfig responseCallSettings = await client.GetAwsServerConfigAsync(request.AwsServerConfigName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AwsServerConfig responseCancellationToken = await client.GetAwsServerConfigAsync(request.AwsServerConfigName, st::CancellationToken.None);

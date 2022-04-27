@@ -77,7 +77,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null, null);
             Policy response = client.GetPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -132,7 +132,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null, null);
             Policy responseCallSettings = await client.GetPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Policy responseCancellationToken = await client.GetPolicyAsync(request, st::CancellationToken.None);
@@ -189,7 +189,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null, null);
             Policy response = client.GetPolicy(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -244,7 +244,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null, null);
             Policy responseCallSettings = await client.GetPolicyAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Policy responseCancellationToken = await client.GetPolicyAsync(request.Name, st::CancellationToken.None);
@@ -301,7 +301,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null, null);
             Policy response = client.GetPolicy(request.PolicyName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -356,7 +356,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null, null);
             Policy responseCallSettings = await client.GetPolicyAsync(request.PolicyName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Policy responseCancellationToken = await client.GetPolicyAsync(request.PolicyName, st::CancellationToken.None);
@@ -413,7 +413,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdatePolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null, null);
             Policy response = client.UpdatePolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -468,7 +468,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdatePolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null, null);
             Policy responseCallSettings = await client.UpdatePolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Policy responseCancellationToken = await client.UpdatePolicyAsync(request, st::CancellationToken.None);
@@ -525,7 +525,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdatePolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null, null);
             Policy response = client.UpdatePolicy(request.Policy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -580,7 +580,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdatePolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null, null);
             Policy responseCallSettings = await client.UpdatePolicyAsync(request.Policy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Policy responseCancellationToken = await client.UpdatePolicyAsync(request.Policy, st::CancellationToken.None);
@@ -606,7 +606,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.CreateAttestor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null, null);
             Attestor response = client.CreateAttestor(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -630,7 +630,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.CreateAttestorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Attestor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null, null);
             Attestor responseCallSettings = await client.CreateAttestorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Attestor responseCancellationToken = await client.CreateAttestorAsync(request, st::CancellationToken.None);
@@ -656,7 +656,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.CreateAttestor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null, null);
             Attestor response = client.CreateAttestor(request.Parent, request.AttestorId, request.Attestor);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -680,7 +680,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.CreateAttestorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Attestor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null, null);
             Attestor responseCallSettings = await client.CreateAttestorAsync(request.Parent, request.AttestorId, request.Attestor, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Attestor responseCancellationToken = await client.CreateAttestorAsync(request.Parent, request.AttestorId, request.Attestor, st::CancellationToken.None);
@@ -706,7 +706,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.CreateAttestor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null, null);
             Attestor response = client.CreateAttestor(request.ParentAsProjectName, request.AttestorId, request.Attestor);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -730,7 +730,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.CreateAttestorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Attestor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null, null);
             Attestor responseCallSettings = await client.CreateAttestorAsync(request.ParentAsProjectName, request.AttestorId, request.Attestor, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Attestor responseCancellationToken = await client.CreateAttestorAsync(request.ParentAsProjectName, request.AttestorId, request.Attestor, st::CancellationToken.None);
@@ -754,7 +754,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetAttestor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null, null);
             Attestor response = client.GetAttestor(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -776,7 +776,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetAttestorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Attestor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null, null);
             Attestor responseCallSettings = await client.GetAttestorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Attestor responseCancellationToken = await client.GetAttestorAsync(request, st::CancellationToken.None);
@@ -800,7 +800,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetAttestor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null, null);
             Attestor response = client.GetAttestor(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -822,7 +822,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetAttestorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Attestor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null, null);
             Attestor responseCallSettings = await client.GetAttestorAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Attestor responseCancellationToken = await client.GetAttestorAsync(request.Name, st::CancellationToken.None);
@@ -846,7 +846,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetAttestor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null, null);
             Attestor response = client.GetAttestor(request.AttestorName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -868,7 +868,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetAttestorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Attestor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null, null);
             Attestor responseCallSettings = await client.GetAttestorAsync(request.AttestorName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Attestor responseCancellationToken = await client.GetAttestorAsync(request.AttestorName, st::CancellationToken.None);
@@ -892,7 +892,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.UpdateAttestor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null, null);
             Attestor response = client.UpdateAttestor(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -914,7 +914,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.UpdateAttestorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Attestor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null, null);
             Attestor responseCallSettings = await client.UpdateAttestorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Attestor responseCancellationToken = await client.UpdateAttestorAsync(request, st::CancellationToken.None);
@@ -938,7 +938,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.UpdateAttestor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null, null);
             Attestor response = client.UpdateAttestor(request.Attestor);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -960,7 +960,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.UpdateAttestorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Attestor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null, null);
             Attestor responseCallSettings = await client.UpdateAttestorAsync(request.Attestor, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Attestor responseCancellationToken = await client.UpdateAttestorAsync(request.Attestor, st::CancellationToken.None);
@@ -978,7 +978,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAttestor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteAttestor(request);
             mockGrpcClient.VerifyAll();
         }
@@ -993,7 +993,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAttestorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteAttestorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteAttestorAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1009,7 +1009,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAttestor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteAttestor(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -1024,7 +1024,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAttestorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteAttestorAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteAttestorAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1040,7 +1040,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAttestor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteAttestor(request.AttestorName);
             mockGrpcClient.VerifyAll();
         }
@@ -1055,7 +1055,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAttestorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteAttestorAsync(request.AttestorName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteAttestorAsync(request.AttestorName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();

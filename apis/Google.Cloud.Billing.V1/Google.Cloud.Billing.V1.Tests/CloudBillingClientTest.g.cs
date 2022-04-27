@@ -47,7 +47,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 MasterBillingAccount = "master_billing_account42bd6a27",
             };
             mockGrpcClient.Setup(x => x.GetBillingAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             BillingAccount response = client.GetBillingAccount(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -69,7 +69,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 MasterBillingAccount = "master_billing_account42bd6a27",
             };
             mockGrpcClient.Setup(x => x.GetBillingAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BillingAccount>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             BillingAccount responseCallSettings = await client.GetBillingAccountAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BillingAccount responseCancellationToken = await client.GetBillingAccountAsync(request, st::CancellationToken.None);
@@ -93,7 +93,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 MasterBillingAccount = "master_billing_account42bd6a27",
             };
             mockGrpcClient.Setup(x => x.GetBillingAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             BillingAccount response = client.GetBillingAccount(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -115,7 +115,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 MasterBillingAccount = "master_billing_account42bd6a27",
             };
             mockGrpcClient.Setup(x => x.GetBillingAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BillingAccount>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             BillingAccount responseCallSettings = await client.GetBillingAccountAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BillingAccount responseCancellationToken = await client.GetBillingAccountAsync(request.Name, st::CancellationToken.None);
@@ -139,7 +139,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 MasterBillingAccount = "master_billing_account42bd6a27",
             };
             mockGrpcClient.Setup(x => x.GetBillingAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             BillingAccount response = client.GetBillingAccount(request.BillingAccountName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -161,7 +161,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 MasterBillingAccount = "master_billing_account42bd6a27",
             };
             mockGrpcClient.Setup(x => x.GetBillingAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BillingAccount>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             BillingAccount responseCallSettings = await client.GetBillingAccountAsync(request.BillingAccountName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BillingAccount responseCancellationToken = await client.GetBillingAccountAsync(request.BillingAccountName, st::CancellationToken.None);
@@ -187,7 +187,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 MasterBillingAccount = "master_billing_account42bd6a27",
             };
             mockGrpcClient.Setup(x => x.UpdateBillingAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             BillingAccount response = client.UpdateBillingAccount(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -211,7 +211,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 MasterBillingAccount = "master_billing_account42bd6a27",
             };
             mockGrpcClient.Setup(x => x.UpdateBillingAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BillingAccount>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             BillingAccount responseCallSettings = await client.UpdateBillingAccountAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BillingAccount responseCancellationToken = await client.UpdateBillingAccountAsync(request, st::CancellationToken.None);
@@ -236,7 +236,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 MasterBillingAccount = "master_billing_account42bd6a27",
             };
             mockGrpcClient.Setup(x => x.UpdateBillingAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             BillingAccount response = client.UpdateBillingAccount(request.Name, request.Account);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -259,7 +259,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 MasterBillingAccount = "master_billing_account42bd6a27",
             };
             mockGrpcClient.Setup(x => x.UpdateBillingAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BillingAccount>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             BillingAccount responseCallSettings = await client.UpdateBillingAccountAsync(request.Name, request.Account, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BillingAccount responseCancellationToken = await client.UpdateBillingAccountAsync(request.Name, request.Account, st::CancellationToken.None);
@@ -284,7 +284,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 MasterBillingAccount = "master_billing_account42bd6a27",
             };
             mockGrpcClient.Setup(x => x.UpdateBillingAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             BillingAccount response = client.UpdateBillingAccount(request.BillingAccountName, request.Account);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -307,7 +307,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 MasterBillingAccount = "master_billing_account42bd6a27",
             };
             mockGrpcClient.Setup(x => x.UpdateBillingAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BillingAccount>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             BillingAccount responseCallSettings = await client.UpdateBillingAccountAsync(request.BillingAccountName, request.Account, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BillingAccount responseCancellationToken = await client.UpdateBillingAccountAsync(request.BillingAccountName, request.Account, st::CancellationToken.None);
@@ -331,7 +331,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 MasterBillingAccount = "master_billing_account42bd6a27",
             };
             mockGrpcClient.Setup(x => x.CreateBillingAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             BillingAccount response = client.CreateBillingAccount(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -353,7 +353,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 MasterBillingAccount = "master_billing_account42bd6a27",
             };
             mockGrpcClient.Setup(x => x.CreateBillingAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BillingAccount>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             BillingAccount responseCallSettings = await client.CreateBillingAccountAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BillingAccount responseCancellationToken = await client.CreateBillingAccountAsync(request, st::CancellationToken.None);
@@ -377,7 +377,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 MasterBillingAccount = "master_billing_account42bd6a27",
             };
             mockGrpcClient.Setup(x => x.CreateBillingAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             BillingAccount response = client.CreateBillingAccount(request.BillingAccount);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -399,7 +399,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 MasterBillingAccount = "master_billing_account42bd6a27",
             };
             mockGrpcClient.Setup(x => x.CreateBillingAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BillingAccount>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             BillingAccount responseCallSettings = await client.CreateBillingAccountAsync(request.BillingAccount, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BillingAccount responseCancellationToken = await client.CreateBillingAccountAsync(request.BillingAccount, st::CancellationToken.None);
@@ -423,7 +423,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 BillingEnabled = false,
             };
             mockGrpcClient.Setup(x => x.GetProjectBillingInfo(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             ProjectBillingInfo response = client.GetProjectBillingInfo(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -445,7 +445,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 BillingEnabled = false,
             };
             mockGrpcClient.Setup(x => x.GetProjectBillingInfoAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ProjectBillingInfo>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             ProjectBillingInfo responseCallSettings = await client.GetProjectBillingInfoAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ProjectBillingInfo responseCancellationToken = await client.GetProjectBillingInfoAsync(request, st::CancellationToken.None);
@@ -469,7 +469,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 BillingEnabled = false,
             };
             mockGrpcClient.Setup(x => x.GetProjectBillingInfo(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             ProjectBillingInfo response = client.GetProjectBillingInfo(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -491,7 +491,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 BillingEnabled = false,
             };
             mockGrpcClient.Setup(x => x.GetProjectBillingInfoAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ProjectBillingInfo>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             ProjectBillingInfo responseCallSettings = await client.GetProjectBillingInfoAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ProjectBillingInfo responseCancellationToken = await client.GetProjectBillingInfoAsync(request.Name, st::CancellationToken.None);
@@ -516,7 +516,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 BillingEnabled = false,
             };
             mockGrpcClient.Setup(x => x.UpdateProjectBillingInfo(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             ProjectBillingInfo response = client.UpdateProjectBillingInfo(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -539,7 +539,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 BillingEnabled = false,
             };
             mockGrpcClient.Setup(x => x.UpdateProjectBillingInfoAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ProjectBillingInfo>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             ProjectBillingInfo responseCallSettings = await client.UpdateProjectBillingInfoAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ProjectBillingInfo responseCancellationToken = await client.UpdateProjectBillingInfoAsync(request, st::CancellationToken.None);
@@ -564,7 +564,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 BillingEnabled = false,
             };
             mockGrpcClient.Setup(x => x.UpdateProjectBillingInfo(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             ProjectBillingInfo response = client.UpdateProjectBillingInfo(request.Name, request.ProjectBillingInfo);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -587,7 +587,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 BillingEnabled = false,
             };
             mockGrpcClient.Setup(x => x.UpdateProjectBillingInfoAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ProjectBillingInfo>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             ProjectBillingInfo responseCallSettings = await client.UpdateProjectBillingInfoAsync(request.Name, request.ProjectBillingInfo, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ProjectBillingInfo responseCancellationToken = await client.UpdateProjectBillingInfoAsync(request.Name, request.ProjectBillingInfo, st::CancellationToken.None);
@@ -618,7 +618,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.GetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -647,7 +647,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request, st::CancellationToken.None);
@@ -677,7 +677,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.GetIamPolicy(request.Resource);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -705,7 +705,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request.Resource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request.Resource, st::CancellationToken.None);
@@ -735,7 +735,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.GetIamPolicy(request.ResourceAsResourceName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -763,7 +763,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request.ResourceAsResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request.ResourceAsResourceName, st::CancellationToken.None);
@@ -795,7 +795,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.SetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -825,7 +825,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request, st::CancellationToken.None);
@@ -856,7 +856,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.SetIamPolicy(request.Resource, request.Policy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -885,7 +885,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request.Resource, request.Policy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request.Resource, request.Policy, st::CancellationToken.None);
@@ -916,7 +916,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.SetIamPolicy(request.ResourceAsResourceName, request.Policy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -945,7 +945,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request.ResourceAsResourceName, request.Policy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request.ResourceAsResourceName, request.Policy, st::CancellationToken.None);
@@ -973,7 +973,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -999,7 +999,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request, st::CancellationToken.None);
@@ -1027,7 +1027,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request.Resource, request.Permissions);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1053,7 +1053,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request.Resource, request.Permissions, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request.Resource, request.Permissions, st::CancellationToken.None);
@@ -1081,7 +1081,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request.ResourceAsResourceName, request.Permissions);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1107,7 +1107,7 @@ namespace Google.Cloud.Billing.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null);
+            CloudBillingClient client = new CloudBillingClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request.ResourceAsResourceName, request.Permissions, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request.ResourceAsResourceName, request.Permissions, st::CancellationToken.None);

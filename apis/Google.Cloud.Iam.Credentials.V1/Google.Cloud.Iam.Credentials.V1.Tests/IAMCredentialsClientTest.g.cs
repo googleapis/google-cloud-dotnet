@@ -48,7 +48,7 @@ namespace Google.Cloud.Iam.Credentials.V1.Tests
                 ExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GenerateAccessToken(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null);
+            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null, null);
             GenerateAccessTokenResponse response = client.GenerateAccessToken(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -74,7 +74,7 @@ namespace Google.Cloud.Iam.Credentials.V1.Tests
                 ExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GenerateAccessTokenAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GenerateAccessTokenResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null);
+            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null, null);
             GenerateAccessTokenResponse responseCallSettings = await client.GenerateAccessTokenAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GenerateAccessTokenResponse responseCancellationToken = await client.GenerateAccessTokenAsync(request, st::CancellationToken.None);
@@ -102,7 +102,7 @@ namespace Google.Cloud.Iam.Credentials.V1.Tests
                 ExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GenerateAccessToken(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null);
+            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null, null);
             GenerateAccessTokenResponse response = client.GenerateAccessToken(request.Name, request.Delegates, request.Scope, request.Lifetime);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -128,7 +128,7 @@ namespace Google.Cloud.Iam.Credentials.V1.Tests
                 ExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GenerateAccessTokenAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GenerateAccessTokenResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null);
+            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null, null);
             GenerateAccessTokenResponse responseCallSettings = await client.GenerateAccessTokenAsync(request.Name, request.Delegates, request.Scope, request.Lifetime, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GenerateAccessTokenResponse responseCancellationToken = await client.GenerateAccessTokenAsync(request.Name, request.Delegates, request.Scope, request.Lifetime, st::CancellationToken.None);
@@ -156,7 +156,7 @@ namespace Google.Cloud.Iam.Credentials.V1.Tests
                 ExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GenerateAccessToken(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null);
+            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null, null);
             GenerateAccessTokenResponse response = client.GenerateAccessToken(request.ServiceAccountName, request.Delegates, request.Scope, request.Lifetime);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -182,7 +182,7 @@ namespace Google.Cloud.Iam.Credentials.V1.Tests
                 ExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GenerateAccessTokenAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GenerateAccessTokenResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null);
+            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null, null);
             GenerateAccessTokenResponse responseCallSettings = await client.GenerateAccessTokenAsync(request.ServiceAccountName, request.Delegates, request.Scope, request.Lifetime, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GenerateAccessTokenResponse responseCancellationToken = await client.GenerateAccessTokenAsync(request.ServiceAccountName, request.Delegates, request.Scope, request.Lifetime, st::CancellationToken.None);
@@ -209,7 +209,7 @@ namespace Google.Cloud.Iam.Credentials.V1.Tests
                 Token = "tokena18da094",
             };
             mockGrpcClient.Setup(x => x.GenerateIdToken(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null);
+            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null, null);
             GenerateIdTokenResponse response = client.GenerateIdToken(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -234,7 +234,7 @@ namespace Google.Cloud.Iam.Credentials.V1.Tests
                 Token = "tokena18da094",
             };
             mockGrpcClient.Setup(x => x.GenerateIdTokenAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GenerateIdTokenResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null);
+            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null, null);
             GenerateIdTokenResponse responseCallSettings = await client.GenerateIdTokenAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GenerateIdTokenResponse responseCancellationToken = await client.GenerateIdTokenAsync(request, st::CancellationToken.None);
@@ -261,7 +261,7 @@ namespace Google.Cloud.Iam.Credentials.V1.Tests
                 Token = "tokena18da094",
             };
             mockGrpcClient.Setup(x => x.GenerateIdToken(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null);
+            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null, null);
             GenerateIdTokenResponse response = client.GenerateIdToken(request.Name, request.Delegates, request.Audience, request.IncludeEmail);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -286,7 +286,7 @@ namespace Google.Cloud.Iam.Credentials.V1.Tests
                 Token = "tokena18da094",
             };
             mockGrpcClient.Setup(x => x.GenerateIdTokenAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GenerateIdTokenResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null);
+            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null, null);
             GenerateIdTokenResponse responseCallSettings = await client.GenerateIdTokenAsync(request.Name, request.Delegates, request.Audience, request.IncludeEmail, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GenerateIdTokenResponse responseCancellationToken = await client.GenerateIdTokenAsync(request.Name, request.Delegates, request.Audience, request.IncludeEmail, st::CancellationToken.None);
@@ -313,7 +313,7 @@ namespace Google.Cloud.Iam.Credentials.V1.Tests
                 Token = "tokena18da094",
             };
             mockGrpcClient.Setup(x => x.GenerateIdToken(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null);
+            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null, null);
             GenerateIdTokenResponse response = client.GenerateIdToken(request.ServiceAccountName, request.Delegates, request.Audience, request.IncludeEmail);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -338,7 +338,7 @@ namespace Google.Cloud.Iam.Credentials.V1.Tests
                 Token = "tokena18da094",
             };
             mockGrpcClient.Setup(x => x.GenerateIdTokenAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GenerateIdTokenResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null);
+            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null, null);
             GenerateIdTokenResponse responseCallSettings = await client.GenerateIdTokenAsync(request.ServiceAccountName, request.Delegates, request.Audience, request.IncludeEmail, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GenerateIdTokenResponse responseCancellationToken = await client.GenerateIdTokenAsync(request.ServiceAccountName, request.Delegates, request.Audience, request.IncludeEmail, st::CancellationToken.None);
@@ -365,7 +365,7 @@ namespace Google.Cloud.Iam.Credentials.V1.Tests
                 SignedBlob = proto::ByteString.CopyFromUtf8("signed_blob0afddec9"),
             };
             mockGrpcClient.Setup(x => x.SignBlob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null);
+            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null, null);
             SignBlobResponse response = client.SignBlob(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -390,7 +390,7 @@ namespace Google.Cloud.Iam.Credentials.V1.Tests
                 SignedBlob = proto::ByteString.CopyFromUtf8("signed_blob0afddec9"),
             };
             mockGrpcClient.Setup(x => x.SignBlobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SignBlobResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null);
+            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null, null);
             SignBlobResponse responseCallSettings = await client.SignBlobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SignBlobResponse responseCancellationToken = await client.SignBlobAsync(request, st::CancellationToken.None);
@@ -417,7 +417,7 @@ namespace Google.Cloud.Iam.Credentials.V1.Tests
                 SignedBlob = proto::ByteString.CopyFromUtf8("signed_blob0afddec9"),
             };
             mockGrpcClient.Setup(x => x.SignBlob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null);
+            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null, null);
             SignBlobResponse response = client.SignBlob(request.Name, request.Delegates, request.Payload);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -442,7 +442,7 @@ namespace Google.Cloud.Iam.Credentials.V1.Tests
                 SignedBlob = proto::ByteString.CopyFromUtf8("signed_blob0afddec9"),
             };
             mockGrpcClient.Setup(x => x.SignBlobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SignBlobResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null);
+            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null, null);
             SignBlobResponse responseCallSettings = await client.SignBlobAsync(request.Name, request.Delegates, request.Payload, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SignBlobResponse responseCancellationToken = await client.SignBlobAsync(request.Name, request.Delegates, request.Payload, st::CancellationToken.None);
@@ -469,7 +469,7 @@ namespace Google.Cloud.Iam.Credentials.V1.Tests
                 SignedBlob = proto::ByteString.CopyFromUtf8("signed_blob0afddec9"),
             };
             mockGrpcClient.Setup(x => x.SignBlob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null);
+            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null, null);
             SignBlobResponse response = client.SignBlob(request.ServiceAccountName, request.Delegates, request.Payload);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -494,7 +494,7 @@ namespace Google.Cloud.Iam.Credentials.V1.Tests
                 SignedBlob = proto::ByteString.CopyFromUtf8("signed_blob0afddec9"),
             };
             mockGrpcClient.Setup(x => x.SignBlobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SignBlobResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null);
+            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null, null);
             SignBlobResponse responseCallSettings = await client.SignBlobAsync(request.ServiceAccountName, request.Delegates, request.Payload, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SignBlobResponse responseCancellationToken = await client.SignBlobAsync(request.ServiceAccountName, request.Delegates, request.Payload, st::CancellationToken.None);
@@ -521,7 +521,7 @@ namespace Google.Cloud.Iam.Credentials.V1.Tests
                 SignedJwt = "signed_jwt09d786db",
             };
             mockGrpcClient.Setup(x => x.SignJwt(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null);
+            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null, null);
             SignJwtResponse response = client.SignJwt(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -546,7 +546,7 @@ namespace Google.Cloud.Iam.Credentials.V1.Tests
                 SignedJwt = "signed_jwt09d786db",
             };
             mockGrpcClient.Setup(x => x.SignJwtAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SignJwtResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null);
+            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null, null);
             SignJwtResponse responseCallSettings = await client.SignJwtAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SignJwtResponse responseCancellationToken = await client.SignJwtAsync(request, st::CancellationToken.None);
@@ -573,7 +573,7 @@ namespace Google.Cloud.Iam.Credentials.V1.Tests
                 SignedJwt = "signed_jwt09d786db",
             };
             mockGrpcClient.Setup(x => x.SignJwt(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null);
+            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null, null);
             SignJwtResponse response = client.SignJwt(request.Name, request.Delegates, request.Payload);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -598,7 +598,7 @@ namespace Google.Cloud.Iam.Credentials.V1.Tests
                 SignedJwt = "signed_jwt09d786db",
             };
             mockGrpcClient.Setup(x => x.SignJwtAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SignJwtResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null);
+            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null, null);
             SignJwtResponse responseCallSettings = await client.SignJwtAsync(request.Name, request.Delegates, request.Payload, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SignJwtResponse responseCancellationToken = await client.SignJwtAsync(request.Name, request.Delegates, request.Payload, st::CancellationToken.None);
@@ -625,7 +625,7 @@ namespace Google.Cloud.Iam.Credentials.V1.Tests
                 SignedJwt = "signed_jwt09d786db",
             };
             mockGrpcClient.Setup(x => x.SignJwt(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null);
+            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null, null);
             SignJwtResponse response = client.SignJwt(request.ServiceAccountName, request.Delegates, request.Payload);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -650,7 +650,7 @@ namespace Google.Cloud.Iam.Credentials.V1.Tests
                 SignedJwt = "signed_jwt09d786db",
             };
             mockGrpcClient.Setup(x => x.SignJwtAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SignJwtResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null);
+            IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null, null);
             SignJwtResponse responseCallSettings = await client.SignJwtAsync(request.ServiceAccountName, request.Delegates, request.Payload, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SignJwtResponse responseCancellationToken = await client.SignJwtAsync(request.ServiceAccountName, request.Delegates, request.Payload, st::CancellationToken.None);

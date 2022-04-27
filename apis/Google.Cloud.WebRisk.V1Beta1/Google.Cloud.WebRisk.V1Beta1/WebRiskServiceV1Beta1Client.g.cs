@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -132,9 +132,8 @@ namespace Google.Cloud.WebRisk.V1Beta1
         public WebRiskServiceV1Beta1Settings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public WebRiskServiceV1Beta1ClientBuilder()
+        public WebRiskServiceV1Beta1ClientBuilder() : base(WebRiskServiceV1Beta1Client.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = WebRiskServiceV1Beta1Client.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref WebRiskServiceV1Beta1Client client);
@@ -161,29 +160,18 @@ namespace Google.Cloud.WebRisk.V1Beta1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return WebRiskServiceV1Beta1Client.Create(callInvoker, Settings);
+            return WebRiskServiceV1Beta1Client.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<WebRiskServiceV1Beta1Client> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return WebRiskServiceV1Beta1Client.Create(callInvoker, Settings);
+            return WebRiskServiceV1Beta1Client.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => WebRiskServiceV1Beta1Client.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => WebRiskServiceV1Beta1Client.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => WebRiskServiceV1Beta1Client.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>WebRiskServiceV1Beta1 client wrapper, for convenient use.</summary>
@@ -211,19 +199,10 @@ namespace Google.Cloud.WebRisk.V1Beta1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(WebRiskServiceV1Beta1.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="WebRiskServiceV1Beta1Client"/> using the default credentials, endpoint
@@ -253,8 +232,9 @@ namespace Google.Cloud.WebRisk.V1Beta1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="WebRiskServiceV1Beta1Settings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="WebRiskServiceV1Beta1Client"/>.</returns>
-        internal static WebRiskServiceV1Beta1Client Create(grpccore::CallInvoker callInvoker, WebRiskServiceV1Beta1Settings settings = null)
+        internal static WebRiskServiceV1Beta1Client Create(grpccore::CallInvoker callInvoker, WebRiskServiceV1Beta1Settings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -263,7 +243,7 @@ namespace Google.Cloud.WebRisk.V1Beta1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client grpcClient = new WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client(callInvoker);
-            return new WebRiskServiceV1Beta1ClientImpl(grpcClient, settings);
+            return new WebRiskServiceV1Beta1ClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -586,18 +566,19 @@ namespace Google.Cloud.WebRisk.V1Beta1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="WebRiskServiceV1Beta1Settings"/> used within this client.</param>
-        public WebRiskServiceV1Beta1ClientImpl(WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client grpcClient, WebRiskServiceV1Beta1Settings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public WebRiskServiceV1Beta1ClientImpl(WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client grpcClient, WebRiskServiceV1Beta1Settings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             WebRiskServiceV1Beta1Settings effectiveSettings = settings ?? WebRiskServiceV1Beta1Settings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callComputeThreatListDiff = clientHelper.BuildApiCall<ComputeThreatListDiffRequest, ComputeThreatListDiffResponse>(grpcClient.ComputeThreatListDiffAsync, grpcClient.ComputeThreatListDiff, effectiveSettings.ComputeThreatListDiffSettings);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callComputeThreatListDiff = clientHelper.BuildApiCall<ComputeThreatListDiffRequest, ComputeThreatListDiffResponse>("ComputeThreatListDiff", grpcClient.ComputeThreatListDiffAsync, grpcClient.ComputeThreatListDiff, effectiveSettings.ComputeThreatListDiffSettings);
             Modify_ApiCall(ref _callComputeThreatListDiff);
             Modify_ComputeThreatListDiffApiCall(ref _callComputeThreatListDiff);
-            _callSearchUris = clientHelper.BuildApiCall<SearchUrisRequest, SearchUrisResponse>(grpcClient.SearchUrisAsync, grpcClient.SearchUris, effectiveSettings.SearchUrisSettings);
+            _callSearchUris = clientHelper.BuildApiCall<SearchUrisRequest, SearchUrisResponse>("SearchUris", grpcClient.SearchUrisAsync, grpcClient.SearchUris, effectiveSettings.SearchUrisSettings);
             Modify_ApiCall(ref _callSearchUris);
             Modify_SearchUrisApiCall(ref _callSearchUris);
-            _callSearchHashes = clientHelper.BuildApiCall<SearchHashesRequest, SearchHashesResponse>(grpcClient.SearchHashesAsync, grpcClient.SearchHashes, effectiveSettings.SearchHashesSettings);
+            _callSearchHashes = clientHelper.BuildApiCall<SearchHashesRequest, SearchHashesResponse>("SearchHashes", grpcClient.SearchHashesAsync, grpcClient.SearchHashes, effectiveSettings.SearchHashesSettings);
             Modify_ApiCall(ref _callSearchHashes);
             Modify_SearchHashesApiCall(ref _callSearchHashes);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

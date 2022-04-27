@@ -39,7 +39,7 @@ namespace Google.Cloud.Debugger.V2.Tests
                 Debuggee = new Debuggee(),
             };
             mockGrpcClient.Setup(x => x.RegisterDebuggee(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            Controller2Client client = new Controller2ClientImpl(mockGrpcClient.Object, null);
+            Controller2Client client = new Controller2ClientImpl(mockGrpcClient.Object, null, null);
             RegisterDebuggeeResponse response = client.RegisterDebuggee(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -58,7 +58,7 @@ namespace Google.Cloud.Debugger.V2.Tests
                 Debuggee = new Debuggee(),
             };
             mockGrpcClient.Setup(x => x.RegisterDebuggeeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RegisterDebuggeeResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            Controller2Client client = new Controller2ClientImpl(mockGrpcClient.Object, null);
+            Controller2Client client = new Controller2ClientImpl(mockGrpcClient.Object, null, null);
             RegisterDebuggeeResponse responseCallSettings = await client.RegisterDebuggeeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             RegisterDebuggeeResponse responseCancellationToken = await client.RegisterDebuggeeAsync(request, st::CancellationToken.None);
@@ -79,7 +79,7 @@ namespace Google.Cloud.Debugger.V2.Tests
                 Debuggee = new Debuggee(),
             };
             mockGrpcClient.Setup(x => x.RegisterDebuggee(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            Controller2Client client = new Controller2ClientImpl(mockGrpcClient.Object, null);
+            Controller2Client client = new Controller2ClientImpl(mockGrpcClient.Object, null, null);
             RegisterDebuggeeResponse response = client.RegisterDebuggee(request.Debuggee);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -98,7 +98,7 @@ namespace Google.Cloud.Debugger.V2.Tests
                 Debuggee = new Debuggee(),
             };
             mockGrpcClient.Setup(x => x.RegisterDebuggeeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RegisterDebuggeeResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            Controller2Client client = new Controller2ClientImpl(mockGrpcClient.Object, null);
+            Controller2Client client = new Controller2ClientImpl(mockGrpcClient.Object, null, null);
             RegisterDebuggeeResponse responseCallSettings = await client.RegisterDebuggeeAsync(request.Debuggee, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             RegisterDebuggeeResponse responseCancellationToken = await client.RegisterDebuggeeAsync(request.Debuggee, st::CancellationToken.None);
@@ -123,7 +123,7 @@ namespace Google.Cloud.Debugger.V2.Tests
                 WaitExpired = false,
             };
             mockGrpcClient.Setup(x => x.ListActiveBreakpoints(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            Controller2Client client = new Controller2ClientImpl(mockGrpcClient.Object, null);
+            Controller2Client client = new Controller2ClientImpl(mockGrpcClient.Object, null, null);
             ListActiveBreakpointsResponse response = client.ListActiveBreakpoints(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -146,7 +146,7 @@ namespace Google.Cloud.Debugger.V2.Tests
                 WaitExpired = false,
             };
             mockGrpcClient.Setup(x => x.ListActiveBreakpointsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListActiveBreakpointsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            Controller2Client client = new Controller2ClientImpl(mockGrpcClient.Object, null);
+            Controller2Client client = new Controller2ClientImpl(mockGrpcClient.Object, null, null);
             ListActiveBreakpointsResponse responseCallSettings = await client.ListActiveBreakpointsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ListActiveBreakpointsResponse responseCancellationToken = await client.ListActiveBreakpointsAsync(request, st::CancellationToken.None);
@@ -169,7 +169,7 @@ namespace Google.Cloud.Debugger.V2.Tests
                 WaitExpired = false,
             };
             mockGrpcClient.Setup(x => x.ListActiveBreakpoints(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            Controller2Client client = new Controller2ClientImpl(mockGrpcClient.Object, null);
+            Controller2Client client = new Controller2ClientImpl(mockGrpcClient.Object, null, null);
             ListActiveBreakpointsResponse response = client.ListActiveBreakpoints(request.DebuggeeId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -190,7 +190,7 @@ namespace Google.Cloud.Debugger.V2.Tests
                 WaitExpired = false,
             };
             mockGrpcClient.Setup(x => x.ListActiveBreakpointsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListActiveBreakpointsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            Controller2Client client = new Controller2ClientImpl(mockGrpcClient.Object, null);
+            Controller2Client client = new Controller2ClientImpl(mockGrpcClient.Object, null, null);
             ListActiveBreakpointsResponse responseCallSettings = await client.ListActiveBreakpointsAsync(request.DebuggeeId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ListActiveBreakpointsResponse responseCancellationToken = await client.ListActiveBreakpointsAsync(request.DebuggeeId, st::CancellationToken.None);
@@ -209,7 +209,7 @@ namespace Google.Cloud.Debugger.V2.Tests
             };
             UpdateActiveBreakpointResponse expectedResponse = new UpdateActiveBreakpointResponse { };
             mockGrpcClient.Setup(x => x.UpdateActiveBreakpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            Controller2Client client = new Controller2ClientImpl(mockGrpcClient.Object, null);
+            Controller2Client client = new Controller2ClientImpl(mockGrpcClient.Object, null, null);
             UpdateActiveBreakpointResponse response = client.UpdateActiveBreakpoint(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -226,7 +226,7 @@ namespace Google.Cloud.Debugger.V2.Tests
             };
             UpdateActiveBreakpointResponse expectedResponse = new UpdateActiveBreakpointResponse { };
             mockGrpcClient.Setup(x => x.UpdateActiveBreakpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UpdateActiveBreakpointResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            Controller2Client client = new Controller2ClientImpl(mockGrpcClient.Object, null);
+            Controller2Client client = new Controller2ClientImpl(mockGrpcClient.Object, null, null);
             UpdateActiveBreakpointResponse responseCallSettings = await client.UpdateActiveBreakpointAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UpdateActiveBreakpointResponse responseCancellationToken = await client.UpdateActiveBreakpointAsync(request, st::CancellationToken.None);
@@ -245,7 +245,7 @@ namespace Google.Cloud.Debugger.V2.Tests
             };
             UpdateActiveBreakpointResponse expectedResponse = new UpdateActiveBreakpointResponse { };
             mockGrpcClient.Setup(x => x.UpdateActiveBreakpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            Controller2Client client = new Controller2ClientImpl(mockGrpcClient.Object, null);
+            Controller2Client client = new Controller2ClientImpl(mockGrpcClient.Object, null, null);
             UpdateActiveBreakpointResponse response = client.UpdateActiveBreakpoint(request.DebuggeeId, request.Breakpoint);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -262,7 +262,7 @@ namespace Google.Cloud.Debugger.V2.Tests
             };
             UpdateActiveBreakpointResponse expectedResponse = new UpdateActiveBreakpointResponse { };
             mockGrpcClient.Setup(x => x.UpdateActiveBreakpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UpdateActiveBreakpointResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            Controller2Client client = new Controller2ClientImpl(mockGrpcClient.Object, null);
+            Controller2Client client = new Controller2ClientImpl(mockGrpcClient.Object, null, null);
             UpdateActiveBreakpointResponse responseCallSettings = await client.UpdateActiveBreakpointAsync(request.DebuggeeId, request.Breakpoint, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UpdateActiveBreakpointResponse responseCancellationToken = await client.UpdateActiveBreakpointAsync(request.DebuggeeId, request.Breakpoint, st::CancellationToken.None);

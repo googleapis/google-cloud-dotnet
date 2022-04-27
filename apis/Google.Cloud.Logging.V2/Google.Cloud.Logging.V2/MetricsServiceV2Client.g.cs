@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -167,9 +167,8 @@ namespace Google.Cloud.Logging.V2
         public MetricsServiceV2Settings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public MetricsServiceV2ClientBuilder()
+        public MetricsServiceV2ClientBuilder() : base(MetricsServiceV2Client.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = MetricsServiceV2Client.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref MetricsServiceV2Client client);
@@ -196,29 +195,18 @@ namespace Google.Cloud.Logging.V2
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return MetricsServiceV2Client.Create(callInvoker, Settings);
+            return MetricsServiceV2Client.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<MetricsServiceV2Client> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return MetricsServiceV2Client.Create(callInvoker, Settings);
+            return MetricsServiceV2Client.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => MetricsServiceV2Client.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => MetricsServiceV2Client.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => MetricsServiceV2Client.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>MetricsServiceV2 client wrapper, for convenient use.</summary>
@@ -253,19 +241,10 @@ namespace Google.Cloud.Logging.V2
             "https://www.googleapis.com/auth/logging.write",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(MetricsServiceV2.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="MetricsServiceV2Client"/> using the default credentials, endpoint and
@@ -292,8 +271,9 @@ namespace Google.Cloud.Logging.V2
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="MetricsServiceV2Settings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="MetricsServiceV2Client"/>.</returns>
-        internal static MetricsServiceV2Client Create(grpccore::CallInvoker callInvoker, MetricsServiceV2Settings settings = null)
+        internal static MetricsServiceV2Client Create(grpccore::CallInvoker callInvoker, MetricsServiceV2Settings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -302,7 +282,7 @@ namespace Google.Cloud.Logging.V2
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             MetricsServiceV2.MetricsServiceV2Client grpcClient = new MetricsServiceV2.MetricsServiceV2Client(callInvoker);
-            return new MetricsServiceV2ClientImpl(grpcClient, settings);
+            return new MetricsServiceV2ClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1019,24 +999,25 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="MetricsServiceV2Settings"/> used within this client.</param>
-        public MetricsServiceV2ClientImpl(MetricsServiceV2.MetricsServiceV2Client grpcClient, MetricsServiceV2Settings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public MetricsServiceV2ClientImpl(MetricsServiceV2.MetricsServiceV2Client grpcClient, MetricsServiceV2Settings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             MetricsServiceV2Settings effectiveSettings = settings ?? MetricsServiceV2Settings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListLogMetrics = clientHelper.BuildApiCall<ListLogMetricsRequest, ListLogMetricsResponse>(grpcClient.ListLogMetricsAsync, grpcClient.ListLogMetrics, effectiveSettings.ListLogMetricsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callListLogMetrics = clientHelper.BuildApiCall<ListLogMetricsRequest, ListLogMetricsResponse>("ListLogMetrics", grpcClient.ListLogMetricsAsync, grpcClient.ListLogMetrics, effectiveSettings.ListLogMetricsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListLogMetrics);
             Modify_ListLogMetricsApiCall(ref _callListLogMetrics);
-            _callGetLogMetric = clientHelper.BuildApiCall<GetLogMetricRequest, LogMetric>(grpcClient.GetLogMetricAsync, grpcClient.GetLogMetric, effectiveSettings.GetLogMetricSettings).WithGoogleRequestParam("metric_name", request => request.MetricName);
+            _callGetLogMetric = clientHelper.BuildApiCall<GetLogMetricRequest, LogMetric>("GetLogMetric", grpcClient.GetLogMetricAsync, grpcClient.GetLogMetric, effectiveSettings.GetLogMetricSettings).WithGoogleRequestParam("metric_name", request => request.MetricName);
             Modify_ApiCall(ref _callGetLogMetric);
             Modify_GetLogMetricApiCall(ref _callGetLogMetric);
-            _callCreateLogMetric = clientHelper.BuildApiCall<CreateLogMetricRequest, LogMetric>(grpcClient.CreateLogMetricAsync, grpcClient.CreateLogMetric, effectiveSettings.CreateLogMetricSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateLogMetric = clientHelper.BuildApiCall<CreateLogMetricRequest, LogMetric>("CreateLogMetric", grpcClient.CreateLogMetricAsync, grpcClient.CreateLogMetric, effectiveSettings.CreateLogMetricSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateLogMetric);
             Modify_CreateLogMetricApiCall(ref _callCreateLogMetric);
-            _callUpdateLogMetric = clientHelper.BuildApiCall<UpdateLogMetricRequest, LogMetric>(grpcClient.UpdateLogMetricAsync, grpcClient.UpdateLogMetric, effectiveSettings.UpdateLogMetricSettings).WithGoogleRequestParam("metric_name", request => request.MetricName);
+            _callUpdateLogMetric = clientHelper.BuildApiCall<UpdateLogMetricRequest, LogMetric>("UpdateLogMetric", grpcClient.UpdateLogMetricAsync, grpcClient.UpdateLogMetric, effectiveSettings.UpdateLogMetricSettings).WithGoogleRequestParam("metric_name", request => request.MetricName);
             Modify_ApiCall(ref _callUpdateLogMetric);
             Modify_UpdateLogMetricApiCall(ref _callUpdateLogMetric);
-            _callDeleteLogMetric = clientHelper.BuildApiCall<DeleteLogMetricRequest, wkt::Empty>(grpcClient.DeleteLogMetricAsync, grpcClient.DeleteLogMetric, effectiveSettings.DeleteLogMetricSettings).WithGoogleRequestParam("metric_name", request => request.MetricName);
+            _callDeleteLogMetric = clientHelper.BuildApiCall<DeleteLogMetricRequest, wkt::Empty>("DeleteLogMetric", grpcClient.DeleteLogMetricAsync, grpcClient.DeleteLogMetric, effectiveSettings.DeleteLogMetricSettings).WithGoogleRequestParam("metric_name", request => request.MetricName);
             Modify_ApiCall(ref _callDeleteLogMetric);
             Modify_DeleteLogMetricApiCall(ref _callDeleteLogMetric);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

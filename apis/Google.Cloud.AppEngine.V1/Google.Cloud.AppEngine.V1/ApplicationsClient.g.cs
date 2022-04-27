@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -172,9 +172,8 @@ namespace Google.Cloud.AppEngine.V1
         public ApplicationsSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public ApplicationsClientBuilder()
+        public ApplicationsClientBuilder() : base(ApplicationsClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = ApplicationsClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref ApplicationsClient client);
@@ -201,29 +200,18 @@ namespace Google.Cloud.AppEngine.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ApplicationsClient.Create(callInvoker, Settings);
+            return ApplicationsClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<ApplicationsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ApplicationsClient.Create(callInvoker, Settings);
+            return ApplicationsClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => ApplicationsClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => ApplicationsClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => ApplicationsClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>Applications client wrapper, for convenient use.</summary>
@@ -254,19 +242,10 @@ namespace Google.Cloud.AppEngine.V1
             "https://www.googleapis.com/auth/cloud-platform.read-only",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Applications.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="ApplicationsClient"/> using the default credentials, endpoint and
@@ -293,8 +272,9 @@ namespace Google.Cloud.AppEngine.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="ApplicationsSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="ApplicationsClient"/>.</returns>
-        internal static ApplicationsClient Create(grpccore::CallInvoker callInvoker, ApplicationsSettings settings = null)
+        internal static ApplicationsClient Create(grpccore::CallInvoker callInvoker, ApplicationsSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -303,7 +283,7 @@ namespace Google.Cloud.AppEngine.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             Applications.ApplicationsClient grpcClient = new Applications.ApplicationsClient(callInvoker);
-            return new ApplicationsClientImpl(grpcClient, settings);
+            return new ApplicationsClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -624,24 +604,25 @@ namespace Google.Cloud.AppEngine.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="ApplicationsSettings"/> used within this client.</param>
-        public ApplicationsClientImpl(Applications.ApplicationsClient grpcClient, ApplicationsSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public ApplicationsClientImpl(Applications.ApplicationsClient grpcClient, ApplicationsSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             ApplicationsSettings effectiveSettings = settings ?? ApplicationsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateApplicationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateApplicationOperationsSettings);
-            UpdateApplicationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateApplicationOperationsSettings);
-            RepairApplicationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RepairApplicationOperationsSettings);
-            _callGetApplication = clientHelper.BuildApiCall<GetApplicationRequest, Application>(grpcClient.GetApplicationAsync, grpcClient.GetApplication, effectiveSettings.GetApplicationSettings).WithGoogleRequestParam("name", request => request.Name);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateApplicationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateApplicationOperationsSettings, logger);
+            UpdateApplicationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateApplicationOperationsSettings, logger);
+            RepairApplicationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RepairApplicationOperationsSettings, logger);
+            _callGetApplication = clientHelper.BuildApiCall<GetApplicationRequest, Application>("GetApplication", grpcClient.GetApplicationAsync, grpcClient.GetApplication, effectiveSettings.GetApplicationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetApplication);
             Modify_GetApplicationApiCall(ref _callGetApplication);
-            _callCreateApplication = clientHelper.BuildApiCall<CreateApplicationRequest, lro::Operation>(grpcClient.CreateApplicationAsync, grpcClient.CreateApplication, effectiveSettings.CreateApplicationSettings);
+            _callCreateApplication = clientHelper.BuildApiCall<CreateApplicationRequest, lro::Operation>("CreateApplication", grpcClient.CreateApplicationAsync, grpcClient.CreateApplication, effectiveSettings.CreateApplicationSettings);
             Modify_ApiCall(ref _callCreateApplication);
             Modify_CreateApplicationApiCall(ref _callCreateApplication);
-            _callUpdateApplication = clientHelper.BuildApiCall<UpdateApplicationRequest, lro::Operation>(grpcClient.UpdateApplicationAsync, grpcClient.UpdateApplication, effectiveSettings.UpdateApplicationSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUpdateApplication = clientHelper.BuildApiCall<UpdateApplicationRequest, lro::Operation>("UpdateApplication", grpcClient.UpdateApplicationAsync, grpcClient.UpdateApplication, effectiveSettings.UpdateApplicationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUpdateApplication);
             Modify_UpdateApplicationApiCall(ref _callUpdateApplication);
-            _callRepairApplication = clientHelper.BuildApiCall<RepairApplicationRequest, lro::Operation>(grpcClient.RepairApplicationAsync, grpcClient.RepairApplication, effectiveSettings.RepairApplicationSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callRepairApplication = clientHelper.BuildApiCall<RepairApplicationRequest, lro::Operation>("RepairApplication", grpcClient.RepairApplicationAsync, grpcClient.RepairApplication, effectiveSettings.RepairApplicationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callRepairApplication);
             Modify_RepairApplicationApiCall(ref _callRepairApplication);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

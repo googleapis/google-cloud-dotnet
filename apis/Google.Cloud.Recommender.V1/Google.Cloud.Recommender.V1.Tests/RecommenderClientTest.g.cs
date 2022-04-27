@@ -57,7 +57,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 Severity = Insight.Types.Severity.High,
             };
             mockGrpcClient.Setup(x => x.GetInsight(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
             Insight response = client.GetInsight(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -93,7 +93,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 Severity = Insight.Types.Severity.High,
             };
             mockGrpcClient.Setup(x => x.GetInsightAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Insight>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
             Insight responseCallSettings = await client.GetInsightAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Insight responseCancellationToken = await client.GetInsightAsync(request, st::CancellationToken.None);
@@ -131,7 +131,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 Severity = Insight.Types.Severity.High,
             };
             mockGrpcClient.Setup(x => x.GetInsight(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
             Insight response = client.GetInsight(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -167,7 +167,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 Severity = Insight.Types.Severity.High,
             };
             mockGrpcClient.Setup(x => x.GetInsightAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Insight>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
             Insight responseCallSettings = await client.GetInsightAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Insight responseCancellationToken = await client.GetInsightAsync(request.Name, st::CancellationToken.None);
@@ -205,7 +205,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 Severity = Insight.Types.Severity.High,
             };
             mockGrpcClient.Setup(x => x.GetInsight(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
             Insight response = client.GetInsight(request.InsightName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -241,7 +241,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 Severity = Insight.Types.Severity.High,
             };
             mockGrpcClient.Setup(x => x.GetInsightAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Insight>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
             Insight responseCallSettings = await client.GetInsightAsync(request.InsightName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Insight responseCancellationToken = await client.GetInsightAsync(request.InsightName, st::CancellationToken.None);
@@ -287,7 +287,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 Severity = Insight.Types.Severity.High,
             };
             mockGrpcClient.Setup(x => x.MarkInsightAccepted(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
             Insight response = client.MarkInsightAccepted(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -331,7 +331,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 Severity = Insight.Types.Severity.High,
             };
             mockGrpcClient.Setup(x => x.MarkInsightAcceptedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Insight>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
             Insight responseCallSettings = await client.MarkInsightAcceptedAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Insight responseCancellationToken = await client.MarkInsightAcceptedAsync(request, st::CancellationToken.None);
@@ -377,7 +377,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 Severity = Insight.Types.Severity.High,
             };
             mockGrpcClient.Setup(x => x.MarkInsightAccepted(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
             Insight response = client.MarkInsightAccepted(request.Name, request.StateMetadata, request.Etag);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -421,7 +421,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 Severity = Insight.Types.Severity.High,
             };
             mockGrpcClient.Setup(x => x.MarkInsightAcceptedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Insight>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
             Insight responseCallSettings = await client.MarkInsightAcceptedAsync(request.Name, request.StateMetadata, request.Etag, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Insight responseCancellationToken = await client.MarkInsightAcceptedAsync(request.Name, request.StateMetadata, request.Etag, st::CancellationToken.None);
@@ -467,7 +467,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 Severity = Insight.Types.Severity.High,
             };
             mockGrpcClient.Setup(x => x.MarkInsightAccepted(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
             Insight response = client.MarkInsightAccepted(request.InsightName, request.StateMetadata, request.Etag);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -511,7 +511,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 Severity = Insight.Types.Severity.High,
             };
             mockGrpcClient.Setup(x => x.MarkInsightAcceptedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Insight>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
             Insight responseCallSettings = await client.MarkInsightAcceptedAsync(request.InsightName, request.StateMetadata, request.Etag, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Insight responseCancellationToken = await client.MarkInsightAcceptedAsync(request.InsightName, request.StateMetadata, request.Etag, st::CancellationToken.None);
@@ -546,7 +546,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.GetRecommendation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
             Recommendation response = client.GetRecommendation(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -579,7 +579,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.GetRecommendationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Recommendation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
             Recommendation responseCallSettings = await client.GetRecommendationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Recommendation responseCancellationToken = await client.GetRecommendationAsync(request, st::CancellationToken.None);
@@ -614,7 +614,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.GetRecommendation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
             Recommendation response = client.GetRecommendation(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -647,7 +647,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.GetRecommendationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Recommendation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
             Recommendation responseCallSettings = await client.GetRecommendationAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Recommendation responseCancellationToken = await client.GetRecommendationAsync(request.Name, st::CancellationToken.None);
@@ -682,7 +682,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.GetRecommendation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
             Recommendation response = client.GetRecommendation(request.RecommendationName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -715,7 +715,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.GetRecommendationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Recommendation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
             Recommendation responseCallSettings = await client.GetRecommendationAsync(request.RecommendationName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Recommendation responseCancellationToken = await client.GetRecommendationAsync(request.RecommendationName, st::CancellationToken.None);
@@ -758,7 +758,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationClaimed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
             Recommendation response = client.MarkRecommendationClaimed(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -799,7 +799,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationClaimedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Recommendation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
             Recommendation responseCallSettings = await client.MarkRecommendationClaimedAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Recommendation responseCancellationToken = await client.MarkRecommendationClaimedAsync(request, st::CancellationToken.None);
@@ -842,7 +842,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationClaimed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
             Recommendation response = client.MarkRecommendationClaimed(request.Name, request.StateMetadata, request.Etag);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -883,7 +883,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationClaimedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Recommendation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
             Recommendation responseCallSettings = await client.MarkRecommendationClaimedAsync(request.Name, request.StateMetadata, request.Etag, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Recommendation responseCancellationToken = await client.MarkRecommendationClaimedAsync(request.Name, request.StateMetadata, request.Etag, st::CancellationToken.None);
@@ -926,7 +926,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationClaimed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
             Recommendation response = client.MarkRecommendationClaimed(request.RecommendationName, request.StateMetadata, request.Etag);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -967,7 +967,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationClaimedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Recommendation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
             Recommendation responseCallSettings = await client.MarkRecommendationClaimedAsync(request.RecommendationName, request.StateMetadata, request.Etag, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Recommendation responseCancellationToken = await client.MarkRecommendationClaimedAsync(request.RecommendationName, request.StateMetadata, request.Etag, st::CancellationToken.None);
@@ -1010,7 +1010,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationSucceeded(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
             Recommendation response = client.MarkRecommendationSucceeded(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1051,7 +1051,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationSucceededAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Recommendation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
             Recommendation responseCallSettings = await client.MarkRecommendationSucceededAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Recommendation responseCancellationToken = await client.MarkRecommendationSucceededAsync(request, st::CancellationToken.None);
@@ -1094,7 +1094,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationSucceeded(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
             Recommendation response = client.MarkRecommendationSucceeded(request.Name, request.StateMetadata, request.Etag);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1135,7 +1135,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationSucceededAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Recommendation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
             Recommendation responseCallSettings = await client.MarkRecommendationSucceededAsync(request.Name, request.StateMetadata, request.Etag, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Recommendation responseCancellationToken = await client.MarkRecommendationSucceededAsync(request.Name, request.StateMetadata, request.Etag, st::CancellationToken.None);
@@ -1178,7 +1178,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationSucceeded(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
             Recommendation response = client.MarkRecommendationSucceeded(request.RecommendationName, request.StateMetadata, request.Etag);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1219,7 +1219,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationSucceededAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Recommendation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
             Recommendation responseCallSettings = await client.MarkRecommendationSucceededAsync(request.RecommendationName, request.StateMetadata, request.Etag, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Recommendation responseCancellationToken = await client.MarkRecommendationSucceededAsync(request.RecommendationName, request.StateMetadata, request.Etag, st::CancellationToken.None);
@@ -1262,7 +1262,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationFailed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
             Recommendation response = client.MarkRecommendationFailed(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1303,7 +1303,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationFailedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Recommendation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
             Recommendation responseCallSettings = await client.MarkRecommendationFailedAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Recommendation responseCancellationToken = await client.MarkRecommendationFailedAsync(request, st::CancellationToken.None);
@@ -1346,7 +1346,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationFailed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
             Recommendation response = client.MarkRecommendationFailed(request.Name, request.StateMetadata, request.Etag);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1387,7 +1387,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationFailedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Recommendation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
             Recommendation responseCallSettings = await client.MarkRecommendationFailedAsync(request.Name, request.StateMetadata, request.Etag, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Recommendation responseCancellationToken = await client.MarkRecommendationFailedAsync(request.Name, request.StateMetadata, request.Etag, st::CancellationToken.None);
@@ -1430,7 +1430,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationFailed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
             Recommendation response = client.MarkRecommendationFailed(request.RecommendationName, request.StateMetadata, request.Etag);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1471,7 +1471,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationFailedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Recommendation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
             Recommendation responseCallSettings = await client.MarkRecommendationFailedAsync(request.RecommendationName, request.StateMetadata, request.Etag, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Recommendation responseCancellationToken = await client.MarkRecommendationFailedAsync(request.RecommendationName, request.StateMetadata, request.Etag, st::CancellationToken.None);

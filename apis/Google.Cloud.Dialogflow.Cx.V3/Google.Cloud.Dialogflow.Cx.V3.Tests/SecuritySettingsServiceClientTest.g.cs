@@ -54,7 +54,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
             mockGrpcClient.Setup(x => x.CreateSecuritySettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             SecuritySettings response = client.CreateSecuritySettings(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -86,7 +86,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
             mockGrpcClient.Setup(x => x.CreateSecuritySettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecuritySettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             SecuritySettings responseCallSettings = await client.CreateSecuritySettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecuritySettings responseCancellationToken = await client.CreateSecuritySettingsAsync(request, st::CancellationToken.None);
@@ -120,7 +120,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
             mockGrpcClient.Setup(x => x.CreateSecuritySettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             SecuritySettings response = client.CreateSecuritySettings(request.Parent, request.SecuritySettings);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -152,7 +152,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
             mockGrpcClient.Setup(x => x.CreateSecuritySettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecuritySettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             SecuritySettings responseCallSettings = await client.CreateSecuritySettingsAsync(request.Parent, request.SecuritySettings, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecuritySettings responseCancellationToken = await client.CreateSecuritySettingsAsync(request.Parent, request.SecuritySettings, st::CancellationToken.None);
@@ -186,7 +186,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
             mockGrpcClient.Setup(x => x.CreateSecuritySettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             SecuritySettings response = client.CreateSecuritySettings(request.ParentAsLocationName, request.SecuritySettings);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -218,7 +218,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
             mockGrpcClient.Setup(x => x.CreateSecuritySettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecuritySettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             SecuritySettings responseCallSettings = await client.CreateSecuritySettingsAsync(request.ParentAsLocationName, request.SecuritySettings, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecuritySettings responseCancellationToken = await client.CreateSecuritySettingsAsync(request.ParentAsLocationName, request.SecuritySettings, st::CancellationToken.None);
@@ -251,7 +251,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
             mockGrpcClient.Setup(x => x.GetSecuritySettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             SecuritySettings response = client.GetSecuritySettings(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -282,7 +282,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
             mockGrpcClient.Setup(x => x.GetSecuritySettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecuritySettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             SecuritySettings responseCallSettings = await client.GetSecuritySettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecuritySettings responseCancellationToken = await client.GetSecuritySettingsAsync(request, st::CancellationToken.None);
@@ -315,7 +315,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
             mockGrpcClient.Setup(x => x.GetSecuritySettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             SecuritySettings response = client.GetSecuritySettings(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -346,7 +346,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
             mockGrpcClient.Setup(x => x.GetSecuritySettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecuritySettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             SecuritySettings responseCallSettings = await client.GetSecuritySettingsAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecuritySettings responseCancellationToken = await client.GetSecuritySettingsAsync(request.Name, st::CancellationToken.None);
@@ -379,7 +379,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
             mockGrpcClient.Setup(x => x.GetSecuritySettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             SecuritySettings response = client.GetSecuritySettings(request.SecuritySettingsName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -410,7 +410,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
             mockGrpcClient.Setup(x => x.GetSecuritySettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecuritySettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             SecuritySettings responseCallSettings = await client.GetSecuritySettingsAsync(request.SecuritySettingsName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecuritySettings responseCancellationToken = await client.GetSecuritySettingsAsync(request.SecuritySettingsName, st::CancellationToken.None);
@@ -444,7 +444,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
             mockGrpcClient.Setup(x => x.UpdateSecuritySettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             SecuritySettings response = client.UpdateSecuritySettings(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -476,7 +476,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
             mockGrpcClient.Setup(x => x.UpdateSecuritySettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecuritySettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             SecuritySettings responseCallSettings = await client.UpdateSecuritySettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecuritySettings responseCancellationToken = await client.UpdateSecuritySettingsAsync(request, st::CancellationToken.None);
@@ -510,7 +510,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
             mockGrpcClient.Setup(x => x.UpdateSecuritySettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             SecuritySettings response = client.UpdateSecuritySettings(request.SecuritySettings, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -542,7 +542,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
             mockGrpcClient.Setup(x => x.UpdateSecuritySettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecuritySettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             SecuritySettings responseCallSettings = await client.UpdateSecuritySettingsAsync(request.SecuritySettings, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecuritySettings responseCancellationToken = await client.UpdateSecuritySettingsAsync(request.SecuritySettings, request.UpdateMask, st::CancellationToken.None);
@@ -560,7 +560,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSecuritySettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteSecuritySettings(request);
             mockGrpcClient.VerifyAll();
         }
@@ -575,7 +575,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSecuritySettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteSecuritySettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteSecuritySettingsAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -591,7 +591,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSecuritySettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteSecuritySettings(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -606,7 +606,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSecuritySettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteSecuritySettingsAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteSecuritySettingsAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -622,7 +622,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSecuritySettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteSecuritySettings(request.SecuritySettingsName);
             mockGrpcClient.VerifyAll();
         }
@@ -637,7 +637,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSecuritySettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteSecuritySettingsAsync(request.SecuritySettingsName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteSecuritySettingsAsync(request.SecuritySettingsName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
