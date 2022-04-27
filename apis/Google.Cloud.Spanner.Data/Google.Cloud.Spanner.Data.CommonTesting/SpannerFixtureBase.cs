@@ -27,7 +27,6 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
 
         public SpannerFixtureBase()
         {
-            GrpcInfo.EnableSubchannelCounting();
             Database = SpannerTestDatabase.GetInstance(ProjectId);
         }
 

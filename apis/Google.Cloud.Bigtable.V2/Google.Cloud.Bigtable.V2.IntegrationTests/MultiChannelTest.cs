@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+#if NET462_OR_GREATER
 using Google.Cloud.ClientTesting;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -54,3 +55,4 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         }
     }
 }
+#endif
