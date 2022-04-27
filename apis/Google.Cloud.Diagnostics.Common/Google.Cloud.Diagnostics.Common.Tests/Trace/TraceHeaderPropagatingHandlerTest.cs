@@ -147,7 +147,6 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         }
 
         // TODO: Use Options instead of Properties
-#pragma warning disable CS0618 // Type or member is obsolete
         private static void SetOutgoingHttpTraceContext(HttpRequestMessage request, ITraceContext context)
         {
             request.Properties.Add("traceId", context.TraceId);
@@ -165,7 +164,6 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             Assert.DoesNotContain("traceId", request.Properties);
             Assert.DoesNotContain("spanId", request.Properties);
         }
-#pragma warning restore CS0618 // Type or member is obsolete
 
         private void AssertContainsGoogleTraceHeader(HttpRequestMessage request)
         {
