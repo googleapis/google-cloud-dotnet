@@ -26,18 +26,17 @@ namespace Google.Cloud.GkeHub.V1.MultiClusterIngress {
           string.Concat(
             "CkRnb29nbGUvY2xvdWQvZ2tlaHViL3YxL211bHRpY2x1c3RlcmluZ3Jlc3Mv",
             "bXVsdGljbHVzdGVyaW5ncmVzcy5wcm90bxIqZ29vZ2xlLmNsb3VkLmdrZWh1",
-            "Yi5tdWx0aWNsdXN0ZXJpbmdyZXNzLnYxGhxnb29nbGUvYXBpL2Fubm90YXRp",
-            "b25zLnByb3RvIigKC0ZlYXR1cmVTcGVjEhkKEWNvbmZpZ19tZW1iZXJzaGlw",
-            "GAEgASgJQrYCCi5jb20uZ29vZ2xlLmNsb3VkLmdrZWh1Yi5tdWx0aWNsdXN0",
-            "ZXJpbmdyZXNzLnYxQhhNdWx0aUNsdXN0ZXJJbmdyZXNzUHJvdG9QAVpdZ29v",
-            "Z2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9na2Vo",
-            "dWIvbXVsdGljbHVzdGVyaW5ncmVzcy92MTttdWx0aWNsdXN0ZXJpbmdyZXNz",
-            "qgIqR29vZ2xlLkNsb3VkLkdrZUh1Yi5WMS5NdWx0aUNsdXN0ZXJJbmdyZXNz",
-            "ygIqR29vZ2xlXENsb3VkXEdrZUh1YlxNdWx0aUNsdXN0ZXJJbmdyZXNzXFYx",
-            "6gIuR29vZ2xlOjpDbG91ZDo6R2tlSHViOjpNdWx0aUNsdXN0ZXJJbmdyZXNz",
-            "OjpWMWIGcHJvdG8z"));
+            "Yi5tdWx0aWNsdXN0ZXJpbmdyZXNzLnYxIigKC0ZlYXR1cmVTcGVjEhkKEWNv",
+            "bmZpZ19tZW1iZXJzaGlwGAEgASgJQrYCCi5jb20uZ29vZ2xlLmNsb3VkLmdr",
+            "ZWh1Yi5tdWx0aWNsdXN0ZXJpbmdyZXNzLnYxQhhNdWx0aUNsdXN0ZXJJbmdy",
+            "ZXNzUHJvdG9QAVpdZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xl",
+            "YXBpcy9jbG91ZC9na2VodWIvbXVsdGljbHVzdGVyaW5ncmVzcy92MTttdWx0",
+            "aWNsdXN0ZXJpbmdyZXNzqgIqR29vZ2xlLkNsb3VkLkdrZUh1Yi5WMS5NdWx0",
+            "aUNsdXN0ZXJJbmdyZXNzygIqR29vZ2xlXENsb3VkXEdrZUh1YlxNdWx0aUNs",
+            "dXN0ZXJJbmdyZXNzXFYx6gIuR29vZ2xlOjpDbG91ZDo6R2tlSHViOjpNdWx0",
+            "aUNsdXN0ZXJJbmdyZXNzOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.MultiClusterIngress.FeatureSpec), global::Google.Cloud.GkeHub.V1.MultiClusterIngress.FeatureSpec.Parser, new[]{ "ConfigMembership" }, null, null, null, null)
           }));
