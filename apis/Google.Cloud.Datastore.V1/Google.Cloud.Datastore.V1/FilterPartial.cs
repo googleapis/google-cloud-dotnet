@@ -76,8 +76,7 @@ namespace Google.Cloud.Datastore.V1
         /// Creates a filter to check that the specified property is in a given array of values.
         /// </summary>
         /// <param name="value">The name of the property. Must not be null.</param>
-        /// <param name="collection">The array of values to compare against. May be null, which indicates
-        /// a value with <see cref="Value.NullValue"/> set.</param>
+        /// <param name="collection">The array of values to compare against. </param>
         /// <returns>The newly created filter.</returns>
         public static Filter In(string value, ArrayValue collection) =>
             Property(value, collection, Operator.In);
@@ -86,8 +85,7 @@ namespace Google.Cloud.Datastore.V1
         /// Creates a filter to check that the specified property is not in a given array of values.
         /// </summary>
         /// <param name="value">The name of the property. Must not be null.</param>
-        /// <param name="collection">The array of values to compare against. May be null, which indicates
-        /// a value with <see cref="Value.NullValue"/> set.</param>
+        /// <param name="collection">The array of values to compare against. </param>
         /// <returns>The newly created filter.</returns>
         public static Filter NotIn(string value, ArrayValue collection) =>
             Property(value, collection, Operator.NotIn);
