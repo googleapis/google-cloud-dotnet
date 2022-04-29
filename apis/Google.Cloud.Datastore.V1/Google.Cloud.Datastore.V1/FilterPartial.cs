@@ -63,6 +63,34 @@ namespace Google.Cloud.Datastore.V1
             Property(propertyName, propertyValue, Operator.Equal);
 
         /// <summary>
+        /// Creates a filter to check that the specified property is not equal to a given value.
+        /// </summary>
+        /// <param name="propertyName">The name of the property. Must not be null.</param>
+        /// <param name="propertyValue">The value to compare against. May be null, which indicates
+        /// a value with <see cref="Value.NullValue"/> set.</param>
+        /// <returns>The newly created filter.</returns>
+        public static Filter NotEqual(string propertyName, Value propertyValue) =>
+            Property(propertyName, propertyValue, Operator.NotEqual);
+
+        /// <summary>
+        /// Creates a filter to check that the specified property is in a given array of values.
+        /// </summary>
+        /// <param name="value">The name of the property. Must not be null.</param>
+        /// <param name="collection">The array of values to compare against. </param>
+        /// <returns>The newly created filter.</returns>
+        public static Filter In(string value, ArrayValue collection) =>
+            Property(value, collection, Operator.In);
+
+        /// <summary>
+        /// Creates a filter to check that the specified property is not in a given array of values.
+        /// </summary>
+        /// <param name="value">The name of the property. Must not be null.</param>
+        /// <param name="collection">The array of values to compare against. </param>
+        /// <returns>The newly created filter.</returns>
+        public static Filter NotIn(string value, ArrayValue collection) =>
+            Property(value, collection, Operator.NotIn);
+
+        /// <summary>
         /// Creates a filter to check that the specified property is less than a given value.
         /// </summary>
         /// <param name="propertyName">The name of the property. Must not be null.</param>

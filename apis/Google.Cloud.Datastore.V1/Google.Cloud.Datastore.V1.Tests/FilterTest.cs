@@ -55,6 +55,54 @@ namespace Google.Cloud.Datastore.V1.Tests
         }
 
         [Fact]
+        public void NotEqual()
+        {
+            var actual = Filter.NotEqual("x", 1);
+            var expected = new Filter
+            {
+                PropertyFilter = new PropertyFilter
+                {
+                    Op = Operator.NotEqual,
+                    Property = new PropertyReference { Name = "x" },
+                    Value = new Value { IntegerValue = 1 }
+                }
+            };
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void NotIn()
+        {
+            var actual = Filter.NotIn("x", new ArrayValue(new string[2] { "1", "2" }));
+            var expected = new Filter
+            {
+                PropertyFilter = new PropertyFilter
+                {
+                    Op = Operator.NotIn,
+                    Property = new PropertyReference { Name = "x" },
+                    Value = new ArrayValue(new string[2] { "1", "2" })
+                }
+            };
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void In()
+        {
+            var actual = Filter.In("1", new ArrayValue(new string[2] { "1", "2" }));
+            var expected = new Filter
+            {
+                PropertyFilter = new PropertyFilter
+                {
+                    Op = Operator.In,
+                    Property = new PropertyReference { Name = "1" },
+                    Value = new ArrayValue(new string[2] { "1", "2" })
+                }
+            };
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
         public void GreaterThan()
         {
             var actual = Filter.GreaterThan("x", 1);
