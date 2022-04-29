@@ -19,11 +19,9 @@ using gaxgrpc = Google.Api.Gax.Grpc;
 using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using sys = System;
-using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
@@ -53,11 +51,6 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             CreateAssessmentSettings = existing.CreateAssessmentSettings;
             AnnotateAssessmentSettings = existing.AnnotateAssessmentSettings;
-            CreateKeySettings = existing.CreateKeySettings;
-            ListKeysSettings = existing.ListKeysSettings;
-            GetKeySettings = existing.GetKeySettings;
-            UpdateKeySettings = existing.UpdateKeySettings;
-            DeleteKeySettings = existing.DeleteKeySettings;
             OnCopy(existing);
         }
 
@@ -88,71 +81,6 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings AnnotateAssessmentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>RecaptchaEnterpriseServiceV1Beta1Client.CreateKey</c> and
-        /// <c>RecaptchaEnterpriseServiceV1Beta1Client.CreateKeyAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 600 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings CreateKeySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>RecaptchaEnterpriseServiceV1Beta1Client.ListKeys</c> and
-        /// <c>RecaptchaEnterpriseServiceV1Beta1Client.ListKeysAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 600 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings ListKeysSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>RecaptchaEnterpriseServiceV1Beta1Client.GetKey</c> and
-        /// <c>RecaptchaEnterpriseServiceV1Beta1Client.GetKeyAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 600 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings GetKeySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>RecaptchaEnterpriseServiceV1Beta1Client.UpdateKey</c> and
-        /// <c>RecaptchaEnterpriseServiceV1Beta1Client.UpdateKeyAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 600 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings UpdateKeySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>RecaptchaEnterpriseServiceV1Beta1Client.DeleteKey</c> and
-        /// <c>RecaptchaEnterpriseServiceV1Beta1Client.DeleteKeyAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 600 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings DeleteKeySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="RecaptchaEnterpriseServiceV1Beta1Settings"/> object.</returns>
@@ -492,7 +420,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// "projects/{project_number}/assessments/{assessment_id}".
         /// </param>
         /// <param name="annotation">
-        /// Required. The annotation that will be assigned to the Event.
+        /// Optional. The annotation that will be assigned to the Event. This field can be left
+        /// empty to provide reasons that apply to an event without concluding whether
+        /// the event is legitimate or fraudulent.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -512,7 +442,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// "projects/{project_number}/assessments/{assessment_id}".
         /// </param>
         /// <param name="annotation">
-        /// Required. The annotation that will be assigned to the Event.
+        /// Optional. The annotation that will be assigned to the Event. This field can be left
+        /// empty to provide reasons that apply to an event without concluding whether
+        /// the event is legitimate or fraudulent.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -532,7 +464,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// "projects/{project_number}/assessments/{assessment_id}".
         /// </param>
         /// <param name="annotation">
-        /// Required. The annotation that will be assigned to the Event.
+        /// Optional. The annotation that will be assigned to the Event. This field can be left
+        /// empty to provide reasons that apply to an event without concluding whether
+        /// the event is legitimate or fraudulent.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -548,7 +482,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// "projects/{project_number}/assessments/{assessment_id}".
         /// </param>
         /// <param name="annotation">
-        /// Required. The annotation that will be assigned to the Event.
+        /// Optional. The annotation that will be assigned to the Event. This field can be left
+        /// empty to provide reasons that apply to an event without concluding whether
+        /// the event is legitimate or fraudulent.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -568,7 +504,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// "projects/{project_number}/assessments/{assessment_id}".
         /// </param>
         /// <param name="annotation">
-        /// Required. The annotation that will be assigned to the Event.
+        /// Optional. The annotation that will be assigned to the Event. This field can be left
+        /// empty to provide reasons that apply to an event without concluding whether
+        /// the event is legitimate or fraudulent.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -588,138 +526,14 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// "projects/{project_number}/assessments/{assessment_id}".
         /// </param>
         /// <param name="annotation">
-        /// Required. The annotation that will be assigned to the Event.
+        /// Optional. The annotation that will be assigned to the Event. This field can be left
+        /// empty to provide reasons that apply to an event without concluding whether
+        /// the event is legitimate or fraudulent.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<AnnotateAssessmentResponse> AnnotateAssessmentAsync(AssessmentName name, AnnotateAssessmentRequest.Types.Annotation annotation, st::CancellationToken cancellationToken) =>
             AnnotateAssessmentAsync(name, annotation, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates a new reCAPTCHA Enterprise key.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual Key CreateKey(CreateKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Creates a new reCAPTCHA Enterprise key.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Key> CreateKeyAsync(CreateKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Creates a new reCAPTCHA Enterprise key.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Key> CreateKeyAsync(CreateKeyRequest request, st::CancellationToken cancellationToken) =>
-            CreateKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Returns the list of all keys that belong to a project.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="Key"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListKeysResponse, Key> ListKeys(ListKeysRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Returns the list of all keys that belong to a project.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="Key"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListKeysResponse, Key> ListKeysAsync(ListKeysRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Returns the specified key.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual Key GetKey(GetKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Returns the specified key.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Key> GetKeyAsync(GetKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Returns the specified key.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Key> GetKeyAsync(GetKeyRequest request, st::CancellationToken cancellationToken) =>
-            GetKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Updates the specified key.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual Key UpdateKey(UpdateKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Updates the specified key.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Key> UpdateKeyAsync(UpdateKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Updates the specified key.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Key> UpdateKeyAsync(UpdateKeyRequest request, st::CancellationToken cancellationToken) =>
-            UpdateKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Deletes the specified key.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual void DeleteKey(DeleteKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Deletes the specified key.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteKeyAsync(DeleteKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Deletes the specified key.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteKeyAsync(DeleteKeyRequest request, st::CancellationToken cancellationToken) =>
-            DeleteKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>RecaptchaEnterpriseServiceV1Beta1 client wrapper implementation, for convenient use.</summary>
@@ -731,16 +545,6 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         private readonly gaxgrpc::ApiCall<CreateAssessmentRequest, Assessment> _callCreateAssessment;
 
         private readonly gaxgrpc::ApiCall<AnnotateAssessmentRequest, AnnotateAssessmentResponse> _callAnnotateAssessment;
-
-        private readonly gaxgrpc::ApiCall<CreateKeyRequest, Key> _callCreateKey;
-
-        private readonly gaxgrpc::ApiCall<ListKeysRequest, ListKeysResponse> _callListKeys;
-
-        private readonly gaxgrpc::ApiCall<GetKeyRequest, Key> _callGetKey;
-
-        private readonly gaxgrpc::ApiCall<UpdateKeyRequest, Key> _callUpdateKey;
-
-        private readonly gaxgrpc::ApiCall<DeleteKeyRequest, wkt::Empty> _callDeleteKey;
 
         /// <summary>
         /// Constructs a client wrapper for the RecaptchaEnterpriseServiceV1Beta1 service, with the specified gRPC
@@ -761,21 +565,6 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
             _callAnnotateAssessment = clientHelper.BuildApiCall<AnnotateAssessmentRequest, AnnotateAssessmentResponse>(grpcClient.AnnotateAssessmentAsync, grpcClient.AnnotateAssessment, effectiveSettings.AnnotateAssessmentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callAnnotateAssessment);
             Modify_AnnotateAssessmentApiCall(ref _callAnnotateAssessment);
-            _callCreateKey = clientHelper.BuildApiCall<CreateKeyRequest, Key>(grpcClient.CreateKeyAsync, grpcClient.CreateKey, effectiveSettings.CreateKeySettings).WithGoogleRequestParam("parent", request => request.Parent);
-            Modify_ApiCall(ref _callCreateKey);
-            Modify_CreateKeyApiCall(ref _callCreateKey);
-            _callListKeys = clientHelper.BuildApiCall<ListKeysRequest, ListKeysResponse>(grpcClient.ListKeysAsync, grpcClient.ListKeys, effectiveSettings.ListKeysSettings).WithGoogleRequestParam("parent", request => request.Parent);
-            Modify_ApiCall(ref _callListKeys);
-            Modify_ListKeysApiCall(ref _callListKeys);
-            _callGetKey = clientHelper.BuildApiCall<GetKeyRequest, Key>(grpcClient.GetKeyAsync, grpcClient.GetKey, effectiveSettings.GetKeySettings).WithGoogleRequestParam("name", request => request.Name);
-            Modify_ApiCall(ref _callGetKey);
-            Modify_GetKeyApiCall(ref _callGetKey);
-            _callUpdateKey = clientHelper.BuildApiCall<UpdateKeyRequest, Key>(grpcClient.UpdateKeyAsync, grpcClient.UpdateKey, effectiveSettings.UpdateKeySettings).WithGoogleRequestParam("key.name", request => request.Key?.Name);
-            Modify_ApiCall(ref _callUpdateKey);
-            Modify_UpdateKeyApiCall(ref _callUpdateKey);
-            _callDeleteKey = clientHelper.BuildApiCall<DeleteKeyRequest, wkt::Empty>(grpcClient.DeleteKeyAsync, grpcClient.DeleteKey, effectiveSettings.DeleteKeySettings).WithGoogleRequestParam("name", request => request.Name);
-            Modify_ApiCall(ref _callDeleteKey);
-            Modify_DeleteKeyApiCall(ref _callDeleteKey);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -785,16 +574,6 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
 
         partial void Modify_AnnotateAssessmentApiCall(ref gaxgrpc::ApiCall<AnnotateAssessmentRequest, AnnotateAssessmentResponse> call);
 
-        partial void Modify_CreateKeyApiCall(ref gaxgrpc::ApiCall<CreateKeyRequest, Key> call);
-
-        partial void Modify_ListKeysApiCall(ref gaxgrpc::ApiCall<ListKeysRequest, ListKeysResponse> call);
-
-        partial void Modify_GetKeyApiCall(ref gaxgrpc::ApiCall<GetKeyRequest, Key> call);
-
-        partial void Modify_UpdateKeyApiCall(ref gaxgrpc::ApiCall<UpdateKeyRequest, Key> call);
-
-        partial void Modify_DeleteKeyApiCall(ref gaxgrpc::ApiCall<DeleteKeyRequest, wkt::Empty> call);
-
         partial void OnConstruction(RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client grpcClient, RecaptchaEnterpriseServiceV1Beta1Settings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC RecaptchaEnterpriseServiceV1Beta1 client</summary>
@@ -803,16 +582,6 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         partial void Modify_CreateAssessmentRequest(ref CreateAssessmentRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_AnnotateAssessmentRequest(ref AnnotateAssessmentRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_CreateKeyRequest(ref CreateKeyRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_ListKeysRequest(ref ListKeysRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_GetKeyRequest(ref GetKeyRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_UpdateKeyRequest(ref UpdateKeyRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_DeleteKeyRequest(ref DeleteKeyRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates an Assessment of the likelihood an event is legitimate.
@@ -863,137 +632,5 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
             Modify_AnnotateAssessmentRequest(ref request, ref callSettings);
             return _callAnnotateAssessment.Async(request, callSettings);
         }
-
-        /// <summary>
-        /// Creates a new reCAPTCHA Enterprise key.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override Key CreateKey(CreateKeyRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_CreateKeyRequest(ref request, ref callSettings);
-            return _callCreateKey.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Creates a new reCAPTCHA Enterprise key.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Key> CreateKeyAsync(CreateKeyRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_CreateKeyRequest(ref request, ref callSettings);
-            return _callCreateKey.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Returns the list of all keys that belong to a project.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="Key"/> resources.</returns>
-        public override gax::PagedEnumerable<ListKeysResponse, Key> ListKeys(ListKeysRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_ListKeysRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedEnumerable<ListKeysRequest, ListKeysResponse, Key>(_callListKeys, request, callSettings);
-        }
-
-        /// <summary>
-        /// Returns the list of all keys that belong to a project.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="Key"/> resources.</returns>
-        public override gax::PagedAsyncEnumerable<ListKeysResponse, Key> ListKeysAsync(ListKeysRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_ListKeysRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListKeysRequest, ListKeysResponse, Key>(_callListKeys, request, callSettings);
-        }
-
-        /// <summary>
-        /// Returns the specified key.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override Key GetKey(GetKeyRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_GetKeyRequest(ref request, ref callSettings);
-            return _callGetKey.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Returns the specified key.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Key> GetKeyAsync(GetKeyRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_GetKeyRequest(ref request, ref callSettings);
-            return _callGetKey.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Updates the specified key.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override Key UpdateKey(UpdateKeyRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_UpdateKeyRequest(ref request, ref callSettings);
-            return _callUpdateKey.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Updates the specified key.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Key> UpdateKeyAsync(UpdateKeyRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_UpdateKeyRequest(ref request, ref callSettings);
-            return _callUpdateKey.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Deletes the specified key.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override void DeleteKey(DeleteKeyRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_DeleteKeyRequest(ref request, ref callSettings);
-            _callDeleteKey.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Deletes the specified key.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task DeleteKeyAsync(DeleteKeyRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_DeleteKeyRequest(ref request, ref callSettings);
-            return _callDeleteKey.Async(request, callSettings);
-        }
-    }
-
-    public partial class ListKeysRequest : gaxgrpc::IPageRequest
-    {
-    }
-
-    public partial class ListKeysResponse : gaxgrpc::IPageResponse<Key>
-    {
-        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
-        public scg::IEnumerator<Key> GetEnumerator() => Keys.GetEnumerator();
-
-        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 }
