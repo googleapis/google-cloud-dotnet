@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Version>2.0.0-alpha02</Version>
+    <Version>2.0.0-alpha05</Version>
     <TargetFrameworks>netstandard2.1;net462</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Recommended Google client library to access the API Gateway API, which enables you to provide secure access to your backend services with an API that is consistent across all of your services, regardless of the service implementation</Description>
