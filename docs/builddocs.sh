@@ -30,7 +30,7 @@ build_api_docs() {
       return 1
     fi
   else
-    dotnet run --no-build --no-restore -p ../tools/Google.Cloud.Tools.GenerateDocfxSources -- $api
+    dotnet run --no-build --no-restore --project ../tools/Google.Cloud.Tools.GenerateDocfxSources -- $api
   fi
   cp filterConfig.yml output/$api
   $DOCFX metadata --logLevel Warning -f output/$api/docfx.json | tee errors.txt | grep -v "Invalid file link"
@@ -41,7 +41,7 @@ build_api_docs() {
   (! grep --quiet 'Build failed.' errors.txt)
 
   # Generate the snippet markdown
-  dotnet run --no-build --no-restore -p ../tools/Google.Cloud.Tools.GenerateSnippetMarkdown -- $api
+  dotnet run --no-build --no-restore --project ../tools/Google.Cloud.Tools.GenerateSnippetMarkdown -- $api
   
   # Copy external dependency yml files into the API and concatenate toc.yml
   for dep in $(cat output/$api/dependencies)
@@ -56,7 +56,7 @@ build_api_docs() {
   (! grep --quiet 'Build failed.' errors.txt)
   
   # We need to make some changes to meet DevSite build expectations.
-  dotnet run --no-build --no-restore -p ../tools/Google.Cloud.Tools.PostProcessDevSite -- $api
+  dotnet run --no-build --no-restore --project ../tools/Google.Cloud.Tools.PostProcessDevSite -- $api
   
   echo Finished building docs for $api
 }
