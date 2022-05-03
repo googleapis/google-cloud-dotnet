@@ -1641,7 +1641,8 @@ namespace Google.Cloud.Speech.V1 {
     /// <summary>
     /// Encoding of audio data sent in all `RecognitionAudio` messages.
     /// This field is optional for `FLAC` and `WAV` audio files and required
-    /// for all other audio formats. For details, see [AudioEncoding][google.cloud.speech.v1.RecognitionConfig.AudioEncoding].
+    /// for all other audio formats. For details, see
+    /// [AudioEncoding][google.cloud.speech.v1.RecognitionConfig.AudioEncoding].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1662,7 +1663,8 @@ namespace Google.Cloud.Speech.V1 {
     /// source to 16000 Hz. If that's not possible, use the native sample rate of
     /// the audio source (instead of re-sampling).
     /// This field is optional for FLAC and WAV audio files, but is
-    /// required for all other audio formats. For details, see [AudioEncoding][google.cloud.speech.v1.RecognitionConfig.AudioEncoding].
+    /// required for all other audio formats. For details, see
+    /// [AudioEncoding][google.cloud.speech.v1.RecognitionConfig.AudioEncoding].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1982,6 +1984,19 @@ namespace Google.Cloud.Speech.V1 {
     ///   &lt;tr>
     ///     &lt;td>&lt;b>Model&lt;/b>&lt;/td>
     ///     &lt;td>&lt;b>Description&lt;/b>&lt;/td>
+    ///   &lt;/tr>
+    ///   &lt;tr>
+    ///     &lt;td>&lt;code>latest_long&lt;/code>&lt;/td>
+    ///     &lt;td>Best for long form content like media or conversation.&lt;/td>
+    ///   &lt;/tr>
+    ///   &lt;tr>
+    ///     &lt;td>&lt;code>latest_short&lt;/code>&lt;/td>
+    ///     &lt;td>Best for short form content like commands or single shot directed
+    ///     speech.&lt;/td>
+    ///   &lt;/tr>
+    ///   &lt;tr>
+    ///     &lt;td>&lt;code>command_and_search&lt;/code>&lt;/td>
+    ///     &lt;td>Best for short queries such as voice commands or voice search.&lt;/td>
     ///   &lt;/tr>
     ///   &lt;tr>
     ///     &lt;td>&lt;code>command_and_search&lt;/code>&lt;/td>
@@ -2648,7 +2663,8 @@ namespace Google.Cloud.Speech.V1 {
       /// an `AudioEncoding` when you send  send `FLAC` or `WAV` audio, the
       /// encoding configuration must match the encoding described in the audio
       /// header; otherwise the request returns an
-      /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT] error code.
+      /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT] error
+      /// code.
       /// </summary>
       public enum AudioEncoding {
         /// <summary>
@@ -3901,8 +3917,8 @@ namespace Google.Cloud.Speech.V1 {
   /// <summary>
   /// Contains audio data in the encoding specified in the `RecognitionConfig`.
   /// Either `content` or `uri` must be supplied. Supplying both or neither
-  /// returns [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]. See
-  /// [content limits](https://cloud.google.com/speech-to-text/quotas#content).
+  /// returns [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT].
+  /// See [content limits](https://cloud.google.com/speech-to-text/quotas#content).
   /// </summary>
   public sealed partial class RecognitionAudio : pb::IMessage<RecognitionAudio>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3981,8 +3997,9 @@ namespace Google.Cloud.Speech.V1 {
     /// Currently, only Google Cloud Storage URIs are
     /// supported, which must be specified in the following format:
     /// `gs://bucket_name/object_name` (other URI formats return
-    /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]). For more information, see
-    /// [Request URIs](https://cloud.google.com/storage/docs/reference-uris).
+    /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]).
+    /// For more information, see [Request
+    /// URIs](https://cloud.google.com/storage/docs/reference-uris).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4851,8 +4868,8 @@ namespace Google.Cloud.Speech.V1 {
     public const int UriFieldNumber = 4;
     private string uri_ = "";
     /// <summary>
-    /// Output only. The URI of the audio file being transcribed. Empty if the audio was sent
-    /// as byte content.
+    /// Output only. The URI of the audio file being transcribed. Empty if the
+    /// audio was sent as byte content.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5634,9 +5651,9 @@ namespace Google.Cloud.Speech.V1 {
     public const int LanguageCodeFieldNumber = 6;
     private string languageCode_ = "";
     /// <summary>
-    /// Output only. The [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag
-    /// of the language in this result. This language code was detected to have
-    /// the most likelihood of being spoken in the audio.
+    /// Output only. The [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt)
+    /// language tag of the language in this result. This language code was
+    /// detected to have the most likelihood of being spoken in the audio.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6003,9 +6020,9 @@ namespace Google.Cloud.Speech.V1 {
     public const int LanguageCodeFieldNumber = 5;
     private string languageCode_ = "";
     /// <summary>
-    /// Output only. The [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag
-    /// of the language in this result. This language code was detected to have
-    /// the most likelihood of being spoken in the audio.
+    /// Output only. The [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt)
+    /// language tag of the language in this result. This language code was
+    /// detected to have the most likelihood of being spoken in the audio.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
