@@ -44,6 +44,17 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
 
         private readonly PubsubFixture _fixture;
 
+#if NETCOREAPP3_1
+        static PubSubClientTest()
+        {
+            // On .NET Core 3.1 (but not .NET 6) Grpc.Net.Client needs an additional switch
+            // to allow an insecure channel in HTTP/2.
+            // We can't trivially tell whether we're running on the emulator or not, but it doesn't
+            // really matter as we won't be trying to use an unencrypted channel in production.
+            AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
+        }
+#endif
+
         // Factory methods for clients, as a centralized place to apply default settings.
         private static Task<PublisherServiceApiClient> CreatePublisherServiceApiClientAsync() =>
             new PublisherServiceApiClientBuilder { EmulatorDetection = EmulatorDetection.EmulatorOrProduction }.BuildAsync();
