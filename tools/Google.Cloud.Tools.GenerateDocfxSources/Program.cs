@@ -102,8 +102,8 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
 
             // Pick whichever framework is listed first. (This could cause problems if a dependency
             // doesn't target the given framework, but that seems unlikely.)
-            // Default to netstandard2.0 if nothing is listed.
-            string targetFramework = rootApi.TargetFrameworks?.Split(';').First() ?? "netstandard2.0";
+            // Default to netstandard2.1 if nothing is listed.
+            string targetFramework = rootApi.TargetFrameworks?.Split(';').First() ?? "netstandard2.1";
 
             var json = new JObject
             {
@@ -169,8 +169,8 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
         {
             // Pick whichever framework is listed first. (This could cause problems if a dependency
             // doesn't target the given framework, but that seems unlikely.)
-            // Default to netstandard2.0 if nothing is listed.
-            string targetFramework = rootApi.TargetFrameworks?.Split(';').First() ?? "netstandard2.0";
+            // Default to netstandard2.1 if nothing is listed.
+            string targetFramework = rootApi.TargetFrameworks?.Split(';').First() ?? "netstandard2.1";
 
             var json = new JObject
             {
