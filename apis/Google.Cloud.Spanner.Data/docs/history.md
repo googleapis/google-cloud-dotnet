@@ -1,5 +1,13 @@
 # Version history
 
+## Version 3.15.0, released 2022-05-04
+
+### New features
+
+- Make ephemeral transactions retry on abort. ([commit 97faf1c](https://github.com/googleapis/google-cloud-dotnet/commit/97faf1c96266fc0e7d45706a4c29acc7d63b43ff))
+- Introduced `SpannerDate` struct for date-only values. (The default type for `DATE` columns is still `DateTime`.) ([commit 4e3b94e](https://github.com/googleapis/google-cloud-dotnet/commit/4e3b94e66a2776b6eefbefb69f5e7769cff8f794))
+- Introduced `PgNumeric` struct for support of the `NUMERIC` data type in the Postgres dialect. ([commit 87c3306](https://github.com/googleapis/google-cloud-dotnet/commit/87c330666cc096085f8cfa2e1e5b2cacb25e3585))
+
 ## Version 3.14.0, released 2022-03-28
 
 ### New features
