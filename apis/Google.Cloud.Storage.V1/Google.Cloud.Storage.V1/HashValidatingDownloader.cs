@@ -15,7 +15,7 @@
 using Google.Apis.Download;
 using Google.Apis.Http;
 using Google.Apis.Services;
-using System;
+using Google.Apis.Storage.v1.Data;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -27,13 +27,13 @@ namespace Google.Cloud.Storage.V1
     /// Subclass of <see cref="MediaDownloader"/> which validates the data it receives
     /// against a CRC32c hash set in the header.
     /// </summary>
-    internal sealed class HashValidatingDownloader : MediaDownloader
+    internal sealed class HashValidatingDownloader : ContentMetadataRecordingMediaDownloader
     {
         private string crc32cHashBase64;
         private Crc32c hasher;
 
         /// <summary>Constructs a new downloader with the given client service.</summary>
-        internal HashValidatingDownloader(IClientService service) : base(service)
+        internal HashValidatingDownloader(Object metadata, IClientService service) : base(metadata, service)
         {
             ResponseStreamInterceptorProvider = CreateInterceptor;
         }
@@ -66,7 +66,7 @@ namespace Google.Cloud.Storage.V1
 
             if (crc32cHashBase64 != null)
             {
-                string actualHash = Convert.ToBase64String(hasher.GetHash());
+                string actualHash = System.Convert.ToBase64String(hasher.GetHash());
                 if (actualHash != crc32cHashBase64)
                 {
                     throw new IOException($"Incorrect hash: expected '{crc32cHashBase64}' (base64), was '{actualHash}' (base64)");
