@@ -32,7 +32,12 @@ namespace Google.Cloud.Storage.V1
         /// <param name="options">Additional options for the download. May be null, in which case appropriate
         /// defaults will be used.</param>
         /// <param name="progress">Progress reporter for the download. May be null.</param>
-        public virtual void DownloadObject(
+        /// <returns>An <see cref="Object"/> representation of the metadata for the object that has been downloaded
+        /// into the stream. This metadata is not the complete metadata for the object; it's just the information
+        /// provided in headers while downloading. Additionally, the CRC32C hash is only the hash of the data downloaded;
+        /// if the options specify a range which does not encompass the whole object, this will not be the same
+        /// as the CRC32C hash of the complete object.</returns>
+        public virtual Object DownloadObject(
             string bucket,
             string objectName,
             Stream destination,
@@ -52,8 +57,13 @@ namespace Google.Cloud.Storage.V1
         /// defaults will be used.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <param name="progress">Progress reporter for the download. May be null.</param>
-        /// <returns>A task representing the asynchronous operation.</returns>
-        public virtual Task DownloadObjectAsync(
+        /// <returns>A task representing the asynchronous operation. The result of the task is
+        /// an <see cref="Object"/> representation of the metadata for the object that has been downloaded
+        /// into the stream. This metadata is not the complete metadata for the object; it's just the information
+        /// provided in headers while downloading. Additionally, the CRC32C hash is only the hash of the data downloaded;
+        /// if the options specify a range which does not encompass the whole object, this will not be the same
+        /// as the CRC32C hash of the complete object.</returns>
+        public virtual Task<Object> DownloadObjectAsync(
             string bucket,
             string objectName,
             Stream destination,
@@ -75,7 +85,12 @@ namespace Google.Cloud.Storage.V1
         /// <param name="options">Additional options for the download. May be null, in which case appropriate
         /// defaults will be used.</param>
         /// <param name="progress">Progress reporter for the download. May be null.</param>
-        public virtual void DownloadObject(
+        /// <returns>An <see cref="Object"/> representation of the metadata for the object that has been downloaded
+        /// into the stream. This metadata is not the complete metadata for the object; it's just the information
+        /// provided in headers while downloading. Additionally, the CRC32C hash is only the hash of the data downloaded;
+        /// if the options specify a range which does not encompass the whole object, this will not be the same
+        /// as the CRC32C hash of the complete object.</returns>
+        public virtual Object DownloadObject(
             Object source,
             Stream destination,
             DownloadObjectOptions options = null,
@@ -96,8 +111,13 @@ namespace Google.Cloud.Storage.V1
         /// defaults will be used.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <param name="progress">Progress reporter for the download. May be null.</param>
-        /// <returns>A task representing the asynchronous operation.</returns>
-        public virtual Task DownloadObjectAsync(
+        /// <returns>A task representing the asynchronous operation. The result of the task is
+        /// an <see cref="Object"/> representation of the metadata for the object that has been downloaded
+        /// into the stream. This metadata is not the complete metadata for the object; it's just the information
+        /// provided in headers while downloading. Additionally, the CRC32C hash is only the hash of the data downloaded;
+        /// if the options specify a range which does not encompass the whole object, this will not be the same
+        /// as the CRC32C hash of the complete object.</returns>
+        public virtual Task<Object> DownloadObjectAsync(
             Object source,
             Stream destination,
             DownloadObjectOptions options = null,
