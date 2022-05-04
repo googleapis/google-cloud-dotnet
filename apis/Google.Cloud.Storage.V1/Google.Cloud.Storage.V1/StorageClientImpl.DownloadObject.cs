@@ -28,7 +28,7 @@ namespace Google.Cloud.Storage.V1
     public sealed partial class StorageClientImpl : StorageClient
     {
         /// <inheritdoc />
-        public override void DownloadObject(
+        public override Object DownloadObject(
             string bucket,
             string objectName,
             Stream destination,
@@ -36,11 +36,12 @@ namespace Google.Cloud.Storage.V1
             IProgress<IDownloadProgress> progress = null)
         {
             var builder = CreateRequestBuilder(bucket, objectName);
-            DownloadObjectImpl(builder, destination, options, progress);
+            var metadata = new Object { Bucket = bucket, Name = objectName };
+            return DownloadObjectImpl(metadata, builder, destination, options, progress);
         }
 
         /// <inheritdoc />
-        public override Task DownloadObjectAsync(
+        public override Task<Object> DownloadObjectAsync(
             string bucket,
             string objectName,
             Stream destination,
@@ -49,22 +50,24 @@ namespace Google.Cloud.Storage.V1
             IProgress<IDownloadProgress> progress = null)
         {
             var builder = CreateRequestBuilder(bucket, objectName);
-            return DownloadObjectAsyncImpl(builder, destination, options, cancellationToken, progress);
+            var metadata = new Object { Bucket = bucket, Name = objectName };
+            return DownloadObjectAsyncImpl(metadata, builder, destination, options, cancellationToken, progress);
         }
 
         /// <inheritdoc />
-        public override void DownloadObject(
+        public override Object DownloadObject(
             Object source,
             Stream destination,
             DownloadObjectOptions options = null,
             IProgress<IDownloadProgress> progress = null)
         {
             var builder = CreateRequestBuilder(source);
-            DownloadObjectImpl(builder, destination, options, progress);
+            var metadata = new Object { Bucket = source.Bucket, Name = source.Name };
+            return DownloadObjectImpl(metadata, builder, destination, options, progress);
         }
 
         /// <inheritdoc />
-        public override Task DownloadObjectAsync(
+        public override Task<Object> DownloadObjectAsync(
             Object source,
             Stream destination,
             DownloadObjectOptions options = null,
@@ -72,7 +75,8 @@ namespace Google.Cloud.Storage.V1
             IProgress<IDownloadProgress> progress = null)
         {
             var builder = CreateRequestBuilder(source);
-            return DownloadObjectAsyncImpl(builder, destination, options, cancellationToken, progress);
+            var metadata = new Object { Bucket = source.Bucket, Name = source.Name };
+            return DownloadObjectAsyncImpl(metadata, builder, destination, options, cancellationToken, progress);
         }
 
         /// <summary>
@@ -109,7 +113,8 @@ namespace Google.Cloud.Storage.V1
             return CreateRequestBuilder(source.Bucket, source.Name);
         }
 
-        private void DownloadObjectImpl(
+        private Object DownloadObjectImpl(
+            Object metadata,
             RequestBuilder requestBuilder,
             Stream destination,
             DownloadObjectOptions options,
@@ -117,7 +122,7 @@ namespace Google.Cloud.Storage.V1
         {
             // URI will definitely not be null; that's constructed internally.
             GaxPreconditions.CheckNotNull(destination, nameof(destination));
-            var downloader = CreateDownloader(options);
+            var downloader = CreateDownloader(metadata, options);
             options?.ModifyRequestBuilder(requestBuilder);
             string uri = requestBuilder.BuildUri().AbsoluteUri;
             if (progress != null)
@@ -130,9 +135,12 @@ namespace Google.Cloud.Storage.V1
             {
                 throw result.Exception;
             }
+            // This will have been populated by the downloader.
+            return metadata;
         }
 
-        private Task DownloadObjectAsyncImpl(
+        private Task<Object> DownloadObjectAsyncImpl(
+            Object metadata,
             RequestBuilder requestBuilder,
             Stream destination,
             DownloadObjectOptions options,
@@ -143,7 +151,7 @@ namespace Google.Cloud.Storage.V1
             Task.Run(async () =>
             {
                 GaxPreconditions.CheckNotNull(destination, nameof(destination));
-                var downloader = CreateDownloader(options);
+                var downloader = CreateDownloader(metadata, options);
                 options?.ModifyRequestBuilder(requestBuilder);
                 string uri = requestBuilder.BuildUri().AbsoluteUri;
                 if (progress != null)
@@ -156,15 +164,17 @@ namespace Google.Cloud.Storage.V1
                 {
                     throw result.Exception;
                 }
+                // This will have been populated by the downloader.
+                return metadata;
             });
 
-        private MediaDownloader CreateDownloader(DownloadObjectOptions options)
+        private ContentMetadataRecordingMediaDownloader CreateDownloader(Object metadata, DownloadObjectOptions options)
         {
             DownloadValidationMode mode = options?.DownloadValidationMode ?? DownloadValidationMode.Always;
             GaxPreconditions.CheckEnumValue(mode, nameof(DownloadObjectOptions.DownloadValidationMode));
 
-            MediaDownloader downloader = mode == DownloadValidationMode.Never
-                ? new MediaDownloader(Service) : new HashValidatingDownloader(Service);
+            var downloader = mode == DownloadValidationMode.Never
+                ? new ContentMetadataRecordingMediaDownloader(metadata, Service) : new HashValidatingDownloader(metadata, Service);
             options?.ModifyDownloader(downloader);
             ApplyEncryptionKey(options?.EncryptionKey, downloader);
             return downloader;
