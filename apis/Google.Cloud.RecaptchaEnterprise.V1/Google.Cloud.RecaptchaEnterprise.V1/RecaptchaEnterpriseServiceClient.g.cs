@@ -1223,7 +1223,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// <summary>
         /// Search group memberships related to a given account.
         /// </summary>
-        /// <param name="parent">
+        /// <param name="project">
         /// Required. The name of the project to search related account group memberships from,
         /// in the format "projects/{project}".
         /// </param>
@@ -1242,10 +1242,10 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="RelatedAccountGroupMembership"/> resources.</returns>
-        public virtual gax::PagedEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> SearchRelatedAccountGroupMemberships(string parent, proto::ByteString hashedAccountId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual gax::PagedEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> SearchRelatedAccountGroupMemberships(string project, proto::ByteString hashedAccountId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             SearchRelatedAccountGroupMemberships(new SearchRelatedAccountGroupMembershipsRequest
             {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 HashedAccountId = hashedAccountId ?? proto::ByteString.Empty,
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
@@ -1254,7 +1254,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// <summary>
         /// Search group memberships related to a given account.
         /// </summary>
-        /// <param name="parent">
+        /// <param name="project">
         /// Required. The name of the project to search related account group memberships from,
         /// in the format "projects/{project}".
         /// </param>
@@ -1275,10 +1275,10 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="RelatedAccountGroupMembership"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> SearchRelatedAccountGroupMembershipsAsync(string parent, proto::ByteString hashedAccountId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual gax::PagedAsyncEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> SearchRelatedAccountGroupMembershipsAsync(string project, proto::ByteString hashedAccountId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             SearchRelatedAccountGroupMembershipsAsync(new SearchRelatedAccountGroupMembershipsRequest
             {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 HashedAccountId = hashedAccountId ?? proto::ByteString.Empty,
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
@@ -1287,7 +1287,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// <summary>
         /// Search group memberships related to a given account.
         /// </summary>
-        /// <param name="parent">
+        /// <param name="project">
         /// Required. The name of the project to search related account group memberships from,
         /// in the format "projects/{project}".
         /// </param>
@@ -1306,10 +1306,10 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="RelatedAccountGroupMembership"/> resources.</returns>
-        public virtual gax::PagedEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> SearchRelatedAccountGroupMemberships(RelatedAccountGroupName parent, proto::ByteString hashedAccountId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual gax::PagedEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> SearchRelatedAccountGroupMemberships(RelatedAccountGroupName project, proto::ByteString hashedAccountId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             SearchRelatedAccountGroupMemberships(new SearchRelatedAccountGroupMembershipsRequest
             {
-                ParentAsRelatedAccountGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ProjectAsRelatedAccountGroupName = gax::GaxPreconditions.CheckNotNull(project, nameof(project)),
                 HashedAccountId = hashedAccountId ?? proto::ByteString.Empty,
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
@@ -1318,7 +1318,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// <summary>
         /// Search group memberships related to a given account.
         /// </summary>
-        /// <param name="parent">
+        /// <param name="project">
         /// Required. The name of the project to search related account group memberships from,
         /// in the format "projects/{project}".
         /// </param>
@@ -1339,10 +1339,10 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="RelatedAccountGroupMembership"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> SearchRelatedAccountGroupMembershipsAsync(RelatedAccountGroupName parent, proto::ByteString hashedAccountId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual gax::PagedAsyncEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> SearchRelatedAccountGroupMembershipsAsync(RelatedAccountGroupName project, proto::ByteString hashedAccountId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             SearchRelatedAccountGroupMembershipsAsync(new SearchRelatedAccountGroupMembershipsRequest
             {
-                ParentAsRelatedAccountGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ProjectAsRelatedAccountGroupName = gax::GaxPreconditions.CheckNotNull(project, nameof(project)),
                 HashedAccountId = hashedAccountId ?? proto::ByteString.Empty,
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
@@ -1425,7 +1425,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
             _callListRelatedAccountGroupMemberships = clientHelper.BuildApiCall<ListRelatedAccountGroupMembershipsRequest, ListRelatedAccountGroupMembershipsResponse>(grpcClient.ListRelatedAccountGroupMembershipsAsync, grpcClient.ListRelatedAccountGroupMemberships, effectiveSettings.ListRelatedAccountGroupMembershipsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListRelatedAccountGroupMemberships);
             Modify_ListRelatedAccountGroupMembershipsApiCall(ref _callListRelatedAccountGroupMemberships);
-            _callSearchRelatedAccountGroupMemberships = clientHelper.BuildApiCall<SearchRelatedAccountGroupMembershipsRequest, SearchRelatedAccountGroupMembershipsResponse>(grpcClient.SearchRelatedAccountGroupMembershipsAsync, grpcClient.SearchRelatedAccountGroupMemberships, effectiveSettings.SearchRelatedAccountGroupMembershipsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callSearchRelatedAccountGroupMemberships = clientHelper.BuildApiCall<SearchRelatedAccountGroupMembershipsRequest, SearchRelatedAccountGroupMembershipsResponse>(grpcClient.SearchRelatedAccountGroupMembershipsAsync, grpcClient.SearchRelatedAccountGroupMemberships, effectiveSettings.SearchRelatedAccountGroupMembershipsSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callSearchRelatedAccountGroupMemberships);
             Modify_SearchRelatedAccountGroupMembershipsApiCall(ref _callSearchRelatedAccountGroupMemberships);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

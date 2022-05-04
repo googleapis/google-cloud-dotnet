@@ -1136,7 +1136,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Snippets
             // Initialize request argument(s)
             SearchRelatedAccountGroupMembershipsRequest request = new SearchRelatedAccountGroupMembershipsRequest
             {
-                ParentAsRelatedAccountGroupName = RelatedAccountGroupName.FromProjectRelatedaccountgroup("[PROJECT]", "[RELATEDACCOUNTGROUP]"),
+                ProjectAsRelatedAccountGroupName = RelatedAccountGroupName.FromProjectRelatedaccountgroup("[PROJECT]", "[RELATEDACCOUNTGROUP]"),
                 HashedAccountId = ByteString.Empty,
             };
             // Make the request
@@ -1185,7 +1185,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Snippets
             // Initialize request argument(s)
             SearchRelatedAccountGroupMembershipsRequest request = new SearchRelatedAccountGroupMembershipsRequest
             {
-                ParentAsRelatedAccountGroupName = RelatedAccountGroupName.FromProjectRelatedaccountgroup("[PROJECT]", "[RELATEDACCOUNTGROUP]"),
+                ProjectAsRelatedAccountGroupName = RelatedAccountGroupName.FromProjectRelatedaccountgroup("[PROJECT]", "[RELATEDACCOUNTGROUP]"),
                 HashedAccountId = ByteString.Empty,
             };
             // Make the request
@@ -1232,10 +1232,10 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Snippets
             // Create client
             RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/relatedaccountgroups/[RELATEDACCOUNTGROUP]";
+            string project = "projects/[PROJECT]/relatedaccountgroups/[RELATEDACCOUNTGROUP]";
             ByteString hashedAccountId = ByteString.Empty;
             // Make the request
-            PagedEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> response = recaptchaEnterpriseServiceClient.SearchRelatedAccountGroupMemberships(parent, hashedAccountId);
+            PagedEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> response = recaptchaEnterpriseServiceClient.SearchRelatedAccountGroupMemberships(project, hashedAccountId);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (RelatedAccountGroupMembership item in response)
@@ -1278,10 +1278,10 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Snippets
             // Create client
             RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/relatedaccountgroups/[RELATEDACCOUNTGROUP]";
+            string project = "projects/[PROJECT]/relatedaccountgroups/[RELATEDACCOUNTGROUP]";
             ByteString hashedAccountId = ByteString.Empty;
             // Make the request
-            PagedAsyncEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> response = recaptchaEnterpriseServiceClient.SearchRelatedAccountGroupMembershipsAsync(parent, hashedAccountId);
+            PagedAsyncEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> response = recaptchaEnterpriseServiceClient.SearchRelatedAccountGroupMembershipsAsync(project, hashedAccountId);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((RelatedAccountGroupMembership item) =>
@@ -1324,10 +1324,10 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Snippets
             // Create client
             RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
             // Initialize request argument(s)
-            RelatedAccountGroupName parent = RelatedAccountGroupName.FromProjectRelatedaccountgroup("[PROJECT]", "[RELATEDACCOUNTGROUP]");
+            RelatedAccountGroupName project = RelatedAccountGroupName.FromProjectRelatedaccountgroup("[PROJECT]", "[RELATEDACCOUNTGROUP]");
             ByteString hashedAccountId = ByteString.Empty;
             // Make the request
-            PagedEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> response = recaptchaEnterpriseServiceClient.SearchRelatedAccountGroupMemberships(parent, hashedAccountId);
+            PagedEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> response = recaptchaEnterpriseServiceClient.SearchRelatedAccountGroupMemberships(project, hashedAccountId);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (RelatedAccountGroupMembership item in response)
@@ -1370,10 +1370,10 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Snippets
             // Create client
             RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
             // Initialize request argument(s)
-            RelatedAccountGroupName parent = RelatedAccountGroupName.FromProjectRelatedaccountgroup("[PROJECT]", "[RELATEDACCOUNTGROUP]");
+            RelatedAccountGroupName project = RelatedAccountGroupName.FromProjectRelatedaccountgroup("[PROJECT]", "[RELATEDACCOUNTGROUP]");
             ByteString hashedAccountId = ByteString.Empty;
             // Make the request
-            PagedAsyncEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> response = recaptchaEnterpriseServiceClient.SearchRelatedAccountGroupMembershipsAsync(parent, hashedAccountId);
+            PagedAsyncEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> response = recaptchaEnterpriseServiceClient.SearchRelatedAccountGroupMembershipsAsync(project, hashedAccountId);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((RelatedAccountGroupMembership item) =>

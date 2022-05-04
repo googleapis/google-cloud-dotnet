@@ -38,7 +38,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Snippets
             // Initialize request argument(s)
             SearchRelatedAccountGroupMembershipsRequest request = new SearchRelatedAccountGroupMembershipsRequest
             {
-                ParentAsRelatedAccountGroupName = RelatedAccountGroupName.FromProjectRelatedaccountgroup("[PROJECT]", "[RELATEDACCOUNTGROUP]"),
+                ProjectAsRelatedAccountGroupName = RelatedAccountGroupName.FromProjectRelatedaccountgroup("[PROJECT]", "[RELATEDACCOUNTGROUP]"),
                 HashedAccountId = ByteString.Empty,
             };
             // Make the request
