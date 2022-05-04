@@ -1332,12 +1332,12 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
     public partial class SearchRelatedAccountGroupMembershipsRequest
     {
         /// <summary>
-        /// <see cref="RelatedAccountGroupName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="RelatedAccountGroupName"/>-typed view over the <see cref="Project"/> resource name property.
         /// </summary>
-        public RelatedAccountGroupName ParentAsRelatedAccountGroupName
+        public RelatedAccountGroupName ProjectAsRelatedAccountGroupName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : RelatedAccountGroupName.Parse(Parent, allowUnparsed: true);
-            set => Parent = value?.ToString() ?? "";
+            get => string.IsNullOrEmpty(Project) ? null : RelatedAccountGroupName.Parse(Project, allowUnparsed: true);
+            set => Project = value?.ToString() ?? "";
         }
     }
 

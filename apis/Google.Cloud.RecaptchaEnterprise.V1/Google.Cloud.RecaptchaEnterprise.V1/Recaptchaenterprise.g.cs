@@ -112,7 +112,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
             "bmdlX21ldHJpY3MYAyADKAsyNS5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50",
             "ZXJwcmlzZS52MS5DaGFsbGVuZ2VNZXRyaWNzOlbqQVMKKnJlY2FwdGNoYWVu",
             "dGVycHJpc2UuZ29vZ2xlYXBpcy5jb20vTWV0cmljcxIlcHJvamVjdHMve3By",
-            "b2plY3R9L2tleXMve2tleX0vbWV0cmljcyLtBAoDS2V5EgwKBG5hbWUYASAB",
+            "b2plY3R9L2tleXMve2tleX0vbWV0cmljcyK1BQoDS2V5EgwKBG5hbWUYASAB",
             "KAkSFAoMZGlzcGxheV9uYW1lGAIgASgJEksKDHdlYl9zZXR0aW5ncxgDIAEo",
             "CzIzLmdvb2dsZS5jbG91ZC5yZWNhcHRjaGFlbnRlcnByaXNlLnYxLldlYktl",
             "eVNldHRpbmdzSAASUwoQYW5kcm9pZF9zZXR0aW5ncxgEIAEoCzI3Lmdvb2ds",
@@ -123,140 +123,150 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
             "djEuS2V5LkxhYmVsc0VudHJ5Ei8KC2NyZWF0ZV90aW1lGAcgASgLMhouZ29v",
             "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBJMCg90ZXN0aW5nX29wdGlvbnMYCSAB",
             "KAsyMy5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJwcmlzZS52MS5UZXN0",
-            "aW5nT3B0aW9ucxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFs",
-            "dWUYAiABKAk6AjgBOkrqQUcKJnJlY2FwdGNoYWVudGVycHJpc2UuZ29vZ2xl",
-            "YXBpcy5jb20vS2V5Eh1wcm9qZWN0cy97cHJvamVjdH0va2V5cy97a2V5fUIT",
-            "ChFwbGF0Zm9ybV9zZXR0aW5ncyLoAQoOVGVzdGluZ09wdGlvbnMSFQoNdGVz",
-            "dGluZ19zY29yZRgBIAEoAhJfChF0ZXN0aW5nX2NoYWxsZW5nZRgCIAEoDjJE",
-            "Lmdvb2dsZS5jbG91ZC5yZWNhcHRjaGFlbnRlcnByaXNlLnYxLlRlc3RpbmdP",
-            "cHRpb25zLlRlc3RpbmdDaGFsbGVuZ2UiXgoQVGVzdGluZ0NoYWxsZW5nZRIh",
-            "Ch1URVNUSU5HX0NIQUxMRU5HRV9VTlNQRUNJRklFRBAAEg0KCU5PQ0FQVENI",
-            "QRABEhgKFFVOU09MVkFCTEVfQ0hBTExFTkdFEAIikAQKDldlYktleVNldHRp",
-            "bmdzEhkKEWFsbG93X2FsbF9kb21haW5zGAMgASgIEhcKD2FsbG93ZWRfZG9t",
-            "YWlucxgBIAMoCRIZChFhbGxvd19hbXBfdHJhZmZpYxgCIAEoCBJiChBpbnRl",
-            "Z3JhdGlvbl90eXBlGAQgASgOMkMuZ29vZ2xlLmNsb3VkLnJlY2FwdGNoYWVu",
-            "dGVycHJpc2UudjEuV2ViS2V5U2V0dGluZ3MuSW50ZWdyYXRpb25UeXBlQgPg",
-            "QQISdgodY2hhbGxlbmdlX3NlY3VyaXR5X3ByZWZlcmVuY2UYBSABKA4yTy5n",
-            "b29nbGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJwcmlzZS52MS5XZWJLZXlTZXR0",
-            "aW5ncy5DaGFsbGVuZ2VTZWN1cml0eVByZWZlcmVuY2UiWwoPSW50ZWdyYXRp",
-            "b25UeXBlEiAKHElOVEVHUkFUSU9OX1RZUEVfVU5TUEVDSUZJRUQQABIJCgVT",
-            "Q09SRRABEgwKCENIRUNLQk9YEAISDQoJSU5WSVNJQkxFEAMidgobQ2hhbGxl",
-            "bmdlU2VjdXJpdHlQcmVmZXJlbmNlEi0KKUNIQUxMRU5HRV9TRUNVUklUWV9Q",
-            "UkVGRVJFTkNFX1VOU1BFQ0lGSUVEEAASDQoJVVNBQklMSVRZEAESCwoHQkFM",
-            "QU5DRRACEgwKCFNFQ1VSSVRZEAMiVAoSQW5kcm9pZEtleVNldHRpbmdzEh8K",
-            "F2FsbG93X2FsbF9wYWNrYWdlX25hbWVzGAIgASgIEh0KFWFsbG93ZWRfcGFj",
-            "a2FnZV9uYW1lcxgBIAMoCSJKCg5JT1NLZXlTZXR0aW5ncxIcChRhbGxvd19h",
-            "bGxfYnVuZGxlX2lkcxgCIAEoCBIaChJhbGxvd2VkX2J1bmRsZV9pZHMYASAD",
-            "KAkiqQEKEVNjb3JlRGlzdHJpYnV0aW9uEl8KDXNjb3JlX2J1Y2tldHMYASAD",
-            "KAsySC5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJwcmlzZS52MS5TY29y",
-            "ZURpc3RyaWJ1dGlvbi5TY29yZUJ1Y2tldHNFbnRyeRozChFTY29yZUJ1Y2tl",
-            "dHNFbnRyeRILCgNrZXkYASABKAUSDQoFdmFsdWUYAiABKAM6AjgBIqsCCgxT",
-            "Y29yZU1ldHJpY3MSTwoPb3ZlcmFsbF9tZXRyaWNzGAEgASgLMjYuZ29vZ2xl",
-            "LmNsb3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjEuU2NvcmVEaXN0cmlidXRp",
-            "b24SXAoOYWN0aW9uX21ldHJpY3MYAiADKAsyRC5nb29nbGUuY2xvdWQucmVj",
-            "YXB0Y2hhZW50ZXJwcmlzZS52MS5TY29yZU1ldHJpY3MuQWN0aW9uTWV0cmlj",
-            "c0VudHJ5GmwKEkFjdGlvbk1ldHJpY3NFbnRyeRILCgNrZXkYASABKAkSRQoF",
-            "dmFsdWUYAiABKAsyNi5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJwcmlz",
-            "ZS52MS5TY29yZURpc3RyaWJ1dGlvbjoCOAEibwoQQ2hhbGxlbmdlTWV0cmlj",
-            "cxIWCg5wYWdlbG9hZF9jb3VudBgBIAEoAxIXCg9ub2NhcHRjaGFfY291bnQY",
-            "AiABKAMSFAoMZmFpbGVkX2NvdW50GAMgASgDEhQKDHBhc3NlZF9jb3VudBgE",
-            "IAEoAyK2AQopTGlzdFJlbGF0ZWRBY2NvdW50R3JvdXBNZW1iZXJzaGlwc1Jl",
-            "cXVlc3QSWAoGcGFyZW50GAEgASgJQkjgQQL6QUISQHJlY2FwdGNoYWVudGVy",
-            "cHJpc2UuZ29vZ2xlYXBpcy5jb20vUmVsYXRlZEFjY291bnRHcm91cE1lbWJl",
-            "cnNoaXASFgoJcGFnZV9zaXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tlbhgD",
-            "IAEoCUID4EEBIrQBCipMaXN0UmVsYXRlZEFjY291bnRHcm91cE1lbWJlcnNo",
-            "aXBzUmVzcG9uc2USbQohcmVsYXRlZF9hY2NvdW50X2dyb3VwX21lbWJlcnNo",
-            "aXBzGAEgAygLMkIuZ29vZ2xlLmNsb3VkLnJlY2FwdGNoYWVudGVycHJpc2Uu",
-            "djEuUmVsYXRlZEFjY291bnRHcm91cE1lbWJlcnNoaXASFwoPbmV4dF9wYWdl",
-            "X3Rva2VuGAIgASgJIqIBCh9MaXN0UmVsYXRlZEFjY291bnRHcm91cHNSZXF1",
-            "ZXN0Ek4KBnBhcmVudBgBIAEoCUI+4EEC+kE4EjZyZWNhcHRjaGFlbnRlcnBy",
-            "aXNlLmdvb2dsZWFwaXMuY29tL1JlbGF0ZWRBY2NvdW50R3JvdXASFgoJcGFn",
-            "ZV9zaXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tlbhgDIAEoCUID4EEBIpUB",
-            "CiBMaXN0UmVsYXRlZEFjY291bnRHcm91cHNSZXNwb25zZRJYChZyZWxhdGVk",
-            "X2FjY291bnRfZ3JvdXBzGAEgAygLMjguZ29vZ2xlLmNsb3VkLnJlY2FwdGNo",
-            "YWVudGVycHJpc2UudjEuUmVsYXRlZEFjY291bnRHcm91cBIXCg9uZXh0X3Bh",
-            "Z2VfdG9rZW4YAiABKAki2AEKK1NlYXJjaFJlbGF0ZWRBY2NvdW50R3JvdXBN",
-            "ZW1iZXJzaGlwc1JlcXVlc3QSWAoGcGFyZW50GAEgASgJQkjgQQL6QUISQHJl",
-            "Y2FwdGNoYWVudGVycHJpc2UuZ29vZ2xlYXBpcy5jb20vUmVsYXRlZEFjY291",
-            "bnRHcm91cE1lbWJlcnNoaXASHgoRaGFzaGVkX2FjY291bnRfaWQYAiABKAxC",
-            "A+BBARIWCglwYWdlX3NpemUYAyABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAQg",
-            "ASgJQgPgQQEitgEKLFNlYXJjaFJlbGF0ZWRBY2NvdW50R3JvdXBNZW1iZXJz",
-            "aGlwc1Jlc3BvbnNlEm0KIXJlbGF0ZWRfYWNjb3VudF9ncm91cF9tZW1iZXJz",
-            "aGlwcxgBIAMoCzJCLmdvb2dsZS5jbG91ZC5yZWNhcHRjaGFlbnRlcnByaXNl",
-            "LnYxLlJlbGF0ZWRBY2NvdW50R3JvdXBNZW1iZXJzaGlwEhcKD25leHRfcGFn",
-            "ZV90b2tlbhgCIAEoCSKzAgodUmVsYXRlZEFjY291bnRHcm91cE1lbWJlcnNo",
-            "aXASVgoEbmFtZRgBIAEoCUJI4EEC+kFCCkByZWNhcHRjaGFlbnRlcnByaXNl",
+            "aW5nT3B0aW9ucxJGCgx3YWZfc2V0dGluZ3MYCiABKAsyMC5nb29nbGUuY2xv",
+            "dWQucmVjYXB0Y2hhZW50ZXJwcmlzZS52MS5XYWZTZXR0aW5ncxotCgtMYWJl",
+            "bHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOkrqQUcK",
+            "JnJlY2FwdGNoYWVudGVycHJpc2UuZ29vZ2xlYXBpcy5jb20vS2V5Eh1wcm9q",
+            "ZWN0cy97cHJvamVjdH0va2V5cy97a2V5fUITChFwbGF0Zm9ybV9zZXR0aW5n",
+            "cyLoAQoOVGVzdGluZ09wdGlvbnMSFQoNdGVzdGluZ19zY29yZRgBIAEoAhJf",
+            "ChF0ZXN0aW5nX2NoYWxsZW5nZRgCIAEoDjJELmdvb2dsZS5jbG91ZC5yZWNh",
+            "cHRjaGFlbnRlcnByaXNlLnYxLlRlc3RpbmdPcHRpb25zLlRlc3RpbmdDaGFs",
+            "bGVuZ2UiXgoQVGVzdGluZ0NoYWxsZW5nZRIhCh1URVNUSU5HX0NIQUxMRU5H",
+            "RV9VTlNQRUNJRklFRBAAEg0KCU5PQ0FQVENIQRABEhgKFFVOU09MVkFCTEVf",
+            "Q0hBTExFTkdFEAIikAQKDldlYktleVNldHRpbmdzEhkKEWFsbG93X2FsbF9k",
+            "b21haW5zGAMgASgIEhcKD2FsbG93ZWRfZG9tYWlucxgBIAMoCRIZChFhbGxv",
+            "d19hbXBfdHJhZmZpYxgCIAEoCBJiChBpbnRlZ3JhdGlvbl90eXBlGAQgASgO",
+            "MkMuZ29vZ2xlLmNsb3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjEuV2ViS2V5",
+            "U2V0dGluZ3MuSW50ZWdyYXRpb25UeXBlQgPgQQISdgodY2hhbGxlbmdlX3Nl",
+            "Y3VyaXR5X3ByZWZlcmVuY2UYBSABKA4yTy5nb29nbGUuY2xvdWQucmVjYXB0",
+            "Y2hhZW50ZXJwcmlzZS52MS5XZWJLZXlTZXR0aW5ncy5DaGFsbGVuZ2VTZWN1",
+            "cml0eVByZWZlcmVuY2UiWwoPSW50ZWdyYXRpb25UeXBlEiAKHElOVEVHUkFU",
+            "SU9OX1RZUEVfVU5TUEVDSUZJRUQQABIJCgVTQ09SRRABEgwKCENIRUNLQk9Y",
+            "EAISDQoJSU5WSVNJQkxFEAMidgobQ2hhbGxlbmdlU2VjdXJpdHlQcmVmZXJl",
+            "bmNlEi0KKUNIQUxMRU5HRV9TRUNVUklUWV9QUkVGRVJFTkNFX1VOU1BFQ0lG",
+            "SUVEEAASDQoJVVNBQklMSVRZEAESCwoHQkFMQU5DRRACEgwKCFNFQ1VSSVRZ",
+            "EAMiVAoSQW5kcm9pZEtleVNldHRpbmdzEh8KF2FsbG93X2FsbF9wYWNrYWdl",
+            "X25hbWVzGAIgASgIEh0KFWFsbG93ZWRfcGFja2FnZV9uYW1lcxgBIAMoCSJK",
+            "Cg5JT1NLZXlTZXR0aW5ncxIcChRhbGxvd19hbGxfYnVuZGxlX2lkcxgCIAEo",
+            "CBIaChJhbGxvd2VkX2J1bmRsZV9pZHMYASADKAkiqQEKEVNjb3JlRGlzdHJp",
+            "YnV0aW9uEl8KDXNjb3JlX2J1Y2tldHMYASADKAsySC5nb29nbGUuY2xvdWQu",
+            "cmVjYXB0Y2hhZW50ZXJwcmlzZS52MS5TY29yZURpc3RyaWJ1dGlvbi5TY29y",
+            "ZUJ1Y2tldHNFbnRyeRozChFTY29yZUJ1Y2tldHNFbnRyeRILCgNrZXkYASAB",
+            "KAUSDQoFdmFsdWUYAiABKAM6AjgBIqsCCgxTY29yZU1ldHJpY3MSTwoPb3Zl",
+            "cmFsbF9tZXRyaWNzGAEgASgLMjYuZ29vZ2xlLmNsb3VkLnJlY2FwdGNoYWVu",
+            "dGVycHJpc2UudjEuU2NvcmVEaXN0cmlidXRpb24SXAoOYWN0aW9uX21ldHJp",
+            "Y3MYAiADKAsyRC5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJwcmlzZS52",
+            "MS5TY29yZU1ldHJpY3MuQWN0aW9uTWV0cmljc0VudHJ5GmwKEkFjdGlvbk1l",
+            "dHJpY3NFbnRyeRILCgNrZXkYASABKAkSRQoFdmFsdWUYAiABKAsyNi5nb29n",
+            "bGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJwcmlzZS52MS5TY29yZURpc3RyaWJ1",
+            "dGlvbjoCOAEibwoQQ2hhbGxlbmdlTWV0cmljcxIWCg5wYWdlbG9hZF9jb3Vu",
+            "dBgBIAEoAxIXCg9ub2NhcHRjaGFfY291bnQYAiABKAMSFAoMZmFpbGVkX2Nv",
+            "dW50GAMgASgDEhQKDHBhc3NlZF9jb3VudBgEIAEoAyK2AQopTGlzdFJlbGF0",
+            "ZWRBY2NvdW50R3JvdXBNZW1iZXJzaGlwc1JlcXVlc3QSWAoGcGFyZW50GAEg",
+            "ASgJQkjgQQL6QUISQHJlY2FwdGNoYWVudGVycHJpc2UuZ29vZ2xlYXBpcy5j",
+            "b20vUmVsYXRlZEFjY291bnRHcm91cE1lbWJlcnNoaXASFgoJcGFnZV9zaXpl",
+            "GAIgASgFQgPgQQESFwoKcGFnZV90b2tlbhgDIAEoCUID4EEBIrQBCipMaXN0",
+            "UmVsYXRlZEFjY291bnRHcm91cE1lbWJlcnNoaXBzUmVzcG9uc2USbQohcmVs",
+            "YXRlZF9hY2NvdW50X2dyb3VwX21lbWJlcnNoaXBzGAEgAygLMkIuZ29vZ2xl",
+            "LmNsb3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjEuUmVsYXRlZEFjY291bnRH",
+            "cm91cE1lbWJlcnNoaXASFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIqIBCh9M",
+            "aXN0UmVsYXRlZEFjY291bnRHcm91cHNSZXF1ZXN0Ek4KBnBhcmVudBgBIAEo",
+            "CUI+4EEC+kE4EjZyZWNhcHRjaGFlbnRlcnByaXNlLmdvb2dsZWFwaXMuY29t",
+            "L1JlbGF0ZWRBY2NvdW50R3JvdXASFgoJcGFnZV9zaXplGAIgASgFQgPgQQES",
+            "FwoKcGFnZV90b2tlbhgDIAEoCUID4EEBIpUBCiBMaXN0UmVsYXRlZEFjY291",
+            "bnRHcm91cHNSZXNwb25zZRJYChZyZWxhdGVkX2FjY291bnRfZ3JvdXBzGAEg",
+            "AygLMjguZ29vZ2xlLmNsb3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjEuUmVs",
+            "YXRlZEFjY291bnRHcm91cBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAki2QEK",
+            "K1NlYXJjaFJlbGF0ZWRBY2NvdW50R3JvdXBNZW1iZXJzaGlwc1JlcXVlc3QS",
+            "WQoHcHJvamVjdBgBIAEoCUJI4EEC+kFCEkByZWNhcHRjaGFlbnRlcnByaXNl",
             "Lmdvb2dsZWFwaXMuY29tL1JlbGF0ZWRBY2NvdW50R3JvdXBNZW1iZXJzaGlw",
-            "EhkKEWhhc2hlZF9hY2NvdW50X2lkGAIgASgMOp4B6kGaAQpAcmVjYXB0Y2hh",
-            "ZW50ZXJwcmlzZS5nb29nbGVhcGlzLmNvbS9SZWxhdGVkQWNjb3VudEdyb3Vw",
-            "TWVtYmVyc2hpcBJWcHJvamVjdHMve3Byb2plY3R9L3JlbGF0ZWRhY2NvdW50",
-            "Z3JvdXBzL3tyZWxhdGVkYWNjb3VudGdyb3VwfS9tZW1iZXJzaGlwcy97bWVt",
-            "YmVyc2hpcH0i3wEKE1JlbGF0ZWRBY2NvdW50R3JvdXASTAoEbmFtZRgBIAEo",
-            "CUI+4EEC+kE4CjZyZWNhcHRjaGFlbnRlcnByaXNlLmdvb2dsZWFwaXMuY29t",
-            "L1JlbGF0ZWRBY2NvdW50R3JvdXA6eupBdwo2cmVjYXB0Y2hhZW50ZXJwcmlz",
-            "ZS5nb29nbGVhcGlzLmNvbS9SZWxhdGVkQWNjb3VudEdyb3VwEj1wcm9qZWN0",
-            "cy97cHJvamVjdH0vcmVsYXRlZGFjY291bnRncm91cHMve3JlbGF0ZWRhY2Nv",
-            "dW50Z3JvdXB9Mo8TChpSZWNhcHRjaGFFbnRlcnByaXNlU2VydmljZRLOAQoQ",
-            "Q3JlYXRlQXNzZXNzbWVudBI8Lmdvb2dsZS5jbG91ZC5yZWNhcHRjaGFlbnRl",
-            "cnByaXNlLnYxLkNyZWF0ZUFzc2Vzc21lbnRSZXF1ZXN0Gi8uZ29vZ2xlLmNs",
-            "b3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjEuQXNzZXNzbWVudCJLgtPkkwIx",
-            "IiMvdjEve3BhcmVudD1wcm9qZWN0cy8qfS9hc3Nlc3NtZW50czoKYXNzZXNz",
-            "bWVudNpBEXBhcmVudCxhc3Nlc3NtZW50EuABChJBbm5vdGF0ZUFzc2Vzc21l",
-            "bnQSPi5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJwcmlzZS52MS5Bbm5v",
-            "dGF0ZUFzc2Vzc21lbnRSZXF1ZXN0Gj8uZ29vZ2xlLmNsb3VkLnJlY2FwdGNo",
-            "YWVudGVycHJpc2UudjEuQW5ub3RhdGVBc3Nlc3NtZW50UmVzcG9uc2UiSYLT",
-            "5JMCMSIsL3YxL3tuYW1lPXByb2plY3RzLyovYXNzZXNzbWVudHMvKn06YW5u",
-            "b3RhdGU6ASraQQ9uYW1lLGFubm90YXRpb24SlwEKCUNyZWF0ZUtleRI1Lmdv",
-            "b2dsZS5jbG91ZC5yZWNhcHRjaGFlbnRlcnByaXNlLnYxLkNyZWF0ZUtleVJl",
-            "cXVlc3QaKC5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJwcmlzZS52MS5L",
-            "ZXkiKYLT5JMCIyIcL3YxL3twYXJlbnQ9cHJvamVjdHMvKn0va2V5czoDa2V5",
-            "Ep0BCghMaXN0S2V5cxI0Lmdvb2dsZS5jbG91ZC5yZWNhcHRjaGFlbnRlcnBy",
-            "aXNlLnYxLkxpc3RLZXlzUmVxdWVzdBo1Lmdvb2dsZS5jbG91ZC5yZWNhcHRj",
-            "aGFlbnRlcnByaXNlLnYxLkxpc3RLZXlzUmVzcG9uc2UiJILT5JMCHhIcL3Yx",
-            "L3twYXJlbnQ9cHJvamVjdHMvKn0va2V5cxKMAQoGR2V0S2V5EjIuZ29vZ2xl",
-            "LmNsb3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjEuR2V0S2V5UmVxdWVzdBoo",
-            "Lmdvb2dsZS5jbG91ZC5yZWNhcHRjaGFlbnRlcnByaXNlLnYxLktleSIkgtPk",
-            "kwIeEhwvdjEve25hbWU9cHJvamVjdHMvKi9rZXlzLyp9EpsBCglVcGRhdGVL",
-            "ZXkSNS5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJwcmlzZS52MS5VcGRh",
-            "dGVLZXlSZXF1ZXN0GiguZ29vZ2xlLmNsb3VkLnJlY2FwdGNoYWVudGVycHJp",
-            "c2UudjEuS2V5Ii2C0+STAicyIC92MS97a2V5Lm5hbWU9cHJvamVjdHMvKi9r",
-            "ZXlzLyp9OgNrZXkSgAEKCURlbGV0ZUtleRI1Lmdvb2dsZS5jbG91ZC5yZWNh",
-            "cHRjaGFlbnRlcnByaXNlLnYxLkRlbGV0ZUtleVJlcXVlc3QaFi5nb29nbGUu",
-            "cHJvdG9idWYuRW1wdHkiJILT5JMCHiocL3YxL3tuYW1lPXByb2plY3RzLyov",
-            "a2V5cy8qfRKfAQoKTWlncmF0ZUtleRI2Lmdvb2dsZS5jbG91ZC5yZWNhcHRj",
-            "aGFlbnRlcnByaXNlLnYxLk1pZ3JhdGVLZXlSZXF1ZXN0GiguZ29vZ2xlLmNs",
-            "b3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjEuS2V5Ii+C0+STAikiJC92MS97",
-            "bmFtZT1wcm9qZWN0cy8qL2tleXMvKn06bWlncmF0ZToBKhKnAQoKR2V0TWV0",
-            "cmljcxI2Lmdvb2dsZS5jbG91ZC5yZWNhcHRjaGFlbnRlcnByaXNlLnYxLkdl",
-            "dE1ldHJpY3NSZXF1ZXN0GiwuZ29vZ2xlLmNsb3VkLnJlY2FwdGNoYWVudGVy",
-            "cHJpc2UudjEuTWV0cmljcyIzgtPkkwImEiQvdjEve25hbWU9cHJvamVjdHMv",
-            "Ki9rZXlzLyovbWV0cmljc33aQQRuYW1lEuYBChhMaXN0UmVsYXRlZEFjY291",
-            "bnRHcm91cHMSRC5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJwcmlzZS52",
-            "MS5MaXN0UmVsYXRlZEFjY291bnRHcm91cHNSZXF1ZXN0GkUuZ29vZ2xlLmNs",
-            "b3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjEuTGlzdFJlbGF0ZWRBY2NvdW50",
-            "R3JvdXBzUmVzcG9uc2UiPYLT5JMCLhIsL3YxL3twYXJlbnQ9cHJvamVjdHMv",
-            "Kn0vcmVsYXRlZGFjY291bnRncm91cHPaQQZwYXJlbnQSkgIKIkxpc3RSZWxh",
-            "dGVkQWNjb3VudEdyb3VwTWVtYmVyc2hpcHMSTi5nb29nbGUuY2xvdWQucmVj",
-            "YXB0Y2hhZW50ZXJwcmlzZS52MS5MaXN0UmVsYXRlZEFjY291bnRHcm91cE1l",
-            "bWJlcnNoaXBzUmVxdWVzdBpPLmdvb2dsZS5jbG91ZC5yZWNhcHRjaGFlbnRl",
-            "cnByaXNlLnYxLkxpc3RSZWxhdGVkQWNjb3VudEdyb3VwTWVtYmVyc2hpcHNS",
-            "ZXNwb25zZSJLgtPkkwI8EjovdjEve3BhcmVudD1wcm9qZWN0cy8qL3JlbGF0",
-            "ZWRhY2NvdW50Z3JvdXBzLyp9L21lbWJlcnNoaXBz2kEGcGFyZW50ErACCiRT",
-            "ZWFyY2hSZWxhdGVkQWNjb3VudEdyb3VwTWVtYmVyc2hpcHMSUC5nb29nbGUu",
-            "Y2xvdWQucmVjYXB0Y2hhZW50ZXJwcmlzZS52MS5TZWFyY2hSZWxhdGVkQWNj",
-            "b3VudEdyb3VwTWVtYmVyc2hpcHNSZXF1ZXN0GlEuZ29vZ2xlLmNsb3VkLnJl",
-            "Y2FwdGNoYWVudGVycHJpc2UudjEuU2VhcmNoUmVsYXRlZEFjY291bnRHcm91",
-            "cE1lbWJlcnNoaXBzUmVzcG9uc2UiY4LT5JMCQiI9L3YxL3twYXJlbnQ9cHJv",
-            "amVjdHMvKn0vcmVsYXRlZGFjY291bnRncm91cG1lbWJlcnNoaXBzOnNlYXJj",
-            "aDoBKtpBGHBhcmVudCxoYXNoZWRfYWNjb3VudF9pZBpWykEicmVjYXB0Y2hh",
-            "ZW50ZXJwcmlzZS5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2ds",
-            "ZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CkwIKIWNvbS5nb29nbGUu",
-            "cmVjYXB0Y2hhZW50ZXJwcmlzZS52MUIYUmVjYXB0Y2hhRW50ZXJwcmlzZVBy",
-            "b3RvUAFaVmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMv",
-            "Y2xvdWQvcmVjYXB0Y2hhZW50ZXJwcmlzZS92MTtyZWNhcHRjaGFlbnRlcnBy",
-            "aXNlogIER0NSRaoCI0dvb2dsZS5DbG91ZC5SZWNhcHRjaGFFbnRlcnByaXNl",
-            "LlYxygIjR29vZ2xlXENsb3VkXFJlY2FwdGNoYUVudGVycHJpc2VcVjHqAiZH",
-            "b29nbGU6OkNsb3VkOjpSZWNhcHRjaGFFbnRlcnByaXNlOjpWMWIGcHJvdG8z"));
+            "Eh4KEWhhc2hlZF9hY2NvdW50X2lkGAIgASgMQgPgQQESFgoJcGFnZV9zaXpl",
+            "GAMgASgFQgPgQQESFwoKcGFnZV90b2tlbhgEIAEoCUID4EEBIrYBCixTZWFy",
+            "Y2hSZWxhdGVkQWNjb3VudEdyb3VwTWVtYmVyc2hpcHNSZXNwb25zZRJtCiFy",
+            "ZWxhdGVkX2FjY291bnRfZ3JvdXBfbWVtYmVyc2hpcHMYASADKAsyQi5nb29n",
+            "bGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJwcmlzZS52MS5SZWxhdGVkQWNjb3Vu",
+            "dEdyb3VwTWVtYmVyc2hpcBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiswIK",
+            "HVJlbGF0ZWRBY2NvdW50R3JvdXBNZW1iZXJzaGlwElYKBG5hbWUYASABKAlC",
+            "SOBBAvpBQgpAcmVjYXB0Y2hhZW50ZXJwcmlzZS5nb29nbGVhcGlzLmNvbS9S",
+            "ZWxhdGVkQWNjb3VudEdyb3VwTWVtYmVyc2hpcBIZChFoYXNoZWRfYWNjb3Vu",
+            "dF9pZBgCIAEoDDqeAepBmgEKQHJlY2FwdGNoYWVudGVycHJpc2UuZ29vZ2xl",
+            "YXBpcy5jb20vUmVsYXRlZEFjY291bnRHcm91cE1lbWJlcnNoaXASVnByb2pl",
+            "Y3RzL3twcm9qZWN0fS9yZWxhdGVkYWNjb3VudGdyb3Vwcy97cmVsYXRlZGFj",
+            "Y291bnRncm91cH0vbWVtYmVyc2hpcHMve21lbWJlcnNoaXB9It8BChNSZWxh",
+            "dGVkQWNjb3VudEdyb3VwEkwKBG5hbWUYASABKAlCPuBBAvpBOAo2cmVjYXB0",
+            "Y2hhZW50ZXJwcmlzZS5nb29nbGVhcGlzLmNvbS9SZWxhdGVkQWNjb3VudEdy",
+            "b3VwOnrqQXcKNnJlY2FwdGNoYWVudGVycHJpc2UuZ29vZ2xlYXBpcy5jb20v",
+            "UmVsYXRlZEFjY291bnRHcm91cBI9cHJvamVjdHMve3Byb2plY3R9L3JlbGF0",
+            "ZWRhY2NvdW50Z3JvdXBzL3tyZWxhdGVkYWNjb3VudGdyb3VwfSLSAgoLV2Fm",
+            "U2V0dGluZ3MSVQoLd2FmX3NlcnZpY2UYASABKA4yOy5nb29nbGUuY2xvdWQu",
+            "cmVjYXB0Y2hhZW50ZXJwcmlzZS52MS5XYWZTZXR0aW5ncy5XYWZTZXJ2aWNl",
+            "QgPgQQISVQoLd2FmX2ZlYXR1cmUYAiABKA4yOy5nb29nbGUuY2xvdWQucmVj",
+            "YXB0Y2hhZW50ZXJwcmlzZS52MS5XYWZTZXR0aW5ncy5XYWZGZWF0dXJlQgPg",
+            "QQIiYgoKV2FmRmVhdHVyZRIbChdXQUZfRkVBVFVSRV9VTlNQRUNJRklFRBAA",
+            "EhIKDkNIQUxMRU5HRV9QQUdFEAESEQoNU0VTU0lPTl9UT0tFThACEhAKDEFD",
+            "VElPTl9UT0tFThADIjEKCldhZlNlcnZpY2USGwoXV0FGX1NFUlZJQ0VfVU5T",
+            "UEVDSUZJRUQQABIGCgJDQRABMpETChpSZWNhcHRjaGFFbnRlcnByaXNlU2Vy",
+            "dmljZRLOAQoQQ3JlYXRlQXNzZXNzbWVudBI8Lmdvb2dsZS5jbG91ZC5yZWNh",
+            "cHRjaGFlbnRlcnByaXNlLnYxLkNyZWF0ZUFzc2Vzc21lbnRSZXF1ZXN0Gi8u",
+            "Z29vZ2xlLmNsb3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjEuQXNzZXNzbWVu",
+            "dCJLgtPkkwIxIiMvdjEve3BhcmVudD1wcm9qZWN0cy8qfS9hc3Nlc3NtZW50",
+            "czoKYXNzZXNzbWVudNpBEXBhcmVudCxhc3Nlc3NtZW50EuABChJBbm5vdGF0",
+            "ZUFzc2Vzc21lbnQSPi5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJwcmlz",
+            "ZS52MS5Bbm5vdGF0ZUFzc2Vzc21lbnRSZXF1ZXN0Gj8uZ29vZ2xlLmNsb3Vk",
+            "LnJlY2FwdGNoYWVudGVycHJpc2UudjEuQW5ub3RhdGVBc3Nlc3NtZW50UmVz",
+            "cG9uc2UiSYLT5JMCMSIsL3YxL3tuYW1lPXByb2plY3RzLyovYXNzZXNzbWVu",
+            "dHMvKn06YW5ub3RhdGU6ASraQQ9uYW1lLGFubm90YXRpb24SlwEKCUNyZWF0",
+            "ZUtleRI1Lmdvb2dsZS5jbG91ZC5yZWNhcHRjaGFlbnRlcnByaXNlLnYxLkNy",
+            "ZWF0ZUtleVJlcXVlc3QaKC5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJw",
+            "cmlzZS52MS5LZXkiKYLT5JMCIyIcL3YxL3twYXJlbnQ9cHJvamVjdHMvKn0v",
+            "a2V5czoDa2V5Ep0BCghMaXN0S2V5cxI0Lmdvb2dsZS5jbG91ZC5yZWNhcHRj",
+            "aGFlbnRlcnByaXNlLnYxLkxpc3RLZXlzUmVxdWVzdBo1Lmdvb2dsZS5jbG91",
+            "ZC5yZWNhcHRjaGFlbnRlcnByaXNlLnYxLkxpc3RLZXlzUmVzcG9uc2UiJILT",
+            "5JMCHhIcL3YxL3twYXJlbnQ9cHJvamVjdHMvKn0va2V5cxKMAQoGR2V0S2V5",
+            "EjIuZ29vZ2xlLmNsb3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjEuR2V0S2V5",
+            "UmVxdWVzdBooLmdvb2dsZS5jbG91ZC5yZWNhcHRjaGFlbnRlcnByaXNlLnYx",
+            "LktleSIkgtPkkwIeEhwvdjEve25hbWU9cHJvamVjdHMvKi9rZXlzLyp9EpsB",
+            "CglVcGRhdGVLZXkSNS5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJwcmlz",
+            "ZS52MS5VcGRhdGVLZXlSZXF1ZXN0GiguZ29vZ2xlLmNsb3VkLnJlY2FwdGNo",
+            "YWVudGVycHJpc2UudjEuS2V5Ii2C0+STAicyIC92MS97a2V5Lm5hbWU9cHJv",
+            "amVjdHMvKi9rZXlzLyp9OgNrZXkSgAEKCURlbGV0ZUtleRI1Lmdvb2dsZS5j",
+            "bG91ZC5yZWNhcHRjaGFlbnRlcnByaXNlLnYxLkRlbGV0ZUtleVJlcXVlc3Qa",
+            "Fi5nb29nbGUucHJvdG9idWYuRW1wdHkiJILT5JMCHiocL3YxL3tuYW1lPXBy",
+            "b2plY3RzLyova2V5cy8qfRKfAQoKTWlncmF0ZUtleRI2Lmdvb2dsZS5jbG91",
+            "ZC5yZWNhcHRjaGFlbnRlcnByaXNlLnYxLk1pZ3JhdGVLZXlSZXF1ZXN0Gigu",
+            "Z29vZ2xlLmNsb3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjEuS2V5Ii+C0+ST",
+            "AikiJC92MS97bmFtZT1wcm9qZWN0cy8qL2tleXMvKn06bWlncmF0ZToBKhKn",
+            "AQoKR2V0TWV0cmljcxI2Lmdvb2dsZS5jbG91ZC5yZWNhcHRjaGFlbnRlcnBy",
+            "aXNlLnYxLkdldE1ldHJpY3NSZXF1ZXN0GiwuZ29vZ2xlLmNsb3VkLnJlY2Fw",
+            "dGNoYWVudGVycHJpc2UudjEuTWV0cmljcyIzgtPkkwImEiQvdjEve25hbWU9",
+            "cHJvamVjdHMvKi9rZXlzLyovbWV0cmljc33aQQRuYW1lEuYBChhMaXN0UmVs",
+            "YXRlZEFjY291bnRHcm91cHMSRC5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50",
+            "ZXJwcmlzZS52MS5MaXN0UmVsYXRlZEFjY291bnRHcm91cHNSZXF1ZXN0GkUu",
+            "Z29vZ2xlLmNsb3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjEuTGlzdFJlbGF0",
+            "ZWRBY2NvdW50R3JvdXBzUmVzcG9uc2UiPYLT5JMCLhIsL3YxL3twYXJlbnQ9",
+            "cHJvamVjdHMvKn0vcmVsYXRlZGFjY291bnRncm91cHPaQQZwYXJlbnQSkgIK",
+            "Ikxpc3RSZWxhdGVkQWNjb3VudEdyb3VwTWVtYmVyc2hpcHMSTi5nb29nbGUu",
+            "Y2xvdWQucmVjYXB0Y2hhZW50ZXJwcmlzZS52MS5MaXN0UmVsYXRlZEFjY291",
+            "bnRHcm91cE1lbWJlcnNoaXBzUmVxdWVzdBpPLmdvb2dsZS5jbG91ZC5yZWNh",
+            "cHRjaGFlbnRlcnByaXNlLnYxLkxpc3RSZWxhdGVkQWNjb3VudEdyb3VwTWVt",
+            "YmVyc2hpcHNSZXNwb25zZSJLgtPkkwI8EjovdjEve3BhcmVudD1wcm9qZWN0",
+            "cy8qL3JlbGF0ZWRhY2NvdW50Z3JvdXBzLyp9L21lbWJlcnNoaXBz2kEGcGFy",
+            "ZW50ErICCiRTZWFyY2hSZWxhdGVkQWNjb3VudEdyb3VwTWVtYmVyc2hpcHMS",
+            "UC5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJwcmlzZS52MS5TZWFyY2hS",
+            "ZWxhdGVkQWNjb3VudEdyb3VwTWVtYmVyc2hpcHNSZXF1ZXN0GlEuZ29vZ2xl",
+            "LmNsb3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjEuU2VhcmNoUmVsYXRlZEFj",
+            "Y291bnRHcm91cE1lbWJlcnNoaXBzUmVzcG9uc2UiZYLT5JMCQyI+L3YxL3tw",
+            "cm9qZWN0PXByb2plY3RzLyp9L3JlbGF0ZWRhY2NvdW50Z3JvdXBtZW1iZXJz",
+            "aGlwczpzZWFyY2g6ASraQRlwcm9qZWN0LGhhc2hlZF9hY2NvdW50X2lkGlbK",
+            "QSJyZWNhcHRjaGFlbnRlcnByaXNlLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6",
+            "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKTAgoh",
+            "Y29tLmdvb2dsZS5yZWNhcHRjaGFlbnRlcnByaXNlLnYxQhhSZWNhcHRjaGFF",
+            "bnRlcnByaXNlUHJvdG9QAVpWZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8v",
+            "Z29vZ2xlYXBpcy9jbG91ZC9yZWNhcHRjaGFlbnRlcnByaXNlL3YxO3JlY2Fw",
+            "dGNoYWVudGVycHJpc2WiAgRHQ1JFqgIjR29vZ2xlLkNsb3VkLlJlY2FwdGNo",
+            "YUVudGVycHJpc2UuVjHKAiNHb29nbGVcQ2xvdWRcUmVjYXB0Y2hhRW50ZXJw",
+            "cmlzZVxWMeoCJkdvb2dsZTo6Q2xvdWQ6OlJlY2FwdGNoYUVudGVycHJpc2U6",
+            "OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -277,7 +287,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1.MigrateKeyRequest), global::Google.Cloud.RecaptchaEnterprise.V1.MigrateKeyRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1.GetMetricsRequest), global::Google.Cloud.RecaptchaEnterprise.V1.GetMetricsRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1.Metrics), global::Google.Cloud.RecaptchaEnterprise.V1.Metrics.Parser, new[]{ "Name", "StartTime", "ScoreMetrics", "ChallengeMetrics" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1.Key), global::Google.Cloud.RecaptchaEnterprise.V1.Key.Parser, new[]{ "Name", "DisplayName", "WebSettings", "AndroidSettings", "IosSettings", "Labels", "CreateTime", "TestingOptions" }, new[]{ "PlatformSettings" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1.Key), global::Google.Cloud.RecaptchaEnterprise.V1.Key.Parser, new[]{ "Name", "DisplayName", "WebSettings", "AndroidSettings", "IosSettings", "Labels", "CreateTime", "TestingOptions", "WafSettings" }, new[]{ "PlatformSettings" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1.TestingOptions), global::Google.Cloud.RecaptchaEnterprise.V1.TestingOptions.Parser, new[]{ "TestingScore", "TestingChallenge" }, null, new[]{ typeof(global::Google.Cloud.RecaptchaEnterprise.V1.TestingOptions.Types.TestingChallenge) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1.WebKeySettings), global::Google.Cloud.RecaptchaEnterprise.V1.WebKeySettings.Parser, new[]{ "AllowAllDomains", "AllowedDomains", "AllowAmpTraffic", "IntegrationType", "ChallengeSecurityPreference" }, null, new[]{ typeof(global::Google.Cloud.RecaptchaEnterprise.V1.WebKeySettings.Types.IntegrationType), typeof(global::Google.Cloud.RecaptchaEnterprise.V1.WebKeySettings.Types.ChallengeSecurityPreference) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1.AndroidKeySettings), global::Google.Cloud.RecaptchaEnterprise.V1.AndroidKeySettings.Parser, new[]{ "AllowAllPackageNames", "AllowedPackageNames" }, null, null, null, null),
@@ -289,10 +299,11 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupMembershipsResponse), global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupMembershipsResponse.Parser, new[]{ "RelatedAccountGroupMemberships", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsRequest), global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsResponse), global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsResponse.Parser, new[]{ "RelatedAccountGroups", "NextPageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1.SearchRelatedAccountGroupMembershipsRequest), global::Google.Cloud.RecaptchaEnterprise.V1.SearchRelatedAccountGroupMembershipsRequest.Parser, new[]{ "Parent", "HashedAccountId", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1.SearchRelatedAccountGroupMembershipsRequest), global::Google.Cloud.RecaptchaEnterprise.V1.SearchRelatedAccountGroupMembershipsRequest.Parser, new[]{ "Project", "HashedAccountId", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1.SearchRelatedAccountGroupMembershipsResponse), global::Google.Cloud.RecaptchaEnterprise.V1.SearchRelatedAccountGroupMembershipsResponse.Parser, new[]{ "RelatedAccountGroupMemberships", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1.RelatedAccountGroupMembership), global::Google.Cloud.RecaptchaEnterprise.V1.RelatedAccountGroupMembership.Parser, new[]{ "Name", "HashedAccountId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1.RelatedAccountGroup), global::Google.Cloud.RecaptchaEnterprise.V1.RelatedAccountGroup.Parser, new[]{ "Name" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1.RelatedAccountGroup), global::Google.Cloud.RecaptchaEnterprise.V1.RelatedAccountGroup.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1.WafSettings), global::Google.Cloud.RecaptchaEnterprise.V1.WafSettings.Parser, new[]{ "WafService", "WafFeature" }, null, new[]{ typeof(global::Google.Cloud.RecaptchaEnterprise.V1.WafSettings.Types.WafFeature), typeof(global::Google.Cloud.RecaptchaEnterprise.V1.WafSettings.Types.WafService) }, null, null)
           }));
     }
     #endregion
@@ -899,20 +910,20 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
         /// </summary>
         [pbr::OriginalName("REASON_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Indicates a chargeback was issued for the transaction associated with the
-        /// assessment, with no other details. When possible, specify the type by
-        /// using CHARGEBACK_FRAUD or CHARGEBACK_DISPUTE instead.
+        /// Indicates a chargeback issued for the transaction with no other details.
+        /// When possible, specify the type by using CHARGEBACK_FRAUD or
+        /// CHARGEBACK_DISPUTE instead.
         /// </summary>
         [pbr::OriginalName("CHARGEBACK")] Chargeback = 1,
         /// <summary>
         /// Indicates a chargeback related to an alleged unauthorized transaction
-        /// from the perspective of the cardholder (for example, the card number was
+        /// from the cardholder's perspective (for example, the card number was
         /// stolen).
         /// </summary>
         [pbr::OriginalName("CHARGEBACK_FRAUD")] ChargebackFraud = 8,
         /// <summary>
         /// Indicates a chargeback related to the cardholder having provided their
-        /// card but allegedly not being satisfied with the purchase
+        /// card details but allegedly not being satisfied with the purchase
         /// (for example, misrepresentation, attempted cancellation).
         /// </summary>
         [pbr::OriginalName("CHARGEBACK_DISPUTE")] ChargebackDispute = 9,
@@ -4933,6 +4944,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       labels_ = other.labels_.Clone();
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       testingOptions_ = other.testingOptions_ != null ? other.testingOptions_.Clone() : null;
+      wafSettings_ = other.wafSettings_ != null ? other.wafSettings_.Clone() : null;
       switch (other.PlatformSettingsCase) {
         case PlatformSettingsOneofCase.WebSettings:
           WebSettings = other.WebSettings.Clone();
@@ -5075,6 +5087,21 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       }
     }
 
+    /// <summary>Field number for the "waf_settings" field.</summary>
+    public const int WafSettingsFieldNumber = 10;
+    private global::Google.Cloud.RecaptchaEnterprise.V1.WafSettings wafSettings_;
+    /// <summary>
+    /// Settings for WAF
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.RecaptchaEnterprise.V1.WafSettings WafSettings {
+      get { return wafSettings_; }
+      set {
+        wafSettings_ = value;
+      }
+    }
+
     private object platformSettings_;
     /// <summary>Enum of possible cases for the "platform_settings" oneof.</summary>
     public enum PlatformSettingsOneofCase {
@@ -5120,6 +5147,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       if (!Labels.Equals(other.Labels)) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(TestingOptions, other.TestingOptions)) return false;
+      if (!object.Equals(WafSettings, other.WafSettings)) return false;
       if (PlatformSettingsCase != other.PlatformSettingsCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -5136,6 +5164,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       hash ^= Labels.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (testingOptions_ != null) hash ^= TestingOptions.GetHashCode();
+      if (wafSettings_ != null) hash ^= WafSettings.GetHashCode();
       hash ^= (int) platformSettingsCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -5184,6 +5213,10 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
         output.WriteRawTag(74);
         output.WriteMessage(TestingOptions);
       }
+      if (wafSettings_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(WafSettings);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5223,6 +5256,10 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
         output.WriteRawTag(74);
         output.WriteMessage(TestingOptions);
       }
+      if (wafSettings_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(WafSettings);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5255,6 +5292,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       if (testingOptions_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TestingOptions);
       }
+      if (wafSettings_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(WafSettings);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -5285,6 +5325,12 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
           TestingOptions = new global::Google.Cloud.RecaptchaEnterprise.V1.TestingOptions();
         }
         TestingOptions.MergeFrom(other.TestingOptions);
+      }
+      if (other.wafSettings_ != null) {
+        if (wafSettings_ == null) {
+          WafSettings = new global::Google.Cloud.RecaptchaEnterprise.V1.WafSettings();
+        }
+        WafSettings.MergeFrom(other.WafSettings);
       }
       switch (other.PlatformSettingsCase) {
         case PlatformSettingsOneofCase.WebSettings:
@@ -5375,6 +5421,13 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
             input.ReadMessage(TestingOptions);
             break;
           }
+          case 82: {
+            if (wafSettings_ == null) {
+              WafSettings = new global::Google.Cloud.RecaptchaEnterprise.V1.WafSettings();
+            }
+            input.ReadMessage(WafSettings);
+            break;
+          }
         }
       }
     #endif
@@ -5441,6 +5494,13 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
               TestingOptions = new global::Google.Cloud.RecaptchaEnterprise.V1.TestingOptions();
             }
             input.ReadMessage(TestingOptions);
+            break;
+          }
+          case 82: {
+            if (wafSettings_ == null) {
+              WafSettings = new global::Google.Cloud.RecaptchaEnterprise.V1.WafSettings();
+            }
+            input.ReadMessage(WafSettings);
             break;
           }
         }
@@ -8371,7 +8431,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SearchRelatedAccountGroupMembershipsRequest(SearchRelatedAccountGroupMembershipsRequest other) : this() {
-      parent_ = other.parent_;
+      project_ = other.project_;
       hashedAccountId_ = other.hashedAccountId_;
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
@@ -8384,19 +8444,19 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       return new SearchRelatedAccountGroupMembershipsRequest(this);
     }
 
-    /// <summary>Field number for the "parent" field.</summary>
-    public const int ParentFieldNumber = 1;
-    private string parent_ = "";
+    /// <summary>Field number for the "project" field.</summary>
+    public const int ProjectFieldNumber = 1;
+    private string project_ = "";
     /// <summary>
     /// Required. The name of the project to search related account group memberships from,
     /// in the format "projects/{project}".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Parent {
-      get { return parent_; }
+    public string Project {
+      get { return project_; }
       set {
-        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        project_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -8471,7 +8531,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Parent != other.Parent) return false;
+      if (Project != other.Project) return false;
       if (HashedAccountId != other.HashedAccountId) return false;
       if (PageSize != other.PageSize) return false;
       if (PageToken != other.PageToken) return false;
@@ -8482,7 +8542,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (Project.Length != 0) hash ^= Project.GetHashCode();
       if (HashedAccountId.Length != 0) hash ^= HashedAccountId.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
@@ -8504,9 +8564,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Parent.Length != 0) {
+      if (Project.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(Parent);
+        output.WriteString(Project);
       }
       if (HashedAccountId.Length != 0) {
         output.WriteRawTag(18);
@@ -8530,9 +8590,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Parent.Length != 0) {
+      if (Project.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(Parent);
+        output.WriteString(Project);
       }
       if (HashedAccountId.Length != 0) {
         output.WriteRawTag(18);
@@ -8556,8 +8616,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Parent.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      if (Project.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Project);
       }
       if (HashedAccountId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(HashedAccountId);
@@ -8580,8 +8640,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       if (other == null) {
         return;
       }
-      if (other.Parent.Length != 0) {
-        Parent = other.Parent;
+      if (other.Project.Length != 0) {
+        Project = other.Project;
       }
       if (other.HashedAccountId.Length != 0) {
         HashedAccountId = other.HashedAccountId;
@@ -8608,7 +8668,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            Parent = input.ReadString();
+            Project = input.ReadString();
             break;
           }
           case 18: {
@@ -8639,7 +8699,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            Parent = input.ReadString();
+            Project = input.ReadString();
             break;
           }
           case 18: {
@@ -9317,6 +9377,288 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       }
     }
     #endif
+
+  }
+
+  /// <summary>
+  /// Settings specific to keys that can be used for WAF (Web Application
+  /// Firewall).
+  /// </summary>
+  public sealed partial class WafSettings : pb::IMessage<WafSettings>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<WafSettings> _parser = new pb::MessageParser<WafSettings>(() => new WafSettings());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<WafSettings> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.RecaptchaEnterprise.V1.RecaptchaenterpriseReflection.Descriptor.MessageTypes[33]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public WafSettings() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public WafSettings(WafSettings other) : this() {
+      wafService_ = other.wafService_;
+      wafFeature_ = other.wafFeature_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public WafSettings Clone() {
+      return new WafSettings(this);
+    }
+
+    /// <summary>Field number for the "waf_service" field.</summary>
+    public const int WafServiceFieldNumber = 1;
+    private global::Google.Cloud.RecaptchaEnterprise.V1.WafSettings.Types.WafService wafService_ = global::Google.Cloud.RecaptchaEnterprise.V1.WafSettings.Types.WafService.Unspecified;
+    /// <summary>
+    /// Required. The WAF service that uses this key.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.RecaptchaEnterprise.V1.WafSettings.Types.WafService WafService {
+      get { return wafService_; }
+      set {
+        wafService_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "waf_feature" field.</summary>
+    public const int WafFeatureFieldNumber = 2;
+    private global::Google.Cloud.RecaptchaEnterprise.V1.WafSettings.Types.WafFeature wafFeature_ = global::Google.Cloud.RecaptchaEnterprise.V1.WafSettings.Types.WafFeature.Unspecified;
+    /// <summary>
+    /// Required. The WAF feature for which this key is enabled.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.RecaptchaEnterprise.V1.WafSettings.Types.WafFeature WafFeature {
+      get { return wafFeature_; }
+      set {
+        wafFeature_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as WafSettings);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(WafSettings other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (WafService != other.WafService) return false;
+      if (WafFeature != other.WafFeature) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (WafService != global::Google.Cloud.RecaptchaEnterprise.V1.WafSettings.Types.WafService.Unspecified) hash ^= WafService.GetHashCode();
+      if (WafFeature != global::Google.Cloud.RecaptchaEnterprise.V1.WafSettings.Types.WafFeature.Unspecified) hash ^= WafFeature.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (WafService != global::Google.Cloud.RecaptchaEnterprise.V1.WafSettings.Types.WafService.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) WafService);
+      }
+      if (WafFeature != global::Google.Cloud.RecaptchaEnterprise.V1.WafSettings.Types.WafFeature.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) WafFeature);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (WafService != global::Google.Cloud.RecaptchaEnterprise.V1.WafSettings.Types.WafService.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) WafService);
+      }
+      if (WafFeature != global::Google.Cloud.RecaptchaEnterprise.V1.WafSettings.Types.WafFeature.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) WafFeature);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (WafService != global::Google.Cloud.RecaptchaEnterprise.V1.WafSettings.Types.WafService.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) WafService);
+      }
+      if (WafFeature != global::Google.Cloud.RecaptchaEnterprise.V1.WafSettings.Types.WafFeature.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) WafFeature);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(WafSettings other) {
+      if (other == null) {
+        return;
+      }
+      if (other.WafService != global::Google.Cloud.RecaptchaEnterprise.V1.WafSettings.Types.WafService.Unspecified) {
+        WafService = other.WafService;
+      }
+      if (other.WafFeature != global::Google.Cloud.RecaptchaEnterprise.V1.WafSettings.Types.WafFeature.Unspecified) {
+        WafFeature = other.WafFeature;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            WafService = (global::Google.Cloud.RecaptchaEnterprise.V1.WafSettings.Types.WafService) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            WafFeature = (global::Google.Cloud.RecaptchaEnterprise.V1.WafSettings.Types.WafFeature) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            WafService = (global::Google.Cloud.RecaptchaEnterprise.V1.WafSettings.Types.WafService) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            WafFeature = (global::Google.Cloud.RecaptchaEnterprise.V1.WafSettings.Types.WafFeature) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the WafSettings message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Supported WAF features. For more information, see
+      /// https://cloud.google.com/recaptcha-enterprise/docs/usecase#comparison_of_features.
+      /// </summary>
+      public enum WafFeature {
+        /// <summary>
+        /// Undefined feature.
+        /// </summary>
+        [pbr::OriginalName("WAF_FEATURE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Redirects suspicious traffic to reCAPTCHA.
+        /// </summary>
+        [pbr::OriginalName("CHALLENGE_PAGE")] ChallengePage = 1,
+        /// <summary>
+        /// Use reCAPTCHA session-tokens to protect the whole user session on the
+        /// site's domain.
+        /// </summary>
+        [pbr::OriginalName("SESSION_TOKEN")] SessionToken = 2,
+        /// <summary>
+        /// Use reCAPTCHA action-tokens to protect user actions.
+        /// </summary>
+        [pbr::OriginalName("ACTION_TOKEN")] ActionToken = 3,
+      }
+
+      /// <summary>
+      /// Web Application Firewalls supported by reCAPTCHA Enterprise.
+      /// </summary>
+      public enum WafService {
+        /// <summary>
+        /// Undefined WAF
+        /// </summary>
+        [pbr::OriginalName("WAF_SERVICE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Cloud Armor
+        /// </summary>
+        [pbr::OriginalName("CA")] Ca = 1,
+      }
+
+    }
+    #endregion
 
   }
 

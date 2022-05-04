@@ -322,6 +322,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 },
                 CreateTime = new wkt::Timestamp(),
                 TestingOptions = new TestingOptions(),
+                WafSettings = new WafSettings(),
             };
             mockGrpcClient.Setup(x => x.CreateKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
@@ -355,6 +356,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 },
                 CreateTime = new wkt::Timestamp(),
                 TestingOptions = new TestingOptions(),
+                WafSettings = new WafSettings(),
             };
             mockGrpcClient.Setup(x => x.CreateKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Key>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
@@ -389,6 +391,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 },
                 CreateTime = new wkt::Timestamp(),
                 TestingOptions = new TestingOptions(),
+                WafSettings = new WafSettings(),
             };
             mockGrpcClient.Setup(x => x.GetKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
@@ -421,6 +424,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 },
                 CreateTime = new wkt::Timestamp(),
                 TestingOptions = new TestingOptions(),
+                WafSettings = new WafSettings(),
             };
             mockGrpcClient.Setup(x => x.GetKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Key>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
@@ -456,6 +460,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 },
                 CreateTime = new wkt::Timestamp(),
                 TestingOptions = new TestingOptions(),
+                WafSettings = new WafSettings(),
             };
             mockGrpcClient.Setup(x => x.UpdateKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
@@ -489,6 +494,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 },
                 CreateTime = new wkt::Timestamp(),
                 TestingOptions = new TestingOptions(),
+                WafSettings = new WafSettings(),
             };
             mockGrpcClient.Setup(x => x.UpdateKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Key>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
@@ -554,6 +560,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 },
                 CreateTime = new wkt::Timestamp(),
                 TestingOptions = new TestingOptions(),
+                WafSettings = new WafSettings(),
             };
             mockGrpcClient.Setup(x => x.MigrateKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
@@ -586,6 +593,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 },
                 CreateTime = new wkt::Timestamp(),
                 TestingOptions = new TestingOptions(),
+                WafSettings = new WafSettings(),
             };
             mockGrpcClient.Setup(x => x.MigrateKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Key>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
