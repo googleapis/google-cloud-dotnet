@@ -158,6 +158,13 @@ namespace Google.Cloud.Tools.Common
             return FromMajorMinorPatch(Major, Minor, Patch, $"{prefix}{newSuffix}");
         }
 
+        /// <summary>
+        /// Returns this structured version after a patch increment
+        /// </summary>
+        /// <returns></returns>
+        public StructuredVersion AfterPatch() =>
+            FromMajorMinorPatchBuild(Major, Minor, Patch + 1, Build, Prerelease);
+
         public override string ToString() => new StringBuilder($"{Major}.{Minor}.{Patch}")
             .Append(Build is null ? "" : $".{Build}")
             .Append(Prerelease is null ? "" : $"-{Prerelease}")
