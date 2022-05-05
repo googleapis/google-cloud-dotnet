@@ -1,4 +1,4 @@
-﻿// Copyright 2020 Google LLC
+﻿// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,10 +18,10 @@ using System.Linq;
 
 namespace Google.Cloud.Tools.ReleaseManager
 {
-    public sealed class IncrementVersionCommand : CommandBase
+    public sealed class PatchVersionCommand : CommandBase
     {
-        public IncrementVersionCommand()
-            : base("increment-version", "Increment a version in apis.json and generate project files", "id")
+        public PatchVersionCommand()
+            : base("patch-version", "Patch a version in apis.json and generate project files", "id")
         {
         }
 
@@ -37,13 +37,13 @@ namespace Google.Cloud.Tools.ReleaseManager
             var apisToIncrement = new[] { api };
             if (api.PackageGroup is PackageGroup group)
             {
-                Console.WriteLine($"API '{id}' is in package group '{group.Id}'. Incrementing all APIs.");
+                Console.WriteLine($"API '{id}' is in package group '{group.Id}'. Patching all APIs.");
                 apisToIncrement = group.PackageIds.Select(x => catalog[x]).ToArray();
             }
 
             foreach (var apiToIncrement in apisToIncrement)
             {
-                var version = apiToIncrement.StructuredVersion.AfterIncrement().ToString();
+                var version = apiToIncrement.StructuredVersion.AfterPatch().ToString();
                 new SetVersionCommand().InternalExecute(apiToIncrement.Id, version, quiet: false);
             }
         }
