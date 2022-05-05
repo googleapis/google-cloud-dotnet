@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.15.1, released 2022-05-05
+
+### Bug fixes
+
+- Make SpannerTransaction pick up SpannerConnection.LogCommitStats as documented. ([commit db5c55d](https://github.com/googleapis/google-cloud-dotnet/commit/db5c55d16cc4fc1dfd33db8dcb949b86861b1507))
+
 ## Version 3.15.0, released 2022-05-04
 
 ### New features
