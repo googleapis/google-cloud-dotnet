@@ -26,39 +26,40 @@ namespace Google.Cloud.AppEngine.V1 {
           string.Concat(
             "CiVnb29nbGUvYXBwZW5naW5lL3YxL2FwcGxpY2F0aW9uLnByb3RvEhNnb29n",
             "bGUuYXBwZW5naW5lLnYxGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJv",
-            "dG8i8AcKC0FwcGxpY2F0aW9uEgwKBG5hbWUYASABKAkSCgoCaWQYAiABKAkS",
+            "dG8iiQgKC0FwcGxpY2F0aW9uEgwKBG5hbWUYASABKAkSCgoCaWQYAiABKAkS",
             "PAoOZGlzcGF0Y2hfcnVsZXMYAyADKAsyJC5nb29nbGUuYXBwZW5naW5lLnYx",
             "LlVybERpc3BhdGNoUnVsZRITCgthdXRoX2RvbWFpbhgGIAEoCRITCgtsb2Nh",
             "dGlvbl9pZBgHIAEoCRITCgtjb2RlX2J1Y2tldBgIIAEoCRI8ChlkZWZhdWx0",
             "X2Nvb2tpZV9leHBpcmF0aW9uGAkgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1",
             "cmF0aW9uEkYKDnNlcnZpbmdfc3RhdHVzGAogASgOMi4uZ29vZ2xlLmFwcGVu",
             "Z2luZS52MS5BcHBsaWNhdGlvbi5TZXJ2aW5nU3RhdHVzEhgKEGRlZmF1bHRf",
-            "aG9zdG5hbWUYCyABKAkSFgoOZGVmYXVsdF9idWNrZXQYDCABKAkSQAoDaWFw",
-            "GA4gASgLMjMuZ29vZ2xlLmFwcGVuZ2luZS52MS5BcHBsaWNhdGlvbi5JZGVu",
-            "dGl0eUF3YXJlUHJveHkSEgoKZ2NyX2RvbWFpbhgQIAEoCRJECg1kYXRhYmFz",
-            "ZV90eXBlGBEgASgOMi0uZ29vZ2xlLmFwcGVuZ2luZS52MS5BcHBsaWNhdGlv",
-            "bi5EYXRhYmFzZVR5cGUSSgoQZmVhdHVyZV9zZXR0aW5ncxgSIAEoCzIwLmdv",
-            "b2dsZS5hcHBlbmdpbmUudjEuQXBwbGljYXRpb24uRmVhdHVyZVNldHRpbmdz",
-            "GoIBChJJZGVudGl0eUF3YXJlUHJveHkSDwoHZW5hYmxlZBgBIAEoCBIYChBv",
-            "YXV0aDJfY2xpZW50X2lkGAIgASgJEhwKFG9hdXRoMl9jbGllbnRfc2VjcmV0",
-            "GAMgASgJEiMKG29hdXRoMl9jbGllbnRfc2VjcmV0X3NoYTI1NhgEIAEoCRpS",
-            "Cg9GZWF0dXJlU2V0dGluZ3MSGwoTc3BsaXRfaGVhbHRoX2NoZWNrcxgBIAEo",
-            "CBIiChp1c2VfY29udGFpbmVyX29wdGltaXplZF9vcxgCIAEoCCJVCg1TZXJ2",
-            "aW5nU3RhdHVzEg8KC1VOU1BFQ0lGSUVEEAASCwoHU0VSVklORxABEhEKDVVT",
-            "RVJfRElTQUJMRUQQAhITCg9TWVNURU1fRElTQUJMRUQQAyJ6CgxEYXRhYmFz",
-            "ZVR5cGUSHQoZREFUQUJBU0VfVFlQRV9VTlNQRUNJRklFRBAAEhMKD0NMT1VE",
-            "X0RBVEFTVE9SRRABEhMKD0NMT1VEX0ZJUkVTVE9SRRACEiEKHUNMT1VEX0RB",
-            "VEFTVE9SRV9DT01QQVRJQklMSVRZEAMiQAoPVXJsRGlzcGF0Y2hSdWxlEg4K",
-            "BmRvbWFpbhgBIAEoCRIMCgRwYXRoGAIgASgJEg8KB3NlcnZpY2UYAyABKAlC",
-            "wgEKF2NvbS5nb29nbGUuYXBwZW5naW5lLnYxQhBBcHBsaWNhdGlvblByb3Rv",
-            "UAFaPGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYXBw",
-            "ZW5naW5lL3YxO2FwcGVuZ2luZaoCGUdvb2dsZS5DbG91ZC5BcHBFbmdpbmUu",
-            "VjHKAhlHb29nbGVcQ2xvdWRcQXBwRW5naW5lXFYx6gIcR29vZ2xlOjpDbG91",
-            "ZDo6QXBwRW5naW5lOjpWMWIGcHJvdG8z"));
+            "aG9zdG5hbWUYCyABKAkSFgoOZGVmYXVsdF9idWNrZXQYDCABKAkSFwoPc2Vy",
+            "dmljZV9hY2NvdW50GA0gASgJEkAKA2lhcBgOIAEoCzIzLmdvb2dsZS5hcHBl",
+            "bmdpbmUudjEuQXBwbGljYXRpb24uSWRlbnRpdHlBd2FyZVByb3h5EhIKCmdj",
+            "cl9kb21haW4YECABKAkSRAoNZGF0YWJhc2VfdHlwZRgRIAEoDjItLmdvb2ds",
+            "ZS5hcHBlbmdpbmUudjEuQXBwbGljYXRpb24uRGF0YWJhc2VUeXBlEkoKEGZl",
+            "YXR1cmVfc2V0dGluZ3MYEiABKAsyMC5nb29nbGUuYXBwZW5naW5lLnYxLkFw",
+            "cGxpY2F0aW9uLkZlYXR1cmVTZXR0aW5ncxqCAQoSSWRlbnRpdHlBd2FyZVBy",
+            "b3h5Eg8KB2VuYWJsZWQYASABKAgSGAoQb2F1dGgyX2NsaWVudF9pZBgCIAEo",
+            "CRIcChRvYXV0aDJfY2xpZW50X3NlY3JldBgDIAEoCRIjChtvYXV0aDJfY2xp",
+            "ZW50X3NlY3JldF9zaGEyNTYYBCABKAkaUgoPRmVhdHVyZVNldHRpbmdzEhsK",
+            "E3NwbGl0X2hlYWx0aF9jaGVja3MYASABKAgSIgoadXNlX2NvbnRhaW5lcl9v",
+            "cHRpbWl6ZWRfb3MYAiABKAgiVQoNU2VydmluZ1N0YXR1cxIPCgtVTlNQRUNJ",
+            "RklFRBAAEgsKB1NFUlZJTkcQARIRCg1VU0VSX0RJU0FCTEVEEAISEwoPU1lT",
+            "VEVNX0RJU0FCTEVEEAMiegoMRGF0YWJhc2VUeXBlEh0KGURBVEFCQVNFX1RZ",
+            "UEVfVU5TUEVDSUZJRUQQABITCg9DTE9VRF9EQVRBU1RPUkUQARITCg9DTE9V",
+            "RF9GSVJFU1RPUkUQAhIhCh1DTE9VRF9EQVRBU1RPUkVfQ09NUEFUSUJJTElU",
+            "WRADIkAKD1VybERpc3BhdGNoUnVsZRIOCgZkb21haW4YASABKAkSDAoEcGF0",
+            "aBgCIAEoCRIPCgdzZXJ2aWNlGAMgASgJQsIBChdjb20uZ29vZ2xlLmFwcGVu",
+            "Z2luZS52MUIQQXBwbGljYXRpb25Qcm90b1ABWjxnb29nbGUuZ29sYW5nLm9y",
+            "Zy9nZW5wcm90by9nb29nbGVhcGlzL2FwcGVuZ2luZS92MTthcHBlbmdpbmWq",
+            "AhlHb29nbGUuQ2xvdWQuQXBwRW5naW5lLlYxygIZR29vZ2xlXENsb3VkXEFw",
+            "cEVuZ2luZVxWMeoCHEdvb2dsZTo6Q2xvdWQ6OkFwcEVuZ2luZTo6VjFiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppEngine.V1.Application), global::Google.Cloud.AppEngine.V1.Application.Parser, new[]{ "Name", "Id", "DispatchRules", "AuthDomain", "LocationId", "CodeBucket", "DefaultCookieExpiration", "ServingStatus", "DefaultHostname", "DefaultBucket", "Iap", "GcrDomain", "DatabaseType", "FeatureSettings" }, null, new[]{ typeof(global::Google.Cloud.AppEngine.V1.Application.Types.ServingStatus), typeof(global::Google.Cloud.AppEngine.V1.Application.Types.DatabaseType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppEngine.V1.Application.Types.IdentityAwareProxy), global::Google.Cloud.AppEngine.V1.Application.Types.IdentityAwareProxy.Parser, new[]{ "Enabled", "Oauth2ClientId", "Oauth2ClientSecret", "Oauth2ClientSecretSha256" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppEngine.V1.Application), global::Google.Cloud.AppEngine.V1.Application.Parser, new[]{ "Name", "Id", "DispatchRules", "AuthDomain", "LocationId", "CodeBucket", "DefaultCookieExpiration", "ServingStatus", "DefaultHostname", "DefaultBucket", "ServiceAccount", "Iap", "GcrDomain", "DatabaseType", "FeatureSettings" }, null, new[]{ typeof(global::Google.Cloud.AppEngine.V1.Application.Types.ServingStatus), typeof(global::Google.Cloud.AppEngine.V1.Application.Types.DatabaseType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppEngine.V1.Application.Types.IdentityAwareProxy), global::Google.Cloud.AppEngine.V1.Application.Types.IdentityAwareProxy.Parser, new[]{ "Enabled", "Oauth2ClientId", "Oauth2ClientSecret", "Oauth2ClientSecretSha256" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppEngine.V1.Application.Types.FeatureSettings), global::Google.Cloud.AppEngine.V1.Application.Types.FeatureSettings.Parser, new[]{ "SplitHealthChecks", "UseContainerOptimizedOs" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppEngine.V1.UrlDispatchRule), global::Google.Cloud.AppEngine.V1.UrlDispatchRule.Parser, new[]{ "Domain", "Path", "Service" }, null, null, null, null)
           }));
@@ -115,6 +116,7 @@ namespace Google.Cloud.AppEngine.V1 {
       servingStatus_ = other.servingStatus_;
       defaultHostname_ = other.defaultHostname_;
       defaultBucket_ = other.defaultBucket_;
+      serviceAccount_ = other.serviceAccount_;
       iap_ = other.iap_ != null ? other.iap_.Clone() : null;
       gcrDomain_ = other.gcrDomain_;
       databaseType_ = other.databaseType_;
@@ -304,6 +306,23 @@ namespace Google.Cloud.AppEngine.V1 {
       }
     }
 
+    /// <summary>Field number for the "service_account" field.</summary>
+    public const int ServiceAccountFieldNumber = 13;
+    private string serviceAccount_ = "";
+    /// <summary>
+    /// The service account associated with the application.
+    /// This is the app-level default identity. If no identity provided during
+    /// create version, Admin API will fallback to this one.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ServiceAccount {
+      get { return serviceAccount_; }
+      set {
+        serviceAccount_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "iap" field.</summary>
     public const int IapFieldNumber = 14;
     private global::Google.Cloud.AppEngine.V1.Application.Types.IdentityAwareProxy iap_;
@@ -388,6 +407,7 @@ namespace Google.Cloud.AppEngine.V1 {
       if (ServingStatus != other.ServingStatus) return false;
       if (DefaultHostname != other.DefaultHostname) return false;
       if (DefaultBucket != other.DefaultBucket) return false;
+      if (ServiceAccount != other.ServiceAccount) return false;
       if (!object.Equals(Iap, other.Iap)) return false;
       if (GcrDomain != other.GcrDomain) return false;
       if (DatabaseType != other.DatabaseType) return false;
@@ -409,6 +429,7 @@ namespace Google.Cloud.AppEngine.V1 {
       if (ServingStatus != global::Google.Cloud.AppEngine.V1.Application.Types.ServingStatus.Unspecified) hash ^= ServingStatus.GetHashCode();
       if (DefaultHostname.Length != 0) hash ^= DefaultHostname.GetHashCode();
       if (DefaultBucket.Length != 0) hash ^= DefaultBucket.GetHashCode();
+      if (ServiceAccount.Length != 0) hash ^= ServiceAccount.GetHashCode();
       if (iap_ != null) hash ^= Iap.GetHashCode();
       if (GcrDomain.Length != 0) hash ^= GcrDomain.GetHashCode();
       if (DatabaseType != global::Google.Cloud.AppEngine.V1.Application.Types.DatabaseType.Unspecified) hash ^= DatabaseType.GetHashCode();
@@ -467,6 +488,10 @@ namespace Google.Cloud.AppEngine.V1 {
       if (DefaultBucket.Length != 0) {
         output.WriteRawTag(98);
         output.WriteString(DefaultBucket);
+      }
+      if (ServiceAccount.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(ServiceAccount);
       }
       if (iap_ != null) {
         output.WriteRawTag(114);
@@ -531,6 +556,10 @@ namespace Google.Cloud.AppEngine.V1 {
         output.WriteRawTag(98);
         output.WriteString(DefaultBucket);
       }
+      if (ServiceAccount.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(ServiceAccount);
+      }
       if (iap_ != null) {
         output.WriteRawTag(114);
         output.WriteMessage(Iap);
@@ -584,6 +613,9 @@ namespace Google.Cloud.AppEngine.V1 {
       }
       if (DefaultBucket.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DefaultBucket);
+      }
+      if (ServiceAccount.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ServiceAccount);
       }
       if (iap_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Iap);
@@ -639,6 +671,9 @@ namespace Google.Cloud.AppEngine.V1 {
       }
       if (other.DefaultBucket.Length != 0) {
         DefaultBucket = other.DefaultBucket;
+      }
+      if (other.ServiceAccount.Length != 0) {
+        ServiceAccount = other.ServiceAccount;
       }
       if (other.iap_ != null) {
         if (iap_ == null) {
@@ -714,6 +749,10 @@ namespace Google.Cloud.AppEngine.V1 {
           }
           case 98: {
             DefaultBucket = input.ReadString();
+            break;
+          }
+          case 106: {
+            ServiceAccount = input.ReadString();
             break;
           }
           case 114: {
@@ -794,6 +833,10 @@ namespace Google.Cloud.AppEngine.V1 {
           }
           case 98: {
             DefaultBucket = input.ReadString();
+            break;
+          }
+          case 106: {
+            ServiceAccount = input.ReadString();
             break;
           }
           case 114: {

@@ -350,6 +350,39 @@ namespace Google.Cloud.AppEngine.V1
             GetApplicationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Gets information about an application.
+        /// </summary>
+        /// <param name="name">
+        /// Name of the Application resource to get. Example: `apps/myapp`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Application GetApplication(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetApplication(new GetApplicationRequest { Name = name ?? "", }, callSettings);
+
+        /// <summary>
+        /// Gets information about an application.
+        /// </summary>
+        /// <param name="name">
+        /// Name of the Application resource to get. Example: `apps/myapp`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Application> GetApplicationAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetApplicationAsync(new GetApplicationRequest { Name = name ?? "", }, callSettings);
+
+        /// <summary>
+        /// Gets information about an application.
+        /// </summary>
+        /// <param name="name">
+        /// Name of the Application resource to get. Example: `apps/myapp`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Application> GetApplicationAsync(string name, st::CancellationToken cancellationToken) =>
+            GetApplicationAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Creates an App Engine application for a Google Cloud Platform project.
         /// Required fields:
         /// 
@@ -427,6 +460,7 @@ namespace Google.Cloud.AppEngine.V1
         /// 
         /// * `auth_domain` - Google authentication domain for controlling user access to the application.
         /// * `default_cookie_expiration` - Cookie expiration policy for the application.
+        /// * `iap` - Identity-Aware Proxy properties for the application.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -440,6 +474,7 @@ namespace Google.Cloud.AppEngine.V1
         /// 
         /// * `auth_domain` - Google authentication domain for controlling user access to the application.
         /// * `default_cookie_expiration` - Cookie expiration policy for the application.
+        /// * `iap` - Identity-Aware Proxy properties for the application.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -453,6 +488,7 @@ namespace Google.Cloud.AppEngine.V1
         /// 
         /// * `auth_domain` - Google authentication domain for controlling user access to the application.
         /// * `default_cookie_expiration` - Cookie expiration policy for the application.
+        /// * `iap` - Identity-Aware Proxy properties for the application.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -706,6 +742,7 @@ namespace Google.Cloud.AppEngine.V1
         /// 
         /// * `auth_domain` - Google authentication domain for controlling user access to the application.
         /// * `default_cookie_expiration` - Cookie expiration policy for the application.
+        /// * `iap` - Identity-Aware Proxy properties for the application.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -722,6 +759,7 @@ namespace Google.Cloud.AppEngine.V1
         /// 
         /// * `auth_domain` - Google authentication domain for controlling user access to the application.
         /// * `default_cookie_expiration` - Cookie expiration policy for the application.
+        /// * `iap` - Identity-Aware Proxy properties for the application.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
