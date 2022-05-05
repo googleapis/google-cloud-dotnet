@@ -1,5 +1,9 @@
 # Version history
 
+## Version 2.4.0, released 2022-05-05
+
+GA release of the features previously in beta: support for BigNumeric, and more detailed exceptions.
+
 ## Version 2.4.0-beta02, released 2022-04-26
 
 ### New features
