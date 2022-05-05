@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -50,6 +51,14 @@ namespace Google.Cloud.Spanner.V1.Internal.Logging
             GaxPreconditions.CheckNotNull(instance, nameof(instance));
             Interlocked.Exchange(ref s_defaultLogger, instance);
         }
+
+        /// <summary>
+        /// Creates a <see cref="Logger"/> instance that delegates all logging requests to
+        /// <paramref name="logger"/>. This 
+        /// </summary>
+        /// <param name="logger">The logger to delegate to. Must not be null.</param>
+        /// <returns>A Spanner logger that delegates to <paramref name="logger"/>.</returns>
+        public static Logger ForILogger(ILogger logger) => new MsLogger(logger);
 
         /// <summary>
         /// The level of logging this logger should perform. For example, if this is set to
