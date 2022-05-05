@@ -804,7 +804,7 @@ namespace Google.Cloud.Spanner.Data
                 {
                     await OpenAsync(cancellationToken).ConfigureAwait(false);
                     var session = await AcquireSessionAsync(transactionOptions, cancellationToken).ConfigureAwait(false);
-                    return new SpannerTransaction(this, transactionMode, session, targetReadTimestamp) { LogCommitStats = LogCommitStats };
+                    return new SpannerTransaction(this, transactionMode, session, targetReadTimestamp);
                 }, "SpannerConnection.BeginTransaction", Logger);
         }
 

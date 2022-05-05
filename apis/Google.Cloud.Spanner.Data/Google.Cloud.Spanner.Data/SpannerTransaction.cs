@@ -173,6 +173,7 @@ namespace Google.Cloud.Spanner.Data
         {
             SpannerConnection = GaxPreconditions.CheckNotNull(connection, nameof(connection));
             CommitTimeout = SpannerConnection.Builder.Timeout;
+            LogCommitStats = SpannerConnection.LogCommitStats;
             Mode = mode;
             _session = GaxPreconditions.CheckNotNull(session, nameof(session));
             TimestampBound = timestampBound;

@@ -157,7 +157,11 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
         public SpannerConnection GetConnection() => new SpannerConnection(ConnectionString);
 
         // Creates a SpannerConnection with a specific logger.
-        public SpannerConnection GetConnection(Logger logger) =>
-            new SpannerConnection(new SpannerConnectionStringBuilder(ConnectionString) { SessionPoolManager = SessionPoolManager.Create(new V1.SessionPoolOptions(), logger) });
+        public SpannerConnection GetConnection(Logger logger, bool logCommitStats = false) =>
+            new SpannerConnection(new SpannerConnectionStringBuilder(ConnectionString)
+            { 
+                SessionPoolManager = SessionPoolManager.Create(new V1.SessionPoolOptions(), logger),
+                LogCommitStats = logCommitStats
+            });
     }
 }
