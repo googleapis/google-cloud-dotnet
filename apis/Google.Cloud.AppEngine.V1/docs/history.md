@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.4.0, released 2022-05-05
+
+### New features
+
+- Add Application.service_account ([commit 523e2d2](https://github.com/googleapis/google-cloud-dotnet/commit/523e2d23624e0ed8565027843f2e7e48c2e76f5c))
+- Add client library method signature to retrieve Application by name ([commit 523e2d2](https://github.com/googleapis/google-cloud-dotnet/commit/523e2d23624e0ed8565027843f2e7e48c2e76f5c))
+- Add Service.labels ([commit 523e2d2](https://github.com/googleapis/google-cloud-dotnet/commit/523e2d23624e0ed8565027843f2e7e48c2e76f5c))
+- Add Version.app_engine_apis ([commit 523e2d2](https://github.com/googleapis/google-cloud-dotnet/commit/523e2d23624e0ed8565027843f2e7e48c2e76f5c))
+- Add VpcAccessConnector.egress_setting ([commit 523e2d2](https://github.com/googleapis/google-cloud-dotnet/commit/523e2d23624e0ed8565027843f2e7e48c2e76f5c))
+
 ## Version 1.3.0, released 2022-04-26
 
 No API surface changes; just dependency updates.
