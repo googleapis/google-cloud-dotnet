@@ -18,6 +18,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
 {
     // [START dialogflow_v2_generated_Participants_AnalyzeContent_sync]
     using Google.Cloud.Dialogflow.V2;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedParticipantsClientSnippets
     {
@@ -39,6 +40,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
                 QueryParams = new QueryParameters(),
                 RequestId = "",
                 AssistQueryParams = new AssistQueryParameters(),
+                CxParameters = new Struct(),
             };
             // Make the request
             AnalyzeContentResponse response = participantsClient.AnalyzeContent(request);

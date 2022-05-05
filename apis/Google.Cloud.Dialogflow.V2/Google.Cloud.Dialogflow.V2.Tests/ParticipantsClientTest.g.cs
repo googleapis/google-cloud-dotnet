@@ -514,6 +514,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 QueryParams = new QueryParameters(),
                 RequestId = "request_id362c8df6",
                 AssistQueryParams = new AssistQueryParameters(),
+                CxParameters = new wkt::Struct(),
             };
             AnalyzeContentResponse expectedResponse = new AnalyzeContentResponse
             {
@@ -551,6 +552,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 QueryParams = new QueryParameters(),
                 RequestId = "request_id362c8df6",
                 AssistQueryParams = new AssistQueryParameters(),
+                CxParameters = new wkt::Struct(),
             };
             AnalyzeContentResponse expectedResponse = new AnalyzeContentResponse
             {
