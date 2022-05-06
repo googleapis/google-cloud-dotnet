@@ -41,3 +41,4 @@ Fields:
   automatically.)
 - `shortName`: the value of the `name` field in the corresponding service config, if any
 - `serviceConfigFile`: the path the service config YAML file, relative to `protoPath`
+- `transport`: the value passed into the microgenerator `transport` option; defaults to "grpc"
