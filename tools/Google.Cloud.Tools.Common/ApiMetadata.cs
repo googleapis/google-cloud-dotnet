@@ -252,5 +252,13 @@ namespace Google.Cloud.Tools.Common
         /// for GAPIC APIs, and is usually copied from the API index when an API is added.
         /// </summary>
         public string ServiceConfigFile { get; set; }
+
+        /// <summary>
+        /// The option to pass to protoc for API transports. (Note that this is singular
+        /// to conform with the existing option in other languages.) Values are expected to
+        /// be semi-colon-separated, e.g. "grpc", "rest" or "grpc;rest". Defaults to "grpc"
+        /// during generation.
+        /// </summary>
+        public string Transport { get; set; }
     }
 }

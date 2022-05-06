@@ -735,7 +735,8 @@
       "generator": "micro",
       "protoPath": "google/cloud/compute/v1",
       "shortName": "compute",
-      "serviceConfigFile": "compute_v1.yaml"
+      "serviceConfigFile": "compute_v1.yaml",
+      "transport": "rest"
     },
     {
       "id": "Google.Cloud.ContactCenterInsights.V1",
