@@ -469,8 +469,8 @@ namespace Google.Cloud.Vision.V1
         /// extracted.
         /// </summary>
         /// <param name="requests">
-        /// Required. The list of file annotation requests. Right now we support only
-        /// one AnnotateFileRequest in BatchAnnotateFilesRequest.
+        /// Required. The list of file annotation requests. Right now we support only one
+        /// AnnotateFileRequest in BatchAnnotateFilesRequest.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -493,8 +493,8 @@ namespace Google.Cloud.Vision.V1
         /// extracted.
         /// </summary>
         /// <param name="requests">
-        /// Required. The list of file annotation requests. Right now we support only
-        /// one AnnotateFileRequest in BatchAnnotateFilesRequest.
+        /// Required. The list of file annotation requests. Right now we support only one
+        /// AnnotateFileRequest in BatchAnnotateFilesRequest.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -517,8 +517,8 @@ namespace Google.Cloud.Vision.V1
         /// extracted.
         /// </summary>
         /// <param name="requests">
-        /// Required. The list of file annotation requests. Right now we support only
-        /// one AnnotateFileRequest in BatchAnnotateFilesRequest.
+        /// Required. The list of file annotation requests. Right now we support only one
+        /// AnnotateFileRequest in BatchAnnotateFilesRequest.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
