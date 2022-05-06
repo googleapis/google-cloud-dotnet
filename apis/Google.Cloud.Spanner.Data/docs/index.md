@@ -28,6 +28,12 @@ you can start using the ADO.NET provider to create and modify a Cloud Spanner da
 
 ## Creating a Database and Table
 
+> **Note**  
+> For convenience `Google.Cloud.Spanner.Data` allows you to use standard `SpannerCommand`s
+> for DDL operations. But do take into account that Spanner transactions do not support
+> DDL operations, so even if you set `SpannerCommand.Transaction` on a DDL command, the command
+> will execute outside the transaction.
+
 {{sample:SpannerConnection.CreateDatabaseAsync}}
 
 ## DataAdapter support (.NET 4.5+ only)
