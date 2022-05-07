@@ -28,31 +28,31 @@ namespace Google.Cloud.Run.V2 {
             "EhNnb29nbGUuY2xvdWQucnVuLnYyGhlnb29nbGUvYXBpL3Jlc291cmNlLnBy",
             "b3RvGiFnb29nbGUvY2xvdWQvcnVuL3YyL2s4cy5taW4ucHJvdG8aKWdvb2ds",
             "ZS9jbG91ZC9ydW4vdjIvdmVuZG9yX3NldHRpbmdzLnByb3RvGh5nb29nbGUv",
-            "cHJvdG9idWYvZHVyYXRpb24ucHJvdG8iigYKEFJldmlzaW9uVGVtcGxhdGUS",
+            "cHJvdG9idWYvZHVyYXRpb24ucHJvdG8i/wUKEFJldmlzaW9uVGVtcGxhdGUS",
             "MgoIcmV2aXNpb24YASABKAlCIPpBHQobcnVuLmdvb2dsZWFwaXMuY29tL1Jl",
             "dmlzaW9uEkEKBmxhYmVscxgCIAMoCzIxLmdvb2dsZS5jbG91ZC5ydW4udjIu",
             "UmV2aXNpb25UZW1wbGF0ZS5MYWJlbHNFbnRyeRJLCgthbm5vdGF0aW9ucxgD",
             "IAMoCzI2Lmdvb2dsZS5jbG91ZC5ydW4udjIuUmV2aXNpb25UZW1wbGF0ZS5B",
             "bm5vdGF0aW9uc0VudHJ5EjUKB3NjYWxpbmcYBCABKAsyJC5nb29nbGUuY2xv",
             "dWQucnVuLnYyLlJldmlzaW9uU2NhbGluZxIyCgp2cGNfYWNjZXNzGAYgASgL",
-            "Mh4uZ29vZ2xlLmNsb3VkLnJ1bi52Mi5WcGNBY2Nlc3MSHQoVY29udGFpbmVy",
-            "X2NvbmN1cnJlbmN5GAcgASgFEioKB3RpbWVvdXQYCCABKAsyGS5nb29nbGUu",
-            "cHJvdG9idWYuRHVyYXRpb24SFwoPc2VydmljZV9hY2NvdW50GAkgASgJEjIK",
-            "CmNvbnRhaW5lcnMYCiADKAsyHi5nb29nbGUuY2xvdWQucnVuLnYyLkNvbnRh",
-            "aW5lchIsCgd2b2x1bWVzGAsgAygLMhsuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5W",
-            "b2x1bWUSFAoMY29uZmlkZW50aWFsGAwgASgIEkgKFWV4ZWN1dGlvbl9lbnZp",
-            "cm9ubWVudBgNIAEoDjIpLmdvb2dsZS5jbG91ZC5ydW4udjIuRXhlY3V0aW9u",
-            "RW52aXJvbm1lbnQSPgoOZW5jcnlwdGlvbl9rZXkYDiABKAlCJvpBIwohY2xv",
-            "dWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5Gi0KC0xhYmVsc0VudHJ5",
-            "EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaMgoQQW5ub3RhdGlv",
-            "bnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBQmoKF2Nv",
-            "bS5nb29nbGUuY2xvdWQucnVuLnYyQhVSZXZpc2lvblRlbXBsYXRlUHJvdG9Q",
-            "AVo2Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91",
-            "ZC9ydW4vdjI7cnVuYgZwcm90bzM="));
+            "Mh4uZ29vZ2xlLmNsb3VkLnJ1bi52Mi5WcGNBY2Nlc3MSKgoHdGltZW91dBgI",
+            "IAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIXCg9zZXJ2aWNlX2Fj",
+            "Y291bnQYCSABKAkSMgoKY29udGFpbmVycxgKIAMoCzIeLmdvb2dsZS5jbG91",
+            "ZC5ydW4udjIuQ29udGFpbmVyEiwKB3ZvbHVtZXMYCyADKAsyGy5nb29nbGUu",
+            "Y2xvdWQucnVuLnYyLlZvbHVtZRJIChVleGVjdXRpb25fZW52aXJvbm1lbnQY",
+            "DSABKA4yKS5nb29nbGUuY2xvdWQucnVuLnYyLkV4ZWN1dGlvbkVudmlyb25t",
+            "ZW50Ej4KDmVuY3J5cHRpb25fa2V5GA4gASgJQib6QSMKIWNsb3Vka21zLmdv",
+            "b2dsZWFwaXMuY29tL0NyeXB0b0tleRIoCiBtYXhfaW5zdGFuY2VfcmVxdWVz",
+            "dF9jb25jdXJyZW5jeRgPIAEoBRotCgtMYWJlbHNFbnRyeRILCgNrZXkYASAB",
+            "KAkSDQoFdmFsdWUYAiABKAk6AjgBGjIKEEFubm90YXRpb25zRW50cnkSCwoD",
+            "a2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4AUJqChdjb20uZ29vZ2xlLmNs",
+            "b3VkLnJ1bi52MkIVUmV2aXNpb25UZW1wbGF0ZVByb3RvUAFaNmdvb2dsZS5n",
+            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvcnVuL3YyO3J1",
+            "bmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor, global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.RevisionTemplate), global::Google.Cloud.Run.V2.RevisionTemplate.Parser, new[]{ "Revision", "Labels", "Annotations", "Scaling", "VpcAccess", "ContainerConcurrency", "Timeout", "ServiceAccount", "Containers", "Volumes", "Confidential", "ExecutionEnvironment", "EncryptionKey" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.RevisionTemplate), global::Google.Cloud.Run.V2.RevisionTemplate.Parser, new[]{ "Revision", "Labels", "Annotations", "Scaling", "VpcAccess", "Timeout", "ServiceAccount", "Containers", "Volumes", "ExecutionEnvironment", "EncryptionKey", "MaxInstanceRequestConcurrency" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
           }));
     }
     #endregion
@@ -102,14 +102,13 @@ namespace Google.Cloud.Run.V2 {
       annotations_ = other.annotations_.Clone();
       scaling_ = other.scaling_ != null ? other.scaling_.Clone() : null;
       vpcAccess_ = other.vpcAccess_ != null ? other.vpcAccess_.Clone() : null;
-      containerConcurrency_ = other.containerConcurrency_;
       timeout_ = other.timeout_ != null ? other.timeout_.Clone() : null;
       serviceAccount_ = other.serviceAccount_;
       containers_ = other.containers_.Clone();
       volumes_ = other.volumes_.Clone();
-      confidential_ = other.confidential_;
       executionEnvironment_ = other.executionEnvironment_;
       encryptionKey_ = other.encryptionKey_;
+      maxInstanceRequestConcurrency_ = other.maxInstanceRequestConcurrency_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -194,21 +193,6 @@ namespace Google.Cloud.Run.V2 {
       }
     }
 
-    /// <summary>Field number for the "container_concurrency" field.</summary>
-    public const int ContainerConcurrencyFieldNumber = 7;
-    private int containerConcurrency_;
-    /// <summary>
-    /// Sets the maximum number of requests that each serving instance can receive.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int ContainerConcurrency {
-      get { return containerConcurrency_; }
-      set {
-        containerConcurrency_ = value;
-      }
-    }
-
     /// <summary>Field number for the "timeout" field.</summary>
     public const int TimeoutFieldNumber = 8;
     private global::Google.Protobuf.WellKnownTypes.Duration timeout_;
@@ -271,21 +255,6 @@ namespace Google.Cloud.Run.V2 {
       get { return volumes_; }
     }
 
-    /// <summary>Field number for the "confidential" field.</summary>
-    public const int ConfidentialFieldNumber = 12;
-    private bool confidential_;
-    /// <summary>
-    /// Enables Confidential Cloud Run in Revisions created using this template.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Confidential {
-      get { return confidential_; }
-      set {
-        confidential_ = value;
-      }
-    }
-
     /// <summary>Field number for the "execution_environment" field.</summary>
     public const int ExecutionEnvironmentFieldNumber = 13;
     private global::Google.Cloud.Run.V2.ExecutionEnvironment executionEnvironment_ = global::Google.Cloud.Run.V2.ExecutionEnvironment.Unspecified;
@@ -318,6 +287,21 @@ namespace Google.Cloud.Run.V2 {
       }
     }
 
+    /// <summary>Field number for the "max_instance_request_concurrency" field.</summary>
+    public const int MaxInstanceRequestConcurrencyFieldNumber = 15;
+    private int maxInstanceRequestConcurrency_;
+    /// <summary>
+    /// Sets the maximum number of requests that each serving instance can receive.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int MaxInstanceRequestConcurrency {
+      get { return maxInstanceRequestConcurrency_; }
+      set {
+        maxInstanceRequestConcurrency_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -338,14 +322,13 @@ namespace Google.Cloud.Run.V2 {
       if (!Annotations.Equals(other.Annotations)) return false;
       if (!object.Equals(Scaling, other.Scaling)) return false;
       if (!object.Equals(VpcAccess, other.VpcAccess)) return false;
-      if (ContainerConcurrency != other.ContainerConcurrency) return false;
       if (!object.Equals(Timeout, other.Timeout)) return false;
       if (ServiceAccount != other.ServiceAccount) return false;
       if(!containers_.Equals(other.containers_)) return false;
       if(!volumes_.Equals(other.volumes_)) return false;
-      if (Confidential != other.Confidential) return false;
       if (ExecutionEnvironment != other.ExecutionEnvironment) return false;
       if (EncryptionKey != other.EncryptionKey) return false;
+      if (MaxInstanceRequestConcurrency != other.MaxInstanceRequestConcurrency) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -358,14 +341,13 @@ namespace Google.Cloud.Run.V2 {
       hash ^= Annotations.GetHashCode();
       if (scaling_ != null) hash ^= Scaling.GetHashCode();
       if (vpcAccess_ != null) hash ^= VpcAccess.GetHashCode();
-      if (ContainerConcurrency != 0) hash ^= ContainerConcurrency.GetHashCode();
       if (timeout_ != null) hash ^= Timeout.GetHashCode();
       if (ServiceAccount.Length != 0) hash ^= ServiceAccount.GetHashCode();
       hash ^= containers_.GetHashCode();
       hash ^= volumes_.GetHashCode();
-      if (Confidential != false) hash ^= Confidential.GetHashCode();
       if (ExecutionEnvironment != global::Google.Cloud.Run.V2.ExecutionEnvironment.Unspecified) hash ^= ExecutionEnvironment.GetHashCode();
       if (EncryptionKey.Length != 0) hash ^= EncryptionKey.GetHashCode();
+      if (MaxInstanceRequestConcurrency != 0) hash ^= MaxInstanceRequestConcurrency.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -398,10 +380,6 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(50);
         output.WriteMessage(VpcAccess);
       }
-      if (ContainerConcurrency != 0) {
-        output.WriteRawTag(56);
-        output.WriteInt32(ContainerConcurrency);
-      }
       if (timeout_ != null) {
         output.WriteRawTag(66);
         output.WriteMessage(Timeout);
@@ -412,10 +390,6 @@ namespace Google.Cloud.Run.V2 {
       }
       containers_.WriteTo(output, _repeated_containers_codec);
       volumes_.WriteTo(output, _repeated_volumes_codec);
-      if (Confidential != false) {
-        output.WriteRawTag(96);
-        output.WriteBool(Confidential);
-      }
       if (ExecutionEnvironment != global::Google.Cloud.Run.V2.ExecutionEnvironment.Unspecified) {
         output.WriteRawTag(104);
         output.WriteEnum((int) ExecutionEnvironment);
@@ -423,6 +397,10 @@ namespace Google.Cloud.Run.V2 {
       if (EncryptionKey.Length != 0) {
         output.WriteRawTag(114);
         output.WriteString(EncryptionKey);
+      }
+      if (MaxInstanceRequestConcurrency != 0) {
+        output.WriteRawTag(120);
+        output.WriteInt32(MaxInstanceRequestConcurrency);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -448,10 +426,6 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(50);
         output.WriteMessage(VpcAccess);
       }
-      if (ContainerConcurrency != 0) {
-        output.WriteRawTag(56);
-        output.WriteInt32(ContainerConcurrency);
-      }
       if (timeout_ != null) {
         output.WriteRawTag(66);
         output.WriteMessage(Timeout);
@@ -462,10 +436,6 @@ namespace Google.Cloud.Run.V2 {
       }
       containers_.WriteTo(ref output, _repeated_containers_codec);
       volumes_.WriteTo(ref output, _repeated_volumes_codec);
-      if (Confidential != false) {
-        output.WriteRawTag(96);
-        output.WriteBool(Confidential);
-      }
       if (ExecutionEnvironment != global::Google.Cloud.Run.V2.ExecutionEnvironment.Unspecified) {
         output.WriteRawTag(104);
         output.WriteEnum((int) ExecutionEnvironment);
@@ -473,6 +443,10 @@ namespace Google.Cloud.Run.V2 {
       if (EncryptionKey.Length != 0) {
         output.WriteRawTag(114);
         output.WriteString(EncryptionKey);
+      }
+      if (MaxInstanceRequestConcurrency != 0) {
+        output.WriteRawTag(120);
+        output.WriteInt32(MaxInstanceRequestConcurrency);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -495,9 +469,6 @@ namespace Google.Cloud.Run.V2 {
       if (vpcAccess_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(VpcAccess);
       }
-      if (ContainerConcurrency != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ContainerConcurrency);
-      }
       if (timeout_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Timeout);
       }
@@ -506,14 +477,14 @@ namespace Google.Cloud.Run.V2 {
       }
       size += containers_.CalculateSize(_repeated_containers_codec);
       size += volumes_.CalculateSize(_repeated_volumes_codec);
-      if (Confidential != false) {
-        size += 1 + 1;
-      }
       if (ExecutionEnvironment != global::Google.Cloud.Run.V2.ExecutionEnvironment.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ExecutionEnvironment);
       }
       if (EncryptionKey.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(EncryptionKey);
+      }
+      if (MaxInstanceRequestConcurrency != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxInstanceRequestConcurrency);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -544,9 +515,6 @@ namespace Google.Cloud.Run.V2 {
         }
         VpcAccess.MergeFrom(other.VpcAccess);
       }
-      if (other.ContainerConcurrency != 0) {
-        ContainerConcurrency = other.ContainerConcurrency;
-      }
       if (other.timeout_ != null) {
         if (timeout_ == null) {
           Timeout = new global::Google.Protobuf.WellKnownTypes.Duration();
@@ -558,14 +526,14 @@ namespace Google.Cloud.Run.V2 {
       }
       containers_.Add(other.containers_);
       volumes_.Add(other.volumes_);
-      if (other.Confidential != false) {
-        Confidential = other.Confidential;
-      }
       if (other.ExecutionEnvironment != global::Google.Cloud.Run.V2.ExecutionEnvironment.Unspecified) {
         ExecutionEnvironment = other.ExecutionEnvironment;
       }
       if (other.EncryptionKey.Length != 0) {
         EncryptionKey = other.EncryptionKey;
+      }
+      if (other.MaxInstanceRequestConcurrency != 0) {
+        MaxInstanceRequestConcurrency = other.MaxInstanceRequestConcurrency;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -608,10 +576,6 @@ namespace Google.Cloud.Run.V2 {
             input.ReadMessage(VpcAccess);
             break;
           }
-          case 56: {
-            ContainerConcurrency = input.ReadInt32();
-            break;
-          }
           case 66: {
             if (timeout_ == null) {
               Timeout = new global::Google.Protobuf.WellKnownTypes.Duration();
@@ -631,16 +595,16 @@ namespace Google.Cloud.Run.V2 {
             volumes_.AddEntriesFrom(input, _repeated_volumes_codec);
             break;
           }
-          case 96: {
-            Confidential = input.ReadBool();
-            break;
-          }
           case 104: {
             ExecutionEnvironment = (global::Google.Cloud.Run.V2.ExecutionEnvironment) input.ReadEnum();
             break;
           }
           case 114: {
             EncryptionKey = input.ReadString();
+            break;
+          }
+          case 120: {
+            MaxInstanceRequestConcurrency = input.ReadInt32();
             break;
           }
         }
@@ -684,10 +648,6 @@ namespace Google.Cloud.Run.V2 {
             input.ReadMessage(VpcAccess);
             break;
           }
-          case 56: {
-            ContainerConcurrency = input.ReadInt32();
-            break;
-          }
           case 66: {
             if (timeout_ == null) {
               Timeout = new global::Google.Protobuf.WellKnownTypes.Duration();
@@ -707,16 +667,16 @@ namespace Google.Cloud.Run.V2 {
             volumes_.AddEntriesFrom(ref input, _repeated_volumes_codec);
             break;
           }
-          case 96: {
-            Confidential = input.ReadBool();
-            break;
-          }
           case 104: {
             ExecutionEnvironment = (global::Google.Cloud.Run.V2.ExecutionEnvironment) input.ReadEnum();
             break;
           }
           case 114: {
             EncryptionKey = input.ReadString();
+            break;
+          }
+          case 120: {
+            MaxInstanceRequestConcurrency = input.ReadInt32();
             break;
           }
         }

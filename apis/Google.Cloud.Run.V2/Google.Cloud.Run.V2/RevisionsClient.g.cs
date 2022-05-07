@@ -677,13 +677,13 @@ namespace Google.Cloud.Run.V2
             RevisionsSettings effectiveSettings = settings ?? RevisionsSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             DeleteRevisionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRevisionOperationsSettings);
-            _callGetRevision = clientHelper.BuildApiCall<GetRevisionRequest, Revision>(grpcClient.GetRevisionAsync, grpcClient.GetRevision, effectiveSettings.GetRevisionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetRevision = clientHelper.BuildApiCall<GetRevisionRequest, Revision>(grpcClient.GetRevisionAsync, grpcClient.GetRevision, effectiveSettings.GetRevisionSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<GetRevisionRequest>().WithExtractedParameter("location", "^projects/[^/]+/locations/([^/]+)(?:/.*)?$", request => request.Name));
             Modify_ApiCall(ref _callGetRevision);
             Modify_GetRevisionApiCall(ref _callGetRevision);
-            _callListRevisions = clientHelper.BuildApiCall<ListRevisionsRequest, ListRevisionsResponse>(grpcClient.ListRevisionsAsync, grpcClient.ListRevisions, effectiveSettings.ListRevisionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListRevisions = clientHelper.BuildApiCall<ListRevisionsRequest, ListRevisionsResponse>(grpcClient.ListRevisionsAsync, grpcClient.ListRevisions, effectiveSettings.ListRevisionsSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<ListRevisionsRequest>().WithExtractedParameter("location", "^projects/[^/]+/locations/([^/]+)(?:/.*)?$", request => request.Parent));
             Modify_ApiCall(ref _callListRevisions);
             Modify_ListRevisionsApiCall(ref _callListRevisions);
-            _callDeleteRevision = clientHelper.BuildApiCall<DeleteRevisionRequest, lro::Operation>(grpcClient.DeleteRevisionAsync, grpcClient.DeleteRevision, effectiveSettings.DeleteRevisionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteRevision = clientHelper.BuildApiCall<DeleteRevisionRequest, lro::Operation>(grpcClient.DeleteRevisionAsync, grpcClient.DeleteRevision, effectiveSettings.DeleteRevisionSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<DeleteRevisionRequest>().WithExtractedParameter("location", "^projects/[^/]+/locations/([^/]+)(?:/.*)?$", request => request.Name));
             Modify_ApiCall(ref _callDeleteRevision);
             Modify_DeleteRevisionApiCall(ref _callDeleteRevision);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

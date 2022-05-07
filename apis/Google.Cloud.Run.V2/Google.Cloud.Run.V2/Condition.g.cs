@@ -26,61 +26,46 @@ namespace Google.Cloud.Run.V2 {
           string.Concat(
             "CiNnb29nbGUvY2xvdWQvcnVuL3YyL2NvbmRpdGlvbi5wcm90bxITZ29vZ2xl",
             "LmNsb3VkLnJ1bi52MhofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90",
-            "byLoEAoJQ29uZGl0aW9uEgwKBHR5cGUYASABKAkSMwoFc3RhdGUYAiABKA4y",
+            "byLVCwoJQ29uZGl0aW9uEgwKBHR5cGUYASABKAkSMwoFc3RhdGUYAiABKA4y",
             "JC5nb29nbGUuY2xvdWQucnVuLnYyLkNvbmRpdGlvbi5TdGF0ZRIPCgdtZXNz",
             "YWdlGAMgASgJEjgKFGxhc3RfdHJhbnNpdGlvbl90aW1lGAQgASgLMhouZ29v",
             "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBI5CghzZXZlcml0eRgFIAEoDjInLmdv",
             "b2dsZS5jbG91ZC5ydW4udjIuQ29uZGl0aW9uLlNldmVyaXR5Ej0KBnJlYXNv",
             "bhgGIAEoDjIrLmdvb2dsZS5jbG91ZC5ydW4udjIuQ29uZGl0aW9uLkNvbW1v",
-            "blJlYXNvbkgAEkgKD2ludGVybmFsX3JlYXNvbhgHIAEoDjItLmdvb2dsZS5j",
-            "bG91ZC5ydW4udjIuQ29uZGl0aW9uLkludGVybmFsUmVhc29uSAASUwoVZG9t",
-            "YWluX21hcHBpbmdfcmVhc29uGAggASgOMjIuZ29vZ2xlLmNsb3VkLnJ1bi52",
-            "Mi5Db25kaXRpb24uRG9tYWluTWFwcGluZ1JlYXNvbkgAEkgKD3JldmlzaW9u",
-            "X3JlYXNvbhgJIAEoDjItLmdvb2dsZS5jbG91ZC5ydW4udjIuQ29uZGl0aW9u",
-            "LlJldmlzaW9uUmVhc29uSAASSgoQZXhlY3V0aW9uX3JlYXNvbhgLIAEoDjIu",
-            "Lmdvb2dsZS5jbG91ZC5ydW4udjIuQ29uZGl0aW9uLkV4ZWN1dGlvblJlYXNv",
-            "bkgAIn8KBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASFQoRQ09ORElU",
-            "SU9OX1BFTkRJTkcQARIZChVDT05ESVRJT05fUkVDT05DSUxJTkcQAhIUChBD",
-            "T05ESVRJT05fRkFJTEVEEAMSFwoTQ09ORElUSU9OX1NVQ0NFRURFRBAEIkYK",
-            "CFNldmVyaXR5EhgKFFNFVkVSSVRZX1VOU1BFQ0lGSUVEEAASCQoFRVJST1IQ",
-            "ARILCgdXQVJOSU5HEAISCAoESU5GTxADIs4DCgxDb21tb25SZWFzb24SGwoX",
-            "Q09NTU9OX1JFQVNPTl9VTkRFRklORUQQABILCgdVTktOT1dOEAESEQoNUk9V",
-            "VEVfTUlTU0lORxACEhMKD1JFVklTSU9OX0ZBSUxFRBADEh4KGlBST0dSRVNT",
-            "X0RFQURMSU5FX0VYQ0VFREVEEAQSFQoRQlVJTERfU1RFUF9GQUlMRUQQBRIV",
-            "ChFDT05UQUlORVJfTUlTU0lORxAGEh8KG0NPTlRBSU5FUl9QRVJNSVNTSU9O",
-            "X0RFTklFRBAHEiAKHENPTlRBSU5FUl9JTUFHRV9VTkFVVEhPUklaRUQQCBIu",
-            "CipDT05UQUlORVJfSU1BR0VfQVVUSE9SSVpBVElPTl9DSEVDS19GQUlMRUQQ",
-            "CRIkCiBFTkNSWVBUSU9OX0tFWV9QRVJNSVNTSU9OX0RFTklFRBAKEh8KG0VO",
-            "Q1JZUFRJT05fS0VZX0NIRUNLX0ZBSUxFRBALEh8KG1NFQ1JFVFNfQUNDRVNT",
-            "X0NIRUNLX0ZBSUxFRBAMEhkKFVdBSVRJTkdfRk9SX09QRVJBVElPThANEhMK",
-            "D0lNTUVESUFURV9SRVRSWRAOEhMKD1BPU1RQT05FRF9SRVRSWRAPIv8BCg5J",
-            "bnRlcm5hbFJlYXNvbhIdChlJTlRFUk5BTF9SRUFTT05fVU5ERUZJTkVEEAAS",
-            "HQoZQ09ORkxJQ1RJTkdfUkVWSVNJT05fTkFNRRABEhQKEFJFVklTSU9OX01J",
-            "U1NJTkcQAhIZChVDT05GSUdVUkFUSU9OX01JU1NJTkcQAxIVChFBU1NJR05J",
-            "TkdfVFJBRkZJQxAEEiQKIFVQREFUSU5HX0lOR1JFU1NfVFJBRkZJQ19BTExP",
-            "V0VEEAUSIQodUkVWSVNJT05fT1JHX1BPTElDWV9WSU9MQVRJT04QBhIeChpF",
-            "TkFCTElOR19HQ0ZWMl9VUklfU1VQUE9SVBAHItMBChNEb21haW5NYXBwaW5n",
-            "UmVhc29uEiMKH0RPTUFJTl9NQVBQSU5HX1JFQVNPTl9VTkRFRklORUQQABIT",
-            "Cg9ST1VURV9OT1RfUkVBRFkQARIVChFQRVJNSVNTSU9OX0RFTklFRBACEh4K",
-            "GkNFUlRJRklDQVRFX0FMUkVBRFlfRVhJU1RTEAMSGgoWTUFQUElOR19BTFJF",
-            "QURZX0VYSVNUUxAEEhcKE0NFUlRJRklDQVRFX1BFTkRJTkcQBRIWChJDRVJU",
-            "SUZJQ0FURV9GQUlMRUQQBiKvAgoOUmV2aXNpb25SZWFzb24SHQoZUkVWSVNJ",
-            "T05fUkVBU09OX1VOREVGSU5FRBAAEgsKB1BFTkRJTkcQARILCgdSRVNFUlZF",
-            "EAISCwoHUkVUSVJFRBADEgwKCFJFVElSSU5HEAQSDgoKUkVDUkVBVElORxAF",
-            "EiAKHEhFQUxUSF9DSEVDS19DT05UQUlORVJfRVJST1IQBhIkCiBDVVNUT01J",
-            "WkVEX1BBVEhfUkVTUE9OU0VfUEVORElORxAHEiEKHU1JTl9JTlNUQU5DRVNf",
-            "Tk9UX1BST1ZJU0lPTkVEEAgSIQodQUNUSVZFX1JFVklTSU9OX0xJTUlUX1JF",
-            "QUNIRUQQCRIRCg1OT19ERVBMT1lNRU5UEAoSGAoUSEVBTFRIX0NIRUNLX1NL",
-            "SVBQRUQQCyJvCg9FeGVjdXRpb25SZWFzb24SHgoaRVhFQ1VUSU9OX1JFQVNP",
-            "Tl9VTkRFRklORUQQABIkCiBKT0JfU1RBVFVTX1NFUlZJQ0VfUE9MTElOR19F",
-            "UlJPUhABEhYKEk5PTl9aRVJPX0VYSVRfQ09ERRACQgkKB3JlYXNvbnNCYwoX",
-            "Y29tLmdvb2dsZS5jbG91ZC5ydW4udjJCDkNvbmRpdGlvblByb3RvUAFaNmdv",
-            "b2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvcnVu",
-            "L3YyO3J1bmIGcHJvdG8z"));
+            "blJlYXNvbkgAEkgKD3JldmlzaW9uX3JlYXNvbhgJIAEoDjItLmdvb2dsZS5j",
+            "bG91ZC5ydW4udjIuQ29uZGl0aW9uLlJldmlzaW9uUmVhc29uSAASSgoQZXhl",
+            "Y3V0aW9uX3JlYXNvbhgLIAEoDjIuLmdvb2dsZS5jbG91ZC5ydW4udjIuQ29u",
+            "ZGl0aW9uLkV4ZWN1dGlvblJlYXNvbkgAIn8KBVN0YXRlEhUKEVNUQVRFX1VO",
+            "U1BFQ0lGSUVEEAASFQoRQ09ORElUSU9OX1BFTkRJTkcQARIZChVDT05ESVRJ",
+            "T05fUkVDT05DSUxJTkcQAhIUChBDT05ESVRJT05fRkFJTEVEEAMSFwoTQ09O",
+            "RElUSU9OX1NVQ0NFRURFRBAEIkYKCFNldmVyaXR5EhgKFFNFVkVSSVRZX1VO",
+            "U1BFQ0lGSUVEEAASCQoFRVJST1IQARILCgdXQVJOSU5HEAISCAoESU5GTxAD",
+            "IrIDCgxDb21tb25SZWFzb24SGwoXQ09NTU9OX1JFQVNPTl9VTkRFRklORUQQ",
+            "ABILCgdVTktOT1dOEAESEwoPUkVWSVNJT05fRkFJTEVEEAMSHgoaUFJPR1JF",
+            "U1NfREVBRExJTkVfRVhDRUVERUQQBBIVChFDT05UQUlORVJfTUlTU0lORxAG",
+            "Eh8KG0NPTlRBSU5FUl9QRVJNSVNTSU9OX0RFTklFRBAHEiAKHENPTlRBSU5F",
+            "Ul9JTUFHRV9VTkFVVEhPUklaRUQQCBIuCipDT05UQUlORVJfSU1BR0VfQVVU",
+            "SE9SSVpBVElPTl9DSEVDS19GQUlMRUQQCRIkCiBFTkNSWVBUSU9OX0tFWV9Q",
+            "RVJNSVNTSU9OX0RFTklFRBAKEh8KG0VOQ1JZUFRJT05fS0VZX0NIRUNLX0ZB",
+            "SUxFRBALEh8KG1NFQ1JFVFNfQUNDRVNTX0NIRUNLX0ZBSUxFRBAMEhkKFVdB",
+            "SVRJTkdfRk9SX09QRVJBVElPThANEhMKD0lNTUVESUFURV9SRVRSWRAOEhMK",
+            "D1BPU1RQT05FRF9SRVRSWRAPEgwKCElOVEVSTkFMEBAirwIKDlJldmlzaW9u",
+            "UmVhc29uEh0KGVJFVklTSU9OX1JFQVNPTl9VTkRFRklORUQQABILCgdQRU5E",
+            "SU5HEAESCwoHUkVTRVJWRRACEgsKB1JFVElSRUQQAxIMCghSRVRJUklORxAE",
+            "Eg4KClJFQ1JFQVRJTkcQBRIgChxIRUFMVEhfQ0hFQ0tfQ09OVEFJTkVSX0VS",
+            "Uk9SEAYSJAogQ1VTVE9NSVpFRF9QQVRIX1JFU1BPTlNFX1BFTkRJTkcQBxIh",
+            "Ch1NSU5fSU5TVEFOQ0VTX05PVF9QUk9WSVNJT05FRBAIEiEKHUFDVElWRV9S",
+            "RVZJU0lPTl9MSU1JVF9SRUFDSEVEEAkSEQoNTk9fREVQTE9ZTUVOVBAKEhgK",
+            "FEhFQUxUSF9DSEVDS19TS0lQUEVEEAsibwoPRXhlY3V0aW9uUmVhc29uEh4K",
+            "GkVYRUNVVElPTl9SRUFTT05fVU5ERUZJTkVEEAASJAogSk9CX1NUQVRVU19T",
+            "RVJWSUNFX1BPTExJTkdfRVJST1IQARIWChJOT05fWkVST19FWElUX0NPREUQ",
+            "AkIJCgdyZWFzb25zQmMKF2NvbS5nb29nbGUuY2xvdWQucnVuLnYyQg5Db25k",
+            "aXRpb25Qcm90b1ABWjZnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29n",
+            "bGVhcGlzL2Nsb3VkL3J1bi92MjtydW5iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Condition), global::Google.Cloud.Run.V2.Condition.Parser, new[]{ "Type", "State", "Message", "LastTransitionTime", "Severity", "Reason", "InternalReason", "DomainMappingReason", "RevisionReason", "ExecutionReason" }, new[]{ "Reasons" }, new[]{ typeof(global::Google.Cloud.Run.V2.Condition.Types.State), typeof(global::Google.Cloud.Run.V2.Condition.Types.Severity), typeof(global::Google.Cloud.Run.V2.Condition.Types.CommonReason), typeof(global::Google.Cloud.Run.V2.Condition.Types.InternalReason), typeof(global::Google.Cloud.Run.V2.Condition.Types.DomainMappingReason), typeof(global::Google.Cloud.Run.V2.Condition.Types.RevisionReason), typeof(global::Google.Cloud.Run.V2.Condition.Types.ExecutionReason) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Condition), global::Google.Cloud.Run.V2.Condition.Parser, new[]{ "Type", "State", "Message", "LastTransitionTime", "Severity", "Reason", "RevisionReason", "ExecutionReason" }, new[]{ "Reasons" }, new[]{ typeof(global::Google.Cloud.Run.V2.Condition.Types.State), typeof(global::Google.Cloud.Run.V2.Condition.Types.Severity), typeof(global::Google.Cloud.Run.V2.Condition.Types.CommonReason), typeof(global::Google.Cloud.Run.V2.Condition.Types.RevisionReason), typeof(global::Google.Cloud.Run.V2.Condition.Types.ExecutionReason) }, null, null)
           }));
     }
     #endregion
@@ -132,12 +117,6 @@ namespace Google.Cloud.Run.V2 {
       switch (other.ReasonsCase) {
         case ReasonsOneofCase.Reason:
           Reason = other.Reason;
-          break;
-        case ReasonsOneofCase.InternalReason:
-          InternalReason = other.InternalReason;
-          break;
-        case ReasonsOneofCase.DomainMappingReason:
-          DomainMappingReason = other.DomainMappingReason;
           break;
         case ReasonsOneofCase.RevisionReason:
           RevisionReason = other.RevisionReason;
@@ -250,36 +229,6 @@ namespace Google.Cloud.Run.V2 {
       }
     }
 
-    /// <summary>Field number for the "internal_reason" field.</summary>
-    public const int InternalReasonFieldNumber = 7;
-    /// <summary>
-    /// A reason for the internal condition.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Cloud.Run.V2.Condition.Types.InternalReason InternalReason {
-      get { return reasonsCase_ == ReasonsOneofCase.InternalReason ? (global::Google.Cloud.Run.V2.Condition.Types.InternalReason) reasons_ : global::Google.Cloud.Run.V2.Condition.Types.InternalReason.Undefined; }
-      set {
-        reasons_ = value;
-        reasonsCase_ = ReasonsOneofCase.InternalReason;
-      }
-    }
-
-    /// <summary>Field number for the "domain_mapping_reason" field.</summary>
-    public const int DomainMappingReasonFieldNumber = 8;
-    /// <summary>
-    /// A reason for the domain mapping condition.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Cloud.Run.V2.Condition.Types.DomainMappingReason DomainMappingReason {
-      get { return reasonsCase_ == ReasonsOneofCase.DomainMappingReason ? (global::Google.Cloud.Run.V2.Condition.Types.DomainMappingReason) reasons_ : global::Google.Cloud.Run.V2.Condition.Types.DomainMappingReason.Undefined; }
-      set {
-        reasons_ = value;
-        reasonsCase_ = ReasonsOneofCase.DomainMappingReason;
-      }
-    }
-
     /// <summary>Field number for the "revision_reason" field.</summary>
     public const int RevisionReasonFieldNumber = 9;
     /// <summary>
@@ -315,8 +264,6 @@ namespace Google.Cloud.Run.V2 {
     public enum ReasonsOneofCase {
       None = 0,
       Reason = 6,
-      InternalReason = 7,
-      DomainMappingReason = 8,
       RevisionReason = 9,
       ExecutionReason = 11,
     }
@@ -355,8 +302,6 @@ namespace Google.Cloud.Run.V2 {
       if (!object.Equals(LastTransitionTime, other.LastTransitionTime)) return false;
       if (Severity != other.Severity) return false;
       if (Reason != other.Reason) return false;
-      if (InternalReason != other.InternalReason) return false;
-      if (DomainMappingReason != other.DomainMappingReason) return false;
       if (RevisionReason != other.RevisionReason) return false;
       if (ExecutionReason != other.ExecutionReason) return false;
       if (ReasonsCase != other.ReasonsCase) return false;
@@ -373,8 +318,6 @@ namespace Google.Cloud.Run.V2 {
       if (lastTransitionTime_ != null) hash ^= LastTransitionTime.GetHashCode();
       if (Severity != global::Google.Cloud.Run.V2.Condition.Types.Severity.Unspecified) hash ^= Severity.GetHashCode();
       if (reasonsCase_ == ReasonsOneofCase.Reason) hash ^= Reason.GetHashCode();
-      if (reasonsCase_ == ReasonsOneofCase.InternalReason) hash ^= InternalReason.GetHashCode();
-      if (reasonsCase_ == ReasonsOneofCase.DomainMappingReason) hash ^= DomainMappingReason.GetHashCode();
       if (reasonsCase_ == ReasonsOneofCase.RevisionReason) hash ^= RevisionReason.GetHashCode();
       if (reasonsCase_ == ReasonsOneofCase.ExecutionReason) hash ^= ExecutionReason.GetHashCode();
       hash ^= (int) reasonsCase_;
@@ -420,14 +363,6 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(48);
         output.WriteEnum((int) Reason);
       }
-      if (reasonsCase_ == ReasonsOneofCase.InternalReason) {
-        output.WriteRawTag(56);
-        output.WriteEnum((int) InternalReason);
-      }
-      if (reasonsCase_ == ReasonsOneofCase.DomainMappingReason) {
-        output.WriteRawTag(64);
-        output.WriteEnum((int) DomainMappingReason);
-      }
       if (reasonsCase_ == ReasonsOneofCase.RevisionReason) {
         output.WriteRawTag(72);
         output.WriteEnum((int) RevisionReason);
@@ -470,14 +405,6 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(48);
         output.WriteEnum((int) Reason);
       }
-      if (reasonsCase_ == ReasonsOneofCase.InternalReason) {
-        output.WriteRawTag(56);
-        output.WriteEnum((int) InternalReason);
-      }
-      if (reasonsCase_ == ReasonsOneofCase.DomainMappingReason) {
-        output.WriteRawTag(64);
-        output.WriteEnum((int) DomainMappingReason);
-      }
       if (reasonsCase_ == ReasonsOneofCase.RevisionReason) {
         output.WriteRawTag(72);
         output.WriteEnum((int) RevisionReason);
@@ -513,12 +440,6 @@ namespace Google.Cloud.Run.V2 {
       }
       if (reasonsCase_ == ReasonsOneofCase.Reason) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Reason);
-      }
-      if (reasonsCase_ == ReasonsOneofCase.InternalReason) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) InternalReason);
-      }
-      if (reasonsCase_ == ReasonsOneofCase.DomainMappingReason) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DomainMappingReason);
       }
       if (reasonsCase_ == ReasonsOneofCase.RevisionReason) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RevisionReason);
@@ -559,12 +480,6 @@ namespace Google.Cloud.Run.V2 {
       switch (other.ReasonsCase) {
         case ReasonsOneofCase.Reason:
           Reason = other.Reason;
-          break;
-        case ReasonsOneofCase.InternalReason:
-          InternalReason = other.InternalReason;
-          break;
-        case ReasonsOneofCase.DomainMappingReason:
-          DomainMappingReason = other.DomainMappingReason;
           break;
         case ReasonsOneofCase.RevisionReason:
           RevisionReason = other.RevisionReason;
@@ -615,16 +530,6 @@ namespace Google.Cloud.Run.V2 {
           case 48: {
             reasons_ = input.ReadEnum();
             reasonsCase_ = ReasonsOneofCase.Reason;
-            break;
-          }
-          case 56: {
-            reasons_ = input.ReadEnum();
-            reasonsCase_ = ReasonsOneofCase.InternalReason;
-            break;
-          }
-          case 64: {
-            reasons_ = input.ReadEnum();
-            reasonsCase_ = ReasonsOneofCase.DomainMappingReason;
             break;
           }
           case 72: {
@@ -678,16 +583,6 @@ namespace Google.Cloud.Run.V2 {
           case 48: {
             reasons_ = input.ReadEnum();
             reasonsCase_ = ReasonsOneofCase.Reason;
-            break;
-          }
-          case 56: {
-            reasons_ = input.ReadEnum();
-            reasonsCase_ = ReasonsOneofCase.InternalReason;
-            break;
-          }
-          case 64: {
-            reasons_ = input.ReadEnum();
-            reasonsCase_ = ReasonsOneofCase.DomainMappingReason;
             break;
           }
           case 72: {
@@ -771,10 +666,6 @@ namespace Google.Cloud.Run.V2 {
         /// </summary>
         [pbr::OriginalName("UNKNOWN")] Unknown = 1,
         /// <summary>
-        /// The internal route is missing.
-        /// </summary>
-        [pbr::OriginalName("ROUTE_MISSING")] RouteMissing = 2,
-        /// <summary>
         /// Revision creation process failed.
         /// </summary>
         [pbr::OriginalName("REVISION_FAILED")] RevisionFailed = 3,
@@ -782,10 +673,6 @@ namespace Google.Cloud.Run.V2 {
         /// Timed out waiting for completion.
         /// </summary>
         [pbr::OriginalName("PROGRESS_DEADLINE_EXCEEDED")] ProgressDeadlineExceeded = 4,
-        /// <summary>
-        /// There was a build error.
-        /// </summary>
-        [pbr::OriginalName("BUILD_STEP_FAILED")] BuildStepFailed = 5,
         /// <summary>
         /// The container image path is incorrect.
         /// </summary>
@@ -826,79 +713,10 @@ namespace Google.Cloud.Run.V2 {
         /// System will retry later; current attempt failed.
         /// </summary>
         [pbr::OriginalName("POSTPONED_RETRY")] PostponedRetry = 15,
-      }
-
-      /// <summary>
-      /// Reasons applicable to internal resources not exposed to users. These will
-      /// surface in Service.conditions, and could be useful for further diagnosis.
-      /// </summary>
-      public enum InternalReason {
         /// <summary>
-        /// Default value.
+        /// An internal error occurred. Further information may be in the message.
         /// </summary>
-        [pbr::OriginalName("INTERNAL_REASON_UNDEFINED")] Undefined = 0,
-        /// <summary>
-        /// The revision name provided conflicts with an existing one.
-        /// </summary>
-        [pbr::OriginalName("CONFLICTING_REVISION_NAME")] ConflictingRevisionName = 1,
-        /// <summary>
-        /// Revision is missing; this is usually a transient reason.
-        /// </summary>
-        [pbr::OriginalName("REVISION_MISSING")] RevisionMissing = 2,
-        /// <summary>
-        /// Internal configuration is missing; this is usually a transient reason.
-        /// </summary>
-        [pbr::OriginalName("CONFIGURATION_MISSING")] ConfigurationMissing = 3,
-        /// <summary>
-        /// Assigning traffic; this is a transient reason.
-        /// </summary>
-        [pbr::OriginalName("ASSIGNING_TRAFFIC")] AssigningTraffic = 4,
-        /// <summary>
-        /// Updating ingress traffic settings; this is a transient reason.
-        /// </summary>
-        [pbr::OriginalName("UPDATING_INGRESS_TRAFFIC_ALLOWED")] UpdatingIngressTrafficAllowed = 5,
-        /// <summary>
-        /// The revision can't be created because it violates an org policy setting.
-        /// </summary>
-        [pbr::OriginalName("REVISION_ORG_POLICY_VIOLATION")] RevisionOrgPolicyViolation = 6,
-        /// <summary>
-        /// Enabling GCFv2 URI support; this is a transient reason.
-        /// </summary>
-        [pbr::OriginalName("ENABLING_GCFV2_URI_SUPPORT")] EnablingGcfv2UriSupport = 7,
-      }
-
-      /// <summary>
-      /// Reasons specific to DomainMapping resource.
-      /// </summary>
-      public enum DomainMappingReason {
-        /// <summary>
-        /// Default value.
-        /// </summary>
-        [pbr::OriginalName("DOMAIN_MAPPING_REASON_UNDEFINED")] Undefined = 0,
-        /// <summary>
-        /// Internal route is not yet ready.
-        /// </summary>
-        [pbr::OriginalName("ROUTE_NOT_READY")] RouteNotReady = 1,
-        /// <summary>
-        /// Insufficient permissions.
-        /// </summary>
-        [pbr::OriginalName("PERMISSION_DENIED")] PermissionDenied = 2,
-        /// <summary>
-        /// Certificate already exists.
-        /// </summary>
-        [pbr::OriginalName("CERTIFICATE_ALREADY_EXISTS")] CertificateAlreadyExists = 3,
-        /// <summary>
-        /// Mapping already exists.
-        /// </summary>
-        [pbr::OriginalName("MAPPING_ALREADY_EXISTS")] MappingAlreadyExists = 4,
-        /// <summary>
-        /// Certificate issuance pending.
-        /// </summary>
-        [pbr::OriginalName("CERTIFICATE_PENDING")] CertificatePending = 5,
-        /// <summary>
-        /// Certificate issuance failed.
-        /// </summary>
-        [pbr::OriginalName("CERTIFICATE_FAILED")] CertificateFailed = 6,
+        [pbr::OriginalName("INTERNAL")] Internal = 16,
       }
 
       /// <summary>

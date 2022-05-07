@@ -21,7 +21,6 @@ using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using sys = System;
@@ -864,16 +863,12 @@ namespace Google.Cloud.Run.V2
         /// <param name="service">
         /// Required. The Service to be updated.
         /// </param>
-        /// <param name="updateMask">
-        /// The list of fields to be updated.
-        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<Service, Service> UpdateService(Service service, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Service, Service> UpdateService(Service service, gaxgrpc::CallSettings callSettings = null) =>
             UpdateService(new UpdateServiceRequest
             {
                 Service = gax::GaxPreconditions.CheckNotNull(service, nameof(service)),
-                UpdateMask = updateMask,
             }, callSettings);
 
         /// <summary>
@@ -881,17 +876,13 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="service">
         /// Required. The Service to be updated.
-        /// </param>
-        /// <param name="updateMask">
-        /// The list of fields to be updated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Service, Service>> UpdateServiceAsync(Service service, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Service, Service>> UpdateServiceAsync(Service service, gaxgrpc::CallSettings callSettings = null) =>
             UpdateServiceAsync(new UpdateServiceRequest
             {
                 Service = gax::GaxPreconditions.CheckNotNull(service, nameof(service)),
-                UpdateMask = updateMask,
             }, callSettings);
 
         /// <summary>
@@ -900,13 +891,10 @@ namespace Google.Cloud.Run.V2
         /// <param name="service">
         /// Required. The Service to be updated.
         /// </param>
-        /// <param name="updateMask">
-        /// The list of fields to be updated.
-        /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Service, Service>> UpdateServiceAsync(Service service, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
-            UpdateServiceAsync(service, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+        public virtual stt::Task<lro::Operation<Service, Service>> UpdateServiceAsync(Service service, st::CancellationToken cancellationToken) =>
+            UpdateServiceAsync(service, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a Service.
@@ -1192,19 +1180,19 @@ namespace Google.Cloud.Run.V2
             CreateServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateServiceOperationsSettings);
             UpdateServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateServiceOperationsSettings);
             DeleteServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteServiceOperationsSettings);
-            _callCreateService = clientHelper.BuildApiCall<CreateServiceRequest, lro::Operation>(grpcClient.CreateServiceAsync, grpcClient.CreateService, effectiveSettings.CreateServiceSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateService = clientHelper.BuildApiCall<CreateServiceRequest, lro::Operation>(grpcClient.CreateServiceAsync, grpcClient.CreateService, effectiveSettings.CreateServiceSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<CreateServiceRequest>().WithExtractedParameter("location", "^projects/[^/]+/locations/([^/]+)/?$", request => request.Parent));
             Modify_ApiCall(ref _callCreateService);
             Modify_CreateServiceApiCall(ref _callCreateService);
-            _callGetService = clientHelper.BuildApiCall<GetServiceRequest, Service>(grpcClient.GetServiceAsync, grpcClient.GetService, effectiveSettings.GetServiceSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetService = clientHelper.BuildApiCall<GetServiceRequest, Service>(grpcClient.GetServiceAsync, grpcClient.GetService, effectiveSettings.GetServiceSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<GetServiceRequest>().WithExtractedParameter("location", "^projects/[^/]+/locations/([^/]+)(?:/.*)?$", request => request.Name));
             Modify_ApiCall(ref _callGetService);
             Modify_GetServiceApiCall(ref _callGetService);
-            _callListServices = clientHelper.BuildApiCall<ListServicesRequest, ListServicesResponse>(grpcClient.ListServicesAsync, grpcClient.ListServices, effectiveSettings.ListServicesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListServices = clientHelper.BuildApiCall<ListServicesRequest, ListServicesResponse>(grpcClient.ListServicesAsync, grpcClient.ListServices, effectiveSettings.ListServicesSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<ListServicesRequest>().WithExtractedParameter("location", "^projects/[^/]+/locations/([^/]+)/?$", request => request.Parent));
             Modify_ApiCall(ref _callListServices);
             Modify_ListServicesApiCall(ref _callListServices);
-            _callUpdateService = clientHelper.BuildApiCall<UpdateServiceRequest, lro::Operation>(grpcClient.UpdateServiceAsync, grpcClient.UpdateService, effectiveSettings.UpdateServiceSettings).WithGoogleRequestParam("service.name", request => request.Service?.Name);
+            _callUpdateService = clientHelper.BuildApiCall<UpdateServiceRequest, lro::Operation>(grpcClient.UpdateServiceAsync, grpcClient.UpdateService, effectiveSettings.UpdateServiceSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<UpdateServiceRequest>().WithExtractedParameter("location", "^projects/[^/]+/locations/([^/]+)(?:/.*)?$", request => request.Service?.Name));
             Modify_ApiCall(ref _callUpdateService);
             Modify_UpdateServiceApiCall(ref _callUpdateService);
-            _callDeleteService = clientHelper.BuildApiCall<DeleteServiceRequest, lro::Operation>(grpcClient.DeleteServiceAsync, grpcClient.DeleteService, effectiveSettings.DeleteServiceSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteService = clientHelper.BuildApiCall<DeleteServiceRequest, lro::Operation>(grpcClient.DeleteServiceAsync, grpcClient.DeleteService, effectiveSettings.DeleteServiceSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<DeleteServiceRequest>().WithExtractedParameter("location", "^projects/[^/]+/locations/([^/]+)(?:/.*)?$", request => request.Name));
             Modify_ApiCall(ref _callDeleteService);
             Modify_DeleteServiceApiCall(ref _callDeleteService);
             _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>(grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);

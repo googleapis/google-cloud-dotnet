@@ -38,12 +38,12 @@ namespace Google.Cloud.Run.V2 {
             "ZmZpYxIfChtJTkdSRVNTX1RSQUZGSUNfVU5TUEVDSUZJRUQQABIXChNJTkdS",
             "RVNTX1RSQUZGSUNfQUxMEAESIQodSU5HUkVTU19UUkFGRklDX0lOVEVSTkFM",
             "X09OTFkQAhIqCiZJTkdSRVNTX1RSQUZGSUNfSU5URVJOQUxfTE9BRF9CQUxB",
-            "TkNFUhADKoABChRFeGVjdXRpb25FbnZpcm9ubWVudBIlCiFFWEVDVVRJT05f",
-            "RU5WSVJPTk1FTlRfVU5TUEVDSUZJRUQQABIhCh1FWEVDVVRJT05fRU5WSVJP",
-            "Tk1FTlRfREVGQVVMVBABEh4KGkVYRUNVVElPTl9FTlZJUk9OTUVOVF9HRU4y",
-            "EAJCaAoXY29tLmdvb2dsZS5jbG91ZC5ydW4udjJCE1ZlbmRvclNldHRpbmdz",
-            "UHJvdG9QAVo2Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
-            "cy9jbG91ZC9ydW4vdjI7cnVuYgZwcm90bzM="));
+            "TkNFUhADKn0KFEV4ZWN1dGlvbkVudmlyb25tZW50EiUKIUVYRUNVVElPTl9F",
+            "TlZJUk9OTUVOVF9VTlNQRUNJRklFRBAAEh4KGkVYRUNVVElPTl9FTlZJUk9O",
+            "TUVOVF9HRU4xEAESHgoaRVhFQ1VUSU9OX0VOVklST05NRU5UX0dFTjIQAkJo",
+            "Chdjb20uZ29vZ2xlLmNsb3VkLnJ1bi52MkITVmVuZG9yU2V0dGluZ3NQcm90",
+            "b1ABWjZnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Ns",
+            "b3VkL3J1bi92MjtydW5iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Run.V2.IngressTraffic), typeof(global::Google.Cloud.Run.V2.ExecutionEnvironment), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -87,9 +87,9 @@ namespace Google.Cloud.Run.V2 {
     /// </summary>
     [pbr::OriginalName("EXECUTION_ENVIRONMENT_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// Uses the Google-default environment.
+    /// Uses the First Generation environment.
     /// </summary>
-    [pbr::OriginalName("EXECUTION_ENVIRONMENT_DEFAULT")] Default = 1,
+    [pbr::OriginalName("EXECUTION_ENVIRONMENT_GEN1")] Gen1 = 1,
     /// <summary>
     /// Uses Second Generation environment.
     /// </summary>
