@@ -19,7 +19,6 @@ namespace Google.Cloud.Run.V2.Snippets
     // [START run_v2_generated_Services_UpdateService_async_flattened]
     using Google.Cloud.Run.V2;
     using Google.LongRunning;
-    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedServicesClientSnippets
@@ -35,9 +34,8 @@ namespace Google.Cloud.Run.V2.Snippets
             ServicesClient servicesClient = await ServicesClient.CreateAsync();
             // Initialize request argument(s)
             Service service = new Service();
-            FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation<Service, Service> response = await servicesClient.UpdateServiceAsync(service, updateMask);
+            Operation<Service, Service> response = await servicesClient.UpdateServiceAsync(service);
 
             // Poll until the returned long-running operation is complete
             Operation<Service, Service> completedResponse = await response.PollUntilCompletedAsync();

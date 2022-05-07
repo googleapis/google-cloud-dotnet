@@ -19,7 +19,6 @@ namespace Google.Cloud.Run.V2.Snippets
     // [START run_v2_generated_Services_UpdateService_sync_flattened]
     using Google.Cloud.Run.V2;
     using Google.LongRunning;
-    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedServicesClientSnippets
     {
@@ -34,9 +33,8 @@ namespace Google.Cloud.Run.V2.Snippets
             ServicesClient servicesClient = ServicesClient.Create();
             // Initialize request argument(s)
             Service service = new Service();
-            FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation<Service, Service> response = servicesClient.UpdateService(service, updateMask);
+            Operation<Service, Service> response = servicesClient.UpdateService(service);
 
             // Poll until the returned long-running operation is complete
             Operation<Service, Service> completedResponse = response.PollUntilCompleted();
