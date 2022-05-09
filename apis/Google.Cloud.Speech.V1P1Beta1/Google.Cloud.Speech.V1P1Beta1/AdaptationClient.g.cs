@@ -380,8 +380,7 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// recognition model when you send a call that includes the PhraseSet.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this phrase set will be created.
-        /// Format:
+        /// Required. The parent resource where this phrase set will be created. Format:
         /// 
         /// `projects/{project}/locations/{location}/phraseSets`
         /// 
@@ -398,8 +397,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Required. The ID to use for the phrase set, which will become the final
         /// component of the phrase set's resource name.
         /// 
-        /// This value should be 4-63 characters, and valid characters
-        /// are /[a-z][0-9]-/.
+        /// This value should restrict to letters, numbers, and hyphens, with the first
+        /// character a letter, the last a letter or a number, and be 4-63 characters.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -417,8 +416,7 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// recognition model when you send a call that includes the PhraseSet.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this phrase set will be created.
-        /// Format:
+        /// Required. The parent resource where this phrase set will be created. Format:
         /// 
         /// `projects/{project}/locations/{location}/phraseSets`
         /// 
@@ -435,8 +433,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Required. The ID to use for the phrase set, which will become the final
         /// component of the phrase set's resource name.
         /// 
-        /// This value should be 4-63 characters, and valid characters
-        /// are /[a-z][0-9]-/.
+        /// This value should restrict to letters, numbers, and hyphens, with the first
+        /// character a letter, the last a letter or a number, and be 4-63 characters.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -454,8 +452,7 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// recognition model when you send a call that includes the PhraseSet.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this phrase set will be created.
-        /// Format:
+        /// Required. The parent resource where this phrase set will be created. Format:
         /// 
         /// `projects/{project}/locations/{location}/phraseSets`
         /// 
@@ -472,8 +469,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Required. The ID to use for the phrase set, which will become the final
         /// component of the phrase set's resource name.
         /// 
-        /// This value should be 4-63 characters, and valid characters
-        /// are /[a-z][0-9]-/.
+        /// This value should restrict to letters, numbers, and hyphens, with the first
+        /// character a letter, the last a letter or a number, and be 4-63 characters.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -486,8 +483,7 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// recognition model when you send a call that includes the PhraseSet.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this phrase set will be created.
-        /// Format:
+        /// Required. The parent resource where this phrase set will be created. Format:
         /// 
         /// `projects/{project}/locations/{location}/phraseSets`
         /// 
@@ -504,8 +500,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Required. The ID to use for the phrase set, which will become the final
         /// component of the phrase set's resource name.
         /// 
-        /// This value should be 4-63 characters, and valid characters
-        /// are /[a-z][0-9]-/.
+        /// This value should restrict to letters, numbers, and hyphens, with the first
+        /// character a letter, the last a letter or a number, and be 4-63 characters.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -523,8 +519,7 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// recognition model when you send a call that includes the PhraseSet.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this phrase set will be created.
-        /// Format:
+        /// Required. The parent resource where this phrase set will be created. Format:
         /// 
         /// `projects/{project}/locations/{location}/phraseSets`
         /// 
@@ -541,8 +536,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Required. The ID to use for the phrase set, which will become the final
         /// component of the phrase set's resource name.
         /// 
-        /// This value should be 4-63 characters, and valid characters
-        /// are /[a-z][0-9]-/.
+        /// This value should restrict to letters, numbers, and hyphens, with the first
+        /// character a letter, the last a letter or a number, and be 4-63 characters.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -560,8 +555,7 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// recognition model when you send a call that includes the PhraseSet.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this phrase set will be created.
-        /// Format:
+        /// Required. The parent resource where this phrase set will be created. Format:
         /// 
         /// `projects/{project}/locations/{location}/phraseSets`
         /// 
@@ -578,8 +572,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Required. The ID to use for the phrase set, which will become the final
         /// component of the phrase set's resource name.
         /// 
-        /// This value should be 4-63 characters, and valid characters
-        /// are /[a-z][0-9]-/.
+        /// This value should restrict to letters, numbers, and hyphens, with the first
+        /// character a letter, the last a letter or a number, and be 4-63 characters.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1143,8 +1137,7 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Create a custom class.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this custom class will be created.
-        /// Format:
+        /// Required. The parent resource where this custom class will be created. Format:
         /// 
         /// `projects/{project}/locations/{location}/customClasses`
         /// 
@@ -1161,8 +1154,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Required. The ID to use for the custom class, which will become the final
         /// component of the custom class' resource name.
         /// 
-        /// This value should be 4-63 characters, and valid characters
-        /// are /[a-z][0-9]-/.
+        /// This value should restrict to letters, numbers, and hyphens, with the first
+        /// character a letter, the last a letter or a number, and be 4-63 characters.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1178,8 +1171,7 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Create a custom class.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this custom class will be created.
-        /// Format:
+        /// Required. The parent resource where this custom class will be created. Format:
         /// 
         /// `projects/{project}/locations/{location}/customClasses`
         /// 
@@ -1196,8 +1188,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Required. The ID to use for the custom class, which will become the final
         /// component of the custom class' resource name.
         /// 
-        /// This value should be 4-63 characters, and valid characters
-        /// are /[a-z][0-9]-/.
+        /// This value should restrict to letters, numbers, and hyphens, with the first
+        /// character a letter, the last a letter or a number, and be 4-63 characters.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1213,8 +1205,7 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Create a custom class.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this custom class will be created.
-        /// Format:
+        /// Required. The parent resource where this custom class will be created. Format:
         /// 
         /// `projects/{project}/locations/{location}/customClasses`
         /// 
@@ -1231,8 +1222,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Required. The ID to use for the custom class, which will become the final
         /// component of the custom class' resource name.
         /// 
-        /// This value should be 4-63 characters, and valid characters
-        /// are /[a-z][0-9]-/.
+        /// This value should restrict to letters, numbers, and hyphens, with the first
+        /// character a letter, the last a letter or a number, and be 4-63 characters.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1243,8 +1234,7 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Create a custom class.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this custom class will be created.
-        /// Format:
+        /// Required. The parent resource where this custom class will be created. Format:
         /// 
         /// `projects/{project}/locations/{location}/customClasses`
         /// 
@@ -1261,8 +1251,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Required. The ID to use for the custom class, which will become the final
         /// component of the custom class' resource name.
         /// 
-        /// This value should be 4-63 characters, and valid characters
-        /// are /[a-z][0-9]-/.
+        /// This value should restrict to letters, numbers, and hyphens, with the first
+        /// character a letter, the last a letter or a number, and be 4-63 characters.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1278,8 +1268,7 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Create a custom class.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this custom class will be created.
-        /// Format:
+        /// Required. The parent resource where this custom class will be created. Format:
         /// 
         /// `projects/{project}/locations/{location}/customClasses`
         /// 
@@ -1296,8 +1285,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Required. The ID to use for the custom class, which will become the final
         /// component of the custom class' resource name.
         /// 
-        /// This value should be 4-63 characters, and valid characters
-        /// are /[a-z][0-9]-/.
+        /// This value should restrict to letters, numbers, and hyphens, with the first
+        /// character a letter, the last a letter or a number, and be 4-63 characters.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1313,8 +1302,7 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Create a custom class.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this custom class will be created.
-        /// Format:
+        /// Required. The parent resource where this custom class will be created. Format:
         /// 
         /// `projects/{project}/locations/{location}/customClasses`
         /// 
@@ -1331,8 +1319,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Required. The ID to use for the custom class, which will become the final
         /// component of the custom class' resource name.
         /// 
-        /// This value should be 4-63 characters, and valid characters
-        /// are /[a-z][0-9]-/.
+        /// This value should restrict to letters, numbers, and hyphens, with the first
+        /// character a letter, the last a letter or a number, and be 4-63 characters.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
