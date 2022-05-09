@@ -73,7 +73,7 @@ namespace Google.Cloud.Speech.V1 {
             "SF9IRUFERVJfQllURRAHEg0KCVdFQk1fT1BVUxAJIpABChhTcGVha2VyRGlh",
             "cml6YXRpb25Db25maWcSIgoaZW5hYmxlX3NwZWFrZXJfZGlhcml6YXRpb24Y",
             "ASABKAgSGQoRbWluX3NwZWFrZXJfY291bnQYAiABKAUSGQoRbWF4X3NwZWFr",
-            "ZXJfY291bnQYAyABKAUSGgoLc3BlYWtlcl90YWcYBSABKAVCBRgB4EEDIqAI",
+            "ZXJfY291bnQYAyABKAUSGgoLc3BlYWtlcl90YWcYBSABKAVCBRgB4EEDIqQI",
             "ChNSZWNvZ25pdGlvbk1ldGFkYXRhElUKEGludGVyYWN0aW9uX3R5cGUYASAB",
             "KA4yOy5nb29nbGUuY2xvdWQuc3BlZWNoLnYxLlJlY29nbml0aW9uTWV0YWRh",
             "dGEuSW50ZXJhY3Rpb25UeXBlEiQKHGluZHVzdHJ5X25haWNzX2NvZGVfb2Zf",
@@ -97,63 +97,63 @@ namespace Google.Cloud.Speech.V1 {
             "aW5nRGV2aWNlVHlwZRIlCiFSRUNPUkRJTkdfREVWSUNFX1RZUEVfVU5TUEVD",
             "SUZJRUQQABIOCgpTTUFSVFBIT05FEAESBgoCUEMQAhIOCgpQSE9ORV9MSU5F",
             "EAMSCwoHVkVISUNMRRAEEhgKFE9USEVSX09VVERPT1JfREVWSUNFEAUSFwoT",
-            "T1RIRVJfSU5ET09SX0RFVklDRRAGIi8KDVNwZWVjaENvbnRleHQSDwoHcGhy",
-            "YXNlcxgBIAMoCRINCgVib29zdBgEIAEoAiJEChBSZWNvZ25pdGlvbkF1ZGlv",
-            "EhEKB2NvbnRlbnQYASABKAxIABINCgN1cmkYAiABKAlIAEIOCgxhdWRpb19z",
-            "b3VyY2UiiwEKEVJlY29nbml6ZVJlc3BvbnNlEkAKB3Jlc3VsdHMYAiADKAsy",
-            "Ly5nb29nbGUuY2xvdWQuc3BlZWNoLnYxLlNwZWVjaFJlY29nbml0aW9uUmVz",
-            "dWx0EjQKEXRvdGFsX2JpbGxlZF90aW1lGAMgASgLMhkuZ29vZ2xlLnByb3Rv",
-            "YnVmLkR1cmF0aW9uIocCChxMb25nUnVubmluZ1JlY29nbml6ZVJlc3BvbnNl",
-            "EkAKB3Jlc3VsdHMYAiADKAsyLy5nb29nbGUuY2xvdWQuc3BlZWNoLnYxLlNw",
-            "ZWVjaFJlY29nbml0aW9uUmVzdWx0EjQKEXRvdGFsX2JpbGxlZF90aW1lGAMg",
-            "ASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEkUKDW91dHB1dF9jb25m",
-            "aWcYBiABKAsyLi5nb29nbGUuY2xvdWQuc3BlZWNoLnYxLlRyYW5zY3JpcHRP",
-            "dXRwdXRDb25maWcSKAoMb3V0cHV0X2Vycm9yGAcgASgLMhIuZ29vZ2xlLnJw",
-            "Yy5TdGF0dXMisAEKHExvbmdSdW5uaW5nUmVjb2duaXplTWV0YWRhdGESGAoQ",
-            "cHJvZ3Jlc3NfcGVyY2VudBgBIAEoBRIuCgpzdGFydF90aW1lGAIgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI0ChBsYXN0X3VwZGF0ZV90aW1l",
-            "GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIQCgN1cmkYBCAB",
-            "KAlCA+BBAyLnAgoaU3RyZWFtaW5nUmVjb2duaXplUmVzcG9uc2USIQoFZXJy",
-            "b3IYASABKAsyEi5nb29nbGUucnBjLlN0YXR1cxJDCgdyZXN1bHRzGAIgAygL",
-            "MjIuZ29vZ2xlLmNsb3VkLnNwZWVjaC52MS5TdHJlYW1pbmdSZWNvZ25pdGlv",
-            "blJlc3VsdBJdChFzcGVlY2hfZXZlbnRfdHlwZRgEIAEoDjJCLmdvb2dsZS5j",
-            "bG91ZC5zcGVlY2gudjEuU3RyZWFtaW5nUmVjb2duaXplUmVzcG9uc2UuU3Bl",
-            "ZWNoRXZlbnRUeXBlEjQKEXRvdGFsX2JpbGxlZF90aW1lGAUgASgLMhkuZ29v",
-            "Z2xlLnByb3RvYnVmLkR1cmF0aW9uIkwKD1NwZWVjaEV2ZW50VHlwZRIcChhT",
-            "UEVFQ0hfRVZFTlRfVU5TUEVDSUZJRUQQABIbChdFTkRfT0ZfU0lOR0xFX1VU",
-            "VEVSQU5DRRABIvIBChpTdHJlYW1pbmdSZWNvZ25pdGlvblJlc3VsdBJKCgxh",
-            "bHRlcm5hdGl2ZXMYASADKAsyNC5nb29nbGUuY2xvdWQuc3BlZWNoLnYxLlNw",
-            "ZWVjaFJlY29nbml0aW9uQWx0ZXJuYXRpdmUSEAoIaXNfZmluYWwYAiABKAgS",
-            "EQoJc3RhYmlsaXR5GAMgASgCEjIKD3Jlc3VsdF9lbmRfdGltZRgEIAEoCzIZ",
-            "Lmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhITCgtjaGFubmVsX3RhZxgFIAEo",
-            "BRIaCg1sYW5ndWFnZV9jb2RlGAYgASgJQgPgQQMiygEKF1NwZWVjaFJlY29n",
-            "bml0aW9uUmVzdWx0EkoKDGFsdGVybmF0aXZlcxgBIAMoCzI0Lmdvb2dsZS5j",
-            "bG91ZC5zcGVlY2gudjEuU3BlZWNoUmVjb2duaXRpb25BbHRlcm5hdGl2ZRIT",
-            "CgtjaGFubmVsX3RhZxgCIAEoBRIyCg9yZXN1bHRfZW5kX3RpbWUYBCABKAsy",
-            "GS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SGgoNbGFuZ3VhZ2VfY29kZRgF",
-            "IAEoCUID4EEDIncKHFNwZWVjaFJlY29nbml0aW9uQWx0ZXJuYXRpdmUSEgoK",
-            "dHJhbnNjcmlwdBgBIAEoCRISCgpjb25maWRlbmNlGAIgASgCEi8KBXdvcmRz",
-            "GAMgAygLMiAuZ29vZ2xlLmNsb3VkLnNwZWVjaC52MS5Xb3JkSW5mbyKiAQoI",
-            "V29yZEluZm8SLQoKc3RhcnRfdGltZRgBIAEoCzIZLmdvb2dsZS5wcm90b2J1",
-            "Zi5EdXJhdGlvbhIrCghlbmRfdGltZRgCIAEoCzIZLmdvb2dsZS5wcm90b2J1",
-            "Zi5EdXJhdGlvbhIMCgR3b3JkGAMgASgJEhIKCmNvbmZpZGVuY2UYBCABKAIS",
-            "GAoLc3BlYWtlcl90YWcYBSABKAVCA+BBAzLRBAoGU3BlZWNoEpABCglSZWNv",
-            "Z25pemUSKC5nb29nbGUuY2xvdWQuc3BlZWNoLnYxLlJlY29nbml6ZVJlcXVl",
-            "c3QaKS5nb29nbGUuY2xvdWQuc3BlZWNoLnYxLlJlY29nbml6ZVJlc3BvbnNl",
-            "Ii6C0+STAhkiFC92MS9zcGVlY2g6cmVjb2duaXplOgEq2kEMY29uZmlnLGF1",
-            "ZGlvEuQBChRMb25nUnVubmluZ1JlY29nbml6ZRIzLmdvb2dsZS5jbG91ZC5z",
-            "cGVlY2gudjEuTG9uZ1J1bm5pbmdSZWNvZ25pemVSZXF1ZXN0Gh0uZ29vZ2xl",
-            "LmxvbmdydW5uaW5nLk9wZXJhdGlvbiJ4gtPkkwIkIh8vdjEvc3BlZWNoOmxv",
-            "bmdydW5uaW5ncmVjb2duaXplOgEq2kEMY29uZmlnLGF1ZGlvykE8ChxMb25n",
-            "UnVubmluZ1JlY29nbml6ZVJlc3BvbnNlEhxMb25nUnVubmluZ1JlY29nbml6",
-            "ZU1ldGFkYXRhEoEBChJTdHJlYW1pbmdSZWNvZ25pemUSMS5nb29nbGUuY2xv",
-            "dWQuc3BlZWNoLnYxLlN0cmVhbWluZ1JlY29nbml6ZVJlcXVlc3QaMi5nb29n",
+            "T1RIRVJfSU5ET09SX0RFVklDRRAGOgIYASIvCg1TcGVlY2hDb250ZXh0Eg8K",
+            "B3BocmFzZXMYASADKAkSDQoFYm9vc3QYBCABKAIiRAoQUmVjb2duaXRpb25B",
+            "dWRpbxIRCgdjb250ZW50GAEgASgMSAASDQoDdXJpGAIgASgJSABCDgoMYXVk",
+            "aW9fc291cmNlIosBChFSZWNvZ25pemVSZXNwb25zZRJACgdyZXN1bHRzGAIg",
+            "AygLMi8uZ29vZ2xlLmNsb3VkLnNwZWVjaC52MS5TcGVlY2hSZWNvZ25pdGlv",
+            "blJlc3VsdBI0ChF0b3RhbF9iaWxsZWRfdGltZRgDIAEoCzIZLmdvb2dsZS5w",
+            "cm90b2J1Zi5EdXJhdGlvbiKHAgocTG9uZ1J1bm5pbmdSZWNvZ25pemVSZXNw",
+            "b25zZRJACgdyZXN1bHRzGAIgAygLMi8uZ29vZ2xlLmNsb3VkLnNwZWVjaC52",
+            "MS5TcGVlY2hSZWNvZ25pdGlvblJlc3VsdBI0ChF0b3RhbF9iaWxsZWRfdGlt",
+            "ZRgDIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhJFCg1vdXRwdXRf",
+            "Y29uZmlnGAYgASgLMi4uZ29vZ2xlLmNsb3VkLnNwZWVjaC52MS5UcmFuc2Ny",
+            "aXB0T3V0cHV0Q29uZmlnEigKDG91dHB1dF9lcnJvchgHIAEoCzISLmdvb2ds",
+            "ZS5ycGMuU3RhdHVzIrABChxMb25nUnVubmluZ1JlY29nbml6ZU1ldGFkYXRh",
+            "EhgKEHByb2dyZXNzX3BlcmNlbnQYASABKAUSLgoKc3RhcnRfdGltZRgCIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASNAoQbGFzdF91cGRhdGVf",
+            "dGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEAoDdXJp",
+            "GAQgASgJQgPgQQMi5wIKGlN0cmVhbWluZ1JlY29nbml6ZVJlc3BvbnNlEiEK",
+            "BWVycm9yGAEgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXMSQwoHcmVzdWx0cxgC",
+            "IAMoCzIyLmdvb2dsZS5jbG91ZC5zcGVlY2gudjEuU3RyZWFtaW5nUmVjb2du",
+            "aXRpb25SZXN1bHQSXQoRc3BlZWNoX2V2ZW50X3R5cGUYBCABKA4yQi5nb29n",
             "bGUuY2xvdWQuc3BlZWNoLnYxLlN0cmVhbWluZ1JlY29nbml6ZVJlc3BvbnNl",
-            "IgAoATABGknKQRVzcGVlY2guZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3",
-            "dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQnIKGmNvbS5n",
-            "b29nbGUuY2xvdWQuc3BlZWNoLnYxQgtTcGVlY2hQcm90b1ABWjxnb29nbGUu",
-            "Z29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3NwZWVjaC92",
-            "MTtzcGVlY2j4AQGiAgNHQ1NiBnByb3RvMw=="));
+            "LlNwZWVjaEV2ZW50VHlwZRI0ChF0b3RhbF9iaWxsZWRfdGltZRgFIAEoCzIZ",
+            "Lmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbiJMCg9TcGVlY2hFdmVudFR5cGUS",
+            "HAoYU1BFRUNIX0VWRU5UX1VOU1BFQ0lGSUVEEAASGwoXRU5EX09GX1NJTkdM",
+            "RV9VVFRFUkFOQ0UQASLyAQoaU3RyZWFtaW5nUmVjb2duaXRpb25SZXN1bHQS",
+            "SgoMYWx0ZXJuYXRpdmVzGAEgAygLMjQuZ29vZ2xlLmNsb3VkLnNwZWVjaC52",
+            "MS5TcGVlY2hSZWNvZ25pdGlvbkFsdGVybmF0aXZlEhAKCGlzX2ZpbmFsGAIg",
+            "ASgIEhEKCXN0YWJpbGl0eRgDIAEoAhIyCg9yZXN1bHRfZW5kX3RpbWUYBCAB",
+            "KAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SEwoLY2hhbm5lbF90YWcY",
+            "BSABKAUSGgoNbGFuZ3VhZ2VfY29kZRgGIAEoCUID4EEDIsoBChdTcGVlY2hS",
+            "ZWNvZ25pdGlvblJlc3VsdBJKCgxhbHRlcm5hdGl2ZXMYASADKAsyNC5nb29n",
+            "bGUuY2xvdWQuc3BlZWNoLnYxLlNwZWVjaFJlY29nbml0aW9uQWx0ZXJuYXRp",
+            "dmUSEwoLY2hhbm5lbF90YWcYAiABKAUSMgoPcmVzdWx0X2VuZF90aW1lGAQg",
+            "ASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEhoKDWxhbmd1YWdlX2Nv",
+            "ZGUYBSABKAlCA+BBAyJ3ChxTcGVlY2hSZWNvZ25pdGlvbkFsdGVybmF0aXZl",
+            "EhIKCnRyYW5zY3JpcHQYASABKAkSEgoKY29uZmlkZW5jZRgCIAEoAhIvCgV3",
+            "b3JkcxgDIAMoCzIgLmdvb2dsZS5jbG91ZC5zcGVlY2gudjEuV29yZEluZm8i",
+            "ogEKCFdvcmRJbmZvEi0KCnN0YXJ0X3RpbWUYASABKAsyGS5nb29nbGUucHJv",
+            "dG9idWYuRHVyYXRpb24SKwoIZW5kX3RpbWUYAiABKAsyGS5nb29nbGUucHJv",
+            "dG9idWYuRHVyYXRpb24SDAoEd29yZBgDIAEoCRISCgpjb25maWRlbmNlGAQg",
+            "ASgCEhgKC3NwZWFrZXJfdGFnGAUgASgFQgPgQQMy0QQKBlNwZWVjaBKQAQoJ",
+            "UmVjb2duaXplEiguZ29vZ2xlLmNsb3VkLnNwZWVjaC52MS5SZWNvZ25pemVS",
+            "ZXF1ZXN0GikuZ29vZ2xlLmNsb3VkLnNwZWVjaC52MS5SZWNvZ25pemVSZXNw",
+            "b25zZSIugtPkkwIZIhQvdjEvc3BlZWNoOnJlY29nbml6ZToBKtpBDGNvbmZp",
+            "ZyxhdWRpbxLkAQoUTG9uZ1J1bm5pbmdSZWNvZ25pemUSMy5nb29nbGUuY2xv",
+            "dWQuc3BlZWNoLnYxLkxvbmdSdW5uaW5nUmVjb2duaXplUmVxdWVzdBodLmdv",
+            "b2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ieILT5JMCJCIfL3YxL3NwZWVj",
+            "aDpsb25ncnVubmluZ3JlY29nbml6ZToBKtpBDGNvbmZpZyxhdWRpb8pBPAoc",
+            "TG9uZ1J1bm5pbmdSZWNvZ25pemVSZXNwb25zZRIcTG9uZ1J1bm5pbmdSZWNv",
+            "Z25pemVNZXRhZGF0YRKBAQoSU3RyZWFtaW5nUmVjb2duaXplEjEuZ29vZ2xl",
+            "LmNsb3VkLnNwZWVjaC52MS5TdHJlYW1pbmdSZWNvZ25pemVSZXF1ZXN0GjIu",
+            "Z29vZ2xlLmNsb3VkLnNwZWVjaC52MS5TdHJlYW1pbmdSZWNvZ25pemVSZXNw",
+            "b25zZSIAKAEwARpJykEVc3BlZWNoLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6",
+            "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUJyChpj",
+            "b20uZ29vZ2xlLmNsb3VkLnNwZWVjaC52MUILU3BlZWNoUHJvdG9QAVo8Z29v",
+            "Z2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9zcGVl",
+            "Y2gvdjE7c3BlZWNo+AEBogIDR0NTYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Speech.V1.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -1641,8 +1641,7 @@ namespace Google.Cloud.Speech.V1 {
     /// <summary>
     /// Encoding of audio data sent in all `RecognitionAudio` messages.
     /// This field is optional for `FLAC` and `WAV` audio files and required
-    /// for all other audio formats. For details, see
-    /// [AudioEncoding][google.cloud.speech.v1.RecognitionConfig.AudioEncoding].
+    /// for all other audio formats. For details, see [AudioEncoding][google.cloud.speech.v1.RecognitionConfig.AudioEncoding].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1663,8 +1662,7 @@ namespace Google.Cloud.Speech.V1 {
     /// source to 16000 Hz. If that's not possible, use the native sample rate of
     /// the audio source (instead of re-sampling).
     /// This field is optional for FLAC and WAV audio files, but is
-    /// required for all other audio formats. For details, see
-    /// [AudioEncoding][google.cloud.speech.v1.RecognitionConfig.AudioEncoding].
+    /// required for all other audio formats. For details, see [AudioEncoding][google.cloud.speech.v1.RecognitionConfig.AudioEncoding].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1963,6 +1961,7 @@ namespace Google.Cloud.Speech.V1 {
     /// <summary>
     /// Metadata regarding this request.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Speech.V1.RecognitionMetadata Metadata {
@@ -1999,10 +1998,6 @@ namespace Google.Cloud.Speech.V1 {
     ///     &lt;td>Best for short queries such as voice commands or voice search.&lt;/td>
     ///   &lt;/tr>
     ///   &lt;tr>
-    ///     &lt;td>&lt;code>command_and_search&lt;/code>&lt;/td>
-    ///     &lt;td>Best for short queries such as voice commands or voice search.&lt;/td>
-    ///   &lt;/tr>
-    ///   &lt;tr>
     ///     &lt;td>&lt;code>phone_call&lt;/code>&lt;/td>
     ///     &lt;td>Best for audio that originated from a phone call (typically
     ///     recorded at an 8khz sampling rate).&lt;/td>
@@ -2019,6 +2014,16 @@ namespace Google.Cloud.Speech.V1 {
     ///     &lt;td>Best for audio that is not one of the specific audio models.
     ///         For example, long-form audio. Ideally the audio is high-fidelity,
     ///         recorded at a 16khz or greater sampling rate.&lt;/td>
+    ///   &lt;/tr>
+    ///   &lt;tr>
+    ///     &lt;td>&lt;code>medical_conversation&lt;/code>&lt;/td>
+    ///     &lt;td>Best for audio that originated from a conversation between a
+    ///         medical provider and patient.&lt;/td>
+    ///   &lt;/tr>
+    ///   &lt;tr>
+    ///     &lt;td>&lt;code>medical_dictation&lt;/code>&lt;/td>
+    ///     &lt;td>Best for audio that originated from dictation notes by a medical
+    ///         provider.&lt;/td>
     ///   &lt;/tr>
     /// &lt;/table>
     /// </summary>
@@ -2663,8 +2668,7 @@ namespace Google.Cloud.Speech.V1 {
       /// an `AudioEncoding` when you send  send `FLAC` or `WAV` audio, the
       /// encoding configuration must match the encoding described in the audio
       /// header; otherwise the request returns an
-      /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT] error
-      /// code.
+      /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT] error code.
       /// </summary>
       public enum AudioEncoding {
         /// <summary>
@@ -3056,6 +3060,7 @@ namespace Google.Cloud.Speech.V1 {
   /// <summary>
   /// Description of audio data to be recognized.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   public sealed partial class RecognitionMetadata : pb::IMessage<RecognitionMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3917,8 +3922,8 @@ namespace Google.Cloud.Speech.V1 {
   /// <summary>
   /// Contains audio data in the encoding specified in the `RecognitionConfig`.
   /// Either `content` or `uri` must be supplied. Supplying both or neither
-  /// returns [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT].
-  /// See [content limits](https://cloud.google.com/speech-to-text/quotas#content).
+  /// returns [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]. See
+  /// [content limits](https://cloud.google.com/speech-to-text/quotas#content).
   /// </summary>
   public sealed partial class RecognitionAudio : pb::IMessage<RecognitionAudio>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3997,9 +4002,8 @@ namespace Google.Cloud.Speech.V1 {
     /// Currently, only Google Cloud Storage URIs are
     /// supported, which must be specified in the following format:
     /// `gs://bucket_name/object_name` (other URI formats return
-    /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]).
-    /// For more information, see [Request
-    /// URIs](https://cloud.google.com/storage/docs/reference-uris).
+    /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]). For more information, see
+    /// [Request URIs](https://cloud.google.com/storage/docs/reference-uris).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4868,8 +4872,8 @@ namespace Google.Cloud.Speech.V1 {
     public const int UriFieldNumber = 4;
     private string uri_ = "";
     /// <summary>
-    /// Output only. The URI of the audio file being transcribed. Empty if the
-    /// audio was sent as byte content.
+    /// Output only. The URI of the audio file being transcribed. Empty if the audio was sent
+    /// as byte content.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5651,9 +5655,9 @@ namespace Google.Cloud.Speech.V1 {
     public const int LanguageCodeFieldNumber = 6;
     private string languageCode_ = "";
     /// <summary>
-    /// Output only. The [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt)
-    /// language tag of the language in this result. This language code was
-    /// detected to have the most likelihood of being spoken in the audio.
+    /// Output only. The [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag
+    /// of the language in this result. This language code was detected to have
+    /// the most likelihood of being spoken in the audio.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6020,9 +6024,9 @@ namespace Google.Cloud.Speech.V1 {
     public const int LanguageCodeFieldNumber = 5;
     private string languageCode_ = "";
     /// <summary>
-    /// Output only. The [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt)
-    /// language tag of the language in this result. This language code was
-    /// detected to have the most likelihood of being spoken in the audio.
+    /// Output only. The [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag
+    /// of the language in this result. This language code was detected to have
+    /// the most likelihood of being spoken in the audio.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6291,6 +6295,9 @@ namespace Google.Cloud.Speech.V1 {
     private string transcript_ = "";
     /// <summary>
     /// Transcript text representing the words that the user spoke.
+    /// In languages that use spaces to separate words, the transcript might have a
+    /// leading space if it isn't the first result. You can concatenate each result
+    /// to obtain the full transcript without using a separator.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
