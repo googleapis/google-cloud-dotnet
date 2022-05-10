@@ -41,6 +41,7 @@ namespace Google.Cloud.Spanner.Data
             internal SpannerBatchCommandType CommandType { get; }
             internal Priority Priority { get; }
             internal string Tag { get; }
+            internal SpannerConversionOptions ConversionOptions { get; }
 
             public ExecutableCommand(SpannerBatchCommand command)
             {
@@ -51,6 +52,7 @@ namespace Google.Cloud.Spanner.Data
                 CommandType = command.CommandType;
                 Priority = command.Priority;
                 Tag = command.Tag;
+                ConversionOptions = SpannerConversionOptions.ForConnection(Connection);
             }
 
             /// <summary>
@@ -94,8 +96,8 @@ namespace Google.Cloud.Spanner.Data
                 };
                 foreach (var command in Commands)
                 {
-                    var statement = new Statement { Sql = command.CommandText };
-                    command.Parameters.FillSpannerCommandParams(out var parameters, statement.ParamTypes, null);
+                    var statement = new Statement { Sql = command.CommandText };          
+                    command.Parameters.FillSpannerCommandParams(out var parameters, statement.ParamTypes, ConversionOptions);
                     statement.Params = parameters;
                     request.Statements.Add(statement);
                 }

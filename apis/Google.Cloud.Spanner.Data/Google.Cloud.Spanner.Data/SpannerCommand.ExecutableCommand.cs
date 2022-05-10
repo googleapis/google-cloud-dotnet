@@ -62,6 +62,7 @@ namespace Google.Cloud.Spanner.Data
             internal QueryOptions QueryOptions { get; }
             internal Priority Priority { get; }
             internal string Tag { get; }
+            internal SpannerConversionOptions ConversionOptions { get; }
 
             public ExecutableCommand(SpannerCommand command)
             {
@@ -76,6 +77,7 @@ namespace Google.Cloud.Spanner.Data
                 QueryOptions = command.QueryOptions;
                 Priority = command.Priority;
                 Tag = command.Tag;
+                ConversionOptions = SpannerConversionOptions.ForConnection(Connection);
             }
 
             // ExecuteScalar is simply implemented in terms of ExecuteReader.
@@ -126,12 +128,11 @@ namespace Google.Cloud.Spanner.Data
                 var resultSet = await ExecuteReadOrQueryRequestAsync(singleUseReadSettings, effectiveTransaction, cancellationToken)
                         .ConfigureAwait(false);
 
-                var conversionOptions = SpannerConversionOptions.ForConnection(Connection);
                 var enableGetSchemaTable = Connection.Builder.EnableGetSchemaTable;
                 // When the data reader is closed, we may need to dispose of the connection.
                 IDisposable resourceToClose = (behavior & CommandBehavior.CloseConnection) == CommandBehavior.CloseConnection ? Connection : null;
 
-                return new SpannerDataReader(Connection.Logger, resultSet, Transaction?.ReadTimestamp, resourceToClose, conversionOptions, enableGetSchemaTable, CommandTimeout);
+                return new SpannerDataReader(Connection.Logger, resultSet, Transaction?.ReadTimestamp, resourceToClose, ConversionOptions, enableGetSchemaTable, CommandTimeout);
             }
 
             private Task<ReliableStreamReader> ExecuteReadOrQueryRequestAsync(TimestampBound singleUseReadSettings, ISpannerTransaction effectiveTransaction, CancellationToken cancellationToken)
@@ -311,17 +312,10 @@ namespace Google.Cloud.Spanner.Data
 
             private List<Mutation> GetMutations()
             {
-                // Currently, ToProtobufValue doesn't use the options it's provided. They're only
-                // required to prevent us from accidentally adding call sites that wouldn't be able to obtain
-                // valid options. For efficiency, we just pass in null for now. If we ever need real options
-                // from the connection string, uncomment the following line to initialize the options from the connection.
-                // SpannerConversionOptions options = SpannerConversionOptions.ForConnection(SpannerConnection);
-                SpannerConversionOptions conversionOptions = null;
-
                 // Whatever we do with the parameters, we'll need them in a ListValue.
                 var listValue = new ListValue
                 {
-                    Values = { Parameters.Select(x => x.SpannerDbType.ToProtobufValue(x.GetValidatedValue(), conversionOptions)) }
+                    Values = { Parameters.Select(x => x.SpannerDbType.ToProtobufValue(x.GetValidatedValue(), ConversionOptions)) }
                 };
 
                 if (CommandTextBuilder.SpannerCommandType != SpannerCommandType.Delete)
@@ -399,9 +393,7 @@ namespace Google.Cloud.Spanner.Data
                     RequestOptions = BuildRequestOptions()
                 };
 
-                // See comment at the start of GetMutations.
-                SpannerConversionOptions options = null;
-                Parameters.FillSpannerCommandParams(out var parameters, request.ParamTypes, options);
+                Parameters.FillSpannerCommandParams(out var parameters, request.ParamTypes, ConversionOptions);
                 request.Params = parameters;
 
                 return request;

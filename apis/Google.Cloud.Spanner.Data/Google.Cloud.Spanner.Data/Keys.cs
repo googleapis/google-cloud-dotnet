@@ -312,8 +312,9 @@ namespace Google.Cloud.Spanner.Data
 
         private static ListValue ToListValue(SpannerParameterCollection parameters)
         {
-            // See comment at the top of GetMutations in SpannerCommand.ExecutableCommand.
-            // These options are currently not in use, but are required in the API.
+            // There is no access to Connection here, hence keeping options as it is.
+            // We can pass SpannerConversionOptions.Default if we want to.
+            // TODO: Check if SpannerConversionOptions.Default should be passed.
             SpannerConversionOptions options = null;
             return new ListValue
             {
