@@ -96,7 +96,7 @@ namespace Google.Cloud.Spanner.Data
                 };
                 foreach (var command in Commands)
                 {
-                    var statement = new Statement { Sql = command.CommandText };          
+                    var statement = new Statement { Sql = command.CommandText };
                     command.Parameters.FillSpannerCommandParams(out var parameters, statement.ParamTypes, ConversionOptions);
                     statement.Params = parameters;
                     request.Statements.Add(statement);

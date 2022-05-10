@@ -46,7 +46,7 @@ namespace Google.Cloud.Spanner.Data
         public static SpannerDbType Int64 { get; } = new SpannerDbType(TypeCode.Int64);
 
         /// <summary>
-        /// 64 bit floating point number.
+        /// 64 bit floating point number. This is same as Float8 in PostgreSQL dialect.
         /// </summary>
         public static SpannerDbType Float64 { get; } = new SpannerDbType(TypeCode.Float64);
 
@@ -175,6 +175,21 @@ namespace Google.Cloud.Spanner.Data
                         return DbType.Object;
                 }
             }
+        }
+
+        internal System.Type GetConfiguredClrType(SpannerConversionOptions options)
+        {
+            if (TypeCode == TypeCode.Float64 && options.UseSpannerNumericForDecimal)
+            {
+                return typeof(SpannerNumeric);
+            }
+
+            if (TypeCode == TypeCode.Float64 && options.UsePgNumericForDecimal)
+            {
+                return typeof(PgNumeric);
+            }
+
+            return DefaultClrType;
         }
 
         /// <summary>

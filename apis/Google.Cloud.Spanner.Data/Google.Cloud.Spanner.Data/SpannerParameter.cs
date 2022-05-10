@@ -149,9 +149,33 @@ namespace Google.Cloud.Spanner.Data
                     $"{nameof(SpannerDbType)} must be set to one of "
                     + $"({nameof(SpannerDbType.Bool)}, {nameof(SpannerDbType.Int64)}, {nameof(SpannerDbType.Float64)},"
                     + $" {nameof(SpannerDbType.Timestamp)}, {nameof(SpannerDbType.Date)}, {nameof(SpannerDbType.String)},"
-                    + $" {nameof(SpannerDbType.Bytes)}, {nameof(SpannerDbType.Json)}, {nameof(SpannerDbType.Numeric)})");
+                    + $" {nameof(SpannerDbType.Bytes)}, {nameof(SpannerDbType.Json)}, {nameof(SpannerDbType.Numeric)},"
+                    + $" {nameof(SpannerDbType.PgNumeric)})");
             }
             return Value;
+        }
+
+        internal SpannerDbType GetConfiguredSpannerDbType(SpannerConversionOptions options)
+        {
+            // Only if SpannerDbType of parameter is not explicitly provided by user.
+            if (_spannerDbType == null)
+            {
+                if (Value is decimal)
+                {
+                    // User needs to set the right dialect.
+                    if (options != null && options.UseSpannerNumericForDecimal)
+                    {
+                        return SpannerDbType.Numeric;
+                    }
+                    else if (options != null && options.UsePgNumericForDecimal)
+                    {
+                        return SpannerDbType.PgNumeric;
+                    }
+                }                
+            }
+
+            // If we are here, use defaults.
+            return SpannerDbType;
         }
 
         /// <inheritdoc />

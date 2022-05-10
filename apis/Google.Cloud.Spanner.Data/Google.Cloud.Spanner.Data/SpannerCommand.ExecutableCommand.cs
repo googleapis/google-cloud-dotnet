@@ -315,7 +315,7 @@ namespace Google.Cloud.Spanner.Data
                 // Whatever we do with the parameters, we'll need them in a ListValue.
                 var listValue = new ListValue
                 {
-                    Values = { Parameters.Select(x => x.SpannerDbType.ToProtobufValue(x.GetValidatedValue(), ConversionOptions)) }
+                    Values = { Parameters.Select(x => x.GetConfiguredSpannerDbType(ConversionOptions).ToProtobufValue(x.GetValidatedValue(), ConversionOptions)) }
                 };
 
                 if (CommandTextBuilder.SpannerCommandType != SpannerCommandType.Delete)

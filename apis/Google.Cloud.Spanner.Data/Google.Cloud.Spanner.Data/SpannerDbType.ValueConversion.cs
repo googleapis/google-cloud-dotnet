@@ -65,7 +65,7 @@ namespace Google.Cloud.Spanner.Data
             if (targetClrType == typeof(object))
             {
                 //then we decide the type for you
-                targetClrType = DefaultClrType;
+                targetClrType = GetConfiguredClrType(options);
             }
             var possibleUnderlyingType = Nullable.GetUnderlyingType(targetClrType);
             if (possibleUnderlyingType != null)
@@ -172,7 +172,7 @@ namespace Google.Cloud.Spanner.Data
                         return new Value { StringValue = Convert.ToInt64(value, InvariantCulture)
                             .ToString(InvariantCulture) };
                 case TypeCode.Float64:
-                    return new Value {NumberValue = Convert.ToDouble(value, InvariantCulture)};
+                    return new Value { NumberValue = Convert.ToDouble(value, InvariantCulture) };
                 case TypeCode.Timestamp:
                     return new Value
                     {
@@ -256,6 +256,8 @@ namespace Google.Cloud.Spanner.Data
                         }
                         if (value is float || value is double || value is decimal)
                         {
+                            // TODO: Check with Jon, Amanda if LossOfPrecisionHandling needs to be changed,
+                            // as we actually do rounding and not truncation.
                             // We throw if there's a loss of precision. We could use
                             // LossOfPrecisionHandling.Truncate but GoogleSQL documentation requests to
                             // use half-away-from-zero rounding but the SpannerNumeric implementation
@@ -595,7 +597,7 @@ namespace Google.Cloud.Spanner.Data
             }
             if (targetClrType == typeof(SpannerNumeric))
             {
-                if (TypeCode != TypeCode.Numeric)
+                if (TypeCode != TypeCode.Numeric && TypeCode != TypeCode.Float64)
                 {
                     throw new ArgumentException($"{targetClrType.FullName} can only be used for numeric results");
                 }
@@ -605,6 +607,8 @@ namespace Google.Cloud.Spanner.Data
                         return null;
                     case Value.KindOneofCase.StringValue:
                         return SpannerNumeric.Parse(wireValue.StringValue);
+                    case Value.KindOneofCase.NumberValue:
+                        return SpannerNumeric.FromDecimal(Convert.ToDecimal(wireValue.NumberValue), LossOfPrecisionHandling.Truncate);
                     default:
                         throw new InvalidOperationException(
                             $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}");
@@ -612,7 +616,7 @@ namespace Google.Cloud.Spanner.Data
             }
             if (targetClrType == typeof(PgNumeric))
             {
-                if (TypeCode != TypeCode.Numeric || TypeAnnotationCode != TypeAnnotationCode.PgNumeric)
+                if ((TypeCode != TypeCode.Numeric || TypeAnnotationCode != TypeAnnotationCode.PgNumeric) && TypeCode != TypeCode.Float64)
                 {
                     throw new ArgumentException($"{targetClrType.FullName} can only be used for numeric results");
                 }
@@ -622,6 +626,8 @@ namespace Google.Cloud.Spanner.Data
                         return null;
                     case Value.KindOneofCase.StringValue:
                         return V1.PgNumeric.Parse(wireValue.StringValue);
+                    case Value.KindOneofCase.NumberValue:
+                        return V1.PgNumeric.FromDecimal(Convert.ToDecimal(wireValue.NumberValue));
                     default:
                         throw new InvalidOperationException(
                             $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}");
