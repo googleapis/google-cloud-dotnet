@@ -257,6 +257,12 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { SpannerDbType.Numeric, GetSpannerConversionOptions(true, false, false), typeof(SpannerNumeric) };
             yield return new object[] { SpannerDbType.PgNumeric, GetSpannerConversionOptions(false, false, false), typeof(PgNumeric) };
             yield return new object[] { SpannerDbType.PgNumeric, GetSpannerConversionOptions(false, true, false), typeof(PgNumeric) };
+
+            // Date, Timestamp.
+            yield return new object[] { SpannerDbType.Date, GetSpannerConversionOptions(false, false, false), typeof(DateTime) };
+            yield return new object[] { SpannerDbType.Date, GetSpannerConversionOptions(false, false, true), typeof(SpannerDate) };
+            yield return new object[] { SpannerDbType.Timestamp, GetSpannerConversionOptions(false, false, false), typeof(DateTime) };
+            yield return new object[] { SpannerDbType.Timestamp, GetSpannerConversionOptions(false, false, true), typeof(DateTime) };
         }
 
         [Theory]

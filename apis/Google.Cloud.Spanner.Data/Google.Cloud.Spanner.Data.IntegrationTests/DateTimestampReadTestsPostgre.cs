@@ -1,4 +1,4 @@
-﻿// Copyright 2021 Google LLC
+﻿// Copyright 2022 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -21,13 +21,12 @@ using Xunit;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
-    [Collection(nameof(DateTimestampTableFixture))]
-    [CommonTestDiagnostics]
-    public class DateTimestampReadTests
+    [Collection(nameof(DateTimestampTableFixturePostgre))]
+    public class DateTimestampReadTestsPostgre
     {
-        private readonly DateTimestampTableFixture _fixture;
+        private readonly DateTimestampTableFixturePostgre _fixture;
 
-        public DateTimestampReadTests(DateTimestampTableFixture fixture) =>
+        public DateTimestampReadTestsPostgre(DateTimestampTableFixturePostgre fixture) =>
             _fixture = fixture;
 
         private static readonly bool[] s_readWriteAsDateTime = new[]
@@ -53,19 +52,21 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             from parameters in TestDates
             select new object[] { writeAsDateTime, readAsDateTime }.Concat(parameters).ToArray();
 
-        [Theory]
+        [SkippableTheory]
         [MemberData(nameof(TestDates))]
         public async Task WriteDateThenRead_ShouldBeEqual(DateTime expectedDate)
         {
+            Skip.If(_fixture.RunningOnEmulator, "The emulator does not support PostgreSQL dialect.");
             using var connection = _fixture.GetConnection();
             // Write the date value and read it back.
             await connection.CreateInsertOrUpdateCommand(_fixture.TableName,
                 new SpannerParameterCollection
                 {
-                        new SpannerParameter("DateValue", SpannerDbType.Date, expectedDate),
+                    new SpannerParameter("id", SpannerDbType.Int64, 1),
+                    new SpannerParameter("datevalue", SpannerDbType.Date, expectedDate),
                 }
             ).ExecuteNonQueryAsync();
-            var dbDate = await connection.CreateSelectCommand($"SELECT DateValue FROM {_fixture.TableName}").ExecuteScalarAsync<DateTime>();
+            var dbDate = await connection.CreateSelectCommand($"SELECT datevalue FROM {_fixture.TableName}").ExecuteScalarAsync<DateTime>();
             Assert.Equal(expectedDate, dbDate);
         }
 
@@ -76,12 +77,13 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         /// <param name="writeAsDateTime">if set to <c>true</c> <see cref="DateTime"/> is used to write the data, else <see cref="SpannerDate"/> is used.</param>
         /// <param name="readAsDateTime">if set to <c>true</c> <see cref="DateTime"/> is used to read the data, else <see cref="SpannerDate"/> is used.</param>
         /// <param name="expectedDate">The expected date.</param>
-        [Theory]
+        [SkippableTheory]
         [MemberData(nameof(TestDatesWithReadWriteTypes))]
-        public async Task WriteDateThenRead_ShouldBeEqual_UseSpannerDateAndDateTime(bool writeAsDateTime, 
-            bool readAsDateTime, 
+        public async Task WriteDateThenRead_ShouldBeEqual_UseSpannerDateAndDateTime(bool writeAsDateTime,
+            bool readAsDateTime,
             DateTime expectedDate)
         {
+            Skip.If(_fixture.RunningOnEmulator, "The emulator does not support PostgreSQL dialect.");
             // Adding a new SpannerDate type in backward compatible fashion.
             // We could write date as SpannerDate and read as DateTime or 
             // write date as DateTime and read as SpannerDate. This is in addition to
@@ -93,42 +95,46 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 writeAsDateTime ?
                 new SpannerParameterCollection
                 {
-                        new SpannerParameter("DateValue", SpannerDbType.Date, expectedDate)
+                    new SpannerParameter("id", SpannerDbType.Int64, 1),
+                    new SpannerParameter("datevalue", SpannerDbType.Date, expectedDate)
                 }
                 : new SpannerParameterCollection
                 {
-                        new SpannerParameter("DateValue", SpannerDbType.Date, SpannerDate.FromDateTime(expectedDate))
+                    new SpannerParameter("id", SpannerDbType.Int64, 1),
+                    new SpannerParameter("datevalue", SpannerDbType.Date, SpannerDate.FromDateTime(expectedDate))
                 }
             ).ExecuteNonQueryAsync();
 
             if (readAsDateTime)
             {
-                var dbDate = await connection.CreateSelectCommand($"SELECT DateValue FROM {_fixture.TableName}").ExecuteScalarAsync<DateTime>();
+                var dbDate = await connection.CreateSelectCommand($"SELECT datevalue FROM {_fixture.TableName}").ExecuteScalarAsync<DateTime>();
                 Assert.Equal(expectedDate, dbDate);
             }
             else
             {
-                var dbDate = await connection.CreateSelectCommand($"SELECT DateValue FROM {_fixture.TableName}").ExecuteScalarAsync<SpannerDate>();
+                var dbDate = await connection.CreateSelectCommand($"SELECT datevalue FROM {_fixture.TableName}").ExecuteScalarAsync<SpannerDate>();
                 Assert.Equal(SpannerDate.FromDateTime(expectedDate), dbDate);
             }
         }
 
-        [Theory]
+        [SkippableTheory]
         [MemberData(nameof(TestDates))]
         public async Task WriteDateThenRead_ShouldBeEqual_UseOptions(DateTime expectedDate)
         {
+            Skip.If(_fixture.RunningOnEmulator, "The emulator does not support PostgreSQL dialect.");
             // UseSpannerDateForDate = true, should read the date as SpannerDate struct.
             using var connection = new SpannerConnection($"{_fixture.ConnectionString};UseSpannerDateForDate=true");
             await connection.CreateInsertOrUpdateCommand(_fixture.TableName,
                 new SpannerParameterCollection
                 {
-                    new SpannerParameter("DateValue", SpannerDbType.Date, expectedDate)
+                    new SpannerParameter("id", SpannerDbType.Int64, 1),
+                    new SpannerParameter("datevalue", SpannerDbType.Date, expectedDate)
                 }
             ).ExecuteNonQueryAsync();
 
-            var dbDate = await connection.CreateSelectCommand($"SELECT DateValue FROM {_fixture.TableName}").ExecuteScalarAsync<SpannerDate>();
+            var dbDate = await connection.CreateSelectCommand($"SELECT datevalue FROM {_fixture.TableName}").ExecuteScalarAsync<SpannerDate>();
             // Explicitly test the scenario in which CLR Type is not specified.
-            var date = await connection.CreateSelectCommand($"SELECT DateValue FROM {_fixture.TableName}").ExecuteScalarAsync<object>();
+            var date = await connection.CreateSelectCommand($"SELECT datevalue FROM {_fixture.TableName}").ExecuteScalarAsync<object>();
             Assert.Equal(SpannerDate.FromDateTime(expectedDate), dbDate);
             Assert.True(date is SpannerDate);
             Assert.Equal(SpannerDate.FromDateTime(expectedDate), (SpannerDate)date);
@@ -144,28 +150,28 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 new object[] { new DateTime(2020, 11, 29, 18, 51, 10, DateTimeKind.Local) },
             };
 
-        [Theory]
+        [SkippableTheory]
         [MemberData(nameof(TestTimestamps))]
         public async Task WriteTimestampThenRead_ShouldBeEqual(DateTime expectedTimestamp)
         {
-            using (var connection = _fixture.GetConnection())
-            {
-                // Write the timestamp value and read it back.
-                await connection.CreateInsertOrUpdateCommand(_fixture.TableName,
-                    new SpannerParameterCollection
-                    {
-                        new SpannerParameter("TimestampValue", SpannerDbType.Timestamp, expectedTimestamp),
-                    }
-                ).ExecuteNonQueryAsync();
-                var dbTimestamp = await connection.CreateSelectCommand($"SELECT TimestampValue FROM {_fixture.TableName}").ExecuteScalarAsync<DateTime>();
-                // Cloud Spanner always stores the timestamp in UTC, so if the original input value was
-                // a local time, we need to convert the value that we read in the database back to local time.
-                if (expectedTimestamp.Kind == DateTimeKind.Local)
+            Skip.If(_fixture.RunningOnEmulator, "The emulator does not support PostgreSQL dialect.");
+            using var connection = _fixture.GetConnection();
+            // Write the timestamp value and read it back.
+            await connection.CreateInsertOrUpdateCommand(_fixture.TableName,
+                new SpannerParameterCollection
                 {
-                    dbTimestamp = dbTimestamp.ToLocalTime();
+                    new SpannerParameter("id", SpannerDbType.Int64, 1),
+                    new SpannerParameter("timestampvalue", SpannerDbType.Timestamp, expectedTimestamp)
                 }
-                Assert.Equal(expectedTimestamp, dbTimestamp);
+            ).ExecuteNonQueryAsync();
+            var dbTimestamp = await connection.CreateSelectCommand($"SELECT timestampvalue FROM {_fixture.TableName}").ExecuteScalarAsync<DateTime>();
+            // Cloud Spanner always stores the timestamp with timezone in UTC, so if the original input value was
+            // a local time, we need to convert the value that we read in the database back to local time.
+            if (expectedTimestamp.Kind == DateTimeKind.Local)
+            {
+                dbTimestamp = dbTimestamp.ToLocalTime();
             }
+            Assert.Equal(expectedTimestamp, dbTimestamp);
         }
     }
 }

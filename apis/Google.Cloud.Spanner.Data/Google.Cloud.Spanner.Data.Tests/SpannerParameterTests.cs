@@ -61,6 +61,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { new List<byte> { 1 }, SpannerDbType.Bytes, DbType.Binary, typeof(byte[]) };
             yield return new object[] { true, SpannerDbType.Bool, DbType.Boolean, typeof(bool) };
             yield return new object[] { new DateTime(2021, 1, 13, 12, 3, 10), SpannerDbType.Timestamp, DbType.DateTime, typeof(DateTime) };
+            yield return new object[] { new SpannerDate(2021, 1, 13), SpannerDbType.Date, DbType.Date, typeof(DateTime) };
 
             yield return new object[] { 3.14f, SpannerDbType.Float64, DbType.Double, typeof(double) };
             yield return new object[] { 3.14d, SpannerDbType.Float64, DbType.Double, typeof(double) };
@@ -113,6 +114,25 @@ namespace Google.Cloud.Spanner.Data.Tests
                 SpannerDbType.PgNumeric, DbType.VarNumeric, typeof(PgNumeric) };
             yield return new object[] { (PgNumeric)3.14m, SpannerDbType.PgNumeric, GetSpannerConversionOptions(false, true, false),
                 SpannerDbType.PgNumeric, DbType.VarNumeric, typeof(PgNumeric) };
+
+            // DateTime and Timestamp.
+            yield return new object[] { new DateTime(2022, 5, 10, 12, 3, 10), SpannerDbType.Timestamp, GetSpannerConversionOptions(false, false, false),
+                SpannerDbType.Timestamp, DbType.DateTime, typeof(DateTime) };
+            yield return new object[] { new DateTime(2022, 5, 10, 12, 3, 10), SpannerDbType.Timestamp, GetSpannerConversionOptions(false, false, true),
+                SpannerDbType.Timestamp, DbType.DateTime, typeof(DateTime) };
+
+            // DateTime and Date.
+            // Demonstrates the issue with current defaults.
+            yield return new object[] { new DateTime(2022, 5, 10), SpannerDbType.Date, GetSpannerConversionOptions(false, false, false),
+                SpannerDbType.Timestamp, DbType.DateTime, typeof(DateTime) };  
+            yield return new object[] { new DateTime(2022, 5, 10), SpannerDbType.Date, GetSpannerConversionOptions(false, false, true),
+                SpannerDbType.Timestamp, DbType.DateTime, typeof(SpannerDate) };
+
+            // SpannerDate and Date.
+            yield return new object[] { new SpannerDate(2022, 5, 10), SpannerDbType.Date, GetSpannerConversionOptions(false, false, false),
+                SpannerDbType.Date, DbType.Date, typeof(DateTime) };
+            yield return new object[] { new SpannerDate(2022, 5, 10), SpannerDbType.Date, GetSpannerConversionOptions(false, false, true),
+                SpannerDbType.Date, DbType.Date, typeof(SpannerDate) };
         }
 
         [Theory]
@@ -245,6 +265,16 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { new SpannerParameter { Value = 3.14M },
                 GetSpannerConversionOptions(false, true, false), SpannerDbType.PgNumeric };
 
+            // Date and Timestamp.
+            yield return new object[] { new SpannerParameter { Value = new SpannerDate(2022, 5, 10) },
+                GetSpannerConversionOptions(false, false, false), SpannerDbType.Date };
+            yield return new object[] { new SpannerParameter { Value = new SpannerDate(2022, 5, 10) },
+                GetSpannerConversionOptions(false, false, true), SpannerDbType.Date };
+            yield return new object[] { new SpannerParameter { Value = new DateTime(2022, 5, 10) },
+                GetSpannerConversionOptions(false, false, false), SpannerDbType.Timestamp };
+            yield return new object[] { new SpannerParameter { Value = new DateTime(2022, 5, 10) },
+                GetSpannerConversionOptions(false, false, true), SpannerDbType.Timestamp };
+
             // Cases where SpannerDbType is explicitly provided for SpannerParameter.
             // Options will be ignored.
 
@@ -261,6 +291,16 @@ namespace Google.Cloud.Spanner.Data.Tests
                 GetSpannerConversionOptions(false, false, false), SpannerDbType.PgNumeric };
             yield return new object[] { new SpannerParameter { Value = 3.14M, SpannerDbType = SpannerDbType.PgNumeric },
                 GetSpannerConversionOptions(false, true, false), SpannerDbType.PgNumeric };
+
+            // Date and Timestamp.
+            yield return new object[] { new SpannerParameter { Value = new SpannerDate(2022, 5, 10), SpannerDbType = SpannerDbType.Date },
+                GetSpannerConversionOptions(false, false, false), SpannerDbType.Date };
+            yield return new object[] { new SpannerParameter { Value = new SpannerDate(2022, 5, 10), SpannerDbType = SpannerDbType.Date },
+                GetSpannerConversionOptions(false, false, true), SpannerDbType.Date };
+            yield return new object[] { new SpannerParameter { Value = new DateTime(2022, 5, 10), SpannerDbType = SpannerDbType.Timestamp },
+                GetSpannerConversionOptions(false, false, false), SpannerDbType.Timestamp };
+            yield return new object[] { new SpannerParameter { Value = new DateTime(2022, 5, 10), SpannerDbType = SpannerDbType.Timestamp },
+                GetSpannerConversionOptions(false, false, true), SpannerDbType.Timestamp };
         }
 
         [Theory]

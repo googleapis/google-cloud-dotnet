@@ -189,6 +189,11 @@ namespace Google.Cloud.Spanner.Data
                 return typeof(PgNumeric);
             }
 
+            if (TypeCode == TypeCode.Date && options.UseSpannerDateForDate)
+            {
+                return typeof(SpannerDate);
+            }
+
             return DefaultClrType;
         }
 
@@ -209,6 +214,8 @@ namespace Google.Cloud.Spanner.Data
                         return typeof(double);
                     case TypeCode.Timestamp:
                     case TypeCode.Date:
+                        // To keep the code backward compatible, SpannerDate is used for Date based on options while reading.
+                        // TODO: Check with Jon, Amanda if we need change here to have SpannerDate as default for Date.
                         return typeof(DateTime);
                     case TypeCode.String:
                         return typeof(string);
@@ -329,6 +336,10 @@ namespace Google.Cloud.Spanner.Data
             if (type == typeof(DateTime))
             {
                 return Timestamp;
+            }
+            if (type == typeof(SpannerDate))
+            {
+                return Date;
             }
             if (type == typeof(float) || type == typeof(double) || type == typeof(decimal))
             {
