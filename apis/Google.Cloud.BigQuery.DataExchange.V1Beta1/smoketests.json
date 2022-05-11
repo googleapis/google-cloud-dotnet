@@ -1,0 +1,9 @@
+[
+  {
+    "method": "ListDataExchanges",
+    "client": "AnalyticsHubServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/eu"
+    }
+  }
+]

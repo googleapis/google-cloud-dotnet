@@ -339,7 +339,7 @@
     },
     {
       "id": "Google.Cloud.BigQuery.DataExchange.V1Beta1",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Analytics Hub",
       "productUrl": "https://cloud.google.com/analytics-hub",
@@ -359,9 +359,10 @@
     },
     {
       "id": "Google.Cloud.BigQuery.DataExchange.Common",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "targetFrameworks": "netstandard2.0;net461",
       "type": "other",
+      "noVersionHistory": true,
       "description": "Version-agnostic types for the Google BigQuery Data Exchange API.",
       "tags": [
         "bigquery"
