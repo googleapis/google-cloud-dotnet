@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax.Testing;
 using System;
 using Xunit;
 using static Google.Cloud.Storage.V1.UrlSigner;
@@ -81,9 +80,8 @@ namespace Google.Cloud.Storage.V1.Tests
             public void FromDurationToExpiration()
             {
                 var duration = Options.FromDuration(TimeSpan.FromMinutes(1));
-                var clock = new FakeClock(new DateTime(2018, 11, 19, 5, 56, 54, DateTimeKind.Utc));
 
-                var expiration = duration.ToExpiration(clock);
+                var expiration = duration.ToExpiration(new DateTimeOffset(new DateTime(2018, 11, 19, 5, 56, 54, DateTimeKind.Utc)));
 
                 Assert.NotSame(duration, expiration);
                 Assert.Null(expiration.Duration);
@@ -93,11 +91,10 @@ namespace Google.Cloud.Storage.V1.Tests
             [Fact]
             public void FromExpirationToExpiration()
             {
-                var clock = new FakeClock(new DateTime(2018, 11, 19, 5, 56, 54, DateTimeKind.Utc));
                 var now = DateTimeOffset.UtcNow;
                 var expiration = Options.FromExpiration(now);
 
-                var anotherExpiration = expiration.ToExpiration(clock);
+                var anotherExpiration = expiration.ToExpiration(new DateTimeOffset(new DateTime(2018, 11, 19, 5, 56, 54, DateTimeKind.Utc)));
 
                 Assert.Same(expiration, anotherExpiration);
                 Assert.Null(anotherExpiration.Duration);

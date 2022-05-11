@@ -31,16 +31,18 @@ namespace Google.Cloud.Storage.V1
         {
             public string Sign(RequestTemplate requestTemplate, Options options, IBlobSigner blobSigner, IClock clock)
             {
-                var state = new SigningState(requestTemplate, options, blobSigner, clock);
-                var signature = blobSigner.CreateSignature(state._blobToSign);
+                var signerParameters = BlobSignerParameters.ForCurrentTimestamp(clock);
+                var state = new SigningState(requestTemplate, options, blobSigner, signerParameters);
+                var signature = blobSigner.CreateSignature(state._blobToSign, signerParameters);
                 return state.GetResult(signature);
             }
 
             public async Task<string> SignAsync(
                 RequestTemplate requestTemplate, Options options, IBlobSigner blobSigner, IClock clock, CancellationToken cancellationToken)
             {
-                var state = new SigningState(requestTemplate, options, blobSigner, clock);
-                var signature = await blobSigner.CreateSignatureAsync(state._blobToSign, cancellationToken).ConfigureAwait(false);
+                var signerParameters = BlobSignerParameters.ForCurrentTimestamp(clock);
+                var state = new SigningState(requestTemplate, options, blobSigner, signerParameters);
+                var signature = await blobSigner.CreateSignatureAsync(state._blobToSign, signerParameters, cancellationToken).ConfigureAwait(false);
                 return state.GetResult(signature);
             }
 
@@ -133,7 +135,7 @@ namespace Google.Cloud.Storage.V1
                 private List<string> _queryParameters;
                 internal byte[] _blobToSign;
 
-                internal SigningState(RequestTemplate template, Options options, IBlobSigner blobSigner, IClock clock)
+                internal SigningState(RequestTemplate template, Options options, IBlobSigner blobSigner, BlobSignerParameters signerParameters)
                 {
                     GaxPreconditions.CheckArgument(
                         template.QueryParameters.Count == 0,
@@ -151,7 +153,7 @@ namespace Google.Cloud.Storage.V1
 
                     _scheme = options.Scheme;
 
-                    options = options.ToExpiration(clock);
+                    options = options.ToExpiration(signerParameters.SignatureTimestamp);
                     string expiryUnixSeconds = ((int) (options.Expiration.Value - UnixEpoch).TotalSeconds).ToString(CultureInfo.InvariantCulture);
 
                     string signingResourcePath = $"/{template.Bucket}";
