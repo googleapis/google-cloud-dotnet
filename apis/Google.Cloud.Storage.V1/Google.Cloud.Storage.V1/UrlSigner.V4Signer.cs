@@ -32,10 +32,6 @@ namespace Google.Cloud.Storage.V1
     {
         private sealed class V4Signer : ISigner
         {
-            private const string ScopeSuffix = "storage/goog4_request";
-            private const string DefaultRegion = "auto";
-            private const string Algorithm = "GOOG4-RSA-SHA256";
-
             private static readonly int MaxExpirySecondsInclusive = (int) TimeSpan.FromDays(7).TotalSeconds;
 
             // Note: It's irritating to have to convert from base64 to bytes and then to hex, but we can't change the IBlobSigner implementation
@@ -43,8 +39,9 @@ namespace Google.Cloud.Storage.V1
 
             public string Sign(RequestTemplate requestTemplate, Options options, IBlobSigner blobSigner, IClock clock)
             {
-                var state = new UrlSigningState(requestTemplate, options, blobSigner, clock);
-                var base64Signature = blobSigner.CreateSignature(state._blobToSign);
+                var signerParameters = BlobSignerParameters.ForCurrentTimestamp(clock);
+                var state = new UrlSigningState(requestTemplate, options, blobSigner, signerParameters);
+                var base64Signature = blobSigner.CreateSignature(state._blobToSign, signerParameters);
                 var rawSignature = Convert.FromBase64String(base64Signature);
                 var hexSignature = FormatHex(rawSignature);
                 return state.GetResult(hexSignature);
@@ -53,8 +50,9 @@ namespace Google.Cloud.Storage.V1
             public async Task<string> SignAsync(
                 RequestTemplate requestTemplate, Options options, IBlobSigner blobSigner, IClock clock, CancellationToken cancellationToken)
             {
-                var state = new UrlSigningState(requestTemplate, options, blobSigner, clock);
-                var base64Signature = await blobSigner.CreateSignatureAsync(state._blobToSign, cancellationToken).ConfigureAwait(false);
+                var signerParameters = BlobSignerParameters.ForCurrentTimestamp(clock);
+                var state = new UrlSigningState(requestTemplate, options, blobSigner, signerParameters);
+                var base64Signature = await blobSigner.CreateSignatureAsync(state._blobToSign, signerParameters, cancellationToken).ConfigureAwait(false);
                 var rawSignature = Convert.FromBase64String(base64Signature);
                 var hexSignature = FormatHex(rawSignature);
                 return state.GetResult(hexSignature);
@@ -62,8 +60,9 @@ namespace Google.Cloud.Storage.V1
 
             public SignedPostPolicy Sign(PostPolicy postPolicy, Options options, IBlobSigner blobSigner, IClock clock)
             {
-                var state = new PostPolicySigningState(new PostPolicy(postPolicy), options, blobSigner, clock);
-                var base64Signature = blobSigner.CreateSignature(state._blobToSign);
+                var signerParameters = BlobSignerParameters.ForCurrentTimestamp(clock);
+                var state = new PostPolicySigningState(new PostPolicy(postPolicy), options, blobSigner, signerParameters);
+                var base64Signature = blobSigner.CreateSignature(state._blobToSign, signerParameters);
                 var rawSignature = Convert.FromBase64String(base64Signature);
                 var hexSignature = FormatHex(rawSignature);
                 return state.GetResult(hexSignature);
@@ -71,8 +70,9 @@ namespace Google.Cloud.Storage.V1
 
             public async Task<SignedPostPolicy> SignAsync(PostPolicy postPolicy, Options options, IBlobSigner blobSigner, IClock clock, CancellationToken cancellationToken)
             {
-                var state = new PostPolicySigningState(new PostPolicy(postPolicy), options, blobSigner, clock);
-                var base64Signature = await blobSigner.CreateSignatureAsync(state._blobToSign, cancellationToken).ConfigureAwait(false);
+                var signerParameters = BlobSignerParameters.ForCurrentTimestamp(clock);
+                var state = new PostPolicySigningState(new PostPolicy(postPolicy), options, blobSigner, signerParameters);
+                var base64Signature = await blobSigner.CreateSignatureAsync(state._blobToSign, signerParameters, cancellationToken).ConfigureAwait(false);
                 var rawSignature = Convert.FromBase64String(base64Signature);
                 var hexSignature = FormatHex(rawSignature);
                 return state.GetResult(hexSignature);
@@ -90,7 +90,7 @@ namespace Google.Cloud.Storage.V1
                 private readonly string _scheme;
                 private readonly string _host;
 
-                internal UrlSigningState(RequestTemplate template, Options options, IBlobSigner blobSigner, IClock clock)
+                internal UrlSigningState(RequestTemplate template, Options options, IBlobSigner blobSigner, BlobSignerParameters signerParameters)
                 {
                     (_host, _resourcePath) = options.UrlStyle switch
                     {
@@ -100,10 +100,11 @@ namespace Google.Cloud.Storage.V1
                         _ => throw new ArgumentOutOfRangeException(nameof(options.UrlStyle))
                     };
 
-                    _scheme = options.Scheme;
-                    options = options.ToExpiration(clock);
+                    var now = signerParameters.SignatureTimestamp;
 
-                    var now = clock.GetCurrentDateTimeUtc();
+                    _scheme = options.Scheme;
+                    options = options.ToExpiration(now);
+
                     var timestamp = now.ToString("yyyyMMdd'T'HHmmss'Z'", CultureInfo.InvariantCulture);
                     var datestamp = now.ToString("yyyyMMdd", CultureInfo.InvariantCulture);
                     int expirySeconds = (int) (options.Expiration.Value - now).TotalSeconds;
@@ -118,7 +119,7 @@ namespace Google.Cloud.Storage.V1
 
                     string expiryText = expirySeconds.ToString(CultureInfo.InvariantCulture);
 
-                    string credentialScope = $"{datestamp}/{DefaultRegion}/{ScopeSuffix}";
+                    string credentialScope = $"{datestamp}/{signerParameters.Region}/{signerParameters.Service}/{signerParameters.RequestType}";
 
                     var headers = new SortedDictionary<string, string>(StringComparer.Ordinal);
                     headers.AddHeader("host", _host);
@@ -134,7 +135,7 @@ namespace Google.Cloud.Storage.V1
                     var signedHeaders = string.Join(";", headers.Keys.Select(k => k.ToLowerInvariant()));
 
                     var queryParameters = new SortedSet<string>(StringComparer.Ordinal);
-                    queryParameters.AddQueryParameter("X-Goog-Algorithm", Algorithm);
+                    queryParameters.AddQueryParameter("X-Goog-Algorithm", blobSigner.Algorithm);
                     queryParameters.AddQueryParameter("X-Goog-Credential", $"{blobSigner.Id}/{credentialScope}");
                     queryParameters.AddQueryParameter("X-Goog-Date", timestamp);
                     queryParameters.AddQueryParameter("X-Goog-Expires", expirySeconds.ToString(CultureInfo.InvariantCulture));
@@ -168,7 +169,7 @@ namespace Google.Cloud.Storage.V1
                         hashHex = FormatHex(sha256.ComputeHash(Encoding.UTF8.GetBytes(canonicalRequest)));
                     }
 
-                    _blobToSign = Encoding.UTF8.GetBytes($"{Algorithm}\n{timestamp}\n{credentialScope}\n{hashHex}");
+                    _blobToSign = Encoding.UTF8.GetBytes($"{blobSigner.Algorithm}\n{timestamp}\n{credentialScope}\n{hashHex}");
                 }
 
                 internal string GetResult(string signature) =>
@@ -187,7 +188,7 @@ namespace Google.Cloud.Storage.V1
                 internal readonly DateTimeOffset _expiration;
                 private readonly Uri _url;
 
-                internal PostPolicySigningState(PostPolicy policy, Options options, IBlobSigner blobSigner, IClock clock)
+                internal PostPolicySigningState(PostPolicy policy, Options options, IBlobSigner blobSigner, BlobSignerParameters signerParameters)
                 {
                     string uri = options.UrlStyle switch
                     {
@@ -201,8 +202,8 @@ namespace Google.Cloud.Storage.V1
 
                     uri = $"{options.Scheme}://{uri}/";
 
-                    options = options.ToExpiration(clock);
-                    var now = clock.GetCurrentDateTimeUtc();
+                    var now = signerParameters.SignatureTimestamp;
+                    options = options.ToExpiration(now);
 
                     int expirySeconds = (int)(options.Expiration.Value - now).TotalSeconds;
                     if (expirySeconds <= 0)
@@ -215,10 +216,10 @@ namespace Google.Cloud.Storage.V1
                     }
 
                     var datestamp = now.ToString("yyyyMMdd", CultureInfo.InvariantCulture);
-                    string credentialScope = $"{datestamp}/{DefaultRegion}/{ScopeSuffix}";
+                    string credentialScope = $"{datestamp}/{signerParameters.Region}/{signerParameters.Service}/{signerParameters.RequestType}";
 
-                    policy.SetField(PolicyCreationDateTime.Element, new DateTimeOffset(now));
-                    policy.SetField(PolicyAlgorithm.Element, Algorithm);
+                    policy.SetField(PolicyCreationDateTime.Element, now);
+                    policy.SetField(PolicyAlgorithm.Element, blobSigner.Algorithm);
                     policy.SetField(PolicyCredential.Element, $"{blobSigner.Id}/{credentialScope}");
 
                     _expiration = options.Expiration.Value;

@@ -33,10 +33,12 @@ namespace Google.Cloud.Storage.V1
 
             public string Id => _credential.Id;
 
-            public string CreateSignature(byte[] data) => _credential.CreateSignature(data);
+            public string Algorithm => "GOOG4-RSA-SHA256";
 
-            public Task<string> CreateSignatureAsync(byte[] data, CancellationToken cancellationToken) =>
-                Task.FromResult(CreateSignature(data));
+            public string CreateSignature(byte[] data, BlobSignerParameters _) => _credential.CreateSignature(data);
+
+            public Task<string> CreateSignatureAsync(byte[] data, BlobSignerParameters signerParameters, CancellationToken cancellationToken) =>
+                Task.FromResult(CreateSignature(data, signerParameters));
         }
     }
 }
