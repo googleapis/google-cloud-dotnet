@@ -152,7 +152,10 @@ namespace Google.Cloud.Storage.V1.Snippets
         internal sealed class IamServiceBlobSigner : UrlSigner.IBlobSigner
         {
             private readonly IamService _iamService;
+
             public string Id { get; }
+
+            public string Algorithm => "GOOG4-RSA-SHA256";
 
             internal IamServiceBlobSigner(IamService service, string id)
             {
@@ -160,10 +163,10 @@ namespace Google.Cloud.Storage.V1.Snippets
                 Id = id;
             }
 
-            public string CreateSignature(byte[] data) =>
+            public string CreateSignature(byte[] data, UrlSigner.BlobSignerParameters _) =>
                 CreateRequest(data).Execute().Signature;
 
-            public async Task<string> CreateSignatureAsync(byte[] data, CancellationToken cancellationToken)
+            public async Task<string> CreateSignatureAsync(byte[] data, UrlSigner.BlobSignerParameters _, CancellationToken cancellationToken)
             {
                 ProjectsResource.ServiceAccountsResource.SignBlobRequest request = CreateRequest(data);
                 SignBlobResponse response = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
@@ -190,7 +193,7 @@ namespace Google.Cloud.Storage.V1.Snippets
             var objectName = _fixture.HelloStorageObjectName;
             var httpClient = new HttpClient();
 
-            // Sample: IamServiceBlobSignerUsage        
+            // Sample: IamServiceBlobSignerUsage
             // First obtain the email address of the default service account for this instance from the metadata server.
             HttpRequestMessage serviceAccountRequest = new HttpRequestMessage
             {
