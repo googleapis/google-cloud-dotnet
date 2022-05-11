@@ -87,9 +87,11 @@ namespace Google.Cloud.Storage.V1.Tests
         {
             public string Id => "FakeId";
 
-            public string CreateSignature(byte[] data) => "AAA=";
+            public string Algorithm => "GOOG4-RSA-SHA256";
 
-            public async Task<string> CreateSignatureAsync(byte[] data, CancellationToken cancellationToken)
+            public string CreateSignature(byte[] data, BlobSignerParameters _) => "AAA=";
+
+            public async Task<string> CreateSignatureAsync(byte[] data, BlobSignerParameters _, CancellationToken cancellationToken)
             {
                 await Task.Yield();
                 return "BBB=";

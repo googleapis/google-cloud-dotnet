@@ -135,13 +135,13 @@ namespace Google.Cloud.Storage.V1
             /// <summary>
             /// If this set of options was duration based, this method will return a new set
             /// of options whose expiration will be calculated based on this instance duration
-            /// and the given clock.
+            /// and the given <see cref="DateTimeOffset"/>.
             /// If this set of options was expiration based this same instance will be returned.
             /// </summary>
-            /// <param name="clock">The clock to use to calculate the expiration.</param>
+            /// <param name="now">The <see cref="DateTimeOffset"/> that represents the current instant in time.</param>
             /// <returns>An expiration based set of options.</returns>
-            internal Options ToExpiration(IClock clock) =>
-                Expiration.HasValue ? this : WithExpiration(clock.GetCurrentDateTimeUtc() + Duration.Value);
+            internal Options ToExpiration(DateTimeOffset now) =>
+                Expiration.HasValue ? this : WithExpiration(now + Duration.Value);
 
             /// <summary>
             /// Returns a new set of options with the same values as this one but duration based.
