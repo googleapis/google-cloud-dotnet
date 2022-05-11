@@ -154,6 +154,14 @@ namespace Google.Cloud.Spanner.Data
             return Value;
         }
 
+        /// <summary>
+        /// Gets the configured SpannerDbType for this SpannerParameter based on <see cref="SpannerConversionOptions"/>.
+        /// This returns <see cref="SpannerDbType"/> of the SpannerParameter if the configuration for type doesn't exist in options.
+        /// </summary>
+        /// <param name="options">Options to configure the <c>SpannerDbType</c> for this <c>SpannerParameter</c>.</param>
+        /// <returns>The configured <see cref="SpannerDbType"/>.</returns>
+        internal SpannerDbType GetConfiguredSpannerDbType(SpannerConversionOptions options) => SpannerDbType;
+
         /// <inheritdoc />
         public override void ResetDbType()
         {

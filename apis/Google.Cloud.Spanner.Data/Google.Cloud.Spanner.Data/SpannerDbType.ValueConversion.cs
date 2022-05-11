@@ -65,7 +65,7 @@ namespace Google.Cloud.Spanner.Data
             if (targetClrType == typeof(object))
             {
                 //then we decide the type for you
-                targetClrType = DefaultClrType;
+                targetClrType = GetConfiguredClrType(options);
             }
             var possibleUnderlyingType = Nullable.GetUnderlyingType(targetClrType);
             if (possibleUnderlyingType != null)
@@ -117,9 +117,7 @@ namespace Google.Cloud.Spanner.Data
             return ConvertToClrTypeImpl(protobufValue, targetClrType, options);
         }
 
-        // Note: the options can *currently* be null because we're not using them, but
-        // every call site should check that it could provide options if they become required.
-        internal Value ToProtobufValue(object value, SpannerConversionOptions options)
+        internal Value ToProtobufValue(object value)
         {
             if (value == null || value is DBNull)
             {
@@ -200,7 +198,7 @@ namespace Google.Cloud.Spanner.Data
                     {
                         return Value.ForList(
                             enumerable.Cast<object>()
-                                .Select(x => ArrayElementType.ToProtobufValue(x, options)).ToArray());
+                                .Select(x => ArrayElementType.ToProtobufValue(x)).ToArray());
                     }
                     throw new ArgumentException("The given array instance needs to implement IEnumerable.");
                 case TypeCode.Struct:
@@ -210,7 +208,7 @@ namespace Google.Cloud.Spanner.Data
                         {
                             ListValue = new ListValue
                             {
-                                Values = { spannerStruct.Select(f => f.Type.ToProtobufValue(f.Value, options)) }
+                                Values = { spannerStruct.Select(f => f.Type.ToProtobufValue(f.Value)) }
                             }
                         };
                     }

@@ -178,45 +178,50 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
-        /// The default <see cref="System.Type"/> for this Cloud Spanner type.
+        /// Gets the configured <see cref="System.Type"/> for this SpannerDbType based on <see cref="SpannerConversionOptions"/>.
+        /// If the configuration for this type doesn't exist in options, the default CLR type is returned.
         /// </summary>
-        public System.Type DefaultClrType
+        /// <param name="options">Options to configure the CLR Type for this SpannerDbType.</param>
+        /// <returns>The configured <see cref="System.Type"/>.</returns>
+        internal System.Type GetConfiguredClrType(SpannerConversionOptions options)
         {
-            get
+            switch (TypeCode)
             {
-                switch (TypeCode)
-                {
-                    case TypeCode.Bool:
-                        return typeof(bool);
-                    case TypeCode.Int64:
-                        return typeof(long);
-                    case TypeCode.Float64:
-                        return typeof(double);
-                    case TypeCode.Timestamp:
-                    case TypeCode.Date:
-                        return typeof(DateTime);
-                    case TypeCode.String:
-                        return typeof(string);
-                    case TypeCode.Bytes:
-                        return typeof(byte[]);
-                    case TypeCode.Array:
-                        return typeof(List<>).MakeGenericType(ArrayElementType.DefaultClrType);
-                    case TypeCode.Struct:
-                        return typeof(SpannerStruct);
-                    case TypeCode.Numeric:
-                        if (TypeAnnotationCode == TypeAnnotationCode.PgNumeric)
-                        {
-                            return typeof(PgNumeric);
-                        }
-                        return typeof(SpannerNumeric);
-                    case TypeCode.Json:
-                        return typeof(string);
-                    default:
-                        //if we don't recognize it (or its a struct), we use the google native wellknown type.
-                        return typeof(Value);
-                }
+                case TypeCode.Bool:
+                    return typeof(bool);
+                case TypeCode.Int64:
+                    return typeof(long);
+                case TypeCode.Float64:
+                    return typeof(double);
+                case TypeCode.Timestamp:
+                case TypeCode.Date:
+                    return typeof(DateTime);
+                case TypeCode.String:
+                    return typeof(string);
+                case TypeCode.Bytes:
+                    return typeof(byte[]);
+                case TypeCode.Array:
+                    return typeof(List<>).MakeGenericType(ArrayElementType.GetConfiguredClrType(options));
+                case TypeCode.Struct:
+                    return typeof(SpannerStruct);
+                case TypeCode.Numeric:
+                    if (TypeAnnotationCode == TypeAnnotationCode.PgNumeric)
+                    {
+                        return typeof(PgNumeric);
+                    }
+                    return typeof(SpannerNumeric);
+                case TypeCode.Json:
+                    return typeof(string);
+                default:
+                    // If we don't recognize it (or it's a struct), we use the protobuf Value well-known type.
+                    return typeof(Value);
             }
         }
+
+        /// <summary>
+        /// The default <see cref="System.Type"/> for this Cloud Spanner type.
+        /// </summary>
+        public System.Type DefaultClrType => GetConfiguredClrType(default);
 
         /// <summary>
         /// Converts a <see cref="DbType"/> to the corresponding <see cref="SpannerDbType"/>

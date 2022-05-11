@@ -296,7 +296,7 @@ namespace Google.Cloud.Spanner.Data
         public Key(params object[] keyParts)
         {
             var protobufValues = keyParts.Select(
-                v => SpannerDbType.FromClrType(v?.GetType())?.ToProtobufValue(v, SpannerConversionOptions.Default) ?? Value.ForNull());
+                v => SpannerDbType.FromClrType(v?.GetType())?.ToProtobufValue(v) ?? Value.ForNull());
             KeyParts = new ListValue { Values = { protobufValues } };
         }
 
@@ -312,15 +312,12 @@ namespace Google.Cloud.Spanner.Data
 
         private static ListValue ToListValue(SpannerParameterCollection parameters)
         {
-            // See comment at the top of GetMutations in SpannerCommand.ExecutableCommand.
-            // These options are currently not in use, but are required in the API.
-            SpannerConversionOptions options = null;
             return new ListValue
             {
                 Values =
                 {
                     parameters.Select(
-                        x => x.SpannerDbType.ToProtobufValue(x.GetValidatedValue(), options))
+                        x => x.SpannerDbType.ToProtobufValue(x.GetValidatedValue()))
                 }
             };
         }
