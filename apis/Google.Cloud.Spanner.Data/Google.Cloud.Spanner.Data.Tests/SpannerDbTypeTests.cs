@@ -221,8 +221,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         [Fact]
         public void CommitTimestampConversion_Success()
         {
-            var options = SpannerConversionOptions.Default;
-            var actual = SpannerDbType.Timestamp.ToProtobufValue(SpannerParameter.CommitTimestamp, options);
+            var actual = SpannerDbType.Timestamp.ToProtobufValue(SpannerParameter.CommitTimestamp);
             var expected = new Value { StringValue = CommitTimestamp.ProtoStringValue };
             Assert.Equal(expected, actual);
         }
@@ -230,8 +229,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         [Fact]
         public void CommitTimestampConversion_WrongType()
         {
-            var options = SpannerConversionOptions.Default;
-            Assert.Throws<InvalidOperationException>(() => SpannerDbType.Date.ToProtobufValue(SpannerParameter.CommitTimestamp, options));
+            Assert.Throws<InvalidOperationException>(() => SpannerDbType.Date.ToProtobufValue(SpannerParameter.CommitTimestamp));
         }
     }
 }

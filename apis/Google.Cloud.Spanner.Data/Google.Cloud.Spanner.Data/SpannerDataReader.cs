@@ -105,7 +105,7 @@ namespace Google.Cloud.Spanner.Data
         public override System.Type GetFieldType(int i)
         {
             var fieldMetadata = PopulateMetadata().RowType.Fields[i];
-            return SpannerDbType.FromProtobufType(fieldMetadata.Type).DefaultClrType;
+            return SpannerDbType.FromProtobufType(fieldMetadata.Type).GetConfiguredClrType(_conversionOptions);
         }
 
         /// <inheritdoc />
@@ -588,7 +588,7 @@ namespace Google.Cloud.Spanner.Data
 
                 row["ColumnName"] = field.Name;
                 row["ColumnOrdinal"] = ordinal;
-                row["DataType"] = dbType.DefaultClrType;
+                row["DataType"] = dbType.GetConfiguredClrType(_conversionOptions);
                 row["ProviderType"] = dbType;
                 table.Rows.Add(row);
 

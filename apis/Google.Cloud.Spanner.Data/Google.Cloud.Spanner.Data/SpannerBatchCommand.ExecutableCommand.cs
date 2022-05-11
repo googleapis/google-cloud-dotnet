@@ -41,6 +41,7 @@ namespace Google.Cloud.Spanner.Data
             internal SpannerBatchCommandType CommandType { get; }
             internal Priority Priority { get; }
             internal string Tag { get; }
+            internal SpannerConversionOptions ConversionOptions => SpannerConversionOptions.ForConnection(Connection);
 
             public ExecutableCommand(SpannerBatchCommand command)
             {
@@ -79,7 +80,6 @@ namespace Google.Cloud.Spanner.Data
             private async Task<IReadOnlyList<long>> ExecuteBatchDmlAsync(CancellationToken cancellationToken)
             {
                 await Connection.EnsureIsOpenAsync(cancellationToken).ConfigureAwait(false);
-
                 var transaction = Transaction ?? Connection.AmbientTransaction ?? new EphemeralTransaction(Connection, Priority);
                 ExecuteBatchDmlRequest request = GetExecuteBatchDmlRequest();
                 IEnumerable<long> result = await transaction.ExecuteBatchDmlAsync(request, cancellationToken, CommandTimeout).ConfigureAwait(false);
@@ -92,10 +92,12 @@ namespace Google.Cloud.Spanner.Data
                 {
                     RequestOptions = BuildRequestOptions()
                 };
+                // Avoid calling method multiple times in the loop.
+                var conversionOptions = ConversionOptions;
                 foreach (var command in Commands)
                 {
                     var statement = new Statement { Sql = command.CommandText };
-                    command.Parameters.FillSpannerCommandParams(out var parameters, statement.ParamTypes, null);
+                    command.Parameters.FillSpannerCommandParams(out var parameters, statement.ParamTypes, conversionOptions);
                     statement.Params = parameters;
                     request.Statements.Add(statement);
                 }
