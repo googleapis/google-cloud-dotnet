@@ -83,6 +83,7 @@
     "apis/Google.Cloud.GkeConnect.Gateway.V1Beta1/Google.Cloud.GkeConnect.Gateway.V1Beta1/**",
     "apis/Google.Cloud.GkeHub.V1Beta1/Google.Cloud.GkeHub.V1Beta1/**",
     "apis/Google.Cloud.GkeHub.V1/Google.Cloud.GkeHub.V1/**",
+    "apis/Google.Cloud.GkeMultiCloud.V1/Google.Cloud.GkeMultiCloud.V1/**",
     "apis/Google.Cloud.Iam.Admin.V1/Google.Cloud.Iam.Admin.V1/**",
     "apis/Google.Cloud.Iam.Credentials.V1/Google.Cloud.Iam.Credentials.V1/**",
     "apis/Google.Cloud.Iam.V1/Google.Cloud.Iam.V1/**",
