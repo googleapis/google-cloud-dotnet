@@ -187,6 +187,32 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
+        public void UseSpannerNumericForDecimal()
+        {
+            var connectionStringBuilder = new SpannerConnectionStringBuilder("UseSpannerNumericForDecimal=true");
+            Assert.True(connectionStringBuilder.UseSpannerNumericForDecimal);
+            connectionStringBuilder.UseSpannerNumericForDecimal = false;
+            Assert.False(connectionStringBuilder.UseSpannerNumericForDecimal);
+            // DbConnectionStringBuilder lower-cases keywords, annoyingly.
+            Assert.Equal("usespannernumericfordecimal=False", connectionStringBuilder.ToString());
+            connectionStringBuilder = new SpannerConnectionStringBuilder("");
+            Assert.False(connectionStringBuilder.UseSpannerNumericForDecimal);
+        }
+
+        [Fact]
+        public void UsePgNumericForDecimal()
+        {
+            var connectionStringBuilder = new SpannerConnectionStringBuilder("UsePgNumericForDecimal=true");
+            Assert.True(connectionStringBuilder.UsePgNumericForDecimal);
+            connectionStringBuilder.UsePgNumericForDecimal = false;
+            Assert.False(connectionStringBuilder.UsePgNumericForDecimal);
+            // DbConnectionStringBuilder lower-cases keywords, annoyingly.
+            Assert.Equal("usepgnumericfordecimal=False", connectionStringBuilder.ToString());
+            connectionStringBuilder = new SpannerConnectionStringBuilder("");
+            Assert.False(connectionStringBuilder.UsePgNumericForDecimal);
+        }
+
+        [Fact]
         public void EmulatorDetectionProperty()
         {
             var connectionStringBuilder = new SpannerConnectionStringBuilder("EmulatorDetection=EmulatorOnly");

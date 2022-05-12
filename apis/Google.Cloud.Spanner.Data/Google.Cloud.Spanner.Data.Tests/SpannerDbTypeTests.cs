@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Spanner.V1;
 using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Collections.Generic;
@@ -230,6 +231,37 @@ namespace Google.Cloud.Spanner.Data.Tests
         public void CommitTimestampConversion_WrongType()
         {
             Assert.Throws<InvalidOperationException>(() => SpannerDbType.Date.ToProtobufValue(SpannerParameter.CommitTimestamp));
+        }
+
+        private static SpannerConversionOptions GetSpannerConversionOptions(bool useNumeric, bool usePgNumeric)
+        {
+            var connectionStringBuilder = new SpannerConnectionStringBuilder
+            {
+                UseSpannerNumericForDecimal = useNumeric,
+                UsePgNumericForDecimal = usePgNumeric
+            };
+
+            return SpannerConversionOptions.ForConnectionStringBuilder(connectionStringBuilder);
+        }
+
+        public static IEnumerable<object[]> ConfiguredClrTypes()
+        {
+            // Format : SpannerDbType, SpannerConversionOptions, expected ClrType.
+            yield return new object[] { SpannerDbType.Float64, GetSpannerConversionOptions(false, false), typeof(double) };
+            yield return new object[] { SpannerDbType.Float64, GetSpannerConversionOptions(true, false), typeof(SpannerNumeric) };
+            yield return new object[] { SpannerDbType.Float64, GetSpannerConversionOptions(false, true), typeof(PgNumeric) };
+            yield return new object[] { SpannerDbType.Numeric, GetSpannerConversionOptions(false, false), typeof(SpannerNumeric) };
+            yield return new object[] { SpannerDbType.Numeric, GetSpannerConversionOptions(true, false), typeof(SpannerNumeric) };
+            yield return new object[] { SpannerDbType.PgNumeric, GetSpannerConversionOptions(false, false), typeof(PgNumeric) };
+            yield return new object[] { SpannerDbType.PgNumeric, GetSpannerConversionOptions(false, true), typeof(PgNumeric) };
+        }
+
+        [Theory]
+        [MemberData(nameof(ConfiguredClrTypes))]
+        internal void GetConfiguredClrTypeTest(SpannerDbType dbType, SpannerConversionOptions options, System.Type expectedType)
+        {
+            var actualType = dbType.GetConfiguredClrType(options);
+            Assert.Equal(expectedType, actualType);
         }
     }
 }

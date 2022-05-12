@@ -52,6 +52,8 @@ namespace Google.Cloud.Spanner.Data
         private const string EnableGetSchemaTableKeyword = "EnableGetSchemaTable";
         private const string LogCommitStatsKeyword = "LogCommitStats";
         private const string EmulatorDetectionKeyword = "EmulatorDetection";
+        private const string UseSpannerNumericForDecimalKeyword = "UseSpannerNumericForDecimal";
+        private const string UsePgNumericForDecimalKeyword = "UsePgNumericForDecimal";
 
         private InstanceName _instanceName;
         private DatabaseName _databaseName;
@@ -95,6 +97,70 @@ namespace Google.Cloud.Spanner.Data
         {
             get => GetValueOrDefault(UseClrDefaultForNullKeyword).Equals("True", StringComparison.OrdinalIgnoreCase);
             set => this[UseClrDefaultForNullKeyword] = value.ToString(); // Always "True" or "False", regardless of culture.
+        }
+
+        /// <summary>
+        /// Option to change the default CLR type and default SpannerDbType used for the handling of decimal values. 
+        /// By default, CLR type <see cref="double"/> and <see cref="SpannerDbType.Float64"/> are used to handle decimal values. 
+        /// By setting this option to <c>true</c>, CLR type <see cref="SpannerNumeric"/> and <see cref="SpannerDbType.Numeric"/> 
+        /// will be used as default types to handle decimal values while working with numeric column. 
+        /// Setting this option to <c>true</c> with Float64 column will throw <see cref="SpannerException"/>,
+        /// if <see cref="SpannerDbType"/> for the corresponding parameter is not provided.
+        /// This option should be used to specify default type for handling decimal data while working with Numeric column 
+        /// in Spanner Google Standard SQL (GSQL) dialect database.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// If this is <c>false</c> (the default), <see cref="SpannerDbType.Float64"/> will be used as the default
+        /// <see cref="SpannerDbType"/> to handle the decimal values.
+        /// </para>
+        /// <para>
+        /// If this is <c>true</c>, <see cref="SpannerDbType.Numeric"/> will be used as the default 
+        /// <see cref="SpannerDbType"/> to handle the decimal values.
+        /// Setting this option to <c>true</c> with Float64 column will throw <see cref="SpannerException"/>,
+        /// if <see cref="SpannerDbType"/> for the corresponding parameter is not provided.
+        /// This should be used, only when working with Spanner Google Standard SQL (GSQL) dialect database.  
+        /// </para> 
+        /// <para>
+        /// This property corresponds with the value of the "UseSpannerNumericForDecimal" part of the connection string.
+        /// </para>
+        /// </remarks>
+        public bool UseSpannerNumericForDecimal
+        {
+            get => GetValueOrDefault(UseSpannerNumericForDecimalKeyword).Equals("True", StringComparison.OrdinalIgnoreCase);
+            set => this[UseSpannerNumericForDecimalKeyword] = value.ToString(); // Always "True" or "False", regardless of culture.
+        }
+
+        /// <summary>
+        /// Option to change the default CLR type and default SpannerDbType used for the handling of decimal values. 
+        /// By default, CLR type <see cref="double"/> and <see cref="SpannerDbType.Float64"/> are used to handle decimal values. 
+        /// By setting this option to <c>true</c>, CLR type <see cref="PgNumeric"/> and <see cref="SpannerDbType.PgNumeric"/> 
+        /// will be used as default types to handle decimal values while working with numeric column. 
+        /// Setting this option to <c>true</c> with Float64 column will throw <see cref="SpannerException"/>,
+        /// if <see cref="SpannerDbType"/> for the corresponding parameter is not provided. 
+        /// This option should be used to specify default type for handling decimal data while working with numeric column 
+        /// in Spanner PostgreSQL dialect database.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// If this is <c>false</c> (the default), <see cref="SpannerDbType.Float64"/> will be used as the default
+        /// <see cref="SpannerDbType"/> to handle the decimal values.
+        /// </para>
+        /// <para>
+        /// If this is <c>true</c>, <see cref="SpannerDbType.PgNumeric"/> will be used as the default 
+        /// <see cref="SpannerDbType"/> to handle the decimal values.
+        /// Setting this option to <c>true</c> with Float64 column will throw <see cref="SpannerException"/>,
+        /// if <see cref="SpannerDbType"/> for the corresponding parameter is not provided.
+        /// This should be used, only when working with Spanner PostgreSQL dialect database.  
+        /// </para> 
+        /// <para>
+        /// This property corresponds with the value of the "UsePgNumericForDecimal" part of the connection string.
+        /// </para>
+        /// </remarks>
+        public bool UsePgNumericForDecimal
+        {
+            get => GetValueOrDefault(UsePgNumericForDecimalKeyword).Equals("True", StringComparison.OrdinalIgnoreCase);
+            set => this[UsePgNumericForDecimalKeyword] = value.ToString(); // Always "True" or "False", regardless of culture.
         }
 
         // Note: GetSchemaTable can't be a link as it wouldn't build on netstandard1.0.

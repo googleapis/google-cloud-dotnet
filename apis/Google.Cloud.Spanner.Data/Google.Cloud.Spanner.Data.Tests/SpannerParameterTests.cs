@@ -31,6 +31,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { SpannerDbType.Float64, DbType.Double, true };
             yield return new object[] { SpannerDbType.Int64, DbType.Int64, true };
             yield return new object[] { SpannerDbType.Numeric, DbType.VarNumeric, true };
+            yield return new object[] { SpannerDbType.PgNumeric, DbType.VarNumeric, false };
             yield return new object[] { SpannerDbType.Unspecified, DbType.Object, true };
             yield return new object[] { SpannerDbType.String, DbType.String, true };
             // There is no DbType that will map automatically to SpannerDbType.Json.
@@ -73,6 +74,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { 1uL, SpannerDbType.Int64, DbType.Int64, typeof(long) };
 
             yield return new object[] { (SpannerNumeric)3.14m, SpannerDbType.Numeric, DbType.VarNumeric, typeof(SpannerNumeric) };
+            yield return new object[] { (PgNumeric)3.14m, SpannerDbType.PgNumeric, DbType.VarNumeric, typeof(PgNumeric) };
             yield return new object[] { "test", SpannerDbType.String, DbType.String, typeof(string) };
         }
 
@@ -85,6 +87,44 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.Equal(defaultClrType, spannerType.DefaultClrType);
             Assert.Equal(spannerType, parameter.SpannerDbType);
             Assert.Equal(adoType, parameter.DbType);
+        }
+
+        public static IEnumerable<object[]> GetConfiguredValueConversions()
+        {
+            // Format: parameter value, SpannerDbType, SpannerConversionOptions,
+            // Configured SpannerDbType, DbType, expected configured ClrType.
+
+            // Float64 for decimal.
+            yield return new object[] { 3.14m, SpannerDbType.Float64, GetSpannerConversionOptions(false, false),
+                SpannerDbType.Float64, DbType.Double, typeof(double) };
+            yield return new object[] { 3.14m, SpannerDbType.Float64, GetSpannerConversionOptions(true, false),
+                SpannerDbType.Numeric, DbType.VarNumeric, typeof(SpannerNumeric) };
+            yield return new object[] { 3.14m, SpannerDbType.Float64, GetSpannerConversionOptions(false, true),
+                SpannerDbType.PgNumeric, DbType.VarNumeric, typeof(PgNumeric) };
+
+            // Numeric for decimal.
+            yield return new object[] { (SpannerNumeric)3.14m, SpannerDbType.Numeric, GetSpannerConversionOptions(false, false),
+                SpannerDbType.Numeric, DbType.VarNumeric, typeof(SpannerNumeric) };
+            yield return new object[] { (SpannerNumeric)3.14m, SpannerDbType.Numeric, GetSpannerConversionOptions(true, false),
+                SpannerDbType.Numeric, DbType.VarNumeric, typeof(SpannerNumeric) };
+
+            // PgNumeric for decimal.
+            yield return new object[] { (PgNumeric)3.14m, SpannerDbType.PgNumeric, GetSpannerConversionOptions(false, false),
+                SpannerDbType.PgNumeric, DbType.VarNumeric, typeof(PgNumeric) };
+            yield return new object[] { (PgNumeric)3.14m, SpannerDbType.PgNumeric, GetSpannerConversionOptions(false, true),
+                SpannerDbType.PgNumeric, DbType.VarNumeric, typeof(PgNumeric) };
+        }
+
+        [Theory]
+        [MemberData(nameof(GetConfiguredValueConversions))]
+        internal void ConfiguredValueMappings(object value, SpannerDbType spannerType, SpannerConversionOptions options,
+            SpannerDbType configuredSpannerType, DbType adoType, System.Type configuredClrType)
+        {
+            var parameter = new SpannerParameter { Value = value };
+
+            Assert.Equal(configuredClrType, spannerType.GetConfiguredClrType(options));
+            Assert.Equal(configuredSpannerType, parameter.GetConfiguredSpannerDbType(options));
+            Assert.Equal(adoType, configuredSpannerType.DbType);
         }
 
         public static IEnumerable<object[]> GetDbTypeSizes()
@@ -151,6 +191,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { SpannerDbType.Float64 };
             yield return new object[] { SpannerDbType.Int64 };
             yield return new object[] { SpannerDbType.Numeric };
+            yield return new object[] { SpannerDbType.PgNumeric };
             yield return new object[] { SpannerDbType.Timestamp };
             yield return new object[] { SpannerDbType.Json };
             yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.Bytes) };
@@ -159,6 +200,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.Date) };
             yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.Float64) };
             yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.Int64) };
+            yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.PgNumeric) };
             yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.Numeric) };
             yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.Timestamp) };
             yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.Json) };
@@ -174,6 +216,58 @@ namespace Google.Cloud.Spanner.Data.Tests
             // Setting the size to the same (default) value should be allowed for all types.
             param.Size = 0;
             Assert.Equal(0, param.Size);
+        }
+
+        private static SpannerConversionOptions GetSpannerConversionOptions(bool useNumeric, bool usePgNumeric)
+        {
+            var connectionStringBuilder = new SpannerConnectionStringBuilder
+            {
+                UseSpannerNumericForDecimal = useNumeric,
+                UsePgNumericForDecimal = usePgNumeric
+            };
+
+            return SpannerConversionOptions.ForConnectionStringBuilder(connectionStringBuilder);
+        }
+
+        public static IEnumerable<object[]> ConfiguredSpannerDbTypes()
+        {
+            // Format : SpannerParameter, SpannerConversionOptions, SpannerDbType.
+
+            // Cases where SpannerDbType is not explicitly provided for SpannerParameter.
+            // SpannerDbType will be inferred based on options.
+
+            // Float64, Numeric, PgNumeric.
+            yield return new object[] { new SpannerParameter { Value = 3.14M },
+                GetSpannerConversionOptions(false, false), SpannerDbType.Float64 };
+            yield return new object[] { new SpannerParameter { Value = 3.14M },
+                GetSpannerConversionOptions(true, false), SpannerDbType.Numeric };
+            yield return new object[] { new SpannerParameter { Value = 3.14M },
+                GetSpannerConversionOptions(false, true), SpannerDbType.PgNumeric };
+
+            // Cases where SpannerDbType is explicitly provided for SpannerParameter.
+            // Options will be ignored.
+
+            // Float64, Numeric and PgNumeric.
+            yield return new object[] { new SpannerParameter { Value = 3.14M, SpannerDbType = SpannerDbType.Float64 },
+                GetSpannerConversionOptions(false, false), SpannerDbType.Float64 };
+            yield return new object[] { new SpannerParameter { Value = 3.14M, SpannerDbType = SpannerDbType.Float64 },
+                GetSpannerConversionOptions(true, false), SpannerDbType.Float64 };
+            yield return new object[] { new SpannerParameter { Value = 3.14M, SpannerDbType = SpannerDbType.Numeric },
+                GetSpannerConversionOptions(false, false), SpannerDbType.Numeric };
+            yield return new object[] { new SpannerParameter { Value = 3.14M, SpannerDbType = SpannerDbType.Numeric },
+                GetSpannerConversionOptions(true, false), SpannerDbType.Numeric };
+            yield return new object[] { new SpannerParameter { Value = 3.14M, SpannerDbType = SpannerDbType.PgNumeric },
+                GetSpannerConversionOptions(false, false), SpannerDbType.PgNumeric };
+            yield return new object[] { new SpannerParameter { Value = 3.14M, SpannerDbType = SpannerDbType.PgNumeric },
+                GetSpannerConversionOptions(false, true), SpannerDbType.PgNumeric };
+        }
+
+        [Theory]
+        [MemberData(nameof(ConfiguredSpannerDbTypes))]
+        internal void GetConfiguredSpannerDbTypeTest(SpannerParameter parameter, SpannerConversionOptions options, SpannerDbType expectedType)
+        {
+            var actualType = parameter.GetConfiguredSpannerDbType(options);
+            Assert.Equal(expectedType, actualType);
         }
     }
 }

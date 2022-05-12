@@ -20,7 +20,6 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Reflection;
 using TypeCode = Google.Cloud.Spanner.V1.TypeCode;
 
 namespace Google.Cloud.Spanner.Data
@@ -46,7 +45,7 @@ namespace Google.Cloud.Spanner.Data
         public static SpannerDbType Int64 { get; } = new SpannerDbType(TypeCode.Int64);
 
         /// <summary>
-        /// 64 bit floating point number.
+        /// 64 bit floating point number. This is same as Float8 in PostgreSQL dialect.
         /// </summary>
         public static SpannerDbType Float64 { get; } = new SpannerDbType(TypeCode.Float64);
 
@@ -192,6 +191,14 @@ namespace Google.Cloud.Spanner.Data
                 case TypeCode.Int64:
                     return typeof(long);
                 case TypeCode.Float64:
+                    if (options != null && options.UseSpannerNumericForDecimal)
+                    {
+                        return typeof(SpannerNumeric);
+                    }
+                    if (options != null && options.UsePgNumericForDecimal)
+                    {
+                        return typeof(PgNumeric);
+                    }
                     return typeof(double);
                 case TypeCode.Timestamp:
                 case TypeCode.Date:
