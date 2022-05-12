@@ -1,0 +1,7 @@
+{
+  "distribution_name": "Google.Cloud.GkeMultiCloud.V1",
+  "release_level": "preview",
+  "client_documentation": "https://cloud.google.com/dotnet/docs/reference/Google.Cloud.GkeMultiCloud.V1/latest",
+  "library_type": "GAPIC_AUTO",
+  "api_shortname": "gkemulticloud"
+}

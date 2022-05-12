@@ -1640,6 +1640,28 @@
       "serviceConfigFile": "gkehub_v1.yaml"
     },
     {
+      "id": "Google.Cloud.GkeMultiCloud.V1",
+      "version": "1.0.0-beta01",
+      "type": "grpc",
+      "productName": "Anthos Multi-Cloud",
+      "productUrl": "https://cloud.google.com/anthos/clusters/docs/multi-cloud",
+      "description": "Recommended Google client library to access the Anthos Multi-Cloud API, which provides a way to manage Kubernetes clusters that run on AWS and Azure infrastructure using the Anthos Multi-Cloud API. Combined with Connect, you can manage Kubernetes clusters on Google Cloud, AWS, and Azure from the Google Cloud Console.  When you create a cluster with Anthos Multi-Cloud, Google creates the resources needed and brings up a cluster on your behalf. You can deploy workloads with the Anthos Multi-Cloud API or the gcloud and kubectl command-line tools.",
+      "tags": [
+        "gke",
+        "anthos",
+        "multicloud",
+        "aws",
+        "azure"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "2.3.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/gkemulticloud/v1",
+      "shortName": "gkemulticloud",
+      "serviceConfigFile": "gkemulticloud_v1.yaml"
+    },
+    {
       "id": "Google.Cloud.Iam.Admin.V1",
       "version": "1.2.0",
       "type": "grpc",

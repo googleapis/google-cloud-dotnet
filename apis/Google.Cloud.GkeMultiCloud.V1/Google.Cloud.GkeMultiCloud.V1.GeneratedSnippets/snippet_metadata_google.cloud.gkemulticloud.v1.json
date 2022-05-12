@@ -1,0 +1,3946 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.GkeMultiCloud.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.gkemulticloud.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_CreateAwsCluster_sync",
+      "title": "CreateAwsClusterRequestObject",
+      "description": "Snippet for CreateAwsCluster",
+      "file": "AwsClustersClient.CreateAwsClusterRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAwsCluster",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.CreateAwsCluster",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "CreateAwsCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.CreateAwsCluster",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_CreateAwsCluster_async",
+      "title": "CreateAwsClusterRequestObjectAsync",
+      "description": "Snippet for CreateAwsClusterAsync",
+      "file": "AwsClustersClient.CreateAwsClusterRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAwsClusterAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.CreateAwsClusterAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "CreateAwsCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.CreateAwsCluster",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_CreateAwsCluster_sync_flattened",
+      "title": "CreateAwsCluster",
+      "description": "Snippet for CreateAwsCluster",
+      "file": "AwsClustersClient.CreateAwsClusterSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAwsCluster",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.CreateAwsCluster",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "CreateAwsCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.CreateAwsCluster",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_CreateAwsCluster_async_flattened",
+      "title": "CreateAwsClusterAsync",
+      "description": "Snippet for CreateAwsClusterAsync",
+      "file": "AwsClustersClient.CreateAwsClusterAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAwsClusterAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.CreateAwsClusterAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "CreateAwsCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.CreateAwsCluster",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_CreateAwsCluster_sync_flattened_resourceNames",
+      "title": "CreateAwsClusterResourceNames",
+      "description": "Snippet for CreateAwsCluster",
+      "file": "AwsClustersClient.CreateAwsClusterResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAwsCluster",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.CreateAwsCluster",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "CreateAwsCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.CreateAwsCluster",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_CreateAwsCluster_async_flattened_resourceNames",
+      "title": "CreateAwsClusterResourceNamesAsync",
+      "description": "Snippet for CreateAwsClusterAsync",
+      "file": "AwsClustersClient.CreateAwsClusterResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAwsClusterAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.CreateAwsClusterAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "CreateAwsCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.CreateAwsCluster",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_UpdateAwsCluster_sync",
+      "title": "UpdateAwsClusterRequestObject",
+      "description": "Snippet for UpdateAwsCluster",
+      "file": "AwsClustersClient.UpdateAwsClusterRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAwsCluster",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.UpdateAwsCluster",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "UpdateAwsCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.UpdateAwsCluster",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_UpdateAwsCluster_async",
+      "title": "UpdateAwsClusterRequestObjectAsync",
+      "description": "Snippet for UpdateAwsClusterAsync",
+      "file": "AwsClustersClient.UpdateAwsClusterRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAwsClusterAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.UpdateAwsClusterAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "UpdateAwsCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.UpdateAwsCluster",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_UpdateAwsCluster_sync_flattened",
+      "title": "UpdateAwsCluster",
+      "description": "Snippet for UpdateAwsCluster",
+      "file": "AwsClustersClient.UpdateAwsClusterSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAwsCluster",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.UpdateAwsCluster",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "UpdateAwsCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.UpdateAwsCluster",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_UpdateAwsCluster_async_flattened",
+      "title": "UpdateAwsClusterAsync",
+      "description": "Snippet for UpdateAwsClusterAsync",
+      "file": "AwsClustersClient.UpdateAwsClusterAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAwsClusterAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.UpdateAwsClusterAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "UpdateAwsCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.UpdateAwsCluster",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_GetAwsCluster_sync",
+      "title": "GetAwsClusterRequestObject",
+      "description": "Snippet for GetAwsCluster",
+      "file": "AwsClustersClient.GetAwsClusterRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAwsCluster",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsCluster",
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.AwsCluster",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "GetAwsCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.GetAwsCluster",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_GetAwsCluster_async",
+      "title": "GetAwsClusterRequestObjectAsync",
+      "description": "Snippet for GetAwsClusterAsync",
+      "file": "AwsClustersClient.GetAwsClusterRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAwsClusterAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsClusterAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AwsCluster>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "GetAwsCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.GetAwsCluster",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_GetAwsCluster_sync_flattened",
+      "title": "GetAwsCluster",
+      "description": "Snippet for GetAwsCluster",
+      "file": "AwsClustersClient.GetAwsClusterSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAwsCluster",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsCluster",
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.AwsCluster",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "GetAwsCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.GetAwsCluster",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_GetAwsCluster_async_flattened",
+      "title": "GetAwsClusterAsync",
+      "description": "Snippet for GetAwsClusterAsync",
+      "file": "AwsClustersClient.GetAwsClusterAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAwsClusterAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsClusterAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AwsCluster>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "GetAwsCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.GetAwsCluster",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_GetAwsCluster_sync_flattened_resourceNames",
+      "title": "GetAwsClusterResourceNames",
+      "description": "Snippet for GetAwsCluster",
+      "file": "AwsClustersClient.GetAwsClusterResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAwsCluster",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsCluster",
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.AwsCluster",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "GetAwsCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.GetAwsCluster",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_GetAwsCluster_async_flattened_resourceNames",
+      "title": "GetAwsClusterResourceNamesAsync",
+      "description": "Snippet for GetAwsClusterAsync",
+      "file": "AwsClustersClient.GetAwsClusterResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAwsClusterAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsClusterAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AwsCluster>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "GetAwsCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.GetAwsCluster",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_ListAwsClusters_sync",
+      "title": "ListAwsClustersRequestObject",
+      "description": "Snippet for ListAwsClusters",
+      "file": "AwsClustersClient.ListAwsClustersRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAwsClusters",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.ListAwsClusters",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAwsClustersResponse, Google.Cloud.GkeMultiCloud.V1.AwsCluster>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "ListAwsClusters",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.ListAwsClusters",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_ListAwsClusters_async",
+      "title": "ListAwsClustersRequestObjectAsync",
+      "description": "Snippet for ListAwsClustersAsync",
+      "file": "AwsClustersClient.ListAwsClustersRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAwsClustersAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.ListAwsClustersAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAwsClustersResponse, Google.Cloud.GkeMultiCloud.V1.AwsCluster>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "ListAwsClusters",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.ListAwsClusters",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_ListAwsClusters_sync_flattened",
+      "title": "ListAwsClusters",
+      "description": "Snippet for ListAwsClusters",
+      "file": "AwsClustersClient.ListAwsClustersSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAwsClusters",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.ListAwsClusters",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAwsClustersResponse, Google.Cloud.GkeMultiCloud.V1.AwsCluster>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "ListAwsClusters",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.ListAwsClusters",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_ListAwsClusters_async_flattened",
+      "title": "ListAwsClustersAsync",
+      "description": "Snippet for ListAwsClustersAsync",
+      "file": "AwsClustersClient.ListAwsClustersAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAwsClustersAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.ListAwsClustersAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAwsClustersResponse, Google.Cloud.GkeMultiCloud.V1.AwsCluster>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "ListAwsClusters",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.ListAwsClusters",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_ListAwsClusters_sync_flattened_resourceNames",
+      "title": "ListAwsClustersResourceNames",
+      "description": "Snippet for ListAwsClusters",
+      "file": "AwsClustersClient.ListAwsClustersResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAwsClusters",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.ListAwsClusters",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAwsClustersResponse, Google.Cloud.GkeMultiCloud.V1.AwsCluster>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "ListAwsClusters",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.ListAwsClusters",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_ListAwsClusters_async_flattened_resourceNames",
+      "title": "ListAwsClustersResourceNamesAsync",
+      "description": "Snippet for ListAwsClustersAsync",
+      "file": "AwsClustersClient.ListAwsClustersResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAwsClustersAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.ListAwsClustersAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAwsClustersResponse, Google.Cloud.GkeMultiCloud.V1.AwsCluster>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "ListAwsClusters",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.ListAwsClusters",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_DeleteAwsCluster_sync",
+      "title": "DeleteAwsClusterRequestObject",
+      "description": "Snippet for DeleteAwsCluster",
+      "file": "AwsClustersClient.DeleteAwsClusterRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAwsCluster",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.DeleteAwsCluster",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "DeleteAwsCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.DeleteAwsCluster",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_DeleteAwsCluster_async",
+      "title": "DeleteAwsClusterRequestObjectAsync",
+      "description": "Snippet for DeleteAwsClusterAsync",
+      "file": "AwsClustersClient.DeleteAwsClusterRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAwsClusterAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.DeleteAwsClusterAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "DeleteAwsCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.DeleteAwsCluster",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_DeleteAwsCluster_sync_flattened",
+      "title": "DeleteAwsCluster",
+      "description": "Snippet for DeleteAwsCluster",
+      "file": "AwsClustersClient.DeleteAwsClusterSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAwsCluster",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.DeleteAwsCluster",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "DeleteAwsCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.DeleteAwsCluster",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_DeleteAwsCluster_async_flattened",
+      "title": "DeleteAwsClusterAsync",
+      "description": "Snippet for DeleteAwsClusterAsync",
+      "file": "AwsClustersClient.DeleteAwsClusterAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAwsClusterAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.DeleteAwsClusterAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "DeleteAwsCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.DeleteAwsCluster",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_DeleteAwsCluster_sync_flattened_resourceNames",
+      "title": "DeleteAwsClusterResourceNames",
+      "description": "Snippet for DeleteAwsCluster",
+      "file": "AwsClustersClient.DeleteAwsClusterResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAwsCluster",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.DeleteAwsCluster",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "DeleteAwsCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.DeleteAwsCluster",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_DeleteAwsCluster_async_flattened_resourceNames",
+      "title": "DeleteAwsClusterResourceNamesAsync",
+      "description": "Snippet for DeleteAwsClusterAsync",
+      "file": "AwsClustersClient.DeleteAwsClusterResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAwsClusterAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.DeleteAwsClusterAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "DeleteAwsCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.DeleteAwsCluster",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_GenerateAwsAccessToken_sync",
+      "title": "GenerateAwsAccessTokenRequestObject",
+      "description": "Snippet for GenerateAwsAccessToken",
+      "file": "AwsClustersClient.GenerateAwsAccessTokenRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateAwsAccessToken",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GenerateAwsAccessToken",
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.GenerateAwsAccessTokenResponse",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "GenerateAwsAccessToken",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.GenerateAwsAccessToken",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_GenerateAwsAccessToken_async",
+      "title": "GenerateAwsAccessTokenRequestObjectAsync",
+      "description": "Snippet for GenerateAwsAccessTokenAsync",
+      "file": "AwsClustersClient.GenerateAwsAccessTokenRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateAwsAccessTokenAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GenerateAwsAccessTokenAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.GenerateAwsAccessTokenResponse>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "GenerateAwsAccessToken",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.GenerateAwsAccessToken",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_CreateAwsNodePool_sync",
+      "title": "CreateAwsNodePoolRequestObject",
+      "description": "Snippet for CreateAwsNodePool",
+      "file": "AwsClustersClient.CreateAwsNodePoolRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAwsNodePool",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.CreateAwsNodePool",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "CreateAwsNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.CreateAwsNodePool",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_CreateAwsNodePool_async",
+      "title": "CreateAwsNodePoolRequestObjectAsync",
+      "description": "Snippet for CreateAwsNodePoolAsync",
+      "file": "AwsClustersClient.CreateAwsNodePoolRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAwsNodePoolAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.CreateAwsNodePoolAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "CreateAwsNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.CreateAwsNodePool",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_CreateAwsNodePool_sync_flattened",
+      "title": "CreateAwsNodePool",
+      "description": "Snippet for CreateAwsNodePool",
+      "file": "AwsClustersClient.CreateAwsNodePoolSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAwsNodePool",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.CreateAwsNodePool",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "CreateAwsNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.CreateAwsNodePool",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_CreateAwsNodePool_async_flattened",
+      "title": "CreateAwsNodePoolAsync",
+      "description": "Snippet for CreateAwsNodePoolAsync",
+      "file": "AwsClustersClient.CreateAwsNodePoolAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAwsNodePoolAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.CreateAwsNodePoolAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "CreateAwsNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.CreateAwsNodePool",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_CreateAwsNodePool_sync_flattened_resourceNames",
+      "title": "CreateAwsNodePoolResourceNames",
+      "description": "Snippet for CreateAwsNodePool",
+      "file": "AwsClustersClient.CreateAwsNodePoolResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAwsNodePool",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.CreateAwsNodePool",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "CreateAwsNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.CreateAwsNodePool",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_CreateAwsNodePool_async_flattened_resourceNames",
+      "title": "CreateAwsNodePoolResourceNamesAsync",
+      "description": "Snippet for CreateAwsNodePoolAsync",
+      "file": "AwsClustersClient.CreateAwsNodePoolResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAwsNodePoolAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.CreateAwsNodePoolAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "CreateAwsNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.CreateAwsNodePool",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_UpdateAwsNodePool_sync",
+      "title": "UpdateAwsNodePoolRequestObject",
+      "description": "Snippet for UpdateAwsNodePool",
+      "file": "AwsClustersClient.UpdateAwsNodePoolRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAwsNodePool",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.UpdateAwsNodePool",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "UpdateAwsNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.UpdateAwsNodePool",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_UpdateAwsNodePool_async",
+      "title": "UpdateAwsNodePoolRequestObjectAsync",
+      "description": "Snippet for UpdateAwsNodePoolAsync",
+      "file": "AwsClustersClient.UpdateAwsNodePoolRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAwsNodePoolAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.UpdateAwsNodePoolAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "UpdateAwsNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.UpdateAwsNodePool",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_UpdateAwsNodePool_sync_flattened",
+      "title": "UpdateAwsNodePool",
+      "description": "Snippet for UpdateAwsNodePool",
+      "file": "AwsClustersClient.UpdateAwsNodePoolSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAwsNodePool",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.UpdateAwsNodePool",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "UpdateAwsNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.UpdateAwsNodePool",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_UpdateAwsNodePool_async_flattened",
+      "title": "UpdateAwsNodePoolAsync",
+      "description": "Snippet for UpdateAwsNodePoolAsync",
+      "file": "AwsClustersClient.UpdateAwsNodePoolAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAwsNodePoolAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.UpdateAwsNodePoolAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "UpdateAwsNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.UpdateAwsNodePool",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_GetAwsNodePool_sync",
+      "title": "GetAwsNodePoolRequestObject",
+      "description": "Snippet for GetAwsNodePool",
+      "file": "AwsClustersClient.GetAwsNodePoolRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAwsNodePool",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsNodePool",
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.AwsNodePool",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "GetAwsNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.GetAwsNodePool",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_GetAwsNodePool_async",
+      "title": "GetAwsNodePoolRequestObjectAsync",
+      "description": "Snippet for GetAwsNodePoolAsync",
+      "file": "AwsClustersClient.GetAwsNodePoolRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAwsNodePoolAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsNodePoolAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AwsNodePool>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "GetAwsNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.GetAwsNodePool",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_GetAwsNodePool_sync_flattened",
+      "title": "GetAwsNodePool",
+      "description": "Snippet for GetAwsNodePool",
+      "file": "AwsClustersClient.GetAwsNodePoolSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAwsNodePool",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsNodePool",
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.AwsNodePool",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "GetAwsNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.GetAwsNodePool",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_GetAwsNodePool_async_flattened",
+      "title": "GetAwsNodePoolAsync",
+      "description": "Snippet for GetAwsNodePoolAsync",
+      "file": "AwsClustersClient.GetAwsNodePoolAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAwsNodePoolAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsNodePoolAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AwsNodePool>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "GetAwsNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.GetAwsNodePool",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_GetAwsNodePool_sync_flattened_resourceNames",
+      "title": "GetAwsNodePoolResourceNames",
+      "description": "Snippet for GetAwsNodePool",
+      "file": "AwsClustersClient.GetAwsNodePoolResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAwsNodePool",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsNodePool",
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.AwsNodePool",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "GetAwsNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.GetAwsNodePool",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_GetAwsNodePool_async_flattened_resourceNames",
+      "title": "GetAwsNodePoolResourceNamesAsync",
+      "description": "Snippet for GetAwsNodePoolAsync",
+      "file": "AwsClustersClient.GetAwsNodePoolResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAwsNodePoolAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsNodePoolAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AwsNodePool>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "GetAwsNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.GetAwsNodePool",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_ListAwsNodePools_sync",
+      "title": "ListAwsNodePoolsRequestObject",
+      "description": "Snippet for ListAwsNodePools",
+      "file": "AwsClustersClient.ListAwsNodePoolsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAwsNodePools",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.ListAwsNodePools",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAwsNodePoolsResponse, Google.Cloud.GkeMultiCloud.V1.AwsNodePool>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "ListAwsNodePools",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.ListAwsNodePools",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_ListAwsNodePools_async",
+      "title": "ListAwsNodePoolsRequestObjectAsync",
+      "description": "Snippet for ListAwsNodePoolsAsync",
+      "file": "AwsClustersClient.ListAwsNodePoolsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAwsNodePoolsAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.ListAwsNodePoolsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAwsNodePoolsResponse, Google.Cloud.GkeMultiCloud.V1.AwsNodePool>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "ListAwsNodePools",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.ListAwsNodePools",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_ListAwsNodePools_sync_flattened",
+      "title": "ListAwsNodePools",
+      "description": "Snippet for ListAwsNodePools",
+      "file": "AwsClustersClient.ListAwsNodePoolsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAwsNodePools",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.ListAwsNodePools",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAwsNodePoolsResponse, Google.Cloud.GkeMultiCloud.V1.AwsNodePool>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "ListAwsNodePools",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.ListAwsNodePools",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_ListAwsNodePools_async_flattened",
+      "title": "ListAwsNodePoolsAsync",
+      "description": "Snippet for ListAwsNodePoolsAsync",
+      "file": "AwsClustersClient.ListAwsNodePoolsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAwsNodePoolsAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.ListAwsNodePoolsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAwsNodePoolsResponse, Google.Cloud.GkeMultiCloud.V1.AwsNodePool>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "ListAwsNodePools",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.ListAwsNodePools",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_ListAwsNodePools_sync_flattened_resourceNames",
+      "title": "ListAwsNodePoolsResourceNames",
+      "description": "Snippet for ListAwsNodePools",
+      "file": "AwsClustersClient.ListAwsNodePoolsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAwsNodePools",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.ListAwsNodePools",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAwsNodePoolsResponse, Google.Cloud.GkeMultiCloud.V1.AwsNodePool>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "ListAwsNodePools",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.ListAwsNodePools",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_ListAwsNodePools_async_flattened_resourceNames",
+      "title": "ListAwsNodePoolsResourceNamesAsync",
+      "description": "Snippet for ListAwsNodePoolsAsync",
+      "file": "AwsClustersClient.ListAwsNodePoolsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAwsNodePoolsAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.ListAwsNodePoolsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAwsNodePoolsResponse, Google.Cloud.GkeMultiCloud.V1.AwsNodePool>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "ListAwsNodePools",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.ListAwsNodePools",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_DeleteAwsNodePool_sync",
+      "title": "DeleteAwsNodePoolRequestObject",
+      "description": "Snippet for DeleteAwsNodePool",
+      "file": "AwsClustersClient.DeleteAwsNodePoolRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAwsNodePool",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.DeleteAwsNodePool",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "DeleteAwsNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.DeleteAwsNodePool",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_DeleteAwsNodePool_async",
+      "title": "DeleteAwsNodePoolRequestObjectAsync",
+      "description": "Snippet for DeleteAwsNodePoolAsync",
+      "file": "AwsClustersClient.DeleteAwsNodePoolRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAwsNodePoolAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.DeleteAwsNodePoolAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "DeleteAwsNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.DeleteAwsNodePool",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_DeleteAwsNodePool_sync_flattened",
+      "title": "DeleteAwsNodePool",
+      "description": "Snippet for DeleteAwsNodePool",
+      "file": "AwsClustersClient.DeleteAwsNodePoolSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAwsNodePool",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.DeleteAwsNodePool",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "DeleteAwsNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.DeleteAwsNodePool",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_DeleteAwsNodePool_async_flattened",
+      "title": "DeleteAwsNodePoolAsync",
+      "description": "Snippet for DeleteAwsNodePoolAsync",
+      "file": "AwsClustersClient.DeleteAwsNodePoolAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAwsNodePoolAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.DeleteAwsNodePoolAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "DeleteAwsNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.DeleteAwsNodePool",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_DeleteAwsNodePool_sync_flattened_resourceNames",
+      "title": "DeleteAwsNodePoolResourceNames",
+      "description": "Snippet for DeleteAwsNodePool",
+      "file": "AwsClustersClient.DeleteAwsNodePoolResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAwsNodePool",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.DeleteAwsNodePool",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "DeleteAwsNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.DeleteAwsNodePool",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_DeleteAwsNodePool_async_flattened_resourceNames",
+      "title": "DeleteAwsNodePoolResourceNamesAsync",
+      "description": "Snippet for DeleteAwsNodePoolAsync",
+      "file": "AwsClustersClient.DeleteAwsNodePoolResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAwsNodePoolAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.DeleteAwsNodePoolAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "DeleteAwsNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.DeleteAwsNodePool",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_GetAwsServerConfig_sync",
+      "title": "GetAwsServerConfigRequestObject",
+      "description": "Snippet for GetAwsServerConfig",
+      "file": "AwsClustersClient.GetAwsServerConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAwsServerConfig",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsServerConfig",
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.AwsServerConfig",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "GetAwsServerConfig",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.GetAwsServerConfig",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_GetAwsServerConfig_async",
+      "title": "GetAwsServerConfigRequestObjectAsync",
+      "description": "Snippet for GetAwsServerConfigAsync",
+      "file": "AwsClustersClient.GetAwsServerConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAwsServerConfigAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsServerConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AwsServerConfig>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "GetAwsServerConfig",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.GetAwsServerConfig",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_GetAwsServerConfig_sync_flattened",
+      "title": "GetAwsServerConfig",
+      "description": "Snippet for GetAwsServerConfig",
+      "file": "AwsClustersClient.GetAwsServerConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAwsServerConfig",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsServerConfig",
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.AwsServerConfig",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "GetAwsServerConfig",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.GetAwsServerConfig",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_GetAwsServerConfig_async_flattened",
+      "title": "GetAwsServerConfigAsync",
+      "description": "Snippet for GetAwsServerConfigAsync",
+      "file": "AwsClustersClient.GetAwsServerConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAwsServerConfigAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsServerConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AwsServerConfig>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "GetAwsServerConfig",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.GetAwsServerConfig",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_GetAwsServerConfig_sync_flattened_resourceNames",
+      "title": "GetAwsServerConfigResourceNames",
+      "description": "Snippet for GetAwsServerConfig",
+      "file": "AwsClustersClient.GetAwsServerConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAwsServerConfig",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsServerConfig",
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.AwsServerConfig",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "GetAwsServerConfig",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.GetAwsServerConfig",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_GetAwsServerConfig_async_flattened_resourceNames",
+      "title": "GetAwsServerConfigResourceNamesAsync",
+      "description": "Snippet for GetAwsServerConfigAsync",
+      "file": "AwsClustersClient.GetAwsServerConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAwsServerConfigAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsServerConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AwsServerConfig>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "GetAwsServerConfig",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.GetAwsServerConfig",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_CreateAzureClient_sync",
+      "title": "CreateAzureClientRequestObject",
+      "description": "Snippet for CreateAzureClient",
+      "file": "AzureClustersClient.CreateAzureClientRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAzureClient",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.CreateAzureClient",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureClient, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "CreateAzureClient",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.CreateAzureClient",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_CreateAzureClient_async",
+      "title": "CreateAzureClientRequestObjectAsync",
+      "description": "Snippet for CreateAzureClientAsync",
+      "file": "AzureClustersClient.CreateAzureClientRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAzureClientAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.CreateAzureClientAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureClient, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "CreateAzureClient",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.CreateAzureClient",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_CreateAzureClient_sync_flattened",
+      "title": "CreateAzureClient",
+      "description": "Snippet for CreateAzureClient",
+      "file": "AzureClustersClient.CreateAzureClientSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAzureClient",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.CreateAzureClient",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureClient, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "CreateAzureClient",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.CreateAzureClient",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_CreateAzureClient_async_flattened",
+      "title": "CreateAzureClientAsync",
+      "description": "Snippet for CreateAzureClientAsync",
+      "file": "AzureClustersClient.CreateAzureClientAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAzureClientAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.CreateAzureClientAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureClient, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "CreateAzureClient",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.CreateAzureClient",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_CreateAzureClient_sync_flattened_resourceNames",
+      "title": "CreateAzureClientResourceNames",
+      "description": "Snippet for CreateAzureClient",
+      "file": "AzureClustersClient.CreateAzureClientResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAzureClient",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.CreateAzureClient",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureClient, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "CreateAzureClient",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.CreateAzureClient",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_CreateAzureClient_async_flattened_resourceNames",
+      "title": "CreateAzureClientResourceNamesAsync",
+      "description": "Snippet for CreateAzureClientAsync",
+      "file": "AzureClustersClient.CreateAzureClientResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAzureClientAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.CreateAzureClientAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureClient, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "CreateAzureClient",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.CreateAzureClient",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GetAzureClient_sync",
+      "title": "GetAzureClientRequestObject",
+      "description": "Snippet for GetAzureClient",
+      "file": "AzureClustersClient.GetAzureClientRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAzureClient",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureClient",
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.AzureClient",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GetAzureClient",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GetAzureClient",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GetAzureClient_async",
+      "title": "GetAzureClientRequestObjectAsync",
+      "description": "Snippet for GetAzureClientAsync",
+      "file": "AzureClustersClient.GetAzureClientRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAzureClientAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureClientAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AzureClient>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GetAzureClient",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GetAzureClient",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GetAzureClient_sync_flattened",
+      "title": "GetAzureClient",
+      "description": "Snippet for GetAzureClient",
+      "file": "AzureClustersClient.GetAzureClientSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAzureClient",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureClient",
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.AzureClient",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GetAzureClient",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GetAzureClient",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GetAzureClient_async_flattened",
+      "title": "GetAzureClientAsync",
+      "description": "Snippet for GetAzureClientAsync",
+      "file": "AzureClustersClient.GetAzureClientAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAzureClientAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureClientAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AzureClient>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GetAzureClient",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GetAzureClient",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GetAzureClient_sync_flattened_resourceNames",
+      "title": "GetAzureClientResourceNames",
+      "description": "Snippet for GetAzureClient",
+      "file": "AzureClustersClient.GetAzureClientResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAzureClient",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureClient",
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.AzureClient",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GetAzureClient",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GetAzureClient",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GetAzureClient_async_flattened_resourceNames",
+      "title": "GetAzureClientResourceNamesAsync",
+      "description": "Snippet for GetAzureClientAsync",
+      "file": "AzureClustersClient.GetAzureClientResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAzureClientAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureClientAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AzureClient>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GetAzureClient",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GetAzureClient",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_ListAzureClients_sync",
+      "title": "ListAzureClientsRequestObject",
+      "description": "Snippet for ListAzureClients",
+      "file": "AzureClustersClient.ListAzureClientsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAzureClients",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.ListAzureClients",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAzureClientsResponse, Google.Cloud.GkeMultiCloud.V1.AzureClient>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "ListAzureClients",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.ListAzureClients",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_ListAzureClients_async",
+      "title": "ListAzureClientsRequestObjectAsync",
+      "description": "Snippet for ListAzureClientsAsync",
+      "file": "AzureClustersClient.ListAzureClientsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAzureClientsAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.ListAzureClientsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAzureClientsResponse, Google.Cloud.GkeMultiCloud.V1.AzureClient>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "ListAzureClients",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.ListAzureClients",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_ListAzureClients_sync_flattened",
+      "title": "ListAzureClients",
+      "description": "Snippet for ListAzureClients",
+      "file": "AzureClustersClient.ListAzureClientsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAzureClients",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.ListAzureClients",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAzureClientsResponse, Google.Cloud.GkeMultiCloud.V1.AzureClient>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "ListAzureClients",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.ListAzureClients",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_ListAzureClients_async_flattened",
+      "title": "ListAzureClientsAsync",
+      "description": "Snippet for ListAzureClientsAsync",
+      "file": "AzureClustersClient.ListAzureClientsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAzureClientsAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.ListAzureClientsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAzureClientsResponse, Google.Cloud.GkeMultiCloud.V1.AzureClient>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "ListAzureClients",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.ListAzureClients",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_ListAzureClients_sync_flattened_resourceNames",
+      "title": "ListAzureClientsResourceNames",
+      "description": "Snippet for ListAzureClients",
+      "file": "AzureClustersClient.ListAzureClientsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAzureClients",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.ListAzureClients",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAzureClientsResponse, Google.Cloud.GkeMultiCloud.V1.AzureClient>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "ListAzureClients",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.ListAzureClients",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_ListAzureClients_async_flattened_resourceNames",
+      "title": "ListAzureClientsResourceNamesAsync",
+      "description": "Snippet for ListAzureClientsAsync",
+      "file": "AzureClustersClient.ListAzureClientsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAzureClientsAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.ListAzureClientsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAzureClientsResponse, Google.Cloud.GkeMultiCloud.V1.AzureClient>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "ListAzureClients",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.ListAzureClients",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_DeleteAzureClient_sync",
+      "title": "DeleteAzureClientRequestObject",
+      "description": "Snippet for DeleteAzureClient",
+      "file": "AzureClustersClient.DeleteAzureClientRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAzureClient",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.DeleteAzureClient",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "DeleteAzureClient",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.DeleteAzureClient",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_DeleteAzureClient_async",
+      "title": "DeleteAzureClientRequestObjectAsync",
+      "description": "Snippet for DeleteAzureClientAsync",
+      "file": "AzureClustersClient.DeleteAzureClientRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAzureClientAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.DeleteAzureClientAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "DeleteAzureClient",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.DeleteAzureClient",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_DeleteAzureClient_sync_flattened",
+      "title": "DeleteAzureClient",
+      "description": "Snippet for DeleteAzureClient",
+      "file": "AzureClustersClient.DeleteAzureClientSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAzureClient",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.DeleteAzureClient",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "DeleteAzureClient",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.DeleteAzureClient",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_DeleteAzureClient_async_flattened",
+      "title": "DeleteAzureClientAsync",
+      "description": "Snippet for DeleteAzureClientAsync",
+      "file": "AzureClustersClient.DeleteAzureClientAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAzureClientAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.DeleteAzureClientAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "DeleteAzureClient",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.DeleteAzureClient",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_DeleteAzureClient_sync_flattened_resourceNames",
+      "title": "DeleteAzureClientResourceNames",
+      "description": "Snippet for DeleteAzureClient",
+      "file": "AzureClustersClient.DeleteAzureClientResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAzureClient",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.DeleteAzureClient",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "DeleteAzureClient",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.DeleteAzureClient",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_DeleteAzureClient_async_flattened_resourceNames",
+      "title": "DeleteAzureClientResourceNamesAsync",
+      "description": "Snippet for DeleteAzureClientAsync",
+      "file": "AzureClustersClient.DeleteAzureClientResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAzureClientAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.DeleteAzureClientAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "DeleteAzureClient",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.DeleteAzureClient",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_CreateAzureCluster_sync",
+      "title": "CreateAzureClusterRequestObject",
+      "description": "Snippet for CreateAzureCluster",
+      "file": "AzureClustersClient.CreateAzureClusterRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAzureCluster",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.CreateAzureCluster",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "CreateAzureCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.CreateAzureCluster",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_CreateAzureCluster_async",
+      "title": "CreateAzureClusterRequestObjectAsync",
+      "description": "Snippet for CreateAzureClusterAsync",
+      "file": "AzureClustersClient.CreateAzureClusterRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAzureClusterAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.CreateAzureClusterAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "CreateAzureCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.CreateAzureCluster",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_CreateAzureCluster_sync_flattened",
+      "title": "CreateAzureCluster",
+      "description": "Snippet for CreateAzureCluster",
+      "file": "AzureClustersClient.CreateAzureClusterSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAzureCluster",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.CreateAzureCluster",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "CreateAzureCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.CreateAzureCluster",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_CreateAzureCluster_async_flattened",
+      "title": "CreateAzureClusterAsync",
+      "description": "Snippet for CreateAzureClusterAsync",
+      "file": "AzureClustersClient.CreateAzureClusterAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAzureClusterAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.CreateAzureClusterAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "CreateAzureCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.CreateAzureCluster",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_CreateAzureCluster_sync_flattened_resourceNames",
+      "title": "CreateAzureClusterResourceNames",
+      "description": "Snippet for CreateAzureCluster",
+      "file": "AzureClustersClient.CreateAzureClusterResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAzureCluster",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.CreateAzureCluster",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "CreateAzureCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.CreateAzureCluster",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_CreateAzureCluster_async_flattened_resourceNames",
+      "title": "CreateAzureClusterResourceNamesAsync",
+      "description": "Snippet for CreateAzureClusterAsync",
+      "file": "AzureClustersClient.CreateAzureClusterResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAzureClusterAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.CreateAzureClusterAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "CreateAzureCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.CreateAzureCluster",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_UpdateAzureCluster_sync",
+      "title": "UpdateAzureClusterRequestObject",
+      "description": "Snippet for UpdateAzureCluster",
+      "file": "AzureClustersClient.UpdateAzureClusterRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAzureCluster",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.UpdateAzureCluster",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "UpdateAzureCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.UpdateAzureCluster",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_UpdateAzureCluster_async",
+      "title": "UpdateAzureClusterRequestObjectAsync",
+      "description": "Snippet for UpdateAzureClusterAsync",
+      "file": "AzureClustersClient.UpdateAzureClusterRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAzureClusterAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.UpdateAzureClusterAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "UpdateAzureCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.UpdateAzureCluster",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_UpdateAzureCluster_sync_flattened",
+      "title": "UpdateAzureCluster",
+      "description": "Snippet for UpdateAzureCluster",
+      "file": "AzureClustersClient.UpdateAzureClusterSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAzureCluster",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.UpdateAzureCluster",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "UpdateAzureCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.UpdateAzureCluster",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_UpdateAzureCluster_async_flattened",
+      "title": "UpdateAzureClusterAsync",
+      "description": "Snippet for UpdateAzureClusterAsync",
+      "file": "AzureClustersClient.UpdateAzureClusterAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAzureClusterAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.UpdateAzureClusterAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "UpdateAzureCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.UpdateAzureCluster",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GetAzureCluster_sync",
+      "title": "GetAzureClusterRequestObject",
+      "description": "Snippet for GetAzureCluster",
+      "file": "AzureClustersClient.GetAzureClusterRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAzureCluster",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureCluster",
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.AzureCluster",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GetAzureCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GetAzureCluster",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GetAzureCluster_async",
+      "title": "GetAzureClusterRequestObjectAsync",
+      "description": "Snippet for GetAzureClusterAsync",
+      "file": "AzureClustersClient.GetAzureClusterRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAzureClusterAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureClusterAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AzureCluster>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GetAzureCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GetAzureCluster",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GetAzureCluster_sync_flattened",
+      "title": "GetAzureCluster",
+      "description": "Snippet for GetAzureCluster",
+      "file": "AzureClustersClient.GetAzureClusterSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAzureCluster",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureCluster",
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.AzureCluster",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GetAzureCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GetAzureCluster",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GetAzureCluster_async_flattened",
+      "title": "GetAzureClusterAsync",
+      "description": "Snippet for GetAzureClusterAsync",
+      "file": "AzureClustersClient.GetAzureClusterAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAzureClusterAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureClusterAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AzureCluster>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GetAzureCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GetAzureCluster",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GetAzureCluster_sync_flattened_resourceNames",
+      "title": "GetAzureClusterResourceNames",
+      "description": "Snippet for GetAzureCluster",
+      "file": "AzureClustersClient.GetAzureClusterResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAzureCluster",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureCluster",
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.AzureCluster",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GetAzureCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GetAzureCluster",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GetAzureCluster_async_flattened_resourceNames",
+      "title": "GetAzureClusterResourceNamesAsync",
+      "description": "Snippet for GetAzureClusterAsync",
+      "file": "AzureClustersClient.GetAzureClusterResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAzureClusterAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureClusterAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AzureCluster>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GetAzureCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GetAzureCluster",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_ListAzureClusters_sync",
+      "title": "ListAzureClustersRequestObject",
+      "description": "Snippet for ListAzureClusters",
+      "file": "AzureClustersClient.ListAzureClustersRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAzureClusters",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.ListAzureClusters",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAzureClustersResponse, Google.Cloud.GkeMultiCloud.V1.AzureCluster>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "ListAzureClusters",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.ListAzureClusters",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_ListAzureClusters_async",
+      "title": "ListAzureClustersRequestObjectAsync",
+      "description": "Snippet for ListAzureClustersAsync",
+      "file": "AzureClustersClient.ListAzureClustersRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAzureClustersAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.ListAzureClustersAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAzureClustersResponse, Google.Cloud.GkeMultiCloud.V1.AzureCluster>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "ListAzureClusters",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.ListAzureClusters",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_ListAzureClusters_sync_flattened",
+      "title": "ListAzureClusters",
+      "description": "Snippet for ListAzureClusters",
+      "file": "AzureClustersClient.ListAzureClustersSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAzureClusters",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.ListAzureClusters",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAzureClustersResponse, Google.Cloud.GkeMultiCloud.V1.AzureCluster>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "ListAzureClusters",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.ListAzureClusters",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_ListAzureClusters_async_flattened",
+      "title": "ListAzureClustersAsync",
+      "description": "Snippet for ListAzureClustersAsync",
+      "file": "AzureClustersClient.ListAzureClustersAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAzureClustersAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.ListAzureClustersAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAzureClustersResponse, Google.Cloud.GkeMultiCloud.V1.AzureCluster>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "ListAzureClusters",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.ListAzureClusters",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_ListAzureClusters_sync_flattened_resourceNames",
+      "title": "ListAzureClustersResourceNames",
+      "description": "Snippet for ListAzureClusters",
+      "file": "AzureClustersClient.ListAzureClustersResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAzureClusters",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.ListAzureClusters",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAzureClustersResponse, Google.Cloud.GkeMultiCloud.V1.AzureCluster>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "ListAzureClusters",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.ListAzureClusters",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_ListAzureClusters_async_flattened_resourceNames",
+      "title": "ListAzureClustersResourceNamesAsync",
+      "description": "Snippet for ListAzureClustersAsync",
+      "file": "AzureClustersClient.ListAzureClustersResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAzureClustersAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.ListAzureClustersAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAzureClustersResponse, Google.Cloud.GkeMultiCloud.V1.AzureCluster>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "ListAzureClusters",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.ListAzureClusters",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_DeleteAzureCluster_sync",
+      "title": "DeleteAzureClusterRequestObject",
+      "description": "Snippet for DeleteAzureCluster",
+      "file": "AzureClustersClient.DeleteAzureClusterRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAzureCluster",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.DeleteAzureCluster",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "DeleteAzureCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.DeleteAzureCluster",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_DeleteAzureCluster_async",
+      "title": "DeleteAzureClusterRequestObjectAsync",
+      "description": "Snippet for DeleteAzureClusterAsync",
+      "file": "AzureClustersClient.DeleteAzureClusterRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAzureClusterAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.DeleteAzureClusterAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "DeleteAzureCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.DeleteAzureCluster",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_DeleteAzureCluster_sync_flattened",
+      "title": "DeleteAzureCluster",
+      "description": "Snippet for DeleteAzureCluster",
+      "file": "AzureClustersClient.DeleteAzureClusterSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAzureCluster",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.DeleteAzureCluster",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "DeleteAzureCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.DeleteAzureCluster",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_DeleteAzureCluster_async_flattened",
+      "title": "DeleteAzureClusterAsync",
+      "description": "Snippet for DeleteAzureClusterAsync",
+      "file": "AzureClustersClient.DeleteAzureClusterAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAzureClusterAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.DeleteAzureClusterAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "DeleteAzureCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.DeleteAzureCluster",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_DeleteAzureCluster_sync_flattened_resourceNames",
+      "title": "DeleteAzureClusterResourceNames",
+      "description": "Snippet for DeleteAzureCluster",
+      "file": "AzureClustersClient.DeleteAzureClusterResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAzureCluster",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.DeleteAzureCluster",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "DeleteAzureCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.DeleteAzureCluster",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_DeleteAzureCluster_async_flattened_resourceNames",
+      "title": "DeleteAzureClusterResourceNamesAsync",
+      "description": "Snippet for DeleteAzureClusterAsync",
+      "file": "AzureClustersClient.DeleteAzureClusterResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAzureClusterAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.DeleteAzureClusterAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "DeleteAzureCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.DeleteAzureCluster",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GenerateAzureAccessToken_sync",
+      "title": "GenerateAzureAccessTokenRequestObject",
+      "description": "Snippet for GenerateAzureAccessToken",
+      "file": "AzureClustersClient.GenerateAzureAccessTokenRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateAzureAccessToken",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GenerateAzureAccessToken",
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.GenerateAzureAccessTokenResponse",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GenerateAzureAccessToken",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GenerateAzureAccessToken",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GenerateAzureAccessToken_async",
+      "title": "GenerateAzureAccessTokenRequestObjectAsync",
+      "description": "Snippet for GenerateAzureAccessTokenAsync",
+      "file": "AzureClustersClient.GenerateAzureAccessTokenRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateAzureAccessTokenAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GenerateAzureAccessTokenAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.GenerateAzureAccessTokenResponse>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GenerateAzureAccessToken",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GenerateAzureAccessToken",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_CreateAzureNodePool_sync",
+      "title": "CreateAzureNodePoolRequestObject",
+      "description": "Snippet for CreateAzureNodePool",
+      "file": "AzureClustersClient.CreateAzureNodePoolRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAzureNodePool",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.CreateAzureNodePool",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "CreateAzureNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.CreateAzureNodePool",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_CreateAzureNodePool_async",
+      "title": "CreateAzureNodePoolRequestObjectAsync",
+      "description": "Snippet for CreateAzureNodePoolAsync",
+      "file": "AzureClustersClient.CreateAzureNodePoolRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAzureNodePoolAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.CreateAzureNodePoolAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "CreateAzureNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.CreateAzureNodePool",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_CreateAzureNodePool_sync_flattened",
+      "title": "CreateAzureNodePool",
+      "description": "Snippet for CreateAzureNodePool",
+      "file": "AzureClustersClient.CreateAzureNodePoolSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAzureNodePool",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.CreateAzureNodePool",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "CreateAzureNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.CreateAzureNodePool",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_CreateAzureNodePool_async_flattened",
+      "title": "CreateAzureNodePoolAsync",
+      "description": "Snippet for CreateAzureNodePoolAsync",
+      "file": "AzureClustersClient.CreateAzureNodePoolAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAzureNodePoolAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.CreateAzureNodePoolAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "CreateAzureNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.CreateAzureNodePool",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_CreateAzureNodePool_sync_flattened_resourceNames",
+      "title": "CreateAzureNodePoolResourceNames",
+      "description": "Snippet for CreateAzureNodePool",
+      "file": "AzureClustersClient.CreateAzureNodePoolResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAzureNodePool",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.CreateAzureNodePool",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "CreateAzureNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.CreateAzureNodePool",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_CreateAzureNodePool_async_flattened_resourceNames",
+      "title": "CreateAzureNodePoolResourceNamesAsync",
+      "description": "Snippet for CreateAzureNodePoolAsync",
+      "file": "AzureClustersClient.CreateAzureNodePoolResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAzureNodePoolAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.CreateAzureNodePoolAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "CreateAzureNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.CreateAzureNodePool",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_UpdateAzureNodePool_sync",
+      "title": "UpdateAzureNodePoolRequestObject",
+      "description": "Snippet for UpdateAzureNodePool",
+      "file": "AzureClustersClient.UpdateAzureNodePoolRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAzureNodePool",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.UpdateAzureNodePool",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "UpdateAzureNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.UpdateAzureNodePool",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_UpdateAzureNodePool_async",
+      "title": "UpdateAzureNodePoolRequestObjectAsync",
+      "description": "Snippet for UpdateAzureNodePoolAsync",
+      "file": "AzureClustersClient.UpdateAzureNodePoolRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAzureNodePoolAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.UpdateAzureNodePoolAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "UpdateAzureNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.UpdateAzureNodePool",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_UpdateAzureNodePool_sync_flattened",
+      "title": "UpdateAzureNodePool",
+      "description": "Snippet for UpdateAzureNodePool",
+      "file": "AzureClustersClient.UpdateAzureNodePoolSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAzureNodePool",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.UpdateAzureNodePool",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "UpdateAzureNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.UpdateAzureNodePool",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_UpdateAzureNodePool_async_flattened",
+      "title": "UpdateAzureNodePoolAsync",
+      "description": "Snippet for UpdateAzureNodePoolAsync",
+      "file": "AzureClustersClient.UpdateAzureNodePoolAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAzureNodePoolAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.UpdateAzureNodePoolAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "UpdateAzureNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.UpdateAzureNodePool",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GetAzureNodePool_sync",
+      "title": "GetAzureNodePoolRequestObject",
+      "description": "Snippet for GetAzureNodePool",
+      "file": "AzureClustersClient.GetAzureNodePoolRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAzureNodePool",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureNodePool",
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.AzureNodePool",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GetAzureNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GetAzureNodePool",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GetAzureNodePool_async",
+      "title": "GetAzureNodePoolRequestObjectAsync",
+      "description": "Snippet for GetAzureNodePoolAsync",
+      "file": "AzureClustersClient.GetAzureNodePoolRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAzureNodePoolAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureNodePoolAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AzureNodePool>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GetAzureNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GetAzureNodePool",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GetAzureNodePool_sync_flattened",
+      "title": "GetAzureNodePool",
+      "description": "Snippet for GetAzureNodePool",
+      "file": "AzureClustersClient.GetAzureNodePoolSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAzureNodePool",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureNodePool",
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.AzureNodePool",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GetAzureNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GetAzureNodePool",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GetAzureNodePool_async_flattened",
+      "title": "GetAzureNodePoolAsync",
+      "description": "Snippet for GetAzureNodePoolAsync",
+      "file": "AzureClustersClient.GetAzureNodePoolAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAzureNodePoolAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureNodePoolAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AzureNodePool>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GetAzureNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GetAzureNodePool",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GetAzureNodePool_sync_flattened_resourceNames",
+      "title": "GetAzureNodePoolResourceNames",
+      "description": "Snippet for GetAzureNodePool",
+      "file": "AzureClustersClient.GetAzureNodePoolResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAzureNodePool",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureNodePool",
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.AzureNodePool",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GetAzureNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GetAzureNodePool",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GetAzureNodePool_async_flattened_resourceNames",
+      "title": "GetAzureNodePoolResourceNamesAsync",
+      "description": "Snippet for GetAzureNodePoolAsync",
+      "file": "AzureClustersClient.GetAzureNodePoolResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAzureNodePoolAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureNodePoolAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AzureNodePool>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GetAzureNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GetAzureNodePool",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_ListAzureNodePools_sync",
+      "title": "ListAzureNodePoolsRequestObject",
+      "description": "Snippet for ListAzureNodePools",
+      "file": "AzureClustersClient.ListAzureNodePoolsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAzureNodePools",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.ListAzureNodePools",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAzureNodePoolsResponse, Google.Cloud.GkeMultiCloud.V1.AzureNodePool>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "ListAzureNodePools",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.ListAzureNodePools",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_ListAzureNodePools_async",
+      "title": "ListAzureNodePoolsRequestObjectAsync",
+      "description": "Snippet for ListAzureNodePoolsAsync",
+      "file": "AzureClustersClient.ListAzureNodePoolsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAzureNodePoolsAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.ListAzureNodePoolsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAzureNodePoolsResponse, Google.Cloud.GkeMultiCloud.V1.AzureNodePool>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "ListAzureNodePools",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.ListAzureNodePools",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_ListAzureNodePools_sync_flattened",
+      "title": "ListAzureNodePools",
+      "description": "Snippet for ListAzureNodePools",
+      "file": "AzureClustersClient.ListAzureNodePoolsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAzureNodePools",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.ListAzureNodePools",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAzureNodePoolsResponse, Google.Cloud.GkeMultiCloud.V1.AzureNodePool>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "ListAzureNodePools",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.ListAzureNodePools",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_ListAzureNodePools_async_flattened",
+      "title": "ListAzureNodePoolsAsync",
+      "description": "Snippet for ListAzureNodePoolsAsync",
+      "file": "AzureClustersClient.ListAzureNodePoolsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAzureNodePoolsAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.ListAzureNodePoolsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAzureNodePoolsResponse, Google.Cloud.GkeMultiCloud.V1.AzureNodePool>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "ListAzureNodePools",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.ListAzureNodePools",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_ListAzureNodePools_sync_flattened_resourceNames",
+      "title": "ListAzureNodePoolsResourceNames",
+      "description": "Snippet for ListAzureNodePools",
+      "file": "AzureClustersClient.ListAzureNodePoolsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAzureNodePools",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.ListAzureNodePools",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAzureNodePoolsResponse, Google.Cloud.GkeMultiCloud.V1.AzureNodePool>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "ListAzureNodePools",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.ListAzureNodePools",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_ListAzureNodePools_async_flattened_resourceNames",
+      "title": "ListAzureNodePoolsResourceNamesAsync",
+      "description": "Snippet for ListAzureNodePoolsAsync",
+      "file": "AzureClustersClient.ListAzureNodePoolsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAzureNodePoolsAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.ListAzureNodePoolsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAzureNodePoolsResponse, Google.Cloud.GkeMultiCloud.V1.AzureNodePool>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "ListAzureNodePools",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.ListAzureNodePools",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_DeleteAzureNodePool_sync",
+      "title": "DeleteAzureNodePoolRequestObject",
+      "description": "Snippet for DeleteAzureNodePool",
+      "file": "AzureClustersClient.DeleteAzureNodePoolRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAzureNodePool",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.DeleteAzureNodePool",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "DeleteAzureNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.DeleteAzureNodePool",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_DeleteAzureNodePool_async",
+      "title": "DeleteAzureNodePoolRequestObjectAsync",
+      "description": "Snippet for DeleteAzureNodePoolAsync",
+      "file": "AzureClustersClient.DeleteAzureNodePoolRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAzureNodePoolAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.DeleteAzureNodePoolAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "DeleteAzureNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.DeleteAzureNodePool",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_DeleteAzureNodePool_sync_flattened",
+      "title": "DeleteAzureNodePool",
+      "description": "Snippet for DeleteAzureNodePool",
+      "file": "AzureClustersClient.DeleteAzureNodePoolSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAzureNodePool",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.DeleteAzureNodePool",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "DeleteAzureNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.DeleteAzureNodePool",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_DeleteAzureNodePool_async_flattened",
+      "title": "DeleteAzureNodePoolAsync",
+      "description": "Snippet for DeleteAzureNodePoolAsync",
+      "file": "AzureClustersClient.DeleteAzureNodePoolAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAzureNodePoolAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.DeleteAzureNodePoolAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "DeleteAzureNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.DeleteAzureNodePool",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_DeleteAzureNodePool_sync_flattened_resourceNames",
+      "title": "DeleteAzureNodePoolResourceNames",
+      "description": "Snippet for DeleteAzureNodePool",
+      "file": "AzureClustersClient.DeleteAzureNodePoolResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAzureNodePool",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.DeleteAzureNodePool",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "DeleteAzureNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.DeleteAzureNodePool",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_DeleteAzureNodePool_async_flattened_resourceNames",
+      "title": "DeleteAzureNodePoolResourceNamesAsync",
+      "description": "Snippet for DeleteAzureNodePoolAsync",
+      "file": "AzureClustersClient.DeleteAzureNodePoolResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAzureNodePoolAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.DeleteAzureNodePoolAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "DeleteAzureNodePool",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.DeleteAzureNodePool",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GetAzureServerConfig_sync",
+      "title": "GetAzureServerConfigRequestObject",
+      "description": "Snippet for GetAzureServerConfig",
+      "file": "AzureClustersClient.GetAzureServerConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAzureServerConfig",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureServerConfig",
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.AzureServerConfig",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GetAzureServerConfig",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GetAzureServerConfig",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GetAzureServerConfig_async",
+      "title": "GetAzureServerConfigRequestObjectAsync",
+      "description": "Snippet for GetAzureServerConfigAsync",
+      "file": "AzureClustersClient.GetAzureServerConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAzureServerConfigAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureServerConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AzureServerConfig>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GetAzureServerConfig",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GetAzureServerConfig",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GetAzureServerConfig_sync_flattened",
+      "title": "GetAzureServerConfig",
+      "description": "Snippet for GetAzureServerConfig",
+      "file": "AzureClustersClient.GetAzureServerConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAzureServerConfig",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureServerConfig",
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.AzureServerConfig",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GetAzureServerConfig",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GetAzureServerConfig",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GetAzureServerConfig_async_flattened",
+      "title": "GetAzureServerConfigAsync",
+      "description": "Snippet for GetAzureServerConfigAsync",
+      "file": "AzureClustersClient.GetAzureServerConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAzureServerConfigAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureServerConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AzureServerConfig>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GetAzureServerConfig",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GetAzureServerConfig",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GetAzureServerConfig_sync_flattened_resourceNames",
+      "title": "GetAzureServerConfigResourceNames",
+      "description": "Snippet for GetAzureServerConfig",
+      "file": "AzureClustersClient.GetAzureServerConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAzureServerConfig",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureServerConfig",
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.AzureServerConfig",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GetAzureServerConfig",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GetAzureServerConfig",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GetAzureServerConfig_async_flattened_resourceNames",
+      "title": "GetAzureServerConfigResourceNamesAsync",
+      "description": "Snippet for GetAzureServerConfigAsync",
+      "file": "AzureClustersClient.GetAzureServerConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAzureServerConfigAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureServerConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AzureServerConfig>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GetAzureServerConfig",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GetAzureServerConfig",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    }
+  ]
+}
