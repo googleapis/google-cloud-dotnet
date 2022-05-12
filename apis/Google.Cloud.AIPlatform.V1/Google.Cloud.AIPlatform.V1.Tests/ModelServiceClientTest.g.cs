@@ -669,6 +669,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 {
                     new ModelEvaluation.Types.ModelEvaluationExplanationSpec(),
                 },
+                DisplayName = "display_name137f65c2",
+                Metadata = new wkt::Value(),
             };
             mockGrpcClient.Setup(x => x.ImportModelEvaluation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
@@ -704,6 +706,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 {
                     new ModelEvaluation.Types.ModelEvaluationExplanationSpec(),
                 },
+                DisplayName = "display_name137f65c2",
+                Metadata = new wkt::Value(),
             };
             mockGrpcClient.Setup(x => x.ImportModelEvaluationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ModelEvaluation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
@@ -741,6 +745,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 {
                     new ModelEvaluation.Types.ModelEvaluationExplanationSpec(),
                 },
+                DisplayName = "display_name137f65c2",
+                Metadata = new wkt::Value(),
             };
             mockGrpcClient.Setup(x => x.ImportModelEvaluation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
@@ -776,6 +782,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 {
                     new ModelEvaluation.Types.ModelEvaluationExplanationSpec(),
                 },
+                DisplayName = "display_name137f65c2",
+                Metadata = new wkt::Value(),
             };
             mockGrpcClient.Setup(x => x.ImportModelEvaluationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ModelEvaluation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
@@ -813,6 +821,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 {
                     new ModelEvaluation.Types.ModelEvaluationExplanationSpec(),
                 },
+                DisplayName = "display_name137f65c2",
+                Metadata = new wkt::Value(),
             };
             mockGrpcClient.Setup(x => x.ImportModelEvaluation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
@@ -848,6 +858,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 {
                     new ModelEvaluation.Types.ModelEvaluationExplanationSpec(),
                 },
+                DisplayName = "display_name137f65c2",
+                Metadata = new wkt::Value(),
             };
             mockGrpcClient.Setup(x => x.ImportModelEvaluationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ModelEvaluation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
@@ -884,6 +896,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 {
                     new ModelEvaluation.Types.ModelEvaluationExplanationSpec(),
                 },
+                DisplayName = "display_name137f65c2",
+                Metadata = new wkt::Value(),
             };
             mockGrpcClient.Setup(x => x.GetModelEvaluation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
@@ -918,6 +932,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 {
                     new ModelEvaluation.Types.ModelEvaluationExplanationSpec(),
                 },
+                DisplayName = "display_name137f65c2",
+                Metadata = new wkt::Value(),
             };
             mockGrpcClient.Setup(x => x.GetModelEvaluationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ModelEvaluation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
@@ -954,6 +970,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 {
                     new ModelEvaluation.Types.ModelEvaluationExplanationSpec(),
                 },
+                DisplayName = "display_name137f65c2",
+                Metadata = new wkt::Value(),
             };
             mockGrpcClient.Setup(x => x.GetModelEvaluation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
@@ -988,6 +1006,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 {
                     new ModelEvaluation.Types.ModelEvaluationExplanationSpec(),
                 },
+                DisplayName = "display_name137f65c2",
+                Metadata = new wkt::Value(),
             };
             mockGrpcClient.Setup(x => x.GetModelEvaluationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ModelEvaluation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
@@ -1024,6 +1044,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 {
                     new ModelEvaluation.Types.ModelEvaluationExplanationSpec(),
                 },
+                DisplayName = "display_name137f65c2",
+                Metadata = new wkt::Value(),
             };
             mockGrpcClient.Setup(x => x.GetModelEvaluation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
@@ -1058,6 +1080,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 {
                     new ModelEvaluation.Types.ModelEvaluationExplanationSpec(),
                 },
+                DisplayName = "display_name137f65c2",
+                Metadata = new wkt::Value(),
             };
             mockGrpcClient.Setup(x => x.GetModelEvaluationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ModelEvaluation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
