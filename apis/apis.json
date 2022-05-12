@@ -1641,7 +1641,7 @@
     },
     {
       "id": "Google.Cloud.GkeMultiCloud.V1",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Anthos Multi-Cloud",
       "productUrl": "https://cloud.google.com/anthos/clusters/docs/multi-cloud",
