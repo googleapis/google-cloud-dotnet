@@ -3261,11 +3261,13 @@ namespace Google.Analytics.Admin.V1Alpha
             /// <summary>An unparsed resource name.</summary>
             Unparsed = 0,
 
-            /// <summary>A resource name with pattern <c>properties/{property}/customDimensions</c>.</summary>
-            Property = 1,
+            /// <summary>
+            /// A resource name with pattern <c>properties/{property}/customDimensions/{custom_dimension}</c>.
+            /// </summary>
+            PropertyCustomDimension = 1,
         }
 
-        private static gax::PathTemplate s_property = new gax::PathTemplate("properties/{property}/customDimensions");
+        private static gax::PathTemplate s_propertyCustomDimension = new gax::PathTemplate("properties/{property}/customDimensions/{custom_dimension}");
 
         /// <summary>Creates a <see cref="CustomDimensionName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -3277,35 +3279,40 @@ namespace Google.Analytics.Admin.V1Alpha
             new CustomDimensionName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
 
         /// <summary>
-        /// Creates a <see cref="CustomDimensionName"/> with the pattern <c>properties/{property}/customDimensions</c>.
+        /// Creates a <see cref="CustomDimensionName"/> with the pattern
+        /// <c>properties/{property}/customDimensions/{custom_dimension}</c>.
         /// </summary>
         /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="customDimensionId">The <c>CustomDimension</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>A new instance of <see cref="CustomDimensionName"/> constructed from the provided ids.</returns>
-        public static CustomDimensionName FromProperty(string propertyId) =>
-            new CustomDimensionName(ResourceNameType.Property, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)));
+        public static CustomDimensionName FromPropertyCustomDimension(string propertyId, string customDimensionId) =>
+            new CustomDimensionName(ResourceNameType.PropertyCustomDimension, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), customDimensionId: gax::GaxPreconditions.CheckNotNullOrEmpty(customDimensionId, nameof(customDimensionId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="CustomDimensionName"/> with pattern
-        /// <c>properties/{property}/customDimensions</c>.
+        /// <c>properties/{property}/customDimensions/{custom_dimension}</c>.
         /// </summary>
         /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="customDimensionId">The <c>CustomDimension</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
         /// The string representation of this <see cref="CustomDimensionName"/> with pattern
-        /// <c>properties/{property}/customDimensions</c>.
+        /// <c>properties/{property}/customDimensions/{custom_dimension}</c>.
         /// </returns>
-        public static string Format(string propertyId) => FormatProperty(propertyId);
+        public static string Format(string propertyId, string customDimensionId) =>
+            FormatPropertyCustomDimension(propertyId, customDimensionId);
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="CustomDimensionName"/> with pattern
-        /// <c>properties/{property}/customDimensions</c>.
+        /// <c>properties/{property}/customDimensions/{custom_dimension}</c>.
         /// </summary>
         /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="customDimensionId">The <c>CustomDimension</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
         /// The string representation of this <see cref="CustomDimensionName"/> with pattern
-        /// <c>properties/{property}/customDimensions</c>.
+        /// <c>properties/{property}/customDimensions/{custom_dimension}</c>.
         /// </returns>
-        public static string FormatProperty(string propertyId) =>
-            s_property.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)));
+        public static string FormatPropertyCustomDimension(string propertyId, string customDimensionId) =>
+            s_propertyCustomDimension.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), gax::GaxPreconditions.CheckNotNullOrEmpty(customDimensionId, nameof(customDimensionId)));
 
         /// <summary>
         /// Parses the given resource name string into a new <see cref="CustomDimensionName"/> instance.
@@ -3313,7 +3320,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item><description><c>properties/{property}/customDimensions</c></description></item>
+        /// <item><description><c>properties/{property}/customDimensions/{custom_dimension}</c></description></item>
         /// </list>
         /// </remarks>
         /// <param name="customDimensionName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -3327,7 +3334,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item><description><c>properties/{property}/customDimensions</c></description></item>
+        /// <item><description><c>properties/{property}/customDimensions/{custom_dimension}</c></description></item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -3347,7 +3354,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item><description><c>properties/{property}/customDimensions</c></description></item>
+        /// <item><description><c>properties/{property}/customDimensions/{custom_dimension}</c></description></item>
         /// </list>
         /// </remarks>
         /// <param name="customDimensionName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -3365,7 +3372,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item><description><c>properties/{property}/customDimensions</c></description></item>
+        /// <item><description><c>properties/{property}/customDimensions/{custom_dimension}</c></description></item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -3383,9 +3390,9 @@ namespace Google.Analytics.Admin.V1Alpha
         {
             gax::GaxPreconditions.CheckNotNull(customDimensionName, nameof(customDimensionName));
             gax::TemplatedResourceName resourceName;
-            if (s_property.TryParseName(customDimensionName, out resourceName))
+            if (s_propertyCustomDimension.TryParseName(customDimensionName, out resourceName))
             {
-                result = FromProperty(resourceName[0]);
+                result = FromPropertyCustomDimension(resourceName[0], resourceName[1]);
                 return true;
             }
             if (allowUnparsed)
@@ -3400,19 +3407,21 @@ namespace Google.Analytics.Admin.V1Alpha
             return false;
         }
 
-        private CustomDimensionName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string propertyId = null)
+        private CustomDimensionName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string customDimensionId = null, string propertyId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
+            CustomDimensionId = customDimensionId;
             PropertyId = propertyId;
         }
 
         /// <summary>
         /// Constructs a new instance of a <see cref="CustomDimensionName"/> class from the component parts of pattern
-        /// <c>properties/{property}/customDimensions</c>
+        /// <c>properties/{property}/customDimensions/{custom_dimension}</c>
         /// </summary>
         /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
-        public CustomDimensionName(string propertyId) : this(ResourceNameType.Property, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)))
+        /// <param name="customDimensionId">The <c>CustomDimension</c> ID. Must not be <c>null</c> or empty.</param>
+        public CustomDimensionName(string propertyId, string customDimensionId) : this(ResourceNameType.PropertyCustomDimension, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), customDimensionId: gax::GaxPreconditions.CheckNotNullOrEmpty(customDimensionId, nameof(customDimensionId)))
         {
         }
 
@@ -3424,6 +3433,12 @@ namespace Google.Analytics.Admin.V1Alpha
         /// unparsed resource name.
         /// </summary>
         public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>CustomDimension</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string CustomDimensionId { get; }
 
         /// <summary>
         /// The <c>Property</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
@@ -3440,7 +3455,7 @@ namespace Google.Analytics.Admin.V1Alpha
             switch (Type)
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
-                case ResourceNameType.Property: return s_property.Expand(PropertyId);
+                case ResourceNameType.PropertyCustomDimension: return s_propertyCustomDimension.Expand(PropertyId, CustomDimensionId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }
@@ -3470,11 +3485,13 @@ namespace Google.Analytics.Admin.V1Alpha
             /// <summary>An unparsed resource name.</summary>
             Unparsed = 0,
 
-            /// <summary>A resource name with pattern <c>properties/{property}/customMetrics</c>.</summary>
-            Property = 1,
+            /// <summary>
+            /// A resource name with pattern <c>properties/{property}/customMetrics/{custom_metric}</c>.
+            /// </summary>
+            PropertyCustomMetric = 1,
         }
 
-        private static gax::PathTemplate s_property = new gax::PathTemplate("properties/{property}/customMetrics");
+        private static gax::PathTemplate s_propertyCustomMetric = new gax::PathTemplate("properties/{property}/customMetrics/{custom_metric}");
 
         /// <summary>Creates a <see cref="CustomMetricName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -3486,41 +3503,46 @@ namespace Google.Analytics.Admin.V1Alpha
             new CustomMetricName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
 
         /// <summary>
-        /// Creates a <see cref="CustomMetricName"/> with the pattern <c>properties/{property}/customMetrics</c>.
+        /// Creates a <see cref="CustomMetricName"/> with the pattern
+        /// <c>properties/{property}/customMetrics/{custom_metric}</c>.
         /// </summary>
         /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="customMetricId">The <c>CustomMetric</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>A new instance of <see cref="CustomMetricName"/> constructed from the provided ids.</returns>
-        public static CustomMetricName FromProperty(string propertyId) =>
-            new CustomMetricName(ResourceNameType.Property, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)));
+        public static CustomMetricName FromPropertyCustomMetric(string propertyId, string customMetricId) =>
+            new CustomMetricName(ResourceNameType.PropertyCustomMetric, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), customMetricId: gax::GaxPreconditions.CheckNotNullOrEmpty(customMetricId, nameof(customMetricId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="CustomMetricName"/> with pattern
-        /// <c>properties/{property}/customMetrics</c>.
+        /// <c>properties/{property}/customMetrics/{custom_metric}</c>.
         /// </summary>
         /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="customMetricId">The <c>CustomMetric</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
         /// The string representation of this <see cref="CustomMetricName"/> with pattern
-        /// <c>properties/{property}/customMetrics</c>.
+        /// <c>properties/{property}/customMetrics/{custom_metric}</c>.
         /// </returns>
-        public static string Format(string propertyId) => FormatProperty(propertyId);
+        public static string Format(string propertyId, string customMetricId) =>
+            FormatPropertyCustomMetric(propertyId, customMetricId);
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="CustomMetricName"/> with pattern
-        /// <c>properties/{property}/customMetrics</c>.
+        /// <c>properties/{property}/customMetrics/{custom_metric}</c>.
         /// </summary>
         /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="customMetricId">The <c>CustomMetric</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
         /// The string representation of this <see cref="CustomMetricName"/> with pattern
-        /// <c>properties/{property}/customMetrics</c>.
+        /// <c>properties/{property}/customMetrics/{custom_metric}</c>.
         /// </returns>
-        public static string FormatProperty(string propertyId) =>
-            s_property.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)));
+        public static string FormatPropertyCustomMetric(string propertyId, string customMetricId) =>
+            s_propertyCustomMetric.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), gax::GaxPreconditions.CheckNotNullOrEmpty(customMetricId, nameof(customMetricId)));
 
         /// <summary>Parses the given resource name string into a new <see cref="CustomMetricName"/> instance.</summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item><description><c>properties/{property}/customMetrics</c></description></item>
+        /// <item><description><c>properties/{property}/customMetrics/{custom_metric}</c></description></item>
         /// </list>
         /// </remarks>
         /// <param name="customMetricName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -3534,7 +3556,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item><description><c>properties/{property}/customMetrics</c></description></item>
+        /// <item><description><c>properties/{property}/customMetrics/{custom_metric}</c></description></item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -3554,7 +3576,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item><description><c>properties/{property}/customMetrics</c></description></item>
+        /// <item><description><c>properties/{property}/customMetrics/{custom_metric}</c></description></item>
         /// </list>
         /// </remarks>
         /// <param name="customMetricName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -3572,7 +3594,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item><description><c>properties/{property}/customMetrics</c></description></item>
+        /// <item><description><c>properties/{property}/customMetrics/{custom_metric}</c></description></item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -3590,9 +3612,9 @@ namespace Google.Analytics.Admin.V1Alpha
         {
             gax::GaxPreconditions.CheckNotNull(customMetricName, nameof(customMetricName));
             gax::TemplatedResourceName resourceName;
-            if (s_property.TryParseName(customMetricName, out resourceName))
+            if (s_propertyCustomMetric.TryParseName(customMetricName, out resourceName))
             {
-                result = FromProperty(resourceName[0]);
+                result = FromPropertyCustomMetric(resourceName[0], resourceName[1]);
                 return true;
             }
             if (allowUnparsed)
@@ -3607,19 +3629,21 @@ namespace Google.Analytics.Admin.V1Alpha
             return false;
         }
 
-        private CustomMetricName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string propertyId = null)
+        private CustomMetricName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string customMetricId = null, string propertyId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
+            CustomMetricId = customMetricId;
             PropertyId = propertyId;
         }
 
         /// <summary>
         /// Constructs a new instance of a <see cref="CustomMetricName"/> class from the component parts of pattern
-        /// <c>properties/{property}/customMetrics</c>
+        /// <c>properties/{property}/customMetrics/{custom_metric}</c>
         /// </summary>
         /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
-        public CustomMetricName(string propertyId) : this(ResourceNameType.Property, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)))
+        /// <param name="customMetricId">The <c>CustomMetric</c> ID. Must not be <c>null</c> or empty.</param>
+        public CustomMetricName(string propertyId, string customMetricId) : this(ResourceNameType.PropertyCustomMetric, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), customMetricId: gax::GaxPreconditions.CheckNotNullOrEmpty(customMetricId, nameof(customMetricId)))
         {
         }
 
@@ -3631,6 +3655,12 @@ namespace Google.Analytics.Admin.V1Alpha
         /// unparsed resource name.
         /// </summary>
         public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>CustomMetric</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string CustomMetricId { get; }
 
         /// <summary>
         /// The <c>Property</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
@@ -3647,7 +3677,7 @@ namespace Google.Analytics.Admin.V1Alpha
             switch (Type)
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
-                case ResourceNameType.Property: return s_property.Expand(PropertyId);
+                case ResourceNameType.PropertyCustomMetric: return s_propertyCustomMetric.Expand(PropertyId, CustomMetricId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }

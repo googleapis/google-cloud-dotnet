@@ -31,7 +31,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
             // Initialize request argument(s)
-            CustomMetricName name = CustomMetricName.FromProperty("[PROPERTY]");
+            CustomMetricName name = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]");
             // Make the request
             CustomMetric response = analyticsAdminServiceClient.GetCustomMetric(name);
         }

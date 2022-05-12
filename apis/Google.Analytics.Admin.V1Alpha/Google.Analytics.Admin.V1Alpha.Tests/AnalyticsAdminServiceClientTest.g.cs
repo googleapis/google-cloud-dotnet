@@ -4781,7 +4781,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomDimension expectedResponse = new CustomDimension
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -4806,7 +4806,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomDimension expectedResponse = new CustomDimension
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -4833,7 +4833,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomDimension expectedResponse = new CustomDimension
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -4858,7 +4858,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomDimension expectedResponse = new CustomDimension
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -4885,7 +4885,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomDimension expectedResponse = new CustomDimension
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -4910,7 +4910,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomDimension expectedResponse = new CustomDimension
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -4937,7 +4937,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomDimension expectedResponse = new CustomDimension
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -4962,7 +4962,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomDimension expectedResponse = new CustomDimension
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -4989,7 +4989,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomDimension expectedResponse = new CustomDimension
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5014,7 +5014,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomDimension expectedResponse = new CustomDimension
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5036,7 +5036,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             ArchiveCustomDimensionRequest request = new ArchiveCustomDimensionRequest
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ArchiveCustomDimension(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -5051,7 +5051,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             ArchiveCustomDimensionRequest request = new ArchiveCustomDimensionRequest
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ArchiveCustomDimensionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -5067,7 +5067,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             ArchiveCustomDimensionRequest request = new ArchiveCustomDimensionRequest
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ArchiveCustomDimension(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -5082,7 +5082,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             ArchiveCustomDimensionRequest request = new ArchiveCustomDimensionRequest
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ArchiveCustomDimensionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -5098,7 +5098,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             ArchiveCustomDimensionRequest request = new ArchiveCustomDimensionRequest
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ArchiveCustomDimension(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -5113,7 +5113,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             ArchiveCustomDimensionRequest request = new ArchiveCustomDimensionRequest
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ArchiveCustomDimensionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -5129,11 +5129,11 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             GetCustomDimensionRequest request = new GetCustomDimensionRequest
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
             };
             CustomDimension expectedResponse = new CustomDimension
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5153,11 +5153,11 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             GetCustomDimensionRequest request = new GetCustomDimensionRequest
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
             };
             CustomDimension expectedResponse = new CustomDimension
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5179,11 +5179,11 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             GetCustomDimensionRequest request = new GetCustomDimensionRequest
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
             };
             CustomDimension expectedResponse = new CustomDimension
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5203,11 +5203,11 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             GetCustomDimensionRequest request = new GetCustomDimensionRequest
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
             };
             CustomDimension expectedResponse = new CustomDimension
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5229,11 +5229,11 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             GetCustomDimensionRequest request = new GetCustomDimensionRequest
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
             };
             CustomDimension expectedResponse = new CustomDimension
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5253,11 +5253,11 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             GetCustomDimensionRequest request = new GetCustomDimensionRequest
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
             };
             CustomDimension expectedResponse = new CustomDimension
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5284,7 +5284,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomMetric expectedResponse = new CustomMetric
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5313,7 +5313,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomMetric expectedResponse = new CustomMetric
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5344,7 +5344,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomMetric expectedResponse = new CustomMetric
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5373,7 +5373,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomMetric expectedResponse = new CustomMetric
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5404,7 +5404,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomMetric expectedResponse = new CustomMetric
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5433,7 +5433,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomMetric expectedResponse = new CustomMetric
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5464,7 +5464,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomMetric expectedResponse = new CustomMetric
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5493,7 +5493,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomMetric expectedResponse = new CustomMetric
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5524,7 +5524,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomMetric expectedResponse = new CustomMetric
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5553,7 +5553,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomMetric expectedResponse = new CustomMetric
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5579,7 +5579,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             ArchiveCustomMetricRequest request = new ArchiveCustomMetricRequest
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ArchiveCustomMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -5594,7 +5594,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             ArchiveCustomMetricRequest request = new ArchiveCustomMetricRequest
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ArchiveCustomMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -5610,7 +5610,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             ArchiveCustomMetricRequest request = new ArchiveCustomMetricRequest
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ArchiveCustomMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -5625,7 +5625,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             ArchiveCustomMetricRequest request = new ArchiveCustomMetricRequest
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ArchiveCustomMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -5641,7 +5641,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             ArchiveCustomMetricRequest request = new ArchiveCustomMetricRequest
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ArchiveCustomMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -5656,7 +5656,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             ArchiveCustomMetricRequest request = new ArchiveCustomMetricRequest
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ArchiveCustomMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -5672,11 +5672,11 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             GetCustomMetricRequest request = new GetCustomMetricRequest
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
             };
             CustomMetric expectedResponse = new CustomMetric
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5700,11 +5700,11 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             GetCustomMetricRequest request = new GetCustomMetricRequest
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
             };
             CustomMetric expectedResponse = new CustomMetric
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5730,11 +5730,11 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             GetCustomMetricRequest request = new GetCustomMetricRequest
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
             };
             CustomMetric expectedResponse = new CustomMetric
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5758,11 +5758,11 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             GetCustomMetricRequest request = new GetCustomMetricRequest
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
             };
             CustomMetric expectedResponse = new CustomMetric
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5788,11 +5788,11 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             GetCustomMetricRequest request = new GetCustomMetricRequest
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
             };
             CustomMetric expectedResponse = new CustomMetric
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5816,11 +5816,11 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             GetCustomMetricRequest request = new GetCustomMetricRequest
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
             };
             CustomMetric expectedResponse = new CustomMetric
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
