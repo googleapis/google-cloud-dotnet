@@ -577,7 +577,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         /// Creates a table associated with a CSV file on Google Cloud Storage, which has some invalid data.
         /// A query on that table can provide the valid data but still have errors.
         /// </summary>
-        [Fact]
+        [Fact(Skip = "https://github.com/googleapis/google-cloud-dotnet/issues/8470")]
         public void PartiallyBrokenQuery()
         {
             string[] csvRows =
