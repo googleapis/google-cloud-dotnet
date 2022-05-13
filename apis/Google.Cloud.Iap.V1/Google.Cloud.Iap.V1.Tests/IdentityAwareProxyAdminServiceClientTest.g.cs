@@ -295,5 +295,466 @@ namespace Google.Cloud.Iap.V1.Tests
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
+
+        [xunit::FactAttribute]
+        public void CreateTunnelDestGroupRequestObject()
+        {
+            moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient> mockGrpcClient = new moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateTunnelDestGroupRequest request = new CreateTunnelDestGroupRequest
+            {
+                ParentAsTunnelLocationName = TunnelLocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                TunnelDestGroup = new TunnelDestGroup(),
+                TunnelDestGroupId = "tunnel_dest_group_idad0d3bcc",
+            };
+            TunnelDestGroup expectedResponse = new TunnelDestGroup
+            {
+                TunnelDestGroupName = TunnelDestGroupName.FromProjectLocationDestGroup("[PROJECT]", "[LOCATION]", "[DEST_GROUP]"),
+                Cidrs = { "cidrs46409853", },
+                Fqdns = { "fqdns28ae1f7a", },
+            };
+            mockGrpcClient.Setup(x => x.CreateTunnelDestGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            TunnelDestGroup response = client.CreateTunnelDestGroup(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateTunnelDestGroupRequestObjectAsync()
+        {
+            moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient> mockGrpcClient = new moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateTunnelDestGroupRequest request = new CreateTunnelDestGroupRequest
+            {
+                ParentAsTunnelLocationName = TunnelLocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                TunnelDestGroup = new TunnelDestGroup(),
+                TunnelDestGroupId = "tunnel_dest_group_idad0d3bcc",
+            };
+            TunnelDestGroup expectedResponse = new TunnelDestGroup
+            {
+                TunnelDestGroupName = TunnelDestGroupName.FromProjectLocationDestGroup("[PROJECT]", "[LOCATION]", "[DEST_GROUP]"),
+                Cidrs = { "cidrs46409853", },
+                Fqdns = { "fqdns28ae1f7a", },
+            };
+            mockGrpcClient.Setup(x => x.CreateTunnelDestGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TunnelDestGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            TunnelDestGroup responseCallSettings = await client.CreateTunnelDestGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            TunnelDestGroup responseCancellationToken = await client.CreateTunnelDestGroupAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateTunnelDestGroup()
+        {
+            moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient> mockGrpcClient = new moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateTunnelDestGroupRequest request = new CreateTunnelDestGroupRequest
+            {
+                ParentAsTunnelLocationName = TunnelLocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                TunnelDestGroup = new TunnelDestGroup(),
+                TunnelDestGroupId = "tunnel_dest_group_idad0d3bcc",
+            };
+            TunnelDestGroup expectedResponse = new TunnelDestGroup
+            {
+                TunnelDestGroupName = TunnelDestGroupName.FromProjectLocationDestGroup("[PROJECT]", "[LOCATION]", "[DEST_GROUP]"),
+                Cidrs = { "cidrs46409853", },
+                Fqdns = { "fqdns28ae1f7a", },
+            };
+            mockGrpcClient.Setup(x => x.CreateTunnelDestGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            TunnelDestGroup response = client.CreateTunnelDestGroup(request.Parent, request.TunnelDestGroup, request.TunnelDestGroupId);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateTunnelDestGroupAsync()
+        {
+            moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient> mockGrpcClient = new moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateTunnelDestGroupRequest request = new CreateTunnelDestGroupRequest
+            {
+                ParentAsTunnelLocationName = TunnelLocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                TunnelDestGroup = new TunnelDestGroup(),
+                TunnelDestGroupId = "tunnel_dest_group_idad0d3bcc",
+            };
+            TunnelDestGroup expectedResponse = new TunnelDestGroup
+            {
+                TunnelDestGroupName = TunnelDestGroupName.FromProjectLocationDestGroup("[PROJECT]", "[LOCATION]", "[DEST_GROUP]"),
+                Cidrs = { "cidrs46409853", },
+                Fqdns = { "fqdns28ae1f7a", },
+            };
+            mockGrpcClient.Setup(x => x.CreateTunnelDestGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TunnelDestGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            TunnelDestGroup responseCallSettings = await client.CreateTunnelDestGroupAsync(request.Parent, request.TunnelDestGroup, request.TunnelDestGroupId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            TunnelDestGroup responseCancellationToken = await client.CreateTunnelDestGroupAsync(request.Parent, request.TunnelDestGroup, request.TunnelDestGroupId, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateTunnelDestGroupResourceNames()
+        {
+            moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient> mockGrpcClient = new moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateTunnelDestGroupRequest request = new CreateTunnelDestGroupRequest
+            {
+                ParentAsTunnelLocationName = TunnelLocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                TunnelDestGroup = new TunnelDestGroup(),
+                TunnelDestGroupId = "tunnel_dest_group_idad0d3bcc",
+            };
+            TunnelDestGroup expectedResponse = new TunnelDestGroup
+            {
+                TunnelDestGroupName = TunnelDestGroupName.FromProjectLocationDestGroup("[PROJECT]", "[LOCATION]", "[DEST_GROUP]"),
+                Cidrs = { "cidrs46409853", },
+                Fqdns = { "fqdns28ae1f7a", },
+            };
+            mockGrpcClient.Setup(x => x.CreateTunnelDestGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            TunnelDestGroup response = client.CreateTunnelDestGroup(request.ParentAsTunnelLocationName, request.TunnelDestGroup, request.TunnelDestGroupId);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateTunnelDestGroupResourceNamesAsync()
+        {
+            moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient> mockGrpcClient = new moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateTunnelDestGroupRequest request = new CreateTunnelDestGroupRequest
+            {
+                ParentAsTunnelLocationName = TunnelLocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                TunnelDestGroup = new TunnelDestGroup(),
+                TunnelDestGroupId = "tunnel_dest_group_idad0d3bcc",
+            };
+            TunnelDestGroup expectedResponse = new TunnelDestGroup
+            {
+                TunnelDestGroupName = TunnelDestGroupName.FromProjectLocationDestGroup("[PROJECT]", "[LOCATION]", "[DEST_GROUP]"),
+                Cidrs = { "cidrs46409853", },
+                Fqdns = { "fqdns28ae1f7a", },
+            };
+            mockGrpcClient.Setup(x => x.CreateTunnelDestGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TunnelDestGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            TunnelDestGroup responseCallSettings = await client.CreateTunnelDestGroupAsync(request.ParentAsTunnelLocationName, request.TunnelDestGroup, request.TunnelDestGroupId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            TunnelDestGroup responseCancellationToken = await client.CreateTunnelDestGroupAsync(request.ParentAsTunnelLocationName, request.TunnelDestGroup, request.TunnelDestGroupId, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetTunnelDestGroupRequestObject()
+        {
+            moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient> mockGrpcClient = new moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient>(moq::MockBehavior.Strict);
+            GetTunnelDestGroupRequest request = new GetTunnelDestGroupRequest
+            {
+                TunnelDestGroupName = TunnelDestGroupName.FromProjectLocationDestGroup("[PROJECT]", "[LOCATION]", "[DEST_GROUP]"),
+            };
+            TunnelDestGroup expectedResponse = new TunnelDestGroup
+            {
+                TunnelDestGroupName = TunnelDestGroupName.FromProjectLocationDestGroup("[PROJECT]", "[LOCATION]", "[DEST_GROUP]"),
+                Cidrs = { "cidrs46409853", },
+                Fqdns = { "fqdns28ae1f7a", },
+            };
+            mockGrpcClient.Setup(x => x.GetTunnelDestGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            TunnelDestGroup response = client.GetTunnelDestGroup(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetTunnelDestGroupRequestObjectAsync()
+        {
+            moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient> mockGrpcClient = new moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient>(moq::MockBehavior.Strict);
+            GetTunnelDestGroupRequest request = new GetTunnelDestGroupRequest
+            {
+                TunnelDestGroupName = TunnelDestGroupName.FromProjectLocationDestGroup("[PROJECT]", "[LOCATION]", "[DEST_GROUP]"),
+            };
+            TunnelDestGroup expectedResponse = new TunnelDestGroup
+            {
+                TunnelDestGroupName = TunnelDestGroupName.FromProjectLocationDestGroup("[PROJECT]", "[LOCATION]", "[DEST_GROUP]"),
+                Cidrs = { "cidrs46409853", },
+                Fqdns = { "fqdns28ae1f7a", },
+            };
+            mockGrpcClient.Setup(x => x.GetTunnelDestGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TunnelDestGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            TunnelDestGroup responseCallSettings = await client.GetTunnelDestGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            TunnelDestGroup responseCancellationToken = await client.GetTunnelDestGroupAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetTunnelDestGroup()
+        {
+            moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient> mockGrpcClient = new moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient>(moq::MockBehavior.Strict);
+            GetTunnelDestGroupRequest request = new GetTunnelDestGroupRequest
+            {
+                TunnelDestGroupName = TunnelDestGroupName.FromProjectLocationDestGroup("[PROJECT]", "[LOCATION]", "[DEST_GROUP]"),
+            };
+            TunnelDestGroup expectedResponse = new TunnelDestGroup
+            {
+                TunnelDestGroupName = TunnelDestGroupName.FromProjectLocationDestGroup("[PROJECT]", "[LOCATION]", "[DEST_GROUP]"),
+                Cidrs = { "cidrs46409853", },
+                Fqdns = { "fqdns28ae1f7a", },
+            };
+            mockGrpcClient.Setup(x => x.GetTunnelDestGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            TunnelDestGroup response = client.GetTunnelDestGroup(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetTunnelDestGroupAsync()
+        {
+            moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient> mockGrpcClient = new moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient>(moq::MockBehavior.Strict);
+            GetTunnelDestGroupRequest request = new GetTunnelDestGroupRequest
+            {
+                TunnelDestGroupName = TunnelDestGroupName.FromProjectLocationDestGroup("[PROJECT]", "[LOCATION]", "[DEST_GROUP]"),
+            };
+            TunnelDestGroup expectedResponse = new TunnelDestGroup
+            {
+                TunnelDestGroupName = TunnelDestGroupName.FromProjectLocationDestGroup("[PROJECT]", "[LOCATION]", "[DEST_GROUP]"),
+                Cidrs = { "cidrs46409853", },
+                Fqdns = { "fqdns28ae1f7a", },
+            };
+            mockGrpcClient.Setup(x => x.GetTunnelDestGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TunnelDestGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            TunnelDestGroup responseCallSettings = await client.GetTunnelDestGroupAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            TunnelDestGroup responseCancellationToken = await client.GetTunnelDestGroupAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetTunnelDestGroupResourceNames()
+        {
+            moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient> mockGrpcClient = new moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient>(moq::MockBehavior.Strict);
+            GetTunnelDestGroupRequest request = new GetTunnelDestGroupRequest
+            {
+                TunnelDestGroupName = TunnelDestGroupName.FromProjectLocationDestGroup("[PROJECT]", "[LOCATION]", "[DEST_GROUP]"),
+            };
+            TunnelDestGroup expectedResponse = new TunnelDestGroup
+            {
+                TunnelDestGroupName = TunnelDestGroupName.FromProjectLocationDestGroup("[PROJECT]", "[LOCATION]", "[DEST_GROUP]"),
+                Cidrs = { "cidrs46409853", },
+                Fqdns = { "fqdns28ae1f7a", },
+            };
+            mockGrpcClient.Setup(x => x.GetTunnelDestGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            TunnelDestGroup response = client.GetTunnelDestGroup(request.TunnelDestGroupName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetTunnelDestGroupResourceNamesAsync()
+        {
+            moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient> mockGrpcClient = new moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient>(moq::MockBehavior.Strict);
+            GetTunnelDestGroupRequest request = new GetTunnelDestGroupRequest
+            {
+                TunnelDestGroupName = TunnelDestGroupName.FromProjectLocationDestGroup("[PROJECT]", "[LOCATION]", "[DEST_GROUP]"),
+            };
+            TunnelDestGroup expectedResponse = new TunnelDestGroup
+            {
+                TunnelDestGroupName = TunnelDestGroupName.FromProjectLocationDestGroup("[PROJECT]", "[LOCATION]", "[DEST_GROUP]"),
+                Cidrs = { "cidrs46409853", },
+                Fqdns = { "fqdns28ae1f7a", },
+            };
+            mockGrpcClient.Setup(x => x.GetTunnelDestGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TunnelDestGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            TunnelDestGroup responseCallSettings = await client.GetTunnelDestGroupAsync(request.TunnelDestGroupName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            TunnelDestGroup responseCancellationToken = await client.GetTunnelDestGroupAsync(request.TunnelDestGroupName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteTunnelDestGroupRequestObject()
+        {
+            moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient> mockGrpcClient = new moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient>(moq::MockBehavior.Strict);
+            DeleteTunnelDestGroupRequest request = new DeleteTunnelDestGroupRequest
+            {
+                TunnelDestGroupName = TunnelDestGroupName.FromProjectLocationDestGroup("[PROJECT]", "[LOCATION]", "[DEST_GROUP]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteTunnelDestGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteTunnelDestGroup(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteTunnelDestGroupRequestObjectAsync()
+        {
+            moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient> mockGrpcClient = new moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient>(moq::MockBehavior.Strict);
+            DeleteTunnelDestGroupRequest request = new DeleteTunnelDestGroupRequest
+            {
+                TunnelDestGroupName = TunnelDestGroupName.FromProjectLocationDestGroup("[PROJECT]", "[LOCATION]", "[DEST_GROUP]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteTunnelDestGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteTunnelDestGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteTunnelDestGroupAsync(request, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteTunnelDestGroup()
+        {
+            moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient> mockGrpcClient = new moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient>(moq::MockBehavior.Strict);
+            DeleteTunnelDestGroupRequest request = new DeleteTunnelDestGroupRequest
+            {
+                TunnelDestGroupName = TunnelDestGroupName.FromProjectLocationDestGroup("[PROJECT]", "[LOCATION]", "[DEST_GROUP]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteTunnelDestGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteTunnelDestGroup(request.Name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteTunnelDestGroupAsync()
+        {
+            moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient> mockGrpcClient = new moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient>(moq::MockBehavior.Strict);
+            DeleteTunnelDestGroupRequest request = new DeleteTunnelDestGroupRequest
+            {
+                TunnelDestGroupName = TunnelDestGroupName.FromProjectLocationDestGroup("[PROJECT]", "[LOCATION]", "[DEST_GROUP]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteTunnelDestGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteTunnelDestGroupAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteTunnelDestGroupAsync(request.Name, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteTunnelDestGroupResourceNames()
+        {
+            moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient> mockGrpcClient = new moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient>(moq::MockBehavior.Strict);
+            DeleteTunnelDestGroupRequest request = new DeleteTunnelDestGroupRequest
+            {
+                TunnelDestGroupName = TunnelDestGroupName.FromProjectLocationDestGroup("[PROJECT]", "[LOCATION]", "[DEST_GROUP]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteTunnelDestGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteTunnelDestGroup(request.TunnelDestGroupName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteTunnelDestGroupResourceNamesAsync()
+        {
+            moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient> mockGrpcClient = new moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient>(moq::MockBehavior.Strict);
+            DeleteTunnelDestGroupRequest request = new DeleteTunnelDestGroupRequest
+            {
+                TunnelDestGroupName = TunnelDestGroupName.FromProjectLocationDestGroup("[PROJECT]", "[LOCATION]", "[DEST_GROUP]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteTunnelDestGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteTunnelDestGroupAsync(request.TunnelDestGroupName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteTunnelDestGroupAsync(request.TunnelDestGroupName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateTunnelDestGroupRequestObject()
+        {
+            moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient> mockGrpcClient = new moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient>(moq::MockBehavior.Strict);
+            UpdateTunnelDestGroupRequest request = new UpdateTunnelDestGroupRequest
+            {
+                TunnelDestGroup = new TunnelDestGroup(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            TunnelDestGroup expectedResponse = new TunnelDestGroup
+            {
+                TunnelDestGroupName = TunnelDestGroupName.FromProjectLocationDestGroup("[PROJECT]", "[LOCATION]", "[DEST_GROUP]"),
+                Cidrs = { "cidrs46409853", },
+                Fqdns = { "fqdns28ae1f7a", },
+            };
+            mockGrpcClient.Setup(x => x.UpdateTunnelDestGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            TunnelDestGroup response = client.UpdateTunnelDestGroup(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateTunnelDestGroupRequestObjectAsync()
+        {
+            moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient> mockGrpcClient = new moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient>(moq::MockBehavior.Strict);
+            UpdateTunnelDestGroupRequest request = new UpdateTunnelDestGroupRequest
+            {
+                TunnelDestGroup = new TunnelDestGroup(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            TunnelDestGroup expectedResponse = new TunnelDestGroup
+            {
+                TunnelDestGroupName = TunnelDestGroupName.FromProjectLocationDestGroup("[PROJECT]", "[LOCATION]", "[DEST_GROUP]"),
+                Cidrs = { "cidrs46409853", },
+                Fqdns = { "fqdns28ae1f7a", },
+            };
+            mockGrpcClient.Setup(x => x.UpdateTunnelDestGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TunnelDestGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            TunnelDestGroup responseCallSettings = await client.UpdateTunnelDestGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            TunnelDestGroup responseCancellationToken = await client.UpdateTunnelDestGroupAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateTunnelDestGroup()
+        {
+            moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient> mockGrpcClient = new moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient>(moq::MockBehavior.Strict);
+            UpdateTunnelDestGroupRequest request = new UpdateTunnelDestGroupRequest
+            {
+                TunnelDestGroup = new TunnelDestGroup(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            TunnelDestGroup expectedResponse = new TunnelDestGroup
+            {
+                TunnelDestGroupName = TunnelDestGroupName.FromProjectLocationDestGroup("[PROJECT]", "[LOCATION]", "[DEST_GROUP]"),
+                Cidrs = { "cidrs46409853", },
+                Fqdns = { "fqdns28ae1f7a", },
+            };
+            mockGrpcClient.Setup(x => x.UpdateTunnelDestGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            TunnelDestGroup response = client.UpdateTunnelDestGroup(request.TunnelDestGroup, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateTunnelDestGroupAsync()
+        {
+            moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient> mockGrpcClient = new moq::Mock<IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient>(moq::MockBehavior.Strict);
+            UpdateTunnelDestGroupRequest request = new UpdateTunnelDestGroupRequest
+            {
+                TunnelDestGroup = new TunnelDestGroup(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            TunnelDestGroup expectedResponse = new TunnelDestGroup
+            {
+                TunnelDestGroupName = TunnelDestGroupName.FromProjectLocationDestGroup("[PROJECT]", "[LOCATION]", "[DEST_GROUP]"),
+                Cidrs = { "cidrs46409853", },
+                Fqdns = { "fqdns28ae1f7a", },
+            };
+            mockGrpcClient.Setup(x => x.UpdateTunnelDestGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TunnelDestGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            TunnelDestGroup responseCallSettings = await client.UpdateTunnelDestGroupAsync(request.TunnelDestGroup, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            TunnelDestGroup responseCancellationToken = await client.UpdateTunnelDestGroupAsync(request.TunnelDestGroup, request.UpdateMask, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }

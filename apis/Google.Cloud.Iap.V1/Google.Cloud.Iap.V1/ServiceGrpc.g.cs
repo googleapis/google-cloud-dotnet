@@ -3,7 +3,7 @@
 //     source: google/cloud/iap/v1/service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2021 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -79,6 +79,22 @@ namespace Google.Cloud.Iap.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Iap.V1.IapSettings> __Marshaller_google_cloud_iap_v1_IapSettings = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iap.V1.IapSettings.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iap.V1.UpdateIapSettingsRequest> __Marshaller_google_cloud_iap_v1_UpdateIapSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iap.V1.UpdateIapSettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Iap.V1.ListTunnelDestGroupsRequest> __Marshaller_google_cloud_iap_v1_ListTunnelDestGroupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iap.V1.ListTunnelDestGroupsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Iap.V1.ListTunnelDestGroupsResponse> __Marshaller_google_cloud_iap_v1_ListTunnelDestGroupsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iap.V1.ListTunnelDestGroupsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Iap.V1.CreateTunnelDestGroupRequest> __Marshaller_google_cloud_iap_v1_CreateTunnelDestGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iap.V1.CreateTunnelDestGroupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Iap.V1.TunnelDestGroup> __Marshaller_google_cloud_iap_v1_TunnelDestGroup = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iap.V1.TunnelDestGroup.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Iap.V1.GetTunnelDestGroupRequest> __Marshaller_google_cloud_iap_v1_GetTunnelDestGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iap.V1.GetTunnelDestGroupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Iap.V1.DeleteTunnelDestGroupRequest> __Marshaller_google_cloud_iap_v1_DeleteTunnelDestGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iap.V1.DeleteTunnelDestGroupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Iap.V1.UpdateTunnelDestGroupRequest> __Marshaller_google_cloud_iap_v1_UpdateTunnelDestGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iap.V1.UpdateTunnelDestGroupRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_SetIamPolicy = new grpc::Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
@@ -119,6 +135,46 @@ namespace Google.Cloud.Iap.V1 {
         "UpdateIapSettings",
         __Marshaller_google_cloud_iap_v1_UpdateIapSettingsRequest,
         __Marshaller_google_cloud_iap_v1_IapSettings);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Iap.V1.ListTunnelDestGroupsRequest, global::Google.Cloud.Iap.V1.ListTunnelDestGroupsResponse> __Method_ListTunnelDestGroups = new grpc::Method<global::Google.Cloud.Iap.V1.ListTunnelDestGroupsRequest, global::Google.Cloud.Iap.V1.ListTunnelDestGroupsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListTunnelDestGroups",
+        __Marshaller_google_cloud_iap_v1_ListTunnelDestGroupsRequest,
+        __Marshaller_google_cloud_iap_v1_ListTunnelDestGroupsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Iap.V1.CreateTunnelDestGroupRequest, global::Google.Cloud.Iap.V1.TunnelDestGroup> __Method_CreateTunnelDestGroup = new grpc::Method<global::Google.Cloud.Iap.V1.CreateTunnelDestGroupRequest, global::Google.Cloud.Iap.V1.TunnelDestGroup>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateTunnelDestGroup",
+        __Marshaller_google_cloud_iap_v1_CreateTunnelDestGroupRequest,
+        __Marshaller_google_cloud_iap_v1_TunnelDestGroup);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Iap.V1.GetTunnelDestGroupRequest, global::Google.Cloud.Iap.V1.TunnelDestGroup> __Method_GetTunnelDestGroup = new grpc::Method<global::Google.Cloud.Iap.V1.GetTunnelDestGroupRequest, global::Google.Cloud.Iap.V1.TunnelDestGroup>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetTunnelDestGroup",
+        __Marshaller_google_cloud_iap_v1_GetTunnelDestGroupRequest,
+        __Marshaller_google_cloud_iap_v1_TunnelDestGroup);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Iap.V1.DeleteTunnelDestGroupRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteTunnelDestGroup = new grpc::Method<global::Google.Cloud.Iap.V1.DeleteTunnelDestGroupRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteTunnelDestGroup",
+        __Marshaller_google_cloud_iap_v1_DeleteTunnelDestGroupRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Iap.V1.UpdateTunnelDestGroupRequest, global::Google.Cloud.Iap.V1.TunnelDestGroup> __Method_UpdateTunnelDestGroup = new grpc::Method<global::Google.Cloud.Iap.V1.UpdateTunnelDestGroupRequest, global::Google.Cloud.Iap.V1.TunnelDestGroup>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateTunnelDestGroup",
+        __Marshaller_google_cloud_iap_v1_UpdateTunnelDestGroupRequest,
+        __Marshaller_google_cloud_iap_v1_TunnelDestGroup);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -196,6 +252,68 @@ namespace Google.Cloud.Iap.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iap.V1.IapSettings> UpdateIapSettings(global::Google.Cloud.Iap.V1.UpdateIapSettingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists the existing TunnelDestGroups. To group across all locations, use a
+      /// `-` as the location ID. For example:
+      /// `/v1/projects/123/iap_tunnel/locations/-/destGroups`
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iap.V1.ListTunnelDestGroupsResponse> ListTunnelDestGroups(global::Google.Cloud.Iap.V1.ListTunnelDestGroupsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new TunnelDestGroup.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iap.V1.TunnelDestGroup> CreateTunnelDestGroup(global::Google.Cloud.Iap.V1.CreateTunnelDestGroupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retrieves an existing TunnelDestGroup.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iap.V1.TunnelDestGroup> GetTunnelDestGroup(global::Google.Cloud.Iap.V1.GetTunnelDestGroupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a TunnelDestGroup.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTunnelDestGroup(global::Google.Cloud.Iap.V1.DeleteTunnelDestGroupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a TunnelDestGroup.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iap.V1.TunnelDestGroup> UpdateTunnelDestGroup(global::Google.Cloud.Iap.V1.UpdateTunnelDestGroupRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -509,6 +627,254 @@ namespace Google.Cloud.Iap.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateIapSettings, null, options, request);
       }
+      /// <summary>
+      /// Lists the existing TunnelDestGroups. To group across all locations, use a
+      /// `-` as the location ID. For example:
+      /// `/v1/projects/123/iap_tunnel/locations/-/destGroups`
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Iap.V1.ListTunnelDestGroupsResponse ListTunnelDestGroups(global::Google.Cloud.Iap.V1.ListTunnelDestGroupsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListTunnelDestGroups(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the existing TunnelDestGroups. To group across all locations, use a
+      /// `-` as the location ID. For example:
+      /// `/v1/projects/123/iap_tunnel/locations/-/destGroups`
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Iap.V1.ListTunnelDestGroupsResponse ListTunnelDestGroups(global::Google.Cloud.Iap.V1.ListTunnelDestGroupsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListTunnelDestGroups, null, options, request);
+      }
+      /// <summary>
+      /// Lists the existing TunnelDestGroups. To group across all locations, use a
+      /// `-` as the location ID. For example:
+      /// `/v1/projects/123/iap_tunnel/locations/-/destGroups`
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iap.V1.ListTunnelDestGroupsResponse> ListTunnelDestGroupsAsync(global::Google.Cloud.Iap.V1.ListTunnelDestGroupsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListTunnelDestGroupsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the existing TunnelDestGroups. To group across all locations, use a
+      /// `-` as the location ID. For example:
+      /// `/v1/projects/123/iap_tunnel/locations/-/destGroups`
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iap.V1.ListTunnelDestGroupsResponse> ListTunnelDestGroupsAsync(global::Google.Cloud.Iap.V1.ListTunnelDestGroupsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListTunnelDestGroups, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new TunnelDestGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Iap.V1.TunnelDestGroup CreateTunnelDestGroup(global::Google.Cloud.Iap.V1.CreateTunnelDestGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateTunnelDestGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new TunnelDestGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Iap.V1.TunnelDestGroup CreateTunnelDestGroup(global::Google.Cloud.Iap.V1.CreateTunnelDestGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateTunnelDestGroup, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new TunnelDestGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iap.V1.TunnelDestGroup> CreateTunnelDestGroupAsync(global::Google.Cloud.Iap.V1.CreateTunnelDestGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateTunnelDestGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new TunnelDestGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iap.V1.TunnelDestGroup> CreateTunnelDestGroupAsync(global::Google.Cloud.Iap.V1.CreateTunnelDestGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateTunnelDestGroup, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves an existing TunnelDestGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Iap.V1.TunnelDestGroup GetTunnelDestGroup(global::Google.Cloud.Iap.V1.GetTunnelDestGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTunnelDestGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves an existing TunnelDestGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Iap.V1.TunnelDestGroup GetTunnelDestGroup(global::Google.Cloud.Iap.V1.GetTunnelDestGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetTunnelDestGroup, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves an existing TunnelDestGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iap.V1.TunnelDestGroup> GetTunnelDestGroupAsync(global::Google.Cloud.Iap.V1.GetTunnelDestGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTunnelDestGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves an existing TunnelDestGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iap.V1.TunnelDestGroup> GetTunnelDestGroupAsync(global::Google.Cloud.Iap.V1.GetTunnelDestGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetTunnelDestGroup, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a TunnelDestGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTunnelDestGroup(global::Google.Cloud.Iap.V1.DeleteTunnelDestGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteTunnelDestGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a TunnelDestGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTunnelDestGroup(global::Google.Cloud.Iap.V1.DeleteTunnelDestGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteTunnelDestGroup, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a TunnelDestGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTunnelDestGroupAsync(global::Google.Cloud.Iap.V1.DeleteTunnelDestGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteTunnelDestGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a TunnelDestGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTunnelDestGroupAsync(global::Google.Cloud.Iap.V1.DeleteTunnelDestGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteTunnelDestGroup, null, options, request);
+      }
+      /// <summary>
+      /// Updates a TunnelDestGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Iap.V1.TunnelDestGroup UpdateTunnelDestGroup(global::Google.Cloud.Iap.V1.UpdateTunnelDestGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateTunnelDestGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a TunnelDestGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Iap.V1.TunnelDestGroup UpdateTunnelDestGroup(global::Google.Cloud.Iap.V1.UpdateTunnelDestGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateTunnelDestGroup, null, options, request);
+      }
+      /// <summary>
+      /// Updates a TunnelDestGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iap.V1.TunnelDestGroup> UpdateTunnelDestGroupAsync(global::Google.Cloud.Iap.V1.UpdateTunnelDestGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateTunnelDestGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a TunnelDestGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iap.V1.TunnelDestGroup> UpdateTunnelDestGroupAsync(global::Google.Cloud.Iap.V1.UpdateTunnelDestGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateTunnelDestGroup, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override IdentityAwareProxyAdminServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -527,7 +893,12 @@ namespace Google.Cloud.Iap.V1 {
           .AddMethod(__Method_GetIamPolicy, serviceImpl.GetIamPolicy)
           .AddMethod(__Method_TestIamPermissions, serviceImpl.TestIamPermissions)
           .AddMethod(__Method_GetIapSettings, serviceImpl.GetIapSettings)
-          .AddMethod(__Method_UpdateIapSettings, serviceImpl.UpdateIapSettings).Build();
+          .AddMethod(__Method_UpdateIapSettings, serviceImpl.UpdateIapSettings)
+          .AddMethod(__Method_ListTunnelDestGroups, serviceImpl.ListTunnelDestGroups)
+          .AddMethod(__Method_CreateTunnelDestGroup, serviceImpl.CreateTunnelDestGroup)
+          .AddMethod(__Method_GetTunnelDestGroup, serviceImpl.GetTunnelDestGroup)
+          .AddMethod(__Method_DeleteTunnelDestGroup, serviceImpl.DeleteTunnelDestGroup)
+          .AddMethod(__Method_UpdateTunnelDestGroup, serviceImpl.UpdateTunnelDestGroup).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -542,6 +913,11 @@ namespace Google.Cloud.Iap.V1 {
       serviceBinder.AddMethod(__Method_TestIamPermissions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(serviceImpl.TestIamPermissions));
       serviceBinder.AddMethod(__Method_GetIapSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iap.V1.GetIapSettingsRequest, global::Google.Cloud.Iap.V1.IapSettings>(serviceImpl.GetIapSettings));
       serviceBinder.AddMethod(__Method_UpdateIapSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iap.V1.UpdateIapSettingsRequest, global::Google.Cloud.Iap.V1.IapSettings>(serviceImpl.UpdateIapSettings));
+      serviceBinder.AddMethod(__Method_ListTunnelDestGroups, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iap.V1.ListTunnelDestGroupsRequest, global::Google.Cloud.Iap.V1.ListTunnelDestGroupsResponse>(serviceImpl.ListTunnelDestGroups));
+      serviceBinder.AddMethod(__Method_CreateTunnelDestGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iap.V1.CreateTunnelDestGroupRequest, global::Google.Cloud.Iap.V1.TunnelDestGroup>(serviceImpl.CreateTunnelDestGroup));
+      serviceBinder.AddMethod(__Method_GetTunnelDestGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iap.V1.GetTunnelDestGroupRequest, global::Google.Cloud.Iap.V1.TunnelDestGroup>(serviceImpl.GetTunnelDestGroup));
+      serviceBinder.AddMethod(__Method_DeleteTunnelDestGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iap.V1.DeleteTunnelDestGroupRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteTunnelDestGroup));
+      serviceBinder.AddMethod(__Method_UpdateTunnelDestGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iap.V1.UpdateTunnelDestGroupRequest, global::Google.Cloud.Iap.V1.TunnelDestGroup>(serviceImpl.UpdateTunnelDestGroup));
     }
 
   }
@@ -703,11 +1079,12 @@ namespace Google.Cloud.Iap.V1 {
       /// <summary>
       /// Constructs a new OAuth brand for the project if one does not exist.
       /// The created brand is "internal only", meaning that OAuth clients created
-      /// under it only accept requests from users who belong to the same G Suite
-      /// organization as the project. The brand is created in an un-reviewed status.
-      /// NOTE: The "internal only" status can be manually changed in the Google
-      /// Cloud console. Requires that a brand does not already exist for the
-      /// project, and that the specified support email is owned by the caller.
+      /// under it only accept requests from users who belong to the same Google
+      /// Workspace organization as the project. The brand is created in an
+      /// un-reviewed status. NOTE: The "internal only" status can be manually
+      /// changed in the Google Cloud Console. Requires that a brand does not already
+      /// exist for the project, and that the specified support email is owned by the
+      /// caller.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -876,11 +1253,12 @@ namespace Google.Cloud.Iap.V1 {
       /// <summary>
       /// Constructs a new OAuth brand for the project if one does not exist.
       /// The created brand is "internal only", meaning that OAuth clients created
-      /// under it only accept requests from users who belong to the same G Suite
-      /// organization as the project. The brand is created in an un-reviewed status.
-      /// NOTE: The "internal only" status can be manually changed in the Google
-      /// Cloud console. Requires that a brand does not already exist for the
-      /// project, and that the specified support email is owned by the caller.
+      /// under it only accept requests from users who belong to the same Google
+      /// Workspace organization as the project. The brand is created in an
+      /// un-reviewed status. NOTE: The "internal only" status can be manually
+      /// changed in the Google Cloud Console. Requires that a brand does not already
+      /// exist for the project, and that the specified support email is owned by the
+      /// caller.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -895,11 +1273,12 @@ namespace Google.Cloud.Iap.V1 {
       /// <summary>
       /// Constructs a new OAuth brand for the project if one does not exist.
       /// The created brand is "internal only", meaning that OAuth clients created
-      /// under it only accept requests from users who belong to the same G Suite
-      /// organization as the project. The brand is created in an un-reviewed status.
-      /// NOTE: The "internal only" status can be manually changed in the Google
-      /// Cloud console. Requires that a brand does not already exist for the
-      /// project, and that the specified support email is owned by the caller.
+      /// under it only accept requests from users who belong to the same Google
+      /// Workspace organization as the project. The brand is created in an
+      /// un-reviewed status. NOTE: The "internal only" status can be manually
+      /// changed in the Google Cloud Console. Requires that a brand does not already
+      /// exist for the project, and that the specified support email is owned by the
+      /// caller.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -912,11 +1291,12 @@ namespace Google.Cloud.Iap.V1 {
       /// <summary>
       /// Constructs a new OAuth brand for the project if one does not exist.
       /// The created brand is "internal only", meaning that OAuth clients created
-      /// under it only accept requests from users who belong to the same G Suite
-      /// organization as the project. The brand is created in an un-reviewed status.
-      /// NOTE: The "internal only" status can be manually changed in the Google
-      /// Cloud console. Requires that a brand does not already exist for the
-      /// project, and that the specified support email is owned by the caller.
+      /// under it only accept requests from users who belong to the same Google
+      /// Workspace organization as the project. The brand is created in an
+      /// un-reviewed status. NOTE: The "internal only" status can be manually
+      /// changed in the Google Cloud Console. Requires that a brand does not already
+      /// exist for the project, and that the specified support email is owned by the
+      /// caller.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -931,11 +1311,12 @@ namespace Google.Cloud.Iap.V1 {
       /// <summary>
       /// Constructs a new OAuth brand for the project if one does not exist.
       /// The created brand is "internal only", meaning that OAuth clients created
-      /// under it only accept requests from users who belong to the same G Suite
-      /// organization as the project. The brand is created in an un-reviewed status.
-      /// NOTE: The "internal only" status can be manually changed in the Google
-      /// Cloud console. Requires that a brand does not already exist for the
-      /// project, and that the specified support email is owned by the caller.
+      /// under it only accept requests from users who belong to the same Google
+      /// Workspace organization as the project. The brand is created in an
+      /// un-reviewed status. NOTE: The "internal only" status can be manually
+      /// changed in the Google Cloud Console. Requires that a brand does not already
+      /// exist for the project, and that the specified support email is owned by the
+      /// caller.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
