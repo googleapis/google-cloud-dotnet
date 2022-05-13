@@ -16,6 +16,7 @@ using Google.Api.Gax;
 using Google.Apis.Bigquery.v2.Data;
 using Google.Apis.Requests;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -96,34 +97,61 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <summary>
-        /// Returns <c>this</c> if the job has no errors, or throws an exception containing the
-        /// errors. A job may have errors but still contain useful information, and may also contain
-        /// errors before completing.
+        /// Throws an exception if the job has any errors, or returns <c>this</c> if the job has no errors so far.
+        /// A job may have errors but still contain useful information, and may also contain errors before completing.
+        /// If this method is called on a job that completed successfully but with errors, it will throw an exception.
+        /// Use <see cref="ThrowOnFatalError"/> to only throw an exception if a job has failed.
         /// </summary>
-        /// <exception cref="GoogleApiException">The job has errors.</exception>
+        /// <exception cref="GoogleApiException">The job has errors. The <see cref="RequestError.Errors"/> property
+        /// corresponds to the errors reported in <see cref="JobStatus.Errors"/>.</exception>
         /// <returns><c>this</c> if the job has no errors.</returns>
         public BigQueryJob ThrowOnAnyError()
         {
             var errors = Resource.Status?.Errors;
             if (errors?.Count > 0)
             {
-                throw new GoogleApiException(_client.Service.Name)
-                {
-                    Error = new RequestError
-                    {
-                        Errors = errors.Select(error => new SingleError
-                        {
-                            Location = error.Location,
-                            Reason = error.Reason,
-                            Message = error.Message
-                        }).ToList(),
-                        Message = $"Job {Reference?.ProjectId}/{Reference?.Location}/{Reference?.JobId} contained {errors.Count} error(s). " +
-                            $"First error message: {errors.First().Message}"
-                    }
-                };
+                throw ConvertToRequestError(errors.ToList());
             }
             return this;
         }
+
+        /// <summary>
+        /// Throws an exception if the job has failed. Returns <c>this</c> if the job has not failed, even if it contains
+        /// errors. A job may have errors but still contain useful information, and may also contain errors before completing.
+        /// Use <see cref="ThrowOnAnyError"/> to throw an exception if any errors have been reported.
+        /// </summary>
+        /// <exception cref="GoogleApiException">The job has failed. Within the <see cref="RequestError.Errors"/> property,
+        /// the first error is from the <see cref="JobStatus.ErrorResult"/>, and any others are from
+        /// <see cref="JobStatus.Errors"/>.</exception>
+        /// <returns><c>this</c> if the job has not completed unsuccessfully (either because it hasn't completed,
+        /// or it has completed successfully, potentially with non-fatal errors).</returns>
+        public BigQueryJob ThrowOnFatalError()
+        {
+            var error = Resource.Status?.ErrorResult;
+            if (error is null)
+            {
+                return this;
+            }
+
+            var allErrors = new[] { error }.Concat(Resource.Status?.Errors ?? Enumerable.Empty<ErrorProto>()).ToList();
+            throw ConvertToRequestError(allErrors);
+        }
+
+        private GoogleApiException ConvertToRequestError(IReadOnlyList<ErrorProto> errors) =>
+            new GoogleApiException(_client.Service.Name)
+            {
+                Error = new RequestError
+                {
+                    Errors = errors.Select(error => new SingleError
+                    {
+                        Location = error.Location,
+                        Reason = error.Reason,
+                        Message = error.Message
+                    }).ToList(),
+                    Message = $"Job {Reference?.ProjectId}/{Reference?.Location}/{Reference?.JobId} contained {errors.Count} error(s). " +
+                        $"First error message: {errors.First().Message}"
+                }
+            };
 
         /// <summary>
         /// Polls this job for completion, returning a new <see cref="BigQueryJob"/> object with the updated information.
@@ -218,7 +246,7 @@ namespace Google.Cloud.BigQuery.V2
             {
                 throw new InvalidOperationException("Job has no ID. (This can happen for dry run queries.)");
             }
-            ThrowOnAnyError();
+            ThrowOnFatalError();
             return query.DestinationTable;
         }
 
