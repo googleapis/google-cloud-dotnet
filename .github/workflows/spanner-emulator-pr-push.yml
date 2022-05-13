@@ -44,5 +44,5 @@ jobs:
           SPANNER_EMULATOR_HOST: localhost:9010
           TEST_PROJECT: emulator-test-project
       run: |
-        dotnet test -c Release ./apis/Google.Cloud.Spanner.Data/Google.Cloud.Spanner.Data.IntegrationTests
+        dotnet test -c Release ./apis/Google.Cloud.Spanner.Data/Google.Cloud.Spanner.Data.IntegrationTests --filter FullyQualifiedName!~PostgreSql
         dotnet test -c Release ./apis/Google.Cloud.Spanner.Data/Google.Cloud.Spanner.Data.Snippets
