@@ -166,17 +166,9 @@ namespace Google.Cloud.Spanner.Data
             // Only if SpannerDbType of parameter is not explicitly provided by user.
             if (_spannerDbType == null)
             {
-                if (Value is decimal)
+                if (Value is decimal && options != null)
                 {
-                    // User needs to set the right dialect.
-                    if (options != null && options.UseSpannerNumericForDecimal)
-                    {
-                        return SpannerDbType.Numeric;
-                    }
-                    else if (options != null && options.UsePgNumericForDecimal)
-                    {
-                        return SpannerDbType.PgNumeric;
-                    }
+                    return options.DefaultTypeForDecimal;
                 }
             }
 

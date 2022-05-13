@@ -27,7 +27,6 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
 
         public SpannerFixtureBasePostgreSql()
         {
-            GrpcInfo.EnableSubchannelCounting();
             Database = SpannerTestDatabasePostgreSql.GetInstance(ProjectId);
         }
 
@@ -35,7 +34,7 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
         public SpannerConnection GetConnection() => Database.GetConnection();
         public string ConnectionString => Database.ConnectionString;
         public SpannerConnection GetConnection(Logger logger, bool logCommitStats = false) => Database.GetConnection(logger, logCommitStats);
-        public bool RunningOnEmulator => SpannerClientCreationOptions.UsesEmulator;
+        public bool RunningOnEmulator => SpannerClientCreationOptions.UsesEmulator; 
         internal SpannerClientCreationOptions SpannerClientCreationOptions => Database.SpannerClientCreationOptions;
     }
 }

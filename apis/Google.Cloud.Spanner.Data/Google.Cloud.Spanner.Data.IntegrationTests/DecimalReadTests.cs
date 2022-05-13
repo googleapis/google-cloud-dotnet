@@ -31,19 +31,19 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public static IEnumerable<object[]> TestDecimals =>
             new List<object[]>
             {
-                new object[] { new decimal(1.23456789) },
+                new object[] { 1.23456789m },
                 new object[] { decimal.MinusOne },
                 new object[] { decimal.Zero },
-                new object[] { new decimal(123456789.0123456789012345678) },
+                new object[] { 123456789.01234m },
             };
 
-        public static IEnumerable<object[]> TestDecimalsWithNumeric => 
-            Enumerable.Concat(TestDecimals,
+        // decimal.MaxValue and decimal.MinValue will work only with numeric column and not with Float64.
+        public static IEnumerable<object[]> MaxMinDecimals => 
             new List<object[]>
             {
                 new object[] { decimal.MaxValue },
                 new object[] { decimal.MinValue },             
-            });
+            };
 
         // Test case: Simple case of using decimal value with Float64 column in database.
         // SpannerDbType is explicitly set for the parameter.
@@ -105,8 +105,13 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     new SpannerParameter { ParameterName = "DecimalValue", Value = expectedValue },
                 }
             ).ExecuteNonQueryAsync();
+
             var decimalValue = await connection.CreateSelectCommand($"SELECT DecimalValue FROM {_fixture.TableName}").ExecuteScalarAsync<decimal>();
             Assert.Equal(expectedValue, decimalValue);
+            // Explicitly test the scenario in which CLR Type is not specified.
+            var value = await connection.CreateSelectCommand($"SELECT DecimalValue FROM {_fixture.TableName}").ExecuteScalarAsync<object>();
+            Assert.True(value is double);
+            Assert.Equal((double)expectedValue, value);
         }
 
         // Test Case: Using decimal with Float64 column in database without passing SpannerDbType of the parameter.
@@ -129,7 +134,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
         // Normal case of using decimal with Numeric column in database.
         [Theory]
-        [MemberData(nameof(TestDecimalsWithNumeric))]
+        [MemberData(nameof(TestDecimals))]
+        [MemberData(nameof(MaxMinDecimals))]
         public async Task WriteThenRead_ShouldBeEqual_WithNumericColumn(decimal expectedValue)
         {
             using var connection = _fixture.GetConnection();
@@ -149,7 +155,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         // The configuration should be ignored in .NET to Spanner path, as SpannerDbType of parameter is specified.
         // The configuration should be honored in Spanner to .NET path if ClrType isn't specified while reading.
         [Theory]
-        [MemberData(nameof(TestDecimalsWithNumeric))]
+        [MemberData(nameof(TestDecimals))]
+        [MemberData(nameof(MaxMinDecimals))]
         public async Task WriteThenRead_ShouldBeEqual_WithNumericColumn_UseOptions(decimal expectedValue)
         {
             using var connection = new SpannerConnection($"{_fixture.ConnectionString};UseSpannerNumericForDecimal=true");
@@ -172,7 +179,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         // SpannerConversionOptions is not explicitly set, so Default of Float64 for decimal would be used.
         // This should throw SpannerException as Float64 type value would be provided to a Numeric column.
         [Theory]
-        [MemberData(nameof(TestDecimalsWithNumeric))]
+        [MemberData(nameof(TestDecimals))]
+        [MemberData(nameof(MaxMinDecimals))]
         public async Task WriteWithoutSpannerDbType_WithNumericColumn(decimal expectedValue)
         {
             using var connection = _fixture.GetConnection();
@@ -189,7 +197,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         // The configuration should be honored in .NET to Spanner path, as SpannerDbType of parameter isn't specified.
         // The configuration should be honored in Spanner to .NET path if ClrType isn't specified while reading.
         [Theory]
-        [MemberData(nameof(TestDecimalsWithNumeric))]
+        [MemberData(nameof(TestDecimals))]
+        [MemberData(nameof(MaxMinDecimals))]
         public async Task WriteThenReadWithoutSpannerDbType_ShouldBeEqual_WithNumericColumn_UseOptions(decimal expectedValue)
         {
             using var connection = new SpannerConnection($"{_fixture.ConnectionString};UseSpannerNumericForDecimal=true");

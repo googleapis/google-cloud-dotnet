@@ -25,12 +25,6 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
 
         public SpannerTableFixturePostgreSql(string tableName)
         {
-            // Emulator doesn't support PostgreSQL, so just return.
-            if (RunningOnEmulator)
-            {
-                return;
-            }
-
             TableName = tableName;
             if (Database.Fresh)
             {

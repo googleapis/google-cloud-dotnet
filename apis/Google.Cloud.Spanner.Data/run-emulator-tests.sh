@@ -30,5 +30,5 @@ EMULATOR_PID=$!
 trap "kill -15 $EMULATOR_PID; echo \"Cleaned up the emulator\";" EXIT
 
 # Run the tests.
-dotnet test -c Release Google.Cloud.Spanner.Data.IntegrationTests
+dotnet test -c Release Google.Cloud.Spanner.Data.IntegrationTests --filter FullyQualifiedName!~PostgreSql
 dotnet test -c Release Google.Cloud.Spanner.Data/Google.Cloud.Spanner.Data.Snippets

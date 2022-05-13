@@ -12,11 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax;
-using Google.Api.Gax.ResourceNames;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Admin.Database.V1;
-using Google.Cloud.Spanner.Admin.Instance.V1;
 using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Grpc.Core;
@@ -39,22 +36,18 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
         /// <param name="projectId">The project ID to use, typically from a fixture.</param>
         public static SpannerTestDatabasePostgreSql GetInstance(string projectId)
         {
-            if (s_instance == null)
+            lock (s_lock)
             {
-                lock (s_lock)
+                if (s_instance == null)
                 {
-                    if (s_instance == null)
-                    {
-                        s_instance = new SpannerTestDatabasePostgreSql(projectId);
-                    }
-                    else if (s_instance.ProjectId != projectId)
-                    {
-                        throw new ArgumentException($"A PostgreSQL database for project ID {s_instance.ProjectId} has already been created; this test requested {projectId}");
-                    }
-                    return s_instance;
+                    s_instance = new SpannerTestDatabasePostgreSql(projectId);
                 }
+                else if (s_instance.ProjectId != projectId)
+                {
+                    throw new ArgumentException($"A PostgreSQL database for project ID {s_instance.ProjectId} has already been created; this test requested {projectId}");
+                }
+                return s_instance;
             }
-            return s_instance;
         }
 
         private static readonly string s_generatedDatabaseName = IdGenerator.FromDateTime(prefix: "testdb_pg_", pattern: "yyyyMMdd't'HHmmss");
@@ -89,8 +82,7 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
             var builder = new SpannerConnectionStringBuilder
             {
                 Host = SpannerHost,
-                DataSource = $"projects/{ProjectId}/instances/{SpannerInstance}",
-                EmulatorDetection = EmulatorDetection.EmulatorOrProduction
+                DataSource = $"projects/{ProjectId}/instances/{SpannerInstance}"
             };
             if (SpannerPort != null)
             {
@@ -102,15 +94,11 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
             ConnectionString = databaseBuilder.ConnectionString;
             DatabaseName = databaseBuilder.DatabaseName;
 
-            MaybeCreateInstanceOnEmulator(projectId);
+            // Assuming that instance already exists.
             if (Fresh)
             {
-                // Skip creating PostgreSQL database in Emulator, as it would fail.
-                if (!SpannerClientCreationOptions.UsesEmulator)
-                {
-                    CreatePostgreSqlDatabase();
-                    Logger.DefaultLogger.Debug($"Created database {SpannerDatabase} with PostgreSql dialect.");
-                }
+                CreatePostgreSqlDatabase();
+                Logger.DefaultLogger.Debug($"Created database {SpannerDatabase} with PostgreSql dialect.");
             }
             else
             {
@@ -122,40 +110,6 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
         {
             string value = Environment.GetEnvironmentVariable(name);
             return string.IsNullOrEmpty(value) ? defaultValue : value;
-        }
-
-        private void MaybeCreateInstanceOnEmulator(string projectId)
-        {
-            if (SpannerClientCreationOptions.UsesEmulator)
-            {
-                // Try to create an instance on the emulator and ignore any AlreadyExists error.
-                var adminClientBuilder = new InstanceAdminClientBuilder
-                {
-                    EmulatorDetection = EmulatorDetection.EmulatorOnly
-                };
-                var instanceAdminClient = adminClientBuilder.Build();
-
-                var instanceName = InstanceName.FromProjectInstance(projectId, SpannerInstance);
-                try
-                {
-                    instanceAdminClient.CreateInstance(new CreateInstanceRequest
-                    {
-                        InstanceId = instanceName.InstanceId,
-                        ParentAsProjectName = ProjectName.FromProject(projectId),
-                        Instance = new Instance
-                        {
-                            InstanceName = instanceName,
-                            ConfigAsInstanceConfigName = new InstanceConfigName(projectId, "emulator-config"),
-                            DisplayName = "Test Instance",
-                            NodeCount = 1,
-                        },
-                    }).PollUntilCompleted();
-                }
-                catch (RpcException e) when (e.StatusCode == StatusCode.AlreadyExists)
-                {
-                    // Ignore
-                }
-            }
         }
 
         private void CreatePostgreSqlDatabase()

@@ -14,7 +14,6 @@
 
 using Google.Cloud.Spanner.V1;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -31,27 +30,26 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public static IEnumerable<object[]> TestDecimals =>
             new List<object[]>
             {
-                new object[] { new decimal(1.23456789) },
+                new object[] { 1.23456789m },
                 new object[] { decimal.MinusOne },
                 new object[] { decimal.Zero },
-                new object[] { new decimal(123456789.0123456789012345678) },
+                new object[] { 123456789.01234m },
             };
 
-        public static IEnumerable<object[]> TestDecimalsWithPgNumeric =>
-           Enumerable.Concat(TestDecimals,
+        // decimal.MaxValue and decimal.MinValue will work only with PgNumeric column.
+        public static IEnumerable<object[]> MaxMinDecimals =>
             new List<object[]>
             {
                 new object[] { decimal.MaxValue },
                 new object[] { decimal.MinValue },
-            });
+            };
 
         // Test case: Simple case of using decimal value with Float8 column in database.
         // SpannerDbType is explicitly set for the parameter.
-        [SkippableTheory]
+        [Theory]
         [MemberData(nameof(TestDecimals))]
         public async Task WriteThenRead_ShouldBeEqual(decimal expectedValue)
         {
-            Skip.If(_fixture.RunningOnEmulator, "The emulator does not support PostgreSQL dialect.");
             using var connection = _fixture.GetConnection();
             // Write the decimal value and read it back.
             await connection.CreateInsertOrUpdateCommand(_fixture.TableName,
@@ -71,11 +69,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         // SpannerDbType is explicitly set for the parameter.
         // The configuration should be ignored in .NET to Spanner path, as SpannerDbType of parameter is specified.
         // The configuration should be honored in Spanner to .NET path if ClrType isn't specified while reading.
-        [SkippableTheory]
+        [Theory]
         [MemberData(nameof(TestDecimals))]
         public async Task WriteThenRead_ShouldBeEqual_UseOptions(decimal expectedValue)
         {
-            Skip.If(_fixture.RunningOnEmulator, "The emulator does not support PostgreSQL dialect.");
             // Set the SpannerConversionOptions in the connection string.
             using var connection = new SpannerConnection($"{_fixture.ConnectionString};UsePgNumericForDecimal=true");
             // Write the decimal value and read it back.
@@ -99,11 +96,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         // Test Case: Using decimal with Float8 column in database without explicitly specifying SpannerDbType of parameter.
         // SpannerConversionOptions is not explicitly set, so Default option would be used.
         // Default SpannerDbType for decimal is Float64, so it will work with Float8 type column in database.
-        [SkippableTheory]
+        [Theory]
         [MemberData(nameof(TestDecimals))]
         public async Task WriteThenRead_ShouldBeEqual_WithoutSpannerDbType(decimal expectedValue)
         {
-            Skip.If(_fixture.RunningOnEmulator, "The emulator does not support PostgreSQL dialect.");
             using var connection = _fixture.GetConnection();
             await connection.CreateInsertOrUpdateCommand(_fixture.TableName,
                 new SpannerParameterCollection
@@ -120,11 +116,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         // Test Case: Using decimal with Float8 column in database without passing SpannerDbType of the parameter.
         // SpannerConversionOptions is set to use PgNumeric for decimal.
         // This should throw SpannerException as Float8 column expects Float8 value but PgNumeric value is passed.
-        [SkippableTheory]
+        [Theory]
         [MemberData(nameof(TestDecimals))]
         public async Task WriteWithoutSpannerDbType_UseOptions(decimal expectedValue)
         {
-            Skip.If(_fixture.RunningOnEmulator, "The emulator does not support PostgreSQL dialect.");
             using var connection = new SpannerConnection($"{_fixture.ConnectionString};UsePgNumericForDecimal=true");
             await Assert.ThrowsAsync<SpannerException>(async () =>
             await connection.CreateInsertOrUpdateCommand(_fixture.TableName,
@@ -137,11 +132,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         }
 
         // Normal case of using decimal with PgNumeric column in database.
-        [SkippableTheory]
-        [MemberData(nameof(TestDecimalsWithPgNumeric))]
+        [Theory]
+        [MemberData(nameof(TestDecimals))]
+        [MemberData(nameof(MaxMinDecimals))]
         public async Task WriteThenRead_ShouldBeEqual_WithPgNumericColumn(decimal expectedValue)
         {
-            Skip.If(_fixture.RunningOnEmulator, "The emulator does not support PostgreSQL dialect.");
             using var connection = _fixture.GetConnection();
             // Write the decimal value as PgNumeric and read it back.
             await connection.CreateInsertOrUpdateCommand(_fixture.TableName,
@@ -159,11 +154,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         // SpannerConversionOptions is set to use PgNumeric for decimal.
         // The configuration should be ignored in .NET to Spanner path, as SpannerDbType of parameter is specified.
         // The configuration should be honored in Spanner to .NET path if ClrType isn't specified while reading.
-        [SkippableTheory]
-        [MemberData(nameof(TestDecimalsWithPgNumeric))]
+        [Theory]
+        [MemberData(nameof(TestDecimals))]
+        [MemberData(nameof(MaxMinDecimals))]
         public async Task WriteThenRead_ShouldBeEqual_WithPgNumericColumn_UseOptions(decimal expectedValue)
         {
-            Skip.If(_fixture.RunningOnEmulator, "The emulator does not support PostgreSQL dialect.");
             using var connection = new SpannerConnection($"{_fixture.ConnectionString};UsePgNumericForDecimal=true");
             await connection.CreateInsertOrUpdateCommand(_fixture.TableName,
                 new SpannerParameterCollection
@@ -183,11 +178,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         // Case of using decimal with PgNumeric column in database without specifying SpannerDbType of parameter. 
         // SpannerConversionOptions is not explicitly set, so Default of Float64 for decimal would be used.
         // This should throw SpannerException as Float64 type value would be provided to a PgNumeric column.
-        [SkippableTheory]
-        [MemberData(nameof(TestDecimalsWithPgNumeric))]
+        [Theory]
+        [MemberData(nameof(TestDecimals))]
+        [MemberData(nameof(MaxMinDecimals))]
         public async Task WriteWithoutSpannerDbType_WithPgNumericColumn(decimal expectedValue)
         {
-            Skip.If(_fixture.RunningOnEmulator, "The emulator does not support PostgreSQL dialect.");
             using var connection = _fixture.GetConnection();
             await Assert.ThrowsAsync<SpannerException>(async () =>
             await connection.CreateInsertOrUpdateCommand(_fixture.TableName,
@@ -202,11 +197,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         // SpannerConversionOptions is set to use PgNumeric for decimal.
         // The configuration should be honored in .NET to Spanner path, as SpannerDbType of parameter isn't specified.
         // The configuration should be honored in Spanner to .NET path if ClrType isn't specified while reading.
-        [SkippableTheory]
-        [MemberData(nameof(TestDecimalsWithPgNumeric))]
+        [Theory]
+        [MemberData(nameof(TestDecimals))]
+        [MemberData(nameof(MaxMinDecimals))]
         public async Task WriteThenReadWithoutSpannerDbType_ShouldBeEqual_WithPgNumericColumn_UseOptions(decimal expectedValue)
         {
-            Skip.If(_fixture.RunningOnEmulator, "The emulator does not support PostgreSQL dialect.");
             using var connection = new SpannerConnection($"{_fixture.ConnectionString};UsePgNumericForDecimal=true");
             await connection.CreateInsertOrUpdateCommand(_fixture.TableName,
                 new SpannerParameterCollection

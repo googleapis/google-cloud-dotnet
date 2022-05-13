@@ -27,24 +27,19 @@ namespace Google.Cloud.Spanner.Data
         internal bool UseDBNull { get; }
 
         /// <summary>
-        /// True to use <see cref="SpannerDbType.Numeric"/> as default SpannerDbType for decimal values; false to use <see cref="SpannerDbType.Float64"/>.
-        /// This should be used, only when working with Spanner Google Standard SQL (GSQL) dialect database.
+        /// Default <see cref="SpannerDbType"/> for decimal based on connection string options.
         /// </summary>
-        internal bool UseSpannerNumericForDecimal { get; }
-
-        /// <summary>
-        /// True to use <see cref="SpannerDbType.PgNumeric"/> as default SpannerDbType for decimal values; false to use <see cref="SpannerDbType.Float64"/>.
-        /// This should be used, only when working with Spanner PostgreSQL dialect database.
-        /// </summary>
-        internal bool UsePgNumericForDecimal { get; }
+        internal SpannerDbType DefaultTypeForDecimal { get; }
 
         private SpannerConversionOptions(bool useDBNull,
             bool useSpannerNumericForDecimal,
             bool usePgNumericForDecimal)
         {
             UseDBNull = useDBNull;
-            UseSpannerNumericForDecimal = useSpannerNumericForDecimal;
-            UsePgNumericForDecimal = usePgNumericForDecimal;
+            DefaultTypeForDecimal =
+                useSpannerNumericForDecimal ? SpannerDbType.Numeric
+                : usePgNumericForDecimal ? SpannerDbType.PgNumeric
+                : SpannerDbType.Float64;
         }
 
         /// <summary>

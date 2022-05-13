@@ -260,7 +260,7 @@ namespace Google.Cloud.Spanner.Data
                             // use half-away-from-zero rounding but the SpannerNumeric implementation
                             // truncates instead.
                             return Value.ForString(SpannerNumeric.FromDecimal(
-                                Convert.ToDecimal(value, InvariantCulture), LossOfPrecisionHandling.Throw).ToString());
+                                Convert.ToDecimal(value, InvariantCulture), LossOfPrecisionHandling.Truncate).ToString());
                         }
                         if (value is sbyte || value is short || value is int || value is long)
                         {
@@ -613,9 +613,12 @@ namespace Google.Cloud.Spanner.Data
             }
             if (targetClrType == typeof(PgNumeric))
             {
-                if ((TypeCode != TypeCode.Numeric || TypeAnnotationCode != TypeAnnotationCode.PgNumeric) && TypeCode != TypeCode.Float64)
+                bool isPgNumeric = TypeAnnotationCode == TypeAnnotationCode.PgNumeric;
+                bool isFloat64 = TypeCode == TypeCode.Float64;
+
+                if (!isPgNumeric && !isFloat64)
                 {
-                    throw new ArgumentException($"{targetClrType.FullName} can only be used for numeric results");
+                    throw new ArgumentException($"{targetClrType.FullName} can only be used for numeric results and only when working with a PostgreSQL dialect.");
                 }
                 switch (wireValue.KindCase)
                 {
