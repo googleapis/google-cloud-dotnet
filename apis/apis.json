@@ -2272,7 +2272,7 @@
     },
     {
       "id": "Google.Cloud.Optimization.V1",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Cloud Optimization",
       "description": "Recommended Google client library to access the Cloud Optimization API, which provides a portfolio of solvers to address common optimization use cases starting with optimal route planning for vehicle fleets.",
