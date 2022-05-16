@@ -52,6 +52,8 @@ namespace Google.Cloud.PubSub.V1.Snippets
                 Detached = false,
                 EnableExactlyOnceDelivery = false,
                 TopicMessageRetentionDuration = new Duration(),
+                BigqueryConfig = new BigQueryConfig(),
+                State = Subscription.Types.State.Unspecified,
             };
             // Make the request
             Subscription response = subscriberServiceApiClient.CreateSubscription(request);
@@ -83,6 +85,8 @@ namespace Google.Cloud.PubSub.V1.Snippets
                 Detached = false,
                 EnableExactlyOnceDelivery = false,
                 TopicMessageRetentionDuration = new Duration(),
+                BigqueryConfig = new BigQueryConfig(),
+                State = Subscription.Types.State.Unspecified,
             };
             // Make the request
             Subscription response = await subscriberServiceApiClient.CreateSubscriptionAsync(request);

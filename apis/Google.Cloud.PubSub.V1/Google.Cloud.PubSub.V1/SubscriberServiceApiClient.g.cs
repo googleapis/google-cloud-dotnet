@@ -643,8 +643,9 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="pushConfig">
         /// If push delivery is used with this subscription, this field is
-        /// used to configure it. An empty `pushConfig` signifies that the subscriber
-        /// will pull and ack messages using API methods.
+        /// used to configure it. Either `pushConfig` or `bigQueryConfig` can be set,
+        /// but not both. If both are empty, then the subscriber will pull and ack
+        /// messages using API methods.
         /// </param>
         /// <param name="ackDeadlineSeconds">
         /// The approximate amount of time (on a best-effort basis) Pub/Sub waits for
@@ -707,8 +708,9 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="pushConfig">
         /// If push delivery is used with this subscription, this field is
-        /// used to configure it. An empty `pushConfig` signifies that the subscriber
-        /// will pull and ack messages using API methods.
+        /// used to configure it. Either `pushConfig` or `bigQueryConfig` can be set,
+        /// but not both. If both are empty, then the subscriber will pull and ack
+        /// messages using API methods.
         /// </param>
         /// <param name="ackDeadlineSeconds">
         /// The approximate amount of time (on a best-effort basis) Pub/Sub waits for
@@ -771,8 +773,9 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="pushConfig">
         /// If push delivery is used with this subscription, this field is
-        /// used to configure it. An empty `pushConfig` signifies that the subscriber
-        /// will pull and ack messages using API methods.
+        /// used to configure it. Either `pushConfig` or `bigQueryConfig` can be set,
+        /// but not both. If both are empty, then the subscriber will pull and ack
+        /// messages using API methods.
         /// </param>
         /// <param name="ackDeadlineSeconds">
         /// The approximate amount of time (on a best-effort basis) Pub/Sub waits for
@@ -829,8 +832,9 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="pushConfig">
         /// If push delivery is used with this subscription, this field is
-        /// used to configure it. An empty `pushConfig` signifies that the subscriber
-        /// will pull and ack messages using API methods.
+        /// used to configure it. Either `pushConfig` or `bigQueryConfig` can be set,
+        /// but not both. If both are empty, then the subscriber will pull and ack
+        /// messages using API methods.
         /// </param>
         /// <param name="ackDeadlineSeconds">
         /// The approximate amount of time (on a best-effort basis) Pub/Sub waits for
@@ -893,8 +897,9 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="pushConfig">
         /// If push delivery is used with this subscription, this field is
-        /// used to configure it. An empty `pushConfig` signifies that the subscriber
-        /// will pull and ack messages using API methods.
+        /// used to configure it. Either `pushConfig` or `bigQueryConfig` can be set,
+        /// but not both. If both are empty, then the subscriber will pull and ack
+        /// messages using API methods.
         /// </param>
         /// <param name="ackDeadlineSeconds">
         /// The approximate amount of time (on a best-effort basis) Pub/Sub waits for
@@ -957,8 +962,9 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="pushConfig">
         /// If push delivery is used with this subscription, this field is
-        /// used to configure it. An empty `pushConfig` signifies that the subscriber
-        /// will pull and ack messages using API methods.
+        /// used to configure it. Either `pushConfig` or `bigQueryConfig` can be set,
+        /// but not both. If both are empty, then the subscriber will pull and ack
+        /// messages using API methods.
         /// </param>
         /// <param name="ackDeadlineSeconds">
         /// The approximate amount of time (on a best-effort basis) Pub/Sub waits for
