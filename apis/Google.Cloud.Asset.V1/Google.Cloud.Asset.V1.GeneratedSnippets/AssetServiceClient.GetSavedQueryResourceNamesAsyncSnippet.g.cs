@@ -16,32 +16,26 @@
 
 namespace Google.Cloud.Asset.V1.Snippets
 {
-    // [START cloudasset_v1_generated_AssetService_AnalyzeIamPolicy_async]
+    // [START cloudasset_v1_generated_AssetService_GetSavedQuery_async_flattened_resourceNames]
     using Google.Cloud.Asset.V1;
-    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedAssetServiceClientSnippets
     {
-        /// <summary>Snippet for AnalyzeIamPolicyAsync</summary>
+        /// <summary>Snippet for GetSavedQueryAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated for illustrative purposes only.
         /// It may require modifications to work in your environment.
         /// </remarks>
-        public async Task AnalyzeIamPolicyRequestObjectAsync()
+        public async Task GetSavedQueryResourceNamesAsync()
         {
             // Create client
             AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
             // Initialize request argument(s)
-            AnalyzeIamPolicyRequest request = new AnalyzeIamPolicyRequest
-            {
-                AnalysisQuery = new IamPolicyAnalysisQuery(),
-                ExecutionTimeout = new Duration(),
-                SavedAnalysisQuery = "",
-            };
+            SavedQueryName name = SavedQueryName.FromProjectSavedQuery("[PROJECT]", "[SAVED_QUERY]");
             // Make the request
-            AnalyzeIamPolicyResponse response = await assetServiceClient.AnalyzeIamPolicyAsync(request);
+            SavedQuery response = await assetServiceClient.GetSavedQueryAsync(name);
         }
     }
-    // [END cloudasset_v1_generated_AssetService_AnalyzeIamPolicy_async]
+    // [END cloudasset_v1_generated_AssetService_GetSavedQuery_async_flattened_resourceNames]
 }

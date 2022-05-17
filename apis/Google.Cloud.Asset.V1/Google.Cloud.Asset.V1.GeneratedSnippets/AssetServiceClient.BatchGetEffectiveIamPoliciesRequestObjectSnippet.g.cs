@@ -16,32 +16,33 @@
 
 namespace Google.Cloud.Asset.V1.Snippets
 {
-    // [START cloudasset_v1_generated_AssetService_AnalyzeIamPolicy_async]
+    // [START cloudasset_v1_generated_AssetService_BatchGetEffectiveIamPolicies_sync]
+    using Google.Api.Gax;
     using Google.Cloud.Asset.V1;
-    using Google.Protobuf.WellKnownTypes;
-    using System.Threading.Tasks;
 
     public sealed partial class GeneratedAssetServiceClientSnippets
     {
-        /// <summary>Snippet for AnalyzeIamPolicyAsync</summary>
+        /// <summary>Snippet for BatchGetEffectiveIamPolicies</summary>
         /// <remarks>
         /// This snippet has been automatically generated for illustrative purposes only.
         /// It may require modifications to work in your environment.
         /// </remarks>
-        public async Task AnalyzeIamPolicyRequestObjectAsync()
+        public void BatchGetEffectiveIamPoliciesRequestObject()
         {
             // Create client
-            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
             // Initialize request argument(s)
-            AnalyzeIamPolicyRequest request = new AnalyzeIamPolicyRequest
+            BatchGetEffectiveIamPoliciesRequest request = new BatchGetEffectiveIamPoliciesRequest
             {
-                AnalysisQuery = new IamPolicyAnalysisQuery(),
-                ExecutionTimeout = new Duration(),
-                SavedAnalysisQuery = "",
+                ScopeAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                ResourceNames =
+                {
+                    new UnparsedResourceName("a/wildcard/resource"),
+                },
             };
             // Make the request
-            AnalyzeIamPolicyResponse response = await assetServiceClient.AnalyzeIamPolicyAsync(request);
+            BatchGetEffectiveIamPoliciesResponse response = assetServiceClient.BatchGetEffectiveIamPolicies(request);
         }
     }
-    // [END cloudasset_v1_generated_AssetService_AnalyzeIamPolicy_async]
+    // [END cloudasset_v1_generated_AssetService_BatchGetEffectiveIamPolicies_sync]
 }

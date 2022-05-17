@@ -1256,6 +1256,984 @@
       },
       "canonical": true,
       "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_CreateSavedQuery_sync",
+      "title": "CreateSavedQueryRequestObject",
+      "description": "Snippet for CreateSavedQuery",
+      "file": "AssetServiceClient.CreateSavedQueryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSavedQuery",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.CreateSavedQuery",
+        "resultType": "Google.Cloud.Asset.V1.SavedQuery",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSavedQuery",
+          "fullName": "google.cloud.asset.v1.AssetService.CreateSavedQuery",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_CreateSavedQuery_async",
+      "title": "CreateSavedQueryRequestObjectAsync",
+      "description": "Snippet for CreateSavedQueryAsync",
+      "file": "AssetServiceClient.CreateSavedQueryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSavedQueryAsync",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.CreateSavedQueryAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Asset.V1.SavedQuery>",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSavedQuery",
+          "fullName": "google.cloud.asset.v1.AssetService.CreateSavedQuery",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_CreateSavedQuery_sync_flattened",
+      "title": "CreateSavedQuery",
+      "description": "Snippet for CreateSavedQuery",
+      "file": "AssetServiceClient.CreateSavedQuerySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSavedQuery",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.CreateSavedQuery",
+        "resultType": "Google.Cloud.Asset.V1.SavedQuery",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSavedQuery",
+          "fullName": "google.cloud.asset.v1.AssetService.CreateSavedQuery",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_CreateSavedQuery_async_flattened",
+      "title": "CreateSavedQueryAsync",
+      "description": "Snippet for CreateSavedQueryAsync",
+      "file": "AssetServiceClient.CreateSavedQueryAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSavedQueryAsync",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.CreateSavedQueryAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Asset.V1.SavedQuery>",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSavedQuery",
+          "fullName": "google.cloud.asset.v1.AssetService.CreateSavedQuery",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_CreateSavedQuery_sync_flattened_resourceNames1",
+      "title": "CreateSavedQueryResourceNames1",
+      "description": "Snippet for CreateSavedQuery",
+      "file": "AssetServiceClient.CreateSavedQueryResourceNames1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSavedQuery",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.CreateSavedQuery",
+        "resultType": "Google.Cloud.Asset.V1.SavedQuery",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSavedQuery",
+          "fullName": "google.cloud.asset.v1.AssetService.CreateSavedQuery",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_CreateSavedQuery_async_flattened_resourceNames1",
+      "title": "CreateSavedQueryResourceNames1Async",
+      "description": "Snippet for CreateSavedQueryAsync",
+      "file": "AssetServiceClient.CreateSavedQueryResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSavedQueryAsync",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.CreateSavedQueryAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Asset.V1.SavedQuery>",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSavedQuery",
+          "fullName": "google.cloud.asset.v1.AssetService.CreateSavedQuery",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_CreateSavedQuery_sync_flattened_resourceNames2",
+      "title": "CreateSavedQueryResourceNames2",
+      "description": "Snippet for CreateSavedQuery",
+      "file": "AssetServiceClient.CreateSavedQueryResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSavedQuery",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.CreateSavedQuery",
+        "resultType": "Google.Cloud.Asset.V1.SavedQuery",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSavedQuery",
+          "fullName": "google.cloud.asset.v1.AssetService.CreateSavedQuery",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_CreateSavedQuery_async_flattened_resourceNames2",
+      "title": "CreateSavedQueryResourceNames2Async",
+      "description": "Snippet for CreateSavedQueryAsync",
+      "file": "AssetServiceClient.CreateSavedQueryResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSavedQueryAsync",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.CreateSavedQueryAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Asset.V1.SavedQuery>",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSavedQuery",
+          "fullName": "google.cloud.asset.v1.AssetService.CreateSavedQuery",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_CreateSavedQuery_sync_flattened_resourceNames3",
+      "title": "CreateSavedQueryResourceNames3",
+      "description": "Snippet for CreateSavedQuery",
+      "file": "AssetServiceClient.CreateSavedQueryResourceNames3Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSavedQuery",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.CreateSavedQuery",
+        "resultType": "Google.Cloud.Asset.V1.SavedQuery",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSavedQuery",
+          "fullName": "google.cloud.asset.v1.AssetService.CreateSavedQuery",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_CreateSavedQuery_async_flattened_resourceNames3",
+      "title": "CreateSavedQueryResourceNames3Async",
+      "description": "Snippet for CreateSavedQueryAsync",
+      "file": "AssetServiceClient.CreateSavedQueryResourceNames3AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSavedQueryAsync",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.CreateSavedQueryAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Asset.V1.SavedQuery>",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSavedQuery",
+          "fullName": "google.cloud.asset.v1.AssetService.CreateSavedQuery",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_GetSavedQuery_sync",
+      "title": "GetSavedQueryRequestObject",
+      "description": "Snippet for GetSavedQuery",
+      "file": "AssetServiceClient.GetSavedQueryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSavedQuery",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.GetSavedQuery",
+        "resultType": "Google.Cloud.Asset.V1.SavedQuery",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "GetSavedQuery",
+          "fullName": "google.cloud.asset.v1.AssetService.GetSavedQuery",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_GetSavedQuery_async",
+      "title": "GetSavedQueryRequestObjectAsync",
+      "description": "Snippet for GetSavedQueryAsync",
+      "file": "AssetServiceClient.GetSavedQueryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSavedQueryAsync",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.GetSavedQueryAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Asset.V1.SavedQuery>",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "GetSavedQuery",
+          "fullName": "google.cloud.asset.v1.AssetService.GetSavedQuery",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_GetSavedQuery_sync_flattened",
+      "title": "GetSavedQuery",
+      "description": "Snippet for GetSavedQuery",
+      "file": "AssetServiceClient.GetSavedQuerySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSavedQuery",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.GetSavedQuery",
+        "resultType": "Google.Cloud.Asset.V1.SavedQuery",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "GetSavedQuery",
+          "fullName": "google.cloud.asset.v1.AssetService.GetSavedQuery",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_GetSavedQuery_async_flattened",
+      "title": "GetSavedQueryAsync",
+      "description": "Snippet for GetSavedQueryAsync",
+      "file": "AssetServiceClient.GetSavedQueryAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSavedQueryAsync",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.GetSavedQueryAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Asset.V1.SavedQuery>",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "GetSavedQuery",
+          "fullName": "google.cloud.asset.v1.AssetService.GetSavedQuery",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_GetSavedQuery_sync_flattened_resourceNames",
+      "title": "GetSavedQueryResourceNames",
+      "description": "Snippet for GetSavedQuery",
+      "file": "AssetServiceClient.GetSavedQueryResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSavedQuery",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.GetSavedQuery",
+        "resultType": "Google.Cloud.Asset.V1.SavedQuery",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "GetSavedQuery",
+          "fullName": "google.cloud.asset.v1.AssetService.GetSavedQuery",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_GetSavedQuery_async_flattened_resourceNames",
+      "title": "GetSavedQueryResourceNamesAsync",
+      "description": "Snippet for GetSavedQueryAsync",
+      "file": "AssetServiceClient.GetSavedQueryResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSavedQueryAsync",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.GetSavedQueryAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Asset.V1.SavedQuery>",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "GetSavedQuery",
+          "fullName": "google.cloud.asset.v1.AssetService.GetSavedQuery",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_ListSavedQueries_sync",
+      "title": "ListSavedQueriesRequestObject",
+      "description": "Snippet for ListSavedQueries",
+      "file": "AssetServiceClient.ListSavedQueriesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSavedQueries",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.ListSavedQueries",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Asset.V1.ListSavedQueriesResponse, Google.Cloud.Asset.V1.SavedQuery>",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "ListSavedQueries",
+          "fullName": "google.cloud.asset.v1.AssetService.ListSavedQueries",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_ListSavedQueries_async",
+      "title": "ListSavedQueriesRequestObjectAsync",
+      "description": "Snippet for ListSavedQueriesAsync",
+      "file": "AssetServiceClient.ListSavedQueriesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSavedQueriesAsync",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.ListSavedQueriesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Asset.V1.ListSavedQueriesResponse, Google.Cloud.Asset.V1.SavedQuery>",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "ListSavedQueries",
+          "fullName": "google.cloud.asset.v1.AssetService.ListSavedQueries",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_ListSavedQueries_sync_flattened",
+      "title": "ListSavedQueries",
+      "description": "Snippet for ListSavedQueries",
+      "file": "AssetServiceClient.ListSavedQueriesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSavedQueries",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.ListSavedQueries",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Asset.V1.ListSavedQueriesResponse, Google.Cloud.Asset.V1.SavedQuery>",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "ListSavedQueries",
+          "fullName": "google.cloud.asset.v1.AssetService.ListSavedQueries",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_ListSavedQueries_async_flattened",
+      "title": "ListSavedQueriesAsync",
+      "description": "Snippet for ListSavedQueriesAsync",
+      "file": "AssetServiceClient.ListSavedQueriesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSavedQueriesAsync",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.ListSavedQueriesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Asset.V1.ListSavedQueriesResponse, Google.Cloud.Asset.V1.SavedQuery>",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "ListSavedQueries",
+          "fullName": "google.cloud.asset.v1.AssetService.ListSavedQueries",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_ListSavedQueries_sync_flattened_resourceNames1",
+      "title": "ListSavedQueriesResourceNames1",
+      "description": "Snippet for ListSavedQueries",
+      "file": "AssetServiceClient.ListSavedQueriesResourceNames1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSavedQueries",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.ListSavedQueries",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Asset.V1.ListSavedQueriesResponse, Google.Cloud.Asset.V1.SavedQuery>",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "ListSavedQueries",
+          "fullName": "google.cloud.asset.v1.AssetService.ListSavedQueries",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_ListSavedQueries_async_flattened_resourceNames1",
+      "title": "ListSavedQueriesResourceNames1Async",
+      "description": "Snippet for ListSavedQueriesAsync",
+      "file": "AssetServiceClient.ListSavedQueriesResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSavedQueriesAsync",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.ListSavedQueriesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Asset.V1.ListSavedQueriesResponse, Google.Cloud.Asset.V1.SavedQuery>",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "ListSavedQueries",
+          "fullName": "google.cloud.asset.v1.AssetService.ListSavedQueries",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_ListSavedQueries_sync_flattened_resourceNames2",
+      "title": "ListSavedQueriesResourceNames2",
+      "description": "Snippet for ListSavedQueries",
+      "file": "AssetServiceClient.ListSavedQueriesResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSavedQueries",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.ListSavedQueries",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Asset.V1.ListSavedQueriesResponse, Google.Cloud.Asset.V1.SavedQuery>",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "ListSavedQueries",
+          "fullName": "google.cloud.asset.v1.AssetService.ListSavedQueries",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_ListSavedQueries_async_flattened_resourceNames2",
+      "title": "ListSavedQueriesResourceNames2Async",
+      "description": "Snippet for ListSavedQueriesAsync",
+      "file": "AssetServiceClient.ListSavedQueriesResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSavedQueriesAsync",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.ListSavedQueriesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Asset.V1.ListSavedQueriesResponse, Google.Cloud.Asset.V1.SavedQuery>",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "ListSavedQueries",
+          "fullName": "google.cloud.asset.v1.AssetService.ListSavedQueries",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_ListSavedQueries_sync_flattened_resourceNames3",
+      "title": "ListSavedQueriesResourceNames3",
+      "description": "Snippet for ListSavedQueries",
+      "file": "AssetServiceClient.ListSavedQueriesResourceNames3Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSavedQueries",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.ListSavedQueries",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Asset.V1.ListSavedQueriesResponse, Google.Cloud.Asset.V1.SavedQuery>",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "ListSavedQueries",
+          "fullName": "google.cloud.asset.v1.AssetService.ListSavedQueries",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_ListSavedQueries_async_flattened_resourceNames3",
+      "title": "ListSavedQueriesResourceNames3Async",
+      "description": "Snippet for ListSavedQueriesAsync",
+      "file": "AssetServiceClient.ListSavedQueriesResourceNames3AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSavedQueriesAsync",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.ListSavedQueriesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Asset.V1.ListSavedQueriesResponse, Google.Cloud.Asset.V1.SavedQuery>",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "ListSavedQueries",
+          "fullName": "google.cloud.asset.v1.AssetService.ListSavedQueries",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_UpdateSavedQuery_sync",
+      "title": "UpdateSavedQueryRequestObject",
+      "description": "Snippet for UpdateSavedQuery",
+      "file": "AssetServiceClient.UpdateSavedQueryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSavedQuery",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.UpdateSavedQuery",
+        "resultType": "Google.Cloud.Asset.V1.SavedQuery",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSavedQuery",
+          "fullName": "google.cloud.asset.v1.AssetService.UpdateSavedQuery",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_UpdateSavedQuery_async",
+      "title": "UpdateSavedQueryRequestObjectAsync",
+      "description": "Snippet for UpdateSavedQueryAsync",
+      "file": "AssetServiceClient.UpdateSavedQueryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSavedQueryAsync",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.UpdateSavedQueryAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Asset.V1.SavedQuery>",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSavedQuery",
+          "fullName": "google.cloud.asset.v1.AssetService.UpdateSavedQuery",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_UpdateSavedQuery_sync_flattened",
+      "title": "UpdateSavedQuery",
+      "description": "Snippet for UpdateSavedQuery",
+      "file": "AssetServiceClient.UpdateSavedQuerySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSavedQuery",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.UpdateSavedQuery",
+        "resultType": "Google.Cloud.Asset.V1.SavedQuery",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSavedQuery",
+          "fullName": "google.cloud.asset.v1.AssetService.UpdateSavedQuery",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_UpdateSavedQuery_async_flattened",
+      "title": "UpdateSavedQueryAsync",
+      "description": "Snippet for UpdateSavedQueryAsync",
+      "file": "AssetServiceClient.UpdateSavedQueryAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSavedQueryAsync",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.UpdateSavedQueryAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Asset.V1.SavedQuery>",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSavedQuery",
+          "fullName": "google.cloud.asset.v1.AssetService.UpdateSavedQuery",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_DeleteSavedQuery_sync",
+      "title": "DeleteSavedQueryRequestObject",
+      "description": "Snippet for DeleteSavedQuery",
+      "file": "AssetServiceClient.DeleteSavedQueryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSavedQuery",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.DeleteSavedQuery",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSavedQuery",
+          "fullName": "google.cloud.asset.v1.AssetService.DeleteSavedQuery",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_DeleteSavedQuery_async",
+      "title": "DeleteSavedQueryRequestObjectAsync",
+      "description": "Snippet for DeleteSavedQueryAsync",
+      "file": "AssetServiceClient.DeleteSavedQueryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSavedQueryAsync",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.DeleteSavedQueryAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSavedQuery",
+          "fullName": "google.cloud.asset.v1.AssetService.DeleteSavedQuery",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_DeleteSavedQuery_sync_flattened",
+      "title": "DeleteSavedQuery",
+      "description": "Snippet for DeleteSavedQuery",
+      "file": "AssetServiceClient.DeleteSavedQuerySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSavedQuery",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.DeleteSavedQuery",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSavedQuery",
+          "fullName": "google.cloud.asset.v1.AssetService.DeleteSavedQuery",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_DeleteSavedQuery_async_flattened",
+      "title": "DeleteSavedQueryAsync",
+      "description": "Snippet for DeleteSavedQueryAsync",
+      "file": "AssetServiceClient.DeleteSavedQueryAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSavedQueryAsync",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.DeleteSavedQueryAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSavedQuery",
+          "fullName": "google.cloud.asset.v1.AssetService.DeleteSavedQuery",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_DeleteSavedQuery_sync_flattened_resourceNames",
+      "title": "DeleteSavedQueryResourceNames",
+      "description": "Snippet for DeleteSavedQuery",
+      "file": "AssetServiceClient.DeleteSavedQueryResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSavedQuery",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.DeleteSavedQuery",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSavedQuery",
+          "fullName": "google.cloud.asset.v1.AssetService.DeleteSavedQuery",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_DeleteSavedQuery_async_flattened_resourceNames",
+      "title": "DeleteSavedQueryResourceNamesAsync",
+      "description": "Snippet for DeleteSavedQueryAsync",
+      "file": "AssetServiceClient.DeleteSavedQueryResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSavedQueryAsync",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.DeleteSavedQueryAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSavedQuery",
+          "fullName": "google.cloud.asset.v1.AssetService.DeleteSavedQuery",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_BatchGetEffectiveIamPolicies_sync",
+      "title": "BatchGetEffectiveIamPoliciesRequestObject",
+      "description": "Snippet for BatchGetEffectiveIamPolicies",
+      "file": "AssetServiceClient.BatchGetEffectiveIamPoliciesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchGetEffectiveIamPolicies",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.BatchGetEffectiveIamPolicies",
+        "resultType": "Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "BatchGetEffectiveIamPolicies",
+          "fullName": "google.cloud.asset.v1.AssetService.BatchGetEffectiveIamPolicies",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_BatchGetEffectiveIamPolicies_async",
+      "title": "BatchGetEffectiveIamPoliciesRequestObjectAsync",
+      "description": "Snippet for BatchGetEffectiveIamPoliciesAsync",
+      "file": "AssetServiceClient.BatchGetEffectiveIamPoliciesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchGetEffectiveIamPoliciesAsync",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.BatchGetEffectiveIamPoliciesAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse>",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "BatchGetEffectiveIamPolicies",
+          "fullName": "google.cloud.asset.v1.AssetService.BatchGetEffectiveIamPolicies",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
     }
   ]
 }

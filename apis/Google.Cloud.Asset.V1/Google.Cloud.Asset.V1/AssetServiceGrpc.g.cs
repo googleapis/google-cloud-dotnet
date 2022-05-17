@@ -3,7 +3,7 @@
 //     source: google/cloud/asset/v1/asset_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2021 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -109,6 +109,24 @@ namespace Google.Cloud.Asset.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.AnalyzeMoveRequest> __Marshaller_google_cloud_asset_v1_AnalyzeMoveRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.AnalyzeMoveRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.AnalyzeMoveResponse> __Marshaller_google_cloud_asset_v1_AnalyzeMoveResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.AnalyzeMoveResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.CreateSavedQueryRequest> __Marshaller_google_cloud_asset_v1_CreateSavedQueryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.CreateSavedQueryRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.SavedQuery> __Marshaller_google_cloud_asset_v1_SavedQuery = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.SavedQuery.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.GetSavedQueryRequest> __Marshaller_google_cloud_asset_v1_GetSavedQueryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.GetSavedQueryRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.ListSavedQueriesRequest> __Marshaller_google_cloud_asset_v1_ListSavedQueriesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.ListSavedQueriesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.ListSavedQueriesResponse> __Marshaller_google_cloud_asset_v1_ListSavedQueriesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.ListSavedQueriesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.UpdateSavedQueryRequest> __Marshaller_google_cloud_asset_v1_UpdateSavedQueryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.UpdateSavedQueryRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.DeleteSavedQueryRequest> __Marshaller_google_cloud_asset_v1_DeleteSavedQueryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.DeleteSavedQueryRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesRequest> __Marshaller_google_cloud_asset_v1_BatchGetEffectiveIamPoliciesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse> __Marshaller_google_cloud_asset_v1_BatchGetEffectiveIamPoliciesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Asset.V1.ExportAssetsRequest, global::Google.LongRunning.Operation> __Method_ExportAssets = new grpc::Method<global::Google.Cloud.Asset.V1.ExportAssetsRequest, global::Google.LongRunning.Operation>(
@@ -214,6 +232,54 @@ namespace Google.Cloud.Asset.V1 {
         __Marshaller_google_cloud_asset_v1_AnalyzeMoveRequest,
         __Marshaller_google_cloud_asset_v1_AnalyzeMoveResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Asset.V1.CreateSavedQueryRequest, global::Google.Cloud.Asset.V1.SavedQuery> __Method_CreateSavedQuery = new grpc::Method<global::Google.Cloud.Asset.V1.CreateSavedQueryRequest, global::Google.Cloud.Asset.V1.SavedQuery>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateSavedQuery",
+        __Marshaller_google_cloud_asset_v1_CreateSavedQueryRequest,
+        __Marshaller_google_cloud_asset_v1_SavedQuery);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Asset.V1.GetSavedQueryRequest, global::Google.Cloud.Asset.V1.SavedQuery> __Method_GetSavedQuery = new grpc::Method<global::Google.Cloud.Asset.V1.GetSavedQueryRequest, global::Google.Cloud.Asset.V1.SavedQuery>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetSavedQuery",
+        __Marshaller_google_cloud_asset_v1_GetSavedQueryRequest,
+        __Marshaller_google_cloud_asset_v1_SavedQuery);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Asset.V1.ListSavedQueriesRequest, global::Google.Cloud.Asset.V1.ListSavedQueriesResponse> __Method_ListSavedQueries = new grpc::Method<global::Google.Cloud.Asset.V1.ListSavedQueriesRequest, global::Google.Cloud.Asset.V1.ListSavedQueriesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListSavedQueries",
+        __Marshaller_google_cloud_asset_v1_ListSavedQueriesRequest,
+        __Marshaller_google_cloud_asset_v1_ListSavedQueriesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Asset.V1.UpdateSavedQueryRequest, global::Google.Cloud.Asset.V1.SavedQuery> __Method_UpdateSavedQuery = new grpc::Method<global::Google.Cloud.Asset.V1.UpdateSavedQueryRequest, global::Google.Cloud.Asset.V1.SavedQuery>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateSavedQuery",
+        __Marshaller_google_cloud_asset_v1_UpdateSavedQueryRequest,
+        __Marshaller_google_cloud_asset_v1_SavedQuery);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Asset.V1.DeleteSavedQueryRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteSavedQuery = new grpc::Method<global::Google.Cloud.Asset.V1.DeleteSavedQueryRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteSavedQuery",
+        __Marshaller_google_cloud_asset_v1_DeleteSavedQueryRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesRequest, global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse> __Method_BatchGetEffectiveIamPolicies = new grpc::Method<global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesRequest, global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchGetEffectiveIamPolicies",
+        __Marshaller_google_cloud_asset_v1_BatchGetEffectiveIamPoliciesRequest,
+        __Marshaller_google_cloud_asset_v1_BatchGetEffectiveIamPoliciesResponse);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -228,13 +294,14 @@ namespace Google.Cloud.Asset.V1 {
       /// Exports assets with time and resource types to a given Cloud Storage
       /// location/BigQuery table. For Cloud Storage location destinations, the
       /// output format is newline-delimited JSON. Each line represents a
-      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON format; for BigQuery table
-      /// destinations, the output table stores the fields in asset proto as columns.
-      /// This API implements the [google.longrunning.Operation][google.longrunning.Operation] API
-      /// , which allows you to keep track of the export. We recommend intervals of
-      /// at least 2 seconds with exponential retry to poll the export operation
-      /// result. For regular-size resource parent, the export operation usually
-      /// finishes within 5 minutes.
+      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON
+      /// format; for BigQuery table destinations, the output table stores the fields
+      /// in asset Protobuf as columns. This API implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation] API, which
+      /// allows you to keep track of the export. We recommend intervals of at least
+      /// 2 seconds with exponential retry to poll the export operation result. For
+      /// regular-size resource parent, the export operation usually finishes within
+      /// 5 minutes.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -385,11 +452,12 @@ namespace Google.Cloud.Asset.V1 {
       /// accesses on which resources, and writes the analysis results to a Google
       /// Cloud Storage or a BigQuery destination. For Cloud Storage destination, the
       /// output format is the JSON format that represents a
-      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse]. This method implements the
-      /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
-      /// status. We recommend intervals of at least 2 seconds with exponential
-      /// backoff retry to poll the operation result. The metadata contains the
-      /// metadata for the long-running operation.
+      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse].
+      /// This method implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation], which allows
+      /// you to track the operation status. We recommend intervals of at least 2
+      /// seconds with exponential backoff retry to poll the operation result. The
+      /// metadata contains the metadata for the long-running operation.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -412,6 +480,78 @@ namespace Google.Cloud.Asset.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Asset.V1.AnalyzeMoveResponse> AnalyzeMove(global::Google.Cloud.Asset.V1.AnalyzeMoveRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a saved query in a parent project/folder/organization.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Asset.V1.SavedQuery> CreateSavedQuery(global::Google.Cloud.Asset.V1.CreateSavedQueryRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details about a saved query.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Asset.V1.SavedQuery> GetSavedQuery(global::Google.Cloud.Asset.V1.GetSavedQueryRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all saved queries in a parent project/folder/organization.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Asset.V1.ListSavedQueriesResponse> ListSavedQueries(global::Google.Cloud.Asset.V1.ListSavedQueriesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a saved query.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Asset.V1.SavedQuery> UpdateSavedQuery(global::Google.Cloud.Asset.V1.UpdateSavedQueryRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a saved query.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSavedQuery(global::Google.Cloud.Asset.V1.DeleteSavedQueryRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets effective IAM policies for a batch of resources.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse> BatchGetEffectiveIamPolicies(global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -449,13 +589,14 @@ namespace Google.Cloud.Asset.V1 {
       /// Exports assets with time and resource types to a given Cloud Storage
       /// location/BigQuery table. For Cloud Storage location destinations, the
       /// output format is newline-delimited JSON. Each line represents a
-      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON format; for BigQuery table
-      /// destinations, the output table stores the fields in asset proto as columns.
-      /// This API implements the [google.longrunning.Operation][google.longrunning.Operation] API
-      /// , which allows you to keep track of the export. We recommend intervals of
-      /// at least 2 seconds with exponential retry to poll the export operation
-      /// result. For regular-size resource parent, the export operation usually
-      /// finishes within 5 minutes.
+      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON
+      /// format; for BigQuery table destinations, the output table stores the fields
+      /// in asset Protobuf as columns. This API implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation] API, which
+      /// allows you to keep track of the export. We recommend intervals of at least
+      /// 2 seconds with exponential retry to poll the export operation result. For
+      /// regular-size resource parent, the export operation usually finishes within
+      /// 5 minutes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -471,13 +612,14 @@ namespace Google.Cloud.Asset.V1 {
       /// Exports assets with time and resource types to a given Cloud Storage
       /// location/BigQuery table. For Cloud Storage location destinations, the
       /// output format is newline-delimited JSON. Each line represents a
-      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON format; for BigQuery table
-      /// destinations, the output table stores the fields in asset proto as columns.
-      /// This API implements the [google.longrunning.Operation][google.longrunning.Operation] API
-      /// , which allows you to keep track of the export. We recommend intervals of
-      /// at least 2 seconds with exponential retry to poll the export operation
-      /// result. For regular-size resource parent, the export operation usually
-      /// finishes within 5 minutes.
+      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON
+      /// format; for BigQuery table destinations, the output table stores the fields
+      /// in asset Protobuf as columns. This API implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation] API, which
+      /// allows you to keep track of the export. We recommend intervals of at least
+      /// 2 seconds with exponential retry to poll the export operation result. For
+      /// regular-size resource parent, the export operation usually finishes within
+      /// 5 minutes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -491,13 +633,14 @@ namespace Google.Cloud.Asset.V1 {
       /// Exports assets with time and resource types to a given Cloud Storage
       /// location/BigQuery table. For Cloud Storage location destinations, the
       /// output format is newline-delimited JSON. Each line represents a
-      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON format; for BigQuery table
-      /// destinations, the output table stores the fields in asset proto as columns.
-      /// This API implements the [google.longrunning.Operation][google.longrunning.Operation] API
-      /// , which allows you to keep track of the export. We recommend intervals of
-      /// at least 2 seconds with exponential retry to poll the export operation
-      /// result. For regular-size resource parent, the export operation usually
-      /// finishes within 5 minutes.
+      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON
+      /// format; for BigQuery table destinations, the output table stores the fields
+      /// in asset Protobuf as columns. This API implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation] API, which
+      /// allows you to keep track of the export. We recommend intervals of at least
+      /// 2 seconds with exponential retry to poll the export operation result. For
+      /// regular-size resource parent, the export operation usually finishes within
+      /// 5 minutes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -513,13 +656,14 @@ namespace Google.Cloud.Asset.V1 {
       /// Exports assets with time and resource types to a given Cloud Storage
       /// location/BigQuery table. For Cloud Storage location destinations, the
       /// output format is newline-delimited JSON. Each line represents a
-      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON format; for BigQuery table
-      /// destinations, the output table stores the fields in asset proto as columns.
-      /// This API implements the [google.longrunning.Operation][google.longrunning.Operation] API
-      /// , which allows you to keep track of the export. We recommend intervals of
-      /// at least 2 seconds with exponential retry to poll the export operation
-      /// result. For regular-size resource parent, the export operation usually
-      /// finishes within 5 minutes.
+      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON
+      /// format; for BigQuery table destinations, the output table stores the fields
+      /// in asset Protobuf as columns. This API implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation] API, which
+      /// allows you to keep track of the export. We recommend intervals of at least
+      /// 2 seconds with exponential retry to poll the export operation result. For
+      /// regular-size resource parent, the export operation usually finishes within
+      /// 5 minutes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1074,11 +1218,12 @@ namespace Google.Cloud.Asset.V1 {
       /// accesses on which resources, and writes the analysis results to a Google
       /// Cloud Storage or a BigQuery destination. For Cloud Storage destination, the
       /// output format is the JSON format that represents a
-      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse]. This method implements the
-      /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
-      /// status. We recommend intervals of at least 2 seconds with exponential
-      /// backoff retry to poll the operation result. The metadata contains the
-      /// metadata for the long-running operation.
+      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse].
+      /// This method implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation], which allows
+      /// you to track the operation status. We recommend intervals of at least 2
+      /// seconds with exponential backoff retry to poll the operation result. The
+      /// metadata contains the metadata for the long-running operation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1095,11 +1240,12 @@ namespace Google.Cloud.Asset.V1 {
       /// accesses on which resources, and writes the analysis results to a Google
       /// Cloud Storage or a BigQuery destination. For Cloud Storage destination, the
       /// output format is the JSON format that represents a
-      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse]. This method implements the
-      /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
-      /// status. We recommend intervals of at least 2 seconds with exponential
-      /// backoff retry to poll the operation result. The metadata contains the
-      /// metadata for the long-running operation.
+      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse].
+      /// This method implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation], which allows
+      /// you to track the operation status. We recommend intervals of at least 2
+      /// seconds with exponential backoff retry to poll the operation result. The
+      /// metadata contains the metadata for the long-running operation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1114,11 +1260,12 @@ namespace Google.Cloud.Asset.V1 {
       /// accesses on which resources, and writes the analysis results to a Google
       /// Cloud Storage or a BigQuery destination. For Cloud Storage destination, the
       /// output format is the JSON format that represents a
-      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse]. This method implements the
-      /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
-      /// status. We recommend intervals of at least 2 seconds with exponential
-      /// backoff retry to poll the operation result. The metadata contains the
-      /// metadata for the long-running operation.
+      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse].
+      /// This method implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation], which allows
+      /// you to track the operation status. We recommend intervals of at least 2
+      /// seconds with exponential backoff retry to poll the operation result. The
+      /// metadata contains the metadata for the long-running operation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1135,11 +1282,12 @@ namespace Google.Cloud.Asset.V1 {
       /// accesses on which resources, and writes the analysis results to a Google
       /// Cloud Storage or a BigQuery destination. For Cloud Storage destination, the
       /// output format is the JSON format that represents a
-      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse]. This method implements the
-      /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
-      /// status. We recommend intervals of at least 2 seconds with exponential
-      /// backoff retry to poll the operation result. The metadata contains the
-      /// metadata for the long-running operation.
+      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse].
+      /// This method implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation], which allows
+      /// you to track the operation status. We recommend intervals of at least 2
+      /// seconds with exponential backoff retry to poll the operation result. The
+      /// metadata contains the metadata for the long-running operation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1213,6 +1361,294 @@ namespace Google.Cloud.Asset.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_AnalyzeMove, null, options, request);
       }
+      /// <summary>
+      /// Creates a saved query in a parent project/folder/organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Asset.V1.SavedQuery CreateSavedQuery(global::Google.Cloud.Asset.V1.CreateSavedQueryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateSavedQuery(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a saved query in a parent project/folder/organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Asset.V1.SavedQuery CreateSavedQuery(global::Google.Cloud.Asset.V1.CreateSavedQueryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateSavedQuery, null, options, request);
+      }
+      /// <summary>
+      /// Creates a saved query in a parent project/folder/organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.SavedQuery> CreateSavedQueryAsync(global::Google.Cloud.Asset.V1.CreateSavedQueryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateSavedQueryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a saved query in a parent project/folder/organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.SavedQuery> CreateSavedQueryAsync(global::Google.Cloud.Asset.V1.CreateSavedQueryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateSavedQuery, null, options, request);
+      }
+      /// <summary>
+      /// Gets details about a saved query.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Asset.V1.SavedQuery GetSavedQuery(global::Google.Cloud.Asset.V1.GetSavedQueryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSavedQuery(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details about a saved query.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Asset.V1.SavedQuery GetSavedQuery(global::Google.Cloud.Asset.V1.GetSavedQueryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetSavedQuery, null, options, request);
+      }
+      /// <summary>
+      /// Gets details about a saved query.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.SavedQuery> GetSavedQueryAsync(global::Google.Cloud.Asset.V1.GetSavedQueryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSavedQueryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details about a saved query.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.SavedQuery> GetSavedQueryAsync(global::Google.Cloud.Asset.V1.GetSavedQueryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetSavedQuery, null, options, request);
+      }
+      /// <summary>
+      /// Lists all saved queries in a parent project/folder/organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Asset.V1.ListSavedQueriesResponse ListSavedQueries(global::Google.Cloud.Asset.V1.ListSavedQueriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSavedQueries(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all saved queries in a parent project/folder/organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Asset.V1.ListSavedQueriesResponse ListSavedQueries(global::Google.Cloud.Asset.V1.ListSavedQueriesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListSavedQueries, null, options, request);
+      }
+      /// <summary>
+      /// Lists all saved queries in a parent project/folder/organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.ListSavedQueriesResponse> ListSavedQueriesAsync(global::Google.Cloud.Asset.V1.ListSavedQueriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSavedQueriesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all saved queries in a parent project/folder/organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.ListSavedQueriesResponse> ListSavedQueriesAsync(global::Google.Cloud.Asset.V1.ListSavedQueriesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListSavedQueries, null, options, request);
+      }
+      /// <summary>
+      /// Updates a saved query.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Asset.V1.SavedQuery UpdateSavedQuery(global::Google.Cloud.Asset.V1.UpdateSavedQueryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSavedQuery(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a saved query.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Asset.V1.SavedQuery UpdateSavedQuery(global::Google.Cloud.Asset.V1.UpdateSavedQueryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateSavedQuery, null, options, request);
+      }
+      /// <summary>
+      /// Updates a saved query.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.SavedQuery> UpdateSavedQueryAsync(global::Google.Cloud.Asset.V1.UpdateSavedQueryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSavedQueryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a saved query.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.SavedQuery> UpdateSavedQueryAsync(global::Google.Cloud.Asset.V1.UpdateSavedQueryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateSavedQuery, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a saved query.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSavedQuery(global::Google.Cloud.Asset.V1.DeleteSavedQueryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteSavedQuery(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a saved query.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSavedQuery(global::Google.Cloud.Asset.V1.DeleteSavedQueryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteSavedQuery, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a saved query.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSavedQueryAsync(global::Google.Cloud.Asset.V1.DeleteSavedQueryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteSavedQueryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a saved query.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSavedQueryAsync(global::Google.Cloud.Asset.V1.DeleteSavedQueryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteSavedQuery, null, options, request);
+      }
+      /// <summary>
+      /// Gets effective IAM policies for a batch of resources.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse BatchGetEffectiveIamPolicies(global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchGetEffectiveIamPolicies(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets effective IAM policies for a batch of resources.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse BatchGetEffectiveIamPolicies(global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchGetEffectiveIamPolicies, null, options, request);
+      }
+      /// <summary>
+      /// Gets effective IAM policies for a batch of resources.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse> BatchGetEffectiveIamPoliciesAsync(global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchGetEffectiveIamPoliciesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets effective IAM policies for a batch of resources.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse> BatchGetEffectiveIamPoliciesAsync(global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchGetEffectiveIamPolicies, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override AssetServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -1239,7 +1675,13 @@ namespace Google.Cloud.Asset.V1 {
           .AddMethod(__Method_SearchAllIamPolicies, serviceImpl.SearchAllIamPolicies)
           .AddMethod(__Method_AnalyzeIamPolicy, serviceImpl.AnalyzeIamPolicy)
           .AddMethod(__Method_AnalyzeIamPolicyLongrunning, serviceImpl.AnalyzeIamPolicyLongrunning)
-          .AddMethod(__Method_AnalyzeMove, serviceImpl.AnalyzeMove).Build();
+          .AddMethod(__Method_AnalyzeMove, serviceImpl.AnalyzeMove)
+          .AddMethod(__Method_CreateSavedQuery, serviceImpl.CreateSavedQuery)
+          .AddMethod(__Method_GetSavedQuery, serviceImpl.GetSavedQuery)
+          .AddMethod(__Method_ListSavedQueries, serviceImpl.ListSavedQueries)
+          .AddMethod(__Method_UpdateSavedQuery, serviceImpl.UpdateSavedQuery)
+          .AddMethod(__Method_DeleteSavedQuery, serviceImpl.DeleteSavedQuery)
+          .AddMethod(__Method_BatchGetEffectiveIamPolicies, serviceImpl.BatchGetEffectiveIamPolicies).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -1262,6 +1704,12 @@ namespace Google.Cloud.Asset.V1 {
       serviceBinder.AddMethod(__Method_AnalyzeIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Asset.V1.AnalyzeIamPolicyRequest, global::Google.Cloud.Asset.V1.AnalyzeIamPolicyResponse>(serviceImpl.AnalyzeIamPolicy));
       serviceBinder.AddMethod(__Method_AnalyzeIamPolicyLongrunning, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Asset.V1.AnalyzeIamPolicyLongrunningRequest, global::Google.LongRunning.Operation>(serviceImpl.AnalyzeIamPolicyLongrunning));
       serviceBinder.AddMethod(__Method_AnalyzeMove, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Asset.V1.AnalyzeMoveRequest, global::Google.Cloud.Asset.V1.AnalyzeMoveResponse>(serviceImpl.AnalyzeMove));
+      serviceBinder.AddMethod(__Method_CreateSavedQuery, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Asset.V1.CreateSavedQueryRequest, global::Google.Cloud.Asset.V1.SavedQuery>(serviceImpl.CreateSavedQuery));
+      serviceBinder.AddMethod(__Method_GetSavedQuery, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Asset.V1.GetSavedQueryRequest, global::Google.Cloud.Asset.V1.SavedQuery>(serviceImpl.GetSavedQuery));
+      serviceBinder.AddMethod(__Method_ListSavedQueries, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Asset.V1.ListSavedQueriesRequest, global::Google.Cloud.Asset.V1.ListSavedQueriesResponse>(serviceImpl.ListSavedQueries));
+      serviceBinder.AddMethod(__Method_UpdateSavedQuery, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Asset.V1.UpdateSavedQueryRequest, global::Google.Cloud.Asset.V1.SavedQuery>(serviceImpl.UpdateSavedQuery));
+      serviceBinder.AddMethod(__Method_DeleteSavedQuery, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Asset.V1.DeleteSavedQueryRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteSavedQuery));
+      serviceBinder.AddMethod(__Method_BatchGetEffectiveIamPolicies, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesRequest, global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse>(serviceImpl.BatchGetEffectiveIamPolicies));
     }
 
   }
