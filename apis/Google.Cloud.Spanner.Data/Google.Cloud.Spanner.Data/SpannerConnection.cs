@@ -273,8 +273,18 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public new SpannerTransaction BeginTransaction() => (SpannerTransaction)base.BeginTransaction();
 
-        // FIXME: This is "new" because there's now BeginTransactionAsync in the BCL.
-        // We should probably override BeginDbTransactionAsync...
+#if NETSTANDARD2_1_OR_GREATER
+        /// <inheritdoc />
+        protected override async ValueTask<DbTransaction> BeginDbTransactionAsync(IsolationLevel isolationLevel, CancellationToken cancellationToken)
+        {
+            if (isolationLevel != IsolationLevel.Unspecified && isolationLevel != IsolationLevel.Serializable)
+            {
+                throw new NotSupportedException(
+                    $"Cloud Spanner only supports isolation levels {IsolationLevel.Serializable} and {IsolationLevel.Unspecified}.");
+            }
+            return await BeginTransactionAsync(cancellationToken).ConfigureAwait(false);
+        }
+#endif
 
         /// <summary>
         /// Begins a new read/write transaction.

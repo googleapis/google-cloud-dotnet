@@ -353,24 +353,29 @@ namespace Google.Cloud.Spanner.Data
         /// Commits the database transaction synchronously, returning the database timestamp for the commit via <paramref name="timestamp"/>.
         /// </summary>
         /// <param name="timestamp">Returns the UTC timestamp when the data was written to the database.</param>
-        public void Commit(out DateTime timestamp) => timestamp = Task.Run(() => CommitAsync(default)).ResultWithUnwrappedExceptions();
+        public void Commit(out DateTime timestamp) => timestamp = Task.Run(() => CommitAndReturnTimestampAsync(default)).ResultWithUnwrappedExceptions();
 
-        // FIXME: This is "new" because there's now CommitAsync in the BCL. That returns just Task, rather than Task<DateTime>,
-        // which is awkward...        
+        /// <inheritdoc />
+        public
+#if NETSTANDARD2_1_OR_GREATER
+            override
+#endif
+            Task CommitAsync(CancellationToken cancellationToken = default) => CommitAndReturnTimestampAsync(cancellationToken);
 
         /// <summary>
-        /// Commits the database transaction asynchronously.
+        /// Commits the database transaction asynchronously, returning the UTC timestamp when the data was written to the database.
         /// </summary>
         /// <param name="cancellationToken">A cancellation token used for this task.</param>
         /// <returns>Returns the UTC timestamp when the data was written to the database.</returns>
-#if NET462
-        public Task<DateTime> CommitAsync(CancellationToken cancellationToken = default)
-#else
-        public new Task<DateTime> CommitAsync(CancellationToken cancellationToken = default)
-#endif
+        public Task<DateTime> CommitAndReturnTimestampAsync(CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckState(Mode != TransactionMode.ReadOnly, "You cannot commit a readonly transaction.");
-            var request = new CommitRequest { Mutations = { _mutations }, ReturnCommitStats = LogCommitStats, RequestOptions = BuildCommitRequestOptions() };
+            var request = new CommitRequest
+            { 
+                Mutations = { _mutations },
+                ReturnCommitStats = LogCommitStats,
+                RequestOptions = new RequestOptions { Priority = PriorityConverter.ToProto(CommitPriority), TransactionTag = _tag ?? "" }
+            };
             return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
             {
                 var callSettings = SpannerConnection.CreateCallSettings(settings => settings.CommitSettings, CommitTimeout, cancellationToken);
@@ -387,8 +392,7 @@ namespace Google.Cloud.Spanner.Data
             },
             "SpannerTransaction.Commit", SpannerConnection.Logger);
         }
-        private RequestOptions BuildCommitRequestOptions() =>
-            new RequestOptions { Priority = PriorityConverter.ToProto(CommitPriority), TransactionTag = _tag ?? "" };
+
 
         /// <inheritdoc />
         public override void Rollback() => Task.Run(() => RollbackAsync(default)).WaitWithUnwrappedExceptions();
