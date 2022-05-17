@@ -17,6 +17,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
+using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -62,6 +63,12 @@ namespace Google.Cloud.Asset.V1
             AnalyzeIamPolicyLongrunningSettings = existing.AnalyzeIamPolicyLongrunningSettings;
             AnalyzeIamPolicyLongrunningOperationsSettings = existing.AnalyzeIamPolicyLongrunningOperationsSettings.Clone();
             AnalyzeMoveSettings = existing.AnalyzeMoveSettings;
+            CreateSavedQuerySettings = existing.CreateSavedQuerySettings;
+            GetSavedQuerySettings = existing.GetSavedQuerySettings;
+            ListSavedQueriesSettings = existing.ListSavedQueriesSettings;
+            UpdateSavedQuerySettings = existing.UpdateSavedQuerySettings;
+            DeleteSavedQuerySettings = existing.DeleteSavedQuerySettings;
+            BatchGetEffectiveIamPoliciesSettings = existing.BatchGetEffectiveIamPoliciesSettings;
             OnCopy(existing);
         }
 
@@ -323,6 +330,79 @@ namespace Google.Cloud.Asset.V1
         /// </remarks>
         public gaxgrpc::CallSettings AnalyzeMoveSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AssetServiceClient.CreateSavedQuery</c> and <c>AssetServiceClient.CreateSavedQueryAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateSavedQuerySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AssetServiceClient.GetSavedQuery</c> and <c>AssetServiceClient.GetSavedQueryAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetSavedQuerySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AssetServiceClient.ListSavedQueries</c> and <c>AssetServiceClient.ListSavedQueriesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListSavedQueriesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AssetServiceClient.UpdateSavedQuery</c> and <c>AssetServiceClient.UpdateSavedQueryAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateSavedQuerySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AssetServiceClient.DeleteSavedQuery</c> and <c>AssetServiceClient.DeleteSavedQueryAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteSavedQuerySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AssetServiceClient.BatchGetEffectiveIamPolicies</c> and
+        /// <c>AssetServiceClient.BatchGetEffectiveIamPoliciesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchGetEffectiveIamPoliciesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="AssetServiceSettings"/> object.</returns>
         public AssetServiceSettings Clone() => new AssetServiceSettings(this);
@@ -487,13 +567,14 @@ namespace Google.Cloud.Asset.V1
         /// Exports assets with time and resource types to a given Cloud Storage
         /// location/BigQuery table. For Cloud Storage location destinations, the
         /// output format is newline-delimited JSON. Each line represents a
-        /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON format; for BigQuery table
-        /// destinations, the output table stores the fields in asset proto as columns.
-        /// This API implements the [google.longrunning.Operation][google.longrunning.Operation] API
-        /// , which allows you to keep track of the export. We recommend intervals of
-        /// at least 2 seconds with exponential retry to poll the export operation
-        /// result. For regular-size resource parent, the export operation usually
-        /// finishes within 5 minutes.
+        /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON
+        /// format; for BigQuery table destinations, the output table stores the fields
+        /// in asset Protobuf as columns. This API implements the
+        /// [google.longrunning.Operation][google.longrunning.Operation] API, which
+        /// allows you to keep track of the export. We recommend intervals of at least
+        /// 2 seconds with exponential retry to poll the export operation result. For
+        /// regular-size resource parent, the export operation usually finishes within
+        /// 5 minutes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -505,13 +586,14 @@ namespace Google.Cloud.Asset.V1
         /// Exports assets with time and resource types to a given Cloud Storage
         /// location/BigQuery table. For Cloud Storage location destinations, the
         /// output format is newline-delimited JSON. Each line represents a
-        /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON format; for BigQuery table
-        /// destinations, the output table stores the fields in asset proto as columns.
-        /// This API implements the [google.longrunning.Operation][google.longrunning.Operation] API
-        /// , which allows you to keep track of the export. We recommend intervals of
-        /// at least 2 seconds with exponential retry to poll the export operation
-        /// result. For regular-size resource parent, the export operation usually
-        /// finishes within 5 minutes.
+        /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON
+        /// format; for BigQuery table destinations, the output table stores the fields
+        /// in asset Protobuf as columns. This API implements the
+        /// [google.longrunning.Operation][google.longrunning.Operation] API, which
+        /// allows you to keep track of the export. We recommend intervals of at least
+        /// 2 seconds with exponential retry to poll the export operation result. For
+        /// regular-size resource parent, the export operation usually finishes within
+        /// 5 minutes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -523,13 +605,14 @@ namespace Google.Cloud.Asset.V1
         /// Exports assets with time and resource types to a given Cloud Storage
         /// location/BigQuery table. For Cloud Storage location destinations, the
         /// output format is newline-delimited JSON. Each line represents a
-        /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON format; for BigQuery table
-        /// destinations, the output table stores the fields in asset proto as columns.
-        /// This API implements the [google.longrunning.Operation][google.longrunning.Operation] API
-        /// , which allows you to keep track of the export. We recommend intervals of
-        /// at least 2 seconds with exponential retry to poll the export operation
-        /// result. For regular-size resource parent, the export operation usually
-        /// finishes within 5 minutes.
+        /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON
+        /// format; for BigQuery table destinations, the output table stores the fields
+        /// in asset Protobuf as columns. This API implements the
+        /// [google.longrunning.Operation][google.longrunning.Operation] API, which
+        /// allows you to keep track of the export. We recommend intervals of at least
+        /// 2 seconds with exponential retry to poll the export operation result. For
+        /// regular-size resource parent, the export operation usually finishes within
+        /// 5 minutes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -588,10 +671,11 @@ namespace Google.Cloud.Asset.V1
         /// response.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the organization or project the assets belong to. Format:
-        /// "organizations/[organization-number]" (such as "organizations/123"),
-        /// "projects/[project-id]" (such as "projects/my-project-id"), or
-        /// "projects/[project-number]" (such as "projects/12345").
+        /// Required. Name of the organization, folder, or project the assets belong
+        /// to. Format: "organizations/[organization-number]" (such as
+        /// "organizations/123"), "projects/[project-id]" (such as
+        /// "projects/my-project-id"), "projects/[project-number]" (such as
+        /// "projects/12345"), or "folders/[folder-number]" (such as "folders/12345").
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -616,10 +700,11 @@ namespace Google.Cloud.Asset.V1
         /// response.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the organization or project the assets belong to. Format:
-        /// "organizations/[organization-number]" (such as "organizations/123"),
-        /// "projects/[project-id]" (such as "projects/my-project-id"), or
-        /// "projects/[project-number]" (such as "projects/12345").
+        /// Required. Name of the organization, folder, or project the assets belong
+        /// to. Format: "organizations/[organization-number]" (such as
+        /// "organizations/123"), "projects/[project-id]" (such as
+        /// "projects/my-project-id"), "projects/[project-number]" (such as
+        /// "projects/12345"), or "folders/[folder-number]" (such as "folders/12345").
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -644,10 +729,11 @@ namespace Google.Cloud.Asset.V1
         /// response.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the organization or project the assets belong to. Format:
-        /// "organizations/[organization-number]" (such as "organizations/123"),
-        /// "projects/[project-id]" (such as "projects/my-project-id"), or
-        /// "projects/[project-number]" (such as "projects/12345").
+        /// Required. Name of the organization, folder, or project the assets belong
+        /// to. Format: "organizations/[organization-number]" (such as
+        /// "organizations/123"), "projects/[project-id]" (such as
+        /// "projects/my-project-id"), "projects/[project-number]" (such as
+        /// "projects/12345"), or "folders/[folder-number]" (such as "folders/12345").
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -672,10 +758,11 @@ namespace Google.Cloud.Asset.V1
         /// response.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the organization or project the assets belong to. Format:
-        /// "organizations/[organization-number]" (such as "organizations/123"),
-        /// "projects/[project-id]" (such as "projects/my-project-id"), or
-        /// "projects/[project-number]" (such as "projects/12345").
+        /// Required. Name of the organization, folder, or project the assets belong
+        /// to. Format: "organizations/[organization-number]" (such as
+        /// "organizations/123"), "projects/[project-id]" (such as
+        /// "projects/my-project-id"), "projects/[project-number]" (such as
+        /// "projects/12345"), or "folders/[folder-number]" (such as "folders/12345").
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1050,8 +1137,8 @@ namespace Google.Cloud.Asset.V1
         /// Updates an asset feed configuration.
         /// </summary>
         /// <param name="feed">
-        /// Required. The new values of feed details. It must match an existing feed and the
-        /// field `name` must be in the format of:
+        /// Required. The new values of feed details. It must match an existing feed
+        /// and the field `name` must be in the format of:
         /// projects/project_number/feeds/feed_id or
         /// folders/folder_number/feeds/feed_id or
         /// organizations/organization_number/feeds/feed_id.
@@ -1068,8 +1155,8 @@ namespace Google.Cloud.Asset.V1
         /// Updates an asset feed configuration.
         /// </summary>
         /// <param name="feed">
-        /// Required. The new values of feed details. It must match an existing feed and the
-        /// field `name` must be in the format of:
+        /// Required. The new values of feed details. It must match an existing feed
+        /// and the field `name` must be in the format of:
         /// projects/project_number/feeds/feed_id or
         /// folders/folder_number/feeds/feed_id or
         /// organizations/organization_number/feeds/feed_id.
@@ -1086,8 +1173,8 @@ namespace Google.Cloud.Asset.V1
         /// Updates an asset feed configuration.
         /// </summary>
         /// <param name="feed">
-        /// Required. The new values of feed details. It must match an existing feed and the
-        /// field `name` must be in the format of:
+        /// Required. The new values of feed details. It must match an existing feed
+        /// and the field `name` must be in the format of:
         /// projects/project_number/feeds/feed_id or
         /// folders/folder_number/feeds/feed_id or
         /// organizations/organization_number/feeds/feed_id.
@@ -1251,8 +1338,9 @@ namespace Google.Cloud.Asset.V1
         /// otherwise the request will be rejected.
         /// </summary>
         /// <param name="scope">
-        /// Required. A scope can be a project, a folder, or an organization. The search is
-        /// limited to the resources within the `scope`. The caller must be granted the
+        /// Required. A scope can be a project, a folder, or an organization. The
+        /// search is limited to the resources within the `scope`. The caller must be
+        /// granted the
         /// [`cloudasset.assets.searchAllResources`](https://cloud.google.com/asset-inventory/docs/access-control#required_permissions)
         /// permission on the desired scope.
         /// 
@@ -1306,8 +1394,8 @@ namespace Google.Cloud.Asset.V1
         /// location.
         /// </param>
         /// <param name="assetTypes">
-        /// Optional. A list of asset types that this request searches for. If empty, it will
-        /// search all the [searchable asset
+        /// Optional. A list of asset types that this request searches for. If empty,
+        /// it will search all the [searchable asset
         /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types).
         /// 
         /// Regular expressions are also supported. For example:
@@ -1351,8 +1439,9 @@ namespace Google.Cloud.Asset.V1
         /// otherwise the request will be rejected.
         /// </summary>
         /// <param name="scope">
-        /// Required. A scope can be a project, a folder, or an organization. The search is
-        /// limited to the resources within the `scope`. The caller must be granted the
+        /// Required. A scope can be a project, a folder, or an organization. The
+        /// search is limited to the resources within the `scope`. The caller must be
+        /// granted the
         /// [`cloudasset.assets.searchAllResources`](https://cloud.google.com/asset-inventory/docs/access-control#required_permissions)
         /// permission on the desired scope.
         /// 
@@ -1406,8 +1495,8 @@ namespace Google.Cloud.Asset.V1
         /// location.
         /// </param>
         /// <param name="assetTypes">
-        /// Optional. A list of asset types that this request searches for. If empty, it will
-        /// search all the [searchable asset
+        /// Optional. A list of asset types that this request searches for. If empty,
+        /// it will search all the [searchable asset
         /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types).
         /// 
         /// Regular expressions are also supported. For example:
@@ -1475,9 +1564,9 @@ namespace Google.Cloud.Asset.V1
         /// otherwise the request will be rejected.
         /// </summary>
         /// <param name="scope">
-        /// Required. A scope can be a project, a folder, or an organization. The search is
-        /// limited to the IAM policies within the `scope`. The caller must be granted
-        /// the
+        /// Required. A scope can be a project, a folder, or an organization. The
+        /// search is limited to the IAM policies within the `scope`. The caller must
+        /// be granted the
         /// [`cloudasset.assets.searchAllIamPolicies`](https://cloud.google.com/asset-inventory/docs/access-control#required_permissions)
         /// permission on the desired scope.
         /// 
@@ -1493,7 +1582,7 @@ namespace Google.Cloud.Asset.V1
         /// query](https://cloud.google.com/asset-inventory/docs/searching-iam-policies#how_to_construct_a_query)
         /// for more information. If not specified or empty, it will search all the
         /// IAM policies within the specified `scope`. Note that the query string is
-        /// compared against each Cloud IAM policy binding, including its members,
+        /// compared against each Cloud IAM policy binding, including its principals,
         /// roles, and Cloud IAM conditions. The returned Cloud IAM policies will only
         /// contain the bindings that match your query. To learn more about the IAM
         /// policy structure, see [IAM policy
@@ -1529,8 +1618,8 @@ namespace Google.Cloud.Asset.V1
         /// "instance2" and also specify user "amy".
         /// * `roles:roles/compute.admin` to find IAM policy bindings that specify the
         /// Compute Admin role.
-        /// * `memberTypes:user` to find IAM policy bindings that contain the "user"
-        /// member type.
+        /// * `memberTypes:user` to find IAM policy bindings that contain the
+        /// principal type "user".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1558,9 +1647,9 @@ namespace Google.Cloud.Asset.V1
         /// otherwise the request will be rejected.
         /// </summary>
         /// <param name="scope">
-        /// Required. A scope can be a project, a folder, or an organization. The search is
-        /// limited to the IAM policies within the `scope`. The caller must be granted
-        /// the
+        /// Required. A scope can be a project, a folder, or an organization. The
+        /// search is limited to the IAM policies within the `scope`. The caller must
+        /// be granted the
         /// [`cloudasset.assets.searchAllIamPolicies`](https://cloud.google.com/asset-inventory/docs/access-control#required_permissions)
         /// permission on the desired scope.
         /// 
@@ -1576,7 +1665,7 @@ namespace Google.Cloud.Asset.V1
         /// query](https://cloud.google.com/asset-inventory/docs/searching-iam-policies#how_to_construct_a_query)
         /// for more information. If not specified or empty, it will search all the
         /// IAM policies within the specified `scope`. Note that the query string is
-        /// compared against each Cloud IAM policy binding, including its members,
+        /// compared against each Cloud IAM policy binding, including its principals,
         /// roles, and Cloud IAM conditions. The returned Cloud IAM policies will only
         /// contain the bindings that match your query. To learn more about the IAM
         /// policy structure, see [IAM policy
@@ -1612,8 +1701,8 @@ namespace Google.Cloud.Asset.V1
         /// "instance2" and also specify user "amy".
         /// * `roles:roles/compute.admin` to find IAM policy bindings that specify the
         /// Compute Admin role.
-        /// * `memberTypes:user` to find IAM policy bindings that contain the "user"
-        /// member type.
+        /// * `memberTypes:user` to find IAM policy bindings that contain the
+        /// principal type "user".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1669,11 +1758,12 @@ namespace Google.Cloud.Asset.V1
         /// accesses on which resources, and writes the analysis results to a Google
         /// Cloud Storage or a BigQuery destination. For Cloud Storage destination, the
         /// output format is the JSON format that represents a
-        /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse]. This method implements the
-        /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
-        /// status. We recommend intervals of at least 2 seconds with exponential
-        /// backoff retry to poll the operation result. The metadata contains the
-        /// metadata for the long-running operation.
+        /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse].
+        /// This method implements the
+        /// [google.longrunning.Operation][google.longrunning.Operation], which allows
+        /// you to track the operation status. We recommend intervals of at least 2
+        /// seconds with exponential backoff retry to poll the operation result. The
+        /// metadata contains the metadata for the long-running operation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1686,11 +1776,12 @@ namespace Google.Cloud.Asset.V1
         /// accesses on which resources, and writes the analysis results to a Google
         /// Cloud Storage or a BigQuery destination. For Cloud Storage destination, the
         /// output format is the JSON format that represents a
-        /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse]. This method implements the
-        /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
-        /// status. We recommend intervals of at least 2 seconds with exponential
-        /// backoff retry to poll the operation result. The metadata contains the
-        /// metadata for the long-running operation.
+        /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse].
+        /// This method implements the
+        /// [google.longrunning.Operation][google.longrunning.Operation], which allows
+        /// you to track the operation status. We recommend intervals of at least 2
+        /// seconds with exponential backoff retry to poll the operation result. The
+        /// metadata contains the metadata for the long-running operation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1703,11 +1794,12 @@ namespace Google.Cloud.Asset.V1
         /// accesses on which resources, and writes the analysis results to a Google
         /// Cloud Storage or a BigQuery destination. For Cloud Storage destination, the
         /// output format is the JSON format that represents a
-        /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse]. This method implements the
-        /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
-        /// status. We recommend intervals of at least 2 seconds with exponential
-        /// backoff retry to poll the operation result. The metadata contains the
-        /// metadata for the long-running operation.
+        /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse].
+        /// This method implements the
+        /// [google.longrunning.Operation][google.longrunning.Operation], which allows
+        /// you to track the operation status. We recommend intervals of at least 2
+        /// seconds with exponential backoff retry to poll the operation result. The
+        /// metadata contains the metadata for the long-running operation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1780,6 +1872,1048 @@ namespace Google.Cloud.Asset.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<AnalyzeMoveResponse> AnalyzeMoveAsync(AnalyzeMoveRequest request, st::CancellationToken cancellationToken) =>
             AnalyzeMoveAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a saved query in a parent project/folder/organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SavedQuery CreateSavedQuery(CreateSavedQueryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a saved query in a parent project/folder/organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SavedQuery> CreateSavedQueryAsync(CreateSavedQueryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a saved query in a parent project/folder/organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SavedQuery> CreateSavedQueryAsync(CreateSavedQueryRequest request, st::CancellationToken cancellationToken) =>
+            CreateSavedQueryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a saved query in a parent project/folder/organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project/folder/organization where this
+        /// saved_query should be created in. It can only be an organization number
+        /// (such as "organizations/123"), a folder number (such as "folders/123"), a
+        /// project ID (such as "projects/my-project-id")", or a project number (such
+        /// as "projects/12345").
+        /// </param>
+        /// <param name="savedQuery">
+        /// Required. The saved_query details. The `name` field must be empty as it
+        /// will be generated based on the parent and saved_query_id.
+        /// </param>
+        /// <param name="savedQueryId">
+        /// Required. The ID to use for the saved query, which must be unique in the
+        /// specified parent. It will become the final component of the saved query's
+        /// resource name.
+        /// 
+        /// This value should be 4-63 characters, and valid characters
+        /// are /[a-z][0-9]-/.
+        /// 
+        /// Notice that this field is required in the saved query creation, and the
+        /// `name` field of the `saved_query` will be ignored.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SavedQuery CreateSavedQuery(string parent, SavedQuery savedQuery, string savedQueryId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSavedQuery(new CreateSavedQueryRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                SavedQuery = gax::GaxPreconditions.CheckNotNull(savedQuery, nameof(savedQuery)),
+                SavedQueryId = gax::GaxPreconditions.CheckNotNullOrEmpty(savedQueryId, nameof(savedQueryId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a saved query in a parent project/folder/organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project/folder/organization where this
+        /// saved_query should be created in. It can only be an organization number
+        /// (such as "organizations/123"), a folder number (such as "folders/123"), a
+        /// project ID (such as "projects/my-project-id")", or a project number (such
+        /// as "projects/12345").
+        /// </param>
+        /// <param name="savedQuery">
+        /// Required. The saved_query details. The `name` field must be empty as it
+        /// will be generated based on the parent and saved_query_id.
+        /// </param>
+        /// <param name="savedQueryId">
+        /// Required. The ID to use for the saved query, which must be unique in the
+        /// specified parent. It will become the final component of the saved query's
+        /// resource name.
+        /// 
+        /// This value should be 4-63 characters, and valid characters
+        /// are /[a-z][0-9]-/.
+        /// 
+        /// Notice that this field is required in the saved query creation, and the
+        /// `name` field of the `saved_query` will be ignored.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SavedQuery> CreateSavedQueryAsync(string parent, SavedQuery savedQuery, string savedQueryId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSavedQueryAsync(new CreateSavedQueryRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                SavedQuery = gax::GaxPreconditions.CheckNotNull(savedQuery, nameof(savedQuery)),
+                SavedQueryId = gax::GaxPreconditions.CheckNotNullOrEmpty(savedQueryId, nameof(savedQueryId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a saved query in a parent project/folder/organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project/folder/organization where this
+        /// saved_query should be created in. It can only be an organization number
+        /// (such as "organizations/123"), a folder number (such as "folders/123"), a
+        /// project ID (such as "projects/my-project-id")", or a project number (such
+        /// as "projects/12345").
+        /// </param>
+        /// <param name="savedQuery">
+        /// Required. The saved_query details. The `name` field must be empty as it
+        /// will be generated based on the parent and saved_query_id.
+        /// </param>
+        /// <param name="savedQueryId">
+        /// Required. The ID to use for the saved query, which must be unique in the
+        /// specified parent. It will become the final component of the saved query's
+        /// resource name.
+        /// 
+        /// This value should be 4-63 characters, and valid characters
+        /// are /[a-z][0-9]-/.
+        /// 
+        /// Notice that this field is required in the saved query creation, and the
+        /// `name` field of the `saved_query` will be ignored.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SavedQuery> CreateSavedQueryAsync(string parent, SavedQuery savedQuery, string savedQueryId, st::CancellationToken cancellationToken) =>
+            CreateSavedQueryAsync(parent, savedQuery, savedQueryId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a saved query in a parent project/folder/organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project/folder/organization where this
+        /// saved_query should be created in. It can only be an organization number
+        /// (such as "organizations/123"), a folder number (such as "folders/123"), a
+        /// project ID (such as "projects/my-project-id")", or a project number (such
+        /// as "projects/12345").
+        /// </param>
+        /// <param name="savedQuery">
+        /// Required. The saved_query details. The `name` field must be empty as it
+        /// will be generated based on the parent and saved_query_id.
+        /// </param>
+        /// <param name="savedQueryId">
+        /// Required. The ID to use for the saved query, which must be unique in the
+        /// specified parent. It will become the final component of the saved query's
+        /// resource name.
+        /// 
+        /// This value should be 4-63 characters, and valid characters
+        /// are /[a-z][0-9]-/.
+        /// 
+        /// Notice that this field is required in the saved query creation, and the
+        /// `name` field of the `saved_query` will be ignored.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SavedQuery CreateSavedQuery(gagr::ProjectName parent, SavedQuery savedQuery, string savedQueryId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSavedQuery(new CreateSavedQueryRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                SavedQuery = gax::GaxPreconditions.CheckNotNull(savedQuery, nameof(savedQuery)),
+                SavedQueryId = gax::GaxPreconditions.CheckNotNullOrEmpty(savedQueryId, nameof(savedQueryId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a saved query in a parent project/folder/organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project/folder/organization where this
+        /// saved_query should be created in. It can only be an organization number
+        /// (such as "organizations/123"), a folder number (such as "folders/123"), a
+        /// project ID (such as "projects/my-project-id")", or a project number (such
+        /// as "projects/12345").
+        /// </param>
+        /// <param name="savedQuery">
+        /// Required. The saved_query details. The `name` field must be empty as it
+        /// will be generated based on the parent and saved_query_id.
+        /// </param>
+        /// <param name="savedQueryId">
+        /// Required. The ID to use for the saved query, which must be unique in the
+        /// specified parent. It will become the final component of the saved query's
+        /// resource name.
+        /// 
+        /// This value should be 4-63 characters, and valid characters
+        /// are /[a-z][0-9]-/.
+        /// 
+        /// Notice that this field is required in the saved query creation, and the
+        /// `name` field of the `saved_query` will be ignored.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SavedQuery> CreateSavedQueryAsync(gagr::ProjectName parent, SavedQuery savedQuery, string savedQueryId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSavedQueryAsync(new CreateSavedQueryRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                SavedQuery = gax::GaxPreconditions.CheckNotNull(savedQuery, nameof(savedQuery)),
+                SavedQueryId = gax::GaxPreconditions.CheckNotNullOrEmpty(savedQueryId, nameof(savedQueryId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a saved query in a parent project/folder/organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project/folder/organization where this
+        /// saved_query should be created in. It can only be an organization number
+        /// (such as "organizations/123"), a folder number (such as "folders/123"), a
+        /// project ID (such as "projects/my-project-id")", or a project number (such
+        /// as "projects/12345").
+        /// </param>
+        /// <param name="savedQuery">
+        /// Required. The saved_query details. The `name` field must be empty as it
+        /// will be generated based on the parent and saved_query_id.
+        /// </param>
+        /// <param name="savedQueryId">
+        /// Required. The ID to use for the saved query, which must be unique in the
+        /// specified parent. It will become the final component of the saved query's
+        /// resource name.
+        /// 
+        /// This value should be 4-63 characters, and valid characters
+        /// are /[a-z][0-9]-/.
+        /// 
+        /// Notice that this field is required in the saved query creation, and the
+        /// `name` field of the `saved_query` will be ignored.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SavedQuery> CreateSavedQueryAsync(gagr::ProjectName parent, SavedQuery savedQuery, string savedQueryId, st::CancellationToken cancellationToken) =>
+            CreateSavedQueryAsync(parent, savedQuery, savedQueryId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a saved query in a parent project/folder/organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project/folder/organization where this
+        /// saved_query should be created in. It can only be an organization number
+        /// (such as "organizations/123"), a folder number (such as "folders/123"), a
+        /// project ID (such as "projects/my-project-id")", or a project number (such
+        /// as "projects/12345").
+        /// </param>
+        /// <param name="savedQuery">
+        /// Required. The saved_query details. The `name` field must be empty as it
+        /// will be generated based on the parent and saved_query_id.
+        /// </param>
+        /// <param name="savedQueryId">
+        /// Required. The ID to use for the saved query, which must be unique in the
+        /// specified parent. It will become the final component of the saved query's
+        /// resource name.
+        /// 
+        /// This value should be 4-63 characters, and valid characters
+        /// are /[a-z][0-9]-/.
+        /// 
+        /// Notice that this field is required in the saved query creation, and the
+        /// `name` field of the `saved_query` will be ignored.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SavedQuery CreateSavedQuery(gagr::FolderName parent, SavedQuery savedQuery, string savedQueryId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSavedQuery(new CreateSavedQueryRequest
+            {
+                ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                SavedQuery = gax::GaxPreconditions.CheckNotNull(savedQuery, nameof(savedQuery)),
+                SavedQueryId = gax::GaxPreconditions.CheckNotNullOrEmpty(savedQueryId, nameof(savedQueryId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a saved query in a parent project/folder/organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project/folder/organization where this
+        /// saved_query should be created in. It can only be an organization number
+        /// (such as "organizations/123"), a folder number (such as "folders/123"), a
+        /// project ID (such as "projects/my-project-id")", or a project number (such
+        /// as "projects/12345").
+        /// </param>
+        /// <param name="savedQuery">
+        /// Required. The saved_query details. The `name` field must be empty as it
+        /// will be generated based on the parent and saved_query_id.
+        /// </param>
+        /// <param name="savedQueryId">
+        /// Required. The ID to use for the saved query, which must be unique in the
+        /// specified parent. It will become the final component of the saved query's
+        /// resource name.
+        /// 
+        /// This value should be 4-63 characters, and valid characters
+        /// are /[a-z][0-9]-/.
+        /// 
+        /// Notice that this field is required in the saved query creation, and the
+        /// `name` field of the `saved_query` will be ignored.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SavedQuery> CreateSavedQueryAsync(gagr::FolderName parent, SavedQuery savedQuery, string savedQueryId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSavedQueryAsync(new CreateSavedQueryRequest
+            {
+                ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                SavedQuery = gax::GaxPreconditions.CheckNotNull(savedQuery, nameof(savedQuery)),
+                SavedQueryId = gax::GaxPreconditions.CheckNotNullOrEmpty(savedQueryId, nameof(savedQueryId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a saved query in a parent project/folder/organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project/folder/organization where this
+        /// saved_query should be created in. It can only be an organization number
+        /// (such as "organizations/123"), a folder number (such as "folders/123"), a
+        /// project ID (such as "projects/my-project-id")", or a project number (such
+        /// as "projects/12345").
+        /// </param>
+        /// <param name="savedQuery">
+        /// Required. The saved_query details. The `name` field must be empty as it
+        /// will be generated based on the parent and saved_query_id.
+        /// </param>
+        /// <param name="savedQueryId">
+        /// Required. The ID to use for the saved query, which must be unique in the
+        /// specified parent. It will become the final component of the saved query's
+        /// resource name.
+        /// 
+        /// This value should be 4-63 characters, and valid characters
+        /// are /[a-z][0-9]-/.
+        /// 
+        /// Notice that this field is required in the saved query creation, and the
+        /// `name` field of the `saved_query` will be ignored.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SavedQuery> CreateSavedQueryAsync(gagr::FolderName parent, SavedQuery savedQuery, string savedQueryId, st::CancellationToken cancellationToken) =>
+            CreateSavedQueryAsync(parent, savedQuery, savedQueryId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a saved query in a parent project/folder/organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project/folder/organization where this
+        /// saved_query should be created in. It can only be an organization number
+        /// (such as "organizations/123"), a folder number (such as "folders/123"), a
+        /// project ID (such as "projects/my-project-id")", or a project number (such
+        /// as "projects/12345").
+        /// </param>
+        /// <param name="savedQuery">
+        /// Required. The saved_query details. The `name` field must be empty as it
+        /// will be generated based on the parent and saved_query_id.
+        /// </param>
+        /// <param name="savedQueryId">
+        /// Required. The ID to use for the saved query, which must be unique in the
+        /// specified parent. It will become the final component of the saved query's
+        /// resource name.
+        /// 
+        /// This value should be 4-63 characters, and valid characters
+        /// are /[a-z][0-9]-/.
+        /// 
+        /// Notice that this field is required in the saved query creation, and the
+        /// `name` field of the `saved_query` will be ignored.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SavedQuery CreateSavedQuery(gagr::OrganizationName parent, SavedQuery savedQuery, string savedQueryId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSavedQuery(new CreateSavedQueryRequest
+            {
+                ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                SavedQuery = gax::GaxPreconditions.CheckNotNull(savedQuery, nameof(savedQuery)),
+                SavedQueryId = gax::GaxPreconditions.CheckNotNullOrEmpty(savedQueryId, nameof(savedQueryId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a saved query in a parent project/folder/organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project/folder/organization where this
+        /// saved_query should be created in. It can only be an organization number
+        /// (such as "organizations/123"), a folder number (such as "folders/123"), a
+        /// project ID (such as "projects/my-project-id")", or a project number (such
+        /// as "projects/12345").
+        /// </param>
+        /// <param name="savedQuery">
+        /// Required. The saved_query details. The `name` field must be empty as it
+        /// will be generated based on the parent and saved_query_id.
+        /// </param>
+        /// <param name="savedQueryId">
+        /// Required. The ID to use for the saved query, which must be unique in the
+        /// specified parent. It will become the final component of the saved query's
+        /// resource name.
+        /// 
+        /// This value should be 4-63 characters, and valid characters
+        /// are /[a-z][0-9]-/.
+        /// 
+        /// Notice that this field is required in the saved query creation, and the
+        /// `name` field of the `saved_query` will be ignored.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SavedQuery> CreateSavedQueryAsync(gagr::OrganizationName parent, SavedQuery savedQuery, string savedQueryId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSavedQueryAsync(new CreateSavedQueryRequest
+            {
+                ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                SavedQuery = gax::GaxPreconditions.CheckNotNull(savedQuery, nameof(savedQuery)),
+                SavedQueryId = gax::GaxPreconditions.CheckNotNullOrEmpty(savedQueryId, nameof(savedQueryId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a saved query in a parent project/folder/organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project/folder/organization where this
+        /// saved_query should be created in. It can only be an organization number
+        /// (such as "organizations/123"), a folder number (such as "folders/123"), a
+        /// project ID (such as "projects/my-project-id")", or a project number (such
+        /// as "projects/12345").
+        /// </param>
+        /// <param name="savedQuery">
+        /// Required. The saved_query details. The `name` field must be empty as it
+        /// will be generated based on the parent and saved_query_id.
+        /// </param>
+        /// <param name="savedQueryId">
+        /// Required. The ID to use for the saved query, which must be unique in the
+        /// specified parent. It will become the final component of the saved query's
+        /// resource name.
+        /// 
+        /// This value should be 4-63 characters, and valid characters
+        /// are /[a-z][0-9]-/.
+        /// 
+        /// Notice that this field is required in the saved query creation, and the
+        /// `name` field of the `saved_query` will be ignored.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SavedQuery> CreateSavedQueryAsync(gagr::OrganizationName parent, SavedQuery savedQuery, string savedQueryId, st::CancellationToken cancellationToken) =>
+            CreateSavedQueryAsync(parent, savedQuery, savedQueryId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details about a saved query.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SavedQuery GetSavedQuery(GetSavedQueryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details about a saved query.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SavedQuery> GetSavedQueryAsync(GetSavedQueryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details about a saved query.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SavedQuery> GetSavedQueryAsync(GetSavedQueryRequest request, st::CancellationToken cancellationToken) =>
+            GetSavedQueryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details about a saved query.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the saved query and it must be in the format of:
+        /// 
+        /// * projects/project_number/savedQueries/saved_query_id
+        /// * folders/folder_number/savedQueries/saved_query_id
+        /// * organizations/organization_number/savedQueries/saved_query_id
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SavedQuery GetSavedQuery(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSavedQuery(new GetSavedQueryRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details about a saved query.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the saved query and it must be in the format of:
+        /// 
+        /// * projects/project_number/savedQueries/saved_query_id
+        /// * folders/folder_number/savedQueries/saved_query_id
+        /// * organizations/organization_number/savedQueries/saved_query_id
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SavedQuery> GetSavedQueryAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSavedQueryAsync(new GetSavedQueryRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details about a saved query.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the saved query and it must be in the format of:
+        /// 
+        /// * projects/project_number/savedQueries/saved_query_id
+        /// * folders/folder_number/savedQueries/saved_query_id
+        /// * organizations/organization_number/savedQueries/saved_query_id
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SavedQuery> GetSavedQueryAsync(string name, st::CancellationToken cancellationToken) =>
+            GetSavedQueryAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details about a saved query.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the saved query and it must be in the format of:
+        /// 
+        /// * projects/project_number/savedQueries/saved_query_id
+        /// * folders/folder_number/savedQueries/saved_query_id
+        /// * organizations/organization_number/savedQueries/saved_query_id
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SavedQuery GetSavedQuery(SavedQueryName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSavedQuery(new GetSavedQueryRequest
+            {
+                SavedQueryName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details about a saved query.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the saved query and it must be in the format of:
+        /// 
+        /// * projects/project_number/savedQueries/saved_query_id
+        /// * folders/folder_number/savedQueries/saved_query_id
+        /// * organizations/organization_number/savedQueries/saved_query_id
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SavedQuery> GetSavedQueryAsync(SavedQueryName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSavedQueryAsync(new GetSavedQueryRequest
+            {
+                SavedQueryName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details about a saved query.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the saved query and it must be in the format of:
+        /// 
+        /// * projects/project_number/savedQueries/saved_query_id
+        /// * folders/folder_number/savedQueries/saved_query_id
+        /// * organizations/organization_number/savedQueries/saved_query_id
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SavedQuery> GetSavedQueryAsync(SavedQueryName name, st::CancellationToken cancellationToken) =>
+            GetSavedQueryAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all saved queries in a parent project/folder/organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SavedQuery"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueries(ListSavedQueriesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all saved queries in a parent project/folder/organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SavedQuery"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueriesAsync(ListSavedQueriesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all saved queries in a parent project/folder/organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent project/folder/organization whose savedQueries are to
+        /// be listed. It can only be using project/folder/organization number (such as
+        /// "folders/12345")", or a project ID (such as "projects/my-project-id").
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SavedQuery"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueries(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSavedQueries(new ListSavedQueriesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all saved queries in a parent project/folder/organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent project/folder/organization whose savedQueries are to
+        /// be listed. It can only be using project/folder/organization number (such as
+        /// "folders/12345")", or a project ID (such as "projects/my-project-id").
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SavedQuery"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueriesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSavedQueriesAsync(new ListSavedQueriesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all saved queries in a parent project/folder/organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent project/folder/organization whose savedQueries are to
+        /// be listed. It can only be using project/folder/organization number (such as
+        /// "folders/12345")", or a project ID (such as "projects/my-project-id").
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SavedQuery"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueries(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSavedQueries(new ListSavedQueriesRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all saved queries in a parent project/folder/organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent project/folder/organization whose savedQueries are to
+        /// be listed. It can only be using project/folder/organization number (such as
+        /// "folders/12345")", or a project ID (such as "projects/my-project-id").
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SavedQuery"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueriesAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSavedQueriesAsync(new ListSavedQueriesRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all saved queries in a parent project/folder/organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent project/folder/organization whose savedQueries are to
+        /// be listed. It can only be using project/folder/organization number (such as
+        /// "folders/12345")", or a project ID (such as "projects/my-project-id").
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SavedQuery"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueries(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSavedQueries(new ListSavedQueriesRequest
+            {
+                ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all saved queries in a parent project/folder/organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent project/folder/organization whose savedQueries are to
+        /// be listed. It can only be using project/folder/organization number (such as
+        /// "folders/12345")", or a project ID (such as "projects/my-project-id").
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SavedQuery"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueriesAsync(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSavedQueriesAsync(new ListSavedQueriesRequest
+            {
+                ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all saved queries in a parent project/folder/organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent project/folder/organization whose savedQueries are to
+        /// be listed. It can only be using project/folder/organization number (such as
+        /// "folders/12345")", or a project ID (such as "projects/my-project-id").
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SavedQuery"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueries(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSavedQueries(new ListSavedQueriesRequest
+            {
+                ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all saved queries in a parent project/folder/organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent project/folder/organization whose savedQueries are to
+        /// be listed. It can only be using project/folder/organization number (such as
+        /// "folders/12345")", or a project ID (such as "projects/my-project-id").
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SavedQuery"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueriesAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSavedQueriesAsync(new ListSavedQueriesRequest
+            {
+                ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a saved query.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SavedQuery UpdateSavedQuery(UpdateSavedQueryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a saved query.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SavedQuery> UpdateSavedQueryAsync(UpdateSavedQueryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a saved query.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SavedQuery> UpdateSavedQueryAsync(UpdateSavedQueryRequest request, st::CancellationToken cancellationToken) =>
+            UpdateSavedQueryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a saved query.
+        /// </summary>
+        /// <param name="savedQuery">
+        /// Required. The saved query to update.
+        /// 
+        /// The saved query's `name` field is used to identify the one to update,
+        /// which has format as below:
+        /// 
+        /// * projects/project_number/savedQueries/saved_query_id
+        /// * folders/folder_number/savedQueries/saved_query_id
+        /// * organizations/organization_number/savedQueries/saved_query_id
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SavedQuery UpdateSavedQuery(SavedQuery savedQuery, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSavedQuery(new UpdateSavedQueryRequest
+            {
+                SavedQuery = gax::GaxPreconditions.CheckNotNull(savedQuery, nameof(savedQuery)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a saved query.
+        /// </summary>
+        /// <param name="savedQuery">
+        /// Required. The saved query to update.
+        /// 
+        /// The saved query's `name` field is used to identify the one to update,
+        /// which has format as below:
+        /// 
+        /// * projects/project_number/savedQueries/saved_query_id
+        /// * folders/folder_number/savedQueries/saved_query_id
+        /// * organizations/organization_number/savedQueries/saved_query_id
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SavedQuery> UpdateSavedQueryAsync(SavedQuery savedQuery, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSavedQueryAsync(new UpdateSavedQueryRequest
+            {
+                SavedQuery = gax::GaxPreconditions.CheckNotNull(savedQuery, nameof(savedQuery)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a saved query.
+        /// </summary>
+        /// <param name="savedQuery">
+        /// Required. The saved query to update.
+        /// 
+        /// The saved query's `name` field is used to identify the one to update,
+        /// which has format as below:
+        /// 
+        /// * projects/project_number/savedQueries/saved_query_id
+        /// * folders/folder_number/savedQueries/saved_query_id
+        /// * organizations/organization_number/savedQueries/saved_query_id
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SavedQuery> UpdateSavedQueryAsync(SavedQuery savedQuery, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateSavedQueryAsync(savedQuery, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a saved query.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteSavedQuery(DeleteSavedQueryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a saved query.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSavedQueryAsync(DeleteSavedQueryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a saved query.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSavedQueryAsync(DeleteSavedQueryRequest request, st::CancellationToken cancellationToken) =>
+            DeleteSavedQueryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a saved query.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the saved query to delete. It must be in the format
+        /// of:
+        /// 
+        /// * projects/project_number/savedQueries/saved_query_id
+        /// * folders/folder_number/savedQueries/saved_query_id
+        /// * organizations/organization_number/savedQueries/saved_query_id
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteSavedQuery(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSavedQuery(new DeleteSavedQueryRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a saved query.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the saved query to delete. It must be in the format
+        /// of:
+        /// 
+        /// * projects/project_number/savedQueries/saved_query_id
+        /// * folders/folder_number/savedQueries/saved_query_id
+        /// * organizations/organization_number/savedQueries/saved_query_id
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSavedQueryAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSavedQueryAsync(new DeleteSavedQueryRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a saved query.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the saved query to delete. It must be in the format
+        /// of:
+        /// 
+        /// * projects/project_number/savedQueries/saved_query_id
+        /// * folders/folder_number/savedQueries/saved_query_id
+        /// * organizations/organization_number/savedQueries/saved_query_id
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSavedQueryAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteSavedQueryAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a saved query.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the saved query to delete. It must be in the format
+        /// of:
+        /// 
+        /// * projects/project_number/savedQueries/saved_query_id
+        /// * folders/folder_number/savedQueries/saved_query_id
+        /// * organizations/organization_number/savedQueries/saved_query_id
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteSavedQuery(SavedQueryName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSavedQuery(new DeleteSavedQueryRequest
+            {
+                SavedQueryName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a saved query.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the saved query to delete. It must be in the format
+        /// of:
+        /// 
+        /// * projects/project_number/savedQueries/saved_query_id
+        /// * folders/folder_number/savedQueries/saved_query_id
+        /// * organizations/organization_number/savedQueries/saved_query_id
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSavedQueryAsync(SavedQueryName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSavedQueryAsync(new DeleteSavedQueryRequest
+            {
+                SavedQueryName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a saved query.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the saved query to delete. It must be in the format
+        /// of:
+        /// 
+        /// * projects/project_number/savedQueries/saved_query_id
+        /// * folders/folder_number/savedQueries/saved_query_id
+        /// * organizations/organization_number/savedQueries/saved_query_id
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSavedQueryAsync(SavedQueryName name, st::CancellationToken cancellationToken) =>
+            DeleteSavedQueryAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets effective IAM policies for a batch of resources.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchGetEffectiveIamPoliciesResponse BatchGetEffectiveIamPolicies(BatchGetEffectiveIamPoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets effective IAM policies for a batch of resources.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchGetEffectiveIamPoliciesResponse> BatchGetEffectiveIamPoliciesAsync(BatchGetEffectiveIamPoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets effective IAM policies for a batch of resources.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchGetEffectiveIamPoliciesResponse> BatchGetEffectiveIamPoliciesAsync(BatchGetEffectiveIamPoliciesRequest request, st::CancellationToken cancellationToken) =>
+            BatchGetEffectiveIamPoliciesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>AssetService client wrapper implementation, for convenient use.</summary>
@@ -1813,6 +2947,18 @@ namespace Google.Cloud.Asset.V1
         private readonly gaxgrpc::ApiCall<AnalyzeIamPolicyLongrunningRequest, lro::Operation> _callAnalyzeIamPolicyLongrunning;
 
         private readonly gaxgrpc::ApiCall<AnalyzeMoveRequest, AnalyzeMoveResponse> _callAnalyzeMove;
+
+        private readonly gaxgrpc::ApiCall<CreateSavedQueryRequest, SavedQuery> _callCreateSavedQuery;
+
+        private readonly gaxgrpc::ApiCall<GetSavedQueryRequest, SavedQuery> _callGetSavedQuery;
+
+        private readonly gaxgrpc::ApiCall<ListSavedQueriesRequest, ListSavedQueriesResponse> _callListSavedQueries;
+
+        private readonly gaxgrpc::ApiCall<UpdateSavedQueryRequest, SavedQuery> _callUpdateSavedQuery;
+
+        private readonly gaxgrpc::ApiCall<DeleteSavedQueryRequest, wkt::Empty> _callDeleteSavedQuery;
+
+        private readonly gaxgrpc::ApiCall<BatchGetEffectiveIamPoliciesRequest, BatchGetEffectiveIamPoliciesResponse> _callBatchGetEffectiveIamPolicies;
 
         /// <summary>
         /// Constructs a client wrapper for the AssetService service, with the specified gRPC client and settings.
@@ -1865,6 +3011,24 @@ namespace Google.Cloud.Asset.V1
             _callAnalyzeMove = clientHelper.BuildApiCall<AnalyzeMoveRequest, AnalyzeMoveResponse>(grpcClient.AnalyzeMoveAsync, grpcClient.AnalyzeMove, effectiveSettings.AnalyzeMoveSettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callAnalyzeMove);
             Modify_AnalyzeMoveApiCall(ref _callAnalyzeMove);
+            _callCreateSavedQuery = clientHelper.BuildApiCall<CreateSavedQueryRequest, SavedQuery>(grpcClient.CreateSavedQueryAsync, grpcClient.CreateSavedQuery, effectiveSettings.CreateSavedQuerySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateSavedQuery);
+            Modify_CreateSavedQueryApiCall(ref _callCreateSavedQuery);
+            _callGetSavedQuery = clientHelper.BuildApiCall<GetSavedQueryRequest, SavedQuery>(grpcClient.GetSavedQueryAsync, grpcClient.GetSavedQuery, effectiveSettings.GetSavedQuerySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetSavedQuery);
+            Modify_GetSavedQueryApiCall(ref _callGetSavedQuery);
+            _callListSavedQueries = clientHelper.BuildApiCall<ListSavedQueriesRequest, ListSavedQueriesResponse>(grpcClient.ListSavedQueriesAsync, grpcClient.ListSavedQueries, effectiveSettings.ListSavedQueriesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListSavedQueries);
+            Modify_ListSavedQueriesApiCall(ref _callListSavedQueries);
+            _callUpdateSavedQuery = clientHelper.BuildApiCall<UpdateSavedQueryRequest, SavedQuery>(grpcClient.UpdateSavedQueryAsync, grpcClient.UpdateSavedQuery, effectiveSettings.UpdateSavedQuerySettings).WithGoogleRequestParam("saved_query.name", request => request.SavedQuery?.Name);
+            Modify_ApiCall(ref _callUpdateSavedQuery);
+            Modify_UpdateSavedQueryApiCall(ref _callUpdateSavedQuery);
+            _callDeleteSavedQuery = clientHelper.BuildApiCall<DeleteSavedQueryRequest, wkt::Empty>(grpcClient.DeleteSavedQueryAsync, grpcClient.DeleteSavedQuery, effectiveSettings.DeleteSavedQuerySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteSavedQuery);
+            Modify_DeleteSavedQueryApiCall(ref _callDeleteSavedQuery);
+            _callBatchGetEffectiveIamPolicies = clientHelper.BuildApiCall<BatchGetEffectiveIamPoliciesRequest, BatchGetEffectiveIamPoliciesResponse>(grpcClient.BatchGetEffectiveIamPoliciesAsync, grpcClient.BatchGetEffectiveIamPolicies, effectiveSettings.BatchGetEffectiveIamPoliciesSettings).WithGoogleRequestParam("scope", request => request.Scope);
+            Modify_ApiCall(ref _callBatchGetEffectiveIamPolicies);
+            Modify_BatchGetEffectiveIamPoliciesApiCall(ref _callBatchGetEffectiveIamPolicies);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1895,6 +3059,18 @@ namespace Google.Cloud.Asset.V1
         partial void Modify_AnalyzeIamPolicyLongrunningApiCall(ref gaxgrpc::ApiCall<AnalyzeIamPolicyLongrunningRequest, lro::Operation> call);
 
         partial void Modify_AnalyzeMoveApiCall(ref gaxgrpc::ApiCall<AnalyzeMoveRequest, AnalyzeMoveResponse> call);
+
+        partial void Modify_CreateSavedQueryApiCall(ref gaxgrpc::ApiCall<CreateSavedQueryRequest, SavedQuery> call);
+
+        partial void Modify_GetSavedQueryApiCall(ref gaxgrpc::ApiCall<GetSavedQueryRequest, SavedQuery> call);
+
+        partial void Modify_ListSavedQueriesApiCall(ref gaxgrpc::ApiCall<ListSavedQueriesRequest, ListSavedQueriesResponse> call);
+
+        partial void Modify_UpdateSavedQueryApiCall(ref gaxgrpc::ApiCall<UpdateSavedQueryRequest, SavedQuery> call);
+
+        partial void Modify_DeleteSavedQueryApiCall(ref gaxgrpc::ApiCall<DeleteSavedQueryRequest, wkt::Empty> call);
+
+        partial void Modify_BatchGetEffectiveIamPoliciesApiCall(ref gaxgrpc::ApiCall<BatchGetEffectiveIamPoliciesRequest, BatchGetEffectiveIamPoliciesResponse> call);
 
         partial void OnConstruction(AssetService.AssetServiceClient grpcClient, AssetServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1927,6 +3103,18 @@ namespace Google.Cloud.Asset.V1
 
         partial void Modify_AnalyzeMoveRequest(ref AnalyzeMoveRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_CreateSavedQueryRequest(ref CreateSavedQueryRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetSavedQueryRequest(ref GetSavedQueryRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListSavedQueriesRequest(ref ListSavedQueriesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateSavedQueryRequest(ref UpdateSavedQueryRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteSavedQueryRequest(ref DeleteSavedQueryRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchGetEffectiveIamPoliciesRequest(ref BatchGetEffectiveIamPoliciesRequest request, ref gaxgrpc::CallSettings settings);
+
         /// <summary>The long-running operations client for <c>ExportAssets</c>.</summary>
         public override lro::OperationsClient ExportAssetsOperationsClient { get; }
 
@@ -1934,13 +3122,14 @@ namespace Google.Cloud.Asset.V1
         /// Exports assets with time and resource types to a given Cloud Storage
         /// location/BigQuery table. For Cloud Storage location destinations, the
         /// output format is newline-delimited JSON. Each line represents a
-        /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON format; for BigQuery table
-        /// destinations, the output table stores the fields in asset proto as columns.
-        /// This API implements the [google.longrunning.Operation][google.longrunning.Operation] API
-        /// , which allows you to keep track of the export. We recommend intervals of
-        /// at least 2 seconds with exponential retry to poll the export operation
-        /// result. For regular-size resource parent, the export operation usually
-        /// finishes within 5 minutes.
+        /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON
+        /// format; for BigQuery table destinations, the output table stores the fields
+        /// in asset Protobuf as columns. This API implements the
+        /// [google.longrunning.Operation][google.longrunning.Operation] API, which
+        /// allows you to keep track of the export. We recommend intervals of at least
+        /// 2 seconds with exponential retry to poll the export operation result. For
+        /// regular-size resource parent, the export operation usually finishes within
+        /// 5 minutes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1955,13 +3144,14 @@ namespace Google.Cloud.Asset.V1
         /// Exports assets with time and resource types to a given Cloud Storage
         /// location/BigQuery table. For Cloud Storage location destinations, the
         /// output format is newline-delimited JSON. Each line represents a
-        /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON format; for BigQuery table
-        /// destinations, the output table stores the fields in asset proto as columns.
-        /// This API implements the [google.longrunning.Operation][google.longrunning.Operation] API
-        /// , which allows you to keep track of the export. We recommend intervals of
-        /// at least 2 seconds with exponential retry to poll the export operation
-        /// result. For regular-size resource parent, the export operation usually
-        /// finishes within 5 minutes.
+        /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON
+        /// format; for BigQuery table destinations, the output table stores the fields
+        /// in asset Protobuf as columns. This API implements the
+        /// [google.longrunning.Operation][google.longrunning.Operation] API, which
+        /// allows you to keep track of the export. We recommend intervals of at least
+        /// 2 seconds with exponential retry to poll the export operation result. For
+        /// regular-size resource parent, the export operation usually finishes within
+        /// 5 minutes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2250,11 +3440,12 @@ namespace Google.Cloud.Asset.V1
         /// accesses on which resources, and writes the analysis results to a Google
         /// Cloud Storage or a BigQuery destination. For Cloud Storage destination, the
         /// output format is the JSON format that represents a
-        /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse]. This method implements the
-        /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
-        /// status. We recommend intervals of at least 2 seconds with exponential
-        /// backoff retry to poll the operation result. The metadata contains the
-        /// metadata for the long-running operation.
+        /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse].
+        /// This method implements the
+        /// [google.longrunning.Operation][google.longrunning.Operation], which allows
+        /// you to track the operation status. We recommend intervals of at least 2
+        /// seconds with exponential backoff retry to poll the operation result. The
+        /// metadata contains the metadata for the long-running operation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2270,11 +3461,12 @@ namespace Google.Cloud.Asset.V1
         /// accesses on which resources, and writes the analysis results to a Google
         /// Cloud Storage or a BigQuery destination. For Cloud Storage destination, the
         /// output format is the JSON format that represents a
-        /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse]. This method implements the
-        /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
-        /// status. We recommend intervals of at least 2 seconds with exponential
-        /// backoff retry to poll the operation result. The metadata contains the
-        /// metadata for the long-running operation.
+        /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse].
+        /// This method implements the
+        /// [google.longrunning.Operation][google.longrunning.Operation], which allows
+        /// you to track the operation status. We recommend intervals of at least 2
+        /// seconds with exponential backoff retry to poll the operation result. The
+        /// metadata contains the metadata for the long-running operation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2316,6 +3508,150 @@ namespace Google.Cloud.Asset.V1
             Modify_AnalyzeMoveRequest(ref request, ref callSettings);
             return _callAnalyzeMove.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Creates a saved query in a parent project/folder/organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SavedQuery CreateSavedQuery(CreateSavedQueryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateSavedQueryRequest(ref request, ref callSettings);
+            return _callCreateSavedQuery.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a saved query in a parent project/folder/organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SavedQuery> CreateSavedQueryAsync(CreateSavedQueryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateSavedQueryRequest(ref request, ref callSettings);
+            return _callCreateSavedQuery.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details about a saved query.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SavedQuery GetSavedQuery(GetSavedQueryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSavedQueryRequest(ref request, ref callSettings);
+            return _callGetSavedQuery.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details about a saved query.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SavedQuery> GetSavedQueryAsync(GetSavedQueryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSavedQueryRequest(ref request, ref callSettings);
+            return _callGetSavedQuery.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all saved queries in a parent project/folder/organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SavedQuery"/> resources.</returns>
+        public override gax::PagedEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueries(ListSavedQueriesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSavedQueriesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListSavedQueriesRequest, ListSavedQueriesResponse, SavedQuery>(_callListSavedQueries, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all saved queries in a parent project/folder/organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SavedQuery"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueriesAsync(ListSavedQueriesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSavedQueriesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListSavedQueriesRequest, ListSavedQueriesResponse, SavedQuery>(_callListSavedQueries, request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a saved query.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SavedQuery UpdateSavedQuery(UpdateSavedQueryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateSavedQueryRequest(ref request, ref callSettings);
+            return _callUpdateSavedQuery.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a saved query.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SavedQuery> UpdateSavedQueryAsync(UpdateSavedQueryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateSavedQueryRequest(ref request, ref callSettings);
+            return _callUpdateSavedQuery.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a saved query.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteSavedQuery(DeleteSavedQueryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteSavedQueryRequest(ref request, ref callSettings);
+            _callDeleteSavedQuery.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a saved query.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteSavedQueryAsync(DeleteSavedQueryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteSavedQueryRequest(ref request, ref callSettings);
+            return _callDeleteSavedQuery.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets effective IAM policies for a batch of resources.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchGetEffectiveIamPoliciesResponse BatchGetEffectiveIamPolicies(BatchGetEffectiveIamPoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchGetEffectiveIamPoliciesRequest(ref request, ref callSettings);
+            return _callBatchGetEffectiveIamPolicies.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets effective IAM policies for a batch of resources.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchGetEffectiveIamPoliciesResponse> BatchGetEffectiveIamPoliciesAsync(BatchGetEffectiveIamPoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchGetEffectiveIamPoliciesRequest(ref request, ref callSettings);
+            return _callBatchGetEffectiveIamPolicies.Async(request, callSettings);
+        }
     }
 
     public partial class ListAssetsRequest : gaxgrpc::IPageRequest
@@ -2327,6 +3663,10 @@ namespace Google.Cloud.Asset.V1
     }
 
     public partial class SearchAllIamPoliciesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListSavedQueriesRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -2350,6 +3690,14 @@ namespace Google.Cloud.Asset.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<IamPolicySearchResult> GetEnumerator() => Results.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListSavedQueriesResponse : gaxgrpc::IPageResponse<SavedQuery>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<SavedQuery> GetEnumerator() => SavedQueries.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

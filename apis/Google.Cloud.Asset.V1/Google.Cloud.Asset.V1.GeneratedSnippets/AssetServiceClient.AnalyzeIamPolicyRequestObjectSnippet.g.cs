@@ -36,6 +36,7 @@ namespace Google.Cloud.Asset.V1.Snippets
             {
                 AnalysisQuery = new IamPolicyAnalysisQuery(),
                 ExecutionTimeout = new Duration(),
+                SavedAnalysisQuery = "",
             };
             // Make the request
             AnalyzeIamPolicyResponse response = assetServiceClient.AnalyzeIamPolicy(request);

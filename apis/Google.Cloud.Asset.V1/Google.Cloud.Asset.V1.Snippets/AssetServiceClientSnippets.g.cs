@@ -17,6 +17,7 @@
 namespace Google.Cloud.Asset.V1.Snippets
 {
     using Google.Api.Gax;
+    using Google.Api.Gax.ResourceNames;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
@@ -1184,6 +1185,7 @@ namespace Google.Cloud.Asset.V1.Snippets
             {
                 AnalysisQuery = new IamPolicyAnalysisQuery(),
                 ExecutionTimeout = new Duration(),
+                SavedAnalysisQuery = "",
             };
             // Make the request
             AnalyzeIamPolicyResponse response = assetServiceClient.AnalyzeIamPolicy(request);
@@ -1202,6 +1204,7 @@ namespace Google.Cloud.Asset.V1.Snippets
             {
                 AnalysisQuery = new IamPolicyAnalysisQuery(),
                 ExecutionTimeout = new Duration(),
+                SavedAnalysisQuery = "",
             };
             // Make the request
             AnalyzeIamPolicyResponse response = await assetServiceClient.AnalyzeIamPolicyAsync(request);
@@ -1219,6 +1222,7 @@ namespace Google.Cloud.Asset.V1.Snippets
             {
                 AnalysisQuery = new IamPolicyAnalysisQuery(),
                 OutputConfig = new IamPolicyAnalysisOutputConfig(),
+                SavedAnalysisQuery = "",
             };
             // Make the request
             Operation<AnalyzeIamPolicyLongrunningResponse, AnalyzeIamPolicyLongrunningMetadata> response = assetServiceClient.AnalyzeIamPolicyLongrunning(request);
@@ -1253,6 +1257,7 @@ namespace Google.Cloud.Asset.V1.Snippets
             {
                 AnalysisQuery = new IamPolicyAnalysisQuery(),
                 OutputConfig = new IamPolicyAnalysisOutputConfig(),
+                SavedAnalysisQuery = "",
             };
             // Make the request
             Operation<AnalyzeIamPolicyLongrunningResponse, AnalyzeIamPolicyLongrunningMetadata> response = await assetServiceClient.AnalyzeIamPolicyLongrunningAsync(request);
@@ -1309,6 +1314,904 @@ namespace Google.Cloud.Asset.V1.Snippets
             };
             // Make the request
             AnalyzeMoveResponse response = await assetServiceClient.AnalyzeMoveAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSavedQuery</summary>
+        public void CreateSavedQueryRequestObject()
+        {
+            // Snippet: CreateSavedQuery(CreateSavedQueryRequest, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            CreateSavedQueryRequest request = new CreateSavedQueryRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                SavedQuery = new SavedQuery(),
+                SavedQueryId = "",
+            };
+            // Make the request
+            SavedQuery response = assetServiceClient.CreateSavedQuery(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSavedQueryAsync</summary>
+        public async Task CreateSavedQueryRequestObjectAsync()
+        {
+            // Snippet: CreateSavedQueryAsync(CreateSavedQueryRequest, CallSettings)
+            // Additional: CreateSavedQueryAsync(CreateSavedQueryRequest, CancellationToken)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateSavedQueryRequest request = new CreateSavedQueryRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                SavedQuery = new SavedQuery(),
+                SavedQueryId = "",
+            };
+            // Make the request
+            SavedQuery response = await assetServiceClient.CreateSavedQueryAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSavedQuery</summary>
+        public void CreateSavedQuery()
+        {
+            // Snippet: CreateSavedQuery(string, SavedQuery, string, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            SavedQuery savedQuery = new SavedQuery();
+            string savedQueryId = "";
+            // Make the request
+            SavedQuery response = assetServiceClient.CreateSavedQuery(parent, savedQuery, savedQueryId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSavedQueryAsync</summary>
+        public async Task CreateSavedQueryAsync()
+        {
+            // Snippet: CreateSavedQueryAsync(string, SavedQuery, string, CallSettings)
+            // Additional: CreateSavedQueryAsync(string, SavedQuery, string, CancellationToken)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            SavedQuery savedQuery = new SavedQuery();
+            string savedQueryId = "";
+            // Make the request
+            SavedQuery response = await assetServiceClient.CreateSavedQueryAsync(parent, savedQuery, savedQueryId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSavedQuery</summary>
+        public void CreateSavedQueryResourceNames1()
+        {
+            // Snippet: CreateSavedQuery(ProjectName, SavedQuery, string, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            SavedQuery savedQuery = new SavedQuery();
+            string savedQueryId = "";
+            // Make the request
+            SavedQuery response = assetServiceClient.CreateSavedQuery(parent, savedQuery, savedQueryId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSavedQueryAsync</summary>
+        public async Task CreateSavedQueryResourceNames1Async()
+        {
+            // Snippet: CreateSavedQueryAsync(ProjectName, SavedQuery, string, CallSettings)
+            // Additional: CreateSavedQueryAsync(ProjectName, SavedQuery, string, CancellationToken)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            SavedQuery savedQuery = new SavedQuery();
+            string savedQueryId = "";
+            // Make the request
+            SavedQuery response = await assetServiceClient.CreateSavedQueryAsync(parent, savedQuery, savedQueryId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSavedQuery</summary>
+        public void CreateSavedQueryResourceNames2()
+        {
+            // Snippet: CreateSavedQuery(FolderName, SavedQuery, string, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            FolderName parent = FolderName.FromFolder("[FOLDER]");
+            SavedQuery savedQuery = new SavedQuery();
+            string savedQueryId = "";
+            // Make the request
+            SavedQuery response = assetServiceClient.CreateSavedQuery(parent, savedQuery, savedQueryId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSavedQueryAsync</summary>
+        public async Task CreateSavedQueryResourceNames2Async()
+        {
+            // Snippet: CreateSavedQueryAsync(FolderName, SavedQuery, string, CallSettings)
+            // Additional: CreateSavedQueryAsync(FolderName, SavedQuery, string, CancellationToken)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FolderName parent = FolderName.FromFolder("[FOLDER]");
+            SavedQuery savedQuery = new SavedQuery();
+            string savedQueryId = "";
+            // Make the request
+            SavedQuery response = await assetServiceClient.CreateSavedQueryAsync(parent, savedQuery, savedQueryId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSavedQuery</summary>
+        public void CreateSavedQueryResourceNames3()
+        {
+            // Snippet: CreateSavedQuery(OrganizationName, SavedQuery, string, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
+            SavedQuery savedQuery = new SavedQuery();
+            string savedQueryId = "";
+            // Make the request
+            SavedQuery response = assetServiceClient.CreateSavedQuery(parent, savedQuery, savedQueryId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSavedQueryAsync</summary>
+        public async Task CreateSavedQueryResourceNames3Async()
+        {
+            // Snippet: CreateSavedQueryAsync(OrganizationName, SavedQuery, string, CallSettings)
+            // Additional: CreateSavedQueryAsync(OrganizationName, SavedQuery, string, CancellationToken)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
+            SavedQuery savedQuery = new SavedQuery();
+            string savedQueryId = "";
+            // Make the request
+            SavedQuery response = await assetServiceClient.CreateSavedQueryAsync(parent, savedQuery, savedQueryId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSavedQuery</summary>
+        public void GetSavedQueryRequestObject()
+        {
+            // Snippet: GetSavedQuery(GetSavedQueryRequest, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            GetSavedQueryRequest request = new GetSavedQueryRequest
+            {
+                SavedQueryName = SavedQueryName.FromProjectSavedQuery("[PROJECT]", "[SAVED_QUERY]"),
+            };
+            // Make the request
+            SavedQuery response = assetServiceClient.GetSavedQuery(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSavedQueryAsync</summary>
+        public async Task GetSavedQueryRequestObjectAsync()
+        {
+            // Snippet: GetSavedQueryAsync(GetSavedQueryRequest, CallSettings)
+            // Additional: GetSavedQueryAsync(GetSavedQueryRequest, CancellationToken)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetSavedQueryRequest request = new GetSavedQueryRequest
+            {
+                SavedQueryName = SavedQueryName.FromProjectSavedQuery("[PROJECT]", "[SAVED_QUERY]"),
+            };
+            // Make the request
+            SavedQuery response = await assetServiceClient.GetSavedQueryAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSavedQuery</summary>
+        public void GetSavedQuery()
+        {
+            // Snippet: GetSavedQuery(string, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/savedQueries/[SAVED_QUERY]";
+            // Make the request
+            SavedQuery response = assetServiceClient.GetSavedQuery(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSavedQueryAsync</summary>
+        public async Task GetSavedQueryAsync()
+        {
+            // Snippet: GetSavedQueryAsync(string, CallSettings)
+            // Additional: GetSavedQueryAsync(string, CancellationToken)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/savedQueries/[SAVED_QUERY]";
+            // Make the request
+            SavedQuery response = await assetServiceClient.GetSavedQueryAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSavedQuery</summary>
+        public void GetSavedQueryResourceNames()
+        {
+            // Snippet: GetSavedQuery(SavedQueryName, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            SavedQueryName name = SavedQueryName.FromProjectSavedQuery("[PROJECT]", "[SAVED_QUERY]");
+            // Make the request
+            SavedQuery response = assetServiceClient.GetSavedQuery(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSavedQueryAsync</summary>
+        public async Task GetSavedQueryResourceNamesAsync()
+        {
+            // Snippet: GetSavedQueryAsync(SavedQueryName, CallSettings)
+            // Additional: GetSavedQueryAsync(SavedQueryName, CancellationToken)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SavedQueryName name = SavedQueryName.FromProjectSavedQuery("[PROJECT]", "[SAVED_QUERY]");
+            // Make the request
+            SavedQuery response = await assetServiceClient.GetSavedQueryAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSavedQueries</summary>
+        public void ListSavedQueriesRequestObject()
+        {
+            // Snippet: ListSavedQueries(ListSavedQueriesRequest, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            ListSavedQueriesRequest request = new ListSavedQueriesRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListSavedQueriesResponse, SavedQuery> response = assetServiceClient.ListSavedQueries(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SavedQuery item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSavedQueriesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SavedQuery item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SavedQuery> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SavedQuery item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSavedQueriesAsync</summary>
+        public async Task ListSavedQueriesRequestObjectAsync()
+        {
+            // Snippet: ListSavedQueriesAsync(ListSavedQueriesRequest, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListSavedQueriesRequest request = new ListSavedQueriesRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListSavedQueriesResponse, SavedQuery> response = assetServiceClient.ListSavedQueriesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SavedQuery item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSavedQueriesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SavedQuery item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SavedQuery> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SavedQuery item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSavedQueries</summary>
+        public void ListSavedQueries()
+        {
+            // Snippet: ListSavedQueries(string, string, int?, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            // Make the request
+            PagedEnumerable<ListSavedQueriesResponse, SavedQuery> response = assetServiceClient.ListSavedQueries(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SavedQuery item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSavedQueriesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SavedQuery item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SavedQuery> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SavedQuery item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSavedQueriesAsync</summary>
+        public async Task ListSavedQueriesAsync()
+        {
+            // Snippet: ListSavedQueriesAsync(string, string, int?, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            // Make the request
+            PagedAsyncEnumerable<ListSavedQueriesResponse, SavedQuery> response = assetServiceClient.ListSavedQueriesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SavedQuery item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSavedQueriesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SavedQuery item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SavedQuery> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SavedQuery item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSavedQueries</summary>
+        public void ListSavedQueriesResourceNames1()
+        {
+            // Snippet: ListSavedQueries(ProjectName, string, int?, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            // Make the request
+            PagedEnumerable<ListSavedQueriesResponse, SavedQuery> response = assetServiceClient.ListSavedQueries(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SavedQuery item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSavedQueriesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SavedQuery item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SavedQuery> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SavedQuery item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSavedQueriesAsync</summary>
+        public async Task ListSavedQueriesResourceNames1Async()
+        {
+            // Snippet: ListSavedQueriesAsync(ProjectName, string, int?, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            // Make the request
+            PagedAsyncEnumerable<ListSavedQueriesResponse, SavedQuery> response = assetServiceClient.ListSavedQueriesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SavedQuery item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSavedQueriesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SavedQuery item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SavedQuery> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SavedQuery item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSavedQueries</summary>
+        public void ListSavedQueriesResourceNames2()
+        {
+            // Snippet: ListSavedQueries(FolderName, string, int?, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            FolderName parent = FolderName.FromFolder("[FOLDER]");
+            // Make the request
+            PagedEnumerable<ListSavedQueriesResponse, SavedQuery> response = assetServiceClient.ListSavedQueries(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SavedQuery item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSavedQueriesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SavedQuery item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SavedQuery> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SavedQuery item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSavedQueriesAsync</summary>
+        public async Task ListSavedQueriesResourceNames2Async()
+        {
+            // Snippet: ListSavedQueriesAsync(FolderName, string, int?, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FolderName parent = FolderName.FromFolder("[FOLDER]");
+            // Make the request
+            PagedAsyncEnumerable<ListSavedQueriesResponse, SavedQuery> response = assetServiceClient.ListSavedQueriesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SavedQuery item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSavedQueriesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SavedQuery item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SavedQuery> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SavedQuery item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSavedQueries</summary>
+        public void ListSavedQueriesResourceNames3()
+        {
+            // Snippet: ListSavedQueries(OrganizationName, string, int?, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
+            // Make the request
+            PagedEnumerable<ListSavedQueriesResponse, SavedQuery> response = assetServiceClient.ListSavedQueries(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SavedQuery item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSavedQueriesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SavedQuery item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SavedQuery> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SavedQuery item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSavedQueriesAsync</summary>
+        public async Task ListSavedQueriesResourceNames3Async()
+        {
+            // Snippet: ListSavedQueriesAsync(OrganizationName, string, int?, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListSavedQueriesResponse, SavedQuery> response = assetServiceClient.ListSavedQueriesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SavedQuery item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSavedQueriesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SavedQuery item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SavedQuery> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SavedQuery item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSavedQuery</summary>
+        public void UpdateSavedQueryRequestObject()
+        {
+            // Snippet: UpdateSavedQuery(UpdateSavedQueryRequest, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateSavedQueryRequest request = new UpdateSavedQueryRequest
+            {
+                SavedQuery = new SavedQuery(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            SavedQuery response = assetServiceClient.UpdateSavedQuery(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSavedQueryAsync</summary>
+        public async Task UpdateSavedQueryRequestObjectAsync()
+        {
+            // Snippet: UpdateSavedQueryAsync(UpdateSavedQueryRequest, CallSettings)
+            // Additional: UpdateSavedQueryAsync(UpdateSavedQueryRequest, CancellationToken)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateSavedQueryRequest request = new UpdateSavedQueryRequest
+            {
+                SavedQuery = new SavedQuery(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            SavedQuery response = await assetServiceClient.UpdateSavedQueryAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSavedQuery</summary>
+        public void UpdateSavedQuery()
+        {
+            // Snippet: UpdateSavedQuery(SavedQuery, FieldMask, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            SavedQuery savedQuery = new SavedQuery();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            SavedQuery response = assetServiceClient.UpdateSavedQuery(savedQuery, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSavedQueryAsync</summary>
+        public async Task UpdateSavedQueryAsync()
+        {
+            // Snippet: UpdateSavedQueryAsync(SavedQuery, FieldMask, CallSettings)
+            // Additional: UpdateSavedQueryAsync(SavedQuery, FieldMask, CancellationToken)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SavedQuery savedQuery = new SavedQuery();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            SavedQuery response = await assetServiceClient.UpdateSavedQueryAsync(savedQuery, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSavedQuery</summary>
+        public void DeleteSavedQueryRequestObject()
+        {
+            // Snippet: DeleteSavedQuery(DeleteSavedQueryRequest, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteSavedQueryRequest request = new DeleteSavedQueryRequest
+            {
+                SavedQueryName = SavedQueryName.FromProjectSavedQuery("[PROJECT]", "[SAVED_QUERY]"),
+            };
+            // Make the request
+            assetServiceClient.DeleteSavedQuery(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSavedQueryAsync</summary>
+        public async Task DeleteSavedQueryRequestObjectAsync()
+        {
+            // Snippet: DeleteSavedQueryAsync(DeleteSavedQueryRequest, CallSettings)
+            // Additional: DeleteSavedQueryAsync(DeleteSavedQueryRequest, CancellationToken)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteSavedQueryRequest request = new DeleteSavedQueryRequest
+            {
+                SavedQueryName = SavedQueryName.FromProjectSavedQuery("[PROJECT]", "[SAVED_QUERY]"),
+            };
+            // Make the request
+            await assetServiceClient.DeleteSavedQueryAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSavedQuery</summary>
+        public void DeleteSavedQuery()
+        {
+            // Snippet: DeleteSavedQuery(string, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/savedQueries/[SAVED_QUERY]";
+            // Make the request
+            assetServiceClient.DeleteSavedQuery(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSavedQueryAsync</summary>
+        public async Task DeleteSavedQueryAsync()
+        {
+            // Snippet: DeleteSavedQueryAsync(string, CallSettings)
+            // Additional: DeleteSavedQueryAsync(string, CancellationToken)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/savedQueries/[SAVED_QUERY]";
+            // Make the request
+            await assetServiceClient.DeleteSavedQueryAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSavedQuery</summary>
+        public void DeleteSavedQueryResourceNames()
+        {
+            // Snippet: DeleteSavedQuery(SavedQueryName, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            SavedQueryName name = SavedQueryName.FromProjectSavedQuery("[PROJECT]", "[SAVED_QUERY]");
+            // Make the request
+            assetServiceClient.DeleteSavedQuery(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSavedQueryAsync</summary>
+        public async Task DeleteSavedQueryResourceNamesAsync()
+        {
+            // Snippet: DeleteSavedQueryAsync(SavedQueryName, CallSettings)
+            // Additional: DeleteSavedQueryAsync(SavedQueryName, CancellationToken)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SavedQueryName name = SavedQueryName.FromProjectSavedQuery("[PROJECT]", "[SAVED_QUERY]");
+            // Make the request
+            await assetServiceClient.DeleteSavedQueryAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchGetEffectiveIamPolicies</summary>
+        public void BatchGetEffectiveIamPoliciesRequestObject()
+        {
+            // Snippet: BatchGetEffectiveIamPolicies(BatchGetEffectiveIamPoliciesRequest, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            BatchGetEffectiveIamPoliciesRequest request = new BatchGetEffectiveIamPoliciesRequest
+            {
+                ScopeAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                ResourceNames =
+                {
+                    new UnparsedResourceName("a/wildcard/resource"),
+                },
+            };
+            // Make the request
+            BatchGetEffectiveIamPoliciesResponse response = assetServiceClient.BatchGetEffectiveIamPolicies(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchGetEffectiveIamPoliciesAsync</summary>
+        public async Task BatchGetEffectiveIamPoliciesRequestObjectAsync()
+        {
+            // Snippet: BatchGetEffectiveIamPoliciesAsync(BatchGetEffectiveIamPoliciesRequest, CallSettings)
+            // Additional: BatchGetEffectiveIamPoliciesAsync(BatchGetEffectiveIamPoliciesRequest, CancellationToken)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchGetEffectiveIamPoliciesRequest request = new BatchGetEffectiveIamPoliciesRequest
+            {
+                ScopeAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                ResourceNames =
+                {
+                    new UnparsedResourceName("a/wildcard/resource"),
+                },
+            };
+            // Make the request
+            BatchGetEffectiveIamPoliciesResponse response = await assetServiceClient.BatchGetEffectiveIamPoliciesAsync(request);
             // End snippet
         }
     }

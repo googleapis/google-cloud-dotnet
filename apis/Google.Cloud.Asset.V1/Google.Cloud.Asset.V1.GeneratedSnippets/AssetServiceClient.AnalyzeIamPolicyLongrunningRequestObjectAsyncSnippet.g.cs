@@ -37,6 +37,7 @@ namespace Google.Cloud.Asset.V1.Snippets
             {
                 AnalysisQuery = new IamPolicyAnalysisQuery(),
                 OutputConfig = new IamPolicyAnalysisOutputConfig(),
+                SavedAnalysisQuery = "",
             };
             // Make the request
             Operation<AnalyzeIamPolicyLongrunningResponse, AnalyzeIamPolicyLongrunningMetadata> response = await assetServiceClient.AnalyzeIamPolicyLongrunningAsync(request);

@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using gax = Google.Api.Gax;
+using gagr = Google.Api.Gax.ResourceNames;
 using gcav = Google.Cloud.Asset.V1;
 using sys = System;
 
@@ -315,6 +316,315 @@ namespace Google.Cloud.Asset.V1
         public static bool operator !=(FeedName a, FeedName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>SavedQuery</c> resource.</summary>
+    public sealed partial class SavedQueryName : gax::IResourceName, sys::IEquatable<SavedQueryName>
+    {
+        /// <summary>The possible contents of <see cref="SavedQueryName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>A resource name with pattern <c>projects/{project}/savedQueries/{saved_query}</c>.</summary>
+            ProjectSavedQuery = 1,
+
+            /// <summary>A resource name with pattern <c>folders/{folder}/savedQueries/{saved_query}</c>.</summary>
+            FolderSavedQuery = 2,
+
+            /// <summary>
+            /// A resource name with pattern <c>organizations/{organization}/savedQueries/{saved_query}</c>.
+            /// </summary>
+            OrganizationSavedQuery = 3,
+        }
+
+        private static gax::PathTemplate s_projectSavedQuery = new gax::PathTemplate("projects/{project}/savedQueries/{saved_query}");
+
+        private static gax::PathTemplate s_folderSavedQuery = new gax::PathTemplate("folders/{folder}/savedQueries/{saved_query}");
+
+        private static gax::PathTemplate s_organizationSavedQuery = new gax::PathTemplate("organizations/{organization}/savedQueries/{saved_query}");
+
+        /// <summary>Creates a <see cref="SavedQueryName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="SavedQueryName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static SavedQueryName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new SavedQueryName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="SavedQueryName"/> with the pattern <c>projects/{project}/savedQueries/{saved_query}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="savedQueryId">The <c>SavedQuery</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="SavedQueryName"/> constructed from the provided ids.</returns>
+        public static SavedQueryName FromProjectSavedQuery(string projectId, string savedQueryId) =>
+            new SavedQueryName(ResourceNameType.ProjectSavedQuery, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), savedQueryId: gax::GaxPreconditions.CheckNotNullOrEmpty(savedQueryId, nameof(savedQueryId)));
+
+        /// <summary>
+        /// Creates a <see cref="SavedQueryName"/> with the pattern <c>folders/{folder}/savedQueries/{saved_query}</c>.
+        /// </summary>
+        /// <param name="folderId">The <c>Folder</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="savedQueryId">The <c>SavedQuery</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="SavedQueryName"/> constructed from the provided ids.</returns>
+        public static SavedQueryName FromFolderSavedQuery(string folderId, string savedQueryId) =>
+            new SavedQueryName(ResourceNameType.FolderSavedQuery, folderId: gax::GaxPreconditions.CheckNotNullOrEmpty(folderId, nameof(folderId)), savedQueryId: gax::GaxPreconditions.CheckNotNullOrEmpty(savedQueryId, nameof(savedQueryId)));
+
+        /// <summary>
+        /// Creates a <see cref="SavedQueryName"/> with the pattern
+        /// <c>organizations/{organization}/savedQueries/{saved_query}</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="savedQueryId">The <c>SavedQuery</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="SavedQueryName"/> constructed from the provided ids.</returns>
+        public static SavedQueryName FromOrganizationSavedQuery(string organizationId, string savedQueryId) =>
+            new SavedQueryName(ResourceNameType.OrganizationSavedQuery, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), savedQueryId: gax::GaxPreconditions.CheckNotNullOrEmpty(savedQueryId, nameof(savedQueryId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="SavedQueryName"/> with pattern
+        /// <c>projects/{project}/savedQueries/{saved_query}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="savedQueryId">The <c>SavedQuery</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="SavedQueryName"/> with pattern
+        /// <c>projects/{project}/savedQueries/{saved_query}</c>.
+        /// </returns>
+        public static string Format(string projectId, string savedQueryId) => FormatProjectSavedQuery(projectId, savedQueryId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="SavedQueryName"/> with pattern
+        /// <c>projects/{project}/savedQueries/{saved_query}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="savedQueryId">The <c>SavedQuery</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="SavedQueryName"/> with pattern
+        /// <c>projects/{project}/savedQueries/{saved_query}</c>.
+        /// </returns>
+        public static string FormatProjectSavedQuery(string projectId, string savedQueryId) =>
+            s_projectSavedQuery.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(savedQueryId, nameof(savedQueryId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="SavedQueryName"/> with pattern
+        /// <c>folders/{folder}/savedQueries/{saved_query}</c>.
+        /// </summary>
+        /// <param name="folderId">The <c>Folder</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="savedQueryId">The <c>SavedQuery</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="SavedQueryName"/> with pattern
+        /// <c>folders/{folder}/savedQueries/{saved_query}</c>.
+        /// </returns>
+        public static string FormatFolderSavedQuery(string folderId, string savedQueryId) =>
+            s_folderSavedQuery.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(folderId, nameof(folderId)), gax::GaxPreconditions.CheckNotNullOrEmpty(savedQueryId, nameof(savedQueryId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="SavedQueryName"/> with pattern
+        /// <c>organizations/{organization}/savedQueries/{saved_query}</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="savedQueryId">The <c>SavedQuery</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="SavedQueryName"/> with pattern
+        /// <c>organizations/{organization}/savedQueries/{saved_query}</c>.
+        /// </returns>
+        public static string FormatOrganizationSavedQuery(string organizationId, string savedQueryId) =>
+            s_organizationSavedQuery.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(savedQueryId, nameof(savedQueryId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="SavedQueryName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/savedQueries/{saved_query}</c></description></item>
+        /// <item><description><c>folders/{folder}/savedQueries/{saved_query}</c></description></item>
+        /// <item><description><c>organizations/{organization}/savedQueries/{saved_query}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="savedQueryName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="SavedQueryName"/> if successful.</returns>
+        public static SavedQueryName Parse(string savedQueryName) => Parse(savedQueryName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="SavedQueryName"/> instance; optionally allowing
+        /// an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/savedQueries/{saved_query}</c></description></item>
+        /// <item><description><c>folders/{folder}/savedQueries/{saved_query}</c></description></item>
+        /// <item><description><c>organizations/{organization}/savedQueries/{saved_query}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="savedQueryName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="SavedQueryName"/> if successful.</returns>
+        public static SavedQueryName Parse(string savedQueryName, bool allowUnparsed) =>
+            TryParse(savedQueryName, allowUnparsed, out SavedQueryName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="SavedQueryName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/savedQueries/{saved_query}</c></description></item>
+        /// <item><description><c>folders/{folder}/savedQueries/{saved_query}</c></description></item>
+        /// <item><description><c>organizations/{organization}/savedQueries/{saved_query}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="savedQueryName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="SavedQueryName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string savedQueryName, out SavedQueryName result) =>
+            TryParse(savedQueryName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="SavedQueryName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/savedQueries/{saved_query}</c></description></item>
+        /// <item><description><c>folders/{folder}/savedQueries/{saved_query}</c></description></item>
+        /// <item><description><c>organizations/{organization}/savedQueries/{saved_query}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="savedQueryName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="SavedQueryName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string savedQueryName, bool allowUnparsed, out SavedQueryName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(savedQueryName, nameof(savedQueryName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectSavedQuery.TryParseName(savedQueryName, out resourceName))
+            {
+                result = FromProjectSavedQuery(resourceName[0], resourceName[1]);
+                return true;
+            }
+            if (s_folderSavedQuery.TryParseName(savedQueryName, out resourceName))
+            {
+                result = FromFolderSavedQuery(resourceName[0], resourceName[1]);
+                return true;
+            }
+            if (s_organizationSavedQuery.TryParseName(savedQueryName, out resourceName))
+            {
+                result = FromOrganizationSavedQuery(resourceName[0], resourceName[1]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(savedQueryName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private SavedQueryName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string folderId = null, string organizationId = null, string projectId = null, string savedQueryId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            FolderId = folderId;
+            OrganizationId = organizationId;
+            ProjectId = projectId;
+            SavedQueryId = savedQueryId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="SavedQueryName"/> class from the component parts of pattern
+        /// <c>projects/{project}/savedQueries/{saved_query}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="savedQueryId">The <c>SavedQuery</c> ID. Must not be <c>null</c> or empty.</param>
+        public SavedQueryName(string projectId, string savedQueryId) : this(ResourceNameType.ProjectSavedQuery, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), savedQueryId: gax::GaxPreconditions.CheckNotNullOrEmpty(savedQueryId, nameof(savedQueryId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Folder</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string FolderId { get; }
+
+        /// <summary>
+        /// The <c>Organization</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
+        /// </summary>
+        public string OrganizationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The <c>SavedQuery</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
+        /// </summary>
+        public string SavedQueryId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectSavedQuery: return s_projectSavedQuery.Expand(ProjectId, SavedQueryId);
+                case ResourceNameType.FolderSavedQuery: return s_folderSavedQuery.Expand(FolderId, SavedQueryId);
+                case ResourceNameType.OrganizationSavedQuery: return s_organizationSavedQuery.Expand(OrganizationId, SavedQueryId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as SavedQueryName);
+
+        /// <inheritdoc/>
+        public bool Equals(SavedQueryName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(SavedQueryName a, SavedQueryName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(SavedQueryName a, SavedQueryName b) => !(a == b);
+    }
+
     public partial class ExportAssetsRequest
     {
         /// <summary>
@@ -384,6 +694,178 @@ namespace Google.Cloud.Asset.V1
         {
             get => string.IsNullOrEmpty(Name) ? null : gcav::FeedName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class SavedQuery
+    {
+        /// <summary>
+        /// <see cref="gcav::SavedQueryName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::SavedQueryName SavedQueryName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::SavedQueryName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateSavedQueryRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::ProjectName ParentAsProjectName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gagr::FolderName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::FolderName ParentAsFolderName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::FolderName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gagr::OrganizationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::OrganizationName ParentAsOrganizationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::OrganizationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (gagr::ProjectName.TryParse(Parent, out gagr::ProjectName project))
+                {
+                    return project;
+                }
+                if (gagr::FolderName.TryParse(Parent, out gagr::FolderName folder))
+                {
+                    return folder;
+                }
+                if (gagr::OrganizationName.TryParse(Parent, out gagr::OrganizationName organization))
+                {
+                    return organization;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetSavedQueryRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::SavedQueryName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::SavedQueryName SavedQueryName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::SavedQueryName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListSavedQueriesRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::ProjectName ParentAsProjectName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gagr::FolderName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::FolderName ParentAsFolderName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::FolderName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gagr::OrganizationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::OrganizationName ParentAsOrganizationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::OrganizationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (gagr::ProjectName.TryParse(Parent, out gagr::ProjectName project))
+                {
+                    return project;
+                }
+                if (gagr::FolderName.TryParse(Parent, out gagr::FolderName folder))
+                {
+                    return folder;
+                }
+                if (gagr::OrganizationName.TryParse(Parent, out gagr::OrganizationName organization))
+                {
+                    return organization;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteSavedQueryRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::SavedQueryName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::SavedQueryName SavedQueryName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::SavedQueryName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BatchGetEffectiveIamPoliciesRequest
+    {
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Scope"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ScopeAsResourceName
+        {
+            get => string.IsNullOrEmpty(Scope) ? null : gax::UnparsedResourceName.Parse(Scope);
+            set => Scope = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Names"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<gax::IResourceName> ResourceNames
+        {
+            get => new gax::ResourceNameList<gax::IResourceName>(Names, s => string.IsNullOrEmpty(s) ? null : gax::UnparsedResourceName.Parse(s));
         }
     }
 }
