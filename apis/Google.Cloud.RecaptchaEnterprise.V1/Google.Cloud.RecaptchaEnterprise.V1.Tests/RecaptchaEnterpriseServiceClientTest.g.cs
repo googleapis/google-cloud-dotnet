@@ -45,6 +45,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 RiskAnalysis = new RiskAnalysis(),
                 TokenProperties = new TokenProperties(),
                 AccountDefenderAssessment = new AccountDefenderAssessment(),
+                PrivatePasswordLeakVerification = new PrivatePasswordLeakVerification(),
             };
             mockGrpcClient.Setup(x => x.CreateAssessment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
@@ -69,6 +70,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 RiskAnalysis = new RiskAnalysis(),
                 TokenProperties = new TokenProperties(),
                 AccountDefenderAssessment = new AccountDefenderAssessment(),
+                PrivatePasswordLeakVerification = new PrivatePasswordLeakVerification(),
             };
             mockGrpcClient.Setup(x => x.CreateAssessmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Assessment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
@@ -95,6 +97,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 RiskAnalysis = new RiskAnalysis(),
                 TokenProperties = new TokenProperties(),
                 AccountDefenderAssessment = new AccountDefenderAssessment(),
+                PrivatePasswordLeakVerification = new PrivatePasswordLeakVerification(),
             };
             mockGrpcClient.Setup(x => x.CreateAssessment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
@@ -119,6 +122,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 RiskAnalysis = new RiskAnalysis(),
                 TokenProperties = new TokenProperties(),
                 AccountDefenderAssessment = new AccountDefenderAssessment(),
+                PrivatePasswordLeakVerification = new PrivatePasswordLeakVerification(),
             };
             mockGrpcClient.Setup(x => x.CreateAssessmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Assessment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
@@ -145,6 +149,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 RiskAnalysis = new RiskAnalysis(),
                 TokenProperties = new TokenProperties(),
                 AccountDefenderAssessment = new AccountDefenderAssessment(),
+                PrivatePasswordLeakVerification = new PrivatePasswordLeakVerification(),
             };
             mockGrpcClient.Setup(x => x.CreateAssessment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
@@ -169,6 +174,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 RiskAnalysis = new RiskAnalysis(),
                 TokenProperties = new TokenProperties(),
                 AccountDefenderAssessment = new AccountDefenderAssessment(),
+                PrivatePasswordLeakVerification = new PrivatePasswordLeakVerification(),
             };
             mockGrpcClient.Setup(x => x.CreateAssessmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Assessment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
