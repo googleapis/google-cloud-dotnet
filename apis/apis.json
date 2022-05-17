@@ -1577,6 +1577,26 @@
       "serviceConfigFile": "gameservices_v1beta.yaml"
     },
     {
+      "id": "Google.Cloud.GkeBackup.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Backup for GKE",
+      "productUrl": "https://cloud.google.com/kubernetes-engine/docs/add-on/backup-for-gke",
+      "description": "Recommended Google client library to access the Backup for GKE API, which is a managed Kubernetes workload backup and restore service for GKE clusters.",
+      "tags": [
+        "kubernetes",
+        "gke",
+        "backup"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "2.3.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/gkebackup/v1",
+      "shortName": "gkebackup",
+      "serviceConfigFile": "gkebackup_v1.yaml"
+    },
+    {
       "id": "Google.Cloud.GkeConnect.Gateway.V1Beta1",
       "version": "1.0.0-beta02",
       "type": "grpc",
