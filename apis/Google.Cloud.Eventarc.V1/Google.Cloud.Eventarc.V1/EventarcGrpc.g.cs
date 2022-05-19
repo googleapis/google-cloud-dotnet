@@ -95,6 +95,14 @@ namespace Google.Cloud.Eventarc.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Eventarc.V1.DeleteChannelRequest> __Marshaller_google_cloud_eventarc_v1_DeleteChannelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Eventarc.V1.DeleteChannelRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Eventarc.V1.GetProviderRequest> __Marshaller_google_cloud_eventarc_v1_GetProviderRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Eventarc.V1.GetProviderRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Eventarc.V1.Provider> __Marshaller_google_cloud_eventarc_v1_Provider = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Eventarc.V1.Provider.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Eventarc.V1.ListProvidersRequest> __Marshaller_google_cloud_eventarc_v1_ListProvidersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Eventarc.V1.ListProvidersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Eventarc.V1.ListProvidersResponse> __Marshaller_google_cloud_eventarc_v1_ListProvidersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Eventarc.V1.ListProvidersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Eventarc.V1.GetChannelConnectionRequest> __Marshaller_google_cloud_eventarc_v1_GetChannelConnectionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Eventarc.V1.GetChannelConnectionRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Eventarc.V1.ChannelConnection> __Marshaller_google_cloud_eventarc_v1_ChannelConnection = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Eventarc.V1.ChannelConnection.Parser));
@@ -186,6 +194,22 @@ namespace Google.Cloud.Eventarc.V1 {
         "DeleteChannel",
         __Marshaller_google_cloud_eventarc_v1_DeleteChannelRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Eventarc.V1.GetProviderRequest, global::Google.Cloud.Eventarc.V1.Provider> __Method_GetProvider = new grpc::Method<global::Google.Cloud.Eventarc.V1.GetProviderRequest, global::Google.Cloud.Eventarc.V1.Provider>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetProvider",
+        __Marshaller_google_cloud_eventarc_v1_GetProviderRequest,
+        __Marshaller_google_cloud_eventarc_v1_Provider);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Eventarc.V1.ListProvidersRequest, global::Google.Cloud.Eventarc.V1.ListProvidersResponse> __Method_ListProviders = new grpc::Method<global::Google.Cloud.Eventarc.V1.ListProvidersRequest, global::Google.Cloud.Eventarc.V1.ListProvidersResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListProviders",
+        __Marshaller_google_cloud_eventarc_v1_ListProvidersRequest,
+        __Marshaller_google_cloud_eventarc_v1_ListProvidersResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Eventarc.V1.GetChannelConnectionRequest, global::Google.Cloud.Eventarc.V1.ChannelConnection> __Method_GetChannelConnection = new grpc::Method<global::Google.Cloud.Eventarc.V1.GetChannelConnectionRequest, global::Google.Cloud.Eventarc.V1.ChannelConnection>(
@@ -345,6 +369,30 @@ namespace Google.Cloud.Eventarc.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteChannel(global::Google.Cloud.Eventarc.V1.DeleteChannelRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Get a single Provider.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Eventarc.V1.Provider> GetProvider(global::Google.Cloud.Eventarc.V1.GetProviderRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// List providers.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Eventarc.V1.ListProvidersResponse> ListProviders(global::Google.Cloud.Eventarc.V1.ListProvidersRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -907,6 +955,102 @@ namespace Google.Cloud.Eventarc.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteChannel, null, options, request);
       }
       /// <summary>
+      /// Get a single Provider.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Eventarc.V1.Provider GetProvider(global::Google.Cloud.Eventarc.V1.GetProviderRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetProvider(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get a single Provider.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Eventarc.V1.Provider GetProvider(global::Google.Cloud.Eventarc.V1.GetProviderRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetProvider, null, options, request);
+      }
+      /// <summary>
+      /// Get a single Provider.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Eventarc.V1.Provider> GetProviderAsync(global::Google.Cloud.Eventarc.V1.GetProviderRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetProviderAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get a single Provider.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Eventarc.V1.Provider> GetProviderAsync(global::Google.Cloud.Eventarc.V1.GetProviderRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetProvider, null, options, request);
+      }
+      /// <summary>
+      /// List providers.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Eventarc.V1.ListProvidersResponse ListProviders(global::Google.Cloud.Eventarc.V1.ListProvidersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListProviders(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List providers.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Eventarc.V1.ListProvidersResponse ListProviders(global::Google.Cloud.Eventarc.V1.ListProvidersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListProviders, null, options, request);
+      }
+      /// <summary>
+      /// List providers.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Eventarc.V1.ListProvidersResponse> ListProvidersAsync(global::Google.Cloud.Eventarc.V1.ListProvidersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListProvidersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List providers.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Eventarc.V1.ListProvidersResponse> ListProvidersAsync(global::Google.Cloud.Eventarc.V1.ListProvidersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListProviders, null, options, request);
+      }
+      /// <summary>
       /// Get a single ChannelConnection.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1122,6 +1266,8 @@ namespace Google.Cloud.Eventarc.V1 {
           .AddMethod(__Method_CreateChannel, serviceImpl.CreateChannel)
           .AddMethod(__Method_UpdateChannel, serviceImpl.UpdateChannel)
           .AddMethod(__Method_DeleteChannel, serviceImpl.DeleteChannel)
+          .AddMethod(__Method_GetProvider, serviceImpl.GetProvider)
+          .AddMethod(__Method_ListProviders, serviceImpl.ListProviders)
           .AddMethod(__Method_GetChannelConnection, serviceImpl.GetChannelConnection)
           .AddMethod(__Method_ListChannelConnections, serviceImpl.ListChannelConnections)
           .AddMethod(__Method_CreateChannelConnection, serviceImpl.CreateChannelConnection)
@@ -1145,6 +1291,8 @@ namespace Google.Cloud.Eventarc.V1 {
       serviceBinder.AddMethod(__Method_CreateChannel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Eventarc.V1.CreateChannelRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateChannel));
       serviceBinder.AddMethod(__Method_UpdateChannel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Eventarc.V1.UpdateChannelRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateChannel));
       serviceBinder.AddMethod(__Method_DeleteChannel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Eventarc.V1.DeleteChannelRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteChannel));
+      serviceBinder.AddMethod(__Method_GetProvider, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Eventarc.V1.GetProviderRequest, global::Google.Cloud.Eventarc.V1.Provider>(serviceImpl.GetProvider));
+      serviceBinder.AddMethod(__Method_ListProviders, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Eventarc.V1.ListProvidersRequest, global::Google.Cloud.Eventarc.V1.ListProvidersResponse>(serviceImpl.ListProviders));
       serviceBinder.AddMethod(__Method_GetChannelConnection, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Eventarc.V1.GetChannelConnectionRequest, global::Google.Cloud.Eventarc.V1.ChannelConnection>(serviceImpl.GetChannelConnection));
       serviceBinder.AddMethod(__Method_ListChannelConnections, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Eventarc.V1.ListChannelConnectionsRequest, global::Google.Cloud.Eventarc.V1.ListChannelConnectionsResponse>(serviceImpl.ListChannelConnections));
       serviceBinder.AddMethod(__Method_CreateChannelConnection, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Eventarc.V1.CreateChannelConnectionRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateChannelConnection));

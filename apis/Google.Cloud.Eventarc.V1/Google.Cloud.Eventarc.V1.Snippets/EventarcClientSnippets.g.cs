@@ -1793,6 +1793,373 @@ namespace Google.Cloud.Eventarc.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetProvider</summary>
+        public void GetProviderRequestObject()
+        {
+            // Snippet: GetProvider(GetProviderRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            GetProviderRequest request = new GetProviderRequest
+            {
+                ProviderName = ProviderName.FromProjectLocationProvider("[PROJECT]", "[LOCATION]", "[PROVIDER]"),
+            };
+            // Make the request
+            Provider response = eventarcClient.GetProvider(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProviderAsync</summary>
+        public async Task GetProviderRequestObjectAsync()
+        {
+            // Snippet: GetProviderAsync(GetProviderRequest, CallSettings)
+            // Additional: GetProviderAsync(GetProviderRequest, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            GetProviderRequest request = new GetProviderRequest
+            {
+                ProviderName = ProviderName.FromProjectLocationProvider("[PROJECT]", "[LOCATION]", "[PROVIDER]"),
+            };
+            // Make the request
+            Provider response = await eventarcClient.GetProviderAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProvider</summary>
+        public void GetProvider()
+        {
+            // Snippet: GetProvider(string, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/providers/[PROVIDER]";
+            // Make the request
+            Provider response = eventarcClient.GetProvider(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProviderAsync</summary>
+        public async Task GetProviderAsync()
+        {
+            // Snippet: GetProviderAsync(string, CallSettings)
+            // Additional: GetProviderAsync(string, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/providers/[PROVIDER]";
+            // Make the request
+            Provider response = await eventarcClient.GetProviderAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProvider</summary>
+        public void GetProviderResourceNames()
+        {
+            // Snippet: GetProvider(ProviderName, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            ProviderName name = ProviderName.FromProjectLocationProvider("[PROJECT]", "[LOCATION]", "[PROVIDER]");
+            // Make the request
+            Provider response = eventarcClient.GetProvider(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProviderAsync</summary>
+        public async Task GetProviderResourceNamesAsync()
+        {
+            // Snippet: GetProviderAsync(ProviderName, CallSettings)
+            // Additional: GetProviderAsync(ProviderName, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            ProviderName name = ProviderName.FromProjectLocationProvider("[PROJECT]", "[LOCATION]", "[PROVIDER]");
+            // Make the request
+            Provider response = await eventarcClient.GetProviderAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListProviders</summary>
+        public void ListProvidersRequestObject()
+        {
+            // Snippet: ListProviders(ListProvidersRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            ListProvidersRequest request = new ListProvidersRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                OrderBy = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListProvidersResponse, Provider> response = eventarcClient.ListProviders(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Provider item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListProvidersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Provider item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Provider> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Provider item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListProvidersAsync</summary>
+        public async Task ListProvidersRequestObjectAsync()
+        {
+            // Snippet: ListProvidersAsync(ListProvidersRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            ListProvidersRequest request = new ListProvidersRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                OrderBy = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListProvidersResponse, Provider> response = eventarcClient.ListProvidersAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Provider item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListProvidersResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Provider item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Provider> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Provider item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListProviders</summary>
+        public void ListProviders()
+        {
+            // Snippet: ListProviders(string, string, int?, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListProvidersResponse, Provider> response = eventarcClient.ListProviders(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Provider item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListProvidersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Provider item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Provider> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Provider item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListProvidersAsync</summary>
+        public async Task ListProvidersAsync()
+        {
+            // Snippet: ListProvidersAsync(string, string, int?, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListProvidersResponse, Provider> response = eventarcClient.ListProvidersAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Provider item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListProvidersResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Provider item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Provider> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Provider item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListProviders</summary>
+        public void ListProvidersResourceNames()
+        {
+            // Snippet: ListProviders(LocationName, string, int?, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListProvidersResponse, Provider> response = eventarcClient.ListProviders(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Provider item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListProvidersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Provider item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Provider> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Provider item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListProvidersAsync</summary>
+        public async Task ListProvidersResourceNamesAsync()
+        {
+            // Snippet: ListProvidersAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListProvidersResponse, Provider> response = eventarcClient.ListProvidersAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Provider item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListProvidersResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Provider item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Provider> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Provider item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         /// <summary>Snippet for GetChannelConnection</summary>
         public void GetChannelConnectionRequestObject()
         {

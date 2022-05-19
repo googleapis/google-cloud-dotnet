@@ -419,6 +419,144 @@ namespace Google.Cloud.Eventarc.V1.Tests
         }
 
         [xunit::FactAttribute]
+        public void GetProviderRequestObject()
+        {
+            moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetProviderRequest request = new GetProviderRequest
+            {
+                ProviderName = ProviderName.FromProjectLocationProvider("[PROJECT]", "[LOCATION]", "[PROVIDER]"),
+            };
+            Provider expectedResponse = new Provider
+            {
+                ProviderName = ProviderName.FromProjectLocationProvider("[PROJECT]", "[LOCATION]", "[PROVIDER]"),
+                DisplayName = "display_name137f65c2",
+                EventTypes = { new EventType(), },
+            };
+            mockGrpcClient.Setup(x => x.GetProvider(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            Provider response = client.GetProvider(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetProviderRequestObjectAsync()
+        {
+            moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetProviderRequest request = new GetProviderRequest
+            {
+                ProviderName = ProviderName.FromProjectLocationProvider("[PROJECT]", "[LOCATION]", "[PROVIDER]"),
+            };
+            Provider expectedResponse = new Provider
+            {
+                ProviderName = ProviderName.FromProjectLocationProvider("[PROJECT]", "[LOCATION]", "[PROVIDER]"),
+                DisplayName = "display_name137f65c2",
+                EventTypes = { new EventType(), },
+            };
+            mockGrpcClient.Setup(x => x.GetProviderAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Provider>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            Provider responseCallSettings = await client.GetProviderAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Provider responseCancellationToken = await client.GetProviderAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetProvider()
+        {
+            moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetProviderRequest request = new GetProviderRequest
+            {
+                ProviderName = ProviderName.FromProjectLocationProvider("[PROJECT]", "[LOCATION]", "[PROVIDER]"),
+            };
+            Provider expectedResponse = new Provider
+            {
+                ProviderName = ProviderName.FromProjectLocationProvider("[PROJECT]", "[LOCATION]", "[PROVIDER]"),
+                DisplayName = "display_name137f65c2",
+                EventTypes = { new EventType(), },
+            };
+            mockGrpcClient.Setup(x => x.GetProvider(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            Provider response = client.GetProvider(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetProviderAsync()
+        {
+            moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetProviderRequest request = new GetProviderRequest
+            {
+                ProviderName = ProviderName.FromProjectLocationProvider("[PROJECT]", "[LOCATION]", "[PROVIDER]"),
+            };
+            Provider expectedResponse = new Provider
+            {
+                ProviderName = ProviderName.FromProjectLocationProvider("[PROJECT]", "[LOCATION]", "[PROVIDER]"),
+                DisplayName = "display_name137f65c2",
+                EventTypes = { new EventType(), },
+            };
+            mockGrpcClient.Setup(x => x.GetProviderAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Provider>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            Provider responseCallSettings = await client.GetProviderAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Provider responseCancellationToken = await client.GetProviderAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetProviderResourceNames()
+        {
+            moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetProviderRequest request = new GetProviderRequest
+            {
+                ProviderName = ProviderName.FromProjectLocationProvider("[PROJECT]", "[LOCATION]", "[PROVIDER]"),
+            };
+            Provider expectedResponse = new Provider
+            {
+                ProviderName = ProviderName.FromProjectLocationProvider("[PROJECT]", "[LOCATION]", "[PROVIDER]"),
+                DisplayName = "display_name137f65c2",
+                EventTypes = { new EventType(), },
+            };
+            mockGrpcClient.Setup(x => x.GetProvider(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            Provider response = client.GetProvider(request.ProviderName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetProviderResourceNamesAsync()
+        {
+            moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetProviderRequest request = new GetProviderRequest
+            {
+                ProviderName = ProviderName.FromProjectLocationProvider("[PROJECT]", "[LOCATION]", "[PROVIDER]"),
+            };
+            Provider expectedResponse = new Provider
+            {
+                ProviderName = ProviderName.FromProjectLocationProvider("[PROJECT]", "[LOCATION]", "[PROVIDER]"),
+                DisplayName = "display_name137f65c2",
+                EventTypes = { new EventType(), },
+            };
+            mockGrpcClient.Setup(x => x.GetProviderAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Provider>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            Provider responseCallSettings = await client.GetProviderAsync(request.ProviderName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Provider responseCancellationToken = await client.GetProviderAsync(request.ProviderName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void GetChannelConnectionRequestObject()
         {
             moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);

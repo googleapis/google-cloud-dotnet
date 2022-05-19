@@ -63,6 +63,8 @@ namespace Google.Cloud.Eventarc.V1
             UpdateChannelOperationsSettings = existing.UpdateChannelOperationsSettings.Clone();
             DeleteChannelSettings = existing.DeleteChannelSettings;
             DeleteChannelOperationsSettings = existing.DeleteChannelOperationsSettings.Clone();
+            GetProviderSettings = existing.GetProviderSettings;
+            ListProvidersSettings = existing.ListProvidersSettings;
             GetChannelConnectionSettings = existing.GetChannelConnectionSettings;
             ListChannelConnectionsSettings = existing.ListChannelConnectionsSettings;
             CreateChannelConnectionSettings = existing.CreateChannelConnectionSettings;
@@ -301,6 +303,30 @@ namespace Google.Cloud.Eventarc.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>EventarcClient.GetProvider</c>
+        ///  and <c>EventarcClient.GetProviderAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetProviderSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EventarcClient.ListProviders</c> and <c>EventarcClient.ListProvidersAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListProvidersSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1858,6 +1884,225 @@ namespace Google.Cloud.Eventarc.V1
             DeleteChannelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Get a single Provider.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Provider GetProvider(GetProviderRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a single Provider.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Provider> GetProviderAsync(GetProviderRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a single Provider.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Provider> GetProviderAsync(GetProviderRequest request, st::CancellationToken cancellationToken) =>
+            GetProviderAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a single Provider.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the provider to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Provider GetProvider(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetProvider(new GetProviderRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a single Provider.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the provider to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Provider> GetProviderAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetProviderAsync(new GetProviderRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a single Provider.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the provider to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Provider> GetProviderAsync(string name, st::CancellationToken cancellationToken) =>
+            GetProviderAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a single Provider.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the provider to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Provider GetProvider(ProviderName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetProvider(new GetProviderRequest
+            {
+                ProviderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a single Provider.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the provider to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Provider> GetProviderAsync(ProviderName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetProviderAsync(new GetProviderRequest
+            {
+                ProviderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a single Provider.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the provider to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Provider> GetProviderAsync(ProviderName name, st::CancellationToken cancellationToken) =>
+            GetProviderAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// List providers.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Provider"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListProvidersResponse, Provider> ListProviders(ListProvidersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List providers.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Provider"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListProvidersResponse, Provider> ListProvidersAsync(ListProvidersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List providers.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent of the provider to get.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Provider"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListProvidersResponse, Provider> ListProviders(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListProviders(new ListProvidersRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// List providers.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent of the provider to get.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Provider"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListProvidersResponse, Provider> ListProvidersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListProvidersAsync(new ListProvidersRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// List providers.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent of the provider to get.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Provider"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListProvidersResponse, Provider> ListProviders(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListProviders(new ListProvidersRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// List providers.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent of the provider to get.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Provider"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListProvidersResponse, Provider> ListProvidersAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListProvidersAsync(new ListProvidersRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
         /// Get a single ChannelConnection.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2412,6 +2657,10 @@ namespace Google.Cloud.Eventarc.V1
 
         private readonly gaxgrpc::ApiCall<DeleteChannelRequest, lro::Operation> _callDeleteChannel;
 
+        private readonly gaxgrpc::ApiCall<GetProviderRequest, Provider> _callGetProvider;
+
+        private readonly gaxgrpc::ApiCall<ListProvidersRequest, ListProvidersResponse> _callListProviders;
+
         private readonly gaxgrpc::ApiCall<GetChannelConnectionRequest, ChannelConnection> _callGetChannelConnection;
 
         private readonly gaxgrpc::ApiCall<ListChannelConnectionsRequest, ListChannelConnectionsResponse> _callListChannelConnections;
@@ -2468,6 +2717,12 @@ namespace Google.Cloud.Eventarc.V1
             _callDeleteChannel = clientHelper.BuildApiCall<DeleteChannelRequest, lro::Operation>(grpcClient.DeleteChannelAsync, grpcClient.DeleteChannel, effectiveSettings.DeleteChannelSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteChannel);
             Modify_DeleteChannelApiCall(ref _callDeleteChannel);
+            _callGetProvider = clientHelper.BuildApiCall<GetProviderRequest, Provider>(grpcClient.GetProviderAsync, grpcClient.GetProvider, effectiveSettings.GetProviderSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetProvider);
+            Modify_GetProviderApiCall(ref _callGetProvider);
+            _callListProviders = clientHelper.BuildApiCall<ListProvidersRequest, ListProvidersResponse>(grpcClient.ListProvidersAsync, grpcClient.ListProviders, effectiveSettings.ListProvidersSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListProviders);
+            Modify_ListProvidersApiCall(ref _callListProviders);
             _callGetChannelConnection = clientHelper.BuildApiCall<GetChannelConnectionRequest, ChannelConnection>(grpcClient.GetChannelConnectionAsync, grpcClient.GetChannelConnection, effectiveSettings.GetChannelConnectionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetChannelConnection);
             Modify_GetChannelConnectionApiCall(ref _callGetChannelConnection);
@@ -2505,6 +2760,10 @@ namespace Google.Cloud.Eventarc.V1
 
         partial void Modify_DeleteChannelApiCall(ref gaxgrpc::ApiCall<DeleteChannelRequest, lro::Operation> call);
 
+        partial void Modify_GetProviderApiCall(ref gaxgrpc::ApiCall<GetProviderRequest, Provider> call);
+
+        partial void Modify_ListProvidersApiCall(ref gaxgrpc::ApiCall<ListProvidersRequest, ListProvidersResponse> call);
+
         partial void Modify_GetChannelConnectionApiCall(ref gaxgrpc::ApiCall<GetChannelConnectionRequest, ChannelConnection> call);
 
         partial void Modify_ListChannelConnectionsApiCall(ref gaxgrpc::ApiCall<ListChannelConnectionsRequest, ListChannelConnectionsResponse> call);
@@ -2537,6 +2796,10 @@ namespace Google.Cloud.Eventarc.V1
         partial void Modify_UpdateChannelRequest(ref UpdateChannelRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteChannelRequest(ref DeleteChannelRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetProviderRequest(ref GetProviderRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListProvidersRequest(ref ListProvidersRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetChannelConnectionRequest(ref GetChannelConnectionRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2805,6 +3068,54 @@ namespace Google.Cloud.Eventarc.V1
         }
 
         /// <summary>
+        /// Get a single Provider.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Provider GetProvider(GetProviderRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetProviderRequest(ref request, ref callSettings);
+            return _callGetProvider.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get a single Provider.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Provider> GetProviderAsync(GetProviderRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetProviderRequest(ref request, ref callSettings);
+            return _callGetProvider.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// List providers.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Provider"/> resources.</returns>
+        public override gax::PagedEnumerable<ListProvidersResponse, Provider> ListProviders(ListProvidersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListProvidersRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListProvidersRequest, ListProvidersResponse, Provider>(_callListProviders, request, callSettings);
+        }
+
+        /// <summary>
+        /// List providers.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Provider"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListProvidersResponse, Provider> ListProvidersAsync(ListProvidersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListProvidersRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListProvidersRequest, ListProvidersResponse, Provider>(_callListProviders, request, callSettings);
+        }
+
+        /// <summary>
         /// Get a single ChannelConnection.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2915,6 +3226,10 @@ namespace Google.Cloud.Eventarc.V1
     {
     }
 
+    public partial class ListProvidersRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListChannelConnectionsRequest : gaxgrpc::IPageRequest
     {
     }
@@ -2931,6 +3246,14 @@ namespace Google.Cloud.Eventarc.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Channel> GetEnumerator() => Channels.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListProvidersResponse : gaxgrpc::IPageResponse<Provider>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Provider> GetEnumerator() => Providers.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
