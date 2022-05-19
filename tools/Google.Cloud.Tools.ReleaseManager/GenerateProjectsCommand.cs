@@ -107,41 +107,32 @@ namespace Google.Cloud.Tools.ReleaseManager
             { "Xunit.SkippableFact", "1.4.13" },
             { "Moq", "4.16.1" },
             { "System.Linq.Async", "5.1.0" },
-            { ReferenceAssembliesPackage, ReferenceAssembliesVersion }
         };
 
         // Hard-coded versions for dependencies for production packages that can be updated arbitrarily, as their assets are all private.
         // The relationship between this and PrivateAssets is tested on startup.
         private static readonly Dictionary<string, string> CommonHiddenProductionDependencies = new Dictionary<string, string>
         {
-            { CompatibilityAnalyzer, "0.2.12-alpha" },
             { ConfigureAwaitAnalyzer, "5.0.0" },
-            { ReferenceAssembliesPackage, ReferenceAssembliesVersion }
         };
 
         private static readonly Dictionary<string, string> CommonSampleDependencies = new Dictionary<string, string>
         {
             { "CommandLineParser", "2.8.0" },
             { "Google.Cloud.SampleUtil", "project"},
-            { ReferenceAssembliesPackage, ReferenceAssembliesVersion }
         };
 
-        private const string CompatibilityAnalyzer = "Microsoft.DotNet.Analyzers.Compatibility";
         private const string ConfigureAwaitAnalyzer = "ConfigureAwaitChecker.Analyzer";
         private const string CSharpWorkspacesPackage = "Microsoft.CodeAnalysis.CSharp.Workspaces";
-        private const string ReferenceAssembliesPackage = "Microsoft.NETFramework.ReferenceAssemblies";
-        private const string ReferenceAssembliesVersion = "1.0.2";
-
+        
         /// <summary>
         /// For packages which need a PrivateAssets attribute in dependencies, this dictionary provides the value of the attribute.
         /// </summary>
         private static readonly Dictionary<string, string> PrivateAssets = new Dictionary<string, string>
         {
             { GrpcCorePackage, "None" },
-            { CompatibilityAnalyzer, "All" },
             { ConfigureAwaitAnalyzer, "All" },
-            { CSharpWorkspacesPackage, "All" },
-            { ReferenceAssembliesPackage, "All" }
+            { CSharpWorkspacesPackage, "All" }
         };
 
         private const string AnalyzersPath = @"..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll";
