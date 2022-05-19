@@ -310,6 +310,62 @@ namespace Google.Cloud.AccessApproval.V1.Tests
         }
 
         [xunit::FactAttribute]
+        public void InvalidateApprovalRequestRequestObject()
+        {
+            moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
+            InvalidateApprovalRequestMessage request = new InvalidateApprovalRequestMessage
+            {
+                ApprovalRequestName = ApprovalRequestName.FromProjectApprovalRequest("[PROJECT]", "[APPROVAL_REQUEST]"),
+            };
+            ApprovalRequest expectedResponse = new ApprovalRequest
+            {
+                ApprovalRequestName = ApprovalRequestName.FromProjectApprovalRequest("[PROJECT]", "[APPROVAL_REQUEST]"),
+                RequestedResourceName = "requested_resource_name3898f866",
+                RequestedReason = new AccessReason(),
+                RequestedLocations = new AccessLocations(),
+                RequestTime = new wkt::Timestamp(),
+                RequestedExpiration = new wkt::Timestamp(),
+                Approve = new ApproveDecision(),
+                Dismiss = new DismissDecision(),
+                RequestedResourceProperties = new ResourceProperties(),
+            };
+            mockGrpcClient.Setup(x => x.InvalidateApprovalRequest(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AccessApprovalServiceClient client = new AccessApprovalServiceClientImpl(mockGrpcClient.Object, null);
+            ApprovalRequest response = client.InvalidateApprovalRequest(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task InvalidateApprovalRequestRequestObjectAsync()
+        {
+            moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
+            InvalidateApprovalRequestMessage request = new InvalidateApprovalRequestMessage
+            {
+                ApprovalRequestName = ApprovalRequestName.FromProjectApprovalRequest("[PROJECT]", "[APPROVAL_REQUEST]"),
+            };
+            ApprovalRequest expectedResponse = new ApprovalRequest
+            {
+                ApprovalRequestName = ApprovalRequestName.FromProjectApprovalRequest("[PROJECT]", "[APPROVAL_REQUEST]"),
+                RequestedResourceName = "requested_resource_name3898f866",
+                RequestedReason = new AccessReason(),
+                RequestedLocations = new AccessLocations(),
+                RequestTime = new wkt::Timestamp(),
+                RequestedExpiration = new wkt::Timestamp(),
+                Approve = new ApproveDecision(),
+                Dismiss = new DismissDecision(),
+                RequestedResourceProperties = new ResourceProperties(),
+            };
+            mockGrpcClient.Setup(x => x.InvalidateApprovalRequestAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ApprovalRequest>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AccessApprovalServiceClient client = new AccessApprovalServiceClientImpl(mockGrpcClient.Object, null);
+            ApprovalRequest responseCallSettings = await client.InvalidateApprovalRequestAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ApprovalRequest responseCancellationToken = await client.InvalidateApprovalRequestAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void GetAccessApprovalSettingsRequestObject()
         {
             moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
@@ -329,6 +385,9 @@ namespace Google.Cloud.AccessApproval.V1.Tests
                     new EnrolledService(),
                 },
                 EnrolledAncestor = true,
+                ActiveKeyVersion = "active_key_versionfb97b530",
+                AncestorHasActiveKeyVersion = true,
+                InvalidKeyVersion = true,
             };
             mockGrpcClient.Setup(x => x.GetAccessApprovalSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AccessApprovalServiceClient client = new AccessApprovalServiceClientImpl(mockGrpcClient.Object, null);
@@ -357,6 +416,9 @@ namespace Google.Cloud.AccessApproval.V1.Tests
                     new EnrolledService(),
                 },
                 EnrolledAncestor = true,
+                ActiveKeyVersion = "active_key_versionfb97b530",
+                AncestorHasActiveKeyVersion = true,
+                InvalidKeyVersion = true,
             };
             mockGrpcClient.Setup(x => x.GetAccessApprovalSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AccessApprovalSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AccessApprovalServiceClient client = new AccessApprovalServiceClientImpl(mockGrpcClient.Object, null);
@@ -387,6 +449,9 @@ namespace Google.Cloud.AccessApproval.V1.Tests
                     new EnrolledService(),
                 },
                 EnrolledAncestor = true,
+                ActiveKeyVersion = "active_key_versionfb97b530",
+                AncestorHasActiveKeyVersion = true,
+                InvalidKeyVersion = true,
             };
             mockGrpcClient.Setup(x => x.GetAccessApprovalSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AccessApprovalServiceClient client = new AccessApprovalServiceClientImpl(mockGrpcClient.Object, null);
@@ -415,6 +480,9 @@ namespace Google.Cloud.AccessApproval.V1.Tests
                     new EnrolledService(),
                 },
                 EnrolledAncestor = true,
+                ActiveKeyVersion = "active_key_versionfb97b530",
+                AncestorHasActiveKeyVersion = true,
+                InvalidKeyVersion = true,
             };
             mockGrpcClient.Setup(x => x.GetAccessApprovalSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AccessApprovalSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AccessApprovalServiceClient client = new AccessApprovalServiceClientImpl(mockGrpcClient.Object, null);
@@ -445,6 +513,9 @@ namespace Google.Cloud.AccessApproval.V1.Tests
                     new EnrolledService(),
                 },
                 EnrolledAncestor = true,
+                ActiveKeyVersion = "active_key_versionfb97b530",
+                AncestorHasActiveKeyVersion = true,
+                InvalidKeyVersion = true,
             };
             mockGrpcClient.Setup(x => x.GetAccessApprovalSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AccessApprovalServiceClient client = new AccessApprovalServiceClientImpl(mockGrpcClient.Object, null);
@@ -473,6 +544,9 @@ namespace Google.Cloud.AccessApproval.V1.Tests
                     new EnrolledService(),
                 },
                 EnrolledAncestor = true,
+                ActiveKeyVersion = "active_key_versionfb97b530",
+                AncestorHasActiveKeyVersion = true,
+                InvalidKeyVersion = true,
             };
             mockGrpcClient.Setup(x => x.GetAccessApprovalSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AccessApprovalSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AccessApprovalServiceClient client = new AccessApprovalServiceClientImpl(mockGrpcClient.Object, null);
@@ -504,6 +578,9 @@ namespace Google.Cloud.AccessApproval.V1.Tests
                     new EnrolledService(),
                 },
                 EnrolledAncestor = true,
+                ActiveKeyVersion = "active_key_versionfb97b530",
+                AncestorHasActiveKeyVersion = true,
+                InvalidKeyVersion = true,
             };
             mockGrpcClient.Setup(x => x.UpdateAccessApprovalSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AccessApprovalServiceClient client = new AccessApprovalServiceClientImpl(mockGrpcClient.Object, null);
@@ -533,6 +610,9 @@ namespace Google.Cloud.AccessApproval.V1.Tests
                     new EnrolledService(),
                 },
                 EnrolledAncestor = true,
+                ActiveKeyVersion = "active_key_versionfb97b530",
+                AncestorHasActiveKeyVersion = true,
+                InvalidKeyVersion = true,
             };
             mockGrpcClient.Setup(x => x.UpdateAccessApprovalSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AccessApprovalSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AccessApprovalServiceClient client = new AccessApprovalServiceClientImpl(mockGrpcClient.Object, null);
@@ -564,6 +644,9 @@ namespace Google.Cloud.AccessApproval.V1.Tests
                     new EnrolledService(),
                 },
                 EnrolledAncestor = true,
+                ActiveKeyVersion = "active_key_versionfb97b530",
+                AncestorHasActiveKeyVersion = true,
+                InvalidKeyVersion = true,
             };
             mockGrpcClient.Setup(x => x.UpdateAccessApprovalSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AccessApprovalServiceClient client = new AccessApprovalServiceClientImpl(mockGrpcClient.Object, null);
@@ -593,6 +676,9 @@ namespace Google.Cloud.AccessApproval.V1.Tests
                     new EnrolledService(),
                 },
                 EnrolledAncestor = true,
+                ActiveKeyVersion = "active_key_versionfb97b530",
+                AncestorHasActiveKeyVersion = true,
+                InvalidKeyVersion = true,
             };
             mockGrpcClient.Setup(x => x.UpdateAccessApprovalSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AccessApprovalSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AccessApprovalServiceClient client = new AccessApprovalServiceClientImpl(mockGrpcClient.Object, null);
@@ -693,6 +779,90 @@ namespace Google.Cloud.AccessApproval.V1.Tests
             AccessApprovalServiceClient client = new AccessApprovalServiceClientImpl(mockGrpcClient.Object, null);
             await client.DeleteAccessApprovalSettingsAsync(request.AccessApprovalSettingsName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteAccessApprovalSettingsAsync(request.AccessApprovalSettingsName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetAccessApprovalServiceAccountRequestObject()
+        {
+            moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
+            GetAccessApprovalServiceAccountMessage request = new GetAccessApprovalServiceAccountMessage
+            {
+                Name = "name1c9368b0",
+            };
+            AccessApprovalServiceAccount expectedResponse = new AccessApprovalServiceAccount
+            {
+                AccessApprovalServiceAccountName = AccessApprovalServiceAccountName.FromProject("[PROJECT]"),
+                AccountEmail = "account_email01cc68b0",
+            };
+            mockGrpcClient.Setup(x => x.GetAccessApprovalServiceAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AccessApprovalServiceClient client = new AccessApprovalServiceClientImpl(mockGrpcClient.Object, null);
+            AccessApprovalServiceAccount response = client.GetAccessApprovalServiceAccount(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetAccessApprovalServiceAccountRequestObjectAsync()
+        {
+            moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
+            GetAccessApprovalServiceAccountMessage request = new GetAccessApprovalServiceAccountMessage
+            {
+                Name = "name1c9368b0",
+            };
+            AccessApprovalServiceAccount expectedResponse = new AccessApprovalServiceAccount
+            {
+                AccessApprovalServiceAccountName = AccessApprovalServiceAccountName.FromProject("[PROJECT]"),
+                AccountEmail = "account_email01cc68b0",
+            };
+            mockGrpcClient.Setup(x => x.GetAccessApprovalServiceAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AccessApprovalServiceAccount>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AccessApprovalServiceClient client = new AccessApprovalServiceClientImpl(mockGrpcClient.Object, null);
+            AccessApprovalServiceAccount responseCallSettings = await client.GetAccessApprovalServiceAccountAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AccessApprovalServiceAccount responseCancellationToken = await client.GetAccessApprovalServiceAccountAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetAccessApprovalServiceAccount()
+        {
+            moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
+            GetAccessApprovalServiceAccountMessage request = new GetAccessApprovalServiceAccountMessage
+            {
+                Name = "name1c9368b0",
+            };
+            AccessApprovalServiceAccount expectedResponse = new AccessApprovalServiceAccount
+            {
+                AccessApprovalServiceAccountName = AccessApprovalServiceAccountName.FromProject("[PROJECT]"),
+                AccountEmail = "account_email01cc68b0",
+            };
+            mockGrpcClient.Setup(x => x.GetAccessApprovalServiceAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AccessApprovalServiceClient client = new AccessApprovalServiceClientImpl(mockGrpcClient.Object, null);
+            AccessApprovalServiceAccount response = client.GetAccessApprovalServiceAccount(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetAccessApprovalServiceAccountAsync()
+        {
+            moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
+            GetAccessApprovalServiceAccountMessage request = new GetAccessApprovalServiceAccountMessage
+            {
+                Name = "name1c9368b0",
+            };
+            AccessApprovalServiceAccount expectedResponse = new AccessApprovalServiceAccount
+            {
+                AccessApprovalServiceAccountName = AccessApprovalServiceAccountName.FromProject("[PROJECT]"),
+                AccountEmail = "account_email01cc68b0",
+            };
+            mockGrpcClient.Setup(x => x.GetAccessApprovalServiceAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AccessApprovalServiceAccount>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AccessApprovalServiceClient client = new AccessApprovalServiceClientImpl(mockGrpcClient.Object, null);
+            AccessApprovalServiceAccount responseCallSettings = await client.GetAccessApprovalServiceAccountAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AccessApprovalServiceAccount responseCancellationToken = await client.GetAccessApprovalServiceAccountAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
     }

@@ -529,6 +529,59 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "accessapproval_v1_generated_AccessApprovalService_InvalidateApprovalRequest_sync",
+      "title": "InvalidateApprovalRequestRequestObject",
+      "description": "Snippet for InvalidateApprovalRequest",
+      "file": "AccessApprovalServiceClient.InvalidateApprovalRequestRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InvalidateApprovalRequest",
+        "fullName": "Google.Cloud.AccessApproval.V1.AccessApprovalServiceClient.InvalidateApprovalRequest",
+        "resultType": "Google.Cloud.AccessApproval.V1.ApprovalRequest",
+        "client": {
+          "shortName": "AccessApprovalServiceClient",
+          "fullName": "Google.Cloud.AccessApproval.V1.AccessApprovalServiceClient"
+        },
+        "method": {
+          "shortName": "InvalidateApprovalRequest",
+          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.InvalidateApprovalRequest",
+          "service": {
+            "shortName": "AccessApprovalService",
+            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "accessapproval_v1_generated_AccessApprovalService_InvalidateApprovalRequest_async",
+      "title": "InvalidateApprovalRequestRequestObjectAsync",
+      "description": "Snippet for InvalidateApprovalRequestAsync",
+      "file": "AccessApprovalServiceClient.InvalidateApprovalRequestRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InvalidateApprovalRequestAsync",
+        "fullName": "Google.Cloud.AccessApproval.V1.AccessApprovalServiceClient.InvalidateApprovalRequestAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AccessApproval.V1.ApprovalRequest>",
+        "client": {
+          "shortName": "AccessApprovalServiceClient",
+          "fullName": "Google.Cloud.AccessApproval.V1.AccessApprovalServiceClient"
+        },
+        "method": {
+          "shortName": "InvalidateApprovalRequest",
+          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.InvalidateApprovalRequest",
+          "service": {
+            "shortName": "AccessApprovalService",
+            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "accessapproval_v1_generated_AccessApprovalService_GetAccessApprovalSettings_sync",
       "title": "GetAccessApprovalSettingsRequestObject",
       "description": "Snippet for GetAccessApprovalSettings",
@@ -931,6 +984,110 @@
         "method": {
           "shortName": "DeleteAccessApprovalSettings",
           "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.DeleteAccessApprovalSettings",
+          "service": {
+            "shortName": "AccessApprovalService",
+            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "accessapproval_v1_generated_AccessApprovalService_GetAccessApprovalServiceAccount_sync",
+      "title": "GetAccessApprovalServiceAccountRequestObject",
+      "description": "Snippet for GetAccessApprovalServiceAccount",
+      "file": "AccessApprovalServiceClient.GetAccessApprovalServiceAccountRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAccessApprovalServiceAccount",
+        "fullName": "Google.Cloud.AccessApproval.V1.AccessApprovalServiceClient.GetAccessApprovalServiceAccount",
+        "resultType": "Google.Cloud.AccessApproval.V1.AccessApprovalServiceAccount",
+        "client": {
+          "shortName": "AccessApprovalServiceClient",
+          "fullName": "Google.Cloud.AccessApproval.V1.AccessApprovalServiceClient"
+        },
+        "method": {
+          "shortName": "GetAccessApprovalServiceAccount",
+          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.GetAccessApprovalServiceAccount",
+          "service": {
+            "shortName": "AccessApprovalService",
+            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "accessapproval_v1_generated_AccessApprovalService_GetAccessApprovalServiceAccount_async",
+      "title": "GetAccessApprovalServiceAccountRequestObjectAsync",
+      "description": "Snippet for GetAccessApprovalServiceAccountAsync",
+      "file": "AccessApprovalServiceClient.GetAccessApprovalServiceAccountRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAccessApprovalServiceAccountAsync",
+        "fullName": "Google.Cloud.AccessApproval.V1.AccessApprovalServiceClient.GetAccessApprovalServiceAccountAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AccessApproval.V1.AccessApprovalServiceAccount>",
+        "client": {
+          "shortName": "AccessApprovalServiceClient",
+          "fullName": "Google.Cloud.AccessApproval.V1.AccessApprovalServiceClient"
+        },
+        "method": {
+          "shortName": "GetAccessApprovalServiceAccount",
+          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.GetAccessApprovalServiceAccount",
+          "service": {
+            "shortName": "AccessApprovalService",
+            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "accessapproval_v1_generated_AccessApprovalService_GetAccessApprovalServiceAccount_sync_flattened",
+      "title": "GetAccessApprovalServiceAccount",
+      "description": "Snippet for GetAccessApprovalServiceAccount",
+      "file": "AccessApprovalServiceClient.GetAccessApprovalServiceAccountSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAccessApprovalServiceAccount",
+        "fullName": "Google.Cloud.AccessApproval.V1.AccessApprovalServiceClient.GetAccessApprovalServiceAccount",
+        "resultType": "Google.Cloud.AccessApproval.V1.AccessApprovalServiceAccount",
+        "client": {
+          "shortName": "AccessApprovalServiceClient",
+          "fullName": "Google.Cloud.AccessApproval.V1.AccessApprovalServiceClient"
+        },
+        "method": {
+          "shortName": "GetAccessApprovalServiceAccount",
+          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.GetAccessApprovalServiceAccount",
+          "service": {
+            "shortName": "AccessApprovalService",
+            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "accessapproval_v1_generated_AccessApprovalService_GetAccessApprovalServiceAccount_async_flattened",
+      "title": "GetAccessApprovalServiceAccountAsync",
+      "description": "Snippet for GetAccessApprovalServiceAccountAsync",
+      "file": "AccessApprovalServiceClient.GetAccessApprovalServiceAccountAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAccessApprovalServiceAccountAsync",
+        "fullName": "Google.Cloud.AccessApproval.V1.AccessApprovalServiceClient.GetAccessApprovalServiceAccountAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AccessApproval.V1.AccessApprovalServiceAccount>",
+        "client": {
+          "shortName": "AccessApprovalServiceClient",
+          "fullName": "Google.Cloud.AccessApproval.V1.AccessApprovalServiceClient"
+        },
+        "method": {
+          "shortName": "GetAccessApprovalServiceAccount",
+          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.GetAccessApprovalServiceAccount",
           "service": {
             "shortName": "AccessApprovalService",
             "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
