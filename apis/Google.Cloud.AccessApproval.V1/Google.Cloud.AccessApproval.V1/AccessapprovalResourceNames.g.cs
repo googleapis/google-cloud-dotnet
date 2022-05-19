@@ -652,6 +652,321 @@ namespace Google.Cloud.AccessApproval.V1
         public static bool operator !=(AccessApprovalSettingsName a, AccessApprovalSettingsName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>AccessApprovalServiceAccount</c> resource.</summary>
+    public sealed partial class AccessApprovalServiceAccountName : gax::IResourceName, sys::IEquatable<AccessApprovalServiceAccountName>
+    {
+        /// <summary>The possible contents of <see cref="AccessApprovalServiceAccountName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>A resource name with pattern <c>projects/{project}/serviceAccount</c>.</summary>
+            Project = 1,
+
+            /// <summary>A resource name with pattern <c>folders/{folder}/serviceAccount</c>.</summary>
+            Folder = 2,
+
+            /// <summary>A resource name with pattern <c>organizations/{organization}/serviceAccount</c>.</summary>
+            Organization = 3,
+        }
+
+        private static gax::PathTemplate s_project = new gax::PathTemplate("projects/{project}/serviceAccount");
+
+        private static gax::PathTemplate s_folder = new gax::PathTemplate("folders/{folder}/serviceAccount");
+
+        private static gax::PathTemplate s_organization = new gax::PathTemplate("organizations/{organization}/serviceAccount");
+
+        /// <summary>
+        /// Creates a <see cref="AccessApprovalServiceAccountName"/> containing an unparsed resource name.
+        /// </summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="AccessApprovalServiceAccountName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static AccessApprovalServiceAccountName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new AccessApprovalServiceAccountName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="AccessApprovalServiceAccountName"/> with the pattern
+        /// <c>projects/{project}/serviceAccount</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// A new instance of <see cref="AccessApprovalServiceAccountName"/> constructed from the provided ids.
+        /// </returns>
+        public static AccessApprovalServiceAccountName FromProject(string projectId) =>
+            new AccessApprovalServiceAccountName(ResourceNameType.Project, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)));
+
+        /// <summary>
+        /// Creates a <see cref="AccessApprovalServiceAccountName"/> with the pattern <c>folders/{folder}/serviceAccount</c>
+        /// .
+        /// </summary>
+        /// <param name="folderId">The <c>Folder</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// A new instance of <see cref="AccessApprovalServiceAccountName"/> constructed from the provided ids.
+        /// </returns>
+        public static AccessApprovalServiceAccountName FromFolder(string folderId) =>
+            new AccessApprovalServiceAccountName(ResourceNameType.Folder, folderId: gax::GaxPreconditions.CheckNotNullOrEmpty(folderId, nameof(folderId)));
+
+        /// <summary>
+        /// Creates a <see cref="AccessApprovalServiceAccountName"/> with the pattern
+        /// <c>organizations/{organization}/serviceAccount</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// A new instance of <see cref="AccessApprovalServiceAccountName"/> constructed from the provided ids.
+        /// </returns>
+        public static AccessApprovalServiceAccountName FromOrganization(string organizationId) =>
+            new AccessApprovalServiceAccountName(ResourceNameType.Organization, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AccessApprovalServiceAccountName"/> with
+        /// pattern <c>projects/{project}/serviceAccount</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AccessApprovalServiceAccountName"/> with pattern
+        /// <c>projects/{project}/serviceAccount</c>.
+        /// </returns>
+        public static string Format(string projectId) => FormatProject(projectId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AccessApprovalServiceAccountName"/> with
+        /// pattern <c>projects/{project}/serviceAccount</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AccessApprovalServiceAccountName"/> with pattern
+        /// <c>projects/{project}/serviceAccount</c>.
+        /// </returns>
+        public static string FormatProject(string projectId) =>
+            s_project.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AccessApprovalServiceAccountName"/> with
+        /// pattern <c>folders/{folder}/serviceAccount</c>.
+        /// </summary>
+        /// <param name="folderId">The <c>Folder</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AccessApprovalServiceAccountName"/> with pattern
+        /// <c>folders/{folder}/serviceAccount</c>.
+        /// </returns>
+        public static string FormatFolder(string folderId) =>
+            s_folder.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(folderId, nameof(folderId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AccessApprovalServiceAccountName"/> with
+        /// pattern <c>organizations/{organization}/serviceAccount</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AccessApprovalServiceAccountName"/> with pattern
+        /// <c>organizations/{organization}/serviceAccount</c>.
+        /// </returns>
+        public static string FormatOrganization(string organizationId) =>
+            s_organization.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="AccessApprovalServiceAccountName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/serviceAccount</c></description></item>
+        /// <item><description><c>folders/{folder}/serviceAccount</c></description></item>
+        /// <item><description><c>organizations/{organization}/serviceAccount</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="accessApprovalServiceAccountName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <returns>The parsed <see cref="AccessApprovalServiceAccountName"/> if successful.</returns>
+        public static AccessApprovalServiceAccountName Parse(string accessApprovalServiceAccountName) =>
+            Parse(accessApprovalServiceAccountName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="AccessApprovalServiceAccountName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/serviceAccount</c></description></item>
+        /// <item><description><c>folders/{folder}/serviceAccount</c></description></item>
+        /// <item><description><c>organizations/{organization}/serviceAccount</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="accessApprovalServiceAccountName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="AccessApprovalServiceAccountName"/> if successful.</returns>
+        public static AccessApprovalServiceAccountName Parse(string accessApprovalServiceAccountName, bool allowUnparsed) =>
+            TryParse(accessApprovalServiceAccountName, allowUnparsed, out AccessApprovalServiceAccountName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="AccessApprovalServiceAccountName"/>
+        /// instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/serviceAccount</c></description></item>
+        /// <item><description><c>folders/{folder}/serviceAccount</c></description></item>
+        /// <item><description><c>organizations/{organization}/serviceAccount</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="accessApprovalServiceAccountName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="AccessApprovalServiceAccountName"/>, or <c>null</c> if
+        /// parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string accessApprovalServiceAccountName, out AccessApprovalServiceAccountName result) =>
+            TryParse(accessApprovalServiceAccountName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="AccessApprovalServiceAccountName"/>
+        /// instance; optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/serviceAccount</c></description></item>
+        /// <item><description><c>folders/{folder}/serviceAccount</c></description></item>
+        /// <item><description><c>organizations/{organization}/serviceAccount</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="accessApprovalServiceAccountName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="AccessApprovalServiceAccountName"/>, or <c>null</c> if
+        /// parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string accessApprovalServiceAccountName, bool allowUnparsed, out AccessApprovalServiceAccountName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(accessApprovalServiceAccountName, nameof(accessApprovalServiceAccountName));
+            gax::TemplatedResourceName resourceName;
+            if (s_project.TryParseName(accessApprovalServiceAccountName, out resourceName))
+            {
+                result = FromProject(resourceName[0]);
+                return true;
+            }
+            if (s_folder.TryParseName(accessApprovalServiceAccountName, out resourceName))
+            {
+                result = FromFolder(resourceName[0]);
+                return true;
+            }
+            if (s_organization.TryParseName(accessApprovalServiceAccountName, out resourceName))
+            {
+                result = FromOrganization(resourceName[0]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(accessApprovalServiceAccountName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private AccessApprovalServiceAccountName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string folderId = null, string organizationId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            FolderId = folderId;
+            OrganizationId = organizationId;
+            ProjectId = projectId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="AccessApprovalServiceAccountName"/> class from the component parts
+        /// of pattern <c>projects/{project}/serviceAccount</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        public AccessApprovalServiceAccountName(string projectId) : this(ResourceNameType.Project, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Folder</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string FolderId { get; }
+
+        /// <summary>
+        /// The <c>Organization</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
+        /// </summary>
+        public string OrganizationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.Project: return s_project.Expand(ProjectId);
+                case ResourceNameType.Folder: return s_folder.Expand(FolderId);
+                case ResourceNameType.Organization: return s_organization.Expand(OrganizationId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as AccessApprovalServiceAccountName);
+
+        /// <inheritdoc/>
+        public bool Equals(AccessApprovalServiceAccountName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(AccessApprovalServiceAccountName a, AccessApprovalServiceAccountName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(AccessApprovalServiceAccountName a, AccessApprovalServiceAccountName b) => !(a == b);
+    }
+
     public partial class ApprovalRequest
     {
         /// <summary>
@@ -673,6 +988,19 @@ namespace Google.Cloud.AccessApproval.V1
         public gcav::AccessApprovalSettingsName AccessApprovalSettingsName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcav::AccessApprovalSettingsName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class AccessApprovalServiceAccount
+    {
+        /// <summary>
+        /// <see cref="gcav::AccessApprovalServiceAccountName"/>-typed view over the <see cref="Name"/> resource name
+        /// property.
+        /// </summary>
+        public gcav::AccessApprovalServiceAccountName AccessApprovalServiceAccountName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::AccessApprovalServiceAccountName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -760,6 +1088,18 @@ namespace Google.Cloud.AccessApproval.V1
     }
 
     public partial class DismissApprovalRequestMessage
+    {
+        /// <summary>
+        /// <see cref="gcav::ApprovalRequestName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::ApprovalRequestName ApprovalRequestName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::ApprovalRequestName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class InvalidateApprovalRequestMessage
     {
         /// <summary>
         /// <see cref="gcav::ApprovalRequestName"/>-typed view over the <see cref="Name"/> resource name property.

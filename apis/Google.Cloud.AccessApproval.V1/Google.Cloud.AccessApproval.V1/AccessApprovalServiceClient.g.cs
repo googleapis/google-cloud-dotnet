@@ -52,9 +52,11 @@ namespace Google.Cloud.AccessApproval.V1
             GetApprovalRequestSettings = existing.GetApprovalRequestSettings;
             ApproveApprovalRequestSettings = existing.ApproveApprovalRequestSettings;
             DismissApprovalRequestSettings = existing.DismissApprovalRequestSettings;
+            InvalidateApprovalRequestSettings = existing.InvalidateApprovalRequestSettings;
             GetAccessApprovalSettingsSettings = existing.GetAccessApprovalSettingsSettings;
             UpdateAccessApprovalSettingsSettings = existing.UpdateAccessApprovalSettingsSettings;
             DeleteAccessApprovalSettingsSettings = existing.DeleteAccessApprovalSettingsSettings;
+            GetAccessApprovalServiceAccountSettings = existing.GetAccessApprovalServiceAccountSettings;
             OnCopy(existing);
         }
 
@@ -126,6 +128,19 @@ namespace Google.Cloud.AccessApproval.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AccessApprovalServiceClient.InvalidateApprovalRequest</c> and
+        /// <c>AccessApprovalServiceClient.InvalidateApprovalRequestAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings InvalidateApprovalRequestSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>AccessApprovalServiceClient.GetAccessApprovalSettings</c> and
         /// <c>AccessApprovalServiceClient.GetAccessApprovalSettingsAsync</c>.
         /// </summary>
@@ -168,6 +183,19 @@ namespace Google.Cloud.AccessApproval.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteAccessApprovalSettingsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AccessApprovalServiceClient.GetAccessApprovalServiceAccount</c> and
+        /// <c>AccessApprovalServiceClient.GetAccessApprovalServiceAccountAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAccessApprovalServiceAccountSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="AccessApprovalServiceSettings"/> object.</returns>
@@ -805,6 +833,54 @@ namespace Google.Cloud.AccessApproval.V1
             DismissApprovalRequestAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Invalidates an existing ApprovalRequest. Returns the updated
+        /// ApprovalRequest.
+        /// 
+        /// NOTE: This does not deny access to the resource if another request has been
+        /// made and approved. It only invalidates a single approval.
+        /// 
+        /// Returns FAILED_PRECONDITION if the request exists but is not in an approved
+        /// state.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ApprovalRequest InvalidateApprovalRequest(InvalidateApprovalRequestMessage request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Invalidates an existing ApprovalRequest. Returns the updated
+        /// ApprovalRequest.
+        /// 
+        /// NOTE: This does not deny access to the resource if another request has been
+        /// made and approved. It only invalidates a single approval.
+        /// 
+        /// Returns FAILED_PRECONDITION if the request exists but is not in an approved
+        /// state.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ApprovalRequest> InvalidateApprovalRequestAsync(InvalidateApprovalRequestMessage request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Invalidates an existing ApprovalRequest. Returns the updated
+        /// ApprovalRequest.
+        /// 
+        /// NOTE: This does not deny access to the resource if another request has been
+        /// made and approved. It only invalidates a single approval.
+        /// 
+        /// Returns FAILED_PRECONDITION if the request exists but is not in an approved
+        /// state.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ApprovalRequest> InvalidateApprovalRequestAsync(InvalidateApprovalRequestMessage request, st::CancellationToken cancellationToken) =>
+            InvalidateApprovalRequestAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Gets the settings associated with a project, folder, or organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1162,6 +1238,72 @@ namespace Google.Cloud.AccessApproval.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task DeleteAccessApprovalSettingsAsync(AccessApprovalSettingsName name, st::CancellationToken cancellationToken) =>
             DeleteAccessApprovalSettingsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves the service account that is used by Access Approval to access KMS
+        /// keys for signing approved approval requests.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AccessApprovalServiceAccount GetAccessApprovalServiceAccount(GetAccessApprovalServiceAccountMessage request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves the service account that is used by Access Approval to access KMS
+        /// keys for signing approved approval requests.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AccessApprovalServiceAccount> GetAccessApprovalServiceAccountAsync(GetAccessApprovalServiceAccountMessage request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves the service account that is used by Access Approval to access KMS
+        /// keys for signing approved approval requests.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AccessApprovalServiceAccount> GetAccessApprovalServiceAccountAsync(GetAccessApprovalServiceAccountMessage request, st::CancellationToken cancellationToken) =>
+            GetAccessApprovalServiceAccountAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves the service account that is used by Access Approval to access KMS
+        /// keys for signing approved approval requests.
+        /// </summary>
+        /// <param name="name">
+        /// Name of the AccessApprovalServiceAccount to retrieve.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AccessApprovalServiceAccount GetAccessApprovalServiceAccount(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAccessApprovalServiceAccount(new GetAccessApprovalServiceAccountMessage { Name = name ?? "", }, callSettings);
+
+        /// <summary>
+        /// Retrieves the service account that is used by Access Approval to access KMS
+        /// keys for signing approved approval requests.
+        /// </summary>
+        /// <param name="name">
+        /// Name of the AccessApprovalServiceAccount to retrieve.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AccessApprovalServiceAccount> GetAccessApprovalServiceAccountAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAccessApprovalServiceAccountAsync(new GetAccessApprovalServiceAccountMessage { Name = name ?? "", }, callSettings);
+
+        /// <summary>
+        /// Retrieves the service account that is used by Access Approval to access KMS
+        /// keys for signing approved approval requests.
+        /// </summary>
+        /// <param name="name">
+        /// Name of the AccessApprovalServiceAccount to retrieve.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AccessApprovalServiceAccount> GetAccessApprovalServiceAccountAsync(string name, st::CancellationToken cancellationToken) =>
+            GetAccessApprovalServiceAccountAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>AccessApprovalService client wrapper implementation, for convenient use.</summary>
@@ -1210,11 +1352,15 @@ namespace Google.Cloud.AccessApproval.V1
 
         private readonly gaxgrpc::ApiCall<DismissApprovalRequestMessage, ApprovalRequest> _callDismissApprovalRequest;
 
+        private readonly gaxgrpc::ApiCall<InvalidateApprovalRequestMessage, ApprovalRequest> _callInvalidateApprovalRequest;
+
         private readonly gaxgrpc::ApiCall<GetAccessApprovalSettingsMessage, AccessApprovalSettings> _callGetAccessApprovalSettings;
 
         private readonly gaxgrpc::ApiCall<UpdateAccessApprovalSettingsMessage, AccessApprovalSettings> _callUpdateAccessApprovalSettings;
 
         private readonly gaxgrpc::ApiCall<DeleteAccessApprovalSettingsMessage, wkt::Empty> _callDeleteAccessApprovalSettings;
+
+        private readonly gaxgrpc::ApiCall<GetAccessApprovalServiceAccountMessage, AccessApprovalServiceAccount> _callGetAccessApprovalServiceAccount;
 
         /// <summary>
         /// Constructs a client wrapper for the AccessApprovalService service, with the specified gRPC client and
@@ -1239,6 +1385,9 @@ namespace Google.Cloud.AccessApproval.V1
             _callDismissApprovalRequest = clientHelper.BuildApiCall<DismissApprovalRequestMessage, ApprovalRequest>(grpcClient.DismissApprovalRequestAsync, grpcClient.DismissApprovalRequest, effectiveSettings.DismissApprovalRequestSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDismissApprovalRequest);
             Modify_DismissApprovalRequestApiCall(ref _callDismissApprovalRequest);
+            _callInvalidateApprovalRequest = clientHelper.BuildApiCall<InvalidateApprovalRequestMessage, ApprovalRequest>(grpcClient.InvalidateApprovalRequestAsync, grpcClient.InvalidateApprovalRequest, effectiveSettings.InvalidateApprovalRequestSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callInvalidateApprovalRequest);
+            Modify_InvalidateApprovalRequestApiCall(ref _callInvalidateApprovalRequest);
             _callGetAccessApprovalSettings = clientHelper.BuildApiCall<GetAccessApprovalSettingsMessage, AccessApprovalSettings>(grpcClient.GetAccessApprovalSettingsAsync, grpcClient.GetAccessApprovalSettings, effectiveSettings.GetAccessApprovalSettingsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetAccessApprovalSettings);
             Modify_GetAccessApprovalSettingsApiCall(ref _callGetAccessApprovalSettings);
@@ -1248,6 +1397,9 @@ namespace Google.Cloud.AccessApproval.V1
             _callDeleteAccessApprovalSettings = clientHelper.BuildApiCall<DeleteAccessApprovalSettingsMessage, wkt::Empty>(grpcClient.DeleteAccessApprovalSettingsAsync, grpcClient.DeleteAccessApprovalSettings, effectiveSettings.DeleteAccessApprovalSettingsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteAccessApprovalSettings);
             Modify_DeleteAccessApprovalSettingsApiCall(ref _callDeleteAccessApprovalSettings);
+            _callGetAccessApprovalServiceAccount = clientHelper.BuildApiCall<GetAccessApprovalServiceAccountMessage, AccessApprovalServiceAccount>(grpcClient.GetAccessApprovalServiceAccountAsync, grpcClient.GetAccessApprovalServiceAccount, effectiveSettings.GetAccessApprovalServiceAccountSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetAccessApprovalServiceAccount);
+            Modify_GetAccessApprovalServiceAccountApiCall(ref _callGetAccessApprovalServiceAccount);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1261,11 +1413,15 @@ namespace Google.Cloud.AccessApproval.V1
 
         partial void Modify_DismissApprovalRequestApiCall(ref gaxgrpc::ApiCall<DismissApprovalRequestMessage, ApprovalRequest> call);
 
+        partial void Modify_InvalidateApprovalRequestApiCall(ref gaxgrpc::ApiCall<InvalidateApprovalRequestMessage, ApprovalRequest> call);
+
         partial void Modify_GetAccessApprovalSettingsApiCall(ref gaxgrpc::ApiCall<GetAccessApprovalSettingsMessage, AccessApprovalSettings> call);
 
         partial void Modify_UpdateAccessApprovalSettingsApiCall(ref gaxgrpc::ApiCall<UpdateAccessApprovalSettingsMessage, AccessApprovalSettings> call);
 
         partial void Modify_DeleteAccessApprovalSettingsApiCall(ref gaxgrpc::ApiCall<DeleteAccessApprovalSettingsMessage, wkt::Empty> call);
+
+        partial void Modify_GetAccessApprovalServiceAccountApiCall(ref gaxgrpc::ApiCall<GetAccessApprovalServiceAccountMessage, AccessApprovalServiceAccount> call);
 
         partial void OnConstruction(AccessApproval.AccessApprovalClient grpcClient, AccessApprovalServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1280,11 +1436,15 @@ namespace Google.Cloud.AccessApproval.V1
 
         partial void Modify_DismissApprovalRequestMessage(ref DismissApprovalRequestMessage request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_InvalidateApprovalRequestMessage(ref InvalidateApprovalRequestMessage request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_GetAccessApprovalSettingsMessage(ref GetAccessApprovalSettingsMessage request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateAccessApprovalSettingsMessage(ref UpdateAccessApprovalSettingsMessage request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteAccessApprovalSettingsMessage(ref DeleteAccessApprovalSettingsMessage request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAccessApprovalServiceAccountMessage(ref GetAccessApprovalServiceAccountMessage request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists approval requests associated with a project, folder, or organization.
@@ -1411,6 +1571,44 @@ namespace Google.Cloud.AccessApproval.V1
         }
 
         /// <summary>
+        /// Invalidates an existing ApprovalRequest. Returns the updated
+        /// ApprovalRequest.
+        /// 
+        /// NOTE: This does not deny access to the resource if another request has been
+        /// made and approved. It only invalidates a single approval.
+        /// 
+        /// Returns FAILED_PRECONDITION if the request exists but is not in an approved
+        /// state.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ApprovalRequest InvalidateApprovalRequest(InvalidateApprovalRequestMessage request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_InvalidateApprovalRequestMessage(ref request, ref callSettings);
+            return _callInvalidateApprovalRequest.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Invalidates an existing ApprovalRequest. Returns the updated
+        /// ApprovalRequest.
+        /// 
+        /// NOTE: This does not deny access to the resource if another request has been
+        /// made and approved. It only invalidates a single approval.
+        /// 
+        /// Returns FAILED_PRECONDITION if the request exists but is not in an approved
+        /// state.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ApprovalRequest> InvalidateApprovalRequestAsync(InvalidateApprovalRequestMessage request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_InvalidateApprovalRequestMessage(ref request, ref callSettings);
+            return _callInvalidateApprovalRequest.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Gets the settings associated with a project, folder, or organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1492,6 +1690,32 @@ namespace Google.Cloud.AccessApproval.V1
         {
             Modify_DeleteAccessApprovalSettingsMessage(ref request, ref callSettings);
             return _callDeleteAccessApprovalSettings.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves the service account that is used by Access Approval to access KMS
+        /// keys for signing approved approval requests.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AccessApprovalServiceAccount GetAccessApprovalServiceAccount(GetAccessApprovalServiceAccountMessage request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAccessApprovalServiceAccountMessage(ref request, ref callSettings);
+            return _callGetAccessApprovalServiceAccount.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves the service account that is used by Access Approval to access KMS
+        /// keys for signing approved approval requests.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AccessApprovalServiceAccount> GetAccessApprovalServiceAccountAsync(GetAccessApprovalServiceAccountMessage request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAccessApprovalServiceAccountMessage(ref request, ref callSettings);
+            return _callGetAccessApprovalServiceAccount.Async(request, callSettings);
         }
     }
 
