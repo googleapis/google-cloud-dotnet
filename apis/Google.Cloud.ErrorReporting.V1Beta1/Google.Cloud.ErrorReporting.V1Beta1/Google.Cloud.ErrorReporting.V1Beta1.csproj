@@ -6,12 +6,10 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Recommended Google client library to access the Google Cloud Error Reporting API, which groups and counts similar errors from cloud services. The Googe Cloud Error Reporting API provides a way to report new errors and read access to error groups and their associated errors.</Description>
     <PackageTags>ErrorReporting;Stackdriver;Google;Cloud</PackageTags>
-    <CodeAnalysisRuleSet>..\..\..\grpc.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="5.0.0" PrivateAssets="All" />
     <PackageReference Include="Google.Api.Gax.Grpc" Version="[4.0.0-alpha05, 5.0.0)" />
     <PackageReference Include="Grpc.Core" Version="[2.41.0, 3.0.0)" PrivateAssets="None" Condition="'$(TargetFramework)'=='net462'" />
-    <Analyzer Condition="Exists('..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll')" Include="..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll" />
   </ItemGroup>
 </Project>

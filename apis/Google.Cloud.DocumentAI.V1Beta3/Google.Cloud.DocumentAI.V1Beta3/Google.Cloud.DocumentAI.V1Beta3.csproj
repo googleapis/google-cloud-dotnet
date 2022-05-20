@@ -6,13 +6,11 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Recommended Google client library to access the Google Document AI API (v1beta3), which is a service to parse structured information from unstructured or semi-structured documents using state-of-the-art Google AI such as natural language, computer vision, translation, and AutoML.</Description>
     <PackageTags>ai;language;documents;vision;translation;automl;Google;Cloud</PackageTags>
-    <CodeAnalysisRuleSet>..\..\..\grpc.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="5.0.0" PrivateAssets="All" />
     <PackageReference Include="Google.Api.Gax.Grpc" Version="[4.0.0-alpha05, 5.0.0)" />
     <ProjectReference Include="..\..\Google.LongRunning\Google.LongRunning\Google.LongRunning.csproj" />
     <PackageReference Include="Grpc.Core" Version="[2.41.0, 3.0.0)" PrivateAssets="None" Condition="'$(TargetFramework)'=='net462'" />
-    <Analyzer Condition="Exists('..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll')" Include="..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll" />
   </ItemGroup>
 </Project>
