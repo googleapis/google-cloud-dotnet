@@ -43,7 +43,6 @@ namespace Google.Cloud.Tools.ReleaseManager
         // Project references which don't just follow the pattern of ..\..\{package}\{package}\{package}.csproj
         private static readonly Dictionary<string, string> KnownProjectReferences = new Dictionary<string, string>
         {
-            { "Google.Cloud.AnalyzersTesting", @"..\..\..\tools\Google.Cloud.AnalyzersTesting\Google.Cloud.AnalyzersTesting.csproj" },
             { "Google.Cloud.ClientTesting", @"..\..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj" },
             { "Google.Cloud.Diagnostics.Common.Tests", @"..\..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.Tests\Google.Cloud.Diagnostics.Common.Tests.csproj" },
             { "Google.Cloud.Diagnostics.Common.IntegrationTests", @"..\..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.IntegrationTests\Google.Cloud.Diagnostics.Common.IntegrationTests.csproj" },
@@ -66,10 +65,6 @@ namespace Google.Cloud.Tools.ReleaseManager
             {  ApiType.Regapic, new[] { "Google.Api.Gax.Grpc" } },
         };
 
-        // TODO: remove this, as we don't have any analyzers at the moment.
-        private const string AnalyzersTargetFramework = "netstandard1.3";
-        private const string AnalyzersTestTargetFramework = "netcoreapp2.0";
-
         private const string ProjectVersionValue = "project";
         private const string DefaultVersionValue = "default";
         private const string GrpcCorePackage = "Grpc.Core";
@@ -88,12 +83,6 @@ namespace Google.Cloud.Tools.ReleaseManager
             { "Grpc.Core.Api", GrpcVersion },
             { "Google.Api.CommonProtos", "2.5.0" },
             { "Google.Protobuf", "3.18.0" }
-        };
-
-        // Hard-coded versions for all analyzer projects.
-        private static readonly Dictionary<string, string> CommonAnalyzerDependencies = new Dictionary<string, string>
-        {
-            { CSharpWorkspacesPackage, "2.4.0" }
         };
 
         // Hard-coded versions for all test packages. These can be defaulted even for stable packages, whereas
@@ -134,8 +123,6 @@ namespace Google.Cloud.Tools.ReleaseManager
             { ConfigureAwaitAnalyzer, "All" },
             { CSharpWorkspacesPackage, "All" }
         };
-
-        private const string AnalyzersPath = @"..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll";
 
         public GenerateProjectsCommand() : base("generate-projects", "Generates project files, coverage files etc from the API catalog")
         {
@@ -348,17 +335,6 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         public static void GenerateProjects(string apiRoot, ApiMetadata api, HashSet<string> apiNames)
         {
-            if (api.Type == ApiType.Analyzers)
-            {
-                Directory.CreateDirectory(apiRoot);
-
-                var mainDirectory = Path.Combine(apiRoot, api.Id);
-                Directory.CreateDirectory(mainDirectory);
-
-                var testDirectory = Path.Combine(apiRoot, api.Id + ".Tests");
-                Directory.CreateDirectory(testDirectory);
-            }
-
             // We assume the source directories already exist, either because they've just
             // been generated or because they were already there. We infer the type of each
             // project based on the directory name. Expected suffixes:
@@ -387,11 +363,11 @@ namespace Google.Cloud.Tools.ReleaseManager
                     case ".IntegrationTests":
                     case ".Snippets":
                     case ".Tests":
-                        GenerateTestProject(api, dir, apiNames, isForAnalyzers: api.Type == ApiType.Analyzers);
+                        GenerateTestProject(api, dir, apiNames);
                         GenerateCoverageFile(api, dir);
                         break;
                     case ".GeneratedSnippets":
-                        GenerateTestProject(api, dir, apiNames, isForAnalyzers: api.Type == ApiType.Analyzers);
+                        GenerateTestProject(api, dir, apiNames);
                         break;
                     case ".Samples":
                         GenerateSampleProject(api, dir, apiNames);
@@ -597,96 +573,42 @@ api-name: {api.Id}
             }
             string targetFrameworks = api.TargetFrameworks ?? PackageTypeToDefaultTargetFrameworks.GetValueOrDefault(api.Type);
 
-            SortedList<string, string> dependencies;
-            if (api.Type == ApiType.Analyzers)
+            var dependencies = new SortedList<string, string>(CommonHiddenProductionDependencies, StringComparer.Ordinal);
+
+            // Default dependencies by package type
+            if (PackageTypeToImplicitDependencies.TryGetValue(api.Type, out var implicitDependencies))
             {
-                if (targetFrameworks != AnalyzersTargetFramework)
+                foreach (var dependency in implicitDependencies)
                 {
-                    throw new UserErrorException($"Analyzers are expected to use {AnalyzersTargetFramework}");
+                    dependencies[dependency] = DefaultVersionValue;
                 }
-
-                dependencies = new SortedList<string, string>(CommonAnalyzerDependencies, StringComparer.Ordinal);
-
-                // Note: If support is added here for using additional dependencies, we need to resolve
-                //       the packaging issues and make sure the onus won't be on the user to add the
-                //       dependency references.
             }
-            else
+
+            // Deliberately not using Add, so that a project can override the defaults.
+            // In particular, stable releases *must* override versions of GRPC and GAX.
+            foreach (var dependency in api.Dependencies)
             {
-
-                dependencies = new SortedList<string, string>(CommonHiddenProductionDependencies, StringComparer.Ordinal);
-
-                // Default dependencies by package type
-                if (PackageTypeToImplicitDependencies.TryGetValue(api.Type, out var implicitDependencies))
-                {
-                    foreach (var dependency in implicitDependencies)
-                    {
-                        dependencies[dependency] = DefaultVersionValue;
-                    }
-                }
-
-                // Deliberately not using Add, so that a project can override the defaults.
-                // In particular, stable releases *must* override versions of GRPC and GAX.
-                foreach (var dependency in api.Dependencies)
-                {
-                    dependencies[dependency.Key] = !NewMajorVersionMode ? dependency.Value
-                        : DefaultPackageVersions.TryGetValue(dependency.Key, out var defaultVersion) ? defaultVersion
-                        : apiNames.Contains(dependency.Key) ? ProjectVersionValue
-                        : dependency.Value;
-                }
+                dependencies[dependency.Key] = !NewMajorVersionMode ? dependency.Value
+                    : DefaultPackageVersions.TryGetValue(dependency.Key, out var defaultVersion) ? defaultVersion
+                    : apiNames.Contains(dependency.Key) ? ProjectVersionValue
+                    : dependency.Value;
             }
 
             var propertyGroup = new XElement("PropertyGroup",
                 // Build-related properties
                 new XElement("Version", api.Version), // TODO: Version, or VersionPrefix/VersionSuffix?
                 new XElement("TargetFrameworks", targetFrameworks),
-                new XElement("GenerateDocumentationFile", api.Type != ApiType.Analyzers),
+                new XElement("GenerateDocumentationFile", true),
                 // Package-related properties
                 new XElement("Description", api.Description),
                 new XElement("PackageTags", string.Join(";", api.Tags.Concat(new[] { "Google", "Cloud" })))
             );
-            if (dependencies.ContainsKey(GrpcCorePackage))
-            {
-                propertyGroup.Add(new XElement("CodeAnalysisRuleSet", "..\\..\\..\\grpc.ruleset"));
-            }
             var dependenciesElement = CreateDependenciesElement(api.Id, dependencies, api.IsReleaseVersion, testProject: false, apiNames: apiNames);
-
-            if (api.Type == ApiType.Analyzers)
-            {
-                propertyGroup.Add(new XElement("IncludeBuildOutput", false));
-
-                void AddPackFile(string includePath, string packagePath)
-                {
-                    dependenciesElement.Add(
-                        new XElement("None",
-                            new XAttribute("Include", includePath),
-                            new XAttribute("Pack", "true"),
-                            new XAttribute("PackagePath", packagePath),
-                            new XAttribute("Visible", "false")));
-                }
-
-                AddPackFile(
-                    $"$(OutputPath)\\{AnalyzersTargetFramework}\\$(AssemblyName).dll",
-                    "analyzers/dotnet/cs");
-
-                // Add install scripts as per
-                // https://docs.microsoft.com/en-us/nuget/reference/analyzers-conventions#install-and-uninstall-scripts
-                // Name each file rather than using a wildcard so 'dotnet pack' will error out if the files are missing
-                // for some reason.
-                AddPackFile(
-                    @"..\..\..\analyzerScripts\install.ps1",
-                    "tools");
-                AddPackFile(
-                    @"..\..\..\analyzerScripts\uninstall.ps1",
-                    "tools");
-            }
             WriteProjectFile(api, directory, propertyGroup, dependenciesElement);
         }
 
-        private static string GetTestTargetFrameworks(ApiMetadata api, bool isForAnalyzers) =>
-            isForAnalyzers
-                ? AnalyzersTestTargetFramework
-                : api.TestTargetFrameworks ?? api.TargetFrameworks ?? DefaultTestTargetFrameworks;
+        private static string GetTestTargetFrameworks(ApiMetadata api) =>
+            api.TestTargetFrameworks ?? api.TargetFrameworks ?? DefaultTestTargetFrameworks;
 
 
         private static void GenerateSmokeTestProject(ApiMetadata api, string directory, HashSet<string> apiNames)
@@ -728,7 +650,7 @@ api-name: {api.Id}
             WriteProjectFile(api, directory, propertyGroup, dependenciesElement);
         }
 
-        private static void GenerateTestProject(ApiMetadata api, string directory, HashSet<string> apiNames, bool isForAnalyzers = false)
+        private static void GenerateTestProject(ApiMetadata api, string directory, HashSet<string> apiNames)
         {
             // Don't generate a project file if we've got a placeholder directory
             if (Directory.GetFiles(directory, "*.cs", SearchOption.AllDirectories).Length == 0)
@@ -736,12 +658,6 @@ api-name: {api.Id}
                 return;
             }
             var dependencies = new SortedList<string, string>(CommonTestDependencies, StringComparer.Ordinal);
-            if (isForAnalyzers)
-            {
-                dependencies.Remove("Google.Cloud.ClientTesting");
-                dependencies.Add("Google.Cloud.AnalyzersTesting", ProjectVersionValue);
-            }
-
             dependencies.Add(api.Id, "project");
 
             // Deliberately not using Add, so that a project can override the defaults.
@@ -753,7 +669,7 @@ api-name: {api.Id}
                         : dependency.Value;
             }
 
-            var testTargetFrameworks = GetTestTargetFrameworks(api, isForAnalyzers);
+            var testTargetFrameworks = GetTestTargetFrameworks(api);
             var propertyGroup =
                 new XElement("PropertyGroup",
                     new XElement("TargetFrameworks", testTargetFrameworks),
@@ -764,9 +680,7 @@ api-name: {api.Id}
                     // xUnit2004 prevents Assert.Equal(true, value) etc, preferring Assert.True and Assert.False, but
                     //   Assert.Equal is clearer (IMO) for comparing values rather than conditions.
                     // xUnit2013 prevents simple checks for the number of items in a collection
-                    // AD0001 is the error for an analyzer throwing an exception. We can remove this when
-                    // the fix for https://github.com/xunit/xunit/issues/1409 is in NuGet.
-                    new XElement("NoWarn", "1701;1702;1705;xUnit2004;xUnit2013;AD0001")
+                    new XElement("NoWarn", "1701;1702;1705;xUnit2004;xUnit2013")
                 );
             string project = Path.GetFileName(directory);
             var dependenciesElement = CreateDependenciesElement(project, dependencies, api.IsReleaseVersion, testProject: true, apiNames: apiNames);
@@ -854,10 +768,7 @@ api-name: {api.Id}
         private static XElement CreateDependenciesElement(string project, IDictionary<string, string> dependencies, bool stableRelease, bool testProject, HashSet<string> apiNames) =>
             new XElement("ItemGroup",
                 // Use the GAX version for all otherwise-unversioned GAX dependencies
-                dependencies.Select(pair => CreateDependencyElement(project, pair.Key, pair.Value, stableRelease, testProject, apiNames)),
-                new XElement("Analyzer",
-                    new XAttribute("Condition", $"Exists('{AnalyzersPath}')"),
-                    new XAttribute("Include", AnalyzersPath)));
+                dependencies.Select(pair => CreateDependencyElement(project, pair.Key, pair.Value, stableRelease, testProject, apiNames)));
 
         /// <summary>
         /// Creates a single XElement for a dependency. This can be a package reference or a project reference:

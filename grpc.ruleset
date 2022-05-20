@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<RuleSet Name="gRPC Rules" Description=" " ToolsVersion="15.0">
-  <Rules AnalyzerId="Google.Cloud.Tools.Analyzers" RuleNamespace="Google.Cloud.Tools.Analyzers">
-    <Rule Id="GCP0003" Action="Warning" />
-  </Rules>
-</RuleSet>
