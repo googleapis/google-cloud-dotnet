@@ -20,123 +20,175 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
+using System.Linq;
 using System.Text;
 using System.Text.Json;
 
-namespace Google.Cloud.Logging.Console
+namespace Google.Cloud.Logging.Console;
+
+/// <summary>
+/// Console formatter for use with Google Cloud Logging.
+/// </summary>
+public sealed class GoogleCloudConsoleFormatter : ConsoleFormatter, IDisposable
 {
     /// <summary>
-    /// Console formatter for use with Google Cloud Logging.
+    /// We don't get the current state of a Utf8JsonWriter, so when writing out scopes,
+    /// we need to use the current depth of the writer to determine whether or
+    /// not we've already started writing out the scopes.
     /// </summary>
-    public sealed class GoogleCloudConsoleFormatter : ConsoleFormatter, IDisposable
+    private const int NoScopesDepth = 1;
+
+    /// <summary>
+    /// The name for the Google Cloud console formatter.
+    /// </summary>
+    public static string FormatterName { get; } = "google-cloud";
+
+    private static readonly JsonEncodedText s_messagePropertyName = JsonEncodedText.Encode("message");
+    private static readonly JsonEncodedText s_exceptionPropertyName = JsonEncodedText.Encode("exception");
+    private static readonly JsonEncodedText s_severityPropertyName = JsonEncodedText.Encode("severity");
+    private static readonly JsonEncodedText s_categoryPropertyName = JsonEncodedText.Encode("category");
+    private static readonly JsonEncodedText s_scopesPropertyName = JsonEncodedText.Encode("scopes");
+    private static readonly JsonEncodedText s_formatParametersPropertyName = JsonEncodedText.Encode("format_parameters");
+
+    private static readonly JsonEncodedText s_debugSeverity = JsonEncodedText.Encode("DEBUG");
+    private static readonly JsonEncodedText s_infoSeverity = JsonEncodedText.Encode("INFO");
+    private static readonly JsonEncodedText s_warningSeverity = JsonEncodedText.Encode("WARNING");
+    private static readonly JsonEncodedText s_errorSeverity = JsonEncodedText.Encode("ERROR");
+    private static readonly JsonEncodedText s_criticalSeverity = JsonEncodedText.Encode("CRITICAL");
+
+    private readonly IDisposable _optionsReloadToken;
+    private GoogleCloudConsoleFormatterOptions _options;
+
+    /// <summary>
+    /// Constructor accepting just an options, to simplify testing.
+    /// </summary>
+    /// <param name="options">The formatter options. Must not be null.</param>
+    internal GoogleCloudConsoleFormatter(GoogleCloudConsoleFormatterOptions options)
+        : base(FormatterName)
     {
-        private readonly IDisposable _optionsReloadToken;
-        private GoogleCloudConsoleFormatterOptions _options;
+        _options = options ?? throw new ArgumentNullException(nameof(options));
+        _optionsReloadToken = null;
+    }
 
-        /// <summary>
-        /// Constructor accepting just an options, to simplify testing.
-        /// </summary>
-        /// <param name="options">The formatter options. Must not be null.</param>
-        internal GoogleCloudConsoleFormatter(GoogleCloudConsoleFormatterOptions options)
-            : base(nameof(GoogleCloudConsoleFormatter))
-        {
-            _options = options ?? throw new ArgumentNullException(nameof(options));
-            _optionsReloadToken = null;
-        }
+    /// <summary>
+    /// Constructs a new formatter which uses the specified monitor to retrieve
+    /// options and watch for options changes.
+    /// </summary>
+    /// <param name="optionsMonitor">The monitor to observe for changes in options. Must not be null.</param>
+    public GoogleCloudConsoleFormatter(IOptionsMonitor<GoogleCloudConsoleFormatterOptions> optionsMonitor)
+        : this(optionsMonitor.CurrentValue)
+    {
+        _optionsReloadToken = optionsMonitor.OnChange(options => _options = options);
+    }
 
-        /// <summary>
-        /// Constructs a new formatter which uses the specified monitor to retrieve
-        /// options and watch for options changes.
-        /// </summary>
-        /// <param name="optionsMonitor">The monitor to observe for changes in options. Must not be null.</param>
-        public GoogleCloudConsoleFormatter(IOptionsMonitor<GoogleCloudConsoleFormatterOptions> optionsMonitor)
-            : this(optionsMonitor.CurrentValue)
+    /// <inheritdoc />
+    public override void Write<TState>(in LogEntry<TState> logEntry, IExternalScopeProvider scopeProvider, TextWriter textWriter)
+    {
+        string message = logEntry.Formatter(logEntry.State, logEntry.Exception) ?? "";
+        using var output = new MemoryStream();
         {
-            _optionsReloadToken = optionsMonitor.OnChange(options => _options = options);
-        }
-
-        /// <inheritdoc />
-        public override void Write<TState>(in LogEntry<TState> logEntry, IExternalScopeProvider scopeProvider, TextWriter textWriter)
-        {
-            string message = logEntry.Formatter(logEntry.State, logEntry.Exception);
-            if (logEntry.Exception == null && message == null)
+            using var writer = new Utf8JsonWriter(output);
             {
-                return;
-            }
-            // TODO: Use PooledByteBufferWriter when it's public...
-            using var output = new MemoryStream();
-            {
-                using var writer = new Utf8JsonWriter(output);
+                writer.WriteStartObject();
+                writer.WriteString(s_messagePropertyName, message);
+                writer.WriteString(s_categoryPropertyName, logEntry.Category);
+                writer.WriteString(s_severityPropertyName, GetSeverity(logEntry.LogLevel));
+                if (logEntry.Exception is object)
                 {
-                    writer.WriteStartObject();
-                    writer.WriteString("message", message);
-                    if (logEntry.Exception is object)
-                    {
-                        writer.WriteString("exception", logEntry.Exception.ToString());
-                    }
-                    writer.WriteString("severity", GetSeverity(logEntry.LogLevel));
-
-                    MaybeWriteKeyValuePairs(writer, logEntry.State, propertyName: "state");
-                    MaybeWriteScopeInformation(writer, scopeProvider);
-                    writer.WriteEndObject();
-                    writer.Flush();
+                    writer.WriteString(s_exceptionPropertyName, ToInvariantString(logEntry.Exception));
                 }
-                // TODO: Even when we've got PooledByteBufferWriter available, do we really need to create a separate
-                // string like this? Should we just write directly to the TextWriter instead?
-                textWriter.WriteLine(Encoding.UTF8.GetString(output.GetBuffer(), 0, (int) output.Position));
+
+                MaybeWriteFormatParameters(writer, logEntry.State);
+                MaybeWriteScopeInformation(writer, scopeProvider);
+                writer.WriteEndObject();
+                writer.Flush();
             }
+            // TODO: It would be lovely to have a more efficient way of writing the JSON to the console
+            // than writing bytes and converting those bytes back into a string - but for the moment,
+            // this is what we've got.
+            textWriter.WriteLine(Encoding.UTF8.GetString(output.GetBuffer(), 0, (int) output.Position));
+        }
+    }
+
+    private void MaybeWriteFormatParameters<TState>(Utf8JsonWriter writer, TState state)
+    {
+        // If we have format params and its more than just the original message add them.
+        if (state is IEnumerable<KeyValuePair<string, object>> formatParams &&
+            formatParams.Any(pair => pair.Key != "{OriginalFormat}"))
+        {
+            writer.WritePropertyName(s_formatParametersPropertyName);
+            WriteKeyValuePairs(writer, formatParams);
+        }
+    }
+
+    private void MaybeWriteScopeInformation(Utf8JsonWriter writer, IExternalScopeProvider scopeProvider)
+    {
+        if (!_options.IncludeScopes || scopeProvider is null)
+        {
+            return;
         }
 
-        private void MaybeWriteScopeInformation(Utf8JsonWriter writer, IExternalScopeProvider scopeProvider)
+        // Write the scopes as an array property, but only if there are any.            
+        scopeProvider.ForEachScope(WriteScope, writer);
+        // If there are no scopes, the write state will still be "object". If
+        // we've written at least one scope, the write state will be "array".
+        if (writer.CurrentDepth != NoScopesDepth)
         {
-            if (!_options.IncludeScopes || scopeProvider is null)
-            {
-                return;
-            }
-            writer.WriteStartArray("scopes");
-            scopeProvider.ForEachScope((scope, localWriter) =>
-            {
-                if (!MaybeWriteKeyValuePairs(localWriter, scope, propertyName: null))
-                {
-                    writer.WriteStringValue(ToInvariantString(scope));
-                }
-            }, writer);
             writer.WriteEndArray();
         }
 
-        private static bool MaybeWriteKeyValuePairs<TValue>(Utf8JsonWriter writer, TValue value, string propertyName)
+        static void WriteScope(object value, Utf8JsonWriter writer)
         {
-            if (value is IReadOnlyCollection<KeyValuePair<string, object>> stateDictionary)
+            // Detect "first scope" and start the scopes array property.
+            if (writer.CurrentDepth == NoScopesDepth)
             {
-                if (propertyName is object)
-                {
-                    writer.WritePropertyName(propertyName);
-                }
-                writer.WriteStartObject();
-                foreach (KeyValuePair<string, object> item in stateDictionary)
-                {
-                    writer.WriteString(item.Key, ToInvariantString(item.Value));
-                }
-                writer.WriteEndObject();
-                return true;
+                writer.WritePropertyName(s_scopesPropertyName);
+                writer.WriteStartArray();
             }
-            return false;
-        }
 
-        private static string GetSeverity(LogLevel logLevel) =>
-            logLevel switch
+            if (value is IEnumerable<KeyValuePair<string, object>> kvps)
             {
-                LogLevel.Trace => "DEBUG",
-                LogLevel.Debug => "DEBUG",
-                LogLevel.Information => "INFO",
-                LogLevel.Warning => "WARNING",
-                LogLevel.Error => "ERROR",
-                LogLevel.Critical => "CRITICAL",
-                _ => throw new ArgumentOutOfRangeException(nameof(logLevel))
-            };
-
-        void IDisposable.Dispose() => _optionsReloadToken?.Dispose();
-
-        private static string ToInvariantString(object obj) => Convert.ToString(obj, CultureInfo.InvariantCulture);
+                WriteKeyValuePairs(writer, kvps);
+            }
+            else
+            {
+                // TODO: Consider special casing integers etc.
+                writer.WriteStringValue(ToInvariantString(value));
+            }
+        }
     }
+
+    private static void WriteKeyValuePairs(Utf8JsonWriter writer, IEnumerable<KeyValuePair<string, object>> pairs)
+    {
+        writer.WriteStartObject();
+        foreach (var pair in pairs)
+        {
+            string key = pair.Key;
+            if (string.IsNullOrEmpty(key))
+            {
+                continue;
+            }
+            if (char.IsDigit(key[0]))
+            {
+                key = "_" + key;
+            }
+            writer.WriteString(key, ToInvariantString(pair.Value));
+        }
+        writer.WriteEndObject();
+    }
+
+    private static JsonEncodedText GetSeverity(LogLevel logLevel) =>
+        logLevel switch
+        {
+            LogLevel.Trace or LogLevel.Debug => s_debugSeverity,
+            LogLevel.Information => s_infoSeverity,
+            LogLevel.Warning => s_warningSeverity,
+            LogLevel.Error => s_errorSeverity,
+            LogLevel.Critical => s_criticalSeverity,
+            _ => throw new ArgumentOutOfRangeException(nameof(logLevel))
+        };
+
+    private static string ToInvariantString(object obj) => Convert.ToString(obj, CultureInfo.InvariantCulture);
+
+    void IDisposable.Dispose() => _optionsReloadToken?.Dispose();
 }
