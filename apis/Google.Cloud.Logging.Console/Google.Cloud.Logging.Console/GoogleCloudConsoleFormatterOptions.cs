@@ -13,18 +13,23 @@
 // limitations under the License.
 
 using Microsoft.Extensions.Logging.Console;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Google.Cloud.Logging.Console
+namespace Google.Cloud.Logging.Console;
+
+/// <summary>
+/// Options for <see cref="GoogleCloudConsoleFormatter"/>.
+/// </summary>
+/// <remarks>
+/// This class does not currently introduce any new formatter options,
+/// but exists to allow further expansion without disruptive API changes.
+/// </remarks>
+public class GoogleCloudConsoleFormatterOptions : ConsoleFormatterOptions
 {
+    // Possible options:
+    // - JSON property names (category, message etc)
+    // - Severity names? (Seems unlikely)
+    // - JsonTextWriterOptions (for debugging)
 
-    /// <summary>
-    /// Options for <see cref="GoogleCloudConsoleFormatter"/>.
-    /// </summary>
-    public class GoogleCloudConsoleFormatterOptions : ConsoleFormatterOptions
-    {
-        // TODO: Service context, labels etc
-    }
+    // That said, for actual Google Cloud Logging, very few things are really flexible -
+    // the property names for state and scopes are the only things that come to mind.
 }
