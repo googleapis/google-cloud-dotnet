@@ -1,18 +1,12 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28922.388
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.Common", "Google.Cloud.Tools.Common\Google.Cloud.Tools.Common.csproj", "{818C2F19-64A3-4C00-9D59-C2AC7A26AEDF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting", "Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{4810D3AB-8422-4940-BB99-0A89AD057C1D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.Analyzers", "Google.Cloud.Tools.Analyzers\Google.Cloud.Tools.Analyzers.csproj", "{7C8D38DD-253A-4244-916D-018C945BED72}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.Analyzers.Tests", "Google.Cloud.Tools.Analyzers.Tests\Google.Cloud.Tools.Analyzers.Tests.csproj", "{C358096D-F0B9-494E-BF49-90856BF00CE4}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.TrimCoverageReport", "Google.Cloud.Tools.TrimCoverageReport\Google.Cloud.Tools.TrimCoverageReport.csproj", "{A0FB3380-F0B1-4E61-90AF-291606C3128A}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.AnalyzersTesting", "Google.Cloud.AnalyzersTesting\Google.Cloud.AnalyzersTesting.csproj", "{5608BDB2-A160-49C0-A545-C08787534B18}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.ProcessBuildTimingLog", "Google.Cloud.Tools.ProcessBuildTimingLog\Google.Cloud.Tools.ProcessBuildTimingLog.csproj", "{E47C244F-96BC-4753-BFE1-7A54A3C3AA3E}"
 EndProject
@@ -28,7 +22,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.ReleaseM
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.ApiIndex.V1", "Google.Cloud.Tools.ApiIndex.V1\Google.Cloud.Tools.ApiIndex.V1.csproj", "{D72EED37-F4B7-404B-97F9-45A5E5EBDA69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Tools.ReleaseManager.Tests", "Google.Cloud.Tools.ReleaseManager.Tests\Google.Cloud.Tools.ReleaseManager.Tests.csproj", "{0FCAFBAD-1EC3-4B37-A82C-F0D0E6C3CD2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.ReleaseManager.Tests", "Google.Cloud.Tools.ReleaseManager.Tests\Google.Cloud.Tools.ReleaseManager.Tests.csproj", "{0FCAFBAD-1EC3-4B37-A82C-F0D0E6C3CD2F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -64,30 +58,6 @@ Global
 		{4810D3AB-8422-4940-BB99-0A89AD057C1D}.Release|x64.Build.0 = Release|Any CPU
 		{4810D3AB-8422-4940-BB99-0A89AD057C1D}.Release|x86.ActiveCfg = Release|Any CPU
 		{4810D3AB-8422-4940-BB99-0A89AD057C1D}.Release|x86.Build.0 = Release|Any CPU
-		{7C8D38DD-253A-4244-916D-018C945BED72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7C8D38DD-253A-4244-916D-018C945BED72}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7C8D38DD-253A-4244-916D-018C945BED72}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{7C8D38DD-253A-4244-916D-018C945BED72}.Debug|x64.Build.0 = Debug|Any CPU
-		{7C8D38DD-253A-4244-916D-018C945BED72}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{7C8D38DD-253A-4244-916D-018C945BED72}.Debug|x86.Build.0 = Debug|Any CPU
-		{7C8D38DD-253A-4244-916D-018C945BED72}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7C8D38DD-253A-4244-916D-018C945BED72}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7C8D38DD-253A-4244-916D-018C945BED72}.Release|x64.ActiveCfg = Release|Any CPU
-		{7C8D38DD-253A-4244-916D-018C945BED72}.Release|x64.Build.0 = Release|Any CPU
-		{7C8D38DD-253A-4244-916D-018C945BED72}.Release|x86.ActiveCfg = Release|Any CPU
-		{7C8D38DD-253A-4244-916D-018C945BED72}.Release|x86.Build.0 = Release|Any CPU
-		{C358096D-F0B9-494E-BF49-90856BF00CE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C358096D-F0B9-494E-BF49-90856BF00CE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C358096D-F0B9-494E-BF49-90856BF00CE4}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{C358096D-F0B9-494E-BF49-90856BF00CE4}.Debug|x64.Build.0 = Debug|Any CPU
-		{C358096D-F0B9-494E-BF49-90856BF00CE4}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{C358096D-F0B9-494E-BF49-90856BF00CE4}.Debug|x86.Build.0 = Debug|Any CPU
-		{C358096D-F0B9-494E-BF49-90856BF00CE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C358096D-F0B9-494E-BF49-90856BF00CE4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C358096D-F0B9-494E-BF49-90856BF00CE4}.Release|x64.ActiveCfg = Release|Any CPU
-		{C358096D-F0B9-494E-BF49-90856BF00CE4}.Release|x64.Build.0 = Release|Any CPU
-		{C358096D-F0B9-494E-BF49-90856BF00CE4}.Release|x86.ActiveCfg = Release|Any CPU
-		{C358096D-F0B9-494E-BF49-90856BF00CE4}.Release|x86.Build.0 = Release|Any CPU
 		{A0FB3380-F0B1-4E61-90AF-291606C3128A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A0FB3380-F0B1-4E61-90AF-291606C3128A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0FB3380-F0B1-4E61-90AF-291606C3128A}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -100,18 +70,6 @@ Global
 		{A0FB3380-F0B1-4E61-90AF-291606C3128A}.Release|x64.Build.0 = Release|Any CPU
 		{A0FB3380-F0B1-4E61-90AF-291606C3128A}.Release|x86.ActiveCfg = Release|Any CPU
 		{A0FB3380-F0B1-4E61-90AF-291606C3128A}.Release|x86.Build.0 = Release|Any CPU
-		{5608BDB2-A160-49C0-A545-C08787534B18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5608BDB2-A160-49C0-A545-C08787534B18}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5608BDB2-A160-49C0-A545-C08787534B18}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{5608BDB2-A160-49C0-A545-C08787534B18}.Debug|x64.Build.0 = Debug|Any CPU
-		{5608BDB2-A160-49C0-A545-C08787534B18}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{5608BDB2-A160-49C0-A545-C08787534B18}.Debug|x86.Build.0 = Debug|Any CPU
-		{5608BDB2-A160-49C0-A545-C08787534B18}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5608BDB2-A160-49C0-A545-C08787534B18}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5608BDB2-A160-49C0-A545-C08787534B18}.Release|x64.ActiveCfg = Release|Any CPU
-		{5608BDB2-A160-49C0-A545-C08787534B18}.Release|x64.Build.0 = Release|Any CPU
-		{5608BDB2-A160-49C0-A545-C08787534B18}.Release|x86.ActiveCfg = Release|Any CPU
-		{5608BDB2-A160-49C0-A545-C08787534B18}.Release|x86.Build.0 = Release|Any CPU
 		{E47C244F-96BC-4753-BFE1-7A54A3C3AA3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E47C244F-96BC-4753-BFE1-7A54A3C3AA3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E47C244F-96BC-4753-BFE1-7A54A3C3AA3E}.Debug|x64.ActiveCfg = Debug|Any CPU
