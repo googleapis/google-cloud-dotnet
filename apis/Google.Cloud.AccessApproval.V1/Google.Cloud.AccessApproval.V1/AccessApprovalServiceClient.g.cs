@@ -31,6 +31,22 @@ using stt = System.Threading.Tasks;
 
 namespace Google.Cloud.AccessApproval.V1
 {
+    internal class Foo
+    {
+        internal void BadCall()
+        {
+            new Bar().Something();
+        }
+    }
+    
+    internal class Bar
+    {
+        internal void Something(int x = 10)
+        {
+        }
+    }
+    
+    
     /// <summary>Settings for <see cref="AccessApprovalServiceClient"/> instances.</summary>
     public sealed partial class AccessApprovalServiceSettings : gaxgrpc::ServiceSettingsBase
     {
