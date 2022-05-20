@@ -548,7 +548,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
                 AdBreak = new Event.Types.AdBreakTask(),
                 ExecuteNow = true,
                 ExecutionTime = new wkt::Timestamp(),
-                State = Event.Types.State.Unspecified,
+                State = Event.Types.State.Stopped,
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -585,7 +585,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
                 AdBreak = new Event.Types.AdBreakTask(),
                 ExecuteNow = true,
                 ExecutionTime = new wkt::Timestamp(),
-                State = Event.Types.State.Unspecified,
+                State = Event.Types.State.Stopped,
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Event>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -623,7 +623,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
                 AdBreak = new Event.Types.AdBreakTask(),
                 ExecuteNow = true,
                 ExecutionTime = new wkt::Timestamp(),
-                State = Event.Types.State.Unspecified,
+                State = Event.Types.State.Stopped,
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -659,7 +659,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
                 AdBreak = new Event.Types.AdBreakTask(),
                 ExecuteNow = true,
                 ExecutionTime = new wkt::Timestamp(),
-                State = Event.Types.State.Unspecified,
+                State = Event.Types.State.Stopped,
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Event>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -697,7 +697,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
                 AdBreak = new Event.Types.AdBreakTask(),
                 ExecuteNow = true,
                 ExecutionTime = new wkt::Timestamp(),
-                State = Event.Types.State.Unspecified,
+                State = Event.Types.State.Stopped,
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -733,7 +733,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
                 AdBreak = new Event.Types.AdBreakTask(),
                 ExecuteNow = true,
                 ExecutionTime = new wkt::Timestamp(),
-                State = Event.Types.State.Unspecified,
+                State = Event.Types.State.Stopped,
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Event>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -769,7 +769,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
                 AdBreak = new Event.Types.AdBreakTask(),
                 ExecuteNow = true,
                 ExecutionTime = new wkt::Timestamp(),
-                State = Event.Types.State.Unspecified,
+                State = Event.Types.State.Stopped,
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -803,7 +803,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
                 AdBreak = new Event.Types.AdBreakTask(),
                 ExecuteNow = true,
                 ExecutionTime = new wkt::Timestamp(),
-                State = Event.Types.State.Unspecified,
+                State = Event.Types.State.Stopped,
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Event>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -839,7 +839,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
                 AdBreak = new Event.Types.AdBreakTask(),
                 ExecuteNow = true,
                 ExecutionTime = new wkt::Timestamp(),
-                State = Event.Types.State.Unspecified,
+                State = Event.Types.State.Stopped,
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -873,7 +873,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
                 AdBreak = new Event.Types.AdBreakTask(),
                 ExecuteNow = true,
                 ExecutionTime = new wkt::Timestamp(),
-                State = Event.Types.State.Unspecified,
+                State = Event.Types.State.Stopped,
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Event>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -909,7 +909,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
                 AdBreak = new Event.Types.AdBreakTask(),
                 ExecuteNow = true,
                 ExecutionTime = new wkt::Timestamp(),
-                State = Event.Types.State.Unspecified,
+                State = Event.Types.State.Stopped,
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -943,7 +943,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
                 AdBreak = new Event.Types.AdBreakTask(),
                 ExecuteNow = true,
                 ExecutionTime = new wkt::Timestamp(),
-                State = Event.Types.State.Unspecified,
+                State = Event.Types.State.Stopped,
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Event>(stt::Task.FromResult(expectedResponse), null, null, null, null));
