@@ -19,7 +19,6 @@ namespace Google.Cloud.Tools.Common
         None,
         Grpc,
         Rest,
-        Analyzers,
         Regapic,
         Other
     }
