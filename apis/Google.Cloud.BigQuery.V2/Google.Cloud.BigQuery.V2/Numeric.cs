@@ -452,14 +452,38 @@ namespace Google.Cloud.BigQuery.V2
 
             // FIXME: Awful performance!
             string text = ToString();
-            // Handles overflow
-            decimal dec = decimal.Parse(text, CultureInfo.InvariantCulture);
-            if (lossOfPrecisionHandling == LossOfPrecisionHandling.Throw && this != Type.ValueFromDecimal(dec, LossOfPrecisionHandling.Truncate))
+
+            // For non-extreme values, we can just parse the text and we're fine.
+            int maxSafeLength = 28 + (_scaledValue < 0 ? 1 : 0) + (text.Contains('.') ? 1 : 0);
+            if (text.Length < maxSafeLength)
             {
-                // TODO: Is this the right exception to use?
+                return decimal.Parse(text, CultureInfo.InvariantCulture);
+            }
+
+            // Otherwise, we may need to care about a loss of precision. Try a round-trip first.
+            decimal dec = decimal.Parse(text, CultureInfo.InvariantCulture);
+            if (this == Type.ValueFromDecimal(dec, LossOfPrecisionHandling.Truncate))
+            {
+                return dec;
+            }
+            // If we've lost precision already and that's unacceptable, throw.
+            if (lossOfPrecisionHandling == LossOfPrecisionHandling.Throw)
+            {
                 throw new InvalidOperationException("Conversion would lose information");
             }
-            return dec;
+            // Otherwise, we need to truncate - which means truncating *before* parsing.
+            int length = Math.Min(text.Length - 1, maxSafeLength + 3);
+            while (true)
+            {
+                string substring = text.Substring(0, length);
+                dec = decimal.Parse(substring, CultureInfo.InvariantCulture);
+                // TODO: Is this always going to be the case? Need to check around leading 0s etc.
+                if (dec.ToString(CultureInfo.InvariantCulture) == substring)
+                {
+                    return dec;
+                }
+                length--;
+            }
         }
 
         /// <summary>

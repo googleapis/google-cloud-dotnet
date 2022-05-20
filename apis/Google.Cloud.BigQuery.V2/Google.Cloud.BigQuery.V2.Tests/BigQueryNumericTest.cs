@@ -50,20 +50,39 @@ namespace Google.Cloud.BigQuery.V2.Tests
 
         [Theory]
         [InlineData("1.123456789123", "1.123456789")]
-        [InlineData("-1.123456789123", "-1.123456789")]
+
+        // Validation that we actually truncate...
+        [InlineData("1.400000006001", "1.400000006")]
+        [InlineData("1.400000006499", "1.400000006")]
+        [InlineData("1.400000006500", "1.400000006")]
+        [InlineData("1.400000006501", "1.400000006")]
+        [InlineData("1.400000006901", "1.400000006")]
+
+        [InlineData("1.400000007001", "1.400000007")]
+        [InlineData("1.400000007499", "1.400000007")]
+        [InlineData("1.400000007500", "1.400000007")]
+        [InlineData("1.400000007501", "1.400000007")]
+        [InlineData("1.400000007901", "1.400000007")]
+
         [InlineData("0.000000000000001", "0")]
-        [InlineData("-0.000000000000001", "0")]
         public void ConversionFromDecimal_Lossy(string decimalText, string expectedText)
         {
-            decimal input = decimal.Parse(decimalText, CultureInfo.InvariantCulture);
-            BigQueryNumeric expected = BigQueryNumeric.Parse(expectedText);
+            // It's easier to do this than to vary negation in other ways.
+            PerformTest(decimalText, expectedText);
+            PerformTest("-" + decimalText, "-" + expectedText);
 
-            BigQueryNumeric conversionOutput = (BigQueryNumeric)input;
-            BigQueryNumeric fromDecimalOutput = BigQueryNumeric.FromDecimal(input, LossOfPrecisionHandling.Truncate);
+            static void PerformTest(string decimalText, string expectedText)
+            {
+                decimal input = decimal.Parse(decimalText, CultureInfo.InvariantCulture);
+                BigQueryNumeric expected = BigQueryNumeric.Parse(expectedText);
 
-            Assert.Equal(expected, conversionOutput);
-            Assert.Equal(expected, fromDecimalOutput);
-            Assert.Throws<ArgumentException>(() => BigQueryNumeric.FromDecimal(input, LossOfPrecisionHandling.Throw));
+                BigQueryNumeric conversionOutput = (BigQueryNumeric)input;
+                BigQueryNumeric fromDecimalOutput = BigQueryNumeric.FromDecimal(input, LossOfPrecisionHandling.Truncate);
+
+                Assert.Equal(expected, conversionOutput);
+                Assert.Equal(expected, fromDecimalOutput);
+                Assert.Throws<ArgumentException>(() => BigQueryNumeric.FromDecimal(input, LossOfPrecisionHandling.Throw));
+            }
         }
 
         [Theory]
@@ -131,26 +150,29 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Throws<OverflowException>(() => numeric.ToDecimal(handling));
         }
 
-        [Theory, CombinatorialData]
-        public void ToDecimal_LossOfPrecision_Truncate(
-            [CombinatorialValues(
-                "79228162514264337593543950335.0000000001", // decimal.MaxValue + epsilon; doesn't count as overflow
-                "123456789012345678900.123456789" // Simpler example of more significant digits than decimal can handle
-            )]
-            string text, bool negate)
+        [Theory]
+        [InlineData("79228162514264337593543950335.0000000001", "79228162514264337593543950335")]
+        [InlineData("123456789012345678900.123456780", "123456789012345678900.12345678")]
+        [InlineData("123456789012345678900.123456785", "123456789012345678900.12345678")]
+        [InlineData("123456789012345678900.123456789", "123456789012345678900.12345678")]
+        [InlineData("123456789012345678900.123456770", "123456789012345678900.12345677")]
+        [InlineData("123456789012345678900.123456775", "123456789012345678900.12345677")]
+        [InlineData("123456789012345678900.123456779", "123456789012345678900.12345677")]
+        public void ToDecimal_LossOfPrecision_Truncate(string text, string expectedDecimalText)
         {
-            if (negate)
+            // It's easier to do this than to vary negation in other ways.
+            PerformTest(text, expectedDecimalText);
+            PerformTest("-" + text, "-" + expectedDecimalText);
+
+            static void PerformTest(string text, string expectedDecimalText)
             {
-                text = "-" + text;
+                BigQueryNumeric numeric = BigQueryNumeric.Parse(text);
+                decimal actual = numeric.ToDecimal(LossOfPrecisionHandling.Truncate);
+                Assert.Equal(expectedDecimalText, actual.ToString(CultureInfo.InvariantCulture));
+                // Conversion via the explicit conversion should do the same thing
+                decimal actual2 = (decimal)numeric;
+                Assert.Equal(actual, actual2);
             }
-            BigQueryNumeric numeric = BigQueryNumeric.Parse(text);
-            // Decimal.Parse will silently lose precision
-            decimal expected = decimal.Parse(text, CultureInfo.InvariantCulture);
-            decimal actual = numeric.ToDecimal(LossOfPrecisionHandling.Truncate);
-            Assert.Equal(expected, actual);
-            // Conversion via the explicit conversion should do the same thing
-            decimal actual2 = (decimal)numeric;
-            Assert.Equal(expected, actual2);
         }
 
         [Theory, CombinatorialData]
