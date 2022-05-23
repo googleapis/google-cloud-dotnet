@@ -641,9 +641,14 @@ namespace Google.Cloud.Datastore.V1 {
         private string kind_ = "";
         /// <summary>
         /// The kind of the entity.
+        ///
         /// A kind matching regex `__.*__` is reserved/read-only.
         /// A kind must not contain more than 1500 bytes when UTF-8 encoded.
         /// Cannot be `""`.
+        ///
+        /// Must be valid UTF-8 bytes. Legacy values that are not valid UTF-8 are
+        /// encoded as `__bytes&lt;X>__` where `&lt;X>` is the base-64 encoding of the
+        /// bytes.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -658,6 +663,7 @@ namespace Google.Cloud.Datastore.V1 {
         public const int IdFieldNumber = 2;
         /// <summary>
         /// The auto-allocated ID of the entity.
+        ///
         /// Never equal to zero. Values less than zero are discouraged and may not
         /// be supported in the future.
         /// </summary>
@@ -675,9 +681,14 @@ namespace Google.Cloud.Datastore.V1 {
         public const int NameFieldNumber = 3;
         /// <summary>
         /// The name of the entity.
+        ///
         /// A name matching regex `__.*__` is reserved/read-only.
         /// A name must not be more than 1500 bytes when UTF-8 encoded.
         /// Cannot be `""`.
+        ///
+        /// Must be valid UTF-8 bytes. Legacy values that are not valid UTF-8 are
+        /// encoded as `__bytes&lt;X>__` where `&lt;X>` is the base-64 encoding of the
+        /// bytes.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
