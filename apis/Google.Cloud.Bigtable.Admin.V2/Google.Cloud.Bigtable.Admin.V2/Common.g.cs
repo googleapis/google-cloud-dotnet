@@ -25,20 +25,19 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiVnb29nbGUvYmlndGFibGUvYWRtaW4vdjIvY29tbW9uLnByb3RvEhhnb29n",
-            "bGUuYmlndGFibGUuYWRtaW4udjIaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMu",
-            "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8iiwEKEU9w",
-            "ZXJhdGlvblByb2dyZXNzEhgKEHByb2dyZXNzX3BlcmNlbnQYASABKAUSLgoK",
-            "c3RhcnRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
-            "LAoIZW5kX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "Kj0KC1N0b3JhZ2VUeXBlEhwKGFNUT1JBR0VfVFlQRV9VTlNQRUNJRklFRBAA",
-            "EgcKA1NTRBABEgcKA0hERBACQtMBChxjb20uZ29vZ2xlLmJpZ3RhYmxlLmFk",
-            "bWluLnYyQgtDb21tb25Qcm90b1ABWj1nb29nbGUuZ29sYW5nLm9yZy9nZW5w",
-            "cm90by9nb29nbGVhcGlzL2JpZ3RhYmxlL2FkbWluL3YyO2FkbWluqgIeR29v",
-            "Z2xlLkNsb3VkLkJpZ3RhYmxlLkFkbWluLlYyygIeR29vZ2xlXENsb3VkXEJp",
-            "Z3RhYmxlXEFkbWluXFYy6gIiR29vZ2xlOjpDbG91ZDo6QmlndGFibGU6OkFk",
-            "bWluOjpWMmIGcHJvdG8z"));
+            "bGUuYmlndGFibGUuYWRtaW4udjIaH2dvb2dsZS9wcm90b2J1Zi90aW1lc3Rh",
+            "bXAucHJvdG8iiwEKEU9wZXJhdGlvblByb2dyZXNzEhgKEHByb2dyZXNzX3Bl",
+            "cmNlbnQYASABKAUSLgoKc3RhcnRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYAyABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wKj0KC1N0b3JhZ2VUeXBlEhwKGFNUT1JBR0VfVFlQ",
+            "RV9VTlNQRUNJRklFRBAAEgcKA1NTRBABEgcKA0hERBACQtMBChxjb20uZ29v",
+            "Z2xlLmJpZ3RhYmxlLmFkbWluLnYyQgtDb21tb25Qcm90b1ABWj1nb29nbGUu",
+            "Z29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2JpZ3RhYmxlL2FkbWlu",
+            "L3YyO2FkbWluqgIeR29vZ2xlLkNsb3VkLkJpZ3RhYmxlLkFkbWluLlYyygIe",
+            "R29vZ2xlXENsb3VkXEJpZ3RhYmxlXEFkbWluXFYy6gIiR29vZ2xlOjpDbG91",
+            "ZDo6QmlndGFibGU6OkFkbWluOjpWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Bigtable.Admin.V2.StorageType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.OperationProgress), global::Google.Cloud.Bigtable.Admin.V2.OperationProgress.Parser, new[]{ "ProgressPercent", "StartTime", "EndTime" }, null, null, null, null)
           }));
