@@ -1,5 +1,10 @@
 # Version history
 
+## Version 2.9.0, released 2022-05-24
+
+### New features
+
+- Adds table details to CreateClusterMetadata ([commit 2db5d8d](https://github.com/googleapis/google-cloud-dotnet/commit/2db5d8da5f62da00833f3c850e7b45bfde0cf1f0))
 ## Version 2.8.0, released 2022-04-04
 
 ### New features
