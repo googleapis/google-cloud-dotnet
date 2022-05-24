@@ -971,8 +971,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ModelFieldNumber = 2;
     private string model_ = "";
     /// <summary>
-    /// Required. The name of the Model that this is the deployment of. Note that the Model
-    /// may be in a different location than the DeployedModel's Endpoint.
+    /// Required. The resource name of the Model that this is the deployment of. Note that
+    /// the Model may be in a different location than the DeployedModel's Endpoint.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
