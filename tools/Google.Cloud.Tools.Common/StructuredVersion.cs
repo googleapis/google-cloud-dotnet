@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using System;
+using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -164,6 +165,19 @@ namespace Google.Cloud.Tools.Common
         /// <returns></returns>
         public StructuredVersion AfterPatch() =>
             FromMajorMinorPatchBuild(Major, Minor, Patch + 1, Build, Prerelease);
+
+        /// <summary>
+        /// Returns this structured version after a major version bump, assuming it's already at
+        /// "a prerelease after the major version bump". For example, 3.0.0-alpha02 => 3.0.0, 3.0.0-beta01 or 3.0.0-alpha01
+        /// (depending on the package ID).
+        /// </summary>
+        public StructuredVersion AfterMajorVersion(string id)
+        {
+            var lastPart = id.Split('.').Last();
+            return lastPart.Contains("Beta") ? new StructuredVersion(Major, 0, 0, null, "beta01")
+                : lastPart.Contains("Alpha") ? new StructuredVersion(Major, 0, 0, null, "alpha01")
+                : new StructuredVersion(Major, 0, 0, null, null);
+        }
 
         public override string ToString() => new StringBuilder($"{Major}.{Minor}.{Patch}")
             .Append(Build is null ? "" : $".{Build}")

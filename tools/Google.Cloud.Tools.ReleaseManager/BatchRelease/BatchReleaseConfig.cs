@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.Tools.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -59,6 +60,16 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
         /// Match exactly the APIs specified.
         /// </summary>
         public List<string> SpecifiedApis { get; set; }
+
+        /// <summary>
+        /// true when updating a major version, false otherwise.
+        /// </summary>
+        /// <remarks>
+        /// When true, this finds the "natural" first version for the package after
+        /// a major version bump: x.0.0 for GA APIs, x.0.0-beta01 for beta APIs, x.0.0-alpha01
+        /// for alpha APIs.
+        /// </remarks>
+        public bool PostMajorVersion { get; set; }
 
         internal IEnumerable<IBatchCriterion> GetCriteria()
         {
