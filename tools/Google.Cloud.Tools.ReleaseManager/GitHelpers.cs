@@ -109,8 +109,8 @@ namespace Google.Cloud.Tools.ReleaseManager
 
             Release GetPendingChanges(ApiMetadata api)
             {
-                string expectedTagName = $"{api.Id}-{api.Version}";
-                var latestRelease = allTags.FirstOrDefault(tag => tag.FriendlyName == expectedTagName);
+                string expectedTagPrefix = $"{api.Id}-";
+                var latestRelease = allTags.FirstOrDefault(tag => tag.FriendlyName.StartsWith(expectedTagPrefix, StringComparison.Ordinal));
 
                 if (latestRelease is null)
                 {
