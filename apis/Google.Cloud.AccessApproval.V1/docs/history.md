@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.4.0, released 2022-05-24
+
+### New features
+
+- Update protos to include InvalidateApprovalRequest and GetAccessApprovalServiceAccount APIs ([commit 35064fa](https://github.com/googleapis/google-cloud-dotnet/commit/35064fa422497ab9577ec95e466896778472ec8f))
+
 ## Version 1.3.0, released 2022-02-14
 
 ### New features
