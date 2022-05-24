@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta04, released 2022-05-24
+
+### Documentation improvements
+
+- Modifies the project ID pattern in comment for Workbench environment ([commit 9f67d86](https://github.com/googleapis/google-cloud-dotnet/commit/9f67d8655c028fcde14849d480b53e3d26873caf))
+
 ## Version 1.0.0-beta03, released 2022-04-26
 
 ### New features
