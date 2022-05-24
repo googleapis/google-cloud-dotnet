@@ -661,6 +661,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 ServiceAccount = "service_accounta3c1b923",
                 NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+                TemplateUri = "template_uriec49b2a8",
+                TemplateMetadata = new PipelineTemplateMetadata(),
             };
             mockGrpcClient.Setup(x => x.CreatePipelineJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
@@ -703,6 +705,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 ServiceAccount = "service_accounta3c1b923",
                 NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+                TemplateUri = "template_uriec49b2a8",
+                TemplateMetadata = new PipelineTemplateMetadata(),
             };
             mockGrpcClient.Setup(x => x.CreatePipelineJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PipelineJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
@@ -747,6 +751,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 ServiceAccount = "service_accounta3c1b923",
                 NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+                TemplateUri = "template_uriec49b2a8",
+                TemplateMetadata = new PipelineTemplateMetadata(),
             };
             mockGrpcClient.Setup(x => x.CreatePipelineJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
@@ -789,6 +795,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 ServiceAccount = "service_accounta3c1b923",
                 NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+                TemplateUri = "template_uriec49b2a8",
+                TemplateMetadata = new PipelineTemplateMetadata(),
             };
             mockGrpcClient.Setup(x => x.CreatePipelineJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PipelineJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
@@ -833,6 +841,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 ServiceAccount = "service_accounta3c1b923",
                 NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+                TemplateUri = "template_uriec49b2a8",
+                TemplateMetadata = new PipelineTemplateMetadata(),
             };
             mockGrpcClient.Setup(x => x.CreatePipelineJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
@@ -875,6 +885,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 ServiceAccount = "service_accounta3c1b923",
                 NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+                TemplateUri = "template_uriec49b2a8",
+                TemplateMetadata = new PipelineTemplateMetadata(),
             };
             mockGrpcClient.Setup(x => x.CreatePipelineJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PipelineJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
@@ -917,6 +929,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 ServiceAccount = "service_accounta3c1b923",
                 NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+                TemplateUri = "template_uriec49b2a8",
+                TemplateMetadata = new PipelineTemplateMetadata(),
             };
             mockGrpcClient.Setup(x => x.GetPipelineJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
@@ -957,6 +971,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 ServiceAccount = "service_accounta3c1b923",
                 NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+                TemplateUri = "template_uriec49b2a8",
+                TemplateMetadata = new PipelineTemplateMetadata(),
             };
             mockGrpcClient.Setup(x => x.GetPipelineJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PipelineJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
@@ -999,6 +1015,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 ServiceAccount = "service_accounta3c1b923",
                 NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+                TemplateUri = "template_uriec49b2a8",
+                TemplateMetadata = new PipelineTemplateMetadata(),
             };
             mockGrpcClient.Setup(x => x.GetPipelineJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
@@ -1039,6 +1057,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 ServiceAccount = "service_accounta3c1b923",
                 NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+                TemplateUri = "template_uriec49b2a8",
+                TemplateMetadata = new PipelineTemplateMetadata(),
             };
             mockGrpcClient.Setup(x => x.GetPipelineJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PipelineJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
@@ -1081,6 +1101,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 ServiceAccount = "service_accounta3c1b923",
                 NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+                TemplateUri = "template_uriec49b2a8",
+                TemplateMetadata = new PipelineTemplateMetadata(),
             };
             mockGrpcClient.Setup(x => x.GetPipelineJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
@@ -1121,6 +1143,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 ServiceAccount = "service_accounta3c1b923",
                 NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+                TemplateUri = "template_uriec49b2a8",
+                TemplateMetadata = new PipelineTemplateMetadata(),
             };
             mockGrpcClient.Setup(x => x.GetPipelineJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PipelineJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);

@@ -592,6 +592,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         ///
         /// "csv"
         /// The source file is a CSV file.
+        /// "jsonl"
+        /// The source file is a JSONL file.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
