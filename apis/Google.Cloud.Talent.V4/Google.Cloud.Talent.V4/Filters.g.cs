@@ -42,37 +42,38 @@ namespace Google.Cloud.Talent.V4 {
             "KA4yJi5nb29nbGUuY2xvdWQudGFsZW50LnY0LkVtcGxveW1lbnRUeXBlEhYK",
             "Dmxhbmd1YWdlX2NvZGVzGAsgAygJEkIKEnB1Ymxpc2hfdGltZV9yYW5nZRgM",
             "IAEoCzImLmdvb2dsZS5jbG91ZC50YWxlbnQudjQuVGltZXN0YW1wUmFuZ2US",
-            "FQoNZXhjbHVkZWRfam9icxgNIAMoCSLJAgoOTG9jYXRpb25GaWx0ZXISDwoH",
+            "FQoNZXhjbHVkZWRfam9icxgNIAMoCSLtAgoOTG9jYXRpb25GaWx0ZXISDwoH",
             "YWRkcmVzcxgBIAEoCRITCgtyZWdpb25fY29kZRgCIAEoCRIkCgdsYXRfbG5n",
             "GAMgASgLMhMuZ29vZ2xlLnR5cGUuTGF0TG5nEhkKEWRpc3RhbmNlX2luX21p",
             "bGVzGAQgASgBElwKFnRlbGVjb21tdXRlX3ByZWZlcmVuY2UYBSABKA4yPC5n",
             "b29nbGUuY2xvdWQudGFsZW50LnY0LkxvY2F0aW9uRmlsdGVyLlRlbGVjb21t",
-            "dXRlUHJlZmVyZW5jZSJyChVUZWxlY29tbXV0ZVByZWZlcmVuY2USJgoiVEVM",
-            "RUNPTU1VVEVfUFJFRkVSRU5DRV9VTlNQRUNJRklFRBAAEhgKFFRFTEVDT01N",
-            "VVRFX0VYQ0xVREVEEAESFwoTVEVMRUNPTU1VVEVfQUxMT1dFRBACIrsDChJD",
-            "b21wZW5zYXRpb25GaWx0ZXISSAoEdHlwZRgBIAEoDjI1Lmdvb2dsZS5jbG91",
-            "ZC50YWxlbnQudjQuQ29tcGVuc2F0aW9uRmlsdGVyLkZpbHRlclR5cGVCA+BB",
-            "AhJNCgV1bml0cxgCIAMoDjI5Lmdvb2dsZS5jbG91ZC50YWxlbnQudjQuQ29t",
-            "cGVuc2F0aW9uSW5mby5Db21wZW5zYXRpb25Vbml0QgPgQQISSQoFcmFuZ2UY",
-            "AyABKAsyOi5nb29nbGUuY2xvdWQudGFsZW50LnY0LkNvbXBlbnNhdGlvbklu",
-            "Zm8uQ29tcGVuc2F0aW9uUmFuZ2USOAowaW5jbHVkZV9qb2JzX3dpdGhfdW5z",
-            "cGVjaWZpZWRfY29tcGVuc2F0aW9uX3JhbmdlGAQgASgIIoYBCgpGaWx0ZXJU",
-            "eXBlEhsKF0ZJTFRFUl9UWVBFX1VOU1BFQ0lGSUVEEAASDQoJVU5JVF9PTkxZ",
-            "EAESEwoPVU5JVF9BTkRfQU1PVU5UEAISGgoWQU5OVUFMSVpFRF9CQVNFX0FN",
-            "T1VOVBADEhsKF0FOTlVBTElaRURfVE9UQUxfQU1PVU5UEAQiwQMKDUNvbW11",
-            "dGVGaWx0ZXISQgoOY29tbXV0ZV9tZXRob2QYASABKA4yJS5nb29nbGUuY2xv",
-            "dWQudGFsZW50LnY0LkNvbW11dGVNZXRob2RCA+BBAhIzChFzdGFydF9jb29y",
-            "ZGluYXRlcxgCIAEoCzITLmdvb2dsZS50eXBlLkxhdExuZ0ID4EECEjcKD3Ry",
-            "YXZlbF9kdXJhdGlvbhgDIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlv",
-            "bkID4EECEiEKGWFsbG93X2ltcHJlY2lzZV9hZGRyZXNzZXMYBCABKAgSSQoM",
-            "cm9hZF90cmFmZmljGAUgASgOMjEuZ29vZ2xlLmNsb3VkLnRhbGVudC52NC5D",
-            "b21tdXRlRmlsdGVyLlJvYWRUcmFmZmljSAASMAoOZGVwYXJ0dXJlX3RpbWUY",
-            "BiABKAsyFi5nb29nbGUudHlwZS5UaW1lT2ZEYXlIACJMCgtSb2FkVHJhZmZp",
-            "YxIcChhST0FEX1RSQUZGSUNfVU5TUEVDSUZJRUQQABIQCgxUUkFGRklDX0ZS",
-            "RUUQARINCglCVVNZX0hPVVIQAkIQCg50cmFmZmljX29wdGlvbkJwChpjb20u",
-            "Z29vZ2xlLmNsb3VkLnRhbGVudC52NEIMRmlsdGVyc1Byb3RvUAFaPGdvb2ds",
-            "ZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvdGFsZW50",
-            "L3Y0O3RhbGVudKICA0NUU2IGcHJvdG8z"));
+            "dXRlUHJlZmVyZW5jZSKVAQoVVGVsZWNvbW11dGVQcmVmZXJlbmNlEiYKIlRF",
+            "TEVDT01NVVRFX1BSRUZFUkVOQ0VfVU5TUEVDSUZJRUQQABIcChRURUxFQ09N",
+            "TVVURV9FWENMVURFRBABGgIIARIXChNURUxFQ09NTVVURV9BTExPV0VEEAIS",
+            "HQoZVEVMRUNPTU1VVEVfSk9CU19FWENMVURFRBADIrsDChJDb21wZW5zYXRp",
+            "b25GaWx0ZXISSAoEdHlwZRgBIAEoDjI1Lmdvb2dsZS5jbG91ZC50YWxlbnQu",
+            "djQuQ29tcGVuc2F0aW9uRmlsdGVyLkZpbHRlclR5cGVCA+BBAhJNCgV1bml0",
+            "cxgCIAMoDjI5Lmdvb2dsZS5jbG91ZC50YWxlbnQudjQuQ29tcGVuc2F0aW9u",
+            "SW5mby5Db21wZW5zYXRpb25Vbml0QgPgQQISSQoFcmFuZ2UYAyABKAsyOi5n",
+            "b29nbGUuY2xvdWQudGFsZW50LnY0LkNvbXBlbnNhdGlvbkluZm8uQ29tcGVu",
+            "c2F0aW9uUmFuZ2USOAowaW5jbHVkZV9qb2JzX3dpdGhfdW5zcGVjaWZpZWRf",
+            "Y29tcGVuc2F0aW9uX3JhbmdlGAQgASgIIoYBCgpGaWx0ZXJUeXBlEhsKF0ZJ",
+            "TFRFUl9UWVBFX1VOU1BFQ0lGSUVEEAASDQoJVU5JVF9PTkxZEAESEwoPVU5J",
+            "VF9BTkRfQU1PVU5UEAISGgoWQU5OVUFMSVpFRF9CQVNFX0FNT1VOVBADEhsK",
+            "F0FOTlVBTElaRURfVE9UQUxfQU1PVU5UEAQiwQMKDUNvbW11dGVGaWx0ZXIS",
+            "QgoOY29tbXV0ZV9tZXRob2QYASABKA4yJS5nb29nbGUuY2xvdWQudGFsZW50",
+            "LnY0LkNvbW11dGVNZXRob2RCA+BBAhIzChFzdGFydF9jb29yZGluYXRlcxgC",
+            "IAEoCzITLmdvb2dsZS50eXBlLkxhdExuZ0ID4EECEjcKD3RyYXZlbF9kdXJh",
+            "dGlvbhgDIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EECEiEK",
+            "GWFsbG93X2ltcHJlY2lzZV9hZGRyZXNzZXMYBCABKAgSSQoMcm9hZF90cmFm",
+            "ZmljGAUgASgOMjEuZ29vZ2xlLmNsb3VkLnRhbGVudC52NC5Db21tdXRlRmls",
+            "dGVyLlJvYWRUcmFmZmljSAASMAoOZGVwYXJ0dXJlX3RpbWUYBiABKAsyFi5n",
+            "b29nbGUudHlwZS5UaW1lT2ZEYXlIACJMCgtSb2FkVHJhZmZpYxIcChhST0FE",
+            "X1RSQUZGSUNfVU5TUEVDSUZJRUQQABIQCgxUUkFGRklDX0ZSRUUQARINCglC",
+            "VVNZX0hPVVIQAkIQCg50cmFmZmljX29wdGlvbkJwChpjb20uZ29vZ2xlLmNs",
+            "b3VkLnRhbGVudC52NEIMRmlsdGVyc1Byb3RvUAFaPGdvb2dsZS5nb2xhbmcu",
+            "b3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvdGFsZW50L3Y0O3RhbGVu",
+            "dKICA0NUU2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Talent.V4.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -287,14 +288,22 @@ namespace Google.Cloud.Talent.V4 {
     /// <summary>
     /// This filter specifies the company [Company.display_name][google.cloud.talent.v4.Company.display_name]
     /// of the jobs to search against. The company name must match the value
-    /// exactly (case sensitive).
+    /// exactly.
     ///
-    /// Alternatively, if the value being searched for is wrapped in
-    /// `SUBSTRING_MATCH([value])`, the company name must contain a case
-    /// insensitive substring match of the value. Using this function may increase
-    /// latency.
+    /// Alternatively, the value being searched for can be wrapped in different
+    /// match operators.
+    /// `SUBSTRING_MATCH([value])`
+    /// The company name must contain a case insensitive substring match of the
+    /// value. Using this function may increase latency.
     ///
-    /// Sample Values: `["Google LLC", "SUBSTRING_MATCH(google)"]`
+    /// Sample Value: `SUBSTRING_MATCH(google)`
+    ///
+    /// `MULTI_WORD_TOKEN_MATCH([value])`
+    /// The value will be treated as a multi word token and the company name must
+    /// contain a case insensitive match of the value. Using this function may
+    /// increase latency.
+    ///
+    /// Sample Value: `MULTI_WORD_TOKEN_MATCH(google)`
     ///
     /// If a value isn't specified, jobs within the search results are
     /// associated with any company.
@@ -1001,7 +1010,7 @@ namespace Google.Cloud.Talent.V4 {
     /// <summary>
     /// Allows the client to return jobs without a
     /// set location, specifically, telecommuting jobs (telecommuting is considered
-    /// by the service as a special location.
+    /// by the service as a special location).
     /// [Job.posting_region][google.cloud.talent.v4.Job.posting_region] indicates if a job permits telecommuting.
     /// If this field is set to [TelecommutePreference.TELECOMMUTE_ALLOWED][google.cloud.talent.v4.LocationFilter.TelecommutePreference.TELECOMMUTE_ALLOWED],
     /// telecommuting jobs are searched, and [address][google.cloud.talent.v4.LocationFilter.address] and [lat_lng][google.cloud.talent.v4.LocationFilter.lat_lng] are
@@ -1279,13 +1288,18 @@ namespace Google.Cloud.Talent.V4 {
         /// </summary>
         [pbr::OriginalName("TELECOMMUTE_PREFERENCE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Exclude telecommute jobs.
+        /// Deprecated: Ignore telecommute status of jobs. Use
+        /// TELECOMMUTE_JOBS_EXCLUDED if want to exclude telecommute jobs.
         /// </summary>
         [pbr::OriginalName("TELECOMMUTE_EXCLUDED")] TelecommuteExcluded = 1,
         /// <summary>
         /// Allow telecommute jobs.
         /// </summary>
         [pbr::OriginalName("TELECOMMUTE_ALLOWED")] TelecommuteAllowed = 2,
+        /// <summary>
+        /// Exclude telecommute jobs.
+        /// </summary>
+        [pbr::OriginalName("TELECOMMUTE_JOBS_EXCLUDED")] TelecommuteJobsExcluded = 3,
       }
 
     }
