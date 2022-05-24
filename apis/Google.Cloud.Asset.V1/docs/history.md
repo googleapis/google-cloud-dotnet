@@ -1,5 +1,14 @@
 # Version history
 
+## Version 2.11.0, released 2022-05-24
+
+### New features
+
+- Add SavedQuery CURD support ([commit 75e403c](https://github.com/googleapis/google-cloud-dotnet/commit/75e403caf6aa0a79b33d4e308d0dbfa97fa80a7d))
+- Add tags support ([commit 75e403c](https://github.com/googleapis/google-cloud-dotnet/commit/75e403caf6aa0a79b33d4e308d0dbfa97fa80a7d))
+- Add RelatedAsset and deprecate RelatedAssets for relationship GA ([commit 75e403c](https://github.com/googleapis/google-cloud-dotnet/commit/75e403caf6aa0a79b33d4e308d0dbfa97fa80a7d))
+  - The previous representation of the relationship feature is deprecated and unimplemented. The RelatedAsset message represents the new stable format.
+
 ## Version 2.10.0, released 2021-09-23
 
 - [Commit b71303f](https://github.com/googleapis/google-cloud-dotnet/commit/b71303f): feat: Release of relationships in v1, Add content type Relationship to support relationship search
