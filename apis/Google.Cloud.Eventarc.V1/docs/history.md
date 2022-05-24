@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.3.0, released 2022-05-24
+
+### New features
+
+- Add Provider resources ([commit 80b4859](https://github.com/googleapis/google-cloud-dotnet/commit/80b4859ce09adb71406b210b1b4ad2f7c974e1c5))
+
 ## Version 1.2.0, released 2022-02-07
 
 ### New features
