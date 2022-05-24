@@ -14,6 +14,7 @@
 
 using Google.Cloud.Tools.Common;
 using LibGit2Sharp;
+using System;
 using System.Collections.Generic;
 
 namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
@@ -27,7 +28,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
             _apis = new HashSet<string>(apis);
         }
 
-        public IEnumerable<ReleaseProposal> GetProposals(ApiCatalog catalog)
+        public IEnumerable<ReleaseProposal> GetProposals(ApiCatalog catalog, Func<string, StructuredVersion, StructuredVersion> versionIncrementer)
         {
             var root = DirectoryLayout.DetermineRootDirectory();
             using var repo = new Repository(root);
@@ -38,7 +39,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
                 {
                     continue;
                 }
-                var newVersion = api.StructuredVersion.AfterIncrement();
+                var newVersion = versionIncrementer(api.Id, api.StructuredVersion);
 
                 yield return ReleaseProposal.CreateFromHistory(repo, api.Id, newVersion);
             }

@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.Tools.Common;
+using System;
 using System.Collections.Generic;
 
 namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
@@ -22,6 +23,6 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
         /// <summary>
         /// Returns the proposed releases for all APIs in the catalog
         /// </summary>
-        IEnumerable<ReleaseProposal> GetProposals(ApiCatalog catalog);
+        IEnumerable<ReleaseProposal> GetProposals(ApiCatalog catalog, Func<string, StructuredVersion, StructuredVersion> versionIncrementer);
     }
 }
