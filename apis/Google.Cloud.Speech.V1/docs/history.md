@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.9.0, released 2022-05-24
+
+### New features
+
+- Add adaptation proto for v1 api ([commit 1c5ae72](https://github.com/googleapis/google-cloud-dotnet/commit/1c5ae72d726a594e08e92a3a652f61a2263bbdc2))
+
+### Documentation improvements
+
+- Add documentation for latest models to RecognitionConfig ([commit f50b641](https://github.com/googleapis/google-cloud-dotnet/commit/f50b641216be4dc3847aa954fb291fcccfed4101))
+
 ## Version 2.8.0, released 2022-04-26
 
 No API surface changes; just dependency updates.
