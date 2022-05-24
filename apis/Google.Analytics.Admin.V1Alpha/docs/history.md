@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-alpha12, released 2022-05-24
+
+### Bug fixes
+
+- CustomDimension and CustomMetric resource configuration in Analytics Admin API ([commit 2a16d98](https://github.com/googleapis/google-cloud-dotnet/commit/2a16d9851457e8fccdef93e1c8c479e46d150da1))
+
 ## Version 1.0.0-alpha11, released 2022-03-14
 
 ### New features
