@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.10.0, released 2022-05-24
+
+### New features
+
+- Add BigQuery configuration for subscriptions ([commit 93ceda9](https://github.com/googleapis/google-cloud-dotnet/commit/93ceda926233c79d836e1ee2806fce4d29b88a54))
+
 ## Version 2.9.0, released 2022-04-04
 
 ### Bug fixes
