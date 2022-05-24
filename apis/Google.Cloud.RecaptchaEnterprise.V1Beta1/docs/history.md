@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta06, released 2022-05-24
+
+### Bug fixes
+
+- **BREAKING CHANGE** Remove key management API ([commit 388080d](https://github.com/googleapis/google-cloud-dotnet/commit/388080deee4af00ea62e2b43f115fc53becb38cb))
+
+### New features
+
+- Introduced Reason, PasswordLeakVerification, AccountDefenderAssessment ([commit 388080d](https://github.com/googleapis/google-cloud-dotnet/commit/388080deee4af00ea62e2b43f115fc53becb38cb))
+
 ## Version 1.0.0-beta05, released 2021-09-01
 
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
