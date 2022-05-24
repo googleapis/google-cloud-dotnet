@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.0.0-beta09, released 2022-05-24
+
+### Documentation improvements
+
+- Update client libraries for v1p1beta1 api ([commit f6e9deb](https://github.com/googleapis/google-cloud-dotnet/commit/f6e9deb2fc0e462b27bc347eb537b357bfd1c0f7))
+- Add documentation for latest models to RecognitionConfig ([commit ed7287c](https://github.com/googleapis/google-cloud-dotnet/commit/ed7287c8dc25ec0a1f37469b18f4569a478c03e0))
+
 ## Version 2.0.0-beta08, released 2022-04-26
 
 ### Documentation improvements
