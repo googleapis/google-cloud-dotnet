@@ -1,5 +1,10 @@
 # Version history
 
+## Version 1.8.0, released 2022-05-24
+
+### New features
+
+- Add display_name and metadata to ModelEvaluation in aiplatform model_evaluation.proto ([commit f3160c5](https://github.com/googleapis/google-cloud-dotnet/commit/f3160c58825803c39dcd24d73777caebd5d49481))
 ## Version 1.7.0, released 2022-04-26
 
 ### New features
