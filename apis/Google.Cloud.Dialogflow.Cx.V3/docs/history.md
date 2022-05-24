@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.13.0, released 2022-05-24
+
+### New features
+
+- Added audio_export_settings ([commit 396b331](https://github.com/googleapis/google-cloud-dotnet/commit/396b3316365f67eced6fb96320738c439f2b1bd7))
+
+### Documentation improvements
+
+- Update the doc on diagnostic info ([commit 6e61aab](https://github.com/googleapis/google-cloud-dotnet/commit/6e61aabbedcd6009980f876d880ba2aa5874bf16))
+
 ## Version 1.12.0, released 2022-04-26
 
 ### Documentation improvements
