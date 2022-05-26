@@ -34,7 +34,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             // Initialize request argument(s)
             GenerateExclusivityManifestRequest request = new GenerateExclusivityManifestRequest
             {
-                Name = "",
+                MembershipName = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]"),
                 CrdManifest = "",
                 CrManifest = "",
             };

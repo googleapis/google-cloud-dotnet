@@ -17,6 +17,7 @@
 namespace Google.Cloud.GkeHub.V1Beta1.Snippets
 {
     // [START gkehub_v1beta1_generated_GkeHubMembershipService_ValidateExclusivity_sync]
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.GkeHub.V1Beta1;
 
     public sealed partial class GeneratedGkeHubMembershipServiceClientSnippets
@@ -33,7 +34,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             // Initialize request argument(s)
             ValidateExclusivityRequest request = new ValidateExclusivityRequest
             {
-                Parent = "",
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 CrManifest = "",
                 IntendedMembership = "",
             };

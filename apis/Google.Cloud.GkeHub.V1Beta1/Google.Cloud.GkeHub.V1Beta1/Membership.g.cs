@@ -52,147 +52,161 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
             "SUZJRUQQABILCgdPTl9QUkVNEAESDwoLTVVMVElfQ0xPVUQQAjpn6kFkCiBn",
             "a2VodWIuZ29vZ2xlYXBpcy5jb20vTWVtYmVyc2hpcBJAcHJvamVjdHMve3By",
             "b2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L21lbWJlcnNoaXBzL3ttZW1i",
-            "ZXJzaGlwfUIGCgR0eXBlIqcDChJNZW1iZXJzaGlwRW5kcG9pbnQSQwoLZ2tl",
+            "ZXJzaGlwfUIGCgR0eXBlIr8EChJNZW1iZXJzaGlwRW5kcG9pbnQSQwoLZ2tl",
             "X2NsdXN0ZXIYBCABKAsyJy5nb29nbGUuY2xvdWQuZ2tlaHViLnYxYmV0YTEu",
             "R2tlQ2x1c3RlckID4EEBSAASSgoPb25fcHJlbV9jbHVzdGVyGAcgASgLMiou",
             "Z29vZ2xlLmNsb3VkLmdrZWh1Yi52MWJldGExLk9uUHJlbUNsdXN0ZXJCA+BB",
             "AUgAElIKE211bHRpX2Nsb3VkX2NsdXN0ZXIYCCABKAsyLi5nb29nbGUuY2xv",
-            "dWQuZ2tlaHViLnYxYmV0YTEuTXVsdGlDbG91ZENsdXN0ZXJCA+BBAUgAElEK",
-            "E2t1YmVybmV0ZXNfbWV0YWRhdGEYBSABKAsyLy5nb29nbGUuY2xvdWQuZ2tl",
-            "aHViLnYxYmV0YTEuS3ViZXJuZXRlc01ldGFkYXRhQgPgQQMSUQoTa3ViZXJu",
-            "ZXRlc19yZXNvdXJjZRgGIAEoCzIvLmdvb2dsZS5jbG91ZC5na2VodWIudjFi",
-            "ZXRhMS5LdWJlcm5ldGVzUmVzb3VyY2VCA+BBAUIGCgR0eXBlIqcCChJLdWJl",
-            "cm5ldGVzUmVzb3VyY2USIwoWbWVtYmVyc2hpcF9jcl9tYW5pZmVzdBgBIAEo",
-            "CUID4EEEElAKFG1lbWJlcnNoaXBfcmVzb3VyY2VzGAIgAygLMi0uZ29vZ2xl",
-            "LmNsb3VkLmdrZWh1Yi52MWJldGExLlJlc291cmNlTWFuaWZlc3RCA+BBAxJN",
-            "ChFjb25uZWN0X3Jlc291cmNlcxgDIAMoCzItLmdvb2dsZS5jbG91ZC5na2Vo",
-            "dWIudjFiZXRhMS5SZXNvdXJjZU1hbmlmZXN0QgPgQQMSSwoQcmVzb3VyY2Vf",
-            "b3B0aW9ucxgEIAEoCzIsLmdvb2dsZS5jbG91ZC5na2VodWIudjFiZXRhMS5S",
-            "ZXNvdXJjZU9wdGlvbnNCA+BBASJjCg9SZXNvdXJjZU9wdGlvbnMSHAoPY29u",
-            "bmVjdF92ZXJzaW9uGAEgASgJQgPgQQESGAoLdjFiZXRhMV9jcmQYAiABKAhC",
-            "A+BBARIYCgtrOHNfdmVyc2lvbhgDIAEoCUID4EEBIjwKEFJlc291cmNlTWFu",
-            "aWZlc3QSEAoIbWFuaWZlc3QYASABKAkSFgoOY2x1c3Rlcl9zY29wZWQYAiAB",
-            "KAgiRgoKR2tlQ2x1c3RlchIaCg1yZXNvdXJjZV9saW5rGAEgASgJQgPgQQUS",
-            "HAoPY2x1c3Rlcl9taXNzaW5nGAMgASgIQgPgQQMiZQoNT25QcmVtQ2x1c3Rl",
-            "chIaCg1yZXNvdXJjZV9saW5rGAEgASgJQgPgQQUSHAoPY2x1c3Rlcl9taXNz",
-            "aW5nGAIgASgIQgPgQQMSGgoNYWRtaW5fY2x1c3RlchgDIAEoCEID4EEFIk0K",
-            "EU11bHRpQ2xvdWRDbHVzdGVyEhoKDXJlc291cmNlX2xpbmsYASABKAlCA+BB",
-            "BRIcCg9jbHVzdGVyX21pc3NpbmcYAiABKAhCA+BBAyLfAQoSS3ViZXJuZXRl",
-            "c01ldGFkYXRhEioKHWt1YmVybmV0ZXNfYXBpX3NlcnZlcl92ZXJzaW9uGAEg",
-            "ASgJQgPgQQMSHQoQbm9kZV9wcm92aWRlcl9pZBgCIAEoCUID4EEDEhcKCm5v",
-            "ZGVfY291bnQYAyABKAVCA+BBAxIXCgp2Y3B1X2NvdW50GAQgASgFQgPgQQMS",
-            "FgoJbWVtb3J5X21iGAUgASgFQgPgQQMSNAoLdXBkYXRlX3RpbWUYZCABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMifQoJQXV0aG9yaXR5",
-            "EhMKBmlzc3VlchgBIAEoCUID4EEBEiMKFndvcmtsb2FkX2lkZW50aXR5X3Bv",
-            "b2wYAiABKAlCA+BBAxIeChFpZGVudGl0eV9wcm92aWRlchgDIAEoCUID4EED",
-            "EhYKCW9pZGNfandrcxgEIAEoDEID4EEBIo4CCg9NZW1iZXJzaGlwU3RhdGUS",
-            "RAoEY29kZRgBIAEoDjIxLmdvb2dsZS5jbG91ZC5na2VodWIudjFiZXRhMS5N",
-            "ZW1iZXJzaGlwU3RhdGUuQ29kZUID4EEDEhcKC2Rlc2NyaXB0aW9uGAIgASgJ",
-            "QgIYARIzCgt1cGRhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXBCAhgBImcKBENvZGUSFAoQQ09ERV9VTlNQRUNJRklFRBAAEgwK",
-            "CENSRUFUSU5HEAESCQoFUkVBRFkQAhIMCghERUxFVElORxADEgwKCFVQREFU",
-            "SU5HEAQSFAoQU0VSVklDRV9VUERBVElORxAFIooBChZMaXN0TWVtYmVyc2hp",
-            "cHNSZXF1ZXN0EhMKBnBhcmVudBgBIAEoCUID4EECEhYKCXBhZ2Vfc2l6ZRgC",
-            "IAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BBARITCgZmaWx0ZXIY",
-            "BCABKAlCA+BBARIVCghvcmRlcl9ieRgFIAEoCUID4EEBIoMBChdMaXN0TWVt",
-            "YmVyc2hpcHNSZXNwb25zZRI6CglyZXNvdXJjZXMYASADKAsyJy5nb29nbGUu",
-            "Y2xvdWQuZ2tlaHViLnYxYmV0YTEuTWVtYmVyc2hpcBIXCg9uZXh0X3BhZ2Vf",
-            "dG9rZW4YAiABKAkSEwoLdW5yZWFjaGFibGUYAyADKAkiKQoUR2V0TWVtYmVy",
-            "c2hpcFJlcXVlc3QSEQoEbmFtZRgBIAEoCUID4EECIqMBChdDcmVhdGVNZW1i",
-            "ZXJzaGlwUmVxdWVzdBITCgZwYXJlbnQYASABKAlCA+BBAhIaCg1tZW1iZXJz",
-            "aGlwX2lkGAIgASgJQgPgQQISPgoIcmVzb3VyY2UYAyABKAsyJy5nb29nbGUu",
-            "Y2xvdWQuZ2tlaHViLnYxYmV0YTEuTWVtYmVyc2hpcEID4EECEhcKCnJlcXVl",
-            "c3RfaWQYBCABKAlCA+BBASJFChdEZWxldGVNZW1iZXJzaGlwUmVxdWVzdBIR",
-            "CgRuYW1lGAEgASgJQgPgQQISFwoKcmVxdWVzdF9pZBgEIAEoCUID4EEBIrsB",
-            "ChdVcGRhdGVNZW1iZXJzaGlwUmVxdWVzdBIRCgRuYW1lGAEgASgJQgPgQQIS",
-            "NAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRN",
-            "YXNrQgPgQQISPgoIcmVzb3VyY2UYAyABKAsyJy5nb29nbGUuY2xvdWQuZ2tl",
-            "aHViLnYxYmV0YTEuTWVtYmVyc2hpcEID4EECEhcKCnJlcXVlc3RfaWQYBCAB",
-            "KAlCA+BBASLoAQoeR2VuZXJhdGVDb25uZWN0TWFuaWZlc3RSZXF1ZXN0EhEK",
-            "BG5hbWUYASABKAlCA+BBAhJFCg1jb25uZWN0X2FnZW50GAIgASgLMikuZ29v",
-            "Z2xlLmNsb3VkLmdrZWh1Yi52MWJldGExLkNvbm5lY3RBZ2VudEID4EEBEhQK",
-            "B3ZlcnNpb24YAyABKAlCA+BBARIXCgppc191cGdyYWRlGAQgASgIQgPgQQES",
-            "FQoIcmVnaXN0cnkYBSABKAlCA+BBARImChlpbWFnZV9wdWxsX3NlY3JldF9j",
-            "b250ZW50GAYgASgMQgPgQQEiZgofR2VuZXJhdGVDb25uZWN0TWFuaWZlc3RS",
-            "ZXNwb25zZRJDCghtYW5pZmVzdBgBIAMoCzIxLmdvb2dsZS5jbG91ZC5na2Vo",
-            "dWIudjFiZXRhMS5Db25uZWN0QWdlbnRSZXNvdXJjZSJdChRDb25uZWN0QWdl",
-            "bnRSZXNvdXJjZRIzCgR0eXBlGAEgASgLMiUuZ29vZ2xlLmNsb3VkLmdrZWh1",
-            "Yi52MWJldGExLlR5cGVNZXRhEhAKCG1hbmlmZXN0GAIgASgJIi0KCFR5cGVN",
-            "ZXRhEgwKBGtpbmQYASABKAkSEwoLYXBpX3ZlcnNpb24YAiABKAkiTAoMQ29u",
-            "bmVjdEFnZW50EhAKBG5hbWUYASABKAlCAhgBEhIKBXByb3h5GAIgASgMQgPg",
-            "QQESFgoJbmFtZXNwYWNlGAMgASgJQgPgQQEibQoaVmFsaWRhdGVFeGNsdXNp",
-            "dml0eVJlcXVlc3QSEwoGcGFyZW50GAEgASgJQgPgQQISGAoLY3JfbWFuaWZl",
-            "c3QYAiABKAlCA+BBARIgChNpbnRlbmRlZF9tZW1iZXJzaGlwGAMgASgJQgPg",
-            "QQIiQQobVmFsaWRhdGVFeGNsdXNpdml0eVJlc3BvbnNlEiIKBnN0YXR1cxgB",
-            "IAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzImwKIkdlbmVyYXRlRXhjbHVzaXZp",
-            "dHlNYW5pZmVzdFJlcXVlc3QSEQoEbmFtZRgBIAEoCUID4EECEhkKDGNyZF9t",
-            "YW5pZmVzdBgCIAEoCUID4EEBEhgKC2NyX21hbmlmZXN0GAMgASgJQgPgQQEi",
-            "UAojR2VuZXJhdGVFeGNsdXNpdml0eU1hbmlmZXN0UmVzcG9uc2USFAoMY3Jk",
-            "X21hbmlmZXN0GAEgASgJEhMKC2NyX21hbmlmZXN0GAIgASgJIvkBChFPcGVy",
-            "YXRpb25NZXRhZGF0YRI0CgtjcmVhdGVfdGltZRgBIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIxCghlbmRfdGltZRgCIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxITCgZ0YXJnZXQYAyABKAlC",
-            "A+BBAxIRCgR2ZXJiGAQgASgJQgPgQQMSGgoNc3RhdHVzX2RldGFpbBgFIAEo",
-            "CUID4EEDEh0KEGNhbmNlbF9yZXF1ZXN0ZWQYBiABKAhCA+BBAxIYCgthcGlf",
-            "dmVyc2lvbhgHIAEoCUID4EEDMuYOChdHa2VIdWJNZW1iZXJzaGlwU2Vydmlj",
-            "ZRLDAQoPTGlzdE1lbWJlcnNoaXBzEjMuZ29vZ2xlLmNsb3VkLmdrZWh1Yi52",
-            "MWJldGExLkxpc3RNZW1iZXJzaGlwc1JlcXVlc3QaNC5nb29nbGUuY2xvdWQu",
-            "Z2tlaHViLnYxYmV0YTEuTGlzdE1lbWJlcnNoaXBzUmVzcG9uc2UiRYLT5JMC",
-            "NhI0L3YxYmV0YTEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9t",
-            "ZW1iZXJzaGlwc9pBBnBhcmVudBKwAQoNR2V0TWVtYmVyc2hpcBIxLmdvb2ds",
-            "ZS5jbG91ZC5na2VodWIudjFiZXRhMS5HZXRNZW1iZXJzaGlwUmVxdWVzdBon",
-            "Lmdvb2dsZS5jbG91ZC5na2VodWIudjFiZXRhMS5NZW1iZXJzaGlwIkOC0+ST",
-            "AjYSNC92MWJldGExL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovbWVt",
-            "YmVyc2hpcHMvKn3aQQRuYW1lEvIBChBDcmVhdGVNZW1iZXJzaGlwEjQuZ29v",
-            "Z2xlLmNsb3VkLmdrZWh1Yi52MWJldGExLkNyZWF0ZU1lbWJlcnNoaXBSZXF1",
-            "ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKIAYLT5JMCQCI0",
-            "L3YxYmV0YTEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9tZW1i",
-            "ZXJzaGlwczoIcmVzb3VyY2XaQR1wYXJlbnQscmVzb3VyY2UsbWVtYmVyc2hp",
-            "cF9pZMpBHwoKTWVtYmVyc2hpcBIRT3BlcmF0aW9uTWV0YWRhdGES2QEKEERl",
-            "bGV0ZU1lbWJlcnNoaXASNC5nb29nbGUuY2xvdWQuZ2tlaHViLnYxYmV0YTEu",
-            "RGVsZXRlTWVtYmVyc2hpcFJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcu",
-            "T3BlcmF0aW9uInCC0+STAjYqNC92MWJldGExL3tuYW1lPXByb2plY3RzLyov",
-            "bG9jYXRpb25zLyovbWVtYmVyc2hpcHMvKn3aQQRuYW1lykEqChVnb29nbGUu",
-            "cHJvdG9idWYuRW1wdHkSEU9wZXJhdGlvbk1ldGFkYXRhEu4BChBVcGRhdGVN",
-            "ZW1iZXJzaGlwEjQuZ29vZ2xlLmNsb3VkLmdrZWh1Yi52MWJldGExLlVwZGF0",
-            "ZU1lbWJlcnNoaXBSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJh",
-            "dGlvbiKEAYLT5JMCQDI0L3YxYmV0YTEve25hbWU9cHJvamVjdHMvKi9sb2Nh",
-            "dGlvbnMvKi9tZW1iZXJzaGlwcy8qfToIcmVzb3VyY2XaQRluYW1lLHJlc291",
-            "cmNlLHVwZGF0ZV9tYXNrykEfCgpNZW1iZXJzaGlwEhFPcGVyYXRpb25NZXRh",
-            "ZGF0YRLqAQoXR2VuZXJhdGVDb25uZWN0TWFuaWZlc3QSOy5nb29nbGUuY2xv",
-            "dWQuZ2tlaHViLnYxYmV0YTEuR2VuZXJhdGVDb25uZWN0TWFuaWZlc3RSZXF1",
-            "ZXN0GjwuZ29vZ2xlLmNsb3VkLmdrZWh1Yi52MWJldGExLkdlbmVyYXRlQ29u",
-            "bmVjdE1hbmlmZXN0UmVzcG9uc2UiVILT5JMCThJML3YxYmV0YTEve25hbWU9",
-            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9tZW1iZXJzaGlwcy8qfTpnZW5lcmF0",
-            "ZUNvbm5lY3RNYW5pZmVzdBLaAQoTVmFsaWRhdGVFeGNsdXNpdml0eRI3Lmdv",
-            "b2dsZS5jbG91ZC5na2VodWIudjFiZXRhMS5WYWxpZGF0ZUV4Y2x1c2l2aXR5",
-            "UmVxdWVzdBo4Lmdvb2dsZS5jbG91ZC5na2VodWIudjFiZXRhMS5WYWxpZGF0",
-            "ZUV4Y2x1c2l2aXR5UmVzcG9uc2UiUILT5JMCShJIL3YxYmV0YTEve3BhcmVu",
-            "dD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9tZW1iZXJzaGlwczp2YWxpZGF0",
-            "ZUV4Y2x1c2l2aXR5EvoBChtHZW5lcmF0ZUV4Y2x1c2l2aXR5TWFuaWZlc3QS",
-            "Py5nb29nbGUuY2xvdWQuZ2tlaHViLnYxYmV0YTEuR2VuZXJhdGVFeGNsdXNp",
-            "dml0eU1hbmlmZXN0UmVxdWVzdBpALmdvb2dsZS5jbG91ZC5na2VodWIudjFi",
-            "ZXRhMS5HZW5lcmF0ZUV4Y2x1c2l2aXR5TWFuaWZlc3RSZXNwb25zZSJYgtPk",
-            "kwJSElAvdjFiZXRhMS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL21l",
-            "bWJlcnNoaXBzLyp9OmdlbmVyYXRlRXhjbHVzaXZpdHlNYW5pZmVzdBpJykEV",
-            "Z2tlaHViLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBp",
-            "cy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybULDAQofY29tLmdvb2dsZS5jbG91",
-            "ZC5na2VodWIudjFiZXRhMVABWkFnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
-            "by9nb29nbGVhcGlzL2Nsb3VkL2drZWh1Yi92MWJldGExO2drZWh1YqoCG0dv",
-            "b2dsZS5DbG91ZC5Ha2VIdWIuVjFCZXRhMcoCG0dvb2dsZVxDbG91ZFxHa2VI",
-            "dWJcVjFiZXRhMeoCHkdvb2dsZTo6Q2xvdWQ6OkdrZUh1Yjo6VjFiZXRhMWIG",
-            "cHJvdG8z"));
+            "dWQuZ2tlaHViLnYxYmV0YTEuTXVsdGlDbG91ZENsdXN0ZXJCA+BBAUgAEkUK",
+            "DGVkZ2VfY2x1c3RlchgJIAEoCzIoLmdvb2dsZS5jbG91ZC5na2VodWIudjFi",
+            "ZXRhMS5FZGdlQ2x1c3RlckID4EEBSAASTwoRYXBwbGlhbmNlX2NsdXN0ZXIY",
+            "CiABKAsyLS5nb29nbGUuY2xvdWQuZ2tlaHViLnYxYmV0YTEuQXBwbGlhbmNl",
+            "Q2x1c3RlckID4EEBSAASUQoTa3ViZXJuZXRlc19tZXRhZGF0YRgFIAEoCzIv",
+            "Lmdvb2dsZS5jbG91ZC5na2VodWIudjFiZXRhMS5LdWJlcm5ldGVzTWV0YWRh",
+            "dGFCA+BBAxJRChNrdWJlcm5ldGVzX3Jlc291cmNlGAYgASgLMi8uZ29vZ2xl",
+            "LmNsb3VkLmdrZWh1Yi52MWJldGExLkt1YmVybmV0ZXNSZXNvdXJjZUID4EEB",
+            "QgYKBHR5cGUipwIKEkt1YmVybmV0ZXNSZXNvdXJjZRIjChZtZW1iZXJzaGlw",
+            "X2NyX21hbmlmZXN0GAEgASgJQgPgQQQSUAoUbWVtYmVyc2hpcF9yZXNvdXJj",
+            "ZXMYAiADKAsyLS5nb29nbGUuY2xvdWQuZ2tlaHViLnYxYmV0YTEuUmVzb3Vy",
+            "Y2VNYW5pZmVzdEID4EEDEk0KEWNvbm5lY3RfcmVzb3VyY2VzGAMgAygLMi0u",
+            "Z29vZ2xlLmNsb3VkLmdrZWh1Yi52MWJldGExLlJlc291cmNlTWFuaWZlc3RC",
+            "A+BBAxJLChByZXNvdXJjZV9vcHRpb25zGAQgASgLMiwuZ29vZ2xlLmNsb3Vk",
+            "LmdrZWh1Yi52MWJldGExLlJlc291cmNlT3B0aW9uc0ID4EEBImMKD1Jlc291",
+            "cmNlT3B0aW9ucxIcCg9jb25uZWN0X3ZlcnNpb24YASABKAlCA+BBARIYCgt2",
+            "MWJldGExX2NyZBgCIAEoCEID4EEBEhgKC2s4c192ZXJzaW9uGAMgASgJQgPg",
+            "QQEiPAoQUmVzb3VyY2VNYW5pZmVzdBIQCghtYW5pZmVzdBgBIAEoCRIWCg5j",
+            "bHVzdGVyX3Njb3BlZBgCIAEoCCJGCgpHa2VDbHVzdGVyEhoKDXJlc291cmNl",
+            "X2xpbmsYASABKAlCA+BBBRIcCg9jbHVzdGVyX21pc3NpbmcYAyABKAhCA+BB",
+            "AyJlCg1PblByZW1DbHVzdGVyEhoKDXJlc291cmNlX2xpbmsYASABKAlCA+BB",
+            "BRIcCg9jbHVzdGVyX21pc3NpbmcYAiABKAhCA+BBAxIaCg1hZG1pbl9jbHVz",
+            "dGVyGAMgASgIQgPgQQUiTQoRTXVsdGlDbG91ZENsdXN0ZXISGgoNcmVzb3Vy",
+            "Y2VfbGluaxgBIAEoCUID4EEFEhwKD2NsdXN0ZXJfbWlzc2luZxgCIAEoCEID",
+            "4EEDIikKC0VkZ2VDbHVzdGVyEhoKDXJlc291cmNlX2xpbmsYASABKAlCA+BB",
+            "BSIuChBBcHBsaWFuY2VDbHVzdGVyEhoKDXJlc291cmNlX2xpbmsYASABKAlC",
+            "A+BBBSLfAQoSS3ViZXJuZXRlc01ldGFkYXRhEioKHWt1YmVybmV0ZXNfYXBp",
+            "X3NlcnZlcl92ZXJzaW9uGAEgASgJQgPgQQMSHQoQbm9kZV9wcm92aWRlcl9p",
+            "ZBgCIAEoCUID4EEDEhcKCm5vZGVfY291bnQYAyABKAVCA+BBAxIXCgp2Y3B1",
+            "X2NvdW50GAQgASgFQgPgQQMSFgoJbWVtb3J5X21iGAUgASgFQgPgQQMSNAoL",
+            "dXBkYXRlX3RpbWUYZCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "QgPgQQMifQoJQXV0aG9yaXR5EhMKBmlzc3VlchgBIAEoCUID4EEBEiMKFndv",
+            "cmtsb2FkX2lkZW50aXR5X3Bvb2wYAiABKAlCA+BBAxIeChFpZGVudGl0eV9w",
+            "cm92aWRlchgDIAEoCUID4EEDEhYKCW9pZGNfandrcxgEIAEoDEID4EEBIo4C",
+            "Cg9NZW1iZXJzaGlwU3RhdGUSRAoEY29kZRgBIAEoDjIxLmdvb2dsZS5jbG91",
+            "ZC5na2VodWIudjFiZXRhMS5NZW1iZXJzaGlwU3RhdGUuQ29kZUID4EEDEhcK",
+            "C2Rlc2NyaXB0aW9uGAIgASgJQgIYARIzCgt1cGRhdGVfdGltZRgDIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCAhgBImcKBENvZGUSFAoQQ09E",
+            "RV9VTlNQRUNJRklFRBAAEgwKCENSRUFUSU5HEAESCQoFUkVBRFkQAhIMCghE",
+            "RUxFVElORxADEgwKCFVQREFUSU5HEAQSFAoQU0VSVklDRV9VUERBVElORxAF",
+            "Iq8BChZMaXN0TWVtYmVyc2hpcHNSZXF1ZXN0EjgKBnBhcmVudBgBIAEoCUIo",
+            "4EEC+kEiEiBna2VodWIuZ29vZ2xlYXBpcy5jb20vTWVtYmVyc2hpcBIWCglw",
+            "YWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAMgASgJQgPgQQES",
+            "EwoGZmlsdGVyGAQgASgJQgPgQQESFQoIb3JkZXJfYnkYBSABKAlCA+BBASKD",
+            "AQoXTGlzdE1lbWJlcnNoaXBzUmVzcG9uc2USOgoJcmVzb3VyY2VzGAEgAygL",
+            "MicuZ29vZ2xlLmNsb3VkLmdrZWh1Yi52MWJldGExLk1lbWJlcnNoaXASFwoP",
+            "bmV4dF9wYWdlX3Rva2VuGAIgASgJEhMKC3VucmVhY2hhYmxlGAMgAygJIk4K",
+            "FEdldE1lbWJlcnNoaXBSZXF1ZXN0EjYKBG5hbWUYASABKAlCKOBBAvpBIgog",
+            "Z2tlaHViLmdvb2dsZWFwaXMuY29tL01lbWJlcnNoaXAiyAEKF0NyZWF0ZU1l",
+            "bWJlcnNoaXBSZXF1ZXN0EjgKBnBhcmVudBgBIAEoCUIo4EEC+kEiEiBna2Vo",
+            "dWIuZ29vZ2xlYXBpcy5jb20vTWVtYmVyc2hpcBIaCg1tZW1iZXJzaGlwX2lk",
+            "GAIgASgJQgPgQQISPgoIcmVzb3VyY2UYAyABKAsyJy5nb29nbGUuY2xvdWQu",
+            "Z2tlaHViLnYxYmV0YTEuTWVtYmVyc2hpcEID4EECEhcKCnJlcXVlc3RfaWQY",
+            "BCABKAlCA+BBASJqChdEZWxldGVNZW1iZXJzaGlwUmVxdWVzdBI2CgRuYW1l",
+            "GAEgASgJQijgQQL6QSIKIGdrZWh1Yi5nb29nbGVhcGlzLmNvbS9NZW1iZXJz",
+            "aGlwEhcKCnJlcXVlc3RfaWQYBCABKAlCA+BBASLgAQoXVXBkYXRlTWVtYmVy",
+            "c2hpcFJlcXVlc3QSNgoEbmFtZRgBIAEoCUIo4EEC+kEiCiBna2VodWIuZ29v",
+            "Z2xlYXBpcy5jb20vTWVtYmVyc2hpcBI0Cgt1cGRhdGVfbWFzaxgCIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBAhI+CghyZXNvdXJjZRgD",
+            "IAEoCzInLmdvb2dsZS5jbG91ZC5na2VodWIudjFiZXRhMS5NZW1iZXJzaGlw",
+            "QgPgQQISFwoKcmVxdWVzdF9pZBgEIAEoCUID4EEBIo0CCh5HZW5lcmF0ZUNv",
+            "bm5lY3RNYW5pZmVzdFJlcXVlc3QSNgoEbmFtZRgBIAEoCUIo4EEC+kEiCiBn",
+            "a2VodWIuZ29vZ2xlYXBpcy5jb20vTWVtYmVyc2hpcBJFCg1jb25uZWN0X2Fn",
+            "ZW50GAIgASgLMikuZ29vZ2xlLmNsb3VkLmdrZWh1Yi52MWJldGExLkNvbm5l",
+            "Y3RBZ2VudEID4EEBEhQKB3ZlcnNpb24YAyABKAlCA+BBARIXCgppc191cGdy",
+            "YWRlGAQgASgIQgPgQQESFQoIcmVnaXN0cnkYBSABKAlCA+BBARImChlpbWFn",
+            "ZV9wdWxsX3NlY3JldF9jb250ZW50GAYgASgMQgPgQQEiZgofR2VuZXJhdGVD",
+            "b25uZWN0TWFuaWZlc3RSZXNwb25zZRJDCghtYW5pZmVzdBgBIAMoCzIxLmdv",
+            "b2dsZS5jbG91ZC5na2VodWIudjFiZXRhMS5Db25uZWN0QWdlbnRSZXNvdXJj",
+            "ZSJdChRDb25uZWN0QWdlbnRSZXNvdXJjZRIzCgR0eXBlGAEgASgLMiUuZ29v",
+            "Z2xlLmNsb3VkLmdrZWh1Yi52MWJldGExLlR5cGVNZXRhEhAKCG1hbmlmZXN0",
+            "GAIgASgJIi0KCFR5cGVNZXRhEgwKBGtpbmQYASABKAkSEwoLYXBpX3ZlcnNp",
+            "b24YAiABKAkiTAoMQ29ubmVjdEFnZW50EhAKBG5hbWUYASABKAlCAhgBEhIK",
+            "BXByb3h5GAIgASgMQgPgQQESFgoJbmFtZXNwYWNlGAMgASgJQgPgQQEikgEK",
+            "GlZhbGlkYXRlRXhjbHVzaXZpdHlSZXF1ZXN0EjgKBnBhcmVudBgBIAEoCUIo",
+            "4EEC+kEiEiBna2VodWIuZ29vZ2xlYXBpcy5jb20vTWVtYmVyc2hpcBIYCgtj",
+            "cl9tYW5pZmVzdBgCIAEoCUID4EEBEiAKE2ludGVuZGVkX21lbWJlcnNoaXAY",
+            "AyABKAlCA+BBAiJBChtWYWxpZGF0ZUV4Y2x1c2l2aXR5UmVzcG9uc2USIgoG",
+            "c3RhdHVzGAEgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXMikQEKIkdlbmVyYXRl",
+            "RXhjbHVzaXZpdHlNYW5pZmVzdFJlcXVlc3QSNgoEbmFtZRgBIAEoCUIo4EEC",
+            "+kEiCiBna2VodWIuZ29vZ2xlYXBpcy5jb20vTWVtYmVyc2hpcBIZCgxjcmRf",
+            "bWFuaWZlc3QYAiABKAlCA+BBARIYCgtjcl9tYW5pZmVzdBgDIAEoCUID4EEB",
+            "IlAKI0dlbmVyYXRlRXhjbHVzaXZpdHlNYW5pZmVzdFJlc3BvbnNlEhQKDGNy",
+            "ZF9tYW5pZmVzdBgBIAEoCRITCgtjcl9tYW5pZmVzdBgCIAEoCSL5AQoRT3Bl",
+            "cmF0aW9uTWV0YWRhdGESNAoLY3JlYXRlX3RpbWUYASABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSMQoIZW5kX3RpbWUYAiABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSEwoGdGFyZ2V0GAMgASgJ",
+            "QgPgQQMSEQoEdmVyYhgEIAEoCUID4EEDEhoKDXN0YXR1c19kZXRhaWwYBSAB",
+            "KAlCA+BBAxIdChBjYW5jZWxfcmVxdWVzdGVkGAYgASgIQgPgQQMSGAoLYXBp",
+            "X3ZlcnNpb24YByABKAlCA+BBAzLmDgoXR2tlSHViTWVtYmVyc2hpcFNlcnZp",
+            "Y2USwwEKD0xpc3RNZW1iZXJzaGlwcxIzLmdvb2dsZS5jbG91ZC5na2VodWIu",
+            "djFiZXRhMS5MaXN0TWVtYmVyc2hpcHNSZXF1ZXN0GjQuZ29vZ2xlLmNsb3Vk",
+            "LmdrZWh1Yi52MWJldGExLkxpc3RNZW1iZXJzaGlwc1Jlc3BvbnNlIkWC0+ST",
+            "AjYSNC92MWJldGExL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0v",
+            "bWVtYmVyc2hpcHPaQQZwYXJlbnQSsAEKDUdldE1lbWJlcnNoaXASMS5nb29n",
+            "bGUuY2xvdWQuZ2tlaHViLnYxYmV0YTEuR2V0TWVtYmVyc2hpcFJlcXVlc3Qa",
+            "Jy5nb29nbGUuY2xvdWQuZ2tlaHViLnYxYmV0YTEuTWVtYmVyc2hpcCJDgtPk",
+            "kwI2EjQvdjFiZXRhMS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL21l",
+            "bWJlcnNoaXBzLyp92kEEbmFtZRLyAQoQQ3JlYXRlTWVtYmVyc2hpcBI0Lmdv",
+            "b2dsZS5jbG91ZC5na2VodWIudjFiZXRhMS5DcmVhdGVNZW1iZXJzaGlwUmVx",
+            "dWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iiAGC0+STAkAi",
+            "NC92MWJldGExL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vbWVt",
+            "YmVyc2hpcHM6CHJlc291cmNl2kEdcGFyZW50LHJlc291cmNlLG1lbWJlcnNo",
+            "aXBfaWTKQR8KCk1lbWJlcnNoaXASEU9wZXJhdGlvbk1ldGFkYXRhEtkBChBE",
+            "ZWxldGVNZW1iZXJzaGlwEjQuZ29vZ2xlLmNsb3VkLmdrZWh1Yi52MWJldGEx",
+            "LkRlbGV0ZU1lbWJlcnNoaXBSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5n",
+            "Lk9wZXJhdGlvbiJwgtPkkwI2KjQvdjFiZXRhMS97bmFtZT1wcm9qZWN0cy8q",
+            "L2xvY2F0aW9ucy8qL21lbWJlcnNoaXBzLyp92kEEbmFtZcpBKgoVZ29vZ2xl",
+            "LnByb3RvYnVmLkVtcHR5EhFPcGVyYXRpb25NZXRhZGF0YRLuAQoQVXBkYXRl",
+            "TWVtYmVyc2hpcBI0Lmdvb2dsZS5jbG91ZC5na2VodWIudjFiZXRhMS5VcGRh",
+            "dGVNZW1iZXJzaGlwUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVy",
+            "YXRpb24ihAGC0+STAkAyNC92MWJldGExL3tuYW1lPXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyovbWVtYmVyc2hpcHMvKn06CHJlc291cmNl2kEZbmFtZSxyZXNv",
+            "dXJjZSx1cGRhdGVfbWFza8pBHwoKTWVtYmVyc2hpcBIRT3BlcmF0aW9uTWV0",
+            "YWRhdGES6gEKF0dlbmVyYXRlQ29ubmVjdE1hbmlmZXN0EjsuZ29vZ2xlLmNs",
+            "b3VkLmdrZWh1Yi52MWJldGExLkdlbmVyYXRlQ29ubmVjdE1hbmlmZXN0UmVx",
+            "dWVzdBo8Lmdvb2dsZS5jbG91ZC5na2VodWIudjFiZXRhMS5HZW5lcmF0ZUNv",
+            "bm5lY3RNYW5pZmVzdFJlc3BvbnNlIlSC0+STAk4STC92MWJldGExL3tuYW1l",
+            "PXByb2plY3RzLyovbG9jYXRpb25zLyovbWVtYmVyc2hpcHMvKn06Z2VuZXJh",
+            "dGVDb25uZWN0TWFuaWZlc3QS2gEKE1ZhbGlkYXRlRXhjbHVzaXZpdHkSNy5n",
+            "b29nbGUuY2xvdWQuZ2tlaHViLnYxYmV0YTEuVmFsaWRhdGVFeGNsdXNpdml0",
+            "eVJlcXVlc3QaOC5nb29nbGUuY2xvdWQuZ2tlaHViLnYxYmV0YTEuVmFsaWRh",
+            "dGVFeGNsdXNpdml0eVJlc3BvbnNlIlCC0+STAkoSSC92MWJldGExL3twYXJl",
+            "bnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vbWVtYmVyc2hpcHM6dmFsaWRh",
+            "dGVFeGNsdXNpdml0eRL6AQobR2VuZXJhdGVFeGNsdXNpdml0eU1hbmlmZXN0",
+            "Ej8uZ29vZ2xlLmNsb3VkLmdrZWh1Yi52MWJldGExLkdlbmVyYXRlRXhjbHVz",
+            "aXZpdHlNYW5pZmVzdFJlcXVlc3QaQC5nb29nbGUuY2xvdWQuZ2tlaHViLnYx",
+            "YmV0YTEuR2VuZXJhdGVFeGNsdXNpdml0eU1hbmlmZXN0UmVzcG9uc2UiWILT",
+            "5JMCUhJQL3YxYmV0YTEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9t",
+            "ZW1iZXJzaGlwcy8qfTpnZW5lcmF0ZUV4Y2x1c2l2aXR5TWFuaWZlc3QaScpB",
+            "FWdrZWh1Yi5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFw",
+            "aXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CwwEKH2NvbS5nb29nbGUuY2xv",
+            "dWQuZ2tlaHViLnYxYmV0YTFQAVpBZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
+            "dG8vZ29vZ2xlYXBpcy9jbG91ZC9na2VodWIvdjFiZXRhMTtna2VodWKqAhtH",
+            "b29nbGUuQ2xvdWQuR2tlSHViLlYxQmV0YTHKAhtHb29nbGVcQ2xvdWRcR2tl",
+            "SHViXFYxYmV0YTHqAh5Hb29nbGU6OkNsb3VkOjpHa2VIdWI6OlYxYmV0YTFi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1Beta1.Membership), global::Google.Cloud.GkeHub.V1Beta1.Membership.Parser, new[]{ "Name", "Labels", "Description", "Endpoint", "State", "Authority", "CreateTime", "UpdateTime", "DeleteTime", "ExternalId", "LastConnectionTime", "UniqueId", "InfrastructureType" }, new[]{ "Type" }, new[]{ typeof(global::Google.Cloud.GkeHub.V1Beta1.Membership.Types.InfrastructureType) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1Beta1.MembershipEndpoint), global::Google.Cloud.GkeHub.V1Beta1.MembershipEndpoint.Parser, new[]{ "GkeCluster", "OnPremCluster", "MultiCloudCluster", "KubernetesMetadata", "KubernetesResource" }, new[]{ "Type" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1Beta1.MembershipEndpoint), global::Google.Cloud.GkeHub.V1Beta1.MembershipEndpoint.Parser, new[]{ "GkeCluster", "OnPremCluster", "MultiCloudCluster", "EdgeCluster", "ApplianceCluster", "KubernetesMetadata", "KubernetesResource" }, new[]{ "Type" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1Beta1.KubernetesResource), global::Google.Cloud.GkeHub.V1Beta1.KubernetesResource.Parser, new[]{ "MembershipCrManifest", "MembershipResources", "ConnectResources", "ResourceOptions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1Beta1.ResourceOptions), global::Google.Cloud.GkeHub.V1Beta1.ResourceOptions.Parser, new[]{ "ConnectVersion", "V1Beta1Crd", "K8SVersion" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1Beta1.ResourceManifest), global::Google.Cloud.GkeHub.V1Beta1.ResourceManifest.Parser, new[]{ "Manifest", "ClusterScoped" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1Beta1.GkeCluster), global::Google.Cloud.GkeHub.V1Beta1.GkeCluster.Parser, new[]{ "ResourceLink", "ClusterMissing" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1Beta1.OnPremCluster), global::Google.Cloud.GkeHub.V1Beta1.OnPremCluster.Parser, new[]{ "ResourceLink", "ClusterMissing", "AdminCluster" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1Beta1.MultiCloudCluster), global::Google.Cloud.GkeHub.V1Beta1.MultiCloudCluster.Parser, new[]{ "ResourceLink", "ClusterMissing" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1Beta1.EdgeCluster), global::Google.Cloud.GkeHub.V1Beta1.EdgeCluster.Parser, new[]{ "ResourceLink" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1Beta1.ApplianceCluster), global::Google.Cloud.GkeHub.V1Beta1.ApplianceCluster.Parser, new[]{ "ResourceLink" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1Beta1.KubernetesMetadata), global::Google.Cloud.GkeHub.V1Beta1.KubernetesMetadata.Parser, new[]{ "KubernetesApiServerVersion", "NodeProviderId", "NodeCount", "VcpuCount", "MemoryMb", "UpdateTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1Beta1.Authority), global::Google.Cloud.GkeHub.V1Beta1.Authority.Parser, new[]{ "Issuer", "WorkloadIdentityPool", "IdentityProvider", "OidcJwks" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1Beta1.MembershipState), global::Google.Cloud.GkeHub.V1Beta1.MembershipState.Parser, new[]{ "Code", "Description", "UpdateTime" }, null, new[]{ typeof(global::Google.Cloud.GkeHub.V1Beta1.MembershipState.Types.Code) }, null, null),
@@ -286,9 +300,8 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. The full, unique name of this Membership resource in the
-    /// format `projects/*/locations/*/memberships/{membership_id}`, set during
-    /// creation.
+    /// Output only. The full, unique name of this Membership resource in the format
+    /// `projects/*/locations/*/memberships/{membership_id}`, set during creation.
     ///
     /// `membership_id` must be a valid RFC 1123 compliant DNS label:
     ///
@@ -434,10 +447,9 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     public const int ExternalIdFieldNumber = 10;
     private string externalId_ = "";
     /// <summary>
-    /// Optional. An externally-generated and managed ID for this Membership. This
-    /// ID may be modified after creation, but this is not recommended. For GKE
-    /// clusters, external_id is managed by the Hub API and updates will be
-    /// ignored.
+    /// Optional. An externally-generated and managed ID for this Membership. This ID may
+    /// be modified after creation, but this is not recommended. For GKE clusters,
+    /// external_id is managed by the Hub API and updates will be ignored.
     ///
     /// The ID must match the regex: `[a-zA-Z0-9][a-zA-Z0-9_\-\.]*`
     ///
@@ -457,11 +469,10 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     public const int LastConnectionTimeFieldNumber = 11;
     private global::Google.Protobuf.WellKnownTypes.Timestamp lastConnectionTime_;
     /// <summary>
-    /// Output only. For clusters using Connect, the timestamp of the most recent
-    /// connection established with Google Cloud. This time is updated every
-    /// several minutes, not continuously. For clusters that do not use GKE
-    /// Connect, or that have never connected successfully, this field will be
-    /// unset.
+    /// Output only. For clusters using Connect, the timestamp of the most recent connection
+    /// established with Google Cloud. This time is updated every several minutes,
+    /// not continuously. For clusters that do not use GKE Connect, or that have
+    /// never connected successfully, this field will be unset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -476,8 +487,8 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     public const int UniqueIdFieldNumber = 12;
     private string uniqueId_ = "";
     /// <summary>
-    /// Output only. Google-generated UUID for this resource. This is unique across
-    /// all Membership resources. If a Membership resource is deleted and another
+    /// Output only. Google-generated UUID for this resource. This is unique across all
+    /// Membership resources. If a Membership resource is deleted and another
     /// resource with the same name is created, it gets a different unique_id.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1090,6 +1101,12 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
         case TypeOneofCase.MultiCloudCluster:
           MultiCloudCluster = other.MultiCloudCluster.Clone();
           break;
+        case TypeOneofCase.EdgeCluster:
+          EdgeCluster = other.EdgeCluster.Clone();
+          break;
+        case TypeOneofCase.ApplianceCluster:
+          ApplianceCluster = other.ApplianceCluster.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1119,7 +1136,9 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     /// <summary>Field number for the "on_prem_cluster" field.</summary>
     public const int OnPremClusterFieldNumber = 7;
     /// <summary>
-    /// Optional. Specific information for a GKE On-Prem cluster.
+    /// Optional. Specific information for a GKE On-Prem cluster. An onprem user-cluster
+    /// who has no resourceLink is not allowed to use this field, it should have
+    /// a nil "type" instead.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1146,6 +1165,36 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "edge_cluster" field.</summary>
+    public const int EdgeClusterFieldNumber = 9;
+    /// <summary>
+    /// Optional. Specific information for a Google Edge cluster.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.GkeHub.V1Beta1.EdgeCluster EdgeCluster {
+      get { return typeCase_ == TypeOneofCase.EdgeCluster ? (global::Google.Cloud.GkeHub.V1Beta1.EdgeCluster) type_ : null; }
+      set {
+        type_ = value;
+        typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.EdgeCluster;
+      }
+    }
+
+    /// <summary>Field number for the "appliance_cluster" field.</summary>
+    public const int ApplianceClusterFieldNumber = 10;
+    /// <summary>
+    /// Optional. Specific information for a GDC Edge Appliance cluster.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.GkeHub.V1Beta1.ApplianceCluster ApplianceCluster {
+      get { return typeCase_ == TypeOneofCase.ApplianceCluster ? (global::Google.Cloud.GkeHub.V1Beta1.ApplianceCluster) type_ : null; }
+      set {
+        type_ = value;
+        typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.ApplianceCluster;
+      }
+    }
+
     /// <summary>Field number for the "kubernetes_metadata" field.</summary>
     public const int KubernetesMetadataFieldNumber = 5;
     private global::Google.Cloud.GkeHub.V1Beta1.KubernetesMetadata kubernetesMetadata_;
@@ -1165,8 +1214,8 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     public const int KubernetesResourceFieldNumber = 6;
     private global::Google.Cloud.GkeHub.V1Beta1.KubernetesResource kubernetesResource_;
     /// <summary>
-    /// Optional. The in-cluster Kubernetes Resources that should be applied for a
-    /// correctly registered cluster, in the steady state. These resources:
+    /// Optional. The in-cluster Kubernetes Resources that should be applied for a correctly
+    /// registered cluster, in the steady state. These resources:
     ///
     ///   * Ensure that the cluster is exclusively registered to one and only one
     ///     Hub Membership.
@@ -1190,6 +1239,8 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       GkeCluster = 4,
       OnPremCluster = 7,
       MultiCloudCluster = 8,
+      EdgeCluster = 9,
+      ApplianceCluster = 10,
     }
     private TypeOneofCase typeCase_ = TypeOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1223,6 +1274,8 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       if (!object.Equals(GkeCluster, other.GkeCluster)) return false;
       if (!object.Equals(OnPremCluster, other.OnPremCluster)) return false;
       if (!object.Equals(MultiCloudCluster, other.MultiCloudCluster)) return false;
+      if (!object.Equals(EdgeCluster, other.EdgeCluster)) return false;
+      if (!object.Equals(ApplianceCluster, other.ApplianceCluster)) return false;
       if (!object.Equals(KubernetesMetadata, other.KubernetesMetadata)) return false;
       if (!object.Equals(KubernetesResource, other.KubernetesResource)) return false;
       if (TypeCase != other.TypeCase) return false;
@@ -1236,6 +1289,8 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       if (typeCase_ == TypeOneofCase.GkeCluster) hash ^= GkeCluster.GetHashCode();
       if (typeCase_ == TypeOneofCase.OnPremCluster) hash ^= OnPremCluster.GetHashCode();
       if (typeCase_ == TypeOneofCase.MultiCloudCluster) hash ^= MultiCloudCluster.GetHashCode();
+      if (typeCase_ == TypeOneofCase.EdgeCluster) hash ^= EdgeCluster.GetHashCode();
+      if (typeCase_ == TypeOneofCase.ApplianceCluster) hash ^= ApplianceCluster.GetHashCode();
       if (kubernetesMetadata_ != null) hash ^= KubernetesMetadata.GetHashCode();
       if (kubernetesResource_ != null) hash ^= KubernetesResource.GetHashCode();
       hash ^= (int) typeCase_;
@@ -1277,6 +1332,14 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
         output.WriteRawTag(66);
         output.WriteMessage(MultiCloudCluster);
       }
+      if (typeCase_ == TypeOneofCase.EdgeCluster) {
+        output.WriteRawTag(74);
+        output.WriteMessage(EdgeCluster);
+      }
+      if (typeCase_ == TypeOneofCase.ApplianceCluster) {
+        output.WriteRawTag(82);
+        output.WriteMessage(ApplianceCluster);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1307,6 +1370,14 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
         output.WriteRawTag(66);
         output.WriteMessage(MultiCloudCluster);
       }
+      if (typeCase_ == TypeOneofCase.EdgeCluster) {
+        output.WriteRawTag(74);
+        output.WriteMessage(EdgeCluster);
+      }
+      if (typeCase_ == TypeOneofCase.ApplianceCluster) {
+        output.WriteRawTag(82);
+        output.WriteMessage(ApplianceCluster);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1325,6 +1396,12 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       }
       if (typeCase_ == TypeOneofCase.MultiCloudCluster) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(MultiCloudCluster);
+      }
+      if (typeCase_ == TypeOneofCase.EdgeCluster) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EdgeCluster);
+      }
+      if (typeCase_ == TypeOneofCase.ApplianceCluster) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ApplianceCluster);
       }
       if (kubernetesMetadata_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(KubernetesMetadata);
@@ -1374,6 +1451,18 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
             MultiCloudCluster = new global::Google.Cloud.GkeHub.V1Beta1.MultiCloudCluster();
           }
           MultiCloudCluster.MergeFrom(other.MultiCloudCluster);
+          break;
+        case TypeOneofCase.EdgeCluster:
+          if (EdgeCluster == null) {
+            EdgeCluster = new global::Google.Cloud.GkeHub.V1Beta1.EdgeCluster();
+          }
+          EdgeCluster.MergeFrom(other.EdgeCluster);
+          break;
+        case TypeOneofCase.ApplianceCluster:
+          if (ApplianceCluster == null) {
+            ApplianceCluster = new global::Google.Cloud.GkeHub.V1Beta1.ApplianceCluster();
+          }
+          ApplianceCluster.MergeFrom(other.ApplianceCluster);
           break;
       }
 
@@ -1433,6 +1522,24 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
             MultiCloudCluster = subBuilder;
             break;
           }
+          case 74: {
+            global::Google.Cloud.GkeHub.V1Beta1.EdgeCluster subBuilder = new global::Google.Cloud.GkeHub.V1Beta1.EdgeCluster();
+            if (typeCase_ == TypeOneofCase.EdgeCluster) {
+              subBuilder.MergeFrom(EdgeCluster);
+            }
+            input.ReadMessage(subBuilder);
+            EdgeCluster = subBuilder;
+            break;
+          }
+          case 82: {
+            global::Google.Cloud.GkeHub.V1Beta1.ApplianceCluster subBuilder = new global::Google.Cloud.GkeHub.V1Beta1.ApplianceCluster();
+            if (typeCase_ == TypeOneofCase.ApplianceCluster) {
+              subBuilder.MergeFrom(ApplianceCluster);
+            }
+            input.ReadMessage(subBuilder);
+            ApplianceCluster = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -1487,6 +1594,24 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
             }
             input.ReadMessage(subBuilder);
             MultiCloudCluster = subBuilder;
+            break;
+          }
+          case 74: {
+            global::Google.Cloud.GkeHub.V1Beta1.EdgeCluster subBuilder = new global::Google.Cloud.GkeHub.V1Beta1.EdgeCluster();
+            if (typeCase_ == TypeOneofCase.EdgeCluster) {
+              subBuilder.MergeFrom(EdgeCluster);
+            }
+            input.ReadMessage(subBuilder);
+            EdgeCluster = subBuilder;
+            break;
+          }
+          case 82: {
+            global::Google.Cloud.GkeHub.V1Beta1.ApplianceCluster subBuilder = new global::Google.Cloud.GkeHub.V1Beta1.ApplianceCluster();
+            if (typeCase_ == TypeOneofCase.ApplianceCluster) {
+              subBuilder.MergeFrom(ApplianceCluster);
+            }
+            input.ReadMessage(subBuilder);
+            ApplianceCluster = subBuilder;
             break;
           }
         }
@@ -1552,8 +1677,8 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     public const int MembershipCrManifestFieldNumber = 1;
     private string membershipCrManifest_ = "";
     /// <summary>
-    /// Input only. The YAML representation of the Membership CR. This field is
-    /// ignored for GKE clusters where Hub can read the CR directly.
+    /// Input only. The YAML representation of the Membership CR. This field is ignored for GKE
+    /// clusters where Hub can read the CR directly.
     ///
     /// Callers should provide the CR that is currently present in the cluster
     /// during CreateMembership or UpdateMembership, or leave this field empty if
@@ -1575,8 +1700,8 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.GkeHub.V1Beta1.ResourceManifest.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.GkeHub.V1Beta1.ResourceManifest> membershipResources_ = new pbc::RepeatedField<global::Google.Cloud.GkeHub.V1Beta1.ResourceManifest>();
     /// <summary>
-    /// Output only. Additional Kubernetes resources that need to be applied to the
-    /// cluster after Membership creation, and after every update.
+    /// Output only. Additional Kubernetes resources that need to be applied to the cluster
+    /// after Membership creation, and after every update.
     ///
     /// This field is only populated in the Membership returned from a successful
     /// long-running operation from CreateMembership or UpdateMembership. It is not
@@ -1872,9 +1997,9 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     public const int ConnectVersionFieldNumber = 1;
     private string connectVersion_ = "";
     /// <summary>
-    /// Optional. The Connect agent version to use for connect_resources. Defaults
-    /// to the latest GKE Connect version. The version must be a currently
-    /// supported version, obsolete versions will be rejected.
+    /// Optional. The Connect agent version to use for connect_resources. Defaults to the
+    /// latest GKE Connect version. The version must be a currently supported
+    /// version, obsolete versions will be rejected.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1907,8 +2032,8 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     public const int K8SVersionFieldNumber = 3;
     private string k8SVersion_ = "";
     /// <summary>
-    /// Optional. Major version of the Kubernetes cluster. This is only used to
-    /// determine which version to use for the CustomResourceDefinition resources,
+    /// Optional. Major version of the Kubernetes cluster. This is only used to determine
+    /// which version to use for the CustomResourceDefinition resources,
     /// `apiextensions/v1beta1` or`apiextensions/v1`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2412,8 +2537,8 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     public const int ClusterMissingFieldNumber = 3;
     private bool clusterMissing_;
     /// <summary>
-    /// Output only. If cluster_missing is set then it denotes that the GKE cluster
-    /// no longer exists in the GKE Control Plane.
+    /// Output only. If cluster_missing is set then it denotes that the GKE cluster no longer
+    /// exists in the GKE Control Plane.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2634,8 +2759,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     public const int ResourceLinkFieldNumber = 1;
     private string resourceLink_ = "";
     /// <summary>
-    /// Immutable. Self-link of the GCP resource for the GKE On-Prem cluster. For
-    /// example:
+    /// Immutable. Self-link of the GCP resource for the GKE On-Prem cluster. For example:
     ///
     ///  //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/vmwareClusters/my-cluster
     ///  //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/bareMetalClusters/my-cluster
@@ -2914,8 +3038,8 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     public const int ResourceLinkFieldNumber = 1;
     private string resourceLink_ = "";
     /// <summary>
-    /// Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster.
-    /// For example:
+    /// Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster. For
+    /// example:
     ///
     ///  //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/awsClusters/my-cluster
     ///  //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/azureClusters/my-cluster
@@ -3104,6 +3228,403 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
   }
 
   /// <summary>
+  /// EdgeCluster contains information specific to Google Edge Clusters.
+  /// </summary>
+  public sealed partial class EdgeCluster : pb::IMessage<EdgeCluster>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<EdgeCluster> _parser = new pb::MessageParser<EdgeCluster>(() => new EdgeCluster());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<EdgeCluster> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EdgeCluster() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EdgeCluster(EdgeCluster other) : this() {
+      resourceLink_ = other.resourceLink_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EdgeCluster Clone() {
+      return new EdgeCluster(this);
+    }
+
+    /// <summary>Field number for the "resource_link" field.</summary>
+    public const int ResourceLinkFieldNumber = 1;
+    private string resourceLink_ = "";
+    /// <summary>
+    /// Immutable. Self-link of the GCP resource for the Edge Cluster. For
+    /// example:
+    ///
+    /// //edgecontainer.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ResourceLink {
+      get { return resourceLink_; }
+      set {
+        resourceLink_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as EdgeCluster);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(EdgeCluster other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ResourceLink != other.ResourceLink) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ResourceLink.Length != 0) hash ^= ResourceLink.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (ResourceLink.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ResourceLink);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ResourceLink.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ResourceLink);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (ResourceLink.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ResourceLink);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(EdgeCluster other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ResourceLink.Length != 0) {
+        ResourceLink = other.ResourceLink;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ResourceLink = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ResourceLink = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// ApplianceCluster contains information specific to GDC Edge Appliance
+  /// Clusters.
+  /// </summary>
+  public sealed partial class ApplianceCluster : pb::IMessage<ApplianceCluster>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ApplianceCluster> _parser = new pb::MessageParser<ApplianceCluster>(() => new ApplianceCluster());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ApplianceCluster> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ApplianceCluster() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ApplianceCluster(ApplianceCluster other) : this() {
+      resourceLink_ = other.resourceLink_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ApplianceCluster Clone() {
+      return new ApplianceCluster(this);
+    }
+
+    /// <summary>Field number for the "resource_link" field.</summary>
+    public const int ResourceLinkFieldNumber = 1;
+    private string resourceLink_ = "";
+    /// <summary>
+    /// Immutable. Self-link of the GCP resource for the Appliance Cluster. For
+    /// example:
+    ///
+    /// //transferappliance.googleapis.com/projects/my-project/locations/us-west1-a/appliances/my-appliance
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ResourceLink {
+      get { return resourceLink_; }
+      set {
+        resourceLink_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ApplianceCluster);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ApplianceCluster other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ResourceLink != other.ResourceLink) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ResourceLink.Length != 0) hash ^= ResourceLink.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (ResourceLink.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ResourceLink);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ResourceLink.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ResourceLink);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (ResourceLink.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ResourceLink);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ApplianceCluster other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ResourceLink.Length != 0) {
+        ResourceLink = other.ResourceLink;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ResourceLink = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ResourceLink = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// KubernetesMetadata provides informational metadata for Memberships
   /// representing Kubernetes clusters.
   /// </summary>
@@ -3121,7 +3642,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3160,8 +3681,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     public const int KubernetesApiServerVersionFieldNumber = 1;
     private string kubernetesApiServerVersion_ = "";
     /// <summary>
-    /// Output only. Kubernetes API server version string as reported by
-    /// '/version'.
+    /// Output only. Kubernetes API server version string as reported by '/version'.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3176,9 +3696,9 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     public const int NodeProviderIdFieldNumber = 2;
     private string nodeProviderId_ = "";
     /// <summary>
-    /// Output only. Node providerID as reported by the first node in the list of
-    /// nodes on the Kubernetes endpoint. On Kubernetes platforms that support
-    /// zero-node clusters (like GKE-on-GCP), the node_count will be zero and the
+    /// Output only. Node providerID as reported by the first node in the list of nodes on
+    /// the Kubernetes endpoint. On Kubernetes platforms that support zero-node
+    /// clusters (like GKE-on-GCP), the node_count will be zero and the
     /// node_provider_id will be empty.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3224,8 +3744,8 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     public const int MemoryMbFieldNumber = 5;
     private int memoryMb_;
     /// <summary>
-    /// Output only. The total memory capacity as reported by the sum of all
-    /// Kubernetes nodes resources, defined in MB.
+    /// Output only. The total memory capacity as reported by the sum of all Kubernetes nodes
+    /// resources, defined in MB.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3240,9 +3760,9 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     public const int UpdateTimeFieldNumber = 100;
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
-    /// Output only. The time at which these details were last updated. This
-    /// update_time is different from the Membership-level update_time since
-    /// EndpointDetails are updated internally for API consumers.
+    /// Output only. The time at which these details were last updated. This update_time is
+    /// different from the Membership-level update_time since EndpointDetails are
+    /// updated internally for API consumers.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3534,7 +4054,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3571,8 +4091,8 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     public const int IssuerFieldNumber = 1;
     private string issuer_ = "";
     /// <summary>
-    /// Optional. A JSON Web Token (JWT) issuer URI. `issuer` must start with
-    /// `https://` and be a valid URL with length &lt;2000 characters.
+    /// Optional. A JSON Web Token (JWT) issuer URI. `issuer` must start with `https://` and
+    /// be a valid URL with length &lt;2000 characters.
     ///
     /// If set, then Google will allow valid OIDC tokens from this issuer to
     /// authenticate within the workload_identity_pool. OIDC discovery will be
@@ -3595,8 +4115,8 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     public const int WorkloadIdentityPoolFieldNumber = 2;
     private string workloadIdentityPool_ = "";
     /// <summary>
-    /// Output only. The name of the workload identity pool in which `issuer` will
-    /// be recognized.
+    /// Output only. The name of the workload identity pool in which `issuer` will be
+    /// recognized.
     ///
     /// There is a single Workload Identity Pool per Hub that is shared
     /// between all Memberships that belong to that Hub. For a Hub hosted in
@@ -3616,8 +4136,8 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     public const int IdentityProviderFieldNumber = 3;
     private string identityProvider_ = "";
     /// <summary>
-    /// Output only. An identity provider that reflects the `issuer` in the
-    /// workload identity pool.
+    /// Output only. An identity provider that reflects the `issuer` in the workload identity
+    /// pool.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3632,8 +4152,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     public const int OidcJwksFieldNumber = 4;
     private pb::ByteString oidcJwks_ = pb::ByteString.Empty;
     /// <summary>
-    /// Optional. OIDC verification keys for this Membership in JWKS format (RFC
-    /// 7517).
+    /// Optional. OIDC verification keys for this Membership in JWKS format (RFC 7517).
     ///
     /// When this field is set, OIDC discovery will NOT be performed on `issuer`,
     /// and instead OIDC tokens will be validated using this field.
@@ -3869,7 +4388,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4193,7 +4712,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4231,8 +4750,8 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent (project and location) where the Memberships will be
-    /// listed. Specified in the format `projects/*/locations/*`.
+    /// Required. The parent (project and location) where the Memberships will be listed.
+    /// Specified in the format `projects/*/locations/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4247,9 +4766,9 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. When requesting a 'page' of resources, `page_size` specifies
-    /// number of resources to return. If unspecified or set to 0, all resources
-    /// will be returned.
+    /// Optional. When requesting a 'page' of resources, `page_size` specifies number of
+    /// resources to return. If unspecified or set to 0, all resources will
+    /// be returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4281,8 +4800,8 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     public const int FilterFieldNumber = 4;
     private string filter_ = "";
     /// <summary>
-    /// Optional. Lists Memberships that match the filter expression, following the
-    /// syntax outlined in https://google.aip.dev/160.
+    /// Optional. Lists Memberships that match the filter expression, following the syntax
+    /// outlined in https://google.aip.dev/160.
     ///
     /// Examples:
     ///
@@ -4573,7 +5092,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4828,7 +5347,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5024,7 +5543,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5061,8 +5580,8 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent (project and location) where the Memberships will be
-    /// created. Specified in the format `projects/*/locations/*`.
+    /// Required. The parent (project and location) where the Memberships will be created.
+    /// Specified in the format `projects/*/locations/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5077,8 +5596,8 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     public const int MembershipIdFieldNumber = 2;
     private string membershipId_ = "";
     /// <summary>
-    /// Required. Client chosen ID for the membership. `membership_id` must be a
-    /// valid RFC 1123 compliant DNS label:
+    /// Required. Client chosen ID for the membership. `membership_id` must be a valid RFC
+    /// 1123 compliant DNS label:
     ///
     ///   1. At most 63 characters in length
     ///   2. It must consist of lower case alphanumeric characters or `-`
@@ -5369,7 +5888,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5617,7 +6136,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5670,8 +6189,8 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     public const int UpdateMaskFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
-    /// Required. Mask of fields to update. At least one field path must be
-    /// specified in this mask.
+    /// Required. Mask of fields to update. At least one field path must be specified in this
+    /// mask.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5973,7 +6492,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6012,8 +6531,8 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The Membership resource name the Agent will associate with, in
-    /// the format `projects/*/locations/*/memberships/*`.
+    /// Required. The Membership resource name the Agent will associate with, in the format
+    /// `projects/*/locations/*/memberships/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6043,8 +6562,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     public const int VersionFieldNumber = 3;
     private string version_ = "";
     /// <summary>
-    /// Optional. The Connect agent version to use. Defaults to the most current
-    /// version.
+    /// Optional. The Connect agent version to use. Defaults to the most current version.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6382,7 +6900,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6568,7 +7086,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6813,7 +7331,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7048,7 +7566,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7100,9 +7618,9 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     public const int ProxyFieldNumber = 2;
     private pb::ByteString proxy_ = pb::ByteString.Empty;
     /// <summary>
-    /// Optional. URI of a proxy if connectivity from the agent to
-    /// gkeconnect.googleapis.com requires the use of a proxy. Format must be in
-    /// the form `http(s)://{proxy_address}`, depending on the HTTP/HTTPS protocol
+    /// Optional. URI of a proxy if connectivity from the agent to gkeconnect.googleapis.com
+    /// requires the use of a proxy. Format must be in the form
+    /// `http(s)://{proxy_address}`, depending on the HTTP/HTTPS protocol
     /// supported by the proxy. This will direct the connect agent's outbound
     /// traffic through a HTTP(S) proxy.
     /// </summary>
@@ -7119,8 +7637,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     public const int NamespaceFieldNumber = 3;
     private string namespace_ = "";
     /// <summary>
-    /// Optional. Namespace for GKE Connect agent resources. Defaults to
-    /// `gke-connect`.
+    /// Optional. Namespace for GKE Connect agent resources. Defaults to `gke-connect`.
     ///
     /// The Connect Agent is authorized automatically when run in the default
     /// namespace. Otherwise, explicit authorization must be granted with an
@@ -7334,7 +7851,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7370,8 +7887,8 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent (project and location) where the Memberships will be
-    /// created. Specified in the format `projects/*/locations/*`.
+    /// Required. The parent (project and location) where the Memberships will be created.
+    /// Specified in the format `projects/*/locations/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7386,8 +7903,8 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     public const int CrManifestFieldNumber = 2;
     private string crManifest_ = "";
     /// <summary>
-    /// Optional. The YAML of the membership CR in the cluster. Empty if the
-    /// membership CR does not exist.
+    /// Optional. The YAML of the membership CR in the cluster. Empty if the membership
+    /// CR does not exist.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7402,9 +7919,8 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     public const int IntendedMembershipFieldNumber = 3;
     private string intendedMembership_ = "";
     /// <summary>
-    /// Required. The intended membership name under the `parent`. This method only
-    /// does validation in anticipation of a CreateMembership call with the same
-    /// name.
+    /// Required. The intended membership name under the `parent`. This method only does
+    /// validation in anticipation of a CreateMembership call with the same name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7613,7 +8129,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[23]; }
+      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7822,7 +8338,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[24]; }
+      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8102,7 +8618,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[25]; }
+      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[27]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8339,7 +8855,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[26]; }
+      get { return global::Google.Cloud.GkeHub.V1Beta1.MembershipReflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8456,9 +8972,8 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     /// <summary>
     /// Output only. Identifies whether the user has requested cancellation
     /// of the operation. Operations that have successfully been cancelled
-    /// have [Operation.error][] value with a
-    /// [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
-    /// `Code.CANCELLED`.
+    /// have [Operation.error][] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+    /// corresponding to `Code.CANCELLED`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

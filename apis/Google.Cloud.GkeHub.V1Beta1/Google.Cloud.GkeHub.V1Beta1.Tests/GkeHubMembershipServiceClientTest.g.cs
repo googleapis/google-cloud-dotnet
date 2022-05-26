@@ -15,6 +15,9 @@
 // Generated code. DO NOT EDIT!
 
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gagr = Google.Api.Gax.ResourceNames;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -35,9 +38,11 @@ namespace Google.Cloud.GkeHub.V1Beta1.Tests
         {
             moq::Mock<GkeHubMembershipService.GkeHubMembershipServiceClient> mockGrpcClient = new moq::Mock<GkeHubMembershipService.GkeHubMembershipServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetMembershipRequest request = new GetMembershipRequest
             {
-                Name = "name1c9368b0",
+                MembershipName = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]"),
             };
             Membership expectedResponse = new Membership
             {
@@ -73,9 +78,11 @@ namespace Google.Cloud.GkeHub.V1Beta1.Tests
         {
             moq::Mock<GkeHubMembershipService.GkeHubMembershipServiceClient> mockGrpcClient = new moq::Mock<GkeHubMembershipService.GkeHubMembershipServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetMembershipRequest request = new GetMembershipRequest
             {
-                Name = "name1c9368b0",
+                MembershipName = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]"),
             };
             Membership expectedResponse = new Membership
             {
@@ -113,9 +120,11 @@ namespace Google.Cloud.GkeHub.V1Beta1.Tests
         {
             moq::Mock<GkeHubMembershipService.GkeHubMembershipServiceClient> mockGrpcClient = new moq::Mock<GkeHubMembershipService.GkeHubMembershipServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetMembershipRequest request = new GetMembershipRequest
             {
-                Name = "name1c9368b0",
+                MembershipName = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]"),
             };
             Membership expectedResponse = new Membership
             {
@@ -151,9 +160,11 @@ namespace Google.Cloud.GkeHub.V1Beta1.Tests
         {
             moq::Mock<GkeHubMembershipService.GkeHubMembershipServiceClient> mockGrpcClient = new moq::Mock<GkeHubMembershipService.GkeHubMembershipServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetMembershipRequest request = new GetMembershipRequest
             {
-                Name = "name1c9368b0",
+                MembershipName = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]"),
             };
             Membership expectedResponse = new Membership
             {
@@ -187,13 +198,97 @@ namespace Google.Cloud.GkeHub.V1Beta1.Tests
         }
 
         [xunit::FactAttribute]
+        public void GetMembershipResourceNames()
+        {
+            moq::Mock<GkeHubMembershipService.GkeHubMembershipServiceClient> mockGrpcClient = new moq::Mock<GkeHubMembershipService.GkeHubMembershipServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            GetMembershipRequest request = new GetMembershipRequest
+            {
+                MembershipName = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]"),
+            };
+            Membership expectedResponse = new Membership
+            {
+                MembershipName = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]"),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Description = "description2cf9da67",
+                Endpoint = new MembershipEndpoint(),
+                State = new MembershipState(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                DeleteTime = new wkt::Timestamp(),
+                Authority = new Authority(),
+                ExternalId = "external_id9442680e",
+                LastConnectionTime = new wkt::Timestamp(),
+                UniqueId = "unique_idee0c0869",
+                InfrastructureType = Membership.Types.InfrastructureType.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.GetMembership(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            GkeHubMembershipServiceClient client = new GkeHubMembershipServiceClientImpl(mockGrpcClient.Object, null);
+            Membership response = client.GetMembership(request.MembershipName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetMembershipResourceNamesAsync()
+        {
+            moq::Mock<GkeHubMembershipService.GkeHubMembershipServiceClient> mockGrpcClient = new moq::Mock<GkeHubMembershipService.GkeHubMembershipServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            GetMembershipRequest request = new GetMembershipRequest
+            {
+                MembershipName = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]"),
+            };
+            Membership expectedResponse = new Membership
+            {
+                MembershipName = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]"),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Description = "description2cf9da67",
+                Endpoint = new MembershipEndpoint(),
+                State = new MembershipState(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                DeleteTime = new wkt::Timestamp(),
+                Authority = new Authority(),
+                ExternalId = "external_id9442680e",
+                LastConnectionTime = new wkt::Timestamp(),
+                UniqueId = "unique_idee0c0869",
+                InfrastructureType = Membership.Types.InfrastructureType.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.GetMembershipAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Membership>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            GkeHubMembershipServiceClient client = new GkeHubMembershipServiceClientImpl(mockGrpcClient.Object, null);
+            Membership responseCallSettings = await client.GetMembershipAsync(request.MembershipName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Membership responseCancellationToken = await client.GetMembershipAsync(request.MembershipName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void GenerateConnectManifestRequestObject()
         {
             moq::Mock<GkeHubMembershipService.GkeHubMembershipServiceClient> mockGrpcClient = new moq::Mock<GkeHubMembershipService.GkeHubMembershipServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GenerateConnectManifestRequest request = new GenerateConnectManifestRequest
             {
-                Name = "name1c9368b0",
+                MembershipName = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]"),
                 ConnectAgent = new ConnectAgent(),
                 Version = "version102ff72a",
                 IsUpgrade = false,
@@ -219,9 +314,11 @@ namespace Google.Cloud.GkeHub.V1Beta1.Tests
         {
             moq::Mock<GkeHubMembershipService.GkeHubMembershipServiceClient> mockGrpcClient = new moq::Mock<GkeHubMembershipService.GkeHubMembershipServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GenerateConnectManifestRequest request = new GenerateConnectManifestRequest
             {
-                Name = "name1c9368b0",
+                MembershipName = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]"),
                 ConnectAgent = new ConnectAgent(),
                 Version = "version102ff72a",
                 IsUpgrade = false,
@@ -249,9 +346,11 @@ namespace Google.Cloud.GkeHub.V1Beta1.Tests
         {
             moq::Mock<GkeHubMembershipService.GkeHubMembershipServiceClient> mockGrpcClient = new moq::Mock<GkeHubMembershipService.GkeHubMembershipServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ValidateExclusivityRequest request = new ValidateExclusivityRequest
             {
-                Parent = "parent7858e4d0",
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 CrManifest = "cr_manifestdf1378ad",
                 IntendedMembership = "intended_membership4a00bbcb",
             };
@@ -271,9 +370,11 @@ namespace Google.Cloud.GkeHub.V1Beta1.Tests
         {
             moq::Mock<GkeHubMembershipService.GkeHubMembershipServiceClient> mockGrpcClient = new moq::Mock<GkeHubMembershipService.GkeHubMembershipServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ValidateExclusivityRequest request = new ValidateExclusivityRequest
             {
-                Parent = "parent7858e4d0",
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 CrManifest = "cr_manifestdf1378ad",
                 IntendedMembership = "intended_membership4a00bbcb",
             };
@@ -295,9 +396,11 @@ namespace Google.Cloud.GkeHub.V1Beta1.Tests
         {
             moq::Mock<GkeHubMembershipService.GkeHubMembershipServiceClient> mockGrpcClient = new moq::Mock<GkeHubMembershipService.GkeHubMembershipServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GenerateExclusivityManifestRequest request = new GenerateExclusivityManifestRequest
             {
-                Name = "name1c9368b0",
+                MembershipName = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]"),
                 CrdManifest = "crd_manifest09dc10bb",
                 CrManifest = "cr_manifestdf1378ad",
             };
@@ -318,9 +421,11 @@ namespace Google.Cloud.GkeHub.V1Beta1.Tests
         {
             moq::Mock<GkeHubMembershipService.GkeHubMembershipServiceClient> mockGrpcClient = new moq::Mock<GkeHubMembershipService.GkeHubMembershipServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GenerateExclusivityManifestRequest request = new GenerateExclusivityManifestRequest
             {
-                Name = "name1c9368b0",
+                MembershipName = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]"),
                 CrdManifest = "crd_manifest09dc10bb",
                 CrManifest = "cr_manifestdf1378ad",
             };

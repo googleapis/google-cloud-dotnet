@@ -16,7 +16,7 @@
 
 namespace Google.Cloud.GkeHub.V1Beta1.Snippets
 {
-    // [START gkehub_v1beta1_generated_GkeHubMembershipService_ListMemberships_async]
+    // [START gkehub_v1beta1_generated_GkeHubMembershipService_ListMemberships_async_flattened_resourceNames]
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.GkeHub.V1Beta1;
@@ -31,19 +31,14 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
         /// This snippet has been automatically generated for illustrative purposes only.
         /// It may require modifications to work in your environment.
         /// </remarks>
-        public async Task ListMembershipsRequestObjectAsync()
+        public async Task ListMembershipsResourceNamesAsync()
         {
             // Create client
             GkeHubMembershipServiceClient gkeHubMembershipServiceClient = await GkeHubMembershipServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListMembershipsRequest request = new ListMembershipsRequest
-            {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Filter = "",
-                OrderBy = "",
-            };
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            PagedAsyncEnumerable<ListMembershipsResponse, Membership> response = gkeHubMembershipServiceClient.ListMembershipsAsync(request);
+            PagedAsyncEnumerable<ListMembershipsResponse, Membership> response = gkeHubMembershipServiceClient.ListMembershipsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Membership item) =>
@@ -78,5 +73,5 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END gkehub_v1beta1_generated_GkeHubMembershipService_ListMemberships_async]
+    // [END gkehub_v1beta1_generated_GkeHubMembershipService_ListMemberships_async_flattened_resourceNames]
 }

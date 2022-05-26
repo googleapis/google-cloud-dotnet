@@ -16,44 +16,37 @@
 
 namespace Google.Cloud.GkeHub.V1Beta1.Snippets
 {
-    // [START gkehub_v1beta1_generated_GkeHubMembershipService_ListMemberships_async]
+    // [START gkehub_v1beta1_generated_GkeHubMembershipService_ListMemberships_sync_flattened_resourceNames]
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.GkeHub.V1Beta1;
     using System;
-    using System.Linq;
-    using System.Threading.Tasks;
 
     public sealed partial class GeneratedGkeHubMembershipServiceClientSnippets
     {
-        /// <summary>Snippet for ListMembershipsAsync</summary>
+        /// <summary>Snippet for ListMemberships</summary>
         /// <remarks>
         /// This snippet has been automatically generated for illustrative purposes only.
         /// It may require modifications to work in your environment.
         /// </remarks>
-        public async Task ListMembershipsRequestObjectAsync()
+        public void ListMembershipsResourceNames()
         {
             // Create client
-            GkeHubMembershipServiceClient gkeHubMembershipServiceClient = await GkeHubMembershipServiceClient.CreateAsync();
+            GkeHubMembershipServiceClient gkeHubMembershipServiceClient = GkeHubMembershipServiceClient.Create();
             // Initialize request argument(s)
-            ListMembershipsRequest request = new ListMembershipsRequest
-            {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Filter = "",
-                OrderBy = "",
-            };
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            PagedAsyncEnumerable<ListMembershipsResponse, Membership> response = gkeHubMembershipServiceClient.ListMembershipsAsync(request);
+            PagedEnumerable<ListMembershipsResponse, Membership> response = gkeHubMembershipServiceClient.ListMemberships(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Membership item) =>
+            foreach (Membership item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListMembershipsResponse page) =>
+            foreach (ListMembershipsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -62,11 +55,11 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Membership> singlePage = await response.ReadPageAsync(pageSize);
+            Page<Membership> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Membership item in singlePage)
@@ -78,5 +71,5 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END gkehub_v1beta1_generated_GkeHubMembershipService_ListMemberships_async]
+    // [END gkehub_v1beta1_generated_GkeHubMembershipService_ListMemberships_sync_flattened_resourceNames]
 }

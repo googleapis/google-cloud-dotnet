@@ -17,6 +17,9 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
+using gagr = Google.Api.Gax.ResourceNames;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -59,6 +62,8 @@ namespace Google.Cloud.GkeHub.V1Beta1
             GenerateConnectManifestSettings = existing.GenerateConnectManifestSettings;
             ValidateExclusivitySettings = existing.ValidateExclusivitySettings;
             GenerateExclusivityManifestSettings = existing.GenerateExclusivityManifestSettings;
+            LocationsSettings = existing.LocationsSettings;
+            IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
@@ -270,6 +275,16 @@ namespace Google.Cloud.GkeHub.V1Beta1
         /// </remarks>
         public gaxgrpc::CallSettings GenerateExclusivityManifestSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
+        /// <summary>
+        /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
+        /// </summary>
+        public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="GkeHubMembershipServiceSettings"/> object.</returns>
         public GkeHubMembershipServiceSettings Clone() => new GkeHubMembershipServiceSettings(this);
@@ -342,8 +357,7 @@ namespace Google.Cloud.GkeHub.V1Beta1
     /// <summary>GkeHubMembershipService client wrapper, for convenient use.</summary>
     /// <remarks>
     /// The GKE Hub MembershipService handles the registration of many Kubernetes
-    /// clusters to Google Cloud, represented with the
-    /// [Membership][google.cloud.gkehub.v1beta1.Membership] resource.
+    /// clusters to Google Cloud, represented with the [Membership][google.cloud.gkehub.v1beta1.Membership] resource.
     /// 
     /// GKE Hub is currently only available in the global region.
     /// 
@@ -442,6 +456,12 @@ namespace Google.Cloud.GkeHub.V1Beta1
         /// <summary>The underlying gRPC GkeHubMembershipService client</summary>
         public virtual GkeHubMembershipService.GkeHubMembershipServiceClient GrpcClient => throw new sys::NotImplementedException();
 
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
+
         /// <summary>
         /// Lists Memberships in a given project and location.
         /// </summary>
@@ -464,8 +484,8 @@ namespace Google.Cloud.GkeHub.V1Beta1
         /// Lists Memberships in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent (project and location) where the Memberships will be
-        /// listed. Specified in the format `projects/*/locations/*`.
+        /// Required. The parent (project and location) where the Memberships will be listed.
+        /// Specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -489,8 +509,8 @@ namespace Google.Cloud.GkeHub.V1Beta1
         /// Lists Memberships in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent (project and location) where the Memberships will be
-        /// listed. Specified in the format `projects/*/locations/*`.
+        /// Required. The parent (project and location) where the Memberships will be listed.
+        /// Specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -506,6 +526,56 @@ namespace Google.Cloud.GkeHub.V1Beta1
             ListMembershipsAsync(new ListMembershipsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists Memberships in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent (project and location) where the Memberships will be listed.
+        /// Specified in the format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Membership"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListMembershipsResponse, Membership> ListMemberships(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListMemberships(new ListMembershipsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists Memberships in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent (project and location) where the Memberships will be listed.
+        /// Specified in the format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Membership"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListMembershipsResponse, Membership> ListMembershipsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListMembershipsAsync(new ListMembershipsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -577,6 +647,48 @@ namespace Google.Cloud.GkeHub.V1Beta1
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Membership> GetMembershipAsync(string name, st::CancellationToken cancellationToken) =>
+            GetMembershipAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the details of a Membership.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Membership resource name in the format
+        /// `projects/*/locations/*/memberships/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Membership GetMembership(MembershipName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMembership(new GetMembershipRequest
+            {
+                MembershipName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of a Membership.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Membership resource name in the format
+        /// `projects/*/locations/*/memberships/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Membership> GetMembershipAsync(MembershipName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMembershipAsync(new GetMembershipRequest
+            {
+                MembershipName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of a Membership.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Membership resource name in the format
+        /// `projects/*/locations/*/memberships/*`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Membership> GetMembershipAsync(MembershipName name, st::CancellationToken cancellationToken) =>
             GetMembershipAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -652,15 +764,15 @@ namespace Google.Cloud.GkeHub.V1Beta1
         /// https://cloud.google.com/anthos/multicluster-management/connect/registering-a-cluster.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent (project and location) where the Memberships will be
-        /// created. Specified in the format `projects/*/locations/*`.
+        /// Required. The parent (project and location) where the Memberships will be created.
+        /// Specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="resource">
         /// Required. The membership to create.
         /// </param>
         /// <param name="membershipId">
-        /// Required. Client chosen ID for the membership. `membership_id` must be a
-        /// valid RFC 1123 compliant DNS label:
+        /// Required. Client chosen ID for the membership. `membership_id` must be a valid RFC
+        /// 1123 compliant DNS label:
         /// 
         /// 1. At most 63 characters in length
         /// 2. It must consist of lower case alphanumeric characters or `-`
@@ -687,15 +799,15 @@ namespace Google.Cloud.GkeHub.V1Beta1
         /// https://cloud.google.com/anthos/multicluster-management/connect/registering-a-cluster.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent (project and location) where the Memberships will be
-        /// created. Specified in the format `projects/*/locations/*`.
+        /// Required. The parent (project and location) where the Memberships will be created.
+        /// Specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="resource">
         /// Required. The membership to create.
         /// </param>
         /// <param name="membershipId">
-        /// Required. Client chosen ID for the membership. `membership_id` must be a
-        /// valid RFC 1123 compliant DNS label:
+        /// Required. Client chosen ID for the membership. `membership_id` must be a valid RFC
+        /// 1123 compliant DNS label:
         /// 
         /// 1. At most 63 characters in length
         /// 2. It must consist of lower case alphanumeric characters or `-`
@@ -722,15 +834,15 @@ namespace Google.Cloud.GkeHub.V1Beta1
         /// https://cloud.google.com/anthos/multicluster-management/connect/registering-a-cluster.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent (project and location) where the Memberships will be
-        /// created. Specified in the format `projects/*/locations/*`.
+        /// Required. The parent (project and location) where the Memberships will be created.
+        /// Specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="resource">
         /// Required. The membership to create.
         /// </param>
         /// <param name="membershipId">
-        /// Required. Client chosen ID for the membership. `membership_id` must be a
-        /// valid RFC 1123 compliant DNS label:
+        /// Required. Client chosen ID for the membership. `membership_id` must be a valid RFC
+        /// 1123 compliant DNS label:
         /// 
         /// 1. At most 63 characters in length
         /// 2. It must consist of lower case alphanumeric characters or `-`
@@ -742,6 +854,106 @@ namespace Google.Cloud.GkeHub.V1Beta1
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Membership, OperationMetadata>> CreateMembershipAsync(string parent, Membership resource, string membershipId, st::CancellationToken cancellationToken) =>
+            CreateMembershipAsync(parent, resource, membershipId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new Membership.
+        /// 
+        /// **This is currently only supported for GKE clusters on Google Cloud**.
+        /// To register other clusters, follow the instructions at
+        /// https://cloud.google.com/anthos/multicluster-management/connect/registering-a-cluster.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent (project and location) where the Memberships will be created.
+        /// Specified in the format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="resource">
+        /// Required. The membership to create.
+        /// </param>
+        /// <param name="membershipId">
+        /// Required. Client chosen ID for the membership. `membership_id` must be a valid RFC
+        /// 1123 compliant DNS label:
+        /// 
+        /// 1. At most 63 characters in length
+        /// 2. It must consist of lower case alphanumeric characters or `-`
+        /// 3. It must start and end with an alphanumeric character
+        /// 
+        /// Which can be expressed as the regex: `[a-z0-9]([-a-z0-9]*[a-z0-9])?`,
+        /// with a maximum length of 63 characters.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Membership, OperationMetadata> CreateMembership(gagr::LocationName parent, Membership resource, string membershipId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMembership(new CreateMembershipRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                MembershipId = gax::GaxPreconditions.CheckNotNullOrEmpty(membershipId, nameof(membershipId)),
+                Resource = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Membership.
+        /// 
+        /// **This is currently only supported for GKE clusters on Google Cloud**.
+        /// To register other clusters, follow the instructions at
+        /// https://cloud.google.com/anthos/multicluster-management/connect/registering-a-cluster.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent (project and location) where the Memberships will be created.
+        /// Specified in the format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="resource">
+        /// Required. The membership to create.
+        /// </param>
+        /// <param name="membershipId">
+        /// Required. Client chosen ID for the membership. `membership_id` must be a valid RFC
+        /// 1123 compliant DNS label:
+        /// 
+        /// 1. At most 63 characters in length
+        /// 2. It must consist of lower case alphanumeric characters or `-`
+        /// 3. It must start and end with an alphanumeric character
+        /// 
+        /// Which can be expressed as the regex: `[a-z0-9]([-a-z0-9]*[a-z0-9])?`,
+        /// with a maximum length of 63 characters.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Membership, OperationMetadata>> CreateMembershipAsync(gagr::LocationName parent, Membership resource, string membershipId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMembershipAsync(new CreateMembershipRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                MembershipId = gax::GaxPreconditions.CheckNotNullOrEmpty(membershipId, nameof(membershipId)),
+                Resource = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Membership.
+        /// 
+        /// **This is currently only supported for GKE clusters on Google Cloud**.
+        /// To register other clusters, follow the instructions at
+        /// https://cloud.google.com/anthos/multicluster-management/connect/registering-a-cluster.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent (project and location) where the Memberships will be created.
+        /// Specified in the format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="resource">
+        /// Required. The membership to create.
+        /// </param>
+        /// <param name="membershipId">
+        /// Required. Client chosen ID for the membership. `membership_id` must be a valid RFC
+        /// 1123 compliant DNS label:
+        /// 
+        /// 1. At most 63 characters in length
+        /// 2. It must consist of lower case alphanumeric characters or `-`
+        /// 3. It must start and end with an alphanumeric character
+        /// 
+        /// Which can be expressed as the regex: `[a-z0-9]([-a-z0-9]*[a-z0-9])?`,
+        /// with a maximum length of 63 characters.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Membership, OperationMetadata>> CreateMembershipAsync(gagr::LocationName parent, Membership resource, string membershipId, st::CancellationToken cancellationToken) =>
             CreateMembershipAsync(parent, resource, membershipId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -864,6 +1076,60 @@ namespace Google.Cloud.GkeHub.V1Beta1
             DeleteMembershipAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Removes a Membership.
+        /// 
+        /// **This is currently only supported for GKE clusters on Google Cloud**.
+        /// To unregister other clusters, follow the instructions at
+        /// https://cloud.google.com/anthos/multicluster-management/connect/unregistering-a-cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Membership resource name in the format
+        /// `projects/*/locations/*/memberships/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteMembership(MembershipName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteMembership(new DeleteMembershipRequest
+            {
+                MembershipName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Removes a Membership.
+        /// 
+        /// **This is currently only supported for GKE clusters on Google Cloud**.
+        /// To unregister other clusters, follow the instructions at
+        /// https://cloud.google.com/anthos/multicluster-management/connect/unregistering-a-cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Membership resource name in the format
+        /// `projects/*/locations/*/memberships/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteMembershipAsync(MembershipName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteMembershipAsync(new DeleteMembershipRequest
+            {
+                MembershipName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Removes a Membership.
+        /// 
+        /// **This is currently only supported for GKE clusters on Google Cloud**.
+        /// To unregister other clusters, follow the instructions at
+        /// https://cloud.google.com/anthos/multicluster-management/connect/unregistering-a-cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Membership resource name in the format
+        /// `projects/*/locations/*/memberships/*`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteMembershipAsync(MembershipName name, st::CancellationToken cancellationToken) =>
+            DeleteMembershipAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Updates an existing Membership.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -934,8 +1200,8 @@ namespace Google.Cloud.GkeHub.V1Beta1
         /// user-modifiable fields to match `resource`.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Mask of fields to update. At least one field path must be
-        /// specified in this mask.
+        /// Required. Mask of fields to update. At least one field path must be specified in this
+        /// mask.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -965,8 +1231,8 @@ namespace Google.Cloud.GkeHub.V1Beta1
         /// user-modifiable fields to match `resource`.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Mask of fields to update. At least one field path must be
-        /// specified in this mask.
+        /// Required. Mask of fields to update. At least one field path must be specified in this
+        /// mask.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -996,12 +1262,100 @@ namespace Google.Cloud.GkeHub.V1Beta1
         /// user-modifiable fields to match `resource`.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Mask of fields to update. At least one field path must be
-        /// specified in this mask.
+        /// Required. Mask of fields to update. At least one field path must be specified in this
+        /// mask.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Membership, OperationMetadata>> UpdateMembershipAsync(string name, Membership resource, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateMembershipAsync(name, resource, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an existing Membership.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The membership resource name in the format:
+        /// `projects/[project_id]/locations/global/memberships/[membership_id]`
+        /// </param>
+        /// <param name="resource">
+        /// Required. Only fields specified in update_mask are updated.
+        /// If you specify a field in the update_mask but don't specify its value here
+        /// that field will be deleted.
+        /// If you are updating a map field, set the value of a key to null or empty
+        /// string to delete the key from the map. It's not possible to update a key's
+        /// value to the empty string.
+        /// If you specify the update_mask to be a special path "*", fully replaces all
+        /// user-modifiable fields to match `resource`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Mask of fields to update. At least one field path must be specified in this
+        /// mask.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Membership, OperationMetadata> UpdateMembership(MembershipName name, Membership resource, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateMembership(new UpdateMembershipRequest
+            {
+                MembershipName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                Resource = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an existing Membership.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The membership resource name in the format:
+        /// `projects/[project_id]/locations/global/memberships/[membership_id]`
+        /// </param>
+        /// <param name="resource">
+        /// Required. Only fields specified in update_mask are updated.
+        /// If you specify a field in the update_mask but don't specify its value here
+        /// that field will be deleted.
+        /// If you are updating a map field, set the value of a key to null or empty
+        /// string to delete the key from the map. It's not possible to update a key's
+        /// value to the empty string.
+        /// If you specify the update_mask to be a special path "*", fully replaces all
+        /// user-modifiable fields to match `resource`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Mask of fields to update. At least one field path must be specified in this
+        /// mask.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Membership, OperationMetadata>> UpdateMembershipAsync(MembershipName name, Membership resource, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateMembershipAsync(new UpdateMembershipRequest
+            {
+                MembershipName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                Resource = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an existing Membership.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The membership resource name in the format:
+        /// `projects/[project_id]/locations/global/memberships/[membership_id]`
+        /// </param>
+        /// <param name="resource">
+        /// Required. Only fields specified in update_mask are updated.
+        /// If you specify a field in the update_mask but don't specify its value here
+        /// that field will be deleted.
+        /// If you are updating a map field, set the value of a key to null or empty
+        /// string to delete the key from the map. It's not possible to update a key's
+        /// value to the empty string.
+        /// If you specify the update_mask to be a special path "*", fully replaces all
+        /// user-modifiable fields to match `resource`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Mask of fields to update. At least one field path must be specified in this
+        /// mask.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Membership, OperationMetadata>> UpdateMembershipAsync(MembershipName name, Membership resource, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateMembershipAsync(name, resource, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1134,8 +1488,7 @@ namespace Google.Cloud.GkeHub.V1Beta1
     /// <summary>GkeHubMembershipService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
     /// The GKE Hub MembershipService handles the registration of many Kubernetes
-    /// clusters to Google Cloud, represented with the
-    /// [Membership][google.cloud.gkehub.v1beta1.Membership] resource.
+    /// clusters to Google Cloud, represented with the [Membership][google.cloud.gkehub.v1beta1.Membership] resource.
     /// 
     /// GKE Hub is currently only available in the global region.
     /// 
@@ -1177,6 +1530,8 @@ namespace Google.Cloud.GkeHub.V1Beta1
             CreateMembershipOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateMembershipOperationsSettings);
             DeleteMembershipOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteMembershipOperationsSettings);
             UpdateMembershipOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateMembershipOperationsSettings);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings);
             _callListMemberships = clientHelper.BuildApiCall<ListMembershipsRequest, ListMembershipsResponse>(grpcClient.ListMembershipsAsync, grpcClient.ListMemberships, effectiveSettings.ListMembershipsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListMemberships);
             Modify_ListMembershipsApiCall(ref _callListMemberships);
@@ -1226,6 +1581,12 @@ namespace Google.Cloud.GkeHub.V1Beta1
 
         /// <summary>The underlying gRPC GkeHubMembershipService client</summary>
         public override GkeHubMembershipService.GkeHubMembershipServiceClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
         partial void Modify_ListMembershipsRequest(ref ListMembershipsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1514,6 +1875,32 @@ namespace Google.Cloud.GkeHub.V1Beta1
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class GkeHubMembershipService
+    {
+        public partial class GkeHubMembershipServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
+
+            /// <summary>
+            /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gciv::IAMPolicy.IAMPolicyClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gciv::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() =>
+                new gciv::IAMPolicy.IAMPolicyClient(CallInvoker);
         }
     }
 }

@@ -16,7 +16,7 @@
 
 namespace Google.Cloud.GkeHub.V1Beta1.Snippets
 {
-    // [START gkehub_v1beta1_generated_GkeHubMembershipService_CreateMembership_async]
+    // [START gkehub_v1beta1_generated_GkeHubMembershipService_CreateMembership_async_flattened_resourceNames]
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.GkeHub.V1Beta1;
     using Google.LongRunning;
@@ -29,20 +29,16 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
         /// This snippet has been automatically generated for illustrative purposes only.
         /// It may require modifications to work in your environment.
         /// </remarks>
-        public async Task CreateMembershipRequestObjectAsync()
+        public async Task CreateMembershipResourceNamesAsync()
         {
             // Create client
             GkeHubMembershipServiceClient gkeHubMembershipServiceClient = await GkeHubMembershipServiceClient.CreateAsync();
             // Initialize request argument(s)
-            CreateMembershipRequest request = new CreateMembershipRequest
-            {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                MembershipId = "",
-                Resource = new Membership(),
-                RequestId = "",
-            };
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            Membership resource = new Membership();
+            string membershipId = "";
             // Make the request
-            Operation<Membership, OperationMetadata> response = await gkeHubMembershipServiceClient.CreateMembershipAsync(request);
+            Operation<Membership, OperationMetadata> response = await gkeHubMembershipServiceClient.CreateMembershipAsync(parent, resource, membershipId);
 
             // Poll until the returned long-running operation is complete
             Operation<Membership, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -61,5 +57,5 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             }
         }
     }
-    // [END gkehub_v1beta1_generated_GkeHubMembershipService_CreateMembership_async]
+    // [END gkehub_v1beta1_generated_GkeHubMembershipService_CreateMembership_async_flattened_resourceNames]
 }

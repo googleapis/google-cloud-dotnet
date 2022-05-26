@@ -32,7 +32,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             // Create client
             GkeHubMembershipServiceClient gkeHubMembershipServiceClient = await GkeHubMembershipServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/memberships/[MEMBERSHIP]";
             // Make the request
             Membership response = await gkeHubMembershipServiceClient.GetMembershipAsync(name);
         }
