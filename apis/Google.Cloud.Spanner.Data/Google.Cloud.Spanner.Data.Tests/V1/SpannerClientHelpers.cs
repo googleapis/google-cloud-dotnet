@@ -205,7 +205,10 @@ namespace Google.Cloud.Spanner.V1.Tests
             return spannerClientMock;
         }
 
-        internal static Mock<SpannerClient> SetupExecuteStreamingSql(this Mock<SpannerClient> spannerClientMock)
+        internal static Mock<SpannerClient> SetupExecuteStreamingSql(this Mock<SpannerClient> spannerClientMock) =>
+            SetupExecuteStreamingSql(spannerClientMock, new ExecuteSqlRequest());
+
+        internal static Mock<SpannerClient> SetupExecuteStreamingSql(this Mock<SpannerClient> spannerClientMock, ExecuteSqlRequest requestReceiver)
         {
             spannerClientMock
                 .Setup(client => client.ExecuteStreamingSql(
@@ -213,6 +216,8 @@ namespace Google.Cloud.Spanner.V1.Tests
                     It.IsAny<CallSettings>()))
                 .Returns<ExecuteSqlRequest, CallSettings>((request, _) =>
                 {
+                    // Copy the executed request into the receiver so that callers can perform further checking later.
+                    requestReceiver.MergeFrom(request);
                     IEnumerable<PartialResultSet> results = new string[] {"token1", "token2", "token3"}
                     .Select((resumeToken, index) => new PartialResultSet
                     {

@@ -989,7 +989,51 @@ namespace Google.Cloud.Spanner.Data.Tests
                 It.IsAny<CallSettings>()), Times.Exactly(10));
         }
 
-        internal static SpannerConnection BuildSpannerConnection(Mock<SpannerClient> spannerClientMock)
+        [Fact]
+        public void ExecuteStreamingSql_DecimalParameterDefaultsToFloat64()
+        {
+            var builder = new SpannerConnectionStringBuilder();
+            var parameter = new SpannerParameter
+            {
+                ParameterName = "p",
+                Value = 100.5m
+            };
+            var actualValue = RunExecuteStreamingSqlWithParameter(builder, parameter).Fields["p"];
+            var expectedValue = Value.ForNumber(100.5);
+            Assert.Equal(expectedValue, actualValue);
+        }
+
+        private Struct RunExecuteStreamingSqlWithParameter(SpannerConnectionStringBuilder builder, SpannerParameter parameter)
+        {
+            var request = new ExecuteSqlRequest();
+            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupExecuteStreamingSql(request);
+
+            var connection = BuildSpannerConnection(spannerClientMock, builder);
+
+            var command = connection.CreateSelectCommand("SELECT * FROM FOO");
+            command.Parameters.Add(parameter);
+            using (var reader = command.ExecuteReader())
+            {
+                Assert.True(reader.HasRows);
+            }
+            spannerClientMock.Verify(client => client.ExecuteStreamingSql(
+                It.IsAny<ExecuteSqlRequest>(),
+                It.IsAny<CallSettings>()), Times.Once());
+            return request.Params;
+        }
+
+        internal static SpannerConnection BuildSpannerConnection(Mock<SpannerClient> spannerClientMock) =>
+            BuildSpannerConnection(spannerClientMock, new SpannerConnectionStringBuilder());
+
+        /// <summary>
+        /// Builds a spanner connection based on the given mock and connection string builder.
+        /// The connection string builder will be mutated during the course of this method.
+        /// </summary>
+        internal static SpannerConnection BuildSpannerConnection(Mock<SpannerClient> spannerClientMock, SpannerConnectionStringBuilder builder)
         {
             var spannerClient = spannerClientMock.Object;
             var sessionPoolOptions = new SessionPoolOptions
@@ -1001,12 +1045,8 @@ namespace Google.Cloud.Spanner.Data.Tests
             sessionPoolManager.SpannerSettings.Scheduler = spannerClient.Settings.Scheduler;
             sessionPoolManager.SpannerSettings.Clock = spannerClient.Settings.Clock;
 
-            SpannerConnectionStringBuilder builder = new SpannerConnectionStringBuilder
-            {
-                DataSource = DatabaseName.Format(SpannerClientHelpers.ProjectId, SpannerClientHelpers.Instance, SpannerClientHelpers.Database),
-                SessionPoolManager = sessionPoolManager
-            };
-
+            builder.DataSource = DatabaseName.Format(SpannerClientHelpers.ProjectId, SpannerClientHelpers.Instance, SpannerClientHelpers.Database);
+            builder.SessionPoolManager = sessionPoolManager;
             return new SpannerConnection(builder);
         }
 
