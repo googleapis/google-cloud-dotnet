@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using gax = Google.Api.Gax;
+using gagr = Google.Api.Gax.ResourceNames;
 using gcgv = Google.Cloud.GkeHub.V1Beta1;
 using sys = System;
 
@@ -260,6 +261,102 @@ namespace Google.Cloud.GkeHub.V1Beta1
     }
 
     public partial class Membership
+    {
+        /// <summary>
+        /// <see cref="gcgv::MembershipName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcgv::MembershipName MembershipName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcgv::MembershipName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListMembershipsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetMembershipRequest
+    {
+        /// <summary>
+        /// <see cref="gcgv::MembershipName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcgv::MembershipName MembershipName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcgv::MembershipName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateMembershipRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteMembershipRequest
+    {
+        /// <summary>
+        /// <see cref="gcgv::MembershipName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcgv::MembershipName MembershipName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcgv::MembershipName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class UpdateMembershipRequest
+    {
+        /// <summary>
+        /// <see cref="gcgv::MembershipName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcgv::MembershipName MembershipName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcgv::MembershipName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GenerateConnectManifestRequest
+    {
+        /// <summary>
+        /// <see cref="gcgv::MembershipName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcgv::MembershipName MembershipName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcgv::MembershipName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ValidateExclusivityRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GenerateExclusivityManifestRequest
     {
         /// <summary>
         /// <see cref="gcgv::MembershipName"/>-typed view over the <see cref="Name"/> resource name property.

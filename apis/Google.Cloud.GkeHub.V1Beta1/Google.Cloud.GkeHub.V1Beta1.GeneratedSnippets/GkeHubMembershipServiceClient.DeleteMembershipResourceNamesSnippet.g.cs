@@ -16,50 +16,43 @@
 
 namespace Google.Cloud.GkeHub.V1Beta1.Snippets
 {
-    // [START gkehub_v1beta1_generated_GkeHubMembershipService_CreateMembership_async]
-    using Google.Api.Gax.ResourceNames;
+    // [START gkehub_v1beta1_generated_GkeHubMembershipService_DeleteMembership_sync_flattened_resourceNames]
     using Google.Cloud.GkeHub.V1Beta1;
     using Google.LongRunning;
-    using System.Threading.Tasks;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedGkeHubMembershipServiceClientSnippets
     {
-        /// <summary>Snippet for CreateMembershipAsync</summary>
+        /// <summary>Snippet for DeleteMembership</summary>
         /// <remarks>
         /// This snippet has been automatically generated for illustrative purposes only.
         /// It may require modifications to work in your environment.
         /// </remarks>
-        public async Task CreateMembershipRequestObjectAsync()
+        public void DeleteMembershipResourceNames()
         {
             // Create client
-            GkeHubMembershipServiceClient gkeHubMembershipServiceClient = await GkeHubMembershipServiceClient.CreateAsync();
+            GkeHubMembershipServiceClient gkeHubMembershipServiceClient = GkeHubMembershipServiceClient.Create();
             // Initialize request argument(s)
-            CreateMembershipRequest request = new CreateMembershipRequest
-            {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                MembershipId = "",
-                Resource = new Membership(),
-                RequestId = "",
-            };
+            MembershipName name = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]");
             // Make the request
-            Operation<Membership, OperationMetadata> response = await gkeHubMembershipServiceClient.CreateMembershipAsync(request);
+            Operation<Empty, OperationMetadata> response = gkeHubMembershipServiceClient.DeleteMembership(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Membership, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Membership result = completedResponse.Result;
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Membership, OperationMetadata> retrievedResponse = await gkeHubMembershipServiceClient.PollOnceCreateMembershipAsync(operationName);
+            Operation<Empty, OperationMetadata> retrievedResponse = gkeHubMembershipServiceClient.PollOnceDeleteMembership(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Membership retrievedResult = retrievedResponse.Result;
+                Empty retrievedResult = retrievedResponse.Result;
             }
         }
     }
-    // [END gkehub_v1beta1_generated_GkeHubMembershipService_CreateMembership_async]
+    // [END gkehub_v1beta1_generated_GkeHubMembershipService_DeleteMembership_sync_flattened_resourceNames]
 }

@@ -34,7 +34,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             // Initialize request argument(s)
             GenerateConnectManifestRequest request = new GenerateConnectManifestRequest
             {
-                Name = "",
+                MembershipName = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]"),
                 ConnectAgent = new ConnectAgent(),
                 Version = "",
                 IsUpgrade = false,

@@ -17,6 +17,7 @@
 namespace Google.Cloud.GkeHub.V1Beta1.Snippets
 {
     using Google.Api.Gax;
+    using Google.Api.Gax.ResourceNames;
     using Google.LongRunning;
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
@@ -36,7 +37,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             // Initialize request argument(s)
             ListMembershipsRequest request = new ListMembershipsRequest
             {
-                Parent = "",
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
                 OrderBy = "",
             };
@@ -86,7 +87,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             // Initialize request argument(s)
             ListMembershipsRequest request = new ListMembershipsRequest
             {
-                Parent = "",
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
                 OrderBy = "",
             };
@@ -134,7 +135,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             // Create client
             GkeHubMembershipServiceClient gkeHubMembershipServiceClient = GkeHubMembershipServiceClient.Create();
             // Initialize request argument(s)
-            string parent = "";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
             PagedEnumerable<ListMembershipsResponse, Membership> response = gkeHubMembershipServiceClient.ListMemberships(parent);
 
@@ -179,7 +180,97 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             // Create client
             GkeHubMembershipServiceClient gkeHubMembershipServiceClient = await GkeHubMembershipServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListMembershipsResponse, Membership> response = gkeHubMembershipServiceClient.ListMembershipsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Membership item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListMembershipsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Membership item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Membership> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Membership item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMemberships</summary>
+        public void ListMembershipsResourceNames()
+        {
+            // Snippet: ListMemberships(LocationName, string, int?, CallSettings)
+            // Create client
+            GkeHubMembershipServiceClient gkeHubMembershipServiceClient = GkeHubMembershipServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListMembershipsResponse, Membership> response = gkeHubMembershipServiceClient.ListMemberships(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Membership item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMembershipsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Membership item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Membership> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Membership item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMembershipsAsync</summary>
+        public async Task ListMembershipsResourceNamesAsync()
+        {
+            // Snippet: ListMembershipsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            GkeHubMembershipServiceClient gkeHubMembershipServiceClient = await GkeHubMembershipServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
             PagedAsyncEnumerable<ListMembershipsResponse, Membership> response = gkeHubMembershipServiceClient.ListMembershipsAsync(parent);
 
@@ -224,7 +315,10 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             // Create client
             GkeHubMembershipServiceClient gkeHubMembershipServiceClient = GkeHubMembershipServiceClient.Create();
             // Initialize request argument(s)
-            GetMembershipRequest request = new GetMembershipRequest { Name = "", };
+            GetMembershipRequest request = new GetMembershipRequest
+            {
+                MembershipName = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]"),
+            };
             // Make the request
             Membership response = gkeHubMembershipServiceClient.GetMembership(request);
             // End snippet
@@ -238,7 +332,10 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             // Create client
             GkeHubMembershipServiceClient gkeHubMembershipServiceClient = await GkeHubMembershipServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GetMembershipRequest request = new GetMembershipRequest { Name = "", };
+            GetMembershipRequest request = new GetMembershipRequest
+            {
+                MembershipName = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]"),
+            };
             // Make the request
             Membership response = await gkeHubMembershipServiceClient.GetMembershipAsync(request);
             // End snippet
@@ -251,7 +348,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             // Create client
             GkeHubMembershipServiceClient gkeHubMembershipServiceClient = GkeHubMembershipServiceClient.Create();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/memberships/[MEMBERSHIP]";
             // Make the request
             Membership response = gkeHubMembershipServiceClient.GetMembership(name);
             // End snippet
@@ -265,7 +362,34 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             // Create client
             GkeHubMembershipServiceClient gkeHubMembershipServiceClient = await GkeHubMembershipServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/memberships/[MEMBERSHIP]";
+            // Make the request
+            Membership response = await gkeHubMembershipServiceClient.GetMembershipAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMembership</summary>
+        public void GetMembershipResourceNames()
+        {
+            // Snippet: GetMembership(MembershipName, CallSettings)
+            // Create client
+            GkeHubMembershipServiceClient gkeHubMembershipServiceClient = GkeHubMembershipServiceClient.Create();
+            // Initialize request argument(s)
+            MembershipName name = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]");
+            // Make the request
+            Membership response = gkeHubMembershipServiceClient.GetMembership(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMembershipAsync</summary>
+        public async Task GetMembershipResourceNamesAsync()
+        {
+            // Snippet: GetMembershipAsync(MembershipName, CallSettings)
+            // Additional: GetMembershipAsync(MembershipName, CancellationToken)
+            // Create client
+            GkeHubMembershipServiceClient gkeHubMembershipServiceClient = await GkeHubMembershipServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            MembershipName name = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]");
             // Make the request
             Membership response = await gkeHubMembershipServiceClient.GetMembershipAsync(name);
             // End snippet
@@ -280,7 +404,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             // Initialize request argument(s)
             CreateMembershipRequest request = new CreateMembershipRequest
             {
-                Parent = "",
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 MembershipId = "",
                 Resource = new Membership(),
                 RequestId = "",
@@ -316,7 +440,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             // Initialize request argument(s)
             CreateMembershipRequest request = new CreateMembershipRequest
             {
-                Parent = "",
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 MembershipId = "",
                 Resource = new Membership(),
                 RequestId = "",
@@ -349,7 +473,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             // Create client
             GkeHubMembershipServiceClient gkeHubMembershipServiceClient = GkeHubMembershipServiceClient.Create();
             // Initialize request argument(s)
-            string parent = "";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
             Membership resource = new Membership();
             string membershipId = "";
             // Make the request
@@ -381,7 +505,70 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             // Create client
             GkeHubMembershipServiceClient gkeHubMembershipServiceClient = await GkeHubMembershipServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            Membership resource = new Membership();
+            string membershipId = "";
+            // Make the request
+            Operation<Membership, OperationMetadata> response = await gkeHubMembershipServiceClient.CreateMembershipAsync(parent, resource, membershipId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Membership, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Membership result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Membership, OperationMetadata> retrievedResponse = await gkeHubMembershipServiceClient.PollOnceCreateMembershipAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Membership retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMembership</summary>
+        public void CreateMembershipResourceNames()
+        {
+            // Snippet: CreateMembership(LocationName, Membership, string, CallSettings)
+            // Create client
+            GkeHubMembershipServiceClient gkeHubMembershipServiceClient = GkeHubMembershipServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            Membership resource = new Membership();
+            string membershipId = "";
+            // Make the request
+            Operation<Membership, OperationMetadata> response = gkeHubMembershipServiceClient.CreateMembership(parent, resource, membershipId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Membership, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Membership result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Membership, OperationMetadata> retrievedResponse = gkeHubMembershipServiceClient.PollOnceCreateMembership(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Membership retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMembershipAsync</summary>
+        public async Task CreateMembershipResourceNamesAsync()
+        {
+            // Snippet: CreateMembershipAsync(LocationName, Membership, string, CallSettings)
+            // Additional: CreateMembershipAsync(LocationName, Membership, string, CancellationToken)
+            // Create client
+            GkeHubMembershipServiceClient gkeHubMembershipServiceClient = await GkeHubMembershipServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             Membership resource = new Membership();
             string membershipId = "";
             // Make the request
@@ -414,7 +601,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             // Initialize request argument(s)
             DeleteMembershipRequest request = new DeleteMembershipRequest
             {
-                Name = "",
+                MembershipName = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]"),
                 RequestId = "",
             };
             // Make the request
@@ -448,7 +635,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             // Initialize request argument(s)
             DeleteMembershipRequest request = new DeleteMembershipRequest
             {
-                Name = "",
+                MembershipName = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]"),
                 RequestId = "",
             };
             // Make the request
@@ -479,7 +666,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             // Create client
             GkeHubMembershipServiceClient gkeHubMembershipServiceClient = GkeHubMembershipServiceClient.Create();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/memberships/[MEMBERSHIP]";
             // Make the request
             Operation<Empty, OperationMetadata> response = gkeHubMembershipServiceClient.DeleteMembership(name);
 
@@ -509,7 +696,66 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             // Create client
             GkeHubMembershipServiceClient gkeHubMembershipServiceClient = await GkeHubMembershipServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/memberships/[MEMBERSHIP]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await gkeHubMembershipServiceClient.DeleteMembershipAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await gkeHubMembershipServiceClient.PollOnceDeleteMembershipAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteMembership</summary>
+        public void DeleteMembershipResourceNames()
+        {
+            // Snippet: DeleteMembership(MembershipName, CallSettings)
+            // Create client
+            GkeHubMembershipServiceClient gkeHubMembershipServiceClient = GkeHubMembershipServiceClient.Create();
+            // Initialize request argument(s)
+            MembershipName name = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = gkeHubMembershipServiceClient.DeleteMembership(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = gkeHubMembershipServiceClient.PollOnceDeleteMembership(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteMembershipAsync</summary>
+        public async Task DeleteMembershipResourceNamesAsync()
+        {
+            // Snippet: DeleteMembershipAsync(MembershipName, CallSettings)
+            // Additional: DeleteMembershipAsync(MembershipName, CancellationToken)
+            // Create client
+            GkeHubMembershipServiceClient gkeHubMembershipServiceClient = await GkeHubMembershipServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            MembershipName name = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]");
             // Make the request
             Operation<Empty, OperationMetadata> response = await gkeHubMembershipServiceClient.DeleteMembershipAsync(name);
 
@@ -540,7 +786,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             // Initialize request argument(s)
             UpdateMembershipRequest request = new UpdateMembershipRequest
             {
-                Name = "",
+                MembershipName = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]"),
                 UpdateMask = new FieldMask(),
                 Resource = new Membership(),
                 RequestId = "",
@@ -576,7 +822,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             // Initialize request argument(s)
             UpdateMembershipRequest request = new UpdateMembershipRequest
             {
-                Name = "",
+                MembershipName = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]"),
                 UpdateMask = new FieldMask(),
                 Resource = new Membership(),
                 RequestId = "",
@@ -609,7 +855,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             // Create client
             GkeHubMembershipServiceClient gkeHubMembershipServiceClient = GkeHubMembershipServiceClient.Create();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/memberships/[MEMBERSHIP]";
             Membership resource = new Membership();
             FieldMask updateMask = new FieldMask();
             // Make the request
@@ -641,7 +887,70 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             // Create client
             GkeHubMembershipServiceClient gkeHubMembershipServiceClient = await GkeHubMembershipServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/memberships/[MEMBERSHIP]";
+            Membership resource = new Membership();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Membership, OperationMetadata> response = await gkeHubMembershipServiceClient.UpdateMembershipAsync(name, resource, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Membership, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Membership result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Membership, OperationMetadata> retrievedResponse = await gkeHubMembershipServiceClient.PollOnceUpdateMembershipAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Membership retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateMembership</summary>
+        public void UpdateMembershipResourceNames()
+        {
+            // Snippet: UpdateMembership(MembershipName, Membership, FieldMask, CallSettings)
+            // Create client
+            GkeHubMembershipServiceClient gkeHubMembershipServiceClient = GkeHubMembershipServiceClient.Create();
+            // Initialize request argument(s)
+            MembershipName name = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]");
+            Membership resource = new Membership();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Membership, OperationMetadata> response = gkeHubMembershipServiceClient.UpdateMembership(name, resource, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Membership, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Membership result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Membership, OperationMetadata> retrievedResponse = gkeHubMembershipServiceClient.PollOnceUpdateMembership(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Membership retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateMembershipAsync</summary>
+        public async Task UpdateMembershipResourceNamesAsync()
+        {
+            // Snippet: UpdateMembershipAsync(MembershipName, Membership, FieldMask, CallSettings)
+            // Additional: UpdateMembershipAsync(MembershipName, Membership, FieldMask, CancellationToken)
+            // Create client
+            GkeHubMembershipServiceClient gkeHubMembershipServiceClient = await GkeHubMembershipServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            MembershipName name = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]");
             Membership resource = new Membership();
             FieldMask updateMask = new FieldMask();
             // Make the request
@@ -674,7 +983,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             // Initialize request argument(s)
             GenerateConnectManifestRequest request = new GenerateConnectManifestRequest
             {
-                Name = "",
+                MembershipName = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]"),
                 ConnectAgent = new ConnectAgent(),
                 Version = "",
                 IsUpgrade = false,
@@ -696,7 +1005,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             // Initialize request argument(s)
             GenerateConnectManifestRequest request = new GenerateConnectManifestRequest
             {
-                Name = "",
+                MembershipName = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]"),
                 ConnectAgent = new ConnectAgent(),
                 Version = "",
                 IsUpgrade = false,
@@ -717,7 +1026,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             // Initialize request argument(s)
             ValidateExclusivityRequest request = new ValidateExclusivityRequest
             {
-                Parent = "",
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 CrManifest = "",
                 IntendedMembership = "",
             };
@@ -736,7 +1045,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             // Initialize request argument(s)
             ValidateExclusivityRequest request = new ValidateExclusivityRequest
             {
-                Parent = "",
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 CrManifest = "",
                 IntendedMembership = "",
             };
@@ -754,7 +1063,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             // Initialize request argument(s)
             GenerateExclusivityManifestRequest request = new GenerateExclusivityManifestRequest
             {
-                Name = "",
+                MembershipName = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]"),
                 CrdManifest = "",
                 CrManifest = "",
             };
@@ -773,7 +1082,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             // Initialize request argument(s)
             GenerateExclusivityManifestRequest request = new GenerateExclusivityManifestRequest
             {
-                Name = "",
+                MembershipName = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]"),
                 CrdManifest = "",
                 CrManifest = "",
             };

@@ -16,30 +16,25 @@
 
 namespace Google.Cloud.GkeHub.V1Beta1.Snippets
 {
-    // [START gkehub_v1beta1_generated_GkeHubMembershipService_GenerateExclusivityManifest_sync]
+    // [START gkehub_v1beta1_generated_GkeHubMembershipService_GetMembership_sync_flattened_resourceNames]
     using Google.Cloud.GkeHub.V1Beta1;
 
     public sealed partial class GeneratedGkeHubMembershipServiceClientSnippets
     {
-        /// <summary>Snippet for GenerateExclusivityManifest</summary>
+        /// <summary>Snippet for GetMembership</summary>
         /// <remarks>
         /// This snippet has been automatically generated for illustrative purposes only.
         /// It may require modifications to work in your environment.
         /// </remarks>
-        public void GenerateExclusivityManifestRequestObject()
+        public void GetMembershipResourceNames()
         {
             // Create client
             GkeHubMembershipServiceClient gkeHubMembershipServiceClient = GkeHubMembershipServiceClient.Create();
             // Initialize request argument(s)
-            GenerateExclusivityManifestRequest request = new GenerateExclusivityManifestRequest
-            {
-                MembershipName = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]"),
-                CrdManifest = "",
-                CrManifest = "",
-            };
+            MembershipName name = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]");
             // Make the request
-            GenerateExclusivityManifestResponse response = gkeHubMembershipServiceClient.GenerateExclusivityManifest(request);
+            Membership response = gkeHubMembershipServiceClient.GetMembership(name);
         }
     }
-    // [END gkehub_v1beta1_generated_GkeHubMembershipService_GenerateExclusivityManifest_sync]
+    // [END gkehub_v1beta1_generated_GkeHubMembershipService_GetMembership_sync_flattened_resourceNames]
 }

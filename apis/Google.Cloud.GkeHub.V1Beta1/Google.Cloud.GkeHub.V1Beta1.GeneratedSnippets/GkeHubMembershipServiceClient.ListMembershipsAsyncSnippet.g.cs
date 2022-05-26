@@ -35,7 +35,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             // Create client
             GkeHubMembershipServiceClient gkeHubMembershipServiceClient = await GkeHubMembershipServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
             PagedAsyncEnumerable<ListMembershipsResponse, Membership> response = gkeHubMembershipServiceClient.ListMembershipsAsync(parent);
 
