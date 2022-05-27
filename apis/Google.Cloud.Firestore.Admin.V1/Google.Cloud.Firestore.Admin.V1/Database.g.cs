@@ -26,30 +26,33 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           string.Concat(
             "Cihnb29nbGUvZmlyZXN0b3JlL2FkbWluL3YxL2RhdGFiYXNlLnByb3RvEhln",
             "b29nbGUuZmlyZXN0b3JlLmFkbWluLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2Jl",
-            "aGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGh5nb29n",
-            "bGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90",
-            "aW1lc3RhbXAucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8i",
-            "8AMKCERhdGFiYXNlEgwKBG5hbWUYASABKAkSEwoLbG9jYXRpb25faWQYCSAB",
-            "KAkSPgoEdHlwZRgKIAEoDjIwLmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjEu",
-            "RGF0YWJhc2UuRGF0YWJhc2VUeXBlEk0KEGNvbmN1cnJlbmN5X21vZGUYDyAB",
-            "KA4yMy5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLkRhdGFiYXNlLkNvbmN1",
-            "cnJlbmN5TW9kZRIMCgRldGFnGGMgASgJIlcKDERhdGFiYXNlVHlwZRIdChlE",
-            "QVRBQkFTRV9UWVBFX1VOU1BFQ0lGSUVEEAASFAoQRklSRVNUT1JFX05BVElW",
-            "RRABEhIKDkRBVEFTVE9SRV9NT0RFEAIidwoPQ29uY3VycmVuY3lNb2RlEiAK",
-            "HENPTkNVUlJFTkNZX01PREVfVU5TUEVDSUZJRUQQABIOCgpPUFRJTUlTVElD",
-            "EAESDwoLUEVTU0lNSVNUSUMQAhIhCh1PUFRJTUlTVElDX1dJVEhfRU5USVRZ",
-            "X0dST1VQUxADOlLqQU8KIWZpcmVzdG9yZS5nb29nbGVhcGlzLmNvbS9EYXRh",
-            "YmFzZRIncHJvamVjdHMve3Byb2plY3R9L2RhdGFiYXNlcy97ZGF0YWJhc2V9",
-            "UgEBQuEBCh1jb20uZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MUINRGF0YWJh",
-            "c2VQcm90b1ABWj5nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVh",
-            "cGlzL2ZpcmVzdG9yZS9hZG1pbi92MTthZG1pbqICBEdDRlOqAh9Hb29nbGUu",
-            "Q2xvdWQuRmlyZXN0b3JlLkFkbWluLlYxygIfR29vZ2xlXENsb3VkXEZpcmVz",
-            "dG9yZVxBZG1pblxWMeoCI0dvb2dsZTo6Q2xvdWQ6OkZpcmVzdG9yZTo6QWRt",
-            "aW46OlYxYgZwcm90bzM="));
+            "aGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvItAFCghE",
+            "YXRhYmFzZRIMCgRuYW1lGAEgASgJEhMKC2xvY2F0aW9uX2lkGAkgASgJEj4K",
+            "BHR5cGUYCiABKA4yMC5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLkRhdGFi",
+            "YXNlLkRhdGFiYXNlVHlwZRJNChBjb25jdXJyZW5jeV9tb2RlGA8gASgOMjMu",
+            "Z29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5EYXRhYmFzZS5Db25jdXJyZW5j",
+            "eU1vZGUSYQobYXBwX2VuZ2luZV9pbnRlZ3JhdGlvbl9tb2RlGBMgASgOMjwu",
+            "Z29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5EYXRhYmFzZS5BcHBFbmdpbmVJ",
+            "bnRlZ3JhdGlvbk1vZGUSFwoKa2V5X3ByZWZpeBgUIAEoCUID4EEDEgwKBGV0",
+            "YWcYYyABKAkiVwoMRGF0YWJhc2VUeXBlEh0KGURBVEFCQVNFX1RZUEVfVU5T",
+            "UEVDSUZJRUQQABIUChBGSVJFU1RPUkVfTkFUSVZFEAESEgoOREFUQVNUT1JF",
+            "X01PREUQAiJ3Cg9Db25jdXJyZW5jeU1vZGUSIAocQ09OQ1VSUkVOQ1lfTU9E",
+            "RV9VTlNQRUNJRklFRBAAEg4KCk9QVElNSVNUSUMQARIPCgtQRVNTSU1JU1RJ",
+            "QxACEiEKHU9QVElNSVNUSUNfV0lUSF9FTlRJVFlfR1JPVVBTEAMiYgoYQXBw",
+            "RW5naW5lSW50ZWdyYXRpb25Nb2RlEisKJ0FQUF9FTkdJTkVfSU5URUdSQVRJ",
+            "T05fTU9ERV9VTlNQRUNJRklFRBAAEgsKB0VOQUJMRUQQARIMCghESVNBQkxF",
+            "RBACOlLqQU8KIWZpcmVzdG9yZS5nb29nbGVhcGlzLmNvbS9EYXRhYmFzZRIn",
+            "cHJvamVjdHMve3Byb2plY3R9L2RhdGFiYXNlcy97ZGF0YWJhc2V9UgEBQuEB",
+            "Ch1jb20uZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MUINRGF0YWJhc2VQcm90",
+            "b1ABWj5nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Zp",
+            "cmVzdG9yZS9hZG1pbi92MTthZG1pbqICBEdDRlOqAh9Hb29nbGUuQ2xvdWQu",
+            "RmlyZXN0b3JlLkFkbWluLlYxygIfR29vZ2xlXENsb3VkXEZpcmVzdG9yZVxB",
+            "ZG1pblxWMeoCI0dvb2dsZTo6Q2xvdWQ6OkZpcmVzdG9yZTo6QWRtaW46OlYx",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Database), global::Google.Cloud.Firestore.Admin.V1.Database.Parser, new[]{ "Name", "LocationId", "Type", "ConcurrencyMode", "Etag" }, null, new[]{ typeof(global::Google.Cloud.Firestore.Admin.V1.Database.Types.DatabaseType), typeof(global::Google.Cloud.Firestore.Admin.V1.Database.Types.ConcurrencyMode) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Database), global::Google.Cloud.Firestore.Admin.V1.Database.Parser, new[]{ "Name", "LocationId", "Type", "ConcurrencyMode", "AppEngineIntegrationMode", "KeyPrefix", "Etag" }, null, new[]{ typeof(global::Google.Cloud.Firestore.Admin.V1.Database.Types.DatabaseType), typeof(global::Google.Cloud.Firestore.Admin.V1.Database.Types.ConcurrencyMode), typeof(global::Google.Cloud.Firestore.Admin.V1.Database.Types.AppEngineIntegrationMode) }, null, null)
           }));
     }
     #endregion
@@ -99,6 +102,8 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       locationId_ = other.locationId_;
       type_ = other.type_;
       concurrencyMode_ = other.concurrencyMode_;
+      appEngineIntegrationMode_ = other.appEngineIntegrationMode_;
+      keyPrefix_ = other.keyPrefix_;
       etag_ = other.etag_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -173,6 +178,42 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       }
     }
 
+    /// <summary>Field number for the "app_engine_integration_mode" field.</summary>
+    public const int AppEngineIntegrationModeFieldNumber = 19;
+    private global::Google.Cloud.Firestore.Admin.V1.Database.Types.AppEngineIntegrationMode appEngineIntegrationMode_ = global::Google.Cloud.Firestore.Admin.V1.Database.Types.AppEngineIntegrationMode.Unspecified;
+    /// <summary>
+    /// The App Engine integration mode to use for this database.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Firestore.Admin.V1.Database.Types.AppEngineIntegrationMode AppEngineIntegrationMode {
+      get { return appEngineIntegrationMode_; }
+      set {
+        appEngineIntegrationMode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "key_prefix" field.</summary>
+    public const int KeyPrefixFieldNumber = 20;
+    private string keyPrefix_ = "";
+    /// <summary>
+    /// Output only. The key_prefix for this database. This key_prefix is used, in combination
+    /// with the project id ("&lt;key prefix>~&lt;project id>") to construct the
+    /// application id that is returned from the Cloud Datastore APIs in Google App
+    /// Engine first generation runtimes.
+    ///
+    /// This value may be empty in which case the appid to use for URL-encoded keys
+    /// is the project_id (eg: foo instead of v~foo).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string KeyPrefix {
+      get { return keyPrefix_; }
+      set {
+        keyPrefix_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "etag" field.</summary>
     public const int EtagFieldNumber = 99;
     private string etag_ = "";
@@ -209,6 +250,8 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       if (LocationId != other.LocationId) return false;
       if (Type != other.Type) return false;
       if (ConcurrencyMode != other.ConcurrencyMode) return false;
+      if (AppEngineIntegrationMode != other.AppEngineIntegrationMode) return false;
+      if (KeyPrefix != other.KeyPrefix) return false;
       if (Etag != other.Etag) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -221,6 +264,8 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       if (LocationId.Length != 0) hash ^= LocationId.GetHashCode();
       if (Type != global::Google.Cloud.Firestore.Admin.V1.Database.Types.DatabaseType.Unspecified) hash ^= Type.GetHashCode();
       if (ConcurrencyMode != global::Google.Cloud.Firestore.Admin.V1.Database.Types.ConcurrencyMode.Unspecified) hash ^= ConcurrencyMode.GetHashCode();
+      if (AppEngineIntegrationMode != global::Google.Cloud.Firestore.Admin.V1.Database.Types.AppEngineIntegrationMode.Unspecified) hash ^= AppEngineIntegrationMode.GetHashCode();
+      if (KeyPrefix.Length != 0) hash ^= KeyPrefix.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -256,6 +301,14 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         output.WriteRawTag(120);
         output.WriteEnum((int) ConcurrencyMode);
       }
+      if (AppEngineIntegrationMode != global::Google.Cloud.Firestore.Admin.V1.Database.Types.AppEngineIntegrationMode.Unspecified) {
+        output.WriteRawTag(152, 1);
+        output.WriteEnum((int) AppEngineIntegrationMode);
+      }
+      if (KeyPrefix.Length != 0) {
+        output.WriteRawTag(162, 1);
+        output.WriteString(KeyPrefix);
+      }
       if (Etag.Length != 0) {
         output.WriteRawTag(154, 6);
         output.WriteString(Etag);
@@ -286,6 +339,14 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         output.WriteRawTag(120);
         output.WriteEnum((int) ConcurrencyMode);
       }
+      if (AppEngineIntegrationMode != global::Google.Cloud.Firestore.Admin.V1.Database.Types.AppEngineIntegrationMode.Unspecified) {
+        output.WriteRawTag(152, 1);
+        output.WriteEnum((int) AppEngineIntegrationMode);
+      }
+      if (KeyPrefix.Length != 0) {
+        output.WriteRawTag(162, 1);
+        output.WriteString(KeyPrefix);
+      }
       if (Etag.Length != 0) {
         output.WriteRawTag(154, 6);
         output.WriteString(Etag);
@@ -311,6 +372,12 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       }
       if (ConcurrencyMode != global::Google.Cloud.Firestore.Admin.V1.Database.Types.ConcurrencyMode.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ConcurrencyMode);
+      }
+      if (AppEngineIntegrationMode != global::Google.Cloud.Firestore.Admin.V1.Database.Types.AppEngineIntegrationMode.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) AppEngineIntegrationMode);
+      }
+      if (KeyPrefix.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(KeyPrefix);
       }
       if (Etag.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Etag);
@@ -338,6 +405,12 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       }
       if (other.ConcurrencyMode != global::Google.Cloud.Firestore.Admin.V1.Database.Types.ConcurrencyMode.Unspecified) {
         ConcurrencyMode = other.ConcurrencyMode;
+      }
+      if (other.AppEngineIntegrationMode != global::Google.Cloud.Firestore.Admin.V1.Database.Types.AppEngineIntegrationMode.Unspecified) {
+        AppEngineIntegrationMode = other.AppEngineIntegrationMode;
+      }
+      if (other.KeyPrefix.Length != 0) {
+        KeyPrefix = other.KeyPrefix;
       }
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
@@ -371,6 +444,14 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           }
           case 120: {
             ConcurrencyMode = (global::Google.Cloud.Firestore.Admin.V1.Database.Types.ConcurrencyMode) input.ReadEnum();
+            break;
+          }
+          case 152: {
+            AppEngineIntegrationMode = (global::Google.Cloud.Firestore.Admin.V1.Database.Types.AppEngineIntegrationMode) input.ReadEnum();
+            break;
+          }
+          case 162: {
+            KeyPrefix = input.ReadString();
             break;
           }
           case 794: {
@@ -408,6 +489,14 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             ConcurrencyMode = (global::Google.Cloud.Firestore.Admin.V1.Database.Types.ConcurrencyMode) input.ReadEnum();
             break;
           }
+          case 152: {
+            AppEngineIntegrationMode = (global::Google.Cloud.Firestore.Admin.V1.Database.Types.AppEngineIntegrationMode) input.ReadEnum();
+            break;
+          }
+          case 162: {
+            KeyPrefix = input.ReadString();
+            break;
+          }
           case 794: {
             Etag = input.ReadString();
             break;
@@ -426,6 +515,8 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// The type of the database.
       /// See https://cloud.google.com/datastore/docs/firestore-or-datastore for
       /// information about how to choose.
+      ///
+      /// Mode changes are only allowed if the database is empty.
       /// </summary>
       public enum DatabaseType {
         /// <summary>
@@ -451,22 +542,48 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         /// </summary>
         [pbr::OriginalName("CONCURRENCY_MODE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Use optimistic concurrency control by default. This setting is available
-        /// for Cloud Firestore customers.
+        /// Use optimistic concurrency control by default. This mode is available
+        /// for Cloud Firestore databases.
         /// </summary>
         [pbr::OriginalName("OPTIMISTIC")] Optimistic = 1,
         /// <summary>
-        /// Use pessimistic concurrency control by default. This setting is available
-        /// for Cloud Firestore customers.
+        /// Use pessimistic concurrency control by default. This mode is available
+        /// for Cloud Firestore databases.
+        ///
         /// This is the default setting for Cloud Firestore.
         /// </summary>
         [pbr::OriginalName("PESSIMISTIC")] Pessimistic = 2,
         /// <summary>
-        /// Use optimistic concurrency control with entity groups by default. This is
-        /// the only available setting for Cloud Datastore customers.
-        /// This is the default setting for Cloud Datastore.
+        /// Use optimistic concurrency control with entity groups by default.
+        ///
+        /// This is the only available mode for Cloud Datastore.
+        ///
+        /// This mode is also available for Cloud Firestore with Datastore Mode but
+        /// is not recommended.
         /// </summary>
         [pbr::OriginalName("OPTIMISTIC_WITH_ENTITY_GROUPS")] OptimisticWithEntityGroups = 3,
+      }
+
+      /// <summary>
+      /// The type of App Engine integration mode.
+      /// </summary>
+      public enum AppEngineIntegrationMode {
+        /// <summary>
+        /// Not used.
+        /// </summary>
+        [pbr::OriginalName("APP_ENGINE_INTEGRATION_MODE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// If an App Engine application exists in the same region as this database,
+        /// App Engine configuration will impact this database. This includes
+        /// disabling of the application &amp; database, as well as disabling writes to
+        /// the database.
+        /// </summary>
+        [pbr::OriginalName("ENABLED")] Enabled = 1,
+        /// <summary>
+        /// Appengine has no affect on the ability of this database to serve
+        /// requests.
+        /// </summary>
+        [pbr::OriginalName("DISABLED")] Disabled = 2,
       }
 
     }
