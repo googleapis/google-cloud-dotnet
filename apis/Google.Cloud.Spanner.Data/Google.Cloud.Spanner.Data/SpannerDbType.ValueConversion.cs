@@ -254,12 +254,13 @@ namespace Google.Cloud.Spanner.Data
                         }
                         if (value is float || value is double || value is decimal)
                         {
+                            // TODO: Check with Jon if LossOfPrecisionHandling needs to be changed.
                             // We throw if there's a loss of precision. We could use
                             // LossOfPrecisionHandling.Truncate but GoogleSQL documentation requests to
                             // use half-away-from-zero rounding but the SpannerNumeric implementation
                             // truncates instead.
                             return Value.ForString(SpannerNumeric.FromDecimal(
-                                Convert.ToDecimal(value, InvariantCulture), LossOfPrecisionHandling.Throw).ToString());
+                                Convert.ToDecimal(value, InvariantCulture), LossOfPrecisionHandling.Truncate).ToString());
                         }
                         if (value is sbyte || value is short || value is int || value is long)
                         {
@@ -593,7 +594,11 @@ namespace Google.Cloud.Spanner.Data
             }
             if (targetClrType == typeof(SpannerNumeric))
             {
-                if (TypeCode != TypeCode.Numeric)
+                // Check if Float64 is being read as SpannerNumeric due to user provided type mapping. 
+                bool configuredFloat64AsSpannerNumeric = TypeCode == TypeCode.Float64 && 
+                    options.Float64ToConfiguredClrType == typeof(SpannerNumeric);
+
+                if (TypeCode != TypeCode.Numeric && !configuredFloat64AsSpannerNumeric)
                 {
                     throw new ArgumentException($"{targetClrType.FullName} can only be used for numeric results");
                 }
@@ -603,6 +608,8 @@ namespace Google.Cloud.Spanner.Data
                         return null;
                     case Value.KindOneofCase.StringValue:
                         return SpannerNumeric.Parse(wireValue.StringValue);
+                    case Value.KindOneofCase.NumberValue:
+                        return SpannerNumeric.FromDecimal(Convert.ToDecimal(wireValue.NumberValue), LossOfPrecisionHandling.Truncate);
                     default:
                         throw new InvalidOperationException(
                             $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}");
@@ -610,9 +617,18 @@ namespace Google.Cloud.Spanner.Data
             }
             if (targetClrType == typeof(PgNumeric))
             {
-                if (TypeCode != TypeCode.Numeric || TypeAnnotationCode != TypeAnnotationCode.PgNumeric)
+                bool isPgNumeric = TypeAnnotationCode == TypeAnnotationCode.PgNumeric;
+                bool isFloat64 = TypeCode == TypeCode.Float64;
+                // Check if Float64 is being read as PgNumeric due to user provided type mapping. 
+                bool configuredFloat64AsPgNumeric = isFloat64 && options.Float64ToConfiguredClrType == typeof(PgNumeric); 
+                // For PgNumeric, the value is contained in Value.StringValue.
+                // If the user configures that Float64 should be mapped to PgNumeric CLR type in connection string,
+                // we will need to read Float64 as PgNumeric. The Float64 value is populated in NumberValue of Value.
+                // If the TypeCode is Float64 due to user configured mapping or TypeAnnotationCode is PgNumeric, it is fine.
+                // In all other cases, throw an exception.
+                if (!isPgNumeric && !configuredFloat64AsPgNumeric)
                 {
-                    throw new ArgumentException($"{targetClrType.FullName} can only be used for numeric results");
+                    throw new ArgumentException($"{targetClrType.FullName} can only be used for numeric results and only when working with a PostgreSQL dialect.");
                 }
                 switch (wireValue.KindCase)
                 {
@@ -620,6 +636,8 @@ namespace Google.Cloud.Spanner.Data
                         return null;
                     case Value.KindOneofCase.StringValue:
                         return V1.PgNumeric.Parse(wireValue.StringValue);
+                    case Value.KindOneofCase.NumberValue:
+                        return V1.PgNumeric.FromDecimal(Convert.ToDecimal(wireValue.NumberValue));
                     default:
                         throw new InvalidOperationException(
                             $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}");
