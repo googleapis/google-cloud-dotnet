@@ -12,10 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Spanner.V1;
 using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Collections.Generic;
 using Xunit;
+using static Google.Cloud.Spanner.Data.SpannerConversionOptions;
 
 namespace Google.Cloud.Spanner.Data.Tests
 {
@@ -230,6 +232,57 @@ namespace Google.Cloud.Spanner.Data.Tests
         public void CommitTimestampConversion_WrongType()
         {
             Assert.Throws<InvalidOperationException>(() => SpannerDbType.Date.ToProtobufValue(SpannerParameter.CommitTimestamp));
+        }
+
+        public static IEnumerable<object[]> ConfiguredClrTypes()
+        {
+            // Format : SpannerDbType, SpannerConversionOptions, expected ClrType.
+
+            // Cases where type mapping will determine the CLR type.
+            yield return new object[] { SpannerDbType.Float64, GetSpannerConversionOptions(Float64ToSingle), typeof(float) };
+            yield return new object[] { SpannerDbType.Float64, GetSpannerConversionOptions(Float64ToDecimal), typeof(decimal) };
+            yield return new object[] { SpannerDbType.Float64, GetSpannerConversionOptions(Float64ToDouble), typeof(double) };
+            yield return new object[] { SpannerDbType.Float64, GetSpannerConversionOptions(Float64ToSpannerNumeric), typeof(SpannerNumeric) };
+            yield return new object[] { SpannerDbType.Float64, GetSpannerConversionOptions(Float64ToPgNumeric), typeof(PgNumeric) };
+            yield return new object[] { SpannerDbType.Date, GetSpannerConversionOptions(DateToDateTime), typeof(DateTime) };
+            yield return new object[] { SpannerDbType.Date, GetSpannerConversionOptions(DateToSpannerDate), typeof(SpannerDate) };
+
+            // Cases where type mapping is provided but will be ignored.
+            // Mapping configuration is applicable only to Float64 and Date.
+            // Type mappings will be ignored for all other SpannerDbType.
+            yield return new object[] { SpannerDbType.Numeric, GetSpannerConversionOptions(Float64ToSingle), typeof(SpannerNumeric) };
+            yield return new object[] { SpannerDbType.PgNumeric, GetSpannerConversionOptions(Float64ToDecimal), typeof(PgNumeric) };
+            yield return new object[] { SpannerDbType.Timestamp, GetSpannerConversionOptions(DateToDateTime), typeof(DateTime) };
+            yield return new object[] { SpannerDbType.Timestamp, GetSpannerConversionOptions(DateToSpannerDate), typeof(DateTime) };
+
+            // Cases where we should see default mapping as no type mapping is provided in the connection string.
+            yield return new object[] { SpannerDbType.Float64, GetSpannerConversionOptions(default), typeof(double) };
+            yield return new object[] { SpannerDbType.Timestamp, GetSpannerConversionOptions(default), typeof(DateTime) };
+            yield return new object[] { SpannerDbType.Date, GetSpannerConversionOptions(default), typeof(DateTime) };
+
+            // Cases where we should see default mapping as default SpannerConversionOptions are used.
+            // Note: SpannerConversionOptions is never null for this method.
+            yield return new object[] { SpannerDbType.Float64, Default, typeof(double) };
+            yield return new object[] { SpannerDbType.Timestamp, Default, typeof(DateTime) };
+            yield return new object[] { SpannerDbType.Date, Default, typeof(DateTime) };
+        }
+
+        private static SpannerConversionOptions GetSpannerConversionOptions(string spannerToClrTypeMappings)
+        {
+            var connectionStringBuilder = new SpannerConnectionStringBuilder
+            {
+                SpannerToClrTypeDefaultMappings = spannerToClrTypeMappings
+            };
+
+            return ForConnectionStringBuilder(connectionStringBuilder);
+        }
+
+        [Theory]
+        [MemberData(nameof(ConfiguredClrTypes))]
+        internal void GetConfiguredClrType(SpannerDbType dbType, SpannerConversionOptions options, System.Type expectedType)
+        {
+            var actualType = dbType.GetConfiguredClrType(options);
+            Assert.Equal(expectedType, actualType);
         }
     }
 }

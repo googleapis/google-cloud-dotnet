@@ -149,7 +149,8 @@ namespace Google.Cloud.Spanner.Data
                     $"{nameof(SpannerDbType)} must be set to one of "
                     + $"({nameof(SpannerDbType.Bool)}, {nameof(SpannerDbType.Int64)}, {nameof(SpannerDbType.Float64)},"
                     + $" {nameof(SpannerDbType.Timestamp)}, {nameof(SpannerDbType.Date)}, {nameof(SpannerDbType.String)},"
-                    + $" {nameof(SpannerDbType.Bytes)}, {nameof(SpannerDbType.Json)}, {nameof(SpannerDbType.Numeric)})");
+                    + $" {nameof(SpannerDbType.Bytes)}, {nameof(SpannerDbType.Json)}, {nameof(SpannerDbType.Numeric)},"
+                    + $" {nameof(SpannerDbType.PgNumeric)})");
             }
             return Value;
         }
@@ -160,7 +161,25 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         /// <param name="options">Options to configure the <c>SpannerDbType</c> for this <c>SpannerParameter</c>.</param>
         /// <returns>The configured <see cref="SpannerDbType"/>.</returns>
-        internal SpannerDbType GetConfiguredSpannerDbType(SpannerConversionOptions options) => SpannerDbType;
+        internal SpannerDbType GetConfiguredSpannerDbType(SpannerConversionOptions options)
+        {
+            // Only if SpannerDbType of parameter is not explicitly provided by user.
+            if (_spannerDbType == null)
+            {
+                if (Value is decimal)
+                {
+                    return options.DecimalToConfiguredSpannerType;
+                }
+
+                if (Value is DateTime)
+                {
+                    return options.DateTimeToConfiguredSpannerType;
+                }
+            }
+
+            // If we are here, use defaults.
+            return SpannerDbType;
+        }
 
         /// <inheritdoc />
         public override void ResetDbType()

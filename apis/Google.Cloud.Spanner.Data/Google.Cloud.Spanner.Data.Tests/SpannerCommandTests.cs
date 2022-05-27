@@ -30,6 +30,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Transactions;
 using Xunit;
+using static Google.Cloud.Spanner.Data.SpannerConversionOptions;
 
 namespace Google.Cloud.Spanner.Data.Tests
 {
@@ -989,7 +990,134 @@ namespace Google.Cloud.Spanner.Data.Tests
                 It.IsAny<CallSettings>()), Times.Exactly(10));
         }
 
-        internal static SpannerConnection BuildSpannerConnection(Mock<SpannerClient> spannerClientMock)
+        public static IEnumerable<object[]> ConfiguredSpannerDbTypes()
+        {
+            // Format : ClrToSpannerTypeDefaultMappings value, Parameter value, expected SpannerDbType.
+            // Decimal mappings.
+            yield return new object[] { default, 3.14m, SpannerDbType.Float64 };
+            yield return new object[] { DecimalToFloat64, 3.14m, SpannerDbType.Float64 };
+            yield return new object[] { DecimalToNumeric, 3.14m, SpannerDbType.Numeric };
+            yield return new object[] { DecimalToPgNumeric, 3.14m, SpannerDbType.PgNumeric };
+
+            // DateTime mappings.
+            yield return new object[] { default, new DateTime(2022, 05, 26, 12, 12, 12), SpannerDbType.Timestamp };
+            yield return new object[] { DateTimeToTimestamp, new DateTime(2022, 05, 26, 12, 12, 12), SpannerDbType.Timestamp };
+            yield return new object[] { DateTimeToDate, new DateTime(2022, 05, 26, 12, 12, 12), SpannerDbType.Date };
+        }
+
+        [Theory]
+        [MemberData(nameof(ConfiguredSpannerDbTypes))]
+        public void ExecuteStreamingSql_ParameterDefaultsToConfiguredType(string clrToSpannerTypeMapping, object value, SpannerDbType spannerDbType)
+        {
+            var builder = new SpannerConnectionStringBuilder();
+            if (!string.IsNullOrWhiteSpace(clrToSpannerTypeMapping))
+            {
+                builder.ClrToSpannerTypeDefaultMappings = clrToSpannerTypeMapping;
+            }
+
+            var parameter = new SpannerParameter
+            {
+                ParameterName = "p",
+                Value = value
+            };
+            var actualValue = RunExecuteStreamingSqlWithParameter(builder, parameter).Fields["p"];
+            var expectedValue = spannerDbType.ToProtobufValue(parameter.Value);
+            Assert.Equal(expectedValue, actualValue);
+        }
+
+        public static IEnumerable<object[]> ConfiguredClrTypes()
+        {
+            // Format : SpannerToClrTypeDefaultMappings value, value, SpannerDbType, expected CLR type.
+            // Float64 mappings.
+            yield return new object[] { default, 3.14d, SpannerDbType.Float64, typeof(double) };
+            yield return new object[] { Float64ToSingle, 3.14d, SpannerDbType.Float64, typeof(float) };
+            yield return new object[] { Float64ToDouble, 3.14d, SpannerDbType.Float64, typeof(double) };
+            yield return new object[] { Float64ToDecimal, 3.14d, SpannerDbType.Float64, typeof(decimal) };
+            yield return new object[] { Float64ToSpannerNumeric, 3.14d, SpannerDbType.Float64, typeof(SpannerNumeric) };
+            yield return new object[] { Float64ToPgNumeric, 3.14d, SpannerDbType.Float64, typeof(PgNumeric) };
+
+            //// Date mappings.
+            yield return new object[] { default, "2022-05-26", SpannerDbType.Date, typeof(DateTime) };
+            yield return new object[] { DateToDateTime, "2022-05-26", SpannerDbType.Date, typeof(DateTime) };
+            yield return new object[] { DateToSpannerDate, "2022-05-26", SpannerDbType.Date, typeof(SpannerDate) };
+        }
+
+        [Theory]
+        [MemberData(nameof(ConfiguredClrTypes))]
+        public void ExecuteReadRequest_ColumnDefaultsToConfiguredClrType(string spannerToClrTypeMapping, object dbValue, SpannerDbType dbType, System.Type clrType)
+        {
+            var builder = new SpannerConnectionStringBuilder();
+            if (!string.IsNullOrWhiteSpace(spannerToClrTypeMapping))
+            {
+                builder.SpannerToClrTypeDefaultMappings = spannerToClrTypeMapping;
+            }
+            var options = SpannerConversionOptions.ForConnectionStringBuilder(builder);
+            Value protobufValue = RunReadRequest(builder, dbType, dbValue).Values[0];
+            // This is a hack, but simpler to do what DataReader does behind the scenes.
+            var clrValue = dbType.ConvertToClrType<object>(protobufValue, options);
+            // Check that CLR type of value is as expected.
+            Assert.Equal(clrType, clrValue.GetType());
+        }
+
+        private Struct RunExecuteStreamingSqlWithParameter(SpannerConnectionStringBuilder builder, SpannerParameter parameter)
+        {
+            var request = new ExecuteSqlRequest();
+            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupExecuteStreamingSql(request);
+
+            var connection = BuildSpannerConnection(spannerClientMock, builder);
+
+            var command = connection.CreateSelectCommand("SELECT * FROM FOO");
+            command.Parameters.Add(parameter);
+            using var reader = command.ExecuteReader();
+            Assert.True(reader.HasRows);
+            spannerClientMock.Verify(client => client.ExecuteStreamingSql(
+                It.IsAny<ExecuteSqlRequest>(),
+                It.IsAny<CallSettings>()), Times.Once());
+            return request.Params;
+        }
+
+        // TODO: Ensure that builder is correctly used.
+        private ListValue RunReadRequest(SpannerConnectionStringBuilder builder, SpannerDbType dbType, object value)
+        {
+            var request = new ReadRequest();
+            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupStreamingRead(request);
+
+            var connection = BuildSpannerConnection(spannerClientMock, builder);
+
+            var command = connection.CreateReadCommand(
+                 "Foo", ReadOptions.FromColumns(new List<string> { "Col1" }),
+                 KeySet.FromParameters(new SpannerParameterCollection
+                     {
+                        { "p", dbType, value } 
+                     }));
+            using var reader = command.ExecuteReader();
+            Assert.True(reader.HasRows);
+            // Handle the cases of Float64 and Date for now.
+            Value val = dbType == SpannerDbType.Float64 ? Value.ForNumber((double)value) : Value.ForString((string)value);
+            spannerClientMock.Verify(client => client.StreamingRead(It.Is<ReadRequest>(request => request.KeySet.Equals(new V1.KeySet
+            {
+                Keys = { new ListValue { Values = { val } } }
+            })),
+            It.IsAny<CallSettings>()));
+            return request.KeySet.Keys[0];
+        }
+
+        internal static SpannerConnection BuildSpannerConnection(Mock<SpannerClient> spannerClientMock) =>
+            BuildSpannerConnection(spannerClientMock, new SpannerConnectionStringBuilder());
+
+        /// <summary>
+        /// Builds a spanner connection based on the given mock and connection string builder.
+        /// The connection string builder will be mutated during the course of this method.
+        /// </summary>
+        internal static SpannerConnection BuildSpannerConnection(Mock<SpannerClient> spannerClientMock, SpannerConnectionStringBuilder builder)
         {
             var spannerClient = spannerClientMock.Object;
             var sessionPoolOptions = new SessionPoolOptions
@@ -1000,13 +1128,9 @@ namespace Google.Cloud.Spanner.Data.Tests
             var sessionPoolManager = new SessionPoolManager(sessionPoolOptions, spannerClient.Settings, spannerClient.Settings.Logger, (_o, _s, _l) => Task.FromResult(spannerClient));
             sessionPoolManager.SpannerSettings.Scheduler = spannerClient.Settings.Scheduler;
             sessionPoolManager.SpannerSettings.Clock = spannerClient.Settings.Clock;
-
-            SpannerConnectionStringBuilder builder = new SpannerConnectionStringBuilder
-            {
-                DataSource = DatabaseName.Format(SpannerClientHelpers.ProjectId, SpannerClientHelpers.Instance, SpannerClientHelpers.Database),
-                SessionPoolManager = sessionPoolManager
-            };
-
+            
+            builder.DataSource = DatabaseName.Format(SpannerClientHelpers.ProjectId, SpannerClientHelpers.Instance, SpannerClientHelpers.Database);
+            builder.SessionPoolManager = sessionPoolManager;
             return new SpannerConnection(builder);
         }
 

@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
 using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1;
 using Grpc.Core;
@@ -52,7 +51,9 @@ namespace Google.Cloud.Spanner.Data
         private const string EnableGetSchemaTableKeyword = "EnableGetSchemaTable";
         private const string LogCommitStatsKeyword = "LogCommitStats";
         private const string EmulatorDetectionKeyword = "EmulatorDetection";
-
+        private const string ClrToSpannerTypeDefaultMappingsKeyword = "ClrToSpannerTypeDefaultMappings";
+        private const string SpannerToClrTypeDefaultMappingsKeyword = "SpannerToClrTypeDefaultMappings";
+        
         private InstanceName _instanceName;
         private DatabaseName _databaseName;
 
@@ -94,7 +95,11 @@ namespace Google.Cloud.Spanner.Data
         public bool UseClrDefaultForNull
         {
             get => GetValueOrDefault(UseClrDefaultForNullKeyword).Equals("True", StringComparison.OrdinalIgnoreCase);
-            set => this[UseClrDefaultForNullKeyword] = value.ToString(); // Always "True" or "False", regardless of culture.
+            set
+            {
+                ConversionOptions = ConversionOptions.WithClrDefaultForNullSetting(value);
+                this[UseClrDefaultForNullKeyword] = value.ToString(); // Always "True" or "False", regardless of culture.
+            }
         }
 
         // Note: GetSchemaTable can't be a link as it wouldn't build on netstandard1.0.
@@ -138,6 +143,116 @@ namespace Google.Cloud.Spanner.Data
             }
 
             return dataSource;
+        }
+
+        // TODO: Move the docs into the connection string docs (and link to them from here) for both the new properties.
+
+        /// <summary>
+        /// Option to configure the default CLR type to SpannerDbType mapping. This option comes into picture
+        /// only if <see cref="SpannerDbType"/> and <see cref="System.Data.DbType"/> of the <see cref="SpannerParameter"/>
+        /// are not explicitly provided. Currently only <see cref="decimal"/> and <see cref="DateTime"/> CLR types are supported.
+        /// </summary>
+        /// <remarks>
+        /// The valid type mappings for decimal are: 
+        /// <para><c>DecimalToFloat64</c> - <see cref="decimal"/> CLR type will map to <see cref="SpannerDbType.Float64"/>, 
+        /// if <see cref="SpannerDbType"/> and <see cref="System.Data.DbType"/> is not explicitly provided for the <see cref="SpannerParameter"/>.
+        /// </para>
+        /// <para><c>DecimalToNumeric</c> - <see cref="decimal"/> CLR type will map to <see cref="SpannerDbType.Numeric"/>, 
+        /// if <see cref="SpannerDbType"/> and <see cref="System.Data.DbType"/> is not explicitly provided for the <see cref="SpannerParameter"/>. 
+        /// This should be used while working with Google Standard SQL dialect only.
+        /// </para>
+        /// <para><c>DecimalToPgNumeric</c> - <see cref="decimal"/> CLR type will map to <see cref="SpannerDbType.PgNumeric"/>, 
+        /// if <see cref="SpannerDbType"/> and <see cref="System.Data.DbType"/> is not explicitly provided for the <see cref="SpannerParameter"/>.
+        /// This should be used while working with PostgreSQL dialect only.
+        /// </para>
+        /// The valid type mappings for DateTime are: 
+        /// <para><c>DateTimeToDate</c> - <see cref="DateTime"/> CLR type will map to <see cref="SpannerDbType.Date"/>, 
+        /// if <see cref="SpannerDbType"/> and <see cref="System.Data.DbType"/> is not explicitly provided for the <see cref="SpannerParameter"/>.
+        /// </para>
+        /// <para><c>DateTimeToTimestamp</c> - <see cref="DateTime"/> CLR type will map to <see cref="SpannerDbType.Timestamp"/>, 
+        /// if <see cref="SpannerDbType"/> and <see cref="System.Data.DbType"/> is not explicitly provided for the <see cref="SpannerParameter"/>.
+        /// </para>
+        /// The mapping can be provided as comma separated values. Only one mapping for a type must be provided. 
+        /// Providing mutiple mapping for a type, or providing invalid mapping or providing whitespaces will result in <see cref="ArgumentException"/>. Few examples of valid values are:
+        /// <para>
+        /// DecimalToFloat64,DateTimeToDate
+        /// </para>
+        /// <para>
+        /// DecimalToNumeric,DateTimeToTimestamp
+        /// </para>
+        /// <para>
+        /// This property corresponds with the value of the "ClrToSpannerTypeDefaultMappings" part of the connection string.
+        /// </para>
+        /// </remarks>
+        public string ClrToSpannerTypeDefaultMappings
+        {
+            get => GetValueOrDefault(ClrToSpannerTypeDefaultMappingsKeyword);
+            set
+            {
+                ConversionOptions = ConversionOptions.WithClrToSpannerMappings(value);
+                this[ClrToSpannerTypeDefaultMappingsKeyword] = value;
+            }
+        }
+
+        /// <summary>
+        /// Option to configure the default SpannerDbType to CLR type mappings. This option comes into picture
+        /// only if CLR type of the value being read is not explicitly provided while reading the data from the database.
+        /// Currently only <see cref="SpannerDbType.Float64"/> and <see cref="SpannerDbType.Date"/> are supported.
+        /// </summary>        
+        /// <remarks>
+        /// The valid type mappings for Float64 are:
+        /// <para>
+        /// <c>Float64ToSingle</c> - <see cref="SpannerDbType.Float64"/> will map to <see cref="float"/>, 
+        /// if CLR type of the value being read is not explicitly provided.
+        /// </para>
+        /// <para>
+        /// <c>Float64ToDouble</c> - <see cref="SpannerDbType.Float64"/> will map to <see cref="double"/>, 
+        /// if CLR type of the value being read is not explicitly provided.
+        /// </para>
+        /// <para>
+        /// <c>Float64ToDecimal</c> - <see cref="SpannerDbType.Float64"/> will map to <see cref="decimal"/>, 
+        /// if CLR type of the value being read is not explicitly provided.
+        /// </para>
+        /// <para>
+        /// <c>Float64ToSpannerNumeric</c> - <see cref="SpannerDbType.Float64"/> will map to <see cref="SpannerNumeric"/>, 
+        /// if CLR type of the value being read is not explicitly provided. 
+        /// This should be used while working with Google Standard SQL dialect only.
+        /// </para>
+        /// <para>
+        /// <c>Float64ToPgNumeric</c> - <see cref="SpannerDbType.Float64"/> will map to <see cref="PgNumeric"/>, 
+        /// if CLR type of the value being read is not explicitly provided. 
+        /// This should be used while working with PostgreSQL SQL dialect only.
+        /// </para>
+        /// The valid type mappings for Date are: 
+        /// <para>
+        /// <c>DateToDateTime</c> - <see cref="SpannerDbType.Date"/> will map to <see cref="DateTime"/>, 
+        /// if CLR type of the value being read is not explicitly provided.
+        /// </para>
+        /// <para>
+        /// <c>DateToSpannerDate</c> - <see cref="SpannerDbType.Date"/> will map to <see cref="SpannerDate"/>, 
+        /// if CLR type of the value being read is not explicitly provided.
+        /// </para>
+        /// The mapping can be provided as comma separated values. Only one mapping for a SpannerDbType must be provided. 
+        /// Providing mutiple mapping for a type, or providing invalid mapping or providing whitespaces will result in <see cref="ArgumentException"/>. 
+        /// Few examples of valid values are:
+        /// <para>
+        /// Float64ToDecimal,DateToDateTime
+        /// </para>
+        /// <para>
+        /// Float64ToDouble,DateToSpannerDate
+        /// </para>
+        /// <para>
+        /// This property corresponds with the value of the "SpannerToClrTypeDefaultMappings" part of the connection string.
+        /// </para>
+        /// </remarks>
+        public string SpannerToClrTypeDefaultMappings
+        {
+            get => GetValueOrDefault(SpannerToClrTypeDefaultMappingsKeyword);
+            set
+            {
+                ConversionOptions = ConversionOptions.WithSpannerToClrMappings(value);
+                this[SpannerToClrTypeDefaultMappingsKeyword] = value;
+            }
         }
 
         // Note: EndPoint rather than Endpoint to avoid an unnecessary breaking change from V1.
@@ -381,7 +496,7 @@ namespace Google.Cloud.Spanner.Data
         /// Must not be null.</param>
         /// <param name="credentials">The credential to use for the connection. May be null.</param>
         /// <param name="sessionPoolManager">The session pool manager to use. Must not be null.</param>
-        public SpannerConnectionStringBuilder(string connectionString, ChannelCredentials credentials, SessionPoolManager sessionPoolManager)
+        public SpannerConnectionStringBuilder(string connectionString, ChannelCredentials credentials, SessionPoolManager sessionPoolManager) : this()
         {
             ConnectionString = GaxPreconditions.CheckNotNull(connectionString, nameof(connectionString));
             CredentialOverride = credentials;
@@ -391,12 +506,12 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Creates a new <see cref="SpannerConnectionStringBuilder"/>.
         /// </summary>
-        public SpannerConnectionStringBuilder() { }
-
+        public SpannerConnectionStringBuilder() => ConversionOptions = SpannerConversionOptions.Default;
 
         internal SpannerConnectionStringBuilder Clone() => new SpannerConnectionStringBuilder(ConnectionString, CredentialOverride, SessionPoolManager)
         {
-            EnvironmentVariableProvider = EnvironmentVariableProvider
+            EnvironmentVariableProvider = EnvironmentVariableProvider,
+            ConversionOptions = ConversionOptions
         };
 
         internal SpannerConnectionStringBuilder CloneWithNewDataSource(string dataSource)
@@ -455,6 +570,18 @@ namespace Google.Cloud.Spanner.Data
                 {
                     value = ValidatedDataSource((string)value);
                 }
+                else if (string.Equals(keyword, ClrToSpannerTypeDefaultMappingsKeyword, StringComparison.OrdinalIgnoreCase))
+                {
+                    ConversionOptions = ConversionOptions.WithClrToSpannerMappings((string)value);
+                }
+                else if (string.Equals(keyword, SpannerToClrTypeDefaultMappingsKeyword, StringComparison.OrdinalIgnoreCase))
+                {
+                    ConversionOptions = ConversionOptions.WithSpannerToClrMappings((string)value);
+                }
+                else if (string.Equals(keyword, UseClrDefaultForNullKeyword, StringComparison.OrdinalIgnoreCase))
+                {
+                    ConversionOptions = ConversionOptions.WithClrDefaultForNullSetting(bool.Parse((string)value));
+                }
                 base[keyword] = value;
             }
         }
@@ -467,5 +594,10 @@ namespace Google.Cloud.Spanner.Data
         /// is necessarily public.)
         /// </summary>
         internal Func<string, string> EnvironmentVariableProvider { get; set; }
+
+        /// <summary>
+        /// Gets the conversion options associated with this instance of the builder.
+        /// </summary>
+        internal SpannerConversionOptions ConversionOptions { get; private set; }
     }
 }
