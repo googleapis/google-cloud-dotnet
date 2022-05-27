@@ -27,25 +27,30 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             "CiVnb29nbGUvZmlyZXN0b3JlL2FkbWluL3YxL2ZpZWxkLnByb3RvEhlnb29n",
             "bGUuZmlyZXN0b3JlLmFkbWluLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2",
             "aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiVnb29nbGUv",
-            "ZmlyZXN0b3JlL2FkbWluL3YxL2luZGV4LnByb3RvGhxnb29nbGUvYXBpL2Fu",
-            "bm90YXRpb25zLnByb3RvIuUCCgVGaWVsZBIRCgRuYW1lGAEgASgJQgPgQQIS",
-            "QgoMaW5kZXhfY29uZmlnGAIgASgLMiwuZ29vZ2xlLmZpcmVzdG9yZS5hZG1p",
-            "bi52MS5GaWVsZC5JbmRleENvbmZpZxqJAQoLSW5kZXhDb25maWcSMQoHaW5k",
-            "ZXhlcxgBIAMoCzIgLmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjEuSW5kZXgS",
-            "HAoUdXNlc19hbmNlc3Rvcl9jb25maWcYAiABKAgSFgoOYW5jZXN0b3JfZmll",
-            "bGQYAyABKAkSEQoJcmV2ZXJ0aW5nGAQgASgIOnnqQXYKHmZpcmVzdG9yZS5n",
-            "b29nbGVhcGlzLmNvbS9GaWVsZBJUcHJvamVjdHMve3Byb2plY3R9L2RhdGFi",
-            "YXNlcy97ZGF0YWJhc2V9L2NvbGxlY3Rpb25Hcm91cHMve2NvbGxlY3Rpb259",
-            "L2ZpZWxkcy97ZmllbGR9Qt4BCh1jb20uZ29vZ2xlLmZpcmVzdG9yZS5hZG1p",
-            "bi52MUIKRmllbGRQcm90b1ABWj5nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
-            "by9nb29nbGVhcGlzL2ZpcmVzdG9yZS9hZG1pbi92MTthZG1pbqICBEdDRlOq",
-            "Ah9Hb29nbGUuQ2xvdWQuRmlyZXN0b3JlLkFkbWluLlYxygIfR29vZ2xlXENs",
-            "b3VkXEZpcmVzdG9yZVxBZG1pblxWMeoCI0dvb2dsZTo6Q2xvdWQ6OkZpcmVz",
-            "dG9yZTo6QWRtaW46OlYxYgZwcm90bzM="));
+            "ZmlyZXN0b3JlL2FkbWluL3YxL2luZGV4LnByb3RvIsUECgVGaWVsZBIRCgRu",
+            "YW1lGAEgASgJQgPgQQISQgoMaW5kZXhfY29uZmlnGAIgASgLMiwuZ29vZ2xl",
+            "LmZpcmVzdG9yZS5hZG1pbi52MS5GaWVsZC5JbmRleENvbmZpZxI+Cgp0dGxf",
+            "Y29uZmlnGAMgASgLMiouZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5GaWVs",
+            "ZC5UdGxDb25maWcaiQEKC0luZGV4Q29uZmlnEjEKB2luZGV4ZXMYASADKAsy",
+            "IC5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLkluZGV4EhwKFHVzZXNfYW5j",
+            "ZXN0b3JfY29uZmlnGAIgASgIEhYKDmFuY2VzdG9yX2ZpZWxkGAMgASgJEhEK",
+            "CXJldmVydGluZxgEIAEoCBqdAQoJVHRsQ29uZmlnEkQKBXN0YXRlGAEgASgO",
+            "MjAuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5GaWVsZC5UdGxDb25maWcu",
+            "U3RhdGVCA+BBAyJKCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwK",
+            "CENSRUFUSU5HEAESCgoGQUNUSVZFEAISEAoMTkVFRFNfUkVQQUlSEAM6eepB",
+            "dgoeZmlyZXN0b3JlLmdvb2dsZWFwaXMuY29tL0ZpZWxkElRwcm9qZWN0cy97",
+            "cHJvamVjdH0vZGF0YWJhc2VzL3tkYXRhYmFzZX0vY29sbGVjdGlvbkdyb3Vw",
+            "cy97Y29sbGVjdGlvbn0vZmllbGRzL3tmaWVsZH1C3gEKHWNvbS5nb29nbGUu",
+            "ZmlyZXN0b3JlLmFkbWluLnYxQgpGaWVsZFByb3RvUAFaPmdvb2dsZS5nb2xh",
+            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvZmlyZXN0b3JlL2FkbWluL3Yx",
+            "O2FkbWluogIER0NGU6oCH0dvb2dsZS5DbG91ZC5GaXJlc3RvcmUuQWRtaW4u",
+            "VjHKAh9Hb29nbGVcQ2xvdWRcRmlyZXN0b3JlXEFkbWluXFYx6gIjR29vZ2xl",
+            "OjpDbG91ZDo6RmlyZXN0b3JlOjpBZG1pbjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Firestore.Admin.V1.IndexReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Firestore.Admin.V1.IndexReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Field), global::Google.Cloud.Firestore.Admin.V1.Field.Parser, new[]{ "Name", "IndexConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Field.Types.IndexConfig), global::Google.Cloud.Firestore.Admin.V1.Field.Types.IndexConfig.Parser, new[]{ "Indexes", "UsesAncestorConfig", "AncestorField", "Reverting" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Field), global::Google.Cloud.Firestore.Admin.V1.Field.Parser, new[]{ "Name", "IndexConfig", "TtlConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Field.Types.IndexConfig), global::Google.Cloud.Firestore.Admin.V1.Field.Types.IndexConfig.Parser, new[]{ "Indexes", "UsesAncestorConfig", "AncestorField", "Reverting" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Field.Types.TtlConfig), global::Google.Cloud.Firestore.Admin.V1.Field.Types.TtlConfig.Parser, new[]{ "State" }, null, new[]{ typeof(global::Google.Cloud.Firestore.Admin.V1.Field.Types.TtlConfig.Types.State) }, null, null)})
           }));
     }
     #endregion
@@ -94,6 +99,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
     public Field(Field other) : this() {
       name_ = other.name_;
       indexConfig_ = other.indexConfig_ != null ? other.indexConfig_.Clone() : null;
+      ttlConfig_ = other.ttlConfig_ != null ? other.ttlConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -161,6 +167,23 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       }
     }
 
+    /// <summary>Field number for the "ttl_config" field.</summary>
+    public const int TtlConfigFieldNumber = 3;
+    private global::Google.Cloud.Firestore.Admin.V1.Field.Types.TtlConfig ttlConfig_;
+    /// <summary>
+    /// The TTL configuration for this `Field`.
+    /// Setting or unsetting this will enable or disable the TTL for
+    /// documents that have this `Field`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Firestore.Admin.V1.Field.Types.TtlConfig TtlConfig {
+      get { return ttlConfig_; }
+      set {
+        ttlConfig_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -178,6 +201,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       }
       if (Name != other.Name) return false;
       if (!object.Equals(IndexConfig, other.IndexConfig)) return false;
+      if (!object.Equals(TtlConfig, other.TtlConfig)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -187,6 +211,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (indexConfig_ != null) hash ^= IndexConfig.GetHashCode();
+      if (ttlConfig_ != null) hash ^= TtlConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -213,6 +238,10 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(IndexConfig);
       }
+      if (ttlConfig_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(TtlConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -231,6 +260,10 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(IndexConfig);
       }
+      if (ttlConfig_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(TtlConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -246,6 +279,9 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       }
       if (indexConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(IndexConfig);
+      }
+      if (ttlConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TtlConfig);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -267,6 +303,12 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           IndexConfig = new global::Google.Cloud.Firestore.Admin.V1.Field.Types.IndexConfig();
         }
         IndexConfig.MergeFrom(other.IndexConfig);
+      }
+      if (other.ttlConfig_ != null) {
+        if (ttlConfig_ == null) {
+          TtlConfig = new global::Google.Cloud.Firestore.Admin.V1.Field.Types.TtlConfig();
+        }
+        TtlConfig.MergeFrom(other.TtlConfig);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -294,6 +336,13 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             input.ReadMessage(IndexConfig);
             break;
           }
+          case 26: {
+            if (ttlConfig_ == null) {
+              TtlConfig = new global::Google.Cloud.Firestore.Admin.V1.Field.Types.TtlConfig();
+            }
+            input.ReadMessage(TtlConfig);
+            break;
+          }
         }
       }
     #endif
@@ -318,6 +367,13 @@ namespace Google.Cloud.Firestore.Admin.V1 {
               IndexConfig = new global::Google.Cloud.Firestore.Admin.V1.Field.Types.IndexConfig();
             }
             input.ReadMessage(IndexConfig);
+            break;
+          }
+          case 26: {
+            if (ttlConfig_ == null) {
+              TtlConfig = new global::Google.Cloud.Firestore.Admin.V1.Field.Types.TtlConfig();
+            }
+            input.ReadMessage(TtlConfig);
             break;
           }
         }
@@ -640,6 +696,242 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           }
         }
         #endif
+
+      }
+
+      /// <summary>
+      /// The TTL (time-to-live) configuration for documents that have this `Field`
+      /// set.
+      /// Storing a timestamp value into a TTL-enabled field will be treated as
+      /// the document's absolute expiration time. Using any other data type or
+      /// leaving the field absent will disable the TTL for the individual document.
+      /// </summary>
+      public sealed partial class TtlConfig : pb::IMessage<TtlConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<TtlConfig> _parser = new pb::MessageParser<TtlConfig>(() => new TtlConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<TtlConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Firestore.Admin.V1.Field.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TtlConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TtlConfig(TtlConfig other) : this() {
+          state_ = other.state_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TtlConfig Clone() {
+          return new TtlConfig(this);
+        }
+
+        /// <summary>Field number for the "state" field.</summary>
+        public const int StateFieldNumber = 1;
+        private global::Google.Cloud.Firestore.Admin.V1.Field.Types.TtlConfig.Types.State state_ = global::Google.Cloud.Firestore.Admin.V1.Field.Types.TtlConfig.Types.State.Unspecified;
+        /// <summary>
+        /// Output only. The state of the TTL configuration.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Firestore.Admin.V1.Field.Types.TtlConfig.Types.State State {
+          get { return state_; }
+          set {
+            state_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as TtlConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(TtlConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (State != other.State) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (State != global::Google.Cloud.Firestore.Admin.V1.Field.Types.TtlConfig.Types.State.Unspecified) hash ^= State.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (State != global::Google.Cloud.Firestore.Admin.V1.Field.Types.TtlConfig.Types.State.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) State);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (State != global::Google.Cloud.Firestore.Admin.V1.Field.Types.TtlConfig.Types.State.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) State);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (State != global::Google.Cloud.Firestore.Admin.V1.Field.Types.TtlConfig.Types.State.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(TtlConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.State != global::Google.Cloud.Firestore.Admin.V1.Field.Types.TtlConfig.Types.State.Unspecified) {
+            State = other.State;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                State = (global::Google.Cloud.Firestore.Admin.V1.Field.Types.TtlConfig.Types.State) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                State = (global::Google.Cloud.Firestore.Admin.V1.Field.Types.TtlConfig.Types.State) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the TtlConfig message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// The state of applying the TTL configuration to all documents.
+          /// </summary>
+          public enum State {
+            /// <summary>
+            /// The state is unspecified or unknown.
+            /// </summary>
+            [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// The TTL is being applied. There is an active long-running operation to
+            /// track the change. Newly written documents will have TTLs applied as
+            /// requested. Requested TTLs on existing documents are still being
+            /// processed. When TTLs on all existing documents have been processed, the
+            /// state will move to 'ACTIVE'.
+            /// </summary>
+            [pbr::OriginalName("CREATING")] Creating = 1,
+            /// <summary>
+            /// The TTL is active for all documents.
+            /// </summary>
+            [pbr::OriginalName("ACTIVE")] Active = 2,
+            /// <summary>
+            /// The TTL configuration could not be enabled for all existing documents.
+            /// Newly written documents will continue to have their TTL applied.
+            /// The LRO returned when last attempting to enable TTL for this `Field`
+            /// has failed, and may have more details.
+            /// </summary>
+            [pbr::OriginalName("NEEDS_REPAIR")] NeedsRepair = 3,
+          }
+
+        }
+        #endregion
 
       }
 
