@@ -1630,6 +1630,7 @@
         "anthos"
       ],
       "dependencies": {
+        "Google.Cloud.Iam.V1": "2.4.0",
         "Google.Cloud.Location": "1.0.0",
         "Google.LongRunning": "2.3.0"
       },
