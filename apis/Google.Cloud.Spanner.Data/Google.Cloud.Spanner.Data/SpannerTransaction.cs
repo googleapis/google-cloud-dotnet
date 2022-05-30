@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
 using Google.Cloud.Spanner.V1;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
@@ -28,12 +27,36 @@ using System.Threading.Tasks;
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>
+    /// Base class for SpannerTransaction, used for compatibility purposes with <see cref="DbTransaction"/>.
+    /// (This class is able to override a new method added to <see cref="DbTransaction"/>, even if it clashes
+    /// with an existing method declaration in <see cref="SpannerTransaction"/>.)
+    /// </summary>
+    public abstract class SpannerTransactionBase : DbTransaction
+    {
+        // Ensure we only derive from this class within the same assembly.
+        private protected SpannerTransactionBase()
+        {
+        }
+
+        /// <summary>
+        /// Commits the database transaction asynchronously.
+        /// </summary>
+        /// <param name="cancellationToken">A cancellation token used for this task.</param>
+        /// <returns>A task representing the asynchronous operation.</returns>
+        public
+#if NETSTANDARD2_1_OR_GREATER
+        override
+#endif
+        Task CommitAsync(CancellationToken cancellationToken = default) => ((SpannerTransaction) this).CommitAsync(cancellationToken);
+    }
+
+    /// <summary>
     /// Represents a SQL transaction to be made in a Spanner database.
     /// A transaction in Cloud Spanner is a set of reads and writes that execute
     /// atomically at a single logical point in time across columns, rows, and
     /// tables in a database.
     /// </summary>
-    public sealed class SpannerTransaction : DbTransaction, ISpannerTransaction
+    public sealed class SpannerTransaction : SpannerTransactionBase, ISpannerTransaction
     {
         private readonly List<Mutation> _mutations = new List<Mutation>();
         private DisposeBehavior _disposeBehavior = DisposeBehavior.ReleaseToPool;
@@ -355,19 +378,12 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="timestamp">Returns the UTC timestamp when the data was written to the database.</param>
         public void Commit(out DateTime timestamp) => timestamp = Task.Run(() => CommitAsync(default)).ResultWithUnwrappedExceptions();
 
-        // FIXME: This is "new" because there's now CommitAsync in the BCL. That returns just Task, rather than Task<DateTime>,
-        // which is awkward...        
-
         /// <summary>
-        /// Commits the database transaction asynchronously.
+        /// Commits the database transaction asynchronously, returning the commit timestamp.
         /// </summary>
         /// <param name="cancellationToken">A cancellation token used for this task.</param>
         /// <returns>Returns the UTC timestamp when the data was written to the database.</returns>
-#if NET462
-        public Task<DateTime> CommitAsync(CancellationToken cancellationToken = default)
-#else
         public new Task<DateTime> CommitAsync(CancellationToken cancellationToken = default)
-#endif
         {
             GaxPreconditions.CheckState(Mode != TransactionMode.ReadOnly, "You cannot commit a readonly transaction.");
             var request = new CommitRequest { Mutations = { _mutations }, ReturnCommitStats = LogCommitStats, RequestOptions = BuildCommitRequestOptions() };
