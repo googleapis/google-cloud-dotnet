@@ -197,32 +197,9 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Option to configure the default SpannerDbType to CLR type mappings. This option comes into picture
         /// only if CLR type of the value being read is not explicitly provided while reading the data from the database.
-        /// Currently only <see cref="SpannerDbType.Float64"/> and <see cref="SpannerDbType.Date"/> are supported.
+        /// Currently only <see cref="SpannerDbType.Date"/> is supported.
         /// </summary>        
-        /// <remarks>
-        /// The valid type mappings for Float64 are:
-        /// <para>
-        /// <c>Float64ToSingle</c> - <see cref="SpannerDbType.Float64"/> will map to <see cref="float"/>, 
-        /// if CLR type of the value being read is not explicitly provided.
-        /// </para>
-        /// <para>
-        /// <c>Float64ToDouble</c> - <see cref="SpannerDbType.Float64"/> will map to <see cref="double"/>, 
-        /// if CLR type of the value being read is not explicitly provided.
-        /// </para>
-        /// <para>
-        /// <c>Float64ToDecimal</c> - <see cref="SpannerDbType.Float64"/> will map to <see cref="decimal"/>, 
-        /// if CLR type of the value being read is not explicitly provided.
-        /// </para>
-        /// <para>
-        /// <c>Float64ToSpannerNumeric</c> - <see cref="SpannerDbType.Float64"/> will map to <see cref="SpannerNumeric"/>, 
-        /// if CLR type of the value being read is not explicitly provided. 
-        /// This should be used while working with Google Standard SQL dialect only.
-        /// </para>
-        /// <para>
-        /// <c>Float64ToPgNumeric</c> - <see cref="SpannerDbType.Float64"/> will map to <see cref="PgNumeric"/>, 
-        /// if CLR type of the value being read is not explicitly provided. 
-        /// This should be used while working with PostgreSQL SQL dialect only.
-        /// </para>
+        /// <remarks>        
         /// The valid type mappings for Date are: 
         /// <para>
         /// <c>DateToDateTime</c> - <see cref="SpannerDbType.Date"/> will map to <see cref="DateTime"/>, 
@@ -236,10 +213,10 @@ namespace Google.Cloud.Spanner.Data
         /// Providing mutiple mapping for a type, or providing invalid mapping or providing whitespaces will result in <see cref="ArgumentException"/>. 
         /// Few examples of valid values are:
         /// <para>
-        /// Float64ToDecimal,DateToDateTime
+        /// DateToDateTime
         /// </para>
         /// <para>
-        /// Float64ToDouble,DateToSpannerDate
+        /// DateToSpannerDate
         /// </para>
         /// <para>
         /// This property corresponds with the value of the "SpannerToClrTypeDefaultMappings" part of the connection string.

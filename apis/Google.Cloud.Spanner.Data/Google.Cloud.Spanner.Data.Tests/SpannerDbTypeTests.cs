@@ -239,19 +239,12 @@ namespace Google.Cloud.Spanner.Data.Tests
             // Format : SpannerDbType, SpannerConversionOptions, expected ClrType.
 
             // Cases where type mapping will determine the CLR type.
-            yield return new object[] { SpannerDbType.Float64, GetSpannerConversionOptions(Float64ToSingle), typeof(float) };
-            yield return new object[] { SpannerDbType.Float64, GetSpannerConversionOptions(Float64ToDecimal), typeof(decimal) };
-            yield return new object[] { SpannerDbType.Float64, GetSpannerConversionOptions(Float64ToDouble), typeof(double) };
-            yield return new object[] { SpannerDbType.Float64, GetSpannerConversionOptions(Float64ToSpannerNumeric), typeof(SpannerNumeric) };
-            yield return new object[] { SpannerDbType.Float64, GetSpannerConversionOptions(Float64ToPgNumeric), typeof(PgNumeric) };
             yield return new object[] { SpannerDbType.Date, GetSpannerConversionOptions(DateToDateTime), typeof(DateTime) };
             yield return new object[] { SpannerDbType.Date, GetSpannerConversionOptions(DateToSpannerDate), typeof(SpannerDate) };
 
             // Cases where type mapping is provided but will be ignored.
             // Mapping configuration is applicable only to Float64 and Date.
             // Type mappings will be ignored for all other SpannerDbType.
-            yield return new object[] { SpannerDbType.Numeric, GetSpannerConversionOptions(Float64ToSingle), typeof(SpannerNumeric) };
-            yield return new object[] { SpannerDbType.PgNumeric, GetSpannerConversionOptions(Float64ToDecimal), typeof(PgNumeric) };
             yield return new object[] { SpannerDbType.Timestamp, GetSpannerConversionOptions(DateToDateTime), typeof(DateTime) };
             yield return new object[] { SpannerDbType.Timestamp, GetSpannerConversionOptions(DateToSpannerDate), typeof(DateTime) };
 

@@ -243,15 +243,15 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.True(string.IsNullOrEmpty(builder.SpannerToClrTypeDefaultMappings));
 
             // Explicitly set valid type mappings.
-            builder = new SpannerConnectionStringBuilder("SpannerToClrTypeDefaultMappings=Float64ToSpannerNumeric,DateToDateTime");
+            builder = new SpannerConnectionStringBuilder("SpannerToClrTypeDefaultMappings=DateToDateTime");
             // DbConnectionStringBuilder lower-cases keywords, annoyingly.
-            Assert.Equal("spannertoclrtypedefaultmappings=Float64ToSpannerNumeric,DateToDateTime", builder.ToString());
+            Assert.Equal("spannertoclrtypedefaultmappings=DateToDateTime", builder.ToString());
 
             // Explicitly set valid type mappings. Latest should be reflected.
             // Also check that strings  are case insensitive.
-            builder.SpannerToClrTypeDefaultMappings = "float64Todecimal,dateTospannerDate";
+            builder.SpannerToClrTypeDefaultMappings = "dateTospannerDate";
             // DbConnectionStringBuilder lower-cases keywords, annoyingly.
-            Assert.Equal("spannertoclrtypedefaultmappings=float64Todecimal,dateTospannerDate", builder.ToString());
+            Assert.Equal("spannertoclrtypedefaultmappings=dateTospannerDate", builder.ToString());
         }
 
         [Theory]        
@@ -266,12 +266,10 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.Throws<ArgumentException>(() => new SpannerConnectionStringBuilder { ClrToSpannerTypeDefaultMappings = clrToSpannerTypeMappings });
         }
 
-        [Theory]        
-        [InlineData("Float64ToDouble,Float64ToDecimal,DateToDateTime")] // Multiple mappings for a type.
-        [InlineData("Float64ToDecimal,Float64ToPgNumeric,DateToSpannerDate")] // Multiple mappings for a type.        
-        [InlineData("Float64ToDecimal   ,DateToDateTime")] // Whitespace.
-        [InlineData("Float64ToDecimal   ,  DateToDateTime")] // Whitespace.        
-        [InlineData("UseDecimalForFloat,DateToSpannerDate")] // Invalid value.
+        [Theory]
+        [InlineData("DateToDateTime,DateToSpannerDate")] // Multiple mappings for a type.
+        [InlineData("  DateToDateTime  ,")] // Whitespace.   
+        [InlineData("UseDateToSpannerDate")] // Invalid value.
         public void BadSpannerToClrTypeDefaultMappingsThrows(string spannerToClrTypeMappings)
         {
             Assert.Throws<ArgumentException>(() => new SpannerConnectionStringBuilder($"SpannerToClrTypeDefaultMappings={spannerToClrTypeMappings}"));

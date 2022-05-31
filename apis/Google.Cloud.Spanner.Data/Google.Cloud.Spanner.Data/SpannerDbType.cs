@@ -192,7 +192,7 @@ namespace Google.Cloud.Spanner.Data
                 case TypeCode.Int64:
                     return typeof(long);
                 case TypeCode.Float64:
-                    return options.Float64ToConfiguredClrType;
+                    return typeof(double);
                 case TypeCode.Timestamp:
                     return typeof(DateTime);
                 case TypeCode.Date:
