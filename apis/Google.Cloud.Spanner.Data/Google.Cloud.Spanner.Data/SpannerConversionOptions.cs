@@ -41,11 +41,6 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         internal static readonly HashSet<string> AllowedSpannerToClrTypeMappings = new HashSet<string>()
         {
-            Float64ToSingle,
-            Float64ToDouble,
-            Float64ToDecimal,
-            Float64ToSpannerNumeric,
-            Float64ToPgNumeric,
             DateToDateTime,
             DateToSpannerDate
         };
@@ -58,11 +53,6 @@ namespace Google.Cloud.Spanner.Data
         internal const string DateTimeToTimestamp = nameof(DateTimeToTimestamp);
 
         // Constants for Spanner To CLR type mappings.
-        internal const string Float64ToSingle = nameof(Float64ToSingle);
-        internal const string Float64ToDouble = nameof(Float64ToDouble);
-        internal const string Float64ToDecimal = nameof(Float64ToDecimal);
-        internal const string Float64ToSpannerNumeric = nameof(Float64ToSpannerNumeric);
-        internal const string Float64ToPgNumeric = nameof(Float64ToPgNumeric);
         internal const string DateToSpannerDate = nameof(DateToSpannerDate);
         internal const string DateToDateTime = nameof(DateToDateTime);
 
@@ -92,11 +82,6 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         internal System.Type DateToConfiguredClrType { get; private set; }
 
-        /// <summary>
-        /// Gets the configured CLR type for the Float64 SpannerDbType.
-        /// </summary>
-        internal System.Type Float64ToConfiguredClrType { get; private set; }
-
         private SpannerConversionOptions(bool useDBNull)
         {
             UseDBNull = useDBNull;
@@ -121,8 +106,7 @@ namespace Google.Cloud.Spanner.Data
         {
             DateTimeToConfiguredSpannerType = DateTimeToConfiguredSpannerType,
             DecimalToConfiguredSpannerType = DecimalToConfiguredSpannerType,
-            DateToConfiguredClrType = DateToConfiguredClrType,
-            Float64ToConfiguredClrType = Float64ToConfiguredClrType
+            DateToConfiguredClrType = DateToConfiguredClrType
         };
 
         internal SpannerConversionOptions WithClrDefaultForNullSetting(bool useClrDefaultToNull)
@@ -174,12 +158,6 @@ namespace Google.Cloud.Spanner.Data
             }
 
             // Check multiples for each type.
-            // Currently, we have Float64 and Date to check.
-            if (mappings.Count(j => j.StartsWith("Float64", StringComparison.OrdinalIgnoreCase)) > 1)
-            {
-                throw new ArgumentException($"'{input}' is not a valid value as multiple mappings from Float64 to CLR type are provided for ${nameof(SpannerConnectionStringBuilder.SpannerToClrTypeDefaultMappings)}");
-            }
-
             if (mappings.Count(j => j.StartsWith("Date", StringComparison.OrdinalIgnoreCase)) > 1)
             {
                 throw new ArgumentException($"'{input}' is not a valid value as multiple mappings from Date to CLR type are provided for ${nameof(SpannerConnectionStringBuilder.SpannerToClrTypeDefaultMappings)}");
@@ -188,27 +166,7 @@ namespace Google.Cloud.Spanner.Data
             // If we reach here, all is well.
             foreach (var mapping in mappings)
             {
-                if (string.Equals(mapping, Float64ToDecimal, StringComparison.OrdinalIgnoreCase))
-                {
-                    options.Float64ToConfiguredClrType = typeof(decimal);
-                }
-                else if (string.Equals(mapping, Float64ToDouble, StringComparison.OrdinalIgnoreCase))
-                {
-                    options.Float64ToConfiguredClrType = typeof(double);
-                }
-                else if (string.Equals(mapping, Float64ToSingle, StringComparison.OrdinalIgnoreCase))
-                {
-                    options.Float64ToConfiguredClrType = typeof(float);
-                }
-                else if (string.Equals(mapping, Float64ToSpannerNumeric, StringComparison.OrdinalIgnoreCase))
-                {
-                    options.Float64ToConfiguredClrType = typeof(SpannerNumeric);
-                }
-                else if (string.Equals(mapping, Float64ToPgNumeric, StringComparison.OrdinalIgnoreCase))
-                {
-                    options.Float64ToConfiguredClrType = typeof(PgNumeric);
-                }
-                else if (string.Equals(mapping, DateToDateTime, StringComparison.OrdinalIgnoreCase))
+                if (string.Equals(mapping, DateToDateTime, StringComparison.OrdinalIgnoreCase))
                 {
                     options.DateToConfiguredClrType = typeof(DateTime);
                 }
@@ -228,7 +186,6 @@ namespace Google.Cloud.Spanner.Data
         internal void SetSpannerToClrTypeDefaults()
         {
             DateToConfiguredClrType = typeof(DateTime);
-            Float64ToConfiguredClrType = typeof(double);
         }
 
         private void ValidateAndParseClrToSpannerTypeMappings(string input, SpannerConversionOptions options)

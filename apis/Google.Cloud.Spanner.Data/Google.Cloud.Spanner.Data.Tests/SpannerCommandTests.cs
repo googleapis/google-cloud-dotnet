@@ -1030,11 +1030,6 @@ namespace Google.Cloud.Spanner.Data.Tests
             // Format : SpannerToClrTypeDefaultMappings value, value, SpannerDbType, expected CLR type.
             // Float64 mappings.
             yield return new object[] { default, 3.14d, SpannerDbType.Float64, typeof(double) };
-            yield return new object[] { Float64ToSingle, 3.14d, SpannerDbType.Float64, typeof(float) };
-            yield return new object[] { Float64ToDouble, 3.14d, SpannerDbType.Float64, typeof(double) };
-            yield return new object[] { Float64ToDecimal, 3.14d, SpannerDbType.Float64, typeof(decimal) };
-            yield return new object[] { Float64ToSpannerNumeric, 3.14d, SpannerDbType.Float64, typeof(SpannerNumeric) };
-            yield return new object[] { Float64ToPgNumeric, 3.14d, SpannerDbType.Float64, typeof(PgNumeric) };
 
             //// Date mappings.
             yield return new object[] { default, "2022-05-26", SpannerDbType.Date, typeof(DateTime) };
