@@ -21,6 +21,8 @@ using Xunit;
 
 namespace Google.Cloud.Translation.V2.Snippets
 {
+    using static TranslationClientSnippets;
+
     [SnippetOutputCollector]
     public class AdvancedTranslationClientSnippets
     {
@@ -33,7 +35,7 @@ namespace Google.Cloud.Translation.V2.Snippets
             Console.WriteLine($"Result: {result.TranslatedText}; detected language {result.DetectedSourceLanguage}");
             // End sample
 
-            Assert.Equal("Il pleut.", result.TranslatedText);
+            Assert.Equal(RainingTranslation, result.TranslatedText);
             Assert.Equal("en", result.DetectedSourceLanguage);
         }
 
@@ -46,7 +48,7 @@ namespace Google.Cloud.Translation.V2.Snippets
             Console.WriteLine($"Result: {result.TranslatedText}; detected language {result.DetectedSourceLanguage}");
             // End sample
 
-            Assert.Equal("Il pleut.", result.TranslatedText);
+            Assert.Equal(RainingTranslation, result.TranslatedText);
             Assert.Equal("en", result.DetectedSourceLanguage);
         }
 
@@ -60,7 +62,7 @@ namespace Google.Cloud.Translation.V2.Snippets
             Console.WriteLine($"Result: {result.TranslatedText}; detected language {result.DetectedSourceLanguage}");
             // End sample
 
-            Assert.Equal("Il pleut.", result.TranslatedText);
+            Assert.Equal(RainingTranslation, result.TranslatedText);
             Assert.Equal("en", result.DetectedSourceLanguage);
         }
 
@@ -73,7 +75,7 @@ namespace Google.Cloud.Translation.V2.Snippets
             Console.WriteLine($"Result: {result.TranslatedText}; detected language {result.DetectedSourceLanguage}");
             // End snippet
 
-            Assert.Equal("Il pleut.", result.TranslatedText);
+            Assert.Equal(RainingTranslation, result.TranslatedText);
             Assert.Equal("en", result.DetectedSourceLanguage);
         }
 
@@ -95,7 +97,7 @@ namespace Google.Cloud.Translation.V2.Snippets
             // We skip the <p> element in the check, because sometimes there is a space
             // separating it from the <strong> element, sometimes there isn't.
             // https://github.com/googleapis/google-cloud-dotnet/issues/5366
-            Assert.Contains("<strong>Il pleut.</strong>", result.TranslatedText);
+            Assert.Contains($"<strong>{RainingTranslation}</strong>", result.TranslatedText);
             Assert.Equal("en", result.DetectedSourceLanguage);
         }
 
@@ -111,7 +113,7 @@ namespace Google.Cloud.Translation.V2.Snippets
             // We skip the <p> element in the check, because sometimes there is a space
             // separating it from the <strong> element, sometimes there isn't.
             // https://github.com/googleapis/google-cloud-dotnet/issues/5366
-            Assert.Contains("<strong>Il pleut.</strong>", result.TranslatedText);
+            Assert.Contains($"<strong>{RainingTranslation}</strong>", result.TranslatedText);
             Assert.Equal("en", result.DetectedSourceLanguage);
         }
 
@@ -135,9 +137,9 @@ namespace Google.Cloud.Translation.V2.Snippets
             }
             // End sample
 
-            Assert.Equal("Il pleut.", results[0].TranslatedText);
+            Assert.Equal(RainingTranslation, results[0].TranslatedText);
             Assert.Equal("en", results[0].DetectedSourceLanguage);
-            Assert.Equal("C'est ensoleillé.", results[1].TranslatedText);
+            Assert.Equal(SunnyTranslation, results[1].TranslatedText);
             Assert.Equal("en", results[1].DetectedSourceLanguage);
         }
 
@@ -159,9 +161,9 @@ namespace Google.Cloud.Translation.V2.Snippets
             // We skip the <p> element in the check, because sometimes there is a space
             // separating it from the <strong> element, sometimes there isn't.
             // https://github.com/googleapis/google-cloud-dotnet/issues/5366
-            Assert.Contains("<strong>Il pleut.</strong>", results[0].TranslatedText);
+            Assert.Contains($"<strong>{RainingTranslation}</strong>", results[0].TranslatedText);
             Assert.Equal("en", results[0].DetectedSourceLanguage);
-            Assert.Contains("<strong>C&#39;est ensoleillé.</strong>", results[1].TranslatedText);
+            Assert.Contains($"<strong>{SunnyTranslation}</strong>", results[1].TranslatedText);
             Assert.Equal("en", results[1].DetectedSourceLanguage);
         }
 
@@ -198,7 +200,7 @@ namespace Google.Cloud.Translation.V2.Snippets
             // Sample: DetectLanguages
             // Additional: DetectLanguages(IEnumerable<string>)
             AdvancedTranslationClient client = AdvancedTranslationClient.Create();
-            IList<Detection> results = client.DetectLanguages(new[] { "It is raining.", "Il pleut." });
+            IList<Detection> results = client.DetectLanguages(new[] { "It is raining.", RainingTranslation });
             foreach (var result in results)
             {
                 Console.WriteLine($"Text: {result.Text}; language: {result.Language}; confidence {result.Confidence}");
@@ -208,7 +210,7 @@ namespace Google.Cloud.Translation.V2.Snippets
             Assert.Equal("en", results[0].Language);
             Assert.Equal("It is raining.", results[0].Text);
             Assert.Equal("fr", results[1].Language);
-            Assert.Equal("Il pleut.", results[1].Text);
+            Assert.Equal(RainingTranslation, results[1].Text);
         }
 
         [Fact]
@@ -217,7 +219,7 @@ namespace Google.Cloud.Translation.V2.Snippets
             // Sample: DetectLanguages
             // Additional: DetectLanguagesAsync(IEnumerable<string>, CancellationToken)
             AdvancedTranslationClient client = AdvancedTranslationClient.Create();
-            IList<Detection> results = await client.DetectLanguagesAsync(new[] { "It is raining.", "Il pleut." });
+            IList<Detection> results = await client.DetectLanguagesAsync(new[] { "It is raining.", RainingTranslation });
             foreach (var result in results)
             {
                 Console.WriteLine($"Text: {result.Text}; language: {result.Language}; confidence {result.Confidence}");
@@ -227,7 +229,7 @@ namespace Google.Cloud.Translation.V2.Snippets
             Assert.Equal("en", results[0].Language);
             Assert.Equal("It is raining.", results[0].Text);
             Assert.Equal("fr", results[1].Language);
-            Assert.Equal("Il pleut.", results[1].Text);
+            Assert.Equal(RainingTranslation, results[1].Text);
         }
 
         [Fact]
