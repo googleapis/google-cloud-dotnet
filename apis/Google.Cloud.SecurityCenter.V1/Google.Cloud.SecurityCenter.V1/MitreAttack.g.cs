@@ -25,7 +25,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjFnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvbWl0cmVfYXR0YWNr",
-            "LnByb3RvEh5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEi2AsKC01p",
+            "LnByb3RvEh5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEi7QsKC01p",
             "dHJlQXR0YWNrEkoKDnByaW1hcnlfdGFjdGljGAEgASgOMjIuZ29vZ2xlLmNs",
             "b3VkLnNlY3VyaXR5Y2VudGVyLnYxLk1pdHJlQXR0YWNrLlRhY3RpYxJRChJw",
             "cmltYXJ5X3RlY2huaXF1ZXMYAiADKA4yNS5nb29nbGUuY2xvdWQuc2VjdXJp",
@@ -40,7 +40,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "R0VfRVNDQUxBVElPThAIEhMKD0RFRkVOU0VfRVZBU0lPThAHEhUKEUNSRURF",
             "TlRJQUxfQUNDRVNTEAkSDQoJRElTQ09WRVJZEAoSFAoQTEFURVJBTF9NT1ZF",
             "TUVOVBALEg4KCkNPTExFQ1RJT04QDBIXChNDT01NQU5EX0FORF9DT05UUk9M",
-            "EAQSEAoMRVhGSUxUUkFUSU9OEA0SCgoGSU1QQUNUEA4iuwYKCVRlY2huaXF1",
+            "EAQSEAoMRVhGSUxUUkFUSU9OEA0SCgoGSU1QQUNUEA4i0AYKCVRlY2huaXF1",
             "ZRIZChVURUNITklRVUVfVU5TUEVDSUZJRUQQABITCg9BQ1RJVkVfU0NBTk5J",
             "TkcQARIWChJTQ0FOTklOR19JUF9CTE9DS1MQAhIZChVJTkdSRVNTX1RPT0xf",
             "VFJBTlNGRVIQAxIOCgpOQVRJVkVfQVBJEAQSEgoOU0hBUkVEX01PRFVMRVMQ",
@@ -59,12 +59,13 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "RlJBU1RSVUNUVVJFEBoSJQohRVhQTE9JVF9QVUJMSUNfRkFDSU5HX0FQUExJ",
             "Q0FUSU9OEBsSIQodTU9ESUZZX0FVVEhFTlRJQ0FUSU9OX1BST0NFU1MQHBIU",
             "ChBEQVRBX0RFU1RSVUNUSU9OEB0SHgoaRE9NQUlOX1BPTElDWV9NT0RJRklD",
-            "QVRJT04QHkLsAQoiY29tLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52",
-            "MUIQTWl0cmVBdHRhY2tQcm90b1ABWkxnb29nbGUuZ29sYW5nLm9yZy9nZW5w",
-            "cm90by9nb29nbGVhcGlzL2Nsb3VkL3NlY3VyaXR5Y2VudGVyL3YxO3NlY3Vy",
-            "aXR5Y2VudGVyqgIeR29vZ2xlLkNsb3VkLlNlY3VyaXR5Q2VudGVyLlYxygIe",
-            "R29vZ2xlXENsb3VkXFNlY3VyaXR5Q2VudGVyXFYx6gIhR29vZ2xlOjpDbG91",
-            "ZDo6U2VjdXJpdHlDZW50ZXI6OlYxYgZwcm90bzM="));
+            "QVRJT04QHhITCg9JTVBBSVJfREVGRU5TRVMQH0LsAQoiY29tLmdvb2dsZS5j",
+            "bG91ZC5zZWN1cml0eWNlbnRlci52MUIQTWl0cmVBdHRhY2tQcm90b1ABWkxn",
+            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3Nl",
+            "Y3VyaXR5Y2VudGVyL3YxO3NlY3VyaXR5Y2VudGVyqgIeR29vZ2xlLkNsb3Vk",
+            "LlNlY3VyaXR5Q2VudGVyLlYxygIeR29vZ2xlXENsb3VkXFNlY3VyaXR5Q2Vu",
+            "dGVyXFYx6gIhR29vZ2xlOjpDbG91ZDo6U2VjdXJpdHlDZW50ZXI6OlYxYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -483,7 +484,6 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// <summary>
       /// MITRE ATT&amp;CK techniques that can be referenced by SCC findings.
       /// See: https://attack.mitre.org/techniques/enterprise/
-      /// Next ID: 31
       /// </summary>
       public enum Technique {
         /// <summary>
@@ -610,6 +610,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
         /// T1484
         /// </summary>
         [pbr::OriginalName("DOMAIN_POLICY_MODIFICATION")] DomainPolicyModification = 30,
+        /// <summary>
+        /// T1562
+        /// </summary>
+        [pbr::OriginalName("IMPAIR_DEFENSES")] ImpairDefenses = 31,
       }
 
     }
