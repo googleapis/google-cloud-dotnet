@@ -247,9 +247,9 @@ namespace Google.Cloud.Retail.V2 {
     ///
     /// * user-data
     ///
-    /// * cloud-retail
-    ///   This option requires additional allowlisting. Before using cloud-retail,
-    ///   contact Cloud Retail support team first.
+    /// * cloud-retail:
+    ///   This option requires enabling auto-learning function first. See
+    ///   [guidelines](https://cloud.google.com/retail/docs/completion-overview#generated-completion-dataset).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -642,11 +642,15 @@ namespace Google.Cloud.Retail.V2 {
     /// [CompleteQueryRequest.visitor_id][google.cloud.retail.v2.CompleteQueryRequest.visitor_id]
     /// field is set and [UserEvent][google.cloud.retail.v2.UserEvent] is imported.
     /// The recent searches satisfy the follow rules:
+    ///
     ///  * They are ordered from latest to oldest.
+    ///
     ///  * They are matched with
     ///  [CompleteQueryRequest.query][google.cloud.retail.v2.CompleteQueryRequest.query]
     ///  case insensitively.
+    ///
     ///  * They are transformed to lower cases.
+    ///
     ///  * They are UTF-8 safe.
     ///
     /// Recent searches are deduplicated. More recent searches will be reserved
@@ -892,10 +896,13 @@ namespace Google.Cloud.Retail.V2 {
         private readonly pbc::MapField<string, global::Google.Cloud.Retail.V2.CustomAttribute> attributes_ = new pbc::MapField<string, global::Google.Cloud.Retail.V2.CustomAttribute>();
         /// <summary>
         /// Custom attributes for the suggestion term.
+        ///
         /// * For "user-data", the attributes are additional custom attributes
         /// ingested through BigQuery.
+        ///
         /// * For "cloud-retail", the attributes are product attributes generated
-        /// by Cloud Retail.
+        /// by Cloud Retail. This is an experimental feature. Contact Retail Search
+        /// support team if you are interested in enabling it.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -29,38 +29,39 @@ namespace Google.Cloud.Retail.V2 {
             "cm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byIvCghBdWRp",
             "ZW5jZRIPCgdnZW5kZXJzGAEgAygJEhIKCmFnZV9ncm91cHMYAiADKAkiMwoJ",
             "Q29sb3JJbmZvEhYKDmNvbG9yX2ZhbWlsaWVzGAEgAygJEg4KBmNvbG9ycxgC",
-            "IAMoCSJ+Cg9DdXN0b21BdHRyaWJ1dGUSDAoEdGV4dBgBIAMoCRIPCgdudW1i",
-            "ZXJzGAIgAygBEhcKCnNlYXJjaGFibGUYAyABKAhIAIgBARIWCglpbmRleGFi",
-            "bGUYBCABKAhIAYgBAUINCgtfc2VhcmNoYWJsZUIMCgpfaW5kZXhhYmxlIjIK",
-            "D0Z1bGZpbGxtZW50SW5mbxIMCgR0eXBlGAEgASgJEhEKCXBsYWNlX2lkcxgC",
-            "IAMoCSI4CgVJbWFnZRIQCgN1cmkYASABKAlCA+BBAhIOCgZoZWlnaHQYAiAB",
-            "KAUSDQoFd2lkdGgYAyABKAUieAoISW50ZXJ2YWwSEQoHbWluaW11bRgBIAEo",
-            "AUgAEhsKEWV4Y2x1c2l2ZV9taW5pbXVtGAIgASgBSAASEQoHbWF4aW11bRgD",
-            "IAEoAUgBEhsKEWV4Y2x1c2l2ZV9tYXhpbXVtGAQgASgBSAFCBQoDbWluQgUK",
-            "A21heCKJAwoJUHJpY2VJbmZvEhUKDWN1cnJlbmN5X2NvZGUYASABKAkSDQoF",
-            "cHJpY2UYAiABKAISFgoOb3JpZ2luYWxfcHJpY2UYAyABKAISDAoEY29zdBgE",
-            "IAEoAhI4ChRwcmljZV9lZmZlY3RpdmVfdGltZRgFIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXASNQoRcHJpY2VfZXhwaXJlX3RpbWUYBiABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEkYKC3ByaWNlX3JhbmdlGAcg",
-            "ASgLMiwuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5QcmljZUluZm8uUHJpY2VS",
-            "YW5nZUID4EEDGncKClByaWNlUmFuZ2USLwoFcHJpY2UYASABKAsyIC5nb29n",
-            "bGUuY2xvdWQucmV0YWlsLnYyLkludGVydmFsEjgKDm9yaWdpbmFsX3ByaWNl",
-            "GAIgASgLMiAuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5JbnRlcnZhbCJQCgZS",
-            "YXRpbmcSFAoMcmF0aW5nX2NvdW50GAEgASgFEhYKDmF2ZXJhZ2VfcmF0aW5n",
-            "GAIgASgCEhgKEHJhdGluZ19oaXN0b2dyYW0YAyADKAUiYAoIVXNlckluZm8S",
-            "DwoHdXNlcl9pZBgBIAEoCRISCgppcF9hZGRyZXNzGAIgASgJEhIKCnVzZXJf",
-            "YWdlbnQYAyABKAkSGwoTZGlyZWN0X3VzZXJfcmVxdWVzdBgEIAEoCCKhAgoO",
-            "TG9jYWxJbnZlbnRvcnkSEAoIcGxhY2VfaWQYASABKAkSNQoKcHJpY2VfaW5m",
-            "bxgCIAEoCzIhLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuUHJpY2VJbmZvEkoK",
-            "CmF0dHJpYnV0ZXMYAyADKAsyNi5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkxv",
-            "Y2FsSW52ZW50b3J5LkF0dHJpYnV0ZXNFbnRyeRIeChFmdWxmaWxsbWVudF90",
-            "eXBlcxgEIAMoCUID4EEEGloKD0F0dHJpYnV0ZXNFbnRyeRILCgNrZXkYASAB",
-            "KAkSNgoFdmFsdWUYAiABKAsyJy5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkN1",
-            "c3RvbUF0dHJpYnV0ZToCOAFCwAEKGmNvbS5nb29nbGUuY2xvdWQucmV0YWls",
-            "LnYyQgtDb21tb25Qcm90b1ABWjxnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
-            "by9nb29nbGVhcGlzL2Nsb3VkL3JldGFpbC92MjtyZXRhaWyiAgZSRVRBSUyq",
-            "AhZHb29nbGUuQ2xvdWQuUmV0YWlsLlYyygIWR29vZ2xlXENsb3VkXFJldGFp",
-            "bFxWMuoCGUdvb2dsZTo6Q2xvdWQ6OlJldGFpbDo6VjJiBnByb3RvMw=="));
+            "IAMoCSKGAQoPQ3VzdG9tQXR0cmlidXRlEgwKBHRleHQYASADKAkSDwoHbnVt",
+            "YmVycxgCIAMoARIbCgpzZWFyY2hhYmxlGAMgASgIQgIYAUgAiAEBEhoKCWlu",
+            "ZGV4YWJsZRgEIAEoCEICGAFIAYgBAUINCgtfc2VhcmNoYWJsZUIMCgpfaW5k",
+            "ZXhhYmxlIjIKD0Z1bGZpbGxtZW50SW5mbxIMCgR0eXBlGAEgASgJEhEKCXBs",
+            "YWNlX2lkcxgCIAMoCSI4CgVJbWFnZRIQCgN1cmkYASABKAlCA+BBAhIOCgZo",
+            "ZWlnaHQYAiABKAUSDQoFd2lkdGgYAyABKAUieAoISW50ZXJ2YWwSEQoHbWlu",
+            "aW11bRgBIAEoAUgAEhsKEWV4Y2x1c2l2ZV9taW5pbXVtGAIgASgBSAASEQoH",
+            "bWF4aW11bRgDIAEoAUgBEhsKEWV4Y2x1c2l2ZV9tYXhpbXVtGAQgASgBSAFC",
+            "BQoDbWluQgUKA21heCKJAwoJUHJpY2VJbmZvEhUKDWN1cnJlbmN5X2NvZGUY",
+            "ASABKAkSDQoFcHJpY2UYAiABKAISFgoOb3JpZ2luYWxfcHJpY2UYAyABKAIS",
+            "DAoEY29zdBgEIAEoAhI4ChRwcmljZV9lZmZlY3RpdmVfdGltZRgFIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASNQoRcHJpY2VfZXhwaXJlX3Rp",
+            "bWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEkYKC3ByaWNl",
+            "X3JhbmdlGAcgASgLMiwuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5QcmljZUlu",
+            "Zm8uUHJpY2VSYW5nZUID4EEDGncKClByaWNlUmFuZ2USLwoFcHJpY2UYASAB",
+            "KAsyIC5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkludGVydmFsEjgKDm9yaWdp",
+            "bmFsX3ByaWNlGAIgASgLMiAuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5JbnRl",
+            "cnZhbCJQCgZSYXRpbmcSFAoMcmF0aW5nX2NvdW50GAEgASgFEhYKDmF2ZXJh",
+            "Z2VfcmF0aW5nGAIgASgCEhgKEHJhdGluZ19oaXN0b2dyYW0YAyADKAUiYAoI",
+            "VXNlckluZm8SDwoHdXNlcl9pZBgBIAEoCRISCgppcF9hZGRyZXNzGAIgASgJ",
+            "EhIKCnVzZXJfYWdlbnQYAyABKAkSGwoTZGlyZWN0X3VzZXJfcmVxdWVzdBgE",
+            "IAEoCCKhAgoOTG9jYWxJbnZlbnRvcnkSEAoIcGxhY2VfaWQYASABKAkSNQoK",
+            "cHJpY2VfaW5mbxgCIAEoCzIhLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuUHJp",
+            "Y2VJbmZvEkoKCmF0dHJpYnV0ZXMYAyADKAsyNi5nb29nbGUuY2xvdWQucmV0",
+            "YWlsLnYyLkxvY2FsSW52ZW50b3J5LkF0dHJpYnV0ZXNFbnRyeRIeChFmdWxm",
+            "aWxsbWVudF90eXBlcxgEIAMoCUID4EEEGloKD0F0dHJpYnV0ZXNFbnRyeRIL",
+            "CgNrZXkYASABKAkSNgoFdmFsdWUYAiABKAsyJy5nb29nbGUuY2xvdWQucmV0",
+            "YWlsLnYyLkN1c3RvbUF0dHJpYnV0ZToCOAFCwAEKGmNvbS5nb29nbGUuY2xv",
+            "dWQucmV0YWlsLnYyQgtDb21tb25Qcm90b1ABWjxnb29nbGUuZ29sYW5nLm9y",
+            "Zy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3JldGFpbC92MjtyZXRhaWyi",
+            "AgZSRVRBSUyqAhZHb29nbGUuQ2xvdWQuUmV0YWlsLlYyygIWR29vZ2xlXENs",
+            "b3VkXFJldGFpbFxWMuoCGUdvb2dsZTo6Q2xvdWQ6OlJldGFpbDo6VjJiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -651,11 +652,13 @@ namespace Google.Cloud.Retail.V2 {
     public const int SearchableFieldNumber = 3;
     private bool searchable_;
     /// <summary>
-    /// This field will only be used when
+    /// This field is normally ignored unless
     /// [AttributesConfig.attribute_config_level][] of the
-    /// [Catalog][google.cloud.retail.v2.Catalog] is
-    /// 'PRODUCT_LEVEL_ATTRIBUTE_CONFIG', if true, custom attribute values are
-    /// searchable by text queries in
+    /// [Catalog][google.cloud.retail.v2.Catalog] is set to the deprecated
+    /// 'PRODUCT_LEVEL_ATTRIBUTE_CONFIG' mode. For information about product-level
+    /// attribute configuration, see [Configuration
+    /// modes](https://cloud.google.com/retail/docs/attribute-config#config-modes).
+    /// If true, custom attribute values are searchable by text queries in
     /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search].
     ///
     /// This field is ignored in a [UserEvent][google.cloud.retail.v2.UserEvent].
@@ -663,6 +666,7 @@ namespace Google.Cloud.Retail.V2 {
     /// Only set if type [text][google.cloud.retail.v2.CustomAttribute.text] is
     /// set. Otherwise, a INVALID_ARGUMENT error is returned.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Searchable {
@@ -673,12 +677,14 @@ namespace Google.Cloud.Retail.V2 {
       }
     }
     /// <summary>Gets whether the "searchable" field is set</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasSearchable {
       get { return (_hasBits0 & 1) != 0; }
     }
     /// <summary>Clears the value of the "searchable" field</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearSearchable() {
@@ -689,11 +695,14 @@ namespace Google.Cloud.Retail.V2 {
     public const int IndexableFieldNumber = 4;
     private bool indexable_;
     /// <summary>
-    /// This field will only be used when
+    /// This field is normally ignored unless
     /// [AttributesConfig.attribute_config_level][] of the
-    /// [Catalog][google.cloud.retail.v2.Catalog] is
-    /// 'PRODUCT_LEVEL_ATTRIBUTE_CONFIG', if true, custom attribute values are
-    /// indexed, so that it can be filtered, faceted or boosted in
+    /// [Catalog][google.cloud.retail.v2.Catalog] is set to the deprecated
+    /// 'PRODUCT_LEVEL_ATTRIBUTE_CONFIG' mode. For information about product-level
+    /// attribute configuration, see [Configuration
+    /// modes](https://cloud.google.com/retail/docs/attribute-config#config-modes).
+    /// If true, custom attribute values are indexed, so that they can be filtered,
+    /// faceted or boosted in
     /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search].
     ///
     /// This field is ignored in a [UserEvent][google.cloud.retail.v2.UserEvent].
@@ -704,6 +713,7 @@ namespace Google.Cloud.Retail.V2 {
     /// [SearchRequest.boost_spec][google.cloud.retail.v2.SearchRequest.boost_spec]
     /// for more details.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Indexable {
@@ -714,12 +724,14 @@ namespace Google.Cloud.Retail.V2 {
       }
     }
     /// <summary>Gets whether the "indexable" field is set</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasIndexable {
       get { return (_hasBits0 & 2) != 0; }
     }
     /// <summary>Clears the value of the "indexable" field</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearIndexable() {
@@ -1939,7 +1951,10 @@ namespace Google.Cloud.Retail.V2 {
     private float originalPrice_;
     /// <summary>
     /// Price of the product without any discount. If zero, by default set to be
-    /// the [price][google.cloud.retail.v2.PriceInfo.price].
+    /// the [price][google.cloud.retail.v2.PriceInfo.price]. If set,
+    /// [original_price][google.cloud.retail.v2.PriceInfo.original_price] should be
+    /// greater than or equal to [price][google.cloud.retail.v2.PriceInfo.price],
+    /// otherwise an INVALID_ARGUMENT error is thrown.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2960,9 +2975,13 @@ namespace Google.Cloud.Retail.V2 {
     private string userId_ = "";
     /// <summary>
     /// Highly recommended for logged-in users. Unique identifier for logged-in
-    /// user, such as a user name.
+    /// user, such as a user name. Don't set for anonymous users.
     ///
     /// Always use a hashed value for this ID.
+    ///
+    /// Don't set the field to the same fixed ID for different users. This mixes
+    /// the event history of those users together, which results in degraded
+    /// model quality.
     ///
     /// The field must be a UTF-8 encoded string with a length limit of 128
     /// characters. Otherwise, an INVALID_ARGUMENT error is returned.

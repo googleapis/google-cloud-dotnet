@@ -1604,11 +1604,18 @@ namespace Google.Cloud.Retail.V2 {
     public const int NotificationPubsubTopicFieldNumber = 7;
     private string notificationPubsubTopic_ = "";
     /// <summary>
-    /// Pub/Sub topic for receiving notification. If this field is set,
+    /// Full Pub/Sub topic name for receiving notification. If this field is set,
     /// when the import is finished, a notification will be sent to
     /// specified Pub/Sub topic. The message data will be JSON string of a
     /// [Operation][google.longrunning.Operation].
-    /// Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`.
+    ///
+    /// Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`. It has
+    /// to be within the same project as
+    /// [ImportProductsRequest.parent][google.cloud.retail.v2.ImportProductsRequest.parent].
+    /// Make sure that both
+    /// `cloud-retail-customer-data-access@system.gserviceaccount.com` and
+    /// `service-&lt;project number>@gcp-sa-retail.iam.gserviceaccount.com`
+    /// have the `pubsub.topics.publish` IAM permission on the topic.
     ///
     /// Only supported when
     /// [ImportProductsRequest.reconciliation_mode][google.cloud.retail.v2.ImportProductsRequest.reconciliation_mode]
