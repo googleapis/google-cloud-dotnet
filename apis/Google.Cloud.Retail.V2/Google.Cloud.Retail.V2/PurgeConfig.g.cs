@@ -27,14 +27,15 @@ namespace Google.Cloud.Retail.V2 {
             "Cilnb29nbGUvY2xvdWQvcmV0YWlsL3YyL3B1cmdlX2NvbmZpZy5wcm90bxIW",
             "Z29vZ2xlLmNsb3VkLnJldGFpbC52MhofZ29vZ2xlL2FwaS9maWVsZF9iZWhh",
             "dmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byIPCg1QdXJn",
-            "ZU1ldGFkYXRhIlEKFlB1cmdlVXNlckV2ZW50c1JlcXVlc3QSEwoGcGFyZW50",
-            "GAEgASgJQgPgQQISEwoGZmlsdGVyGAIgASgJQgPgQQISDQoFZm9yY2UYAyAB",
-            "KAgiNgoXUHVyZ2VVc2VyRXZlbnRzUmVzcG9uc2USGwoTcHVyZ2VkX2V2ZW50",
-            "c19jb3VudBgBIAEoA0LFAQoaY29tLmdvb2dsZS5jbG91ZC5yZXRhaWwudjJC",
-            "EFB1cmdlQ29uZmlnUHJvdG9QAVo8Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
-            "dG8vZ29vZ2xlYXBpcy9jbG91ZC9yZXRhaWwvdjI7cmV0YWlsogIGUkVUQUlM",
-            "qgIWR29vZ2xlLkNsb3VkLlJldGFpbC5WMsoCFkdvb2dsZVxDbG91ZFxSZXRh",
-            "aWxcVjLqAhlHb29nbGU6OkNsb3VkOjpSZXRhaWw6OlYyYgZwcm90bzM="));
+            "ZU1ldGFkYXRhInMKFlB1cmdlVXNlckV2ZW50c1JlcXVlc3QSNQoGcGFyZW50",
+            "GAEgASgJQiXgQQL6QR8KHXJldGFpbC5nb29nbGVhcGlzLmNvbS9DYXRhbG9n",
+            "EhMKBmZpbHRlchgCIAEoCUID4EECEg0KBWZvcmNlGAMgASgIIjYKF1B1cmdl",
+            "VXNlckV2ZW50c1Jlc3BvbnNlEhsKE3B1cmdlZF9ldmVudHNfY291bnQYASAB",
+            "KANCxQEKGmNvbS5nb29nbGUuY2xvdWQucmV0YWlsLnYyQhBQdXJnZUNvbmZp",
+            "Z1Byb3RvUAFaPGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFw",
+            "aXMvY2xvdWQvcmV0YWlsL3YyO3JldGFpbKICBlJFVEFJTKoCFkdvb2dsZS5D",
+            "bG91ZC5SZXRhaWwuVjLKAhZHb29nbGVcQ2xvdWRcUmV0YWlsXFYy6gIZR29v",
+            "Z2xlOjpDbG91ZDo6UmV0YWlsOjpWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

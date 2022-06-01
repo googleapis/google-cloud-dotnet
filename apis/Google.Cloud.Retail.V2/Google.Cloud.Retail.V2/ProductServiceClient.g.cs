@@ -1161,6 +1161,11 @@ namespace Google.Cloud.Retail.V2
         /// 
         /// If an unsupported or unknown field is provided, an INVALID_ARGUMENT error
         /// is returned.
+        /// 
+        /// The attribute key can be updated by setting the mask path as
+        /// "attributes.${key_name}". If a key name is present in the mask but not in
+        /// the patching product from the request, this key will be deleted after the
+        /// update.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1194,6 +1199,11 @@ namespace Google.Cloud.Retail.V2
         /// 
         /// If an unsupported or unknown field is provided, an INVALID_ARGUMENT error
         /// is returned.
+        /// 
+        /// The attribute key can be updated by setting the mask path as
+        /// "attributes.${key_name}". If a key name is present in the mask but not in
+        /// the patching product from the request, this key will be deleted after the
+        /// update.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1227,6 +1237,11 @@ namespace Google.Cloud.Retail.V2
         /// 
         /// If an unsupported or unknown field is provided, an INVALID_ARGUMENT error
         /// is returned.
+        /// 
+        /// The attribute key can be updated by setting the mask path as
+        /// "attributes.${key_name}". If a key name is present in the mask but not in
+        /// the patching product from the request, this key will be deleted after the
+        /// update.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1461,7 +1476,7 @@ namespace Google.Cloud.Retail.V2
         /// <summary>
         /// Bulk import of multiple [Product][google.cloud.retail.v2.Product]s.
         /// 
-        /// Request processing may be synchronous. No partial updating is supported.
+        /// Request processing may be synchronous.
         /// Non-existing items are created.
         /// 
         /// Note that it is possible for a subset of the
@@ -1476,7 +1491,7 @@ namespace Google.Cloud.Retail.V2
         /// <summary>
         /// Bulk import of multiple [Product][google.cloud.retail.v2.Product]s.
         /// 
-        /// Request processing may be synchronous. No partial updating is supported.
+        /// Request processing may be synchronous.
         /// Non-existing items are created.
         /// 
         /// Note that it is possible for a subset of the
@@ -1491,7 +1506,7 @@ namespace Google.Cloud.Retail.V2
         /// <summary>
         /// Bulk import of multiple [Product][google.cloud.retail.v2.Product]s.
         /// 
-        /// Request processing may be synchronous. No partial updating is supported.
+        /// Request processing may be synchronous.
         /// Non-existing items are created.
         /// 
         /// Note that it is possible for a subset of the
@@ -1564,7 +1579,7 @@ namespace Google.Cloud.Retail.V2
         /// 
         /// Pre-existing inventory information can only be updated with
         /// [SetInventory][google.cloud.retail.v2.ProductService.SetInventory],
-        /// [AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces],
+        /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces],
         /// and
         /// [RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
         /// 
@@ -1612,7 +1627,7 @@ namespace Google.Cloud.Retail.V2
         /// 
         /// Pre-existing inventory information can only be updated with
         /// [SetInventory][google.cloud.retail.v2.ProductService.SetInventory],
-        /// [AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces],
+        /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces],
         /// and
         /// [RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
         /// 
@@ -1660,7 +1675,7 @@ namespace Google.Cloud.Retail.V2
         /// 
         /// Pre-existing inventory information can only be updated with
         /// [SetInventory][google.cloud.retail.v2.ProductService.SetInventory],
-        /// [AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces],
+        /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces],
         /// and
         /// [RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
         /// 
@@ -1734,7 +1749,7 @@ namespace Google.Cloud.Retail.V2
         /// 
         /// Pre-existing inventory information can only be updated with
         /// [SetInventory][google.cloud.retail.v2.ProductService.SetInventory],
-        /// [AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces],
+        /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces],
         /// and
         /// [RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
         /// 
@@ -1849,7 +1864,7 @@ namespace Google.Cloud.Retail.V2
         /// 
         /// Pre-existing inventory information can only be updated with
         /// [SetInventory][google.cloud.retail.v2.ProductService.SetInventory],
-        /// [AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces],
+        /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces],
         /// and
         /// [RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
         /// 
@@ -1964,7 +1979,7 @@ namespace Google.Cloud.Retail.V2
         /// 
         /// Pre-existing inventory information can only be updated with
         /// [SetInventory][google.cloud.retail.v2.ProductService.SetInventory],
-        /// [AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces],
+        /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces],
         /// and
         /// [RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
         /// 
@@ -3529,7 +3544,7 @@ namespace Google.Cloud.Retail.V2
         /// <summary>
         /// Bulk import of multiple [Product][google.cloud.retail.v2.Product]s.
         /// 
-        /// Request processing may be synchronous. No partial updating is supported.
+        /// Request processing may be synchronous.
         /// Non-existing items are created.
         /// 
         /// Note that it is possible for a subset of the
@@ -3547,7 +3562,7 @@ namespace Google.Cloud.Retail.V2
         /// <summary>
         /// Bulk import of multiple [Product][google.cloud.retail.v2.Product]s.
         /// 
-        /// Request processing may be synchronous. No partial updating is supported.
+        /// Request processing may be synchronous.
         /// Non-existing items are created.
         /// 
         /// Note that it is possible for a subset of the
@@ -3600,7 +3615,7 @@ namespace Google.Cloud.Retail.V2
         /// 
         /// Pre-existing inventory information can only be updated with
         /// [SetInventory][google.cloud.retail.v2.ProductService.SetInventory],
-        /// [AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces],
+        /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces],
         /// and
         /// [RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
         /// 
@@ -3651,7 +3666,7 @@ namespace Google.Cloud.Retail.V2
         /// 
         /// Pre-existing inventory information can only be updated with
         /// [SetInventory][google.cloud.retail.v2.ProductService.SetInventory],
-        /// [AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces],
+        /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces],
         /// and
         /// [RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
         /// 
