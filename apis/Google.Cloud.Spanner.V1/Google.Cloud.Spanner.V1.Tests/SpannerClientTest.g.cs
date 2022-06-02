@@ -51,6 +51,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 },
                 CreateTime = new wkt::Timestamp(),
                 ApproximateLastUseTime = new wkt::Timestamp(),
+                CreatorRole = "creator_role793740e8",
             };
             mockGrpcClient.Setup(x => x.CreateSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
@@ -80,6 +81,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 },
                 CreateTime = new wkt::Timestamp(),
                 ApproximateLastUseTime = new wkt::Timestamp(),
+                CreatorRole = "creator_role793740e8",
             };
             mockGrpcClient.Setup(x => x.CreateSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Session>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
@@ -110,6 +112,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 },
                 CreateTime = new wkt::Timestamp(),
                 ApproximateLastUseTime = new wkt::Timestamp(),
+                CreatorRole = "creator_role793740e8",
             };
             mockGrpcClient.Setup(x => x.CreateSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
@@ -138,6 +141,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 },
                 CreateTime = new wkt::Timestamp(),
                 ApproximateLastUseTime = new wkt::Timestamp(),
+                CreatorRole = "creator_role793740e8",
             };
             mockGrpcClient.Setup(x => x.CreateSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Session>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
@@ -168,6 +172,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 },
                 CreateTime = new wkt::Timestamp(),
                 ApproximateLastUseTime = new wkt::Timestamp(),
+                CreatorRole = "creator_role793740e8",
             };
             mockGrpcClient.Setup(x => x.CreateSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
@@ -196,6 +201,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 },
                 CreateTime = new wkt::Timestamp(),
                 ApproximateLastUseTime = new wkt::Timestamp(),
+                CreatorRole = "creator_role793740e8",
             };
             mockGrpcClient.Setup(x => x.CreateSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Session>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
@@ -354,6 +360,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 },
                 CreateTime = new wkt::Timestamp(),
                 ApproximateLastUseTime = new wkt::Timestamp(),
+                CreatorRole = "creator_role793740e8",
             };
             mockGrpcClient.Setup(x => x.GetSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
@@ -382,6 +389,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 },
                 CreateTime = new wkt::Timestamp(),
                 ApproximateLastUseTime = new wkt::Timestamp(),
+                CreatorRole = "creator_role793740e8",
             };
             mockGrpcClient.Setup(x => x.GetSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Session>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
@@ -412,6 +420,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 },
                 CreateTime = new wkt::Timestamp(),
                 ApproximateLastUseTime = new wkt::Timestamp(),
+                CreatorRole = "creator_role793740e8",
             };
             mockGrpcClient.Setup(x => x.GetSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
@@ -440,6 +449,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 },
                 CreateTime = new wkt::Timestamp(),
                 ApproximateLastUseTime = new wkt::Timestamp(),
+                CreatorRole = "creator_role793740e8",
             };
             mockGrpcClient.Setup(x => x.GetSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Session>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
@@ -470,6 +480,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 },
                 CreateTime = new wkt::Timestamp(),
                 ApproximateLastUseTime = new wkt::Timestamp(),
+                CreatorRole = "creator_role793740e8",
             };
             mockGrpcClient.Setup(x => x.GetSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
@@ -498,6 +509,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 },
                 CreateTime = new wkt::Timestamp(),
                 ApproximateLastUseTime = new wkt::Timestamp(),
+                CreatorRole = "creator_role793740e8",
             };
             mockGrpcClient.Setup(x => x.GetSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Session>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
