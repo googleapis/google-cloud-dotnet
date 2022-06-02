@@ -37,6 +37,7 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 SecurityPolicy = "",
                 Project = "",
+                ValidateOnly = false,
                 SecurityPolicyRuleResource = new SecurityPolicyRule(),
             };
             // Make the request
@@ -72,6 +73,7 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 SecurityPolicy = "",
                 Project = "",
+                ValidateOnly = false,
                 SecurityPolicyRuleResource = new SecurityPolicyRule(),
             };
             // Make the request
@@ -624,6 +626,7 @@ namespace Google.Cloud.Compute.V1.Snippets
                 RequestId = "",
                 SecurityPolicyResource = new SecurityPolicy(),
                 Project = "",
+                ValidateOnly = false,
             };
             // Make the request
             lro::Operation<Operation, Operation> response = securityPoliciesClient.Insert(request);
@@ -659,6 +662,7 @@ namespace Google.Cloud.Compute.V1.Snippets
                 RequestId = "",
                 SecurityPolicyResource = new SecurityPolicy(),
                 Project = "",
+                ValidateOnly = false,
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await securityPoliciesClient.InsertAsync(request);
@@ -1149,6 +1153,7 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 SecurityPolicy = "",
                 Project = "",
+                ValidateOnly = false,
                 SecurityPolicyRuleResource = new SecurityPolicyRule(),
                 Priority = 0,
             };
@@ -1185,6 +1190,7 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 SecurityPolicy = "",
                 Project = "",
+                ValidateOnly = false,
                 SecurityPolicyRuleResource = new SecurityPolicyRule(),
                 Priority = 0,
             };

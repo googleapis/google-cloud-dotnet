@@ -36,6 +36,7 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 SecurityPolicy = "",
                 Project = "",
+                ValidateOnly = false,
                 SecurityPolicyRuleResource = new SecurityPolicyRule(),
                 Priority = 0,
             };

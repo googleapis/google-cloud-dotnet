@@ -54,6 +54,8 @@ namespace Google.Cloud.Compute.V1
             ListSettings = existing.ListSettings;
             PatchSettings = existing.PatchSettings;
             PatchOperationsSettings = existing.PatchOperationsSettings.Clone();
+            SetCertificateMapSettings = existing.SetCertificateMapSettings;
+            SetCertificateMapOperationsSettings = existing.SetCertificateMapOperationsSettings.Clone();
             SetQuicOverrideSettings = existing.SetQuicOverrideSettings;
             SetQuicOverrideOperationsSettings = existing.SetQuicOverrideOperationsSettings.Clone();
             SetSslCertificatesSettings = existing.SetSslCertificatesSettings;
@@ -216,6 +218,37 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings PatchOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>TargetHttpsProxiesClient.SetCertificateMap</c> and <c>TargetHttpsProxiesClient.SetCertificateMapAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SetCertificateMapSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>TargetHttpsProxiesClient.SetCertificateMap</c> and
+        /// <c>TargetHttpsProxiesClient.SetCertificateMapAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings SetCertificateMapOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -1041,6 +1074,121 @@ namespace Google.Cloud.Compute.V1
             PatchAsync(project, targetHttpsProxy, targetHttpsProxyResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Changes the Certificate Map for TargetHttpsProxy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> SetCertificateMap(SetCertificateMapTargetHttpsProxyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Changes the Certificate Map for TargetHttpsProxy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetCertificateMapAsync(SetCertificateMapTargetHttpsProxyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Changes the Certificate Map for TargetHttpsProxy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetCertificateMapAsync(SetCertificateMapTargetHttpsProxyRequest request, st::CancellationToken cancellationToken) =>
+            SetCertificateMapAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>SetCertificateMap</c>.</summary>
+        public virtual lro::OperationsClient SetCertificateMapOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>SetCertificateMap</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceSetCertificateMap(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetCertificateMapOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>SetCertificateMap</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceSetCertificateMapAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetCertificateMapOperationsClient, callSettings);
+
+        /// <summary>
+        /// Changes the Certificate Map for TargetHttpsProxy.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="targetHttpsProxy">
+        /// Name of the TargetHttpsProxy resource whose CertificateMap is to be set. The name must be 1-63 characters long, and comply with RFC1035.
+        /// </param>
+        /// <param name="targetHttpsProxiesSetCertificateMapRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> SetCertificateMap(string project, string targetHttpsProxy, TargetHttpsProxiesSetCertificateMapRequest targetHttpsProxiesSetCertificateMapRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            SetCertificateMap(new SetCertificateMapTargetHttpsProxyRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                TargetHttpsProxiesSetCertificateMapRequestResource = gax::GaxPreconditions.CheckNotNull(targetHttpsProxiesSetCertificateMapRequestResource, nameof(targetHttpsProxiesSetCertificateMapRequestResource)),
+                TargetHttpsProxy = gax::GaxPreconditions.CheckNotNullOrEmpty(targetHttpsProxy, nameof(targetHttpsProxy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Changes the Certificate Map for TargetHttpsProxy.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="targetHttpsProxy">
+        /// Name of the TargetHttpsProxy resource whose CertificateMap is to be set. The name must be 1-63 characters long, and comply with RFC1035.
+        /// </param>
+        /// <param name="targetHttpsProxiesSetCertificateMapRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetCertificateMapAsync(string project, string targetHttpsProxy, TargetHttpsProxiesSetCertificateMapRequest targetHttpsProxiesSetCertificateMapRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            SetCertificateMapAsync(new SetCertificateMapTargetHttpsProxyRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                TargetHttpsProxiesSetCertificateMapRequestResource = gax::GaxPreconditions.CheckNotNull(targetHttpsProxiesSetCertificateMapRequestResource, nameof(targetHttpsProxiesSetCertificateMapRequestResource)),
+                TargetHttpsProxy = gax::GaxPreconditions.CheckNotNullOrEmpty(targetHttpsProxy, nameof(targetHttpsProxy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Changes the Certificate Map for TargetHttpsProxy.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="targetHttpsProxy">
+        /// Name of the TargetHttpsProxy resource whose CertificateMap is to be set. The name must be 1-63 characters long, and comply with RFC1035.
+        /// </param>
+        /// <param name="targetHttpsProxiesSetCertificateMapRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetCertificateMapAsync(string project, string targetHttpsProxy, TargetHttpsProxiesSetCertificateMapRequest targetHttpsProxiesSetCertificateMapRequestResource, st::CancellationToken cancellationToken) =>
+            SetCertificateMapAsync(project, targetHttpsProxy, targetHttpsProxiesSetCertificateMapRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Sets the QUIC override policy for TargetHttpsProxy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1516,6 +1664,8 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<PatchTargetHttpsProxyRequest, Operation> _callPatch;
 
+        private readonly gaxgrpc::ApiCall<SetCertificateMapTargetHttpsProxyRequest, Operation> _callSetCertificateMap;
+
         private readonly gaxgrpc::ApiCall<SetQuicOverrideTargetHttpsProxyRequest, Operation> _callSetQuicOverride;
 
         private readonly gaxgrpc::ApiCall<SetSslCertificatesTargetHttpsProxyRequest, Operation> _callSetSslCertificates;
@@ -1537,6 +1687,7 @@ namespace Google.Cloud.Compute.V1
             DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings);
             InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings);
             PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchOperationsSettings);
+            SetCertificateMapOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetCertificateMapOperationsSettings);
             SetQuicOverrideOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetQuicOverrideOperationsSettings);
             SetSslCertificatesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetSslCertificatesOperationsSettings);
             SetSslPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetSslPolicyOperationsSettings);
@@ -1559,6 +1710,9 @@ namespace Google.Cloud.Compute.V1
             _callPatch = clientHelper.BuildApiCall<PatchTargetHttpsProxyRequest, Operation>(grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("target_https_proxy", request => request.TargetHttpsProxy);
             Modify_ApiCall(ref _callPatch);
             Modify_PatchApiCall(ref _callPatch);
+            _callSetCertificateMap = clientHelper.BuildApiCall<SetCertificateMapTargetHttpsProxyRequest, Operation>(grpcClient.SetCertificateMapAsync, grpcClient.SetCertificateMap, effectiveSettings.SetCertificateMapSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("target_https_proxy", request => request.TargetHttpsProxy);
+            Modify_ApiCall(ref _callSetCertificateMap);
+            Modify_SetCertificateMapApiCall(ref _callSetCertificateMap);
             _callSetQuicOverride = clientHelper.BuildApiCall<SetQuicOverrideTargetHttpsProxyRequest, Operation>(grpcClient.SetQuicOverrideAsync, grpcClient.SetQuicOverride, effectiveSettings.SetQuicOverrideSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("target_https_proxy", request => request.TargetHttpsProxy);
             Modify_ApiCall(ref _callSetQuicOverride);
             Modify_SetQuicOverrideApiCall(ref _callSetQuicOverride);
@@ -1588,6 +1742,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_PatchApiCall(ref gaxgrpc::ApiCall<PatchTargetHttpsProxyRequest, Operation> call);
 
+        partial void Modify_SetCertificateMapApiCall(ref gaxgrpc::ApiCall<SetCertificateMapTargetHttpsProxyRequest, Operation> call);
+
         partial void Modify_SetQuicOverrideApiCall(ref gaxgrpc::ApiCall<SetQuicOverrideTargetHttpsProxyRequest, Operation> call);
 
         partial void Modify_SetSslCertificatesApiCall(ref gaxgrpc::ApiCall<SetSslCertificatesTargetHttpsProxyRequest, Operation> call);
@@ -1612,6 +1768,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_ListTargetHttpsProxiesRequest(ref ListTargetHttpsProxiesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_PatchTargetHttpsProxyRequest(ref PatchTargetHttpsProxyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SetCertificateMapTargetHttpsProxyRequest(ref SetCertificateMapTargetHttpsProxyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SetQuicOverrideTargetHttpsProxyRequest(ref SetQuicOverrideTargetHttpsProxyRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1792,6 +1950,39 @@ namespace Google.Cloud.Compute.V1
             GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
             request.PopulatePollRequestFields(pollRequest);
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>SetCertificateMap</c>.</summary>
+        public override lro::OperationsClient SetCertificateMapOperationsClient { get; }
+
+        /// <summary>
+        /// Changes the Certificate Map for TargetHttpsProxy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> SetCertificateMap(SetCertificateMapTargetHttpsProxyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetCertificateMapTargetHttpsProxyRequest(ref request, ref callSettings);
+            Operation response = _callSetCertificateMap.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetCertificateMapOperationsClient);
+        }
+
+        /// <summary>
+        /// Changes the Certificate Map for TargetHttpsProxy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> SetCertificateMapAsync(SetCertificateMapTargetHttpsProxyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetCertificateMapTargetHttpsProxyRequest(ref request, ref callSettings);
+            Operation response = await _callSetCertificateMap.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetCertificateMapOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>SetQuicOverride</c>.</summary>

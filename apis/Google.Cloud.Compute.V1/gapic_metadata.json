@@ -4138,6 +4138,12 @@
                 "PatchAsync"
               ]
             },
+            "SetCertificateMap": {
+              "methods": [
+                "SetCertificateMap",
+                "SetCertificateMapAsync"
+              ]
+            },
             "SetQuicOverride": {
               "methods": [
                 "SetQuicOverride",
@@ -4313,6 +4319,12 @@
               "methods": [
                 "SetBackendService",
                 "SetBackendServiceAsync"
+              ]
+            },
+            "SetCertificateMap": {
+              "methods": [
+                "SetCertificateMap",
+                "SetCertificateMapAsync"
               ]
             },
             "SetProxyHeader": {

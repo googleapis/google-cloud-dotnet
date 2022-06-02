@@ -37,6 +37,7 @@ namespace Google.Cloud.Compute.V1.Snippets
                 RequestId = "",
                 SecurityPolicyResource = new SecurityPolicy(),
                 Project = "",
+                ValidateOnly = false,
             };
             // Make the request
             lro::Operation<Operation, Operation> response = securityPoliciesClient.Insert(request);
