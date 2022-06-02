@@ -414,7 +414,7 @@ namespace Google.Cloud.Spanner.Data
                     Table = CommandTextBuilder.TargetTable,
                     Index = CommandTextBuilder.ReadOptions.IndexName ?? "",
                     Limit = CommandTextBuilder.ReadOptions.Limit ?? 0L,
-                    KeySet = KeySet.Protobuf,
+                    KeySet = KeySet.ToProtobuf(ConversionOptions),
                     Columns = { CommandTextBuilder.ReadOptions.Columns },
                     RequestOptions = BuildRequestOptions()
                 };
