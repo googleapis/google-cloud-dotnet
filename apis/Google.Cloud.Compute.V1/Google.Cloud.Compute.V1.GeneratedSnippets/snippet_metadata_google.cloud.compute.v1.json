@@ -60019,6 +60019,110 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "compute_v1_generated_TargetHttpsProxies_SetCertificateMap_sync",
+      "title": "SetCertificateMapRequestObject",
+      "description": "Snippet for SetCertificateMap",
+      "file": "TargetHttpsProxiesClient.SetCertificateMapRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetCertificateMap",
+        "fullName": "Google.Cloud.Compute.V1.TargetHttpsProxiesClient.SetCertificateMap",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "TargetHttpsProxiesClient",
+          "fullName": "Google.Cloud.Compute.V1.TargetHttpsProxiesClient"
+        },
+        "method": {
+          "shortName": "SetCertificateMap",
+          "fullName": "google.cloud.compute.v1.TargetHttpsProxies.SetCertificateMap",
+          "service": {
+            "shortName": "TargetHttpsProxies",
+            "fullName": "google.cloud.compute.v1.TargetHttpsProxies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_TargetHttpsProxies_SetCertificateMap_async",
+      "title": "SetCertificateMapRequestObjectAsync",
+      "description": "Snippet for SetCertificateMapAsync",
+      "file": "TargetHttpsProxiesClient.SetCertificateMapRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetCertificateMapAsync",
+        "fullName": "Google.Cloud.Compute.V1.TargetHttpsProxiesClient.SetCertificateMapAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "TargetHttpsProxiesClient",
+          "fullName": "Google.Cloud.Compute.V1.TargetHttpsProxiesClient"
+        },
+        "method": {
+          "shortName": "SetCertificateMap",
+          "fullName": "google.cloud.compute.v1.TargetHttpsProxies.SetCertificateMap",
+          "service": {
+            "shortName": "TargetHttpsProxies",
+            "fullName": "google.cloud.compute.v1.TargetHttpsProxies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_TargetHttpsProxies_SetCertificateMap_sync_flattened",
+      "title": "SetCertificateMap",
+      "description": "Snippet for SetCertificateMap",
+      "file": "TargetHttpsProxiesClient.SetCertificateMapSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetCertificateMap",
+        "fullName": "Google.Cloud.Compute.V1.TargetHttpsProxiesClient.SetCertificateMap",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "TargetHttpsProxiesClient",
+          "fullName": "Google.Cloud.Compute.V1.TargetHttpsProxiesClient"
+        },
+        "method": {
+          "shortName": "SetCertificateMap",
+          "fullName": "google.cloud.compute.v1.TargetHttpsProxies.SetCertificateMap",
+          "service": {
+            "shortName": "TargetHttpsProxies",
+            "fullName": "google.cloud.compute.v1.TargetHttpsProxies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_TargetHttpsProxies_SetCertificateMap_async_flattened",
+      "title": "SetCertificateMapAsync",
+      "description": "Snippet for SetCertificateMapAsync",
+      "file": "TargetHttpsProxiesClient.SetCertificateMapAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetCertificateMapAsync",
+        "fullName": "Google.Cloud.Compute.V1.TargetHttpsProxiesClient.SetCertificateMapAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "TargetHttpsProxiesClient",
+          "fullName": "Google.Cloud.Compute.V1.TargetHttpsProxiesClient"
+        },
+        "method": {
+          "shortName": "SetCertificateMap",
+          "fullName": "google.cloud.compute.v1.TargetHttpsProxies.SetCertificateMap",
+          "service": {
+            "shortName": "TargetHttpsProxies",
+            "fullName": "google.cloud.compute.v1.TargetHttpsProxies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "compute_v1_generated_TargetHttpsProxies_SetQuicOverride_sync",
       "title": "SetQuicOverrideRequestObject",
       "description": "Snippet for SetQuicOverride",
@@ -62610,6 +62714,110 @@
         "method": {
           "shortName": "SetBackendService",
           "fullName": "google.cloud.compute.v1.TargetSslProxies.SetBackendService",
+          "service": {
+            "shortName": "TargetSslProxies",
+            "fullName": "google.cloud.compute.v1.TargetSslProxies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_TargetSslProxies_SetCertificateMap_sync",
+      "title": "SetCertificateMapRequestObject",
+      "description": "Snippet for SetCertificateMap",
+      "file": "TargetSslProxiesClient.SetCertificateMapRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetCertificateMap",
+        "fullName": "Google.Cloud.Compute.V1.TargetSslProxiesClient.SetCertificateMap",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "TargetSslProxiesClient",
+          "fullName": "Google.Cloud.Compute.V1.TargetSslProxiesClient"
+        },
+        "method": {
+          "shortName": "SetCertificateMap",
+          "fullName": "google.cloud.compute.v1.TargetSslProxies.SetCertificateMap",
+          "service": {
+            "shortName": "TargetSslProxies",
+            "fullName": "google.cloud.compute.v1.TargetSslProxies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_TargetSslProxies_SetCertificateMap_async",
+      "title": "SetCertificateMapRequestObjectAsync",
+      "description": "Snippet for SetCertificateMapAsync",
+      "file": "TargetSslProxiesClient.SetCertificateMapRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetCertificateMapAsync",
+        "fullName": "Google.Cloud.Compute.V1.TargetSslProxiesClient.SetCertificateMapAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "TargetSslProxiesClient",
+          "fullName": "Google.Cloud.Compute.V1.TargetSslProxiesClient"
+        },
+        "method": {
+          "shortName": "SetCertificateMap",
+          "fullName": "google.cloud.compute.v1.TargetSslProxies.SetCertificateMap",
+          "service": {
+            "shortName": "TargetSslProxies",
+            "fullName": "google.cloud.compute.v1.TargetSslProxies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_TargetSslProxies_SetCertificateMap_sync_flattened",
+      "title": "SetCertificateMap",
+      "description": "Snippet for SetCertificateMap",
+      "file": "TargetSslProxiesClient.SetCertificateMapSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetCertificateMap",
+        "fullName": "Google.Cloud.Compute.V1.TargetSslProxiesClient.SetCertificateMap",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "TargetSslProxiesClient",
+          "fullName": "Google.Cloud.Compute.V1.TargetSslProxiesClient"
+        },
+        "method": {
+          "shortName": "SetCertificateMap",
+          "fullName": "google.cloud.compute.v1.TargetSslProxies.SetCertificateMap",
+          "service": {
+            "shortName": "TargetSslProxies",
+            "fullName": "google.cloud.compute.v1.TargetSslProxies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "compute_v1_generated_TargetSslProxies_SetCertificateMap_async_flattened",
+      "title": "SetCertificateMapAsync",
+      "description": "Snippet for SetCertificateMapAsync",
+      "file": "TargetSslProxiesClient.SetCertificateMapAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetCertificateMapAsync",
+        "fullName": "Google.Cloud.Compute.V1.TargetSslProxiesClient.SetCertificateMapAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "TargetSslProxiesClient",
+          "fullName": "Google.Cloud.Compute.V1.TargetSslProxiesClient"
+        },
+        "method": {
+          "shortName": "SetCertificateMap",
+          "fullName": "google.cloud.compute.v1.TargetSslProxies.SetCertificateMap",
           "service": {
             "shortName": "TargetSslProxies",
             "fullName": "google.cloud.compute.v1.TargetSslProxies"

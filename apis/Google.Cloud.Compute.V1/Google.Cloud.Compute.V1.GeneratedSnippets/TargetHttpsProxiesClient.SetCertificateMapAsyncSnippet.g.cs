@@ -16,32 +16,28 @@
 
 namespace Google.Cloud.Compute.V1.Snippets
 {
-    // [START compute_v1_generated_SecurityPolicies_Insert_async]
+    // [START compute_v1_generated_TargetHttpsProxies_SetCertificateMap_async_flattened]
     using Google.Cloud.Compute.V1;
     using System.Threading.Tasks;
     using lro = Google.LongRunning;
 
-    public sealed partial class GeneratedSecurityPoliciesClientSnippets
+    public sealed partial class GeneratedTargetHttpsProxiesClientSnippets
     {
-        /// <summary>Snippet for InsertAsync</summary>
+        /// <summary>Snippet for SetCertificateMapAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated for illustrative purposes only.
         /// It may require modifications to work in your environment.
         /// </remarks>
-        public async Task InsertRequestObjectAsync()
+        public async Task SetCertificateMapAsync()
         {
             // Create client
-            SecurityPoliciesClient securityPoliciesClient = await SecurityPoliciesClient.CreateAsync();
+            TargetHttpsProxiesClient targetHttpsProxiesClient = await TargetHttpsProxiesClient.CreateAsync();
             // Initialize request argument(s)
-            InsertSecurityPolicyRequest request = new InsertSecurityPolicyRequest
-            {
-                RequestId = "",
-                SecurityPolicyResource = new SecurityPolicy(),
-                Project = "",
-                ValidateOnly = false,
-            };
+            string project = "";
+            string targetHttpsProxy = "";
+            TargetHttpsProxiesSetCertificateMapRequest targetHttpsProxiesSetCertificateMapRequestResource = new TargetHttpsProxiesSetCertificateMapRequest();
             // Make the request
-            lro::Operation<Operation, Operation> response = await securityPoliciesClient.InsertAsync(request);
+            lro::Operation<Operation, Operation> response = await targetHttpsProxiesClient.SetCertificateMapAsync(project, targetHttpsProxy, targetHttpsProxiesSetCertificateMapRequestResource);
 
             // Poll until the returned long-running operation is complete
             lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
@@ -51,7 +47,7 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            lro::Operation<Operation, Operation> retrievedResponse = await securityPoliciesClient.PollOnceInsertAsync(operationName);
+            lro::Operation<Operation, Operation> retrievedResponse = await targetHttpsProxiesClient.PollOnceSetCertificateMapAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -60,5 +56,5 @@ namespace Google.Cloud.Compute.V1.Snippets
             }
         }
     }
-    // [END compute_v1_generated_SecurityPolicies_Insert_async]
+    // [END compute_v1_generated_TargetHttpsProxies_SetCertificateMap_async_flattened]
 }

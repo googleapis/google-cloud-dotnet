@@ -57,6 +57,10 @@ namespace Google.Cloud.Compute.V1.Tests
                 Protocol = "protocola08b7881",
                 FailoverPolicy = new BackendServiceFailoverPolicy(),
                 LocalityLbPolicy = "locality_lb_policyc8722098",
+                ServiceBindings =
+                {
+                    "service_bindingse637c4a7",
+                },
                 Region = "regionedb20d96",
                 LocalityLbPolicies =
                 {
@@ -126,6 +130,10 @@ namespace Google.Cloud.Compute.V1.Tests
                 Protocol = "protocola08b7881",
                 FailoverPolicy = new BackendServiceFailoverPolicy(),
                 LocalityLbPolicy = "locality_lb_policyc8722098",
+                ServiceBindings =
+                {
+                    "service_bindingse637c4a7",
+                },
                 Region = "regionedb20d96",
                 LocalityLbPolicies =
                 {
@@ -197,6 +205,10 @@ namespace Google.Cloud.Compute.V1.Tests
                 Protocol = "protocola08b7881",
                 FailoverPolicy = new BackendServiceFailoverPolicy(),
                 LocalityLbPolicy = "locality_lb_policyc8722098",
+                ServiceBindings =
+                {
+                    "service_bindingse637c4a7",
+                },
                 Region = "regionedb20d96",
                 LocalityLbPolicies =
                 {
@@ -266,6 +278,10 @@ namespace Google.Cloud.Compute.V1.Tests
                 Protocol = "protocola08b7881",
                 FailoverPolicy = new BackendServiceFailoverPolicy(),
                 LocalityLbPolicy = "locality_lb_policyc8722098",
+                ServiceBindings =
+                {
+                    "service_bindingse637c4a7",
+                },
                 Region = "regionedb20d96",
                 LocalityLbPolicies =
                 {

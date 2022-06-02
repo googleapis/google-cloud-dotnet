@@ -870,6 +870,140 @@ namespace Google.Cloud.Compute.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for SetCertificateMap</summary>
+        public void SetCertificateMapRequestObject()
+        {
+            // Snippet: SetCertificateMap(SetCertificateMapTargetHttpsProxyRequest, CallSettings)
+            // Create client
+            TargetHttpsProxiesClient targetHttpsProxiesClient = TargetHttpsProxiesClient.Create();
+            // Initialize request argument(s)
+            SetCertificateMapTargetHttpsProxyRequest request = new SetCertificateMapTargetHttpsProxyRequest
+            {
+                RequestId = "",
+                TargetHttpsProxy = "",
+                Project = "",
+                TargetHttpsProxiesSetCertificateMapRequestResource = new TargetHttpsProxiesSetCertificateMapRequest(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = targetHttpsProxiesClient.SetCertificateMap(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = targetHttpsProxiesClient.PollOnceSetCertificateMap(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetCertificateMapAsync</summary>
+        public async Task SetCertificateMapRequestObjectAsync()
+        {
+            // Snippet: SetCertificateMapAsync(SetCertificateMapTargetHttpsProxyRequest, CallSettings)
+            // Additional: SetCertificateMapAsync(SetCertificateMapTargetHttpsProxyRequest, CancellationToken)
+            // Create client
+            TargetHttpsProxiesClient targetHttpsProxiesClient = await TargetHttpsProxiesClient.CreateAsync();
+            // Initialize request argument(s)
+            SetCertificateMapTargetHttpsProxyRequest request = new SetCertificateMapTargetHttpsProxyRequest
+            {
+                RequestId = "",
+                TargetHttpsProxy = "",
+                Project = "",
+                TargetHttpsProxiesSetCertificateMapRequestResource = new TargetHttpsProxiesSetCertificateMapRequest(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await targetHttpsProxiesClient.SetCertificateMapAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await targetHttpsProxiesClient.PollOnceSetCertificateMapAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetCertificateMap</summary>
+        public void SetCertificateMap()
+        {
+            // Snippet: SetCertificateMap(string, string, TargetHttpsProxiesSetCertificateMapRequest, CallSettings)
+            // Create client
+            TargetHttpsProxiesClient targetHttpsProxiesClient = TargetHttpsProxiesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string targetHttpsProxy = "";
+            TargetHttpsProxiesSetCertificateMapRequest targetHttpsProxiesSetCertificateMapRequestResource = new TargetHttpsProxiesSetCertificateMapRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = targetHttpsProxiesClient.SetCertificateMap(project, targetHttpsProxy, targetHttpsProxiesSetCertificateMapRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = targetHttpsProxiesClient.PollOnceSetCertificateMap(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetCertificateMapAsync</summary>
+        public async Task SetCertificateMapAsync()
+        {
+            // Snippet: SetCertificateMapAsync(string, string, TargetHttpsProxiesSetCertificateMapRequest, CallSettings)
+            // Additional: SetCertificateMapAsync(string, string, TargetHttpsProxiesSetCertificateMapRequest, CancellationToken)
+            // Create client
+            TargetHttpsProxiesClient targetHttpsProxiesClient = await TargetHttpsProxiesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string targetHttpsProxy = "";
+            TargetHttpsProxiesSetCertificateMapRequest targetHttpsProxiesSetCertificateMapRequestResource = new TargetHttpsProxiesSetCertificateMapRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await targetHttpsProxiesClient.SetCertificateMapAsync(project, targetHttpsProxy, targetHttpsProxiesSetCertificateMapRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await targetHttpsProxiesClient.PollOnceSetCertificateMapAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for SetQuicOverride</summary>
         public void SetQuicOverrideRequestObject()
         {
