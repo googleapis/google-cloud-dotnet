@@ -1,0 +1,1 @@
+Temporarily regenerate all APIs until GAX v4 generator is referenced in WORKSPACE.
