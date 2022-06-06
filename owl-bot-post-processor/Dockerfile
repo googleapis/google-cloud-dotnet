@@ -18,7 +18,7 @@
 # It's usually built automatically via google cloud build, but you can also
 # manually build with:
 #   docker build -t gcr.io/cloud-devrel-public-resources/owlbot-dotnet .
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1-bionic
+FROM mcr.microsoft.com/dotnet/sdk:6.0-focal
 
 # Additional tooling required to regenerate.
 RUN apt-get update
