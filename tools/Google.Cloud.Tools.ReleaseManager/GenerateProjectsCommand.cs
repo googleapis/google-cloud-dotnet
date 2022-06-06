@@ -69,8 +69,8 @@ namespace Google.Cloud.Tools.ReleaseManager
         private const string DefaultVersionValue = "default";
         private const string GrpcCorePackage = "Grpc.Core";
         private const string GrpcCorePackageConditionFramework = "net462";
-        private const string DefaultGaxVersion = "4.0.0-alpha05";
-        private const string GrpcVersion = "2.41.0";
+        private const string DefaultGaxVersion = "4.0.0";
+        private const string GrpcCoreVersion = "2.46.3";
         private static readonly Dictionary<string, string> DefaultPackageVersions = new Dictionary<string, string>
         {
             { "Google.Api.Gax", DefaultGaxVersion },
@@ -78,9 +78,8 @@ namespace Google.Cloud.Tools.ReleaseManager
             { "Google.Api.Gax.Grpc", DefaultGaxVersion },
             { "Google.Api.Gax.Testing", DefaultGaxVersion },
             { "Google.Api.Gax.Grpc.Testing", DefaultGaxVersion },
-            { GrpcCorePackage, GrpcVersion },
-            { "Grpc.Core.Testing", GrpcVersion },
-            { "Grpc.Core.Api", GrpcVersion },
+            { GrpcCorePackage, GrpcCoreVersion },
+            { "Grpc.Core.Testing", GrpcCoreVersion },
             { "Google.Api.CommonProtos", "2.5.0" },
             { "Google.Protobuf", "3.18.0" }
         };
