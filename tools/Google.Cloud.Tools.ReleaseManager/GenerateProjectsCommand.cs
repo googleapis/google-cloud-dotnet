@@ -527,6 +527,10 @@ api-name: {api.Id}
             {
                 forceRegenerationReasons.Add(reason);
             }
+            if (!forceRegenerationReasons.Any())
+            {
+                forceRegenerationReasons.Add("Temporarily regenerate all APIs until GAX v4 generator is referenced in WORKSPACE.");
+            }
             if (forceRegenerationReasons.Any())
             {
                 File.WriteAllLines(owlBotForceRegenerationFile, forceRegenerationReasons);
