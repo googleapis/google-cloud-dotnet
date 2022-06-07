@@ -39,7 +39,6 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
                 RequestMetadata = new RequestMetadata(),
                 JobQuery = new JobQuery(),
                 EnableBroadening = false,
-                RequirePreciseResultSize = false,
                 HistogramQueries =
                 {
                     new HistogramQuery(),
@@ -52,6 +51,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
                 DiversificationLevel = SearchJobsRequest.Types.DiversificationLevel.Unspecified,
                 CustomRankingInfo = new SearchJobsRequest.Types.CustomRankingInfo(),
                 DisableKeywordMatch = false,
+                KeywordMatchMode = SearchJobsRequest.Types.KeywordMatchMode.Unspecified,
             };
             // Make the request
             SearchJobsResponse response = await jobServiceClient.SearchJobsAsync(request);

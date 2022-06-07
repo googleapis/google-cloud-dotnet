@@ -1490,7 +1490,9 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 RequestMetadata = new RequestMetadata(),
                 JobQuery = new JobQuery(),
                 EnableBroadening = false,
+#pragma warning disable CS0612
                 RequirePreciseResultSize = false,
+#pragma warning restore CS0612
                 HistogramQueries =
                 {
                     new HistogramQuery(),
@@ -1503,6 +1505,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 DiversificationLevel = SearchJobsRequest.Types.DiversificationLevel.Disabled,
                 CustomRankingInfo = new SearchJobsRequest.Types.CustomRankingInfo(),
                 DisableKeywordMatch = true,
+                KeywordMatchMode = SearchJobsRequest.Types.KeywordMatchMode.Unspecified,
             };
             SearchJobsResponse expectedResponse = new SearchJobsResponse
             {
@@ -1541,7 +1544,9 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 RequestMetadata = new RequestMetadata(),
                 JobQuery = new JobQuery(),
                 EnableBroadening = false,
+#pragma warning disable CS0612
                 RequirePreciseResultSize = false,
+#pragma warning restore CS0612
                 HistogramQueries =
                 {
                     new HistogramQuery(),
@@ -1554,6 +1559,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 DiversificationLevel = SearchJobsRequest.Types.DiversificationLevel.Disabled,
                 CustomRankingInfo = new SearchJobsRequest.Types.CustomRankingInfo(),
                 DisableKeywordMatch = true,
+                KeywordMatchMode = SearchJobsRequest.Types.KeywordMatchMode.Unspecified,
             };
             SearchJobsResponse expectedResponse = new SearchJobsResponse
             {

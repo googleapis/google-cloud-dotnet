@@ -26,21 +26,20 @@ namespace Google.Cloud.Talent.V4Beta1 {
           string.Concat(
             "Cihnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvdGVuYW50LnByb3RvEhtn",
             "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEaH2dvb2dsZS9hcGkvZmllbGRf",
-            "YmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aH2dv",
-            "b2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aHGdvb2dsZS9hcGkvYW5u",
-            "b3RhdGlvbnMucHJvdG8iwwIKBlRlbmFudBIMCgRuYW1lGAEgASgJEhgKC2V4",
-            "dGVybmFsX2lkGAIgASgJQgPgQQISRQoKdXNhZ2VfdHlwZRgDIAEoDjIxLmdv",
-            "b2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5UZW5hbnQuRGF0YVVzYWdlVHlw",
-            "ZRI0CixrZXl3b3JkX3NlYXJjaGFibGVfcHJvZmlsZV9jdXN0b21fYXR0cmli",
-            "dXRlcxgEIAMoCSJOCg1EYXRhVXNhZ2VUeXBlEh8KG0RBVEFfVVNBR0VfVFlQ",
-            "RV9VTlNQRUNJRklFRBAAEg4KCkFHR1JFR0FURUQQARIMCghJU09MQVRFRBAC",
-            "OkTqQUEKGmpvYnMuZ29vZ2xlYXBpcy5jb20vVGVuYW50EiNwcm9qZWN0cy97",
-            "cHJvamVjdH0vdGVuYW50cy97dGVuYW50fUKBAQofY29tLmdvb2dsZS5jbG91",
-            "ZC50YWxlbnQudjRiZXRhMUITVGVuYW50UmVzb3VyY2VQcm90b1ABWkFnb29n",
-            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3RhbGVu",
-            "dC92NGJldGExO3RhbGVudKICA0NUU2IGcHJvdG8z"));
+            "YmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8iwwIK",
+            "BlRlbmFudBIMCgRuYW1lGAEgASgJEhgKC2V4dGVybmFsX2lkGAIgASgJQgPg",
+            "QQISRQoKdXNhZ2VfdHlwZRgDIAEoDjIxLmdvb2dsZS5jbG91ZC50YWxlbnQu",
+            "djRiZXRhMS5UZW5hbnQuRGF0YVVzYWdlVHlwZRI0CixrZXl3b3JkX3NlYXJj",
+            "aGFibGVfcHJvZmlsZV9jdXN0b21fYXR0cmlidXRlcxgEIAMoCSJOCg1EYXRh",
+            "VXNhZ2VUeXBlEh8KG0RBVEFfVVNBR0VfVFlQRV9VTlNQRUNJRklFRBAAEg4K",
+            "CkFHR1JFR0FURUQQARIMCghJU09MQVRFRBACOkTqQUEKGmpvYnMuZ29vZ2xl",
+            "YXBpcy5jb20vVGVuYW50EiNwcm9qZWN0cy97cHJvamVjdH0vdGVuYW50cy97",
+            "dGVuYW50fUKBAQofY29tLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMUIT",
+            "VGVuYW50UmVzb3VyY2VQcm90b1ABWkFnb29nbGUuZ29sYW5nLm9yZy9nZW5w",
+            "cm90by9nb29nbGVhcGlzL2Nsb3VkL3RhbGVudC92NGJldGExO3RhbGVudKIC",
+            "A0NUU2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Tenant), global::Google.Cloud.Talent.V4Beta1.Tenant.Parser, new[]{ "Name", "ExternalId", "UsageType", "KeywordSearchableProfileCustomAttributes" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.Tenant.Types.DataUsageType) }, null, null)
           }));

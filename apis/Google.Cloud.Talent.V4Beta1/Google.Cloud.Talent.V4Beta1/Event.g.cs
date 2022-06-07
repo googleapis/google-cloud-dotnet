@@ -27,38 +27,30 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "Cidnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvZXZlbnQucHJvdG8SG2dv",
             "b2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMRofZ29vZ2xlL2FwaS9maWVsZF9i",
             "ZWhhdmlvci5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90",
-            "bxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byKMAgoLQ2xpZW50RXZl",
-            "bnQSEgoKcmVxdWVzdF9pZBgBIAEoCRIVCghldmVudF9pZBgCIAEoCUID4EEC",
-            "EjQKC2NyZWF0ZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcEID4EECEjoKCWpvYl9ldmVudBgFIAEoCzIlLmdvb2dsZS5jbG91ZC50",
-            "YWxlbnQudjRiZXRhMS5Kb2JFdmVudEgAEkIKDXByb2ZpbGVfZXZlbnQYBiAB",
-            "KAsyKS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuUHJvZmlsZUV2ZW50",
-            "SAASEwoLZXZlbnRfbm90ZXMYCSABKAlCBwoFZXZlbnQi9gMKCEpvYkV2ZW50",
-            "EkUKBHR5cGUYASABKA4yMi5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEu",
-            "Sm9iRXZlbnQuSm9iRXZlbnRUeXBlQgPgQQISEQoEam9icxgCIAMoCUID4EEC",
-            "Eg8KB3Byb2ZpbGUYAyABKAki/gIKDEpvYkV2ZW50VHlwZRIeChpKT0JfRVZF",
-            "TlRfVFlQRV9VTlNQRUNJRklFRBAAEg4KCklNUFJFU1NJT04QARIICgRWSUVX",
-            "EAISEQoNVklFV19SRURJUkVDVBADEhUKEUFQUExJQ0FUSU9OX1NUQVJUEAQS",
-            "FgoSQVBQTElDQVRJT05fRklOSVNIEAUSIAocQVBQTElDQVRJT05fUVVJQ0tf",
-            "U1VCTUlTU0lPThAGEhgKFEFQUExJQ0FUSU9OX1JFRElSRUNUEAcSIQodQVBQ",
-            "TElDQVRJT05fU1RBUlRfRlJPTV9TRUFSQ0gQCBIkCiBBUFBMSUNBVElPTl9S",
-            "RURJUkVDVF9GUk9NX1NFQVJDSBAJEh4KGkFQUExJQ0FUSU9OX0NPTVBBTllf",
-            "U1VCTUlUEAoSDAoIQk9PS01BUksQCxIQCgxOT1RJRklDQVRJT04QDBIJCgVI",
-            "SVJFRBANEgsKB1NFTlRfQ1YQDhIVChFJTlRFUlZJRVdfR1JBTlRFRBAPIuIB",
-            "CgxQcm9maWxlRXZlbnQSTQoEdHlwZRgBIAEoDjI6Lmdvb2dsZS5jbG91ZC50",
-            "YWxlbnQudjRiZXRhMS5Qcm9maWxlRXZlbnQuUHJvZmlsZUV2ZW50VHlwZUID",
-            "4EECEhUKCHByb2ZpbGVzGAIgAygJQgPgQQISDAoEam9icxgGIAMoCSJeChBQ",
-            "cm9maWxlRXZlbnRUeXBlEiIKHlBST0ZJTEVfRVZFTlRfVFlQRV9VTlNQRUNJ",
-            "RklFRBAAEg4KCklNUFJFU1NJT04QARIICgRWSUVXEAISDAoIQk9PS01BUksQ",
-            "A0J4Ch9jb20uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExQgpFdmVudFBy",
-            "b3RvUAFaQWdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMv",
-            "Y2xvdWQvdGFsZW50L3Y0YmV0YTE7dGFsZW50ogIDQ1RTYgZwcm90bzM="));
+            "byLIAQoLQ2xpZW50RXZlbnQSEgoKcmVxdWVzdF9pZBgBIAEoCRIVCghldmVu",
+            "dF9pZBgCIAEoCUID4EECEjQKC2NyZWF0ZV90aW1lGAQgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EECEjoKCWpvYl9ldmVudBgFIAEoCzIl",
+            "Lmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Kb2JFdmVudEgAEhMKC2V2",
+            "ZW50X25vdGVzGAkgASgJQgcKBWV2ZW50IvYDCghKb2JFdmVudBJFCgR0eXBl",
+            "GAEgASgOMjIuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkpvYkV2ZW50",
+            "LkpvYkV2ZW50VHlwZUID4EECEhEKBGpvYnMYAiADKAlCA+BBAhIPCgdwcm9m",
+            "aWxlGAMgASgJIv4CCgxKb2JFdmVudFR5cGUSHgoaSk9CX0VWRU5UX1RZUEVf",
+            "VU5TUEVDSUZJRUQQABIOCgpJTVBSRVNTSU9OEAESCAoEVklFVxACEhEKDVZJ",
+            "RVdfUkVESVJFQ1QQAxIVChFBUFBMSUNBVElPTl9TVEFSVBAEEhYKEkFQUExJ",
+            "Q0FUSU9OX0ZJTklTSBAFEiAKHEFQUExJQ0FUSU9OX1FVSUNLX1NVQk1JU1NJ",
+            "T04QBhIYChRBUFBMSUNBVElPTl9SRURJUkVDVBAHEiEKHUFQUExJQ0FUSU9O",
+            "X1NUQVJUX0ZST01fU0VBUkNIEAgSJAogQVBQTElDQVRJT05fUkVESVJFQ1Rf",
+            "RlJPTV9TRUFSQ0gQCRIeChpBUFBMSUNBVElPTl9DT01QQU5ZX1NVQk1JVBAK",
+            "EgwKCEJPT0tNQVJLEAsSEAoMTk9USUZJQ0FUSU9OEAwSCQoFSElSRUQQDRIL",
+            "CgdTRU5UX0NWEA4SFQoRSU5URVJWSUVXX0dSQU5URUQQD0J4Ch9jb20uZ29v",
+            "Z2xlLmNsb3VkLnRhbGVudC52NGJldGExQgpFdmVudFByb3RvUAFaQWdvb2ds",
+            "ZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvdGFsZW50",
+            "L3Y0YmV0YTE7dGFsZW50ogIDQ1RTYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ClientEvent), global::Google.Cloud.Talent.V4Beta1.ClientEvent.Parser, new[]{ "RequestId", "EventId", "CreateTime", "JobEvent", "ProfileEvent", "EventNotes" }, new[]{ "Event" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.JobEvent), global::Google.Cloud.Talent.V4Beta1.JobEvent.Parser, new[]{ "Type", "Jobs", "Profile" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.JobEvent.Types.JobEventType) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ProfileEvent), global::Google.Cloud.Talent.V4Beta1.ProfileEvent.Parser, new[]{ "Type", "Profiles", "Jobs" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.ProfileEvent.Types.ProfileEventType) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ClientEvent), global::Google.Cloud.Talent.V4Beta1.ClientEvent.Parser, new[]{ "RequestId", "EventId", "CreateTime", "JobEvent", "EventNotes" }, new[]{ "Event" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.JobEvent), global::Google.Cloud.Talent.V4Beta1.JobEvent.Parser, new[]{ "Type", "Jobs", "Profile" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.JobEvent.Types.JobEventType) }, null, null)
           }));
     }
     #endregion
@@ -113,9 +105,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
       switch (other.EventCase) {
         case EventOneofCase.JobEvent:
           JobEvent = other.JobEvent.Clone();
-          break;
-        case EventOneofCase.ProfileEvent:
-          ProfileEvent = other.ProfileEvent.Clone();
           break;
       }
 
@@ -192,22 +181,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
     }
 
-    /// <summary>Field number for the "profile_event" field.</summary>
-    public const int ProfileEventFieldNumber = 6;
-    /// <summary>
-    /// An event issued when a profile searcher interacts with the application
-    /// that implements Cloud Talent Solution.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Cloud.Talent.V4Beta1.ProfileEvent ProfileEvent {
-      get { return eventCase_ == EventOneofCase.ProfileEvent ? (global::Google.Cloud.Talent.V4Beta1.ProfileEvent) event_ : null; }
-      set {
-        event_ = value;
-        eventCase_ = value == null ? EventOneofCase.None : EventOneofCase.ProfileEvent;
-      }
-    }
-
     /// <summary>Field number for the "event_notes" field.</summary>
     public const int EventNotesFieldNumber = 9;
     private string eventNotes_ = "";
@@ -229,7 +202,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public enum EventOneofCase {
       None = 0,
       JobEvent = 5,
-      ProfileEvent = 6,
     }
     private EventOneofCase eventCase_ = EventOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -264,7 +236,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (EventId != other.EventId) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(JobEvent, other.JobEvent)) return false;
-      if (!object.Equals(ProfileEvent, other.ProfileEvent)) return false;
       if (EventNotes != other.EventNotes) return false;
       if (EventCase != other.EventCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -278,7 +249,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (EventId.Length != 0) hash ^= EventId.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (eventCase_ == EventOneofCase.JobEvent) hash ^= JobEvent.GetHashCode();
-      if (eventCase_ == EventOneofCase.ProfileEvent) hash ^= ProfileEvent.GetHashCode();
       if (EventNotes.Length != 0) hash ^= EventNotes.GetHashCode();
       hash ^= (int) eventCase_;
       if (_unknownFields != null) {
@@ -315,10 +285,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteRawTag(42);
         output.WriteMessage(JobEvent);
       }
-      if (eventCase_ == EventOneofCase.ProfileEvent) {
-        output.WriteRawTag(50);
-        output.WriteMessage(ProfileEvent);
-      }
       if (EventNotes.Length != 0) {
         output.WriteRawTag(74);
         output.WriteString(EventNotes);
@@ -349,10 +315,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteRawTag(42);
         output.WriteMessage(JobEvent);
       }
-      if (eventCase_ == EventOneofCase.ProfileEvent) {
-        output.WriteRawTag(50);
-        output.WriteMessage(ProfileEvent);
-      }
       if (EventNotes.Length != 0) {
         output.WriteRawTag(74);
         output.WriteString(EventNotes);
@@ -378,9 +340,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (eventCase_ == EventOneofCase.JobEvent) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(JobEvent);
-      }
-      if (eventCase_ == EventOneofCase.ProfileEvent) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ProfileEvent);
       }
       if (EventNotes.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(EventNotes);
@@ -418,12 +377,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
             JobEvent = new global::Google.Cloud.Talent.V4Beta1.JobEvent();
           }
           JobEvent.MergeFrom(other.JobEvent);
-          break;
-        case EventOneofCase.ProfileEvent:
-          if (ProfileEvent == null) {
-            ProfileEvent = new global::Google.Cloud.Talent.V4Beta1.ProfileEvent();
-          }
-          ProfileEvent.MergeFrom(other.ProfileEvent);
           break;
       }
 
@@ -464,15 +417,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
             }
             input.ReadMessage(subBuilder);
             JobEvent = subBuilder;
-            break;
-          }
-          case 50: {
-            global::Google.Cloud.Talent.V4Beta1.ProfileEvent subBuilder = new global::Google.Cloud.Talent.V4Beta1.ProfileEvent();
-            if (eventCase_ == EventOneofCase.ProfileEvent) {
-              subBuilder.MergeFrom(ProfileEvent);
-            }
-            input.ReadMessage(subBuilder);
-            ProfileEvent = subBuilder;
             break;
           }
           case 74: {
@@ -516,15 +460,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
             }
             input.ReadMessage(subBuilder);
             JobEvent = subBuilder;
-            break;
-          }
-          case 50: {
-            global::Google.Cloud.Talent.V4Beta1.ProfileEvent subBuilder = new global::Google.Cloud.Talent.V4Beta1.ProfileEvent();
-            if (eventCase_ == EventOneofCase.ProfileEvent) {
-              subBuilder.MergeFrom(ProfileEvent);
-            }
-            input.ReadMessage(subBuilder);
-            ProfileEvent = subBuilder;
             break;
           }
           case 74: {
@@ -929,314 +864,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
         /// recommendation provided by the Cloud Talent Solution service.
         /// </summary>
         [pbr::OriginalName("INTERVIEW_GRANTED")] InterviewGranted = 15,
-      }
-
-    }
-    #endregion
-
-  }
-
-  /// <summary>
-  /// An event issued when a profile searcher interacts with the application
-  /// that implements Cloud Talent Solution.
-  /// </summary>
-  public sealed partial class ProfileEvent : pb::IMessage<ProfileEvent>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<ProfileEvent> _parser = new pb::MessageParser<ProfileEvent>(() => new ProfileEvent());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<ProfileEvent> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Talent.V4Beta1.EventReflection.Descriptor.MessageTypes[2]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ProfileEvent() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ProfileEvent(ProfileEvent other) : this() {
-      type_ = other.type_;
-      profiles_ = other.profiles_.Clone();
-      jobs_ = other.jobs_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ProfileEvent Clone() {
-      return new ProfileEvent(this);
-    }
-
-    /// <summary>Field number for the "type" field.</summary>
-    public const int TypeFieldNumber = 1;
-    private global::Google.Cloud.Talent.V4Beta1.ProfileEvent.Types.ProfileEventType type_ = global::Google.Cloud.Talent.V4Beta1.ProfileEvent.Types.ProfileEventType.Unspecified;
-    /// <summary>
-    /// Required. Type of event.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Cloud.Talent.V4Beta1.ProfileEvent.Types.ProfileEventType Type {
-      get { return type_; }
-      set {
-        type_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "profiles" field.</summary>
-    public const int ProfilesFieldNumber = 2;
-    private static readonly pb::FieldCodec<string> _repeated_profiles_codec
-        = pb::FieldCodec.ForString(18);
-    private readonly pbc::RepeatedField<string> profiles_ = new pbc::RepeatedField<string>();
-    /// <summary>
-    /// Required. The [profile name(s)][google.cloud.talent.v4beta1.Profile.name] associated with this client event.
-    ///
-    /// The format is
-    /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}",
-    /// for example, "projects/foo/tenants/bar/profiles/baz".
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<string> Profiles {
-      get { return profiles_; }
-    }
-
-    /// <summary>Field number for the "jobs" field.</summary>
-    public const int JobsFieldNumber = 6;
-    private static readonly pb::FieldCodec<string> _repeated_jobs_codec
-        = pb::FieldCodec.ForString(50);
-    private readonly pbc::RepeatedField<string> jobs_ = new pbc::RepeatedField<string>();
-    /// <summary>
-    /// The [job name(s)][google.cloud.talent.v4beta1.Job.name] associated with this client event. Leave it
-    /// empty if the event isn't associated with a job.
-    ///
-    /// The format is
-    /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}", for
-    /// example, "projects/foo/tenants/bar/jobs/baz".
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<string> Jobs {
-      get { return jobs_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as ProfileEvent);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(ProfileEvent other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Type != other.Type) return false;
-      if(!profiles_.Equals(other.profiles_)) return false;
-      if(!jobs_.Equals(other.jobs_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Type != global::Google.Cloud.Talent.V4Beta1.ProfileEvent.Types.ProfileEventType.Unspecified) hash ^= Type.GetHashCode();
-      hash ^= profiles_.GetHashCode();
-      hash ^= jobs_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (Type != global::Google.Cloud.Talent.V4Beta1.ProfileEvent.Types.ProfileEventType.Unspecified) {
-        output.WriteRawTag(8);
-        output.WriteEnum((int) Type);
-      }
-      profiles_.WriteTo(output, _repeated_profiles_codec);
-      jobs_.WriteTo(output, _repeated_jobs_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Type != global::Google.Cloud.Talent.V4Beta1.ProfileEvent.Types.ProfileEventType.Unspecified) {
-        output.WriteRawTag(8);
-        output.WriteEnum((int) Type);
-      }
-      profiles_.WriteTo(ref output, _repeated_profiles_codec);
-      jobs_.WriteTo(ref output, _repeated_jobs_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (Type != global::Google.Cloud.Talent.V4Beta1.ProfileEvent.Types.ProfileEventType.Unspecified) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
-      }
-      size += profiles_.CalculateSize(_repeated_profiles_codec);
-      size += jobs_.CalculateSize(_repeated_jobs_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(ProfileEvent other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Type != global::Google.Cloud.Talent.V4Beta1.ProfileEvent.Types.ProfileEventType.Unspecified) {
-        Type = other.Type;
-      }
-      profiles_.Add(other.profiles_);
-      jobs_.Add(other.jobs_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 8: {
-            Type = (global::Google.Cloud.Talent.V4Beta1.ProfileEvent.Types.ProfileEventType) input.ReadEnum();
-            break;
-          }
-          case 18: {
-            profiles_.AddEntriesFrom(input, _repeated_profiles_codec);
-            break;
-          }
-          case 50: {
-            jobs_.AddEntriesFrom(input, _repeated_jobs_codec);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 8: {
-            Type = (global::Google.Cloud.Talent.V4Beta1.ProfileEvent.Types.ProfileEventType) input.ReadEnum();
-            break;
-          }
-          case 18: {
-            profiles_.AddEntriesFrom(ref input, _repeated_profiles_codec);
-            break;
-          }
-          case 50: {
-            jobs_.AddEntriesFrom(ref input, _repeated_jobs_codec);
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-    #region Nested types
-    /// <summary>Container for nested types declared in the ProfileEvent message type.</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static partial class Types {
-      /// <summary>
-      /// The enum represents types of client events for a candidate profile.
-      /// </summary>
-      public enum ProfileEventType {
-        /// <summary>
-        /// Default value.
-        /// </summary>
-        [pbr::OriginalName("PROFILE_EVENT_TYPE_UNSPECIFIED")] Unspecified = 0,
-        /// <summary>
-        /// Send this event when a [ProfileEvent.profiles][google.cloud.talent.v4beta1.ProfileEvent.profiles] was sent as a part of
-        /// a result set for a CTS API call and was rendered in the end user's UI
-        /// (that is, the [ProfileEvent.recruiter][google.cloud.talent.v4beta1.ProfileEvent.recruiter]).
-        /// </summary>
-        [pbr::OriginalName("IMPRESSION")] Impression = 1,
-        /// <summary>
-        /// The VIEW event records the action of a candidate's profile being
-        /// viewed by an end user. This is critical to tracking product metrics and
-        /// should be sent for every profile VIEW that happens in your system,
-        /// whether the event is associated with an API call (for example, a
-        /// recruiter making a request for a result set and clicking on a profile)
-        /// or not (a recruiter using the system to view profile details without
-        /// making a request).
-        ///
-        /// For a VIEW events associated with API calls, the
-        /// [ClientEvent.request_id][google.cloud.talent.v4beta1.ClientEvent.request_id] should be populated.  If the VIEW is not
-        /// associated with an API call, [request_id][google.cloud.talent.v4beta1.ClientEvent.request_id] should
-        /// not be populated.
-        ///
-        /// This event requires a valid recruiter and one valid ID in profiles.
-        /// </summary>
-        [pbr::OriginalName("VIEW")] View = 2,
-        /// <summary>
-        /// The profile is bookmarked.
-        /// </summary>
-        [pbr::OriginalName("BOOKMARK")] Bookmark = 3,
       }
 
     }
