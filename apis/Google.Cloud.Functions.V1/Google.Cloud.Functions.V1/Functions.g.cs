@@ -32,7 +32,7 @@ namespace Google.Cloud.Functions.V1 {
             "L2lhbS92MS9wb2xpY3kucHJvdG8aI2dvb2dsZS9sb25ncnVubmluZy9vcGVy",
             "YXRpb25zLnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8a",
             "IGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGh9nb29nbGUvcHJv",
-            "dG9idWYvdGltZXN0YW1wLnByb3RvIrMQCg1DbG91ZEZ1bmN0aW9uEgwKBG5h",
+            "dG9idWYvdGltZXN0YW1wLnByb3RvIucRCg1DbG91ZEZ1bmN0aW9uEgwKBG5h",
             "bWUYASABKAkSEwoLZGVzY3JpcHRpb24YAiABKAkSHAoSc291cmNlX2FyY2hp",
             "dmVfdXJsGAMgASgJSAASSAoRc291cmNlX3JlcG9zaXRvcnkYBCABKAsyKy5n",
             "b29nbGUuY2xvdWQuZnVuY3Rpb25zLnYxLlNvdXJjZVJlcG9zaXRvcnlIABIb",
@@ -66,17 +66,21 @@ namespace Google.Cloud.Functions.V1 {
             "dEVudlZhchI/Cg5zZWNyZXRfdm9sdW1lcxgeIAMoCzInLmdvb2dsZS5jbG91",
             "ZC5mdW5jdGlvbnMudjEuU2VjcmV0Vm9sdW1lEhkKDHNvdXJjZV90b2tlbhgf",
             "IAEoCUID4EEEEkoKEWRvY2tlcl9yZXBvc2l0b3J5GCIgASgJQi/6QSwKKmFy",
-            "dGlmYWN0cmVnaXN0cnkuZ29vZ2xlYXBpcy5jb20vUmVwb3NpdG9yeRotCgtM",
-            "YWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBGjsK",
-            "GUVudmlyb25tZW50VmFyaWFibGVzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZh",
-            "bHVlGAIgASgJOgI4ARpACh5CdWlsZEVudmlyb25tZW50VmFyaWFibGVzRW50",
-            "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJ1ChpWcGNDb25u",
-            "ZWN0b3JFZ3Jlc3NTZXR0aW5ncxItCilWUENfQ09OTkVDVE9SX0VHUkVTU19T",
-            "RVRUSU5HU19VTlNQRUNJRklFRBAAEhcKE1BSSVZBVEVfUkFOR0VTX09OTFkQ",
-            "ARIPCgtBTExfVFJBRkZJQxACIngKD0luZ3Jlc3NTZXR0aW5ncxIgChxJTkdS",
-            "RVNTX1NFVFRJTkdTX1VOU1BFQ0lGSUVEEAASDQoJQUxMT1dfQUxMEAESFwoT",
-            "QUxMT1dfSU5URVJOQUxfT05MWRACEhsKF0FMTE9XX0lOVEVSTkFMX0FORF9H",
-            "Q0xCEAM6bupBaworY2xvdWRmdW5jdGlvbnMuZ29vZ2xlYXBpcy5jb20vQ2xv",
+            "dGlmYWN0cmVnaXN0cnkuZ29vZ2xlYXBpcy5jb20vUmVwb3NpdG9yeRJQCg9k",
+            "b2NrZXJfcmVnaXN0cnkYIyABKA4yNy5nb29nbGUuY2xvdWQuZnVuY3Rpb25z",
+            "LnYxLkNsb3VkRnVuY3Rpb24uRG9ja2VyUmVnaXN0cnkaLQoLTGFiZWxzRW50",
+            "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ARo7ChlFbnZpcm9u",
+            "bWVudFZhcmlhYmxlc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
+            "CToCOAEaQAoeQnVpbGRFbnZpcm9ubWVudFZhcmlhYmxlc0VudHJ5EgsKA2tl",
+            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEidQoaVnBjQ29ubmVjdG9yRWdy",
+            "ZXNzU2V0dGluZ3MSLQopVlBDX0NPTk5FQ1RPUl9FR1JFU1NfU0VUVElOR1Nf",
+            "VU5TUEVDSUZJRUQQABIXChNQUklWQVRFX1JBTkdFU19PTkxZEAESDwoLQUxM",
+            "X1RSQUZGSUMQAiJ4Cg9JbmdyZXNzU2V0dGluZ3MSIAocSU5HUkVTU19TRVRU",
+            "SU5HU19VTlNQRUNJRklFRBAAEg0KCUFMTE9XX0FMTBABEhcKE0FMTE9XX0lO",
+            "VEVSTkFMX09OTFkQAhIbChdBTExPV19JTlRFUk5BTF9BTkRfR0NMQhADImAK",
+            "DkRvY2tlclJlZ2lzdHJ5Eh8KG0RPQ0tFUl9SRUdJU1RSWV9VTlNQRUNJRklF",
+            "RBAAEhYKEkNPTlRBSU5FUl9SRUdJU1RSWRABEhUKEUFSVElGQUNUX1JFR0lT",
+            "VFJZEAI6bupBaworY2xvdWRmdW5jdGlvbnMuZ29vZ2xlYXBpcy5jb20vQ2xv",
             "dWRGdW5jdGlvbhI8cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
             "YXRpb259L2Z1bmN0aW9ucy97ZnVuY3Rpb259Qg0KC3NvdXJjZV9jb2RlQgkK",
             "B3RyaWdnZXIiOgoQU291cmNlUmVwb3NpdG9yeRILCgN1cmwYASABKAkSGQoM",
@@ -116,76 +120,78 @@ namespace Google.Cloud.Functions.V1 {
             "dWVzdBJBCgRuYW1lGAEgASgJQjPgQQL6QS0KK2Nsb3VkZnVuY3Rpb25zLmdv",
             "b2dsZWFwaXMuY29tL0Nsb3VkRnVuY3Rpb24SEQoEZGF0YRgCIAEoCUID4EEC",
             "IksKFENhbGxGdW5jdGlvblJlc3BvbnNlEhQKDGV4ZWN1dGlvbl9pZBgBIAEo",
-            "CRIOCgZyZXN1bHQYAiABKAkSDQoFZXJyb3IYAyABKAkiKgoYR2VuZXJhdGVV",
-            "cGxvYWRVcmxSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCSIvChlHZW5lcmF0ZVVw",
-            "bG9hZFVybFJlc3BvbnNlEhIKCnVwbG9hZF91cmwYASABKAkiPgoaR2VuZXJh",
-            "dGVEb3dubG9hZFVybFJlcXVlc3QSDAoEbmFtZRgBIAEoCRISCgp2ZXJzaW9u",
-            "X2lkGAIgASgEIjMKG0dlbmVyYXRlRG93bmxvYWRVcmxSZXNwb25zZRIUCgxk",
-            "b3dubG9hZF91cmwYASABKAkqkgEKE0Nsb3VkRnVuY3Rpb25TdGF0dXMSJQoh",
-            "Q0xPVURfRlVOQ1RJT05fU1RBVFVTX1VOU1BFQ0lGSUVEEAASCgoGQUNUSVZF",
-            "EAESCwoHT0ZGTElORRACEhYKEkRFUExPWV9JTl9QUk9HUkVTUxADEhYKEkRF",
-            "TEVURV9JTl9QUk9HUkVTUxAEEgsKB1VOS05PV04QBTKXEQoVQ2xvdWRGdW5j",
-            "dGlvbnNTZXJ2aWNlEqkBCg1MaXN0RnVuY3Rpb25zEi8uZ29vZ2xlLmNsb3Vk",
-            "LmZ1bmN0aW9ucy52MS5MaXN0RnVuY3Rpb25zUmVxdWVzdBowLmdvb2dsZS5j",
-            "bG91ZC5mdW5jdGlvbnMudjEuTGlzdEZ1bmN0aW9uc1Jlc3BvbnNlIjWC0+ST",
-            "Ai8SLS92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2Z1bmN0",
-            "aW9ucxKkAQoLR2V0RnVuY3Rpb24SLS5nb29nbGUuY2xvdWQuZnVuY3Rpb25z",
-            "LnYxLkdldEZ1bmN0aW9uUmVxdWVzdBooLmdvb2dsZS5jbG91ZC5mdW5jdGlv",
-            "bnMudjEuQ2xvdWRGdW5jdGlvbiI8gtPkkwIvEi0vdjEve25hbWU9cHJvamVj",
-            "dHMvKi9sb2NhdGlvbnMvKi9mdW5jdGlvbnMvKn3aQQRuYW1lEt8BCg5DcmVh",
-            "dGVGdW5jdGlvbhIwLmdvb2dsZS5jbG91ZC5mdW5jdGlvbnMudjEuQ3JlYXRl",
-            "RnVuY3Rpb25SZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlv",
-            "biJ8gtPkkwI7Ii8vdjEve2xvY2F0aW9uPXByb2plY3RzLyovbG9jYXRpb25z",
-            "Lyp9L2Z1bmN0aW9uczoIZnVuY3Rpb27aQRFsb2NhdGlvbixmdW5jdGlvbspB",
-            "JAoNQ2xvdWRGdW5jdGlvbhITT3BlcmF0aW9uTWV0YWRhdGFWMRLdAQoOVXBk",
-            "YXRlRnVuY3Rpb24SMC5nb29nbGUuY2xvdWQuZnVuY3Rpb25zLnYxLlVwZGF0",
-            "ZUZ1bmN0aW9uUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRp",
-            "b24ieoLT5JMCQjI2L3YxL3tmdW5jdGlvbi5uYW1lPXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyovZnVuY3Rpb25zLyp9OghmdW5jdGlvbtpBCGZ1bmN0aW9uykEk",
-            "Cg1DbG91ZEZ1bmN0aW9uEhNPcGVyYXRpb25NZXRhZGF0YVYxEs4BCg5EZWxl",
-            "dGVGdW5jdGlvbhIwLmdvb2dsZS5jbG91ZC5mdW5jdGlvbnMudjEuRGVsZXRl",
-            "RnVuY3Rpb25SZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlv",
-            "biJrgtPkkwIvKi0vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9m",
-            "dW5jdGlvbnMvKn3aQQRuYW1lykEsChVnb29nbGUucHJvdG9idWYuRW1wdHkS",
-            "E09wZXJhdGlvbk1ldGFkYXRhVjESugEKDENhbGxGdW5jdGlvbhIuLmdvb2ds",
-            "ZS5jbG91ZC5mdW5jdGlvbnMudjEuQ2FsbEZ1bmN0aW9uUmVxdWVzdBovLmdv",
-            "b2dsZS5jbG91ZC5mdW5jdGlvbnMudjEuQ2FsbEZ1bmN0aW9uUmVzcG9uc2Ui",
-            "SYLT5JMCNyIyL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovZnVu",
-            "Y3Rpb25zLyp9OmNhbGw6ASraQQluYW1lLGRhdGESygEKEUdlbmVyYXRlVXBs",
-            "b2FkVXJsEjMuZ29vZ2xlLmNsb3VkLmZ1bmN0aW9ucy52MS5HZW5lcmF0ZVVw",
-            "bG9hZFVybFJlcXVlc3QaNC5nb29nbGUuY2xvdWQuZnVuY3Rpb25zLnYxLkdl",
-            "bmVyYXRlVXBsb2FkVXJsUmVzcG9uc2UiSoLT5JMCRCI/L3YxL3twYXJlbnQ9",
-            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vZnVuY3Rpb25zOmdlbmVyYXRlVXBs",
-            "b2FkVXJsOgEqEtIBChNHZW5lcmF0ZURvd25sb2FkVXJsEjUuZ29vZ2xlLmNs",
-            "b3VkLmZ1bmN0aW9ucy52MS5HZW5lcmF0ZURvd25sb2FkVXJsUmVxdWVzdBo2",
-            "Lmdvb2dsZS5jbG91ZC5mdW5jdGlvbnMudjEuR2VuZXJhdGVEb3dubG9hZFVy",
-            "bFJlc3BvbnNlIkyC0+STAkYiQS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qL2Z1bmN0aW9ucy8qfTpnZW5lcmF0ZURvd25sb2FkVXJsOgEqEpQB",
-            "CgxTZXRJYW1Qb2xpY3kSIi5nb29nbGUuaWFtLnYxLlNldElhbVBvbGljeVJl",
-            "cXVlc3QaFS5nb29nbGUuaWFtLnYxLlBvbGljeSJJgtPkkwJDIj4vdjEve3Jl",
-            "c291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovZnVuY3Rpb25zLyp9OnNl",
-            "dElhbVBvbGljeToBKhKRAQoMR2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52",
-            "MS5HZXRJYW1Qb2xpY3lSZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3ki",
-            "RoLT5JMCQBI+L3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
-            "L2Z1bmN0aW9ucy8qfTpnZXRJYW1Qb2xpY3kSugEKElRlc3RJYW1QZXJtaXNz",
-            "aW9ucxIoLmdvb2dsZS5pYW0udjEuVGVzdElhbVBlcm1pc3Npb25zUmVxdWVz",
-            "dBopLmdvb2dsZS5pYW0udjEuVGVzdElhbVBlcm1pc3Npb25zUmVzcG9uc2Ui",
-            "T4LT5JMCSSJEL3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
-            "L2Z1bmN0aW9ucy8qfTp0ZXN0SWFtUGVybWlzc2lvbnM6ASoaUcpBHWNsb3Vk",
-            "ZnVuY3Rpb25zLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xl",
-            "YXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybULoAgodY29tLmdvb2dsZS5j",
-            "bG91ZC5mdW5jdGlvbnMudjFCDkZ1bmN0aW9uc1Byb3RvUAFaQmdvb2dsZS5n",
-            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvZnVuY3Rpb25z",
-            "L3YxO2Z1bmN0aW9uc6ICA0dDRupBbwoqYXJ0aWZhY3RyZWdpc3RyeS5nb29n",
-            "bGVhcGlzLmNvbS9SZXBvc2l0b3J5EkFwcm9qZWN0cy97cHJvamVjdH0vbG9j",
-            "YXRpb25zL3tsb2NhdGlvbn0vcmVwb3NpdG9yaWVzL3tyZXBvc2l0b3J5fepB",
-            "eAohY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5ElNwcm9qZWN0",
-            "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0va2V5UmluZ3Mve2tl",
-            "eV9yaW5nfS9jcnlwdG9LZXlzL3tjcnlwdG9fa2V5fWIGcHJvdG8z"));
+            "CRIOCgZyZXN1bHQYAiABKAkSDQoFZXJyb3IYAyABKAkiaAoYR2VuZXJhdGVV",
+            "cGxvYWRVcmxSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRI8CgxrbXNfa2V5X25h",
+            "bWUYAiABKAlCJvpBIwohY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRv",
+            "S2V5Ii8KGUdlbmVyYXRlVXBsb2FkVXJsUmVzcG9uc2USEgoKdXBsb2FkX3Vy",
+            "bBgBIAEoCSI+ChpHZW5lcmF0ZURvd25sb2FkVXJsUmVxdWVzdBIMCgRuYW1l",
+            "GAEgASgJEhIKCnZlcnNpb25faWQYAiABKAQiMwobR2VuZXJhdGVEb3dubG9h",
+            "ZFVybFJlc3BvbnNlEhQKDGRvd25sb2FkX3VybBgBIAEoCSqSAQoTQ2xvdWRG",
+            "dW5jdGlvblN0YXR1cxIlCiFDTE9VRF9GVU5DVElPTl9TVEFUVVNfVU5TUEVD",
+            "SUZJRUQQABIKCgZBQ1RJVkUQARILCgdPRkZMSU5FEAISFgoSREVQTE9ZX0lO",
+            "X1BST0dSRVNTEAMSFgoSREVMRVRFX0lOX1BST0dSRVNTEAQSCwoHVU5LTk9X",
+            "ThAFMpcRChVDbG91ZEZ1bmN0aW9uc1NlcnZpY2USqQEKDUxpc3RGdW5jdGlv",
+            "bnMSLy5nb29nbGUuY2xvdWQuZnVuY3Rpb25zLnYxLkxpc3RGdW5jdGlvbnNS",
+            "ZXF1ZXN0GjAuZ29vZ2xlLmNsb3VkLmZ1bmN0aW9ucy52MS5MaXN0RnVuY3Rp",
+            "b25zUmVzcG9uc2UiNYLT5JMCLxItL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKn0vZnVuY3Rpb25zEqQBCgtHZXRGdW5jdGlvbhItLmdvb2ds",
+            "ZS5jbG91ZC5mdW5jdGlvbnMudjEuR2V0RnVuY3Rpb25SZXF1ZXN0GiguZ29v",
+            "Z2xlLmNsb3VkLmZ1bmN0aW9ucy52MS5DbG91ZEZ1bmN0aW9uIjyC0+STAi8S",
+            "LS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2Z1bmN0aW9ucy8q",
+            "fdpBBG5hbWUS3wEKDkNyZWF0ZUZ1bmN0aW9uEjAuZ29vZ2xlLmNsb3VkLmZ1",
+            "bmN0aW9ucy52MS5DcmVhdGVGdW5jdGlvblJlcXVlc3QaHS5nb29nbGUubG9u",
+            "Z3J1bm5pbmcuT3BlcmF0aW9uInyC0+STAjsiLy92MS97bG9jYXRpb249cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvKn0vZnVuY3Rpb25zOghmdW5jdGlvbtpBEWxv",
+            "Y2F0aW9uLGZ1bmN0aW9uykEkCg1DbG91ZEZ1bmN0aW9uEhNPcGVyYXRpb25N",
+            "ZXRhZGF0YVYxEt0BCg5VcGRhdGVGdW5jdGlvbhIwLmdvb2dsZS5jbG91ZC5m",
+            "dW5jdGlvbnMudjEuVXBkYXRlRnVuY3Rpb25SZXF1ZXN0Gh0uZ29vZ2xlLmxv",
+            "bmdydW5uaW5nLk9wZXJhdGlvbiJ6gtPkkwJCMjYvdjEve2Z1bmN0aW9uLm5h",
+            "bWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9mdW5jdGlvbnMvKn06CGZ1bmN0",
+            "aW9u2kEIZnVuY3Rpb27KQSQKDUNsb3VkRnVuY3Rpb24SE09wZXJhdGlvbk1l",
+            "dGFkYXRhVjESzgEKDkRlbGV0ZUZ1bmN0aW9uEjAuZ29vZ2xlLmNsb3VkLmZ1",
+            "bmN0aW9ucy52MS5EZWxldGVGdW5jdGlvblJlcXVlc3QaHS5nb29nbGUubG9u",
+            "Z3J1bm5pbmcuT3BlcmF0aW9uImuC0+STAi8qLS92MS97bmFtZT1wcm9qZWN0",
+            "cy8qL2xvY2F0aW9ucy8qL2Z1bmN0aW9ucy8qfdpBBG5hbWXKQSwKFWdvb2ds",
+            "ZS5wcm90b2J1Zi5FbXB0eRITT3BlcmF0aW9uTWV0YWRhdGFWMRK6AQoMQ2Fs",
+            "bEZ1bmN0aW9uEi4uZ29vZ2xlLmNsb3VkLmZ1bmN0aW9ucy52MS5DYWxsRnVu",
+            "Y3Rpb25SZXF1ZXN0Gi8uZ29vZ2xlLmNsb3VkLmZ1bmN0aW9ucy52MS5DYWxs",
+            "RnVuY3Rpb25SZXNwb25zZSJJgtPkkwI3IjIvdjEve25hbWU9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKi9mdW5jdGlvbnMvKn06Y2FsbDoBKtpBCW5hbWUsZGF0",
+            "YRLKAQoRR2VuZXJhdGVVcGxvYWRVcmwSMy5nb29nbGUuY2xvdWQuZnVuY3Rp",
+            "b25zLnYxLkdlbmVyYXRlVXBsb2FkVXJsUmVxdWVzdBo0Lmdvb2dsZS5jbG91",
+            "ZC5mdW5jdGlvbnMudjEuR2VuZXJhdGVVcGxvYWRVcmxSZXNwb25zZSJKgtPk",
+            "kwJEIj8vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9mdW5j",
+            "dGlvbnM6Z2VuZXJhdGVVcGxvYWRVcmw6ASoS0gEKE0dlbmVyYXRlRG93bmxv",
+            "YWRVcmwSNS5nb29nbGUuY2xvdWQuZnVuY3Rpb25zLnYxLkdlbmVyYXRlRG93",
+            "bmxvYWRVcmxSZXF1ZXN0GjYuZ29vZ2xlLmNsb3VkLmZ1bmN0aW9ucy52MS5H",
+            "ZW5lcmF0ZURvd25sb2FkVXJsUmVzcG9uc2UiTILT5JMCRiJBL3YxL3tuYW1l",
+            "PXByb2plY3RzLyovbG9jYXRpb25zLyovZnVuY3Rpb25zLyp9OmdlbmVyYXRl",
+            "RG93bmxvYWRVcmw6ASoSlAEKDFNldElhbVBvbGljeRIiLmdvb2dsZS5pYW0u",
+            "djEuU2V0SWFtUG9saWN5UmVxdWVzdBoVLmdvb2dsZS5pYW0udjEuUG9saWN5",
+            "IkmC0+STAkMiPi92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
+            "Ki9mdW5jdGlvbnMvKn06c2V0SWFtUG9saWN5OgEqEpEBCgxHZXRJYW1Qb2xp",
+            "Y3kSIi5nb29nbGUuaWFtLnYxLkdldElhbVBvbGljeVJlcXVlc3QaFS5nb29n",
+            "bGUuaWFtLnYxLlBvbGljeSJGgtPkkwJAEj4vdjEve3Jlc291cmNlPXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyovZnVuY3Rpb25zLyp9OmdldElhbVBvbGljeRK6",
+            "AQoSVGVzdElhbVBlcm1pc3Npb25zEiguZ29vZ2xlLmlhbS52MS5UZXN0SWFt",
+            "UGVybWlzc2lvbnNSZXF1ZXN0GikuZ29vZ2xlLmlhbS52MS5UZXN0SWFtUGVy",
+            "bWlzc2lvbnNSZXNwb25zZSJPgtPkkwJJIkQvdjEve3Jlc291cmNlPXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyovZnVuY3Rpb25zLyp9OnRlc3RJYW1QZXJtaXNz",
+            "aW9uczoBKhpRykEdY2xvdWRmdW5jdGlvbnMuZ29vZ2xlYXBpcy5jb23SQS5o",
+            "dHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3Jt",
+            "QugCCh1jb20uZ29vZ2xlLmNsb3VkLmZ1bmN0aW9ucy52MUIORnVuY3Rpb25z",
+            "UHJvdG9QAVpCZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
+            "cy9jbG91ZC9mdW5jdGlvbnMvdjE7ZnVuY3Rpb25zogIDR0NG6kFvCiphcnRp",
+            "ZmFjdHJlZ2lzdHJ5Lmdvb2dsZWFwaXMuY29tL1JlcG9zaXRvcnkSQXByb2pl",
+            "Y3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9yZXBvc2l0b3Jp",
+            "ZXMve3JlcG9zaXRvcnl96kF4CiFjbG91ZGttcy5nb29nbGVhcGlzLmNvbS9D",
+            "cnlwdG9LZXkSU3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0",
+            "aW9ufS9rZXlSaW5ncy97a2V5X3Jpbmd9L2NyeXB0b0tleXMve2NyeXB0b19r",
+            "ZXl9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Functions.V1.CloudFunctionStatus), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Functions.V1.CloudFunction), global::Google.Cloud.Functions.V1.CloudFunction.Parser, new[]{ "Name", "Description", "SourceArchiveUrl", "SourceRepository", "SourceUploadUrl", "HttpsTrigger", "EventTrigger", "Status", "EntryPoint", "Runtime", "Timeout", "AvailableMemoryMb", "ServiceAccountEmail", "UpdateTime", "VersionId", "Labels", "EnvironmentVariables", "BuildEnvironmentVariables", "Network", "MaxInstances", "MinInstances", "VpcConnector", "VpcConnectorEgressSettings", "IngressSettings", "KmsKeyName", "BuildWorkerPool", "BuildId", "BuildName", "SecretEnvironmentVariables", "SecretVolumes", "SourceToken", "DockerRepository" }, new[]{ "SourceCode", "Trigger" }, new[]{ typeof(global::Google.Cloud.Functions.V1.CloudFunction.Types.VpcConnectorEgressSettings), typeof(global::Google.Cloud.Functions.V1.CloudFunction.Types.IngressSettings) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Functions.V1.CloudFunction), global::Google.Cloud.Functions.V1.CloudFunction.Parser, new[]{ "Name", "Description", "SourceArchiveUrl", "SourceRepository", "SourceUploadUrl", "HttpsTrigger", "EventTrigger", "Status", "EntryPoint", "Runtime", "Timeout", "AvailableMemoryMb", "ServiceAccountEmail", "UpdateTime", "VersionId", "Labels", "EnvironmentVariables", "BuildEnvironmentVariables", "Network", "MaxInstances", "MinInstances", "VpcConnector", "VpcConnectorEgressSettings", "IngressSettings", "KmsKeyName", "BuildWorkerPool", "BuildId", "BuildName", "SecretEnvironmentVariables", "SecretVolumes", "SourceToken", "DockerRepository", "DockerRegistry" }, new[]{ "SourceCode", "Trigger" }, new[]{ typeof(global::Google.Cloud.Functions.V1.CloudFunction.Types.VpcConnectorEgressSettings), typeof(global::Google.Cloud.Functions.V1.CloudFunction.Types.IngressSettings), typeof(global::Google.Cloud.Functions.V1.CloudFunction.Types.DockerRegistry) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Functions.V1.SourceRepository), global::Google.Cloud.Functions.V1.SourceRepository.Parser, new[]{ "Url", "DeployedUrl" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Functions.V1.HttpsTrigger), global::Google.Cloud.Functions.V1.HttpsTrigger.Parser, new[]{ "Url", "SecurityLevel" }, null, new[]{ typeof(global::Google.Cloud.Functions.V1.HttpsTrigger.Types.SecurityLevel) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Functions.V1.EventTrigger), global::Google.Cloud.Functions.V1.EventTrigger.Parser, new[]{ "EventType", "Resource", "Service", "FailurePolicy" }, null, null, null, null),
@@ -200,7 +206,7 @@ namespace Google.Cloud.Functions.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Functions.V1.DeleteFunctionRequest), global::Google.Cloud.Functions.V1.DeleteFunctionRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Functions.V1.CallFunctionRequest), global::Google.Cloud.Functions.V1.CallFunctionRequest.Parser, new[]{ "Name", "Data" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Functions.V1.CallFunctionResponse), global::Google.Cloud.Functions.V1.CallFunctionResponse.Parser, new[]{ "ExecutionId", "Result", "Error" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Functions.V1.GenerateUploadUrlRequest), global::Google.Cloud.Functions.V1.GenerateUploadUrlRequest.Parser, new[]{ "Parent" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Functions.V1.GenerateUploadUrlRequest), global::Google.Cloud.Functions.V1.GenerateUploadUrlRequest.Parser, new[]{ "Parent", "KmsKeyName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Functions.V1.GenerateUploadUrlResponse), global::Google.Cloud.Functions.V1.GenerateUploadUrlResponse.Parser, new[]{ "UploadUrl" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Functions.V1.GenerateDownloadUrlRequest), global::Google.Cloud.Functions.V1.GenerateDownloadUrlRequest.Parser, new[]{ "Name", "VersionId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Functions.V1.GenerateDownloadUrlResponse), global::Google.Cloud.Functions.V1.GenerateDownloadUrlResponse.Parser, new[]{ "DownloadUrl" }, null, null, null, null)
@@ -247,7 +253,6 @@ namespace Google.Cloud.Functions.V1 {
   /// <summary>
   /// Describes a Cloud Function that contains user computation executed in
   /// response to an event. It encapsulate function and triggers configurations.
-  /// Next tag: 36
   /// </summary>
   public sealed partial class CloudFunction : pb::IMessage<CloudFunction>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -310,6 +315,7 @@ namespace Google.Cloud.Functions.V1 {
       secretVolumes_ = other.secretVolumes_.Clone();
       sourceToken_ = other.sourceToken_;
       dockerRepository_ = other.dockerRepository_;
+      dockerRegistry_ = other.dockerRegistry_;
       switch (other.SourceCodeCase) {
         case SourceCodeOneofCase.SourceArchiveUrl:
           SourceArchiveUrl = other.SourceArchiveUrl;
@@ -770,8 +776,9 @@ namespace Google.Cloud.Functions.V1 {
     /// the `docker_repository` field that was created with the same KMS crypto
     /// key.
     ///
-    /// The following service accounts need to be granted Cloud KMS crypto key
-    /// encrypter/decrypter roles on the key.
+    /// The following service accounts need to be granted the role 'Cloud KMS
+    /// CryptoKey Encrypter/Decrypter (roles/cloudkms.cryptoKeyEncrypterDecrypter)'
+    /// on the Key/KeyRing/Project/Organization (least access preferred).
     ///
     /// 1. Google Cloud Functions service account
     ///    (service-{project_number}@gcf-admin-robot.iam.gserviceaccount.com) -
@@ -927,6 +934,26 @@ namespace Google.Cloud.Functions.V1 {
       }
     }
 
+    /// <summary>Field number for the "docker_registry" field.</summary>
+    public const int DockerRegistryFieldNumber = 35;
+    private global::Google.Cloud.Functions.V1.CloudFunction.Types.DockerRegistry dockerRegistry_ = global::Google.Cloud.Functions.V1.CloudFunction.Types.DockerRegistry.Unspecified;
+    /// <summary>
+    /// Docker Registry to use for this deployment.
+    ///
+    /// If `docker_repository` field is specified, this field will be automatically
+    /// set as `ARTIFACT_REGISTRY`.
+    /// If unspecified, it currently defaults to `CONTAINER_REGISTRY`.
+    /// This field may be overridden by the backend for eligible deployments.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Functions.V1.CloudFunction.Types.DockerRegistry DockerRegistry {
+      get { return dockerRegistry_; }
+      set {
+        dockerRegistry_ = value;
+      }
+    }
+
     private object sourceCode_;
     /// <summary>Enum of possible cases for the "source_code" oneof.</summary>
     public enum SourceCodeOneofCase {
@@ -1017,6 +1044,7 @@ namespace Google.Cloud.Functions.V1 {
       if(!secretVolumes_.Equals(other.secretVolumes_)) return false;
       if (SourceToken != other.SourceToken) return false;
       if (DockerRepository != other.DockerRepository) return false;
+      if (DockerRegistry != other.DockerRegistry) return false;
       if (SourceCodeCase != other.SourceCodeCase) return false;
       if (TriggerCase != other.TriggerCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -1058,6 +1086,7 @@ namespace Google.Cloud.Functions.V1 {
       hash ^= secretVolumes_.GetHashCode();
       if (SourceToken.Length != 0) hash ^= SourceToken.GetHashCode();
       if (DockerRepository.Length != 0) hash ^= DockerRepository.GetHashCode();
+      if (DockerRegistry != global::Google.Cloud.Functions.V1.CloudFunction.Types.DockerRegistry.Unspecified) hash ^= DockerRegistry.GetHashCode();
       hash ^= (int) sourceCodeCase_;
       hash ^= (int) triggerCase_;
       if (_unknownFields != null) {
@@ -1191,6 +1220,10 @@ namespace Google.Cloud.Functions.V1 {
         output.WriteRawTag(146, 2);
         output.WriteString(DockerRepository);
       }
+      if (DockerRegistry != global::Google.Cloud.Functions.V1.CloudFunction.Types.DockerRegistry.Unspecified) {
+        output.WriteRawTag(152, 2);
+        output.WriteEnum((int) DockerRegistry);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1314,6 +1347,10 @@ namespace Google.Cloud.Functions.V1 {
         output.WriteRawTag(146, 2);
         output.WriteString(DockerRepository);
       }
+      if (DockerRegistry != global::Google.Cloud.Functions.V1.CloudFunction.Types.DockerRegistry.Unspecified) {
+        output.WriteRawTag(152, 2);
+        output.WriteEnum((int) DockerRegistry);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1410,6 +1447,9 @@ namespace Google.Cloud.Functions.V1 {
       if (DockerRepository.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(DockerRepository);
       }
+      if (DockerRegistry != global::Google.Cloud.Functions.V1.CloudFunction.Types.DockerRegistry.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) DockerRegistry);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1498,6 +1538,9 @@ namespace Google.Cloud.Functions.V1 {
       }
       if (other.DockerRepository.Length != 0) {
         DockerRepository = other.DockerRepository;
+      }
+      if (other.DockerRegistry != global::Google.Cloud.Functions.V1.CloudFunction.Types.DockerRegistry.Unspecified) {
+        DockerRegistry = other.DockerRegistry;
       }
       switch (other.SourceCodeCase) {
         case SourceCodeOneofCase.SourceArchiveUrl:
@@ -1693,6 +1736,10 @@ namespace Google.Cloud.Functions.V1 {
             DockerRepository = input.ReadString();
             break;
           }
+          case 280: {
+            DockerRegistry = (global::Google.Cloud.Functions.V1.CloudFunction.Types.DockerRegistry) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -1857,6 +1904,10 @@ namespace Google.Cloud.Functions.V1 {
             DockerRepository = input.ReadString();
             break;
           }
+          case 280: {
+            DockerRegistry = (global::Google.Cloud.Functions.V1.CloudFunction.Types.DockerRegistry) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -1913,6 +1964,29 @@ namespace Google.Cloud.Functions.V1 {
         /// Allow HTTP traffic from private VPC sources and through GCLB.
         /// </summary>
         [pbr::OriginalName("ALLOW_INTERNAL_AND_GCLB")] AllowInternalAndGclb = 3,
+      }
+
+      /// <summary>
+      /// Docker Registry to use for storing function Docker images.
+      /// </summary>
+      public enum DockerRegistry {
+        /// <summary>
+        /// Unspecified.
+        /// </summary>
+        [pbr::OriginalName("DOCKER_REGISTRY_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Docker images will be stored in multi-regional Container Registry
+        /// repositories named `gcf`.
+        /// </summary>
+        [pbr::OriginalName("CONTAINER_REGISTRY")] ContainerRegistry = 1,
+        /// <summary>
+        /// Docker images will be stored in regional Artifact Registry repositories.
+        /// By default, GCF will create and use repositories named `gcf-artifacts`
+        /// in every region in which a function is deployed. But the repository to
+        /// use can also be specified by the user using the `docker_repository`
+        /// field.
+        /// </summary>
+        [pbr::OriginalName("ARTIFACT_REGISTRY")] ArtifactRegistry = 2,
       }
 
     }
@@ -3208,8 +3282,7 @@ namespace Google.Cloud.Functions.V1 {
   /// <summary>
   /// Configuration for a secret environment variable. It has the information
   /// necessary to fetch the secret value from secret manager and expose it as an
-  /// environment variable. Secret value is not a part of the configuration. Secret
-  /// values are only fetched when a new clone starts.
+  /// environment variable.
   /// </summary>
   public sealed partial class SecretEnvVar : pb::IMessage<SecretEnvVar>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3312,7 +3385,7 @@ namespace Google.Cloud.Functions.V1 {
     /// <summary>
     /// Version of the secret (version number or the string 'latest'). It is
     /// recommended to use a numeric version for secret environment variables as
-    /// any updates to the secret value is not reflected until new clones start.
+    /// any updates to the secret value is not reflected until new instances start.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4407,7 +4480,7 @@ namespace Google.Cloud.Functions.V1 {
     public const int UpdateMaskFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
-    /// Required list of fields to be updated in this request.
+    /// Required. The list of fields in `CloudFunction` that have to be updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6073,6 +6146,7 @@ namespace Google.Cloud.Functions.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GenerateUploadUrlRequest(GenerateUploadUrlRequest other) : this() {
       parent_ = other.parent_;
+      kmsKeyName_ = other.kmsKeyName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -6098,6 +6172,37 @@ namespace Google.Cloud.Functions.V1 {
       }
     }
 
+    /// <summary>Field number for the "kms_key_name" field.</summary>
+    public const int KmsKeyNameFieldNumber = 2;
+    private string kmsKeyName_ = "";
+    /// <summary>
+    /// Resource name of a KMS crypto key (managed by the user) used to
+    /// encrypt/decrypt function source code objects in staging Cloud Storage
+    /// buckets. When you generate an upload url and upload your source code, it
+    /// gets copied to a staging Cloud Storage bucket in an internal regional
+    /// project. The source code is then copied to a versioned directory in the
+    /// sources bucket in the consumer project during the function deployment.
+    ///
+    /// It must match the pattern
+    /// `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
+    ///
+    /// The Google Cloud Functions service account
+    /// (service-{project_number}@gcf-admin-robot.iam.gserviceaccount.com) must be
+    /// granted the role 'Cloud KMS CryptoKey Encrypter/Decrypter
+    /// (roles/cloudkms.cryptoKeyEncrypterDecrypter)' on the
+    /// Key/KeyRing/Project/Organization (least access preferred). GCF will
+    /// delegate access to the Google Storage service account in the internal
+    /// project.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string KmsKeyName {
+      get { return kmsKeyName_; }
+      set {
+        kmsKeyName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -6114,6 +6219,7 @@ namespace Google.Cloud.Functions.V1 {
         return true;
       }
       if (Parent != other.Parent) return false;
+      if (KmsKeyName != other.KmsKeyName) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -6122,6 +6228,7 @@ namespace Google.Cloud.Functions.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (KmsKeyName.Length != 0) hash ^= KmsKeyName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -6144,6 +6251,10 @@ namespace Google.Cloud.Functions.V1 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
+      if (KmsKeyName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(KmsKeyName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6158,6 +6269,10 @@ namespace Google.Cloud.Functions.V1 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
+      if (KmsKeyName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(KmsKeyName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6170,6 +6285,9 @@ namespace Google.Cloud.Functions.V1 {
       int size = 0;
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (KmsKeyName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(KmsKeyName);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -6185,6 +6303,9 @@ namespace Google.Cloud.Functions.V1 {
       }
       if (other.Parent.Length != 0) {
         Parent = other.Parent;
+      }
+      if (other.KmsKeyName.Length != 0) {
+        KmsKeyName = other.KmsKeyName;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -6205,6 +6326,10 @@ namespace Google.Cloud.Functions.V1 {
             Parent = input.ReadString();
             break;
           }
+          case 18: {
+            KmsKeyName = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -6222,6 +6347,10 @@ namespace Google.Cloud.Functions.V1 {
             break;
           case 10: {
             Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            KmsKeyName = input.ReadString();
             break;
           }
         }

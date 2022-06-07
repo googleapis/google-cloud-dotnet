@@ -93,6 +93,7 @@ namespace Google.Cloud.Functions.V1.Tests
                 MinInstances = 445814344,
                 BuildName = "build_namead3cc4b7",
                 DockerRepositoryAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                DockerRegistry = CloudFunction.Types.DockerRegistry.ArtifactRegistry,
             };
             mockGrpcClient.Setup(x => x.GetFunction(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -162,6 +163,7 @@ namespace Google.Cloud.Functions.V1.Tests
                 MinInstances = 445814344,
                 BuildName = "build_namead3cc4b7",
                 DockerRepositoryAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                DockerRegistry = CloudFunction.Types.DockerRegistry.ArtifactRegistry,
             };
             mockGrpcClient.Setup(x => x.GetFunctionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CloudFunction>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -233,6 +235,7 @@ namespace Google.Cloud.Functions.V1.Tests
                 MinInstances = 445814344,
                 BuildName = "build_namead3cc4b7",
                 DockerRepositoryAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                DockerRegistry = CloudFunction.Types.DockerRegistry.ArtifactRegistry,
             };
             mockGrpcClient.Setup(x => x.GetFunction(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -302,6 +305,7 @@ namespace Google.Cloud.Functions.V1.Tests
                 MinInstances = 445814344,
                 BuildName = "build_namead3cc4b7",
                 DockerRepositoryAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                DockerRegistry = CloudFunction.Types.DockerRegistry.ArtifactRegistry,
             };
             mockGrpcClient.Setup(x => x.GetFunctionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CloudFunction>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -373,6 +377,7 @@ namespace Google.Cloud.Functions.V1.Tests
                 MinInstances = 445814344,
                 BuildName = "build_namead3cc4b7",
                 DockerRepositoryAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                DockerRegistry = CloudFunction.Types.DockerRegistry.ArtifactRegistry,
             };
             mockGrpcClient.Setup(x => x.GetFunction(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -442,6 +447,7 @@ namespace Google.Cloud.Functions.V1.Tests
                 MinInstances = 445814344,
                 BuildName = "build_namead3cc4b7",
                 DockerRepositoryAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                DockerRegistry = CloudFunction.Types.DockerRegistry.ArtifactRegistry,
             };
             mockGrpcClient.Setup(x => x.GetFunctionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CloudFunction>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -604,6 +610,7 @@ namespace Google.Cloud.Functions.V1.Tests
             GenerateUploadUrlRequest request = new GenerateUploadUrlRequest
             {
                 Parent = "parent7858e4d0",
+                KmsKeyNameAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
             };
             GenerateUploadUrlResponse expectedResponse = new GenerateUploadUrlResponse
             {
@@ -624,6 +631,7 @@ namespace Google.Cloud.Functions.V1.Tests
             GenerateUploadUrlRequest request = new GenerateUploadUrlRequest
             {
                 Parent = "parent7858e4d0",
+                KmsKeyNameAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
             };
             GenerateUploadUrlResponse expectedResponse = new GenerateUploadUrlResponse
             {
