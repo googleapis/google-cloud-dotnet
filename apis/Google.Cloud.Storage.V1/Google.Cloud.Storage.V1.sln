@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30709.132
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Storage.V1", "Google.Cloud.Storage.V1\Google.Cloud.Storage.V1.csproj", "{E8814844-5FA9-4F2B-AEAD-E7CE427DE48A}"
 EndProject
@@ -20,7 +20,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.PubSub.V1", ".
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Storage.V1.CreateCommonTestBucket", "Google.Cloud.Storage.V1.CreateCommonTestBucket\Google.Cloud.Storage.V1.CreateCommonTestBucket.csproj", "{2D1C6480-6B51-45F1-8BC7-6A68D4AC8A11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Storage.V1.BenchmarkingTool", "Google.Cloud.Storage.V1.BenchmarkingTool\Google.Cloud.Storage.V1.BenchmarkingTool.csproj", "{6AD12A44-5465-4929-9F55-629AC494883F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Storage.V1.BenchmarkingTool", "Google.Cloud.Storage.V1.BenchmarkingTool\Google.Cloud.Storage.V1.BenchmarkingTool.csproj", "{6AD12A44-5465-4929-9F55-629AC494883F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Storage.V1.RetryConformanceTests", "Google.Cloud.Storage.V1.RetryConformanceTests\Google.Cloud.Storage.V1.RetryConformanceTests.csproj", "{C628CE11-A46A-4C5B-BBA1-E23E6092B8A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -152,6 +154,18 @@ Global
 		{6AD12A44-5465-4929-9F55-629AC494883F}.Release|x64.Build.0 = Release|Any CPU
 		{6AD12A44-5465-4929-9F55-629AC494883F}.Release|x86.ActiveCfg = Release|Any CPU
 		{6AD12A44-5465-4929-9F55-629AC494883F}.Release|x86.Build.0 = Release|Any CPU
+		{C628CE11-A46A-4C5B-BBA1-E23E6092B8A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C628CE11-A46A-4C5B-BBA1-E23E6092B8A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C628CE11-A46A-4C5B-BBA1-E23E6092B8A4}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C628CE11-A46A-4C5B-BBA1-E23E6092B8A4}.Debug|x64.Build.0 = Debug|Any CPU
+		{C628CE11-A46A-4C5B-BBA1-E23E6092B8A4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C628CE11-A46A-4C5B-BBA1-E23E6092B8A4}.Debug|x86.Build.0 = Debug|Any CPU
+		{C628CE11-A46A-4C5B-BBA1-E23E6092B8A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C628CE11-A46A-4C5B-BBA1-E23E6092B8A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C628CE11-A46A-4C5B-BBA1-E23E6092B8A4}.Release|x64.ActiveCfg = Release|Any CPU
+		{C628CE11-A46A-4C5B-BBA1-E23E6092B8A4}.Release|x64.Build.0 = Release|Any CPU
+		{C628CE11-A46A-4C5B-BBA1-E23E6092B8A4}.Release|x86.ActiveCfg = Release|Any CPU
+		{C628CE11-A46A-4C5B-BBA1-E23E6092B8A4}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
