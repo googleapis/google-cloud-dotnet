@@ -26,21 +26,21 @@ namespace Google.Cloud.Functions.V1 {
           string.Concat(
             "Cipnb29nbGUvY2xvdWQvZnVuY3Rpb25zL3YxL29wZXJhdGlvbnMucHJvdG8S",
             "GWdvb2dsZS5jbG91ZC5mdW5jdGlvbnMudjEaGWdvb2dsZS9wcm90b2J1Zi9h",
-            "bnkucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aHGdv",
-            "b2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8ihQIKE09wZXJhdGlvbk1ldGFk",
-            "YXRhVjESDgoGdGFyZ2V0GAEgASgJEjYKBHR5cGUYAiABKA4yKC5nb29nbGUu",
-            "Y2xvdWQuZnVuY3Rpb25zLnYxLk9wZXJhdGlvblR5cGUSJQoHcmVxdWVzdBgD",
-            "IAEoCzIULmdvb2dsZS5wcm90b2J1Zi5BbnkSEgoKdmVyc2lvbl9pZBgEIAEo",
-            "AxIvCgt1cGRhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXASEAoIYnVpbGRfaWQYBiABKAkSFAoMc291cmNlX3Rva2VuGAcgASgJ",
-            "EhIKCmJ1aWxkX25hbWUYCCABKAkqaQoNT3BlcmF0aW9uVHlwZRIZChVPUEVS",
-            "QVRJT05fVU5TUEVDSUZJRUQQABITCg9DUkVBVEVfRlVOQ1RJT04QARITCg9V",
-            "UERBVEVfRlVOQ1RJT04QAhITCg9ERUxFVEVfRlVOQ1RJT04QA0J/Ch1jb20u",
-            "Z29vZ2xlLmNsb3VkLmZ1bmN0aW9ucy52MUIYRnVuY3Rpb25zT3BlcmF0aW9u",
-            "c1Byb3RvUAFaQmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFw",
-            "aXMvY2xvdWQvZnVuY3Rpb25zL3YxO2Z1bmN0aW9uc2IGcHJvdG8z"));
+            "bnkucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8ihQIK",
+            "E09wZXJhdGlvbk1ldGFkYXRhVjESDgoGdGFyZ2V0GAEgASgJEjYKBHR5cGUY",
+            "AiABKA4yKC5nb29nbGUuY2xvdWQuZnVuY3Rpb25zLnYxLk9wZXJhdGlvblR5",
+            "cGUSJQoHcmVxdWVzdBgDIAEoCzIULmdvb2dsZS5wcm90b2J1Zi5BbnkSEgoK",
+            "dmVyc2lvbl9pZBgEIAEoAxIvCgt1cGRhdGVfdGltZRgFIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5UaW1lc3RhbXASEAoIYnVpbGRfaWQYBiABKAkSFAoMc291",
+            "cmNlX3Rva2VuGAcgASgJEhIKCmJ1aWxkX25hbWUYCCABKAkqaQoNT3BlcmF0",
+            "aW9uVHlwZRIZChVPUEVSQVRJT05fVU5TUEVDSUZJRUQQABITCg9DUkVBVEVf",
+            "RlVOQ1RJT04QARITCg9VUERBVEVfRlVOQ1RJT04QAhITCg9ERUxFVEVfRlVO",
+            "Q1RJT04QA0J/Ch1jb20uZ29vZ2xlLmNsb3VkLmZ1bmN0aW9ucy52MUIYRnVu",
+            "Y3Rpb25zT3BlcmF0aW9uc1Byb3RvUAFaQmdvb2dsZS5nb2xhbmcub3JnL2dl",
+            "bnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvZnVuY3Rpb25zL3YxO2Z1bmN0aW9u",
+            "c2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Functions.V1.OperationType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Functions.V1.OperationMetadataV1), global::Google.Cloud.Functions.V1.OperationMetadataV1.Parser, new[]{ "Target", "Type", "Request", "VersionId", "UpdateTime", "BuildId", "SourceToken", "BuildName" }, null, null, null, null)
           }));

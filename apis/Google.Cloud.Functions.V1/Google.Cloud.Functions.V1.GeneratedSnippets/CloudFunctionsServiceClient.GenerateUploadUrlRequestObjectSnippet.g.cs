@@ -31,7 +31,11 @@ namespace Google.Cloud.Functions.V1.Snippets
             // Create client
             CloudFunctionsServiceClient cloudFunctionsServiceClient = CloudFunctionsServiceClient.Create();
             // Initialize request argument(s)
-            GenerateUploadUrlRequest request = new GenerateUploadUrlRequest { Parent = "", };
+            GenerateUploadUrlRequest request = new GenerateUploadUrlRequest
+            {
+                Parent = "",
+                KmsKeyNameAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+            };
             // Make the request
             GenerateUploadUrlResponse response = cloudFunctionsServiceClient.GenerateUploadUrl(request);
         }
