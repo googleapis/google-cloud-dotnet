@@ -13,6 +13,6 @@
     <ProjectReference Include="..\..\Google.Cloud.DevTools.Common\Google.Cloud.DevTools.Common\Google.Cloud.DevTools.Common.csproj" />
     <ProjectReference Include="..\..\Google.Cloud.Logging.V2\Google.Cloud.Logging.V2\Google.Cloud.Logging.V2.csproj" />
     <PackageReference Include="Grpc.Core" Version="[2.46.3, 3.0.0)" PrivateAssets="None" Condition="'$(TargetFramework)'=='net462'" />
-    <PackageReference Include="NLog" Version="4.5.11" />
+    <PackageReference Include="NLog" Version="4.7.15" />
   </ItemGroup>
 </Project>

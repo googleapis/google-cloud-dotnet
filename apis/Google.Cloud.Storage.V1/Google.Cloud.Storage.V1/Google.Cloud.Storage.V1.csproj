@@ -10,7 +10,7 @@
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="5.0.0" PrivateAssets="All" />
     <PackageReference Include="Google.Api.Gax.Rest" Version="[4.0.0, 5.0.0)" />
-    <PackageReference Include="Google.Apis.Storage.v1" Version="[1.55.0.2526, 2.0.0.0)" />
+    <PackageReference Include="Google.Apis.Storage.v1" Version="[1.57.0.2685, 2.0.0.0)" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="StorageClient.*.cs">
