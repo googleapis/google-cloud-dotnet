@@ -26,10 +26,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
           string.Concat(
             "CjRnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvY29tcGxldGlvbl9zZXJ2",
             "aWNlLnByb3RvEhtnb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEaHGdvb2ds",
-            "ZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVo",
-            "YXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aKGdvb2ds",
-            "ZS9jbG91ZC90YWxlbnQvdjRiZXRhMS9jb21tb24ucHJvdG8aF2dvb2dsZS9h",
-            "cGkvY2xpZW50LnByb3RvIpMEChRDb21wbGV0ZVF1ZXJ5UmVxdWVzdBIzCgZw",
+            "ZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8aF2dvb2dsZS9hcGkvY2xpZW50LnBy",
+            "b3RvGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUv",
+            "YXBpL3Jlc291cmNlLnByb3RvGihnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0",
+            "YTEvY29tbW9uLnByb3RvIpMEChRDb21wbGV0ZVF1ZXJ5UmVxdWVzdBIzCgZw",
             "YXJlbnQYASABKAlCI+BBAvpBHRIbam9icy5nb29nbGVhcGlzLmNvbS9Db21w",
             "YW55EhIKBXF1ZXJ5GAIgASgJQgPgQQISFgoObGFuZ3VhZ2VfY29kZXMYAyAD",
             "KAkSFgoJcGFnZV9zaXplGAQgASgFQgPgQQISMQoHY29tcGFueRgFIAEoCUIg",
@@ -61,7 +61,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "bnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvdGFsZW50L3Y0YmV0YTE7dGFsZW50",
             "ogIDQ1RTYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest), global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Parser, new[]{ "Parent", "Query", "LanguageCodes", "PageSize", "Company", "Scope", "Type" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionScope), typeof(global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CompleteQueryResponse), global::Google.Cloud.Talent.V4Beta1.CompleteQueryResponse.Parser, new[]{ "CompletionResults", "Metadata" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CompleteQueryResponse.Types.CompletionResult), global::Google.Cloud.Talent.V4Beta1.CompleteQueryResponse.Types.CompletionResult.Parser, new[]{ "Suggestion", "Type", "ImageUri" }, null, null, null, null)})

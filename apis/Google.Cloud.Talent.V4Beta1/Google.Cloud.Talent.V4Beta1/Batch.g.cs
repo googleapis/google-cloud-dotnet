@@ -25,13 +25,12 @@ namespace Google.Cloud.Talent.V4Beta1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cidnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvYmF0Y2gucHJvdG8SG2dv",
-            "b2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMRocZ29vZ2xlL2FwaS9hbm5vdGF0",
-            "aW9ucy5wcm90b0J4Ch9jb20uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGEx",
-            "QgpCYXRjaFByb3RvUAFaQWdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
-            "b2dsZWFwaXMvY2xvdWQvdGFsZW50L3Y0YmV0YTE7dGFsZW50ogIDQ1RTYgZw",
-            "cm90bzM="));
+            "b2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMUJ4Ch9jb20uZ29vZ2xlLmNsb3Vk",
+            "LnRhbGVudC52NGJldGExQgpCYXRjaFByb3RvUAFaQWdvb2dsZS5nb2xhbmcu",
+            "b3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvdGFsZW50L3Y0YmV0YTE7",
+            "dGFsZW50ogIDQ1RTYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, null));
     }
     #endregion

@@ -43,7 +43,6 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 EventId = "event_idaccf3744",
                 CreateTime = new wkt::Timestamp(),
                 JobEvent = new JobEvent(),
-                ProfileEvent = new ProfileEvent(),
                 EventNotes = "event_notes102ba330",
             };
             mockGrpcClient.Setup(x => x.CreateClientEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -68,7 +67,6 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 EventId = "event_idaccf3744",
                 CreateTime = new wkt::Timestamp(),
                 JobEvent = new JobEvent(),
-                ProfileEvent = new ProfileEvent(),
                 EventNotes = "event_notes102ba330",
             };
             mockGrpcClient.Setup(x => x.CreateClientEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ClientEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -95,7 +93,6 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 EventId = "event_idaccf3744",
                 CreateTime = new wkt::Timestamp(),
                 JobEvent = new JobEvent(),
-                ProfileEvent = new ProfileEvent(),
                 EventNotes = "event_notes102ba330",
             };
             mockGrpcClient.Setup(x => x.CreateClientEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -120,7 +117,6 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 EventId = "event_idaccf3744",
                 CreateTime = new wkt::Timestamp(),
                 JobEvent = new JobEvent(),
-                ProfileEvent = new ProfileEvent(),
                 EventNotes = "event_notes102ba330",
             };
             mockGrpcClient.Setup(x => x.CreateClientEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ClientEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -147,7 +143,6 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 EventId = "event_idaccf3744",
                 CreateTime = new wkt::Timestamp(),
                 JobEvent = new JobEvent(),
-                ProfileEvent = new ProfileEvent(),
                 EventNotes = "event_notes102ba330",
             };
             mockGrpcClient.Setup(x => x.CreateClientEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -172,7 +167,6 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 EventId = "event_idaccf3744",
                 CreateTime = new wkt::Timestamp(),
                 JobEvent = new JobEvent(),
-                ProfileEvent = new ProfileEvent(),
                 EventNotes = "event_notes102ba330",
             };
             mockGrpcClient.Setup(x => x.CreateClientEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ClientEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -199,7 +193,6 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 EventId = "event_idaccf3744",
                 CreateTime = new wkt::Timestamp(),
                 JobEvent = new JobEvent(),
-                ProfileEvent = new ProfileEvent(),
                 EventNotes = "event_notes102ba330",
             };
             mockGrpcClient.Setup(x => x.CreateClientEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -224,7 +217,6 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 EventId = "event_idaccf3744",
                 CreateTime = new wkt::Timestamp(),
                 JobEvent = new JobEvent(),
-                ProfileEvent = new ProfileEvent(),
                 EventNotes = "event_notes102ba330",
             };
             mockGrpcClient.Setup(x => x.CreateClientEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ClientEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
