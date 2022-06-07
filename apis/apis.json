@@ -1711,7 +1711,7 @@
       "protoPath": "google/iam/v1",
       "productName": "Google Cloud Identity and Access Management (IAM)",
       "productUrl": "https://cloud.google.com/iam/",
-      "version": "3.0.0-alpha05",
+      "version": "3.0.0",
       "type": "grpc",
       "metadataType": "CORE",
       "description": "gRPC services for the Google Identity and Access Management API. This library is typically used as a dependency for other API client libraries.",
