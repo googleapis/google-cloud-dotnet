@@ -94,7 +94,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             { "xunit.runner.visualstudio", "2.4.3" },
             { "Xunit.SkippableFact", "1.4.13" },
             { "Moq", "4.16.1" },
-            { "System.Linq.Async", "5.1.0" },
+            { "System.Linq.Async", "6.0.1" },
         };
 
         // Hard-coded versions for dependencies for production packages that can be updated arbitrarily, as their assets are all private.
