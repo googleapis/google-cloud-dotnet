@@ -94,31 +94,33 @@ namespace Google.Cloud.AIPlatform.V1 {
             "bERlcGxveW1lbnRNb25pdG9yaW5nT2JqZWN0aXZlQ29uZmlnEhkKEWRlcGxv",
             "eWVkX21vZGVsX2lkGAEgASgJElQKEG9iamVjdGl2ZV9jb25maWcYAiABKAsy",
             "Oi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Nb2RlbE1vbml0b3JpbmdP",
-            "YmplY3RpdmVDb25maWciYwonTW9kZWxEZXBsb3ltZW50TW9uaXRvcmluZ1Nj",
-            "aGVkdWxlQ29uZmlnEjgKEG1vbml0b3JfaW50ZXJ2YWwYASABKAsyGS5nb29n",
-            "bGUucHJvdG9idWYuRHVyYXRpb25CA+BBAiKsBAodTW9kZWxNb25pdG9yaW5n",
-            "U3RhdHNBbm9tYWxpZXMSVQoJb2JqZWN0aXZlGAEgASgOMkIuZ29vZ2xlLmNs",
-            "b3VkLmFpcGxhdGZvcm0udjEuTW9kZWxEZXBsb3ltZW50TW9uaXRvcmluZ09i",
-            "amVjdGl2ZVR5cGUSGQoRZGVwbG95ZWRfbW9kZWxfaWQYAiABKAkSFQoNYW5v",
-            "bWFseV9jb3VudBgDIAEoBRJuCg1mZWF0dXJlX3N0YXRzGAQgAygLMlcuZ29v",
-            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTW9kZWxNb25pdG9yaW5nU3RhdHNB",
-            "bm9tYWxpZXMuRmVhdHVyZUhpc3RvcmljU3RhdHNBbm9tYWxpZXMakQIKHUZl",
-            "YXR1cmVIaXN0b3JpY1N0YXRzQW5vbWFsaWVzEhwKFGZlYXR1cmVfZGlzcGxh",
-            "eV9uYW1lGAEgASgJEj4KCXRocmVzaG9sZBgDIAEoCzIrLmdvb2dsZS5jbG91",
-            "ZC5haXBsYXRmb3JtLnYxLlRocmVzaG9sZENvbmZpZxJHCg50cmFpbmluZ19z",
-            "dGF0cxgEIAEoCzIvLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZlYXR1",
-            "cmVTdGF0c0Fub21hbHkSSQoQcHJlZGljdGlvbl9zdGF0cxgFIAMoCzIvLmdv",
-            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZlYXR1cmVTdGF0c0Fub21hbHkq",
-            "zgEKJk1vZGVsRGVwbG95bWVudE1vbml0b3JpbmdPYmplY3RpdmVUeXBlEjoK",
-            "Nk1PREVMX0RFUExPWU1FTlRfTU9OSVRPUklOR19PQkpFQ1RJVkVfVFlQRV9V",
-            "TlNQRUNJRklFRBAAEhQKEFJBV19GRUFUVVJFX1NLRVcQARIVChFSQVdfRkVB",
-            "VFVSRV9EUklGVBACEhwKGEZFQVRVUkVfQVRUUklCVVRJT05fU0tFVxADEh0K",
-            "GUZFQVRVUkVfQVRUUklCVVRJT05fRFJJRlQQBELlAQoeY29tLmdvb2dsZS5j",
-            "bG91ZC5haXBsYXRmb3JtLnYxQiFNb2RlbERlcGxveW1lbnRNb25pdG9yaW5n",
-            "Sm9iUHJvdG9QAVpEZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xl",
-            "YXBpcy9jbG91ZC9haXBsYXRmb3JtL3YxO2FpcGxhdGZvcm2qAhpHb29nbGUu",
-            "Q2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3Jt",
-            "XFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
+            "YmplY3RpdmVDb25maWcilgEKJ01vZGVsRGVwbG95bWVudE1vbml0b3JpbmdT",
+            "Y2hlZHVsZUNvbmZpZxI4ChBtb25pdG9yX2ludGVydmFsGAEgASgLMhkuZ29v",
+            "Z2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQISMQoObW9uaXRvcl93aW5kb3cY",
+            "AiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24irAQKHU1vZGVsTW9u",
+            "aXRvcmluZ1N0YXRzQW5vbWFsaWVzElUKCW9iamVjdGl2ZRgBIAEoDjJCLmdv",
+            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1vZGVsRGVwbG95bWVudE1vbml0",
+            "b3JpbmdPYmplY3RpdmVUeXBlEhkKEWRlcGxveWVkX21vZGVsX2lkGAIgASgJ",
+            "EhUKDWFub21hbHlfY291bnQYAyABKAUSbgoNZmVhdHVyZV9zdGF0cxgEIAMo",
+            "CzJXLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1vZGVsTW9uaXRvcmlu",
+            "Z1N0YXRzQW5vbWFsaWVzLkZlYXR1cmVIaXN0b3JpY1N0YXRzQW5vbWFsaWVz",
+            "GpECCh1GZWF0dXJlSGlzdG9yaWNTdGF0c0Fub21hbGllcxIcChRmZWF0dXJl",
+            "X2Rpc3BsYXlfbmFtZRgBIAEoCRI+Cgl0aHJlc2hvbGQYAyABKAsyKy5nb29n",
+            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5UaHJlc2hvbGRDb25maWcSRwoOdHJh",
+            "aW5pbmdfc3RhdHMYBCABKAsyLy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
+            "MS5GZWF0dXJlU3RhdHNBbm9tYWx5EkkKEHByZWRpY3Rpb25fc3RhdHMYBSAD",
+            "KAsyLy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5GZWF0dXJlU3RhdHNB",
+            "bm9tYWx5Ks4BCiZNb2RlbERlcGxveW1lbnRNb25pdG9yaW5nT2JqZWN0aXZl",
+            "VHlwZRI6CjZNT0RFTF9ERVBMT1lNRU5UX01PTklUT1JJTkdfT0JKRUNUSVZF",
+            "X1RZUEVfVU5TUEVDSUZJRUQQABIUChBSQVdfRkVBVFVSRV9TS0VXEAESFQoR",
+            "UkFXX0ZFQVRVUkVfRFJJRlQQAhIcChhGRUFUVVJFX0FUVFJJQlVUSU9OX1NL",
+            "RVcQAxIdChlGRUFUVVJFX0FUVFJJQlVUSU9OX0RSSUZUEARC5QEKHmNvbS5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIhTW9kZWxEZXBsb3ltZW50TW9u",
+            "aXRvcmluZ0pvYlByb3RvUAFaRGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
+            "L2dvb2dsZWFwaXMvY2xvdWQvYWlwbGF0Zm9ybS92MTthaXBsYXRmb3JtqgIa",
+            "R29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQ",
+            "bGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.FeatureMonitoringStatsReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.JobStateReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ModelMonitoringReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringObjectiveType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -126,7 +128,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringBigQueryTable), global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringBigQueryTable.Parser, new[]{ "LogSource", "LogType", "BigqueryTablePath" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringBigQueryTable.Types.LogSource), typeof(global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringBigQueryTable.Types.LogType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringObjectiveConfig), global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringObjectiveConfig.Parser, new[]{ "DeployedModelId", "ObjectiveConfig" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringScheduleConfig), global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringScheduleConfig.Parser, new[]{ "MonitorInterval" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringScheduleConfig), global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringScheduleConfig.Parser, new[]{ "MonitorInterval", "MonitorWindow" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringStatsAnomalies), global::Google.Cloud.AIPlatform.V1.ModelMonitoringStatsAnomalies.Parser, new[]{ "Objective", "DeployedModelId", "AnomalyCount", "FeatureStats" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringStatsAnomalies.Types.FeatureHistoricStatsAnomalies), global::Google.Cloud.AIPlatform.V1.ModelMonitoringStatsAnomalies.Types.FeatureHistoricStatsAnomalies.Parser, new[]{ "FeatureDisplayName", "Threshold", "TrainingStats", "PredictionStats" }, null, null, null, null)})
           }));
     }
@@ -2253,6 +2255,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ModelDeploymentMonitoringScheduleConfig(ModelDeploymentMonitoringScheduleConfig other) : this() {
       monitorInterval_ = other.monitorInterval_ != null ? other.monitorInterval_.Clone() : null;
+      monitorWindow_ = other.monitorWindow_ != null ? other.monitorWindow_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2278,6 +2281,28 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "monitor_window" field.</summary>
+    public const int MonitorWindowFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Duration monitorWindow_;
+    /// <summary>
+    /// The time window of the prediction data being included in each prediction
+    /// dataset. This window specifies how long the data should be collected from
+    /// historical model results for each run. If not set,
+    /// [ModelDeploymentMonitoringScheduleConfig.monitor_interval][google.cloud.aiplatform.v1.ModelDeploymentMonitoringScheduleConfig.monitor_interval] will be used.
+    /// e.g. If currently the cutoff time is 2022-01-08 14:30:00 and the
+    /// monitor_window is set to be 3600, then data from 2022-01-08 13:30:00
+    /// to 2022-01-08 14:30:00 will be retrieved and aggregated to calculate the
+    /// monitoring statistics.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration MonitorWindow {
+      get { return monitorWindow_; }
+      set {
+        monitorWindow_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2294,6 +2319,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         return true;
       }
       if (!object.Equals(MonitorInterval, other.MonitorInterval)) return false;
+      if (!object.Equals(MonitorWindow, other.MonitorWindow)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2302,6 +2328,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (monitorInterval_ != null) hash ^= MonitorInterval.GetHashCode();
+      if (monitorWindow_ != null) hash ^= MonitorWindow.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2324,6 +2351,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(MonitorInterval);
       }
+      if (monitorWindow_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(MonitorWindow);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2338,6 +2369,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(MonitorInterval);
       }
+      if (monitorWindow_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(MonitorWindow);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2350,6 +2385,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       int size = 0;
       if (monitorInterval_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(MonitorInterval);
+      }
+      if (monitorWindow_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MonitorWindow);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2368,6 +2406,12 @@ namespace Google.Cloud.AIPlatform.V1 {
           MonitorInterval = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         MonitorInterval.MergeFrom(other.MonitorInterval);
+      }
+      if (other.monitorWindow_ != null) {
+        if (monitorWindow_ == null) {
+          MonitorWindow = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        MonitorWindow.MergeFrom(other.MonitorWindow);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2391,6 +2435,13 @@ namespace Google.Cloud.AIPlatform.V1 {
             input.ReadMessage(MonitorInterval);
             break;
           }
+          case 18: {
+            if (monitorWindow_ == null) {
+              MonitorWindow = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(MonitorWindow);
+            break;
+          }
         }
       }
     #endif
@@ -2411,6 +2462,13 @@ namespace Google.Cloud.AIPlatform.V1 {
               MonitorInterval = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
             input.ReadMessage(MonitorInterval);
+            break;
+          }
+          case 18: {
+            if (monitorWindow_ == null) {
+              MonitorWindow = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(MonitorWindow);
             break;
           }
         }
