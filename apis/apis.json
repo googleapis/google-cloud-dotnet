@@ -3638,7 +3638,7 @@
       "protoPath": "google/cloud/webrisk/v1beta1",
       "productName": "Google Cloud Web Risk",
       "productUrl": "https://cloud.google.com/web-risk/",
-      "version": "3.0.0-alpha05",
+      "version": "3.0.0-beta01",
       "releaseLevelOverride": "preview",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Web Risk API v1beta1.",
