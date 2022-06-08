@@ -134,3 +134,45 @@ documentation.
 Example:
 
 - EmulatorDetection=EmulatorOrProduction
+
+## ClrToSpannerTypeDefaultMappings
+
+ Option to configure the default CLR type to `SpannerDbType` mapping. 
+ This option is only used if the `SpannerDbType` and `DbType` of the `SpannerParameter`
+ are not explicitly provided. Currently only `decimal` and `DateTime` CLR types are supported.
+
+ The valid type mappings for `decimal` are:
+
+- DecimalToFloat64 - `decimal` CLR type will map to `SpannerDbType.Float64`.
+- DecimalToNumeric - `decimal` CLR type will map to `SpannerDbType.Numeric`. This should be used while 
+working with Google Standard SQL dialect only. 
+- DecimalToPgNumeric - `decimal` CLR type will map to `SpannerDbType.PgNumeric`. This should be used while
+working with PostgreSQL dialect only.
+
+The valid type mappings for `DateTime` are:
+
+- DateTimeToDate - `DateTime` CLR type will map to `SpannerDbType.Date`.
+- DateTimeToTimestamp - `DateTime` CLR type will map to `SpannerDbType.Timestamp`.
+
+The mapping can be provided as comma separated values. For each CLR type, at most one mapping may be provided.
+
+Examples:
+
+- ClrToSpannerTypeDefaultMappings=DecimalToFloat64
+- ClrToSpannerTypeDefaultMappings=DecimalToNumeric,DateTimeToTimestamp
+
+## SpannerToClrTypeDefaultMappings
+
+Option to configure the default `SpannerDbType` to CLR type mappings. This option is only used if the 
+CLR type of the value being read is not explicitly provided while reading the data from the database, 
+for example using an indexer: `reader["fieldName"]`. Currently only `SpannerDbType.Date` is supported.
+
+The valid type mappings for `SpannerDbType.Date` are:
+
+- DateToDateTime - `SpannerDbType.Date` will map to `DateTime`.
+- DateToSpannerDate - `SpannerDbType.Date` will map to `SpannerDate`.
+
+Examples:
+
+- SpannerToClrTypeDefaultMappings=DateToDateTime
+- SpannerToClrTypeDefaultMappings=DateToSpannerDate
