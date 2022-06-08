@@ -1052,7 +1052,7 @@
     },
     {
       "id": "Google.Cloud.DevTools.Common",
-      "version": "3.0.0-alpha05",
+      "version": "3.0.0",
       "type": "other",
       "targetFrameworks": "netstandard2.1;net462",
       "testTargetFrameworks": "netcoreapp3.1;net462",
