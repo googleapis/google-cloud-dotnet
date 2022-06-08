@@ -1944,7 +1944,7 @@
       "id": "Google.Cloud.Logging.Type",
       "generator": "proto",
       "protoPath": "google/logging/type",
-      "version": "4.0.0-alpha05",
+      "version": "4.0.0",
       "type": "other",
       "targetFrameworks": "netstandard2.1;net462",
       "description": "Version-agnostic types for the Google Cloud Logging API.",
