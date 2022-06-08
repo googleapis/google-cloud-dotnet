@@ -1984,7 +1984,7 @@
       "protoPath": "google/cloud/managedidentities/v1",
       "productName": "Managed Service for Microsoft Active Directory",
       "productUrl": "https://cloud.google.com/managed-microsoft-ad/",
-      "version": "3.0.0-alpha05",
+      "version": "3.0.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Managed Identities API.",
       "tags": [
