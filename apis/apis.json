@@ -2672,7 +2672,7 @@
     },
     {
       "id": "Google.Cloud.ResourceManager.V3",
-      "version": "2.0.0-alpha05",
+      "version": "2.0.0",
       "type": "grpc",
       "productName": "Cloud Resource Manager",
       "productUrl": "https://cloud.google.com/resource-manager/docs",
