@@ -2758,7 +2758,7 @@
       "protoPath": "google/cloud/scheduler/v1",
       "productName": "Google Cloud Scheduler",
       "productUrl": "https://cloud.google.com/scheduler/",
-      "version": "3.0.0-alpha05",
+      "version": "3.0.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Scheduler API (v1), which creates and manages jobs run on a regular recurring schedule.",
       "tags": [
