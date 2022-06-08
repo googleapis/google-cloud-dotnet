@@ -26,21 +26,24 @@ namespace Grafeas.V1 {
           string.Concat(
             "CiFncmFmZWFzL3YxL2ludG90b19zdGF0ZW1lbnQucHJvdG8SCmdyYWZlYXMu",
             "djEaImdyYWZlYXMvdjEvaW50b3RvX3Byb3ZlbmFuY2UucHJvdG8aIGdyYWZl",
-            "YXMvdjEvc2xzYV9wcm92ZW5hbmNlLnByb3RvItwBCg9JblRvdG9TdGF0ZW1l",
-            "bnQSEwoEdHlwZRgBIAEoCVIFX3R5cGUSJAoHc3ViamVjdBgCIAMoCzITLmdy",
-            "YWZlYXMudjEuU3ViamVjdBIWCg5wcmVkaWNhdGVfdHlwZRgDIAEoCRIyCgpw",
-            "cm92ZW5hbmNlGAQgASgLMhwuZ3JhZmVhcy52MS5JblRvdG9Qcm92ZW5hbmNl",
-            "SAASNQoPc2xzYV9wcm92ZW5hbmNlGAUgASgLMhouZ3JhZmVhcy52MS5TbHNh",
-            "UHJvdmVuYW5jZUgAQgsKCXByZWRpY2F0ZSJ3CgdTdWJqZWN0EgwKBG5hbWUY",
-            "ASABKAkSLwoGZGlnZXN0GAIgAygLMh8uZ3JhZmVhcy52MS5TdWJqZWN0LkRp",
-            "Z2VzdEVudHJ5Gi0KC0RpZ2VzdEVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
-            "ZRgCIAEoCToCOAFCZwoNaW8uZ3JhZmVhcy52MUIUSW5Ub3RvU3RhdGVtZW50",
-            "UHJvdG9QAVo4Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
-            "cy9ncmFmZWFzL3YxO2dyYWZlYXOiAgNHUkFiBnByb3RvMw=="));
+            "YXMvdjEvc2xzYV9wcm92ZW5hbmNlLnByb3RvGilncmFmZWFzL3YxL3Nsc2Ff",
+            "cHJvdmVuYW5jZV96ZXJvX3R3by5wcm90byKjAgoPSW5Ub3RvU3RhdGVtZW50",
+            "EhMKBHR5cGUYASABKAlSBV90eXBlEiQKB3N1YmplY3QYAiADKAsyEy5ncmFm",
+            "ZWFzLnYxLlN1YmplY3QSFgoOcHJlZGljYXRlX3R5cGUYAyABKAkSMgoKcHJv",
+            "dmVuYW5jZRgEIAEoCzIcLmdyYWZlYXMudjEuSW5Ub3RvUHJvdmVuYW5jZUgA",
+            "EjUKD3Nsc2FfcHJvdmVuYW5jZRgFIAEoCzIaLmdyYWZlYXMudjEuU2xzYVBy",
+            "b3ZlbmFuY2VIABJFChhzbHNhX3Byb3ZlbmFuY2VfemVyb190d28YBiABKAsy",
+            "IS5ncmFmZWFzLnYxLlNsc2FQcm92ZW5hbmNlWmVyb1R3b0gAQgsKCXByZWRp",
+            "Y2F0ZSJ3CgdTdWJqZWN0EgwKBG5hbWUYASABKAkSLwoGZGlnZXN0GAIgAygL",
+            "Mh8uZ3JhZmVhcy52MS5TdWJqZWN0LkRpZ2VzdEVudHJ5Gi0KC0RpZ2VzdEVu",
+            "dHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAFCZwoNaW8uZ3Jh",
+            "ZmVhcy52MUIUSW5Ub3RvU3RhdGVtZW50UHJvdG9QAVo4Z29vZ2xlLmdvbGFu",
+            "Zy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9ncmFmZWFzL3YxO2dyYWZlYXOi",
+            "AgNHUkFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Grafeas.V1.IntotoProvenanceReflection.Descriptor, global::Grafeas.V1.SlsaProvenanceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Grafeas.V1.IntotoProvenanceReflection.Descriptor, global::Grafeas.V1.SlsaProvenanceReflection.Descriptor, global::Grafeas.V1.SlsaProvenanceZeroTwoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.InTotoStatement), global::Grafeas.V1.InTotoStatement.Parser, new[]{ "Type", "Subject", "PredicateType", "Provenance", "SlsaProvenance" }, new[]{ "Predicate" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.InTotoStatement), global::Grafeas.V1.InTotoStatement.Parser, new[]{ "Type", "Subject", "PredicateType", "Provenance", "SlsaProvenance", "SlsaProvenanceZeroTwo" }, new[]{ "Predicate" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Subject), global::Grafeas.V1.Subject.Parser, new[]{ "Name", "Digest" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
@@ -97,6 +100,9 @@ namespace Grafeas.V1 {
           break;
         case PredicateOneofCase.SlsaProvenance:
           SlsaProvenance = other.SlsaProvenance.Clone();
+          break;
+        case PredicateOneofCase.SlsaProvenanceZeroTwo:
+          SlsaProvenanceZeroTwo = other.SlsaProvenanceZeroTwo.Clone();
           break;
       }
 
@@ -174,12 +180,25 @@ namespace Grafeas.V1 {
       }
     }
 
+    /// <summary>Field number for the "slsa_provenance_zero_two" field.</summary>
+    public const int SlsaProvenanceZeroTwoFieldNumber = 6;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Grafeas.V1.SlsaProvenanceZeroTwo SlsaProvenanceZeroTwo {
+      get { return predicateCase_ == PredicateOneofCase.SlsaProvenanceZeroTwo ? (global::Grafeas.V1.SlsaProvenanceZeroTwo) predicate_ : null; }
+      set {
+        predicate_ = value;
+        predicateCase_ = value == null ? PredicateOneofCase.None : PredicateOneofCase.SlsaProvenanceZeroTwo;
+      }
+    }
+
     private object predicate_;
     /// <summary>Enum of possible cases for the "predicate" oneof.</summary>
     public enum PredicateOneofCase {
       None = 0,
       Provenance = 4,
       SlsaProvenance = 5,
+      SlsaProvenanceZeroTwo = 6,
     }
     private PredicateOneofCase predicateCase_ = PredicateOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -215,6 +234,7 @@ namespace Grafeas.V1 {
       if (PredicateType != other.PredicateType) return false;
       if (!object.Equals(Provenance, other.Provenance)) return false;
       if (!object.Equals(SlsaProvenance, other.SlsaProvenance)) return false;
+      if (!object.Equals(SlsaProvenanceZeroTwo, other.SlsaProvenanceZeroTwo)) return false;
       if (PredicateCase != other.PredicateCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -228,6 +248,7 @@ namespace Grafeas.V1 {
       if (PredicateType.Length != 0) hash ^= PredicateType.GetHashCode();
       if (predicateCase_ == PredicateOneofCase.Provenance) hash ^= Provenance.GetHashCode();
       if (predicateCase_ == PredicateOneofCase.SlsaProvenance) hash ^= SlsaProvenance.GetHashCode();
+      if (predicateCase_ == PredicateOneofCase.SlsaProvenanceZeroTwo) hash ^= SlsaProvenanceZeroTwo.GetHashCode();
       hash ^= (int) predicateCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -264,6 +285,10 @@ namespace Grafeas.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(SlsaProvenance);
       }
+      if (predicateCase_ == PredicateOneofCase.SlsaProvenanceZeroTwo) {
+        output.WriteRawTag(50);
+        output.WriteMessage(SlsaProvenanceZeroTwo);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -291,6 +316,10 @@ namespace Grafeas.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(SlsaProvenance);
       }
+      if (predicateCase_ == PredicateOneofCase.SlsaProvenanceZeroTwo) {
+        output.WriteRawTag(50);
+        output.WriteMessage(SlsaProvenanceZeroTwo);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -313,6 +342,9 @@ namespace Grafeas.V1 {
       }
       if (predicateCase_ == PredicateOneofCase.SlsaProvenance) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SlsaProvenance);
+      }
+      if (predicateCase_ == PredicateOneofCase.SlsaProvenanceZeroTwo) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SlsaProvenanceZeroTwo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -345,6 +377,12 @@ namespace Grafeas.V1 {
             SlsaProvenance = new global::Grafeas.V1.SlsaProvenance();
           }
           SlsaProvenance.MergeFrom(other.SlsaProvenance);
+          break;
+        case PredicateOneofCase.SlsaProvenanceZeroTwo:
+          if (SlsaProvenanceZeroTwo == null) {
+            SlsaProvenanceZeroTwo = new global::Grafeas.V1.SlsaProvenanceZeroTwo();
+          }
+          SlsaProvenanceZeroTwo.MergeFrom(other.SlsaProvenanceZeroTwo);
           break;
       }
 
@@ -393,6 +431,15 @@ namespace Grafeas.V1 {
             SlsaProvenance = subBuilder;
             break;
           }
+          case 50: {
+            global::Grafeas.V1.SlsaProvenanceZeroTwo subBuilder = new global::Grafeas.V1.SlsaProvenanceZeroTwo();
+            if (predicateCase_ == PredicateOneofCase.SlsaProvenanceZeroTwo) {
+              subBuilder.MergeFrom(SlsaProvenanceZeroTwo);
+            }
+            input.ReadMessage(subBuilder);
+            SlsaProvenanceZeroTwo = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -436,6 +483,15 @@ namespace Grafeas.V1 {
             }
             input.ReadMessage(subBuilder);
             SlsaProvenance = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Grafeas.V1.SlsaProvenanceZeroTwo subBuilder = new global::Grafeas.V1.SlsaProvenanceZeroTwo();
+            if (predicateCase_ == PredicateOneofCase.SlsaProvenanceZeroTwo) {
+              subBuilder.MergeFrom(SlsaProvenanceZeroTwo);
+            }
+            input.ReadMessage(subBuilder);
+            SlsaProvenanceZeroTwo = subBuilder;
             break;
           }
         }

@@ -24,32 +24,44 @@ namespace Grafeas.V1 {
     static PackageReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhncmFmZWFzL3YxL3BhY2thZ2UucHJvdG8SCmdyYWZlYXMudjEisgEKDERp",
-            "c3RyaWJ1dGlvbhIPCgdjcGVfdXJpGAEgASgJEi4KDGFyY2hpdGVjdHVyZRgC",
-            "IAEoDjIYLmdyYWZlYXMudjEuQXJjaGl0ZWN0dXJlEisKDmxhdGVzdF92ZXJz",
-            "aW9uGAMgASgLMhMuZ3JhZmVhcy52MS5WZXJzaW9uEhIKCm1haW50YWluZXIY",
-            "BCABKAkSCwoDdXJsGAUgASgJEhMKC2Rlc2NyaXB0aW9uGAYgASgJIk8KCExv",
-            "Y2F0aW9uEg8KB2NwZV91cmkYASABKAkSJAoHdmVyc2lvbhgCIAEoCzITLmdy",
-            "YWZlYXMudjEuVmVyc2lvbhIMCgRwYXRoGAMgASgJIksKC1BhY2thZ2VOb3Rl",
-            "EgwKBG5hbWUYASABKAkSLgoMZGlzdHJpYnV0aW9uGAogAygLMhguZ3JhZmVh",
-            "cy52MS5EaXN0cmlidXRpb24iSQoRUGFja2FnZU9jY3VycmVuY2USDAoEbmFt",
-            "ZRgBIAEoCRImCghsb2NhdGlvbhgCIAMoCzIULmdyYWZlYXMudjEuTG9jYXRp",
-            "b24i4AEKB1ZlcnNpb24SDQoFZXBvY2gYASABKAUSDAoEbmFtZRgCIAEoCRIQ",
-            "CghyZXZpc2lvbhgDIAEoCRIRCglpbmNsdXNpdmUYBiABKAgSLQoEa2luZBgE",
-            "IAEoDjIfLmdyYWZlYXMudjEuVmVyc2lvbi5WZXJzaW9uS2luZBIRCglmdWxs",
-            "X25hbWUYBSABKAkiUQoLVmVyc2lvbktpbmQSHAoYVkVSU0lPTl9LSU5EX1VO",
-            "U1BFQ0lGSUVEEAASCgoGTk9STUFMEAESCwoHTUlOSU1VTRACEgsKB01BWElN",
-            "VU0QAyo+CgxBcmNoaXRlY3R1cmUSHAoYQVJDSElURUNUVVJFX1VOU1BFQ0lG",
-            "SUVEEAASBwoDWDg2EAESBwoDWDY0EAJCUQoNaW8uZ3JhZmVhcy52MVABWjhn",
-            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2dyYWZlYXMv",
-            "djE7Z3JhZmVhc6ICA0dSQWIGcHJvdG8z"));
+            "ChhncmFmZWFzL3YxL3BhY2thZ2UucHJvdG8SCmdyYWZlYXMudjEaH2dvb2ds",
+            "ZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aF2dyYWZlYXMvdjEvY29tbW9u",
+            "LnByb3RvIrcBCgxEaXN0cmlidXRpb24SFAoHY3BlX3VyaRgBIAEoCUID4EEC",
+            "Ei4KDGFyY2hpdGVjdHVyZRgCIAEoDjIYLmdyYWZlYXMudjEuQXJjaGl0ZWN0",
+            "dXJlEisKDmxhdGVzdF92ZXJzaW9uGAMgASgLMhMuZ3JhZmVhcy52MS5WZXJz",
+            "aW9uEhIKCm1haW50YWluZXIYBCABKAkSCwoDdXJsGAUgASgJEhMKC2Rlc2Ny",
+            "aXB0aW9uGAYgASgJIk8KCExvY2F0aW9uEg8KB2NwZV91cmkYASABKAkSJAoH",
+            "dmVyc2lvbhgCIAEoCzITLmdyYWZlYXMudjEuVmVyc2lvbhIMCgRwYXRoGAMg",
+            "ASgJItACCgtQYWNrYWdlTm90ZRIUCgRuYW1lGAEgASgJQgbgQQLgQQUSLgoM",
+            "ZGlzdHJpYnV0aW9uGAogAygLMhguZ3JhZmVhcy52MS5EaXN0cmlidXRpb24S",
+            "FAoMcGFja2FnZV90eXBlGAsgASgJEg8KB2NwZV91cmkYDCABKAkSLgoMYXJj",
+            "aGl0ZWN0dXJlGA0gASgOMhguZ3JhZmVhcy52MS5BcmNoaXRlY3R1cmUSJAoH",
+            "dmVyc2lvbhgOIAEoCzITLmdyYWZlYXMudjEuVmVyc2lvbhISCgptYWludGFp",
+            "bmVyGA8gASgJEgsKA3VybBgQIAEoCRITCgtkZXNjcmlwdGlvbhgRIAEoCRIk",
+            "CgdsaWNlbnNlGBIgASgLMhMuZ3JhZmVhcy52MS5MaWNlbnNlEiIKBmRpZ2Vz",
+            "dBgTIAMoCzISLmdyYWZlYXMudjEuRGlnZXN0IogCChFQYWNrYWdlT2NjdXJy",
+            "ZW5jZRIUCgRuYW1lGAEgASgJQgbgQQLgQQMSJgoIbG9jYXRpb24YAiADKAsy",
+            "FC5ncmFmZWFzLnYxLkxvY2F0aW9uEhkKDHBhY2thZ2VfdHlwZRgDIAEoCUID",
+            "4EEDEhQKB2NwZV91cmkYBCABKAlCA+BBAxIzCgxhcmNoaXRlY3R1cmUYBSAB",
+            "KA4yGC5ncmFmZWFzLnYxLkFyY2hpdGVjdHVyZUID4EEDEiQKB2xpY2Vuc2UY",
+            "BiABKAsyEy5ncmFmZWFzLnYxLkxpY2Vuc2USKQoHdmVyc2lvbhgHIAEoCzIT",
+            "LmdyYWZlYXMudjEuVmVyc2lvbkID4EEDIuABCgdWZXJzaW9uEg0KBWVwb2No",
+            "GAEgASgFEgwKBG5hbWUYAiABKAkSEAoIcmV2aXNpb24YAyABKAkSEQoJaW5j",
+            "bHVzaXZlGAYgASgIEi0KBGtpbmQYBCABKA4yHy5ncmFmZWFzLnYxLlZlcnNp",
+            "b24uVmVyc2lvbktpbmQSEQoJZnVsbF9uYW1lGAUgASgJIlEKC1ZlcnNpb25L",
+            "aW5kEhwKGFZFUlNJT05fS0lORF9VTlNQRUNJRklFRBAAEgoKBk5PUk1BTBAB",
+            "EgsKB01JTklNVU0QAhILCgdNQVhJTVVNEAMqPgoMQXJjaGl0ZWN0dXJlEhwK",
+            "GEFSQ0hJVEVDVFVSRV9VTlNQRUNJRklFRBAAEgcKA1g4NhABEgcKA1g2NBAC",
+            "QlEKDWlvLmdyYWZlYXMudjFQAVo4Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
+            "dG8vZ29vZ2xlYXBpcy9ncmFmZWFzL3YxO2dyYWZlYXOiAgNHUkFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Grafeas.V1.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Grafeas.V1.Architecture), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Distribution), global::Grafeas.V1.Distribution.Parser, new[]{ "CpeUri", "Architecture", "LatestVersion", "Maintainer", "Url", "Description" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Location), global::Grafeas.V1.Location.Parser, new[]{ "CpeUri", "Version", "Path" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.PackageNote), global::Grafeas.V1.PackageNote.Parser, new[]{ "Name", "Distribution" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.PackageOccurrence), global::Grafeas.V1.PackageOccurrence.Parser, new[]{ "Name", "Location" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.PackageNote), global::Grafeas.V1.PackageNote.Parser, new[]{ "Name", "Distribution", "PackageType", "CpeUri", "Architecture", "Version", "Maintainer", "Url", "Description", "License", "Digest" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.PackageOccurrence), global::Grafeas.V1.PackageOccurrence.Parser, new[]{ "Name", "Location", "PackageType", "CpeUri", "Architecture", "License", "Version" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Version), global::Grafeas.V1.Version.Parser, new[]{ "Epoch", "Name", "Revision", "Inclusive", "Kind", "FullName" }, null, new[]{ typeof(global::Grafeas.V1.Version.Types.VersionKind) }, null, null)
           }));
     }
@@ -135,7 +147,7 @@ namespace Grafeas.V1 {
     public const int CpeUriFieldNumber = 1;
     private string cpeUri_ = "";
     /// <summary>
-    /// Required. The cpe_uri in [CPE format](https://cpe.mitre.org/specification/)
+    /// The cpe_uri in [CPE format](https://cpe.mitre.org/specification/)
     /// denoting the package manager version distributing a package.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -539,8 +551,8 @@ namespace Grafeas.V1 {
     public const int CpeUriFieldNumber = 1;
     private string cpeUri_ = "";
     /// <summary>
-    /// Required. The CPE URI in [CPE format](https://cpe.mitre.org/specification/)
-    /// denoting the package manager version distributing a package.
+    /// Deprecated.
+    /// The CPE URI in [CPE format](https://cpe.mitre.org/specification/)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -555,6 +567,7 @@ namespace Grafeas.V1 {
     public const int VersionFieldNumber = 2;
     private global::Grafeas.V1.Version version_;
     /// <summary>
+    /// Deprecated.
     /// The version installed at this location.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -772,9 +785,7 @@ namespace Grafeas.V1 {
   }
 
   /// <summary>
-  /// This represents a particular package that is distributed over various
-  /// channels. E.g., glibc (aka libc6) is distributed by many, at various
-  /// versions.
+  /// PackageNote represents a particular package version.
   /// </summary>
   public sealed partial class PackageNote : pb::IMessage<PackageNote>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -812,6 +823,15 @@ namespace Grafeas.V1 {
     public PackageNote(PackageNote other) : this() {
       name_ = other.name_;
       distribution_ = other.distribution_.Clone();
+      packageType_ = other.packageType_;
+      cpeUri_ = other.cpeUri_;
+      architecture_ = other.architecture_;
+      version_ = other.version_ != null ? other.version_.Clone() : null;
+      maintainer_ = other.maintainer_;
+      url_ = other.url_;
+      description_ = other.description_;
+      license_ = other.license_ != null ? other.license_.Clone() : null;
+      digest_ = other.digest_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -825,7 +845,7 @@ namespace Grafeas.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. Immutable. The name of the package.
+    /// The name of the package.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -842,12 +862,152 @@ namespace Grafeas.V1 {
         = pb::FieldCodec.ForMessage(82, global::Grafeas.V1.Distribution.Parser);
     private readonly pbc::RepeatedField<global::Grafeas.V1.Distribution> distribution_ = new pbc::RepeatedField<global::Grafeas.V1.Distribution>();
     /// <summary>
+    /// Deprecated.
     /// The various channels by which a package is distributed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Grafeas.V1.Distribution> Distribution {
       get { return distribution_; }
+    }
+
+    /// <summary>Field number for the "package_type" field.</summary>
+    public const int PackageTypeFieldNumber = 11;
+    private string packageType_ = "";
+    /// <summary>
+    /// The type of package; whether native or non native (e.g., ruby gems,
+    /// node.js packages, etc.).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PackageType {
+      get { return packageType_; }
+      set {
+        packageType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "cpe_uri" field.</summary>
+    public const int CpeUriFieldNumber = 12;
+    private string cpeUri_ = "";
+    /// <summary>
+    /// The cpe_uri in [CPE format](https://cpe.mitre.org/specification/)
+    /// denoting the package manager version distributing a package.
+    /// The cpe_uri will be blank for language packages.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CpeUri {
+      get { return cpeUri_; }
+      set {
+        cpeUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "architecture" field.</summary>
+    public const int ArchitectureFieldNumber = 13;
+    private global::Grafeas.V1.Architecture architecture_ = global::Grafeas.V1.Architecture.Unspecified;
+    /// <summary>
+    /// The CPU architecture for which packages in this distribution channel were
+    /// built. Architecture will be blank for language packages.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Grafeas.V1.Architecture Architecture {
+      get { return architecture_; }
+      set {
+        architecture_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "version" field.</summary>
+    public const int VersionFieldNumber = 14;
+    private global::Grafeas.V1.Version version_;
+    /// <summary>
+    /// The version of the package.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Grafeas.V1.Version Version {
+      get { return version_; }
+      set {
+        version_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "maintainer" field.</summary>
+    public const int MaintainerFieldNumber = 15;
+    private string maintainer_ = "";
+    /// <summary>
+    /// A freeform text denoting the maintainer of this package.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Maintainer {
+      get { return maintainer_; }
+      set {
+        maintainer_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "url" field.</summary>
+    public const int UrlFieldNumber = 16;
+    private string url_ = "";
+    /// <summary>
+    /// The homepage for this package.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Url {
+      get { return url_; }
+      set {
+        url_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 17;
+    private string description_ = "";
+    /// <summary>
+    /// The description of this package.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "license" field.</summary>
+    public const int LicenseFieldNumber = 18;
+    private global::Grafeas.V1.License license_;
+    /// <summary>
+    /// Licenses that have been declared by the authors of the package.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Grafeas.V1.License License {
+      get { return license_; }
+      set {
+        license_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "digest" field.</summary>
+    public const int DigestFieldNumber = 19;
+    private static readonly pb::FieldCodec<global::Grafeas.V1.Digest> _repeated_digest_codec
+        = pb::FieldCodec.ForMessage(154, global::Grafeas.V1.Digest.Parser);
+    private readonly pbc::RepeatedField<global::Grafeas.V1.Digest> digest_ = new pbc::RepeatedField<global::Grafeas.V1.Digest>();
+    /// <summary>
+    /// Hash value, typically a file digest, that allows unique
+    /// identification a specific package.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Grafeas.V1.Digest> Digest {
+      get { return digest_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -867,6 +1027,15 @@ namespace Grafeas.V1 {
       }
       if (Name != other.Name) return false;
       if(!distribution_.Equals(other.distribution_)) return false;
+      if (PackageType != other.PackageType) return false;
+      if (CpeUri != other.CpeUri) return false;
+      if (Architecture != other.Architecture) return false;
+      if (!object.Equals(Version, other.Version)) return false;
+      if (Maintainer != other.Maintainer) return false;
+      if (Url != other.Url) return false;
+      if (Description != other.Description) return false;
+      if (!object.Equals(License, other.License)) return false;
+      if(!digest_.Equals(other.digest_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -876,6 +1045,15 @@ namespace Grafeas.V1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       hash ^= distribution_.GetHashCode();
+      if (PackageType.Length != 0) hash ^= PackageType.GetHashCode();
+      if (CpeUri.Length != 0) hash ^= CpeUri.GetHashCode();
+      if (Architecture != global::Grafeas.V1.Architecture.Unspecified) hash ^= Architecture.GetHashCode();
+      if (version_ != null) hash ^= Version.GetHashCode();
+      if (Maintainer.Length != 0) hash ^= Maintainer.GetHashCode();
+      if (Url.Length != 0) hash ^= Url.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (license_ != null) hash ^= License.GetHashCode();
+      hash ^= digest_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -899,6 +1077,39 @@ namespace Grafeas.V1 {
         output.WriteString(Name);
       }
       distribution_.WriteTo(output, _repeated_distribution_codec);
+      if (PackageType.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(PackageType);
+      }
+      if (CpeUri.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(CpeUri);
+      }
+      if (Architecture != global::Grafeas.V1.Architecture.Unspecified) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) Architecture);
+      }
+      if (version_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(Version);
+      }
+      if (Maintainer.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(Maintainer);
+      }
+      if (Url.Length != 0) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(Url);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(138, 1);
+        output.WriteString(Description);
+      }
+      if (license_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(License);
+      }
+      digest_.WriteTo(output, _repeated_digest_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -914,6 +1125,39 @@ namespace Grafeas.V1 {
         output.WriteString(Name);
       }
       distribution_.WriteTo(ref output, _repeated_distribution_codec);
+      if (PackageType.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(PackageType);
+      }
+      if (CpeUri.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(CpeUri);
+      }
+      if (Architecture != global::Grafeas.V1.Architecture.Unspecified) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) Architecture);
+      }
+      if (version_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(Version);
+      }
+      if (Maintainer.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(Maintainer);
+      }
+      if (Url.Length != 0) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(Url);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(138, 1);
+        output.WriteString(Description);
+      }
+      if (license_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(License);
+      }
+      digest_.WriteTo(ref output, _repeated_digest_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -928,6 +1172,31 @@ namespace Grafeas.V1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       size += distribution_.CalculateSize(_repeated_distribution_codec);
+      if (PackageType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PackageType);
+      }
+      if (CpeUri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CpeUri);
+      }
+      if (Architecture != global::Grafeas.V1.Architecture.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Architecture);
+      }
+      if (version_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Version);
+      }
+      if (Maintainer.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Maintainer);
+      }
+      if (Url.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Url);
+      }
+      if (Description.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (license_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(License);
+      }
+      size += digest_.CalculateSize(_repeated_digest_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -944,6 +1213,37 @@ namespace Grafeas.V1 {
         Name = other.Name;
       }
       distribution_.Add(other.distribution_);
+      if (other.PackageType.Length != 0) {
+        PackageType = other.PackageType;
+      }
+      if (other.CpeUri.Length != 0) {
+        CpeUri = other.CpeUri;
+      }
+      if (other.Architecture != global::Grafeas.V1.Architecture.Unspecified) {
+        Architecture = other.Architecture;
+      }
+      if (other.version_ != null) {
+        if (version_ == null) {
+          Version = new global::Grafeas.V1.Version();
+        }
+        Version.MergeFrom(other.Version);
+      }
+      if (other.Maintainer.Length != 0) {
+        Maintainer = other.Maintainer;
+      }
+      if (other.Url.Length != 0) {
+        Url = other.Url;
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
+      }
+      if (other.license_ != null) {
+        if (license_ == null) {
+          License = new global::Grafeas.V1.License();
+        }
+        License.MergeFrom(other.License);
+      }
+      digest_.Add(other.digest_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -967,6 +1267,48 @@ namespace Grafeas.V1 {
             distribution_.AddEntriesFrom(input, _repeated_distribution_codec);
             break;
           }
+          case 90: {
+            PackageType = input.ReadString();
+            break;
+          }
+          case 98: {
+            CpeUri = input.ReadString();
+            break;
+          }
+          case 104: {
+            Architecture = (global::Grafeas.V1.Architecture) input.ReadEnum();
+            break;
+          }
+          case 114: {
+            if (version_ == null) {
+              Version = new global::Grafeas.V1.Version();
+            }
+            input.ReadMessage(Version);
+            break;
+          }
+          case 122: {
+            Maintainer = input.ReadString();
+            break;
+          }
+          case 130: {
+            Url = input.ReadString();
+            break;
+          }
+          case 138: {
+            Description = input.ReadString();
+            break;
+          }
+          case 146: {
+            if (license_ == null) {
+              License = new global::Grafeas.V1.License();
+            }
+            input.ReadMessage(License);
+            break;
+          }
+          case 154: {
+            digest_.AddEntriesFrom(input, _repeated_digest_codec);
+            break;
+          }
         }
       }
     #endif
@@ -988,6 +1330,48 @@ namespace Grafeas.V1 {
           }
           case 82: {
             distribution_.AddEntriesFrom(ref input, _repeated_distribution_codec);
+            break;
+          }
+          case 90: {
+            PackageType = input.ReadString();
+            break;
+          }
+          case 98: {
+            CpeUri = input.ReadString();
+            break;
+          }
+          case 104: {
+            Architecture = (global::Grafeas.V1.Architecture) input.ReadEnum();
+            break;
+          }
+          case 114: {
+            if (version_ == null) {
+              Version = new global::Grafeas.V1.Version();
+            }
+            input.ReadMessage(Version);
+            break;
+          }
+          case 122: {
+            Maintainer = input.ReadString();
+            break;
+          }
+          case 130: {
+            Url = input.ReadString();
+            break;
+          }
+          case 138: {
+            Description = input.ReadString();
+            break;
+          }
+          case 146: {
+            if (license_ == null) {
+              License = new global::Grafeas.V1.License();
+            }
+            input.ReadMessage(License);
+            break;
+          }
+          case 154: {
+            digest_.AddEntriesFrom(ref input, _repeated_digest_codec);
             break;
           }
         }
@@ -1036,6 +1420,11 @@ namespace Grafeas.V1 {
     public PackageOccurrence(PackageOccurrence other) : this() {
       name_ = other.name_;
       location_ = other.location_.Clone();
+      packageType_ = other.packageType_;
+      cpeUri_ = other.cpeUri_;
+      architecture_ = other.architecture_;
+      license_ = other.license_ != null ? other.license_.Clone() : null;
+      version_ = other.version_ != null ? other.version_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1049,7 +1438,7 @@ namespace Grafeas.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. The name of the installed package.
+    /// The name of the installed package.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1066,13 +1455,92 @@ namespace Grafeas.V1 {
         = pb::FieldCodec.ForMessage(18, global::Grafeas.V1.Location.Parser);
     private readonly pbc::RepeatedField<global::Grafeas.V1.Location> location_ = new pbc::RepeatedField<global::Grafeas.V1.Location>();
     /// <summary>
-    /// Required. All of the places within the filesystem versions of this package
+    /// All of the places within the filesystem versions of this package
     /// have been found.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Grafeas.V1.Location> Location {
       get { return location_; }
+    }
+
+    /// <summary>Field number for the "package_type" field.</summary>
+    public const int PackageTypeFieldNumber = 3;
+    private string packageType_ = "";
+    /// <summary>
+    /// The type of package; whether native or non native (e.g., ruby gems,
+    /// node.js packages, etc.).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PackageType {
+      get { return packageType_; }
+      set {
+        packageType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "cpe_uri" field.</summary>
+    public const int CpeUriFieldNumber = 4;
+    private string cpeUri_ = "";
+    /// <summary>
+    /// The cpe_uri in [CPE format](https://cpe.mitre.org/specification/)
+    /// denoting the package manager version distributing a package.
+    /// The cpe_uri will be blank for language packages.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CpeUri {
+      get { return cpeUri_; }
+      set {
+        cpeUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "architecture" field.</summary>
+    public const int ArchitectureFieldNumber = 5;
+    private global::Grafeas.V1.Architecture architecture_ = global::Grafeas.V1.Architecture.Unspecified;
+    /// <summary>
+    /// The CPU architecture for which packages in this distribution channel were
+    /// built. Architecture will be blank for language packages.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Grafeas.V1.Architecture Architecture {
+      get { return architecture_; }
+      set {
+        architecture_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "license" field.</summary>
+    public const int LicenseFieldNumber = 6;
+    private global::Grafeas.V1.License license_;
+    /// <summary>
+    /// Licenses that have been declared by the authors of the package.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Grafeas.V1.License License {
+      get { return license_; }
+      set {
+        license_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "version" field.</summary>
+    public const int VersionFieldNumber = 7;
+    private global::Grafeas.V1.Version version_;
+    /// <summary>
+    /// The version of the package.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Grafeas.V1.Version Version {
+      get { return version_; }
+      set {
+        version_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1092,6 +1560,11 @@ namespace Grafeas.V1 {
       }
       if (Name != other.Name) return false;
       if(!location_.Equals(other.location_)) return false;
+      if (PackageType != other.PackageType) return false;
+      if (CpeUri != other.CpeUri) return false;
+      if (Architecture != other.Architecture) return false;
+      if (!object.Equals(License, other.License)) return false;
+      if (!object.Equals(Version, other.Version)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1101,6 +1574,11 @@ namespace Grafeas.V1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       hash ^= location_.GetHashCode();
+      if (PackageType.Length != 0) hash ^= PackageType.GetHashCode();
+      if (CpeUri.Length != 0) hash ^= CpeUri.GetHashCode();
+      if (Architecture != global::Grafeas.V1.Architecture.Unspecified) hash ^= Architecture.GetHashCode();
+      if (license_ != null) hash ^= License.GetHashCode();
+      if (version_ != null) hash ^= Version.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1124,6 +1602,26 @@ namespace Grafeas.V1 {
         output.WriteString(Name);
       }
       location_.WriteTo(output, _repeated_location_codec);
+      if (PackageType.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PackageType);
+      }
+      if (CpeUri.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(CpeUri);
+      }
+      if (Architecture != global::Grafeas.V1.Architecture.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) Architecture);
+      }
+      if (license_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(License);
+      }
+      if (version_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Version);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1139,6 +1637,26 @@ namespace Grafeas.V1 {
         output.WriteString(Name);
       }
       location_.WriteTo(ref output, _repeated_location_codec);
+      if (PackageType.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PackageType);
+      }
+      if (CpeUri.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(CpeUri);
+      }
+      if (Architecture != global::Grafeas.V1.Architecture.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) Architecture);
+      }
+      if (license_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(License);
+      }
+      if (version_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Version);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1153,6 +1671,21 @@ namespace Grafeas.V1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       size += location_.CalculateSize(_repeated_location_codec);
+      if (PackageType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PackageType);
+      }
+      if (CpeUri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CpeUri);
+      }
+      if (Architecture != global::Grafeas.V1.Architecture.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Architecture);
+      }
+      if (license_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(License);
+      }
+      if (version_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Version);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1169,6 +1702,27 @@ namespace Grafeas.V1 {
         Name = other.Name;
       }
       location_.Add(other.location_);
+      if (other.PackageType.Length != 0) {
+        PackageType = other.PackageType;
+      }
+      if (other.CpeUri.Length != 0) {
+        CpeUri = other.CpeUri;
+      }
+      if (other.Architecture != global::Grafeas.V1.Architecture.Unspecified) {
+        Architecture = other.Architecture;
+      }
+      if (other.license_ != null) {
+        if (license_ == null) {
+          License = new global::Grafeas.V1.License();
+        }
+        License.MergeFrom(other.License);
+      }
+      if (other.version_ != null) {
+        if (version_ == null) {
+          Version = new global::Grafeas.V1.Version();
+        }
+        Version.MergeFrom(other.Version);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1192,6 +1746,32 @@ namespace Grafeas.V1 {
             location_.AddEntriesFrom(input, _repeated_location_codec);
             break;
           }
+          case 26: {
+            PackageType = input.ReadString();
+            break;
+          }
+          case 34: {
+            CpeUri = input.ReadString();
+            break;
+          }
+          case 40: {
+            Architecture = (global::Grafeas.V1.Architecture) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            if (license_ == null) {
+              License = new global::Grafeas.V1.License();
+            }
+            input.ReadMessage(License);
+            break;
+          }
+          case 58: {
+            if (version_ == null) {
+              Version = new global::Grafeas.V1.Version();
+            }
+            input.ReadMessage(Version);
+            break;
+          }
         }
       }
     #endif
@@ -1213,6 +1793,32 @@ namespace Grafeas.V1 {
           }
           case 18: {
             location_.AddEntriesFrom(ref input, _repeated_location_codec);
+            break;
+          }
+          case 26: {
+            PackageType = input.ReadString();
+            break;
+          }
+          case 34: {
+            CpeUri = input.ReadString();
+            break;
+          }
+          case 40: {
+            Architecture = (global::Grafeas.V1.Architecture) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            if (license_ == null) {
+              License = new global::Grafeas.V1.License();
+            }
+            input.ReadMessage(License);
+            break;
+          }
+          case 58: {
+            if (version_ == null) {
+              Version = new global::Grafeas.V1.Version();
+            }
+            input.ReadMessage(Version);
             break;
           }
         }
