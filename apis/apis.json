@@ -2002,7 +2002,7 @@
     },
     {
       "id": "Google.Cloud.MediaTranslation.V1Beta1",
-      "version": "2.0.0-alpha05",
+      "version": "2.0.0-beta01",
       "type": "grpc",
       "productName": "Media Translation",
       "productUrl": "https://cloud.google.com/media-translation",
