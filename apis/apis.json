@@ -261,7 +261,7 @@
     },
     {
       "id": "Google.Cloud.AssuredWorkloads.V1Beta1",
-      "version": "2.0.0-alpha05",
+      "version": "2.0.0-beta01",
       "type": "grpc",
       "productName": "Assured Workloads",
       "productUrl": "https://cloud.google.com/assured-workloads/docs",
