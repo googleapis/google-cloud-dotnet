@@ -71,6 +71,12 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
         /// </remarks>
         public bool PostMajorVersion { get; set; }
 
+        /// <summary>
+        /// Path to a file containing a default history message, for APIs that don't have any other
+        /// notable changes. (If not specified, the normal "just dependencies" will be used.)
+        /// </summary>
+        public string DefaultHistoryMessageFile { get; set; }
+
         internal IEnumerable<IBatchCriterion> GetCriteria()
         {
             if (KnownCommits is object)

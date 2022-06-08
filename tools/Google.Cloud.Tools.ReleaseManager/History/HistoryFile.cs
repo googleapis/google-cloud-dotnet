@@ -28,6 +28,11 @@ namespace Google.Cloud.Tools.ReleaseManager.History
     /// </summary>
     internal sealed class HistoryFile
     {
+        /// <summary>
+        /// The default message to use when no commits in a release contain anything noteworthy.
+        /// </summary>
+        internal const string DefaultMessage = "No API surface changes; just dependency updates.";
+
         public const string FixmeBlockingRelease = "FIXME: Edit this before releasing";
         private static readonly string[] PreambleLines = new[] { "# Version history", "" };
         private const string MarkdownFile = "history.md";
@@ -78,8 +83,11 @@ namespace Google.Cloud.Tools.ReleaseManager.History
         /// Merges the given list of releases into the file, ignoring releases that are already present.
         /// </summary>
         /// <param name="releases">The list of releases to merge, in reverse-chronological order (so latest first).</param>
+        /// <param name="defaultMessage">An optional release message to use when there are no commits with specific messages.
+        /// If this is null <see cref="DefaultMessage"/> is used instead.
+        /// </param>
         /// <returns>The new sections inserted into the history.</returns>
-        internal List<Section> MergeReleases(List<Release> releases)
+        internal List<Section> MergeReleases(List<Release> releases, string defaultMessage)
         {
             List<Section> sectionsInserted = new List<Section>();
 
@@ -95,7 +103,7 @@ namespace Google.Cloud.Tools.ReleaseManager.History
                 {
                     break;
                 }
-                Section section = new Section(release);
+                Section section = new Section(release, defaultMessage ?? DefaultMessage);
                 Sections.Insert(insertIndex, section);
                 sectionsInserted.Add(section);
                 insertIndex++;
@@ -120,7 +128,7 @@ namespace Google.Cloud.Tools.ReleaseManager.History
                 Lines = lines;
             }
 
-            internal Section(Release release)
+            internal Section(Release release, string defaultMessage)
             {
                 Version = release.Version;
 
@@ -138,7 +146,8 @@ namespace Google.Cloud.Tools.ReleaseManager.History
                     // No "interesting" commits? That usually means it's just a dependency update.
                     if (Lines.Count == 2)
                     {
-                        Lines.Add("No API surface changes; just dependency updates.");
+                        var defaultMessageLines = defaultMessage.Replace("\r", "").Split('\n');
+                        Lines.AddRange(defaultMessageLines);
                         Lines.Add("");
                     }
                 }

@@ -58,7 +58,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
         private ReleaseProposal(ApiMetadata api, StructuredVersion oldVersion, StructuredVersion newVersion, HistoryFile historyFile) =>
             (this.api, OldVersion, NewVersion, ModifiedHistoryFile) = (api, oldVersion, newVersion, historyFile);
 
-        public static ReleaseProposal CreateFromHistory(Repository repo, string id, StructuredVersion newVersion)
+        public static ReleaseProposal CreateFromHistory(Repository repo, string id, StructuredVersion newVersion, string defaultMessage)
         {
             var catalog = ApiCatalog.Load();
             var api = catalog[id];
@@ -69,7 +69,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
             var historyFile = HistoryFile.Load(historyFilePath);
             if (!api.NoVersionHistory)
             {
-                var sectionsInserted = historyFile.MergeReleases(releases);
+                var sectionsInserted = historyFile.MergeReleases(releases, defaultMessage);
                 if (sectionsInserted.Count != 1)
                 {
                     throw new UserErrorException($"API {api.Id} would have {sectionsInserted.Count} new history sections");
