@@ -1259,7 +1259,7 @@
     },
     {
       "id": "Google.Cloud.Domains.V1",
-      "version": "2.0.0-alpha05",
+      "version": "2.0.0",
       "type": "grpc",
       "productName": "Cloud Domains",
       "productUrl": "https://cloud.google.com/domains/",
