@@ -2313,7 +2313,7 @@
       "id": "Google.Cloud.OrgPolicy.V1",
       "generator": "proto",
       "protoPath": "google/cloud/orgpolicy/v1",
-      "version": "3.0.0-alpha05",
+      "version": "3.0.0",
       "type": "other",
       "targetFrameworks": "netstandard2.1;net462",
       "description": "OrgPolicy API messages.",
