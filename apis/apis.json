@@ -825,7 +825,7 @@
     },
     {
       "id": "Google.Cloud.DataLabeling.V1Beta1",
-      "version": "2.0.0-alpha05",
+      "version": "2.0.0-beta01",
       "type": "grpc",
       "productName": "Data Labeling",
       "productUrl": "https://cloud.google.com/ai-platform/data-labeling/docs",
