@@ -32,20 +32,20 @@ namespace Grafeas.V1 {
             "YXJrGAYgASgLMicuZ3JhZmVhcy52MS5Db21wbGlhbmNlTm90ZS5DaXNCZW5j",
             "aG1hcmtIABIZChFzY2FuX2luc3RydWN0aW9ucxgHIAEoDBpNCgxDaXNCZW5j",
             "aG1hcmsSFQoNcHJvZmlsZV9sZXZlbBgBIAEoBRImCghzZXZlcml0eRgCIAEo",
-            "DjIULmdyYWZlYXMudjEuU2V2ZXJpdHlCEQoPY29tcGxpYW5jZV90eXBlIjUK",
-            "EUNvbXBsaWFuY2VWZXJzaW9uEg8KB2NwZV91cmkYASABKAkSDwoHdmVyc2lv",
-            "bhgCIAEoCSJwChRDb21wbGlhbmNlT2NjdXJyZW5jZRI5ChNub25fY29tcGxp",
-            "YW50X2ZpbGVzGAIgAygLMhwuZ3JhZmVhcy52MS5Ob25Db21wbGlhbnRGaWxl",
-            "Eh0KFW5vbl9jb21wbGlhbmNlX3JlYXNvbhgDIAEoCSJJChBOb25Db21wbGlh",
-            "bnRGaWxlEgwKBHBhdGgYASABKAkSFwoPZGlzcGxheV9jb21tYW5kGAIgASgJ",
-            "Eg4KBnJlYXNvbhgDIAEoCUJRCg1pby5ncmFmZWFzLnYxUAFaOGdvb2dsZS5n",
-            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvZ3JhZmVhcy92MTtncmFm",
-            "ZWFzogIDR1JBYgZwcm90bzM="));
+            "DjIULmdyYWZlYXMudjEuU2V2ZXJpdHlCEQoPY29tcGxpYW5jZV90eXBlIlEK",
+            "EUNvbXBsaWFuY2VWZXJzaW9uEg8KB2NwZV91cmkYASABKAkSGgoSYmVuY2ht",
+            "YXJrX2RvY3VtZW50GAMgASgJEg8KB3ZlcnNpb24YAiABKAkicAoUQ29tcGxp",
+            "YW5jZU9jY3VycmVuY2USOQoTbm9uX2NvbXBsaWFudF9maWxlcxgCIAMoCzIc",
+            "LmdyYWZlYXMudjEuTm9uQ29tcGxpYW50RmlsZRIdChVub25fY29tcGxpYW5j",
+            "ZV9yZWFzb24YAyABKAkiSQoQTm9uQ29tcGxpYW50RmlsZRIMCgRwYXRoGAEg",
+            "ASgJEhcKD2Rpc3BsYXlfY29tbWFuZBgCIAEoCRIOCgZyZWFzb24YAyABKAlC",
+            "UQoNaW8uZ3JhZmVhcy52MVABWjhnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
+            "by9nb29nbGVhcGlzL2dyYWZlYXMvdjE7Z3JhZmVhc6ICA0dSQWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Grafeas.V1.SeverityReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ComplianceNote), global::Grafeas.V1.ComplianceNote.Parser, new[]{ "Title", "Description", "Version", "Rationale", "Remediation", "CisBenchmark", "ScanInstructions" }, new[]{ "ComplianceType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ComplianceNote.Types.CisBenchmark), global::Grafeas.V1.ComplianceNote.Types.CisBenchmark.Parser, new[]{ "ProfileLevel", "Severity" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ComplianceVersion), global::Grafeas.V1.ComplianceVersion.Parser, new[]{ "CpeUri", "Version" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ComplianceVersion), global::Grafeas.V1.ComplianceVersion.Parser, new[]{ "CpeUri", "BenchmarkDocument", "Version" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ComplianceOccurrence), global::Grafeas.V1.ComplianceOccurrence.Parser, new[]{ "NonCompliantFiles", "NonComplianceReason" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.NonCompliantFile), global::Grafeas.V1.NonCompliantFile.Parser, new[]{ "Path", "DisplayCommand", "Reason" }, null, null, null, null)
           }));
@@ -791,6 +791,7 @@ namespace Grafeas.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ComplianceVersion(ComplianceVersion other) : this() {
       cpeUri_ = other.cpeUri_;
+      benchmarkDocument_ = other.benchmarkDocument_;
       version_ = other.version_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -814,6 +815,22 @@ namespace Grafeas.V1 {
       get { return cpeUri_; }
       set {
         cpeUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "benchmark_document" field.</summary>
+    public const int BenchmarkDocumentFieldNumber = 3;
+    private string benchmarkDocument_ = "";
+    /// <summary>
+    /// The name of the document that defines this benchmark, e.g. "CIS
+    /// Container-Optimized OS".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string BenchmarkDocument {
+      get { return benchmarkDocument_; }
+      set {
+        benchmarkDocument_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -849,6 +866,7 @@ namespace Grafeas.V1 {
         return true;
       }
       if (CpeUri != other.CpeUri) return false;
+      if (BenchmarkDocument != other.BenchmarkDocument) return false;
       if (Version != other.Version) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -858,6 +876,7 @@ namespace Grafeas.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (CpeUri.Length != 0) hash ^= CpeUri.GetHashCode();
+      if (BenchmarkDocument.Length != 0) hash ^= BenchmarkDocument.GetHashCode();
       if (Version.Length != 0) hash ^= Version.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -885,6 +904,10 @@ namespace Grafeas.V1 {
         output.WriteRawTag(18);
         output.WriteString(Version);
       }
+      if (BenchmarkDocument.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(BenchmarkDocument);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -903,6 +926,10 @@ namespace Grafeas.V1 {
         output.WriteRawTag(18);
         output.WriteString(Version);
       }
+      if (BenchmarkDocument.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(BenchmarkDocument);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -915,6 +942,9 @@ namespace Grafeas.V1 {
       int size = 0;
       if (CpeUri.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CpeUri);
+      }
+      if (BenchmarkDocument.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(BenchmarkDocument);
       }
       if (Version.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Version);
@@ -933,6 +963,9 @@ namespace Grafeas.V1 {
       }
       if (other.CpeUri.Length != 0) {
         CpeUri = other.CpeUri;
+      }
+      if (other.BenchmarkDocument.Length != 0) {
+        BenchmarkDocument = other.BenchmarkDocument;
       }
       if (other.Version.Length != 0) {
         Version = other.Version;
@@ -960,6 +993,10 @@ namespace Grafeas.V1 {
             Version = input.ReadString();
             break;
           }
+          case 26: {
+            BenchmarkDocument = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -981,6 +1018,10 @@ namespace Grafeas.V1 {
           }
           case 18: {
             Version = input.ReadString();
+            break;
+          }
+          case 26: {
+            BenchmarkDocument = input.ReadString();
             break;
           }
         }
