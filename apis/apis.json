@@ -84,7 +84,7 @@
     },
     {
       "id": "Google.Cloud.ApiGateway.V1",
-      "version": "2.0.0-alpha05",
+      "version": "2.0.0",
       "type": "grpc",
       "productName": "API Gateway",
       "productUrl": "https://cloud.google.com/api-gateway/docs",
