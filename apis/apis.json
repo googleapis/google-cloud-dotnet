@@ -64,7 +64,7 @@
     },
     {
       "id": "Google.Cloud.AccessApproval.V1",
-      "version": "2.0.0-alpha05",
+      "version": "2.0.0",
       "type": "grpc",
       "productName": "Access Approval",
       "productUrl": "https://cloud.google.com/access-approval/docs/",
