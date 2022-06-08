@@ -25,7 +25,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
     /// </summary>
     public sealed class ReleaseAllCriterion : IBatchCriterion
     {
-        IEnumerable<ReleaseProposal> IBatchCriterion.GetProposals(ApiCatalog catalog, Func<string, StructuredVersion, StructuredVersion> versionIncrementer)
+        IEnumerable<ReleaseProposal> IBatchCriterion.GetProposals(ApiCatalog catalog, Func<string, StructuredVersion, StructuredVersion> versionIncrementer, string defaultMessage)
         {
             var root = DirectoryLayout.DetermineRootDirectory();
             using var repo = new Repository(root);
@@ -48,7 +48,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
                 }
                 var newVersion = versionIncrementer(api.Id, api.StructuredVersion);
 
-                yield return ReleaseProposal.CreateFromHistory(repo, api.Id, newVersion);
+                yield return ReleaseProposal.CreateFromHistory(repo, api.Id, newVersion, defaultMessage);
             }
         }
     }

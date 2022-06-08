@@ -16,7 +16,6 @@ using Google.Cloud.Tools.Common;
 using Google.Cloud.Tools.ReleaseManager.History;
 using LibGit2Sharp;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
@@ -59,7 +58,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             using var repo = new Repository(root);
             var releases = Release.LoadReleases(repo, catalog, api).ToList();
             var historyFile = HistoryFile.Load(historyFilePath);
-            var sectionsInserted = historyFile.MergeReleases(releases);
+            var sectionsInserted = historyFile.MergeReleases(releases, defaultMessage: null);
             if (sectionsInserted.Count != 0)
             {
                 historyFile.Save(historyFilePath);

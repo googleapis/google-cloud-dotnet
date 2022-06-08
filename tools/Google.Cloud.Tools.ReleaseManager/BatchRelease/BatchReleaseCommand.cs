@@ -57,7 +57,8 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
                 config.PostMajorVersion
                 ? (id, sv) => sv.AfterMajorVersion(id)
                 : (id, sv) => sv.AfterIncrement();
-            var proposals = criterion.GetProposals(catalog, versionIncrementer);
+            string defaultMessage = config.DefaultHistoryMessageFile is null ? null : File.ReadAllText(config.DefaultHistoryMessageFile);
+            var proposals = criterion.GetProposals(catalog, versionIncrementer, defaultMessage);
 
             foreach (var proposal in proposals)
             {

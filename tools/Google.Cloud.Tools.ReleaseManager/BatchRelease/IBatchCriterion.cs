@@ -23,6 +23,6 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
         /// <summary>
         /// Returns the proposed releases for all APIs in the catalog
         /// </summary>
-        IEnumerable<ReleaseProposal> GetProposals(ApiCatalog catalog, Func<string, StructuredVersion, StructuredVersion> versionIncrementer);
+        IEnumerable<ReleaseProposal> GetProposals(ApiCatalog catalog, Func<string, StructuredVersion, StructuredVersion> versionIncrementer, string defaultMessage);
     }
 }
