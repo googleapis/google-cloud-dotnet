@@ -14,7 +14,6 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Cloud.ClientTesting;
 using Google.Cloud.Iam.V1;
 using Grpc.Core;
 using System;
@@ -470,45 +469,6 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             await Task.WhenAll(publishTask, subscribeAllTask).ConfigureAwait(false);
             Console.WriteLine("pub+sub completed.");
         }
-
-#if NET462_OR_GREATER
-        [SkippableFact]
-        public async Task SeparateSubchannels()
-        {
-            // This test fails on some Linux platforms.
-            // The failures are due to changes made to the GRPC_VERBOSITY and GRPC_TRACE
-            // environment variables in GrpcInfo.cs not being picked up by the gRPC logging code.
-            // TODO: Determine why this fails and fix.
-            TestEnvironment.SkipIfVpcSc();
-
-            // Skip if we're not using Grpc.Core. Under Grpc.Net.Client it's harder to ensure that
-            // we actually have separate network connections, although that will be the default.
-            Skip.IfNot(
-                GrpcAdapter.GetFallbackAdapter(PublisherServiceApiClient.ServiceMetadata) is GrpcCoreAdapter,
-                "Subchannel counting is only available in Grpc.Core");
-
-            var topicId = _fixture.CreateTopicId();
-            var subscriptionId = _fixture.CreateSubscriptionId();
-            var topicName = new TopicName(_fixture.ProjectId, topicId);
-            var subscriptionName = new SubscriptionName(_fixture.ProjectId, subscriptionId);
-            await CreateTopicAndSubscription(topicName, subscriptionName);
-
-            int originalSubchannelCount = GrpcInfo.SubchannelCount;
-            await RunBulkMessagingImpl(
-                topicName,
-                subscriptionName,
-                messageCount: 2_000,
-                minMessageSize: 4,
-                maxMessageSize: 4,
-                maxMessagesInFlight: 100,
-                initialNackCount: 0,
-                publisherChannelCount: 3,
-                clientCount: 4);
-
-            int subchannelsCreated = GrpcInfo.SubchannelCount - originalSubchannelCount;
-            Assert.Equal(7, subchannelsCreated);
-        }
-#endif
 
         [Fact]
         public async Task DeadLetterQueueAndDeliveryAttempt()
