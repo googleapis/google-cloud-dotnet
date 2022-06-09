@@ -19,7 +19,7 @@ using System;
 using System.Linq;
 using System.Threading;
 
-namespace Google.Cloud.ClientTesting
+namespace Google.Cloud.Bigtable.V2.IntegrationTests
 {
     /// <summary>
     /// Exposes information about the underlying gRPC layer.
