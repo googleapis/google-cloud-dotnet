@@ -219,7 +219,7 @@
       "protoPath": "google/cloud/asset/v1",
       "productName": "Google Cloud Asset Inventory",
       "productUrl": "https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview",
-      "version": "3.0.0-alpha05",
+      "version": "3.0.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Asset Inventory API (v1).",
       "dependencies": {
