@@ -33,9 +33,15 @@ internal class ShowDependencyLevelsCommand : CommandBase
     {
         var catalog = ApiCatalog.Load();
 
-        // Map from the package ID to the (in-catalog) IDs it depends on, excluding grouped APIs.
+        var dependenciesOnGroups = catalog.Apis
+            .Where(api => api.PackageGroup is null)
+            .Where(api => api.Dependencies.Keys.Any(dep => catalog.TryGetApi(dep, out var depApi) && depApi.PackageGroup is not null))
+            .ToList();
+
+        // Map from the package ID to the (in-catalog) IDs it depends on, excluding grouped APIs and those depending on groups.
         var apiToDependencies = catalog.Apis
             .Where(api => api.PackageGroup is null)
+            .Except(dependenciesOnGroups)
             .ToDictionary(
                 api => api.Id,
                 api => api.Dependencies.Keys.Where(dep => catalog.TryGetApi(dep, out var depApi) && depApi.PackageGroup is null).ToHashSet());
@@ -88,9 +94,6 @@ internal class ShowDependencyLevelsCommand : CommandBase
 
         Console.WriteLine();
         Console.WriteLine("APIs with dependencies on groups:");
-        var dependenciesOnGroups = catalog.Apis
-            .Where(api => api.PackageGroup is null)
-            .Where(api => api.Dependencies.Keys.Any(dep => catalog.TryGetApi(dep, out var depApi) && depApi.PackageGroup is not null));
         foreach (var api in dependenciesOnGroups)
         {
             Console.WriteLine($"  {api.Id}");
