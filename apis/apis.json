@@ -2274,7 +2274,7 @@
     },
     {
       "id": "Google.Cloud.Optimization.V1",
-      "version": "2.0.0-alpha05",
+      "version": "2.0.0-beta01",
       "releaseLevelOverride": "unreleased",
       "type": "grpc",
       "productName": "Cloud Optimization",
