@@ -99,7 +99,7 @@ namespace Google.Cloud.ClientTesting
 
             public void Info(string message)
             {
-                if (message.Contains("New connected subchannel"))
+                if (message.Contains("new connected subchannel"))
                 {
                     Interlocked.Increment(ref _count);
                 }
