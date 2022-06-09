@@ -531,6 +531,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 ManifestOptions = new ManifestOptions(),
+                AssetId = "asset_iddbd5c651",
             };
             mockGrpcClient.Setup(x => x.CreateVodSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -564,6 +565,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 ManifestOptions = new ManifestOptions(),
+                AssetId = "asset_iddbd5c651",
             };
             mockGrpcClient.Setup(x => x.CreateVodSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<VodSession>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -599,6 +601,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 ManifestOptions = new ManifestOptions(),
+                AssetId = "asset_iddbd5c651",
             };
             mockGrpcClient.Setup(x => x.CreateVodSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -632,6 +635,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 ManifestOptions = new ManifestOptions(),
+                AssetId = "asset_iddbd5c651",
             };
             mockGrpcClient.Setup(x => x.CreateVodSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<VodSession>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -667,6 +671,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 ManifestOptions = new ManifestOptions(),
+                AssetId = "asset_iddbd5c651",
             };
             mockGrpcClient.Setup(x => x.CreateVodSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -700,6 +705,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 ManifestOptions = new ManifestOptions(),
+                AssetId = "asset_iddbd5c651",
             };
             mockGrpcClient.Setup(x => x.CreateVodSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<VodSession>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -734,6 +740,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 ManifestOptions = new ManifestOptions(),
+                AssetId = "asset_iddbd5c651",
             };
             mockGrpcClient.Setup(x => x.GetVodSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -766,6 +773,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 ManifestOptions = new ManifestOptions(),
+                AssetId = "asset_iddbd5c651",
             };
             mockGrpcClient.Setup(x => x.GetVodSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<VodSession>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -800,6 +808,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 ManifestOptions = new ManifestOptions(),
+                AssetId = "asset_iddbd5c651",
             };
             mockGrpcClient.Setup(x => x.GetVodSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -832,6 +841,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 ManifestOptions = new ManifestOptions(),
+                AssetId = "asset_iddbd5c651",
             };
             mockGrpcClient.Setup(x => x.GetVodSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<VodSession>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -866,6 +876,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 ManifestOptions = new ManifestOptions(),
+                AssetId = "asset_iddbd5c651",
             };
             mockGrpcClient.Setup(x => x.GetVodSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -898,6 +909,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 ManifestOptions = new ManifestOptions(),
+                AssetId = "asset_iddbd5c651",
             };
             mockGrpcClient.Setup(x => x.GetVodSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<VodSession>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -1780,8 +1792,9 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 DefaultSlateId = "default_slate_id07c41bba",
-                StitchingPolicy = LiveSession.Types.StitchingPolicy.Unspecified,
+                StitchingPolicy = LiveSession.Types.StitchingPolicy.CutCurrent,
                 ManifestOptions = new ManifestOptions(),
+                StreamId = "stream_idb4d31f47",
             };
             mockGrpcClient.Setup(x => x.CreateLiveSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -1821,8 +1834,9 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 DefaultSlateId = "default_slate_id07c41bba",
-                StitchingPolicy = LiveSession.Types.StitchingPolicy.Unspecified,
+                StitchingPolicy = LiveSession.Types.StitchingPolicy.CutCurrent,
                 ManifestOptions = new ManifestOptions(),
+                StreamId = "stream_idb4d31f47",
             };
             mockGrpcClient.Setup(x => x.CreateLiveSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LiveSession>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -1864,8 +1878,9 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 DefaultSlateId = "default_slate_id07c41bba",
-                StitchingPolicy = LiveSession.Types.StitchingPolicy.Unspecified,
+                StitchingPolicy = LiveSession.Types.StitchingPolicy.CutCurrent,
                 ManifestOptions = new ManifestOptions(),
+                StreamId = "stream_idb4d31f47",
             };
             mockGrpcClient.Setup(x => x.CreateLiveSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -1905,8 +1920,9 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 DefaultSlateId = "default_slate_id07c41bba",
-                StitchingPolicy = LiveSession.Types.StitchingPolicy.Unspecified,
+                StitchingPolicy = LiveSession.Types.StitchingPolicy.CutCurrent,
                 ManifestOptions = new ManifestOptions(),
+                StreamId = "stream_idb4d31f47",
             };
             mockGrpcClient.Setup(x => x.CreateLiveSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LiveSession>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -1948,8 +1964,9 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 DefaultSlateId = "default_slate_id07c41bba",
-                StitchingPolicy = LiveSession.Types.StitchingPolicy.Unspecified,
+                StitchingPolicy = LiveSession.Types.StitchingPolicy.CutCurrent,
                 ManifestOptions = new ManifestOptions(),
+                StreamId = "stream_idb4d31f47",
             };
             mockGrpcClient.Setup(x => x.CreateLiveSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -1989,8 +2006,9 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 DefaultSlateId = "default_slate_id07c41bba",
-                StitchingPolicy = LiveSession.Types.StitchingPolicy.Unspecified,
+                StitchingPolicy = LiveSession.Types.StitchingPolicy.CutCurrent,
                 ManifestOptions = new ManifestOptions(),
+                StreamId = "stream_idb4d31f47",
             };
             mockGrpcClient.Setup(x => x.CreateLiveSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LiveSession>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -2031,8 +2049,9 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 DefaultSlateId = "default_slate_id07c41bba",
-                StitchingPolicy = LiveSession.Types.StitchingPolicy.Unspecified,
+                StitchingPolicy = LiveSession.Types.StitchingPolicy.CutCurrent,
                 ManifestOptions = new ManifestOptions(),
+                StreamId = "stream_idb4d31f47",
             };
             mockGrpcClient.Setup(x => x.GetLiveSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -2071,8 +2090,9 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 DefaultSlateId = "default_slate_id07c41bba",
-                StitchingPolicy = LiveSession.Types.StitchingPolicy.Unspecified,
+                StitchingPolicy = LiveSession.Types.StitchingPolicy.CutCurrent,
                 ManifestOptions = new ManifestOptions(),
+                StreamId = "stream_idb4d31f47",
             };
             mockGrpcClient.Setup(x => x.GetLiveSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LiveSession>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -2113,8 +2133,9 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 DefaultSlateId = "default_slate_id07c41bba",
-                StitchingPolicy = LiveSession.Types.StitchingPolicy.Unspecified,
+                StitchingPolicy = LiveSession.Types.StitchingPolicy.CutCurrent,
                 ManifestOptions = new ManifestOptions(),
+                StreamId = "stream_idb4d31f47",
             };
             mockGrpcClient.Setup(x => x.GetLiveSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -2153,8 +2174,9 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 DefaultSlateId = "default_slate_id07c41bba",
-                StitchingPolicy = LiveSession.Types.StitchingPolicy.Unspecified,
+                StitchingPolicy = LiveSession.Types.StitchingPolicy.CutCurrent,
                 ManifestOptions = new ManifestOptions(),
+                StreamId = "stream_idb4d31f47",
             };
             mockGrpcClient.Setup(x => x.GetLiveSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LiveSession>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -2195,8 +2217,9 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 DefaultSlateId = "default_slate_id07c41bba",
-                StitchingPolicy = LiveSession.Types.StitchingPolicy.Unspecified,
+                StitchingPolicy = LiveSession.Types.StitchingPolicy.CutCurrent,
                 ManifestOptions = new ManifestOptions(),
+                StreamId = "stream_idb4d31f47",
             };
             mockGrpcClient.Setup(x => x.GetLiveSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -2235,8 +2258,9 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 DefaultSlateId = "default_slate_id07c41bba",
-                StitchingPolicy = LiveSession.Types.StitchingPolicy.Unspecified,
+                StitchingPolicy = LiveSession.Types.StitchingPolicy.CutCurrent,
                 ManifestOptions = new ManifestOptions(),
+                StreamId = "stream_idb4d31f47",
             };
             mockGrpcClient.Setup(x => x.GetLiveSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LiveSession>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
