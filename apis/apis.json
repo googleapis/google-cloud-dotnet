@@ -1092,7 +1092,7 @@
     },
     {
       "id": "Google.Cloud.Diagnostics.AspNetCore3",
-      "version": "5.0.0-alpha05",
+      "version": "5.0.0",
       "type": "other",
       "metadataType": "INTEGRATION",
       "targetFrameworks": "netcoreapp3.1",
@@ -1117,7 +1117,7 @@
     },
     {
       "id": "Google.Cloud.Diagnostics.Common",
-      "version": "5.0.0-alpha05",
+      "version": "5.0.0",
       "type": "other",
       "targetFrameworks": "netstandard2.1;net462",
       "testTargetFrameworks": "netcoreapp3.1;net462",
