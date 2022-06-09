@@ -1463,6 +1463,7 @@
       ],
       "dependencies": {
         "Google.Api.Gax.Grpc": "4.0.0",
+        "Google.Cloud.Location": "2.0.0",
         "Google.LongRunning": "2.3.0",
         "Grpc.Core": "2.46.3"
       },
