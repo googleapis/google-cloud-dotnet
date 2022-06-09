@@ -13,7 +13,6 @@
 // limitations under the License.
 
 #if NET462_OR_GREATER
-using Google.Cloud.ClientTesting;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xunit;
