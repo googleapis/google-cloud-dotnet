@@ -71,8 +71,6 @@ namespace Google.Cloud.Storage.V1.RetryConformanceTests
             bool preconditionProvided = test.PreconditionProvided;
             bool expectSuccess = test.ExpectSuccess;
 
-
-
             foreach (InstructionList testCase in test.Cases)
             {
                 foreach (string instruction in testCase.Instructions)
@@ -80,16 +78,14 @@ namespace Google.Cloud.Storage.V1.RetryConformanceTests
                     foreach (Method method in test.Methods)
                     {
                         if (method.Name == "storage.hmacKey.get")
-
-                        {                        // TODO: Write your tests here.
-                            var res = CreateStorageResources(method);
+                        {                        
+                            // TODO: Write your tests here.
+                            var respurce = CreateStorageResources(method);
                             var meth = GetMappedFunction(method.Name);
                             var funcname = meth.MethodInformation.Name;
 
                             callBench(funcname);
                         }
-
-                        // _storageClient.Service.HttpClient.DefaultRequestHeaders.Add
                     }
                 }
             }
@@ -99,18 +95,38 @@ namespace Google.Cloud.Storage.V1.RetryConformanceTests
         {
             if (functionName.Contains("HmacKey"))
             {
-                // _storageClient.Service.HttpClient.DefaultRequestHeaders.Add("instructions", "{\"storage.hmacKey.get\": [\"return -503\"]}");
-                //string d = "{\"instructions\":{\"storage.buckets.list\": [\"return -503\"]}}";
-                var d = new StringContent("{'instructions':{'storage.buckets.list': ['return-503']}}").ToString();
-                var data = new StringContent(d, Encoding.UTF8, "application/json");
-                //     var response = await _storageClient.Service.HttpClient.PostAsync(TestBenchUrl + "retrytest", data);
-                var response = await _storageClient.Service.HttpClient.PostAsync("https://storage-testbench-vkcain7hhq-el.a.run.app/" + "retry_test", data);
+                // ------- QUESTION
+                string res = await CreateResource();
+                // System.Threading.Thread.Sleep(60000);
+                string res2 = await ListRetryResources();
 
-                //var response = await _storageClient.Service.HttpClient.GetAsync("https://storage-testbench-vkcain7hhq-el.a.run.app/storage/v1/b?project=test");
-                var res = response.Content;
-
-
+                if (res2.Contains(res))
+                {
+                    await GetUpdatedStatus(res);
+                }
             }
+        }
+
+        private async Task GetUpdatedStatus(string resourceId)
+        {
+            _storageClient.Service.HttpClient.DefaultRequestHeaders.Add("x-retry-test-id", resourceId);
+            var response = await _storageClient.Service.HttpClient.GetAsync(TestBenchUrl + "storage/v1/b?project=test");
+            var result = response.Content.ReadAsStringAsync().Result;
+        }
+
+        private async Task<string> ListRetryResources()
+        {
+            var response = await _storageClient.Service.HttpClient.GetAsync(TestBenchUrl + "retry_tests");
+            var result = response.Content.ReadAsStringAsync().Result.ToString();
+            return result;
+        }
+
+        private async Task<string> CreateResource()
+        {
+            var data = new StringContent("{\"instructions\":{\"storage.buckets.list\": [\"return-503\"]}}", Encoding.UTF8, "application/json");
+            var response = await _storageClient.Service.HttpClient.PostAsync(TestBenchUrl + "retry_test", data);
+            var resId = JObject.Parse(response.Content.ReadAsStringAsync().Result.Replace("\\", "")).GetValue("id").ToString();
+            return resId;
         }
 
         private StorageResources CreateStorageResources(Method method)
@@ -118,7 +134,7 @@ namespace Google.Cloud.Storage.V1.RetryConformanceTests
             var result = new StorageResources();
             foreach(Resource resource in method.Resources)
             {
-              /*  if (resource.ToString().Equals("Bucket", StringComparison.OrdinalIgnoreCase))
+              /*  if (resource.ToString().Equals("Bucket", StringComparison.OrdinalIgnoreCase))  ---- QUESTION
                 {
                     var bucket = _storageClient.CreateBucket(ProjectId, Guid.NewGuid().ToString());
                     result.Add(new StorageResource(Resource.Bucket, bucket.Name));
@@ -126,6 +142,7 @@ namespace Google.Cloud.Storage.V1.RetryConformanceTests
                 else */ if(resource.ToString().Equals("HmacKey", StringComparison.OrdinalIgnoreCase))
                 {
                     var hmac = _storageClient.CreateHmacKey(ProjectId, ServiceAccountEmail);
+                   // _storageClient.CreateNotification();        -----QUESTION
                     result.Add(new StorageResource(Resource.HmacKey, hmac.ToString()));
                 }
                
@@ -160,8 +177,8 @@ namespace Google.Cloud.Storage.V1.RetryConformanceTests
             "storage.buckets.get" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.GetBucket)), false, true, false, false, false),
             "storage.buckets.getIamPolicy" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.GetBucketIamPolicy)), false, true, false, false, false),
             "storage.buckets.insert" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.CreateBucket), new System.Type[] { typeof(string), typeof(string), typeof(CreateBucketOptions) }), true, true, false, false, false),
-           // "storage.buckets.update" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.UpdateBucket), new System.Type[] { typeof(string), typeof(string), typeof(UpdateBucketOptions) }), true, true, false, false, false),
-            //"storage.buckets.patch" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.PatchBucket), new System.Type[] { typeof(string), typeof(string), typeof(PatchBucketOptions) }), true, true, false, false, false),
+           // "storage.buckets.update" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.UpdateBucket), new System.Type[] { typeof(string), typeof(string), typeof(UpdateBucketOptions) }), true, true, false, false, false),   ---- QUESTION
+            //"storage.buckets.patch" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.PatchBucket), new System.Type[] { typeof(string), typeof(string), typeof(PatchBucketOptions) }), true, true, false, false, false), 
             "storage.buckets.list" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.ListBuckets)), true, false, false, false, false),
             "storage.hmacKey.get" => new MethodInvocation(s_clientType.GetMethod(nameof(StorageClient.GetHmacKey), new System.Type[] { typeof(string), typeof(string), typeof(GetHmacKeyOptions) }), false, false, false, false, true,true),
             // Just to proceed with testing for now.
