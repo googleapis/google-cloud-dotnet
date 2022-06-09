@@ -18,6 +18,8 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -82,6 +84,8 @@ namespace Google.Cloud.AIPlatform.V1
             WriteTensorboardExperimentDataSettings = existing.WriteTensorboardExperimentDataSettings;
             WriteTensorboardRunDataSettings = existing.WriteTensorboardRunDataSettings;
             ExportTensorboardTimeSeriesDataSettings = existing.ExportTensorboardTimeSeriesDataSettings;
+            LocationsSettings = existing.LocationsSettings;
+            IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
@@ -557,6 +561,16 @@ namespace Google.Cloud.AIPlatform.V1
         /// </remarks>
         public gaxgrpc::CallSettings ExportTensorboardTimeSeriesDataSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
+        /// <summary>
+        /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
+        /// </summary>
+        public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="TensorboardServiceSettings"/> object.</returns>
         public TensorboardServiceSettings Clone() => new TensorboardServiceSettings(this);
@@ -702,6 +716,12 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>The underlying gRPC TensorboardService client</summary>
         public virtual TensorboardService.TensorboardServiceClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Creates a Tensorboard.
@@ -4628,6 +4648,8 @@ namespace Google.Cloud.AIPlatform.V1
             DeleteTensorboardExperimentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTensorboardExperimentOperationsSettings, logger);
             DeleteTensorboardRunOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTensorboardRunOperationsSettings, logger);
             DeleteTensorboardTimeSeriesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTensorboardTimeSeriesOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callCreateTensorboard = clientHelper.BuildApiCall<CreateTensorboardRequest, lro::Operation>("CreateTensorboard", grpcClient.CreateTensorboardAsync, grpcClient.CreateTensorboard, effectiveSettings.CreateTensorboardSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateTensorboard);
             Modify_CreateTensorboardApiCall(ref _callCreateTensorboard);
@@ -4779,6 +4801,12 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>The underlying gRPC TensorboardService client</summary>
         public override TensorboardService.TensorboardServiceClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
         partial void Modify_CreateTensorboardRequest(ref CreateTensorboardRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -5624,6 +5652,32 @@ namespace Google.Cloud.AIPlatform.V1
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class TensorboardService
+    {
+        public partial class TensorboardServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
+
+            /// <summary>
+            /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gciv::IAMPolicy.IAMPolicyClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gciv::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() =>
+                new gciv::IAMPolicy.IAMPolicyClient(CallInvoker);
         }
     }
 }

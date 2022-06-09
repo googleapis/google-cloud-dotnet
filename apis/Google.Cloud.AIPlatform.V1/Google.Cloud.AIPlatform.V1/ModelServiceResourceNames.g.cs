@@ -66,7 +66,43 @@ namespace Google.Cloud.AIPlatform.V1
         }
     }
 
+    public partial class ListModelVersionsRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::ModelName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::ModelName ModelName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::ModelName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class DeleteModelRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::ModelName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::ModelName ModelName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::ModelName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteModelVersionRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::ModelName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::ModelName ModelName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::ModelName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class MergeVersionAliasesRequest
     {
         /// <summary>
         /// <see cref="gcav::ModelName"/>-typed view over the <see cref="Name"/> resource name property.

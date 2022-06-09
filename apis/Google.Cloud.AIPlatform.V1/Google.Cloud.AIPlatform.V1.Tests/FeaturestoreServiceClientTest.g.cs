@@ -16,6 +16,8 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -34,6 +36,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<FeaturestoreService.FeaturestoreServiceClient> mockGrpcClient = new moq::Mock<FeaturestoreService.FeaturestoreServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetFeaturestoreRequest request = new GetFeaturestoreRequest
             {
                 FeaturestoreName = FeaturestoreName.FromProjectLocationFeaturestore("[PROJECT]", "[LOCATION]", "[FEATURESTORE]"),
@@ -67,6 +71,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<FeaturestoreService.FeaturestoreServiceClient> mockGrpcClient = new moq::Mock<FeaturestoreService.FeaturestoreServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetFeaturestoreRequest request = new GetFeaturestoreRequest
             {
                 FeaturestoreName = FeaturestoreName.FromProjectLocationFeaturestore("[PROJECT]", "[LOCATION]", "[FEATURESTORE]"),
@@ -102,6 +108,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<FeaturestoreService.FeaturestoreServiceClient> mockGrpcClient = new moq::Mock<FeaturestoreService.FeaturestoreServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetFeaturestoreRequest request = new GetFeaturestoreRequest
             {
                 FeaturestoreName = FeaturestoreName.FromProjectLocationFeaturestore("[PROJECT]", "[LOCATION]", "[FEATURESTORE]"),
@@ -135,6 +143,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<FeaturestoreService.FeaturestoreServiceClient> mockGrpcClient = new moq::Mock<FeaturestoreService.FeaturestoreServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetFeaturestoreRequest request = new GetFeaturestoreRequest
             {
                 FeaturestoreName = FeaturestoreName.FromProjectLocationFeaturestore("[PROJECT]", "[LOCATION]", "[FEATURESTORE]"),
@@ -170,6 +180,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<FeaturestoreService.FeaturestoreServiceClient> mockGrpcClient = new moq::Mock<FeaturestoreService.FeaturestoreServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetFeaturestoreRequest request = new GetFeaturestoreRequest
             {
                 FeaturestoreName = FeaturestoreName.FromProjectLocationFeaturestore("[PROJECT]", "[LOCATION]", "[FEATURESTORE]"),
@@ -203,6 +215,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<FeaturestoreService.FeaturestoreServiceClient> mockGrpcClient = new moq::Mock<FeaturestoreService.FeaturestoreServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetFeaturestoreRequest request = new GetFeaturestoreRequest
             {
                 FeaturestoreName = FeaturestoreName.FromProjectLocationFeaturestore("[PROJECT]", "[LOCATION]", "[FEATURESTORE]"),
@@ -238,6 +252,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<FeaturestoreService.FeaturestoreServiceClient> mockGrpcClient = new moq::Mock<FeaturestoreService.FeaturestoreServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEntityTypeRequest request = new GetEntityTypeRequest
             {
                 EntityTypeName = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]"),
@@ -270,6 +286,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<FeaturestoreService.FeaturestoreServiceClient> mockGrpcClient = new moq::Mock<FeaturestoreService.FeaturestoreServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEntityTypeRequest request = new GetEntityTypeRequest
             {
                 EntityTypeName = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]"),
@@ -304,6 +322,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<FeaturestoreService.FeaturestoreServiceClient> mockGrpcClient = new moq::Mock<FeaturestoreService.FeaturestoreServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEntityTypeRequest request = new GetEntityTypeRequest
             {
                 EntityTypeName = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]"),
@@ -336,6 +356,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<FeaturestoreService.FeaturestoreServiceClient> mockGrpcClient = new moq::Mock<FeaturestoreService.FeaturestoreServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEntityTypeRequest request = new GetEntityTypeRequest
             {
                 EntityTypeName = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]"),
@@ -370,6 +392,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<FeaturestoreService.FeaturestoreServiceClient> mockGrpcClient = new moq::Mock<FeaturestoreService.FeaturestoreServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEntityTypeRequest request = new GetEntityTypeRequest
             {
                 EntityTypeName = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]"),
@@ -402,6 +426,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<FeaturestoreService.FeaturestoreServiceClient> mockGrpcClient = new moq::Mock<FeaturestoreService.FeaturestoreServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEntityTypeRequest request = new GetEntityTypeRequest
             {
                 EntityTypeName = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]"),
@@ -436,6 +462,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<FeaturestoreService.FeaturestoreServiceClient> mockGrpcClient = new moq::Mock<FeaturestoreService.FeaturestoreServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateEntityTypeRequest request = new UpdateEntityTypeRequest
             {
                 EntityType = new EntityType(),
@@ -469,6 +497,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<FeaturestoreService.FeaturestoreServiceClient> mockGrpcClient = new moq::Mock<FeaturestoreService.FeaturestoreServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateEntityTypeRequest request = new UpdateEntityTypeRequest
             {
                 EntityType = new EntityType(),
@@ -504,6 +534,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<FeaturestoreService.FeaturestoreServiceClient> mockGrpcClient = new moq::Mock<FeaturestoreService.FeaturestoreServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateEntityTypeRequest request = new UpdateEntityTypeRequest
             {
                 EntityType = new EntityType(),
@@ -537,6 +569,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<FeaturestoreService.FeaturestoreServiceClient> mockGrpcClient = new moq::Mock<FeaturestoreService.FeaturestoreServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateEntityTypeRequest request = new UpdateEntityTypeRequest
             {
                 EntityType = new EntityType(),
@@ -572,6 +606,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<FeaturestoreService.FeaturestoreServiceClient> mockGrpcClient = new moq::Mock<FeaturestoreService.FeaturestoreServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetFeatureRequest request = new GetFeatureRequest
             {
                 FeatureName = FeatureName.FromProjectLocationFeaturestoreEntityTypeFeature("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]", "[FEATURE]"),
@@ -609,6 +645,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<FeaturestoreService.FeaturestoreServiceClient> mockGrpcClient = new moq::Mock<FeaturestoreService.FeaturestoreServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetFeatureRequest request = new GetFeatureRequest
             {
                 FeatureName = FeatureName.FromProjectLocationFeaturestoreEntityTypeFeature("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]", "[FEATURE]"),
@@ -648,6 +686,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<FeaturestoreService.FeaturestoreServiceClient> mockGrpcClient = new moq::Mock<FeaturestoreService.FeaturestoreServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetFeatureRequest request = new GetFeatureRequest
             {
                 FeatureName = FeatureName.FromProjectLocationFeaturestoreEntityTypeFeature("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]", "[FEATURE]"),
@@ -685,6 +725,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<FeaturestoreService.FeaturestoreServiceClient> mockGrpcClient = new moq::Mock<FeaturestoreService.FeaturestoreServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetFeatureRequest request = new GetFeatureRequest
             {
                 FeatureName = FeatureName.FromProjectLocationFeaturestoreEntityTypeFeature("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]", "[FEATURE]"),
@@ -724,6 +766,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<FeaturestoreService.FeaturestoreServiceClient> mockGrpcClient = new moq::Mock<FeaturestoreService.FeaturestoreServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetFeatureRequest request = new GetFeatureRequest
             {
                 FeatureName = FeatureName.FromProjectLocationFeaturestoreEntityTypeFeature("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]", "[FEATURE]"),
@@ -761,6 +805,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<FeaturestoreService.FeaturestoreServiceClient> mockGrpcClient = new moq::Mock<FeaturestoreService.FeaturestoreServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetFeatureRequest request = new GetFeatureRequest
             {
                 FeatureName = FeatureName.FromProjectLocationFeaturestoreEntityTypeFeature("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]", "[FEATURE]"),
@@ -800,6 +846,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<FeaturestoreService.FeaturestoreServiceClient> mockGrpcClient = new moq::Mock<FeaturestoreService.FeaturestoreServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateFeatureRequest request = new UpdateFeatureRequest
             {
                 Feature = new Feature(),
@@ -838,6 +886,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<FeaturestoreService.FeaturestoreServiceClient> mockGrpcClient = new moq::Mock<FeaturestoreService.FeaturestoreServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateFeatureRequest request = new UpdateFeatureRequest
             {
                 Feature = new Feature(),
@@ -878,6 +928,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<FeaturestoreService.FeaturestoreServiceClient> mockGrpcClient = new moq::Mock<FeaturestoreService.FeaturestoreServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateFeatureRequest request = new UpdateFeatureRequest
             {
                 Feature = new Feature(),
@@ -916,6 +968,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<FeaturestoreService.FeaturestoreServiceClient> mockGrpcClient = new moq::Mock<FeaturestoreService.FeaturestoreServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateFeatureRequest request = new UpdateFeatureRequest
             {
                 Feature = new Feature(),

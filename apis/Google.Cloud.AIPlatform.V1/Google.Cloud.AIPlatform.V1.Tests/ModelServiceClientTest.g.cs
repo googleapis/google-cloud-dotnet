@@ -16,6 +16,8 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -34,6 +36,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetModelRequest request = new GetModelRequest
             {
                 ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
@@ -81,6 +85,14 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ExplanationSpec = new ExplanationSpec(),
                 EncryptionSpec = new EncryptionSpec(),
                 ArtifactUri = "artifact_uri469c7020",
+                VersionId = "version_id52856e31",
+                VersionAliases =
+                {
+                    "version_aliasesdf58f3b6",
+                },
+                VersionDescription = "version_description5747e174",
+                VersionCreateTime = new wkt::Timestamp(),
+                VersionUpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetModel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -94,6 +106,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetModelRequest request = new GetModelRequest
             {
                 ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
@@ -141,6 +155,14 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ExplanationSpec = new ExplanationSpec(),
                 EncryptionSpec = new EncryptionSpec(),
                 ArtifactUri = "artifact_uri469c7020",
+                VersionId = "version_id52856e31",
+                VersionAliases =
+                {
+                    "version_aliasesdf58f3b6",
+                },
+                VersionDescription = "version_description5747e174",
+                VersionCreateTime = new wkt::Timestamp(),
+                VersionUpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetModelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Model>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -156,6 +178,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetModelRequest request = new GetModelRequest
             {
                 ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
@@ -203,6 +227,14 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ExplanationSpec = new ExplanationSpec(),
                 EncryptionSpec = new EncryptionSpec(),
                 ArtifactUri = "artifact_uri469c7020",
+                VersionId = "version_id52856e31",
+                VersionAliases =
+                {
+                    "version_aliasesdf58f3b6",
+                },
+                VersionDescription = "version_description5747e174",
+                VersionCreateTime = new wkt::Timestamp(),
+                VersionUpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetModel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -216,6 +248,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetModelRequest request = new GetModelRequest
             {
                 ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
@@ -263,6 +297,14 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ExplanationSpec = new ExplanationSpec(),
                 EncryptionSpec = new EncryptionSpec(),
                 ArtifactUri = "artifact_uri469c7020",
+                VersionId = "version_id52856e31",
+                VersionAliases =
+                {
+                    "version_aliasesdf58f3b6",
+                },
+                VersionDescription = "version_description5747e174",
+                VersionCreateTime = new wkt::Timestamp(),
+                VersionUpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetModelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Model>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -278,6 +320,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetModelRequest request = new GetModelRequest
             {
                 ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
@@ -325,6 +369,14 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ExplanationSpec = new ExplanationSpec(),
                 EncryptionSpec = new EncryptionSpec(),
                 ArtifactUri = "artifact_uri469c7020",
+                VersionId = "version_id52856e31",
+                VersionAliases =
+                {
+                    "version_aliasesdf58f3b6",
+                },
+                VersionDescription = "version_description5747e174",
+                VersionCreateTime = new wkt::Timestamp(),
+                VersionUpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetModel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -338,6 +390,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetModelRequest request = new GetModelRequest
             {
                 ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
@@ -385,6 +439,14 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ExplanationSpec = new ExplanationSpec(),
                 EncryptionSpec = new EncryptionSpec(),
                 ArtifactUri = "artifact_uri469c7020",
+                VersionId = "version_id52856e31",
+                VersionAliases =
+                {
+                    "version_aliasesdf58f3b6",
+                },
+                VersionDescription = "version_description5747e174",
+                VersionCreateTime = new wkt::Timestamp(),
+                VersionUpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetModelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Model>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -400,6 +462,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateModelRequest request = new UpdateModelRequest
             {
                 Model = new Model(),
@@ -448,6 +512,14 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ExplanationSpec = new ExplanationSpec(),
                 EncryptionSpec = new EncryptionSpec(),
                 ArtifactUri = "artifact_uri469c7020",
+                VersionId = "version_id52856e31",
+                VersionAliases =
+                {
+                    "version_aliasesdf58f3b6",
+                },
+                VersionDescription = "version_description5747e174",
+                VersionCreateTime = new wkt::Timestamp(),
+                VersionUpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateModel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -461,6 +533,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateModelRequest request = new UpdateModelRequest
             {
                 Model = new Model(),
@@ -509,6 +583,14 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ExplanationSpec = new ExplanationSpec(),
                 EncryptionSpec = new EncryptionSpec(),
                 ArtifactUri = "artifact_uri469c7020",
+                VersionId = "version_id52856e31",
+                VersionAliases =
+                {
+                    "version_aliasesdf58f3b6",
+                },
+                VersionDescription = "version_description5747e174",
+                VersionCreateTime = new wkt::Timestamp(),
+                VersionUpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateModelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Model>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -524,6 +606,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateModelRequest request = new UpdateModelRequest
             {
                 Model = new Model(),
@@ -572,6 +656,14 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ExplanationSpec = new ExplanationSpec(),
                 EncryptionSpec = new EncryptionSpec(),
                 ArtifactUri = "artifact_uri469c7020",
+                VersionId = "version_id52856e31",
+                VersionAliases =
+                {
+                    "version_aliasesdf58f3b6",
+                },
+                VersionDescription = "version_description5747e174",
+                VersionCreateTime = new wkt::Timestamp(),
+                VersionUpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateModel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -585,6 +677,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateModelRequest request = new UpdateModelRequest
             {
                 Model = new Model(),
@@ -633,6 +727,14 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ExplanationSpec = new ExplanationSpec(),
                 EncryptionSpec = new EncryptionSpec(),
                 ArtifactUri = "artifact_uri469c7020",
+                VersionId = "version_id52856e31",
+                VersionAliases =
+                {
+                    "version_aliasesdf58f3b6",
+                },
+                VersionDescription = "version_description5747e174",
+                VersionCreateTime = new wkt::Timestamp(),
+                VersionUpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateModelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Model>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -644,10 +746,462 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         }
 
         [xunit::FactAttribute]
+        public void MergeVersionAliasesRequestObject()
+        {
+            moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            MergeVersionAliasesRequest request = new MergeVersionAliasesRequest
+            {
+                ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                VersionAliases =
+                {
+                    "version_aliasesdf58f3b6",
+                },
+            };
+            Model expectedResponse = new Model
+            {
+                ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                PredictSchemata = new PredictSchemata(),
+                MetadataSchemaUri = "metadata_schema_uric874bf0a",
+                Metadata = new wkt::Value(),
+                TrainingPipelineAsTrainingPipelineName = TrainingPipelineName.FromProjectLocationTrainingPipeline("[PROJECT]", "[LOCATION]", "[TRAINING_PIPELINE]"),
+                ContainerSpec = new ModelContainerSpec(),
+                SupportedDeploymentResourcesTypes =
+                {
+                    Model.Types.DeploymentResourcesType.DedicatedResources,
+                },
+                SupportedInputStorageFormats =
+                {
+                    "supported_input_storage_formats82472d65",
+                },
+                SupportedOutputStorageFormats =
+                {
+                    "supported_output_storage_formats9adca4ec",
+                },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                DeployedModels =
+                {
+                    new DeployedModelRef(),
+                },
+                Etag = "etage8ad7218",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                SupportedExportFormats =
+                {
+                    new Model.Types.ExportFormat(),
+                },
+                ExplanationSpec = new ExplanationSpec(),
+                EncryptionSpec = new EncryptionSpec(),
+                ArtifactUri = "artifact_uri469c7020",
+                VersionId = "version_id52856e31",
+                VersionAliases =
+                {
+                    "version_aliasesdf58f3b6",
+                },
+                VersionDescription = "version_description5747e174",
+                VersionCreateTime = new wkt::Timestamp(),
+                VersionUpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.MergeVersionAliases(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
+            Model response = client.MergeVersionAliases(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task MergeVersionAliasesRequestObjectAsync()
+        {
+            moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            MergeVersionAliasesRequest request = new MergeVersionAliasesRequest
+            {
+                ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                VersionAliases =
+                {
+                    "version_aliasesdf58f3b6",
+                },
+            };
+            Model expectedResponse = new Model
+            {
+                ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                PredictSchemata = new PredictSchemata(),
+                MetadataSchemaUri = "metadata_schema_uric874bf0a",
+                Metadata = new wkt::Value(),
+                TrainingPipelineAsTrainingPipelineName = TrainingPipelineName.FromProjectLocationTrainingPipeline("[PROJECT]", "[LOCATION]", "[TRAINING_PIPELINE]"),
+                ContainerSpec = new ModelContainerSpec(),
+                SupportedDeploymentResourcesTypes =
+                {
+                    Model.Types.DeploymentResourcesType.DedicatedResources,
+                },
+                SupportedInputStorageFormats =
+                {
+                    "supported_input_storage_formats82472d65",
+                },
+                SupportedOutputStorageFormats =
+                {
+                    "supported_output_storage_formats9adca4ec",
+                },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                DeployedModels =
+                {
+                    new DeployedModelRef(),
+                },
+                Etag = "etage8ad7218",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                SupportedExportFormats =
+                {
+                    new Model.Types.ExportFormat(),
+                },
+                ExplanationSpec = new ExplanationSpec(),
+                EncryptionSpec = new EncryptionSpec(),
+                ArtifactUri = "artifact_uri469c7020",
+                VersionId = "version_id52856e31",
+                VersionAliases =
+                {
+                    "version_aliasesdf58f3b6",
+                },
+                VersionDescription = "version_description5747e174",
+                VersionCreateTime = new wkt::Timestamp(),
+                VersionUpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.MergeVersionAliasesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Model>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
+            Model responseCallSettings = await client.MergeVersionAliasesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Model responseCancellationToken = await client.MergeVersionAliasesAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void MergeVersionAliases()
+        {
+            moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            MergeVersionAliasesRequest request = new MergeVersionAliasesRequest
+            {
+                ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                VersionAliases =
+                {
+                    "version_aliasesdf58f3b6",
+                },
+            };
+            Model expectedResponse = new Model
+            {
+                ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                PredictSchemata = new PredictSchemata(),
+                MetadataSchemaUri = "metadata_schema_uric874bf0a",
+                Metadata = new wkt::Value(),
+                TrainingPipelineAsTrainingPipelineName = TrainingPipelineName.FromProjectLocationTrainingPipeline("[PROJECT]", "[LOCATION]", "[TRAINING_PIPELINE]"),
+                ContainerSpec = new ModelContainerSpec(),
+                SupportedDeploymentResourcesTypes =
+                {
+                    Model.Types.DeploymentResourcesType.DedicatedResources,
+                },
+                SupportedInputStorageFormats =
+                {
+                    "supported_input_storage_formats82472d65",
+                },
+                SupportedOutputStorageFormats =
+                {
+                    "supported_output_storage_formats9adca4ec",
+                },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                DeployedModels =
+                {
+                    new DeployedModelRef(),
+                },
+                Etag = "etage8ad7218",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                SupportedExportFormats =
+                {
+                    new Model.Types.ExportFormat(),
+                },
+                ExplanationSpec = new ExplanationSpec(),
+                EncryptionSpec = new EncryptionSpec(),
+                ArtifactUri = "artifact_uri469c7020",
+                VersionId = "version_id52856e31",
+                VersionAliases =
+                {
+                    "version_aliasesdf58f3b6",
+                },
+                VersionDescription = "version_description5747e174",
+                VersionCreateTime = new wkt::Timestamp(),
+                VersionUpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.MergeVersionAliases(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
+            Model response = client.MergeVersionAliases(request.Name, request.VersionAliases);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task MergeVersionAliasesAsync()
+        {
+            moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            MergeVersionAliasesRequest request = new MergeVersionAliasesRequest
+            {
+                ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                VersionAliases =
+                {
+                    "version_aliasesdf58f3b6",
+                },
+            };
+            Model expectedResponse = new Model
+            {
+                ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                PredictSchemata = new PredictSchemata(),
+                MetadataSchemaUri = "metadata_schema_uric874bf0a",
+                Metadata = new wkt::Value(),
+                TrainingPipelineAsTrainingPipelineName = TrainingPipelineName.FromProjectLocationTrainingPipeline("[PROJECT]", "[LOCATION]", "[TRAINING_PIPELINE]"),
+                ContainerSpec = new ModelContainerSpec(),
+                SupportedDeploymentResourcesTypes =
+                {
+                    Model.Types.DeploymentResourcesType.DedicatedResources,
+                },
+                SupportedInputStorageFormats =
+                {
+                    "supported_input_storage_formats82472d65",
+                },
+                SupportedOutputStorageFormats =
+                {
+                    "supported_output_storage_formats9adca4ec",
+                },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                DeployedModels =
+                {
+                    new DeployedModelRef(),
+                },
+                Etag = "etage8ad7218",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                SupportedExportFormats =
+                {
+                    new Model.Types.ExportFormat(),
+                },
+                ExplanationSpec = new ExplanationSpec(),
+                EncryptionSpec = new EncryptionSpec(),
+                ArtifactUri = "artifact_uri469c7020",
+                VersionId = "version_id52856e31",
+                VersionAliases =
+                {
+                    "version_aliasesdf58f3b6",
+                },
+                VersionDescription = "version_description5747e174",
+                VersionCreateTime = new wkt::Timestamp(),
+                VersionUpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.MergeVersionAliasesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Model>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
+            Model responseCallSettings = await client.MergeVersionAliasesAsync(request.Name, request.VersionAliases, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Model responseCancellationToken = await client.MergeVersionAliasesAsync(request.Name, request.VersionAliases, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void MergeVersionAliasesResourceNames()
+        {
+            moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            MergeVersionAliasesRequest request = new MergeVersionAliasesRequest
+            {
+                ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                VersionAliases =
+                {
+                    "version_aliasesdf58f3b6",
+                },
+            };
+            Model expectedResponse = new Model
+            {
+                ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                PredictSchemata = new PredictSchemata(),
+                MetadataSchemaUri = "metadata_schema_uric874bf0a",
+                Metadata = new wkt::Value(),
+                TrainingPipelineAsTrainingPipelineName = TrainingPipelineName.FromProjectLocationTrainingPipeline("[PROJECT]", "[LOCATION]", "[TRAINING_PIPELINE]"),
+                ContainerSpec = new ModelContainerSpec(),
+                SupportedDeploymentResourcesTypes =
+                {
+                    Model.Types.DeploymentResourcesType.DedicatedResources,
+                },
+                SupportedInputStorageFormats =
+                {
+                    "supported_input_storage_formats82472d65",
+                },
+                SupportedOutputStorageFormats =
+                {
+                    "supported_output_storage_formats9adca4ec",
+                },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                DeployedModels =
+                {
+                    new DeployedModelRef(),
+                },
+                Etag = "etage8ad7218",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                SupportedExportFormats =
+                {
+                    new Model.Types.ExportFormat(),
+                },
+                ExplanationSpec = new ExplanationSpec(),
+                EncryptionSpec = new EncryptionSpec(),
+                ArtifactUri = "artifact_uri469c7020",
+                VersionId = "version_id52856e31",
+                VersionAliases =
+                {
+                    "version_aliasesdf58f3b6",
+                },
+                VersionDescription = "version_description5747e174",
+                VersionCreateTime = new wkt::Timestamp(),
+                VersionUpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.MergeVersionAliases(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
+            Model response = client.MergeVersionAliases(request.ModelName, request.VersionAliases);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task MergeVersionAliasesResourceNamesAsync()
+        {
+            moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            MergeVersionAliasesRequest request = new MergeVersionAliasesRequest
+            {
+                ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                VersionAliases =
+                {
+                    "version_aliasesdf58f3b6",
+                },
+            };
+            Model expectedResponse = new Model
+            {
+                ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                PredictSchemata = new PredictSchemata(),
+                MetadataSchemaUri = "metadata_schema_uric874bf0a",
+                Metadata = new wkt::Value(),
+                TrainingPipelineAsTrainingPipelineName = TrainingPipelineName.FromProjectLocationTrainingPipeline("[PROJECT]", "[LOCATION]", "[TRAINING_PIPELINE]"),
+                ContainerSpec = new ModelContainerSpec(),
+                SupportedDeploymentResourcesTypes =
+                {
+                    Model.Types.DeploymentResourcesType.DedicatedResources,
+                },
+                SupportedInputStorageFormats =
+                {
+                    "supported_input_storage_formats82472d65",
+                },
+                SupportedOutputStorageFormats =
+                {
+                    "supported_output_storage_formats9adca4ec",
+                },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                DeployedModels =
+                {
+                    new DeployedModelRef(),
+                },
+                Etag = "etage8ad7218",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                SupportedExportFormats =
+                {
+                    new Model.Types.ExportFormat(),
+                },
+                ExplanationSpec = new ExplanationSpec(),
+                EncryptionSpec = new EncryptionSpec(),
+                ArtifactUri = "artifact_uri469c7020",
+                VersionId = "version_id52856e31",
+                VersionAliases =
+                {
+                    "version_aliasesdf58f3b6",
+                },
+                VersionDescription = "version_description5747e174",
+                VersionCreateTime = new wkt::Timestamp(),
+                VersionUpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.MergeVersionAliasesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Model>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
+            Model responseCallSettings = await client.MergeVersionAliasesAsync(request.ModelName, request.VersionAliases, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Model responseCancellationToken = await client.MergeVersionAliasesAsync(request.ModelName, request.VersionAliases, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void ImportModelEvaluationRequestObject()
         {
             moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ImportModelEvaluationRequest request = new ImportModelEvaluationRequest
             {
                 ParentAsModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
@@ -685,6 +1239,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ImportModelEvaluationRequest request = new ImportModelEvaluationRequest
             {
                 ParentAsModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
@@ -724,6 +1280,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ImportModelEvaluationRequest request = new ImportModelEvaluationRequest
             {
                 ParentAsModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
@@ -761,6 +1319,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ImportModelEvaluationRequest request = new ImportModelEvaluationRequest
             {
                 ParentAsModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
@@ -800,6 +1360,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ImportModelEvaluationRequest request = new ImportModelEvaluationRequest
             {
                 ParentAsModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
@@ -837,6 +1399,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ImportModelEvaluationRequest request = new ImportModelEvaluationRequest
             {
                 ParentAsModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
@@ -876,6 +1440,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetModelEvaluationRequest request = new GetModelEvaluationRequest
             {
                 ModelEvaluationName = ModelEvaluationName.FromProjectLocationModelEvaluation("[PROJECT]", "[LOCATION]", "[MODEL]", "[EVALUATION]"),
@@ -912,6 +1478,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetModelEvaluationRequest request = new GetModelEvaluationRequest
             {
                 ModelEvaluationName = ModelEvaluationName.FromProjectLocationModelEvaluation("[PROJECT]", "[LOCATION]", "[MODEL]", "[EVALUATION]"),
@@ -950,6 +1518,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetModelEvaluationRequest request = new GetModelEvaluationRequest
             {
                 ModelEvaluationName = ModelEvaluationName.FromProjectLocationModelEvaluation("[PROJECT]", "[LOCATION]", "[MODEL]", "[EVALUATION]"),
@@ -986,6 +1556,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetModelEvaluationRequest request = new GetModelEvaluationRequest
             {
                 ModelEvaluationName = ModelEvaluationName.FromProjectLocationModelEvaluation("[PROJECT]", "[LOCATION]", "[MODEL]", "[EVALUATION]"),
@@ -1024,6 +1596,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetModelEvaluationRequest request = new GetModelEvaluationRequest
             {
                 ModelEvaluationName = ModelEvaluationName.FromProjectLocationModelEvaluation("[PROJECT]", "[LOCATION]", "[MODEL]", "[EVALUATION]"),
@@ -1060,6 +1634,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetModelEvaluationRequest request = new GetModelEvaluationRequest
             {
                 ModelEvaluationName = ModelEvaluationName.FromProjectLocationModelEvaluation("[PROJECT]", "[LOCATION]", "[MODEL]", "[EVALUATION]"),
@@ -1098,6 +1674,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetModelEvaluationSliceRequest request = new GetModelEvaluationSliceRequest
             {
                 ModelEvaluationSliceName = ModelEvaluationSliceName.FromProjectLocationModelEvaluationSlice("[PROJECT]", "[LOCATION]", "[MODEL]", "[EVALUATION]", "[SLICE]"),
@@ -1122,6 +1700,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetModelEvaluationSliceRequest request = new GetModelEvaluationSliceRequest
             {
                 ModelEvaluationSliceName = ModelEvaluationSliceName.FromProjectLocationModelEvaluationSlice("[PROJECT]", "[LOCATION]", "[MODEL]", "[EVALUATION]", "[SLICE]"),
@@ -1148,6 +1728,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetModelEvaluationSliceRequest request = new GetModelEvaluationSliceRequest
             {
                 ModelEvaluationSliceName = ModelEvaluationSliceName.FromProjectLocationModelEvaluationSlice("[PROJECT]", "[LOCATION]", "[MODEL]", "[EVALUATION]", "[SLICE]"),
@@ -1172,6 +1754,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetModelEvaluationSliceRequest request = new GetModelEvaluationSliceRequest
             {
                 ModelEvaluationSliceName = ModelEvaluationSliceName.FromProjectLocationModelEvaluationSlice("[PROJECT]", "[LOCATION]", "[MODEL]", "[EVALUATION]", "[SLICE]"),
@@ -1198,6 +1782,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetModelEvaluationSliceRequest request = new GetModelEvaluationSliceRequest
             {
                 ModelEvaluationSliceName = ModelEvaluationSliceName.FromProjectLocationModelEvaluationSlice("[PROJECT]", "[LOCATION]", "[MODEL]", "[EVALUATION]", "[SLICE]"),
@@ -1222,6 +1808,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetModelEvaluationSliceRequest request = new GetModelEvaluationSliceRequest
             {
                 ModelEvaluationSliceName = ModelEvaluationSliceName.FromProjectLocationModelEvaluationSlice("[PROJECT]", "[LOCATION]", "[MODEL]", "[EVALUATION]", "[SLICE]"),

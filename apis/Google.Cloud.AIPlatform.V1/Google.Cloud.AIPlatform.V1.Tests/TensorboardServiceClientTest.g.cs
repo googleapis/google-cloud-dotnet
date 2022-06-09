@@ -16,6 +16,8 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -35,6 +37,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTensorboardRequest request = new GetTensorboardRequest
             {
                 TensorboardName = TensorboardName.FromProjectLocationTensorboard("[PROJECT]", "[LOCATION]", "[TENSORBOARD]"),
@@ -70,6 +74,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTensorboardRequest request = new GetTensorboardRequest
             {
                 TensorboardName = TensorboardName.FromProjectLocationTensorboard("[PROJECT]", "[LOCATION]", "[TENSORBOARD]"),
@@ -107,6 +113,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTensorboardRequest request = new GetTensorboardRequest
             {
                 TensorboardName = TensorboardName.FromProjectLocationTensorboard("[PROJECT]", "[LOCATION]", "[TENSORBOARD]"),
@@ -142,6 +150,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTensorboardRequest request = new GetTensorboardRequest
             {
                 TensorboardName = TensorboardName.FromProjectLocationTensorboard("[PROJECT]", "[LOCATION]", "[TENSORBOARD]"),
@@ -179,6 +189,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTensorboardRequest request = new GetTensorboardRequest
             {
                 TensorboardName = TensorboardName.FromProjectLocationTensorboard("[PROJECT]", "[LOCATION]", "[TENSORBOARD]"),
@@ -214,6 +226,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTensorboardRequest request = new GetTensorboardRequest
             {
                 TensorboardName = TensorboardName.FromProjectLocationTensorboard("[PROJECT]", "[LOCATION]", "[TENSORBOARD]"),
@@ -251,6 +265,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTensorboardExperimentRequest request = new CreateTensorboardExperimentRequest
             {
                 ParentAsTensorboardExperimentName = TensorboardExperimentName.FromProjectLocationTensorboardExperiment("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]"),
@@ -286,6 +302,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTensorboardExperimentRequest request = new CreateTensorboardExperimentRequest
             {
                 ParentAsTensorboardExperimentName = TensorboardExperimentName.FromProjectLocationTensorboardExperiment("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]"),
@@ -323,6 +341,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTensorboardExperimentRequest request = new CreateTensorboardExperimentRequest
             {
                 ParentAsTensorboardExperimentName = TensorboardExperimentName.FromProjectLocationTensorboardExperiment("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]"),
@@ -358,6 +378,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTensorboardExperimentRequest request = new CreateTensorboardExperimentRequest
             {
                 ParentAsTensorboardExperimentName = TensorboardExperimentName.FromProjectLocationTensorboardExperiment("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]"),
@@ -395,6 +417,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTensorboardExperimentRequest request = new CreateTensorboardExperimentRequest
             {
                 ParentAsTensorboardExperimentName = TensorboardExperimentName.FromProjectLocationTensorboardExperiment("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]"),
@@ -430,6 +454,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTensorboardExperimentRequest request = new CreateTensorboardExperimentRequest
             {
                 ParentAsTensorboardExperimentName = TensorboardExperimentName.FromProjectLocationTensorboardExperiment("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]"),
@@ -467,6 +493,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTensorboardExperimentRequest request = new GetTensorboardExperimentRequest
             {
                 TensorboardExperimentName = TensorboardExperimentName.FromProjectLocationTensorboardExperiment("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]"),
@@ -500,6 +528,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTensorboardExperimentRequest request = new GetTensorboardExperimentRequest
             {
                 TensorboardExperimentName = TensorboardExperimentName.FromProjectLocationTensorboardExperiment("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]"),
@@ -535,6 +565,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTensorboardExperimentRequest request = new GetTensorboardExperimentRequest
             {
                 TensorboardExperimentName = TensorboardExperimentName.FromProjectLocationTensorboardExperiment("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]"),
@@ -568,6 +600,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTensorboardExperimentRequest request = new GetTensorboardExperimentRequest
             {
                 TensorboardExperimentName = TensorboardExperimentName.FromProjectLocationTensorboardExperiment("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]"),
@@ -603,6 +637,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTensorboardExperimentRequest request = new GetTensorboardExperimentRequest
             {
                 TensorboardExperimentName = TensorboardExperimentName.FromProjectLocationTensorboardExperiment("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]"),
@@ -636,6 +672,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTensorboardExperimentRequest request = new GetTensorboardExperimentRequest
             {
                 TensorboardExperimentName = TensorboardExperimentName.FromProjectLocationTensorboardExperiment("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]"),
@@ -671,6 +709,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTensorboardExperimentRequest request = new UpdateTensorboardExperimentRequest
             {
                 UpdateMask = new wkt::FieldMask(),
@@ -705,6 +745,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTensorboardExperimentRequest request = new UpdateTensorboardExperimentRequest
             {
                 UpdateMask = new wkt::FieldMask(),
@@ -741,6 +783,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTensorboardExperimentRequest request = new UpdateTensorboardExperimentRequest
             {
                 UpdateMask = new wkt::FieldMask(),
@@ -775,6 +819,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTensorboardExperimentRequest request = new UpdateTensorboardExperimentRequest
             {
                 UpdateMask = new wkt::FieldMask(),
@@ -811,6 +857,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTensorboardRunRequest request = new CreateTensorboardRunRequest
             {
                 ParentAsTensorboardRunName = TensorboardRunName.FromProjectLocationTensorboardExperimentRun("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]"),
@@ -845,6 +893,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTensorboardRunRequest request = new CreateTensorboardRunRequest
             {
                 ParentAsTensorboardRunName = TensorboardRunName.FromProjectLocationTensorboardExperimentRun("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]"),
@@ -881,6 +931,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTensorboardRunRequest request = new CreateTensorboardRunRequest
             {
                 ParentAsTensorboardRunName = TensorboardRunName.FromProjectLocationTensorboardExperimentRun("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]"),
@@ -915,6 +967,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTensorboardRunRequest request = new CreateTensorboardRunRequest
             {
                 ParentAsTensorboardRunName = TensorboardRunName.FromProjectLocationTensorboardExperimentRun("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]"),
@@ -951,6 +1005,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTensorboardRunRequest request = new CreateTensorboardRunRequest
             {
                 ParentAsTensorboardRunName = TensorboardRunName.FromProjectLocationTensorboardExperimentRun("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]"),
@@ -985,6 +1041,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTensorboardRunRequest request = new CreateTensorboardRunRequest
             {
                 ParentAsTensorboardRunName = TensorboardRunName.FromProjectLocationTensorboardExperimentRun("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]"),
@@ -1021,6 +1079,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             BatchCreateTensorboardRunsRequest request = new BatchCreateTensorboardRunsRequest
             {
                 ParentAsTensorboardExperimentName = TensorboardExperimentName.FromProjectLocationTensorboardExperiment("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]"),
@@ -1048,6 +1108,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             BatchCreateTensorboardRunsRequest request = new BatchCreateTensorboardRunsRequest
             {
                 ParentAsTensorboardExperimentName = TensorboardExperimentName.FromProjectLocationTensorboardExperiment("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]"),
@@ -1077,6 +1139,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             BatchCreateTensorboardRunsRequest request = new BatchCreateTensorboardRunsRequest
             {
                 ParentAsTensorboardExperimentName = TensorboardExperimentName.FromProjectLocationTensorboardExperiment("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]"),
@@ -1104,6 +1168,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             BatchCreateTensorboardRunsRequest request = new BatchCreateTensorboardRunsRequest
             {
                 ParentAsTensorboardExperimentName = TensorboardExperimentName.FromProjectLocationTensorboardExperiment("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]"),
@@ -1133,6 +1199,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             BatchCreateTensorboardRunsRequest request = new BatchCreateTensorboardRunsRequest
             {
                 ParentAsTensorboardExperimentName = TensorboardExperimentName.FromProjectLocationTensorboardExperiment("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]"),
@@ -1160,6 +1228,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             BatchCreateTensorboardRunsRequest request = new BatchCreateTensorboardRunsRequest
             {
                 ParentAsTensorboardExperimentName = TensorboardExperimentName.FromProjectLocationTensorboardExperiment("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]"),
@@ -1189,6 +1259,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTensorboardRunRequest request = new GetTensorboardRunRequest
             {
                 TensorboardRunName = TensorboardRunName.FromProjectLocationTensorboardExperimentRun("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]"),
@@ -1221,6 +1293,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTensorboardRunRequest request = new GetTensorboardRunRequest
             {
                 TensorboardRunName = TensorboardRunName.FromProjectLocationTensorboardExperimentRun("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]"),
@@ -1255,6 +1329,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTensorboardRunRequest request = new GetTensorboardRunRequest
             {
                 TensorboardRunName = TensorboardRunName.FromProjectLocationTensorboardExperimentRun("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]"),
@@ -1287,6 +1363,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTensorboardRunRequest request = new GetTensorboardRunRequest
             {
                 TensorboardRunName = TensorboardRunName.FromProjectLocationTensorboardExperimentRun("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]"),
@@ -1321,6 +1399,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTensorboardRunRequest request = new GetTensorboardRunRequest
             {
                 TensorboardRunName = TensorboardRunName.FromProjectLocationTensorboardExperimentRun("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]"),
@@ -1353,6 +1433,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTensorboardRunRequest request = new GetTensorboardRunRequest
             {
                 TensorboardRunName = TensorboardRunName.FromProjectLocationTensorboardExperimentRun("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]"),
@@ -1387,6 +1469,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTensorboardRunRequest request = new UpdateTensorboardRunRequest
             {
                 UpdateMask = new wkt::FieldMask(),
@@ -1420,6 +1504,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTensorboardRunRequest request = new UpdateTensorboardRunRequest
             {
                 UpdateMask = new wkt::FieldMask(),
@@ -1455,6 +1541,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTensorboardRunRequest request = new UpdateTensorboardRunRequest
             {
                 UpdateMask = new wkt::FieldMask(),
@@ -1488,6 +1576,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTensorboardRunRequest request = new UpdateTensorboardRunRequest
             {
                 UpdateMask = new wkt::FieldMask(),
@@ -1523,6 +1613,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             BatchCreateTensorboardTimeSeriesRequest request = new BatchCreateTensorboardTimeSeriesRequest
             {
                 ParentAsTensorboardExperimentName = TensorboardExperimentName.FromProjectLocationTensorboardExperiment("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]"),
@@ -1550,6 +1642,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             BatchCreateTensorboardTimeSeriesRequest request = new BatchCreateTensorboardTimeSeriesRequest
             {
                 ParentAsTensorboardExperimentName = TensorboardExperimentName.FromProjectLocationTensorboardExperiment("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]"),
@@ -1579,6 +1673,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             BatchCreateTensorboardTimeSeriesRequest request = new BatchCreateTensorboardTimeSeriesRequest
             {
                 ParentAsTensorboardExperimentName = TensorboardExperimentName.FromProjectLocationTensorboardExperiment("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]"),
@@ -1606,6 +1702,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             BatchCreateTensorboardTimeSeriesRequest request = new BatchCreateTensorboardTimeSeriesRequest
             {
                 ParentAsTensorboardExperimentName = TensorboardExperimentName.FromProjectLocationTensorboardExperiment("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]"),
@@ -1635,6 +1733,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             BatchCreateTensorboardTimeSeriesRequest request = new BatchCreateTensorboardTimeSeriesRequest
             {
                 ParentAsTensorboardExperimentName = TensorboardExperimentName.FromProjectLocationTensorboardExperiment("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]"),
@@ -1662,6 +1762,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             BatchCreateTensorboardTimeSeriesRequest request = new BatchCreateTensorboardTimeSeriesRequest
             {
                 ParentAsTensorboardExperimentName = TensorboardExperimentName.FromProjectLocationTensorboardExperiment("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]"),
@@ -1691,6 +1793,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTensorboardTimeSeriesRequest request = new CreateTensorboardTimeSeriesRequest
             {
                 ParentAsTensorboardTimeSeriesName = TensorboardTimeSeriesName.FromProjectLocationTensorboardExperimentRunTimeSeries("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]", "[TIME_SERIES]"),
@@ -1722,6 +1826,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTensorboardTimeSeriesRequest request = new CreateTensorboardTimeSeriesRequest
             {
                 ParentAsTensorboardTimeSeriesName = TensorboardTimeSeriesName.FromProjectLocationTensorboardExperimentRunTimeSeries("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]", "[TIME_SERIES]"),
@@ -1755,6 +1861,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTensorboardTimeSeriesRequest request = new CreateTensorboardTimeSeriesRequest
             {
                 ParentAsTensorboardTimeSeriesName = TensorboardTimeSeriesName.FromProjectLocationTensorboardExperimentRunTimeSeries("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]", "[TIME_SERIES]"),
@@ -1785,6 +1893,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTensorboardTimeSeriesRequest request = new CreateTensorboardTimeSeriesRequest
             {
                 ParentAsTensorboardTimeSeriesName = TensorboardTimeSeriesName.FromProjectLocationTensorboardExperimentRunTimeSeries("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]", "[TIME_SERIES]"),
@@ -1817,6 +1927,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTensorboardTimeSeriesRequest request = new CreateTensorboardTimeSeriesRequest
             {
                 ParentAsTensorboardTimeSeriesName = TensorboardTimeSeriesName.FromProjectLocationTensorboardExperimentRunTimeSeries("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]", "[TIME_SERIES]"),
@@ -1847,6 +1959,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTensorboardTimeSeriesRequest request = new CreateTensorboardTimeSeriesRequest
             {
                 ParentAsTensorboardTimeSeriesName = TensorboardTimeSeriesName.FromProjectLocationTensorboardExperimentRunTimeSeries("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]", "[TIME_SERIES]"),
@@ -1879,6 +1993,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTensorboardTimeSeriesRequest request = new GetTensorboardTimeSeriesRequest
             {
                 TensorboardTimeSeriesName = TensorboardTimeSeriesName.FromProjectLocationTensorboardExperimentRunTimeSeries("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]", "[TIME_SERIES]"),
@@ -1908,6 +2024,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTensorboardTimeSeriesRequest request = new GetTensorboardTimeSeriesRequest
             {
                 TensorboardTimeSeriesName = TensorboardTimeSeriesName.FromProjectLocationTensorboardExperimentRunTimeSeries("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]", "[TIME_SERIES]"),
@@ -1939,6 +2057,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTensorboardTimeSeriesRequest request = new GetTensorboardTimeSeriesRequest
             {
                 TensorboardTimeSeriesName = TensorboardTimeSeriesName.FromProjectLocationTensorboardExperimentRunTimeSeries("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]", "[TIME_SERIES]"),
@@ -1968,6 +2088,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTensorboardTimeSeriesRequest request = new GetTensorboardTimeSeriesRequest
             {
                 TensorboardTimeSeriesName = TensorboardTimeSeriesName.FromProjectLocationTensorboardExperimentRunTimeSeries("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]", "[TIME_SERIES]"),
@@ -1999,6 +2121,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTensorboardTimeSeriesRequest request = new GetTensorboardTimeSeriesRequest
             {
                 TensorboardTimeSeriesName = TensorboardTimeSeriesName.FromProjectLocationTensorboardExperimentRunTimeSeries("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]", "[TIME_SERIES]"),
@@ -2028,6 +2152,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTensorboardTimeSeriesRequest request = new GetTensorboardTimeSeriesRequest
             {
                 TensorboardTimeSeriesName = TensorboardTimeSeriesName.FromProjectLocationTensorboardExperimentRunTimeSeries("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]", "[TIME_SERIES]"),
@@ -2059,6 +2185,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTensorboardTimeSeriesRequest request = new UpdateTensorboardTimeSeriesRequest
             {
                 UpdateMask = new wkt::FieldMask(),
@@ -2089,6 +2217,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTensorboardTimeSeriesRequest request = new UpdateTensorboardTimeSeriesRequest
             {
                 UpdateMask = new wkt::FieldMask(),
@@ -2121,6 +2251,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTensorboardTimeSeriesRequest request = new UpdateTensorboardTimeSeriesRequest
             {
                 UpdateMask = new wkt::FieldMask(),
@@ -2151,6 +2283,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTensorboardTimeSeriesRequest request = new UpdateTensorboardTimeSeriesRequest
             {
                 UpdateMask = new wkt::FieldMask(),
@@ -2183,6 +2317,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             BatchReadTensorboardTimeSeriesDataRequest request = new BatchReadTensorboardTimeSeriesDataRequest
             {
                 TensorboardAsTensorboardName = TensorboardName.FromProjectLocationTensorboard("[PROJECT]", "[LOCATION]", "[TENSORBOARD]"),
@@ -2210,6 +2346,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             BatchReadTensorboardTimeSeriesDataRequest request = new BatchReadTensorboardTimeSeriesDataRequest
             {
                 TensorboardAsTensorboardName = TensorboardName.FromProjectLocationTensorboard("[PROJECT]", "[LOCATION]", "[TENSORBOARD]"),
@@ -2239,6 +2377,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             BatchReadTensorboardTimeSeriesDataRequest request = new BatchReadTensorboardTimeSeriesDataRequest
             {
                 TensorboardAsTensorboardName = TensorboardName.FromProjectLocationTensorboard("[PROJECT]", "[LOCATION]", "[TENSORBOARD]"),
@@ -2262,6 +2402,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             BatchReadTensorboardTimeSeriesDataRequest request = new BatchReadTensorboardTimeSeriesDataRequest
             {
                 TensorboardAsTensorboardName = TensorboardName.FromProjectLocationTensorboard("[PROJECT]", "[LOCATION]", "[TENSORBOARD]"),
@@ -2287,6 +2429,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             BatchReadTensorboardTimeSeriesDataRequest request = new BatchReadTensorboardTimeSeriesDataRequest
             {
                 TensorboardAsTensorboardName = TensorboardName.FromProjectLocationTensorboard("[PROJECT]", "[LOCATION]", "[TENSORBOARD]"),
@@ -2310,6 +2454,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             BatchReadTensorboardTimeSeriesDataRequest request = new BatchReadTensorboardTimeSeriesDataRequest
             {
                 TensorboardAsTensorboardName = TensorboardName.FromProjectLocationTensorboard("[PROJECT]", "[LOCATION]", "[TENSORBOARD]"),
@@ -2335,6 +2481,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ReadTensorboardTimeSeriesDataRequest request = new ReadTensorboardTimeSeriesDataRequest
             {
                 TensorboardTimeSeriesAsTensorboardTimeSeriesName = TensorboardTimeSeriesName.FromProjectLocationTensorboardExperimentRunTimeSeries("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]", "[TIME_SERIES]"),
@@ -2357,6 +2505,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ReadTensorboardTimeSeriesDataRequest request = new ReadTensorboardTimeSeriesDataRequest
             {
                 TensorboardTimeSeriesAsTensorboardTimeSeriesName = TensorboardTimeSeriesName.FromProjectLocationTensorboardExperimentRunTimeSeries("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]", "[TIME_SERIES]"),
@@ -2381,6 +2531,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ReadTensorboardTimeSeriesDataRequest request = new ReadTensorboardTimeSeriesDataRequest
             {
                 TensorboardTimeSeriesAsTensorboardTimeSeriesName = TensorboardTimeSeriesName.FromProjectLocationTensorboardExperimentRunTimeSeries("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]", "[TIME_SERIES]"),
@@ -2401,6 +2553,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ReadTensorboardTimeSeriesDataRequest request = new ReadTensorboardTimeSeriesDataRequest
             {
                 TensorboardTimeSeriesAsTensorboardTimeSeriesName = TensorboardTimeSeriesName.FromProjectLocationTensorboardExperimentRunTimeSeries("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]", "[TIME_SERIES]"),
@@ -2423,6 +2577,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ReadTensorboardTimeSeriesDataRequest request = new ReadTensorboardTimeSeriesDataRequest
             {
                 TensorboardTimeSeriesAsTensorboardTimeSeriesName = TensorboardTimeSeriesName.FromProjectLocationTensorboardExperimentRunTimeSeries("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]", "[TIME_SERIES]"),
@@ -2443,6 +2599,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ReadTensorboardTimeSeriesDataRequest request = new ReadTensorboardTimeSeriesDataRequest
             {
                 TensorboardTimeSeriesAsTensorboardTimeSeriesName = TensorboardTimeSeriesName.FromProjectLocationTensorboardExperimentRunTimeSeries("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]", "[TIME_SERIES]"),
@@ -2465,6 +2623,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             WriteTensorboardExperimentDataRequest request = new WriteTensorboardExperimentDataRequest
             {
                 TensorboardExperimentAsTensorboardExperimentName = TensorboardExperimentName.FromProjectLocationTensorboardExperiment("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]"),
@@ -2486,6 +2646,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             WriteTensorboardExperimentDataRequest request = new WriteTensorboardExperimentDataRequest
             {
                 TensorboardExperimentAsTensorboardExperimentName = TensorboardExperimentName.FromProjectLocationTensorboardExperiment("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]"),
@@ -2509,6 +2671,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             WriteTensorboardExperimentDataRequest request = new WriteTensorboardExperimentDataRequest
             {
                 TensorboardExperimentAsTensorboardExperimentName = TensorboardExperimentName.FromProjectLocationTensorboardExperiment("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]"),
@@ -2530,6 +2694,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             WriteTensorboardExperimentDataRequest request = new WriteTensorboardExperimentDataRequest
             {
                 TensorboardExperimentAsTensorboardExperimentName = TensorboardExperimentName.FromProjectLocationTensorboardExperiment("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]"),
@@ -2553,6 +2719,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             WriteTensorboardExperimentDataRequest request = new WriteTensorboardExperimentDataRequest
             {
                 TensorboardExperimentAsTensorboardExperimentName = TensorboardExperimentName.FromProjectLocationTensorboardExperiment("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]"),
@@ -2574,6 +2742,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             WriteTensorboardExperimentDataRequest request = new WriteTensorboardExperimentDataRequest
             {
                 TensorboardExperimentAsTensorboardExperimentName = TensorboardExperimentName.FromProjectLocationTensorboardExperiment("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]"),
@@ -2597,6 +2767,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             WriteTensorboardRunDataRequest request = new WriteTensorboardRunDataRequest
             {
                 TensorboardRunAsTensorboardRunName = TensorboardRunName.FromProjectLocationTensorboardExperimentRun("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]"),
@@ -2618,6 +2790,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             WriteTensorboardRunDataRequest request = new WriteTensorboardRunDataRequest
             {
                 TensorboardRunAsTensorboardRunName = TensorboardRunName.FromProjectLocationTensorboardExperimentRun("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]"),
@@ -2641,6 +2815,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             WriteTensorboardRunDataRequest request = new WriteTensorboardRunDataRequest
             {
                 TensorboardRunAsTensorboardRunName = TensorboardRunName.FromProjectLocationTensorboardExperimentRun("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]"),
@@ -2662,6 +2838,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             WriteTensorboardRunDataRequest request = new WriteTensorboardRunDataRequest
             {
                 TensorboardRunAsTensorboardRunName = TensorboardRunName.FromProjectLocationTensorboardExperimentRun("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]"),
@@ -2685,6 +2863,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             WriteTensorboardRunDataRequest request = new WriteTensorboardRunDataRequest
             {
                 TensorboardRunAsTensorboardRunName = TensorboardRunName.FromProjectLocationTensorboardExperimentRun("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]"),
@@ -2706,6 +2886,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<TensorboardService.TensorboardServiceClient> mockGrpcClient = new moq::Mock<TensorboardService.TensorboardServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             WriteTensorboardRunDataRequest request = new WriteTensorboardRunDataRequest
             {
                 TensorboardRunAsTensorboardRunName = TensorboardRunName.FromProjectLocationTensorboardExperimentRun("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]"),

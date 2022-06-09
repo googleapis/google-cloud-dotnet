@@ -16,6 +16,8 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -34,6 +36,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetMetadataStoreRequest request = new GetMetadataStoreRequest
             {
                 MetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
@@ -59,6 +63,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetMetadataStoreRequest request = new GetMetadataStoreRequest
             {
                 MetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
@@ -86,6 +92,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetMetadataStoreRequest request = new GetMetadataStoreRequest
             {
                 MetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
@@ -111,6 +119,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetMetadataStoreRequest request = new GetMetadataStoreRequest
             {
                 MetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
@@ -138,6 +148,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetMetadataStoreRequest request = new GetMetadataStoreRequest
             {
                 MetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
@@ -163,6 +175,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetMetadataStoreRequest request = new GetMetadataStoreRequest
             {
                 MetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
@@ -190,6 +204,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateArtifactRequest request = new CreateArtifactRequest
             {
                 ParentAsMetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
@@ -229,6 +245,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateArtifactRequest request = new CreateArtifactRequest
             {
                 ParentAsMetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
@@ -270,6 +288,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateArtifactRequest request = new CreateArtifactRequest
             {
                 ParentAsMetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
@@ -309,6 +329,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateArtifactRequest request = new CreateArtifactRequest
             {
                 ParentAsMetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
@@ -350,6 +372,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateArtifactRequest request = new CreateArtifactRequest
             {
                 ParentAsMetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
@@ -389,6 +413,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateArtifactRequest request = new CreateArtifactRequest
             {
                 ParentAsMetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
@@ -430,6 +456,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetArtifactRequest request = new GetArtifactRequest
             {
                 ArtifactName = ArtifactName.FromProjectLocationMetadataStoreArtifact("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[ARTIFACT]"),
@@ -467,6 +495,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetArtifactRequest request = new GetArtifactRequest
             {
                 ArtifactName = ArtifactName.FromProjectLocationMetadataStoreArtifact("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[ARTIFACT]"),
@@ -506,6 +536,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetArtifactRequest request = new GetArtifactRequest
             {
                 ArtifactName = ArtifactName.FromProjectLocationMetadataStoreArtifact("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[ARTIFACT]"),
@@ -543,6 +575,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetArtifactRequest request = new GetArtifactRequest
             {
                 ArtifactName = ArtifactName.FromProjectLocationMetadataStoreArtifact("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[ARTIFACT]"),
@@ -582,6 +616,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetArtifactRequest request = new GetArtifactRequest
             {
                 ArtifactName = ArtifactName.FromProjectLocationMetadataStoreArtifact("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[ARTIFACT]"),
@@ -619,6 +655,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetArtifactRequest request = new GetArtifactRequest
             {
                 ArtifactName = ArtifactName.FromProjectLocationMetadataStoreArtifact("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[ARTIFACT]"),
@@ -658,6 +696,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateArtifactRequest request = new UpdateArtifactRequest
             {
                 Artifact = new Artifact(),
@@ -697,6 +737,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateArtifactRequest request = new UpdateArtifactRequest
             {
                 Artifact = new Artifact(),
@@ -738,6 +780,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateArtifactRequest request = new UpdateArtifactRequest
             {
                 Artifact = new Artifact(),
@@ -776,6 +820,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateArtifactRequest request = new UpdateArtifactRequest
             {
                 Artifact = new Artifact(),
@@ -816,6 +862,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateContextRequest request = new CreateContextRequest
             {
                 ParentAsMetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
@@ -857,6 +905,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateContextRequest request = new CreateContextRequest
             {
                 ParentAsMetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
@@ -900,6 +950,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateContextRequest request = new CreateContextRequest
             {
                 ParentAsMetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
@@ -941,6 +993,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateContextRequest request = new CreateContextRequest
             {
                 ParentAsMetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
@@ -984,6 +1038,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateContextRequest request = new CreateContextRequest
             {
                 ParentAsMetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
@@ -1025,6 +1081,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateContextRequest request = new CreateContextRequest
             {
                 ParentAsMetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
@@ -1068,6 +1126,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetContextRequest request = new GetContextRequest
             {
                 ContextName = ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
@@ -1107,6 +1167,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetContextRequest request = new GetContextRequest
             {
                 ContextName = ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
@@ -1148,6 +1210,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetContextRequest request = new GetContextRequest
             {
                 ContextName = ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
@@ -1187,6 +1251,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetContextRequest request = new GetContextRequest
             {
                 ContextName = ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
@@ -1228,6 +1294,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetContextRequest request = new GetContextRequest
             {
                 ContextName = ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
@@ -1267,6 +1335,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetContextRequest request = new GetContextRequest
             {
                 ContextName = ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
@@ -1308,6 +1378,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateContextRequest request = new UpdateContextRequest
             {
                 Context = new Context(),
@@ -1349,6 +1421,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateContextRequest request = new UpdateContextRequest
             {
                 Context = new Context(),
@@ -1392,6 +1466,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateContextRequest request = new UpdateContextRequest
             {
                 Context = new Context(),
@@ -1432,6 +1508,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateContextRequest request = new UpdateContextRequest
             {
                 Context = new Context(),
@@ -1474,6 +1552,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             AddContextArtifactsAndExecutionsRequest request = new AddContextArtifactsAndExecutionsRequest
             {
                 ContextAsContextName = ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
@@ -1499,6 +1579,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             AddContextArtifactsAndExecutionsRequest request = new AddContextArtifactsAndExecutionsRequest
             {
                 ContextAsContextName = ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
@@ -1526,6 +1608,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             AddContextArtifactsAndExecutionsRequest request = new AddContextArtifactsAndExecutionsRequest
             {
                 ContextAsContextName = ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
@@ -1551,6 +1635,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             AddContextArtifactsAndExecutionsRequest request = new AddContextArtifactsAndExecutionsRequest
             {
                 ContextAsContextName = ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
@@ -1578,6 +1664,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             AddContextArtifactsAndExecutionsRequest request = new AddContextArtifactsAndExecutionsRequest
             {
                 ContextAsContextName = ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
@@ -1603,6 +1691,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             AddContextArtifactsAndExecutionsRequest request = new AddContextArtifactsAndExecutionsRequest
             {
                 ContextAsContextName = ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
@@ -1630,6 +1720,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             AddContextChildrenRequest request = new AddContextChildrenRequest
             {
                 ContextAsContextName = ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
@@ -1651,6 +1743,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             AddContextChildrenRequest request = new AddContextChildrenRequest
             {
                 ContextAsContextName = ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
@@ -1674,6 +1768,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             AddContextChildrenRequest request = new AddContextChildrenRequest
             {
                 ContextAsContextName = ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
@@ -1695,6 +1791,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             AddContextChildrenRequest request = new AddContextChildrenRequest
             {
                 ContextAsContextName = ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
@@ -1718,6 +1816,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             AddContextChildrenRequest request = new AddContextChildrenRequest
             {
                 ContextAsContextName = ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
@@ -1739,6 +1839,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             AddContextChildrenRequest request = new AddContextChildrenRequest
             {
                 ContextAsContextName = ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
@@ -1762,6 +1864,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             QueryContextLineageSubgraphRequest request = new QueryContextLineageSubgraphRequest
             {
                 ContextAsContextName = ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
@@ -1784,6 +1888,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             QueryContextLineageSubgraphRequest request = new QueryContextLineageSubgraphRequest
             {
                 ContextAsContextName = ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
@@ -1808,6 +1914,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             QueryContextLineageSubgraphRequest request = new QueryContextLineageSubgraphRequest
             {
                 ContextAsContextName = ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
@@ -1830,6 +1938,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             QueryContextLineageSubgraphRequest request = new QueryContextLineageSubgraphRequest
             {
                 ContextAsContextName = ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
@@ -1854,6 +1964,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             QueryContextLineageSubgraphRequest request = new QueryContextLineageSubgraphRequest
             {
                 ContextAsContextName = ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
@@ -1876,6 +1988,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             QueryContextLineageSubgraphRequest request = new QueryContextLineageSubgraphRequest
             {
                 ContextAsContextName = ContextName.FromProjectLocationMetadataStoreContext("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[CONTEXT]"),
@@ -1900,6 +2014,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateExecutionRequest request = new CreateExecutionRequest
             {
                 ParentAsMetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
@@ -1938,6 +2054,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateExecutionRequest request = new CreateExecutionRequest
             {
                 ParentAsMetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
@@ -1978,6 +2096,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateExecutionRequest request = new CreateExecutionRequest
             {
                 ParentAsMetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
@@ -2016,6 +2136,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateExecutionRequest request = new CreateExecutionRequest
             {
                 ParentAsMetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
@@ -2056,6 +2178,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateExecutionRequest request = new CreateExecutionRequest
             {
                 ParentAsMetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
@@ -2094,6 +2218,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateExecutionRequest request = new CreateExecutionRequest
             {
                 ParentAsMetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
@@ -2134,6 +2260,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetExecutionRequest request = new GetExecutionRequest
             {
                 ExecutionName = ExecutionName.FromProjectLocationMetadataStoreExecution("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[EXECUTION]"),
@@ -2170,6 +2298,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetExecutionRequest request = new GetExecutionRequest
             {
                 ExecutionName = ExecutionName.FromProjectLocationMetadataStoreExecution("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[EXECUTION]"),
@@ -2208,6 +2338,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetExecutionRequest request = new GetExecutionRequest
             {
                 ExecutionName = ExecutionName.FromProjectLocationMetadataStoreExecution("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[EXECUTION]"),
@@ -2244,6 +2376,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetExecutionRequest request = new GetExecutionRequest
             {
                 ExecutionName = ExecutionName.FromProjectLocationMetadataStoreExecution("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[EXECUTION]"),
@@ -2282,6 +2416,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetExecutionRequest request = new GetExecutionRequest
             {
                 ExecutionName = ExecutionName.FromProjectLocationMetadataStoreExecution("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[EXECUTION]"),
@@ -2318,6 +2454,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetExecutionRequest request = new GetExecutionRequest
             {
                 ExecutionName = ExecutionName.FromProjectLocationMetadataStoreExecution("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[EXECUTION]"),
@@ -2356,6 +2494,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateExecutionRequest request = new UpdateExecutionRequest
             {
                 Execution = new Execution(),
@@ -2394,6 +2534,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateExecutionRequest request = new UpdateExecutionRequest
             {
                 Execution = new Execution(),
@@ -2434,6 +2576,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateExecutionRequest request = new UpdateExecutionRequest
             {
                 Execution = new Execution(),
@@ -2471,6 +2615,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateExecutionRequest request = new UpdateExecutionRequest
             {
                 Execution = new Execution(),
@@ -2510,6 +2656,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             AddExecutionEventsRequest request = new AddExecutionEventsRequest
             {
                 ExecutionAsExecutionName = ExecutionName.FromProjectLocationMetadataStoreExecution("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[EXECUTION]"),
@@ -2528,6 +2676,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             AddExecutionEventsRequest request = new AddExecutionEventsRequest
             {
                 ExecutionAsExecutionName = ExecutionName.FromProjectLocationMetadataStoreExecution("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[EXECUTION]"),
@@ -2548,6 +2698,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             AddExecutionEventsRequest request = new AddExecutionEventsRequest
             {
                 ExecutionAsExecutionName = ExecutionName.FromProjectLocationMetadataStoreExecution("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[EXECUTION]"),
@@ -2566,6 +2718,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             AddExecutionEventsRequest request = new AddExecutionEventsRequest
             {
                 ExecutionAsExecutionName = ExecutionName.FromProjectLocationMetadataStoreExecution("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[EXECUTION]"),
@@ -2586,6 +2740,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             AddExecutionEventsRequest request = new AddExecutionEventsRequest
             {
                 ExecutionAsExecutionName = ExecutionName.FromProjectLocationMetadataStoreExecution("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[EXECUTION]"),
@@ -2604,6 +2760,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             AddExecutionEventsRequest request = new AddExecutionEventsRequest
             {
                 ExecutionAsExecutionName = ExecutionName.FromProjectLocationMetadataStoreExecution("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[EXECUTION]"),
@@ -2624,6 +2782,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             QueryExecutionInputsAndOutputsRequest request = new QueryExecutionInputsAndOutputsRequest
             {
                 ExecutionAsExecutionName = ExecutionName.FromProjectLocationMetadataStoreExecution("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[EXECUTION]"),
@@ -2646,6 +2806,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             QueryExecutionInputsAndOutputsRequest request = new QueryExecutionInputsAndOutputsRequest
             {
                 ExecutionAsExecutionName = ExecutionName.FromProjectLocationMetadataStoreExecution("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[EXECUTION]"),
@@ -2670,6 +2832,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             QueryExecutionInputsAndOutputsRequest request = new QueryExecutionInputsAndOutputsRequest
             {
                 ExecutionAsExecutionName = ExecutionName.FromProjectLocationMetadataStoreExecution("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[EXECUTION]"),
@@ -2692,6 +2856,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             QueryExecutionInputsAndOutputsRequest request = new QueryExecutionInputsAndOutputsRequest
             {
                 ExecutionAsExecutionName = ExecutionName.FromProjectLocationMetadataStoreExecution("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[EXECUTION]"),
@@ -2716,6 +2882,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             QueryExecutionInputsAndOutputsRequest request = new QueryExecutionInputsAndOutputsRequest
             {
                 ExecutionAsExecutionName = ExecutionName.FromProjectLocationMetadataStoreExecution("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[EXECUTION]"),
@@ -2738,6 +2906,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             QueryExecutionInputsAndOutputsRequest request = new QueryExecutionInputsAndOutputsRequest
             {
                 ExecutionAsExecutionName = ExecutionName.FromProjectLocationMetadataStoreExecution("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[EXECUTION]"),
@@ -2762,6 +2932,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateMetadataSchemaRequest request = new CreateMetadataSchemaRequest
             {
                 ParentAsMetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
@@ -2789,6 +2961,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateMetadataSchemaRequest request = new CreateMetadataSchemaRequest
             {
                 ParentAsMetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
@@ -2818,6 +2992,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateMetadataSchemaRequest request = new CreateMetadataSchemaRequest
             {
                 ParentAsMetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
@@ -2845,6 +3021,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateMetadataSchemaRequest request = new CreateMetadataSchemaRequest
             {
                 ParentAsMetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
@@ -2874,6 +3052,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateMetadataSchemaRequest request = new CreateMetadataSchemaRequest
             {
                 ParentAsMetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
@@ -2901,6 +3081,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateMetadataSchemaRequest request = new CreateMetadataSchemaRequest
             {
                 ParentAsMetadataStoreName = MetadataStoreName.FromProjectLocationMetadataStore("[PROJECT]", "[LOCATION]", "[METADATA_STORE]"),
@@ -2930,6 +3112,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetMetadataSchemaRequest request = new GetMetadataSchemaRequest
             {
                 MetadataSchemaName = MetadataSchemaName.FromProjectLocationMetadataStoreMetadataSchema("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[METADATA_SCHEMA]"),
@@ -2955,6 +3139,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetMetadataSchemaRequest request = new GetMetadataSchemaRequest
             {
                 MetadataSchemaName = MetadataSchemaName.FromProjectLocationMetadataStoreMetadataSchema("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[METADATA_SCHEMA]"),
@@ -2982,6 +3168,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetMetadataSchemaRequest request = new GetMetadataSchemaRequest
             {
                 MetadataSchemaName = MetadataSchemaName.FromProjectLocationMetadataStoreMetadataSchema("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[METADATA_SCHEMA]"),
@@ -3007,6 +3195,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetMetadataSchemaRequest request = new GetMetadataSchemaRequest
             {
                 MetadataSchemaName = MetadataSchemaName.FromProjectLocationMetadataStoreMetadataSchema("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[METADATA_SCHEMA]"),
@@ -3034,6 +3224,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetMetadataSchemaRequest request = new GetMetadataSchemaRequest
             {
                 MetadataSchemaName = MetadataSchemaName.FromProjectLocationMetadataStoreMetadataSchema("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[METADATA_SCHEMA]"),
@@ -3059,6 +3251,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetMetadataSchemaRequest request = new GetMetadataSchemaRequest
             {
                 MetadataSchemaName = MetadataSchemaName.FromProjectLocationMetadataStoreMetadataSchema("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[METADATA_SCHEMA]"),
@@ -3086,6 +3280,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             QueryArtifactLineageSubgraphRequest request = new QueryArtifactLineageSubgraphRequest
             {
                 ArtifactAsArtifactName = ArtifactName.FromProjectLocationMetadataStoreArtifact("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[ARTIFACT]"),
@@ -3110,6 +3306,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             QueryArtifactLineageSubgraphRequest request = new QueryArtifactLineageSubgraphRequest
             {
                 ArtifactAsArtifactName = ArtifactName.FromProjectLocationMetadataStoreArtifact("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[ARTIFACT]"),
@@ -3136,6 +3334,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             QueryArtifactLineageSubgraphRequest request = new QueryArtifactLineageSubgraphRequest
             {
                 ArtifactAsArtifactName = ArtifactName.FromProjectLocationMetadataStoreArtifact("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[ARTIFACT]"),
@@ -3158,6 +3358,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             QueryArtifactLineageSubgraphRequest request = new QueryArtifactLineageSubgraphRequest
             {
                 ArtifactAsArtifactName = ArtifactName.FromProjectLocationMetadataStoreArtifact("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[ARTIFACT]"),
@@ -3182,6 +3384,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             QueryArtifactLineageSubgraphRequest request = new QueryArtifactLineageSubgraphRequest
             {
                 ArtifactAsArtifactName = ArtifactName.FromProjectLocationMetadataStoreArtifact("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[ARTIFACT]"),
@@ -3204,6 +3408,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<MetadataService.MetadataServiceClient> mockGrpcClient = new moq::Mock<MetadataService.MetadataServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             QueryArtifactLineageSubgraphRequest request = new QueryArtifactLineageSubgraphRequest
             {
                 ArtifactAsArtifactName = ArtifactName.FromProjectLocationMetadataStoreArtifact("[PROJECT]", "[LOCATION]", "[METADATA_STORE]", "[ARTIFACT]"),

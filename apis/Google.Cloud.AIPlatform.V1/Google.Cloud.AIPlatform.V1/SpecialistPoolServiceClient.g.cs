@@ -18,6 +18,8 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -58,6 +60,8 @@ namespace Google.Cloud.AIPlatform.V1
             DeleteSpecialistPoolOperationsSettings = existing.DeleteSpecialistPoolOperationsSettings.Clone();
             UpdateSpecialistPoolSettings = existing.UpdateSpecialistPoolSettings;
             UpdateSpecialistPoolOperationsSettings = existing.UpdateSpecialistPoolOperationsSettings.Clone();
+            LocationsSettings = existing.LocationsSettings;
+            IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
@@ -181,6 +185,16 @@ namespace Google.Cloud.AIPlatform.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
+        /// <summary>
+        /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
+        /// </summary>
+        public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="SpecialistPoolServiceSettings"/> object.</returns>
@@ -330,6 +344,12 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>The underlying gRPC SpecialistPoolService client</summary>
         public virtual SpecialistPoolService.SpecialistPoolServiceClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Creates a SpecialistPool.
@@ -1005,6 +1025,8 @@ namespace Google.Cloud.AIPlatform.V1
             CreateSpecialistPoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateSpecialistPoolOperationsSettings, logger);
             DeleteSpecialistPoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteSpecialistPoolOperationsSettings, logger);
             UpdateSpecialistPoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateSpecialistPoolOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callCreateSpecialistPool = clientHelper.BuildApiCall<CreateSpecialistPoolRequest, lro::Operation>("CreateSpecialistPool", grpcClient.CreateSpecialistPoolAsync, grpcClient.CreateSpecialistPool, effectiveSettings.CreateSpecialistPoolSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateSpecialistPool);
             Modify_CreateSpecialistPoolApiCall(ref _callCreateSpecialistPool);
@@ -1039,6 +1061,12 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>The underlying gRPC SpecialistPoolService client</summary>
         public override SpecialistPoolService.SpecialistPoolServiceClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
         partial void Modify_CreateSpecialistPoolRequest(ref CreateSpecialistPoolRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1203,6 +1231,32 @@ namespace Google.Cloud.AIPlatform.V1
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class SpecialistPoolService
+    {
+        public partial class SpecialistPoolServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
+
+            /// <summary>
+            /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gciv::IAMPolicy.IAMPolicyClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gciv::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() =>
+                new gciv::IAMPolicy.IAMPolicyClient(CallInvoker);
         }
     }
 }
