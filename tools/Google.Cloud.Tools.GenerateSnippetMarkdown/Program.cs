@@ -141,12 +141,7 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
 
             DirectoryLayout layout = api == "help" ? DirectoryLayout.ForHelpSnippets() : DirectoryLayout.ForApi(api);
 
-            // Hack: the ASP.NET Core 3 snippets are in the Google.Cloud.Diagnostics.AspNetCore directory.
             string sourceDirectory = layout.SourceDirectory;
-            if (sourceDirectory.EndsWith("Google.Cloud.Diagnostics.AspNetCore3"))
-            {
-                sourceDirectory = DirectoryLayout.ForApi("Google.Cloud.Diagnostics.AspNetCore").SourceDirectory;
-            }
             string snippetsSource = Directory.GetDirectories(sourceDirectory, "*.Snippets").FirstOrDefault();
             if (snippetsSource == null)
             {
