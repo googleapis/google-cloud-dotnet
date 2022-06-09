@@ -341,7 +341,7 @@
     },
     {
       "id": "Google.Cloud.BigQuery.DataExchange.V1Beta1",
-      "version": "2.0.0-alpha05",
+      "version": "2.0.0-beta01",
       "releaseLevelOverride": "unreleased",
       "type": "grpc",
       "productName": "Analytics Hub",
@@ -362,7 +362,7 @@
     },
     {
       "id": "Google.Cloud.BigQuery.DataExchange.Common",
-      "version": "2.0.0-alpha05",
+      "version": "2.0.0-beta01",
       "releaseLevelOverride": "unreleased",
       "targetFrameworks": "netstandard2.1;net462",
       "type": "other",
