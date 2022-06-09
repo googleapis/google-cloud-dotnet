@@ -1346,7 +1346,9 @@
         "events",
         "cloudevents"
       ],
-      "dependencies": {},
+      "dependencies": {
+        "CloudNative.CloudEvents.SystemTextJson": "2.3.0"
+      },
       "generator": "micro",
       "protoPath": "google/cloud/eventarc/publishing/v1",
       "shortName": "eventarcpublishing",
