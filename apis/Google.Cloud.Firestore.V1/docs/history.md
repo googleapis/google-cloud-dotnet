@@ -4,6 +4,37 @@ This package is primarily a dependency of Google.Cloud.Firestore. See the
 [Google.Cloud.Firestore version history](https://googleapis.dev/dotnet/Google.Cloud.Firestore/latest/history.html)
 for more details.
 
+## Version 3.0.0, released 2022-06-09
+
+This is the first version of this package to depend on GAX v4.
+
+There are some breaking changes, both in GAX v4 and in the generated
+code. The changes that aren't specific to any given API are [described in the Google Cloud
+documentation](https://cloud.google.com/dotnet/docs/reference/help/breaking-gax4).
+We don't anticipate any changes to most customer code, but please [file a
+GitHub issue](https://github.com/googleapis/google-cloud-dotnet/issues/new/choose)
+if you run into problems.
+
+The most important change in this release is the use of the Grpc.Net.Client package
+for gRPC communication, instead of Grpc.Core. When using .NET Core 3.1 or .NET 5.0+
+this should lead to a smaller installation footprint and greater compatibility (e.g.
+with Apple M1 chips). Any significant change in a core component comes with the risk
+of incompatibility, however - so again, please let us know if you encounter any
+issues.
+
+### Bug fixes
+
+- Change REST binding for ListDocuments to support root collection ([commit a766738](https://github.com/googleapis/google-cloud-dotnet/commit/a76673847c7e3ca351d20f2c336a4b6343d71faa))
+
+### New features
+
+- Expose read_time fields in Firestore PartitionQuery and ListCollectionIds, currently only available in private preview ([commit 9054250](https://github.com/googleapis/google-cloud-dotnet/commit/90542508b9e79943f765596c5bd33c523ee1963c))
+- Enable RunQueryResponse.done ([commit ad9cf69](https://github.com/googleapis/google-cloud-dotnet/commit/ad9cf69a1db81b3b676bdc46bd1d3628c15524d3))
+
+### Documentation improvements
+
+- Clarifications for filters ([commit d35ef87](https://github.com/googleapis/google-cloud-dotnet/commit/d35ef87ad2907d54782e428e315a37f1e7411b2b))
+
 ## Version 2.5.0, released 2022-01-18
 
 No API surface changes; just dependency updates.
