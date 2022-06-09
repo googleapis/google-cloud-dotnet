@@ -19,6 +19,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
     using Google.Protobuf;
+    using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -561,6 +562,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
                 Parent = "",
                 StructuredQuery = new StructuredQuery(),
                 PartitionCount = 0L,
+                ReadTime = new Timestamp(),
             };
             // Make the request
             PagedEnumerable<PartitionQueryResponse, Cursor> response = firestoreClient.PartitionQuery(request);
@@ -611,6 +613,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
                 Parent = "",
                 StructuredQuery = new StructuredQuery(),
                 PartitionCount = 0L,
+                ReadTime = new Timestamp(),
             };
             // Make the request
             PagedAsyncEnumerable<PartitionQueryResponse, Cursor> response = firestoreClient.PartitionQueryAsync(request);
@@ -756,7 +759,11 @@ namespace Google.Cloud.Firestore.V1.Snippets
             // Create client
             FirestoreClient firestoreClient = FirestoreClient.Create();
             // Initialize request argument(s)
-            ListCollectionIdsRequest request = new ListCollectionIdsRequest { Parent = "", };
+            ListCollectionIdsRequest request = new ListCollectionIdsRequest
+            {
+                Parent = "",
+                ReadTime = new Timestamp(),
+            };
             // Make the request
             PagedEnumerable<ListCollectionIdsResponse, string> response = firestoreClient.ListCollectionIds(request);
 
@@ -801,7 +808,11 @@ namespace Google.Cloud.Firestore.V1.Snippets
             // Create client
             FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
             // Initialize request argument(s)
-            ListCollectionIdsRequest request = new ListCollectionIdsRequest { Parent = "", };
+            ListCollectionIdsRequest request = new ListCollectionIdsRequest
+            {
+                Parent = "",
+                ReadTime = new Timestamp(),
+            };
             // Make the request
             PagedAsyncEnumerable<ListCollectionIdsResponse, string> response = firestoreClient.ListCollectionIdsAsync(request);
 
