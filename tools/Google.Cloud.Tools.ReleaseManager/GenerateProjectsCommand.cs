@@ -34,7 +34,7 @@ namespace Google.Cloud.Tools.ReleaseManager
         /// without manually changing apis.json.
         /// </summary>
         /// <remarks>This isn't a constant, as otherwise the compiler complains about unreachable code.</remarks>
-        private static readonly bool NewMajorVersionMode = true;
+        private static readonly bool NewMajorVersionMode = false;
 
         private static readonly Regex AnyVersionPattern = new Regex(@"^[0-9]\d*\.\d+\.\d+(\.\d+)?(-.*)?$");
         private static readonly Regex StableVersionPattern = new Regex(@"^[1-9]\d*\.\d+\.\d+(\.\d+)?$");
