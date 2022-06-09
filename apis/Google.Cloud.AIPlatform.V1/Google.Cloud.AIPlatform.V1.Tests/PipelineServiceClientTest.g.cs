@@ -17,6 +17,8 @@
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
 using gr = Google.Rpc;
@@ -36,6 +38,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTrainingPipelineRequest request = new CreateTrainingPipelineRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -64,6 +68,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                     },
                 },
                 EncryptionSpec = new EncryptionSpec(),
+                ParentModel = "parent_model26d003ff",
+                ModelId = "model_id8abf7c47",
             };
             mockGrpcClient.Setup(x => x.CreateTrainingPipeline(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -77,6 +83,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTrainingPipelineRequest request = new CreateTrainingPipelineRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -105,6 +113,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                     },
                 },
                 EncryptionSpec = new EncryptionSpec(),
+                ParentModel = "parent_model26d003ff",
+                ModelId = "model_id8abf7c47",
             };
             mockGrpcClient.Setup(x => x.CreateTrainingPipelineAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TrainingPipeline>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -120,6 +130,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTrainingPipelineRequest request = new CreateTrainingPipelineRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -148,6 +160,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                     },
                 },
                 EncryptionSpec = new EncryptionSpec(),
+                ParentModel = "parent_model26d003ff",
+                ModelId = "model_id8abf7c47",
             };
             mockGrpcClient.Setup(x => x.CreateTrainingPipeline(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -161,6 +175,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTrainingPipelineRequest request = new CreateTrainingPipelineRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -189,6 +205,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                     },
                 },
                 EncryptionSpec = new EncryptionSpec(),
+                ParentModel = "parent_model26d003ff",
+                ModelId = "model_id8abf7c47",
             };
             mockGrpcClient.Setup(x => x.CreateTrainingPipelineAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TrainingPipeline>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -204,6 +222,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTrainingPipelineRequest request = new CreateTrainingPipelineRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -232,6 +252,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                     },
                 },
                 EncryptionSpec = new EncryptionSpec(),
+                ParentModel = "parent_model26d003ff",
+                ModelId = "model_id8abf7c47",
             };
             mockGrpcClient.Setup(x => x.CreateTrainingPipeline(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -245,6 +267,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTrainingPipelineRequest request = new CreateTrainingPipelineRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -273,6 +297,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                     },
                 },
                 EncryptionSpec = new EncryptionSpec(),
+                ParentModel = "parent_model26d003ff",
+                ModelId = "model_id8abf7c47",
             };
             mockGrpcClient.Setup(x => x.CreateTrainingPipelineAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TrainingPipeline>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -288,6 +314,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTrainingPipelineRequest request = new GetTrainingPipelineRequest
             {
                 TrainingPipelineName = TrainingPipelineName.FromProjectLocationTrainingPipeline("[PROJECT]", "[LOCATION]", "[TRAINING_PIPELINE]"),
@@ -315,6 +343,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                     },
                 },
                 EncryptionSpec = new EncryptionSpec(),
+                ParentModel = "parent_model26d003ff",
+                ModelId = "model_id8abf7c47",
             };
             mockGrpcClient.Setup(x => x.GetTrainingPipeline(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -328,6 +358,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTrainingPipelineRequest request = new GetTrainingPipelineRequest
             {
                 TrainingPipelineName = TrainingPipelineName.FromProjectLocationTrainingPipeline("[PROJECT]", "[LOCATION]", "[TRAINING_PIPELINE]"),
@@ -355,6 +387,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                     },
                 },
                 EncryptionSpec = new EncryptionSpec(),
+                ParentModel = "parent_model26d003ff",
+                ModelId = "model_id8abf7c47",
             };
             mockGrpcClient.Setup(x => x.GetTrainingPipelineAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TrainingPipeline>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -370,6 +404,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTrainingPipelineRequest request = new GetTrainingPipelineRequest
             {
                 TrainingPipelineName = TrainingPipelineName.FromProjectLocationTrainingPipeline("[PROJECT]", "[LOCATION]", "[TRAINING_PIPELINE]"),
@@ -397,6 +433,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                     },
                 },
                 EncryptionSpec = new EncryptionSpec(),
+                ParentModel = "parent_model26d003ff",
+                ModelId = "model_id8abf7c47",
             };
             mockGrpcClient.Setup(x => x.GetTrainingPipeline(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -410,6 +448,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTrainingPipelineRequest request = new GetTrainingPipelineRequest
             {
                 TrainingPipelineName = TrainingPipelineName.FromProjectLocationTrainingPipeline("[PROJECT]", "[LOCATION]", "[TRAINING_PIPELINE]"),
@@ -437,6 +477,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                     },
                 },
                 EncryptionSpec = new EncryptionSpec(),
+                ParentModel = "parent_model26d003ff",
+                ModelId = "model_id8abf7c47",
             };
             mockGrpcClient.Setup(x => x.GetTrainingPipelineAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TrainingPipeline>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -452,6 +494,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTrainingPipelineRequest request = new GetTrainingPipelineRequest
             {
                 TrainingPipelineName = TrainingPipelineName.FromProjectLocationTrainingPipeline("[PROJECT]", "[LOCATION]", "[TRAINING_PIPELINE]"),
@@ -479,6 +523,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                     },
                 },
                 EncryptionSpec = new EncryptionSpec(),
+                ParentModel = "parent_model26d003ff",
+                ModelId = "model_id8abf7c47",
             };
             mockGrpcClient.Setup(x => x.GetTrainingPipeline(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -492,6 +538,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTrainingPipelineRequest request = new GetTrainingPipelineRequest
             {
                 TrainingPipelineName = TrainingPipelineName.FromProjectLocationTrainingPipeline("[PROJECT]", "[LOCATION]", "[TRAINING_PIPELINE]"),
@@ -519,6 +567,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                     },
                 },
                 EncryptionSpec = new EncryptionSpec(),
+                ParentModel = "parent_model26d003ff",
+                ModelId = "model_id8abf7c47",
             };
             mockGrpcClient.Setup(x => x.GetTrainingPipelineAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TrainingPipeline>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -534,6 +584,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CancelTrainingPipelineRequest request = new CancelTrainingPipelineRequest
             {
                 TrainingPipelineName = TrainingPipelineName.FromProjectLocationTrainingPipeline("[PROJECT]", "[LOCATION]", "[TRAINING_PIPELINE]"),
@@ -550,6 +602,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CancelTrainingPipelineRequest request = new CancelTrainingPipelineRequest
             {
                 TrainingPipelineName = TrainingPipelineName.FromProjectLocationTrainingPipeline("[PROJECT]", "[LOCATION]", "[TRAINING_PIPELINE]"),
@@ -567,6 +621,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CancelTrainingPipelineRequest request = new CancelTrainingPipelineRequest
             {
                 TrainingPipelineName = TrainingPipelineName.FromProjectLocationTrainingPipeline("[PROJECT]", "[LOCATION]", "[TRAINING_PIPELINE]"),
@@ -583,6 +639,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CancelTrainingPipelineRequest request = new CancelTrainingPipelineRequest
             {
                 TrainingPipelineName = TrainingPipelineName.FromProjectLocationTrainingPipeline("[PROJECT]", "[LOCATION]", "[TRAINING_PIPELINE]"),
@@ -600,6 +658,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CancelTrainingPipelineRequest request = new CancelTrainingPipelineRequest
             {
                 TrainingPipelineName = TrainingPipelineName.FromProjectLocationTrainingPipeline("[PROJECT]", "[LOCATION]", "[TRAINING_PIPELINE]"),
@@ -616,6 +676,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CancelTrainingPipelineRequest request = new CancelTrainingPipelineRequest
             {
                 TrainingPipelineName = TrainingPipelineName.FromProjectLocationTrainingPipeline("[PROJECT]", "[LOCATION]", "[TRAINING_PIPELINE]"),
@@ -633,6 +695,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreatePipelineJobRequest request = new CreatePipelineJobRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -677,6 +741,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreatePipelineJobRequest request = new CreatePipelineJobRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -723,6 +789,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreatePipelineJobRequest request = new CreatePipelineJobRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -767,6 +835,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreatePipelineJobRequest request = new CreatePipelineJobRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -813,6 +883,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreatePipelineJobRequest request = new CreatePipelineJobRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -857,6 +929,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreatePipelineJobRequest request = new CreatePipelineJobRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -903,6 +977,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetPipelineJobRequest request = new GetPipelineJobRequest
             {
                 PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
@@ -945,6 +1021,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetPipelineJobRequest request = new GetPipelineJobRequest
             {
                 PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
@@ -989,6 +1067,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetPipelineJobRequest request = new GetPipelineJobRequest
             {
                 PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
@@ -1031,6 +1111,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetPipelineJobRequest request = new GetPipelineJobRequest
             {
                 PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
@@ -1075,6 +1157,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetPipelineJobRequest request = new GetPipelineJobRequest
             {
                 PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
@@ -1117,6 +1201,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetPipelineJobRequest request = new GetPipelineJobRequest
             {
                 PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
@@ -1161,6 +1247,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CancelPipelineJobRequest request = new CancelPipelineJobRequest
             {
                 PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
@@ -1177,6 +1265,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CancelPipelineJobRequest request = new CancelPipelineJobRequest
             {
                 PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
@@ -1194,6 +1284,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CancelPipelineJobRequest request = new CancelPipelineJobRequest
             {
                 PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
@@ -1210,6 +1302,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CancelPipelineJobRequest request = new CancelPipelineJobRequest
             {
                 PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
@@ -1227,6 +1321,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CancelPipelineJobRequest request = new CancelPipelineJobRequest
             {
                 PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
@@ -1243,6 +1339,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CancelPipelineJobRequest request = new CancelPipelineJobRequest
             {
                 PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),

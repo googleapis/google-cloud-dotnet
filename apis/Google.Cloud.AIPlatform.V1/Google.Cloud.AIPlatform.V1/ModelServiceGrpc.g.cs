@@ -76,9 +76,17 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.ListModelsResponse> __Marshaller_google_cloud_aiplatform_v1_ListModelsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.ListModelsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.ListModelVersionsRequest> __Marshaller_google_cloud_aiplatform_v1_ListModelVersionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.ListModelVersionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.ListModelVersionsResponse> __Marshaller_google_cloud_aiplatform_v1_ListModelVersionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.ListModelVersionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.UpdateModelRequest> __Marshaller_google_cloud_aiplatform_v1_UpdateModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.UpdateModelRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.DeleteModelRequest> __Marshaller_google_cloud_aiplatform_v1_DeleteModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.DeleteModelRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.DeleteModelVersionRequest> __Marshaller_google_cloud_aiplatform_v1_DeleteModelVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.DeleteModelVersionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.MergeVersionAliasesRequest> __Marshaller_google_cloud_aiplatform_v1_MergeVersionAliasesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.MergeVersionAliasesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.ExportModelRequest> __Marshaller_google_cloud_aiplatform_v1_ExportModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.ExportModelRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -125,6 +133,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         __Marshaller_google_cloud_aiplatform_v1_ListModelsResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.ListModelVersionsRequest, global::Google.Cloud.AIPlatform.V1.ListModelVersionsResponse> __Method_ListModelVersions = new grpc::Method<global::Google.Cloud.AIPlatform.V1.ListModelVersionsRequest, global::Google.Cloud.AIPlatform.V1.ListModelVersionsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListModelVersions",
+        __Marshaller_google_cloud_aiplatform_v1_ListModelVersionsRequest,
+        __Marshaller_google_cloud_aiplatform_v1_ListModelVersionsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.UpdateModelRequest, global::Google.Cloud.AIPlatform.V1.Model> __Method_UpdateModel = new grpc::Method<global::Google.Cloud.AIPlatform.V1.UpdateModelRequest, global::Google.Cloud.AIPlatform.V1.Model>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -139,6 +155,22 @@ namespace Google.Cloud.AIPlatform.V1 {
         "DeleteModel",
         __Marshaller_google_cloud_aiplatform_v1_DeleteModelRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.DeleteModelVersionRequest, global::Google.LongRunning.Operation> __Method_DeleteModelVersion = new grpc::Method<global::Google.Cloud.AIPlatform.V1.DeleteModelVersionRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteModelVersion",
+        __Marshaller_google_cloud_aiplatform_v1_DeleteModelVersionRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.MergeVersionAliasesRequest, global::Google.Cloud.AIPlatform.V1.Model> __Method_MergeVersionAliases = new grpc::Method<global::Google.Cloud.AIPlatform.V1.MergeVersionAliasesRequest, global::Google.Cloud.AIPlatform.V1.Model>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "MergeVersionAliases",
+        __Marshaller_google_cloud_aiplatform_v1_MergeVersionAliasesRequest,
+        __Marshaller_google_cloud_aiplatform_v1_Model);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.ExportModelRequest, global::Google.LongRunning.Operation> __Method_ExportModel = new grpc::Method<global::Google.Cloud.AIPlatform.V1.ExportModelRequest, global::Google.LongRunning.Operation>(
@@ -235,6 +267,18 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
 
       /// <summary>
+      /// Lists versions of the specified model.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.ListModelVersionsResponse> ListModelVersions(global::Google.Cloud.AIPlatform.V1.ListModelVersionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Updates a Model.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -258,6 +302,34 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteModel(global::Google.Cloud.AIPlatform.V1.DeleteModelRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a Model version.
+      ///
+      /// Model version can only be deleted if there are no [DeployedModels][]
+      /// created from it. Deleting the only version in the Model is not allowed. Use
+      /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for deleting the Model instead.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteModelVersion(global::Google.Cloud.AIPlatform.V1.DeleteModelVersionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Merges a set of aliases for a Model version.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.Model> MergeVersionAliases(global::Google.Cloud.AIPlatform.V1.MergeVersionAliasesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -510,6 +582,54 @@ namespace Google.Cloud.AIPlatform.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListModels, null, options, request);
       }
       /// <summary>
+      /// Lists versions of the specified model.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1.ListModelVersionsResponse ListModelVersions(global::Google.Cloud.AIPlatform.V1.ListModelVersionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListModelVersions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists versions of the specified model.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1.ListModelVersionsResponse ListModelVersions(global::Google.Cloud.AIPlatform.V1.ListModelVersionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListModelVersions, null, options, request);
+      }
+      /// <summary>
+      /// Lists versions of the specified model.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.ListModelVersionsResponse> ListModelVersionsAsync(global::Google.Cloud.AIPlatform.V1.ListModelVersionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListModelVersionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists versions of the specified model.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.ListModelVersionsResponse> ListModelVersionsAsync(global::Google.Cloud.AIPlatform.V1.ListModelVersionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListModelVersions, null, options, request);
+      }
+      /// <summary>
       /// Updates a Model.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -620,6 +740,118 @@ namespace Google.Cloud.AIPlatform.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteModelAsync(global::Google.Cloud.AIPlatform.V1.DeleteModelRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteModel, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a Model version.
+      ///
+      /// Model version can only be deleted if there are no [DeployedModels][]
+      /// created from it. Deleting the only version in the Model is not allowed. Use
+      /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for deleting the Model instead.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteModelVersion(global::Google.Cloud.AIPlatform.V1.DeleteModelVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteModelVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a Model version.
+      ///
+      /// Model version can only be deleted if there are no [DeployedModels][]
+      /// created from it. Deleting the only version in the Model is not allowed. Use
+      /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for deleting the Model instead.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteModelVersion(global::Google.Cloud.AIPlatform.V1.DeleteModelVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteModelVersion, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a Model version.
+      ///
+      /// Model version can only be deleted if there are no [DeployedModels][]
+      /// created from it. Deleting the only version in the Model is not allowed. Use
+      /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for deleting the Model instead.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteModelVersionAsync(global::Google.Cloud.AIPlatform.V1.DeleteModelVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteModelVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a Model version.
+      ///
+      /// Model version can only be deleted if there are no [DeployedModels][]
+      /// created from it. Deleting the only version in the Model is not allowed. Use
+      /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for deleting the Model instead.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteModelVersionAsync(global::Google.Cloud.AIPlatform.V1.DeleteModelVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteModelVersion, null, options, request);
+      }
+      /// <summary>
+      /// Merges a set of aliases for a Model version.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1.Model MergeVersionAliases(global::Google.Cloud.AIPlatform.V1.MergeVersionAliasesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return MergeVersionAliases(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Merges a set of aliases for a Model version.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1.Model MergeVersionAliases(global::Google.Cloud.AIPlatform.V1.MergeVersionAliasesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_MergeVersionAliases, null, options, request);
+      }
+      /// <summary>
+      /// Merges a set of aliases for a Model version.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.Model> MergeVersionAliasesAsync(global::Google.Cloud.AIPlatform.V1.MergeVersionAliasesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return MergeVersionAliasesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Merges a set of aliases for a Model version.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.Model> MergeVersionAliasesAsync(global::Google.Cloud.AIPlatform.V1.MergeVersionAliasesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_MergeVersionAliases, null, options, request);
       }
       /// <summary>
       /// Exports a trained, exportable Model to a location specified by the
@@ -934,8 +1166,11 @@ namespace Google.Cloud.AIPlatform.V1 {
           .AddMethod(__Method_UploadModel, serviceImpl.UploadModel)
           .AddMethod(__Method_GetModel, serviceImpl.GetModel)
           .AddMethod(__Method_ListModels, serviceImpl.ListModels)
+          .AddMethod(__Method_ListModelVersions, serviceImpl.ListModelVersions)
           .AddMethod(__Method_UpdateModel, serviceImpl.UpdateModel)
           .AddMethod(__Method_DeleteModel, serviceImpl.DeleteModel)
+          .AddMethod(__Method_DeleteModelVersion, serviceImpl.DeleteModelVersion)
+          .AddMethod(__Method_MergeVersionAliases, serviceImpl.MergeVersionAliases)
           .AddMethod(__Method_ExportModel, serviceImpl.ExportModel)
           .AddMethod(__Method_ImportModelEvaluation, serviceImpl.ImportModelEvaluation)
           .AddMethod(__Method_GetModelEvaluation, serviceImpl.GetModelEvaluation)
@@ -954,8 +1189,11 @@ namespace Google.Cloud.AIPlatform.V1 {
       serviceBinder.AddMethod(__Method_UploadModel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.UploadModelRequest, global::Google.LongRunning.Operation>(serviceImpl.UploadModel));
       serviceBinder.AddMethod(__Method_GetModel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.GetModelRequest, global::Google.Cloud.AIPlatform.V1.Model>(serviceImpl.GetModel));
       serviceBinder.AddMethod(__Method_ListModels, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ListModelsRequest, global::Google.Cloud.AIPlatform.V1.ListModelsResponse>(serviceImpl.ListModels));
+      serviceBinder.AddMethod(__Method_ListModelVersions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ListModelVersionsRequest, global::Google.Cloud.AIPlatform.V1.ListModelVersionsResponse>(serviceImpl.ListModelVersions));
       serviceBinder.AddMethod(__Method_UpdateModel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.UpdateModelRequest, global::Google.Cloud.AIPlatform.V1.Model>(serviceImpl.UpdateModel));
       serviceBinder.AddMethod(__Method_DeleteModel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.DeleteModelRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteModel));
+      serviceBinder.AddMethod(__Method_DeleteModelVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.DeleteModelVersionRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteModelVersion));
+      serviceBinder.AddMethod(__Method_MergeVersionAliases, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.MergeVersionAliasesRequest, global::Google.Cloud.AIPlatform.V1.Model>(serviceImpl.MergeVersionAliases));
       serviceBinder.AddMethod(__Method_ExportModel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ExportModelRequest, global::Google.LongRunning.Operation>(serviceImpl.ExportModel));
       serviceBinder.AddMethod(__Method_ImportModelEvaluation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ImportModelEvaluationRequest, global::Google.Cloud.AIPlatform.V1.ModelEvaluation>(serviceImpl.ImportModelEvaluation));
       serviceBinder.AddMethod(__Method_GetModelEvaluation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.GetModelEvaluationRequest, global::Google.Cloud.AIPlatform.V1.ModelEvaluation>(serviceImpl.GetModelEvaluation));

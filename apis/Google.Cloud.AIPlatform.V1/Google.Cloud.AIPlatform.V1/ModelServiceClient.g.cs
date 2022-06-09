@@ -18,6 +18,8 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -52,9 +54,13 @@ namespace Google.Cloud.AIPlatform.V1
             UploadModelOperationsSettings = existing.UploadModelOperationsSettings.Clone();
             GetModelSettings = existing.GetModelSettings;
             ListModelsSettings = existing.ListModelsSettings;
+            ListModelVersionsSettings = existing.ListModelVersionsSettings;
             UpdateModelSettings = existing.UpdateModelSettings;
             DeleteModelSettings = existing.DeleteModelSettings;
             DeleteModelOperationsSettings = existing.DeleteModelOperationsSettings.Clone();
+            DeleteModelVersionSettings = existing.DeleteModelVersionSettings;
+            DeleteModelVersionOperationsSettings = existing.DeleteModelVersionOperationsSettings.Clone();
+            MergeVersionAliasesSettings = existing.MergeVersionAliasesSettings;
             ExportModelSettings = existing.ExportModelSettings;
             ExportModelOperationsSettings = existing.ExportModelOperationsSettings.Clone();
             ImportModelEvaluationSettings = existing.ImportModelEvaluationSettings;
@@ -62,6 +68,8 @@ namespace Google.Cloud.AIPlatform.V1
             ListModelEvaluationsSettings = existing.ListModelEvaluationsSettings;
             GetModelEvaluationSliceSettings = existing.GetModelEvaluationSliceSettings;
             ListModelEvaluationSlicesSettings = existing.ListModelEvaluationSlicesSettings;
+            LocationsSettings = existing.LocationsSettings;
+            IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
@@ -123,6 +131,18 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ModelServiceClient.ListModelVersions</c> and <c>ModelServiceClient.ListModelVersionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListModelVersionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ModelServiceClient.UpdateModel</c> and <c>ModelServiceClient.UpdateModelAsync</c>.
         /// </summary>
         /// <remarks>
@@ -162,6 +182,48 @@ namespace Google.Cloud.AIPlatform.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ModelServiceClient.DeleteModelVersion</c> and <c>ModelServiceClient.DeleteModelVersionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteModelVersionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ModelServiceClient.DeleteModelVersion</c> and
+        /// <c>ModelServiceClient.DeleteModelVersionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteModelVersionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ModelServiceClient.MergeVersionAliases</c> and <c>ModelServiceClient.MergeVersionAliasesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings MergeVersionAliasesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -254,6 +316,16 @@ namespace Google.Cloud.AIPlatform.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListModelEvaluationSlicesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
+        /// <summary>
+        /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
+        /// </summary>
+        public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="ModelServiceSettings"/> object.</returns>
@@ -394,6 +466,12 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>The underlying gRPC ModelService client</summary>
         public virtual ModelService.ModelServiceClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Uploads a Model artifact into Vertex AI.
@@ -587,6 +665,16 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="name">
         /// Required. The name of the Model resource.
         /// Format: `projects/{project}/locations/{location}/models/{model}`
+        /// 
+        /// In order to retrieve a specific version of the model, also provide
+        /// the version ID or version alias.
+        /// Example: `projects/{project}/locations/{location}/models/{model}@2`
+        /// or
+        /// `projects/{project}/locations/{location}/models/{model}@golden`
+        /// If no version ID or alias is specified, the "default" version will be
+        /// returned. The "default" version alias is created for the first version of
+        /// the model, and can be moved to other versions later on. There will be
+        /// exactly one default version.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -602,6 +690,16 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="name">
         /// Required. The name of the Model resource.
         /// Format: `projects/{project}/locations/{location}/models/{model}`
+        /// 
+        /// In order to retrieve a specific version of the model, also provide
+        /// the version ID or version alias.
+        /// Example: `projects/{project}/locations/{location}/models/{model}@2`
+        /// or
+        /// `projects/{project}/locations/{location}/models/{model}@golden`
+        /// If no version ID or alias is specified, the "default" version will be
+        /// returned. The "default" version alias is created for the first version of
+        /// the model, and can be moved to other versions later on. There will be
+        /// exactly one default version.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -617,6 +715,16 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="name">
         /// Required. The name of the Model resource.
         /// Format: `projects/{project}/locations/{location}/models/{model}`
+        /// 
+        /// In order to retrieve a specific version of the model, also provide
+        /// the version ID or version alias.
+        /// Example: `projects/{project}/locations/{location}/models/{model}@2`
+        /// or
+        /// `projects/{project}/locations/{location}/models/{model}@golden`
+        /// If no version ID or alias is specified, the "default" version will be
+        /// returned. The "default" version alias is created for the first version of
+        /// the model, and can be moved to other versions later on. There will be
+        /// exactly one default version.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -629,6 +737,16 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="name">
         /// Required. The name of the Model resource.
         /// Format: `projects/{project}/locations/{location}/models/{model}`
+        /// 
+        /// In order to retrieve a specific version of the model, also provide
+        /// the version ID or version alias.
+        /// Example: `projects/{project}/locations/{location}/models/{model}@2`
+        /// or
+        /// `projects/{project}/locations/{location}/models/{model}@golden`
+        /// If no version ID or alias is specified, the "default" version will be
+        /// returned. The "default" version alias is created for the first version of
+        /// the model, and can be moved to other versions later on. There will be
+        /// exactly one default version.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -644,6 +762,16 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="name">
         /// Required. The name of the Model resource.
         /// Format: `projects/{project}/locations/{location}/models/{model}`
+        /// 
+        /// In order to retrieve a specific version of the model, also provide
+        /// the version ID or version alias.
+        /// Example: `projects/{project}/locations/{location}/models/{model}@2`
+        /// or
+        /// `projects/{project}/locations/{location}/models/{model}@golden`
+        /// If no version ID or alias is specified, the "default" version will be
+        /// returned. The "default" version alias is created for the first version of
+        /// the model, and can be moved to other versions later on. There will be
+        /// exactly one default version.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -659,6 +787,16 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="name">
         /// Required. The name of the Model resource.
         /// Format: `projects/{project}/locations/{location}/models/{model}`
+        /// 
+        /// In order to retrieve a specific version of the model, also provide
+        /// the version ID or version alias.
+        /// Example: `projects/{project}/locations/{location}/models/{model}@2`
+        /// or
+        /// `projects/{project}/locations/{location}/models/{model}@golden`
+        /// If no version ID or alias is specified, the "default" version will be
+        /// returned. The "default" version alias is created for the first version of
+        /// the model, and can be moved to other versions later on. There will be
+        /// exactly one default version.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -779,6 +917,120 @@ namespace Google.Cloud.AIPlatform.V1
             ListModelsAsync(new ListModelsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists versions of the specified model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Model"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListModelVersionsResponse, Model> ListModelVersions(ListModelVersionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists versions of the specified model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Model"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListModelVersionsResponse, Model> ListModelVersionsAsync(ListModelVersionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists versions of the specified model.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the model to list versions for.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Model"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListModelVersionsResponse, Model> ListModelVersions(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListModelVersions(new ListModelVersionsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists versions of the specified model.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the model to list versions for.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Model"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListModelVersionsResponse, Model> ListModelVersionsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListModelVersionsAsync(new ListModelVersionsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists versions of the specified model.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the model to list versions for.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Model"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListModelVersionsResponse, Model> ListModelVersions(ModelName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListModelVersions(new ListModelVersionsRequest
+            {
+                ModelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists versions of the specified model.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the model to list versions for.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Model"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListModelVersionsResponse, Model> ListModelVersionsAsync(ModelName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListModelVersionsAsync(new ListModelVersionsRequest
+            {
+                ModelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -1088,6 +1340,415 @@ namespace Google.Cloud.AIPlatform.V1
             DeleteModelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deletes a Model version.
+        /// 
+        /// Model version can only be deleted if there are no [DeployedModels][]
+        /// created from it. Deleting the only version in the Model is not allowed. Use
+        /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for deleting the Model instead.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteOperationMetadata> DeleteModelVersion(DeleteModelVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a Model version.
+        /// 
+        /// Model version can only be deleted if there are no [DeployedModels][]
+        /// created from it. Deleting the only version in the Model is not allowed. Use
+        /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for deleting the Model instead.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteModelVersionAsync(DeleteModelVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a Model version.
+        /// 
+        /// Model version can only be deleted if there are no [DeployedModels][]
+        /// created from it. Deleting the only version in the Model is not allowed. Use
+        /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for deleting the Model instead.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteModelVersionAsync(DeleteModelVersionRequest request, st::CancellationToken cancellationToken) =>
+            DeleteModelVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteModelVersion</c>.</summary>
+        public virtual lro::OperationsClient DeleteModelVersionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteModelVersion</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteOperationMetadata> PollOnceDeleteModelVersion(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, DeleteOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteModelVersionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteModelVersion</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> PollOnceDeleteModelVersionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, DeleteOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteModelVersionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a Model version.
+        /// 
+        /// Model version can only be deleted if there are no [DeployedModels][]
+        /// created from it. Deleting the only version in the Model is not allowed. Use
+        /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for deleting the Model instead.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the model version to be deleted, with a version ID explicitly
+        /// included.
+        /// 
+        /// Example: `projects/{project}/locations/{location}/models/{model}@1234`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteOperationMetadata> DeleteModelVersion(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteModelVersion(new DeleteModelVersionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a Model version.
+        /// 
+        /// Model version can only be deleted if there are no [DeployedModels][]
+        /// created from it. Deleting the only version in the Model is not allowed. Use
+        /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for deleting the Model instead.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the model version to be deleted, with a version ID explicitly
+        /// included.
+        /// 
+        /// Example: `projects/{project}/locations/{location}/models/{model}@1234`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteModelVersionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteModelVersionAsync(new DeleteModelVersionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a Model version.
+        /// 
+        /// Model version can only be deleted if there are no [DeployedModels][]
+        /// created from it. Deleting the only version in the Model is not allowed. Use
+        /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for deleting the Model instead.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the model version to be deleted, with a version ID explicitly
+        /// included.
+        /// 
+        /// Example: `projects/{project}/locations/{location}/models/{model}@1234`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteModelVersionAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteModelVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a Model version.
+        /// 
+        /// Model version can only be deleted if there are no [DeployedModels][]
+        /// created from it. Deleting the only version in the Model is not allowed. Use
+        /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for deleting the Model instead.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the model version to be deleted, with a version ID explicitly
+        /// included.
+        /// 
+        /// Example: `projects/{project}/locations/{location}/models/{model}@1234`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteOperationMetadata> DeleteModelVersion(ModelName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteModelVersion(new DeleteModelVersionRequest
+            {
+                ModelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a Model version.
+        /// 
+        /// Model version can only be deleted if there are no [DeployedModels][]
+        /// created from it. Deleting the only version in the Model is not allowed. Use
+        /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for deleting the Model instead.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the model version to be deleted, with a version ID explicitly
+        /// included.
+        /// 
+        /// Example: `projects/{project}/locations/{location}/models/{model}@1234`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteModelVersionAsync(ModelName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteModelVersionAsync(new DeleteModelVersionRequest
+            {
+                ModelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a Model version.
+        /// 
+        /// Model version can only be deleted if there are no [DeployedModels][]
+        /// created from it. Deleting the only version in the Model is not allowed. Use
+        /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for deleting the Model instead.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the model version to be deleted, with a version ID explicitly
+        /// included.
+        /// 
+        /// Example: `projects/{project}/locations/{location}/models/{model}@1234`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteModelVersionAsync(ModelName name, st::CancellationToken cancellationToken) =>
+            DeleteModelVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Merges a set of aliases for a Model version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Model MergeVersionAliases(MergeVersionAliasesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Merges a set of aliases for a Model version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Model> MergeVersionAliasesAsync(MergeVersionAliasesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Merges a set of aliases for a Model version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Model> MergeVersionAliasesAsync(MergeVersionAliasesRequest request, st::CancellationToken cancellationToken) =>
+            MergeVersionAliasesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Merges a set of aliases for a Model version.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the model version to merge aliases, with a version ID
+        /// explicitly included.
+        /// 
+        /// Example: `projects/{project}/locations/{location}/models/{model}@1234`
+        /// </param>
+        /// <param name="versionAliases">
+        /// Required. The set of version aliases to merge.
+        /// The alias should be at most 128 characters, and match
+        /// `[a-z][a-z0-9-]{0,126}[a-z-0-9]`.
+        /// Add the `-` prefix to an alias means removing that alias from the version.
+        /// `-` is NOT counted in the 128 characters. Example: `-golden` means removing
+        /// the `golden` alias from the version.
+        /// 
+        /// There is NO ordering in aliases, which means
+        /// 1) The aliases returned from GetModel API might not have the exactly same
+        /// order from this MergeVersionAliases API. 2) Adding and deleting the same
+        /// alias in the request is not recommended, and the 2 operations will be
+        /// cancelled out.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Model MergeVersionAliases(string name, scg::IEnumerable<string> versionAliases, gaxgrpc::CallSettings callSettings = null) =>
+            MergeVersionAliases(new MergeVersionAliasesRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                VersionAliases =
+                {
+                    gax::GaxPreconditions.CheckNotNull(versionAliases, nameof(versionAliases)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Merges a set of aliases for a Model version.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the model version to merge aliases, with a version ID
+        /// explicitly included.
+        /// 
+        /// Example: `projects/{project}/locations/{location}/models/{model}@1234`
+        /// </param>
+        /// <param name="versionAliases">
+        /// Required. The set of version aliases to merge.
+        /// The alias should be at most 128 characters, and match
+        /// `[a-z][a-z0-9-]{0,126}[a-z-0-9]`.
+        /// Add the `-` prefix to an alias means removing that alias from the version.
+        /// `-` is NOT counted in the 128 characters. Example: `-golden` means removing
+        /// the `golden` alias from the version.
+        /// 
+        /// There is NO ordering in aliases, which means
+        /// 1) The aliases returned from GetModel API might not have the exactly same
+        /// order from this MergeVersionAliases API. 2) Adding and deleting the same
+        /// alias in the request is not recommended, and the 2 operations will be
+        /// cancelled out.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Model> MergeVersionAliasesAsync(string name, scg::IEnumerable<string> versionAliases, gaxgrpc::CallSettings callSettings = null) =>
+            MergeVersionAliasesAsync(new MergeVersionAliasesRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                VersionAliases =
+                {
+                    gax::GaxPreconditions.CheckNotNull(versionAliases, nameof(versionAliases)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Merges a set of aliases for a Model version.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the model version to merge aliases, with a version ID
+        /// explicitly included.
+        /// 
+        /// Example: `projects/{project}/locations/{location}/models/{model}@1234`
+        /// </param>
+        /// <param name="versionAliases">
+        /// Required. The set of version aliases to merge.
+        /// The alias should be at most 128 characters, and match
+        /// `[a-z][a-z0-9-]{0,126}[a-z-0-9]`.
+        /// Add the `-` prefix to an alias means removing that alias from the version.
+        /// `-` is NOT counted in the 128 characters. Example: `-golden` means removing
+        /// the `golden` alias from the version.
+        /// 
+        /// There is NO ordering in aliases, which means
+        /// 1) The aliases returned from GetModel API might not have the exactly same
+        /// order from this MergeVersionAliases API. 2) Adding and deleting the same
+        /// alias in the request is not recommended, and the 2 operations will be
+        /// cancelled out.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Model> MergeVersionAliasesAsync(string name, scg::IEnumerable<string> versionAliases, st::CancellationToken cancellationToken) =>
+            MergeVersionAliasesAsync(name, versionAliases, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Merges a set of aliases for a Model version.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the model version to merge aliases, with a version ID
+        /// explicitly included.
+        /// 
+        /// Example: `projects/{project}/locations/{location}/models/{model}@1234`
+        /// </param>
+        /// <param name="versionAliases">
+        /// Required. The set of version aliases to merge.
+        /// The alias should be at most 128 characters, and match
+        /// `[a-z][a-z0-9-]{0,126}[a-z-0-9]`.
+        /// Add the `-` prefix to an alias means removing that alias from the version.
+        /// `-` is NOT counted in the 128 characters. Example: `-golden` means removing
+        /// the `golden` alias from the version.
+        /// 
+        /// There is NO ordering in aliases, which means
+        /// 1) The aliases returned from GetModel API might not have the exactly same
+        /// order from this MergeVersionAliases API. 2) Adding and deleting the same
+        /// alias in the request is not recommended, and the 2 operations will be
+        /// cancelled out.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Model MergeVersionAliases(ModelName name, scg::IEnumerable<string> versionAliases, gaxgrpc::CallSettings callSettings = null) =>
+            MergeVersionAliases(new MergeVersionAliasesRequest
+            {
+                ModelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                VersionAliases =
+                {
+                    gax::GaxPreconditions.CheckNotNull(versionAliases, nameof(versionAliases)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Merges a set of aliases for a Model version.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the model version to merge aliases, with a version ID
+        /// explicitly included.
+        /// 
+        /// Example: `projects/{project}/locations/{location}/models/{model}@1234`
+        /// </param>
+        /// <param name="versionAliases">
+        /// Required. The set of version aliases to merge.
+        /// The alias should be at most 128 characters, and match
+        /// `[a-z][a-z0-9-]{0,126}[a-z-0-9]`.
+        /// Add the `-` prefix to an alias means removing that alias from the version.
+        /// `-` is NOT counted in the 128 characters. Example: `-golden` means removing
+        /// the `golden` alias from the version.
+        /// 
+        /// There is NO ordering in aliases, which means
+        /// 1) The aliases returned from GetModel API might not have the exactly same
+        /// order from this MergeVersionAliases API. 2) Adding and deleting the same
+        /// alias in the request is not recommended, and the 2 operations will be
+        /// cancelled out.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Model> MergeVersionAliasesAsync(ModelName name, scg::IEnumerable<string> versionAliases, gaxgrpc::CallSettings callSettings = null) =>
+            MergeVersionAliasesAsync(new MergeVersionAliasesRequest
+            {
+                ModelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                VersionAliases =
+                {
+                    gax::GaxPreconditions.CheckNotNull(versionAliases, nameof(versionAliases)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Merges a set of aliases for a Model version.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the model version to merge aliases, with a version ID
+        /// explicitly included.
+        /// 
+        /// Example: `projects/{project}/locations/{location}/models/{model}@1234`
+        /// </param>
+        /// <param name="versionAliases">
+        /// Required. The set of version aliases to merge.
+        /// The alias should be at most 128 characters, and match
+        /// `[a-z][a-z0-9-]{0,126}[a-z-0-9]`.
+        /// Add the `-` prefix to an alias means removing that alias from the version.
+        /// `-` is NOT counted in the 128 characters. Example: `-golden` means removing
+        /// the `golden` alias from the version.
+        /// 
+        /// There is NO ordering in aliases, which means
+        /// 1) The aliases returned from GetModel API might not have the exactly same
+        /// order from this MergeVersionAliases API. 2) Adding and deleting the same
+        /// alias in the request is not recommended, and the 2 operations will be
+        /// cancelled out.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Model> MergeVersionAliasesAsync(ModelName name, scg::IEnumerable<string> versionAliases, st::CancellationToken cancellationToken) =>
+            MergeVersionAliasesAsync(name, versionAliases, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Exports a trained, exportable Model to a location specified by the
         /// user. A Model is considered to be exportable if it has at least one
         /// [supported export format][google.cloud.aiplatform.v1.Model.supported_export_formats].
@@ -1153,6 +1814,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Model to export.
+        /// The resource name may contain version id or version alias to specify the
+        /// version, if no version is specified, the default version will be exported.
         /// </param>
         /// <param name="outputConfig">
         /// Required. The desired output location and configuration.
@@ -1173,6 +1836,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Model to export.
+        /// The resource name may contain version id or version alias to specify the
+        /// version, if no version is specified, the default version will be exported.
         /// </param>
         /// <param name="outputConfig">
         /// Required. The desired output location and configuration.
@@ -1193,6 +1858,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Model to export.
+        /// The resource name may contain version id or version alias to specify the
+        /// version, if no version is specified, the default version will be exported.
         /// </param>
         /// <param name="outputConfig">
         /// Required. The desired output location and configuration.
@@ -1209,6 +1876,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Model to export.
+        /// The resource name may contain version id or version alias to specify the
+        /// version, if no version is specified, the default version will be exported.
         /// </param>
         /// <param name="outputConfig">
         /// Required. The desired output location and configuration.
@@ -1229,6 +1898,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Model to export.
+        /// The resource name may contain version id or version alias to specify the
+        /// version, if no version is specified, the default version will be exported.
         /// </param>
         /// <param name="outputConfig">
         /// Required. The desired output location and configuration.
@@ -1249,6 +1920,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Model to export.
+        /// The resource name may contain version id or version alias to specify the
+        /// version, if no version is specified, the default version will be exported.
         /// </param>
         /// <param name="outputConfig">
         /// Required. The desired output location and configuration.
@@ -1878,9 +2551,15 @@ namespace Google.Cloud.AIPlatform.V1
 
         private readonly gaxgrpc::ApiCall<ListModelsRequest, ListModelsResponse> _callListModels;
 
+        private readonly gaxgrpc::ApiCall<ListModelVersionsRequest, ListModelVersionsResponse> _callListModelVersions;
+
         private readonly gaxgrpc::ApiCall<UpdateModelRequest, Model> _callUpdateModel;
 
         private readonly gaxgrpc::ApiCall<DeleteModelRequest, lro::Operation> _callDeleteModel;
+
+        private readonly gaxgrpc::ApiCall<DeleteModelVersionRequest, lro::Operation> _callDeleteModelVersion;
+
+        private readonly gaxgrpc::ApiCall<MergeVersionAliasesRequest, Model> _callMergeVersionAliases;
 
         private readonly gaxgrpc::ApiCall<ExportModelRequest, lro::Operation> _callExportModel;
 
@@ -1907,7 +2586,10 @@ namespace Google.Cloud.AIPlatform.V1
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
             UploadModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UploadModelOperationsSettings, logger);
             DeleteModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteModelOperationsSettings, logger);
+            DeleteModelVersionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteModelVersionOperationsSettings, logger);
             ExportModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportModelOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callUploadModel = clientHelper.BuildApiCall<UploadModelRequest, lro::Operation>("UploadModel", grpcClient.UploadModelAsync, grpcClient.UploadModel, effectiveSettings.UploadModelSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callUploadModel);
             Modify_UploadModelApiCall(ref _callUploadModel);
@@ -1917,12 +2599,21 @@ namespace Google.Cloud.AIPlatform.V1
             _callListModels = clientHelper.BuildApiCall<ListModelsRequest, ListModelsResponse>("ListModels", grpcClient.ListModelsAsync, grpcClient.ListModels, effectiveSettings.ListModelsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListModels);
             Modify_ListModelsApiCall(ref _callListModels);
+            _callListModelVersions = clientHelper.BuildApiCall<ListModelVersionsRequest, ListModelVersionsResponse>("ListModelVersions", grpcClient.ListModelVersionsAsync, grpcClient.ListModelVersions, effectiveSettings.ListModelVersionsSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callListModelVersions);
+            Modify_ListModelVersionsApiCall(ref _callListModelVersions);
             _callUpdateModel = clientHelper.BuildApiCall<UpdateModelRequest, Model>("UpdateModel", grpcClient.UpdateModelAsync, grpcClient.UpdateModel, effectiveSettings.UpdateModelSettings).WithGoogleRequestParam("model.name", request => request.Model?.Name);
             Modify_ApiCall(ref _callUpdateModel);
             Modify_UpdateModelApiCall(ref _callUpdateModel);
             _callDeleteModel = clientHelper.BuildApiCall<DeleteModelRequest, lro::Operation>("DeleteModel", grpcClient.DeleteModelAsync, grpcClient.DeleteModel, effectiveSettings.DeleteModelSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteModel);
             Modify_DeleteModelApiCall(ref _callDeleteModel);
+            _callDeleteModelVersion = clientHelper.BuildApiCall<DeleteModelVersionRequest, lro::Operation>("DeleteModelVersion", grpcClient.DeleteModelVersionAsync, grpcClient.DeleteModelVersion, effectiveSettings.DeleteModelVersionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteModelVersion);
+            Modify_DeleteModelVersionApiCall(ref _callDeleteModelVersion);
+            _callMergeVersionAliases = clientHelper.BuildApiCall<MergeVersionAliasesRequest, Model>("MergeVersionAliases", grpcClient.MergeVersionAliasesAsync, grpcClient.MergeVersionAliases, effectiveSettings.MergeVersionAliasesSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callMergeVersionAliases);
+            Modify_MergeVersionAliasesApiCall(ref _callMergeVersionAliases);
             _callExportModel = clientHelper.BuildApiCall<ExportModelRequest, lro::Operation>("ExportModel", grpcClient.ExportModelAsync, grpcClient.ExportModel, effectiveSettings.ExportModelSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callExportModel);
             Modify_ExportModelApiCall(ref _callExportModel);
@@ -1952,9 +2643,15 @@ namespace Google.Cloud.AIPlatform.V1
 
         partial void Modify_ListModelsApiCall(ref gaxgrpc::ApiCall<ListModelsRequest, ListModelsResponse> call);
 
+        partial void Modify_ListModelVersionsApiCall(ref gaxgrpc::ApiCall<ListModelVersionsRequest, ListModelVersionsResponse> call);
+
         partial void Modify_UpdateModelApiCall(ref gaxgrpc::ApiCall<UpdateModelRequest, Model> call);
 
         partial void Modify_DeleteModelApiCall(ref gaxgrpc::ApiCall<DeleteModelRequest, lro::Operation> call);
+
+        partial void Modify_DeleteModelVersionApiCall(ref gaxgrpc::ApiCall<DeleteModelVersionRequest, lro::Operation> call);
+
+        partial void Modify_MergeVersionAliasesApiCall(ref gaxgrpc::ApiCall<MergeVersionAliasesRequest, Model> call);
 
         partial void Modify_ExportModelApiCall(ref gaxgrpc::ApiCall<ExportModelRequest, lro::Operation> call);
 
@@ -1973,15 +2670,27 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>The underlying gRPC ModelService client</summary>
         public override ModelService.ModelServiceClient GrpcClient { get; }
 
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public override gciv::IAMPolicyClient IAMPolicyClient { get; }
+
         partial void Modify_UploadModelRequest(ref UploadModelRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetModelRequest(ref GetModelRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListModelsRequest(ref ListModelsRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_ListModelVersionsRequest(ref ListModelVersionsRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_UpdateModelRequest(ref UpdateModelRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteModelRequest(ref DeleteModelRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteModelVersionRequest(ref DeleteModelVersionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_MergeVersionAliasesRequest(ref MergeVersionAliasesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ExportModelRequest(ref ExportModelRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2071,6 +2780,30 @@ namespace Google.Cloud.AIPlatform.V1
         }
 
         /// <summary>
+        /// Lists versions of the specified model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Model"/> resources.</returns>
+        public override gax::PagedEnumerable<ListModelVersionsResponse, Model> ListModelVersions(ListModelVersionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListModelVersionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListModelVersionsRequest, ListModelVersionsResponse, Model>(_callListModelVersions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists versions of the specified model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Model"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListModelVersionsResponse, Model> ListModelVersionsAsync(ListModelVersionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListModelVersionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListModelVersionsRequest, ListModelVersionsResponse, Model>(_callListModelVersions, request, callSettings);
+        }
+
+        /// <summary>
         /// Updates a Model.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2127,6 +2860,65 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Modify_DeleteModelRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, DeleteOperationMetadata>(await _callDeleteModel.Async(request, callSettings).ConfigureAwait(false), DeleteModelOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteModelVersion</c>.</summary>
+        public override lro::OperationsClient DeleteModelVersionOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a Model version.
+        /// 
+        /// Model version can only be deleted if there are no [DeployedModels][]
+        /// created from it. Deleting the only version in the Model is not allowed. Use
+        /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for deleting the Model instead.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, DeleteOperationMetadata> DeleteModelVersion(DeleteModelVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteModelVersionRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, DeleteOperationMetadata>(_callDeleteModelVersion.Sync(request, callSettings), DeleteModelVersionOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a Model version.
+        /// 
+        /// Model version can only be deleted if there are no [DeployedModels][]
+        /// created from it. Deleting the only version in the Model is not allowed. Use
+        /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for deleting the Model instead.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteModelVersionAsync(DeleteModelVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteModelVersionRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, DeleteOperationMetadata>(await _callDeleteModelVersion.Async(request, callSettings).ConfigureAwait(false), DeleteModelVersionOperationsClient);
+        }
+
+        /// <summary>
+        /// Merges a set of aliases for a Model version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Model MergeVersionAliases(MergeVersionAliasesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_MergeVersionAliasesRequest(ref request, ref callSettings);
+            return _callMergeVersionAliases.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Merges a set of aliases for a Model version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Model> MergeVersionAliasesAsync(MergeVersionAliasesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_MergeVersionAliasesRequest(ref request, ref callSettings);
+            return _callMergeVersionAliases.Async(request, callSettings);
         }
 
         /// <summary>The long-running operations client for <c>ExportModel</c>.</summary>
@@ -2285,6 +3077,10 @@ namespace Google.Cloud.AIPlatform.V1
     {
     }
 
+    public partial class ListModelVersionsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListModelEvaluationsRequest : gaxgrpc::IPageRequest
     {
     }
@@ -2294,6 +3090,14 @@ namespace Google.Cloud.AIPlatform.V1
     }
 
     public partial class ListModelsResponse : gaxgrpc::IPageResponse<Model>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Model> GetEnumerator() => Models.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListModelVersionsResponse : gaxgrpc::IPageResponse<Model>
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Model> GetEnumerator() => Models.GetEnumerator();
@@ -2328,6 +3132,32 @@ namespace Google.Cloud.AIPlatform.V1
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class ModelService
+    {
+        public partial class ModelServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
+
+            /// <summary>
+            /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gciv::IAMPolicy.IAMPolicyClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gciv::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() =>
+                new gciv::IAMPolicy.IAMPolicyClient(CallInvoker);
         }
     }
 }

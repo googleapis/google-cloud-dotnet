@@ -217,6 +217,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Starting this job has no impact on any existing deployments of the Model
     /// and their resources.
     /// Exactly one of model and unmanaged_container_model must be set.
+    ///
+    /// The model resource name may contain version id or version alias to specify
+    /// the version, if no version is specified, the default version will be used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

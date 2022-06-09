@@ -18047,6 +18047,161 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "aiplatform_v1_generated_ModelService_ListModelVersions_sync",
+      "title": "ListModelVersionsRequestObject",
+      "description": "Snippet for ListModelVersions",
+      "file": "ModelServiceClient.ListModelVersionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListModelVersions",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.ListModelVersions",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListModelVersionsResponse, Google.Cloud.AIPlatform.V1.Model>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "ListModelVersions",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.ListModelVersions",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_ListModelVersions_async",
+      "title": "ListModelVersionsRequestObjectAsync",
+      "description": "Snippet for ListModelVersionsAsync",
+      "file": "ModelServiceClient.ListModelVersionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListModelVersionsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.ListModelVersionsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListModelVersionsResponse, Google.Cloud.AIPlatform.V1.Model>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "ListModelVersions",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.ListModelVersions",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_ListModelVersions_sync_flattened",
+      "title": "ListModelVersions",
+      "description": "Snippet for ListModelVersions",
+      "file": "ModelServiceClient.ListModelVersionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListModelVersions",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.ListModelVersions",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListModelVersionsResponse, Google.Cloud.AIPlatform.V1.Model>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "ListModelVersions",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.ListModelVersions",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_ListModelVersions_async_flattened",
+      "title": "ListModelVersionsAsync",
+      "description": "Snippet for ListModelVersionsAsync",
+      "file": "ModelServiceClient.ListModelVersionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListModelVersionsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.ListModelVersionsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListModelVersionsResponse, Google.Cloud.AIPlatform.V1.Model>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "ListModelVersions",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.ListModelVersions",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_ListModelVersions_sync_flattened_resourceNames",
+      "title": "ListModelVersionsResourceNames",
+      "description": "Snippet for ListModelVersions",
+      "file": "ModelServiceClient.ListModelVersionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListModelVersions",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.ListModelVersions",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListModelVersionsResponse, Google.Cloud.AIPlatform.V1.Model>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "ListModelVersions",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.ListModelVersions",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_ListModelVersions_async_flattened_resourceNames",
+      "title": "ListModelVersionsResourceNamesAsync",
+      "description": "Snippet for ListModelVersionsAsync",
+      "file": "ModelServiceClient.ListModelVersionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListModelVersionsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.ListModelVersionsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListModelVersionsResponse, Google.Cloud.AIPlatform.V1.Model>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "ListModelVersions",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.ListModelVersions",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "aiplatform_v1_generated_ModelService_UpdateModel_sync",
       "title": "UpdateModelRequestObject",
       "description": "Snippet for UpdateModel",
@@ -18297,6 +18452,316 @@
         "method": {
           "shortName": "DeleteModel",
           "fullName": "google.cloud.aiplatform.v1.ModelService.DeleteModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_DeleteModelVersion_sync",
+      "title": "DeleteModelVersionRequestObject",
+      "description": "Snippet for DeleteModelVersion",
+      "file": "ModelServiceClient.DeleteModelVersionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteModelVersion",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.DeleteModelVersion",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteModelVersion",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.DeleteModelVersion",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_DeleteModelVersion_async",
+      "title": "DeleteModelVersionRequestObjectAsync",
+      "description": "Snippet for DeleteModelVersionAsync",
+      "file": "ModelServiceClient.DeleteModelVersionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteModelVersionAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.DeleteModelVersionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteModelVersion",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.DeleteModelVersion",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_DeleteModelVersion_sync_flattened",
+      "title": "DeleteModelVersion",
+      "description": "Snippet for DeleteModelVersion",
+      "file": "ModelServiceClient.DeleteModelVersionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteModelVersion",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.DeleteModelVersion",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteModelVersion",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.DeleteModelVersion",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_DeleteModelVersion_async_flattened",
+      "title": "DeleteModelVersionAsync",
+      "description": "Snippet for DeleteModelVersionAsync",
+      "file": "ModelServiceClient.DeleteModelVersionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteModelVersionAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.DeleteModelVersionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteModelVersion",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.DeleteModelVersion",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_DeleteModelVersion_sync_flattened_resourceNames",
+      "title": "DeleteModelVersionResourceNames",
+      "description": "Snippet for DeleteModelVersion",
+      "file": "ModelServiceClient.DeleteModelVersionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteModelVersion",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.DeleteModelVersion",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteModelVersion",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.DeleteModelVersion",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_DeleteModelVersion_async_flattened_resourceNames",
+      "title": "DeleteModelVersionResourceNamesAsync",
+      "description": "Snippet for DeleteModelVersionAsync",
+      "file": "ModelServiceClient.DeleteModelVersionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteModelVersionAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.DeleteModelVersionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteModelVersion",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.DeleteModelVersion",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_MergeVersionAliases_sync",
+      "title": "MergeVersionAliasesRequestObject",
+      "description": "Snippet for MergeVersionAliases",
+      "file": "ModelServiceClient.MergeVersionAliasesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MergeVersionAliases",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.MergeVersionAliases",
+        "resultType": "Google.Cloud.AIPlatform.V1.Model",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "MergeVersionAliases",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.MergeVersionAliases",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_MergeVersionAliases_async",
+      "title": "MergeVersionAliasesRequestObjectAsync",
+      "description": "Snippet for MergeVersionAliasesAsync",
+      "file": "ModelServiceClient.MergeVersionAliasesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MergeVersionAliasesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.MergeVersionAliasesAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.Model>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "MergeVersionAliases",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.MergeVersionAliases",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_MergeVersionAliases_sync_flattened",
+      "title": "MergeVersionAliases",
+      "description": "Snippet for MergeVersionAliases",
+      "file": "ModelServiceClient.MergeVersionAliasesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MergeVersionAliases",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.MergeVersionAliases",
+        "resultType": "Google.Cloud.AIPlatform.V1.Model",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "MergeVersionAliases",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.MergeVersionAliases",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_MergeVersionAliases_async_flattened",
+      "title": "MergeVersionAliasesAsync",
+      "description": "Snippet for MergeVersionAliasesAsync",
+      "file": "ModelServiceClient.MergeVersionAliasesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MergeVersionAliasesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.MergeVersionAliasesAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.Model>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "MergeVersionAliases",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.MergeVersionAliases",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_MergeVersionAliases_sync_flattened_resourceNames",
+      "title": "MergeVersionAliasesResourceNames",
+      "description": "Snippet for MergeVersionAliases",
+      "file": "ModelServiceClient.MergeVersionAliasesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MergeVersionAliases",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.MergeVersionAliases",
+        "resultType": "Google.Cloud.AIPlatform.V1.Model",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "MergeVersionAliases",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.MergeVersionAliases",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_MergeVersionAliases_async_flattened_resourceNames",
+      "title": "MergeVersionAliasesResourceNamesAsync",
+      "description": "Snippet for MergeVersionAliasesAsync",
+      "file": "ModelServiceClient.MergeVersionAliasesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MergeVersionAliasesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.MergeVersionAliasesAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.Model>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "MergeVersionAliases",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.MergeVersionAliases",
           "service": {
             "shortName": "ModelService",
             "fullName": "google.cloud.aiplatform.v1.ModelService"

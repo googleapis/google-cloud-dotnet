@@ -16,6 +16,8 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using grpccore = Grpc.Core;
 using moq = Moq;
 using st = System.Threading;
@@ -31,6 +33,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         public void ReadFeatureValuesRequestObject()
         {
             moq::Mock<FeaturestoreOnlineServingService.FeaturestoreOnlineServingServiceClient> mockGrpcClient = new moq::Mock<FeaturestoreOnlineServingService.FeaturestoreOnlineServingServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ReadFeatureValuesRequest request = new ReadFeatureValuesRequest
             {
                 EntityTypeAsEntityTypeName = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]"),
@@ -53,6 +57,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         public async stt::Task ReadFeatureValuesRequestObjectAsync()
         {
             moq::Mock<FeaturestoreOnlineServingService.FeaturestoreOnlineServingServiceClient> mockGrpcClient = new moq::Mock<FeaturestoreOnlineServingService.FeaturestoreOnlineServingServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ReadFeatureValuesRequest request = new ReadFeatureValuesRequest
             {
                 EntityTypeAsEntityTypeName = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]"),
@@ -77,6 +83,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         public void ReadFeatureValues()
         {
             moq::Mock<FeaturestoreOnlineServingService.FeaturestoreOnlineServingServiceClient> mockGrpcClient = new moq::Mock<FeaturestoreOnlineServingService.FeaturestoreOnlineServingServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ReadFeatureValuesRequest request = new ReadFeatureValuesRequest
             {
                 EntityTypeAsEntityTypeName = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]"),
@@ -97,6 +105,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         public async stt::Task ReadFeatureValuesAsync()
         {
             moq::Mock<FeaturestoreOnlineServingService.FeaturestoreOnlineServingServiceClient> mockGrpcClient = new moq::Mock<FeaturestoreOnlineServingService.FeaturestoreOnlineServingServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ReadFeatureValuesRequest request = new ReadFeatureValuesRequest
             {
                 EntityTypeAsEntityTypeName = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]"),
@@ -119,6 +129,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         public void ReadFeatureValuesResourceNames()
         {
             moq::Mock<FeaturestoreOnlineServingService.FeaturestoreOnlineServingServiceClient> mockGrpcClient = new moq::Mock<FeaturestoreOnlineServingService.FeaturestoreOnlineServingServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ReadFeatureValuesRequest request = new ReadFeatureValuesRequest
             {
                 EntityTypeAsEntityTypeName = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]"),
@@ -139,6 +151,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         public async stt::Task ReadFeatureValuesResourceNamesAsync()
         {
             moq::Mock<FeaturestoreOnlineServingService.FeaturestoreOnlineServingServiceClient> mockGrpcClient = new moq::Mock<FeaturestoreOnlineServingService.FeaturestoreOnlineServingServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ReadFeatureValuesRequest request = new ReadFeatureValuesRequest
             {
                 EntityTypeAsEntityTypeName = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]"),

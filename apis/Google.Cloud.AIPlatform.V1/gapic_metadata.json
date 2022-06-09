@@ -775,6 +775,12 @@
                 "DeleteModelAsync"
               ]
             },
+            "DeleteModelVersion": {
+              "methods": [
+                "DeleteModelVersion",
+                "DeleteModelVersionAsync"
+              ]
+            },
             "ExportModel": {
               "methods": [
                 "ExportModel",
@@ -817,10 +823,22 @@
                 "ListModelEvaluationsAsync"
               ]
             },
+            "ListModelVersions": {
+              "methods": [
+                "ListModelVersions",
+                "ListModelVersionsAsync"
+              ]
+            },
             "ListModels": {
               "methods": [
                 "ListModels",
                 "ListModelsAsync"
+              ]
+            },
+            "MergeVersionAliases": {
+              "methods": [
+                "MergeVersionAliases",
+                "MergeVersionAliasesAsync"
               ]
             },
             "UpdateModel": {

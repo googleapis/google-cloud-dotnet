@@ -16,6 +16,8 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -34,6 +36,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<IndexEndpointService.IndexEndpointServiceClient> mockGrpcClient = new moq::Mock<IndexEndpointService.IndexEndpointServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetIndexEndpointRequest request = new GetIndexEndpointRequest
             {
                 IndexEndpointName = IndexEndpointName.FromProjectLocationIndexEndpoint("[PROJECT]", "[LOCATION]", "[INDEX_ENDPOINT]"),
@@ -74,6 +78,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<IndexEndpointService.IndexEndpointServiceClient> mockGrpcClient = new moq::Mock<IndexEndpointService.IndexEndpointServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetIndexEndpointRequest request = new GetIndexEndpointRequest
             {
                 IndexEndpointName = IndexEndpointName.FromProjectLocationIndexEndpoint("[PROJECT]", "[LOCATION]", "[INDEX_ENDPOINT]"),
@@ -116,6 +122,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<IndexEndpointService.IndexEndpointServiceClient> mockGrpcClient = new moq::Mock<IndexEndpointService.IndexEndpointServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetIndexEndpointRequest request = new GetIndexEndpointRequest
             {
                 IndexEndpointName = IndexEndpointName.FromProjectLocationIndexEndpoint("[PROJECT]", "[LOCATION]", "[INDEX_ENDPOINT]"),
@@ -156,6 +164,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<IndexEndpointService.IndexEndpointServiceClient> mockGrpcClient = new moq::Mock<IndexEndpointService.IndexEndpointServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetIndexEndpointRequest request = new GetIndexEndpointRequest
             {
                 IndexEndpointName = IndexEndpointName.FromProjectLocationIndexEndpoint("[PROJECT]", "[LOCATION]", "[INDEX_ENDPOINT]"),
@@ -198,6 +208,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<IndexEndpointService.IndexEndpointServiceClient> mockGrpcClient = new moq::Mock<IndexEndpointService.IndexEndpointServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetIndexEndpointRequest request = new GetIndexEndpointRequest
             {
                 IndexEndpointName = IndexEndpointName.FromProjectLocationIndexEndpoint("[PROJECT]", "[LOCATION]", "[INDEX_ENDPOINT]"),
@@ -238,6 +250,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<IndexEndpointService.IndexEndpointServiceClient> mockGrpcClient = new moq::Mock<IndexEndpointService.IndexEndpointServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetIndexEndpointRequest request = new GetIndexEndpointRequest
             {
                 IndexEndpointName = IndexEndpointName.FromProjectLocationIndexEndpoint("[PROJECT]", "[LOCATION]", "[INDEX_ENDPOINT]"),
@@ -280,6 +294,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<IndexEndpointService.IndexEndpointServiceClient> mockGrpcClient = new moq::Mock<IndexEndpointService.IndexEndpointServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateIndexEndpointRequest request = new UpdateIndexEndpointRequest
             {
                 IndexEndpoint = new IndexEndpoint(),
@@ -321,6 +337,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<IndexEndpointService.IndexEndpointServiceClient> mockGrpcClient = new moq::Mock<IndexEndpointService.IndexEndpointServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateIndexEndpointRequest request = new UpdateIndexEndpointRequest
             {
                 IndexEndpoint = new IndexEndpoint(),
@@ -364,6 +382,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<IndexEndpointService.IndexEndpointServiceClient> mockGrpcClient = new moq::Mock<IndexEndpointService.IndexEndpointServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateIndexEndpointRequest request = new UpdateIndexEndpointRequest
             {
                 IndexEndpoint = new IndexEndpoint(),
@@ -405,6 +425,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<IndexEndpointService.IndexEndpointServiceClient> mockGrpcClient = new moq::Mock<IndexEndpointService.IndexEndpointServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateIndexEndpointRequest request = new UpdateIndexEndpointRequest
             {
                 IndexEndpoint = new IndexEndpoint(),

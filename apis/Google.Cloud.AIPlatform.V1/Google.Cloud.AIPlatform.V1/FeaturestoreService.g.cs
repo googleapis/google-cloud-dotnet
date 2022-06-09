@@ -1589,6 +1589,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     ///
     ///   * `labels`
     ///   * `online_serving_config.fixed_node_count`
+    ///   * `online_serving_config.scaling`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

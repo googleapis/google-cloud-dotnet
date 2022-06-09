@@ -16,50 +16,43 @@
 
 namespace Google.Cloud.AIPlatform.V1.Snippets
 {
-    // [START aiplatform_v1_generated_ModelService_UploadModel_async]
-    using Google.Api.Gax.ResourceNames;
+    // [START aiplatform_v1_generated_ModelService_DeleteModelVersion_sync_flattened]
     using Google.Cloud.AIPlatform.V1;
     using Google.LongRunning;
-    using System.Threading.Tasks;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedModelServiceClientSnippets
     {
-        /// <summary>Snippet for UploadModelAsync</summary>
+        /// <summary>Snippet for DeleteModelVersion</summary>
         /// <remarks>
         /// This snippet has been automatically generated for illustrative purposes only.
         /// It may require modifications to work in your environment.
         /// </remarks>
-        public async Task UploadModelRequestObjectAsync()
+        public void DeleteModelVersion()
         {
             // Create client
-            ModelServiceClient modelServiceClient = await ModelServiceClient.CreateAsync();
+            ModelServiceClient modelServiceClient = ModelServiceClient.Create();
             // Initialize request argument(s)
-            UploadModelRequest request = new UploadModelRequest
-            {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Model = new Model(),
-                ParentModel = "",
-                ModelId = "",
-            };
+            string name = "projects/[PROJECT]/locations/[LOCATION]/models/[MODEL]";
             // Make the request
-            Operation<UploadModelResponse, UploadModelOperationMetadata> response = await modelServiceClient.UploadModelAsync(request);
+            Operation<Empty, DeleteOperationMetadata> response = modelServiceClient.DeleteModelVersion(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<UploadModelResponse, UploadModelOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, DeleteOperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            UploadModelResponse result = completedResponse.Result;
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<UploadModelResponse, UploadModelOperationMetadata> retrievedResponse = await modelServiceClient.PollOnceUploadModelAsync(operationName);
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = modelServiceClient.PollOnceDeleteModelVersion(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                UploadModelResponse retrievedResult = retrievedResponse.Result;
+                Empty retrievedResult = retrievedResponse.Result;
             }
         }
     }
-    // [END aiplatform_v1_generated_ModelService_UploadModel_async]
+    // [END aiplatform_v1_generated_ModelService_DeleteModelVersion_sync_flattened]
 }

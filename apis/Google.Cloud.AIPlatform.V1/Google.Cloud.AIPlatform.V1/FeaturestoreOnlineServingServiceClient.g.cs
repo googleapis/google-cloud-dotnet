@@ -17,6 +17,8 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
@@ -48,6 +50,8 @@ namespace Google.Cloud.AIPlatform.V1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             ReadFeatureValuesSettings = existing.ReadFeatureValuesSettings;
             StreamingReadFeatureValuesSettings = existing.StreamingReadFeatureValuesSettings;
+            LocationsSettings = existing.LocationsSettings;
+            IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
@@ -78,6 +82,16 @@ namespace Google.Cloud.AIPlatform.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings StreamingReadFeatureValuesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
+        /// <summary>
+        /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
+        /// </summary>
+        public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="FeaturestoreOnlineServingServiceSettings"/> object.</returns>
@@ -223,6 +237,12 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>The underlying gRPC FeaturestoreOnlineServingService client</summary>
         public virtual FeaturestoreOnlineServingService.FeaturestoreOnlineServingServiceClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Reads Feature values of a specific entity of an EntityType. For reading
@@ -457,6 +477,8 @@ namespace Google.Cloud.AIPlatform.V1
             GrpcClient = grpcClient;
             FeaturestoreOnlineServingServiceSettings effectiveSettings = settings ?? FeaturestoreOnlineServingServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callReadFeatureValues = clientHelper.BuildApiCall<ReadFeatureValuesRequest, ReadFeatureValuesResponse>("ReadFeatureValues", grpcClient.ReadFeatureValuesAsync, grpcClient.ReadFeatureValues, effectiveSettings.ReadFeatureValuesSettings).WithGoogleRequestParam("entity_type", request => request.EntityType);
             Modify_ApiCall(ref _callReadFeatureValues);
             Modify_ReadFeatureValuesApiCall(ref _callReadFeatureValues);
@@ -478,6 +500,12 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>The underlying gRPC FeaturestoreOnlineServingService client</summary>
         public override FeaturestoreOnlineServingService.FeaturestoreOnlineServingServiceClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
         partial void Modify_ReadFeatureValuesRequest(ref ReadFeatureValuesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -532,6 +560,32 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Modify_StreamingReadFeatureValuesRequest(ref request, ref callSettings);
             return new StreamingReadFeatureValuesStreamImpl(_callStreamingReadFeatureValues.Call(request, callSettings));
+        }
+    }
+
+    public static partial class FeaturestoreOnlineServingService
+    {
+        public partial class FeaturestoreOnlineServingServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
+
+            /// <summary>
+            /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gciv::IAMPolicy.IAMPolicyClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gciv::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() =>
+                new gciv::IAMPolicy.IAMPolicyClient(CallInvoker);
         }
     }
 }

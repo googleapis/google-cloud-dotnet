@@ -16,6 +16,8 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -34,6 +36,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<EndpointService.EndpointServiceClient> mockGrpcClient = new moq::Mock<EndpointService.EndpointServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEndpointRequest request = new GetEndpointRequest
             {
                 EndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
@@ -84,6 +88,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<EndpointService.EndpointServiceClient> mockGrpcClient = new moq::Mock<EndpointService.EndpointServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEndpointRequest request = new GetEndpointRequest
             {
                 EndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
@@ -136,6 +142,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<EndpointService.EndpointServiceClient> mockGrpcClient = new moq::Mock<EndpointService.EndpointServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEndpointRequest request = new GetEndpointRequest
             {
                 EndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
@@ -186,6 +194,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<EndpointService.EndpointServiceClient> mockGrpcClient = new moq::Mock<EndpointService.EndpointServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEndpointRequest request = new GetEndpointRequest
             {
                 EndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
@@ -238,6 +248,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<EndpointService.EndpointServiceClient> mockGrpcClient = new moq::Mock<EndpointService.EndpointServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEndpointRequest request = new GetEndpointRequest
             {
                 EndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
@@ -288,6 +300,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<EndpointService.EndpointServiceClient> mockGrpcClient = new moq::Mock<EndpointService.EndpointServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetEndpointRequest request = new GetEndpointRequest
             {
                 EndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
@@ -340,6 +354,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<EndpointService.EndpointServiceClient> mockGrpcClient = new moq::Mock<EndpointService.EndpointServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateEndpointRequest request = new UpdateEndpointRequest
             {
                 Endpoint = new Endpoint(),
@@ -391,6 +407,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<EndpointService.EndpointServiceClient> mockGrpcClient = new moq::Mock<EndpointService.EndpointServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateEndpointRequest request = new UpdateEndpointRequest
             {
                 Endpoint = new Endpoint(),
@@ -444,6 +462,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<EndpointService.EndpointServiceClient> mockGrpcClient = new moq::Mock<EndpointService.EndpointServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateEndpointRequest request = new UpdateEndpointRequest
             {
                 Endpoint = new Endpoint(),
@@ -495,6 +515,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<EndpointService.EndpointServiceClient> mockGrpcClient = new moq::Mock<EndpointService.EndpointServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateEndpointRequest request = new UpdateEndpointRequest
             {
                 Endpoint = new Endpoint(),

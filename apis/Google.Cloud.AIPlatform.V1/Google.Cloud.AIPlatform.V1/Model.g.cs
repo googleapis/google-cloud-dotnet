@@ -32,60 +32,65 @@ namespace Google.Cloud.AIPlatform.V1 {
             "LnByb3RvGihnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9lbnZfdmFyLnBy",
             "b3RvGixnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9leHBsYW5hdGlvbi5w",
             "cm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90bxofZ29vZ2xlL3By",
-            "b3RvYnVmL3RpbWVzdGFtcC5wcm90byKkDAoFTW9kZWwSDAoEbmFtZRgBIAEo",
-            "CRIZCgxkaXNwbGF5X25hbWUYAiABKAlCA+BBAhITCgtkZXNjcmlwdGlvbhgD",
-            "IAEoCRJFChBwcmVkaWN0X3NjaGVtYXRhGAQgASgLMisuZ29vZ2xlLmNsb3Vk",
-            "LmFpcGxhdGZvcm0udjEuUHJlZGljdFNjaGVtYXRhEiAKE21ldGFkYXRhX3Nj",
-            "aGVtYV91cmkYBSABKAlCA+BBBRItCghtZXRhZGF0YRgGIAEoCzIWLmdvb2ds",
-            "ZS5wcm90b2J1Zi5WYWx1ZUID4EEFElUKGHN1cHBvcnRlZF9leHBvcnRfZm9y",
-            "bWF0cxgUIAMoCzIuLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1vZGVs",
-            "LkV4cG9ydEZvcm1hdEID4EEDEk0KEXRyYWluaW5nX3BpcGVsaW5lGAcgASgJ",
-            "QjLgQQP6QSwKKmFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vVHJhaW5pbmdQ",
-            "aXBlbGluZRJLCg5jb250YWluZXJfc3BlYxgJIAEoCzIuLmdvb2dsZS5jbG91",
-            "ZC5haXBsYXRmb3JtLnYxLk1vZGVsQ29udGFpbmVyU3BlY0ID4EEEEhkKDGFy",
-            "dGlmYWN0X3VyaRgaIAEoCUID4EEFEmwKJHN1cHBvcnRlZF9kZXBsb3ltZW50",
-            "X3Jlc291cmNlc190eXBlcxgKIAMoDjI5Lmdvb2dsZS5jbG91ZC5haXBsYXRm",
-            "b3JtLnYxLk1vZGVsLkRlcGxveW1lbnRSZXNvdXJjZXNUeXBlQgPgQQMSLAof",
-            "c3VwcG9ydGVkX2lucHV0X3N0b3JhZ2VfZm9ybWF0cxgLIAMoCUID4EEDEi0K",
-            "IHN1cHBvcnRlZF9vdXRwdXRfc3RvcmFnZV9mb3JtYXRzGAwgAygJQgPgQQMS",
-            "NAoLY3JlYXRlX3RpbWUYDSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYDiABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wQgPgQQMSSgoPZGVwbG95ZWRfbW9kZWxzGA8gAygLMiwu",
-            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRGVwbG95ZWRNb2RlbFJlZkID",
-            "4EEDEkUKEGV4cGxhbmF0aW9uX3NwZWMYFyABKAsyKy5nb29nbGUuY2xvdWQu",
-            "YWlwbGF0Zm9ybS52MS5FeHBsYW5hdGlvblNwZWMSDAoEZXRhZxgQIAEoCRI9",
-            "CgZsYWJlbHMYESADKAsyLS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5N",
-            "b2RlbC5MYWJlbHNFbnRyeRJDCg9lbmNyeXB0aW9uX3NwZWMYGCABKAsyKi5n",
-            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5FbmNyeXB0aW9uU3BlYxrVAQoM",
-            "RXhwb3J0Rm9ybWF0Eg8KAmlkGAEgASgJQgPgQQMSYgoTZXhwb3J0YWJsZV9j",
-            "b250ZW50cxgCIAMoDjJALmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1v",
-            "ZGVsLkV4cG9ydEZvcm1hdC5FeHBvcnRhYmxlQ29udGVudEID4EEDIlAKEUV4",
-            "cG9ydGFibGVDb250ZW50EiIKHkVYUE9SVEFCTEVfQ09OVEVOVF9VTlNQRUNJ",
-            "RklFRBAAEgwKCEFSVElGQUNUEAESCQoFSU1BR0UQAhotCgtMYWJlbHNFbnRy",
-            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBInYKF0RlcGxveW1l",
-            "bnRSZXNvdXJjZXNUeXBlEikKJURFUExPWU1FTlRfUkVTT1VSQ0VTX1RZUEVf",
-            "VU5TUEVDSUZJRUQQABIXChNERURJQ0FURURfUkVTT1VSQ0VTEAESFwoTQVVU",
-            "T01BVElDX1JFU09VUkNFUxACOlzqQVkKH2FpcGxhdGZvcm0uZ29vZ2xlYXBp",
-            "cy5jb20vTW9kZWwSNnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
-            "Y2F0aW9ufS9tb2RlbHMve21vZGVsfSJ7Cg9QcmVkaWN0U2NoZW1hdGESIAoT",
-            "aW5zdGFuY2Vfc2NoZW1hX3VyaRgBIAEoCUID4EEFEiIKFXBhcmFtZXRlcnNf",
-            "c2NoZW1hX3VyaRgCIAEoCUID4EEFEiIKFXByZWRpY3Rpb25fc2NoZW1hX3Vy",
-            "aRgDIAEoCUID4EEFIvsBChJNb2RlbENvbnRhaW5lclNwZWMSGQoJaW1hZ2Vf",
-            "dXJpGAEgASgJQgbgQQLgQQUSFAoHY29tbWFuZBgCIAMoCUID4EEFEhEKBGFy",
-            "Z3MYAyADKAlCA+BBBRI0CgNlbnYYBCADKAsyIi5nb29nbGUuY2xvdWQuYWlw",
-            "bGF0Zm9ybS52MS5FbnZWYXJCA+BBBRI0CgVwb3J0cxgFIAMoCzIgLmdvb2ds",
-            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLlBvcnRCA+BBBRIaCg1wcmVkaWN0X3Jv",
-            "dXRlGAYgASgJQgPgQQUSGQoMaGVhbHRoX3JvdXRlGAcgASgJQgPgQQUiHgoE",
-            "UG9ydBIWCg5jb250YWluZXJfcG9ydBgDIAEoBULOAQoeY29tLmdvb2dsZS5j",
-            "bG91ZC5haXBsYXRmb3JtLnYxQgpNb2RlbFByb3RvUAFaRGdvb2dsZS5nb2xh",
-            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYWlwbGF0Zm9ybS92",
-            "MTthaXBsYXRmb3JtqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpH",
-            "b29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJ",
-            "UGxhdGZvcm06OlYxYgZwcm90bzM="));
+            "b3RvYnVmL3RpbWVzdGFtcC5wcm90byLyDQoFTW9kZWwSDAoEbmFtZRgBIAEo",
+            "CRIaCgp2ZXJzaW9uX2lkGBwgASgJQgbgQQXgQQMSFwoPdmVyc2lvbl9hbGlh",
+            "c2VzGB0gAygJEjwKE3ZlcnNpb25fY3JlYXRlX3RpbWUYHyABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSPAoTdmVyc2lvbl91cGRhdGVf",
+            "dGltZRggIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIZ",
+            "CgxkaXNwbGF5X25hbWUYAiABKAlCA+BBAhITCgtkZXNjcmlwdGlvbhgDIAEo",
+            "CRIbChN2ZXJzaW9uX2Rlc2NyaXB0aW9uGB4gASgJEkUKEHByZWRpY3Rfc2No",
+            "ZW1hdGEYBCABKAsyKy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5QcmVk",
+            "aWN0U2NoZW1hdGESIAoTbWV0YWRhdGFfc2NoZW1hX3VyaRgFIAEoCUID4EEF",
+            "Ei0KCG1ldGFkYXRhGAYgASgLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlQgPg",
+            "QQUSVQoYc3VwcG9ydGVkX2V4cG9ydF9mb3JtYXRzGBQgAygLMi4uZ29vZ2xl",
+            "LmNsb3VkLmFpcGxhdGZvcm0udjEuTW9kZWwuRXhwb3J0Rm9ybWF0QgPgQQMS",
+            "TQoRdHJhaW5pbmdfcGlwZWxpbmUYByABKAlCMuBBA/pBLAoqYWlwbGF0Zm9y",
+            "bS5nb29nbGVhcGlzLmNvbS9UcmFpbmluZ1BpcGVsaW5lEksKDmNvbnRhaW5l",
+            "cl9zcGVjGAkgASgLMi4uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTW9k",
+            "ZWxDb250YWluZXJTcGVjQgPgQQQSGQoMYXJ0aWZhY3RfdXJpGBogASgJQgPg",
+            "QQUSbAokc3VwcG9ydGVkX2RlcGxveW1lbnRfcmVzb3VyY2VzX3R5cGVzGAog",
+            "AygOMjkuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTW9kZWwuRGVwbG95",
+            "bWVudFJlc291cmNlc1R5cGVCA+BBAxIsCh9zdXBwb3J0ZWRfaW5wdXRfc3Rv",
+            "cmFnZV9mb3JtYXRzGAsgAygJQgPgQQMSLQogc3VwcG9ydGVkX291dHB1dF9z",
+            "dG9yYWdlX2Zvcm1hdHMYDCADKAlCA+BBAxI0CgtjcmVhdGVfdGltZRgNIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVf",
+            "dGltZRgOIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJK",
+            "Cg9kZXBsb3llZF9tb2RlbHMYDyADKAsyLC5nb29nbGUuY2xvdWQuYWlwbGF0",
+            "Zm9ybS52MS5EZXBsb3llZE1vZGVsUmVmQgPgQQMSRQoQZXhwbGFuYXRpb25f",
+            "c3BlYxgXIAEoCzIrLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkV4cGxh",
+            "bmF0aW9uU3BlYxIMCgRldGFnGBAgASgJEj0KBmxhYmVscxgRIAMoCzItLmdv",
+            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1vZGVsLkxhYmVsc0VudHJ5EkMK",
+            "D2VuY3J5cHRpb25fc3BlYxgYIAEoCzIqLmdvb2dsZS5jbG91ZC5haXBsYXRm",
+            "b3JtLnYxLkVuY3J5cHRpb25TcGVjGtUBCgxFeHBvcnRGb3JtYXQSDwoCaWQY",
+            "ASABKAlCA+BBAxJiChNleHBvcnRhYmxlX2NvbnRlbnRzGAIgAygOMkAuZ29v",
+            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTW9kZWwuRXhwb3J0Rm9ybWF0LkV4",
+            "cG9ydGFibGVDb250ZW50QgPgQQMiUAoRRXhwb3J0YWJsZUNvbnRlbnQSIgoe",
+            "RVhQT1JUQUJMRV9DT05URU5UX1VOU1BFQ0lGSUVEEAASDAoIQVJUSUZBQ1QQ",
+            "ARIJCgVJTUFHRRACGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2",
+            "YWx1ZRgCIAEoCToCOAEidgoXRGVwbG95bWVudFJlc291cmNlc1R5cGUSKQol",
+            "REVQTE9ZTUVOVF9SRVNPVVJDRVNfVFlQRV9VTlNQRUNJRklFRBAAEhcKE0RF",
+            "RElDQVRFRF9SRVNPVVJDRVMQARIXChNBVVRPTUFUSUNfUkVTT1VSQ0VTEAI6",
+            "XOpBWQofYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9Nb2RlbBI2cHJvamVj",
+            "dHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L21vZGVscy97bW9k",
+            "ZWx9InsKD1ByZWRpY3RTY2hlbWF0YRIgChNpbnN0YW5jZV9zY2hlbWFfdXJp",
+            "GAEgASgJQgPgQQUSIgoVcGFyYW1ldGVyc19zY2hlbWFfdXJpGAIgASgJQgPg",
+            "QQUSIgoVcHJlZGljdGlvbl9zY2hlbWFfdXJpGAMgASgJQgPgQQUi+wEKEk1v",
+            "ZGVsQ29udGFpbmVyU3BlYxIZCglpbWFnZV91cmkYASABKAlCBuBBAuBBBRIU",
+            "Cgdjb21tYW5kGAIgAygJQgPgQQUSEQoEYXJncxgDIAMoCUID4EEFEjQKA2Vu",
+            "dhgEIAMoCzIiLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkVudlZhckID",
+            "4EEFEjQKBXBvcnRzGAUgAygLMiAuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
+            "djEuUG9ydEID4EEFEhoKDXByZWRpY3Rfcm91dGUYBiABKAlCA+BBBRIZCgxo",
+            "ZWFsdGhfcm91dGUYByABKAlCA+BBBSIeCgRQb3J0EhYKDmNvbnRhaW5lcl9w",
+            "b3J0GAMgASgFQs4BCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFC",
+            "Ck1vZGVsUHJvdG9QAVpEZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29v",
+            "Z2xlYXBpcy9jbG91ZC9haXBsYXRmb3JtL3YxO2FpcGxhdGZvcm2qAhpHb29n",
+            "bGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRm",
+            "b3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.DeployedModelRefReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EnvVarReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ExplanationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Model), global::Google.Cloud.AIPlatform.V1.Model.Parser, new[]{ "Name", "DisplayName", "Description", "PredictSchemata", "MetadataSchemaUri", "Metadata", "SupportedExportFormats", "TrainingPipeline", "ContainerSpec", "ArtifactUri", "SupportedDeploymentResourcesTypes", "SupportedInputStorageFormats", "SupportedOutputStorageFormats", "CreateTime", "UpdateTime", "DeployedModels", "ExplanationSpec", "Etag", "Labels", "EncryptionSpec" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Model.Types.DeploymentResourcesType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Model.Types.ExportFormat), global::Google.Cloud.AIPlatform.V1.Model.Types.ExportFormat.Parser, new[]{ "Id", "ExportableContents" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Model.Types.ExportFormat.Types.ExportableContent) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Model), global::Google.Cloud.AIPlatform.V1.Model.Parser, new[]{ "Name", "VersionId", "VersionAliases", "VersionCreateTime", "VersionUpdateTime", "DisplayName", "Description", "VersionDescription", "PredictSchemata", "MetadataSchemaUri", "Metadata", "SupportedExportFormats", "TrainingPipeline", "ContainerSpec", "ArtifactUri", "SupportedDeploymentResourcesTypes", "SupportedInputStorageFormats", "SupportedOutputStorageFormats", "CreateTime", "UpdateTime", "DeployedModels", "ExplanationSpec", "Etag", "Labels", "EncryptionSpec" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Model.Types.DeploymentResourcesType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Model.Types.ExportFormat), global::Google.Cloud.AIPlatform.V1.Model.Types.ExportFormat.Parser, new[]{ "Id", "ExportableContents" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Model.Types.ExportFormat.Types.ExportableContent) }, null, null),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PredictSchemata), global::Google.Cloud.AIPlatform.V1.PredictSchemata.Parser, new[]{ "InstanceSchemaUri", "ParametersSchemaUri", "PredictionSchemaUri" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelContainerSpec), global::Google.Cloud.AIPlatform.V1.ModelContainerSpec.Parser, new[]{ "ImageUri", "Command", "Args", "Env", "Ports", "PredictRoute", "HealthRoute" }, null, null, null, null),
@@ -134,8 +139,13 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Model(Model other) : this() {
       name_ = other.name_;
+      versionId_ = other.versionId_;
+      versionAliases_ = other.versionAliases_.Clone();
+      versionCreateTime_ = other.versionCreateTime_ != null ? other.versionCreateTime_.Clone() : null;
+      versionUpdateTime_ = other.versionUpdateTime_ != null ? other.versionUpdateTime_.Clone() : null;
       displayName_ = other.displayName_;
       description_ = other.description_;
+      versionDescription_ = other.versionDescription_;
       predictSchemata_ = other.predictSchemata_ != null ? other.predictSchemata_.Clone() : null;
       metadataSchemaUri_ = other.metadataSchemaUri_;
       metadata_ = other.metadata_ != null ? other.metadata_.Clone() : null;
@@ -177,6 +187,76 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "version_id" field.</summary>
+    public const int VersionIdFieldNumber = 28;
+    private string versionId_ = "";
+    /// <summary>
+    /// Output only. Immutable. The version ID of the model.
+    /// A new version is committed when a new model version is uploaded or
+    /// trained under an existing model id. It is an auto-incrementing decimal
+    /// number in string representation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VersionId {
+      get { return versionId_; }
+      set {
+        versionId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "version_aliases" field.</summary>
+    public const int VersionAliasesFieldNumber = 29;
+    private static readonly pb::FieldCodec<string> _repeated_versionAliases_codec
+        = pb::FieldCodec.ForString(234);
+    private readonly pbc::RepeatedField<string> versionAliases_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// User provided version aliases so that a model version can be referenced via
+    /// alias (i.e.
+    /// projects/{project}/locations/{location}/models/{model_id}@{version_alias}
+    /// instead of auto-generated version id (i.e.
+    /// projects/{project}/locations/{location}/models/{model_id}@{version_id}).
+    /// The format is [a-z][a-zA-Z0-9-]{0,126}[a-z0-9] to distinguish from
+    /// version_id. A default version alias will be created for the first version
+    /// of the model, and there must be exactly one default version alias for a
+    /// model.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> VersionAliases {
+      get { return versionAliases_; }
+    }
+
+    /// <summary>Field number for the "version_create_time" field.</summary>
+    public const int VersionCreateTimeFieldNumber = 31;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp versionCreateTime_;
+    /// <summary>
+    /// Output only. Timestamp when this version was created.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp VersionCreateTime {
+      get { return versionCreateTime_; }
+      set {
+        versionCreateTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "version_update_time" field.</summary>
+    public const int VersionUpdateTimeFieldNumber = 32;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp versionUpdateTime_;
+    /// <summary>
+    /// Output only. Timestamp when this version was most recently updated.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp VersionUpdateTime {
+      get { return versionUpdateTime_; }
+      set {
+        versionUpdateTime_ = value;
+      }
+    }
+
     /// <summary>Field number for the "display_name" field.</summary>
     public const int DisplayNameFieldNumber = 2;
     private string displayName_ = "";
@@ -206,6 +286,21 @@ namespace Google.Cloud.AIPlatform.V1 {
       get { return description_; }
       set {
         description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "version_description" field.</summary>
+    public const int VersionDescriptionFieldNumber = 30;
+    private string versionDescription_ = "";
+    /// <summary>
+    /// The description of this version.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VersionDescription {
+      get { return versionDescription_; }
+      set {
+        versionDescription_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -601,8 +696,13 @@ namespace Google.Cloud.AIPlatform.V1 {
         return true;
       }
       if (Name != other.Name) return false;
+      if (VersionId != other.VersionId) return false;
+      if(!versionAliases_.Equals(other.versionAliases_)) return false;
+      if (!object.Equals(VersionCreateTime, other.VersionCreateTime)) return false;
+      if (!object.Equals(VersionUpdateTime, other.VersionUpdateTime)) return false;
       if (DisplayName != other.DisplayName) return false;
       if (Description != other.Description) return false;
+      if (VersionDescription != other.VersionDescription) return false;
       if (!object.Equals(PredictSchemata, other.PredictSchemata)) return false;
       if (MetadataSchemaUri != other.MetadataSchemaUri) return false;
       if (!object.Equals(Metadata, other.Metadata)) return false;
@@ -628,8 +728,13 @@ namespace Google.Cloud.AIPlatform.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (VersionId.Length != 0) hash ^= VersionId.GetHashCode();
+      hash ^= versionAliases_.GetHashCode();
+      if (versionCreateTime_ != null) hash ^= VersionCreateTime.GetHashCode();
+      if (versionUpdateTime_ != null) hash ^= VersionUpdateTime.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (VersionDescription.Length != 0) hash ^= VersionDescription.GetHashCode();
       if (predictSchemata_ != null) hash ^= PredictSchemata.GetHashCode();
       if (MetadataSchemaUri.Length != 0) hash ^= MetadataSchemaUri.GetHashCode();
       if (metadata_ != null) hash ^= Metadata.GetHashCode();
@@ -727,6 +832,23 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(210, 1);
         output.WriteString(ArtifactUri);
       }
+      if (VersionId.Length != 0) {
+        output.WriteRawTag(226, 1);
+        output.WriteString(VersionId);
+      }
+      versionAliases_.WriteTo(output, _repeated_versionAliases_codec);
+      if (VersionDescription.Length != 0) {
+        output.WriteRawTag(242, 1);
+        output.WriteString(VersionDescription);
+      }
+      if (versionCreateTime_ != null) {
+        output.WriteRawTag(250, 1);
+        output.WriteMessage(VersionCreateTime);
+      }
+      if (versionUpdateTime_ != null) {
+        output.WriteRawTag(130, 2);
+        output.WriteMessage(VersionUpdateTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -799,6 +921,23 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(210, 1);
         output.WriteString(ArtifactUri);
       }
+      if (VersionId.Length != 0) {
+        output.WriteRawTag(226, 1);
+        output.WriteString(VersionId);
+      }
+      versionAliases_.WriteTo(ref output, _repeated_versionAliases_codec);
+      if (VersionDescription.Length != 0) {
+        output.WriteRawTag(242, 1);
+        output.WriteString(VersionDescription);
+      }
+      if (versionCreateTime_ != null) {
+        output.WriteRawTag(250, 1);
+        output.WriteMessage(VersionCreateTime);
+      }
+      if (versionUpdateTime_ != null) {
+        output.WriteRawTag(130, 2);
+        output.WriteMessage(VersionUpdateTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -812,11 +951,24 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
+      if (VersionId.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(VersionId);
+      }
+      size += versionAliases_.CalculateSize(_repeated_versionAliases_codec);
+      if (versionCreateTime_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(VersionCreateTime);
+      }
+      if (versionUpdateTime_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(VersionUpdateTime);
+      }
       if (DisplayName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
       }
       if (Description.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (VersionDescription.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(VersionDescription);
       }
       if (predictSchemata_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PredictSchemata);
@@ -872,11 +1024,30 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
+      if (other.VersionId.Length != 0) {
+        VersionId = other.VersionId;
+      }
+      versionAliases_.Add(other.versionAliases_);
+      if (other.versionCreateTime_ != null) {
+        if (versionCreateTime_ == null) {
+          VersionCreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        VersionCreateTime.MergeFrom(other.VersionCreateTime);
+      }
+      if (other.versionUpdateTime_ != null) {
+        if (versionUpdateTime_ == null) {
+          VersionUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        VersionUpdateTime.MergeFrom(other.VersionUpdateTime);
+      }
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }
       if (other.Description.Length != 0) {
         Description = other.Description;
+      }
+      if (other.VersionDescription.Length != 0) {
+        VersionDescription = other.VersionDescription;
       }
       if (other.predictSchemata_ != null) {
         if (predictSchemata_ == null) {
@@ -1055,6 +1226,32 @@ namespace Google.Cloud.AIPlatform.V1 {
             ArtifactUri = input.ReadString();
             break;
           }
+          case 226: {
+            VersionId = input.ReadString();
+            break;
+          }
+          case 234: {
+            versionAliases_.AddEntriesFrom(input, _repeated_versionAliases_codec);
+            break;
+          }
+          case 242: {
+            VersionDescription = input.ReadString();
+            break;
+          }
+          case 250: {
+            if (versionCreateTime_ == null) {
+              VersionCreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(VersionCreateTime);
+            break;
+          }
+          case 258: {
+            if (versionUpdateTime_ == null) {
+              VersionUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(VersionUpdateTime);
+            break;
+          }
         }
       }
     #endif
@@ -1170,6 +1367,32 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 210: {
             ArtifactUri = input.ReadString();
+            break;
+          }
+          case 226: {
+            VersionId = input.ReadString();
+            break;
+          }
+          case 234: {
+            versionAliases_.AddEntriesFrom(ref input, _repeated_versionAliases_codec);
+            break;
+          }
+          case 242: {
+            VersionDescription = input.ReadString();
+            break;
+          }
+          case 250: {
+            if (versionCreateTime_ == null) {
+              VersionCreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(VersionCreateTime);
+            break;
+          }
+          case 258: {
+            if (versionUpdateTime_ == null) {
+              VersionUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(VersionUpdateTime);
             break;
           }
         }

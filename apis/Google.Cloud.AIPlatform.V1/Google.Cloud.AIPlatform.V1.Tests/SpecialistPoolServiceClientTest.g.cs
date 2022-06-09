@@ -16,6 +16,8 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -33,6 +35,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<SpecialistPoolService.SpecialistPoolServiceClient> mockGrpcClient = new moq::Mock<SpecialistPoolService.SpecialistPoolServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetSpecialistPoolRequest request = new GetSpecialistPoolRequest
             {
                 SpecialistPoolName = SpecialistPoolName.FromProjectLocationSpecialistPool("[PROJECT]", "[LOCATION]", "[SPECIALIST_POOL]"),
@@ -67,6 +71,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<SpecialistPoolService.SpecialistPoolServiceClient> mockGrpcClient = new moq::Mock<SpecialistPoolService.SpecialistPoolServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetSpecialistPoolRequest request = new GetSpecialistPoolRequest
             {
                 SpecialistPoolName = SpecialistPoolName.FromProjectLocationSpecialistPool("[PROJECT]", "[LOCATION]", "[SPECIALIST_POOL]"),
@@ -103,6 +109,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<SpecialistPoolService.SpecialistPoolServiceClient> mockGrpcClient = new moq::Mock<SpecialistPoolService.SpecialistPoolServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetSpecialistPoolRequest request = new GetSpecialistPoolRequest
             {
                 SpecialistPoolName = SpecialistPoolName.FromProjectLocationSpecialistPool("[PROJECT]", "[LOCATION]", "[SPECIALIST_POOL]"),
@@ -137,6 +145,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<SpecialistPoolService.SpecialistPoolServiceClient> mockGrpcClient = new moq::Mock<SpecialistPoolService.SpecialistPoolServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetSpecialistPoolRequest request = new GetSpecialistPoolRequest
             {
                 SpecialistPoolName = SpecialistPoolName.FromProjectLocationSpecialistPool("[PROJECT]", "[LOCATION]", "[SPECIALIST_POOL]"),
@@ -173,6 +183,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<SpecialistPoolService.SpecialistPoolServiceClient> mockGrpcClient = new moq::Mock<SpecialistPoolService.SpecialistPoolServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetSpecialistPoolRequest request = new GetSpecialistPoolRequest
             {
                 SpecialistPoolName = SpecialistPoolName.FromProjectLocationSpecialistPool("[PROJECT]", "[LOCATION]", "[SPECIALIST_POOL]"),
@@ -207,6 +219,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<SpecialistPoolService.SpecialistPoolServiceClient> mockGrpcClient = new moq::Mock<SpecialistPoolService.SpecialistPoolServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetSpecialistPoolRequest request = new GetSpecialistPoolRequest
             {
                 SpecialistPoolName = SpecialistPoolName.FromProjectLocationSpecialistPool("[PROJECT]", "[LOCATION]", "[SPECIALIST_POOL]"),
