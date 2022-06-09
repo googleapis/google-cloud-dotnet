@@ -1,6 +1,6 @@
 # Version history
 
-## Version 3.0.0, released 2022-06-08
+## Version 3.0.0, released 2022-06-09
 
 This is the first version of this package to depend on GAX v4.
 
