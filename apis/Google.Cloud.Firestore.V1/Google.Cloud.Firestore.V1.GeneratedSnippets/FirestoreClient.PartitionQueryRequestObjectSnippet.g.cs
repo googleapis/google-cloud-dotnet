@@ -19,6 +19,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
     // [START firestore_v1_generated_Firestore_PartitionQuery_sync]
     using Google.Api.Gax;
     using Google.Cloud.Firestore.V1;
+    using Google.Protobuf.WellKnownTypes;
     using System;
 
     public sealed partial class GeneratedFirestoreClientSnippets
@@ -38,6 +39,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
                 Parent = "",
                 StructuredQuery = new StructuredQuery(),
                 PartitionCount = 0L,
+                ReadTime = new Timestamp(),
             };
             // Make the request
             PagedEnumerable<PartitionQueryResponse, Cursor> response = firestoreClient.PartitionQuery(request);

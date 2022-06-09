@@ -19,6 +19,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
     // [START firestore_v1_generated_Firestore_ListCollectionIds_async]
     using Google.Api.Gax;
     using Google.Cloud.Firestore.V1;
+    using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Linq;
     using System.Threading.Tasks;
@@ -35,7 +36,11 @@ namespace Google.Cloud.Firestore.V1.Snippets
             // Create client
             FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
             // Initialize request argument(s)
-            ListCollectionIdsRequest request = new ListCollectionIdsRequest { Parent = "", };
+            ListCollectionIdsRequest request = new ListCollectionIdsRequest
+            {
+                Parent = "",
+                ReadTime = new Timestamp(),
+            };
             // Make the request
             PagedAsyncEnumerable<ListCollectionIdsResponse, string> response = firestoreClient.ListCollectionIdsAsync(request);
 
