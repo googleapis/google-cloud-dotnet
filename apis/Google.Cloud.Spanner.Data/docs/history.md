@@ -1,5 +1,35 @@
 # Version history
 
+## Version 4.0.0-beta01, released 2022-06-09
+
+This is the first version of this package to depend on GAX v4.
+
+There are some breaking changes, both in GAX v4 and in the generated
+code. The changes that aren't specific to any given API are [described in the Google Cloud
+documentation](https://cloud.google.com/dotnet/docs/reference/help/breaking-gax4).
+We don't anticipate any changes to most customer code, but please [file a
+GitHub issue](https://github.com/googleapis/google-cloud-dotnet/issues/new/choose)
+if you run into problems.
+
+The most important change in this release is the use of the Grpc.Net.Client package
+for gRPC communication, instead of Grpc.Core. When using .NET Core 3.1 or .NET 5.0+
+this should lead to a smaller installation footprint and greater compatibility (e.g.
+with Apple M1 chips). Any significant change in a core component comes with the risk
+of incompatibility, however - so again, please let us know if you encounter any
+issues.
+
+### New features
+
+- Add an adapter for an ILogger to a Spanner Logger ([commit 5b7556b](https://github.com/googleapis/google-cloud-dotnet/commit/5b7556b84be5e708d6ae69ace2e32e2299ef2ae1))
+  - This is an interim step to allow logs to be easily unified (to ILogger) before we eventually remove the Spanner internal logging system entirely.
+- Use self-signed JWTs in Spanner clients ([commit d465906](https://github.com/googleapis/google-cloud-dotnet/commit/d465906a562719eb4d0ddb8574110cf47ffc71ca))
+- Add Session creator role ([commit ffa9c84](https://github.com/googleapis/google-cloud-dotnet/commit/ffa9c8456626be0270836428b7ff19408e8c9d2d))
+- Allow default conversions between Spanner and the CLR to be specified via connection string options
+
+### Documentation improvements
+
+- Clarify transaction semantics ([commit ffa9c84](https://github.com/googleapis/google-cloud-dotnet/commit/ffa9c8456626be0270836428b7ff19408e8c9d2d))
+
 ## Version 3.15.1, released 2022-05-05
 
 ### Bug fixes
