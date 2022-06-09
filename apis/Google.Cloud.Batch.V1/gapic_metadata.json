@@ -1,0 +1,54 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.batch.v1",
+  "libraryPackage": "Google.Cloud.Batch.V1",
+  "services": {
+    "BatchService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "BatchServiceClient",
+          "rpcs": {
+            "CreateJob": {
+              "methods": [
+                "CreateJob",
+                "CreateJobAsync"
+              ]
+            },
+            "DeleteJob": {
+              "methods": [
+                "DeleteJob",
+                "DeleteJobAsync"
+              ]
+            },
+            "GetJob": {
+              "methods": [
+                "GetJob",
+                "GetJobAsync"
+              ]
+            },
+            "GetTask": {
+              "methods": [
+                "GetTask",
+                "GetTaskAsync"
+              ]
+            },
+            "ListJobs": {
+              "methods": [
+                "ListJobs",
+                "ListJobsAsync"
+              ]
+            },
+            "ListTasks": {
+              "methods": [
+                "ListTasks",
+                "ListTasksAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
