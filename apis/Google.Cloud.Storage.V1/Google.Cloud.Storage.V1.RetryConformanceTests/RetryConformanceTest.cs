@@ -109,6 +109,8 @@ namespace Google.Cloud.Storage.V1.RetryConformanceTests
 
         private async Task GetUpdatedStatus(string resourceId)
         {
+            // Use our retry method to be tested here
+            _storageClient.Service.HttpClient.DefaultRequestHeaders.Clear();
             _storageClient.Service.HttpClient.DefaultRequestHeaders.Add("x-retry-test-id", resourceId);
             var response = await _storageClient.Service.HttpClient.GetAsync(TestBenchUrl + "storage/v1/b?project=test");
             var result = response.Content.ReadAsStringAsync().Result;
