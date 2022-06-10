@@ -12,6 +12,7 @@
     "apis/Google.Cloud.ApiGateway.V1/Google.Cloud.ApiGateway.V1/**",
     "apis/Google.Cloud.AIPlatform.V1/Google.Cloud.AIPlatform.V1/**",
     "apis/Google.Cloud.ApigeeConnect.V1/Google.Cloud.ApigeeConnect.V1/**",
+    "apis/Google.Cloud.ApigeeRegistry.V1/Google.Cloud.ApigeeRegistry.V1/**",
     "apis/Google.Cloud.AppEngine.V1/Google.Cloud.AppEngine.V1/**",
     "apis/Google.Cloud.ArtifactRegistry.V1/Google.Cloud.ArtifactRegistry.V1/**",
     "apis/Google.Cloud.ArtifactRegistry.V1Beta2/Google.Cloud.ArtifactRegistry.V1Beta2/**",
