@@ -1,5 +1,19 @@
 # Version history
 
+## Version 4.0.0-beta02, released 2022-06-13
+
+### New features
+
+- Add connection string options support to Keys ([commit 65920aa](https://github.com/googleapis/google-cloud-dotnet/commit/65920aa1e6f44751ebe5295b99cdd63b5763a503))
+
+BREAKING CHANGE: The Key classes (Key, KeyRange, KeySet) used to be
+immutable, and support equality as well as overriding ToString. As
+conversions from CLR to Spanner values now depend on the connection
+string, there's now an overload for ToString accepting a
+ConnectioStringBuilder, but no support for equality. We don't
+anticipate this breaking customers except perhaps for testing
+purposes.
+
 ## Version 4.0.0-beta01, released 2022-06-09
 
 This is the first version of this package to depend on GAX v4.
