@@ -1,0 +1,312 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.dataplex.v1",
+  "libraryPackage": "Google.Cloud.Dataplex.V1",
+  "services": {
+    "ContentService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ContentServiceClient",
+          "rpcs": {
+            "CreateContent": {
+              "methods": [
+                "CreateContent",
+                "CreateContentAsync"
+              ]
+            },
+            "DeleteContent": {
+              "methods": [
+                "DeleteContent",
+                "DeleteContentAsync"
+              ]
+            },
+            "GetContent": {
+              "methods": [
+                "GetContent",
+                "GetContentAsync"
+              ]
+            },
+            "ListContent": {
+              "methods": [
+                "ListContent",
+                "ListContentAsync"
+              ]
+            },
+            "UpdateContent": {
+              "methods": [
+                "UpdateContent",
+                "UpdateContentAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "DataplexService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DataplexServiceClient",
+          "rpcs": {
+            "CancelJob": {
+              "methods": [
+                "CancelJob",
+                "CancelJobAsync"
+              ]
+            },
+            "CreateAsset": {
+              "methods": [
+                "CreateAsset",
+                "CreateAssetAsync"
+              ]
+            },
+            "CreateEnvironment": {
+              "methods": [
+                "CreateEnvironment",
+                "CreateEnvironmentAsync"
+              ]
+            },
+            "CreateLake": {
+              "methods": [
+                "CreateLake",
+                "CreateLakeAsync"
+              ]
+            },
+            "CreateTask": {
+              "methods": [
+                "CreateTask",
+                "CreateTaskAsync"
+              ]
+            },
+            "CreateZone": {
+              "methods": [
+                "CreateZone",
+                "CreateZoneAsync"
+              ]
+            },
+            "DeleteAsset": {
+              "methods": [
+                "DeleteAsset",
+                "DeleteAssetAsync"
+              ]
+            },
+            "DeleteEnvironment": {
+              "methods": [
+                "DeleteEnvironment",
+                "DeleteEnvironmentAsync"
+              ]
+            },
+            "DeleteLake": {
+              "methods": [
+                "DeleteLake",
+                "DeleteLakeAsync"
+              ]
+            },
+            "DeleteTask": {
+              "methods": [
+                "DeleteTask",
+                "DeleteTaskAsync"
+              ]
+            },
+            "DeleteZone": {
+              "methods": [
+                "DeleteZone",
+                "DeleteZoneAsync"
+              ]
+            },
+            "GetAsset": {
+              "methods": [
+                "GetAsset",
+                "GetAssetAsync"
+              ]
+            },
+            "GetEnvironment": {
+              "methods": [
+                "GetEnvironment",
+                "GetEnvironmentAsync"
+              ]
+            },
+            "GetJob": {
+              "methods": [
+                "GetJob",
+                "GetJobAsync"
+              ]
+            },
+            "GetLake": {
+              "methods": [
+                "GetLake",
+                "GetLakeAsync"
+              ]
+            },
+            "GetTask": {
+              "methods": [
+                "GetTask",
+                "GetTaskAsync"
+              ]
+            },
+            "GetZone": {
+              "methods": [
+                "GetZone",
+                "GetZoneAsync"
+              ]
+            },
+            "ListAssetActions": {
+              "methods": [
+                "ListAssetActions",
+                "ListAssetActionsAsync"
+              ]
+            },
+            "ListAssets": {
+              "methods": [
+                "ListAssets",
+                "ListAssetsAsync"
+              ]
+            },
+            "ListEnvironments": {
+              "methods": [
+                "ListEnvironments",
+                "ListEnvironmentsAsync"
+              ]
+            },
+            "ListJobs": {
+              "methods": [
+                "ListJobs",
+                "ListJobsAsync"
+              ]
+            },
+            "ListLakeActions": {
+              "methods": [
+                "ListLakeActions",
+                "ListLakeActionsAsync"
+              ]
+            },
+            "ListLakes": {
+              "methods": [
+                "ListLakes",
+                "ListLakesAsync"
+              ]
+            },
+            "ListSessions": {
+              "methods": [
+                "ListSessions",
+                "ListSessionsAsync"
+              ]
+            },
+            "ListTasks": {
+              "methods": [
+                "ListTasks",
+                "ListTasksAsync"
+              ]
+            },
+            "ListZoneActions": {
+              "methods": [
+                "ListZoneActions",
+                "ListZoneActionsAsync"
+              ]
+            },
+            "ListZones": {
+              "methods": [
+                "ListZones",
+                "ListZonesAsync"
+              ]
+            },
+            "UpdateAsset": {
+              "methods": [
+                "UpdateAsset",
+                "UpdateAssetAsync"
+              ]
+            },
+            "UpdateEnvironment": {
+              "methods": [
+                "UpdateEnvironment",
+                "UpdateEnvironmentAsync"
+              ]
+            },
+            "UpdateLake": {
+              "methods": [
+                "UpdateLake",
+                "UpdateLakeAsync"
+              ]
+            },
+            "UpdateTask": {
+              "methods": [
+                "UpdateTask",
+                "UpdateTaskAsync"
+              ]
+            },
+            "UpdateZone": {
+              "methods": [
+                "UpdateZone",
+                "UpdateZoneAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "MetadataService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "MetadataServiceClient",
+          "rpcs": {
+            "CreateEntity": {
+              "methods": [
+                "CreateEntity",
+                "CreateEntityAsync"
+              ]
+            },
+            "CreatePartition": {
+              "methods": [
+                "CreatePartition",
+                "CreatePartitionAsync"
+              ]
+            },
+            "DeleteEntity": {
+              "methods": [
+                "DeleteEntity",
+                "DeleteEntityAsync"
+              ]
+            },
+            "DeletePartition": {
+              "methods": [
+                "DeletePartition",
+                "DeletePartitionAsync"
+              ]
+            },
+            "GetEntity": {
+              "methods": [
+                "GetEntity",
+                "GetEntityAsync"
+              ]
+            },
+            "GetPartition": {
+              "methods": [
+                "GetPartition",
+                "GetPartitionAsync"
+              ]
+            },
+            "ListEntities": {
+              "methods": [
+                "ListEntities",
+                "ListEntitiesAsync"
+              ]
+            },
+            "ListPartitions": {
+              "methods": [
+                "ListPartitions",
+                "ListPartitionsAsync"
+              ]
+            },
+            "UpdateEntity": {
+              "methods": [
+                "UpdateEntity",
+                "UpdateEntityAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
