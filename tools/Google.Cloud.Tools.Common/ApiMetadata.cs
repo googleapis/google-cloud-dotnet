@@ -255,7 +255,7 @@ namespace Google.Cloud.Tools.Common
         /// <summary>
         /// The option to pass to protoc for API transports. (Note that this is singular
         /// to conform with the existing option in other languages.) Values are expected to
-        /// be semi-colon-separated, e.g. "grpc", "rest" or "grpc;rest". Defaults to "grpc"
+        /// be plus-separated, e.g. "grpc", "rest" or "grpc+rest". Defaults to "grpc"
         /// during generation.
         /// </summary>
         public string Transport { get; set; }
