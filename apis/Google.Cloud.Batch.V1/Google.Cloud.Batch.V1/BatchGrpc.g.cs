@@ -24,7 +24,7 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Batch.V1 {
   /// <summary>
-  /// Google Cloud Batch Service.
+  /// Google Batch Service.
   /// The service manages user submitted batch jobs and allocates Google Compute
   /// Engine VM instances to run the jobs.
   /// </summary>
@@ -183,7 +183,7 @@ namespace Google.Cloud.Batch.V1 {
       }
 
       /// <summary>
-      /// List all Jobs for a project.
+      /// List all Jobs for a project within a region.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -392,7 +392,7 @@ namespace Google.Cloud.Batch.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteJob, null, options, request);
       }
       /// <summary>
-      /// List all Jobs for a project.
+      /// List all Jobs for a project within a region.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -405,7 +405,7 @@ namespace Google.Cloud.Batch.V1 {
         return ListJobs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// List all Jobs for a project.
+      /// List all Jobs for a project within a region.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -416,7 +416,7 @@ namespace Google.Cloud.Batch.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListJobs, null, options, request);
       }
       /// <summary>
-      /// List all Jobs for a project.
+      /// List all Jobs for a project within a region.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -429,7 +429,7 @@ namespace Google.Cloud.Batch.V1 {
         return ListJobsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// List all Jobs for a project.
+      /// List all Jobs for a project within a region.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

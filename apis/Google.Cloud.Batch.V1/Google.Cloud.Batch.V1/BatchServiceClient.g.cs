@@ -246,7 +246,7 @@ namespace Google.Cloud.Batch.V1
 
     /// <summary>BatchService client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// Google Cloud Batch Service.
+    /// Google Batch Service.
     /// The service manages user submitted batch jobs and allocates Google Compute
     /// Engine VM instances to run the jobs.
     /// </remarks>
@@ -368,7 +368,7 @@ namespace Google.Cloud.Batch.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name where the Job will be created.
-        /// Format: projects/{project}/locations/{location}
+        /// Pattern: "projects/{project}/locations/{location}"
         /// </param>
         /// <param name="job">
         /// Required. The Job to create.
@@ -398,7 +398,7 @@ namespace Google.Cloud.Batch.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name where the Job will be created.
-        /// Format: projects/{project}/locations/{location}
+        /// Pattern: "projects/{project}/locations/{location}"
         /// </param>
         /// <param name="job">
         /// Required. The Job to create.
@@ -428,7 +428,7 @@ namespace Google.Cloud.Batch.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name where the Job will be created.
-        /// Format: projects/{project}/locations/{location}
+        /// Pattern: "projects/{project}/locations/{location}"
         /// </param>
         /// <param name="job">
         /// Required. The Job to create.
@@ -453,7 +453,7 @@ namespace Google.Cloud.Batch.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name where the Job will be created.
-        /// Format: projects/{project}/locations/{location}
+        /// Pattern: "projects/{project}/locations/{location}"
         /// </param>
         /// <param name="job">
         /// Required. The Job to create.
@@ -483,7 +483,7 @@ namespace Google.Cloud.Batch.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name where the Job will be created.
-        /// Format: projects/{project}/locations/{location}
+        /// Pattern: "projects/{project}/locations/{location}"
         /// </param>
         /// <param name="job">
         /// Required. The Job to create.
@@ -513,7 +513,7 @@ namespace Google.Cloud.Batch.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name where the Job will be created.
-        /// Format: projects/{project}/locations/{location}
+        /// Pattern: "projects/{project}/locations/{location}"
         /// </param>
         /// <param name="job">
         /// Required. The Job to create.
@@ -725,7 +725,7 @@ namespace Google.Cloud.Batch.V1
             DeleteJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// List all Jobs for a project.
+        /// List all Jobs for a project within a region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -734,7 +734,7 @@ namespace Google.Cloud.Batch.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// List all Jobs for a project.
+        /// List all Jobs for a project within a region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -743,7 +743,7 @@ namespace Google.Cloud.Batch.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// List all Jobs for a project.
+        /// List all Jobs for a project within a region.
         /// </summary>
         /// <param name="parent">
         /// Parent path.
@@ -767,7 +767,7 @@ namespace Google.Cloud.Batch.V1
             }, callSettings);
 
         /// <summary>
-        /// List all Jobs for a project.
+        /// List all Jobs for a project within a region.
         /// </summary>
         /// <param name="parent">
         /// Parent path.
@@ -917,7 +917,9 @@ namespace Google.Cloud.Batch.V1
         /// List Tasks associated with a job.
         /// </summary>
         /// <param name="parent">
-        /// Required. Path of the TaskGroup from which Tasks are being requested.
+        /// Required. Name of a TaskGroup from which Tasks are being requested.
+        /// Pattern:
+        /// "projects/{project}/locations/{location}/jobs/{job}/taskGroups/{task_group}"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -941,7 +943,9 @@ namespace Google.Cloud.Batch.V1
         /// List Tasks associated with a job.
         /// </summary>
         /// <param name="parent">
-        /// Required. Path of the TaskGroup from which Tasks are being requested.
+        /// Required. Name of a TaskGroup from which Tasks are being requested.
+        /// Pattern:
+        /// "projects/{project}/locations/{location}/jobs/{job}/taskGroups/{task_group}"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -965,7 +969,9 @@ namespace Google.Cloud.Batch.V1
         /// List Tasks associated with a job.
         /// </summary>
         /// <param name="parent">
-        /// Required. Path of the TaskGroup from which Tasks are being requested.
+        /// Required. Name of a TaskGroup from which Tasks are being requested.
+        /// Pattern:
+        /// "projects/{project}/locations/{location}/jobs/{job}/taskGroups/{task_group}"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -989,7 +995,9 @@ namespace Google.Cloud.Batch.V1
         /// List Tasks associated with a job.
         /// </summary>
         /// <param name="parent">
-        /// Required. Path of the TaskGroup from which Tasks are being requested.
+        /// Required. Name of a TaskGroup from which Tasks are being requested.
+        /// Pattern:
+        /// "projects/{project}/locations/{location}/jobs/{job}/taskGroups/{task_group}"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1012,7 +1020,7 @@ namespace Google.Cloud.Batch.V1
 
     /// <summary>BatchService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// Google Cloud Batch Service.
+    /// Google Batch Service.
     /// The service manages user submitted batch jobs and allocates Google Compute
     /// Engine VM instances to run the jobs.
     /// </remarks>
@@ -1178,7 +1186,7 @@ namespace Google.Cloud.Batch.V1
         }
 
         /// <summary>
-        /// List all Jobs for a project.
+        /// List all Jobs for a project within a region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1190,7 +1198,7 @@ namespace Google.Cloud.Batch.V1
         }
 
         /// <summary>
-        /// List all Jobs for a project.
+        /// List all Jobs for a project within a region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
