@@ -123,6 +123,9 @@ copy_one_api() {
   fi
 }
 
+# Avoid .NET complaining about submodules being missing
+git submodule update --init --recursive
+
 # Iterate over all the apis in the /owl-bot-staging directory, and copy
 # the files into the /apis directory.
 if [[ -d owl-bot-staging ]]
