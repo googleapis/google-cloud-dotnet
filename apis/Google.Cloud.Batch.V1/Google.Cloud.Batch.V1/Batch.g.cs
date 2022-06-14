@@ -78,10 +78,11 @@ namespace Google.Cloud.Batch.V1 {
             "YXNrc1Jlc3BvbnNlIk6C0+STAj8SPS92MS97cGFyZW50PXByb2plY3RzLyov",
             "bG9jYXRpb25zLyovam9icy8qL3Rhc2tHcm91cHMvKn0vdGFza3PaQQZwYXJl",
             "bnQaSMpBFGJhdGNoLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29v",
-            "Z2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUJrChljb20uZ29vZ2xl",
-            "LmNsb3VkLmJhdGNoLnYxQgpCYXRjaFByb3RvUAFaOmdvb2dsZS5nb2xhbmcu",
-            "b3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYmF0Y2gvdjE7YmF0Y2ii",
-            "AgNHQ0JiBnByb3RvMw=="));
+            "Z2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUK2AQoZY29tLmdvb2ds",
+            "ZS5jbG91ZC5iYXRjaC52MUIKQmF0Y2hQcm90b1ABWjpnb29nbGUuZ29sYW5n",
+            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2JhdGNoL3YxO2JhdGNo",
+            "ogIDR0NCqgIVR29vZ2xlLkNsb3VkLkJhdGNoLlYxygIVR29vZ2xlXENsb3Vk",
+            "XEJhdGNoXFYx6gIYR29vZ2xlOjpDbG91ZDo6QmF0Y2g6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Batch.V1.JobReflection.Descriptor, global::Google.Cloud.Batch.V1.TaskReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -155,7 +156,7 @@ namespace Google.Cloud.Batch.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The parent resource name where the Job will be created.
-    /// Format: projects/{project}/locations/{location}
+    /// Pattern: "projects/{project}/locations/{location}"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1548,7 +1549,9 @@ namespace Google.Cloud.Batch.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. Path of the TaskGroup from which Tasks are being requested.
+    /// Required. Name of a TaskGroup from which Tasks are being requested.
+    /// Pattern:
+    /// "projects/{project}/locations/{location}/jobs/{job}/taskGroups/{task_group}"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1812,7 +1815,7 @@ namespace Google.Cloud.Batch.V1 {
   }
 
   /// <summary>
-  /// ListAssignedTasks Response.
+  /// ListTasks Response.
   /// </summary>
   public sealed partial class ListTasksResponse : pb::IMessage<ListTasksResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

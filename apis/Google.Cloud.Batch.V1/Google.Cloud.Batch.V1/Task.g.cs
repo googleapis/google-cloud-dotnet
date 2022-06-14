@@ -74,10 +74,11 @@ namespace Google.Cloud.Batch.V1 {
             "X2dyb3VwfS90YXNrcy97dGFza30ihQEKC0Vudmlyb25tZW50EkQKCXZhcmlh",
             "YmxlcxgBIAMoCzIxLmdvb2dsZS5jbG91ZC5iYXRjaC52MS5FbnZpcm9ubWVu",
             "dC5WYXJpYWJsZXNFbnRyeRowCg5WYXJpYWJsZXNFbnRyeRILCgNrZXkYASAB",
-            "KAkSDQoFdmFsdWUYAiABKAk6AjgBQmoKGWNvbS5nb29nbGUuY2xvdWQuYmF0",
-            "Y2gudjFCCVRhc2tQcm90b1ABWjpnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
-            "by9nb29nbGVhcGlzL2Nsb3VkL2JhdGNoL3YxO2JhdGNoogIDR0NCYgZwcm90",
-            "bzM="));
+            "KAkSDQoFdmFsdWUYAiABKAk6AjgBQrUBChljb20uZ29vZ2xlLmNsb3VkLmJh",
+            "dGNoLnYxQglUYXNrUHJvdG9QAVo6Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
+            "dG8vZ29vZ2xlYXBpcy9jbG91ZC9iYXRjaC92MTtiYXRjaKICA0dDQqoCFUdv",
+            "b2dsZS5DbG91ZC5CYXRjaC5WMcoCFUdvb2dsZVxDbG91ZFxCYXRjaFxWMeoC",
+            "GEdvb2dsZTo6Q2xvdWQ6OkJhdGNoOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Batch.V1.VolumeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -2171,7 +2172,7 @@ namespace Google.Cloud.Batch.V1 {
         /// <summary>Field number for the "path" field.</summary>
         public const int PathFieldNumber = 1;
         /// <summary>
-        /// Script file path.
+        /// Script file path on the host VM.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2715,7 +2716,7 @@ namespace Google.Cloud.Batch.V1 {
     /// Lifecycle management schema when any task in a task group is failed.
     /// The valid size of lifecycle policies are [0, 10].
     /// For each lifecycle policy, when the condition is met,
-    /// the action in that policy will be executed.
+    /// the action in that policy will execute.
     /// If there are multiple policies that the task execution result matches,
     /// we use the action from the first matched policy. If task execution result
     /// does not meet with any of the defined lifecycle policy, we consider it as
