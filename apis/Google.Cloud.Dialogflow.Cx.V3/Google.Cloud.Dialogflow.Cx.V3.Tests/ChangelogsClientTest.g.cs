@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -32,6 +33,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void GetChangelogRequestObject()
         {
             moq::Mock<Changelogs.ChangelogsClient> mockGrpcClient = new moq::Mock<Changelogs.ChangelogsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetChangelogRequest request = new GetChangelogRequest
             {
                 ChangelogName = ChangelogName.FromProjectLocationAgentChangelog("[PROJECT]", "[LOCATION]", "[AGENT]", "[CHANGELOG]"),
@@ -57,6 +59,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task GetChangelogRequestObjectAsync()
         {
             moq::Mock<Changelogs.ChangelogsClient> mockGrpcClient = new moq::Mock<Changelogs.ChangelogsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetChangelogRequest request = new GetChangelogRequest
             {
                 ChangelogName = ChangelogName.FromProjectLocationAgentChangelog("[PROJECT]", "[LOCATION]", "[AGENT]", "[CHANGELOG]"),
@@ -84,6 +87,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void GetChangelog()
         {
             moq::Mock<Changelogs.ChangelogsClient> mockGrpcClient = new moq::Mock<Changelogs.ChangelogsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetChangelogRequest request = new GetChangelogRequest
             {
                 ChangelogName = ChangelogName.FromProjectLocationAgentChangelog("[PROJECT]", "[LOCATION]", "[AGENT]", "[CHANGELOG]"),
@@ -109,6 +113,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task GetChangelogAsync()
         {
             moq::Mock<Changelogs.ChangelogsClient> mockGrpcClient = new moq::Mock<Changelogs.ChangelogsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetChangelogRequest request = new GetChangelogRequest
             {
                 ChangelogName = ChangelogName.FromProjectLocationAgentChangelog("[PROJECT]", "[LOCATION]", "[AGENT]", "[CHANGELOG]"),
@@ -136,6 +141,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void GetChangelogResourceNames()
         {
             moq::Mock<Changelogs.ChangelogsClient> mockGrpcClient = new moq::Mock<Changelogs.ChangelogsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetChangelogRequest request = new GetChangelogRequest
             {
                 ChangelogName = ChangelogName.FromProjectLocationAgentChangelog("[PROJECT]", "[LOCATION]", "[AGENT]", "[CHANGELOG]"),
@@ -161,6 +167,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task GetChangelogResourceNamesAsync()
         {
             moq::Mock<Changelogs.ChangelogsClient> mockGrpcClient = new moq::Mock<Changelogs.ChangelogsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetChangelogRequest request = new GetChangelogRequest
             {
                 ChangelogName = ChangelogName.FromProjectLocationAgentChangelog("[PROJECT]", "[LOCATION]", "[AGENT]", "[CHANGELOG]"),

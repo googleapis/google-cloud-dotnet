@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -32,6 +33,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void GetDeploymentRequestObject()
         {
             moq::Mock<Deployments.DeploymentsClient> mockGrpcClient = new moq::Mock<Deployments.DeploymentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDeploymentRequest request = new GetDeploymentRequest
             {
                 DeploymentName = DeploymentName.FromProjectLocationAgentEnvironmentDeployment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[DEPLOYMENT]"),
@@ -56,6 +58,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task GetDeploymentRequestObjectAsync()
         {
             moq::Mock<Deployments.DeploymentsClient> mockGrpcClient = new moq::Mock<Deployments.DeploymentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDeploymentRequest request = new GetDeploymentRequest
             {
                 DeploymentName = DeploymentName.FromProjectLocationAgentEnvironmentDeployment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[DEPLOYMENT]"),
@@ -82,6 +85,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void GetDeployment()
         {
             moq::Mock<Deployments.DeploymentsClient> mockGrpcClient = new moq::Mock<Deployments.DeploymentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDeploymentRequest request = new GetDeploymentRequest
             {
                 DeploymentName = DeploymentName.FromProjectLocationAgentEnvironmentDeployment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[DEPLOYMENT]"),
@@ -106,6 +110,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task GetDeploymentAsync()
         {
             moq::Mock<Deployments.DeploymentsClient> mockGrpcClient = new moq::Mock<Deployments.DeploymentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDeploymentRequest request = new GetDeploymentRequest
             {
                 DeploymentName = DeploymentName.FromProjectLocationAgentEnvironmentDeployment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[DEPLOYMENT]"),
@@ -132,6 +137,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void GetDeploymentResourceNames()
         {
             moq::Mock<Deployments.DeploymentsClient> mockGrpcClient = new moq::Mock<Deployments.DeploymentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDeploymentRequest request = new GetDeploymentRequest
             {
                 DeploymentName = DeploymentName.FromProjectLocationAgentEnvironmentDeployment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[DEPLOYMENT]"),
@@ -156,6 +162,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task GetDeploymentResourceNamesAsync()
         {
             moq::Mock<Deployments.DeploymentsClient> mockGrpcClient = new moq::Mock<Deployments.DeploymentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDeploymentRequest request = new GetDeploymentRequest
             {
                 DeploymentName = DeploymentName.FromProjectLocationAgentEnvironmentDeployment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[DEPLOYMENT]"),

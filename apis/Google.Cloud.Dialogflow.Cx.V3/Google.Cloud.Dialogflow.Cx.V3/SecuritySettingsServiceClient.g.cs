@@ -18,6 +18,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using gcl = Google.Cloud.Location;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -54,6 +55,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             UpdateSecuritySettingsSettings = existing.UpdateSecuritySettingsSettings;
             ListSecuritySettingsSettings = existing.ListSecuritySettingsSettings;
             DeleteSecuritySettingsSettings = existing.DeleteSecuritySettingsSettings;
+            LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
 
@@ -153,6 +155,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteSecuritySettingsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="SecuritySettingsServiceSettings"/> object.</returns>
@@ -299,6 +306,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>The underlying gRPC SecuritySettingsService client</summary>
         public virtual SecuritySettingsService.SecuritySettingsServiceClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Create security settings in the specified location.
@@ -908,6 +918,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             GrpcClient = grpcClient;
             SecuritySettingsServiceSettings effectiveSettings = settings ?? SecuritySettingsServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callCreateSecuritySettings = clientHelper.BuildApiCall<CreateSecuritySettingsRequest, SecuritySettings>("CreateSecuritySettings", grpcClient.CreateSecuritySettingsAsync, grpcClient.CreateSecuritySettings, effectiveSettings.CreateSecuritySettingsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateSecuritySettings);
             Modify_CreateSecuritySettingsApiCall(ref _callCreateSecuritySettings);
@@ -942,6 +953,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>The underlying gRPC SecuritySettingsService client</summary>
         public override SecuritySettingsService.SecuritySettingsServiceClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
 
         partial void Modify_CreateSecuritySettingsRequest(ref CreateSecuritySettingsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1086,5 +1100,21 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         public scg::IEnumerator<SecuritySettings> GetEnumerator() => SecuritySettings.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public static partial class SecuritySettingsService
+    {
+        public partial class SecuritySettingsServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
+        }
     }
 }

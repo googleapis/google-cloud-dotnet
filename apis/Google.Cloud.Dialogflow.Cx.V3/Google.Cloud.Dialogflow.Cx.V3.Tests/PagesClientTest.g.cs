@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -32,6 +33,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void GetPageRequestObject()
         {
             moq::Mock<Pages.PagesClient> mockGrpcClient = new moq::Mock<Pages.PagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetPageRequest request = new GetPageRequest
             {
                 PageName = PageName.FromProjectLocationAgentFlowPage("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[PAGE]"),
@@ -64,6 +66,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task GetPageRequestObjectAsync()
         {
             moq::Mock<Pages.PagesClient> mockGrpcClient = new moq::Mock<Pages.PagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetPageRequest request = new GetPageRequest
             {
                 PageName = PageName.FromProjectLocationAgentFlowPage("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[PAGE]"),
@@ -98,6 +101,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void GetPage()
         {
             moq::Mock<Pages.PagesClient> mockGrpcClient = new moq::Mock<Pages.PagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetPageRequest request = new GetPageRequest
             {
                 PageName = PageName.FromProjectLocationAgentFlowPage("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[PAGE]"),
@@ -129,6 +133,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task GetPageAsync()
         {
             moq::Mock<Pages.PagesClient> mockGrpcClient = new moq::Mock<Pages.PagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetPageRequest request = new GetPageRequest
             {
                 PageName = PageName.FromProjectLocationAgentFlowPage("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[PAGE]"),
@@ -162,6 +167,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void GetPageResourceNames()
         {
             moq::Mock<Pages.PagesClient> mockGrpcClient = new moq::Mock<Pages.PagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetPageRequest request = new GetPageRequest
             {
                 PageName = PageName.FromProjectLocationAgentFlowPage("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[PAGE]"),
@@ -193,6 +199,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task GetPageResourceNamesAsync()
         {
             moq::Mock<Pages.PagesClient> mockGrpcClient = new moq::Mock<Pages.PagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetPageRequest request = new GetPageRequest
             {
                 PageName = PageName.FromProjectLocationAgentFlowPage("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[PAGE]"),
@@ -226,6 +233,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void CreatePageRequestObject()
         {
             moq::Mock<Pages.PagesClient> mockGrpcClient = new moq::Mock<Pages.PagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreatePageRequest request = new CreatePageRequest
             {
                 ParentAsFlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
@@ -259,6 +267,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task CreatePageRequestObjectAsync()
         {
             moq::Mock<Pages.PagesClient> mockGrpcClient = new moq::Mock<Pages.PagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreatePageRequest request = new CreatePageRequest
             {
                 ParentAsFlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
@@ -294,6 +303,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void CreatePage()
         {
             moq::Mock<Pages.PagesClient> mockGrpcClient = new moq::Mock<Pages.PagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreatePageRequest request = new CreatePageRequest
             {
                 ParentAsFlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
@@ -326,6 +336,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task CreatePageAsync()
         {
             moq::Mock<Pages.PagesClient> mockGrpcClient = new moq::Mock<Pages.PagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreatePageRequest request = new CreatePageRequest
             {
                 ParentAsFlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
@@ -360,6 +371,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void CreatePageResourceNames()
         {
             moq::Mock<Pages.PagesClient> mockGrpcClient = new moq::Mock<Pages.PagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreatePageRequest request = new CreatePageRequest
             {
                 ParentAsFlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
@@ -392,6 +404,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task CreatePageResourceNamesAsync()
         {
             moq::Mock<Pages.PagesClient> mockGrpcClient = new moq::Mock<Pages.PagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreatePageRequest request = new CreatePageRequest
             {
                 ParentAsFlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
@@ -426,6 +439,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void UpdatePageRequestObject()
         {
             moq::Mock<Pages.PagesClient> mockGrpcClient = new moq::Mock<Pages.PagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdatePageRequest request = new UpdatePageRequest
             {
                 Page = new Page(),
@@ -459,6 +473,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task UpdatePageRequestObjectAsync()
         {
             moq::Mock<Pages.PagesClient> mockGrpcClient = new moq::Mock<Pages.PagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdatePageRequest request = new UpdatePageRequest
             {
                 Page = new Page(),
@@ -494,6 +509,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void UpdatePage()
         {
             moq::Mock<Pages.PagesClient> mockGrpcClient = new moq::Mock<Pages.PagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdatePageRequest request = new UpdatePageRequest
             {
                 Page = new Page(),
@@ -526,6 +542,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task UpdatePageAsync()
         {
             moq::Mock<Pages.PagesClient> mockGrpcClient = new moq::Mock<Pages.PagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdatePageRequest request = new UpdatePageRequest
             {
                 Page = new Page(),
@@ -560,6 +577,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void DeletePageRequestObject()
         {
             moq::Mock<Pages.PagesClient> mockGrpcClient = new moq::Mock<Pages.PagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeletePageRequest request = new DeletePageRequest
             {
                 PageName = PageName.FromProjectLocationAgentFlowPage("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[PAGE]"),
@@ -576,6 +594,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task DeletePageRequestObjectAsync()
         {
             moq::Mock<Pages.PagesClient> mockGrpcClient = new moq::Mock<Pages.PagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeletePageRequest request = new DeletePageRequest
             {
                 PageName = PageName.FromProjectLocationAgentFlowPage("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[PAGE]"),
@@ -593,6 +612,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void DeletePage()
         {
             moq::Mock<Pages.PagesClient> mockGrpcClient = new moq::Mock<Pages.PagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeletePageRequest request = new DeletePageRequest
             {
                 PageName = PageName.FromProjectLocationAgentFlowPage("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[PAGE]"),
@@ -608,6 +628,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task DeletePageAsync()
         {
             moq::Mock<Pages.PagesClient> mockGrpcClient = new moq::Mock<Pages.PagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeletePageRequest request = new DeletePageRequest
             {
                 PageName = PageName.FromProjectLocationAgentFlowPage("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[PAGE]"),
@@ -624,6 +645,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void DeletePageResourceNames()
         {
             moq::Mock<Pages.PagesClient> mockGrpcClient = new moq::Mock<Pages.PagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeletePageRequest request = new DeletePageRequest
             {
                 PageName = PageName.FromProjectLocationAgentFlowPage("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[PAGE]"),
@@ -639,6 +661,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task DeletePageResourceNamesAsync()
         {
             moq::Mock<Pages.PagesClient> mockGrpcClient = new moq::Mock<Pages.PagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeletePageRequest request = new DeletePageRequest
             {
                 PageName = PageName.FromProjectLocationAgentFlowPage("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[PAGE]"),

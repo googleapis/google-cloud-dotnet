@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -32,6 +33,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void GetExperimentRequestObject()
         {
             moq::Mock<Experiments.ExperimentsClient> mockGrpcClient = new moq::Mock<Experiments.ExperimentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetExperimentRequest request = new GetExperimentRequest
             {
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
@@ -68,6 +70,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task GetExperimentRequestObjectAsync()
         {
             moq::Mock<Experiments.ExperimentsClient> mockGrpcClient = new moq::Mock<Experiments.ExperimentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetExperimentRequest request = new GetExperimentRequest
             {
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
@@ -106,6 +109,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void GetExperiment()
         {
             moq::Mock<Experiments.ExperimentsClient> mockGrpcClient = new moq::Mock<Experiments.ExperimentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetExperimentRequest request = new GetExperimentRequest
             {
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
@@ -142,6 +146,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task GetExperimentAsync()
         {
             moq::Mock<Experiments.ExperimentsClient> mockGrpcClient = new moq::Mock<Experiments.ExperimentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetExperimentRequest request = new GetExperimentRequest
             {
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
@@ -180,6 +185,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void GetExperimentResourceNames()
         {
             moq::Mock<Experiments.ExperimentsClient> mockGrpcClient = new moq::Mock<Experiments.ExperimentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetExperimentRequest request = new GetExperimentRequest
             {
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
@@ -216,6 +222,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task GetExperimentResourceNamesAsync()
         {
             moq::Mock<Experiments.ExperimentsClient> mockGrpcClient = new moq::Mock<Experiments.ExperimentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetExperimentRequest request = new GetExperimentRequest
             {
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
@@ -254,6 +261,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void CreateExperimentRequestObject()
         {
             moq::Mock<Experiments.ExperimentsClient> mockGrpcClient = new moq::Mock<Experiments.ExperimentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateExperimentRequest request = new CreateExperimentRequest
             {
                 ParentAsEnvironmentName = EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]"),
@@ -291,6 +299,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task CreateExperimentRequestObjectAsync()
         {
             moq::Mock<Experiments.ExperimentsClient> mockGrpcClient = new moq::Mock<Experiments.ExperimentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateExperimentRequest request = new CreateExperimentRequest
             {
                 ParentAsEnvironmentName = EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]"),
@@ -330,6 +339,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void CreateExperiment()
         {
             moq::Mock<Experiments.ExperimentsClient> mockGrpcClient = new moq::Mock<Experiments.ExperimentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateExperimentRequest request = new CreateExperimentRequest
             {
                 ParentAsEnvironmentName = EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]"),
@@ -367,6 +377,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task CreateExperimentAsync()
         {
             moq::Mock<Experiments.ExperimentsClient> mockGrpcClient = new moq::Mock<Experiments.ExperimentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateExperimentRequest request = new CreateExperimentRequest
             {
                 ParentAsEnvironmentName = EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]"),
@@ -406,6 +417,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void CreateExperimentResourceNames()
         {
             moq::Mock<Experiments.ExperimentsClient> mockGrpcClient = new moq::Mock<Experiments.ExperimentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateExperimentRequest request = new CreateExperimentRequest
             {
                 ParentAsEnvironmentName = EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]"),
@@ -443,6 +455,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task CreateExperimentResourceNamesAsync()
         {
             moq::Mock<Experiments.ExperimentsClient> mockGrpcClient = new moq::Mock<Experiments.ExperimentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateExperimentRequest request = new CreateExperimentRequest
             {
                 ParentAsEnvironmentName = EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]"),
@@ -482,6 +495,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void UpdateExperimentRequestObject()
         {
             moq::Mock<Experiments.ExperimentsClient> mockGrpcClient = new moq::Mock<Experiments.ExperimentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateExperimentRequest request = new UpdateExperimentRequest
             {
                 Experiment = new Experiment(),
@@ -519,6 +533,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task UpdateExperimentRequestObjectAsync()
         {
             moq::Mock<Experiments.ExperimentsClient> mockGrpcClient = new moq::Mock<Experiments.ExperimentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateExperimentRequest request = new UpdateExperimentRequest
             {
                 Experiment = new Experiment(),
@@ -558,6 +573,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void UpdateExperiment()
         {
             moq::Mock<Experiments.ExperimentsClient> mockGrpcClient = new moq::Mock<Experiments.ExperimentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateExperimentRequest request = new UpdateExperimentRequest
             {
                 Experiment = new Experiment(),
@@ -595,6 +611,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task UpdateExperimentAsync()
         {
             moq::Mock<Experiments.ExperimentsClient> mockGrpcClient = new moq::Mock<Experiments.ExperimentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateExperimentRequest request = new UpdateExperimentRequest
             {
                 Experiment = new Experiment(),
@@ -634,6 +651,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void DeleteExperimentRequestObject()
         {
             moq::Mock<Experiments.ExperimentsClient> mockGrpcClient = new moq::Mock<Experiments.ExperimentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteExperimentRequest request = new DeleteExperimentRequest
             {
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
@@ -649,6 +667,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task DeleteExperimentRequestObjectAsync()
         {
             moq::Mock<Experiments.ExperimentsClient> mockGrpcClient = new moq::Mock<Experiments.ExperimentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteExperimentRequest request = new DeleteExperimentRequest
             {
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
@@ -665,6 +684,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void DeleteExperiment()
         {
             moq::Mock<Experiments.ExperimentsClient> mockGrpcClient = new moq::Mock<Experiments.ExperimentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteExperimentRequest request = new DeleteExperimentRequest
             {
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
@@ -680,6 +700,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task DeleteExperimentAsync()
         {
             moq::Mock<Experiments.ExperimentsClient> mockGrpcClient = new moq::Mock<Experiments.ExperimentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteExperimentRequest request = new DeleteExperimentRequest
             {
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
@@ -696,6 +717,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void DeleteExperimentResourceNames()
         {
             moq::Mock<Experiments.ExperimentsClient> mockGrpcClient = new moq::Mock<Experiments.ExperimentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteExperimentRequest request = new DeleteExperimentRequest
             {
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
@@ -711,6 +733,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task DeleteExperimentResourceNamesAsync()
         {
             moq::Mock<Experiments.ExperimentsClient> mockGrpcClient = new moq::Mock<Experiments.ExperimentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteExperimentRequest request = new DeleteExperimentRequest
             {
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
@@ -727,6 +750,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void StartExperimentRequestObject()
         {
             moq::Mock<Experiments.ExperimentsClient> mockGrpcClient = new moq::Mock<Experiments.ExperimentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             StartExperimentRequest request = new StartExperimentRequest
             {
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
@@ -763,6 +787,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task StartExperimentRequestObjectAsync()
         {
             moq::Mock<Experiments.ExperimentsClient> mockGrpcClient = new moq::Mock<Experiments.ExperimentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             StartExperimentRequest request = new StartExperimentRequest
             {
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
@@ -801,6 +826,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void StartExperiment()
         {
             moq::Mock<Experiments.ExperimentsClient> mockGrpcClient = new moq::Mock<Experiments.ExperimentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             StartExperimentRequest request = new StartExperimentRequest
             {
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
@@ -837,6 +863,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task StartExperimentAsync()
         {
             moq::Mock<Experiments.ExperimentsClient> mockGrpcClient = new moq::Mock<Experiments.ExperimentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             StartExperimentRequest request = new StartExperimentRequest
             {
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
@@ -875,6 +902,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void StartExperimentResourceNames()
         {
             moq::Mock<Experiments.ExperimentsClient> mockGrpcClient = new moq::Mock<Experiments.ExperimentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             StartExperimentRequest request = new StartExperimentRequest
             {
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
@@ -911,6 +939,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task StartExperimentResourceNamesAsync()
         {
             moq::Mock<Experiments.ExperimentsClient> mockGrpcClient = new moq::Mock<Experiments.ExperimentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             StartExperimentRequest request = new StartExperimentRequest
             {
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
@@ -949,6 +978,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void StopExperimentRequestObject()
         {
             moq::Mock<Experiments.ExperimentsClient> mockGrpcClient = new moq::Mock<Experiments.ExperimentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             StopExperimentRequest request = new StopExperimentRequest
             {
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
@@ -985,6 +1015,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task StopExperimentRequestObjectAsync()
         {
             moq::Mock<Experiments.ExperimentsClient> mockGrpcClient = new moq::Mock<Experiments.ExperimentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             StopExperimentRequest request = new StopExperimentRequest
             {
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
@@ -1023,6 +1054,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void StopExperiment()
         {
             moq::Mock<Experiments.ExperimentsClient> mockGrpcClient = new moq::Mock<Experiments.ExperimentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             StopExperimentRequest request = new StopExperimentRequest
             {
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
@@ -1059,6 +1091,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task StopExperimentAsync()
         {
             moq::Mock<Experiments.ExperimentsClient> mockGrpcClient = new moq::Mock<Experiments.ExperimentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             StopExperimentRequest request = new StopExperimentRequest
             {
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
@@ -1097,6 +1130,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void StopExperimentResourceNames()
         {
             moq::Mock<Experiments.ExperimentsClient> mockGrpcClient = new moq::Mock<Experiments.ExperimentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             StopExperimentRequest request = new StopExperimentRequest
             {
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
@@ -1133,6 +1167,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task StopExperimentResourceNamesAsync()
         {
             moq::Mock<Experiments.ExperimentsClient> mockGrpcClient = new moq::Mock<Experiments.ExperimentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             StopExperimentRequest request = new StopExperimentRequest
             {
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
