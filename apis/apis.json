@@ -299,7 +299,7 @@
       "generator": "micro",
       "protoPath": "google/cloud/assuredworkloads/v1beta1",
       "shortName": "assuredworkloads",
-      "serviceConfigFile": "assuredworkloads_v1beta1.yaml"
+      "serviceConfigFile": "assuredworkloads.yaml"
     },
     {
       "id": "Google.Cloud.Audit",
