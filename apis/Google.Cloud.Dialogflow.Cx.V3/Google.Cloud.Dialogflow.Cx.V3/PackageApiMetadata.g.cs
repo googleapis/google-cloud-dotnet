@@ -45,11 +45,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             yield return SessionReflection.Descriptor;
             yield return TransitionRouteGroupReflection.Descriptor;
             yield return TestCaseReflection.Descriptor;
+            yield return WebhookReflection.Descriptor;
             yield return EnvironmentReflection.Descriptor;
             yield return ExperimentReflection.Descriptor;
             yield return SecuritySettingsReflection.Descriptor;
             yield return VersionReflection.Descriptor;
-            yield return WebhookReflection.Descriptor;
         }
     }
 }

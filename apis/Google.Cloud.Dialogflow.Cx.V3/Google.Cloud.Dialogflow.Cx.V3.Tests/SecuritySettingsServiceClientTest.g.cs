@@ -17,6 +17,7 @@
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using gcl = Google.Cloud.Location;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -33,6 +34,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void CreateSecuritySettingsRequestObject()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateSecuritySettingsRequest request = new CreateSecuritySettingsRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -65,6 +67,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task CreateSecuritySettingsRequestObjectAsync()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateSecuritySettingsRequest request = new CreateSecuritySettingsRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -99,6 +102,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void CreateSecuritySettings()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateSecuritySettingsRequest request = new CreateSecuritySettingsRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -131,6 +135,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task CreateSecuritySettingsAsync()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateSecuritySettingsRequest request = new CreateSecuritySettingsRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -165,6 +170,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void CreateSecuritySettingsResourceNames()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateSecuritySettingsRequest request = new CreateSecuritySettingsRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -197,6 +203,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task CreateSecuritySettingsResourceNamesAsync()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateSecuritySettingsRequest request = new CreateSecuritySettingsRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -231,6 +238,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void GetSecuritySettingsRequestObject()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetSecuritySettingsRequest request = new GetSecuritySettingsRequest
             {
                 SecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
@@ -262,6 +270,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task GetSecuritySettingsRequestObjectAsync()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetSecuritySettingsRequest request = new GetSecuritySettingsRequest
             {
                 SecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
@@ -295,6 +304,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void GetSecuritySettings()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetSecuritySettingsRequest request = new GetSecuritySettingsRequest
             {
                 SecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
@@ -326,6 +336,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task GetSecuritySettingsAsync()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetSecuritySettingsRequest request = new GetSecuritySettingsRequest
             {
                 SecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
@@ -359,6 +370,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void GetSecuritySettingsResourceNames()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetSecuritySettingsRequest request = new GetSecuritySettingsRequest
             {
                 SecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
@@ -390,6 +402,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task GetSecuritySettingsResourceNamesAsync()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetSecuritySettingsRequest request = new GetSecuritySettingsRequest
             {
                 SecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
@@ -423,6 +436,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void UpdateSecuritySettingsRequestObject()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateSecuritySettingsRequest request = new UpdateSecuritySettingsRequest
             {
                 SecuritySettings = new SecuritySettings(),
@@ -455,6 +469,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task UpdateSecuritySettingsRequestObjectAsync()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateSecuritySettingsRequest request = new UpdateSecuritySettingsRequest
             {
                 SecuritySettings = new SecuritySettings(),
@@ -489,6 +504,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void UpdateSecuritySettings()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateSecuritySettingsRequest request = new UpdateSecuritySettingsRequest
             {
                 SecuritySettings = new SecuritySettings(),
@@ -521,6 +537,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task UpdateSecuritySettingsAsync()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateSecuritySettingsRequest request = new UpdateSecuritySettingsRequest
             {
                 SecuritySettings = new SecuritySettings(),
@@ -555,6 +572,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void DeleteSecuritySettingsRequestObject()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteSecuritySettingsRequest request = new DeleteSecuritySettingsRequest
             {
                 SecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
@@ -570,6 +588,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task DeleteSecuritySettingsRequestObjectAsync()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteSecuritySettingsRequest request = new DeleteSecuritySettingsRequest
             {
                 SecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
@@ -586,6 +605,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void DeleteSecuritySettings()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteSecuritySettingsRequest request = new DeleteSecuritySettingsRequest
             {
                 SecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
@@ -601,6 +621,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task DeleteSecuritySettingsAsync()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteSecuritySettingsRequest request = new DeleteSecuritySettingsRequest
             {
                 SecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
@@ -617,6 +638,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void DeleteSecuritySettingsResourceNames()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteSecuritySettingsRequest request = new DeleteSecuritySettingsRequest
             {
                 SecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
@@ -632,6 +654,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task DeleteSecuritySettingsResourceNamesAsync()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteSecuritySettingsRequest request = new DeleteSecuritySettingsRequest
             {
                 SecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),

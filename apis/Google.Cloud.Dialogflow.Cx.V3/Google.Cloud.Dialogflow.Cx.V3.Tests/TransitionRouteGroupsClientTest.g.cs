@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -32,6 +33,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void GetTransitionRouteGroupRequestObject()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetTransitionRouteGroupRequest request = new GetTransitionRouteGroupRequest
             {
                 TransitionRouteGroupName = TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
@@ -57,6 +59,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task GetTransitionRouteGroupRequestObjectAsync()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetTransitionRouteGroupRequest request = new GetTransitionRouteGroupRequest
             {
                 TransitionRouteGroupName = TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
@@ -84,6 +87,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void GetTransitionRouteGroup()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetTransitionRouteGroupRequest request = new GetTransitionRouteGroupRequest
             {
                 TransitionRouteGroupName = TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
@@ -108,6 +112,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task GetTransitionRouteGroupAsync()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetTransitionRouteGroupRequest request = new GetTransitionRouteGroupRequest
             {
                 TransitionRouteGroupName = TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
@@ -134,6 +139,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void GetTransitionRouteGroupResourceNames()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetTransitionRouteGroupRequest request = new GetTransitionRouteGroupRequest
             {
                 TransitionRouteGroupName = TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
@@ -158,6 +164,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task GetTransitionRouteGroupResourceNamesAsync()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetTransitionRouteGroupRequest request = new GetTransitionRouteGroupRequest
             {
                 TransitionRouteGroupName = TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
@@ -184,6 +191,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void CreateTransitionRouteGroupRequestObject()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateTransitionRouteGroupRequest request = new CreateTransitionRouteGroupRequest
             {
                 ParentAsFlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
@@ -210,6 +218,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task CreateTransitionRouteGroupRequestObjectAsync()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateTransitionRouteGroupRequest request = new CreateTransitionRouteGroupRequest
             {
                 ParentAsFlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
@@ -238,6 +247,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void CreateTransitionRouteGroup()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateTransitionRouteGroupRequest request = new CreateTransitionRouteGroupRequest
             {
                 ParentAsFlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
@@ -263,6 +273,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task CreateTransitionRouteGroupAsync()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateTransitionRouteGroupRequest request = new CreateTransitionRouteGroupRequest
             {
                 ParentAsFlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
@@ -290,6 +301,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void CreateTransitionRouteGroupResourceNames()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateTransitionRouteGroupRequest request = new CreateTransitionRouteGroupRequest
             {
                 ParentAsFlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
@@ -315,6 +327,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task CreateTransitionRouteGroupResourceNamesAsync()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateTransitionRouteGroupRequest request = new CreateTransitionRouteGroupRequest
             {
                 ParentAsFlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
@@ -342,6 +355,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void UpdateTransitionRouteGroupRequestObject()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateTransitionRouteGroupRequest request = new UpdateTransitionRouteGroupRequest
             {
                 TransitionRouteGroup = new TransitionRouteGroup(),
@@ -368,6 +382,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task UpdateTransitionRouteGroupRequestObjectAsync()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateTransitionRouteGroupRequest request = new UpdateTransitionRouteGroupRequest
             {
                 TransitionRouteGroup = new TransitionRouteGroup(),
@@ -396,6 +411,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void UpdateTransitionRouteGroup()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateTransitionRouteGroupRequest request = new UpdateTransitionRouteGroupRequest
             {
                 TransitionRouteGroup = new TransitionRouteGroup(),
@@ -421,6 +437,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task UpdateTransitionRouteGroupAsync()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateTransitionRouteGroupRequest request = new UpdateTransitionRouteGroupRequest
             {
                 TransitionRouteGroup = new TransitionRouteGroup(),
@@ -448,6 +465,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void DeleteTransitionRouteGroupRequestObject()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteTransitionRouteGroupRequest request = new DeleteTransitionRouteGroupRequest
             {
                 TransitionRouteGroupName = TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
@@ -464,6 +482,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task DeleteTransitionRouteGroupRequestObjectAsync()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteTransitionRouteGroupRequest request = new DeleteTransitionRouteGroupRequest
             {
                 TransitionRouteGroupName = TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
@@ -481,6 +500,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void DeleteTransitionRouteGroup()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteTransitionRouteGroupRequest request = new DeleteTransitionRouteGroupRequest
             {
                 TransitionRouteGroupName = TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
@@ -496,6 +516,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task DeleteTransitionRouteGroupAsync()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteTransitionRouteGroupRequest request = new DeleteTransitionRouteGroupRequest
             {
                 TransitionRouteGroupName = TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
@@ -512,6 +533,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void DeleteTransitionRouteGroupResourceNames()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteTransitionRouteGroupRequest request = new DeleteTransitionRouteGroupRequest
             {
                 TransitionRouteGroupName = TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
@@ -527,6 +549,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task DeleteTransitionRouteGroupResourceNamesAsync()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteTransitionRouteGroupRequest request = new DeleteTransitionRouteGroupRequest
             {
                 TransitionRouteGroupName = TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
