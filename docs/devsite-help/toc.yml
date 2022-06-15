@@ -2,6 +2,10 @@
   items:
   - name: Getting started
     href: getting-started.md
+  - name: Client lifecycle
+    href: client-lifecycle.md
+  - name: Transport selection
+    href: transports.md
   - name: Troubleshooting
     href: troubleshooting.md
   - name: Emulator support
