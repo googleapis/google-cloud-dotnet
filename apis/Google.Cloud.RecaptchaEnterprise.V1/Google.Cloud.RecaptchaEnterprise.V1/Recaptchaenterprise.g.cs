@@ -59,7 +59,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
             "VG9rZW5Qcm9wZXJ0aWVzQgPgQQMSYwobYWNjb3VudF9kZWZlbmRlcl9hc3Nl",
             "c3NtZW50GAYgASgLMj4uZ29vZ2xlLmNsb3VkLnJlY2FwdGNoYWVudGVycHJp",
             "c2UudjEuQWNjb3VudERlZmVuZGVyQXNzZXNzbWVudBJwCiJwcml2YXRlX3Bh",
-            "c3N3b3JkX2xlYWtfdmVyaWZpY2F0aW9uGAcgASgLMkQuZ29vZ2xlLmNsb3Vk",
+            "c3N3b3JkX2xlYWtfdmVyaWZpY2F0aW9uGAggASgLMkQuZ29vZ2xlLmNsb3Vk",
             "LnJlY2FwdGNoYWVudGVycHJpc2UudjEuUHJpdmF0ZVBhc3N3b3JkTGVha1Zl",
             "cmlmaWNhdGlvbjpf6kFcCi1yZWNhcHRjaGFlbnRlcnByaXNlLmdvb2dsZWFw",
             "aXMuY29tL0Fzc2Vzc21lbnQSK3Byb2plY3RzL3twcm9qZWN0fS9hc3Nlc3Nt",
@@ -1257,7 +1257,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
     }
 
     /// <summary>Field number for the "private_password_leak_verification" field.</summary>
-    public const int PrivatePasswordLeakVerificationFieldNumber = 7;
+    public const int PrivatePasswordLeakVerificationFieldNumber = 8;
     private global::Google.Cloud.RecaptchaEnterprise.V1.PrivatePasswordLeakVerification privatePasswordLeakVerification_;
     /// <summary>
     /// Password leak verification info.
@@ -1344,7 +1344,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
         output.WriteMessage(AccountDefenderAssessment);
       }
       if (privatePasswordLeakVerification_ != null) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(66);
         output.WriteMessage(PrivatePasswordLeakVerification);
       }
       if (_unknownFields != null) {
@@ -1378,7 +1378,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
         output.WriteMessage(AccountDefenderAssessment);
       }
       if (privatePasswordLeakVerification_ != null) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(66);
         output.WriteMessage(PrivatePasswordLeakVerification);
       }
       if (_unknownFields != null) {
@@ -1501,7 +1501,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
             input.ReadMessage(AccountDefenderAssessment);
             break;
           }
-          case 58: {
+          case 66: {
             if (privatePasswordLeakVerification_ == null) {
               PrivatePasswordLeakVerification = new global::Google.Cloud.RecaptchaEnterprise.V1.PrivatePasswordLeakVerification();
             }
@@ -1555,7 +1555,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
             input.ReadMessage(AccountDefenderAssessment);
             break;
           }
-          case 58: {
+          case 66: {
             if (privatePasswordLeakVerification_ == null) {
               PrivatePasswordLeakVerification = new global::Google.Cloud.RecaptchaEnterprise.V1.PrivatePasswordLeakVerification();
             }
