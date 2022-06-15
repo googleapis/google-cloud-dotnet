@@ -27,7 +27,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "CjFnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9tb2RlbF9tb25pdG9yaW5n",
             "LnByb3RvEhpnb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MRoZZ29vZ2xlL2Fw",
             "aS9yZXNvdXJjZS5wcm90bxojZ29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEv",
-            "aW8ucHJvdG8ipBQKHk1vZGVsTW9uaXRvcmluZ09iamVjdGl2ZUNvbmZpZxJk",
+            "aW8ucHJvdG8ivxUKHk1vZGVsTW9uaXRvcmluZ09iamVjdGl2ZUNvbmZpZxJk",
             "ChB0cmFpbmluZ19kYXRhc2V0GAEgASgLMkouZ29vZ2xlLmNsb3VkLmFpcGxh",
             "dGZvcm0udjEuTW9kZWxNb25pdG9yaW5nT2JqZWN0aXZlQ29uZmlnLlRyYWlu",
             "aW5nRGF0YXNldBKTAQopdHJhaW5pbmdfcHJlZGljdGlvbl9za2V3X2RldGVj",
@@ -46,7 +46,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "bGF0Zm9ybS52MS5CaWdRdWVyeVNvdXJjZUgAEhMKC2RhdGFfZm9ybWF0GAIg",
             "ASgJEhQKDHRhcmdldF9maWVsZBgGIAEoCRJPChlsb2dnaW5nX3NhbXBsaW5n",
             "X3N0cmF0ZWd5GAcgASgLMiwuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEu",
-            "U2FtcGxpbmdTdHJhdGVneUINCgtkYXRhX3NvdXJjZRrCBAolVHJhaW5pbmdQ",
+            "U2FtcGxpbmdTdHJhdGVneUINCgtkYXRhX3NvdXJjZRqPBQolVHJhaW5pbmdQ",
             "cmVkaWN0aW9uU2tld0RldGVjdGlvbkNvbmZpZxKNAQoPc2tld190aHJlc2hv",
             "bGRzGAEgAygLMnQuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTW9kZWxN",
             "b25pdG9yaW5nT2JqZWN0aXZlQ29uZmlnLlRyYWluaW5nUHJlZGljdGlvblNr",
@@ -54,58 +54,61 @@ namespace Google.Cloud.AIPlatform.V1 {
             "cmlidXRpb25fc2NvcmVfc2tld190aHJlc2hvbGRzGAIgAygLMoQBLmdvb2ds",
             "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1vZGVsTW9uaXRvcmluZ09iamVjdGl2",
             "ZUNvbmZpZy5UcmFpbmluZ1ByZWRpY3Rpb25Ta2V3RGV0ZWN0aW9uQ29uZmln",
-            "LkF0dHJpYnV0aW9uU2NvcmVTa2V3VGhyZXNob2xkc0VudHJ5GmIKE1NrZXdU",
-            "aHJlc2hvbGRzRW50cnkSCwoDa2V5GAEgASgJEjoKBXZhbHVlGAIgASgLMisu",
-            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuVGhyZXNob2xkQ29uZmlnOgI4",
-            "ARpyCiNBdHRyaWJ1dGlvblNjb3JlU2tld1RocmVzaG9sZHNFbnRyeRILCgNr",
+            "LkF0dHJpYnV0aW9uU2NvcmVTa2V3VGhyZXNob2xkc0VudHJ5EksKFmRlZmF1",
+            "bHRfc2tld190aHJlc2hvbGQYBiABKAsyKy5nb29nbGUuY2xvdWQuYWlwbGF0",
+            "Zm9ybS52MS5UaHJlc2hvbGRDb25maWcaYgoTU2tld1RocmVzaG9sZHNFbnRy",
+            "eRILCgNrZXkYASABKAkSOgoFdmFsdWUYAiABKAsyKy5nb29nbGUuY2xvdWQu",
+            "YWlwbGF0Zm9ybS52MS5UaHJlc2hvbGRDb25maWc6AjgBGnIKI0F0dHJpYnV0",
+            "aW9uU2NvcmVTa2V3VGhyZXNob2xkc0VudHJ5EgsKA2tleRgBIAEoCRI6CgV2",
+            "YWx1ZRgCIAEoCzIrLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlRocmVz",
+            "aG9sZENvbmZpZzoCOAEagAUKHlByZWRpY3Rpb25EcmlmdERldGVjdGlvbkNv",
+            "bmZpZxKIAQoQZHJpZnRfdGhyZXNob2xkcxgBIAMoCzJuLmdvb2dsZS5jbG91",
+            "ZC5haXBsYXRmb3JtLnYxLk1vZGVsTW9uaXRvcmluZ09iamVjdGl2ZUNvbmZp",
+            "Zy5QcmVkaWN0aW9uRHJpZnREZXRlY3Rpb25Db25maWcuRHJpZnRUaHJlc2hv",
+            "bGRzRW50cnkSqgEKImF0dHJpYnV0aW9uX3Njb3JlX2RyaWZ0X3RocmVzaG9s",
+            "ZHMYAiADKAsyfi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Nb2RlbE1v",
+            "bml0b3JpbmdPYmplY3RpdmVDb25maWcuUHJlZGljdGlvbkRyaWZ0RGV0ZWN0",
+            "aW9uQ29uZmlnLkF0dHJpYnV0aW9uU2NvcmVEcmlmdFRocmVzaG9sZHNFbnRy",
+            "eRJMChdkZWZhdWx0X2RyaWZ0X3RocmVzaG9sZBgFIAEoCzIrLmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxLlRocmVzaG9sZENvbmZpZxpjChREcmlmdFRo",
+            "cmVzaG9sZHNFbnRyeRILCgNrZXkYASABKAkSOgoFdmFsdWUYAiABKAsyKy5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5UaHJlc2hvbGRDb25maWc6AjgB",
+            "GnMKJEF0dHJpYnV0aW9uU2NvcmVEcmlmdFRocmVzaG9sZHNFbnRyeRILCgNr",
             "ZXkYASABKAkSOgoFdmFsdWUYAiABKAsyKy5nb29nbGUuY2xvdWQuYWlwbGF0",
-            "Zm9ybS52MS5UaHJlc2hvbGRDb25maWc6AjgBGrIECh5QcmVkaWN0aW9uRHJp",
-            "ZnREZXRlY3Rpb25Db25maWcSiAEKEGRyaWZ0X3RocmVzaG9sZHMYASADKAsy",
-            "bi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Nb2RlbE1vbml0b3JpbmdP",
-            "YmplY3RpdmVDb25maWcuUHJlZGljdGlvbkRyaWZ0RGV0ZWN0aW9uQ29uZmln",
-            "LkRyaWZ0VGhyZXNob2xkc0VudHJ5EqoBCiJhdHRyaWJ1dGlvbl9zY29yZV9k",
-            "cmlmdF90aHJlc2hvbGRzGAIgAygLMn4uZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
-            "cm0udjEuTW9kZWxNb25pdG9yaW5nT2JqZWN0aXZlQ29uZmlnLlByZWRpY3Rp",
-            "b25EcmlmdERldGVjdGlvbkNvbmZpZy5BdHRyaWJ1dGlvblNjb3JlRHJpZnRU",
-            "aHJlc2hvbGRzRW50cnkaYwoURHJpZnRUaHJlc2hvbGRzRW50cnkSCwoDa2V5",
-            "GAEgASgJEjoKBXZhbHVlGAIgASgLMisuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
-            "cm0udjEuVGhyZXNob2xkQ29uZmlnOgI4ARpzCiRBdHRyaWJ1dGlvblNjb3Jl",
-            "RHJpZnRUaHJlc2hvbGRzRW50cnkSCwoDa2V5GAEgASgJEjoKBXZhbHVlGAIg",
-            "ASgLMisuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuVGhyZXNob2xkQ29u",
-            "ZmlnOgI4ARq8BAoRRXhwbGFuYXRpb25Db25maWcSIQoZZW5hYmxlX2ZlYXR1",
-            "cmVfYXR0cmlidXRlcxgBIAEoCBJ+ChRleHBsYW5hdGlvbl9iYXNlbGluZRgC",
-            "IAEoCzJgLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1vZGVsTW9uaXRv",
-            "cmluZ09iamVjdGl2ZUNvbmZpZy5FeHBsYW5hdGlvbkNvbmZpZy5FeHBsYW5h",
-            "dGlvbkJhc2VsaW5lGoMDChNFeHBsYW5hdGlvbkJhc2VsaW5lEjkKA2djcxgC",
-            "IAEoCzIqLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkdjc0Rlc3RpbmF0",
-            "aW9uSAASQwoIYmlncXVlcnkYAyABKAsyLy5nb29nbGUuY2xvdWQuYWlwbGF0",
-            "Zm9ybS52MS5CaWdRdWVyeURlc3RpbmF0aW9uSAASjAEKEXByZWRpY3Rpb25f",
-            "Zm9ybWF0GAEgASgOMnEuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTW9k",
-            "ZWxNb25pdG9yaW5nT2JqZWN0aXZlQ29uZmlnLkV4cGxhbmF0aW9uQ29uZmln",
-            "LkV4cGxhbmF0aW9uQmFzZWxpbmUuUHJlZGljdGlvbkZvcm1hdCJOChBQcmVk",
-            "aWN0aW9uRm9ybWF0EiEKHVBSRURJQ1RJT05fRk9STUFUX1VOU1BFQ0lGSUVE",
-            "EAASCQoFSlNPTkwQAhIMCghCSUdRVUVSWRADQg0KC2Rlc3RpbmF0aW9uIs0B",
-            "ChpNb2RlbE1vbml0b3JpbmdBbGVydENvbmZpZxJlChJlbWFpbF9hbGVydF9j",
-            "b25maWcYASABKAsyRy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Nb2Rl",
-            "bE1vbml0b3JpbmdBbGVydENvbmZpZy5FbWFpbEFsZXJ0Q29uZmlnSAASFgoO",
-            "ZW5hYmxlX2xvZ2dpbmcYAiABKAgaJwoQRW1haWxBbGVydENvbmZpZxITCgt1",
-            "c2VyX2VtYWlscxgBIAMoCUIHCgVhbGVydCIvCg9UaHJlc2hvbGRDb25maWcS",
-            "DwoFdmFsdWUYASABKAFIAEILCgl0aHJlc2hvbGQinAEKEFNhbXBsaW5nU3Ry",
-            "YXRlZ3kSXQoUcmFuZG9tX3NhbXBsZV9jb25maWcYASABKAsyPy5nb29nbGUu",
-            "Y2xvdWQuYWlwbGF0Zm9ybS52MS5TYW1wbGluZ1N0cmF0ZWd5LlJhbmRvbVNh",
-            "bXBsZUNvbmZpZxopChJSYW5kb21TYW1wbGVDb25maWcSEwoLc2FtcGxlX3Jh",
-            "dGUYASABKAFC2AEKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIU",
-            "TW9kZWxNb25pdG9yaW5nUHJvdG9QAVpEZ29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
-            "cHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9haXBsYXRmb3JtL3YxO2FpcGxhdGZv",
-            "cm2qAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91",
-            "ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6",
-            "VjFiBnByb3RvMw=="));
+            "Zm9ybS52MS5UaHJlc2hvbGRDb25maWc6AjgBGrwEChFFeHBsYW5hdGlvbkNv",
+            "bmZpZxIhChllbmFibGVfZmVhdHVyZV9hdHRyaWJ1dGVzGAEgASgIEn4KFGV4",
+            "cGxhbmF0aW9uX2Jhc2VsaW5lGAIgASgLMmAuZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjEuTW9kZWxNb25pdG9yaW5nT2JqZWN0aXZlQ29uZmlnLkV4cGxh",
+            "bmF0aW9uQ29uZmlnLkV4cGxhbmF0aW9uQmFzZWxpbmUagwMKE0V4cGxhbmF0",
+            "aW9uQmFzZWxpbmUSOQoDZ2NzGAIgASgLMiouZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjEuR2NzRGVzdGluYXRpb25IABJDCghiaWdxdWVyeRgDIAEoCzIv",
+            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkJpZ1F1ZXJ5RGVzdGluYXRp",
+            "b25IABKMAQoRcHJlZGljdGlvbl9mb3JtYXQYASABKA4ycS5nb29nbGUuY2xv",
+            "dWQuYWlwbGF0Zm9ybS52MS5Nb2RlbE1vbml0b3JpbmdPYmplY3RpdmVDb25m",
+            "aWcuRXhwbGFuYXRpb25Db25maWcuRXhwbGFuYXRpb25CYXNlbGluZS5QcmVk",
+            "aWN0aW9uRm9ybWF0Ik4KEFByZWRpY3Rpb25Gb3JtYXQSIQodUFJFRElDVElP",
+            "Tl9GT1JNQVRfVU5TUEVDSUZJRUQQABIJCgVKU09OTBACEgwKCEJJR1FVRVJZ",
+            "EANCDQoLZGVzdGluYXRpb24izQEKGk1vZGVsTW9uaXRvcmluZ0FsZXJ0Q29u",
+            "ZmlnEmUKEmVtYWlsX2FsZXJ0X2NvbmZpZxgBIAEoCzJHLmdvb2dsZS5jbG91",
+            "ZC5haXBsYXRmb3JtLnYxLk1vZGVsTW9uaXRvcmluZ0FsZXJ0Q29uZmlnLkVt",
+            "YWlsQWxlcnRDb25maWdIABIWCg5lbmFibGVfbG9nZ2luZxgCIAEoCBonChBF",
+            "bWFpbEFsZXJ0Q29uZmlnEhMKC3VzZXJfZW1haWxzGAEgAygJQgcKBWFsZXJ0",
+            "Ii8KD1RocmVzaG9sZENvbmZpZxIPCgV2YWx1ZRgBIAEoAUgAQgsKCXRocmVz",
+            "aG9sZCKcAQoQU2FtcGxpbmdTdHJhdGVneRJdChRyYW5kb21fc2FtcGxlX2Nv",
+            "bmZpZxgBIAEoCzI/Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlNhbXBs",
+            "aW5nU3RyYXRlZ3kuUmFuZG9tU2FtcGxlQ29uZmlnGikKElJhbmRvbVNhbXBs",
+            "ZUNvbmZpZxITCgtzYW1wbGVfcmF0ZRgBIAEoAULYAQoeY29tLmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxQhRNb2RlbE1vbml0b3JpbmdQcm90b1ABWkRn",
+            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2Fp",
+            "cGxhdGZvcm0vdjE7YWlwbGF0Zm9ybaoCGkdvb2dsZS5DbG91ZC5BSVBsYXRm",
+            "b3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6",
+            "OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig), global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Parser, new[]{ "TrainingDataset", "TrainingPredictionSkewDetectionConfig", "PredictionDriftDetectionConfig", "ExplanationConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.TrainingDataset), global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.TrainingDataset.Parser, new[]{ "Dataset", "GcsSource", "BigquerySource", "DataFormat", "TargetField", "LoggingSamplingStrategy" }, new[]{ "DataSource" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.TrainingPredictionSkewDetectionConfig), global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.TrainingPredictionSkewDetectionConfig.Parser, new[]{ "SkewThresholds", "AttributionScoreSkewThresholds" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.PredictionDriftDetectionConfig), global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.PredictionDriftDetectionConfig.Parser, new[]{ "DriftThresholds", "AttributionScoreDriftThresholds" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.TrainingPredictionSkewDetectionConfig), global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.TrainingPredictionSkewDetectionConfig.Parser, new[]{ "SkewThresholds", "AttributionScoreSkewThresholds", "DefaultSkewThreshold" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.PredictionDriftDetectionConfig), global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.PredictionDriftDetectionConfig.Parser, new[]{ "DriftThresholds", "AttributionScoreDriftThresholds", "DefaultDriftThreshold" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.ExplanationConfig), global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.ExplanationConfig.Parser, new[]{ "EnableFeatureAttributes", "ExplanationBaseline" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.ExplanationConfig.Types.ExplanationBaseline), global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.ExplanationConfig.Types.ExplanationBaseline.Parser, new[]{ "Gcs", "Bigquery", "PredictionFormat" }, new[]{ "Destination" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.ExplanationConfig.Types.ExplanationBaseline.Types.PredictionFormat) }, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringAlertConfig), global::Google.Cloud.AIPlatform.V1.ModelMonitoringAlertConfig.Parser, new[]{ "EmailAlertConfig", "EnableLogging" }, new[]{ "Alert" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringAlertConfig.Types.EmailAlertConfig), global::Google.Cloud.AIPlatform.V1.ModelMonitoringAlertConfig.Types.EmailAlertConfig.Parser, new[]{ "UserEmails" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ThresholdConfig), global::Google.Cloud.AIPlatform.V1.ThresholdConfig.Parser, new[]{ "Value" }, new[]{ "Threshold" }, null, null, null),
@@ -992,6 +995,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         public TrainingPredictionSkewDetectionConfig(TrainingPredictionSkewDetectionConfig other) : this() {
           skewThresholds_ = other.skewThresholds_.Clone();
           attributionScoreSkewThresholds_ = other.attributionScoreSkewThresholds_.Clone();
+          defaultSkewThreshold_ = other.defaultSkewThreshold_ != null ? other.defaultSkewThreshold_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1034,6 +1038,23 @@ namespace Google.Cloud.AIPlatform.V1 {
           get { return attributionScoreSkewThresholds_; }
         }
 
+        /// <summary>Field number for the "default_skew_threshold" field.</summary>
+        public const int DefaultSkewThresholdFieldNumber = 6;
+        private global::Google.Cloud.AIPlatform.V1.ThresholdConfig defaultSkewThreshold_;
+        /// <summary>
+        /// Skew anomaly detection threshold used by all features.
+        /// When the per-feature thresholds are not set, this field can be used to
+        /// specify a threshold for all features.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1.ThresholdConfig DefaultSkewThreshold {
+          get { return defaultSkewThreshold_; }
+          set {
+            defaultSkewThreshold_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -1051,6 +1072,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           if (!SkewThresholds.Equals(other.SkewThresholds)) return false;
           if (!AttributionScoreSkewThresholds.Equals(other.AttributionScoreSkewThresholds)) return false;
+          if (!object.Equals(DefaultSkewThreshold, other.DefaultSkewThreshold)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -1060,6 +1082,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           int hash = 1;
           hash ^= SkewThresholds.GetHashCode();
           hash ^= AttributionScoreSkewThresholds.GetHashCode();
+          if (defaultSkewThreshold_ != null) hash ^= DefaultSkewThreshold.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1080,6 +1103,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         #else
           skewThresholds_.WriteTo(output, _map_skewThresholds_codec);
           attributionScoreSkewThresholds_.WriteTo(output, _map_attributionScoreSkewThresholds_codec);
+          if (defaultSkewThreshold_ != null) {
+            output.WriteRawTag(50);
+            output.WriteMessage(DefaultSkewThreshold);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1092,6 +1119,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           skewThresholds_.WriteTo(ref output, _map_skewThresholds_codec);
           attributionScoreSkewThresholds_.WriteTo(ref output, _map_attributionScoreSkewThresholds_codec);
+          if (defaultSkewThreshold_ != null) {
+            output.WriteRawTag(50);
+            output.WriteMessage(DefaultSkewThreshold);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1104,6 +1135,9 @@ namespace Google.Cloud.AIPlatform.V1 {
           int size = 0;
           size += skewThresholds_.CalculateSize(_map_skewThresholds_codec);
           size += attributionScoreSkewThresholds_.CalculateSize(_map_attributionScoreSkewThresholds_codec);
+          if (defaultSkewThreshold_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(DefaultSkewThreshold);
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -1118,6 +1152,12 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           skewThresholds_.Add(other.skewThresholds_);
           attributionScoreSkewThresholds_.Add(other.attributionScoreSkewThresholds_);
+          if (other.defaultSkewThreshold_ != null) {
+            if (defaultSkewThreshold_ == null) {
+              DefaultSkewThreshold = new global::Google.Cloud.AIPlatform.V1.ThresholdConfig();
+            }
+            DefaultSkewThreshold.MergeFrom(other.DefaultSkewThreshold);
+          }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -1141,6 +1181,13 @@ namespace Google.Cloud.AIPlatform.V1 {
                 attributionScoreSkewThresholds_.AddEntriesFrom(input, _map_attributionScoreSkewThresholds_codec);
                 break;
               }
+              case 50: {
+                if (defaultSkewThreshold_ == null) {
+                  DefaultSkewThreshold = new global::Google.Cloud.AIPlatform.V1.ThresholdConfig();
+                }
+                input.ReadMessage(DefaultSkewThreshold);
+                break;
+              }
             }
           }
         #endif
@@ -1162,6 +1209,13 @@ namespace Google.Cloud.AIPlatform.V1 {
               }
               case 18: {
                 attributionScoreSkewThresholds_.AddEntriesFrom(ref input, _map_attributionScoreSkewThresholds_codec);
+                break;
+              }
+              case 50: {
+                if (defaultSkewThreshold_ == null) {
+                  DefaultSkewThreshold = new global::Google.Cloud.AIPlatform.V1.ThresholdConfig();
+                }
+                input.ReadMessage(DefaultSkewThreshold);
                 break;
               }
             }
@@ -1210,6 +1264,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         public PredictionDriftDetectionConfig(PredictionDriftDetectionConfig other) : this() {
           driftThresholds_ = other.driftThresholds_.Clone();
           attributionScoreDriftThresholds_ = other.attributionScoreDriftThresholds_.Clone();
+          defaultDriftThreshold_ = other.defaultDriftThreshold_ != null ? other.defaultDriftThreshold_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1251,6 +1306,23 @@ namespace Google.Cloud.AIPlatform.V1 {
           get { return attributionScoreDriftThresholds_; }
         }
 
+        /// <summary>Field number for the "default_drift_threshold" field.</summary>
+        public const int DefaultDriftThresholdFieldNumber = 5;
+        private global::Google.Cloud.AIPlatform.V1.ThresholdConfig defaultDriftThreshold_;
+        /// <summary>
+        /// Drift anomaly detection threshold used by all features.
+        /// When the per-feature thresholds are not set, this field can be used to
+        /// specify a threshold for all features.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1.ThresholdConfig DefaultDriftThreshold {
+          get { return defaultDriftThreshold_; }
+          set {
+            defaultDriftThreshold_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -1268,6 +1340,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           if (!DriftThresholds.Equals(other.DriftThresholds)) return false;
           if (!AttributionScoreDriftThresholds.Equals(other.AttributionScoreDriftThresholds)) return false;
+          if (!object.Equals(DefaultDriftThreshold, other.DefaultDriftThreshold)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -1277,6 +1350,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           int hash = 1;
           hash ^= DriftThresholds.GetHashCode();
           hash ^= AttributionScoreDriftThresholds.GetHashCode();
+          if (defaultDriftThreshold_ != null) hash ^= DefaultDriftThreshold.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1297,6 +1371,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         #else
           driftThresholds_.WriteTo(output, _map_driftThresholds_codec);
           attributionScoreDriftThresholds_.WriteTo(output, _map_attributionScoreDriftThresholds_codec);
+          if (defaultDriftThreshold_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(DefaultDriftThreshold);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1309,6 +1387,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           driftThresholds_.WriteTo(ref output, _map_driftThresholds_codec);
           attributionScoreDriftThresholds_.WriteTo(ref output, _map_attributionScoreDriftThresholds_codec);
+          if (defaultDriftThreshold_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(DefaultDriftThreshold);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1321,6 +1403,9 @@ namespace Google.Cloud.AIPlatform.V1 {
           int size = 0;
           size += driftThresholds_.CalculateSize(_map_driftThresholds_codec);
           size += attributionScoreDriftThresholds_.CalculateSize(_map_attributionScoreDriftThresholds_codec);
+          if (defaultDriftThreshold_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(DefaultDriftThreshold);
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -1335,6 +1420,12 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           driftThresholds_.Add(other.driftThresholds_);
           attributionScoreDriftThresholds_.Add(other.attributionScoreDriftThresholds_);
+          if (other.defaultDriftThreshold_ != null) {
+            if (defaultDriftThreshold_ == null) {
+              DefaultDriftThreshold = new global::Google.Cloud.AIPlatform.V1.ThresholdConfig();
+            }
+            DefaultDriftThreshold.MergeFrom(other.DefaultDriftThreshold);
+          }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -1358,6 +1449,13 @@ namespace Google.Cloud.AIPlatform.V1 {
                 attributionScoreDriftThresholds_.AddEntriesFrom(input, _map_attributionScoreDriftThresholds_codec);
                 break;
               }
+              case 42: {
+                if (defaultDriftThreshold_ == null) {
+                  DefaultDriftThreshold = new global::Google.Cloud.AIPlatform.V1.ThresholdConfig();
+                }
+                input.ReadMessage(DefaultDriftThreshold);
+                break;
+              }
             }
           }
         #endif
@@ -1379,6 +1477,13 @@ namespace Google.Cloud.AIPlatform.V1 {
               }
               case 18: {
                 attributionScoreDriftThresholds_.AddEntriesFrom(ref input, _map_attributionScoreDriftThresholds_codec);
+                break;
+              }
+              case 42: {
+                if (defaultDriftThreshold_ == null) {
+                  DefaultDriftThreshold = new global::Google.Cloud.AIPlatform.V1.ThresholdConfig();
+                }
+                input.ReadMessage(DefaultDriftThreshold);
                 break;
               }
             }
