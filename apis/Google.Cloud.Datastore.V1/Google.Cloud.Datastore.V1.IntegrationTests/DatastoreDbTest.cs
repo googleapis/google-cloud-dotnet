@@ -18,6 +18,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
+using static Google.Cloud.Datastore.V1.PropertyFilter.Types;
 using static Google.Cloud.Datastore.V1.QueryResultBatch.Types;
 
 namespace Google.Cloud.Datastore.V1.IntegrationTests
@@ -144,6 +145,47 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
                 ValidateQueryResults(db.RunQueryLazily(query));
                 ValidateQueryResults(db.RunQueryLazily(gql));
             });
+        }
+
+        [Fact]
+        public void InFilterQuery()
+        {
+            var db = _fixture.CreateDatastoreDb();
+            var keyFactory = db.CreateKeyFactory("inFilter");
+
+            var actualQuery = new Query("inFilter") { Filter = Filter.In("1", null) };
+            var expected = new Filter
+            { 
+                PropertyFilter = new PropertyFilter
+                {
+                    Op = Operator.In,
+                    Property = new PropertyReference { Name = "1" },
+                    Value = Value.ForNull()
+                }
+            };
+            var expectedQuery = new Query("inFilter") { Filter = expected };
+
+            Assert.Equal(actualQuery,expectedQuery);
+        }
+
+        [Fact]
+        public void NotInFilterQuery()
+        {
+            var db = _fixture.CreateDatastoreDb();
+            var keyFactory = db.CreateKeyFactory("notinFilter");
+
+            var actualQuery = new Query("notinFilter") { Filter = Filter.NotIn("1", null) };
+            var expected = new Filter
+            {
+                PropertyFilter = new PropertyFilter
+                {
+                    Op = Operator.NotIn,
+                    Property = new PropertyReference { Name = "1" },
+                    Value = Value.ForNull()
+                }
+            };
+            var expectedQuery = new Query("notinFilter") { Filter = expected };
+            Assert.Equal(actualQuery, expectedQuery);
         }
 
         [Fact]
