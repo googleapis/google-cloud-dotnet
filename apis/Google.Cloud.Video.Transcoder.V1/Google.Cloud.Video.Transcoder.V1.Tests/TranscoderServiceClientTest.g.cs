@@ -51,6 +51,13 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
                 TtlAfterCompletionDays = 1495978457,
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -81,6 +88,13 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
                 TtlAfterCompletionDays = 1495978457,
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -113,6 +127,13 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
                 TtlAfterCompletionDays = 1495978457,
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -143,6 +164,13 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
                 TtlAfterCompletionDays = 1495978457,
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -175,6 +203,13 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
                 TtlAfterCompletionDays = 1495978457,
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -205,6 +240,13 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
                 TtlAfterCompletionDays = 1495978457,
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -236,6 +278,13 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
                 TtlAfterCompletionDays = 1495978457,
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -265,6 +314,13 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
                 TtlAfterCompletionDays = 1495978457,
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -296,6 +352,13 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
                 TtlAfterCompletionDays = 1495978457,
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -325,6 +388,13 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
                 TtlAfterCompletionDays = 1495978457,
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -356,6 +426,13 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
                 TtlAfterCompletionDays = 1495978457,
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -385,6 +462,13 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
                 TtlAfterCompletionDays = 1495978457,
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -505,6 +589,13 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
             {
                 JobTemplateName = JobTemplateName.FromProjectLocationJobTemplate("[PROJECT]", "[LOCATION]", "[JOB_TEMPLATE]"),
                 Config = new JobConfig(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateJobTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -527,6 +618,13 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
             {
                 JobTemplateName = JobTemplateName.FromProjectLocationJobTemplate("[PROJECT]", "[LOCATION]", "[JOB_TEMPLATE]"),
                 Config = new JobConfig(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateJobTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<JobTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -551,6 +649,13 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
             {
                 JobTemplateName = JobTemplateName.FromProjectLocationJobTemplate("[PROJECT]", "[LOCATION]", "[JOB_TEMPLATE]"),
                 Config = new JobConfig(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateJobTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -573,6 +678,13 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
             {
                 JobTemplateName = JobTemplateName.FromProjectLocationJobTemplate("[PROJECT]", "[LOCATION]", "[JOB_TEMPLATE]"),
                 Config = new JobConfig(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateJobTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<JobTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -597,6 +709,13 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
             {
                 JobTemplateName = JobTemplateName.FromProjectLocationJobTemplate("[PROJECT]", "[LOCATION]", "[JOB_TEMPLATE]"),
                 Config = new JobConfig(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateJobTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -619,6 +738,13 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
             {
                 JobTemplateName = JobTemplateName.FromProjectLocationJobTemplate("[PROJECT]", "[LOCATION]", "[JOB_TEMPLATE]"),
                 Config = new JobConfig(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateJobTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<JobTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -641,6 +767,13 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
             {
                 JobTemplateName = JobTemplateName.FromProjectLocationJobTemplate("[PROJECT]", "[LOCATION]", "[JOB_TEMPLATE]"),
                 Config = new JobConfig(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetJobTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -661,6 +794,13 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
             {
                 JobTemplateName = JobTemplateName.FromProjectLocationJobTemplate("[PROJECT]", "[LOCATION]", "[JOB_TEMPLATE]"),
                 Config = new JobConfig(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetJobTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<JobTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -683,6 +823,13 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
             {
                 JobTemplateName = JobTemplateName.FromProjectLocationJobTemplate("[PROJECT]", "[LOCATION]", "[JOB_TEMPLATE]"),
                 Config = new JobConfig(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetJobTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -703,6 +850,13 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
             {
                 JobTemplateName = JobTemplateName.FromProjectLocationJobTemplate("[PROJECT]", "[LOCATION]", "[JOB_TEMPLATE]"),
                 Config = new JobConfig(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetJobTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<JobTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -725,6 +879,13 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
             {
                 JobTemplateName = JobTemplateName.FromProjectLocationJobTemplate("[PROJECT]", "[LOCATION]", "[JOB_TEMPLATE]"),
                 Config = new JobConfig(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetJobTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -745,6 +906,13 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
             {
                 JobTemplateName = JobTemplateName.FromProjectLocationJobTemplate("[PROJECT]", "[LOCATION]", "[JOB_TEMPLATE]"),
                 Config = new JobConfig(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetJobTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<JobTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null, null);
