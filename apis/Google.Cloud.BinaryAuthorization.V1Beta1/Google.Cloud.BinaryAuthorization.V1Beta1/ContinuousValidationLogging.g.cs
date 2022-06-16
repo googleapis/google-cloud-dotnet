@@ -27,42 +27,43 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
             "Ckxnb29nbGUvY2xvdWQvYmluYXJ5YXV0aG9yaXphdGlvbi92MWJldGExL2Nv",
             "bnRpbnVvdXNfdmFsaWRhdGlvbl9sb2dnaW5nLnByb3RvEihnb29nbGUuY2xv",
             "dWQuYmluYXJ5YXV0aG9yaXphdGlvbi52MWJldGExGh9nb29nbGUvcHJvdG9i",
-            "dWYvdGltZXN0YW1wLnByb3RvIsgIChlDb250aW51b3VzVmFsaWRhdGlvbkV2",
+            "dWYvdGltZXN0YW1wLnByb3RvIt8IChlDb250aW51b3VzVmFsaWRhdGlvbkV2",
             "ZW50EnUKCXBvZF9ldmVudBgBIAEoCzJgLmdvb2dsZS5jbG91ZC5iaW5hcnlh",
             "dXRob3JpemF0aW9uLnYxYmV0YTEuQ29udGludW91c1ZhbGlkYXRpb25FdmVu",
             "dC5Db250aW51b3VzVmFsaWRhdGlvblBvZEV2ZW50SAASfgoYdW5zdXBwb3J0",
             "ZWRfcG9saWN5X2V2ZW50GAIgASgLMlouZ29vZ2xlLmNsb3VkLmJpbmFyeWF1",
             "dGhvcml6YXRpb24udjFiZXRhMS5Db250aW51b3VzVmFsaWRhdGlvbkV2ZW50",
-            "LlVuc3VwcG9ydGVkUG9saWN5RXZlbnRIABr2BQocQ29udGludW91c1ZhbGlk",
-            "YXRpb25Qb2RFdmVudBILCgNwb2QYASABKAkSLwoLZGVwbG95X3RpbWUYAiAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVuZF90aW1lGAMg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBKKAQoHdmVyZGljdBgE",
-            "IAEoDjJ5Lmdvb2dsZS5jbG91ZC5iaW5hcnlhdXRob3JpemF0aW9uLnYxYmV0",
-            "YTEuQ29udGludW91c1ZhbGlkYXRpb25FdmVudC5Db250aW51b3VzVmFsaWRh",
-            "dGlvblBvZEV2ZW50LlBvbGljeUNvbmZvcm1hbmNlVmVyZGljdBJ9CgZpbWFn",
-            "ZXMYBSADKAsybS5nb29nbGUuY2xvdWQuYmluYXJ5YXV0aG9yaXphdGlvbi52",
-            "MWJldGExLkNvbnRpbnVvdXNWYWxpZGF0aW9uRXZlbnQuQ29udGludW91c1Zh",
-            "bGlkYXRpb25Qb2RFdmVudC5JbWFnZURldGFpbHMagAIKDEltYWdlRGV0YWls",
-            "cxINCgVpbWFnZRgBIAEoCRKJAQoGcmVzdWx0GAIgASgOMnkuZ29vZ2xlLmNs",
-            "b3VkLmJpbmFyeWF1dGhvcml6YXRpb24udjFiZXRhMS5Db250aW51b3VzVmFs",
-            "aWRhdGlvbkV2ZW50LkNvbnRpbnVvdXNWYWxpZGF0aW9uUG9kRXZlbnQuSW1h",
-            "Z2VEZXRhaWxzLkF1ZGl0UmVzdWx0EhMKC2Rlc2NyaXB0aW9uGAMgASgJIkAK",
-            "C0F1ZGl0UmVzdWx0EhwKGEFVRElUX1JFU1VMVF9VTlNQRUNJRklFRBAAEgkK",
-            "BUFMTE9XEAESCAoEREVOWRACIlsKGFBvbGljeUNvbmZvcm1hbmNlVmVyZGlj",
-            "dBIqCiZQT0xJQ1lfQ09ORk9STUFOQ0VfVkVSRElDVF9VTlNQRUNJRklFRBAA",
-            "EhMKD1ZJT0xBVEVTX1BPTElDWRABGi0KFlVuc3VwcG9ydGVkUG9saWN5RXZl",
-            "bnQSEwoLZGVzY3JpcHRpb24YASABKAlCDAoKZXZlbnRfdHlwZUK2AgosY29t",
-            "Lmdvb2dsZS5jbG91ZC5iaW5hcnlhdXRob3JpemF0aW9uLnYxYmV0YTFCIENv",
-            "bnRpbnVvdXNWYWxpZGF0aW9uTG9nZ2luZ1Byb3RvUAFaW2dvb2dsZS5nb2xh",
-            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYmluYXJ5YXV0aG9y",
-            "aXphdGlvbi92MWJldGExO2JpbmFyeWF1dGhvcml6YXRpb274AQGqAihHb29n",
-            "bGUuQ2xvdWQuQmluYXJ5QXV0aG9yaXphdGlvbi5WMUJldGExygIoR29vZ2xl",
-            "XENsb3VkXEJpbmFyeUF1dGhvcml6YXRpb25cVjFiZXRhMeoCK0dvb2dsZTo6",
-            "Q2xvdWQ6OkJpbmFyeUF1dGhvcml6YXRpb246OlYxYmV0YTFiBnByb3RvMw=="));
+            "LlVuc3VwcG9ydGVkUG9saWN5RXZlbnRIABqNBgocQ29udGludW91c1ZhbGlk",
+            "YXRpb25Qb2RFdmVudBIVCg1wb2RfbmFtZXNwYWNlGAcgASgJEgsKA3BvZBgB",
+            "IAEoCRIvCgtkZXBsb3lfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXASLAoIZW5kX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wEooBCgd2ZXJkaWN0GAQgASgOMnkuZ29vZ2xlLmNsb3VkLmJp",
+            "bmFyeWF1dGhvcml6YXRpb24udjFiZXRhMS5Db250aW51b3VzVmFsaWRhdGlv",
+            "bkV2ZW50LkNvbnRpbnVvdXNWYWxpZGF0aW9uUG9kRXZlbnQuUG9saWN5Q29u",
+            "Zm9ybWFuY2VWZXJkaWN0En0KBmltYWdlcxgFIAMoCzJtLmdvb2dsZS5jbG91",
+            "ZC5iaW5hcnlhdXRob3JpemF0aW9uLnYxYmV0YTEuQ29udGludW91c1ZhbGlk",
+            "YXRpb25FdmVudC5Db250aW51b3VzVmFsaWRhdGlvblBvZEV2ZW50LkltYWdl",
+            "RGV0YWlscxqAAgoMSW1hZ2VEZXRhaWxzEg0KBWltYWdlGAEgASgJEokBCgZy",
+            "ZXN1bHQYAiABKA4yeS5nb29nbGUuY2xvdWQuYmluYXJ5YXV0aG9yaXphdGlv",
+            "bi52MWJldGExLkNvbnRpbnVvdXNWYWxpZGF0aW9uRXZlbnQuQ29udGludW91",
+            "c1ZhbGlkYXRpb25Qb2RFdmVudC5JbWFnZURldGFpbHMuQXVkaXRSZXN1bHQS",
+            "EwoLZGVzY3JpcHRpb24YAyABKAkiQAoLQXVkaXRSZXN1bHQSHAoYQVVESVRf",
+            "UkVTVUxUX1VOU1BFQ0lGSUVEEAASCQoFQUxMT1cQARIICgRERU5ZEAIiWwoY",
+            "UG9saWN5Q29uZm9ybWFuY2VWZXJkaWN0EioKJlBPTElDWV9DT05GT1JNQU5D",
+            "RV9WRVJESUNUX1VOU1BFQ0lGSUVEEAASEwoPVklPTEFURVNfUE9MSUNZEAEa",
+            "LQoWVW5zdXBwb3J0ZWRQb2xpY3lFdmVudBITCgtkZXNjcmlwdGlvbhgBIAEo",
+            "CUIMCgpldmVudF90eXBlQrYCCixjb20uZ29vZ2xlLmNsb3VkLmJpbmFyeWF1",
+            "dGhvcml6YXRpb24udjFiZXRhMUIgQ29udGludW91c1ZhbGlkYXRpb25Mb2dn",
+            "aW5nUHJvdG9QAVpbZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xl",
+            "YXBpcy9jbG91ZC9iaW5hcnlhdXRob3JpemF0aW9uL3YxYmV0YTE7YmluYXJ5",
+            "YXV0aG9yaXphdGlvbvgBAaoCKEdvb2dsZS5DbG91ZC5CaW5hcnlBdXRob3Jp",
+            "emF0aW9uLlYxQmV0YTHKAihHb29nbGVcQ2xvdWRcQmluYXJ5QXV0aG9yaXph",
+            "dGlvblxWMWJldGEx6gIrR29vZ2xlOjpDbG91ZDo6QmluYXJ5QXV0aG9yaXph",
+            "dGlvbjo6VjFiZXRhMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent), global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Parser, new[]{ "PodEvent", "UnsupportedPolicyEvent" }, new[]{ "EventType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent), global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Parser, new[]{ "Pod", "DeployTime", "EndTime", "Verdict", "Images" }, null, new[]{ typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.PolicyConformanceVerdict) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails), global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Parser, new[]{ "Image", "Result", "Description" }, null, new[]{ typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.AuditResult) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent), global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Parser, new[]{ "PodEvent", "UnsupportedPolicyEvent" }, new[]{ "EventType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent), global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Parser, new[]{ "PodNamespace", "Pod", "DeployTime", "EndTime", "Verdict", "Images" }, null, new[]{ typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.PolicyConformanceVerdict) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails), global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Parser, new[]{ "Image", "Result", "Description" }, null, new[]{ typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.AuditResult) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.UnsupportedPolicyEvent), global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.UnsupportedPolicyEvent.Parser, new[]{ "Description" }, null, null, null, null)})
           }));
     }
@@ -404,6 +405,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ContinuousValidationPodEvent(ContinuousValidationPodEvent other) : this() {
+          podNamespace_ = other.podNamespace_;
           pod_ = other.pod_;
           deployTime_ = other.deployTime_ != null ? other.deployTime_.Clone() : null;
           endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
@@ -416,6 +418,21 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ContinuousValidationPodEvent Clone() {
           return new ContinuousValidationPodEvent(this);
+        }
+
+        /// <summary>Field number for the "pod_namespace" field.</summary>
+        public const int PodNamespaceFieldNumber = 7;
+        private string podNamespace_ = "";
+        /// <summary>
+        /// The k8s namespace of the Pod.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string PodNamespace {
+          get { return podNamespace_; }
+          set {
+            podNamespace_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
         }
 
         /// <summary>Field number for the "pod" field.</summary>
@@ -507,6 +524,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
           if (ReferenceEquals(other, this)) {
             return true;
           }
+          if (PodNamespace != other.PodNamespace) return false;
           if (Pod != other.Pod) return false;
           if (!object.Equals(DeployTime, other.DeployTime)) return false;
           if (!object.Equals(EndTime, other.EndTime)) return false;
@@ -519,6 +537,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
+          if (PodNamespace.Length != 0) hash ^= PodNamespace.GetHashCode();
           if (Pod.Length != 0) hash ^= Pod.GetHashCode();
           if (deployTime_ != null) hash ^= DeployTime.GetHashCode();
           if (endTime_ != null) hash ^= EndTime.GetHashCode();
@@ -559,6 +578,10 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
             output.WriteEnum((int) Verdict);
           }
           images_.WriteTo(output, _repeated_images_codec);
+          if (PodNamespace.Length != 0) {
+            output.WriteRawTag(58);
+            output.WriteString(PodNamespace);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -586,6 +609,10 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
             output.WriteEnum((int) Verdict);
           }
           images_.WriteTo(ref output, _repeated_images_codec);
+          if (PodNamespace.Length != 0) {
+            output.WriteRawTag(58);
+            output.WriteString(PodNamespace);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -596,6 +623,9 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
+          if (PodNamespace.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(PodNamespace);
+          }
           if (Pod.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Pod);
           }
@@ -620,6 +650,9 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         public void MergeFrom(ContinuousValidationPodEvent other) {
           if (other == null) {
             return;
+          }
+          if (other.PodNamespace.Length != 0) {
+            PodNamespace = other.PodNamespace;
           }
           if (other.Pod.Length != 0) {
             Pod = other.Pod;
@@ -681,6 +714,10 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
                 images_.AddEntriesFrom(input, _repeated_images_codec);
                 break;
               }
+              case 58: {
+                PodNamespace = input.ReadString();
+                break;
+              }
             }
           }
         #endif
@@ -720,6 +757,10 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
               }
               case 42: {
                 images_.AddEntriesFrom(ref input, _repeated_images_codec);
+                break;
+              }
+              case 58: {
+                PodNamespace = input.ReadString();
                 break;
               }
             }
