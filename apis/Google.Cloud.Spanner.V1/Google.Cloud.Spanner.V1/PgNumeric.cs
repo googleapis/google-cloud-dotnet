@@ -275,7 +275,39 @@ namespace Google.Cloud.Spanner.V1
         /// If the value is between -1 and 1 exclusive, a "0" character is included before the decimal point.
         /// </summary>
         /// <returns>A canonical string representation of this value.</returns>
-        public override string ToString()
+        public override string ToString() => ToString((_, _, decimalPlaces) => decimalPlaces);
+
+        /// <summary>
+        /// Returns a canonical string representation of this value. This always uses "." as a decimal point.
+        /// If the value is between -1 and 1 exclusive, a "0" character is included before the decimal point.
+        /// Trailing zeros are included.
+        /// The number representation will be truncated to the amount of decimal places as returned by
+        /// <paramref name="decimalPrecisionCalculator"/>.
+        /// </summary>
+        /// <param name="decimalPrecisionCalculator">
+        /// <para>
+        /// A function to calculate how many decimal places should the
+        /// representation be truncated to. This number should be greater or equal to zero and less than or equal to
+        /// the total decimal places in the number.
+        /// </para>
+        /// <para>
+        /// The parameters of this function are:
+        /// <list type="bullet">
+        /// <item>
+        /// The text representation of the the scaled value, scaled to <see cref="_scale"/> or
+        /// the empty string for zero.
+        /// Will contain the '-' if the number is negative. It won't contain the trailing zeros.
+        /// </item>
+        /// <item>
+        /// The number of integer places in the value. This may be zero.
+        /// </item>
+        /// <item>
+        /// The number of decimal places in the value, including trailing zeros. This may be zero.
+        /// </item>
+        /// </list>
+        /// </para>
+        /// </param>
+        private string ToString(Func<string, int, int, int> decimalPrecisionCalculator)
         {
             if (_notANumber)
             {
@@ -285,25 +317,28 @@ namespace Google.Cloud.Spanner.V1
             int sign = _scaledValue.Sign;
             if (sign == 0)
             {
-                return _trailingZeros == 0 ? "0" : "0." + new string('0', _trailingZeros);
+                return _trailingZeros == 0 ? "0" : "0." + new string('0', decimalPrecisionCalculator("", 0, _trailingZeros));
             }
 
-            string integerText = _scaledValue.ToString(CultureInfo.InvariantCulture);
+            var integerText = _scaledValue.ToString(CultureInfo.InvariantCulture);
+
+            int signLength = sign > 0 ? 0 : 1;
 
             // We can have a scaled value or a non-scaled value, check if its scaled. 
             if (_scale == 0)
             {
-                return _trailingZeros == 0 ? integerText : integerText + '.' + new string('0', _trailingZeros);
+                return _trailingZeros == 0 ? integerText : integerText + '.' + new string('0',decimalPrecisionCalculator(integerText, integerText.Length - signLength, _trailingZeros));
             }
 
-            int signLength = sign > 0 ? 0 : 1;
-
-            // Always have something before the period, even if it's just a 0.
+            // Always have something before the period, even if it's just a 0
             int originalIntegerPlaces = Math.Max(integerText.Length - signLength - _scale, 0);
             int resultIntegerPlaces = Math.Max(originalIntegerPlaces, 1);
 
-            // Sign, then integer part, then period (maybe), then significant decimals, then trailing zeros.
-            int resultLength = signLength + resultIntegerPlaces + (_scale > 0 ? 1 : 0) + _scale + _trailingZeros;
+            // Decimal precision now that we know how many digits are in the integer part.
+            int decimalPlaces = decimalPrecisionCalculator(integerText, originalIntegerPlaces, _scale + _trailingZeros);
+
+            // Sign, then integer part, then period (maybe), then allowed decimal places
+            int resultLength = signLength + resultIntegerPlaces + (_scale > 0 ? 1 : 0) + decimalPlaces;
             var chars = new char[resultLength];
             int targetPosition = 0;
             int sourcePosition = 0;
@@ -324,7 +359,7 @@ namespace Google.Cloud.Spanner.V1
             // Fill zeroes if necessary.
             if (originalIntegerPlaces == 0)
             {
-                int decimalsToFill = _scale - (integerText.Length - signLength);
+                int decimalsToFill = Math.Min(decimalPlaces, _scale - (integerText.Length - signLength));
                 for (int i = 0; i < decimalsToFill; i++)
                 {
                     chars[targetPosition++] = '0';
@@ -332,7 +367,7 @@ namespace Google.Cloud.Spanner.V1
             }
 
             // Now the significant digits in the remaining text.
-            for (; sourcePosition < integerText.Length; sourcePosition++)
+            for (; sourcePosition < integerText.Length && targetPosition < chars.Length; sourcePosition++)
             {
                 chars[targetPosition++] = integerText[sourcePosition];
             }
@@ -431,15 +466,70 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>The converted value.</returns>
         public decimal ToDecimal(LossOfPrecisionHandling lossOfPrecisionHandling)
         {
-            // FIXME: Awful performance!
-            string text = ToString();
-            // Handles overflow.
-            decimal dec = Decimal.Parse(text, CultureInfo.InvariantCulture);
-            if (lossOfPrecisionHandling == LossOfPrecisionHandling.Throw && this != dec)
+            if (_notANumber)
             {
-                throw new InvalidOperationException("Conversion would lose information");
+                throw new OverflowException($"NaN cannot be represented as {typeof(decimal).FullName}");
             }
-            return dec;
+
+            // We don't handle zero explicitly as we want to take into account trailing zeros here.
+
+            // Handles overflow
+            return decimal.Parse(ToString(DecimalPrecision), CultureInfo.InvariantCulture);
+
+            int DecimalPrecision(string scaledText, int integerPlaces, int decimalPlaces)
+            {
+                int decimalPrecision;
+                // If the number had no decimal places to begin with, then we need not to worry.
+                // If the number has 29 or more integer places we cannot include any decimal places;
+                // this may overflow when we convert to decimal but that's fine, let's not handle that here.
+                if (decimalPlaces == 0 || integerPlaces >= 29)
+                {
+                    decimalPrecision = 0;
+                }
+                // If the number has at most 28 significant digits we can represent it fully.
+                else if (integerPlaces + decimalPlaces <= 28)
+                {
+                    decimalPrecision = decimalPlaces;
+                }
+                // If there are no integer places we can represent up to 28 decimal places.
+                else if (integerPlaces == 0)
+                {
+                    decimalPrecision = Math.Min(decimalPlaces, 28);
+                }
+                // integerPlaces + decimalPlaces >= 29 and
+                // 1 <= integerPlaces <= 28 which means we may have room for some of the decimal places
+                // but we need to find out if the number can have 28 or 29 significant digits.
+                else
+                {
+                    int significantPlaces = 29;
+                    string maxDecimalText = decimal.MaxValue.ToString(CultureInfo.InvariantCulture);
+                    // Let's compare digit by digit to check if our unscaled number is greater than decimal max,
+                    // in which case we can only have 28 significant places.
+                    for (int i = scaledText.StartsWith("-") ? 1 : 0, j = 0; i < scaledText.Length && j < maxDecimalText.Length; i++, j++)
+                    {
+                        char valueDigit = scaledText[i];
+                        char maxValueDigit = maxDecimalText[j];
+                        if (valueDigit > maxValueDigit)
+                        {
+                            significantPlaces = 28;
+                            break;
+                        }
+                        if (valueDigit < maxValueDigit)
+                        {
+                            break;
+                        }
+                    }
+                    // We probably don't need Math.Min here, but it doesn't hurt either.
+                    // Note that since we have at most 28 integer places the result here cannot be negative.
+                    decimalPrecision = Math.Min(significantPlaces - integerPlaces, decimalPlaces);
+                }
+                // We truncated but we can't.
+                if (decimalPrecision < decimalPlaces && lossOfPrecisionHandling == LossOfPrecisionHandling.Throw)
+                {
+                    throw new InvalidOperationException("Conversion would lose information");
+                }
+                return decimalPrecision;
+            }
         }
 
         /// <summary>
