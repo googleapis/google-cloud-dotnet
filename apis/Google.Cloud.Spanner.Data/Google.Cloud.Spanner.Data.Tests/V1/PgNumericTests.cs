@@ -311,6 +311,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         [InlineData("NaN", "NaN")]
         [InlineData("1.00", "1.00")]
         [InlineData("1.000000", "1.000000")]
+        [InlineData("0.0000000000000", "0.0000000000000")]
         [InlineData("99999.999999000", "99999.999999000")]
         [InlineData("-0.000001", "-0.000001")]
         [InlineData("100", "100")]
@@ -329,56 +330,114 @@ namespace Google.Cloud.Spanner.V1.Tests
             Assert.Equal(expectedValue, numeric.ToString());
         }
 
-        [Theory]
-        [InlineData("0.00")]
-        [InlineData("1.00")]
-        [InlineData("1.01")]
-        [InlineData("12345.123456000")]
-        [InlineData("-0.000001")]
-        [InlineData("1234567891.123456789123")]
-        [InlineData("-12345678912.12345678912")]
-        [InlineData("123456789123456789.12345678912")]
-        [InlineData("12345678912345678912345678.1234567891234567891234")]
-        [InlineData("9999999999999999999999999999.999999999999999999999999")]
-        [InlineData("100")]
-        [InlineData("1.33333333333333333")]
-        public void ToDecimal(string input)
+        [Theory, CombinatorialData]
+        public void ToDecimal_Precise(
+            [CombinatorialValues(
+                "79228162514264337593543950335", // decimal.MaxValue
+                "0.0000000000000000000000000001", // Epsilon for decimal
+                "7.9228162514264337593543950335", // Maximum significant digits with 28 dps which is the max dps for decimal
+                "7.2345678901234567890123456789",
+                "8.234567890123456789012345678",
+                "0.8234567890123456789012345678",
+                "0.1234",
+                "12300000000"
+            )]
+            string text, LossOfPrecisionHandling handling, bool negate)
         {
-            var numeric = PgNumeric.Parse(input);
-            // decimal.Parse will silently lose precision if input has more significant digits than decimal can handle.
-            decimal expected = decimal.Parse(input, CultureInfo.InvariantCulture);
-            decimal actual = numeric.ToDecimal(LossOfPrecisionHandling.Truncate);
+            if (negate)
+            {
+                text = "-" + text;
+            }
+            PgNumeric numeric = PgNumeric.Parse(text);
+            decimal expected = decimal.Parse(text, CultureInfo.InvariantCulture);
+            decimal actual = numeric.ToDecimal(handling);
             Assert.Equal(expected, actual);
-            // Conversion via the explicit conversion should do the same thing.
-            decimal actual2 = (decimal)numeric;
-            Assert.Equal(expected, actual2);
+        }
+
+        [Theory, CombinatorialData]
+        public void ToDecimal_Overflow([CombinatorialValues(
+            "79228162514264337593543950336", // decimal.MaxValue + 1
+            "123456789012345678901234567890" // 30 integer places
+            )] string text, LossOfPrecisionHandling handling)
+        {
+            PerformTest(text, handling);
+            PerformTest("-" + text, handling);
+
+            static void PerformTest(string text, LossOfPrecisionHandling handling)
+            {
+                PgNumeric numeric = PgNumeric.Parse(text);
+                Assert.Throws<OverflowException>(() => numeric.ToDecimal(handling));
+            }
         }
 
         [Theory]
-        [InlineData("123456789012345678900.123456789", "123456789012345678900.12345679")]
         [InlineData("79228162514264337593543950335.0000000001", "79228162514264337593543950335")]
-        public void ToDecimal_LossOfPrecision_Truncate(string input, string expectedValue)
+        [InlineData("0.1234567891234567891234567899999", "0.1234567891234567891234567899")]
+        [InlineData("1.1234567891234567891234567899999", "1.1234567891234567891234567899")]
+        [InlineData("123456789012345678900.123456780", "123456789012345678900.12345678")]
+        [InlineData("123456789012345678900.123456785", "123456789012345678900.12345678")]
+        [InlineData("123456789012345678900.123456789", "123456789012345678900.12345678")]
+        [InlineData("123456789012345678900.123456770", "123456789012345678900.12345677")]
+        [InlineData("123456789012345678900.123456775", "123456789012345678900.12345677")]
+        [InlineData("123456789012345678900.123456779", "123456789012345678900.12345677")]
+        // For scaled values in [-(2^96 - 1), (2^96 - 1)] we can have 29 significant digits.
+        [InlineData("7.2345678901234567890123456789", "7.2345678901234567890123456789")]
+        // For scaled values outside of [-(2^96 - 1), (2^96 - 1)] we can have 28 significant digits only.
+        [InlineData("8.2345678901234567890123456789", "8.234567890123456789012345678")]
+        [InlineData("0.82345678901234567890123456789", "0.8234567890123456789012345678")]
+        [InlineData("9999999999999999999999999999.999999999999999999999999", "9999999999999999999999999999")]
+        public void ToDecimal_LossOfPrecision_Truncate(string text, string expectedDecimalText)
         {
-            // Decimal can take upto 29 digits. If input has more significant digits than decimal can handle, it will be truncated and
-            // there will be loss of precision.
-            var numeric = PgNumeric.Parse(input);
-            var convertedDecimalString = numeric.ToDecimal(LossOfPrecisionHandling.Truncate).ToString(CultureInfo.InvariantCulture);
-            Assert.Equal(expectedValue, convertedDecimalString);
-        }
+            // It's easier to do this than to vary negation in other ways.
+            PerformTest(text, expectedDecimalText);
+            PerformTest("-" + text, "-" + expectedDecimalText);
 
-        [Fact]
-        public void ToDecimal_Overflow()
-        {
-            var numeric = PgNumeric.Parse("99999999999999999999999999999999.9999999999999999999999999999");
-            Assert.Throws<OverflowException>(() => numeric.ToDecimal(LossOfPrecisionHandling.Truncate));
+            static void PerformTest(string text, string expectedDecimalText)
+            {
+                PgNumeric numeric = PgNumeric.Parse(text);
+                decimal actual = numeric.ToDecimal(LossOfPrecisionHandling.Truncate);
+                Assert.Equal(expectedDecimalText, actual.ToString(CultureInfo.InvariantCulture));
+                // Conversion via the explicit conversion should do the same thing
+                decimal actual2 = (decimal) numeric;
+                Assert.Equal(actual, actual2);
+            }
         }
 
         [Theory]
-        [InlineData("12345678.1234567891234567891234567891")]
-        [InlineData("123456789012345678900.123456789")]
-        public void ToDecimal_LossOfPrecision_Throw(string input)
+        [InlineData("0.00000000000000000000000000000000000000", "0.0000000000000000000000000000")]
+        [InlineData("-0.00000000000000000000000000000000000000", "0.0000000000000000000000000000")]
+        // We test zero on its own as the minus sign is not included on the string representation.
+        public void ToDecimal_LossOfPrecision_Truncate_Zero(string text, string expectedDecimalText)
         {
-            var numeric = PgNumeric.Parse(input);
+            PgNumeric numeric = PgNumeric.Parse(text);
+            decimal actual = numeric.ToDecimal(LossOfPrecisionHandling.Truncate);
+            Assert.Equal(expectedDecimalText, actual.ToString(CultureInfo.InvariantCulture));
+            // Conversion via the explicit conversion should do the same thing
+            decimal actual2 = (decimal) numeric;
+            Assert.Equal(actual, actual2);
+        }
+
+        [Theory, CombinatorialData]
+        public void ToDecimal_LossOfPrecision_Throw(
+            [CombinatorialValues(
+                // decimal.MaxValue + epsilon; doesn't count as overflow
+                "79228162514264337593543950335.00000000000000000000000000000000000001",
+                // Simpler example of more significant digits than decimal can handle
+                "123456789012345678900.123456789",
+                // Even for zero, this loses information as there are more significant digits than decimal can handle.
+                // Trailing zeroes are significant here because they are relevant for determining precission.
+                "0.00000000000000000000000000000000000000",
+                // Or for any number really, this loses information as there are more significant digits than decimal can handle
+                // Trailing zeroes are significant here because they are relevant for determining precission.
+                "1.00000000000000000000000000000000000000"
+            )]
+            string text, bool negate)
+        {
+            if (negate)
+            {
+                text = "-" + text;
+            }
+            PgNumeric numeric = PgNumeric.Parse(text);
             Assert.Throws<InvalidOperationException>(() => numeric.ToDecimal(LossOfPrecisionHandling.Throw));
         }
 
