@@ -27,41 +27,41 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
             "Cg5pbmRleF92MS5wcm90bxIeZ29vZ2xlLmNsb3VkLnRvb2xzLmFwaWluZGV4",
             "LnYxInsKBUluZGV4EjEKBGFwaXMYASADKAsyIy5nb29nbGUuY2xvdWQudG9v",
             "bHMuYXBpaW5kZXgudjEuQXBpEj8KCG1ldGFkYXRhGAIgASgLMi0uZ29vZ2xl",
-            "LmNsb3VkLnRvb2xzLmFwaWluZGV4LnYxLkluZGV4TWV0YWRhdGEisgQKA0Fw",
+            "LmNsb3VkLnRvb2xzLmFwaWluZGV4LnYxLkluZGV4TWV0YWRhdGEi1AQKA0Fw",
             "aRIKCgJpZBgBIAEoCRIRCglkaXJlY3RvcnkYAiABKAkSDwoHdmVyc2lvbhgD",
             "IAEoCRIVCg1tYWpvcl92ZXJzaW9uGAQgASgJEhEKCWhvc3RfbmFtZRgFIAEo",
             "CRINCgV0aXRsZRgGIAEoCRITCgtkZXNjcmlwdGlvbhgHIAEoCRIaChJpbXBv",
             "cnRfZGlyZWN0b3JpZXMYCCADKAkSQQoHb3B0aW9ucxgJIAMoCzIwLmdvb2ds",
             "ZS5jbG91ZC50b29scy5hcGlpbmRleC52MS5BcGkuT3B0aW9uc0VudHJ5EjkK",
             "CHNlcnZpY2VzGAogAygLMicuZ29vZ2xlLmNsb3VkLnRvb2xzLmFwaWluZGV4",
-            "LnYxLlNlcnZpY2USEwoLY29uZmlnX2ZpbGUYCyABKAkamwEKDE9wdGlvblZh",
-            "bHVlcxJXCgx2YWx1ZV9jb3VudHMYASADKAsyQS5nb29nbGUuY2xvdWQudG9v",
-            "bHMuYXBpaW5kZXgudjEuQXBpLk9wdGlvblZhbHVlcy5WYWx1ZUNvdW50c0Vu",
-            "dHJ5GjIKEFZhbHVlQ291bnRzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVl",
-            "GAIgASgFOgI4ARpgCgxPcHRpb25zRW50cnkSCwoDa2V5GAEgASgJEj8KBXZh",
-            "bHVlGAIgASgLMjAuZ29vZ2xlLmNsb3VkLnRvb2xzLmFwaWluZGV4LnYxLkFw",
-            "aS5PcHRpb25WYWx1ZXM6AjgBImkKB1NlcnZpY2USEgoKc2hvcnRfbmFtZRgB",
-            "IAEoCRIRCglmdWxsX25hbWUYAiABKAkSNwoHbWV0aG9kcxgDIAMoCzImLmdv",
-            "b2dsZS5jbG91ZC50b29scy5hcGlpbmRleC52MS5NZXRob2Qi1AIKBk1ldGhv",
-            "ZBISCgpzaG9ydF9uYW1lGAEgASgJEhEKCWZ1bGxfbmFtZRgCIAEoCRI5CgRt",
-            "b2RlGAMgASgOMisuZ29vZ2xlLmNsb3VkLnRvb2xzLmFwaWluZGV4LnYxLk1l",
-            "dGhvZC5Nb2RlEkQKCGJpbmRpbmdzGAQgAygLMjIuZ29vZ2xlLmNsb3VkLnRv",
-            "b2xzLmFwaWluZGV4LnYxLk1ldGhvZC5IdHRwQmluZGluZxowCgtIdHRwQmlu",
-            "ZGluZxITCgtodHRwX21ldGhvZBgBIAEoCRIMCgRwYXRoGAIgASgJInAKBE1v",
-            "ZGUSFAoQTU9ERV9VTlNQRUNJRklFRBAAEgkKBVVOQVJZEAESFAoQQ0xJRU5U",
-            "X1NUUkVBTUlORxACEhQKEFNFUlZFUl9TVFJFQU1JTkcQAxIbChdCSURJUkVD",
-            "VElPTkFMX1NUUkVBTUlORxAEInIKDUluZGV4TWV0YWRhdGESFgoOc2NoZW1h",
-            "X3ZlcnNpb24YASABKAkSSQoQc2NoZW1hX3N0YWJpbGl0eRgCIAEoDjIvLmdv",
-            "b2dsZS5jbG91ZC50b29scy5hcGlpbmRleC52MS5TY2hlbWFTdGFiaWxpdHkq",
-            "XQoPU2NoZW1hU3RhYmlsaXR5EiAKHFNDSEVNQV9TVEFCSUxJVFlfVU5TUEVD",
-            "SUZJRUQQABIMCghVTlNUQUJMRRABEgoKBlNUQUJMRRACEg4KCkRFUFJFQ0FU",
-            "RUQQA0IhqgIeR29vZ2xlLkNsb3VkLlRvb2xzLkFwaUluZGV4LlYxYgZwcm90",
-            "bzM="));
+            "LnYxLlNlcnZpY2USEwoLY29uZmlnX2ZpbGUYCyABKAkSIAoYc2VydmljZV9j",
+            "b25maWdfYXBpX25hbWVzGAwgAygJGpsBCgxPcHRpb25WYWx1ZXMSVwoMdmFs",
+            "dWVfY291bnRzGAEgAygLMkEuZ29vZ2xlLmNsb3VkLnRvb2xzLmFwaWluZGV4",
+            "LnYxLkFwaS5PcHRpb25WYWx1ZXMuVmFsdWVDb3VudHNFbnRyeRoyChBWYWx1",
+            "ZUNvdW50c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoBToCOAEa",
+            "YAoMT3B0aW9uc0VudHJ5EgsKA2tleRgBIAEoCRI/CgV2YWx1ZRgCIAEoCzIw",
+            "Lmdvb2dsZS5jbG91ZC50b29scy5hcGlpbmRleC52MS5BcGkuT3B0aW9uVmFs",
+            "dWVzOgI4ASJpCgdTZXJ2aWNlEhIKCnNob3J0X25hbWUYASABKAkSEQoJZnVs",
+            "bF9uYW1lGAIgASgJEjcKB21ldGhvZHMYAyADKAsyJi5nb29nbGUuY2xvdWQu",
+            "dG9vbHMuYXBpaW5kZXgudjEuTWV0aG9kItQCCgZNZXRob2QSEgoKc2hvcnRf",
+            "bmFtZRgBIAEoCRIRCglmdWxsX25hbWUYAiABKAkSOQoEbW9kZRgDIAEoDjIr",
+            "Lmdvb2dsZS5jbG91ZC50b29scy5hcGlpbmRleC52MS5NZXRob2QuTW9kZRJE",
+            "CghiaW5kaW5ncxgEIAMoCzIyLmdvb2dsZS5jbG91ZC50b29scy5hcGlpbmRl",
+            "eC52MS5NZXRob2QuSHR0cEJpbmRpbmcaMAoLSHR0cEJpbmRpbmcSEwoLaHR0",
+            "cF9tZXRob2QYASABKAkSDAoEcGF0aBgCIAEoCSJwCgRNb2RlEhQKEE1PREVf",
+            "VU5TUEVDSUZJRUQQABIJCgVVTkFSWRABEhQKEENMSUVOVF9TVFJFQU1JTkcQ",
+            "AhIUChBTRVJWRVJfU1RSRUFNSU5HEAMSGwoXQklESVJFQ1RJT05BTF9TVFJF",
+            "QU1JTkcQBCJyCg1JbmRleE1ldGFkYXRhEhYKDnNjaGVtYV92ZXJzaW9uGAEg",
+            "ASgJEkkKEHNjaGVtYV9zdGFiaWxpdHkYAiABKA4yLy5nb29nbGUuY2xvdWQu",
+            "dG9vbHMuYXBpaW5kZXgudjEuU2NoZW1hU3RhYmlsaXR5Kl0KD1NjaGVtYVN0",
+            "YWJpbGl0eRIgChxTQ0hFTUFfU1RBQklMSVRZX1VOU1BFQ0lGSUVEEAASDAoI",
+            "VU5TVEFCTEUQARIKCgZTVEFCTEUQAhIOCgpERVBSRUNBVEVEEANCIaoCHkdv",
+            "b2dsZS5DbG91ZC5Ub29scy5BcGlJbmRleC5WMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Tools.ApiIndex.V1.SchemaStability), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tools.ApiIndex.V1.Index), global::Google.Cloud.Tools.ApiIndex.V1.Index.Parser, new[]{ "Apis", "Metadata" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tools.ApiIndex.V1.Api), global::Google.Cloud.Tools.ApiIndex.V1.Api.Parser, new[]{ "Id", "Directory", "Version", "MajorVersion", "HostName", "Title", "Description", "ImportDirectories", "Options", "Services", "ConfigFile" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tools.ApiIndex.V1.Api.Types.OptionValues), global::Google.Cloud.Tools.ApiIndex.V1.Api.Types.OptionValues.Parser, new[]{ "ValueCounts" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tools.ApiIndex.V1.Api), global::Google.Cloud.Tools.ApiIndex.V1.Api.Parser, new[]{ "Id", "Directory", "Version", "MajorVersion", "HostName", "Title", "Description", "ImportDirectories", "Options", "Services", "ConfigFile", "ServiceConfigApiNames" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tools.ApiIndex.V1.Api.Types.OptionValues), global::Google.Cloud.Tools.ApiIndex.V1.Api.Types.OptionValues.Parser, new[]{ "ValueCounts" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tools.ApiIndex.V1.Service), global::Google.Cloud.Tools.ApiIndex.V1.Service.Parser, new[]{ "ShortName", "FullName", "Methods" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tools.ApiIndex.V1.Method), global::Google.Cloud.Tools.ApiIndex.V1.Method.Parser, new[]{ "ShortName", "FullName", "Mode", "Bindings" }, null, new[]{ typeof(global::Google.Cloud.Tools.ApiIndex.V1.Method.Types.Mode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tools.ApiIndex.V1.Method.Types.HttpBinding), global::Google.Cloud.Tools.ApiIndex.V1.Method.Types.HttpBinding.Parser, new[]{ "HttpMethod", "Path" }, null, null, null, null)}),
@@ -386,6 +386,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
       options_ = other.options_.Clone();
       services_ = other.services_.Clone();
       configFile_ = other.configFile_;
+      serviceConfigApiNames_ = other.serviceConfigApiNames_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -587,6 +588,23 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
       }
     }
 
+    /// <summary>Field number for the "service_config_api_names" field.</summary>
+    public const int ServiceConfigApiNamesFieldNumber = 12;
+    private static readonly pb::FieldCodec<string> _repeated_serviceConfigApiNames_codec
+        = pb::FieldCodec.ForString(98);
+    private readonly pbc::RepeatedField<string> serviceConfigApiNames_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// All API names listed in the service config file.
+    /// This includes mixins, e.g. "google.longrunning.Operations" and
+    /// "google.cloud.location.Locations".
+    /// The names are ordered lexicographically.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ServiceConfigApiNames {
+      get { return serviceConfigApiNames_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -613,6 +631,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
       if (!Options.Equals(other.Options)) return false;
       if(!services_.Equals(other.services_)) return false;
       if (ConfigFile != other.ConfigFile) return false;
+      if(!serviceConfigApiNames_.Equals(other.serviceConfigApiNames_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -631,6 +650,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
       hash ^= Options.GetHashCode();
       hash ^= services_.GetHashCode();
       if (ConfigFile.Length != 0) hash ^= ConfigFile.GetHashCode();
+      hash ^= serviceConfigApiNames_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -684,6 +704,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
         output.WriteRawTag(90);
         output.WriteString(ConfigFile);
       }
+      serviceConfigApiNames_.WriteTo(output, _repeated_serviceConfigApiNames_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -729,6 +750,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
         output.WriteRawTag(90);
         output.WriteString(ConfigFile);
       }
+      serviceConfigApiNames_.WriteTo(ref output, _repeated_serviceConfigApiNames_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -766,6 +788,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
       if (ConfigFile.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ConfigFile);
       }
+      size += serviceConfigApiNames_.CalculateSize(_repeated_serviceConfigApiNames_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -805,6 +828,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
       if (other.ConfigFile.Length != 0) {
         ConfigFile = other.ConfigFile;
       }
+      serviceConfigApiNames_.Add(other.serviceConfigApiNames_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -864,6 +888,10 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
             ConfigFile = input.ReadString();
             break;
           }
+          case 98: {
+            serviceConfigApiNames_.AddEntriesFrom(input, _repeated_serviceConfigApiNames_codec);
+            break;
+          }
         }
       }
     #endif
@@ -921,6 +949,10 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
           }
           case 90: {
             ConfigFile = input.ReadString();
+            break;
+          }
+          case 98: {
+            serviceConfigApiNames_.AddEntriesFrom(ref input, _repeated_serviceConfigApiNames_codec);
             break;
           }
         }
