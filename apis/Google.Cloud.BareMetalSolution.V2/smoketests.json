@@ -1,0 +1,37 @@
+[
+  {
+    "method": "ListNetworkUsage",
+    "client": "BareMetalSolutionClient",
+    "arguments": {
+      "location": "projects/${PROJECT_ID}/locations/global"
+    }
+  },
+  {
+    "method": "ListNfsShares",
+    "client": "BareMetalSolutionClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/global"
+    }
+  },
+  {
+    "method": "ListInstances",
+    "client": "BareMetalSolutionClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/global"
+    }
+  },
+  {
+    "method": "ListVolumes",
+    "client": "BareMetalSolutionClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/global"
+    }
+  },
+  {
+    "method": "ListNetworks",
+    "client": "BareMetalSolutionClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/global"
+    }
+  }
+]
