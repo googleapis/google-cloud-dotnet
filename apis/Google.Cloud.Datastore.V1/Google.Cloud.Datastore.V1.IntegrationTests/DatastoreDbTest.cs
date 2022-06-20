@@ -126,19 +126,21 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         {
             var db = _fixture.CreateDatastoreDb();
             var keyFactory = db.CreateKeyFactory("inFilter");
-
-            var actualQuery = new Query("inFilter") { Filter = Filter.In("1", null) };
-            var expected = new Filter
+            using (var transaction = db.BeginTransaction())
             {
-                PropertyFilter = new PropertyFilter
-                {
-                    Op = Operator.In,
-                    Property = new PropertyReference { Name = "1" },
-                    Value = Value.ForNull()
-                }
-            };
-            var expectedQuery = new Query("inFilter") { Filter = expected };
-            Assert.Equal(db.RunQuery(actualQuery), db.RunQuery(expectedQuery));
+                var entities = Enumerable.Range(0, 5)
+                    .Select(x => new Entity { Key = keyFactory.CreateIncompleteKey(), ["x"] = x })
+                    .ToList();
+                transaction.Insert(entities);
+                transaction.Commit();
+            }
+
+            var query = new Query("inFilter") { Filter = Filter.In("x", null) };
+
+            _fixture.RetryQuery(() =>
+            {
+                Assert.Equal(0, db.RunQuery(query).Entities.Count());
+            });
         }
 
         [Fact]
@@ -146,19 +148,21 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         {
             var db = _fixture.CreateDatastoreDb();
             var keyFactory = db.CreateKeyFactory("notinFilter");
-
-            var actualQuery = new Query("notinFilter") { Filter = Filter.NotIn("1", null) };
-            var expected = new Filter
+            using (var transaction = db.BeginTransaction())
             {
-                PropertyFilter = new PropertyFilter
-                {
-                    Op = Operator.NotIn,
-                    Property = new PropertyReference { Name = "1" },
-                    Value = Value.ForNull()
-                }
-            };
-            var expectedQuery = new Query("notinFilter") { Filter = expected };
-            Assert.Equal(db.RunQuery(actualQuery), db.RunQuery(expectedQuery));
+                var entities = Enumerable.Range(0, 5)
+                    .Select(x => new Entity { Key = keyFactory.CreateIncompleteKey(), ["x"] = x })
+                    .ToList();
+                transaction.Insert(entities);
+                transaction.Commit();
+            }
+
+            var query = new Query("notinFilter") { Filter = Filter.NotIn("x", null) };
+
+            _fixture.RetryQuery(() =>
+            {
+                Assert.Equal(5, db.RunQuery(query).Entities.Count());
+            });
         }
 
         [Fact]
