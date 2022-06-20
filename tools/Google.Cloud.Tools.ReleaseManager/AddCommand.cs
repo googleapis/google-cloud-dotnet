@@ -19,6 +19,7 @@ using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
@@ -29,6 +30,13 @@ namespace Google.Cloud.Tools.ReleaseManager
     /// </summary>
     public class AddCommand : CommandBase
     {
+        private static readonly Dictionary<string, string> MixinDependencies = new()
+        {
+            { "google.cloud.location.Locations", "Google.Cloud.Location" },
+            { "google.iam.v1.IAMPolicy","Google.Cloud.Iam.V1" },
+            { "google.longrunning.Operations", "Google.LongRunning" }
+        };
+
         public AddCommand()
             : base("add", "Adds an API to the API catalog", "id")
         {
@@ -84,6 +92,16 @@ namespace Google.Cloud.Tools.ReleaseManager
                 if (apisByProtoPath.TryGetValue(import, out var dependency))
                 {
                     api.Dependencies.Add(dependency.Id, dependency.Version);
+                }
+            }
+
+            // Add mixin dependencies discovered via APIs listed in the service config file.
+            // This *does* fail if we can't find the API, as that would indicate a general issue.
+            foreach (var declaredApi in targetApi.ServiceConfigApiNames)
+            {
+                if (MixinDependencies.TryGetValue(declaredApi, out var package))
+                {
+                    api.Dependencies[package] = catalog[package].Version;
                 }
             }
 
