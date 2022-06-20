@@ -35,3 +35,26 @@ Some libraries (e.g. PubSub) included IAM methods directly within the client sur
 These are now exposed via a separate client, accessed via the `IAMPolicyClient` property
 of the "main" API client. For example, a previous call of `client.GetIamPolicy(name)`
 should be changed to `client.IAMPolicyClient.GetIamPolicy(name)`.
+
+## Client implementation constructors
+
+The client libraries for the gRPC-based APIs have always split the client classes into an abstract base class (e.g. `ExampleClient`)
+and a concrete derived class (e.g. `ExampleClientImpl`). While most users won't need to construct
+these implementation classes directly (instead using the static `ExampleClient.Create()` method or
+`ExampleClientBuilder.Build()`), they're public and have public constructors to support edge cases.
+
+In the GAX v3 generation of libraries, the constructor signature was:
+
+```csharp
+public ExampleClientImpl(Example.ExampleClient grpcClient, ExampleSettings settings)
+```
+
+(`Example.ExampleClient` is the generated low-level gRPC stub.)
+
+In GAX v4, the constructor also accepts a logger:
+
+```csharp
+public ExampleClientImpl(Example.ExampleClient grpcClient, ExampleSettings settings, ILogger logger)
+```
+
+The logger may be null, so it's easy to change any code that called the old signature - but it's still a breaking change.
