@@ -60,7 +60,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
   }
   #region Messages
   /// <summary>
-  /// Schema of a table.
+  /// Schema of a table. This schema is a subset of
+  /// google.cloud.bigquery.v2.TableSchema containing information necessary to
+  /// generate valid message to write to BigQuery.
   /// </summary>
   public sealed partial class TableSchema : pb::IMessage<TableSchema>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
