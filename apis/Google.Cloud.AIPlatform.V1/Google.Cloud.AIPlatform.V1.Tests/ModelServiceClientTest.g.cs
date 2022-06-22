@@ -1436,6 +1436,186 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         }
 
         [xunit::FactAttribute]
+        public void BatchImportModelEvaluationSlicesRequestObject()
+        {
+            moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            BatchImportModelEvaluationSlicesRequest request = new BatchImportModelEvaluationSlicesRequest
+            {
+                ParentAsModelEvaluationName = ModelEvaluationName.FromProjectLocationModelEvaluation("[PROJECT]", "[LOCATION]", "[MODEL]", "[EVALUATION]"),
+                ModelEvaluationSlices =
+                {
+                    new ModelEvaluationSlice(),
+                },
+            };
+            BatchImportModelEvaluationSlicesResponse expectedResponse = new BatchImportModelEvaluationSlicesResponse
+            {
+                ImportedModelEvaluationSlices =
+                {
+                    "imported_model_evaluation_slices7e19195c",
+                },
+            };
+            mockGrpcClient.Setup(x => x.BatchImportModelEvaluationSlices(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
+            BatchImportModelEvaluationSlicesResponse response = client.BatchImportModelEvaluationSlices(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task BatchImportModelEvaluationSlicesRequestObjectAsync()
+        {
+            moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            BatchImportModelEvaluationSlicesRequest request = new BatchImportModelEvaluationSlicesRequest
+            {
+                ParentAsModelEvaluationName = ModelEvaluationName.FromProjectLocationModelEvaluation("[PROJECT]", "[LOCATION]", "[MODEL]", "[EVALUATION]"),
+                ModelEvaluationSlices =
+                {
+                    new ModelEvaluationSlice(),
+                },
+            };
+            BatchImportModelEvaluationSlicesResponse expectedResponse = new BatchImportModelEvaluationSlicesResponse
+            {
+                ImportedModelEvaluationSlices =
+                {
+                    "imported_model_evaluation_slices7e19195c",
+                },
+            };
+            mockGrpcClient.Setup(x => x.BatchImportModelEvaluationSlicesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchImportModelEvaluationSlicesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
+            BatchImportModelEvaluationSlicesResponse responseCallSettings = await client.BatchImportModelEvaluationSlicesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            BatchImportModelEvaluationSlicesResponse responseCancellationToken = await client.BatchImportModelEvaluationSlicesAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void BatchImportModelEvaluationSlices()
+        {
+            moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            BatchImportModelEvaluationSlicesRequest request = new BatchImportModelEvaluationSlicesRequest
+            {
+                ParentAsModelEvaluationName = ModelEvaluationName.FromProjectLocationModelEvaluation("[PROJECT]", "[LOCATION]", "[MODEL]", "[EVALUATION]"),
+                ModelEvaluationSlices =
+                {
+                    new ModelEvaluationSlice(),
+                },
+            };
+            BatchImportModelEvaluationSlicesResponse expectedResponse = new BatchImportModelEvaluationSlicesResponse
+            {
+                ImportedModelEvaluationSlices =
+                {
+                    "imported_model_evaluation_slices7e19195c",
+                },
+            };
+            mockGrpcClient.Setup(x => x.BatchImportModelEvaluationSlices(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
+            BatchImportModelEvaluationSlicesResponse response = client.BatchImportModelEvaluationSlices(request.Parent, request.ModelEvaluationSlices);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task BatchImportModelEvaluationSlicesAsync()
+        {
+            moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            BatchImportModelEvaluationSlicesRequest request = new BatchImportModelEvaluationSlicesRequest
+            {
+                ParentAsModelEvaluationName = ModelEvaluationName.FromProjectLocationModelEvaluation("[PROJECT]", "[LOCATION]", "[MODEL]", "[EVALUATION]"),
+                ModelEvaluationSlices =
+                {
+                    new ModelEvaluationSlice(),
+                },
+            };
+            BatchImportModelEvaluationSlicesResponse expectedResponse = new BatchImportModelEvaluationSlicesResponse
+            {
+                ImportedModelEvaluationSlices =
+                {
+                    "imported_model_evaluation_slices7e19195c",
+                },
+            };
+            mockGrpcClient.Setup(x => x.BatchImportModelEvaluationSlicesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchImportModelEvaluationSlicesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
+            BatchImportModelEvaluationSlicesResponse responseCallSettings = await client.BatchImportModelEvaluationSlicesAsync(request.Parent, request.ModelEvaluationSlices, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            BatchImportModelEvaluationSlicesResponse responseCancellationToken = await client.BatchImportModelEvaluationSlicesAsync(request.Parent, request.ModelEvaluationSlices, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void BatchImportModelEvaluationSlicesResourceNames()
+        {
+            moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            BatchImportModelEvaluationSlicesRequest request = new BatchImportModelEvaluationSlicesRequest
+            {
+                ParentAsModelEvaluationName = ModelEvaluationName.FromProjectLocationModelEvaluation("[PROJECT]", "[LOCATION]", "[MODEL]", "[EVALUATION]"),
+                ModelEvaluationSlices =
+                {
+                    new ModelEvaluationSlice(),
+                },
+            };
+            BatchImportModelEvaluationSlicesResponse expectedResponse = new BatchImportModelEvaluationSlicesResponse
+            {
+                ImportedModelEvaluationSlices =
+                {
+                    "imported_model_evaluation_slices7e19195c",
+                },
+            };
+            mockGrpcClient.Setup(x => x.BatchImportModelEvaluationSlices(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
+            BatchImportModelEvaluationSlicesResponse response = client.BatchImportModelEvaluationSlices(request.ParentAsModelEvaluationName, request.ModelEvaluationSlices);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task BatchImportModelEvaluationSlicesResourceNamesAsync()
+        {
+            moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
+            BatchImportModelEvaluationSlicesRequest request = new BatchImportModelEvaluationSlicesRequest
+            {
+                ParentAsModelEvaluationName = ModelEvaluationName.FromProjectLocationModelEvaluation("[PROJECT]", "[LOCATION]", "[MODEL]", "[EVALUATION]"),
+                ModelEvaluationSlices =
+                {
+                    new ModelEvaluationSlice(),
+                },
+            };
+            BatchImportModelEvaluationSlicesResponse expectedResponse = new BatchImportModelEvaluationSlicesResponse
+            {
+                ImportedModelEvaluationSlices =
+                {
+                    "imported_model_evaluation_slices7e19195c",
+                },
+            };
+            mockGrpcClient.Setup(x => x.BatchImportModelEvaluationSlicesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchImportModelEvaluationSlicesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null, null);
+            BatchImportModelEvaluationSlicesResponse responseCallSettings = await client.BatchImportModelEvaluationSlicesAsync(request.ParentAsModelEvaluationName, request.ModelEvaluationSlices, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            BatchImportModelEvaluationSlicesResponse responseCancellationToken = await client.BatchImportModelEvaluationSlicesAsync(request.ParentAsModelEvaluationName, request.ModelEvaluationSlices, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void GetModelEvaluationRequestObject()
         {
             moq::Mock<ModelService.ModelServiceClient> mockGrpcClient = new moq::Mock<ModelService.ModelServiceClient>(moq::MockBehavior.Strict);

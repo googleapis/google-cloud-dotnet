@@ -1675,6 +1675,117 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for BatchImportModelEvaluationSlices</summary>
+        public void BatchImportModelEvaluationSlicesRequestObject()
+        {
+            // Snippet: BatchImportModelEvaluationSlices(BatchImportModelEvaluationSlicesRequest, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = ModelServiceClient.Create();
+            // Initialize request argument(s)
+            BatchImportModelEvaluationSlicesRequest request = new BatchImportModelEvaluationSlicesRequest
+            {
+                ParentAsModelEvaluationName = ModelEvaluationName.FromProjectLocationModelEvaluation("[PROJECT]", "[LOCATION]", "[MODEL]", "[EVALUATION]"),
+                ModelEvaluationSlices =
+                {
+                    new ModelEvaluationSlice(),
+                },
+            };
+            // Make the request
+            BatchImportModelEvaluationSlicesResponse response = modelServiceClient.BatchImportModelEvaluationSlices(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchImportModelEvaluationSlicesAsync</summary>
+        public async Task BatchImportModelEvaluationSlicesRequestObjectAsync()
+        {
+            // Snippet: BatchImportModelEvaluationSlicesAsync(BatchImportModelEvaluationSlicesRequest, CallSettings)
+            // Additional: BatchImportModelEvaluationSlicesAsync(BatchImportModelEvaluationSlicesRequest, CancellationToken)
+            // Create client
+            ModelServiceClient modelServiceClient = await ModelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchImportModelEvaluationSlicesRequest request = new BatchImportModelEvaluationSlicesRequest
+            {
+                ParentAsModelEvaluationName = ModelEvaluationName.FromProjectLocationModelEvaluation("[PROJECT]", "[LOCATION]", "[MODEL]", "[EVALUATION]"),
+                ModelEvaluationSlices =
+                {
+                    new ModelEvaluationSlice(),
+                },
+            };
+            // Make the request
+            BatchImportModelEvaluationSlicesResponse response = await modelServiceClient.BatchImportModelEvaluationSlicesAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchImportModelEvaluationSlices</summary>
+        public void BatchImportModelEvaluationSlices()
+        {
+            // Snippet: BatchImportModelEvaluationSlices(string, IEnumerable<ModelEvaluationSlice>, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = ModelServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/models/[MODEL]/evaluations/[EVALUATION]";
+            IEnumerable<ModelEvaluationSlice> modelEvaluationSlices = new ModelEvaluationSlice[]
+            {
+                new ModelEvaluationSlice(),
+            };
+            // Make the request
+            BatchImportModelEvaluationSlicesResponse response = modelServiceClient.BatchImportModelEvaluationSlices(parent, modelEvaluationSlices);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchImportModelEvaluationSlicesAsync</summary>
+        public async Task BatchImportModelEvaluationSlicesAsync()
+        {
+            // Snippet: BatchImportModelEvaluationSlicesAsync(string, IEnumerable<ModelEvaluationSlice>, CallSettings)
+            // Additional: BatchImportModelEvaluationSlicesAsync(string, IEnumerable<ModelEvaluationSlice>, CancellationToken)
+            // Create client
+            ModelServiceClient modelServiceClient = await ModelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/models/[MODEL]/evaluations/[EVALUATION]";
+            IEnumerable<ModelEvaluationSlice> modelEvaluationSlices = new ModelEvaluationSlice[]
+            {
+                new ModelEvaluationSlice(),
+            };
+            // Make the request
+            BatchImportModelEvaluationSlicesResponse response = await modelServiceClient.BatchImportModelEvaluationSlicesAsync(parent, modelEvaluationSlices);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchImportModelEvaluationSlices</summary>
+        public void BatchImportModelEvaluationSlicesResourceNames()
+        {
+            // Snippet: BatchImportModelEvaluationSlices(ModelEvaluationName, IEnumerable<ModelEvaluationSlice>, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = ModelServiceClient.Create();
+            // Initialize request argument(s)
+            ModelEvaluationName parent = ModelEvaluationName.FromProjectLocationModelEvaluation("[PROJECT]", "[LOCATION]", "[MODEL]", "[EVALUATION]");
+            IEnumerable<ModelEvaluationSlice> modelEvaluationSlices = new ModelEvaluationSlice[]
+            {
+                new ModelEvaluationSlice(),
+            };
+            // Make the request
+            BatchImportModelEvaluationSlicesResponse response = modelServiceClient.BatchImportModelEvaluationSlices(parent, modelEvaluationSlices);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchImportModelEvaluationSlicesAsync</summary>
+        public async Task BatchImportModelEvaluationSlicesResourceNamesAsync()
+        {
+            // Snippet: BatchImportModelEvaluationSlicesAsync(ModelEvaluationName, IEnumerable<ModelEvaluationSlice>, CallSettings)
+            // Additional: BatchImportModelEvaluationSlicesAsync(ModelEvaluationName, IEnumerable<ModelEvaluationSlice>, CancellationToken)
+            // Create client
+            ModelServiceClient modelServiceClient = await ModelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ModelEvaluationName parent = ModelEvaluationName.FromProjectLocationModelEvaluation("[PROJECT]", "[LOCATION]", "[MODEL]", "[EVALUATION]");
+            IEnumerable<ModelEvaluationSlice> modelEvaluationSlices = new ModelEvaluationSlice[]
+            {
+                new ModelEvaluationSlice(),
+            };
+            // Make the request
+            BatchImportModelEvaluationSlicesResponse response = await modelServiceClient.BatchImportModelEvaluationSlicesAsync(parent, modelEvaluationSlices);
+            // End snippet
+        }
+
         /// <summary>Snippet for GetModelEvaluation</summary>
         public void GetModelEvaluationRequestObject()
         {

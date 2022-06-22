@@ -19081,6 +19081,161 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "aiplatform_v1_generated_ModelService_BatchImportModelEvaluationSlices_sync",
+      "title": "BatchImportModelEvaluationSlicesRequestObject",
+      "description": "Snippet for BatchImportModelEvaluationSlices",
+      "file": "ModelServiceClient.BatchImportModelEvaluationSlicesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchImportModelEvaluationSlices",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.BatchImportModelEvaluationSlices",
+        "resultType": "Google.Cloud.AIPlatform.V1.BatchImportModelEvaluationSlicesResponse",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "BatchImportModelEvaluationSlices",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.BatchImportModelEvaluationSlices",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_BatchImportModelEvaluationSlices_async",
+      "title": "BatchImportModelEvaluationSlicesRequestObjectAsync",
+      "description": "Snippet for BatchImportModelEvaluationSlicesAsync",
+      "file": "ModelServiceClient.BatchImportModelEvaluationSlicesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchImportModelEvaluationSlicesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.BatchImportModelEvaluationSlicesAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.BatchImportModelEvaluationSlicesResponse>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "BatchImportModelEvaluationSlices",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.BatchImportModelEvaluationSlices",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_BatchImportModelEvaluationSlices_sync_flattened",
+      "title": "BatchImportModelEvaluationSlices",
+      "description": "Snippet for BatchImportModelEvaluationSlices",
+      "file": "ModelServiceClient.BatchImportModelEvaluationSlicesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchImportModelEvaluationSlices",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.BatchImportModelEvaluationSlices",
+        "resultType": "Google.Cloud.AIPlatform.V1.BatchImportModelEvaluationSlicesResponse",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "BatchImportModelEvaluationSlices",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.BatchImportModelEvaluationSlices",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_BatchImportModelEvaluationSlices_async_flattened",
+      "title": "BatchImportModelEvaluationSlicesAsync",
+      "description": "Snippet for BatchImportModelEvaluationSlicesAsync",
+      "file": "ModelServiceClient.BatchImportModelEvaluationSlicesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchImportModelEvaluationSlicesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.BatchImportModelEvaluationSlicesAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.BatchImportModelEvaluationSlicesResponse>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "BatchImportModelEvaluationSlices",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.BatchImportModelEvaluationSlices",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_BatchImportModelEvaluationSlices_sync_flattened_resourceNames",
+      "title": "BatchImportModelEvaluationSlicesResourceNames",
+      "description": "Snippet for BatchImportModelEvaluationSlices",
+      "file": "ModelServiceClient.BatchImportModelEvaluationSlicesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchImportModelEvaluationSlices",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.BatchImportModelEvaluationSlices",
+        "resultType": "Google.Cloud.AIPlatform.V1.BatchImportModelEvaluationSlicesResponse",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "BatchImportModelEvaluationSlices",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.BatchImportModelEvaluationSlices",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_BatchImportModelEvaluationSlices_async_flattened_resourceNames",
+      "title": "BatchImportModelEvaluationSlicesResourceNamesAsync",
+      "description": "Snippet for BatchImportModelEvaluationSlicesAsync",
+      "file": "ModelServiceClient.BatchImportModelEvaluationSlicesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchImportModelEvaluationSlicesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.BatchImportModelEvaluationSlicesAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.BatchImportModelEvaluationSlicesResponse>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "BatchImportModelEvaluationSlices",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.BatchImportModelEvaluationSlices",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "aiplatform_v1_generated_ModelService_GetModelEvaluation_sync",
       "title": "GetModelEvaluationRequestObject",
       "description": "Snippet for GetModelEvaluation",
