@@ -80,7 +80,7 @@ namespace Google.Cloud.Datastore.V1
         /// <returns>The newly created filter.</returns>
         public static Filter In(string value, ArrayValue collection)
         {
-            GaxPreconditions.CheckArgument(collection != null, nameof(collection), "Filter collection must not be null");
+            GaxPreconditions.CheckNotNull(collection, nameof(collection));
             return Property(value, collection, Operator.In);
         }
 
@@ -92,7 +92,7 @@ namespace Google.Cloud.Datastore.V1
         /// <returns>The newly created filter.</returns>
         public static Filter NotIn(string value, ArrayValue collection)
         {
-            GaxPreconditions.CheckArgument(collection != null, nameof(collection), "Filter collection must not be null");
+            GaxPreconditions.CheckNotNull(collection, nameof(collection));
             return Property(value, collection, Operator.NotIn);
         }
 

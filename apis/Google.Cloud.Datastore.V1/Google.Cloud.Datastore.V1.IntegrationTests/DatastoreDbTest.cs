@@ -122,50 +122,6 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         }
 
         [Fact]
-        public void InFilterQuery_NullArrayValue()
-        {
-            var db = _fixture.CreateDatastoreDb();
-            var keyFactory = db.CreateKeyFactory("inFilter");
-            using (var transaction = db.BeginTransaction())
-            {
-                var entities = Enumerable.Range(0, 5)
-                    .Select(x => new Entity { Key = keyFactory.CreateIncompleteKey(), ["x"] = x })
-                    .ToList();
-                transaction.Insert(entities);
-                transaction.Commit();
-            }
-
-            var query = new Query("inFilter") { Filter = Filter.In("x", null) };
-
-            _fixture.RetryQuery(() =>
-            {
-                Assert.Equal(0, db.RunQuery(query).Entities.Count());
-            });
-        }
-
-        [Fact]
-        public void NotInFilterQuery_NullArrayValue()
-        {
-            var db = _fixture.CreateDatastoreDb();
-            var keyFactory = db.CreateKeyFactory("notinFilter");
-            using (var transaction = db.BeginTransaction())
-            {
-                var entities = Enumerable.Range(0, 5)
-                    .Select(x => new Entity { Key = keyFactory.CreateIncompleteKey(), ["x"] = x })
-                    .ToList();
-                transaction.Insert(entities);
-                transaction.Commit();
-            }
-
-            var query = new Query("notinFilter") { Filter = Filter.NotIn("x", null) };
-
-            _fixture.RetryQuery(() =>
-            {
-                Assert.Equal(5, db.RunQuery(query).Entities.Count());
-            });
-        }
-
-        [Fact]
         public void SyncQueries()
         {
             var db = _fixture.CreateDatastoreDb();
