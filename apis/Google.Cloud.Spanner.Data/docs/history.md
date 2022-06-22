@@ -1,5 +1,14 @@
 # Version history
 
+## Version 4.0.0, released 2022-06-22
+
+First GA release of v4.0. Please see release notes for 4.0.0-beta01 and 4.0.0-beta02 for details of breaking changes since v3.x
+
+### Bug fixes
+
+- Fix ToDecimal truncation for SpannerNumeric. ([commit 2be4686](https://github.com/googleapis/google-cloud-dotnet/commit/2be4686f77e94f03a8198490769c40da41166ad2))
+- Fixes ToDecimal truncation for PgNumeric. ([commit 3ff15fb](https://github.com/googleapis/google-cloud-dotnet/commit/3ff15fb663ec9d1f7b2b3eef796d910d8767c673))
+
 ## Version 4.0.0-beta02, released 2022-06-13
 
 ### New features
