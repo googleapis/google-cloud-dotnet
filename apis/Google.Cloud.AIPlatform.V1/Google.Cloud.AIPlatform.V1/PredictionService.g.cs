@@ -34,49 +34,50 @@ namespace Google.Cloud.AIPlatform.V1 {
             "ZXN0EjwKCGVuZHBvaW50GAEgASgJQirgQQL6QSQKImFpcGxhdGZvcm0uZ29v",
             "Z2xlYXBpcy5jb20vRW5kcG9pbnQSLgoJaW5zdGFuY2VzGAIgAygLMhYuZ29v",
             "Z2xlLnByb3RvYnVmLlZhbHVlQgPgQQISKgoKcGFyYW1ldGVycxgDIAEoCzIW",
-            "Lmdvb2dsZS5wcm90b2J1Zi5WYWx1ZSKyAQoPUHJlZGljdFJlc3BvbnNlEisK",
+            "Lmdvb2dsZS5wcm90b2J1Zi5WYWx1ZSLRAQoPUHJlZGljdFJlc3BvbnNlEisK",
             "C3ByZWRpY3Rpb25zGAEgAygLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlEhkK",
             "EWRlcGxveWVkX21vZGVsX2lkGAIgASgJEjYKBW1vZGVsGAMgASgJQifgQQP6",
-            "QSEKH2FpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vTW9kZWwSHwoSbW9kZWxf",
-            "ZGlzcGxheV9uYW1lGAQgASgJQgPgQQMiegoRUmF3UHJlZGljdFJlcXVlc3QS",
-            "PAoIZW5kcG9pbnQYASABKAlCKuBBAvpBJAoiYWlwbGF0Zm9ybS5nb29nbGVh",
-            "cGlzLmNvbS9FbmRwb2ludBInCglodHRwX2JvZHkYAiABKAsyFC5nb29nbGUu",
-            "YXBpLkh0dHBCb2R5Ip0CCg5FeHBsYWluUmVxdWVzdBI8CghlbmRwb2ludBgB",
-            "IAEoCUIq4EEC+kEkCiJhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0VuZHBv",
-            "aW50Ei4KCWluc3RhbmNlcxgCIAMoCzIWLmdvb2dsZS5wcm90b2J1Zi5WYWx1",
-            "ZUID4EECEioKCnBhcmFtZXRlcnMYBCABKAsyFi5nb29nbGUucHJvdG9idWYu",
-            "VmFsdWUSVgoZZXhwbGFuYXRpb25fc3BlY19vdmVycmlkZRgFIAEoCzIzLmdv",
-            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkV4cGxhbmF0aW9uU3BlY092ZXJy",
-            "aWRlEhkKEWRlcGxveWVkX21vZGVsX2lkGAMgASgJIpgBCg9FeHBsYWluUmVz",
-            "cG9uc2USPQoMZXhwbGFuYXRpb25zGAEgAygLMicuZ29vZ2xlLmNsb3VkLmFp",
-            "cGxhdGZvcm0udjEuRXhwbGFuYXRpb24SGQoRZGVwbG95ZWRfbW9kZWxfaWQY",
-            "AiABKAkSKwoLcHJlZGljdGlvbnMYAyADKAsyFi5nb29nbGUucHJvdG9idWYu",
-            "VmFsdWUyvAUKEVByZWRpY3Rpb25TZXJ2aWNlEsgBCgdQcmVkaWN0EiouZ29v",
-            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuUHJlZGljdFJlcXVlc3QaKy5nb29n",
-            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5QcmVkaWN0UmVzcG9uc2UiZILT5JMC",
-            "PiI5L3YxL3tlbmRwb2ludD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2VuZHBv",
-            "aW50cy8qfTpwcmVkaWN0OgEq2kEdZW5kcG9pbnQsaW5zdGFuY2VzLHBhcmFt",
-            "ZXRlcnMSrwEKClJhd1ByZWRpY3QSLS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
-            "bS52MS5SYXdQcmVkaWN0UmVxdWVzdBoULmdvb2dsZS5hcGkuSHR0cEJvZHki",
-            "XILT5JMCQSI8L3YxL3tlbmRwb2ludD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
-            "L2VuZHBvaW50cy8qfTpyYXdQcmVkaWN0OgEq2kESZW5kcG9pbnQsaHR0cF9i",
-            "b2R5EtoBCgdFeHBsYWluEiouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEu",
-            "RXhwbGFpblJlcXVlc3QaKy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5F",
-            "eHBsYWluUmVzcG9uc2UidoLT5JMCPiI5L3YxL3tlbmRwb2ludD1wcm9qZWN0",
-            "cy8qL2xvY2F0aW9ucy8qL2VuZHBvaW50cy8qfTpleHBsYWluOgEq2kEvZW5k",
-            "cG9pbnQsaW5zdGFuY2VzLHBhcmFtZXRlcnMsZGVwbG95ZWRfbW9kZWxfaWQa",
-            "TcpBGWFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5n",
-            "b29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQtoBCh5jb20uZ29v",
-            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCFlByZWRpY3Rpb25TZXJ2aWNlUHJv",
-            "dG9QAVpEZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9j",
-            "bG91ZC9haXBsYXRmb3JtL3YxO2FpcGxhdGZvcm2qAhpHb29nbGUuQ2xvdWQu",
-            "QUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gId",
-            "R29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
+            "QSEKH2FpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vTW9kZWwSHQoQbW9kZWxf",
+            "dmVyc2lvbl9pZBgFIAEoCUID4EEDEh8KEm1vZGVsX2Rpc3BsYXlfbmFtZRgE",
+            "IAEoCUID4EEDInoKEVJhd1ByZWRpY3RSZXF1ZXN0EjwKCGVuZHBvaW50GAEg",
+            "ASgJQirgQQL6QSQKImFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vRW5kcG9p",
+            "bnQSJwoJaHR0cF9ib2R5GAIgASgLMhQuZ29vZ2xlLmFwaS5IdHRwQm9keSKd",
+            "AgoORXhwbGFpblJlcXVlc3QSPAoIZW5kcG9pbnQYASABKAlCKuBBAvpBJAoi",
+            "YWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9FbmRwb2ludBIuCglpbnN0YW5j",
+            "ZXMYAiADKAsyFi5nb29nbGUucHJvdG9idWYuVmFsdWVCA+BBAhIqCgpwYXJh",
+            "bWV0ZXJzGAQgASgLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlElYKGWV4cGxh",
+            "bmF0aW9uX3NwZWNfb3ZlcnJpZGUYBSABKAsyMy5nb29nbGUuY2xvdWQuYWlw",
+            "bGF0Zm9ybS52MS5FeHBsYW5hdGlvblNwZWNPdmVycmlkZRIZChFkZXBsb3ll",
+            "ZF9tb2RlbF9pZBgDIAEoCSKYAQoPRXhwbGFpblJlc3BvbnNlEj0KDGV4cGxh",
+            "bmF0aW9ucxgBIAMoCzInLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkV4",
+            "cGxhbmF0aW9uEhkKEWRlcGxveWVkX21vZGVsX2lkGAIgASgJEisKC3ByZWRp",
+            "Y3Rpb25zGAMgAygLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlMrwFChFQcmVk",
+            "aWN0aW9uU2VydmljZRLIAQoHUHJlZGljdBIqLmdvb2dsZS5jbG91ZC5haXBs",
+            "YXRmb3JtLnYxLlByZWRpY3RSZXF1ZXN0GisuZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjEuUHJlZGljdFJlc3BvbnNlImSC0+STAj4iOS92MS97ZW5kcG9p",
+            "bnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9lbmRwb2ludHMvKn06cHJlZGlj",
+            "dDoBKtpBHWVuZHBvaW50LGluc3RhbmNlcyxwYXJhbWV0ZXJzEq8BCgpSYXdQ",
+            "cmVkaWN0Ei0uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuUmF3UHJlZGlj",
+            "dFJlcXVlc3QaFC5nb29nbGUuYXBpLkh0dHBCb2R5IlyC0+STAkEiPC92MS97",
+            "ZW5kcG9pbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9lbmRwb2ludHMvKn06",
+            "cmF3UHJlZGljdDoBKtpBEmVuZHBvaW50LGh0dHBfYm9keRLaAQoHRXhwbGFp",
+            "bhIqLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkV4cGxhaW5SZXF1ZXN0",
+            "GisuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRXhwbGFpblJlc3BvbnNl",
+            "InaC0+STAj4iOS92MS97ZW5kcG9pbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
+            "Ki9lbmRwb2ludHMvKn06ZXhwbGFpbjoBKtpBL2VuZHBvaW50LGluc3RhbmNl",
+            "cyxwYXJhbWV0ZXJzLGRlcGxveWVkX21vZGVsX2lkGk3KQRlhaXBsYXRmb3Jt",
+            "Lmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20v",
+            "YXV0aC9jbG91ZC1wbGF0Zm9ybULaAQoeY29tLmdvb2dsZS5jbG91ZC5haXBs",
+            "YXRmb3JtLnYxQhZQcmVkaWN0aW9uU2VydmljZVByb3RvUAFaRGdvb2dsZS5n",
+            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYWlwbGF0Zm9y",
+            "bS92MTthaXBsYXRmb3JtqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHK",
+            "AhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6",
+            "OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.HttpbodyReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ExplanationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PredictRequest), global::Google.Cloud.AIPlatform.V1.PredictRequest.Parser, new[]{ "Endpoint", "Instances", "Parameters" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PredictResponse), global::Google.Cloud.AIPlatform.V1.PredictResponse.Parser, new[]{ "Predictions", "DeployedModelId", "Model", "ModelDisplayName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PredictResponse), global::Google.Cloud.AIPlatform.V1.PredictResponse.Parser, new[]{ "Predictions", "DeployedModelId", "Model", "ModelVersionId", "ModelDisplayName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.RawPredictRequest), global::Google.Cloud.AIPlatform.V1.RawPredictRequest.Parser, new[]{ "Endpoint", "HttpBody" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ExplainRequest), global::Google.Cloud.AIPlatform.V1.ExplainRequest.Parser, new[]{ "Endpoint", "Instances", "Parameters", "ExplanationSpecOverride", "DeployedModelId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ExplainResponse), global::Google.Cloud.AIPlatform.V1.ExplainResponse.Parser, new[]{ "Explanations", "DeployedModelId", "Predictions" }, null, null, null, null)
@@ -412,6 +413,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       predictions_ = other.predictions_.Clone();
       deployedModelId_ = other.deployedModelId_;
       model_ = other.model_;
+      modelVersionId_ = other.modelVersionId_;
       modelDisplayName_ = other.modelDisplayName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -471,6 +473,22 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "model_version_id" field.</summary>
+    public const int ModelVersionIdFieldNumber = 5;
+    private string modelVersionId_ = "";
+    /// <summary>
+    /// Output only. The version ID of the Model which is deployed as the DeployedModel that
+    /// this prediction hits.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ModelVersionId {
+      get { return modelVersionId_; }
+      set {
+        modelVersionId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "model_display_name" field.</summary>
     public const int ModelDisplayNameFieldNumber = 4;
     private string modelDisplayName_ = "";
@@ -505,6 +523,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if(!predictions_.Equals(other.predictions_)) return false;
       if (DeployedModelId != other.DeployedModelId) return false;
       if (Model != other.Model) return false;
+      if (ModelVersionId != other.ModelVersionId) return false;
       if (ModelDisplayName != other.ModelDisplayName) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -516,6 +535,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       hash ^= predictions_.GetHashCode();
       if (DeployedModelId.Length != 0) hash ^= DeployedModelId.GetHashCode();
       if (Model.Length != 0) hash ^= Model.GetHashCode();
+      if (ModelVersionId.Length != 0) hash ^= ModelVersionId.GetHashCode();
       if (ModelDisplayName.Length != 0) hash ^= ModelDisplayName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -548,6 +568,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(34);
         output.WriteString(ModelDisplayName);
       }
+      if (ModelVersionId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(ModelVersionId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -571,6 +595,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(34);
         output.WriteString(ModelDisplayName);
       }
+      if (ModelVersionId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(ModelVersionId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -587,6 +615,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (Model.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Model);
+      }
+      if (ModelVersionId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ModelVersionId);
       }
       if (ModelDisplayName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ModelDisplayName);
@@ -609,6 +640,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (other.Model.Length != 0) {
         Model = other.Model;
+      }
+      if (other.ModelVersionId.Length != 0) {
+        ModelVersionId = other.ModelVersionId;
       }
       if (other.ModelDisplayName.Length != 0) {
         ModelDisplayName = other.ModelDisplayName;
@@ -644,6 +678,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             ModelDisplayName = input.ReadString();
             break;
           }
+          case 42: {
+            ModelVersionId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -673,6 +711,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 34: {
             ModelDisplayName = input.ReadString();
+            break;
+          }
+          case 42: {
+            ModelVersionId = input.ReadString();
             break;
           }
         }
