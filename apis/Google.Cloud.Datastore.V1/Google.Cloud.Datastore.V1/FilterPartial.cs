@@ -76,19 +76,25 @@ namespace Google.Cloud.Datastore.V1
         /// Creates a filter to check that the specified property is in a given array of values.
         /// </summary>
         /// <param name="value">The name of the property. Must not be null.</param>
-        /// <param name="collection">The array of values to compare against. </param>
+        /// <param name="collection">The array of values to compare against. Must not be null. </param>
         /// <returns>The newly created filter.</returns>
-        public static Filter In(string value, ArrayValue collection) =>
-            Property(value, collection, Operator.In);
+        public static Filter In(string value, ArrayValue collection)
+        {
+            GaxPreconditions.CheckArgument(collection != null, nameof(collection), "Filter collection must not be null");
+            return Property(value, collection, Operator.In);
+        }
 
         /// <summary>
         /// Creates a filter to check that the specified property is not in a given array of values.
         /// </summary>
         /// <param name="value">The name of the property. Must not be null.</param>
-        /// <param name="collection">The array of values to compare against. </param>
+        /// <param name="collection">The array of values to compare against. Must not be null.</param>
         /// <returns>The newly created filter.</returns>
-        public static Filter NotIn(string value, ArrayValue collection) =>
-            Property(value, collection, Operator.NotIn);
+        public static Filter NotIn(string value, ArrayValue collection)
+        {
+            GaxPreconditions.CheckArgument(collection != null, nameof(collection), "Filter collection must not be null");
+            return Property(value, collection, Operator.NotIn);
+        }
 
         /// <summary>
         /// Creates a filter to check that the specified property is less than a given value.
