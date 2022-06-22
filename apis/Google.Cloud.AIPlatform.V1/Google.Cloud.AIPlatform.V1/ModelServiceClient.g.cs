@@ -64,6 +64,7 @@ namespace Google.Cloud.AIPlatform.V1
             ExportModelSettings = existing.ExportModelSettings;
             ExportModelOperationsSettings = existing.ExportModelOperationsSettings.Clone();
             ImportModelEvaluationSettings = existing.ImportModelEvaluationSettings;
+            BatchImportModelEvaluationSlicesSettings = existing.BatchImportModelEvaluationSlicesSettings;
             GetModelEvaluationSettings = existing.GetModelEvaluationSettings;
             ListModelEvaluationsSettings = existing.ListModelEvaluationsSettings;
             GetModelEvaluationSliceSettings = existing.GetModelEvaluationSliceSettings;
@@ -266,6 +267,19 @@ namespace Google.Cloud.AIPlatform.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ImportModelEvaluationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ModelServiceClient.BatchImportModelEvaluationSlices</c> and
+        /// <c>ModelServiceClient.BatchImportModelEvaluationSlicesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchImportModelEvaluationSlicesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -2065,6 +2079,157 @@ namespace Google.Cloud.AIPlatform.V1
             ImportModelEvaluationAsync(parent, modelEvaluation, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Imports a list of externally generated ModelEvaluationSlice.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchImportModelEvaluationSlicesResponse BatchImportModelEvaluationSlices(BatchImportModelEvaluationSlicesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Imports a list of externally generated ModelEvaluationSlice.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchImportModelEvaluationSlicesResponse> BatchImportModelEvaluationSlicesAsync(BatchImportModelEvaluationSlicesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Imports a list of externally generated ModelEvaluationSlice.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchImportModelEvaluationSlicesResponse> BatchImportModelEvaluationSlicesAsync(BatchImportModelEvaluationSlicesRequest request, st::CancellationToken cancellationToken) =>
+            BatchImportModelEvaluationSlicesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Imports a list of externally generated ModelEvaluationSlice.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent ModelEvaluation resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/models/{model}/evaluations/{evaluation}`
+        /// </param>
+        /// <param name="modelEvaluationSlices">
+        /// Required. Model evaluation slice resource to be imported.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchImportModelEvaluationSlicesResponse BatchImportModelEvaluationSlices(string parent, scg::IEnumerable<ModelEvaluationSlice> modelEvaluationSlices, gaxgrpc::CallSettings callSettings = null) =>
+            BatchImportModelEvaluationSlices(new BatchImportModelEvaluationSlicesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ModelEvaluationSlices =
+                {
+                    gax::GaxPreconditions.CheckNotNull(modelEvaluationSlices, nameof(modelEvaluationSlices)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Imports a list of externally generated ModelEvaluationSlice.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent ModelEvaluation resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/models/{model}/evaluations/{evaluation}`
+        /// </param>
+        /// <param name="modelEvaluationSlices">
+        /// Required. Model evaluation slice resource to be imported.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchImportModelEvaluationSlicesResponse> BatchImportModelEvaluationSlicesAsync(string parent, scg::IEnumerable<ModelEvaluationSlice> modelEvaluationSlices, gaxgrpc::CallSettings callSettings = null) =>
+            BatchImportModelEvaluationSlicesAsync(new BatchImportModelEvaluationSlicesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ModelEvaluationSlices =
+                {
+                    gax::GaxPreconditions.CheckNotNull(modelEvaluationSlices, nameof(modelEvaluationSlices)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Imports a list of externally generated ModelEvaluationSlice.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent ModelEvaluation resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/models/{model}/evaluations/{evaluation}`
+        /// </param>
+        /// <param name="modelEvaluationSlices">
+        /// Required. Model evaluation slice resource to be imported.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchImportModelEvaluationSlicesResponse> BatchImportModelEvaluationSlicesAsync(string parent, scg::IEnumerable<ModelEvaluationSlice> modelEvaluationSlices, st::CancellationToken cancellationToken) =>
+            BatchImportModelEvaluationSlicesAsync(parent, modelEvaluationSlices, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Imports a list of externally generated ModelEvaluationSlice.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent ModelEvaluation resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/models/{model}/evaluations/{evaluation}`
+        /// </param>
+        /// <param name="modelEvaluationSlices">
+        /// Required. Model evaluation slice resource to be imported.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchImportModelEvaluationSlicesResponse BatchImportModelEvaluationSlices(ModelEvaluationName parent, scg::IEnumerable<ModelEvaluationSlice> modelEvaluationSlices, gaxgrpc::CallSettings callSettings = null) =>
+            BatchImportModelEvaluationSlices(new BatchImportModelEvaluationSlicesRequest
+            {
+                ParentAsModelEvaluationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ModelEvaluationSlices =
+                {
+                    gax::GaxPreconditions.CheckNotNull(modelEvaluationSlices, nameof(modelEvaluationSlices)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Imports a list of externally generated ModelEvaluationSlice.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent ModelEvaluation resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/models/{model}/evaluations/{evaluation}`
+        /// </param>
+        /// <param name="modelEvaluationSlices">
+        /// Required. Model evaluation slice resource to be imported.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchImportModelEvaluationSlicesResponse> BatchImportModelEvaluationSlicesAsync(ModelEvaluationName parent, scg::IEnumerable<ModelEvaluationSlice> modelEvaluationSlices, gaxgrpc::CallSettings callSettings = null) =>
+            BatchImportModelEvaluationSlicesAsync(new BatchImportModelEvaluationSlicesRequest
+            {
+                ParentAsModelEvaluationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ModelEvaluationSlices =
+                {
+                    gax::GaxPreconditions.CheckNotNull(modelEvaluationSlices, nameof(modelEvaluationSlices)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Imports a list of externally generated ModelEvaluationSlice.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent ModelEvaluation resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/models/{model}/evaluations/{evaluation}`
+        /// </param>
+        /// <param name="modelEvaluationSlices">
+        /// Required. Model evaluation slice resource to be imported.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchImportModelEvaluationSlicesResponse> BatchImportModelEvaluationSlicesAsync(ModelEvaluationName parent, scg::IEnumerable<ModelEvaluationSlice> modelEvaluationSlices, st::CancellationToken cancellationToken) =>
+            BatchImportModelEvaluationSlicesAsync(parent, modelEvaluationSlices, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Gets a ModelEvaluation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2565,6 +2730,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         private readonly gaxgrpc::ApiCall<ImportModelEvaluationRequest, ModelEvaluation> _callImportModelEvaluation;
 
+        private readonly gaxgrpc::ApiCall<BatchImportModelEvaluationSlicesRequest, BatchImportModelEvaluationSlicesResponse> _callBatchImportModelEvaluationSlices;
+
         private readonly gaxgrpc::ApiCall<GetModelEvaluationRequest, ModelEvaluation> _callGetModelEvaluation;
 
         private readonly gaxgrpc::ApiCall<ListModelEvaluationsRequest, ListModelEvaluationsResponse> _callListModelEvaluations;
@@ -2620,6 +2787,9 @@ namespace Google.Cloud.AIPlatform.V1
             _callImportModelEvaluation = clientHelper.BuildApiCall<ImportModelEvaluationRequest, ModelEvaluation>("ImportModelEvaluation", grpcClient.ImportModelEvaluationAsync, grpcClient.ImportModelEvaluation, effectiveSettings.ImportModelEvaluationSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callImportModelEvaluation);
             Modify_ImportModelEvaluationApiCall(ref _callImportModelEvaluation);
+            _callBatchImportModelEvaluationSlices = clientHelper.BuildApiCall<BatchImportModelEvaluationSlicesRequest, BatchImportModelEvaluationSlicesResponse>("BatchImportModelEvaluationSlices", grpcClient.BatchImportModelEvaluationSlicesAsync, grpcClient.BatchImportModelEvaluationSlices, effectiveSettings.BatchImportModelEvaluationSlicesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchImportModelEvaluationSlices);
+            Modify_BatchImportModelEvaluationSlicesApiCall(ref _callBatchImportModelEvaluationSlices);
             _callGetModelEvaluation = clientHelper.BuildApiCall<GetModelEvaluationRequest, ModelEvaluation>("GetModelEvaluation", grpcClient.GetModelEvaluationAsync, grpcClient.GetModelEvaluation, effectiveSettings.GetModelEvaluationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetModelEvaluation);
             Modify_GetModelEvaluationApiCall(ref _callGetModelEvaluation);
@@ -2656,6 +2826,8 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_ExportModelApiCall(ref gaxgrpc::ApiCall<ExportModelRequest, lro::Operation> call);
 
         partial void Modify_ImportModelEvaluationApiCall(ref gaxgrpc::ApiCall<ImportModelEvaluationRequest, ModelEvaluation> call);
+
+        partial void Modify_BatchImportModelEvaluationSlicesApiCall(ref gaxgrpc::ApiCall<BatchImportModelEvaluationSlicesRequest, BatchImportModelEvaluationSlicesResponse> call);
 
         partial void Modify_GetModelEvaluationApiCall(ref gaxgrpc::ApiCall<GetModelEvaluationRequest, ModelEvaluation> call);
 
@@ -2695,6 +2867,8 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_ExportModelRequest(ref ExportModelRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ImportModelEvaluationRequest(ref ImportModelEvaluationRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchImportModelEvaluationSlicesRequest(ref BatchImportModelEvaluationSlicesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetModelEvaluationRequest(ref GetModelEvaluationRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2974,6 +3148,30 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Modify_ImportModelEvaluationRequest(ref request, ref callSettings);
             return _callImportModelEvaluation.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Imports a list of externally generated ModelEvaluationSlice.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchImportModelEvaluationSlicesResponse BatchImportModelEvaluationSlices(BatchImportModelEvaluationSlicesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchImportModelEvaluationSlicesRequest(ref request, ref callSettings);
+            return _callBatchImportModelEvaluationSlices.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Imports a list of externally generated ModelEvaluationSlice.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchImportModelEvaluationSlicesResponse> BatchImportModelEvaluationSlicesAsync(BatchImportModelEvaluationSlicesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchImportModelEvaluationSlicesRequest(ref request, ref callSettings);
+            return _callBatchImportModelEvaluationSlices.Async(request, callSettings);
         }
 
         /// <summary>
