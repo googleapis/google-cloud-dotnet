@@ -50,6 +50,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DeployedModelId = "deployed_model_idf0bd41af",
                 ModelAsModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
                 ModelDisplayName = "model_display_name8ef9ce34",
+                ModelVersionId = "model_version_idcaf4b810",
             };
             mockGrpcClient.Setup(x => x.Predict(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -76,6 +77,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DeployedModelId = "deployed_model_idf0bd41af",
                 ModelAsModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
                 ModelDisplayName = "model_display_name8ef9ce34",
+                ModelVersionId = "model_version_idcaf4b810",
             };
             mockGrpcClient.Setup(x => x.PredictAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PredictResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -104,6 +106,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DeployedModelId = "deployed_model_idf0bd41af",
                 ModelAsModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
                 ModelDisplayName = "model_display_name8ef9ce34",
+                ModelVersionId = "model_version_idcaf4b810",
             };
             mockGrpcClient.Setup(x => x.Predict(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -130,6 +133,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DeployedModelId = "deployed_model_idf0bd41af",
                 ModelAsModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
                 ModelDisplayName = "model_display_name8ef9ce34",
+                ModelVersionId = "model_version_idcaf4b810",
             };
             mockGrpcClient.Setup(x => x.PredictAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PredictResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -158,6 +162,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DeployedModelId = "deployed_model_idf0bd41af",
                 ModelAsModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
                 ModelDisplayName = "model_display_name8ef9ce34",
+                ModelVersionId = "model_version_idcaf4b810",
             };
             mockGrpcClient.Setup(x => x.Predict(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -184,6 +189,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DeployedModelId = "deployed_model_idf0bd41af",
                 ModelAsModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
                 ModelDisplayName = "model_display_name8ef9ce34",
+                ModelVersionId = "model_version_idcaf4b810",
             };
             mockGrpcClient.Setup(x => x.PredictAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PredictResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null, null);

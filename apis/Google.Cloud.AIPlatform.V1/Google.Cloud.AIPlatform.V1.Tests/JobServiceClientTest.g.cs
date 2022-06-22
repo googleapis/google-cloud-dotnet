@@ -2204,6 +2204,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 ExplanationSpec = new ExplanationSpec(),
                 UnmanagedContainerModel = new UnmanagedContainerModel(),
+                ModelVersionId = "model_version_idcaf4b810",
             };
             mockGrpcClient.Setup(x => x.CreateBatchPredictionJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -2255,6 +2256,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 ExplanationSpec = new ExplanationSpec(),
                 UnmanagedContainerModel = new UnmanagedContainerModel(),
+                ModelVersionId = "model_version_idcaf4b810",
             };
             mockGrpcClient.Setup(x => x.CreateBatchPredictionJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchPredictionJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -2308,6 +2310,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 ExplanationSpec = new ExplanationSpec(),
                 UnmanagedContainerModel = new UnmanagedContainerModel(),
+                ModelVersionId = "model_version_idcaf4b810",
             };
             mockGrpcClient.Setup(x => x.CreateBatchPredictionJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -2359,6 +2362,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 ExplanationSpec = new ExplanationSpec(),
                 UnmanagedContainerModel = new UnmanagedContainerModel(),
+                ModelVersionId = "model_version_idcaf4b810",
             };
             mockGrpcClient.Setup(x => x.CreateBatchPredictionJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchPredictionJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -2412,6 +2416,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 ExplanationSpec = new ExplanationSpec(),
                 UnmanagedContainerModel = new UnmanagedContainerModel(),
+                ModelVersionId = "model_version_idcaf4b810",
             };
             mockGrpcClient.Setup(x => x.CreateBatchPredictionJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -2463,6 +2468,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 ExplanationSpec = new ExplanationSpec(),
                 UnmanagedContainerModel = new UnmanagedContainerModel(),
+                ModelVersionId = "model_version_idcaf4b810",
             };
             mockGrpcClient.Setup(x => x.CreateBatchPredictionJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchPredictionJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -2515,6 +2521,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 ExplanationSpec = new ExplanationSpec(),
                 UnmanagedContainerModel = new UnmanagedContainerModel(),
+                ModelVersionId = "model_version_idcaf4b810",
             };
             mockGrpcClient.Setup(x => x.GetBatchPredictionJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -2565,6 +2572,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 ExplanationSpec = new ExplanationSpec(),
                 UnmanagedContainerModel = new UnmanagedContainerModel(),
+                ModelVersionId = "model_version_idcaf4b810",
             };
             mockGrpcClient.Setup(x => x.GetBatchPredictionJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchPredictionJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -2617,6 +2625,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 ExplanationSpec = new ExplanationSpec(),
                 UnmanagedContainerModel = new UnmanagedContainerModel(),
+                ModelVersionId = "model_version_idcaf4b810",
             };
             mockGrpcClient.Setup(x => x.GetBatchPredictionJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -2667,6 +2676,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 ExplanationSpec = new ExplanationSpec(),
                 UnmanagedContainerModel = new UnmanagedContainerModel(),
+                ModelVersionId = "model_version_idcaf4b810",
             };
             mockGrpcClient.Setup(x => x.GetBatchPredictionJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchPredictionJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -2719,6 +2729,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 ExplanationSpec = new ExplanationSpec(),
                 UnmanagedContainerModel = new UnmanagedContainerModel(),
+                ModelVersionId = "model_version_idcaf4b810",
             };
             mockGrpcClient.Setup(x => x.GetBatchPredictionJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -2769,6 +2780,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 ExplanationSpec = new ExplanationSpec(),
                 UnmanagedContainerModel = new UnmanagedContainerModel(),
+                ModelVersionId = "model_version_idcaf4b810",
             };
             mockGrpcClient.Setup(x => x.GetBatchPredictionJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchPredictionJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
