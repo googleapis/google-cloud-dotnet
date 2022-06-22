@@ -122,7 +122,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         }
 
         [Fact]
-        public void InFilterQuery()
+        public void InFilterQuery_NullArrayValue()
         {
             var db = _fixture.CreateDatastoreDb();
             var keyFactory = db.CreateKeyFactory("inFilter");
@@ -144,7 +144,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         }
 
         [Fact]
-        public void NotInFilterQuery()
+        public void NotInFilterQuery_NullArrayValue()
         {
             var db = _fixture.CreateDatastoreDb();
             var keyFactory = db.CreateKeyFactory("notinFilter");
