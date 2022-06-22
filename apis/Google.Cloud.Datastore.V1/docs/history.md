@@ -1,5 +1,11 @@
 # Version history
 
+## Version 4.1.0, released 2022-06-22
+
+### New features
+
+- Add `IN` and `NOT_IN` operators ([commit 409b4f5](https://github.com/googleapis/google-cloud-dotnet/commit/409b4f5a273550d7aaf03af95aab0803327aa405))
+
 ## Version 4.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
