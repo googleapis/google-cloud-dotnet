@@ -18,7 +18,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
-using static Google.Cloud.Datastore.V1.PropertyFilter.Types;
 using static Google.Cloud.Datastore.V1.QueryResultBatch.Types;
 
 namespace Google.Cloud.Datastore.V1.IntegrationTests
