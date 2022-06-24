@@ -150,47 +150,48 @@ namespace Google.Cloud.NetworkManagement.V1 {
             "b3VyY2VfdXJpGAIgASgJIqABCgZUYXJnZXQSFgoSVEFSR0VUX1VOU1BFQ0lG",
             "SUVEEAASDwoLUEVFUklOR19WUEMQARIPCgtWUE5fR0FURVdBWRACEhAKDElO",
             "VEVSQ09OTkVDVBADEg4KCkdLRV9NQVNURVIQBBIiCh5JTVBPUlRFRF9DVVNU",
-            "T01fUk9VVEVfTkVYVF9IT1AQBRIWChJDTE9VRF9TUUxfSU5TVEFOQ0UQBiLi",
-            "AwoJQWJvcnRJbmZvEkEKBWNhdXNlGAEgASgOMjIuZ29vZ2xlLmNsb3VkLm5l",
+            "T01fUk9VVEVfTkVYVF9IT1AQBRIWChJDTE9VRF9TUUxfSU5TVEFOQ0UQBiKH",
+            "BAoJQWJvcnRJbmZvEkEKBWNhdXNlGAEgASgOMjIuZ29vZ2xlLmNsb3VkLm5l",
             "dHdvcmttYW5hZ2VtZW50LnYxLkFib3J0SW5mby5DYXVzZRIUCgxyZXNvdXJj",
-            "ZV91cmkYAiABKAki+wIKBUNhdXNlEhUKEUNBVVNFX1VOU1BFQ0lGSUVEEAAS",
-            "EwoPVU5LTk9XTl9ORVRXT1JLEAESDgoKVU5LTk9XTl9JUBACEhMKD1VOS05P",
-            "V05fUFJPSkVDVBADEhUKEVBFUk1JU1NJT05fREVOSUVEEAQSFgoSTk9fU09V",
-            "UkNFX0xPQ0FUSU9OEAUSFAoQSU5WQUxJRF9BUkdVTUVOVBAGEhIKDk5PX0VY",
-            "VEVSTkFMX0lQEAcSGgoWVU5JTlRFTkRFRF9ERVNUSU5BVElPThAIEhIKDlRS",
-            "QUNFX1RPT19MT05HEAkSEgoOSU5URVJOQUxfRVJST1IQChIdChlTT1VSQ0Vf",
-            "RU5EUE9JTlRfTk9UX0ZPVU5EEAsSHQoZTUlTTUFUQ0hFRF9TT1VSQ0VfTkVU",
-            "V09SSxAMEiIKHkRFU1RJTkFUSU9OX0VORFBPSU5UX05PVF9GT1VORBANEiIK",
-            "Hk1JU01BVENIRURfREVTVElOQVRJT05fTkVUV09SSxAOIpoGCghEcm9wSW5m",
-            "bxJACgVjYXVzZRgBIAEoDjIxLmdvb2dsZS5jbG91ZC5uZXR3b3JrbWFuYWdl",
-            "bWVudC52MS5Ecm9wSW5mby5DYXVzZRIUCgxyZXNvdXJjZV91cmkYAiABKAki",
-            "tQUKBUNhdXNlEhUKEUNBVVNFX1VOU1BFQ0lGSUVEEAASHAoYVU5LTk9XTl9F",
-            "WFRFUk5BTF9BRERSRVNTEAESGQoVRk9SRUlHTl9JUF9ESVNBTExPV0VEEAIS",
-            "EQoNRklSRVdBTExfUlVMRRADEgwKCE5PX1JPVVRFEAQSEwoPUk9VVEVfQkxB",
-            "Q0tIT0xFEAUSFwoTUk9VVEVfV1JPTkdfTkVUV09SSxAGEh8KG1BSSVZBVEVf",
-            "VFJBRkZJQ19UT19JTlRFUk5FVBAHEiQKIFBSSVZBVEVfR09PR0xFX0FDQ0VT",
-            "U19ESVNBTExPV0VEEAgSFwoTTk9fRVhURVJOQUxfQUREUkVTUxAJEhwKGFVO",
-            "S05PV05fSU5URVJOQUxfQUREUkVTUxAKEhwKGEZPUldBUkRJTkdfUlVMRV9N",
-            "SVNNQVRDSBALEiAKHEZPUldBUkRJTkdfUlVMRV9OT19JTlNUQU5DRVMQDBI4",
-            "CjRGSVJFV0FMTF9CTE9DS0lOR19MT0FEX0JBTEFOQ0VSX0JBQ0tFTkRfSEVB",
-            "TFRIX0NIRUNLEA0SGAoUSU5TVEFOQ0VfTk9UX1JVTk5JTkcQDhIYChRUUkFG",
-            "RklDX1RZUEVfQkxPQ0tFRBAPEiIKHkdLRV9NQVNURVJfVU5BVVRIT1JJWkVE",
-            "X0FDQ0VTUxAQEioKJkNMT1VEX1NRTF9JTlNUQU5DRV9VTkFVVEhPUklaRURf",
-            "QUNDRVNTEBESHgoaRFJPUFBFRF9JTlNJREVfR0tFX1NFUlZJQ0UQEhIkCiBE",
-            "Uk9QUEVEX0lOU0lERV9DTE9VRF9TUUxfU0VSVklDRRATEiUKIUdPT0dMRV9N",
-            "QU5BR0VEX1NFUlZJQ0VfTk9fUEVFUklORxAUEiQKIENMT1VEX1NRTF9JTlNU",
-            "QU5DRV9OT19JUF9BRERSRVNTEBUiawoNR0tFTWFzdGVySW5mbxITCgtjbHVz",
-            "dGVyX3VyaRgCIAEoCRIbChNjbHVzdGVyX25ldHdvcmtfdXJpGAQgASgJEhMK",
-            "C2ludGVybmFsX2lwGAUgASgJEhMKC2V4dGVybmFsX2lwGAYgASgJIogBChRD",
-            "bG91ZFNRTEluc3RhbmNlSW5mbxIUCgxkaXNwbGF5X25hbWUYASABKAkSCwoD",
-            "dXJpGAIgASgJEhMKC25ldHdvcmtfdXJpGAQgASgJEhMKC2ludGVybmFsX2lw",
-            "GAUgASgJEhMKC2V4dGVybmFsX2lwGAYgASgJEg4KBnJlZ2lvbhgHIAEoCUL4",
-            "AQolY29tLmdvb2dsZS5jbG91ZC5uZXR3b3JrbWFuYWdlbWVudC52MUIKVHJh",
-            "Y2VQcm90b1ABWlJnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVh",
-            "cGlzL2Nsb3VkL25ldHdvcmttYW5hZ2VtZW50L3YxO25ldHdvcmttYW5hZ2Vt",
-            "ZW50qgIhR29vZ2xlLkNsb3VkLk5ldHdvcmtNYW5hZ2VtZW50LlYxygIhR29v",
-            "Z2xlXENsb3VkXE5ldHdvcmtNYW5hZ2VtZW50XFYx6gIkR29vZ2xlOjpDbG91",
-            "ZDo6TmV0d29ya01hbmFnZW1lbnQ6OlYxYgZwcm90bzM="));
+            "ZV91cmkYAiABKAkSIwobcHJvamVjdHNfbWlzc2luZ19wZXJtaXNzaW9uGAMg",
+            "AygJIvsCCgVDYXVzZRIVChFDQVVTRV9VTlNQRUNJRklFRBAAEhMKD1VOS05P",
+            "V05fTkVUV09SSxABEg4KClVOS05PV05fSVAQAhITCg9VTktOT1dOX1BST0pF",
+            "Q1QQAxIVChFQRVJNSVNTSU9OX0RFTklFRBAEEhYKEk5PX1NPVVJDRV9MT0NB",
+            "VElPThAFEhQKEElOVkFMSURfQVJHVU1FTlQQBhISCg5OT19FWFRFUk5BTF9J",
+            "UBAHEhoKFlVOSU5URU5ERURfREVTVElOQVRJT04QCBISCg5UUkFDRV9UT09f",
+            "TE9ORxAJEhIKDklOVEVSTkFMX0VSUk9SEAoSHQoZU09VUkNFX0VORFBPSU5U",
+            "X05PVF9GT1VORBALEh0KGU1JU01BVENIRURfU09VUkNFX05FVFdPUksQDBIi",
+            "Ch5ERVNUSU5BVElPTl9FTkRQT0lOVF9OT1RfRk9VTkQQDRIiCh5NSVNNQVRD",
+            "SEVEX0RFU1RJTkFUSU9OX05FVFdPUksQDiKaBgoIRHJvcEluZm8SQAoFY2F1",
+            "c2UYASABKA4yMS5nb29nbGUuY2xvdWQubmV0d29ya21hbmFnZW1lbnQudjEu",
+            "RHJvcEluZm8uQ2F1c2USFAoMcmVzb3VyY2VfdXJpGAIgASgJIrUFCgVDYXVz",
+            "ZRIVChFDQVVTRV9VTlNQRUNJRklFRBAAEhwKGFVOS05PV05fRVhURVJOQUxf",
+            "QUREUkVTUxABEhkKFUZPUkVJR05fSVBfRElTQUxMT1dFRBACEhEKDUZJUkVX",
+            "QUxMX1JVTEUQAxIMCghOT19ST1VURRAEEhMKD1JPVVRFX0JMQUNLSE9MRRAF",
+            "EhcKE1JPVVRFX1dST05HX05FVFdPUksQBhIfChtQUklWQVRFX1RSQUZGSUNf",
+            "VE9fSU5URVJORVQQBxIkCiBQUklWQVRFX0dPT0dMRV9BQ0NFU1NfRElTQUxM",
+            "T1dFRBAIEhcKE05PX0VYVEVSTkFMX0FERFJFU1MQCRIcChhVTktOT1dOX0lO",
+            "VEVSTkFMX0FERFJFU1MQChIcChhGT1JXQVJESU5HX1JVTEVfTUlTTUFUQ0gQ",
+            "CxIgChxGT1JXQVJESU5HX1JVTEVfTk9fSU5TVEFOQ0VTEAwSOAo0RklSRVdB",
+            "TExfQkxPQ0tJTkdfTE9BRF9CQUxBTkNFUl9CQUNLRU5EX0hFQUxUSF9DSEVD",
+            "SxANEhgKFElOU1RBTkNFX05PVF9SVU5OSU5HEA4SGAoUVFJBRkZJQ19UWVBF",
+            "X0JMT0NLRUQQDxIiCh5HS0VfTUFTVEVSX1VOQVVUSE9SSVpFRF9BQ0NFU1MQ",
+            "EBIqCiZDTE9VRF9TUUxfSU5TVEFOQ0VfVU5BVVRIT1JJWkVEX0FDQ0VTUxAR",
+            "Eh4KGkRST1BQRURfSU5TSURFX0dLRV9TRVJWSUNFEBISJAogRFJPUFBFRF9J",
+            "TlNJREVfQ0xPVURfU1FMX1NFUlZJQ0UQExIlCiFHT09HTEVfTUFOQUdFRF9T",
+            "RVJWSUNFX05PX1BFRVJJTkcQFBIkCiBDTE9VRF9TUUxfSU5TVEFOQ0VfTk9f",
+            "SVBfQUREUkVTUxAVImsKDUdLRU1hc3RlckluZm8SEwoLY2x1c3Rlcl91cmkY",
+            "AiABKAkSGwoTY2x1c3Rlcl9uZXR3b3JrX3VyaRgEIAEoCRITCgtpbnRlcm5h",
+            "bF9pcBgFIAEoCRITCgtleHRlcm5hbF9pcBgGIAEoCSKIAQoUQ2xvdWRTUUxJ",
+            "bnN0YW5jZUluZm8SFAoMZGlzcGxheV9uYW1lGAEgASgJEgsKA3VyaRgCIAEo",
+            "CRITCgtuZXR3b3JrX3VyaRgEIAEoCRITCgtpbnRlcm5hbF9pcBgFIAEoCRIT",
+            "CgtleHRlcm5hbF9pcBgGIAEoCRIOCgZyZWdpb24YByABKAlC+AEKJWNvbS5n",
+            "b29nbGUuY2xvdWQubmV0d29ya21hbmFnZW1lbnQudjFCClRyYWNlUHJvdG9Q",
+            "AVpSZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91",
+            "ZC9uZXR3b3JrbWFuYWdlbWVudC92MTtuZXR3b3JrbWFuYWdlbWVudKoCIUdv",
+            "b2dsZS5DbG91ZC5OZXR3b3JrTWFuYWdlbWVudC5WMcoCIUdvb2dsZVxDbG91",
+            "ZFxOZXR3b3JrTWFuYWdlbWVudFxWMeoCJEdvb2dsZTo6Q2xvdWQ6Ok5ldHdv",
+            "cmtNYW5hZ2VtZW50OjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -208,7 +209,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.EndpointInfo), global::Google.Cloud.NetworkManagement.V1.EndpointInfo.Parser, new[]{ "SourceIp", "DestinationIp", "Protocol", "SourcePort", "DestinationPort", "SourceNetworkUri", "DestinationNetworkUri" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.DeliverInfo), global::Google.Cloud.NetworkManagement.V1.DeliverInfo.Parser, new[]{ "Target", "ResourceUri" }, null, new[]{ typeof(global::Google.Cloud.NetworkManagement.V1.DeliverInfo.Types.Target) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.ForwardInfo), global::Google.Cloud.NetworkManagement.V1.ForwardInfo.Parser, new[]{ "Target", "ResourceUri" }, null, new[]{ typeof(global::Google.Cloud.NetworkManagement.V1.ForwardInfo.Types.Target) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.AbortInfo), global::Google.Cloud.NetworkManagement.V1.AbortInfo.Parser, new[]{ "Cause", "ResourceUri" }, null, new[]{ typeof(global::Google.Cloud.NetworkManagement.V1.AbortInfo.Types.Cause) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.AbortInfo), global::Google.Cloud.NetworkManagement.V1.AbortInfo.Parser, new[]{ "Cause", "ResourceUri", "ProjectsMissingPermission" }, null, new[]{ typeof(global::Google.Cloud.NetworkManagement.V1.AbortInfo.Types.Cause) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.DropInfo), global::Google.Cloud.NetworkManagement.V1.DropInfo.Parser, new[]{ "Cause", "ResourceUri" }, null, new[]{ typeof(global::Google.Cloud.NetworkManagement.V1.DropInfo.Types.Cause) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.GKEMasterInfo), global::Google.Cloud.NetworkManagement.V1.GKEMasterInfo.Parser, new[]{ "ClusterUri", "ClusterNetworkUri", "InternalIp", "ExternalIp" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.CloudSQLInstanceInfo), global::Google.Cloud.NetworkManagement.V1.CloudSQLInstanceInfo.Parser, new[]{ "DisplayName", "Uri", "NetworkUri", "InternalIp", "ExternalIp", "Region" }, null, null, null, null)
@@ -6860,6 +6861,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public AbortInfo(AbortInfo other) : this() {
       cause_ = other.cause_;
       resourceUri_ = other.resourceUri_;
+      projectsMissingPermission_ = other.projectsMissingPermission_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -6899,6 +6901,22 @@ namespace Google.Cloud.NetworkManagement.V1 {
       }
     }
 
+    /// <summary>Field number for the "projects_missing_permission" field.</summary>
+    public const int ProjectsMissingPermissionFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_projectsMissingPermission_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> projectsMissingPermission_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// List of project IDs that the user has specified in the request but does
+    /// not have permission to access network configs. Analysis is aborted in this
+    /// case with the PERMISSION_DENIED cause.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ProjectsMissingPermission {
+      get { return projectsMissingPermission_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -6916,6 +6934,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       }
       if (Cause != other.Cause) return false;
       if (ResourceUri != other.ResourceUri) return false;
+      if(!projectsMissingPermission_.Equals(other.projectsMissingPermission_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -6925,6 +6944,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       int hash = 1;
       if (Cause != global::Google.Cloud.NetworkManagement.V1.AbortInfo.Types.Cause.Unspecified) hash ^= Cause.GetHashCode();
       if (ResourceUri.Length != 0) hash ^= ResourceUri.GetHashCode();
+      hash ^= projectsMissingPermission_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -6951,6 +6971,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
         output.WriteRawTag(18);
         output.WriteString(ResourceUri);
       }
+      projectsMissingPermission_.WriteTo(output, _repeated_projectsMissingPermission_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6969,6 +6990,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
         output.WriteRawTag(18);
         output.WriteString(ResourceUri);
       }
+      projectsMissingPermission_.WriteTo(ref output, _repeated_projectsMissingPermission_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6985,6 +7007,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       if (ResourceUri.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ResourceUri);
       }
+      size += projectsMissingPermission_.CalculateSize(_repeated_projectsMissingPermission_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -7003,6 +7026,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       if (other.ResourceUri.Length != 0) {
         ResourceUri = other.ResourceUri;
       }
+      projectsMissingPermission_.Add(other.projectsMissingPermission_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -7026,6 +7050,10 @@ namespace Google.Cloud.NetworkManagement.V1 {
             ResourceUri = input.ReadString();
             break;
           }
+          case 26: {
+            projectsMissingPermission_.AddEntriesFrom(input, _repeated_projectsMissingPermission_codec);
+            break;
+          }
         }
       }
     #endif
@@ -7047,6 +7075,10 @@ namespace Google.Cloud.NetworkManagement.V1 {
           }
           case 18: {
             ResourceUri = input.ReadString();
+            break;
+          }
+          case 26: {
+            projectsMissingPermission_.AddEntriesFrom(ref input, _repeated_projectsMissingPermission_codec);
             break;
           }
         }
