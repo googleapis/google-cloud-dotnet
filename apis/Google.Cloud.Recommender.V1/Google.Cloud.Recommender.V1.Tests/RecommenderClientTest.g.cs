@@ -1479,5 +1479,657 @@ namespace Google.Cloud.Recommender.V1.Tests
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
+
+        [xunit::FactAttribute]
+        public void GetRecommenderConfigRequestObject()
+        {
+            moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
+            GetRecommenderConfigRequest request = new GetRecommenderConfigRequest
+            {
+                RecommenderConfigName = RecommenderConfigName.FromProjectLocationRecommender("[PROJECT]", "[LOCATION]", "[RECOMMENDER]"),
+            };
+            RecommenderConfig expectedResponse = new RecommenderConfig
+            {
+                RecommenderConfigName = RecommenderConfigName.FromProjectLocationRecommender("[PROJECT]", "[LOCATION]", "[RECOMMENDER]"),
+                RecommenderGenerationConfig = new RecommenderGenerationConfig(),
+                Etag = "etage8ad7218",
+                UpdateTime = new wkt::Timestamp(),
+                RevisionId = "revision_id8d9ae05d",
+                Annotations =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                DisplayName = "display_name137f65c2",
+            };
+            mockGrpcClient.Setup(x => x.GetRecommenderConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
+            RecommenderConfig response = client.GetRecommenderConfig(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetRecommenderConfigRequestObjectAsync()
+        {
+            moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
+            GetRecommenderConfigRequest request = new GetRecommenderConfigRequest
+            {
+                RecommenderConfigName = RecommenderConfigName.FromProjectLocationRecommender("[PROJECT]", "[LOCATION]", "[RECOMMENDER]"),
+            };
+            RecommenderConfig expectedResponse = new RecommenderConfig
+            {
+                RecommenderConfigName = RecommenderConfigName.FromProjectLocationRecommender("[PROJECT]", "[LOCATION]", "[RECOMMENDER]"),
+                RecommenderGenerationConfig = new RecommenderGenerationConfig(),
+                Etag = "etage8ad7218",
+                UpdateTime = new wkt::Timestamp(),
+                RevisionId = "revision_id8d9ae05d",
+                Annotations =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                DisplayName = "display_name137f65c2",
+            };
+            mockGrpcClient.Setup(x => x.GetRecommenderConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RecommenderConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
+            RecommenderConfig responseCallSettings = await client.GetRecommenderConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            RecommenderConfig responseCancellationToken = await client.GetRecommenderConfigAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetRecommenderConfig()
+        {
+            moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
+            GetRecommenderConfigRequest request = new GetRecommenderConfigRequest
+            {
+                RecommenderConfigName = RecommenderConfigName.FromProjectLocationRecommender("[PROJECT]", "[LOCATION]", "[RECOMMENDER]"),
+            };
+            RecommenderConfig expectedResponse = new RecommenderConfig
+            {
+                RecommenderConfigName = RecommenderConfigName.FromProjectLocationRecommender("[PROJECT]", "[LOCATION]", "[RECOMMENDER]"),
+                RecommenderGenerationConfig = new RecommenderGenerationConfig(),
+                Etag = "etage8ad7218",
+                UpdateTime = new wkt::Timestamp(),
+                RevisionId = "revision_id8d9ae05d",
+                Annotations =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                DisplayName = "display_name137f65c2",
+            };
+            mockGrpcClient.Setup(x => x.GetRecommenderConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
+            RecommenderConfig response = client.GetRecommenderConfig(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetRecommenderConfigAsync()
+        {
+            moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
+            GetRecommenderConfigRequest request = new GetRecommenderConfigRequest
+            {
+                RecommenderConfigName = RecommenderConfigName.FromProjectLocationRecommender("[PROJECT]", "[LOCATION]", "[RECOMMENDER]"),
+            };
+            RecommenderConfig expectedResponse = new RecommenderConfig
+            {
+                RecommenderConfigName = RecommenderConfigName.FromProjectLocationRecommender("[PROJECT]", "[LOCATION]", "[RECOMMENDER]"),
+                RecommenderGenerationConfig = new RecommenderGenerationConfig(),
+                Etag = "etage8ad7218",
+                UpdateTime = new wkt::Timestamp(),
+                RevisionId = "revision_id8d9ae05d",
+                Annotations =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                DisplayName = "display_name137f65c2",
+            };
+            mockGrpcClient.Setup(x => x.GetRecommenderConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RecommenderConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
+            RecommenderConfig responseCallSettings = await client.GetRecommenderConfigAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            RecommenderConfig responseCancellationToken = await client.GetRecommenderConfigAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetRecommenderConfigResourceNames()
+        {
+            moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
+            GetRecommenderConfigRequest request = new GetRecommenderConfigRequest
+            {
+                RecommenderConfigName = RecommenderConfigName.FromProjectLocationRecommender("[PROJECT]", "[LOCATION]", "[RECOMMENDER]"),
+            };
+            RecommenderConfig expectedResponse = new RecommenderConfig
+            {
+                RecommenderConfigName = RecommenderConfigName.FromProjectLocationRecommender("[PROJECT]", "[LOCATION]", "[RECOMMENDER]"),
+                RecommenderGenerationConfig = new RecommenderGenerationConfig(),
+                Etag = "etage8ad7218",
+                UpdateTime = new wkt::Timestamp(),
+                RevisionId = "revision_id8d9ae05d",
+                Annotations =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                DisplayName = "display_name137f65c2",
+            };
+            mockGrpcClient.Setup(x => x.GetRecommenderConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
+            RecommenderConfig response = client.GetRecommenderConfig(request.RecommenderConfigName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetRecommenderConfigResourceNamesAsync()
+        {
+            moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
+            GetRecommenderConfigRequest request = new GetRecommenderConfigRequest
+            {
+                RecommenderConfigName = RecommenderConfigName.FromProjectLocationRecommender("[PROJECT]", "[LOCATION]", "[RECOMMENDER]"),
+            };
+            RecommenderConfig expectedResponse = new RecommenderConfig
+            {
+                RecommenderConfigName = RecommenderConfigName.FromProjectLocationRecommender("[PROJECT]", "[LOCATION]", "[RECOMMENDER]"),
+                RecommenderGenerationConfig = new RecommenderGenerationConfig(),
+                Etag = "etage8ad7218",
+                UpdateTime = new wkt::Timestamp(),
+                RevisionId = "revision_id8d9ae05d",
+                Annotations =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                DisplayName = "display_name137f65c2",
+            };
+            mockGrpcClient.Setup(x => x.GetRecommenderConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RecommenderConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
+            RecommenderConfig responseCallSettings = await client.GetRecommenderConfigAsync(request.RecommenderConfigName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            RecommenderConfig responseCancellationToken = await client.GetRecommenderConfigAsync(request.RecommenderConfigName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateRecommenderConfigRequestObject()
+        {
+            moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
+            UpdateRecommenderConfigRequest request = new UpdateRecommenderConfigRequest
+            {
+                RecommenderConfig = new RecommenderConfig(),
+                UpdateMask = new wkt::FieldMask(),
+                ValidateOnly = true,
+            };
+            RecommenderConfig expectedResponse = new RecommenderConfig
+            {
+                RecommenderConfigName = RecommenderConfigName.FromProjectLocationRecommender("[PROJECT]", "[LOCATION]", "[RECOMMENDER]"),
+                RecommenderGenerationConfig = new RecommenderGenerationConfig(),
+                Etag = "etage8ad7218",
+                UpdateTime = new wkt::Timestamp(),
+                RevisionId = "revision_id8d9ae05d",
+                Annotations =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                DisplayName = "display_name137f65c2",
+            };
+            mockGrpcClient.Setup(x => x.UpdateRecommenderConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
+            RecommenderConfig response = client.UpdateRecommenderConfig(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateRecommenderConfigRequestObjectAsync()
+        {
+            moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
+            UpdateRecommenderConfigRequest request = new UpdateRecommenderConfigRequest
+            {
+                RecommenderConfig = new RecommenderConfig(),
+                UpdateMask = new wkt::FieldMask(),
+                ValidateOnly = true,
+            };
+            RecommenderConfig expectedResponse = new RecommenderConfig
+            {
+                RecommenderConfigName = RecommenderConfigName.FromProjectLocationRecommender("[PROJECT]", "[LOCATION]", "[RECOMMENDER]"),
+                RecommenderGenerationConfig = new RecommenderGenerationConfig(),
+                Etag = "etage8ad7218",
+                UpdateTime = new wkt::Timestamp(),
+                RevisionId = "revision_id8d9ae05d",
+                Annotations =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                DisplayName = "display_name137f65c2",
+            };
+            mockGrpcClient.Setup(x => x.UpdateRecommenderConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RecommenderConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
+            RecommenderConfig responseCallSettings = await client.UpdateRecommenderConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            RecommenderConfig responseCancellationToken = await client.UpdateRecommenderConfigAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateRecommenderConfig()
+        {
+            moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
+            UpdateRecommenderConfigRequest request = new UpdateRecommenderConfigRequest
+            {
+                RecommenderConfig = new RecommenderConfig(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            RecommenderConfig expectedResponse = new RecommenderConfig
+            {
+                RecommenderConfigName = RecommenderConfigName.FromProjectLocationRecommender("[PROJECT]", "[LOCATION]", "[RECOMMENDER]"),
+                RecommenderGenerationConfig = new RecommenderGenerationConfig(),
+                Etag = "etage8ad7218",
+                UpdateTime = new wkt::Timestamp(),
+                RevisionId = "revision_id8d9ae05d",
+                Annotations =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                DisplayName = "display_name137f65c2",
+            };
+            mockGrpcClient.Setup(x => x.UpdateRecommenderConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
+            RecommenderConfig response = client.UpdateRecommenderConfig(request.RecommenderConfig, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateRecommenderConfigAsync()
+        {
+            moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
+            UpdateRecommenderConfigRequest request = new UpdateRecommenderConfigRequest
+            {
+                RecommenderConfig = new RecommenderConfig(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            RecommenderConfig expectedResponse = new RecommenderConfig
+            {
+                RecommenderConfigName = RecommenderConfigName.FromProjectLocationRecommender("[PROJECT]", "[LOCATION]", "[RECOMMENDER]"),
+                RecommenderGenerationConfig = new RecommenderGenerationConfig(),
+                Etag = "etage8ad7218",
+                UpdateTime = new wkt::Timestamp(),
+                RevisionId = "revision_id8d9ae05d",
+                Annotations =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                DisplayName = "display_name137f65c2",
+            };
+            mockGrpcClient.Setup(x => x.UpdateRecommenderConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RecommenderConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
+            RecommenderConfig responseCallSettings = await client.UpdateRecommenderConfigAsync(request.RecommenderConfig, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            RecommenderConfig responseCancellationToken = await client.UpdateRecommenderConfigAsync(request.RecommenderConfig, request.UpdateMask, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetInsightTypeConfigRequestObject()
+        {
+            moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
+            GetInsightTypeConfigRequest request = new GetInsightTypeConfigRequest
+            {
+                InsightTypeConfigName = InsightTypeConfigName.FromProjectLocationInsightType("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]"),
+            };
+            InsightTypeConfig expectedResponse = new InsightTypeConfig
+            {
+                InsightTypeConfigName = InsightTypeConfigName.FromProjectLocationInsightType("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]"),
+                InsightTypeGenerationConfig = new InsightTypeGenerationConfig(),
+                Etag = "etage8ad7218",
+                UpdateTime = new wkt::Timestamp(),
+                RevisionId = "revision_id8d9ae05d",
+                Annotations =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                DisplayName = "display_name137f65c2",
+            };
+            mockGrpcClient.Setup(x => x.GetInsightTypeConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
+            InsightTypeConfig response = client.GetInsightTypeConfig(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetInsightTypeConfigRequestObjectAsync()
+        {
+            moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
+            GetInsightTypeConfigRequest request = new GetInsightTypeConfigRequest
+            {
+                InsightTypeConfigName = InsightTypeConfigName.FromProjectLocationInsightType("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]"),
+            };
+            InsightTypeConfig expectedResponse = new InsightTypeConfig
+            {
+                InsightTypeConfigName = InsightTypeConfigName.FromProjectLocationInsightType("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]"),
+                InsightTypeGenerationConfig = new InsightTypeGenerationConfig(),
+                Etag = "etage8ad7218",
+                UpdateTime = new wkt::Timestamp(),
+                RevisionId = "revision_id8d9ae05d",
+                Annotations =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                DisplayName = "display_name137f65c2",
+            };
+            mockGrpcClient.Setup(x => x.GetInsightTypeConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InsightTypeConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
+            InsightTypeConfig responseCallSettings = await client.GetInsightTypeConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            InsightTypeConfig responseCancellationToken = await client.GetInsightTypeConfigAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetInsightTypeConfig()
+        {
+            moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
+            GetInsightTypeConfigRequest request = new GetInsightTypeConfigRequest
+            {
+                InsightTypeConfigName = InsightTypeConfigName.FromProjectLocationInsightType("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]"),
+            };
+            InsightTypeConfig expectedResponse = new InsightTypeConfig
+            {
+                InsightTypeConfigName = InsightTypeConfigName.FromProjectLocationInsightType("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]"),
+                InsightTypeGenerationConfig = new InsightTypeGenerationConfig(),
+                Etag = "etage8ad7218",
+                UpdateTime = new wkt::Timestamp(),
+                RevisionId = "revision_id8d9ae05d",
+                Annotations =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                DisplayName = "display_name137f65c2",
+            };
+            mockGrpcClient.Setup(x => x.GetInsightTypeConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
+            InsightTypeConfig response = client.GetInsightTypeConfig(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetInsightTypeConfigAsync()
+        {
+            moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
+            GetInsightTypeConfigRequest request = new GetInsightTypeConfigRequest
+            {
+                InsightTypeConfigName = InsightTypeConfigName.FromProjectLocationInsightType("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]"),
+            };
+            InsightTypeConfig expectedResponse = new InsightTypeConfig
+            {
+                InsightTypeConfigName = InsightTypeConfigName.FromProjectLocationInsightType("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]"),
+                InsightTypeGenerationConfig = new InsightTypeGenerationConfig(),
+                Etag = "etage8ad7218",
+                UpdateTime = new wkt::Timestamp(),
+                RevisionId = "revision_id8d9ae05d",
+                Annotations =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                DisplayName = "display_name137f65c2",
+            };
+            mockGrpcClient.Setup(x => x.GetInsightTypeConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InsightTypeConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
+            InsightTypeConfig responseCallSettings = await client.GetInsightTypeConfigAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            InsightTypeConfig responseCancellationToken = await client.GetInsightTypeConfigAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetInsightTypeConfigResourceNames()
+        {
+            moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
+            GetInsightTypeConfigRequest request = new GetInsightTypeConfigRequest
+            {
+                InsightTypeConfigName = InsightTypeConfigName.FromProjectLocationInsightType("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]"),
+            };
+            InsightTypeConfig expectedResponse = new InsightTypeConfig
+            {
+                InsightTypeConfigName = InsightTypeConfigName.FromProjectLocationInsightType("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]"),
+                InsightTypeGenerationConfig = new InsightTypeGenerationConfig(),
+                Etag = "etage8ad7218",
+                UpdateTime = new wkt::Timestamp(),
+                RevisionId = "revision_id8d9ae05d",
+                Annotations =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                DisplayName = "display_name137f65c2",
+            };
+            mockGrpcClient.Setup(x => x.GetInsightTypeConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
+            InsightTypeConfig response = client.GetInsightTypeConfig(request.InsightTypeConfigName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetInsightTypeConfigResourceNamesAsync()
+        {
+            moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
+            GetInsightTypeConfigRequest request = new GetInsightTypeConfigRequest
+            {
+                InsightTypeConfigName = InsightTypeConfigName.FromProjectLocationInsightType("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]"),
+            };
+            InsightTypeConfig expectedResponse = new InsightTypeConfig
+            {
+                InsightTypeConfigName = InsightTypeConfigName.FromProjectLocationInsightType("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]"),
+                InsightTypeGenerationConfig = new InsightTypeGenerationConfig(),
+                Etag = "etage8ad7218",
+                UpdateTime = new wkt::Timestamp(),
+                RevisionId = "revision_id8d9ae05d",
+                Annotations =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                DisplayName = "display_name137f65c2",
+            };
+            mockGrpcClient.Setup(x => x.GetInsightTypeConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InsightTypeConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
+            InsightTypeConfig responseCallSettings = await client.GetInsightTypeConfigAsync(request.InsightTypeConfigName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            InsightTypeConfig responseCancellationToken = await client.GetInsightTypeConfigAsync(request.InsightTypeConfigName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateInsightTypeConfigRequestObject()
+        {
+            moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
+            UpdateInsightTypeConfigRequest request = new UpdateInsightTypeConfigRequest
+            {
+                InsightTypeConfig = new InsightTypeConfig(),
+                UpdateMask = new wkt::FieldMask(),
+                ValidateOnly = true,
+            };
+            InsightTypeConfig expectedResponse = new InsightTypeConfig
+            {
+                InsightTypeConfigName = InsightTypeConfigName.FromProjectLocationInsightType("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]"),
+                InsightTypeGenerationConfig = new InsightTypeGenerationConfig(),
+                Etag = "etage8ad7218",
+                UpdateTime = new wkt::Timestamp(),
+                RevisionId = "revision_id8d9ae05d",
+                Annotations =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                DisplayName = "display_name137f65c2",
+            };
+            mockGrpcClient.Setup(x => x.UpdateInsightTypeConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
+            InsightTypeConfig response = client.UpdateInsightTypeConfig(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateInsightTypeConfigRequestObjectAsync()
+        {
+            moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
+            UpdateInsightTypeConfigRequest request = new UpdateInsightTypeConfigRequest
+            {
+                InsightTypeConfig = new InsightTypeConfig(),
+                UpdateMask = new wkt::FieldMask(),
+                ValidateOnly = true,
+            };
+            InsightTypeConfig expectedResponse = new InsightTypeConfig
+            {
+                InsightTypeConfigName = InsightTypeConfigName.FromProjectLocationInsightType("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]"),
+                InsightTypeGenerationConfig = new InsightTypeGenerationConfig(),
+                Etag = "etage8ad7218",
+                UpdateTime = new wkt::Timestamp(),
+                RevisionId = "revision_id8d9ae05d",
+                Annotations =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                DisplayName = "display_name137f65c2",
+            };
+            mockGrpcClient.Setup(x => x.UpdateInsightTypeConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InsightTypeConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
+            InsightTypeConfig responseCallSettings = await client.UpdateInsightTypeConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            InsightTypeConfig responseCancellationToken = await client.UpdateInsightTypeConfigAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateInsightTypeConfig()
+        {
+            moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
+            UpdateInsightTypeConfigRequest request = new UpdateInsightTypeConfigRequest
+            {
+                InsightTypeConfig = new InsightTypeConfig(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            InsightTypeConfig expectedResponse = new InsightTypeConfig
+            {
+                InsightTypeConfigName = InsightTypeConfigName.FromProjectLocationInsightType("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]"),
+                InsightTypeGenerationConfig = new InsightTypeGenerationConfig(),
+                Etag = "etage8ad7218",
+                UpdateTime = new wkt::Timestamp(),
+                RevisionId = "revision_id8d9ae05d",
+                Annotations =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                DisplayName = "display_name137f65c2",
+            };
+            mockGrpcClient.Setup(x => x.UpdateInsightTypeConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
+            InsightTypeConfig response = client.UpdateInsightTypeConfig(request.InsightTypeConfig, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateInsightTypeConfigAsync()
+        {
+            moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
+            UpdateInsightTypeConfigRequest request = new UpdateInsightTypeConfigRequest
+            {
+                InsightTypeConfig = new InsightTypeConfig(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            InsightTypeConfig expectedResponse = new InsightTypeConfig
+            {
+                InsightTypeConfigName = InsightTypeConfigName.FromProjectLocationInsightType("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]"),
+                InsightTypeGenerationConfig = new InsightTypeGenerationConfig(),
+                Etag = "etage8ad7218",
+                UpdateTime = new wkt::Timestamp(),
+                RevisionId = "revision_id8d9ae05d",
+                Annotations =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                DisplayName = "display_name137f65c2",
+            };
+            mockGrpcClient.Setup(x => x.UpdateInsightTypeConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InsightTypeConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null, null);
+            InsightTypeConfig responseCallSettings = await client.UpdateInsightTypeConfigAsync(request.InsightTypeConfig, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            InsightTypeConfig responseCancellationToken = await client.UpdateInsightTypeConfigAsync(request.InsightTypeConfig, request.UpdateMask, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }

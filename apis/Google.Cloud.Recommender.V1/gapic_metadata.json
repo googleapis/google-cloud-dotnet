@@ -16,10 +16,22 @@
                 "GetInsightAsync"
               ]
             },
+            "GetInsightTypeConfig": {
+              "methods": [
+                "GetInsightTypeConfig",
+                "GetInsightTypeConfigAsync"
+              ]
+            },
             "GetRecommendation": {
               "methods": [
                 "GetRecommendation",
                 "GetRecommendationAsync"
+              ]
+            },
+            "GetRecommenderConfig": {
+              "methods": [
+                "GetRecommenderConfig",
+                "GetRecommenderConfigAsync"
               ]
             },
             "ListInsights": {
@@ -56,6 +68,18 @@
               "methods": [
                 "MarkRecommendationSucceeded",
                 "MarkRecommendationSucceededAsync"
+              ]
+            },
+            "UpdateInsightTypeConfig": {
+              "methods": [
+                "UpdateInsightTypeConfig",
+                "UpdateInsightTypeConfigAsync"
+              ]
+            },
+            "UpdateRecommenderConfig": {
+              "methods": [
+                "UpdateRecommenderConfig",
+                "UpdateRecommenderConfigAsync"
               ]
             }
           }

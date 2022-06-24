@@ -90,6 +90,18 @@ namespace Google.Cloud.Recommender.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.MarkRecommendationSucceededRequest> __Marshaller_google_cloud_recommender_v1_MarkRecommendationSucceededRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Recommender.V1.MarkRecommendationSucceededRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.MarkRecommendationFailedRequest> __Marshaller_google_cloud_recommender_v1_MarkRecommendationFailedRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Recommender.V1.MarkRecommendationFailedRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.GetRecommenderConfigRequest> __Marshaller_google_cloud_recommender_v1_GetRecommenderConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Recommender.V1.GetRecommenderConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.RecommenderConfig> __Marshaller_google_cloud_recommender_v1_RecommenderConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Recommender.V1.RecommenderConfig.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.UpdateRecommenderConfigRequest> __Marshaller_google_cloud_recommender_v1_UpdateRecommenderConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Recommender.V1.UpdateRecommenderConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.GetInsightTypeConfigRequest> __Marshaller_google_cloud_recommender_v1_GetInsightTypeConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Recommender.V1.GetInsightTypeConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.InsightTypeConfig> __Marshaller_google_cloud_recommender_v1_InsightTypeConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Recommender.V1.InsightTypeConfig.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.UpdateInsightTypeConfigRequest> __Marshaller_google_cloud_recommender_v1_UpdateInsightTypeConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Recommender.V1.UpdateInsightTypeConfigRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Recommender.V1.ListInsightsRequest, global::Google.Cloud.Recommender.V1.ListInsightsResponse> __Method_ListInsights = new grpc::Method<global::Google.Cloud.Recommender.V1.ListInsightsRequest, global::Google.Cloud.Recommender.V1.ListInsightsResponse>(
@@ -154,6 +166,38 @@ namespace Google.Cloud.Recommender.V1 {
         "MarkRecommendationFailed",
         __Marshaller_google_cloud_recommender_v1_MarkRecommendationFailedRequest,
         __Marshaller_google_cloud_recommender_v1_Recommendation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Recommender.V1.GetRecommenderConfigRequest, global::Google.Cloud.Recommender.V1.RecommenderConfig> __Method_GetRecommenderConfig = new grpc::Method<global::Google.Cloud.Recommender.V1.GetRecommenderConfigRequest, global::Google.Cloud.Recommender.V1.RecommenderConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetRecommenderConfig",
+        __Marshaller_google_cloud_recommender_v1_GetRecommenderConfigRequest,
+        __Marshaller_google_cloud_recommender_v1_RecommenderConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Recommender.V1.UpdateRecommenderConfigRequest, global::Google.Cloud.Recommender.V1.RecommenderConfig> __Method_UpdateRecommenderConfig = new grpc::Method<global::Google.Cloud.Recommender.V1.UpdateRecommenderConfigRequest, global::Google.Cloud.Recommender.V1.RecommenderConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateRecommenderConfig",
+        __Marshaller_google_cloud_recommender_v1_UpdateRecommenderConfigRequest,
+        __Marshaller_google_cloud_recommender_v1_RecommenderConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Recommender.V1.GetInsightTypeConfigRequest, global::Google.Cloud.Recommender.V1.InsightTypeConfig> __Method_GetInsightTypeConfig = new grpc::Method<global::Google.Cloud.Recommender.V1.GetInsightTypeConfigRequest, global::Google.Cloud.Recommender.V1.InsightTypeConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetInsightTypeConfig",
+        __Marshaller_google_cloud_recommender_v1_GetInsightTypeConfigRequest,
+        __Marshaller_google_cloud_recommender_v1_InsightTypeConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Recommender.V1.UpdateInsightTypeConfigRequest, global::Google.Cloud.Recommender.V1.InsightTypeConfig> __Method_UpdateInsightTypeConfig = new grpc::Method<global::Google.Cloud.Recommender.V1.UpdateInsightTypeConfigRequest, global::Google.Cloud.Recommender.V1.InsightTypeConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateInsightTypeConfig",
+        __Marshaller_google_cloud_recommender_v1_UpdateInsightTypeConfigRequest,
+        __Marshaller_google_cloud_recommender_v1_InsightTypeConfig);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -295,6 +339,58 @@ namespace Google.Cloud.Recommender.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Recommender.V1.Recommendation> MarkRecommendationFailed(global::Google.Cloud.Recommender.V1.MarkRecommendationFailedRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets the requested Recommender Config. There is only one instance of the
+      /// config for each Recommender.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Recommender.V1.RecommenderConfig> GetRecommenderConfig(global::Google.Cloud.Recommender.V1.GetRecommenderConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a Recommender Config. This will create a new revision of the
+      /// config.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Recommender.V1.RecommenderConfig> UpdateRecommenderConfig(global::Google.Cloud.Recommender.V1.UpdateRecommenderConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets the requested InsightTypeConfig. There is only one instance of the
+      /// config for each InsightType.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Recommender.V1.InsightTypeConfig> GetInsightTypeConfig(global::Google.Cloud.Recommender.V1.GetInsightTypeConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates an InsightTypeConfig change. This will create a new revision of the
+      /// config.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Recommender.V1.InsightTypeConfig> UpdateInsightTypeConfig(global::Google.Cloud.Recommender.V1.UpdateInsightTypeConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -864,6 +960,214 @@ namespace Google.Cloud.Recommender.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_MarkRecommendationFailed, null, options, request);
       }
+      /// <summary>
+      /// Gets the requested Recommender Config. There is only one instance of the
+      /// config for each Recommender.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Recommender.V1.RecommenderConfig GetRecommenderConfig(global::Google.Cloud.Recommender.V1.GetRecommenderConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetRecommenderConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the requested Recommender Config. There is only one instance of the
+      /// config for each Recommender.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Recommender.V1.RecommenderConfig GetRecommenderConfig(global::Google.Cloud.Recommender.V1.GetRecommenderConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetRecommenderConfig, null, options, request);
+      }
+      /// <summary>
+      /// Gets the requested Recommender Config. There is only one instance of the
+      /// config for each Recommender.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Recommender.V1.RecommenderConfig> GetRecommenderConfigAsync(global::Google.Cloud.Recommender.V1.GetRecommenderConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetRecommenderConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the requested Recommender Config. There is only one instance of the
+      /// config for each Recommender.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Recommender.V1.RecommenderConfig> GetRecommenderConfigAsync(global::Google.Cloud.Recommender.V1.GetRecommenderConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetRecommenderConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates a Recommender Config. This will create a new revision of the
+      /// config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Recommender.V1.RecommenderConfig UpdateRecommenderConfig(global::Google.Cloud.Recommender.V1.UpdateRecommenderConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateRecommenderConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a Recommender Config. This will create a new revision of the
+      /// config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Recommender.V1.RecommenderConfig UpdateRecommenderConfig(global::Google.Cloud.Recommender.V1.UpdateRecommenderConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateRecommenderConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates a Recommender Config. This will create a new revision of the
+      /// config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Recommender.V1.RecommenderConfig> UpdateRecommenderConfigAsync(global::Google.Cloud.Recommender.V1.UpdateRecommenderConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateRecommenderConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a Recommender Config. This will create a new revision of the
+      /// config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Recommender.V1.RecommenderConfig> UpdateRecommenderConfigAsync(global::Google.Cloud.Recommender.V1.UpdateRecommenderConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateRecommenderConfig, null, options, request);
+      }
+      /// <summary>
+      /// Gets the requested InsightTypeConfig. There is only one instance of the
+      /// config for each InsightType.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Recommender.V1.InsightTypeConfig GetInsightTypeConfig(global::Google.Cloud.Recommender.V1.GetInsightTypeConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetInsightTypeConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the requested InsightTypeConfig. There is only one instance of the
+      /// config for each InsightType.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Recommender.V1.InsightTypeConfig GetInsightTypeConfig(global::Google.Cloud.Recommender.V1.GetInsightTypeConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetInsightTypeConfig, null, options, request);
+      }
+      /// <summary>
+      /// Gets the requested InsightTypeConfig. There is only one instance of the
+      /// config for each InsightType.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Recommender.V1.InsightTypeConfig> GetInsightTypeConfigAsync(global::Google.Cloud.Recommender.V1.GetInsightTypeConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetInsightTypeConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the requested InsightTypeConfig. There is only one instance of the
+      /// config for each InsightType.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Recommender.V1.InsightTypeConfig> GetInsightTypeConfigAsync(global::Google.Cloud.Recommender.V1.GetInsightTypeConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetInsightTypeConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates an InsightTypeConfig change. This will create a new revision of the
+      /// config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Recommender.V1.InsightTypeConfig UpdateInsightTypeConfig(global::Google.Cloud.Recommender.V1.UpdateInsightTypeConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateInsightTypeConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an InsightTypeConfig change. This will create a new revision of the
+      /// config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Recommender.V1.InsightTypeConfig UpdateInsightTypeConfig(global::Google.Cloud.Recommender.V1.UpdateInsightTypeConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateInsightTypeConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates an InsightTypeConfig change. This will create a new revision of the
+      /// config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Recommender.V1.InsightTypeConfig> UpdateInsightTypeConfigAsync(global::Google.Cloud.Recommender.V1.UpdateInsightTypeConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateInsightTypeConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an InsightTypeConfig change. This will create a new revision of the
+      /// config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Recommender.V1.InsightTypeConfig> UpdateInsightTypeConfigAsync(global::Google.Cloud.Recommender.V1.UpdateInsightTypeConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateInsightTypeConfig, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override RecommenderClient NewInstance(ClientBaseConfiguration configuration)
@@ -885,7 +1189,11 @@ namespace Google.Cloud.Recommender.V1 {
           .AddMethod(__Method_GetRecommendation, serviceImpl.GetRecommendation)
           .AddMethod(__Method_MarkRecommendationClaimed, serviceImpl.MarkRecommendationClaimed)
           .AddMethod(__Method_MarkRecommendationSucceeded, serviceImpl.MarkRecommendationSucceeded)
-          .AddMethod(__Method_MarkRecommendationFailed, serviceImpl.MarkRecommendationFailed).Build();
+          .AddMethod(__Method_MarkRecommendationFailed, serviceImpl.MarkRecommendationFailed)
+          .AddMethod(__Method_GetRecommenderConfig, serviceImpl.GetRecommenderConfig)
+          .AddMethod(__Method_UpdateRecommenderConfig, serviceImpl.UpdateRecommenderConfig)
+          .AddMethod(__Method_GetInsightTypeConfig, serviceImpl.GetInsightTypeConfig)
+          .AddMethod(__Method_UpdateInsightTypeConfig, serviceImpl.UpdateInsightTypeConfig).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -903,6 +1211,10 @@ namespace Google.Cloud.Recommender.V1 {
       serviceBinder.AddMethod(__Method_MarkRecommendationClaimed, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Recommender.V1.MarkRecommendationClaimedRequest, global::Google.Cloud.Recommender.V1.Recommendation>(serviceImpl.MarkRecommendationClaimed));
       serviceBinder.AddMethod(__Method_MarkRecommendationSucceeded, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Recommender.V1.MarkRecommendationSucceededRequest, global::Google.Cloud.Recommender.V1.Recommendation>(serviceImpl.MarkRecommendationSucceeded));
       serviceBinder.AddMethod(__Method_MarkRecommendationFailed, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Recommender.V1.MarkRecommendationFailedRequest, global::Google.Cloud.Recommender.V1.Recommendation>(serviceImpl.MarkRecommendationFailed));
+      serviceBinder.AddMethod(__Method_GetRecommenderConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Recommender.V1.GetRecommenderConfigRequest, global::Google.Cloud.Recommender.V1.RecommenderConfig>(serviceImpl.GetRecommenderConfig));
+      serviceBinder.AddMethod(__Method_UpdateRecommenderConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Recommender.V1.UpdateRecommenderConfigRequest, global::Google.Cloud.Recommender.V1.RecommenderConfig>(serviceImpl.UpdateRecommenderConfig));
+      serviceBinder.AddMethod(__Method_GetInsightTypeConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Recommender.V1.GetInsightTypeConfigRequest, global::Google.Cloud.Recommender.V1.InsightTypeConfig>(serviceImpl.GetInsightTypeConfig));
+      serviceBinder.AddMethod(__Method_UpdateInsightTypeConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Recommender.V1.UpdateInsightTypeConfigRequest, global::Google.Cloud.Recommender.V1.InsightTypeConfig>(serviceImpl.UpdateInsightTypeConfig));
     }
 
   }
