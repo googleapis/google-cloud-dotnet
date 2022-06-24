@@ -365,7 +365,7 @@
       "version": "1.0.0-beta00",
       "type": "grpc",
       "productName": "Batch",
-      "description": "Recommended Google client library to access the Batch API, which allows you to manage the running of batch jobs on Google Cloud Platform.",
+      "description": "Recommended Google client library to access the Batch API (v1), which allows you to manage the running of batch jobs on Google Cloud Platform.",
       "tags": [
         "batch"
       ],
@@ -378,6 +378,25 @@
       "protoPath": "google/cloud/batch/v1",
       "shortName": "batch",
       "serviceConfigFile": "batch_v1.yaml"
+    },
+    {
+      "id": "Google.Cloud.Batch.V1Alpha",
+      "version": "1.0.0-alpha00",
+      "type": "grpc",
+      "productName": "Batch",
+      "description": "Recommended Google client library to access the Batch API (v1alpha), which allows you to manage the running of batch jobs on Google Cloud Platform.",
+      "tags": [
+        "batch"
+      ],
+      "dependencies": {
+        "Google.Cloud.Iam.V1": "3.0.0",
+        "Google.Cloud.Location": "2.0.0",
+        "Google.LongRunning": "3.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/batch/v1alpha",
+      "shortName": "batch",
+      "serviceConfigFile": "batch_v1alpha.yaml"
     },
     {
       "id": "Google.Cloud.BigQuery.Connection.V1",
