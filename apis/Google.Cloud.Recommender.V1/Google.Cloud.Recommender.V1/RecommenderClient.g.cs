@@ -18,6 +18,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using proto = Google.Protobuf;
+using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
@@ -53,6 +54,10 @@ namespace Google.Cloud.Recommender.V1
             MarkRecommendationClaimedSettings = existing.MarkRecommendationClaimedSettings;
             MarkRecommendationSucceededSettings = existing.MarkRecommendationSucceededSettings;
             MarkRecommendationFailedSettings = existing.MarkRecommendationFailedSettings;
+            GetRecommenderConfigSettings = existing.GetRecommenderConfigSettings;
+            UpdateRecommenderConfigSettings = existing.UpdateRecommenderConfigSettings;
+            GetInsightTypeConfigSettings = existing.GetInsightTypeConfigSettings;
+            UpdateInsightTypeConfigSettings = existing.UpdateInsightTypeConfigSettings;
             OnCopy(existing);
         }
 
@@ -192,6 +197,54 @@ namespace Google.Cloud.Recommender.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings MarkRecommendationFailedSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RecommenderClient.GetRecommenderConfig</c> and <c>RecommenderClient.GetRecommenderConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetRecommenderConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RecommenderClient.UpdateRecommenderConfig</c> and <c>RecommenderClient.UpdateRecommenderConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateRecommenderConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RecommenderClient.GetInsightTypeConfig</c> and <c>RecommenderClient.GetInsightTypeConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetInsightTypeConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RecommenderClient.UpdateInsightTypeConfig</c> and <c>RecommenderClient.UpdateInsightTypeConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateInsightTypeConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="RecommenderSettings"/> object.</returns>
@@ -688,8 +741,8 @@ namespace Google.Cloud.Recommender.V1
         /// Required. Name of the insight.
         /// </param>
         /// <param name="stateMetadata">
-        /// Optional. State properties user wish to include with this state.  Full replace of the
-        /// current state_metadata.
+        /// Optional. State properties user wish to include with this state.  Full
+        /// replace of the current state_metadata.
         /// </param>
         /// <param name="etag">
         /// Required. Fingerprint of the Insight. Provides optimistic locking.
@@ -719,8 +772,8 @@ namespace Google.Cloud.Recommender.V1
         /// Required. Name of the insight.
         /// </param>
         /// <param name="stateMetadata">
-        /// Optional. State properties user wish to include with this state.  Full replace of the
-        /// current state_metadata.
+        /// Optional. State properties user wish to include with this state.  Full
+        /// replace of the current state_metadata.
         /// </param>
         /// <param name="etag">
         /// Required. Fingerprint of the Insight. Provides optimistic locking.
@@ -750,8 +803,8 @@ namespace Google.Cloud.Recommender.V1
         /// Required. Name of the insight.
         /// </param>
         /// <param name="stateMetadata">
-        /// Optional. State properties user wish to include with this state.  Full replace of the
-        /// current state_metadata.
+        /// Optional. State properties user wish to include with this state.  Full
+        /// replace of the current state_metadata.
         /// </param>
         /// <param name="etag">
         /// Required. Fingerprint of the Insight. Provides optimistic locking.
@@ -773,8 +826,8 @@ namespace Google.Cloud.Recommender.V1
         /// Required. Name of the insight.
         /// </param>
         /// <param name="stateMetadata">
-        /// Optional. State properties user wish to include with this state.  Full replace of the
-        /// current state_metadata.
+        /// Optional. State properties user wish to include with this state.  Full
+        /// replace of the current state_metadata.
         /// </param>
         /// <param name="etag">
         /// Required. Fingerprint of the Insight. Provides optimistic locking.
@@ -804,8 +857,8 @@ namespace Google.Cloud.Recommender.V1
         /// Required. Name of the insight.
         /// </param>
         /// <param name="stateMetadata">
-        /// Optional. State properties user wish to include with this state.  Full replace of the
-        /// current state_metadata.
+        /// Optional. State properties user wish to include with this state.  Full
+        /// replace of the current state_metadata.
         /// </param>
         /// <param name="etag">
         /// Required. Fingerprint of the Insight. Provides optimistic locking.
@@ -835,8 +888,8 @@ namespace Google.Cloud.Recommender.V1
         /// Required. Name of the insight.
         /// </param>
         /// <param name="stateMetadata">
-        /// Optional. State properties user wish to include with this state.  Full replace of the
-        /// current state_metadata.
+        /// Optional. State properties user wish to include with this state.  Full
+        /// replace of the current state_metadata.
         /// </param>
         /// <param name="etag">
         /// Required. Fingerprint of the Insight. Provides optimistic locking.
@@ -2201,6 +2254,496 @@ namespace Google.Cloud.Recommender.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Recommendation> MarkRecommendationFailedAsync(RecommendationName name, scg::IDictionary<string, string> stateMetadata, string etag, st::CancellationToken cancellationToken) =>
             MarkRecommendationFailedAsync(name, stateMetadata, etag, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the requested Recommender Config. There is only one instance of the
+        /// config for each Recommender.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RecommenderConfig GetRecommenderConfig(GetRecommenderConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the requested Recommender Config. There is only one instance of the
+        /// config for each Recommender.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RecommenderConfig> GetRecommenderConfigAsync(GetRecommenderConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the requested Recommender Config. There is only one instance of the
+        /// config for each Recommender.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RecommenderConfig> GetRecommenderConfigAsync(GetRecommenderConfigRequest request, st::CancellationToken cancellationToken) =>
+            GetRecommenderConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the requested Recommender Config. There is only one instance of the
+        /// config for each Recommender.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the Recommendation Config to get.
+        /// 
+        /// Acceptable formats:
+        /// 
+        /// * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
+        /// 
+        /// * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
+        /// 
+        /// * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RecommenderConfig GetRecommenderConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRecommenderConfig(new GetRecommenderConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the requested Recommender Config. There is only one instance of the
+        /// config for each Recommender.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the Recommendation Config to get.
+        /// 
+        /// Acceptable formats:
+        /// 
+        /// * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
+        /// 
+        /// * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
+        /// 
+        /// * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RecommenderConfig> GetRecommenderConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRecommenderConfigAsync(new GetRecommenderConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the requested Recommender Config. There is only one instance of the
+        /// config for each Recommender.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the Recommendation Config to get.
+        /// 
+        /// Acceptable formats:
+        /// 
+        /// * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
+        /// 
+        /// * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
+        /// 
+        /// * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RecommenderConfig> GetRecommenderConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            GetRecommenderConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the requested Recommender Config. There is only one instance of the
+        /// config for each Recommender.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the Recommendation Config to get.
+        /// 
+        /// Acceptable formats:
+        /// 
+        /// * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
+        /// 
+        /// * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
+        /// 
+        /// * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RecommenderConfig GetRecommenderConfig(RecommenderConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRecommenderConfig(new GetRecommenderConfigRequest
+            {
+                RecommenderConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the requested Recommender Config. There is only one instance of the
+        /// config for each Recommender.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the Recommendation Config to get.
+        /// 
+        /// Acceptable formats:
+        /// 
+        /// * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
+        /// 
+        /// * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
+        /// 
+        /// * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RecommenderConfig> GetRecommenderConfigAsync(RecommenderConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRecommenderConfigAsync(new GetRecommenderConfigRequest
+            {
+                RecommenderConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the requested Recommender Config. There is only one instance of the
+        /// config for each Recommender.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the Recommendation Config to get.
+        /// 
+        /// Acceptable formats:
+        /// 
+        /// * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
+        /// 
+        /// * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
+        /// 
+        /// * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RecommenderConfig> GetRecommenderConfigAsync(RecommenderConfigName name, st::CancellationToken cancellationToken) =>
+            GetRecommenderConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a Recommender Config. This will create a new revision of the
+        /// config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RecommenderConfig UpdateRecommenderConfig(UpdateRecommenderConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a Recommender Config. This will create a new revision of the
+        /// config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RecommenderConfig> UpdateRecommenderConfigAsync(UpdateRecommenderConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a Recommender Config. This will create a new revision of the
+        /// config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RecommenderConfig> UpdateRecommenderConfigAsync(UpdateRecommenderConfigRequest request, st::CancellationToken cancellationToken) =>
+            UpdateRecommenderConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a Recommender Config. This will create a new revision of the
+        /// config.
+        /// </summary>
+        /// <param name="recommenderConfig">
+        /// Required. The RecommenderConfig to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of fields to be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RecommenderConfig UpdateRecommenderConfig(RecommenderConfig recommenderConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateRecommenderConfig(new UpdateRecommenderConfigRequest
+            {
+                RecommenderConfig = gax::GaxPreconditions.CheckNotNull(recommenderConfig, nameof(recommenderConfig)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a Recommender Config. This will create a new revision of the
+        /// config.
+        /// </summary>
+        /// <param name="recommenderConfig">
+        /// Required. The RecommenderConfig to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of fields to be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RecommenderConfig> UpdateRecommenderConfigAsync(RecommenderConfig recommenderConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateRecommenderConfigAsync(new UpdateRecommenderConfigRequest
+            {
+                RecommenderConfig = gax::GaxPreconditions.CheckNotNull(recommenderConfig, nameof(recommenderConfig)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a Recommender Config. This will create a new revision of the
+        /// config.
+        /// </summary>
+        /// <param name="recommenderConfig">
+        /// Required. The RecommenderConfig to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of fields to be updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RecommenderConfig> UpdateRecommenderConfigAsync(RecommenderConfig recommenderConfig, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateRecommenderConfigAsync(recommenderConfig, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the requested InsightTypeConfig. There is only one instance of the
+        /// config for each InsightType.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual InsightTypeConfig GetInsightTypeConfig(GetInsightTypeConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the requested InsightTypeConfig. There is only one instance of the
+        /// config for each InsightType.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InsightTypeConfig> GetInsightTypeConfigAsync(GetInsightTypeConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the requested InsightTypeConfig. There is only one instance of the
+        /// config for each InsightType.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InsightTypeConfig> GetInsightTypeConfigAsync(GetInsightTypeConfigRequest request, st::CancellationToken cancellationToken) =>
+            GetInsightTypeConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the requested InsightTypeConfig. There is only one instance of the
+        /// config for each InsightType.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the InsightTypeConfig to get.
+        /// 
+        /// Acceptable formats:
+        /// 
+        /// * `projects/[PROJECT_NUMBER]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+        /// 
+        /// * `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+        /// 
+        /// * `organizations/[ORGANIZATION_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual InsightTypeConfig GetInsightTypeConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetInsightTypeConfig(new GetInsightTypeConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the requested InsightTypeConfig. There is only one instance of the
+        /// config for each InsightType.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the InsightTypeConfig to get.
+        /// 
+        /// Acceptable formats:
+        /// 
+        /// * `projects/[PROJECT_NUMBER]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+        /// 
+        /// * `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+        /// 
+        /// * `organizations/[ORGANIZATION_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InsightTypeConfig> GetInsightTypeConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetInsightTypeConfigAsync(new GetInsightTypeConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the requested InsightTypeConfig. There is only one instance of the
+        /// config for each InsightType.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the InsightTypeConfig to get.
+        /// 
+        /// Acceptable formats:
+        /// 
+        /// * `projects/[PROJECT_NUMBER]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+        /// 
+        /// * `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+        /// 
+        /// * `organizations/[ORGANIZATION_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InsightTypeConfig> GetInsightTypeConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            GetInsightTypeConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the requested InsightTypeConfig. There is only one instance of the
+        /// config for each InsightType.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the InsightTypeConfig to get.
+        /// 
+        /// Acceptable formats:
+        /// 
+        /// * `projects/[PROJECT_NUMBER]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+        /// 
+        /// * `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+        /// 
+        /// * `organizations/[ORGANIZATION_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual InsightTypeConfig GetInsightTypeConfig(InsightTypeConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetInsightTypeConfig(new GetInsightTypeConfigRequest
+            {
+                InsightTypeConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the requested InsightTypeConfig. There is only one instance of the
+        /// config for each InsightType.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the InsightTypeConfig to get.
+        /// 
+        /// Acceptable formats:
+        /// 
+        /// * `projects/[PROJECT_NUMBER]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+        /// 
+        /// * `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+        /// 
+        /// * `organizations/[ORGANIZATION_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InsightTypeConfig> GetInsightTypeConfigAsync(InsightTypeConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetInsightTypeConfigAsync(new GetInsightTypeConfigRequest
+            {
+                InsightTypeConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the requested InsightTypeConfig. There is only one instance of the
+        /// config for each InsightType.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the InsightTypeConfig to get.
+        /// 
+        /// Acceptable formats:
+        /// 
+        /// * `projects/[PROJECT_NUMBER]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+        /// 
+        /// * `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+        /// 
+        /// * `organizations/[ORGANIZATION_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InsightTypeConfig> GetInsightTypeConfigAsync(InsightTypeConfigName name, st::CancellationToken cancellationToken) =>
+            GetInsightTypeConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an InsightTypeConfig change. This will create a new revision of the
+        /// config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual InsightTypeConfig UpdateInsightTypeConfig(UpdateInsightTypeConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an InsightTypeConfig change. This will create a new revision of the
+        /// config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InsightTypeConfig> UpdateInsightTypeConfigAsync(UpdateInsightTypeConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an InsightTypeConfig change. This will create a new revision of the
+        /// config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InsightTypeConfig> UpdateInsightTypeConfigAsync(UpdateInsightTypeConfigRequest request, st::CancellationToken cancellationToken) =>
+            UpdateInsightTypeConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an InsightTypeConfig change. This will create a new revision of the
+        /// config.
+        /// </summary>
+        /// <param name="insightTypeConfig">
+        /// Required. The InsightTypeConfig to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of fields to be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual InsightTypeConfig UpdateInsightTypeConfig(InsightTypeConfig insightTypeConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateInsightTypeConfig(new UpdateInsightTypeConfigRequest
+            {
+                InsightTypeConfig = gax::GaxPreconditions.CheckNotNull(insightTypeConfig, nameof(insightTypeConfig)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an InsightTypeConfig change. This will create a new revision of the
+        /// config.
+        /// </summary>
+        /// <param name="insightTypeConfig">
+        /// Required. The InsightTypeConfig to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of fields to be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InsightTypeConfig> UpdateInsightTypeConfigAsync(InsightTypeConfig insightTypeConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateInsightTypeConfigAsync(new UpdateInsightTypeConfigRequest
+            {
+                InsightTypeConfig = gax::GaxPreconditions.CheckNotNull(insightTypeConfig, nameof(insightTypeConfig)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an InsightTypeConfig change. This will create a new revision of the
+        /// config.
+        /// </summary>
+        /// <param name="insightTypeConfig">
+        /// Required. The InsightTypeConfig to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of fields to be updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InsightTypeConfig> UpdateInsightTypeConfigAsync(InsightTypeConfig insightTypeConfig, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateInsightTypeConfigAsync(insightTypeConfig, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Recommender client wrapper implementation, for convenient use.</summary>
@@ -2227,6 +2770,14 @@ namespace Google.Cloud.Recommender.V1
         private readonly gaxgrpc::ApiCall<MarkRecommendationSucceededRequest, Recommendation> _callMarkRecommendationSucceeded;
 
         private readonly gaxgrpc::ApiCall<MarkRecommendationFailedRequest, Recommendation> _callMarkRecommendationFailed;
+
+        private readonly gaxgrpc::ApiCall<GetRecommenderConfigRequest, RecommenderConfig> _callGetRecommenderConfig;
+
+        private readonly gaxgrpc::ApiCall<UpdateRecommenderConfigRequest, RecommenderConfig> _callUpdateRecommenderConfig;
+
+        private readonly gaxgrpc::ApiCall<GetInsightTypeConfigRequest, InsightTypeConfig> _callGetInsightTypeConfig;
+
+        private readonly gaxgrpc::ApiCall<UpdateInsightTypeConfigRequest, InsightTypeConfig> _callUpdateInsightTypeConfig;
 
         /// <summary>
         /// Constructs a client wrapper for the Recommender service, with the specified gRPC client and settings.
@@ -2263,6 +2814,18 @@ namespace Google.Cloud.Recommender.V1
             _callMarkRecommendationFailed = clientHelper.BuildApiCall<MarkRecommendationFailedRequest, Recommendation>("MarkRecommendationFailed", grpcClient.MarkRecommendationFailedAsync, grpcClient.MarkRecommendationFailed, effectiveSettings.MarkRecommendationFailedSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callMarkRecommendationFailed);
             Modify_MarkRecommendationFailedApiCall(ref _callMarkRecommendationFailed);
+            _callGetRecommenderConfig = clientHelper.BuildApiCall<GetRecommenderConfigRequest, RecommenderConfig>("GetRecommenderConfig", grpcClient.GetRecommenderConfigAsync, grpcClient.GetRecommenderConfig, effectiveSettings.GetRecommenderConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetRecommenderConfig);
+            Modify_GetRecommenderConfigApiCall(ref _callGetRecommenderConfig);
+            _callUpdateRecommenderConfig = clientHelper.BuildApiCall<UpdateRecommenderConfigRequest, RecommenderConfig>("UpdateRecommenderConfig", grpcClient.UpdateRecommenderConfigAsync, grpcClient.UpdateRecommenderConfig, effectiveSettings.UpdateRecommenderConfigSettings).WithGoogleRequestParam("recommender_config.name", request => request.RecommenderConfig?.Name);
+            Modify_ApiCall(ref _callUpdateRecommenderConfig);
+            Modify_UpdateRecommenderConfigApiCall(ref _callUpdateRecommenderConfig);
+            _callGetInsightTypeConfig = clientHelper.BuildApiCall<GetInsightTypeConfigRequest, InsightTypeConfig>("GetInsightTypeConfig", grpcClient.GetInsightTypeConfigAsync, grpcClient.GetInsightTypeConfig, effectiveSettings.GetInsightTypeConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetInsightTypeConfig);
+            Modify_GetInsightTypeConfigApiCall(ref _callGetInsightTypeConfig);
+            _callUpdateInsightTypeConfig = clientHelper.BuildApiCall<UpdateInsightTypeConfigRequest, InsightTypeConfig>("UpdateInsightTypeConfig", grpcClient.UpdateInsightTypeConfigAsync, grpcClient.UpdateInsightTypeConfig, effectiveSettings.UpdateInsightTypeConfigSettings).WithGoogleRequestParam("insight_type_config.name", request => request.InsightTypeConfig?.Name);
+            Modify_ApiCall(ref _callUpdateInsightTypeConfig);
+            Modify_UpdateInsightTypeConfigApiCall(ref _callUpdateInsightTypeConfig);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2284,6 +2847,14 @@ namespace Google.Cloud.Recommender.V1
 
         partial void Modify_MarkRecommendationFailedApiCall(ref gaxgrpc::ApiCall<MarkRecommendationFailedRequest, Recommendation> call);
 
+        partial void Modify_GetRecommenderConfigApiCall(ref gaxgrpc::ApiCall<GetRecommenderConfigRequest, RecommenderConfig> call);
+
+        partial void Modify_UpdateRecommenderConfigApiCall(ref gaxgrpc::ApiCall<UpdateRecommenderConfigRequest, RecommenderConfig> call);
+
+        partial void Modify_GetInsightTypeConfigApiCall(ref gaxgrpc::ApiCall<GetInsightTypeConfigRequest, InsightTypeConfig> call);
+
+        partial void Modify_UpdateInsightTypeConfigApiCall(ref gaxgrpc::ApiCall<UpdateInsightTypeConfigRequest, InsightTypeConfig> call);
+
         partial void OnConstruction(Recommender.RecommenderClient grpcClient, RecommenderSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC Recommender client</summary>
@@ -2304,6 +2875,14 @@ namespace Google.Cloud.Recommender.V1
         partial void Modify_MarkRecommendationSucceededRequest(ref MarkRecommendationSucceededRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_MarkRecommendationFailedRequest(ref MarkRecommendationFailedRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetRecommenderConfigRequest(ref GetRecommenderConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateRecommenderConfigRequest(ref UpdateRecommenderConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetInsightTypeConfigRequest(ref GetInsightTypeConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateInsightTypeConfigRequest(ref UpdateInsightTypeConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists insights for the specified Cloud Resource. Requires the
@@ -2571,6 +3150,110 @@ namespace Google.Cloud.Recommender.V1
         {
             Modify_MarkRecommendationFailedRequest(ref request, ref callSettings);
             return _callMarkRecommendationFailed.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the requested Recommender Config. There is only one instance of the
+        /// config for each Recommender.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RecommenderConfig GetRecommenderConfig(GetRecommenderConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetRecommenderConfigRequest(ref request, ref callSettings);
+            return _callGetRecommenderConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the requested Recommender Config. There is only one instance of the
+        /// config for each Recommender.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RecommenderConfig> GetRecommenderConfigAsync(GetRecommenderConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetRecommenderConfigRequest(ref request, ref callSettings);
+            return _callGetRecommenderConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a Recommender Config. This will create a new revision of the
+        /// config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RecommenderConfig UpdateRecommenderConfig(UpdateRecommenderConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateRecommenderConfigRequest(ref request, ref callSettings);
+            return _callUpdateRecommenderConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a Recommender Config. This will create a new revision of the
+        /// config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RecommenderConfig> UpdateRecommenderConfigAsync(UpdateRecommenderConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateRecommenderConfigRequest(ref request, ref callSettings);
+            return _callUpdateRecommenderConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the requested InsightTypeConfig. There is only one instance of the
+        /// config for each InsightType.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override InsightTypeConfig GetInsightTypeConfig(GetInsightTypeConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetInsightTypeConfigRequest(ref request, ref callSettings);
+            return _callGetInsightTypeConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the requested InsightTypeConfig. There is only one instance of the
+        /// config for each InsightType.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<InsightTypeConfig> GetInsightTypeConfigAsync(GetInsightTypeConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetInsightTypeConfigRequest(ref request, ref callSettings);
+            return _callGetInsightTypeConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates an InsightTypeConfig change. This will create a new revision of the
+        /// config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override InsightTypeConfig UpdateInsightTypeConfig(UpdateInsightTypeConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateInsightTypeConfigRequest(ref request, ref callSettings);
+            return _callUpdateInsightTypeConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates an InsightTypeConfig change. This will create a new revision of the
+        /// config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<InsightTypeConfig> UpdateInsightTypeConfigAsync(UpdateInsightTypeConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateInsightTypeConfigRequest(ref request, ref callSettings);
+            return _callUpdateInsightTypeConfig.Async(request, callSettings);
         }
     }
 

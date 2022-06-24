@@ -1351,6 +1351,524 @@
         }
       },
       "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "recommender_v1_generated_Recommender_GetRecommenderConfig_sync",
+      "title": "GetRecommenderConfigRequestObject",
+      "description": "Snippet for GetRecommenderConfig",
+      "file": "RecommenderClient.GetRecommenderConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRecommenderConfig",
+        "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.GetRecommenderConfig",
+        "resultType": "Google.Cloud.Recommender.V1.RecommenderConfig",
+        "client": {
+          "shortName": "RecommenderClient",
+          "fullName": "Google.Cloud.Recommender.V1.RecommenderClient"
+        },
+        "method": {
+          "shortName": "GetRecommenderConfig",
+          "fullName": "google.cloud.recommender.v1.Recommender.GetRecommenderConfig",
+          "service": {
+            "shortName": "Recommender",
+            "fullName": "google.cloud.recommender.v1.Recommender"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "recommender_v1_generated_Recommender_GetRecommenderConfig_async",
+      "title": "GetRecommenderConfigRequestObjectAsync",
+      "description": "Snippet for GetRecommenderConfigAsync",
+      "file": "RecommenderClient.GetRecommenderConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRecommenderConfigAsync",
+        "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.GetRecommenderConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Recommender.V1.RecommenderConfig>",
+        "client": {
+          "shortName": "RecommenderClient",
+          "fullName": "Google.Cloud.Recommender.V1.RecommenderClient"
+        },
+        "method": {
+          "shortName": "GetRecommenderConfig",
+          "fullName": "google.cloud.recommender.v1.Recommender.GetRecommenderConfig",
+          "service": {
+            "shortName": "Recommender",
+            "fullName": "google.cloud.recommender.v1.Recommender"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "recommender_v1_generated_Recommender_GetRecommenderConfig_sync_flattened",
+      "title": "GetRecommenderConfig",
+      "description": "Snippet for GetRecommenderConfig",
+      "file": "RecommenderClient.GetRecommenderConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRecommenderConfig",
+        "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.GetRecommenderConfig",
+        "resultType": "Google.Cloud.Recommender.V1.RecommenderConfig",
+        "client": {
+          "shortName": "RecommenderClient",
+          "fullName": "Google.Cloud.Recommender.V1.RecommenderClient"
+        },
+        "method": {
+          "shortName": "GetRecommenderConfig",
+          "fullName": "google.cloud.recommender.v1.Recommender.GetRecommenderConfig",
+          "service": {
+            "shortName": "Recommender",
+            "fullName": "google.cloud.recommender.v1.Recommender"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "recommender_v1_generated_Recommender_GetRecommenderConfig_async_flattened",
+      "title": "GetRecommenderConfigAsync",
+      "description": "Snippet for GetRecommenderConfigAsync",
+      "file": "RecommenderClient.GetRecommenderConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRecommenderConfigAsync",
+        "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.GetRecommenderConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Recommender.V1.RecommenderConfig>",
+        "client": {
+          "shortName": "RecommenderClient",
+          "fullName": "Google.Cloud.Recommender.V1.RecommenderClient"
+        },
+        "method": {
+          "shortName": "GetRecommenderConfig",
+          "fullName": "google.cloud.recommender.v1.Recommender.GetRecommenderConfig",
+          "service": {
+            "shortName": "Recommender",
+            "fullName": "google.cloud.recommender.v1.Recommender"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "recommender_v1_generated_Recommender_GetRecommenderConfig_sync_flattened_resourceNames",
+      "title": "GetRecommenderConfigResourceNames",
+      "description": "Snippet for GetRecommenderConfig",
+      "file": "RecommenderClient.GetRecommenderConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRecommenderConfig",
+        "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.GetRecommenderConfig",
+        "resultType": "Google.Cloud.Recommender.V1.RecommenderConfig",
+        "client": {
+          "shortName": "RecommenderClient",
+          "fullName": "Google.Cloud.Recommender.V1.RecommenderClient"
+        },
+        "method": {
+          "shortName": "GetRecommenderConfig",
+          "fullName": "google.cloud.recommender.v1.Recommender.GetRecommenderConfig",
+          "service": {
+            "shortName": "Recommender",
+            "fullName": "google.cloud.recommender.v1.Recommender"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "recommender_v1_generated_Recommender_GetRecommenderConfig_async_flattened_resourceNames",
+      "title": "GetRecommenderConfigResourceNamesAsync",
+      "description": "Snippet for GetRecommenderConfigAsync",
+      "file": "RecommenderClient.GetRecommenderConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRecommenderConfigAsync",
+        "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.GetRecommenderConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Recommender.V1.RecommenderConfig>",
+        "client": {
+          "shortName": "RecommenderClient",
+          "fullName": "Google.Cloud.Recommender.V1.RecommenderClient"
+        },
+        "method": {
+          "shortName": "GetRecommenderConfig",
+          "fullName": "google.cloud.recommender.v1.Recommender.GetRecommenderConfig",
+          "service": {
+            "shortName": "Recommender",
+            "fullName": "google.cloud.recommender.v1.Recommender"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "recommender_v1_generated_Recommender_UpdateRecommenderConfig_sync",
+      "title": "UpdateRecommenderConfigRequestObject",
+      "description": "Snippet for UpdateRecommenderConfig",
+      "file": "RecommenderClient.UpdateRecommenderConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateRecommenderConfig",
+        "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.UpdateRecommenderConfig",
+        "resultType": "Google.Cloud.Recommender.V1.RecommenderConfig",
+        "client": {
+          "shortName": "RecommenderClient",
+          "fullName": "Google.Cloud.Recommender.V1.RecommenderClient"
+        },
+        "method": {
+          "shortName": "UpdateRecommenderConfig",
+          "fullName": "google.cloud.recommender.v1.Recommender.UpdateRecommenderConfig",
+          "service": {
+            "shortName": "Recommender",
+            "fullName": "google.cloud.recommender.v1.Recommender"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "recommender_v1_generated_Recommender_UpdateRecommenderConfig_async",
+      "title": "UpdateRecommenderConfigRequestObjectAsync",
+      "description": "Snippet for UpdateRecommenderConfigAsync",
+      "file": "RecommenderClient.UpdateRecommenderConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateRecommenderConfigAsync",
+        "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.UpdateRecommenderConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Recommender.V1.RecommenderConfig>",
+        "client": {
+          "shortName": "RecommenderClient",
+          "fullName": "Google.Cloud.Recommender.V1.RecommenderClient"
+        },
+        "method": {
+          "shortName": "UpdateRecommenderConfig",
+          "fullName": "google.cloud.recommender.v1.Recommender.UpdateRecommenderConfig",
+          "service": {
+            "shortName": "Recommender",
+            "fullName": "google.cloud.recommender.v1.Recommender"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "recommender_v1_generated_Recommender_UpdateRecommenderConfig_sync_flattened",
+      "title": "UpdateRecommenderConfig",
+      "description": "Snippet for UpdateRecommenderConfig",
+      "file": "RecommenderClient.UpdateRecommenderConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateRecommenderConfig",
+        "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.UpdateRecommenderConfig",
+        "resultType": "Google.Cloud.Recommender.V1.RecommenderConfig",
+        "client": {
+          "shortName": "RecommenderClient",
+          "fullName": "Google.Cloud.Recommender.V1.RecommenderClient"
+        },
+        "method": {
+          "shortName": "UpdateRecommenderConfig",
+          "fullName": "google.cloud.recommender.v1.Recommender.UpdateRecommenderConfig",
+          "service": {
+            "shortName": "Recommender",
+            "fullName": "google.cloud.recommender.v1.Recommender"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "recommender_v1_generated_Recommender_UpdateRecommenderConfig_async_flattened",
+      "title": "UpdateRecommenderConfigAsync",
+      "description": "Snippet for UpdateRecommenderConfigAsync",
+      "file": "RecommenderClient.UpdateRecommenderConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateRecommenderConfigAsync",
+        "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.UpdateRecommenderConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Recommender.V1.RecommenderConfig>",
+        "client": {
+          "shortName": "RecommenderClient",
+          "fullName": "Google.Cloud.Recommender.V1.RecommenderClient"
+        },
+        "method": {
+          "shortName": "UpdateRecommenderConfig",
+          "fullName": "google.cloud.recommender.v1.Recommender.UpdateRecommenderConfig",
+          "service": {
+            "shortName": "Recommender",
+            "fullName": "google.cloud.recommender.v1.Recommender"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "recommender_v1_generated_Recommender_GetInsightTypeConfig_sync",
+      "title": "GetInsightTypeConfigRequestObject",
+      "description": "Snippet for GetInsightTypeConfig",
+      "file": "RecommenderClient.GetInsightTypeConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInsightTypeConfig",
+        "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.GetInsightTypeConfig",
+        "resultType": "Google.Cloud.Recommender.V1.InsightTypeConfig",
+        "client": {
+          "shortName": "RecommenderClient",
+          "fullName": "Google.Cloud.Recommender.V1.RecommenderClient"
+        },
+        "method": {
+          "shortName": "GetInsightTypeConfig",
+          "fullName": "google.cloud.recommender.v1.Recommender.GetInsightTypeConfig",
+          "service": {
+            "shortName": "Recommender",
+            "fullName": "google.cloud.recommender.v1.Recommender"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "recommender_v1_generated_Recommender_GetInsightTypeConfig_async",
+      "title": "GetInsightTypeConfigRequestObjectAsync",
+      "description": "Snippet for GetInsightTypeConfigAsync",
+      "file": "RecommenderClient.GetInsightTypeConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInsightTypeConfigAsync",
+        "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.GetInsightTypeConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Recommender.V1.InsightTypeConfig>",
+        "client": {
+          "shortName": "RecommenderClient",
+          "fullName": "Google.Cloud.Recommender.V1.RecommenderClient"
+        },
+        "method": {
+          "shortName": "GetInsightTypeConfig",
+          "fullName": "google.cloud.recommender.v1.Recommender.GetInsightTypeConfig",
+          "service": {
+            "shortName": "Recommender",
+            "fullName": "google.cloud.recommender.v1.Recommender"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "recommender_v1_generated_Recommender_GetInsightTypeConfig_sync_flattened",
+      "title": "GetInsightTypeConfig",
+      "description": "Snippet for GetInsightTypeConfig",
+      "file": "RecommenderClient.GetInsightTypeConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInsightTypeConfig",
+        "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.GetInsightTypeConfig",
+        "resultType": "Google.Cloud.Recommender.V1.InsightTypeConfig",
+        "client": {
+          "shortName": "RecommenderClient",
+          "fullName": "Google.Cloud.Recommender.V1.RecommenderClient"
+        },
+        "method": {
+          "shortName": "GetInsightTypeConfig",
+          "fullName": "google.cloud.recommender.v1.Recommender.GetInsightTypeConfig",
+          "service": {
+            "shortName": "Recommender",
+            "fullName": "google.cloud.recommender.v1.Recommender"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "recommender_v1_generated_Recommender_GetInsightTypeConfig_async_flattened",
+      "title": "GetInsightTypeConfigAsync",
+      "description": "Snippet for GetInsightTypeConfigAsync",
+      "file": "RecommenderClient.GetInsightTypeConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInsightTypeConfigAsync",
+        "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.GetInsightTypeConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Recommender.V1.InsightTypeConfig>",
+        "client": {
+          "shortName": "RecommenderClient",
+          "fullName": "Google.Cloud.Recommender.V1.RecommenderClient"
+        },
+        "method": {
+          "shortName": "GetInsightTypeConfig",
+          "fullName": "google.cloud.recommender.v1.Recommender.GetInsightTypeConfig",
+          "service": {
+            "shortName": "Recommender",
+            "fullName": "google.cloud.recommender.v1.Recommender"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "recommender_v1_generated_Recommender_GetInsightTypeConfig_sync_flattened_resourceNames",
+      "title": "GetInsightTypeConfigResourceNames",
+      "description": "Snippet for GetInsightTypeConfig",
+      "file": "RecommenderClient.GetInsightTypeConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInsightTypeConfig",
+        "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.GetInsightTypeConfig",
+        "resultType": "Google.Cloud.Recommender.V1.InsightTypeConfig",
+        "client": {
+          "shortName": "RecommenderClient",
+          "fullName": "Google.Cloud.Recommender.V1.RecommenderClient"
+        },
+        "method": {
+          "shortName": "GetInsightTypeConfig",
+          "fullName": "google.cloud.recommender.v1.Recommender.GetInsightTypeConfig",
+          "service": {
+            "shortName": "Recommender",
+            "fullName": "google.cloud.recommender.v1.Recommender"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "recommender_v1_generated_Recommender_GetInsightTypeConfig_async_flattened_resourceNames",
+      "title": "GetInsightTypeConfigResourceNamesAsync",
+      "description": "Snippet for GetInsightTypeConfigAsync",
+      "file": "RecommenderClient.GetInsightTypeConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInsightTypeConfigAsync",
+        "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.GetInsightTypeConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Recommender.V1.InsightTypeConfig>",
+        "client": {
+          "shortName": "RecommenderClient",
+          "fullName": "Google.Cloud.Recommender.V1.RecommenderClient"
+        },
+        "method": {
+          "shortName": "GetInsightTypeConfig",
+          "fullName": "google.cloud.recommender.v1.Recommender.GetInsightTypeConfig",
+          "service": {
+            "shortName": "Recommender",
+            "fullName": "google.cloud.recommender.v1.Recommender"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "recommender_v1_generated_Recommender_UpdateInsightTypeConfig_sync",
+      "title": "UpdateInsightTypeConfigRequestObject",
+      "description": "Snippet for UpdateInsightTypeConfig",
+      "file": "RecommenderClient.UpdateInsightTypeConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateInsightTypeConfig",
+        "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.UpdateInsightTypeConfig",
+        "resultType": "Google.Cloud.Recommender.V1.InsightTypeConfig",
+        "client": {
+          "shortName": "RecommenderClient",
+          "fullName": "Google.Cloud.Recommender.V1.RecommenderClient"
+        },
+        "method": {
+          "shortName": "UpdateInsightTypeConfig",
+          "fullName": "google.cloud.recommender.v1.Recommender.UpdateInsightTypeConfig",
+          "service": {
+            "shortName": "Recommender",
+            "fullName": "google.cloud.recommender.v1.Recommender"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "recommender_v1_generated_Recommender_UpdateInsightTypeConfig_async",
+      "title": "UpdateInsightTypeConfigRequestObjectAsync",
+      "description": "Snippet for UpdateInsightTypeConfigAsync",
+      "file": "RecommenderClient.UpdateInsightTypeConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateInsightTypeConfigAsync",
+        "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.UpdateInsightTypeConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Recommender.V1.InsightTypeConfig>",
+        "client": {
+          "shortName": "RecommenderClient",
+          "fullName": "Google.Cloud.Recommender.V1.RecommenderClient"
+        },
+        "method": {
+          "shortName": "UpdateInsightTypeConfig",
+          "fullName": "google.cloud.recommender.v1.Recommender.UpdateInsightTypeConfig",
+          "service": {
+            "shortName": "Recommender",
+            "fullName": "google.cloud.recommender.v1.Recommender"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "recommender_v1_generated_Recommender_UpdateInsightTypeConfig_sync_flattened",
+      "title": "UpdateInsightTypeConfig",
+      "description": "Snippet for UpdateInsightTypeConfig",
+      "file": "RecommenderClient.UpdateInsightTypeConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateInsightTypeConfig",
+        "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.UpdateInsightTypeConfig",
+        "resultType": "Google.Cloud.Recommender.V1.InsightTypeConfig",
+        "client": {
+          "shortName": "RecommenderClient",
+          "fullName": "Google.Cloud.Recommender.V1.RecommenderClient"
+        },
+        "method": {
+          "shortName": "UpdateInsightTypeConfig",
+          "fullName": "google.cloud.recommender.v1.Recommender.UpdateInsightTypeConfig",
+          "service": {
+            "shortName": "Recommender",
+            "fullName": "google.cloud.recommender.v1.Recommender"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "recommender_v1_generated_Recommender_UpdateInsightTypeConfig_async_flattened",
+      "title": "UpdateInsightTypeConfigAsync",
+      "description": "Snippet for UpdateInsightTypeConfigAsync",
+      "file": "RecommenderClient.UpdateInsightTypeConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateInsightTypeConfigAsync",
+        "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.UpdateInsightTypeConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Recommender.V1.InsightTypeConfig>",
+        "client": {
+          "shortName": "RecommenderClient",
+          "fullName": "Google.Cloud.Recommender.V1.RecommenderClient"
+        },
+        "method": {
+          "shortName": "UpdateInsightTypeConfig",
+          "fullName": "google.cloud.recommender.v1.Recommender.UpdateInsightTypeConfig",
+          "service": {
+            "shortName": "Recommender",
+            "fullName": "google.cloud.recommender.v1.Recommender"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
     }
   ]
 }

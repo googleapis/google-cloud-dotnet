@@ -30,7 +30,9 @@ namespace Google.Cloud.Recommender.V1
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return InsightReflection.Descriptor;
+            yield return InsightTypeConfigReflection.Descriptor;
             yield return RecommendationReflection.Descriptor;
+            yield return RecommenderConfigReflection.Descriptor;
             yield return RecommenderServiceReflection.Descriptor;
         }
     }
