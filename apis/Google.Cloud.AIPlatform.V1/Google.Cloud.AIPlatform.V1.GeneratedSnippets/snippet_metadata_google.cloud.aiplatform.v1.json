@@ -1200,6 +1200,161 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "aiplatform_v1_generated_DatasetService_ListSavedQueries_sync",
+      "title": "ListSavedQueriesRequestObject",
+      "description": "Snippet for ListSavedQueries",
+      "file": "DatasetServiceClient.ListSavedQueriesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSavedQueries",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.ListSavedQueries",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListSavedQueriesResponse, Google.Cloud.AIPlatform.V1.SavedQuery>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "ListSavedQueries",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.ListSavedQueries",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_ListSavedQueries_async",
+      "title": "ListSavedQueriesRequestObjectAsync",
+      "description": "Snippet for ListSavedQueriesAsync",
+      "file": "DatasetServiceClient.ListSavedQueriesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSavedQueriesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.ListSavedQueriesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListSavedQueriesResponse, Google.Cloud.AIPlatform.V1.SavedQuery>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "ListSavedQueries",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.ListSavedQueries",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_ListSavedQueries_sync_flattened",
+      "title": "ListSavedQueries",
+      "description": "Snippet for ListSavedQueries",
+      "file": "DatasetServiceClient.ListSavedQueriesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSavedQueries",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.ListSavedQueries",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListSavedQueriesResponse, Google.Cloud.AIPlatform.V1.SavedQuery>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "ListSavedQueries",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.ListSavedQueries",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_ListSavedQueries_async_flattened",
+      "title": "ListSavedQueriesAsync",
+      "description": "Snippet for ListSavedQueriesAsync",
+      "file": "DatasetServiceClient.ListSavedQueriesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSavedQueriesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.ListSavedQueriesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListSavedQueriesResponse, Google.Cloud.AIPlatform.V1.SavedQuery>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "ListSavedQueries",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.ListSavedQueries",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_ListSavedQueries_sync_flattened_resourceNames",
+      "title": "ListSavedQueriesResourceNames",
+      "description": "Snippet for ListSavedQueries",
+      "file": "DatasetServiceClient.ListSavedQueriesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSavedQueries",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.ListSavedQueries",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListSavedQueriesResponse, Google.Cloud.AIPlatform.V1.SavedQuery>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "ListSavedQueries",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.ListSavedQueries",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_ListSavedQueries_async_flattened_resourceNames",
+      "title": "ListSavedQueriesResourceNamesAsync",
+      "description": "Snippet for ListSavedQueriesAsync",
+      "file": "DatasetServiceClient.ListSavedQueriesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSavedQueriesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.ListSavedQueriesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListSavedQueriesResponse, Google.Cloud.AIPlatform.V1.SavedQuery>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "ListSavedQueries",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.ListSavedQueries",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "aiplatform_v1_generated_DatasetService_GetAnnotationSpec_sync",
       "title": "GetAnnotationSpecRequestObject",
       "description": "Snippet for GetAnnotationSpec",

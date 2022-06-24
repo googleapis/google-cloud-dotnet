@@ -104,6 +104,18 @@ namespace Google.Cloud.AIPlatform.V1
         }
     }
 
+    public partial class ListSavedQueriesRequest
+    {
+        /// <summary>
+        /// <see cref="DatasetName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public DatasetName ParentAsDatasetName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : DatasetName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetAnnotationSpecRequest
     {
         /// <summary>

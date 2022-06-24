@@ -64,6 +64,12 @@
                 "ListDatasetsAsync"
               ]
             },
+            "ListSavedQueries": {
+              "methods": [
+                "ListSavedQueries",
+                "ListSavedQueriesAsync"
+              ]
+            },
             "UpdateDataset": {
               "methods": [
                 "UpdateDataset",
