@@ -62,6 +62,7 @@ namespace Google.Cloud.AIPlatform.V1
             ExportDataSettings = existing.ExportDataSettings;
             ExportDataOperationsSettings = existing.ExportDataOperationsSettings.Clone();
             ListDataItemsSettings = existing.ListDataItemsSettings;
+            ListSavedQueriesSettings = existing.ListSavedQueriesSettings;
             GetAnnotationSpecSettings = existing.GetAnnotationSpecSettings;
             ListAnnotationsSettings = existing.ListAnnotationsSettings;
             LocationsSettings = existing.LocationsSettings;
@@ -238,6 +239,18 @@ namespace Google.Cloud.AIPlatform.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListDataItemsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DatasetServiceClient.ListSavedQueries</c> and <c>DatasetServiceClient.ListSavedQueriesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListSavedQueriesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1512,6 +1525,128 @@ namespace Google.Cloud.AIPlatform.V1
             }, callSettings);
 
         /// <summary>
+        /// Lists SavedQueries in a Dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SavedQuery"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueries(ListSavedQueriesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists SavedQueries in a Dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SavedQuery"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueriesAsync(ListSavedQueriesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists SavedQueries in a Dataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Dataset to list SavedQueries from.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SavedQuery"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueries(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSavedQueries(new ListSavedQueriesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists SavedQueries in a Dataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Dataset to list SavedQueries from.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SavedQuery"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueriesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSavedQueriesAsync(new ListSavedQueriesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists SavedQueries in a Dataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Dataset to list SavedQueries from.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SavedQuery"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueries(DatasetName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSavedQueries(new ListSavedQueriesRequest
+            {
+                ParentAsDatasetName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists SavedQueries in a Dataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Dataset to list SavedQueries from.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SavedQuery"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueriesAsync(DatasetName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSavedQueriesAsync(new ListSavedQueriesRequest
+            {
+                ParentAsDatasetName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
         /// Gets an AnnotationSpec.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1774,6 +1909,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         private readonly gaxgrpc::ApiCall<ListDataItemsRequest, ListDataItemsResponse> _callListDataItems;
 
+        private readonly gaxgrpc::ApiCall<ListSavedQueriesRequest, ListSavedQueriesResponse> _callListSavedQueries;
+
         private readonly gaxgrpc::ApiCall<GetAnnotationSpecRequest, AnnotationSpec> _callGetAnnotationSpec;
 
         private readonly gaxgrpc::ApiCall<ListAnnotationsRequest, ListAnnotationsResponse> _callListAnnotations;
@@ -1819,6 +1956,9 @@ namespace Google.Cloud.AIPlatform.V1
             _callListDataItems = clientHelper.BuildApiCall<ListDataItemsRequest, ListDataItemsResponse>("ListDataItems", grpcClient.ListDataItemsAsync, grpcClient.ListDataItems, effectiveSettings.ListDataItemsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDataItems);
             Modify_ListDataItemsApiCall(ref _callListDataItems);
+            _callListSavedQueries = clientHelper.BuildApiCall<ListSavedQueriesRequest, ListSavedQueriesResponse>("ListSavedQueries", grpcClient.ListSavedQueriesAsync, grpcClient.ListSavedQueries, effectiveSettings.ListSavedQueriesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListSavedQueries);
+            Modify_ListSavedQueriesApiCall(ref _callListSavedQueries);
             _callGetAnnotationSpec = clientHelper.BuildApiCall<GetAnnotationSpecRequest, AnnotationSpec>("GetAnnotationSpec", grpcClient.GetAnnotationSpecAsync, grpcClient.GetAnnotationSpec, effectiveSettings.GetAnnotationSpecSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetAnnotationSpec);
             Modify_GetAnnotationSpecApiCall(ref _callGetAnnotationSpec);
@@ -1845,6 +1985,8 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_ExportDataApiCall(ref gaxgrpc::ApiCall<ExportDataRequest, lro::Operation> call);
 
         partial void Modify_ListDataItemsApiCall(ref gaxgrpc::ApiCall<ListDataItemsRequest, ListDataItemsResponse> call);
+
+        partial void Modify_ListSavedQueriesApiCall(ref gaxgrpc::ApiCall<ListSavedQueriesRequest, ListSavedQueriesResponse> call);
 
         partial void Modify_GetAnnotationSpecApiCall(ref gaxgrpc::ApiCall<GetAnnotationSpecRequest, AnnotationSpec> call);
 
@@ -1876,6 +2018,8 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_ExportDataRequest(ref ExportDataRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListDataItemsRequest(ref ListDataItemsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListSavedQueriesRequest(ref ListSavedQueriesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetAnnotationSpecRequest(ref GetAnnotationSpecRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2086,6 +2230,30 @@ namespace Google.Cloud.AIPlatform.V1
         }
 
         /// <summary>
+        /// Lists SavedQueries in a Dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SavedQuery"/> resources.</returns>
+        public override gax::PagedEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueries(ListSavedQueriesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSavedQueriesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListSavedQueriesRequest, ListSavedQueriesResponse, SavedQuery>(_callListSavedQueries, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists SavedQueries in a Dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SavedQuery"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueriesAsync(ListSavedQueriesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSavedQueriesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListSavedQueriesRequest, ListSavedQueriesResponse, SavedQuery>(_callListSavedQueries, request, callSettings);
+        }
+
+        /// <summary>
         /// Gets an AnnotationSpec.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2142,6 +2310,10 @@ namespace Google.Cloud.AIPlatform.V1
     {
     }
 
+    public partial class ListSavedQueriesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListAnnotationsRequest : gaxgrpc::IPageRequest
     {
     }
@@ -2158,6 +2330,14 @@ namespace Google.Cloud.AIPlatform.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<DataItem> GetEnumerator() => DataItems.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListSavedQueriesResponse : gaxgrpc::IPageResponse<SavedQuery>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<SavedQuery> GetEnumerator() => SavedQueries.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

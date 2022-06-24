@@ -31,6 +31,7 @@ namespace Google.Cloud.AIPlatform.V1
         {
             yield return FeaturestoreMonitoringReflection.Descriptor;
             yield return EntityTypeReflection.Descriptor;
+            yield return SavedQueryReflection.Descriptor;
             yield return OperationReflection.Descriptor;
             yield return EncryptionSpecReflection.Descriptor;
             yield return TensorboardReflection.Descriptor;
