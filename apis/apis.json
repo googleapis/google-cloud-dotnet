@@ -4042,6 +4042,21 @@
       "serviceConfigFile": "workflows_v1beta.yaml"
     },
     {
+      "id": "Google.Geo.Type",
+      "version": "1.0.0-beta00",
+      "targetFrameworks": "netstandard2.1;net462",
+      "type": "other",
+      "description": "Version-agnostic types for Geo APIs.",
+      "tags": [
+        "geo"
+      ],
+      "dependencies": {
+        "Google.Api.CommonProtos": "2.6.0"
+      },
+      "generator": "proto",
+      "protoPath": "google/geo/type"
+    },
+    {
       "id": "Google.Identity.AccessContextManager.Type",
       "packageOwner": "google-cloud",
       "generator": "proto",
@@ -4101,6 +4116,26 @@
       },
       "forceOwlBotRegeneration": "Post-processor requires googleapis repo.",
       "serviceConfigFile": "longrunning.yaml"
+    },
+    {
+      "id": "Google.Maps.Routing.V2",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Maps Routing",
+      "productUrl": "https://developers.google.com/maps/documentation/routes_preferred",
+      "description": "Recommended Google client library to access the Google Maps Routes Preferred API.",
+      "tags": [
+        "maps",
+        "routes",
+        "geo"
+      ],
+      "dependencies": {
+        "Google.Geo.Type": "project"
+      },
+      "generator": "micro",
+      "protoPath": "google/maps/routing/v2",
+      "shortName": "routes",
+      "serviceConfigFile": "routes_v2.yaml"
     },
     {
       "id": "Grafeas.V1",
