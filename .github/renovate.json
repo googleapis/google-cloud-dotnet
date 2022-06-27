@@ -200,6 +200,7 @@
     "apis/Google.Cloud.Workflows.Executions.V1Beta/Google.Cloud.Workflows.Executions.V1Beta/**",
     "apis/Google.Cloud.Workflows.V1/Google.Cloud.Workflows.V1/**",
     "apis/Google.Cloud.Workflows.V1Beta/Google.Cloud.Workflows.V1Beta/**",
+    "apis/Google.Geo.Type/Google.Geo.Type/**",
     "apis/Google.Identity.AccessContextManager.Type/Google.Identity.AccessContextManager.Type/**",
     "apis/Google.Identity.AccessContextManager.V1/Google.Identity.AccessContextManager.V1/**",
     "apis/Google.LongRunning/Google.LongRunning/**",
