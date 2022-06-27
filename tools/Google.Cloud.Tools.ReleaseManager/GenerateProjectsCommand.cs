@@ -159,6 +159,13 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
             foreach (var api in catalog.Apis)
             {
+                // If we're not releasing anything, it's fine for this to use project dependencies.
+                // This is typically the case when creating a pair of packages, one of which will be
+                // general (e.g. X.Y.Type) and the other of which depends on it.
+                if (api.Version.EndsWith("00"))
+                {
+                    continue;
+                }
                 var projectDependencies = api.Dependencies.Where(d => d.Value == ProjectVersionValue).Select(d => d.Key).ToList();
                 if (projectDependencies.Count == 0)
                 {
