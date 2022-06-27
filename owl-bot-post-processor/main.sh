@@ -124,6 +124,7 @@ copy_one_api() {
 }
 
 # Avoid .NET complaining about submodules being missing
+git config --global --add safe.directory /repo
 git submodule update --init --recursive
 
 # Iterate over all the apis in the /owl-bot-staging directory, and copy
