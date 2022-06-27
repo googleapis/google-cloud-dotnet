@@ -476,6 +476,23 @@
       "serviceConfigFile": "bigquerydatatransfer_v1.yaml"
     },
     {
+      "id": "Google.Cloud.BigQuery.Migration.V2",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "BigQuery Migration",
+      "productUrl": "https://cloud.google.com/bigquery/docs/migration-intro",
+      "description": "Recommended Google client library to access the BigQuery Migration service, exposing apis for migration jobs operations, and agent management.",
+      "tags": [
+        "BigQuery",
+        "migration"
+      ],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/cloud/bigquery/migration/v2",
+      "shortName": "bigquerymigration",
+      "serviceConfigFile": "bigquerymigration_v2.yaml"
+    },
+    {
       "id": "Google.Cloud.BigQuery.Reservation.V1",
       "version": "2.0.0",
       "type": "grpc",
