@@ -139,6 +139,50 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
             await TestErrorReporting(testId, client);
         }
 
+        [Fact]
+        public async Task AddGoogleDiagnosticsForAspNetCore_ConfiguresComponents_FullyIndividually()
+        {
+            var testId = IdGenerator.FromDateTime();
+            var startTime = DateTime.UtcNow;
+            string projectId = TestEnvironment.GetTestProjectId();
+            string serviceName = EntryData.Service;
+            string version = EntryData.Version;
+
+            var hostBuilder = GetHostBuilder(webHostBuilder =>
+                webHostBuilder
+                    .UseDefaultServiceProvider(options => options.ValidateScopes = true)
+                    .ConfigureServices(services =>
+                        services.AddGoogleDiagnosticsForAspNetCore(
+                            traceOptions: new AspNetCoreTraceOptions
+                            {
+                                ServiceOptions = new TraceServiceOptions
+                                {
+                                    ProjectId = projectId,
+                                    Options = TraceOptions.Create(retryOptions: RetryOptions.NoRetry(ExceptionHandling.Propagate))
+                                }
+                            },
+                            loggingOptions: new LoggingServiceOptions
+                            {
+                                ProjectId = projectId,
+                                ServiceName = serviceName,
+                                Version = version,
+                                Options = LoggingOptions.Create(retryOptions: RetryOptions.NoRetry(ExceptionHandling.Propagate))
+                            },
+                            errorReportingOptions: new ErrorReportingServiceOptions
+                            {
+                                ProjectId = projectId,
+                                ServiceName = serviceName,
+                                Version = version,
+                                Options = ErrorReportingOptions.Create(retryOptions: RetryOptions.NoRetry(ExceptionHandling.Propagate))
+                            })));
+
+            using var server = GetTestServer(hostBuilder);
+            using var client = server.CreateClient();
+            await TestTrace(testId, startTime, client);
+            await TestLogging(testId, startTime, client);
+            await TestErrorReporting(testId, client);
+        }
+
         private static async Task TestLogging(string testId, DateTime startTime, HttpClient client)
         {
             await client.GetAsync($"/Main/Warning/{testId}");
