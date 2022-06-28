@@ -8,6 +8,10 @@ then
   exit 1
 fi
 
+source ../toolversions.sh
+
+install_docfx
+
 if [[ "$2" != "" ]]
 then
   declare -r SERVICE_ACCOUNT_JSON=$2
@@ -62,5 +66,9 @@ else
 fi
 
 cd ../..
+
+echo 'Building site for local debugging purposes'
+cp devsite-help-docfx.json output/devsite-help/docfx.json
+$DOCFX build --disableGitFeatures output/devsite-help/docfx.json
 
 echo 'Done'

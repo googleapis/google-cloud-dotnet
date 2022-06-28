@@ -1,0 +1,29 @@
+// This JSON file is not used for the real build;
+// it's present to help check content before releasing the help.
+{
+  "build": {
+    "content": [
+      {
+        "files": ["**/*.yml", "**/*.md"],
+        "src": "api",
+        "dest": "api"
+      }
+    ],
+    "globalMetadata": {
+      "_appTitle": "Test",
+      "_packageVersion": "0.0.0",
+      "_disableContribution": true,
+      "_appFooter": " ",
+      "_disableNavbar": true,
+      "_disableBreadcrumb": true,
+      "_enableSearch": false,
+      "_disableToc": true,
+      "_disableSideFilter": true,
+      "_disableAffix": true,
+      "_disableFooter": true,
+      "_rootPath": "/",
+      "_projectPath": "/"
+    },
+    "dest": "site"
+  }
+}
