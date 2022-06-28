@@ -19,7 +19,7 @@ declare -r DEVSITE_STAGING_BUCKET=docs-staging-v2
 declare -r VERSION=$1
 
 # Build the snippets for the help docset
-dotnet run -p ../tools/Google.Cloud.Tools.GenerateSnippetMarkdown -- help
+dotnet run --project ../tools/Google.Cloud.Tools.GenerateSnippetMarkdown -- help
 
 rm -rf output/devsite-help
 mkdir -p output/devsite-help/api

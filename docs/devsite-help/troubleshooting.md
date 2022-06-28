@@ -1,13 +1,67 @@
-# Frequently Asked Questions
+# Troubleshooting
 
 ## How can I trace gRPC issues?
 
-> Note: this guidance only applies when using Grpc.Core, which is currently the
-> default gRPC implementation. We intend to update this documentation with
-> respect to Grpc.Net.Client before adopting that as the default implementation.
+When working with libraries that use gRPC, you need to be aware of which gRPC
+implementation you're using in order to enable logging.
 
-For libraries that use gRPC, it can be very useful to hook into the
-gRPC logging framework. There are two aspects to this:
+For libraries released from June 2022 onwards, the default gRPC implementation is Grpc.Net.Client
+in environments where that works (in particular .NET Core 3.1 and .NET 5 and higher). The
+older Grpc.Core implementation is used in those .NET Framework environments where Grpc.Net.Client
+isn't available. See the [transports documentation](transports.md) for more information about
+gRPC implementation selection.
+
+### Client-level logging
+
+The [client builder used to configure clients](client-configuration.md) has a `Logger` property
+which logs trace-level messages. This only provides basic information on when API calls start, end,
+or are retried, but that can still be useful for diagnostic purposes.
+
+The logger will automatically be configured if you use dependency injection to configure the client.
+If you wish to log manually, you can create a logger factory and then a logger explicitly:
+
+```csharp
+var loggerFactory = LoggerFactory.Create(builder => builder.AddConsole().SetMinimumLevel(LogLevel.Trace));
+var client = new ExampleClientBuilder
+{
+    Logger = loggerFactory.CreateLogger("ExampleClient")
+}.Build();
+```
+
+### Transport logging with Grpc.Net.Client
+
+The `GrpcChannelOptions` class in Grpc.Net.Client has a `LoggerFactory` property that can be set
+to log debug and trace messages. If you're configuring clients via dependency injection, then simply calling
+`AddGrpcNetClientAdapter()` on the service collection will ensure that the client is constructed with the loggers
+from the resulting service provider. For example, to make a `ExampleClient` available to dependency
+injection with logging configured automatically, you might use:
+
+```csharp
+builder.Services
+    .AddGrpcNetClientAdapter()
+    .AddExampleClient();
+```
+
+If you're not using dependency injection, it's still reasonably straightforward to create a logger factory
+and configure a client to use it:
+
+```csharp
+var loggerFactory = LoggerFactory.Create(builder => builder.AddConsole().SetMinimumLevel(LogLevel.Debug));
+var grpcAdapter = GrpcNetClientAdapter.Default
+    .WithAdditionalOptions(options => options.LoggerFactory = loggerFactory);
+
+var client = new ExampleClientBuilder
+{
+    GrpcAdapter = grpcAdapter
+}.Build();
+```
+
+Note that however the logger is set up, it needs to be configured with a minimum log level of debug or trace
+in order to be useful.
+
+### Transport logging with Grpc.Core
+
+There are two aspects to configuring logging with Grpc.Core.
 
 - Setting environment variables
 - Directing logs
@@ -40,8 +94,8 @@ namespace for details.
 
 ## How can I trace requests and responses in REST-based APIs?
 
-For libraries that use HTTP1.1 and REST, it can be useful to perfom request and response
-logging. There are two aspects to this:
+For libraries that use HTTP1.1 and REST (Google.Cloud.Storage.V1, Google.Cloud.BigQuery.V2, Google.Cloud.Translation.V2),
+it can be useful to perfom request and response logging. There are two aspects to this:
 
 - Registering a global logger
 - Configuring the events to log in a specific service
@@ -55,8 +109,6 @@ headers and the response body:
 
 To log *all* events from the message handler, you can set the `LogEvents` property to
 `~LogEventType.None`.
-
-
 
 ## Why aren't the gRPC native libraries being found?
 
@@ -159,15 +211,3 @@ Or an indexer in an object initializer:
 Or modify it after other initialization steps:
 
 [!code-cs[](../examples/help.Faq.txt#ProtoMap3)]
-
-## Why is System.EntryPointNotFoundException being thrown?
-
-While there are various *potential* causes for this, the most likely
-cause is that you have a dependency on Grpc.Core 2.x, but you're
-still depending on Google Cloud libraries that depend on Grpc.Core
-1.x.
-
-We have now released client libraries (some of them still in beta,
-but most GA) which use GAX 3.x, which depends on Grpc.Core 2.x. If
-you update to the latest version of the client library, that should
-fix the issue.
