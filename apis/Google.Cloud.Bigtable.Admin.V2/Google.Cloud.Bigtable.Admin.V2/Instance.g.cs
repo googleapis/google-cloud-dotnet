@@ -40,65 +40,66 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             "Ij0KBFR5cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAAEg4KClBST0RVQ1RJT04Q",
             "ARIPCgtERVZFTE9QTUVOVBACOlPqQVAKJWJpZ3RhYmxlYWRtaW4uZ29vZ2xl",
             "YXBpcy5jb20vSW5zdGFuY2USJ3Byb2plY3RzL3twcm9qZWN0fS9pbnN0YW5j",
-            "ZXMve2luc3RhbmNlfSI1ChJBdXRvc2NhbGluZ1RhcmdldHMSHwoXY3B1X3V0",
-            "aWxpemF0aW9uX3BlcmNlbnQYAiABKAUiTwoRQXV0b3NjYWxpbmdMaW1pdHMS",
-            "HAoPbWluX3NlcnZlX25vZGVzGAEgASgFQgPgQQISHAoPbWF4X3NlcnZlX25v",
-            "ZGVzGAIgASgFQgPgQQIi0QcKB0NsdXN0ZXISDAoEbmFtZRgBIAEoCRI7Cghs",
-            "b2NhdGlvbhgCIAEoCUIp4EEF+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5j",
-            "b20vTG9jYXRpb24SOwoFc3RhdGUYAyABKA4yJy5nb29nbGUuYmlndGFibGUu",
-            "YWRtaW4udjIuQ2x1c3Rlci5TdGF0ZUID4EEDEhMKC3NlcnZlX25vZGVzGAQg",
-            "ASgFEkkKDmNsdXN0ZXJfY29uZmlnGAcgASgLMi8uZ29vZ2xlLmJpZ3RhYmxl",
-            "LmFkbWluLnYyLkNsdXN0ZXIuQ2x1c3RlckNvbmZpZ0gAEkgKFGRlZmF1bHRf",
-            "c3RvcmFnZV90eXBlGAUgASgOMiUuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYy",
-            "LlN0b3JhZ2VUeXBlQgPgQQUSUgoRZW5jcnlwdGlvbl9jb25maWcYBiABKAsy",
-            "Mi5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuQ2x1c3Rlci5FbmNyeXB0aW9u",
-            "Q29uZmlnQgPgQQUauAEKGENsdXN0ZXJBdXRvc2NhbGluZ0NvbmZpZxJMChJh",
-            "dXRvc2NhbGluZ19saW1pdHMYASABKAsyKy5nb29nbGUuYmlndGFibGUuYWRt",
-            "aW4udjIuQXV0b3NjYWxpbmdMaW1pdHNCA+BBAhJOChNhdXRvc2NhbGluZ190",
-            "YXJnZXRzGAIgASgLMiwuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkF1dG9z",
-            "Y2FsaW5nVGFyZ2V0c0ID4EECGm8KDUNsdXN0ZXJDb25maWcSXgoaY2x1c3Rl",
-            "cl9hdXRvc2NhbGluZ19jb25maWcYASABKAsyOi5nb29nbGUuYmlndGFibGUu",
-            "YWRtaW4udjIuQ2x1c3Rlci5DbHVzdGVyQXV0b3NjYWxpbmdDb25maWcaUAoQ",
-            "RW5jcnlwdGlvbkNvbmZpZxI8CgxrbXNfa2V5X25hbWUYASABKAlCJvpBIwoh",
-            "Y2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5IlEKBVN0YXRlEhMK",
-            "D1NUQVRFX05PVF9LTk9XThAAEgkKBVJFQURZEAESDAoIQ1JFQVRJTkcQAhIM",
-            "CghSRVNJWklORxADEgwKCERJU0FCTEVEEAQ6ZepBYgokYmlndGFibGVhZG1p",
-            "bi5nb29nbGVhcGlzLmNvbS9DbHVzdGVyEjpwcm9qZWN0cy97cHJvamVjdH0v",
-            "aW5zdGFuY2VzL3tpbnN0YW5jZX0vY2x1c3RlcnMve2NsdXN0ZXJ9QggKBmNv",
-            "bmZpZyKIBAoKQXBwUHJvZmlsZRIMCgRuYW1lGAEgASgJEgwKBGV0YWcYAiAB",
-            "KAkSEwoLZGVzY3JpcHRpb24YAyABKAkSZwodbXVsdGlfY2x1c3Rlcl9yb3V0",
-            "aW5nX3VzZV9hbnkYBSABKAsyPi5nb29nbGUuYmlndGFibGUuYWRtaW4udjIu",
-            "QXBwUHJvZmlsZS5NdWx0aUNsdXN0ZXJSb3V0aW5nVXNlQW55SAASWwoWc2lu",
-            "Z2xlX2NsdXN0ZXJfcm91dGluZxgGIAEoCzI5Lmdvb2dsZS5iaWd0YWJsZS5h",
-            "ZG1pbi52Mi5BcHBQcm9maWxlLlNpbmdsZUNsdXN0ZXJSb3V0aW5nSAAaMAoZ",
-            "TXVsdGlDbHVzdGVyUm91dGluZ1VzZUFueRITCgtjbHVzdGVyX2lkcxgBIAMo",
-            "CRpOChRTaW5nbGVDbHVzdGVyUm91dGluZxISCgpjbHVzdGVyX2lkGAEgASgJ",
-            "EiIKGmFsbG93X3RyYW5zYWN0aW9uYWxfd3JpdGVzGAIgASgIOm/qQWwKJ2Jp",
-            "Z3RhYmxlYWRtaW4uZ29vZ2xlYXBpcy5jb20vQXBwUHJvZmlsZRJBcHJvamVj",
-            "dHMve3Byb2plY3R9L2luc3RhbmNlcy97aW5zdGFuY2V9L2FwcFByb2ZpbGVz",
-            "L3thcHBfcHJvZmlsZX1CEAoOcm91dGluZ19wb2xpY3kiiAMKCUhvdFRhYmxl",
-            "dBIMCgRuYW1lGAEgASgJEjsKCnRhYmxlX25hbWUYAiABKAlCJ/pBJAoiYmln",
-            "dGFibGVhZG1pbi5nb29nbGVhcGlzLmNvbS9UYWJsZRIzCgpzdGFydF90aW1l",
-            "GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjEKCGVu",
-            "ZF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EED",
-            "EhEKCXN0YXJ0X2tleRgFIAEoCRIPCgdlbmRfa2V5GAYgASgJEiMKFm5vZGVf",
-            "Y3B1X3VzYWdlX3BlcmNlbnQYByABKAJCA+BBAzp/6kF8CiZiaWd0YWJsZWFk",
-            "bWluLmdvb2dsZWFwaXMuY29tL0hvdFRhYmxldBJScHJvamVjdHMve3Byb2pl",
-            "Y3R9L2luc3RhbmNlcy97aW5zdGFuY2V9L2NsdXN0ZXJzL3tjbHVzdGVyfS9o",
-            "b3RUYWJsZXRzL3tob3RfdGFibGV0fULQAgocY29tLmdvb2dsZS5iaWd0YWJs",
-            "ZS5hZG1pbi52MkINSW5zdGFuY2VQcm90b1ABWj1nb29nbGUuZ29sYW5nLm9y",
-            "Zy9nZW5wcm90by9nb29nbGVhcGlzL2JpZ3RhYmxlL2FkbWluL3YyO2FkbWlu",
-            "qgIeR29vZ2xlLkNsb3VkLkJpZ3RhYmxlLkFkbWluLlYyygIeR29vZ2xlXENs",
-            "b3VkXEJpZ3RhYmxlXEFkbWluXFYy6gIiR29vZ2xlOjpDbG91ZDo6QmlndGFi",
-            "bGU6OkFkbWluOjpWMupBeAohY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5",
-            "cHRvS2V5ElNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
-            "bn0va2V5UmluZ3Mve2tleV9yaW5nfS9jcnlwdG9LZXlzL3tjcnlwdG9fa2V5",
-            "fWIGcHJvdG8z"));
+            "ZXMve2luc3RhbmNlfSJfChJBdXRvc2NhbGluZ1RhcmdldHMSHwoXY3B1X3V0",
+            "aWxpemF0aW9uX3BlcmNlbnQYAiABKAUSKAogc3RvcmFnZV91dGlsaXphdGlv",
+            "bl9naWJfcGVyX25vZGUYAyABKAUiTwoRQXV0b3NjYWxpbmdMaW1pdHMSHAoP",
+            "bWluX3NlcnZlX25vZGVzGAEgASgFQgPgQQISHAoPbWF4X3NlcnZlX25vZGVz",
+            "GAIgASgFQgPgQQIi0QcKB0NsdXN0ZXISDAoEbmFtZRgBIAEoCRI7Cghsb2Nh",
+            "dGlvbhgCIAEoCUIp4EEF+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20v",
+            "TG9jYXRpb24SOwoFc3RhdGUYAyABKA4yJy5nb29nbGUuYmlndGFibGUuYWRt",
+            "aW4udjIuQ2x1c3Rlci5TdGF0ZUID4EEDEhMKC3NlcnZlX25vZGVzGAQgASgF",
+            "EkkKDmNsdXN0ZXJfY29uZmlnGAcgASgLMi8uZ29vZ2xlLmJpZ3RhYmxlLmFk",
+            "bWluLnYyLkNsdXN0ZXIuQ2x1c3RlckNvbmZpZ0gAEkgKFGRlZmF1bHRfc3Rv",
+            "cmFnZV90eXBlGAUgASgOMiUuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLlN0",
+            "b3JhZ2VUeXBlQgPgQQUSUgoRZW5jcnlwdGlvbl9jb25maWcYBiABKAsyMi5n",
+            "b29nbGUuYmlndGFibGUuYWRtaW4udjIuQ2x1c3Rlci5FbmNyeXB0aW9uQ29u",
+            "ZmlnQgPgQQUauAEKGENsdXN0ZXJBdXRvc2NhbGluZ0NvbmZpZxJMChJhdXRv",
+            "c2NhbGluZ19saW1pdHMYASABKAsyKy5nb29nbGUuYmlndGFibGUuYWRtaW4u",
+            "djIuQXV0b3NjYWxpbmdMaW1pdHNCA+BBAhJOChNhdXRvc2NhbGluZ190YXJn",
+            "ZXRzGAIgASgLMiwuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkF1dG9zY2Fs",
+            "aW5nVGFyZ2V0c0ID4EECGm8KDUNsdXN0ZXJDb25maWcSXgoaY2x1c3Rlcl9h",
+            "dXRvc2NhbGluZ19jb25maWcYASABKAsyOi5nb29nbGUuYmlndGFibGUuYWRt",
+            "aW4udjIuQ2x1c3Rlci5DbHVzdGVyQXV0b3NjYWxpbmdDb25maWcaUAoQRW5j",
+            "cnlwdGlvbkNvbmZpZxI8CgxrbXNfa2V5X25hbWUYASABKAlCJvpBIwohY2xv",
+            "dWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5IlEKBVN0YXRlEhMKD1NU",
+            "QVRFX05PVF9LTk9XThAAEgkKBVJFQURZEAESDAoIQ1JFQVRJTkcQAhIMCghS",
+            "RVNJWklORxADEgwKCERJU0FCTEVEEAQ6ZepBYgokYmlndGFibGVhZG1pbi5n",
+            "b29nbGVhcGlzLmNvbS9DbHVzdGVyEjpwcm9qZWN0cy97cHJvamVjdH0vaW5z",
+            "dGFuY2VzL3tpbnN0YW5jZX0vY2x1c3RlcnMve2NsdXN0ZXJ9QggKBmNvbmZp",
+            "ZyKIBAoKQXBwUHJvZmlsZRIMCgRuYW1lGAEgASgJEgwKBGV0YWcYAiABKAkS",
+            "EwoLZGVzY3JpcHRpb24YAyABKAkSZwodbXVsdGlfY2x1c3Rlcl9yb3V0aW5n",
+            "X3VzZV9hbnkYBSABKAsyPi5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuQXBw",
+            "UHJvZmlsZS5NdWx0aUNsdXN0ZXJSb3V0aW5nVXNlQW55SAASWwoWc2luZ2xl",
+            "X2NsdXN0ZXJfcm91dGluZxgGIAEoCzI5Lmdvb2dsZS5iaWd0YWJsZS5hZG1p",
+            "bi52Mi5BcHBQcm9maWxlLlNpbmdsZUNsdXN0ZXJSb3V0aW5nSAAaMAoZTXVs",
+            "dGlDbHVzdGVyUm91dGluZ1VzZUFueRITCgtjbHVzdGVyX2lkcxgBIAMoCRpO",
+            "ChRTaW5nbGVDbHVzdGVyUm91dGluZxISCgpjbHVzdGVyX2lkGAEgASgJEiIK",
+            "GmFsbG93X3RyYW5zYWN0aW9uYWxfd3JpdGVzGAIgASgIOm/qQWwKJ2JpZ3Rh",
+            "YmxlYWRtaW4uZ29vZ2xlYXBpcy5jb20vQXBwUHJvZmlsZRJBcHJvamVjdHMv",
+            "e3Byb2plY3R9L2luc3RhbmNlcy97aW5zdGFuY2V9L2FwcFByb2ZpbGVzL3th",
+            "cHBfcHJvZmlsZX1CEAoOcm91dGluZ19wb2xpY3kiiAMKCUhvdFRhYmxldBIM",
+            "CgRuYW1lGAEgASgJEjsKCnRhYmxlX25hbWUYAiABKAlCJ/pBJAoiYmlndGFi",
+            "bGVhZG1pbi5nb29nbGVhcGlzLmNvbS9UYWJsZRIzCgpzdGFydF90aW1lGAMg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjEKCGVuZF90",
+            "aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEhEK",
+            "CXN0YXJ0X2tleRgFIAEoCRIPCgdlbmRfa2V5GAYgASgJEiMKFm5vZGVfY3B1",
+            "X3VzYWdlX3BlcmNlbnQYByABKAJCA+BBAzp/6kF8CiZiaWd0YWJsZWFkbWlu",
+            "Lmdvb2dsZWFwaXMuY29tL0hvdFRhYmxldBJScHJvamVjdHMve3Byb2plY3R9",
+            "L2luc3RhbmNlcy97aW5zdGFuY2V9L2NsdXN0ZXJzL3tjbHVzdGVyfS9ob3RU",
+            "YWJsZXRzL3tob3RfdGFibGV0fULQAgocY29tLmdvb2dsZS5iaWd0YWJsZS5h",
+            "ZG1pbi52MkINSW5zdGFuY2VQcm90b1ABWj1nb29nbGUuZ29sYW5nLm9yZy9n",
+            "ZW5wcm90by9nb29nbGVhcGlzL2JpZ3RhYmxlL2FkbWluL3YyO2FkbWluqgIe",
+            "R29vZ2xlLkNsb3VkLkJpZ3RhYmxlLkFkbWluLlYyygIeR29vZ2xlXENsb3Vk",
+            "XEJpZ3RhYmxlXEFkbWluXFYy6gIiR29vZ2xlOjpDbG91ZDo6QmlndGFibGU6",
+            "OkFkbWluOjpWMupBeAohY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRv",
+            "S2V5ElNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
+            "a2V5UmluZ3Mve2tleV9yaW5nfS9jcnlwdG9LZXlzL3tjcnlwdG9fa2V5fWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Bigtable.Admin.V2.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Instance), global::Google.Cloud.Bigtable.Admin.V2.Instance.Parser, new[]{ "Name", "DisplayName", "State", "Type", "Labels", "CreateTime" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.State), typeof(global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.Type) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AutoscalingTargets), global::Google.Cloud.Bigtable.Admin.V2.AutoscalingTargets.Parser, new[]{ "CpuUtilizationPercent" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AutoscalingTargets), global::Google.Cloud.Bigtable.Admin.V2.AutoscalingTargets.Parser, new[]{ "CpuUtilizationPercent", "StorageUtilizationGibPerNode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AutoscalingLimits), global::Google.Cloud.Bigtable.Admin.V2.AutoscalingLimits.Parser, new[]{ "MinServeNodes", "MaxServeNodes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Parser, new[]{ "Name", "Location", "State", "ServeNodes", "ClusterConfig", "DefaultStorageType", "EncryptionConfig" }, new[]{ "Config" }, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterAutoscalingConfig), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterAutoscalingConfig.Parser, new[]{ "AutoscalingLimits", "AutoscalingTargets" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterConfig), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterConfig.Parser, new[]{ "ClusterAutoscalingConfig" }, null, null, null, null),
@@ -612,6 +613,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AutoscalingTargets(AutoscalingTargets other) : this() {
       cpuUtilizationPercent_ = other.cpuUtilizationPercent_;
+      storageUtilizationGibPerNode_ = other.storageUtilizationGibPerNode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -639,6 +641,26 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
     }
 
+    /// <summary>Field number for the "storage_utilization_gib_per_node" field.</summary>
+    public const int StorageUtilizationGibPerNodeFieldNumber = 3;
+    private int storageUtilizationGibPerNode_;
+    /// <summary>
+    /// The storage utilization that the Autoscaler should be trying to achieve.
+    /// This number is limited between 2560 (2.5TiB) and 5120 (5TiB) for a SSD
+    /// cluster and between 8192 (8TiB) and 16384 (16TiB) for an HDD cluster;
+    /// otherwise it will return INVALID_ARGUMENT error. If this value is set to 0,
+    /// it will be treated as if it were set to the default value: 2560 for SSD,
+    /// 8192 for HDD.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int StorageUtilizationGibPerNode {
+      get { return storageUtilizationGibPerNode_; }
+      set {
+        storageUtilizationGibPerNode_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -655,6 +677,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return true;
       }
       if (CpuUtilizationPercent != other.CpuUtilizationPercent) return false;
+      if (StorageUtilizationGibPerNode != other.StorageUtilizationGibPerNode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -663,6 +686,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (CpuUtilizationPercent != 0) hash ^= CpuUtilizationPercent.GetHashCode();
+      if (StorageUtilizationGibPerNode != 0) hash ^= StorageUtilizationGibPerNode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -685,6 +709,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         output.WriteRawTag(16);
         output.WriteInt32(CpuUtilizationPercent);
       }
+      if (StorageUtilizationGibPerNode != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(StorageUtilizationGibPerNode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -699,6 +727,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         output.WriteRawTag(16);
         output.WriteInt32(CpuUtilizationPercent);
       }
+      if (StorageUtilizationGibPerNode != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(StorageUtilizationGibPerNode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -711,6 +743,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       int size = 0;
       if (CpuUtilizationPercent != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(CpuUtilizationPercent);
+      }
+      if (StorageUtilizationGibPerNode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(StorageUtilizationGibPerNode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -726,6 +761,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       if (other.CpuUtilizationPercent != 0) {
         CpuUtilizationPercent = other.CpuUtilizationPercent;
+      }
+      if (other.StorageUtilizationGibPerNode != 0) {
+        StorageUtilizationGibPerNode = other.StorageUtilizationGibPerNode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -746,6 +784,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             CpuUtilizationPercent = input.ReadInt32();
             break;
           }
+          case 24: {
+            StorageUtilizationGibPerNode = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -763,6 +805,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             break;
           case 16: {
             CpuUtilizationPercent = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            StorageUtilizationGibPerNode = input.ReadInt32();
             break;
           }
         }
