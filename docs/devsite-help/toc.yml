@@ -2,6 +2,8 @@
   items:
   - name: Getting started
     href: getting-started.md
+  - name: Client configuration
+    href: client-configuration.md
   - name: Client lifecycle
     href: client-lifecycle.md
   - name: Transport selection
