@@ -3672,6 +3672,161 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_UndeleteTable_sync",
+      "title": "UndeleteTableRequestObject",
+      "description": "Snippet for UndeleteTable",
+      "file": "BigtableTableAdminClient.UndeleteTableRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UndeleteTable",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.UndeleteTable",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Table, Google.Cloud.Bigtable.Admin.V2.UndeleteTableMetadata>",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "UndeleteTable",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.UndeleteTable",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_UndeleteTable_async",
+      "title": "UndeleteTableRequestObjectAsync",
+      "description": "Snippet for UndeleteTableAsync",
+      "file": "BigtableTableAdminClient.UndeleteTableRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UndeleteTableAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.UndeleteTableAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Table, Google.Cloud.Bigtable.Admin.V2.UndeleteTableMetadata>>",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "UndeleteTable",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.UndeleteTable",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_UndeleteTable_sync_flattened",
+      "title": "UndeleteTable",
+      "description": "Snippet for UndeleteTable",
+      "file": "BigtableTableAdminClient.UndeleteTableSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UndeleteTable",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.UndeleteTable",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Table, Google.Cloud.Bigtable.Admin.V2.UndeleteTableMetadata>",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "UndeleteTable",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.UndeleteTable",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_UndeleteTable_async_flattened",
+      "title": "UndeleteTableAsync",
+      "description": "Snippet for UndeleteTableAsync",
+      "file": "BigtableTableAdminClient.UndeleteTableAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UndeleteTableAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.UndeleteTableAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Table, Google.Cloud.Bigtable.Admin.V2.UndeleteTableMetadata>>",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "UndeleteTable",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.UndeleteTable",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_UndeleteTable_sync_flattened_resourceNames",
+      "title": "UndeleteTableResourceNames",
+      "description": "Snippet for UndeleteTable",
+      "file": "BigtableTableAdminClient.UndeleteTableResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UndeleteTable",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.UndeleteTable",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Table, Google.Cloud.Bigtable.Admin.V2.UndeleteTableMetadata>",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "UndeleteTable",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.UndeleteTable",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_UndeleteTable_async_flattened_resourceNames",
+      "title": "UndeleteTableResourceNamesAsync",
+      "description": "Snippet for UndeleteTableAsync",
+      "file": "BigtableTableAdminClient.UndeleteTableResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UndeleteTableAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.UndeleteTableAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Table, Google.Cloud.Bigtable.Admin.V2.UndeleteTableMetadata>>",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "UndeleteTable",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.UndeleteTable",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_ModifyColumnFamilies_sync",
       "title": "ModifyColumnFamiliesRequestObject",
       "description": "Snippet for ModifyColumnFamilies",

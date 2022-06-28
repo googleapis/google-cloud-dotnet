@@ -55,6 +55,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
             ListTablesSettings = existing.ListTablesSettings;
             GetTableSettings = existing.GetTableSettings;
             DeleteTableSettings = existing.DeleteTableSettings;
+            UndeleteTableSettings = existing.UndeleteTableSettings;
+            UndeleteTableOperationsSettings = existing.UndeleteTableOperationsSettings.Clone();
             ModifyColumnFamiliesSettings = existing.ModifyColumnFamiliesSettings;
             DropRowRangeSettings = existing.DropRowRangeSettings;
             GenerateConsistencyTokenSettings = existing.GenerateConsistencyTokenSettings;
@@ -176,6 +178,36 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteTableSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableTableAdminClient.UndeleteTable</c> and <c>BigtableTableAdminClient.UndeleteTableAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UndeleteTableSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BigtableTableAdminClient.UndeleteTable</c> and
+        /// <c>BigtableTableAdminClient.UndeleteTableAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UndeleteTableOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1473,6 +1505,149 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task DeleteTableAsync(gcbcv::TableName name, st::CancellationToken cancellationToken) =>
             DeleteTableAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Restores a specified table which was accidentally deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Table, UndeleteTableMetadata> UndeleteTable(UndeleteTableRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Restores a specified table which was accidentally deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Table, UndeleteTableMetadata>> UndeleteTableAsync(UndeleteTableRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Restores a specified table which was accidentally deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Table, UndeleteTableMetadata>> UndeleteTableAsync(UndeleteTableRequest request, st::CancellationToken cancellationToken) =>
+            UndeleteTableAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UndeleteTable</c>.</summary>
+        public virtual lro::OperationsClient UndeleteTableOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UndeleteTable</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Table, UndeleteTableMetadata> PollOnceUndeleteTable(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Table, UndeleteTableMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UndeleteTableOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UndeleteTable</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Table, UndeleteTableMetadata>> PollOnceUndeleteTableAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Table, UndeleteTableMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UndeleteTableOperationsClient, callSettings);
+
+        /// <summary>
+        /// Restores a specified table which was accidentally deleted.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the table to be restored.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Table, UndeleteTableMetadata> UndeleteTable(string name, gaxgrpc::CallSettings callSettings = null) =>
+            UndeleteTable(new UndeleteTableRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Restores a specified table which was accidentally deleted.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the table to be restored.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Table, UndeleteTableMetadata>> UndeleteTableAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            UndeleteTableAsync(new UndeleteTableRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Restores a specified table which was accidentally deleted.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the table to be restored.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Table, UndeleteTableMetadata>> UndeleteTableAsync(string name, st::CancellationToken cancellationToken) =>
+            UndeleteTableAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Restores a specified table which was accidentally deleted.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the table to be restored.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Table, UndeleteTableMetadata> UndeleteTable(gcbcv::TableName name, gaxgrpc::CallSettings callSettings = null) =>
+            UndeleteTable(new UndeleteTableRequest
+            {
+                TableName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Restores a specified table which was accidentally deleted.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the table to be restored.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Table, UndeleteTableMetadata>> UndeleteTableAsync(gcbcv::TableName name, gaxgrpc::CallSettings callSettings = null) =>
+            UndeleteTableAsync(new UndeleteTableRequest
+            {
+                TableName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Restores a specified table which was accidentally deleted.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the table to be restored.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Table, UndeleteTableMetadata>> UndeleteTableAsync(gcbcv::TableName name, st::CancellationToken cancellationToken) =>
+            UndeleteTableAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Performs a series of column family modifications on the specified table.
@@ -4105,6 +4280,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         private readonly gaxgrpc::ApiCall<DeleteTableRequest, wkt::Empty> _callDeleteTable;
 
+        private readonly gaxgrpc::ApiCall<UndeleteTableRequest, lro::Operation> _callUndeleteTable;
+
         private readonly gaxgrpc::ApiCall<ModifyColumnFamiliesRequest, Table> _callModifyColumnFamilies;
 
         private readonly gaxgrpc::ApiCall<DropRowRangeRequest, wkt::Empty> _callDropRowRange;
@@ -4151,6 +4328,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             BigtableTableAdminSettings effectiveSettings = settings ?? BigtableTableAdminSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
             CreateTableFromSnapshotOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateTableFromSnapshotOperationsSettings, logger);
+            UndeleteTableOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UndeleteTableOperationsSettings, logger);
             SnapshotTableOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SnapshotTableOperationsSettings, logger);
             CreateBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBackupOperationsSettings, logger);
             RestoreTableOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RestoreTableOperationsSettings, logger);
@@ -4169,6 +4347,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
             _callDeleteTable = clientHelper.BuildApiCall<DeleteTableRequest, wkt::Empty>("DeleteTable", grpcClient.DeleteTableAsync, grpcClient.DeleteTable, effectiveSettings.DeleteTableSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteTable);
             Modify_DeleteTableApiCall(ref _callDeleteTable);
+            _callUndeleteTable = clientHelper.BuildApiCall<UndeleteTableRequest, lro::Operation>("UndeleteTable", grpcClient.UndeleteTableAsync, grpcClient.UndeleteTable, effectiveSettings.UndeleteTableSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callUndeleteTable);
+            Modify_UndeleteTableApiCall(ref _callUndeleteTable);
             _callModifyColumnFamilies = clientHelper.BuildApiCall<ModifyColumnFamiliesRequest, Table>("ModifyColumnFamilies", grpcClient.ModifyColumnFamiliesAsync, grpcClient.ModifyColumnFamilies, effectiveSettings.ModifyColumnFamiliesSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callModifyColumnFamilies);
             Modify_ModifyColumnFamiliesApiCall(ref _callModifyColumnFamilies);
@@ -4235,6 +4416,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         partial void Modify_DeleteTableApiCall(ref gaxgrpc::ApiCall<DeleteTableRequest, wkt::Empty> call);
 
+        partial void Modify_UndeleteTableApiCall(ref gaxgrpc::ApiCall<UndeleteTableRequest, lro::Operation> call);
+
         partial void Modify_ModifyColumnFamiliesApiCall(ref gaxgrpc::ApiCall<ModifyColumnFamiliesRequest, Table> call);
 
         partial void Modify_DropRowRangeApiCall(ref gaxgrpc::ApiCall<DropRowRangeRequest, wkt::Empty> call);
@@ -4283,6 +4466,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         partial void Modify_GetTableRequest(ref GetTableRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteTableRequest(ref DeleteTableRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UndeleteTableRequest(ref UndeleteTableRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ModifyColumnFamiliesRequest(ref ModifyColumnFamiliesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4457,6 +4642,33 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             Modify_DeleteTableRequest(ref request, ref callSettings);
             return _callDeleteTable.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>UndeleteTable</c>.</summary>
+        public override lro::OperationsClient UndeleteTableOperationsClient { get; }
+
+        /// <summary>
+        /// Restores a specified table which was accidentally deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Table, UndeleteTableMetadata> UndeleteTable(UndeleteTableRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UndeleteTableRequest(ref request, ref callSettings);
+            return new lro::Operation<Table, UndeleteTableMetadata>(_callUndeleteTable.Sync(request, callSettings), UndeleteTableOperationsClient);
+        }
+
+        /// <summary>
+        /// Restores a specified table which was accidentally deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Table, UndeleteTableMetadata>> UndeleteTableAsync(UndeleteTableRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UndeleteTableRequest(ref request, ref callSettings);
+            return new lro::Operation<Table, UndeleteTableMetadata>(await _callUndeleteTable.Async(request, callSettings).ConfigureAwait(false), UndeleteTableOperationsClient);
         }
 
         /// <summary>
