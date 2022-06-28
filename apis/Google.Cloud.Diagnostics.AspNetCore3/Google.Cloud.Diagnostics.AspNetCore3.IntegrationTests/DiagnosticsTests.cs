@@ -27,11 +27,10 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
+using static Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests.TestServerHelpers;
 
 namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
 {
-    using static TestServerHelpers;
-
     public class DiagnosticsTests
     {
         public DiagnosticsTests()
@@ -63,25 +62,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
         }
 
         [Fact]
-        public void AddGoogleDiagnosticsForAspNetCore_ConfiguresServices()
-        {
-            var hostBuilder = GetHostBuilder(webHostBuilder => webHostBuilder.ConfigureServices(
-                services => services.AddGoogleDiagnosticsForAspNetCore("tmp", "app", "1.0.0")));
-
-            using var server = GetTestServer(hostBuilder);
-            var services = GetServices(server);
-
-            // Test tracing
-            Assert.NotNull(services.GetService<IHttpContextAccessor>());
-            Assert.NotNull(services.GetService<IManagedTracer>());
-
-            // Test exception logging
-            Assert.NotNull(services.GetService<IExceptionLogger>());
-            Assert.NotNull(services.GetService<IContextExceptionLogger>());
-        }
-
-        [Fact]
-        public async Task AddGoogleDiagnosticsForAspNetCore_ConfiguresComponents()
+        public async Task AddGoogleDiagnosticsForAspNetCore_ConfiguresServices()
         {
             var testId = IdGenerator.FromDateTime();
             var startTime = DateTime.UtcNow;
@@ -92,6 +73,17 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
                         TestEnvironment.GetTestProjectId(), EntryData.Service, EntryData.Version)));
 
             using var server = GetTestServer(hostBuilder);
+
+            var services = GetServices(server);
+
+            // Test tracing DI
+            Assert.NotNull(services.GetService<IHttpContextAccessor>());
+            Assert.NotNull(services.GetService<IManagedTracer>());
+
+            // Test logging DI
+            Assert.NotNull(services.GetService<IExceptionLogger>());
+            Assert.NotNull(services.GetService<IContextExceptionLogger>());
+
             using var client = server.CreateClient();
             await TestTrace(testId, startTime, client);
             await TestLogging(testId, startTime, client);
@@ -99,30 +91,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
         }
 
         [Fact]
-        public async Task AddGoogleDiagnosticsForAspNetCore_ValidateDependencyInjection()
-        {
-            var testId = IdGenerator.FromDateTime();
-            var startTime = DateTime.UtcNow;
-
-            var hostBuilder = GetHostBuilder(webHostBuilder =>
-                webHostBuilder
-                    .UseDefaultServiceProvider(options => options.ValidateScopes = true)
-                    .ConfigureServices(services =>
-                        services.AddGoogleDiagnosticsForAspNetCore(
-                            TestEnvironment.GetTestProjectId(), EntryData.Service, EntryData.Version,
-                            traceOptions: TraceOptions.Create(retryOptions: RetryOptions.NoRetry(ExceptionHandling.Propagate)),
-                            loggingOptions: LoggingOptions.Create(retryOptions: RetryOptions.NoRetry(ExceptionHandling.Propagate)),
-                            errorReportingOptions: ErrorReportingOptions.Create(retryOptions: RetryOptions.NoRetry(ExceptionHandling.Propagate)))));
-
-            using var server = GetTestServer(hostBuilder);
-            using var client = server.CreateClient();
-            await TestTrace(testId, startTime, client);
-            await TestLogging(testId, startTime, client);
-            await TestErrorReporting(testId, client);
-        }
-
-        [Fact]
-        public async Task AddGoogleDiagnosticsForAspNetCore_ConfiguresComponentsFromHostBuilderContext()
+        public async Task AddGoogleDiagnosticsForAspNetCore_ConfiguresServices_FromHostBuilderContext()
         {
             var testId = IdGenerator.FromDateTime();
             var startTime = DateTime.UtcNow;
@@ -139,6 +108,29 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
                         services.AddGoogleDiagnosticsForAspNetCore(
                             ctx.Configuration["project_id"], ctx.Configuration["module_id"], ctx.Configuration["version_id"]))
                     .ConfigureAppConfiguration((hostContext, configBuilder) => configBuilder.AddInMemoryCollection(configurationData)));
+
+            using var server = GetTestServer(hostBuilder);
+            using var client = server.CreateClient();
+            await TestTrace(testId, startTime, client);
+            await TestLogging(testId, startTime, client);
+            await TestErrorReporting(testId, client);
+        }
+
+        [Fact]
+        public async Task AddGoogleDiagnosticsForAspNetCore_ConfiguresComponents()
+        {
+            var testId = IdGenerator.FromDateTime();
+            var startTime = DateTime.UtcNow;
+
+            var hostBuilder = GetHostBuilder(webHostBuilder =>
+                webHostBuilder
+                    .UseDefaultServiceProvider(options => options.ValidateScopes = true)
+                    .ConfigureServices(services =>
+                        services.AddGoogleDiagnosticsForAspNetCore(
+                            TestEnvironment.GetTestProjectId(), EntryData.Service, EntryData.Version,
+                            traceOptions: TraceOptions.Create(retryOptions: RetryOptions.NoRetry(ExceptionHandling.Propagate)),
+                            loggingOptions: LoggingOptions.Create(retryOptions: RetryOptions.NoRetry(ExceptionHandling.Propagate)),
+                            errorReportingOptions: ErrorReportingOptions.Create(retryOptions: RetryOptions.NoRetry(ExceptionHandling.Propagate)))));
 
             using var server = GetTestServer(hostBuilder);
             using var client = server.CreateClient();
