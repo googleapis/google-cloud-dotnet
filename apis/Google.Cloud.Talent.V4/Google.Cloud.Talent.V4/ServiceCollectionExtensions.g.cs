@@ -26,7 +26,7 @@ namespace Microsoft.Extensions.DependencyInjection
     /// <summary>Static class to provide extension methods to configure API clients.</summary>
     public static partial class ServiceCollectionExtensions
     {
-        /// <summary>Adds a singleton <see cref="gctv::CompanyServiceClient"/> to <paramref name="services"/>.</summary>
+        /// <summary>Adds a singleton <see cref="gctv::TenantServiceClient"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
         /// </param>
@@ -34,10 +34,10 @@ namespace Microsoft.Extensions.DependencyInjection
         /// An optional action to invoke on the client builder. This is invoked before services from
         /// <paramref name="services"/> are used.
         /// </param>
-        public static IServiceCollection AddCompanyServiceClient(this IServiceCollection services, sys::Action<gctv::CompanyServiceClientBuilder> action = null) =>
+        public static IServiceCollection AddTenantServiceClient(this IServiceCollection services, sys::Action<gctv::TenantServiceClientBuilder> action = null) =>
             services.AddSingleton(provider =>
             {
-                gctv::CompanyServiceClientBuilder builder = new gctv::CompanyServiceClientBuilder();
+                gctv::TenantServiceClientBuilder builder = new gctv::TenantServiceClientBuilder();
                 action?.Invoke(builder);
                 return builder.Build(provider);
             });
@@ -54,6 +54,22 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddSingleton(provider =>
             {
                 gctv::CompletionClientBuilder builder = new gctv::CompletionClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gctv::CompanyServiceClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddCompanyServiceClient(this IServiceCollection services, sys::Action<gctv::CompanyServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gctv::CompanyServiceClientBuilder builder = new gctv::CompanyServiceClientBuilder();
                 action?.Invoke(builder);
                 return builder.Build(provider);
             });
@@ -86,22 +102,6 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddSingleton(provider =>
             {
                 gctv::JobServiceClientBuilder builder = new gctv::JobServiceClientBuilder();
-                action?.Invoke(builder);
-                return builder.Build(provider);
-            });
-
-        /// <summary>Adds a singleton <see cref="gctv::TenantServiceClient"/> to <paramref name="services"/>.</summary>
-        /// <param name="services">
-        /// The service collection to add the client to. The services are used to configure the client when requested.
-        /// </param>
-        /// <param name="action">
-        /// An optional action to invoke on the client builder. This is invoked before services from
-        /// <paramref name="services"/> are used.
-        /// </param>
-        public static IServiceCollection AddTenantServiceClient(this IServiceCollection services, sys::Action<gctv::TenantServiceClientBuilder> action = null) =>
-            services.AddSingleton(provider =>
-            {
-                gctv::TenantServiceClientBuilder builder = new gctv::TenantServiceClientBuilder();
                 action?.Invoke(builder);
                 return builder.Build(provider);
             });

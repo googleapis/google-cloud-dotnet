@@ -28,7 +28,7 @@ namespace Google.Cloud.Talent.V4 {
             "b3VkLnRhbGVudC52NBofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90",
             "bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxojZ29vZ2xlL2Nsb3VkL3Rh",
             "bGVudC92NC9jb21tb24ucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3Rh",
-            "bXAucHJvdG8i9Q4KA0pvYhIMCgRuYW1lGAEgASgJEjQKB2NvbXBhbnkYAiAB",
+            "bXAucHJvdG8i/BMKA0pvYhIMCgRuYW1lGAEgASgJEjQKB2NvbXBhbnkYAiAB",
             "KAlCI+BBAvpBHQobam9icy5nb29nbGVhcGlzLmNvbS9Db21wYW55EhsKDnJl",
             "cXVpc2l0aW9uX2lkGAMgASgJQgPgQQISEgoFdGl0bGUYBCABKAlCA+BBAhIY",
             "CgtkZXNjcmlwdGlvbhgFIAEoCUID4EECEhEKCWFkZHJlc3NlcxgGIAMoCRJF",
@@ -59,27 +59,42 @@ namespace Google.Cloud.Talent.V4 {
             "ASgJQgPgQQMSQgoMZGVyaXZlZF9pbmZvGB0gASgLMicuZ29vZ2xlLmNsb3Vk",
             "LnRhbGVudC52NC5Kb2IuRGVyaXZlZEluZm9CA+BBAxJJChJwcm9jZXNzaW5n",
             "X29wdGlvbnMYHiABKAsyLS5nb29nbGUuY2xvdWQudGFsZW50LnY0LkpvYi5Q",
-            "cm9jZXNzaW5nT3B0aW9ucxpECg9BcHBsaWNhdGlvbkluZm8SDgoGZW1haWxz",
-            "GAEgAygJEhMKC2luc3RydWN0aW9uGAIgASgJEgwKBHVyaXMYAyADKAkafwoL",
-            "RGVyaXZlZEluZm8SMwoJbG9jYXRpb25zGAEgAygLMiAuZ29vZ2xlLmNsb3Vk",
-            "LnRhbGVudC52NC5Mb2NhdGlvbhI7Cg5qb2JfY2F0ZWdvcmllcxgDIAMoDjIj",
-            "Lmdvb2dsZS5jbG91ZC50YWxlbnQudjQuSm9iQ2F0ZWdvcnkagwEKEVByb2Nl",
-            "c3NpbmdPcHRpb25zEikKIWRpc2FibGVfc3RyZWV0X2FkZHJlc3NfcmVzb2x1",
-            "dGlvbhgBIAEoCBJDChFodG1sX3Nhbml0aXphdGlvbhgCIAEoDjIoLmdvb2ds",
-            "ZS5jbG91ZC50YWxlbnQudjQuSHRtbFNhbml0aXphdGlvbhpgChVDdXN0b21B",
-            "dHRyaWJ1dGVzRW50cnkSCwoDa2V5GAEgASgJEjYKBXZhbHVlGAIgASgLMicu",
-            "Z29vZ2xlLmNsb3VkLnRhbGVudC52NC5DdXN0b21BdHRyaWJ1dGU6AjgBOkzq",
-            "QUkKF2pvYnMuZ29vZ2xlYXBpcy5jb20vSm9iEi5wcm9qZWN0cy97cHJvamVj",
-            "dH0vdGVuYW50cy97dGVuYW50fS9qb2JzL3tqb2J9QmwKGmNvbS5nb29nbGUu",
-            "Y2xvdWQudGFsZW50LnY0QghKb2JQcm90b1ABWjxnb29nbGUuZ29sYW5nLm9y",
-            "Zy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3RhbGVudC92NDt0YWxlbnSi",
-            "AgNDVFNiBnByb3RvMw=="));
+            "cm9jZXNzaW5nT3B0aW9ucxJACg5qb2JfZGVidWdfaW5mbxg6IAEoCzIoLmdv",
+            "b2dsZS5jbG91ZC50YWxlbnQudjQuSm9iLkpvYkRlYnVnSW5mbxpECg9BcHBs",
+            "aWNhdGlvbkluZm8SDgoGZW1haWxzGAEgAygJEhMKC2luc3RydWN0aW9uGAIg",
+            "ASgJEgwKBHVyaXMYAyADKAkauwEKC0Rlcml2ZWRJbmZvEjMKCWxvY2F0aW9u",
+            "cxgBIAMoCzIgLmdvb2dsZS5jbG91ZC50YWxlbnQudjQuTG9jYXRpb24SOgoQ",
+            "c3RyZWV0X2xvY2F0aW9ucxgCIAMoCzIgLmdvb2dsZS5jbG91ZC50YWxlbnQu",
+            "djQuTG9jYXRpb24SOwoOam9iX2NhdGVnb3JpZXMYAyADKA4yIy5nb29nbGUu",
+            "Y2xvdWQudGFsZW50LnY0LkpvYkNhdGVnb3J5GoMBChFQcm9jZXNzaW5nT3B0",
+            "aW9ucxIpCiFkaXNhYmxlX3N0cmVldF9hZGRyZXNzX3Jlc29sdXRpb24YASAB",
+            "KAgSQwoRaHRtbF9zYW5pdGl6YXRpb24YAiABKA4yKC5nb29nbGUuY2xvdWQu",
+            "dGFsZW50LnY0Lkh0bWxTYW5pdGl6YXRpb24ahQQKDEpvYkRlYnVnSW5mbxJC",
+            "CgZzdGF0dXMYASABKA4yMi5nb29nbGUuY2xvdWQudGFsZW50LnY0LkpvYi5K",
+            "b2JEZWJ1Z0luZm8uSm9iU3RhdHVzEkcKC3NvY19iZWxpZWZzGAIgAygLMjIu",
+            "Z29vZ2xlLmNsb3VkLnRhbGVudC52NC5Kb2IuSm9iRGVidWdJbmZvLlNvY0Jl",
+            "bGllZhISCgpwcm9qZWN0X2lkGAMgASgJEhYKDmRpc3RyaWJ1dG9yX2lkGAQg",
+            "ASgJEhEKCXRlbmFudF9pZBgFIAEoCRIWCg5wcm9qZWN0X251bWJlchgGIAEo",
+            "AxIbChNqb2JfY2xhc3NpZmljYXRpb25zGAcgAygJEhEKCXNlbmlvcml0eRgI",
+            "IAEoCRIZChFjb25maWRlbmNlX3Njb3JlcxgJIAMoARI0ChBsYXN0X3VwZGF0",
+            "ZV90aW1lGAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBo/CglT",
+            "b2NCZWxpZWYSEAoIc29jX2NvZGUYASABKAkSEwoLcHJvYmFiaWxpdHkYAiAB",
+            "KAESCwoDc3ZwGAMgASgFIk8KCUpvYlN0YXR1cxIeChpKT0JfREVCVUdfSU5G",
+            "T19VTlNQRUNJRklFRBAAEgsKB0VYUElSRUQQARIICgRPUEVOEAISCwoHREVM",
+            "RVRFRBADGmAKFUN1c3RvbUF0dHJpYnV0ZXNFbnRyeRILCgNrZXkYASABKAkS",
+            "NgoFdmFsdWUYAiABKAsyJy5nb29nbGUuY2xvdWQudGFsZW50LnY0LkN1c3Rv",
+            "bUF0dHJpYnV0ZToCOAE6TOpBSQoXam9icy5nb29nbGVhcGlzLmNvbS9Kb2IS",
+            "LnByb2plY3RzL3twcm9qZWN0fS90ZW5hbnRzL3t0ZW5hbnR9L2pvYnMve2pv",
+            "Yn1CbAoaY29tLmdvb2dsZS5jbG91ZC50YWxlbnQudjRCCEpvYlByb3RvUAFa",
+            "PGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQv",
+            "dGFsZW50L3Y0O3RhbGVudKICA0NUU2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Talent.V4.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4.Job), global::Google.Cloud.Talent.V4.Job.Parser, new[]{ "Name", "Company", "RequisitionId", "Title", "Description", "Addresses", "ApplicationInfo", "JobBenefits", "CompensationInfo", "CustomAttributes", "DegreeTypes", "Department", "EmploymentTypes", "Incentives", "LanguageCode", "JobLevel", "PromotionValue", "Qualifications", "Responsibilities", "PostingRegion", "Visibility", "JobStartTime", "JobEndTime", "PostingPublishTime", "PostingExpireTime", "PostingCreateTime", "PostingUpdateTime", "CompanyDisplayName", "DerivedInfo", "ProcessingOptions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4.Job.Types.ApplicationInfo), global::Google.Cloud.Talent.V4.Job.Types.ApplicationInfo.Parser, new[]{ "Emails", "Instruction", "Uris" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4.Job.Types.DerivedInfo), global::Google.Cloud.Talent.V4.Job.Types.DerivedInfo.Parser, new[]{ "Locations", "JobCategories" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4.Job), global::Google.Cloud.Talent.V4.Job.Parser, new[]{ "Name", "Company", "RequisitionId", "Title", "Description", "Addresses", "ApplicationInfo", "JobBenefits", "CompensationInfo", "CustomAttributes", "DegreeTypes", "Department", "EmploymentTypes", "Incentives", "LanguageCode", "JobLevel", "PromotionValue", "Qualifications", "Responsibilities", "PostingRegion", "Visibility", "JobStartTime", "JobEndTime", "PostingPublishTime", "PostingExpireTime", "PostingCreateTime", "PostingUpdateTime", "CompanyDisplayName", "DerivedInfo", "ProcessingOptions", "JobDebugInfo" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4.Job.Types.ApplicationInfo), global::Google.Cloud.Talent.V4.Job.Types.ApplicationInfo.Parser, new[]{ "Emails", "Instruction", "Uris" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4.Job.Types.DerivedInfo), global::Google.Cloud.Talent.V4.Job.Types.DerivedInfo.Parser, new[]{ "Locations", "StreetLocations", "JobCategories" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4.Job.Types.ProcessingOptions), global::Google.Cloud.Talent.V4.Job.Types.ProcessingOptions.Parser, new[]{ "DisableStreetAddressResolution", "HtmlSanitization" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4.Job.Types.JobDebugInfo), global::Google.Cloud.Talent.V4.Job.Types.JobDebugInfo.Parser, new[]{ "Status", "SocBeliefs", "ProjectId", "DistributorId", "TenantId", "ProjectNumber", "JobClassifications", "Seniority", "ConfidenceScores", "LastUpdateTime" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4.Job.Types.JobDebugInfo.Types.JobStatus) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4.Job.Types.JobDebugInfo.Types.SocBelief), global::Google.Cloud.Talent.V4.Job.Types.JobDebugInfo.Types.SocBelief.Parser, new[]{ "SocCode", "Probability", "Svp" }, null, null, null, null)}),
             null, })
           }));
     }
@@ -156,6 +171,7 @@ namespace Google.Cloud.Talent.V4 {
       companyDisplayName_ = other.companyDisplayName_;
       derivedInfo_ = other.derivedInfo_ != null ? other.derivedInfo_.Clone() : null;
       processingOptions_ = other.processingOptions_ != null ? other.processingOptions_.Clone() : null;
+      jobDebugInfo_ = other.jobDebugInfo_ != null ? other.jobDebugInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -771,6 +787,21 @@ namespace Google.Cloud.Talent.V4 {
       }
     }
 
+    /// <summary>Field number for the "job_debug_info" field.</summary>
+    public const int JobDebugInfoFieldNumber = 58;
+    private global::Google.Cloud.Talent.V4.Job.Types.JobDebugInfo jobDebugInfo_;
+    /// <summary>
+    /// Debugging information for internal users.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Talent.V4.Job.Types.JobDebugInfo JobDebugInfo {
+      get { return jobDebugInfo_; }
+      set {
+        jobDebugInfo_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -816,6 +847,7 @@ namespace Google.Cloud.Talent.V4 {
       if (CompanyDisplayName != other.CompanyDisplayName) return false;
       if (!object.Equals(DerivedInfo, other.DerivedInfo)) return false;
       if (!object.Equals(ProcessingOptions, other.ProcessingOptions)) return false;
+      if (!object.Equals(JobDebugInfo, other.JobDebugInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -853,6 +885,7 @@ namespace Google.Cloud.Talent.V4 {
       if (CompanyDisplayName.Length != 0) hash ^= CompanyDisplayName.GetHashCode();
       if (derivedInfo_ != null) hash ^= DerivedInfo.GetHashCode();
       if (processingOptions_ != null) hash ^= ProcessingOptions.GetHashCode();
+      if (jobDebugInfo_ != null) hash ^= JobDebugInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -976,6 +1009,10 @@ namespace Google.Cloud.Talent.V4 {
         output.WriteRawTag(242, 1);
         output.WriteMessage(ProcessingOptions);
       }
+      if (jobDebugInfo_ != null) {
+        output.WriteRawTag(210, 3);
+        output.WriteMessage(JobDebugInfo);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1091,6 +1128,10 @@ namespace Google.Cloud.Talent.V4 {
         output.WriteRawTag(242, 1);
         output.WriteMessage(ProcessingOptions);
       }
+      if (jobDebugInfo_ != null) {
+        output.WriteRawTag(210, 3);
+        output.WriteMessage(JobDebugInfo);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1180,6 +1221,9 @@ namespace Google.Cloud.Talent.V4 {
       }
       if (processingOptions_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(ProcessingOptions);
+      }
+      if (jobDebugInfo_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(JobDebugInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1302,6 +1346,12 @@ namespace Google.Cloud.Talent.V4 {
           ProcessingOptions = new global::Google.Cloud.Talent.V4.Job.Types.ProcessingOptions();
         }
         ProcessingOptions.MergeFrom(other.ProcessingOptions);
+      }
+      if (other.jobDebugInfo_ != null) {
+        if (jobDebugInfo_ == null) {
+          JobDebugInfo = new global::Google.Cloud.Talent.V4.Job.Types.JobDebugInfo();
+        }
+        JobDebugInfo.MergeFrom(other.JobDebugInfo);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1471,6 +1521,13 @@ namespace Google.Cloud.Talent.V4 {
             input.ReadMessage(ProcessingOptions);
             break;
           }
+          case 466: {
+            if (jobDebugInfo_ == null) {
+              JobDebugInfo = new global::Google.Cloud.Talent.V4.Job.Types.JobDebugInfo();
+            }
+            input.ReadMessage(JobDebugInfo);
+            break;
+          }
         }
       }
     #endif
@@ -1637,6 +1694,13 @@ namespace Google.Cloud.Talent.V4 {
               ProcessingOptions = new global::Google.Cloud.Talent.V4.Job.Types.ProcessingOptions();
             }
             input.ReadMessage(ProcessingOptions);
+            break;
+          }
+          case 466: {
+            if (jobDebugInfo_ == null) {
+              JobDebugInfo = new global::Google.Cloud.Talent.V4.Job.Types.JobDebugInfo();
+            }
+            input.ReadMessage(JobDebugInfo);
             break;
           }
         }
@@ -1952,6 +2016,7 @@ namespace Google.Cloud.Talent.V4 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public DerivedInfo(DerivedInfo other) : this() {
           locations_ = other.locations_.Clone();
+          streetLocations_ = other.streetLocations_.Clone();
           jobCategories_ = other.jobCategories_.Clone();
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
@@ -1977,6 +2042,30 @@ namespace Google.Cloud.Talent.V4 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<global::Google.Cloud.Talent.V4.Location> Locations {
           get { return locations_; }
+        }
+
+        /// <summary>Field number for the "street_locations" field.</summary>
+        public const int StreetLocationsFieldNumber = 2;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Talent.V4.Location> _repeated_streetLocations_codec
+            = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Talent.V4.Location.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4.Location> streetLocations_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4.Location>();
+        /// <summary>
+        /// Structured street locations of the job.
+        ///
+        /// Unlike [locations][google.cloud.talent.v4.Job.DerivedInfo.locations], [street_locations][google.cloud.talent.v4.Job.DerivedInfo.street_locations] contains street locations
+        /// inferred from job posting details, e.g. [Job.addresses][google.cloud.talent.v4.Job.addresses],
+        /// [Job.company_display_name][google.cloud.talent.v4.Job.company_display_name], and so on.
+        ///
+        /// Note that the inference of [street_locations][google.cloud.talent.v4.Job.DerivedInfo.street_locations] isn't guaranteed to
+        /// be 100% correct.
+        ///
+        /// [street_locations][google.cloud.talent.v4.Job.DerivedInfo.street_locations] are exactly matched to [Job.addresses][google.cloud.talent.v4.Job.addresses] in the same
+        /// order.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.Talent.V4.Location> StreetLocations {
+          get { return streetLocations_; }
         }
 
         /// <summary>Field number for the "job_categories" field.</summary>
@@ -2009,6 +2098,7 @@ namespace Google.Cloud.Talent.V4 {
             return true;
           }
           if(!locations_.Equals(other.locations_)) return false;
+          if(!streetLocations_.Equals(other.streetLocations_)) return false;
           if(!jobCategories_.Equals(other.jobCategories_)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -2018,6 +2108,7 @@ namespace Google.Cloud.Talent.V4 {
         public override int GetHashCode() {
           int hash = 1;
           hash ^= locations_.GetHashCode();
+          hash ^= streetLocations_.GetHashCode();
           hash ^= jobCategories_.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -2038,6 +2129,7 @@ namespace Google.Cloud.Talent.V4 {
           output.WriteRawMessage(this);
         #else
           locations_.WriteTo(output, _repeated_locations_codec);
+          streetLocations_.WriteTo(output, _repeated_streetLocations_codec);
           jobCategories_.WriteTo(output, _repeated_jobCategories_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
@@ -2050,6 +2142,7 @@ namespace Google.Cloud.Talent.V4 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           locations_.WriteTo(ref output, _repeated_locations_codec);
+          streetLocations_.WriteTo(ref output, _repeated_streetLocations_codec);
           jobCategories_.WriteTo(ref output, _repeated_jobCategories_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
@@ -2062,6 +2155,7 @@ namespace Google.Cloud.Talent.V4 {
         public int CalculateSize() {
           int size = 0;
           size += locations_.CalculateSize(_repeated_locations_codec);
+          size += streetLocations_.CalculateSize(_repeated_streetLocations_codec);
           size += jobCategories_.CalculateSize(_repeated_jobCategories_codec);
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -2076,6 +2170,7 @@ namespace Google.Cloud.Talent.V4 {
             return;
           }
           locations_.Add(other.locations_);
+          streetLocations_.Add(other.streetLocations_);
           jobCategories_.Add(other.jobCategories_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -2094,6 +2189,10 @@ namespace Google.Cloud.Talent.V4 {
                 break;
               case 10: {
                 locations_.AddEntriesFrom(input, _repeated_locations_codec);
+                break;
+              }
+              case 18: {
+                streetLocations_.AddEntriesFrom(input, _repeated_streetLocations_codec);
                 break;
               }
               case 26:
@@ -2118,6 +2217,10 @@ namespace Google.Cloud.Talent.V4 {
                 break;
               case 10: {
                 locations_.AddEntriesFrom(ref input, _repeated_locations_codec);
+                break;
+              }
+              case 18: {
+                streetLocations_.AddEntriesFrom(ref input, _repeated_streetLocations_codec);
                 break;
               }
               case 26:
@@ -2376,6 +2479,820 @@ namespace Google.Cloud.Talent.V4 {
           }
         }
         #endif
+
+      }
+
+      /// <summary>
+      /// Debugging information for internal users.
+      /// </summary>
+      public sealed partial class JobDebugInfo : pb::IMessage<JobDebugInfo>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<JobDebugInfo> _parser = new pb::MessageParser<JobDebugInfo>(() => new JobDebugInfo());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<JobDebugInfo> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Talent.V4.Job.Descriptor.NestedTypes[3]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public JobDebugInfo() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public JobDebugInfo(JobDebugInfo other) : this() {
+          status_ = other.status_;
+          socBeliefs_ = other.socBeliefs_.Clone();
+          projectId_ = other.projectId_;
+          distributorId_ = other.distributorId_;
+          tenantId_ = other.tenantId_;
+          projectNumber_ = other.projectNumber_;
+          jobClassifications_ = other.jobClassifications_.Clone();
+          seniority_ = other.seniority_;
+          confidenceScores_ = other.confidenceScores_.Clone();
+          lastUpdateTime_ = other.lastUpdateTime_ != null ? other.lastUpdateTime_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public JobDebugInfo Clone() {
+          return new JobDebugInfo(this);
+        }
+
+        /// <summary>Field number for the "status" field.</summary>
+        public const int StatusFieldNumber = 1;
+        private global::Google.Cloud.Talent.V4.Job.Types.JobDebugInfo.Types.JobStatus status_ = global::Google.Cloud.Talent.V4.Job.Types.JobDebugInfo.Types.JobStatus.JobDebugInfoUnspecified;
+        /// <summary>
+        /// Job Status.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Talent.V4.Job.Types.JobDebugInfo.Types.JobStatus Status {
+          get { return status_; }
+          set {
+            status_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "soc_beliefs" field.</summary>
+        public const int SocBeliefsFieldNumber = 2;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Talent.V4.Job.Types.JobDebugInfo.Types.SocBelief> _repeated_socBeliefs_codec
+            = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Talent.V4.Job.Types.JobDebugInfo.Types.SocBelief.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4.Job.Types.JobDebugInfo.Types.SocBelief> socBeliefs_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4.Job.Types.JobDebugInfo.Types.SocBelief>();
+        /// <summary>
+        /// Soc Beliefs.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.Talent.V4.Job.Types.JobDebugInfo.Types.SocBelief> SocBeliefs {
+          get { return socBeliefs_; }
+        }
+
+        /// <summary>Field number for the "project_id" field.</summary>
+        public const int ProjectIdFieldNumber = 3;
+        private string projectId_ = "";
+        /// <summary>
+        /// project id.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ProjectId {
+          get { return projectId_; }
+          set {
+            projectId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "distributor_id" field.</summary>
+        public const int DistributorIdFieldNumber = 4;
+        private string distributorId_ = "";
+        /// <summary>
+        /// distributor id
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string DistributorId {
+          get { return distributorId_; }
+          set {
+            distributorId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "tenant_id" field.</summary>
+        public const int TenantIdFieldNumber = 5;
+        private string tenantId_ = "";
+        /// <summary>
+        /// tenant id.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string TenantId {
+          get { return tenantId_; }
+          set {
+            tenantId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "project_number" field.</summary>
+        public const int ProjectNumberFieldNumber = 6;
+        private long projectNumber_;
+        /// <summary>
+        /// project number
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long ProjectNumber {
+          get { return projectNumber_; }
+          set {
+            projectNumber_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "job_classifications" field.</summary>
+        public const int JobClassificationsFieldNumber = 7;
+        private static readonly pb::FieldCodec<string> _repeated_jobClassifications_codec
+            = pb::FieldCodec.ForString(58);
+        private readonly pbc::RepeatedField<string> jobClassifications_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Job Classifications
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> JobClassifications {
+          get { return jobClassifications_; }
+        }
+
+        /// <summary>Field number for the "seniority" field.</summary>
+        public const int SeniorityFieldNumber = 8;
+        private string seniority_ = "";
+        /// <summary>
+        /// Seniority
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Seniority {
+          get { return seniority_; }
+          set {
+            seniority_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "confidence_scores" field.</summary>
+        public const int ConfidenceScoresFieldNumber = 9;
+        private static readonly pb::FieldCodec<double> _repeated_confidenceScores_codec
+            = pb::FieldCodec.ForDouble(74);
+        private readonly pbc::RepeatedField<double> confidenceScores_ = new pbc::RepeatedField<double>();
+        /// <summary>
+        /// Confidence Scores
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<double> ConfidenceScores {
+          get { return confidenceScores_; }
+        }
+
+        /// <summary>Field number for the "last_update_time" field.</summary>
+        public const int LastUpdateTimeFieldNumber = 10;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp lastUpdateTime_;
+        /// <summary>
+        /// Last Update TIme
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp LastUpdateTime {
+          get { return lastUpdateTime_; }
+          set {
+            lastUpdateTime_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as JobDebugInfo);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(JobDebugInfo other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Status != other.Status) return false;
+          if(!socBeliefs_.Equals(other.socBeliefs_)) return false;
+          if (ProjectId != other.ProjectId) return false;
+          if (DistributorId != other.DistributorId) return false;
+          if (TenantId != other.TenantId) return false;
+          if (ProjectNumber != other.ProjectNumber) return false;
+          if(!jobClassifications_.Equals(other.jobClassifications_)) return false;
+          if (Seniority != other.Seniority) return false;
+          if(!confidenceScores_.Equals(other.confidenceScores_)) return false;
+          if (!object.Equals(LastUpdateTime, other.LastUpdateTime)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Status != global::Google.Cloud.Talent.V4.Job.Types.JobDebugInfo.Types.JobStatus.JobDebugInfoUnspecified) hash ^= Status.GetHashCode();
+          hash ^= socBeliefs_.GetHashCode();
+          if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
+          if (DistributorId.Length != 0) hash ^= DistributorId.GetHashCode();
+          if (TenantId.Length != 0) hash ^= TenantId.GetHashCode();
+          if (ProjectNumber != 0L) hash ^= ProjectNumber.GetHashCode();
+          hash ^= jobClassifications_.GetHashCode();
+          if (Seniority.Length != 0) hash ^= Seniority.GetHashCode();
+          hash ^= confidenceScores_.GetHashCode();
+          if (lastUpdateTime_ != null) hash ^= LastUpdateTime.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Status != global::Google.Cloud.Talent.V4.Job.Types.JobDebugInfo.Types.JobStatus.JobDebugInfoUnspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Status);
+          }
+          socBeliefs_.WriteTo(output, _repeated_socBeliefs_codec);
+          if (ProjectId.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(ProjectId);
+          }
+          if (DistributorId.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(DistributorId);
+          }
+          if (TenantId.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(TenantId);
+          }
+          if (ProjectNumber != 0L) {
+            output.WriteRawTag(48);
+            output.WriteInt64(ProjectNumber);
+          }
+          jobClassifications_.WriteTo(output, _repeated_jobClassifications_codec);
+          if (Seniority.Length != 0) {
+            output.WriteRawTag(66);
+            output.WriteString(Seniority);
+          }
+          confidenceScores_.WriteTo(output, _repeated_confidenceScores_codec);
+          if (lastUpdateTime_ != null) {
+            output.WriteRawTag(82);
+            output.WriteMessage(LastUpdateTime);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Status != global::Google.Cloud.Talent.V4.Job.Types.JobDebugInfo.Types.JobStatus.JobDebugInfoUnspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Status);
+          }
+          socBeliefs_.WriteTo(ref output, _repeated_socBeliefs_codec);
+          if (ProjectId.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(ProjectId);
+          }
+          if (DistributorId.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(DistributorId);
+          }
+          if (TenantId.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(TenantId);
+          }
+          if (ProjectNumber != 0L) {
+            output.WriteRawTag(48);
+            output.WriteInt64(ProjectNumber);
+          }
+          jobClassifications_.WriteTo(ref output, _repeated_jobClassifications_codec);
+          if (Seniority.Length != 0) {
+            output.WriteRawTag(66);
+            output.WriteString(Seniority);
+          }
+          confidenceScores_.WriteTo(ref output, _repeated_confidenceScores_codec);
+          if (lastUpdateTime_ != null) {
+            output.WriteRawTag(82);
+            output.WriteMessage(LastUpdateTime);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Status != global::Google.Cloud.Talent.V4.Job.Types.JobDebugInfo.Types.JobStatus.JobDebugInfoUnspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
+          }
+          size += socBeliefs_.CalculateSize(_repeated_socBeliefs_codec);
+          if (ProjectId.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ProjectId);
+          }
+          if (DistributorId.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(DistributorId);
+          }
+          if (TenantId.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(TenantId);
+          }
+          if (ProjectNumber != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(ProjectNumber);
+          }
+          size += jobClassifications_.CalculateSize(_repeated_jobClassifications_codec);
+          if (Seniority.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Seniority);
+          }
+          size += confidenceScores_.CalculateSize(_repeated_confidenceScores_codec);
+          if (lastUpdateTime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(LastUpdateTime);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(JobDebugInfo other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Status != global::Google.Cloud.Talent.V4.Job.Types.JobDebugInfo.Types.JobStatus.JobDebugInfoUnspecified) {
+            Status = other.Status;
+          }
+          socBeliefs_.Add(other.socBeliefs_);
+          if (other.ProjectId.Length != 0) {
+            ProjectId = other.ProjectId;
+          }
+          if (other.DistributorId.Length != 0) {
+            DistributorId = other.DistributorId;
+          }
+          if (other.TenantId.Length != 0) {
+            TenantId = other.TenantId;
+          }
+          if (other.ProjectNumber != 0L) {
+            ProjectNumber = other.ProjectNumber;
+          }
+          jobClassifications_.Add(other.jobClassifications_);
+          if (other.Seniority.Length != 0) {
+            Seniority = other.Seniority;
+          }
+          confidenceScores_.Add(other.confidenceScores_);
+          if (other.lastUpdateTime_ != null) {
+            if (lastUpdateTime_ == null) {
+              LastUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            LastUpdateTime.MergeFrom(other.LastUpdateTime);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                Status = (global::Google.Cloud.Talent.V4.Job.Types.JobDebugInfo.Types.JobStatus) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                socBeliefs_.AddEntriesFrom(input, _repeated_socBeliefs_codec);
+                break;
+              }
+              case 26: {
+                ProjectId = input.ReadString();
+                break;
+              }
+              case 34: {
+                DistributorId = input.ReadString();
+                break;
+              }
+              case 42: {
+                TenantId = input.ReadString();
+                break;
+              }
+              case 48: {
+                ProjectNumber = input.ReadInt64();
+                break;
+              }
+              case 58: {
+                jobClassifications_.AddEntriesFrom(input, _repeated_jobClassifications_codec);
+                break;
+              }
+              case 66: {
+                Seniority = input.ReadString();
+                break;
+              }
+              case 74:
+              case 73: {
+                confidenceScores_.AddEntriesFrom(input, _repeated_confidenceScores_codec);
+                break;
+              }
+              case 82: {
+                if (lastUpdateTime_ == null) {
+                  LastUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(LastUpdateTime);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                Status = (global::Google.Cloud.Talent.V4.Job.Types.JobDebugInfo.Types.JobStatus) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                socBeliefs_.AddEntriesFrom(ref input, _repeated_socBeliefs_codec);
+                break;
+              }
+              case 26: {
+                ProjectId = input.ReadString();
+                break;
+              }
+              case 34: {
+                DistributorId = input.ReadString();
+                break;
+              }
+              case 42: {
+                TenantId = input.ReadString();
+                break;
+              }
+              case 48: {
+                ProjectNumber = input.ReadInt64();
+                break;
+              }
+              case 58: {
+                jobClassifications_.AddEntriesFrom(ref input, _repeated_jobClassifications_codec);
+                break;
+              }
+              case 66: {
+                Seniority = input.ReadString();
+                break;
+              }
+              case 74:
+              case 73: {
+                confidenceScores_.AddEntriesFrom(ref input, _repeated_confidenceScores_codec);
+                break;
+              }
+              case 82: {
+                if (lastUpdateTime_ == null) {
+                  LastUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(LastUpdateTime);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the JobDebugInfo message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          public enum JobStatus {
+            [pbr::OriginalName("JOB_DEBUG_INFO_UNSPECIFIED")] JobDebugInfoUnspecified = 0,
+            [pbr::OriginalName("EXPIRED")] Expired = 1,
+            [pbr::OriginalName("OPEN")] Open = 2,
+            [pbr::OriginalName("DELETED")] Deleted = 3,
+          }
+
+          /// <summary>
+          /// A belief that a job has particular soc with some probability.
+          /// </summary>
+          public sealed partial class SocBelief : pb::IMessage<SocBelief>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<SocBelief> _parser = new pb::MessageParser<SocBelief>(() => new SocBelief());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<SocBelief> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Talent.V4.Job.Types.JobDebugInfo.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public SocBelief() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public SocBelief(SocBelief other) : this() {
+              socCode_ = other.socCode_;
+              probability_ = other.probability_;
+              svp_ = other.svp_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public SocBelief Clone() {
+              return new SocBelief(this);
+            }
+
+            /// <summary>Field number for the "soc_code" field.</summary>
+            public const int SocCodeFieldNumber = 1;
+            private string socCode_ = "";
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string SocCode {
+              get { return socCode_; }
+              set {
+                socCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "probability" field.</summary>
+            public const int ProbabilityFieldNumber = 2;
+            private double probability_;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public double Probability {
+              get { return probability_; }
+              set {
+                probability_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "svp" field.</summary>
+            public const int SvpFieldNumber = 3;
+            private int svp_;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int Svp {
+              get { return svp_; }
+              set {
+                svp_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as SocBelief);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(SocBelief other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (SocCode != other.SocCode) return false;
+              if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Probability, other.Probability)) return false;
+              if (Svp != other.Svp) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (SocCode.Length != 0) hash ^= SocCode.GetHashCode();
+              if (Probability != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Probability);
+              if (Svp != 0) hash ^= Svp.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (SocCode.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(SocCode);
+              }
+              if (Probability != 0D) {
+                output.WriteRawTag(17);
+                output.WriteDouble(Probability);
+              }
+              if (Svp != 0) {
+                output.WriteRawTag(24);
+                output.WriteInt32(Svp);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (SocCode.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(SocCode);
+              }
+              if (Probability != 0D) {
+                output.WriteRawTag(17);
+                output.WriteDouble(Probability);
+              }
+              if (Svp != 0) {
+                output.WriteRawTag(24);
+                output.WriteInt32(Svp);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (SocCode.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(SocCode);
+              }
+              if (Probability != 0D) {
+                size += 1 + 8;
+              }
+              if (Svp != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeInt32Size(Svp);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(SocBelief other) {
+              if (other == null) {
+                return;
+              }
+              if (other.SocCode.Length != 0) {
+                SocCode = other.SocCode;
+              }
+              if (other.Probability != 0D) {
+                Probability = other.Probability;
+              }
+              if (other.Svp != 0) {
+                Svp = other.Svp;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    SocCode = input.ReadString();
+                    break;
+                  }
+                  case 17: {
+                    Probability = input.ReadDouble();
+                    break;
+                  }
+                  case 24: {
+                    Svp = input.ReadInt32();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    SocCode = input.ReadString();
+                    break;
+                  }
+                  case 17: {
+                    Probability = input.ReadDouble();
+                    break;
+                  }
+                  case 24: {
+                    Svp = input.ReadInt32();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
 
       }
 

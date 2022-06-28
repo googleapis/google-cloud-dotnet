@@ -88,6 +88,7 @@ namespace Google.Cloud.Talent.V4.Tests
                 CompanyDisplayName = "company_display_name07e5990f",
                 DerivedInfo = new Job.Types.DerivedInfo(),
                 ProcessingOptions = new Job.Types.ProcessingOptions(),
+                JobDebugInfo = new Job.Types.JobDebugInfo(),
             };
             mockGrpcClient.Setup(x => x.CreateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -155,6 +156,7 @@ namespace Google.Cloud.Talent.V4.Tests
                 CompanyDisplayName = "company_display_name07e5990f",
                 DerivedInfo = new Job.Types.DerivedInfo(),
                 ProcessingOptions = new Job.Types.ProcessingOptions(),
+                JobDebugInfo = new Job.Types.JobDebugInfo(),
             };
             mockGrpcClient.Setup(x => x.CreateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -224,6 +226,7 @@ namespace Google.Cloud.Talent.V4.Tests
                 CompanyDisplayName = "company_display_name07e5990f",
                 DerivedInfo = new Job.Types.DerivedInfo(),
                 ProcessingOptions = new Job.Types.ProcessingOptions(),
+                JobDebugInfo = new Job.Types.JobDebugInfo(),
             };
             mockGrpcClient.Setup(x => x.CreateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -291,6 +294,7 @@ namespace Google.Cloud.Talent.V4.Tests
                 CompanyDisplayName = "company_display_name07e5990f",
                 DerivedInfo = new Job.Types.DerivedInfo(),
                 ProcessingOptions = new Job.Types.ProcessingOptions(),
+                JobDebugInfo = new Job.Types.JobDebugInfo(),
             };
             mockGrpcClient.Setup(x => x.CreateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -360,6 +364,7 @@ namespace Google.Cloud.Talent.V4.Tests
                 CompanyDisplayName = "company_display_name07e5990f",
                 DerivedInfo = new Job.Types.DerivedInfo(),
                 ProcessingOptions = new Job.Types.ProcessingOptions(),
+                JobDebugInfo = new Job.Types.JobDebugInfo(),
             };
             mockGrpcClient.Setup(x => x.CreateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -427,6 +432,7 @@ namespace Google.Cloud.Talent.V4.Tests
                 CompanyDisplayName = "company_display_name07e5990f",
                 DerivedInfo = new Job.Types.DerivedInfo(),
                 ProcessingOptions = new Job.Types.ProcessingOptions(),
+                JobDebugInfo = new Job.Types.JobDebugInfo(),
             };
             mockGrpcClient.Setup(x => x.CreateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -495,6 +501,7 @@ namespace Google.Cloud.Talent.V4.Tests
                 CompanyDisplayName = "company_display_name07e5990f",
                 DerivedInfo = new Job.Types.DerivedInfo(),
                 ProcessingOptions = new Job.Types.ProcessingOptions(),
+                JobDebugInfo = new Job.Types.JobDebugInfo(),
             };
             mockGrpcClient.Setup(x => x.GetJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -561,6 +568,7 @@ namespace Google.Cloud.Talent.V4.Tests
                 CompanyDisplayName = "company_display_name07e5990f",
                 DerivedInfo = new Job.Types.DerivedInfo(),
                 ProcessingOptions = new Job.Types.ProcessingOptions(),
+                JobDebugInfo = new Job.Types.JobDebugInfo(),
             };
             mockGrpcClient.Setup(x => x.GetJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -629,6 +637,7 @@ namespace Google.Cloud.Talent.V4.Tests
                 CompanyDisplayName = "company_display_name07e5990f",
                 DerivedInfo = new Job.Types.DerivedInfo(),
                 ProcessingOptions = new Job.Types.ProcessingOptions(),
+                JobDebugInfo = new Job.Types.JobDebugInfo(),
             };
             mockGrpcClient.Setup(x => x.GetJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -695,6 +704,7 @@ namespace Google.Cloud.Talent.V4.Tests
                 CompanyDisplayName = "company_display_name07e5990f",
                 DerivedInfo = new Job.Types.DerivedInfo(),
                 ProcessingOptions = new Job.Types.ProcessingOptions(),
+                JobDebugInfo = new Job.Types.JobDebugInfo(),
             };
             mockGrpcClient.Setup(x => x.GetJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -763,6 +773,7 @@ namespace Google.Cloud.Talent.V4.Tests
                 CompanyDisplayName = "company_display_name07e5990f",
                 DerivedInfo = new Job.Types.DerivedInfo(),
                 ProcessingOptions = new Job.Types.ProcessingOptions(),
+                JobDebugInfo = new Job.Types.JobDebugInfo(),
             };
             mockGrpcClient.Setup(x => x.GetJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -829,6 +840,7 @@ namespace Google.Cloud.Talent.V4.Tests
                 CompanyDisplayName = "company_display_name07e5990f",
                 DerivedInfo = new Job.Types.DerivedInfo(),
                 ProcessingOptions = new Job.Types.ProcessingOptions(),
+                JobDebugInfo = new Job.Types.JobDebugInfo(),
             };
             mockGrpcClient.Setup(x => x.GetJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -898,6 +910,7 @@ namespace Google.Cloud.Talent.V4.Tests
                 CompanyDisplayName = "company_display_name07e5990f",
                 DerivedInfo = new Job.Types.DerivedInfo(),
                 ProcessingOptions = new Job.Types.ProcessingOptions(),
+                JobDebugInfo = new Job.Types.JobDebugInfo(),
             };
             mockGrpcClient.Setup(x => x.UpdateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -965,6 +978,7 @@ namespace Google.Cloud.Talent.V4.Tests
                 CompanyDisplayName = "company_display_name07e5990f",
                 DerivedInfo = new Job.Types.DerivedInfo(),
                 ProcessingOptions = new Job.Types.ProcessingOptions(),
+                JobDebugInfo = new Job.Types.JobDebugInfo(),
             };
             mockGrpcClient.Setup(x => x.UpdateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -1034,6 +1048,7 @@ namespace Google.Cloud.Talent.V4.Tests
                 CompanyDisplayName = "company_display_name07e5990f",
                 DerivedInfo = new Job.Types.DerivedInfo(),
                 ProcessingOptions = new Job.Types.ProcessingOptions(),
+                JobDebugInfo = new Job.Types.JobDebugInfo(),
             };
             mockGrpcClient.Setup(x => x.UpdateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -1101,6 +1116,7 @@ namespace Google.Cloud.Talent.V4.Tests
                 CompanyDisplayName = "company_display_name07e5990f",
                 DerivedInfo = new Job.Types.DerivedInfo(),
                 ProcessingOptions = new Job.Types.ProcessingOptions(),
+                JobDebugInfo = new Job.Types.JobDebugInfo(),
             };
             mockGrpcClient.Setup(x => x.UpdateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -1233,9 +1249,11 @@ namespace Google.Cloud.Talent.V4.Tests
                 OrderBy = "order_byb4d33ada",
                 DiversificationLevel = SearchJobsRequest.Types.DiversificationLevel.TwoPerCompany,
                 CustomRankingInfo = new SearchJobsRequest.Types.CustomRankingInfo(),
+                EnableDebugInfo = true,
 #pragma warning disable CS0612
                 DisableKeywordMatch = true,
 #pragma warning restore CS0612
+                MendelDebugInput = new wkt::Any(),
                 KeywordMatchMode = SearchJobsRequest.Types.KeywordMatchMode.Unspecified,
             };
             SearchJobsResponse expectedResponse = new SearchJobsResponse
@@ -1285,9 +1303,11 @@ namespace Google.Cloud.Talent.V4.Tests
                 OrderBy = "order_byb4d33ada",
                 DiversificationLevel = SearchJobsRequest.Types.DiversificationLevel.TwoPerCompany,
                 CustomRankingInfo = new SearchJobsRequest.Types.CustomRankingInfo(),
+                EnableDebugInfo = true,
 #pragma warning disable CS0612
                 DisableKeywordMatch = true,
 #pragma warning restore CS0612
+                MendelDebugInput = new wkt::Any(),
                 KeywordMatchMode = SearchJobsRequest.Types.KeywordMatchMode.Unspecified,
             };
             SearchJobsResponse expectedResponse = new SearchJobsResponse
@@ -1339,9 +1359,11 @@ namespace Google.Cloud.Talent.V4.Tests
                 OrderBy = "order_byb4d33ada",
                 DiversificationLevel = SearchJobsRequest.Types.DiversificationLevel.TwoPerCompany,
                 CustomRankingInfo = new SearchJobsRequest.Types.CustomRankingInfo(),
+                EnableDebugInfo = true,
 #pragma warning disable CS0612
                 DisableKeywordMatch = true,
 #pragma warning restore CS0612
+                MendelDebugInput = new wkt::Any(),
                 KeywordMatchMode = SearchJobsRequest.Types.KeywordMatchMode.Unspecified,
             };
             SearchJobsResponse expectedResponse = new SearchJobsResponse
@@ -1391,9 +1413,11 @@ namespace Google.Cloud.Talent.V4.Tests
                 OrderBy = "order_byb4d33ada",
                 DiversificationLevel = SearchJobsRequest.Types.DiversificationLevel.TwoPerCompany,
                 CustomRankingInfo = new SearchJobsRequest.Types.CustomRankingInfo(),
+                EnableDebugInfo = true,
 #pragma warning disable CS0612
                 DisableKeywordMatch = true,
 #pragma warning restore CS0612
+                MendelDebugInput = new wkt::Any(),
                 KeywordMatchMode = SearchJobsRequest.Types.KeywordMatchMode.Unspecified,
             };
             SearchJobsResponse expectedResponse = new SearchJobsResponse

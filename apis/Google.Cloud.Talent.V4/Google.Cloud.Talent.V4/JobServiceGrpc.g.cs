@@ -84,6 +84,8 @@ namespace Google.Cloud.Talent.V4 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4.BatchDeleteJobsRequest> __Marshaller_google_cloud_talent_v4_BatchDeleteJobsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4.BatchDeleteJobsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4.PurgeJobsRequest> __Marshaller_google_cloud_talent_v4_PurgeJobsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4.PurgeJobsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4.ListJobsRequest> __Marshaller_google_cloud_talent_v4_ListJobsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4.ListJobsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4.ListJobsResponse> __Marshaller_google_cloud_talent_v4_ListJobsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4.ListJobsResponse.Parser));
@@ -146,6 +148,14 @@ namespace Google.Cloud.Talent.V4 {
         __ServiceName,
         "BatchDeleteJobs",
         __Marshaller_google_cloud_talent_v4_BatchDeleteJobsRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Talent.V4.PurgeJobsRequest, global::Google.LongRunning.Operation> __Method_PurgeJobs = new grpc::Method<global::Google.Cloud.Talent.V4.PurgeJobsRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "PurgeJobs",
+        __Marshaller_google_cloud_talent_v4_PurgeJobsRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -272,6 +282,23 @@ namespace Google.Cloud.Talent.V4 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> BatchDeleteJobs(global::Google.Cloud.Talent.V4.BatchDeleteJobsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Purges all jobs associated with requested target.
+      ///
+      /// Note: Jobs in OPEN status remain searchable until the operation completes.
+      ///
+      /// Note: The operation returned may take hours or longer to complete,
+      /// depending on the number of jobs that need to be deleted.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> PurgeJobs(global::Google.Cloud.Talent.V4.PurgeJobsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -731,6 +758,74 @@ namespace Google.Cloud.Talent.V4 {
         return CallInvoker.AsyncUnaryCall(__Method_BatchDeleteJobs, null, options, request);
       }
       /// <summary>
+      /// Purges all jobs associated with requested target.
+      ///
+      /// Note: Jobs in OPEN status remain searchable until the operation completes.
+      ///
+      /// Note: The operation returned may take hours or longer to complete,
+      /// depending on the number of jobs that need to be deleted.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation PurgeJobs(global::Google.Cloud.Talent.V4.PurgeJobsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return PurgeJobs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Purges all jobs associated with requested target.
+      ///
+      /// Note: Jobs in OPEN status remain searchable until the operation completes.
+      ///
+      /// Note: The operation returned may take hours or longer to complete,
+      /// depending on the number of jobs that need to be deleted.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation PurgeJobs(global::Google.Cloud.Talent.V4.PurgeJobsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_PurgeJobs, null, options, request);
+      }
+      /// <summary>
+      /// Purges all jobs associated with requested target.
+      ///
+      /// Note: Jobs in OPEN status remain searchable until the operation completes.
+      ///
+      /// Note: The operation returned may take hours or longer to complete,
+      /// depending on the number of jobs that need to be deleted.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> PurgeJobsAsync(global::Google.Cloud.Talent.V4.PurgeJobsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return PurgeJobsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Purges all jobs associated with requested target.
+      ///
+      /// Note: Jobs in OPEN status remain searchable until the operation completes.
+      ///
+      /// Note: The operation returned may take hours or longer to complete,
+      /// depending on the number of jobs that need to be deleted.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> PurgeJobsAsync(global::Google.Cloud.Talent.V4.PurgeJobsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_PurgeJobs, null, options, request);
+      }
+      /// <summary>
       /// Lists jobs by filter.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -947,6 +1042,7 @@ namespace Google.Cloud.Talent.V4 {
           .AddMethod(__Method_BatchUpdateJobs, serviceImpl.BatchUpdateJobs)
           .AddMethod(__Method_DeleteJob, serviceImpl.DeleteJob)
           .AddMethod(__Method_BatchDeleteJobs, serviceImpl.BatchDeleteJobs)
+          .AddMethod(__Method_PurgeJobs, serviceImpl.PurgeJobs)
           .AddMethod(__Method_ListJobs, serviceImpl.ListJobs)
           .AddMethod(__Method_SearchJobs, serviceImpl.SearchJobs)
           .AddMethod(__Method_SearchJobsForAlert, serviceImpl.SearchJobsForAlert).Build();
@@ -966,6 +1062,7 @@ namespace Google.Cloud.Talent.V4 {
       serviceBinder.AddMethod(__Method_BatchUpdateJobs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Talent.V4.BatchUpdateJobsRequest, global::Google.LongRunning.Operation>(serviceImpl.BatchUpdateJobs));
       serviceBinder.AddMethod(__Method_DeleteJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Talent.V4.DeleteJobRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteJob));
       serviceBinder.AddMethod(__Method_BatchDeleteJobs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Talent.V4.BatchDeleteJobsRequest, global::Google.LongRunning.Operation>(serviceImpl.BatchDeleteJobs));
+      serviceBinder.AddMethod(__Method_PurgeJobs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Talent.V4.PurgeJobsRequest, global::Google.LongRunning.Operation>(serviceImpl.PurgeJobs));
       serviceBinder.AddMethod(__Method_ListJobs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Talent.V4.ListJobsRequest, global::Google.Cloud.Talent.V4.ListJobsResponse>(serviceImpl.ListJobs));
       serviceBinder.AddMethod(__Method_SearchJobs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Talent.V4.SearchJobsRequest, global::Google.Cloud.Talent.V4.SearchJobsResponse>(serviceImpl.SearchJobs));
       serviceBinder.AddMethod(__Method_SearchJobsForAlert, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Talent.V4.SearchJobsRequest, global::Google.Cloud.Talent.V4.SearchJobsResponse>(serviceImpl.SearchJobsForAlert));
