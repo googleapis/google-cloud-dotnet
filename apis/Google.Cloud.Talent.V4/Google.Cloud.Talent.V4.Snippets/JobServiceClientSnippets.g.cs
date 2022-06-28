@@ -17,7 +17,6 @@
 namespace Google.Cloud.Talent.V4.Snippets
 {
     using Google.Api.Gax;
-    using Google.Api.Gax.ResourceNames;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
@@ -946,197 +945,6 @@ namespace Google.Cloud.Talent.V4.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for PurgeJobs</summary>
-        public void PurgeJobsRequestObject()
-        {
-            // Snippet: PurgeJobs(PurgeJobsRequest, CallSettings)
-            // Create client
-            JobServiceClient jobServiceClient = JobServiceClient.Create();
-            // Initialize request argument(s)
-            PurgeJobsRequest request = new PurgeJobsRequest
-            {
-                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
-                Filter = "",
-                Force = false,
-            };
-            // Make the request
-            Operation<PurgeJobsResponse, BatchOperationMetadata> response = jobServiceClient.PurgeJobs(request);
-
-            // Poll until the returned long-running operation is complete
-            Operation<PurgeJobsResponse, BatchOperationMetadata> completedResponse = response.PollUntilCompleted();
-            // Retrieve the operation result
-            PurgeJobsResponse result = completedResponse.Result;
-
-            // Or get the name of the operation
-            string operationName = response.Name;
-            // This name can be stored, then the long-running operation retrieved later by name
-            Operation<PurgeJobsResponse, BatchOperationMetadata> retrievedResponse = jobServiceClient.PollOncePurgeJobs(operationName);
-            // Check if the retrieved long-running operation has completed
-            if (retrievedResponse.IsCompleted)
-            {
-                // If it has completed, then access the result
-                PurgeJobsResponse retrievedResult = retrievedResponse.Result;
-            }
-            // End snippet
-        }
-
-        /// <summary>Snippet for PurgeJobsAsync</summary>
-        public async Task PurgeJobsRequestObjectAsync()
-        {
-            // Snippet: PurgeJobsAsync(PurgeJobsRequest, CallSettings)
-            // Additional: PurgeJobsAsync(PurgeJobsRequest, CancellationToken)
-            // Create client
-            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            PurgeJobsRequest request = new PurgeJobsRequest
-            {
-                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
-                Filter = "",
-                Force = false,
-            };
-            // Make the request
-            Operation<PurgeJobsResponse, BatchOperationMetadata> response = await jobServiceClient.PurgeJobsAsync(request);
-
-            // Poll until the returned long-running operation is complete
-            Operation<PurgeJobsResponse, BatchOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
-            // Retrieve the operation result
-            PurgeJobsResponse result = completedResponse.Result;
-
-            // Or get the name of the operation
-            string operationName = response.Name;
-            // This name can be stored, then the long-running operation retrieved later by name
-            Operation<PurgeJobsResponse, BatchOperationMetadata> retrievedResponse = await jobServiceClient.PollOncePurgeJobsAsync(operationName);
-            // Check if the retrieved long-running operation has completed
-            if (retrievedResponse.IsCompleted)
-            {
-                // If it has completed, then access the result
-                PurgeJobsResponse retrievedResult = retrievedResponse.Result;
-            }
-            // End snippet
-        }
-
-        /// <summary>Snippet for PurgeJobs</summary>
-        public void PurgeJobs()
-        {
-            // Snippet: PurgeJobs(string, string, CallSettings)
-            // Create client
-            JobServiceClient jobServiceClient = JobServiceClient.Create();
-            // Initialize request argument(s)
-            string parent = "projects/[PROJECT]";
-            string filter = "";
-            // Make the request
-            Operation<PurgeJobsResponse, BatchOperationMetadata> response = jobServiceClient.PurgeJobs(parent, filter);
-
-            // Poll until the returned long-running operation is complete
-            Operation<PurgeJobsResponse, BatchOperationMetadata> completedResponse = response.PollUntilCompleted();
-            // Retrieve the operation result
-            PurgeJobsResponse result = completedResponse.Result;
-
-            // Or get the name of the operation
-            string operationName = response.Name;
-            // This name can be stored, then the long-running operation retrieved later by name
-            Operation<PurgeJobsResponse, BatchOperationMetadata> retrievedResponse = jobServiceClient.PollOncePurgeJobs(operationName);
-            // Check if the retrieved long-running operation has completed
-            if (retrievedResponse.IsCompleted)
-            {
-                // If it has completed, then access the result
-                PurgeJobsResponse retrievedResult = retrievedResponse.Result;
-            }
-            // End snippet
-        }
-
-        /// <summary>Snippet for PurgeJobsAsync</summary>
-        public async Task PurgeJobsAsync()
-        {
-            // Snippet: PurgeJobsAsync(string, string, CallSettings)
-            // Additional: PurgeJobsAsync(string, string, CancellationToken)
-            // Create client
-            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            string parent = "projects/[PROJECT]";
-            string filter = "";
-            // Make the request
-            Operation<PurgeJobsResponse, BatchOperationMetadata> response = await jobServiceClient.PurgeJobsAsync(parent, filter);
-
-            // Poll until the returned long-running operation is complete
-            Operation<PurgeJobsResponse, BatchOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
-            // Retrieve the operation result
-            PurgeJobsResponse result = completedResponse.Result;
-
-            // Or get the name of the operation
-            string operationName = response.Name;
-            // This name can be stored, then the long-running operation retrieved later by name
-            Operation<PurgeJobsResponse, BatchOperationMetadata> retrievedResponse = await jobServiceClient.PollOncePurgeJobsAsync(operationName);
-            // Check if the retrieved long-running operation has completed
-            if (retrievedResponse.IsCompleted)
-            {
-                // If it has completed, then access the result
-                PurgeJobsResponse retrievedResult = retrievedResponse.Result;
-            }
-            // End snippet
-        }
-
-        /// <summary>Snippet for PurgeJobs</summary>
-        public void PurgeJobsResourceNames()
-        {
-            // Snippet: PurgeJobs(ProjectName, string, CallSettings)
-            // Create client
-            JobServiceClient jobServiceClient = JobServiceClient.Create();
-            // Initialize request argument(s)
-            ProjectName parent = ProjectName.FromProject("[PROJECT]");
-            string filter = "";
-            // Make the request
-            Operation<PurgeJobsResponse, BatchOperationMetadata> response = jobServiceClient.PurgeJobs(parent, filter);
-
-            // Poll until the returned long-running operation is complete
-            Operation<PurgeJobsResponse, BatchOperationMetadata> completedResponse = response.PollUntilCompleted();
-            // Retrieve the operation result
-            PurgeJobsResponse result = completedResponse.Result;
-
-            // Or get the name of the operation
-            string operationName = response.Name;
-            // This name can be stored, then the long-running operation retrieved later by name
-            Operation<PurgeJobsResponse, BatchOperationMetadata> retrievedResponse = jobServiceClient.PollOncePurgeJobs(operationName);
-            // Check if the retrieved long-running operation has completed
-            if (retrievedResponse.IsCompleted)
-            {
-                // If it has completed, then access the result
-                PurgeJobsResponse retrievedResult = retrievedResponse.Result;
-            }
-            // End snippet
-        }
-
-        /// <summary>Snippet for PurgeJobsAsync</summary>
-        public async Task PurgeJobsResourceNamesAsync()
-        {
-            // Snippet: PurgeJobsAsync(ProjectName, string, CallSettings)
-            // Additional: PurgeJobsAsync(ProjectName, string, CancellationToken)
-            // Create client
-            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            ProjectName parent = ProjectName.FromProject("[PROJECT]");
-            string filter = "";
-            // Make the request
-            Operation<PurgeJobsResponse, BatchOperationMetadata> response = await jobServiceClient.PurgeJobsAsync(parent, filter);
-
-            // Poll until the returned long-running operation is complete
-            Operation<PurgeJobsResponse, BatchOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
-            // Retrieve the operation result
-            PurgeJobsResponse result = completedResponse.Result;
-
-            // Or get the name of the operation
-            string operationName = response.Name;
-            // This name can be stored, then the long-running operation retrieved later by name
-            Operation<PurgeJobsResponse, BatchOperationMetadata> retrievedResponse = await jobServiceClient.PollOncePurgeJobsAsync(operationName);
-            // Check if the retrieved long-running operation has completed
-            if (retrievedResponse.IsCompleted)
-            {
-                // If it has completed, then access the result
-                PurgeJobsResponse retrievedResult = retrievedResponse.Result;
-            }
-            // End snippet
-        }
-
         /// <summary>Snippet for ListJobs</summary>
         public void ListJobsRequestObject()
         {
@@ -1446,8 +1254,6 @@ namespace Google.Cloud.Talent.V4.Snippets
                 OrderBy = "",
                 DiversificationLevel = SearchJobsRequest.Types.DiversificationLevel.Unspecified,
                 CustomRankingInfo = new SearchJobsRequest.Types.CustomRankingInfo(),
-                EnableDebugInfo = false,
-                MendelDebugInput = new Any(),
                 KeywordMatchMode = SearchJobsRequest.Types.KeywordMatchMode.Unspecified,
             };
             // Make the request
@@ -1481,8 +1287,6 @@ namespace Google.Cloud.Talent.V4.Snippets
                 OrderBy = "",
                 DiversificationLevel = SearchJobsRequest.Types.DiversificationLevel.Unspecified,
                 CustomRankingInfo = new SearchJobsRequest.Types.CustomRankingInfo(),
-                EnableDebugInfo = false,
-                MendelDebugInput = new Any(),
                 KeywordMatchMode = SearchJobsRequest.Types.KeywordMatchMode.Unspecified,
             };
             // Make the request
@@ -1515,8 +1319,6 @@ namespace Google.Cloud.Talent.V4.Snippets
                 OrderBy = "",
                 DiversificationLevel = SearchJobsRequest.Types.DiversificationLevel.Unspecified,
                 CustomRankingInfo = new SearchJobsRequest.Types.CustomRankingInfo(),
-                EnableDebugInfo = false,
-                MendelDebugInput = new Any(),
                 KeywordMatchMode = SearchJobsRequest.Types.KeywordMatchMode.Unspecified,
             };
             // Make the request
@@ -1550,8 +1352,6 @@ namespace Google.Cloud.Talent.V4.Snippets
                 OrderBy = "",
                 DiversificationLevel = SearchJobsRequest.Types.DiversificationLevel.Unspecified,
                 CustomRankingInfo = new SearchJobsRequest.Types.CustomRankingInfo(),
-                EnableDebugInfo = false,
-                MendelDebugInput = new Any(),
                 KeywordMatchMode = SearchJobsRequest.Types.KeywordMatchMode.Unspecified,
             };
             // Make the request
