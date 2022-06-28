@@ -42,6 +42,8 @@ var client = new ExampleClientBuilder
 }.Build();
 ```
 
+For more details on what can be configured within a client, see the [client configuration documentation](client-configuration.md).
+
 ### Dependency injection (Microsoft.Extensions.DependencyInjection)
 
 Every library includes an extension method for each client in the `Microsoft.Extensions.DependencyInjection` namespace,
@@ -86,6 +88,18 @@ builder.Services
 Any properties explicitly set on the builder will not be requested from the service provider. For example,
 if credentials are configured (in any form) on the builder, the `Build(IServiceProvider)` method will
 not request `ChannelCredentials`, `ICredential` or `GoogleCredential`.
+
+Additionally, in environments where Grpc.Net.Client will be used (e.g. .NET Core or .NET 5+) we recommend
+adding the `GrpcNetClientAdapter` to the dependency injection services, which allows logging and `HttpClient`
+construction to be configured in a consistent manner. For example:
+
+```csharp
+var builder = WebApplication.CreateBuilder(args);
+builder.Services
+    .AddRazorPages()
+    .AddGrpcNetClientAdapter()
+    .AddExampleClient();
+```
 
 ## Clean-up
 
