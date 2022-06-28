@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
+using gagr = Google.Api.Gax.ResourceNames;
 using gctv = Google.Cloud.Talent.V4;
 
 namespace Google.Cloud.Talent.V4
@@ -107,6 +108,18 @@ namespace Google.Cloud.Talent.V4
         public gax::ResourceNameList<JobName> JobNames
         {
             get => new gax::ResourceNameList<JobName>(Names, s => string.IsNullOrEmpty(s) ? null : JobName.Parse(s, allowUnparsed: true));
+        }
+    }
+
+    public partial class PurgeJobsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::ProjectName ParentAsProjectName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
         }
     }
 }

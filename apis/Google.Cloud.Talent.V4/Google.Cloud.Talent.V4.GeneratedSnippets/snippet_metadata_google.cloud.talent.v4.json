@@ -1971,6 +1971,161 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "jobs_v4_generated_JobService_PurgeJobs_sync",
+      "title": "PurgeJobsRequestObject",
+      "description": "Snippet for PurgeJobs",
+      "file": "JobServiceClient.PurgeJobsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PurgeJobs",
+        "fullName": "Google.Cloud.Talent.V4.JobServiceClient.PurgeJobs",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Talent.V4.PurgeJobsResponse, Google.Cloud.Talent.V4.BatchOperationMetadata>",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.JobServiceClient"
+        },
+        "method": {
+          "shortName": "PurgeJobs",
+          "fullName": "google.cloud.talent.v4.JobService.PurgeJobs",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.talent.v4.JobService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "jobs_v4_generated_JobService_PurgeJobs_async",
+      "title": "PurgeJobsRequestObjectAsync",
+      "description": "Snippet for PurgeJobsAsync",
+      "file": "JobServiceClient.PurgeJobsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PurgeJobsAsync",
+        "fullName": "Google.Cloud.Talent.V4.JobServiceClient.PurgeJobsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Talent.V4.PurgeJobsResponse, Google.Cloud.Talent.V4.BatchOperationMetadata>>",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.JobServiceClient"
+        },
+        "method": {
+          "shortName": "PurgeJobs",
+          "fullName": "google.cloud.talent.v4.JobService.PurgeJobs",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.talent.v4.JobService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "jobs_v4_generated_JobService_PurgeJobs_sync_flattened",
+      "title": "PurgeJobs",
+      "description": "Snippet for PurgeJobs",
+      "file": "JobServiceClient.PurgeJobsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PurgeJobs",
+        "fullName": "Google.Cloud.Talent.V4.JobServiceClient.PurgeJobs",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Talent.V4.PurgeJobsResponse, Google.Cloud.Talent.V4.BatchOperationMetadata>",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.JobServiceClient"
+        },
+        "method": {
+          "shortName": "PurgeJobs",
+          "fullName": "google.cloud.talent.v4.JobService.PurgeJobs",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.talent.v4.JobService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "jobs_v4_generated_JobService_PurgeJobs_async_flattened",
+      "title": "PurgeJobsAsync",
+      "description": "Snippet for PurgeJobsAsync",
+      "file": "JobServiceClient.PurgeJobsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PurgeJobsAsync",
+        "fullName": "Google.Cloud.Talent.V4.JobServiceClient.PurgeJobsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Talent.V4.PurgeJobsResponse, Google.Cloud.Talent.V4.BatchOperationMetadata>>",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.JobServiceClient"
+        },
+        "method": {
+          "shortName": "PurgeJobs",
+          "fullName": "google.cloud.talent.v4.JobService.PurgeJobs",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.talent.v4.JobService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "jobs_v4_generated_JobService_PurgeJobs_sync_flattened_resourceNames",
+      "title": "PurgeJobsResourceNames",
+      "description": "Snippet for PurgeJobs",
+      "file": "JobServiceClient.PurgeJobsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PurgeJobs",
+        "fullName": "Google.Cloud.Talent.V4.JobServiceClient.PurgeJobs",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Talent.V4.PurgeJobsResponse, Google.Cloud.Talent.V4.BatchOperationMetadata>",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.JobServiceClient"
+        },
+        "method": {
+          "shortName": "PurgeJobs",
+          "fullName": "google.cloud.talent.v4.JobService.PurgeJobs",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.talent.v4.JobService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "jobs_v4_generated_JobService_PurgeJobs_async_flattened_resourceNames",
+      "title": "PurgeJobsResourceNamesAsync",
+      "description": "Snippet for PurgeJobsAsync",
+      "file": "JobServiceClient.PurgeJobsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PurgeJobsAsync",
+        "fullName": "Google.Cloud.Talent.V4.JobServiceClient.PurgeJobsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Talent.V4.PurgeJobsResponse, Google.Cloud.Talent.V4.BatchOperationMetadata>>",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.JobServiceClient"
+        },
+        "method": {
+          "shortName": "PurgeJobs",
+          "fullName": "google.cloud.talent.v4.JobService.PurgeJobs",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.talent.v4.JobService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "jobs_v4_generated_JobService_ListJobs_sync",
       "title": "ListJobsRequestObject",
       "description": "Snippet for ListJobs",

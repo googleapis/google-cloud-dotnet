@@ -121,6 +121,12 @@
                 "ListJobsAsync"
               ]
             },
+            "PurgeJobs": {
+              "methods": [
+                "PurgeJobs",
+                "PurgeJobsAsync"
+              ]
+            },
             "SearchJobs": {
               "methods": [
                 "SearchJobs",

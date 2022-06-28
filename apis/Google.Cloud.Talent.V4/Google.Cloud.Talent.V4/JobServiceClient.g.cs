@@ -17,6 +17,7 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -58,6 +59,8 @@ namespace Google.Cloud.Talent.V4
             DeleteJobSettings = existing.DeleteJobSettings;
             BatchDeleteJobsSettings = existing.BatchDeleteJobsSettings;
             BatchDeleteJobsOperationsSettings = existing.BatchDeleteJobsOperationsSettings.Clone();
+            PurgeJobsSettings = existing.PurgeJobsSettings;
+            PurgeJobsOperationsSettings = existing.PurgeJobsOperationsSettings.Clone();
             ListJobsSettings = existing.ListJobsSettings;
             SearchJobsSettings = existing.SearchJobsSettings;
             SearchJobsForAlertSettings = existing.SearchJobsForAlertSettings;
@@ -218,6 +221,36 @@ namespace Google.Cloud.Talent.V4
         /// </list>
         /// </remarks>
         public lro::OperationsSettings BatchDeleteJobsOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>JobServiceClient.PurgeJobs</c>
+        ///  and <c>JobServiceClient.PurgeJobsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings PurgeJobsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>JobServiceClient.PurgeJobs</c> and
+        /// <c>JobServiceClient.PurgeJobsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings PurgeJobsOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -1591,6 +1624,288 @@ namespace Google.Cloud.Talent.V4
             BatchDeleteJobsAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Purges all jobs associated with requested target.
+        /// 
+        /// Note: Jobs in OPEN status remain searchable until the operation completes.
+        /// 
+        /// Note: The operation returned may take hours or longer to complete,
+        /// depending on the number of jobs that need to be deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<PurgeJobsResponse, BatchOperationMetadata> PurgeJobs(PurgeJobsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Purges all jobs associated with requested target.
+        /// 
+        /// Note: Jobs in OPEN status remain searchable until the operation completes.
+        /// 
+        /// Note: The operation returned may take hours or longer to complete,
+        /// depending on the number of jobs that need to be deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PurgeJobsResponse, BatchOperationMetadata>> PurgeJobsAsync(PurgeJobsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Purges all jobs associated with requested target.
+        /// 
+        /// Note: Jobs in OPEN status remain searchable until the operation completes.
+        /// 
+        /// Note: The operation returned may take hours or longer to complete,
+        /// depending on the number of jobs that need to be deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PurgeJobsResponse, BatchOperationMetadata>> PurgeJobsAsync(PurgeJobsRequest request, st::CancellationToken cancellationToken) =>
+            PurgeJobsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>PurgeJobs</c>.</summary>
+        public virtual lro::OperationsClient PurgeJobsOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>PurgeJobs</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<PurgeJobsResponse, BatchOperationMetadata> PollOncePurgeJobs(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<PurgeJobsResponse, BatchOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PurgeJobsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>PurgeJobs</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<PurgeJobsResponse, BatchOperationMetadata>> PollOncePurgeJobsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<PurgeJobsResponse, BatchOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PurgeJobsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Purges all jobs associated with requested target.
+        /// 
+        /// Note: Jobs in OPEN status remain searchable until the operation completes.
+        /// 
+        /// Note: The operation returned may take hours or longer to complete,
+        /// depending on the number of jobs that need to be deleted.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the project under which the jobs should be deleted.
+        /// 
+        /// The format is "projects/{project_id}". For example, "projects/foo".
+        /// </param>
+        /// <param name="filter">
+        /// Required. A filter matching the jobs to be purged.
+        /// 
+        /// The filter can be one of the following three parent resources.
+        /// 1. Company. Resource name of the company under which all the jobs should be
+        /// deleted. The format is
+        /// "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}". For
+        /// example, "projects/foo/tenants/bar/companies/baz"
+        /// 2. Tenant. Resource name of the tenant under which all the jobs should be
+        /// deleted. The format is "projects/{project_id}/tenants/{tenant_id}". For
+        /// example, "projects/foo/tenants/bar".
+        /// 3. Project. Resource name of the project under which all the jobs should be
+        /// deleted. The format is "projects/{project_id}". For example,
+        /// "projects/foo/".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<PurgeJobsResponse, BatchOperationMetadata> PurgeJobs(string parent, string filter, gaxgrpc::CallSettings callSettings = null) =>
+            PurgeJobs(new PurgeJobsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+            }, callSettings);
+
+        /// <summary>
+        /// Purges all jobs associated with requested target.
+        /// 
+        /// Note: Jobs in OPEN status remain searchable until the operation completes.
+        /// 
+        /// Note: The operation returned may take hours or longer to complete,
+        /// depending on the number of jobs that need to be deleted.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the project under which the jobs should be deleted.
+        /// 
+        /// The format is "projects/{project_id}". For example, "projects/foo".
+        /// </param>
+        /// <param name="filter">
+        /// Required. A filter matching the jobs to be purged.
+        /// 
+        /// The filter can be one of the following three parent resources.
+        /// 1. Company. Resource name of the company under which all the jobs should be
+        /// deleted. The format is
+        /// "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}". For
+        /// example, "projects/foo/tenants/bar/companies/baz"
+        /// 2. Tenant. Resource name of the tenant under which all the jobs should be
+        /// deleted. The format is "projects/{project_id}/tenants/{tenant_id}". For
+        /// example, "projects/foo/tenants/bar".
+        /// 3. Project. Resource name of the project under which all the jobs should be
+        /// deleted. The format is "projects/{project_id}". For example,
+        /// "projects/foo/".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PurgeJobsResponse, BatchOperationMetadata>> PurgeJobsAsync(string parent, string filter, gaxgrpc::CallSettings callSettings = null) =>
+            PurgeJobsAsync(new PurgeJobsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+            }, callSettings);
+
+        /// <summary>
+        /// Purges all jobs associated with requested target.
+        /// 
+        /// Note: Jobs in OPEN status remain searchable until the operation completes.
+        /// 
+        /// Note: The operation returned may take hours or longer to complete,
+        /// depending on the number of jobs that need to be deleted.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the project under which the jobs should be deleted.
+        /// 
+        /// The format is "projects/{project_id}". For example, "projects/foo".
+        /// </param>
+        /// <param name="filter">
+        /// Required. A filter matching the jobs to be purged.
+        /// 
+        /// The filter can be one of the following three parent resources.
+        /// 1. Company. Resource name of the company under which all the jobs should be
+        /// deleted. The format is
+        /// "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}". For
+        /// example, "projects/foo/tenants/bar/companies/baz"
+        /// 2. Tenant. Resource name of the tenant under which all the jobs should be
+        /// deleted. The format is "projects/{project_id}/tenants/{tenant_id}". For
+        /// example, "projects/foo/tenants/bar".
+        /// 3. Project. Resource name of the project under which all the jobs should be
+        /// deleted. The format is "projects/{project_id}". For example,
+        /// "projects/foo/".
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PurgeJobsResponse, BatchOperationMetadata>> PurgeJobsAsync(string parent, string filter, st::CancellationToken cancellationToken) =>
+            PurgeJobsAsync(parent, filter, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Purges all jobs associated with requested target.
+        /// 
+        /// Note: Jobs in OPEN status remain searchable until the operation completes.
+        /// 
+        /// Note: The operation returned may take hours or longer to complete,
+        /// depending on the number of jobs that need to be deleted.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the project under which the jobs should be deleted.
+        /// 
+        /// The format is "projects/{project_id}". For example, "projects/foo".
+        /// </param>
+        /// <param name="filter">
+        /// Required. A filter matching the jobs to be purged.
+        /// 
+        /// The filter can be one of the following three parent resources.
+        /// 1. Company. Resource name of the company under which all the jobs should be
+        /// deleted. The format is
+        /// "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}". For
+        /// example, "projects/foo/tenants/bar/companies/baz"
+        /// 2. Tenant. Resource name of the tenant under which all the jobs should be
+        /// deleted. The format is "projects/{project_id}/tenants/{tenant_id}". For
+        /// example, "projects/foo/tenants/bar".
+        /// 3. Project. Resource name of the project under which all the jobs should be
+        /// deleted. The format is "projects/{project_id}". For example,
+        /// "projects/foo/".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<PurgeJobsResponse, BatchOperationMetadata> PurgeJobs(gagr::ProjectName parent, string filter, gaxgrpc::CallSettings callSettings = null) =>
+            PurgeJobs(new PurgeJobsRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+            }, callSettings);
+
+        /// <summary>
+        /// Purges all jobs associated with requested target.
+        /// 
+        /// Note: Jobs in OPEN status remain searchable until the operation completes.
+        /// 
+        /// Note: The operation returned may take hours or longer to complete,
+        /// depending on the number of jobs that need to be deleted.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the project under which the jobs should be deleted.
+        /// 
+        /// The format is "projects/{project_id}". For example, "projects/foo".
+        /// </param>
+        /// <param name="filter">
+        /// Required. A filter matching the jobs to be purged.
+        /// 
+        /// The filter can be one of the following three parent resources.
+        /// 1. Company. Resource name of the company under which all the jobs should be
+        /// deleted. The format is
+        /// "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}". For
+        /// example, "projects/foo/tenants/bar/companies/baz"
+        /// 2. Tenant. Resource name of the tenant under which all the jobs should be
+        /// deleted. The format is "projects/{project_id}/tenants/{tenant_id}". For
+        /// example, "projects/foo/tenants/bar".
+        /// 3. Project. Resource name of the project under which all the jobs should be
+        /// deleted. The format is "projects/{project_id}". For example,
+        /// "projects/foo/".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PurgeJobsResponse, BatchOperationMetadata>> PurgeJobsAsync(gagr::ProjectName parent, string filter, gaxgrpc::CallSettings callSettings = null) =>
+            PurgeJobsAsync(new PurgeJobsRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+            }, callSettings);
+
+        /// <summary>
+        /// Purges all jobs associated with requested target.
+        /// 
+        /// Note: Jobs in OPEN status remain searchable until the operation completes.
+        /// 
+        /// Note: The operation returned may take hours or longer to complete,
+        /// depending on the number of jobs that need to be deleted.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the project under which the jobs should be deleted.
+        /// 
+        /// The format is "projects/{project_id}". For example, "projects/foo".
+        /// </param>
+        /// <param name="filter">
+        /// Required. A filter matching the jobs to be purged.
+        /// 
+        /// The filter can be one of the following three parent resources.
+        /// 1. Company. Resource name of the company under which all the jobs should be
+        /// deleted. The format is
+        /// "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}". For
+        /// example, "projects/foo/tenants/bar/companies/baz"
+        /// 2. Tenant. Resource name of the tenant under which all the jobs should be
+        /// deleted. The format is "projects/{project_id}/tenants/{tenant_id}". For
+        /// example, "projects/foo/tenants/bar".
+        /// 3. Project. Resource name of the project under which all the jobs should be
+        /// deleted. The format is "projects/{project_id}". For example,
+        /// "projects/foo/".
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PurgeJobsResponse, BatchOperationMetadata>> PurgeJobsAsync(gagr::ProjectName parent, string filter, st::CancellationToken cancellationToken) =>
+            PurgeJobsAsync(parent, filter, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Lists jobs by filter.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1934,6 +2249,8 @@ namespace Google.Cloud.Talent.V4
 
         private readonly gaxgrpc::ApiCall<BatchDeleteJobsRequest, lro::Operation> _callBatchDeleteJobs;
 
+        private readonly gaxgrpc::ApiCall<PurgeJobsRequest, lro::Operation> _callPurgeJobs;
+
         private readonly gaxgrpc::ApiCall<ListJobsRequest, ListJobsResponse> _callListJobs;
 
         private readonly gaxgrpc::ApiCall<SearchJobsRequest, SearchJobsResponse> _callSearchJobs;
@@ -1954,6 +2271,7 @@ namespace Google.Cloud.Talent.V4
             BatchCreateJobsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchCreateJobsOperationsSettings, logger);
             BatchUpdateJobsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchUpdateJobsOperationsSettings, logger);
             BatchDeleteJobsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchDeleteJobsOperationsSettings, logger);
+            PurgeJobsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PurgeJobsOperationsSettings, logger);
             _callCreateJob = clientHelper.BuildApiCall<CreateJobRequest, Job>("CreateJob", grpcClient.CreateJobAsync, grpcClient.CreateJob, effectiveSettings.CreateJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateJob);
             Modify_CreateJobApiCall(ref _callCreateJob);
@@ -1975,6 +2293,9 @@ namespace Google.Cloud.Talent.V4
             _callBatchDeleteJobs = clientHelper.BuildApiCall<BatchDeleteJobsRequest, lro::Operation>("BatchDeleteJobs", grpcClient.BatchDeleteJobsAsync, grpcClient.BatchDeleteJobs, effectiveSettings.BatchDeleteJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callBatchDeleteJobs);
             Modify_BatchDeleteJobsApiCall(ref _callBatchDeleteJobs);
+            _callPurgeJobs = clientHelper.BuildApiCall<PurgeJobsRequest, lro::Operation>("PurgeJobs", grpcClient.PurgeJobsAsync, grpcClient.PurgeJobs, effectiveSettings.PurgeJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callPurgeJobs);
+            Modify_PurgeJobsApiCall(ref _callPurgeJobs);
             _callListJobs = clientHelper.BuildApiCall<ListJobsRequest, ListJobsResponse>("ListJobs", grpcClient.ListJobsAsync, grpcClient.ListJobs, effectiveSettings.ListJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListJobs);
             Modify_ListJobsApiCall(ref _callListJobs);
@@ -2003,6 +2324,8 @@ namespace Google.Cloud.Talent.V4
 
         partial void Modify_BatchDeleteJobsApiCall(ref gaxgrpc::ApiCall<BatchDeleteJobsRequest, lro::Operation> call);
 
+        partial void Modify_PurgeJobsApiCall(ref gaxgrpc::ApiCall<PurgeJobsRequest, lro::Operation> call);
+
         partial void Modify_ListJobsApiCall(ref gaxgrpc::ApiCall<ListJobsRequest, ListJobsResponse> call);
 
         partial void Modify_SearchJobsApiCall(ref gaxgrpc::ApiCall<SearchJobsRequest, SearchJobsResponse> call);
@@ -2027,6 +2350,8 @@ namespace Google.Cloud.Talent.V4
         partial void Modify_DeleteJobRequest(ref DeleteJobRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_BatchDeleteJobsRequest(ref BatchDeleteJobsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_PurgeJobsRequest(ref PurgeJobsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListJobsRequest(ref ListJobsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2227,6 +2552,43 @@ namespace Google.Cloud.Talent.V4
         {
             Modify_BatchDeleteJobsRequest(ref request, ref callSettings);
             return new lro::Operation<BatchDeleteJobsResponse, BatchOperationMetadata>(await _callBatchDeleteJobs.Async(request, callSettings).ConfigureAwait(false), BatchDeleteJobsOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>PurgeJobs</c>.</summary>
+        public override lro::OperationsClient PurgeJobsOperationsClient { get; }
+
+        /// <summary>
+        /// Purges all jobs associated with requested target.
+        /// 
+        /// Note: Jobs in OPEN status remain searchable until the operation completes.
+        /// 
+        /// Note: The operation returned may take hours or longer to complete,
+        /// depending on the number of jobs that need to be deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<PurgeJobsResponse, BatchOperationMetadata> PurgeJobs(PurgeJobsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PurgeJobsRequest(ref request, ref callSettings);
+            return new lro::Operation<PurgeJobsResponse, BatchOperationMetadata>(_callPurgeJobs.Sync(request, callSettings), PurgeJobsOperationsClient);
+        }
+
+        /// <summary>
+        /// Purges all jobs associated with requested target.
+        /// 
+        /// Note: Jobs in OPEN status remain searchable until the operation completes.
+        /// 
+        /// Note: The operation returned may take hours or longer to complete,
+        /// depending on the number of jobs that need to be deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<PurgeJobsResponse, BatchOperationMetadata>> PurgeJobsAsync(PurgeJobsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PurgeJobsRequest(ref request, ref callSettings);
+            return new lro::Operation<PurgeJobsResponse, BatchOperationMetadata>(await _callPurgeJobs.Async(request, callSettings).ConfigureAwait(false), PurgeJobsOperationsClient);
         }
 
         /// <summary>

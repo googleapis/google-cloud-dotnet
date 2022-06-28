@@ -31,16 +31,16 @@ namespace Google.Cloud.Talent.V4
         {
             yield return CommonReflection.Descriptor;
             yield return CompanyReflection.Descriptor;
-            yield return CompanyServiceReflection.Descriptor;
+            yield return TenantReflection.Descriptor;
+            yield return TenantServiceReflection.Descriptor;
             yield return CompletionServiceReflection.Descriptor;
             yield return EventReflection.Descriptor;
-            yield return EventServiceReflection.Descriptor;
+            yield return CompanyServiceReflection.Descriptor;
             yield return FiltersReflection.Descriptor;
+            yield return EventServiceReflection.Descriptor;
             yield return HistogramReflection.Descriptor;
             yield return JobReflection.Descriptor;
             yield return JobServiceReflection.Descriptor;
-            yield return TenantReflection.Descriptor;
-            yield return TenantServiceReflection.Descriptor;
         }
     }
 }

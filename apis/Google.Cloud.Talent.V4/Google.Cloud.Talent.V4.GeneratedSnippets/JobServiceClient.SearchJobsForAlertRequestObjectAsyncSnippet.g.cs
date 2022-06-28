@@ -18,6 +18,7 @@ namespace Google.Cloud.Talent.V4.Snippets
 {
     // [START jobs_v4_generated_JobService_SearchJobsForAlert_async]
     using Google.Cloud.Talent.V4;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedJobServiceClientSnippets
@@ -50,6 +51,8 @@ namespace Google.Cloud.Talent.V4.Snippets
                 OrderBy = "",
                 DiversificationLevel = SearchJobsRequest.Types.DiversificationLevel.Unspecified,
                 CustomRankingInfo = new SearchJobsRequest.Types.CustomRankingInfo(),
+                EnableDebugInfo = false,
+                MendelDebugInput = new Any(),
                 KeywordMatchMode = SearchJobsRequest.Types.KeywordMatchMode.Unspecified,
             };
             // Make the request
