@@ -1,5 +1,9 @@
 # Version history
 
+## Version 3.0.0, released 2022-06-29
+
+No API surface changes since 3.0.0-beta01. (See 3.0.0-beta01 release notes for details.)
+
 ## Version 3.0.0-beta01, released 2022-06-09
 
 This is the first version of this package to depend on GAX v4.
