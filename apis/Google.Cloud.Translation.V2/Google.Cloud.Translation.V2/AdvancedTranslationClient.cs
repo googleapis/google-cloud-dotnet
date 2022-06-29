@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,7 +15,6 @@
 using Google.Api.Gax;
 using Google.Api.Gax.Rest;
 using Google.Apis.Auth.OAuth2;
-using Google.Apis.Services;
 using Google.Apis.Translate.v2;
 using System;
 using System.Collections.Generic;
@@ -310,13 +309,30 @@ namespace Google.Cloud.Translation.V2
         }
 
         /// <summary>
+        /// Asynchronously creates an <see cref="AdvancedTranslationClient"/> using application default credentials.
+        /// For any non-default values, please use <see cref="AdvancedTranslationClientBuilder"/>.
+        /// </summary>
+        /// <returns>The task representing the created <see cref="AdvancedTranslationClient"/>.</returns>
+        public static Task<AdvancedTranslationClient> CreateAsync() => new AdvancedTranslationClientBuilder().BuildAsync();
+
+        /// <summary>
+        /// Synchronously creates a n<see cref="AdvancedTranslationClient"/> using application default credentials.
+        /// For any non-default values, please use <see cref="AdvancedTranslationClientBuilder"/>.
+        /// </summary>
+        public static AdvancedTranslationClient Create() => new AdvancedTranslationClientBuilder().Build();
+
+        /// <summary>
         /// Asynchronously creates a <see cref="AdvancedTranslationClient"/>, using application default credentials if
         /// no credentials are specified.
         /// </summary>
         /// <remarks>
-        /// The credentials are scoped as necessary.
+        /// If a credential is supplied, the default scopes are applied to it (for credential types that support scoping),
+        /// overriding any existing scopes in the credentials. To use scoped credentials without any modifications, create
+        /// a <see cref="AdvancedTranslationClientBuilder"/> and set the <see cref="ClientBuilderBase{TClient}.Credential"/> property.
         /// </remarks>
-        /// <param name="credential">Optional <see cref="GoogleCredential"/>.</param>
+        /// <param name="credential">Optional <see cref="GoogleCredential"/>. If this is non-null, default scopes are applied to it
+        /// (for credential types that support scoping), overriding any existing scopes in the credentials. To use scoped credentials without any modifications, create
+        /// a <see cref="AdvancedTranslationClientBuilder"/> and set the <see cref="ClientBuilderBase{TClient}.Credential"/> property.</param>
         /// <param name="model">The default translation model to use. Defaults to null, indicating that by default no model is specified in requests.</param>
         /// <returns>The task representing the created <see cref="AdvancedTranslationClient"/>.</returns>
         public static Task<AdvancedTranslationClient> CreateAsync(GoogleCredential credential = null, string model = null) =>
@@ -348,9 +364,13 @@ namespace Google.Cloud.Translation.V2
         /// no credentials are specified.
         /// </summary>
         /// <remarks>
-        /// The credentials are scoped as necessary.
+        /// If a credential is supplied, the default scopes are applied to it (for credential types that support scoping),
+        /// overriding any existing scopes in the credentials. To use scoped credentials without any modifications, create
+        /// a <see cref="AdvancedTranslationClientBuilder"/> and set the <see cref="ClientBuilderBase{TClient}.Credential"/> property.
         /// </remarks>
-        /// <param name="credential">Optional <see cref="GoogleCredential"/>.</param>
+        /// <param name="credential">Optional <see cref="GoogleCredential"/>. If this is non-null, default scopes are applied to it
+        /// (for credential types that support scoping), overriding any existing scopes in the credentials. To use scoped credentials without any modifications, create
+        /// a <see cref="AdvancedTranslationClientBuilder"/> and set the <see cref="ClientBuilderBase{TClient}.Credential"/> property.</param>
         /// <param name="model">The default translation model to use. Defaults to null, indicating that by default no model is specified in requests.</param>
         /// <returns>The created <see cref="AdvancedTranslationClient"/>.</returns>
         public static AdvancedTranslationClient Create(GoogleCredential credential = null, string model = null) =>
