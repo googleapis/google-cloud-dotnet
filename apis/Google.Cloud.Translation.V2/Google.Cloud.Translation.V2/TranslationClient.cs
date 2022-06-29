@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,7 +15,6 @@
 using Google.Api.Gax;
 using Google.Api.Gax.Rest;
 using Google.Apis.Auth.OAuth2;
-using Google.Apis.Services;
 using Google.Apis.Translate.v2;
 using System;
 using System.Collections.Generic;
@@ -313,13 +312,30 @@ namespace Google.Cloud.Translation.V2
         }
 
         /// <summary>
+        /// Asynchronously creates a <see cref="TranslationClient"/> using application default credentials.
+        /// For any non-default values, please use <see cref="TranslationClientBuilder"/>.
+        /// </summary>
+        /// <returns>The task representing the created <see cref="TranslationClient"/>.</returns>
+        public static Task<TranslationClient> CreateAsync() => new TranslationClientBuilder().BuildAsync();
+
+        /// <summary>
+        /// Synchronously creates a <see cref="TranslationClient"/> using application default credentials.
+        /// For any non-default values, please use <see cref="TranslationClientBuilder"/>.
+        /// </summary>
+        public static TranslationClient Create() => new TranslationClientBuilder().Build();
+
+        /// <summary>
         /// Asynchronously creates a <see cref="TranslationClient"/>, using application default credentials if
         /// no credentials are specified.
         /// </summary>
         /// <remarks>
-        /// The credentials are scoped as necessary.
+        /// If a credential is supplied, the default scopes are applied to it (for credential types that support scoping),
+        /// overriding any existing scopes in the credentials. To use scoped credentials without any modifications, create
+        /// a <see cref="TranslationClientBuilder"/> and set the <see cref="ClientBuilderBase{TClient}.Credential"/> property.
         /// </remarks>
-        /// <param name="credential">Optional <see cref="GoogleCredential"/>.</param>
+        /// <param name="credential">Optional <see cref="GoogleCredential"/>. If this is non-null, default scopes are applied to it
+        /// (for credential types that support scoping), overriding any existing scopes in the credentials. To use scoped credentials without any modifications, create
+        /// a <see cref="TranslationClientBuilder"/> and set the <see cref="ClientBuilderBase{TClient}.Credential"/> property.</param>
         /// <param name="model">The default translation model to use. Defaults to <see cref="TranslationModel.ServiceDefault"/>.</param>
         /// <returns>The task representing the created <see cref="TranslationClient"/>.</returns>
         public static Task<TranslationClient> CreateAsync(GoogleCredential credential = null, TranslationModel model = TranslationModel.ServiceDefault) =>
@@ -329,17 +345,17 @@ namespace Google.Cloud.Translation.V2
                 TranslationModel = model
             }.BuildAsync();
 
-    /// <summary>
-    /// Creates a <see cref="TranslationClient"/> from an API key instead of using OAuth2 credentials.
-    /// </summary>
-    /// <remarks>
-    /// You are encouraged to use OAuth2 credentials where possible. This method is primarily provided to make the transition
-    /// from using API keys to OAuth2 credentials straightforward.
-    /// </remarks>
-    /// <param name="apiKey">API key to use. Must not be null.</param>
-    /// <param name="model">The default translation model to use. Defaults to <see cref="TranslationModel.ServiceDefault"/>.</param>
-    /// <returns>The created <see cref="TranslationClient"/>.</returns>
-    public static TranslationClient CreateFromApiKey(string apiKey, TranslationModel model = TranslationModel.ServiceDefault) =>
+        /// <summary>
+        /// Creates a <see cref="TranslationClient"/> from an API key instead of using OAuth2 credentials.
+        /// </summary>
+        /// <remarks>
+        /// You are encouraged to use OAuth2 credentials where possible. This method is primarily provided to make the transition
+        /// from using API keys to OAuth2 credentials straightforward.
+        /// </remarks>
+        /// <param name="apiKey">API key to use. Must not be null.</param>
+        /// <param name="model">The default translation model to use. Defaults to <see cref="TranslationModel.ServiceDefault"/>.</param>
+        /// <returns>The created <see cref="TranslationClient"/>.</returns>
+        public static TranslationClient CreateFromApiKey(string apiKey, TranslationModel model = TranslationModel.ServiceDefault) =>
             new TranslationClientBuilder
             {
                 ApiKey = GaxPreconditions.CheckNotNull(apiKey, nameof(apiKey)),
@@ -351,9 +367,13 @@ namespace Google.Cloud.Translation.V2
         /// no credentials are specified.
         /// </summary>
         /// <remarks>
-        /// The credentials are scoped as necessary.
+        /// If a credential is supplied, the default scopes are applied to it (for credential types that support scoping),
+        /// overriding any existing scopes in the credentials. To use scoped credentials without any modifications, create
+        /// a <see cref="TranslationClientBuilder"/> and set the <see cref="ClientBuilderBase{TClient}.Credential"/> property.
         /// </remarks>
-        /// <param name="credential">Optional <see cref="GoogleCredential"/>.</param>
+        /// <param name="credential">Optional <see cref="GoogleCredential"/>. If this is non-null, default scopes are applied to it
+        /// (for credential types that support scoping), overriding any existing scopes in the credentials. To use scoped credentials without any modifications, create
+        /// a <see cref="TranslationClientBuilder"/> and set the <see cref="ClientBuilderBase{TClient}.Credential"/> property.</param>
         /// <param name="model">The default translation model to use. Defaults to <see cref="TranslationModel.ServiceDefault"/>.</param>
         /// <returns>The created <see cref="TranslationClient"/>.</returns>
         public static TranslationClient Create(GoogleCredential credential = null, TranslationModel model = TranslationModel.ServiceDefault) =>
