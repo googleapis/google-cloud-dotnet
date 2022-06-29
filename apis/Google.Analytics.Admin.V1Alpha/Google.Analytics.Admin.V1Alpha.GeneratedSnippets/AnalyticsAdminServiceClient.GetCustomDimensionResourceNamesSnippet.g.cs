@@ -31,7 +31,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
             // Initialize request argument(s)
-            CustomDimensionName name = CustomDimensionName.FromProperty("[PROPERTY]");
+            CustomDimensionName name = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]");
             // Make the request
             CustomDimension response = analyticsAdminServiceClient.GetCustomDimension(name);
         }

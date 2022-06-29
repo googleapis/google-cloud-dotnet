@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -45,7 +46,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
                 ResolutionStatus = ResolutionStatus.Muted,
             };
             mockGrpcClient.Setup(x => x.GetGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null);
+            ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null, null);
             ErrorGroup response = client.GetGroup(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -70,7 +71,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
                 ResolutionStatus = ResolutionStatus.Muted,
             };
             mockGrpcClient.Setup(x => x.GetGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ErrorGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null);
+            ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null, null);
             ErrorGroup responseCallSettings = await client.GetGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ErrorGroup responseCancellationToken = await client.GetGroupAsync(request, st::CancellationToken.None);
@@ -97,7 +98,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
                 ResolutionStatus = ResolutionStatus.Muted,
             };
             mockGrpcClient.Setup(x => x.GetGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null);
+            ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null, null);
             ErrorGroup response = client.GetGroup(request.GroupName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -122,7 +123,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
                 ResolutionStatus = ResolutionStatus.Muted,
             };
             mockGrpcClient.Setup(x => x.GetGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ErrorGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null);
+            ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null, null);
             ErrorGroup responseCallSettings = await client.GetGroupAsync(request.GroupName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ErrorGroup responseCancellationToken = await client.GetGroupAsync(request.GroupName, st::CancellationToken.None);
@@ -149,7 +150,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
                 ResolutionStatus = ResolutionStatus.Muted,
             };
             mockGrpcClient.Setup(x => x.GetGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null);
+            ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null, null);
             ErrorGroup response = client.GetGroup(request.GroupNameAsErrorGroupName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -174,7 +175,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
                 ResolutionStatus = ResolutionStatus.Muted,
             };
             mockGrpcClient.Setup(x => x.GetGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ErrorGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null);
+            ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null, null);
             ErrorGroup responseCallSettings = await client.GetGroupAsync(request.GroupNameAsErrorGroupName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ErrorGroup responseCancellationToken = await client.GetGroupAsync(request.GroupNameAsErrorGroupName, st::CancellationToken.None);
@@ -201,7 +202,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
                 ResolutionStatus = ResolutionStatus.Muted,
             };
             mockGrpcClient.Setup(x => x.UpdateGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null);
+            ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null, null);
             ErrorGroup response = client.UpdateGroup(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -226,7 +227,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
                 ResolutionStatus = ResolutionStatus.Muted,
             };
             mockGrpcClient.Setup(x => x.UpdateGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ErrorGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null);
+            ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null, null);
             ErrorGroup responseCallSettings = await client.UpdateGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ErrorGroup responseCancellationToken = await client.UpdateGroupAsync(request, st::CancellationToken.None);
@@ -253,7 +254,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
                 ResolutionStatus = ResolutionStatus.Muted,
             };
             mockGrpcClient.Setup(x => x.UpdateGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null);
+            ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null, null);
             ErrorGroup response = client.UpdateGroup(request.Group);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -278,7 +279,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
                 ResolutionStatus = ResolutionStatus.Muted,
             };
             mockGrpcClient.Setup(x => x.UpdateGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ErrorGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null);
+            ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null, null);
             ErrorGroup responseCallSettings = await client.UpdateGroupAsync(request.Group, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ErrorGroup responseCancellationToken = await client.UpdateGroupAsync(request.Group, st::CancellationToken.None);

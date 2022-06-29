@@ -96,6 +96,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
   /// Data format for input or output data.
   /// </summary>
   public enum DataFormat {
+    /// <summary>
+    /// Data format is unspecified.
+    /// </summary>
     [pbr::OriginalName("DATA_FORMAT_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
     /// Avro is a standard open source row based file format.
@@ -213,7 +216,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     public const int DataFormatFieldNumber = 3;
     private global::Google.Cloud.BigQuery.Storage.V1.DataFormat dataFormat_ = global::Google.Cloud.BigQuery.Storage.V1.DataFormat.Unspecified;
     /// <summary>
-    /// Immutable. Data format of the output data.
+    /// Immutable. Data format of the output data. DATA_FORMAT_UNSPECIFIED not supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

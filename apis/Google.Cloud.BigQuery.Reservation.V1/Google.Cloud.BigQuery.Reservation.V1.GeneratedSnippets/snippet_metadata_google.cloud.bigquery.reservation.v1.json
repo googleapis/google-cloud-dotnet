@@ -2690,6 +2690,110 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_UpdateAssignment_sync",
+      "title": "UpdateAssignmentRequestObject",
+      "description": "Snippet for UpdateAssignment",
+      "file": "ReservationServiceClient.UpdateAssignmentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAssignment",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.UpdateAssignment",
+        "resultType": "Google.Cloud.BigQuery.Reservation.V1.Assignment",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAssignment",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.UpdateAssignment",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_UpdateAssignment_async",
+      "title": "UpdateAssignmentRequestObjectAsync",
+      "description": "Snippet for UpdateAssignmentAsync",
+      "file": "ReservationServiceClient.UpdateAssignmentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAssignmentAsync",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.UpdateAssignmentAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.Assignment>",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAssignment",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.UpdateAssignment",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_UpdateAssignment_sync_flattened",
+      "title": "UpdateAssignment",
+      "description": "Snippet for UpdateAssignment",
+      "file": "ReservationServiceClient.UpdateAssignmentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAssignment",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.UpdateAssignment",
+        "resultType": "Google.Cloud.BigQuery.Reservation.V1.Assignment",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAssignment",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.UpdateAssignment",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_UpdateAssignment_async_flattened",
+      "title": "UpdateAssignmentAsync",
+      "description": "Snippet for UpdateAssignmentAsync",
+      "file": "ReservationServiceClient.UpdateAssignmentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAssignmentAsync",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.UpdateAssignmentAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.Assignment>",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAssignment",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.UpdateAssignment",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "bigqueryreservation_v1_generated_ReservationService_GetBiReservation_sync",
       "title": "GetBiReservationRequestObject",
       "description": "Snippet for GetBiReservation",

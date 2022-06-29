@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gcbcv = Google.Cloud.Bigtable.Common.V2;
@@ -39,7 +40,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateTableRequest request = new CreateTableRequest
             {
-                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                ParentAsInstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 TableId = "table_idde1e5ba1",
                 Table = new Table(),
                 InitialSplits =
@@ -68,7 +69,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 RestoreInfo = new RestoreInfo(),
             };
             mockGrpcClient.Setup(x => x.CreateTable(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             Table response = client.CreateTable(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -81,7 +82,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateTableRequest request = new CreateTableRequest
             {
-                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                ParentAsInstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 TableId = "table_idde1e5ba1",
                 Table = new Table(),
                 InitialSplits =
@@ -110,7 +111,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 RestoreInfo = new RestoreInfo(),
             };
             mockGrpcClient.Setup(x => x.CreateTableAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Table>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             Table responseCallSettings = await client.CreateTableAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Table responseCancellationToken = await client.CreateTableAsync(request, st::CancellationToken.None);
@@ -125,7 +126,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateTableRequest request = new CreateTableRequest
             {
-                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                ParentAsInstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 TableId = "table_idde1e5ba1",
                 Table = new Table(),
             };
@@ -150,7 +151,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 RestoreInfo = new RestoreInfo(),
             };
             mockGrpcClient.Setup(x => x.CreateTable(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             Table response = client.CreateTable(request.Parent, request.TableId, request.Table);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -163,7 +164,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateTableRequest request = new CreateTableRequest
             {
-                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                ParentAsInstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 TableId = "table_idde1e5ba1",
                 Table = new Table(),
             };
@@ -188,7 +189,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 RestoreInfo = new RestoreInfo(),
             };
             mockGrpcClient.Setup(x => x.CreateTableAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Table>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             Table responseCallSettings = await client.CreateTableAsync(request.Parent, request.TableId, request.Table, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Table responseCancellationToken = await client.CreateTableAsync(request.Parent, request.TableId, request.Table, st::CancellationToken.None);
@@ -203,7 +204,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateTableRequest request = new CreateTableRequest
             {
-                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                ParentAsInstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 TableId = "table_idde1e5ba1",
                 Table = new Table(),
             };
@@ -228,7 +229,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 RestoreInfo = new RestoreInfo(),
             };
             mockGrpcClient.Setup(x => x.CreateTable(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             Table response = client.CreateTable(request.ParentAsInstanceName, request.TableId, request.Table);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -241,7 +242,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateTableRequest request = new CreateTableRequest
             {
-                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                ParentAsInstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 TableId = "table_idde1e5ba1",
                 Table = new Table(),
             };
@@ -266,7 +267,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 RestoreInfo = new RestoreInfo(),
             };
             mockGrpcClient.Setup(x => x.CreateTableAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Table>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             Table responseCallSettings = await client.CreateTableAsync(request.ParentAsInstanceName, request.TableId, request.Table, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Table responseCancellationToken = await client.CreateTableAsync(request.ParentAsInstanceName, request.TableId, request.Table, st::CancellationToken.None);
@@ -305,7 +306,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 RestoreInfo = new RestoreInfo(),
             };
             mockGrpcClient.Setup(x => x.GetTable(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             Table response = client.GetTable(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -342,7 +343,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 RestoreInfo = new RestoreInfo(),
             };
             mockGrpcClient.Setup(x => x.GetTableAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Table>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             Table responseCallSettings = await client.GetTableAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Table responseCancellationToken = await client.GetTableAsync(request, st::CancellationToken.None);
@@ -380,7 +381,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 RestoreInfo = new RestoreInfo(),
             };
             mockGrpcClient.Setup(x => x.GetTable(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             Table response = client.GetTable(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -416,7 +417,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 RestoreInfo = new RestoreInfo(),
             };
             mockGrpcClient.Setup(x => x.GetTableAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Table>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             Table responseCallSettings = await client.GetTableAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Table responseCancellationToken = await client.GetTableAsync(request.Name, st::CancellationToken.None);
@@ -454,7 +455,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 RestoreInfo = new RestoreInfo(),
             };
             mockGrpcClient.Setup(x => x.GetTable(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             Table response = client.GetTable(request.TableName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -490,7 +491,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 RestoreInfo = new RestoreInfo(),
             };
             mockGrpcClient.Setup(x => x.GetTableAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Table>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             Table responseCallSettings = await client.GetTableAsync(request.TableName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Table responseCancellationToken = await client.GetTableAsync(request.TableName, st::CancellationToken.None);
@@ -509,7 +510,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTable(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteTable(request);
             mockGrpcClient.VerifyAll();
         }
@@ -525,7 +526,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTableAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteTableAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteTableAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -542,7 +543,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTable(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteTable(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -558,7 +559,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTableAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteTableAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteTableAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -575,7 +576,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTable(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteTable(request.TableName);
             mockGrpcClient.VerifyAll();
         }
@@ -591,7 +592,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTableAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteTableAsync(request.TableName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteTableAsync(request.TableName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -631,7 +632,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 RestoreInfo = new RestoreInfo(),
             };
             mockGrpcClient.Setup(x => x.ModifyColumnFamilies(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             Table response = client.ModifyColumnFamilies(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -671,7 +672,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 RestoreInfo = new RestoreInfo(),
             };
             mockGrpcClient.Setup(x => x.ModifyColumnFamiliesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Table>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             Table responseCallSettings = await client.ModifyColumnFamiliesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Table responseCancellationToken = await client.ModifyColumnFamiliesAsync(request, st::CancellationToken.None);
@@ -713,7 +714,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 RestoreInfo = new RestoreInfo(),
             };
             mockGrpcClient.Setup(x => x.ModifyColumnFamilies(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             Table response = client.ModifyColumnFamilies(request.Name, request.Modifications);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -753,7 +754,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 RestoreInfo = new RestoreInfo(),
             };
             mockGrpcClient.Setup(x => x.ModifyColumnFamiliesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Table>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             Table responseCallSettings = await client.ModifyColumnFamiliesAsync(request.Name, request.Modifications, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Table responseCancellationToken = await client.ModifyColumnFamiliesAsync(request.Name, request.Modifications, st::CancellationToken.None);
@@ -795,7 +796,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 RestoreInfo = new RestoreInfo(),
             };
             mockGrpcClient.Setup(x => x.ModifyColumnFamilies(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             Table response = client.ModifyColumnFamilies(request.TableName, request.Modifications);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -835,7 +836,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 RestoreInfo = new RestoreInfo(),
             };
             mockGrpcClient.Setup(x => x.ModifyColumnFamiliesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Table>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             Table responseCallSettings = await client.ModifyColumnFamiliesAsync(request.TableName, request.Modifications, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Table responseCancellationToken = await client.ModifyColumnFamiliesAsync(request.TableName, request.Modifications, st::CancellationToken.None);
@@ -856,7 +857,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DropRowRange(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             client.DropRowRange(request);
             mockGrpcClient.VerifyAll();
         }
@@ -874,7 +875,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DropRowRangeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             await client.DropRowRangeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DropRowRangeAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -894,7 +895,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 ConsistencyToken = "consistency_token7d99a6b3",
             };
             mockGrpcClient.Setup(x => x.GenerateConsistencyToken(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             GenerateConsistencyTokenResponse response = client.GenerateConsistencyToken(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -914,7 +915,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 ConsistencyToken = "consistency_token7d99a6b3",
             };
             mockGrpcClient.Setup(x => x.GenerateConsistencyTokenAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GenerateConsistencyTokenResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             GenerateConsistencyTokenResponse responseCallSettings = await client.GenerateConsistencyTokenAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GenerateConsistencyTokenResponse responseCancellationToken = await client.GenerateConsistencyTokenAsync(request, st::CancellationToken.None);
@@ -936,7 +937,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 ConsistencyToken = "consistency_token7d99a6b3",
             };
             mockGrpcClient.Setup(x => x.GenerateConsistencyToken(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             GenerateConsistencyTokenResponse response = client.GenerateConsistencyToken(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -956,7 +957,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 ConsistencyToken = "consistency_token7d99a6b3",
             };
             mockGrpcClient.Setup(x => x.GenerateConsistencyTokenAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GenerateConsistencyTokenResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             GenerateConsistencyTokenResponse responseCallSettings = await client.GenerateConsistencyTokenAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GenerateConsistencyTokenResponse responseCancellationToken = await client.GenerateConsistencyTokenAsync(request.Name, st::CancellationToken.None);
@@ -978,7 +979,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 ConsistencyToken = "consistency_token7d99a6b3",
             };
             mockGrpcClient.Setup(x => x.GenerateConsistencyToken(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             GenerateConsistencyTokenResponse response = client.GenerateConsistencyToken(request.TableName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -998,7 +999,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 ConsistencyToken = "consistency_token7d99a6b3",
             };
             mockGrpcClient.Setup(x => x.GenerateConsistencyTokenAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GenerateConsistencyTokenResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             GenerateConsistencyTokenResponse responseCallSettings = await client.GenerateConsistencyTokenAsync(request.TableName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GenerateConsistencyTokenResponse responseCancellationToken = await client.GenerateConsistencyTokenAsync(request.TableName, st::CancellationToken.None);
@@ -1018,7 +1019,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             CheckConsistencyResponse expectedResponse = new CheckConsistencyResponse { Consistent = false, };
             mockGrpcClient.Setup(x => x.CheckConsistency(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             CheckConsistencyResponse response = client.CheckConsistency(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1036,7 +1037,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             CheckConsistencyResponse expectedResponse = new CheckConsistencyResponse { Consistent = false, };
             mockGrpcClient.Setup(x => x.CheckConsistencyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CheckConsistencyResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             CheckConsistencyResponse responseCallSettings = await client.CheckConsistencyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CheckConsistencyResponse responseCancellationToken = await client.CheckConsistencyAsync(request, st::CancellationToken.None);
@@ -1056,7 +1057,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             CheckConsistencyResponse expectedResponse = new CheckConsistencyResponse { Consistent = false, };
             mockGrpcClient.Setup(x => x.CheckConsistency(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             CheckConsistencyResponse response = client.CheckConsistency(request.Name, request.ConsistencyToken);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1074,7 +1075,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             CheckConsistencyResponse expectedResponse = new CheckConsistencyResponse { Consistent = false, };
             mockGrpcClient.Setup(x => x.CheckConsistencyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CheckConsistencyResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             CheckConsistencyResponse responseCallSettings = await client.CheckConsistencyAsync(request.Name, request.ConsistencyToken, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CheckConsistencyResponse responseCancellationToken = await client.CheckConsistencyAsync(request.Name, request.ConsistencyToken, st::CancellationToken.None);
@@ -1094,7 +1095,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             CheckConsistencyResponse expectedResponse = new CheckConsistencyResponse { Consistent = false, };
             mockGrpcClient.Setup(x => x.CheckConsistency(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             CheckConsistencyResponse response = client.CheckConsistency(request.TableName, request.ConsistencyToken);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1112,7 +1113,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             CheckConsistencyResponse expectedResponse = new CheckConsistencyResponse { Consistent = false, };
             mockGrpcClient.Setup(x => x.CheckConsistencyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CheckConsistencyResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             CheckConsistencyResponse responseCallSettings = await client.CheckConsistencyAsync(request.TableName, request.ConsistencyToken, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CheckConsistencyResponse responseCancellationToken = await client.CheckConsistencyAsync(request.TableName, request.ConsistencyToken, st::CancellationToken.None);
@@ -1140,7 +1141,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetSnapshot(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             Snapshot response = client.GetSnapshot(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1166,7 +1167,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetSnapshotAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Snapshot>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             Snapshot responseCallSettings = await client.GetSnapshotAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Snapshot responseCancellationToken = await client.GetSnapshotAsync(request, st::CancellationToken.None);
@@ -1194,7 +1195,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetSnapshot(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             Snapshot response = client.GetSnapshot(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1220,7 +1221,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetSnapshotAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Snapshot>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             Snapshot responseCallSettings = await client.GetSnapshotAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Snapshot responseCancellationToken = await client.GetSnapshotAsync(request.Name, st::CancellationToken.None);
@@ -1248,7 +1249,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetSnapshot(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             Snapshot response = client.GetSnapshot(request.SnapshotName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1274,7 +1275,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetSnapshotAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Snapshot>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             Snapshot responseCallSettings = await client.GetSnapshotAsync(request.SnapshotName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Snapshot responseCancellationToken = await client.GetSnapshotAsync(request.SnapshotName, st::CancellationToken.None);
@@ -1293,7 +1294,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSnapshot(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteSnapshot(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1309,7 +1310,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSnapshotAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteSnapshotAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteSnapshotAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1326,7 +1327,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSnapshot(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteSnapshot(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -1342,7 +1343,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSnapshotAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteSnapshotAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteSnapshotAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1359,7 +1360,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSnapshot(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteSnapshot(request.SnapshotName);
             mockGrpcClient.VerifyAll();
         }
@@ -1375,7 +1376,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSnapshotAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteSnapshotAsync(request.SnapshotName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteSnapshotAsync(request.SnapshotName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1402,7 +1403,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 EncryptionInfo = new EncryptionInfo(),
             };
             mockGrpcClient.Setup(x => x.GetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             Backup response = client.GetBackup(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1429,7 +1430,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 EncryptionInfo = new EncryptionInfo(),
             };
             mockGrpcClient.Setup(x => x.GetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             Backup responseCallSettings = await client.GetBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Backup responseCancellationToken = await client.GetBackupAsync(request, st::CancellationToken.None);
@@ -1458,7 +1459,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 EncryptionInfo = new EncryptionInfo(),
             };
             mockGrpcClient.Setup(x => x.GetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             Backup response = client.GetBackup(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1485,7 +1486,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 EncryptionInfo = new EncryptionInfo(),
             };
             mockGrpcClient.Setup(x => x.GetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             Backup responseCallSettings = await client.GetBackupAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Backup responseCancellationToken = await client.GetBackupAsync(request.Name, st::CancellationToken.None);
@@ -1514,7 +1515,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 EncryptionInfo = new EncryptionInfo(),
             };
             mockGrpcClient.Setup(x => x.GetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             Backup response = client.GetBackup(request.BackupName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1541,7 +1542,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 EncryptionInfo = new EncryptionInfo(),
             };
             mockGrpcClient.Setup(x => x.GetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             Backup responseCallSettings = await client.GetBackupAsync(request.BackupName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Backup responseCancellationToken = await client.GetBackupAsync(request.BackupName, st::CancellationToken.None);
@@ -1571,7 +1572,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 EncryptionInfo = new EncryptionInfo(),
             };
             mockGrpcClient.Setup(x => x.UpdateBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             Backup response = client.UpdateBackup(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1599,7 +1600,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 EncryptionInfo = new EncryptionInfo(),
             };
             mockGrpcClient.Setup(x => x.UpdateBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             Backup responseCallSettings = await client.UpdateBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Backup responseCancellationToken = await client.UpdateBackupAsync(request, st::CancellationToken.None);
@@ -1629,7 +1630,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 EncryptionInfo = new EncryptionInfo(),
             };
             mockGrpcClient.Setup(x => x.UpdateBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             Backup response = client.UpdateBackup(request.Backup, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1657,7 +1658,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 EncryptionInfo = new EncryptionInfo(),
             };
             mockGrpcClient.Setup(x => x.UpdateBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             Backup responseCallSettings = await client.UpdateBackupAsync(request.Backup, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Backup responseCancellationToken = await client.UpdateBackupAsync(request.Backup, request.UpdateMask, st::CancellationToken.None);
@@ -1676,7 +1677,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteBackup(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1692,7 +1693,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteBackupAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1709,7 +1710,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteBackup(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -1725,7 +1726,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteBackupAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteBackupAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1742,7 +1743,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteBackup(request.BackupName);
             mockGrpcClient.VerifyAll();
         }
@@ -1758,7 +1759,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteBackupAsync(request.BackupName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteBackupAsync(request.BackupName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1788,7 +1789,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.GetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1818,7 +1819,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request, st::CancellationToken.None);
@@ -1849,7 +1850,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.GetIamPolicy(request.Resource);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1878,7 +1879,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request.Resource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request.Resource, st::CancellationToken.None);
@@ -1909,7 +1910,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.GetIamPolicy(request.ResourceAsResourceName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1938,7 +1939,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request.ResourceAsResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request.ResourceAsResourceName, st::CancellationToken.None);
@@ -1971,7 +1972,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.SetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2002,7 +2003,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request, st::CancellationToken.None);
@@ -2034,7 +2035,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.SetIamPolicy(request.Resource, request.Policy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2064,7 +2065,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request.Resource, request.Policy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request.Resource, request.Policy, st::CancellationToken.None);
@@ -2096,7 +2097,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.SetIamPolicy(request.ResourceAsResourceName, request.Policy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2126,7 +2127,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request.ResourceAsResourceName, request.Policy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request.ResourceAsResourceName, request.Policy, st::CancellationToken.None);
@@ -2155,7 +2156,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2182,7 +2183,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request, st::CancellationToken.None);
@@ -2211,7 +2212,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request.Resource, request.Permissions);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2238,7 +2239,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request.Resource, request.Permissions, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request.Resource, request.Permissions, st::CancellationToken.None);
@@ -2267,7 +2268,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request.ResourceAsResourceName, request.Permissions);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2294,7 +2295,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request.ResourceAsResourceName, request.Permissions, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request.ResourceAsResourceName, request.Permissions, st::CancellationToken.None);

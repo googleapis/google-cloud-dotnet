@@ -14,14 +14,16 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -59,6 +61,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             ListContinuousTestResultsSettings = existing.ListContinuousTestResultsSettings;
             DeployFlowSettings = existing.DeployFlowSettings;
             DeployFlowOperationsSettings = existing.DeployFlowOperationsSettings.Clone();
+            LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
 
@@ -300,6 +303,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
 
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="EnvironmentsSettings"/> object.</returns>
         public EnvironmentsSettings Clone() => new EnvironmentsSettings(this);
@@ -314,9 +322,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         public EnvironmentsSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public EnvironmentsClientBuilder()
+        public EnvironmentsClientBuilder() : base(EnvironmentsClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = EnvironmentsClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref EnvironmentsClient client);
@@ -343,29 +350,18 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return EnvironmentsClient.Create(callInvoker, Settings);
+            return EnvironmentsClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<EnvironmentsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return EnvironmentsClient.Create(callInvoker, Settings);
+            return EnvironmentsClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => EnvironmentsClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => EnvironmentsClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => EnvironmentsClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>Environments client wrapper, for convenient use.</summary>
@@ -394,19 +390,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             "https://www.googleapis.com/auth/dialogflow",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Environments.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="EnvironmentsClient"/> using the default credentials, endpoint and
@@ -433,8 +420,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="EnvironmentsSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="EnvironmentsClient"/>.</returns>
-        internal static EnvironmentsClient Create(grpccore::CallInvoker callInvoker, EnvironmentsSettings settings = null)
+        internal static EnvironmentsClient Create(grpccore::CallInvoker callInvoker, EnvironmentsSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -443,7 +431,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             Environments.EnvironmentsClient grpcClient = new Environments.EnvironmentsClient(callInvoker);
-            return new EnvironmentsClientImpl(grpcClient, settings);
+            return new EnvironmentsClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -461,6 +449,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>The underlying gRPC Environments client</summary>
         public virtual Environments.EnvironmentsClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Returns the list of all environments in the specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
@@ -1621,40 +1612,42 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="EnvironmentsSettings"/> used within this client.</param>
-        public EnvironmentsClientImpl(Environments.EnvironmentsClient grpcClient, EnvironmentsSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public EnvironmentsClientImpl(Environments.EnvironmentsClient grpcClient, EnvironmentsSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             EnvironmentsSettings effectiveSettings = settings ?? EnvironmentsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateEnvironmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateEnvironmentOperationsSettings);
-            UpdateEnvironmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateEnvironmentOperationsSettings);
-            RunContinuousTestOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RunContinuousTestOperationsSettings);
-            DeployFlowOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeployFlowOperationsSettings);
-            _callListEnvironments = clientHelper.BuildApiCall<ListEnvironmentsRequest, ListEnvironmentsResponse>(grpcClient.ListEnvironmentsAsync, grpcClient.ListEnvironments, effectiveSettings.ListEnvironmentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateEnvironmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateEnvironmentOperationsSettings, logger);
+            UpdateEnvironmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateEnvironmentOperationsSettings, logger);
+            RunContinuousTestOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RunContinuousTestOperationsSettings, logger);
+            DeployFlowOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeployFlowOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
+            _callListEnvironments = clientHelper.BuildApiCall<ListEnvironmentsRequest, ListEnvironmentsResponse>("ListEnvironments", grpcClient.ListEnvironmentsAsync, grpcClient.ListEnvironments, effectiveSettings.ListEnvironmentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListEnvironments);
             Modify_ListEnvironmentsApiCall(ref _callListEnvironments);
-            _callGetEnvironment = clientHelper.BuildApiCall<GetEnvironmentRequest, Environment>(grpcClient.GetEnvironmentAsync, grpcClient.GetEnvironment, effectiveSettings.GetEnvironmentSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetEnvironment = clientHelper.BuildApiCall<GetEnvironmentRequest, Environment>("GetEnvironment", grpcClient.GetEnvironmentAsync, grpcClient.GetEnvironment, effectiveSettings.GetEnvironmentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetEnvironment);
             Modify_GetEnvironmentApiCall(ref _callGetEnvironment);
-            _callCreateEnvironment = clientHelper.BuildApiCall<CreateEnvironmentRequest, lro::Operation>(grpcClient.CreateEnvironmentAsync, grpcClient.CreateEnvironment, effectiveSettings.CreateEnvironmentSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateEnvironment = clientHelper.BuildApiCall<CreateEnvironmentRequest, lro::Operation>("CreateEnvironment", grpcClient.CreateEnvironmentAsync, grpcClient.CreateEnvironment, effectiveSettings.CreateEnvironmentSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateEnvironment);
             Modify_CreateEnvironmentApiCall(ref _callCreateEnvironment);
-            _callUpdateEnvironment = clientHelper.BuildApiCall<UpdateEnvironmentRequest, lro::Operation>(grpcClient.UpdateEnvironmentAsync, grpcClient.UpdateEnvironment, effectiveSettings.UpdateEnvironmentSettings).WithGoogleRequestParam("environment.name", request => request.Environment?.Name);
+            _callUpdateEnvironment = clientHelper.BuildApiCall<UpdateEnvironmentRequest, lro::Operation>("UpdateEnvironment", grpcClient.UpdateEnvironmentAsync, grpcClient.UpdateEnvironment, effectiveSettings.UpdateEnvironmentSettings).WithGoogleRequestParam("environment.name", request => request.Environment?.Name);
             Modify_ApiCall(ref _callUpdateEnvironment);
             Modify_UpdateEnvironmentApiCall(ref _callUpdateEnvironment);
-            _callDeleteEnvironment = clientHelper.BuildApiCall<DeleteEnvironmentRequest, wkt::Empty>(grpcClient.DeleteEnvironmentAsync, grpcClient.DeleteEnvironment, effectiveSettings.DeleteEnvironmentSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteEnvironment = clientHelper.BuildApiCall<DeleteEnvironmentRequest, wkt::Empty>("DeleteEnvironment", grpcClient.DeleteEnvironmentAsync, grpcClient.DeleteEnvironment, effectiveSettings.DeleteEnvironmentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteEnvironment);
             Modify_DeleteEnvironmentApiCall(ref _callDeleteEnvironment);
-            _callLookupEnvironmentHistory = clientHelper.BuildApiCall<LookupEnvironmentHistoryRequest, LookupEnvironmentHistoryResponse>(grpcClient.LookupEnvironmentHistoryAsync, grpcClient.LookupEnvironmentHistory, effectiveSettings.LookupEnvironmentHistorySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callLookupEnvironmentHistory = clientHelper.BuildApiCall<LookupEnvironmentHistoryRequest, LookupEnvironmentHistoryResponse>("LookupEnvironmentHistory", grpcClient.LookupEnvironmentHistoryAsync, grpcClient.LookupEnvironmentHistory, effectiveSettings.LookupEnvironmentHistorySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callLookupEnvironmentHistory);
             Modify_LookupEnvironmentHistoryApiCall(ref _callLookupEnvironmentHistory);
-            _callRunContinuousTest = clientHelper.BuildApiCall<RunContinuousTestRequest, lro::Operation>(grpcClient.RunContinuousTestAsync, grpcClient.RunContinuousTest, effectiveSettings.RunContinuousTestSettings).WithGoogleRequestParam("environment", request => request.Environment);
+            _callRunContinuousTest = clientHelper.BuildApiCall<RunContinuousTestRequest, lro::Operation>("RunContinuousTest", grpcClient.RunContinuousTestAsync, grpcClient.RunContinuousTest, effectiveSettings.RunContinuousTestSettings).WithGoogleRequestParam("environment", request => request.Environment);
             Modify_ApiCall(ref _callRunContinuousTest);
             Modify_RunContinuousTestApiCall(ref _callRunContinuousTest);
-            _callListContinuousTestResults = clientHelper.BuildApiCall<ListContinuousTestResultsRequest, ListContinuousTestResultsResponse>(grpcClient.ListContinuousTestResultsAsync, grpcClient.ListContinuousTestResults, effectiveSettings.ListContinuousTestResultsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListContinuousTestResults = clientHelper.BuildApiCall<ListContinuousTestResultsRequest, ListContinuousTestResultsResponse>("ListContinuousTestResults", grpcClient.ListContinuousTestResultsAsync, grpcClient.ListContinuousTestResults, effectiveSettings.ListContinuousTestResultsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListContinuousTestResults);
             Modify_ListContinuousTestResultsApiCall(ref _callListContinuousTestResults);
-            _callDeployFlow = clientHelper.BuildApiCall<DeployFlowRequest, lro::Operation>(grpcClient.DeployFlowAsync, grpcClient.DeployFlow, effectiveSettings.DeployFlowSettings).WithGoogleRequestParam("environment", request => request.Environment);
+            _callDeployFlow = clientHelper.BuildApiCall<DeployFlowRequest, lro::Operation>("DeployFlow", grpcClient.DeployFlowAsync, grpcClient.DeployFlow, effectiveSettings.DeployFlowSettings).WithGoogleRequestParam("environment", request => request.Environment);
             Modify_ApiCall(ref _callDeployFlow);
             Modify_DeployFlowApiCall(ref _callDeployFlow);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
@@ -1684,6 +1677,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>The underlying gRPC Environments client</summary>
         public override Environments.EnvironmentsClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
 
         partial void Modify_ListEnvironmentsRequest(ref ListEnvironmentsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2039,6 +2035,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class Environments
+    {
+        public partial class EnvironmentsClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
         }
     }
 }

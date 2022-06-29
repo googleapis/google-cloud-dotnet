@@ -215,5 +215,65 @@ namespace Google.Cloud.Spanner.Data.Tests
             builder = builder.WithDatabase(null);
             Assert.Null(builder.SpannerDatabase);
         }
+
+        [Fact]
+        public void ClrToSpannerTypeDefaultMappings()
+        {
+            // Defaults - When property is not set.
+            var builder = new SpannerConnectionStringBuilder();
+            Assert.True(string.IsNullOrEmpty(builder.ClrToSpannerTypeDefaultMappings)); 
+            
+            // Explicitly set valid type mapping.
+            builder = new SpannerConnectionStringBuilder("ClrToSpannerTypeDefaultMappings=DecimalToNumeric,DateTimeToDate");
+            // DbConnectionStringBuilder lower-cases keywords, annoyingly.
+            Assert.Equal("clrtospannertypedefaultmappings=DecimalToNumeric,DateTimeToDate", builder.ToString());
+
+            // Explicitly set valid type mappings. Latest should be reflected.
+            // Also check that strings  are case insensitive.
+            builder.ClrToSpannerTypeDefaultMappings = "decimalTofloat64,dateTimetotimestamp";
+            // DbConnectionStringBuilder lower-cases keywords, annoyingly.
+            Assert.Equal("clrtospannertypedefaultmappings=decimalTofloat64,dateTimetotimestamp", builder.ToString());
+        }
+
+        [Fact]
+        public void SpannerToClrTypeDefaultMappings()
+        {
+            // Defaults - When property is not set.
+            var builder = new SpannerConnectionStringBuilder();
+            Assert.True(string.IsNullOrEmpty(builder.SpannerToClrTypeDefaultMappings));
+
+            // Explicitly set valid type mappings.
+            builder = new SpannerConnectionStringBuilder("SpannerToClrTypeDefaultMappings=DateToDateTime");
+            // DbConnectionStringBuilder lower-cases keywords, annoyingly.
+            Assert.Equal("spannertoclrtypedefaultmappings=DateToDateTime", builder.ToString());
+
+            // Explicitly set valid type mappings. Latest should be reflected.
+            // Also check that strings  are case insensitive.
+            builder.SpannerToClrTypeDefaultMappings = "dateTospannerDate";
+            // DbConnectionStringBuilder lower-cases keywords, annoyingly.
+            Assert.Equal("spannertoclrtypedefaultmappings=dateTospannerDate", builder.ToString());
+        }
+
+        [Theory]        
+        [InlineData("DecimalToFloat64,DecimalToNumeric,DateTimeToDate")] // Multiple mappings for a type.
+        [InlineData("DecimalToFloat64,DecimalToPgNumeric,DateTimeToDate,DateTimeToTimestamp")] // Multiple mappings for a type.
+        [InlineData("DecimalToFloat64   ,DecimalToNumeric,DateTimeToDate")] // Multiple mappings and whitespace.       
+        [InlineData("DecimalToFloat64   ,  DateTimeToDate")] // Valid mapping with whitespace.
+        [InlineData("UseFloat64ForDecimal,DecimalToNumeric,DateTimeToDate")] // Invalid values.
+        public void BadClrToSpannerTypeDefaultMappingsThrows(string clrToSpannerTypeMappings)
+        {
+            Assert.Throws<ArgumentException>(() => new SpannerConnectionStringBuilder($"ClrToSpannerTypeDefaultMappings={clrToSpannerTypeMappings}"));            
+            Assert.Throws<ArgumentException>(() => new SpannerConnectionStringBuilder { ClrToSpannerTypeDefaultMappings = clrToSpannerTypeMappings });
+        }
+
+        [Theory]
+        [InlineData("DateToDateTime,DateToSpannerDate")] // Multiple mappings for a type.
+        [InlineData("  DateToDateTime  ,")] // Whitespace.   
+        [InlineData("UseDateToSpannerDate")] // Invalid value.
+        public void BadSpannerToClrTypeDefaultMappingsThrows(string spannerToClrTypeMappings)
+        {
+            Assert.Throws<ArgumentException>(() => new SpannerConnectionStringBuilder($"SpannerToClrTypeDefaultMappings={spannerToClrTypeMappings}"));
+            Assert.Throws<ArgumentException>(() => new SpannerConnectionStringBuilder { SpannerToClrTypeDefaultMappings = spannerToClrTypeMappings });
+        }
     }
 }

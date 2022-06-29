@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gagr = Google.Api.Gax.ResourceNames;
 using gcev = Google.Cloud.Eventarc.V1;
 
@@ -112,6 +113,30 @@ namespace Google.Cloud.Eventarc.V1
         {
             get => string.IsNullOrEmpty(Name) ? null : gcev::ChannelName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetProviderRequest
+    {
+        /// <summary>
+        /// <see cref="gcev::ProviderName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcev::ProviderName ProviderName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcev::ProviderName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListProvidersRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
         }
     }
 

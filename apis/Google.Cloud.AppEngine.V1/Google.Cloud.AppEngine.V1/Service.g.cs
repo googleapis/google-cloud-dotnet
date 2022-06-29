@@ -26,24 +26,27 @@ namespace Google.Cloud.AppEngine.V1 {
           string.Concat(
             "CiFnb29nbGUvYXBwZW5naW5lL3YxL3NlcnZpY2UucHJvdG8SE2dvb2dsZS5h",
             "cHBlbmdpbmUudjEaKmdvb2dsZS9hcHBlbmdpbmUvdjEvbmV0d29ya19zZXR0",
-            "aW5ncy5wcm90byKVAQoHU2VydmljZRIMCgRuYW1lGAEgASgJEgoKAmlkGAIg",
+            "aW5ncy5wcm90byL+AQoHU2VydmljZRIMCgRuYW1lGAEgASgJEgoKAmlkGAIg",
             "ASgJEjAKBXNwbGl0GAMgASgLMiEuZ29vZ2xlLmFwcGVuZ2luZS52MS5UcmFm",
-            "ZmljU3BsaXQSPgoQbmV0d29ya19zZXR0aW5ncxgGIAEoCzIkLmdvb2dsZS5h",
-            "cHBlbmdpbmUudjEuTmV0d29ya1NldHRpbmdzIoQCCgxUcmFmZmljU3BsaXQS",
-            "OwoIc2hhcmRfYnkYASABKA4yKS5nb29nbGUuYXBwZW5naW5lLnYxLlRyYWZm",
-            "aWNTcGxpdC5TaGFyZEJ5EkcKC2FsbG9jYXRpb25zGAIgAygLMjIuZ29vZ2xl",
-            "LmFwcGVuZ2luZS52MS5UcmFmZmljU3BsaXQuQWxsb2NhdGlvbnNFbnRyeRoy",
-            "ChBBbGxvY2F0aW9uc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
-            "AToCOAEiOgoHU2hhcmRCeRIPCgtVTlNQRUNJRklFRBAAEgoKBkNPT0tJRRAB",
-            "EgYKAklQEAISCgoGUkFORE9NEANCvgEKF2NvbS5nb29nbGUuYXBwZW5naW5l",
-            "LnYxQgxTZXJ2aWNlUHJvdG9QAVo8Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
-            "dG8vZ29vZ2xlYXBpcy9hcHBlbmdpbmUvdjE7YXBwZW5naW5lqgIZR29vZ2xl",
-            "LkNsb3VkLkFwcEVuZ2luZS5WMcoCGUdvb2dsZVxDbG91ZFxBcHBFbmdpbmVc",
-            "VjHqAhxHb29nbGU6OkNsb3VkOjpBcHBFbmdpbmU6OlYxYgZwcm90bzM="));
+            "ZmljU3BsaXQSOAoGbGFiZWxzGAQgAygLMiguZ29vZ2xlLmFwcGVuZ2luZS52",
+            "MS5TZXJ2aWNlLkxhYmVsc0VudHJ5Ej4KEG5ldHdvcmtfc2V0dGluZ3MYBiAB",
+            "KAsyJC5nb29nbGUuYXBwZW5naW5lLnYxLk5ldHdvcmtTZXR0aW5ncxotCgtM",
+            "YWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIoQC",
+            "CgxUcmFmZmljU3BsaXQSOwoIc2hhcmRfYnkYASABKA4yKS5nb29nbGUuYXBw",
+            "ZW5naW5lLnYxLlRyYWZmaWNTcGxpdC5TaGFyZEJ5EkcKC2FsbG9jYXRpb25z",
+            "GAIgAygLMjIuZ29vZ2xlLmFwcGVuZ2luZS52MS5UcmFmZmljU3BsaXQuQWxs",
+            "b2NhdGlvbnNFbnRyeRoyChBBbGxvY2F0aW9uc0VudHJ5EgsKA2tleRgBIAEo",
+            "CRINCgV2YWx1ZRgCIAEoAToCOAEiOgoHU2hhcmRCeRIPCgtVTlNQRUNJRklF",
+            "RBAAEgoKBkNPT0tJRRABEgYKAklQEAISCgoGUkFORE9NEANCvgEKF2NvbS5n",
+            "b29nbGUuYXBwZW5naW5lLnYxQgxTZXJ2aWNlUHJvdG9QAVo8Z29vZ2xlLmdv",
+            "bGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9hcHBlbmdpbmUvdjE7YXBw",
+            "ZW5naW5lqgIZR29vZ2xlLkNsb3VkLkFwcEVuZ2luZS5WMcoCGUdvb2dsZVxD",
+            "bG91ZFxBcHBFbmdpbmVcVjHqAhxHb29nbGU6OkNsb3VkOjpBcHBFbmdpbmU6",
+            "OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.AppEngine.V1.NetworkSettingsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppEngine.V1.Service), global::Google.Cloud.AppEngine.V1.Service.Parser, new[]{ "Name", "Id", "Split", "NetworkSettings" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppEngine.V1.Service), global::Google.Cloud.AppEngine.V1.Service.Parser, new[]{ "Name", "Id", "Split", "Labels", "NetworkSettings" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppEngine.V1.TrafficSplit), global::Google.Cloud.AppEngine.V1.TrafficSplit.Parser, new[]{ "ShardBy", "Allocations" }, null, new[]{ typeof(global::Google.Cloud.AppEngine.V1.TrafficSplit.Types.ShardBy) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
@@ -97,6 +100,7 @@ namespace Google.Cloud.AppEngine.V1 {
       name_ = other.name_;
       id_ = other.id_;
       split_ = other.split_ != null ? other.split_.Clone() : null;
+      labels_ = other.labels_.Clone();
       networkSettings_ = other.networkSettings_ != null ? other.networkSettings_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -159,6 +163,30 @@ namespace Google.Cloud.AppEngine.V1 {
       }
     }
 
+    /// <summary>Field number for the "labels" field.</summary>
+    public const int LabelsFieldNumber = 4;
+    private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 34);
+    private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// A set of labels to apply to this service. Labels are key/value pairs that
+    /// describe the service and all resources that belong to it (e.g.,
+    /// versions). The labels can be used to search and group resources, and are
+    /// propagated to the usage and billing reports, enabling fine-grain analysis
+    /// of costs. An example of using labels is to tag resources belonging to
+    /// different environments (e.g., "env=prod", "env=qa").
+    ///
+    /// &lt;p>Label keys and values can be no longer than 63 characters and can only
+    /// contain lowercase letters, numeric characters, underscores, dashes, and
+    /// international characters. Label keys must start with a lowercase letter
+    /// or an international character. Each service can have at most 32 labels.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> Labels {
+      get { return labels_; }
+    }
+
     /// <summary>Field number for the "network_settings" field.</summary>
     public const int NetworkSettingsFieldNumber = 6;
     private global::Google.Cloud.AppEngine.V1.NetworkSettings networkSettings_;
@@ -192,6 +220,7 @@ namespace Google.Cloud.AppEngine.V1 {
       if (Name != other.Name) return false;
       if (Id != other.Id) return false;
       if (!object.Equals(Split, other.Split)) return false;
+      if (!Labels.Equals(other.Labels)) return false;
       if (!object.Equals(NetworkSettings, other.NetworkSettings)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -203,6 +232,7 @@ namespace Google.Cloud.AppEngine.V1 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (split_ != null) hash ^= Split.GetHashCode();
+      hash ^= Labels.GetHashCode();
       if (networkSettings_ != null) hash ^= NetworkSettings.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -234,6 +264,7 @@ namespace Google.Cloud.AppEngine.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(Split);
       }
+      labels_.WriteTo(output, _map_labels_codec);
       if (networkSettings_ != null) {
         output.WriteRawTag(50);
         output.WriteMessage(NetworkSettings);
@@ -260,6 +291,7 @@ namespace Google.Cloud.AppEngine.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(Split);
       }
+      labels_.WriteTo(ref output, _map_labels_codec);
       if (networkSettings_ != null) {
         output.WriteRawTag(50);
         output.WriteMessage(NetworkSettings);
@@ -283,6 +315,7 @@ namespace Google.Cloud.AppEngine.V1 {
       if (split_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Split);
       }
+      size += labels_.CalculateSize(_map_labels_codec);
       if (networkSettings_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(NetworkSettings);
       }
@@ -310,6 +343,7 @@ namespace Google.Cloud.AppEngine.V1 {
         }
         Split.MergeFrom(other.Split);
       }
+      labels_.Add(other.labels_);
       if (other.networkSettings_ != null) {
         if (networkSettings_ == null) {
           NetworkSettings = new global::Google.Cloud.AppEngine.V1.NetworkSettings();
@@ -344,6 +378,10 @@ namespace Google.Cloud.AppEngine.V1 {
               Split = new global::Google.Cloud.AppEngine.V1.TrafficSplit();
             }
             input.ReadMessage(Split);
+            break;
+          }
+          case 34: {
+            labels_.AddEntriesFrom(input, _map_labels_codec);
             break;
           }
           case 50: {
@@ -381,6 +419,10 @@ namespace Google.Cloud.AppEngine.V1 {
               Split = new global::Google.Cloud.AppEngine.V1.TrafficSplit();
             }
             input.ReadMessage(Split);
+            break;
+          }
+          case 34: {
+            labels_.AddEntriesFrom(ref input, _map_labels_codec);
             break;
           }
           case 50: {

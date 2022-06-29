@@ -60,93 +60,99 @@ namespace Google.Cloud.AIPlatform.V1 {
             "VE9QUElORxADEg0KCVNVQ0NFRURFRBAEEg4KCklORkVBU0lCTEUQBTps6kFp",
             "Ch9haXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL1RyaWFsEkZwcm9qZWN0cy97",
             "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vc3R1ZGllcy97c3R1ZHl9",
-            "L3RyaWFscy97dHJpYWx9IqAYCglTdHVkeVNwZWMSagoZZGVjYXlfY3VydmVf",
+            "L3RyaWFscy97dHJpYWx9IsAaCglTdHVkeVNwZWMSagoZZGVjYXlfY3VydmVf",
             "c3RvcHBpbmdfc3BlYxgEIAEoCzJFLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
             "LnYxLlN0dWR5U3BlYy5EZWNheUN1cnZlQXV0b21hdGVkU3RvcHBpbmdTcGVj",
             "SAASawoebWVkaWFuX2F1dG9tYXRlZF9zdG9wcGluZ19zcGVjGAUgASgLMkEu",
             "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU3R1ZHlTcGVjLk1lZGlhbkF1",
-            "dG9tYXRlZFN0b3BwaW5nU3BlY0gAEkYKB21ldHJpY3MYASADKAsyMC5nb29n",
-            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5TdHVkeVNwZWMuTWV0cmljU3BlY0ID",
-            "4EECEkwKCnBhcmFtZXRlcnMYAiADKAsyMy5nb29nbGUuY2xvdWQuYWlwbGF0",
-            "Zm9ybS52MS5TdHVkeVNwZWMuUGFyYW1ldGVyU3BlY0ID4EECEkIKCWFsZ29y",
-            "aXRobRgDIAEoDjIvLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlN0dWR5",
-            "U3BlYy5BbGdvcml0aG0SUQoRb2JzZXJ2YXRpb25fbm9pc2UYBiABKA4yNi5n",
-            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5TdHVkeVNwZWMuT2JzZXJ2YXRp",
-            "b25Ob2lzZRJiChptZWFzdXJlbWVudF9zZWxlY3Rpb25fdHlwZRgHIAEoDjI+",
-            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlN0dWR5U3BlYy5NZWFzdXJl",
-            "bWVudFNlbGVjdGlvblR5cGUatQEKCk1ldHJpY1NwZWMSFgoJbWV0cmljX2lk",
-            "GAEgASgJQgPgQQISTAoEZ29hbBgCIAEoDjI5Lmdvb2dsZS5jbG91ZC5haXBs",
-            "YXRmb3JtLnYxLlN0dWR5U3BlYy5NZXRyaWNTcGVjLkdvYWxUeXBlQgPgQQIi",
-            "QQoIR29hbFR5cGUSGQoVR09BTF9UWVBFX1VOU1BFQ0lGSUVEEAASDAoITUFY",
-            "SU1JWkUQARIMCghNSU5JTUlaRRACGs0OCg1QYXJhbWV0ZXJTcGVjEmAKEWRv",
-            "dWJsZV92YWx1ZV9zcGVjGAIgASgLMkMuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
-            "cm0udjEuU3R1ZHlTcGVjLlBhcmFtZXRlclNwZWMuRG91YmxlVmFsdWVTcGVj",
-            "SAASYgoSaW50ZWdlcl92YWx1ZV9zcGVjGAMgASgLMkQuZ29vZ2xlLmNsb3Vk",
-            "LmFpcGxhdGZvcm0udjEuU3R1ZHlTcGVjLlBhcmFtZXRlclNwZWMuSW50ZWdl",
-            "clZhbHVlU3BlY0gAEmoKFmNhdGVnb3JpY2FsX3ZhbHVlX3NwZWMYBCABKAsy",
-            "SC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5TdHVkeVNwZWMuUGFyYW1l",
-            "dGVyU3BlYy5DYXRlZ29yaWNhbFZhbHVlU3BlY0gAEmQKE2Rpc2NyZXRlX3Zh",
-            "bHVlX3NwZWMYBSABKAsyRS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5T",
-            "dHVkeVNwZWMuUGFyYW1ldGVyU3BlYy5EaXNjcmV0ZVZhbHVlU3BlY0gAEhkK",
-            "DHBhcmFtZXRlcl9pZBgBIAEoCUID4EECElEKCnNjYWxlX3R5cGUYBiABKA4y",
-            "PS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5TdHVkeVNwZWMuUGFyYW1l",
-            "dGVyU3BlYy5TY2FsZVR5cGUScQobY29uZGl0aW9uYWxfcGFyYW1ldGVyX3Nw",
-            "ZWNzGAogAygLMkwuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU3R1ZHlT",
-            "cGVjLlBhcmFtZXRlclNwZWMuQ29uZGl0aW9uYWxQYXJhbWV0ZXJTcGVjGm8K",
-            "D0RvdWJsZVZhbHVlU3BlYxIWCgltaW5fdmFsdWUYASABKAFCA+BBAhIWCglt",
-            "YXhfdmFsdWUYAiABKAFCA+BBAhIaCg1kZWZhdWx0X3ZhbHVlGAQgASgBSACI",
-            "AQFCEAoOX2RlZmF1bHRfdmFsdWUacAoQSW50ZWdlclZhbHVlU3BlYxIWCglt",
-            "aW5fdmFsdWUYASABKANCA+BBAhIWCgltYXhfdmFsdWUYAiABKANCA+BBAhIa",
-            "Cg1kZWZhdWx0X3ZhbHVlGAQgASgDSACIAQFCEAoOX2RlZmF1bHRfdmFsdWUa",
-            "WQoUQ2F0ZWdvcmljYWxWYWx1ZVNwZWMSEwoGdmFsdWVzGAEgAygJQgPgQQIS",
-            "GgoNZGVmYXVsdF92YWx1ZRgDIAEoCUgAiAEBQhAKDl9kZWZhdWx0X3ZhbHVl",
-            "GlYKEURpc2NyZXRlVmFsdWVTcGVjEhMKBnZhbHVlcxgBIAMoAUID4EECEhoK",
-            "DWRlZmF1bHRfdmFsdWUYAyABKAFIAIgBAUIQCg5fZGVmYXVsdF92YWx1ZRqk",
-            "BQoYQ29uZGl0aW9uYWxQYXJhbWV0ZXJTcGVjEoUBChZwYXJlbnRfZGlzY3Jl",
-            "dGVfdmFsdWVzGAIgASgLMmMuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEu",
-            "U3R1ZHlTcGVjLlBhcmFtZXRlclNwZWMuQ29uZGl0aW9uYWxQYXJhbWV0ZXJT",
-            "cGVjLkRpc2NyZXRlVmFsdWVDb25kaXRpb25IABJ7ChFwYXJlbnRfaW50X3Zh",
-            "bHVlcxgDIAEoCzJeLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlN0dWR5",
-            "U3BlYy5QYXJhbWV0ZXJTcGVjLkNvbmRpdGlvbmFsUGFyYW1ldGVyU3BlYy5J",
-            "bnRWYWx1ZUNvbmRpdGlvbkgAEosBChlwYXJlbnRfY2F0ZWdvcmljYWxfdmFs",
-            "dWVzGAQgASgLMmYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU3R1ZHlT",
-            "cGVjLlBhcmFtZXRlclNwZWMuQ29uZGl0aW9uYWxQYXJhbWV0ZXJTcGVjLkNh",
-            "dGVnb3JpY2FsVmFsdWVDb25kaXRpb25IABJQCg5wYXJhbWV0ZXJfc3BlYxgB",
-            "IAEoCzIzLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlN0dWR5U3BlYy5Q",
-            "YXJhbWV0ZXJTcGVjQgPgQQIaLQoWRGlzY3JldGVWYWx1ZUNvbmRpdGlvbhIT",
-            "CgZ2YWx1ZXMYASADKAFCA+BBAhooChFJbnRWYWx1ZUNvbmRpdGlvbhITCgZ2",
-            "YWx1ZXMYASADKANCA+BBAhowChlDYXRlZ29yaWNhbFZhbHVlQ29uZGl0aW9u",
-            "EhMKBnZhbHVlcxgBIAMoCUID4EECQhgKFnBhcmVudF92YWx1ZV9jb25kaXRp",
-            "b24ibgoJU2NhbGVUeXBlEhoKFlNDQUxFX1RZUEVfVU5TUEVDSUZJRUQQABIV",
-            "ChFVTklUX0xJTkVBUl9TQ0FMRRABEhIKDlVOSVRfTE9HX1NDQUxFEAISGgoW",
-            "VU5JVF9SRVZFUlNFX0xPR19TQ0FMRRADQhYKFHBhcmFtZXRlcl92YWx1ZV9z",
-            "cGVjGj8KH0RlY2F5Q3VydmVBdXRvbWF0ZWRTdG9wcGluZ1NwZWMSHAoUdXNl",
-            "X2VsYXBzZWRfZHVyYXRpb24YASABKAgaOwobTWVkaWFuQXV0b21hdGVkU3Rv",
-            "cHBpbmdTcGVjEhwKFHVzZV9lbGFwc2VkX2R1cmF0aW9uGAEgASgIIkoKCUFs",
-            "Z29yaXRobRIZChVBTEdPUklUSE1fVU5TUEVDSUZJRUQQABIPCgtHUklEX1NF",
-            "QVJDSBACEhEKDVJBTkRPTV9TRUFSQ0gQAyJIChBPYnNlcnZhdGlvbk5vaXNl",
-            "EiEKHU9CU0VSVkFUSU9OX05PSVNFX1VOU1BFQ0lGSUVEEAASBwoDTE9XEAES",
-            "CAoESElHSBACInIKGE1lYXN1cmVtZW50U2VsZWN0aW9uVHlwZRIqCiZNRUFT",
-            "VVJFTUVOVF9TRUxFQ1RJT05fVFlQRV9VTlNQRUNJRklFRBAAEhQKEExBU1Rf",
-            "TUVBU1VSRU1FTlQQARIUChBCRVNUX01FQVNVUkVNRU5UEAJCGQoXYXV0b21h",
-            "dGVkX3N0b3BwaW5nX3NwZWMi3AEKC01lYXN1cmVtZW50EjgKEGVsYXBzZWRf",
-            "ZHVyYXRpb24YASABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BB",
-            "AxIXCgpzdGVwX2NvdW50GAIgASgDQgPgQQMSRAoHbWV0cmljcxgDIAMoCzIu",
-            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1lYXN1cmVtZW50Lk1ldHJp",
-            "Y0ID4EEDGjQKBk1ldHJpYxIWCgltZXRyaWNfaWQYASABKAlCA+BBAxISCgV2",
-            "YWx1ZRgCIAEoAUID4EEDQs4BCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
-            "cm0udjFCClN0dWR5UHJvdG9QAVpEZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
-            "dG8vZ29vZ2xlYXBpcy9jbG91ZC9haXBsYXRmb3JtL3YxO2FpcGxhdGZvcm2q",
-            "AhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxB",
-            "SVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFi",
-            "BnByb3RvMw=="));
+            "dG9tYXRlZFN0b3BwaW5nU3BlY0gAEmsKHmNvbnZleF9hdXRvbWF0ZWRfc3Rv",
+            "cHBpbmdfc3BlYxgJIAEoCzJBLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
+            "LlN0dWR5U3BlYy5Db252ZXhBdXRvbWF0ZWRTdG9wcGluZ1NwZWNIABJGCgdt",
+            "ZXRyaWNzGAEgAygLMjAuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU3R1",
+            "ZHlTcGVjLk1ldHJpY1NwZWNCA+BBAhJMCgpwYXJhbWV0ZXJzGAIgAygLMjMu",
+            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU3R1ZHlTcGVjLlBhcmFtZXRl",
+            "clNwZWNCA+BBAhJCCglhbGdvcml0aG0YAyABKA4yLy5nb29nbGUuY2xvdWQu",
+            "YWlwbGF0Zm9ybS52MS5TdHVkeVNwZWMuQWxnb3JpdGhtElEKEW9ic2VydmF0",
+            "aW9uX25vaXNlGAYgASgOMjYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEu",
+            "U3R1ZHlTcGVjLk9ic2VydmF0aW9uTm9pc2USYgoabWVhc3VyZW1lbnRfc2Vs",
+            "ZWN0aW9uX3R5cGUYByABKA4yPi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
+            "MS5TdHVkeVNwZWMuTWVhc3VyZW1lbnRTZWxlY3Rpb25UeXBlGrUBCgpNZXRy",
+            "aWNTcGVjEhYKCW1ldHJpY19pZBgBIAEoCUID4EECEkwKBGdvYWwYAiABKA4y",
+            "OS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5TdHVkeVNwZWMuTWV0cmlj",
+            "U3BlYy5Hb2FsVHlwZUID4EECIkEKCEdvYWxUeXBlEhkKFUdPQUxfVFlQRV9V",
+            "TlNQRUNJRklFRBAAEgwKCE1BWElNSVpFEAESDAoITUlOSU1JWkUQAhrNDgoN",
+            "UGFyYW1ldGVyU3BlYxJgChFkb3VibGVfdmFsdWVfc3BlYxgCIAEoCzJDLmdv",
+            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlN0dWR5U3BlYy5QYXJhbWV0ZXJT",
+            "cGVjLkRvdWJsZVZhbHVlU3BlY0gAEmIKEmludGVnZXJfdmFsdWVfc3BlYxgD",
+            "IAEoCzJELmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlN0dWR5U3BlYy5Q",
+            "YXJhbWV0ZXJTcGVjLkludGVnZXJWYWx1ZVNwZWNIABJqChZjYXRlZ29yaWNh",
+            "bF92YWx1ZV9zcGVjGAQgASgLMkguZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
+            "djEuU3R1ZHlTcGVjLlBhcmFtZXRlclNwZWMuQ2F0ZWdvcmljYWxWYWx1ZVNw",
+            "ZWNIABJkChNkaXNjcmV0ZV92YWx1ZV9zcGVjGAUgASgLMkUuZ29vZ2xlLmNs",
+            "b3VkLmFpcGxhdGZvcm0udjEuU3R1ZHlTcGVjLlBhcmFtZXRlclNwZWMuRGlz",
+            "Y3JldGVWYWx1ZVNwZWNIABIZCgxwYXJhbWV0ZXJfaWQYASABKAlCA+BBAhJR",
+            "CgpzY2FsZV90eXBlGAYgASgOMj0uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
+            "djEuU3R1ZHlTcGVjLlBhcmFtZXRlclNwZWMuU2NhbGVUeXBlEnEKG2NvbmRp",
+            "dGlvbmFsX3BhcmFtZXRlcl9zcGVjcxgKIAMoCzJMLmdvb2dsZS5jbG91ZC5h",
+            "aXBsYXRmb3JtLnYxLlN0dWR5U3BlYy5QYXJhbWV0ZXJTcGVjLkNvbmRpdGlv",
+            "bmFsUGFyYW1ldGVyU3BlYxpvCg9Eb3VibGVWYWx1ZVNwZWMSFgoJbWluX3Zh",
+            "bHVlGAEgASgBQgPgQQISFgoJbWF4X3ZhbHVlGAIgASgBQgPgQQISGgoNZGVm",
+            "YXVsdF92YWx1ZRgEIAEoAUgAiAEBQhAKDl9kZWZhdWx0X3ZhbHVlGnAKEElu",
+            "dGVnZXJWYWx1ZVNwZWMSFgoJbWluX3ZhbHVlGAEgASgDQgPgQQISFgoJbWF4",
+            "X3ZhbHVlGAIgASgDQgPgQQISGgoNZGVmYXVsdF92YWx1ZRgEIAEoA0gAiAEB",
+            "QhAKDl9kZWZhdWx0X3ZhbHVlGlkKFENhdGVnb3JpY2FsVmFsdWVTcGVjEhMK",
+            "BnZhbHVlcxgBIAMoCUID4EECEhoKDWRlZmF1bHRfdmFsdWUYAyABKAlIAIgB",
+            "AUIQCg5fZGVmYXVsdF92YWx1ZRpWChFEaXNjcmV0ZVZhbHVlU3BlYxITCgZ2",
+            "YWx1ZXMYASADKAFCA+BBAhIaCg1kZWZhdWx0X3ZhbHVlGAMgASgBSACIAQFC",
+            "EAoOX2RlZmF1bHRfdmFsdWUapAUKGENvbmRpdGlvbmFsUGFyYW1ldGVyU3Bl",
+            "YxKFAQoWcGFyZW50X2Rpc2NyZXRlX3ZhbHVlcxgCIAEoCzJjLmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxLlN0dWR5U3BlYy5QYXJhbWV0ZXJTcGVjLkNv",
+            "bmRpdGlvbmFsUGFyYW1ldGVyU3BlYy5EaXNjcmV0ZVZhbHVlQ29uZGl0aW9u",
+            "SAASewoRcGFyZW50X2ludF92YWx1ZXMYAyABKAsyXi5nb29nbGUuY2xvdWQu",
+            "YWlwbGF0Zm9ybS52MS5TdHVkeVNwZWMuUGFyYW1ldGVyU3BlYy5Db25kaXRp",
+            "b25hbFBhcmFtZXRlclNwZWMuSW50VmFsdWVDb25kaXRpb25IABKLAQoZcGFy",
+            "ZW50X2NhdGVnb3JpY2FsX3ZhbHVlcxgEIAEoCzJmLmdvb2dsZS5jbG91ZC5h",
+            "aXBsYXRmb3JtLnYxLlN0dWR5U3BlYy5QYXJhbWV0ZXJTcGVjLkNvbmRpdGlv",
+            "bmFsUGFyYW1ldGVyU3BlYy5DYXRlZ29yaWNhbFZhbHVlQ29uZGl0aW9uSAAS",
+            "UAoOcGFyYW1ldGVyX3NwZWMYASABKAsyMy5nb29nbGUuY2xvdWQuYWlwbGF0",
+            "Zm9ybS52MS5TdHVkeVNwZWMuUGFyYW1ldGVyU3BlY0ID4EECGi0KFkRpc2Ny",
+            "ZXRlVmFsdWVDb25kaXRpb24SEwoGdmFsdWVzGAEgAygBQgPgQQIaKAoRSW50",
+            "VmFsdWVDb25kaXRpb24SEwoGdmFsdWVzGAEgAygDQgPgQQIaMAoZQ2F0ZWdv",
+            "cmljYWxWYWx1ZUNvbmRpdGlvbhITCgZ2YWx1ZXMYASADKAlCA+BBAkIYChZw",
+            "YXJlbnRfdmFsdWVfY29uZGl0aW9uIm4KCVNjYWxlVHlwZRIaChZTQ0FMRV9U",
+            "WVBFX1VOU1BFQ0lGSUVEEAASFQoRVU5JVF9MSU5FQVJfU0NBTEUQARISCg5V",
+            "TklUX0xPR19TQ0FMRRACEhoKFlVOSVRfUkVWRVJTRV9MT0dfU0NBTEUQA0IW",
+            "ChRwYXJhbWV0ZXJfdmFsdWVfc3BlYxo/Ch9EZWNheUN1cnZlQXV0b21hdGVk",
+            "U3RvcHBpbmdTcGVjEhwKFHVzZV9lbGFwc2VkX2R1cmF0aW9uGAEgASgIGjsK",
+            "G01lZGlhbkF1dG9tYXRlZFN0b3BwaW5nU3BlYxIcChR1c2VfZWxhcHNlZF9k",
+            "dXJhdGlvbhgBIAEoCBqwAQobQ29udmV4QXV0b21hdGVkU3RvcHBpbmdTcGVj",
+            "EhYKDm1heF9zdGVwX2NvdW50GAEgASgDEhYKDm1pbl9zdGVwX2NvdW50GAIg",
+            "ASgDEh0KFW1pbl9tZWFzdXJlbWVudF9jb3VudBgDIAEoAxIkChxsZWFybmlu",
+            "Z19yYXRlX3BhcmFtZXRlcl9uYW1lGAQgASgJEhwKFHVzZV9lbGFwc2VkX2R1",
+            "cmF0aW9uGAUgASgIIkoKCUFsZ29yaXRobRIZChVBTEdPUklUSE1fVU5TUEVD",
+            "SUZJRUQQABIPCgtHUklEX1NFQVJDSBACEhEKDVJBTkRPTV9TRUFSQ0gQAyJI",
+            "ChBPYnNlcnZhdGlvbk5vaXNlEiEKHU9CU0VSVkFUSU9OX05PSVNFX1VOU1BF",
+            "Q0lGSUVEEAASBwoDTE9XEAESCAoESElHSBACInIKGE1lYXN1cmVtZW50U2Vs",
+            "ZWN0aW9uVHlwZRIqCiZNRUFTVVJFTUVOVF9TRUxFQ1RJT05fVFlQRV9VTlNQ",
+            "RUNJRklFRBAAEhQKEExBU1RfTUVBU1VSRU1FTlQQARIUChBCRVNUX01FQVNV",
+            "UkVNRU5UEAJCGQoXYXV0b21hdGVkX3N0b3BwaW5nX3NwZWMi3AEKC01lYXN1",
+            "cmVtZW50EjgKEGVsYXBzZWRfZHVyYXRpb24YASABKAsyGS5nb29nbGUucHJv",
+            "dG9idWYuRHVyYXRpb25CA+BBAxIXCgpzdGVwX2NvdW50GAIgASgDQgPgQQMS",
+            "RAoHbWV0cmljcxgDIAMoCzIuLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
+            "Lk1lYXN1cmVtZW50Lk1ldHJpY0ID4EEDGjQKBk1ldHJpYxIWCgltZXRyaWNf",
+            "aWQYASABKAlCA+BBAxISCgV2YWx1ZRgCIAEoAUID4EEDQs4BCh5jb20uZ29v",
+            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCClN0dWR5UHJvdG9QAVpEZ29vZ2xl",
+            "LmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9haXBsYXRm",
+            "b3JtL3YxO2FpcGxhdGZvcm2qAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5W",
+            "McoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91",
+            "ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Study), global::Google.Cloud.AIPlatform.V1.Study.Parser, new[]{ "Name", "DisplayName", "StudySpec", "State", "CreateTime", "InactiveReason" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Study.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Trial), global::Google.Cloud.AIPlatform.V1.Trial.Parser, new[]{ "Name", "Id", "State", "Parameters", "FinalMeasurement", "Measurements", "StartTime", "EndTime", "ClientId", "InfeasibleReason", "CustomJob", "WebAccessUris" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Trial.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Trial.Types.Parameter), global::Google.Cloud.AIPlatform.V1.Trial.Types.Parameter.Parser, new[]{ "ParameterId", "Value" }, null, null, null, null),
             null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Parser, new[]{ "DecayCurveStoppingSpec", "MedianAutomatedStoppingSpec", "Metrics", "Parameters", "Algorithm", "ObservationNoise", "MeasurementSelectionType" }, new[]{ "AutomatedStoppingSpec" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.Algorithm), typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ObservationNoise), typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MeasurementSelectionType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MetricSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MetricSpec.Parser, new[]{ "MetricId", "Goal" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MetricSpec.Types.GoalType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Parser, new[]{ "DecayCurveStoppingSpec", "MedianAutomatedStoppingSpec", "ConvexAutomatedStoppingSpec", "Metrics", "Parameters", "Algorithm", "ObservationNoise", "MeasurementSelectionType" }, new[]{ "AutomatedStoppingSpec" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.Algorithm), typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ObservationNoise), typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MeasurementSelectionType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MetricSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MetricSpec.Parser, new[]{ "MetricId", "Goal" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MetricSpec.Types.GoalType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Parser, new[]{ "DoubleValueSpec", "IntegerValueSpec", "CategoricalValueSpec", "DiscreteValueSpec", "ParameterId", "ScaleType", "ConditionalParameterSpecs" }, new[]{ "ParameterValueSpec" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.ScaleType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.DoubleValueSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.DoubleValueSpec.Parser, new[]{ "MinValue", "MaxValue", "DefaultValue" }, new[]{ "DefaultValue" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.IntegerValueSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.IntegerValueSpec.Parser, new[]{ "MinValue", "MaxValue", "DefaultValue" }, new[]{ "DefaultValue" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.CategoricalValueSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.CategoricalValueSpec.Parser, new[]{ "Values", "DefaultValue" }, new[]{ "DefaultValue" }, null, null, null),
@@ -155,7 +161,8 @@ namespace Google.Cloud.AIPlatform.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.ConditionalParameterSpec.Types.IntValueCondition), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.ConditionalParameterSpec.Types.IntValueCondition.Parser, new[]{ "Values" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.ConditionalParameterSpec.Types.CategoricalValueCondition), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.ConditionalParameterSpec.Types.CategoricalValueCondition.Parser, new[]{ "Values" }, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.DecayCurveAutomatedStoppingSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.DecayCurveAutomatedStoppingSpec.Parser, new[]{ "UseElapsedDuration" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MedianAutomatedStoppingSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MedianAutomatedStoppingSpec.Parser, new[]{ "UseElapsedDuration" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MedianAutomatedStoppingSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MedianAutomatedStoppingSpec.Parser, new[]{ "UseElapsedDuration" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ConvexAutomatedStoppingSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ConvexAutomatedStoppingSpec.Parser, new[]{ "MaxStepCount", "MinStepCount", "MinMeasurementCount", "LearningRateParameterName", "UseElapsedDuration" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Measurement), global::Google.Cloud.AIPlatform.V1.Measurement.Parser, new[]{ "ElapsedDuration", "StepCount", "Metrics" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Measurement.Types.Metric), global::Google.Cloud.AIPlatform.V1.Measurement.Types.Metric.Parser, new[]{ "MetricId", "Value" }, null, null, null, null)})
           }));
     }
@@ -1602,6 +1609,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         case AutomatedStoppingSpecOneofCase.MedianAutomatedStoppingSpec:
           MedianAutomatedStoppingSpec = other.MedianAutomatedStoppingSpec.Clone();
           break;
+        case AutomatedStoppingSpecOneofCase.ConvexAutomatedStoppingSpec:
+          ConvexAutomatedStoppingSpec = other.ConvexAutomatedStoppingSpec.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1640,6 +1650,21 @@ namespace Google.Cloud.AIPlatform.V1 {
       set {
         automatedStoppingSpec_ = value;
         automatedStoppingSpecCase_ = value == null ? AutomatedStoppingSpecOneofCase.None : AutomatedStoppingSpecOneofCase.MedianAutomatedStoppingSpec;
+      }
+    }
+
+    /// <summary>Field number for the "convex_automated_stopping_spec" field.</summary>
+    public const int ConvexAutomatedStoppingSpecFieldNumber = 9;
+    /// <summary>
+    /// The automated early stopping spec using convex stopping rule.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ConvexAutomatedStoppingSpec ConvexAutomatedStoppingSpec {
+      get { return automatedStoppingSpecCase_ == AutomatedStoppingSpecOneofCase.ConvexAutomatedStoppingSpec ? (global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ConvexAutomatedStoppingSpec) automatedStoppingSpec_ : null; }
+      set {
+        automatedStoppingSpec_ = value;
+        automatedStoppingSpecCase_ = value == null ? AutomatedStoppingSpecOneofCase.None : AutomatedStoppingSpecOneofCase.ConvexAutomatedStoppingSpec;
       }
     }
 
@@ -1724,6 +1749,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       None = 0,
       DecayCurveStoppingSpec = 4,
       MedianAutomatedStoppingSpec = 5,
+      ConvexAutomatedStoppingSpec = 9,
     }
     private AutomatedStoppingSpecOneofCase automatedStoppingSpecCase_ = AutomatedStoppingSpecOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1756,6 +1782,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (!object.Equals(DecayCurveStoppingSpec, other.DecayCurveStoppingSpec)) return false;
       if (!object.Equals(MedianAutomatedStoppingSpec, other.MedianAutomatedStoppingSpec)) return false;
+      if (!object.Equals(ConvexAutomatedStoppingSpec, other.ConvexAutomatedStoppingSpec)) return false;
       if(!metrics_.Equals(other.metrics_)) return false;
       if(!parameters_.Equals(other.parameters_)) return false;
       if (Algorithm != other.Algorithm) return false;
@@ -1771,6 +1798,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       int hash = 1;
       if (automatedStoppingSpecCase_ == AutomatedStoppingSpecOneofCase.DecayCurveStoppingSpec) hash ^= DecayCurveStoppingSpec.GetHashCode();
       if (automatedStoppingSpecCase_ == AutomatedStoppingSpecOneofCase.MedianAutomatedStoppingSpec) hash ^= MedianAutomatedStoppingSpec.GetHashCode();
+      if (automatedStoppingSpecCase_ == AutomatedStoppingSpecOneofCase.ConvexAutomatedStoppingSpec) hash ^= ConvexAutomatedStoppingSpec.GetHashCode();
       hash ^= metrics_.GetHashCode();
       hash ^= parameters_.GetHashCode();
       if (Algorithm != global::Google.Cloud.AIPlatform.V1.StudySpec.Types.Algorithm.Unspecified) hash ^= Algorithm.GetHashCode();
@@ -1817,6 +1845,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(56);
         output.WriteEnum((int) MeasurementSelectionType);
       }
+      if (automatedStoppingSpecCase_ == AutomatedStoppingSpecOneofCase.ConvexAutomatedStoppingSpec) {
+        output.WriteRawTag(74);
+        output.WriteMessage(ConvexAutomatedStoppingSpec);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1849,6 +1881,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(56);
         output.WriteEnum((int) MeasurementSelectionType);
       }
+      if (automatedStoppingSpecCase_ == AutomatedStoppingSpecOneofCase.ConvexAutomatedStoppingSpec) {
+        output.WriteRawTag(74);
+        output.WriteMessage(ConvexAutomatedStoppingSpec);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1864,6 +1900,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (automatedStoppingSpecCase_ == AutomatedStoppingSpecOneofCase.MedianAutomatedStoppingSpec) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(MedianAutomatedStoppingSpec);
+      }
+      if (automatedStoppingSpecCase_ == AutomatedStoppingSpecOneofCase.ConvexAutomatedStoppingSpec) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ConvexAutomatedStoppingSpec);
       }
       size += metrics_.CalculateSize(_repeated_metrics_codec);
       size += parameters_.CalculateSize(_repeated_parameters_codec);
@@ -1911,6 +1950,12 @@ namespace Google.Cloud.AIPlatform.V1 {
             MedianAutomatedStoppingSpec = new global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MedianAutomatedStoppingSpec();
           }
           MedianAutomatedStoppingSpec.MergeFrom(other.MedianAutomatedStoppingSpec);
+          break;
+        case AutomatedStoppingSpecOneofCase.ConvexAutomatedStoppingSpec:
+          if (ConvexAutomatedStoppingSpec == null) {
+            ConvexAutomatedStoppingSpec = new global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ConvexAutomatedStoppingSpec();
+          }
+          ConvexAutomatedStoppingSpec.MergeFrom(other.ConvexAutomatedStoppingSpec);
           break;
       }
 
@@ -1967,6 +2012,15 @@ namespace Google.Cloud.AIPlatform.V1 {
             MeasurementSelectionType = (global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MeasurementSelectionType) input.ReadEnum();
             break;
           }
+          case 74: {
+            global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ConvexAutomatedStoppingSpec subBuilder = new global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ConvexAutomatedStoppingSpec();
+            if (automatedStoppingSpecCase_ == AutomatedStoppingSpecOneofCase.ConvexAutomatedStoppingSpec) {
+              subBuilder.MergeFrom(ConvexAutomatedStoppingSpec);
+            }
+            input.ReadMessage(subBuilder);
+            ConvexAutomatedStoppingSpec = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -2018,6 +2072,15 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 56: {
             MeasurementSelectionType = (global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MeasurementSelectionType) input.ReadEnum();
+            break;
+          }
+          case 74: {
+            global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ConvexAutomatedStoppingSpec subBuilder = new global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ConvexAutomatedStoppingSpec();
+            if (automatedStoppingSpecCase_ == AutomatedStoppingSpecOneofCase.ConvexAutomatedStoppingSpec) {
+              subBuilder.MergeFrom(ConvexAutomatedStoppingSpec);
+            }
+            input.ReadMessage(subBuilder);
+            ConvexAutomatedStoppingSpec = subBuilder;
             break;
           }
         }
@@ -5368,6 +5431,391 @@ namespace Google.Cloud.AIPlatform.V1 {
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
                 break;
               case 8: {
+                UseElapsedDuration = input.ReadBool();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Configuration for ConvexAutomatedStoppingSpec.
+      /// When there are enough completed trials (configured by
+      /// min_measurement_count), for pending trials with enough measurements and
+      /// steps, the policy first computes an overestimate of the objective value at
+      /// max_num_steps according to the slope of the incomplete objective value
+      /// curve. No prediction can be made if the curve is completely flat. If the
+      /// overestimation is worse than the best objective value of the completed
+      /// trials, this pending trial will be early-stopped, but a last measurement
+      /// will be added to the pending trial with max_num_steps and predicted
+      /// objective value from the autoregression model.
+      /// </summary>
+      public sealed partial class ConvexAutomatedStoppingSpec : pb::IMessage<ConvexAutomatedStoppingSpec>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ConvexAutomatedStoppingSpec> _parser = new pb::MessageParser<ConvexAutomatedStoppingSpec>(() => new ConvexAutomatedStoppingSpec());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ConvexAutomatedStoppingSpec> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1.StudySpec.Descriptor.NestedTypes[4]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ConvexAutomatedStoppingSpec() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ConvexAutomatedStoppingSpec(ConvexAutomatedStoppingSpec other) : this() {
+          maxStepCount_ = other.maxStepCount_;
+          minStepCount_ = other.minStepCount_;
+          minMeasurementCount_ = other.minMeasurementCount_;
+          learningRateParameterName_ = other.learningRateParameterName_;
+          useElapsedDuration_ = other.useElapsedDuration_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ConvexAutomatedStoppingSpec Clone() {
+          return new ConvexAutomatedStoppingSpec(this);
+        }
+
+        /// <summary>Field number for the "max_step_count" field.</summary>
+        public const int MaxStepCountFieldNumber = 1;
+        private long maxStepCount_;
+        /// <summary>
+        /// Steps used in predicting the final objective for early stopped trials. In
+        /// general, it's set to be the same as the defined steps in training /
+        /// tuning. If not defined, it will learn it from the completed trials. When
+        /// use_steps is false, this field is set to the maximum elapsed seconds.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long MaxStepCount {
+          get { return maxStepCount_; }
+          set {
+            maxStepCount_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "min_step_count" field.</summary>
+        public const int MinStepCountFieldNumber = 2;
+        private long minStepCount_;
+        /// <summary>
+        /// Minimum number of steps for a trial to complete. Trials which do not have
+        /// a measurement with step_count > min_step_count won't be considered for
+        /// early stopping. It's ok to set it to 0, and a trial can be early stopped
+        /// at any stage. By default, min_step_count is set to be one-tenth of the
+        /// max_step_count.
+        /// When use_elapsed_duration is true, this field is set to the minimum
+        /// elapsed seconds.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long MinStepCount {
+          get { return minStepCount_; }
+          set {
+            minStepCount_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "min_measurement_count" field.</summary>
+        public const int MinMeasurementCountFieldNumber = 3;
+        private long minMeasurementCount_;
+        /// <summary>
+        /// The minimal number of measurements in a Trial.  Early-stopping checks
+        /// will not trigger if less than min_measurement_count+1 completed trials or
+        /// pending trials with less than min_measurement_count measurements. If not
+        /// defined, the default value is 5.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long MinMeasurementCount {
+          get { return minMeasurementCount_; }
+          set {
+            minMeasurementCount_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "learning_rate_parameter_name" field.</summary>
+        public const int LearningRateParameterNameFieldNumber = 4;
+        private string learningRateParameterName_ = "";
+        /// <summary>
+        /// The hyper-parameter name used in the tuning job that stands for learning
+        /// rate. Leave it blank if learning rate is not in a parameter in tuning.
+        /// The learning_rate is used to estimate the objective value of the ongoing
+        /// trial.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string LearningRateParameterName {
+          get { return learningRateParameterName_; }
+          set {
+            learningRateParameterName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "use_elapsed_duration" field.</summary>
+        public const int UseElapsedDurationFieldNumber = 5;
+        private bool useElapsedDuration_;
+        /// <summary>
+        /// This bool determines whether or not the rule is applied based on
+        /// elapsed_secs or steps. If use_elapsed_duration==false, the early stopping
+        /// decision is made according to the predicted objective values according to
+        /// the target steps. If use_elapsed_duration==true, elapsed_secs is used
+        /// instead of steps. Also, in this case, the parameters max_num_steps and
+        /// min_num_steps are overloaded to contain max_elapsed_seconds and
+        /// min_elapsed_seconds.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool UseElapsedDuration {
+          get { return useElapsedDuration_; }
+          set {
+            useElapsedDuration_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ConvexAutomatedStoppingSpec);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ConvexAutomatedStoppingSpec other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (MaxStepCount != other.MaxStepCount) return false;
+          if (MinStepCount != other.MinStepCount) return false;
+          if (MinMeasurementCount != other.MinMeasurementCount) return false;
+          if (LearningRateParameterName != other.LearningRateParameterName) return false;
+          if (UseElapsedDuration != other.UseElapsedDuration) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (MaxStepCount != 0L) hash ^= MaxStepCount.GetHashCode();
+          if (MinStepCount != 0L) hash ^= MinStepCount.GetHashCode();
+          if (MinMeasurementCount != 0L) hash ^= MinMeasurementCount.GetHashCode();
+          if (LearningRateParameterName.Length != 0) hash ^= LearningRateParameterName.GetHashCode();
+          if (UseElapsedDuration != false) hash ^= UseElapsedDuration.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (MaxStepCount != 0L) {
+            output.WriteRawTag(8);
+            output.WriteInt64(MaxStepCount);
+          }
+          if (MinStepCount != 0L) {
+            output.WriteRawTag(16);
+            output.WriteInt64(MinStepCount);
+          }
+          if (MinMeasurementCount != 0L) {
+            output.WriteRawTag(24);
+            output.WriteInt64(MinMeasurementCount);
+          }
+          if (LearningRateParameterName.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(LearningRateParameterName);
+          }
+          if (UseElapsedDuration != false) {
+            output.WriteRawTag(40);
+            output.WriteBool(UseElapsedDuration);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (MaxStepCount != 0L) {
+            output.WriteRawTag(8);
+            output.WriteInt64(MaxStepCount);
+          }
+          if (MinStepCount != 0L) {
+            output.WriteRawTag(16);
+            output.WriteInt64(MinStepCount);
+          }
+          if (MinMeasurementCount != 0L) {
+            output.WriteRawTag(24);
+            output.WriteInt64(MinMeasurementCount);
+          }
+          if (LearningRateParameterName.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(LearningRateParameterName);
+          }
+          if (UseElapsedDuration != false) {
+            output.WriteRawTag(40);
+            output.WriteBool(UseElapsedDuration);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (MaxStepCount != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(MaxStepCount);
+          }
+          if (MinStepCount != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(MinStepCount);
+          }
+          if (MinMeasurementCount != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(MinMeasurementCount);
+          }
+          if (LearningRateParameterName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(LearningRateParameterName);
+          }
+          if (UseElapsedDuration != false) {
+            size += 1 + 1;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ConvexAutomatedStoppingSpec other) {
+          if (other == null) {
+            return;
+          }
+          if (other.MaxStepCount != 0L) {
+            MaxStepCount = other.MaxStepCount;
+          }
+          if (other.MinStepCount != 0L) {
+            MinStepCount = other.MinStepCount;
+          }
+          if (other.MinMeasurementCount != 0L) {
+            MinMeasurementCount = other.MinMeasurementCount;
+          }
+          if (other.LearningRateParameterName.Length != 0) {
+            LearningRateParameterName = other.LearningRateParameterName;
+          }
+          if (other.UseElapsedDuration != false) {
+            UseElapsedDuration = other.UseElapsedDuration;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                MaxStepCount = input.ReadInt64();
+                break;
+              }
+              case 16: {
+                MinStepCount = input.ReadInt64();
+                break;
+              }
+              case 24: {
+                MinMeasurementCount = input.ReadInt64();
+                break;
+              }
+              case 34: {
+                LearningRateParameterName = input.ReadString();
+                break;
+              }
+              case 40: {
+                UseElapsedDuration = input.ReadBool();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                MaxStepCount = input.ReadInt64();
+                break;
+              }
+              case 16: {
+                MinStepCount = input.ReadInt64();
+                break;
+              }
+              case 24: {
+                MinMeasurementCount = input.ReadInt64();
+                break;
+              }
+              case 34: {
+                LearningRateParameterName = input.ReadString();
+                break;
+              }
+              case 40: {
                 UseElapsedDuration = input.ReadBool();
                 break;
               }

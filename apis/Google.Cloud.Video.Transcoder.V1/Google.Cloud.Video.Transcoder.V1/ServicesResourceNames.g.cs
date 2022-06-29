@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gagr = Google.Api.Gax.ResourceNames;
 using gcvtv = Google.Cloud.Video.Transcoder.V1;
 

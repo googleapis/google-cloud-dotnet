@@ -14,15 +14,18 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -59,6 +62,8 @@ namespace Google.Cloud.AIPlatform.V1
             DeletePipelineJobSettings = existing.DeletePipelineJobSettings;
             DeletePipelineJobOperationsSettings = existing.DeletePipelineJobOperationsSettings.Clone();
             CancelPipelineJobSettings = existing.CancelPipelineJobSettings;
+            LocationsSettings = existing.LocationsSettings;
+            IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
@@ -224,6 +229,16 @@ namespace Google.Cloud.AIPlatform.V1
         /// </remarks>
         public gaxgrpc::CallSettings CancelPipelineJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
+        /// <summary>
+        /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
+        /// </summary>
+        public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="PipelineServiceSettings"/> object.</returns>
         public PipelineServiceSettings Clone() => new PipelineServiceSettings(this);
@@ -239,9 +254,8 @@ namespace Google.Cloud.AIPlatform.V1
         public PipelineServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public PipelineServiceClientBuilder()
+        public PipelineServiceClientBuilder() : base(PipelineServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = PipelineServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref PipelineServiceClient client);
@@ -268,29 +282,18 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return PipelineServiceClient.Create(callInvoker, Settings);
+            return PipelineServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<PipelineServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return PipelineServiceClient.Create(callInvoker, Settings);
+            return PipelineServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => PipelineServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => PipelineServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => PipelineServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>PipelineService client wrapper, for convenient use.</summary>
@@ -319,19 +322,10 @@ namespace Google.Cloud.AIPlatform.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(PipelineService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="PipelineServiceClient"/> using the default credentials, endpoint and
@@ -358,8 +352,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="PipelineServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="PipelineServiceClient"/>.</returns>
-        internal static PipelineServiceClient Create(grpccore::CallInvoker callInvoker, PipelineServiceSettings settings = null)
+        internal static PipelineServiceClient Create(grpccore::CallInvoker callInvoker, PipelineServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -368,7 +363,7 @@ namespace Google.Cloud.AIPlatform.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             PipelineService.PipelineServiceClient grpcClient = new PipelineService.PipelineServiceClient(callInvoker);
-            return new PipelineServiceClientImpl(grpcClient, settings);
+            return new PipelineServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -386,6 +381,12 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>The underlying gRPC PipelineService client</summary>
         public virtual PipelineService.PipelineServiceClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Creates a TrainingPipeline. A created TrainingPipeline right away will be
@@ -1902,41 +1903,44 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="PipelineServiceSettings"/> used within this client.</param>
-        public PipelineServiceClientImpl(PipelineService.PipelineServiceClient grpcClient, PipelineServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public PipelineServiceClientImpl(PipelineService.PipelineServiceClient grpcClient, PipelineServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             PipelineServiceSettings effectiveSettings = settings ?? PipelineServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            DeleteTrainingPipelineOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTrainingPipelineOperationsSettings);
-            DeletePipelineJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeletePipelineJobOperationsSettings);
-            _callCreateTrainingPipeline = clientHelper.BuildApiCall<CreateTrainingPipelineRequest, TrainingPipeline>(grpcClient.CreateTrainingPipelineAsync, grpcClient.CreateTrainingPipeline, effectiveSettings.CreateTrainingPipelineSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            DeleteTrainingPipelineOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTrainingPipelineOperationsSettings, logger);
+            DeletePipelineJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeletePipelineJobOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
+            _callCreateTrainingPipeline = clientHelper.BuildApiCall<CreateTrainingPipelineRequest, TrainingPipeline>("CreateTrainingPipeline", grpcClient.CreateTrainingPipelineAsync, grpcClient.CreateTrainingPipeline, effectiveSettings.CreateTrainingPipelineSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateTrainingPipeline);
             Modify_CreateTrainingPipelineApiCall(ref _callCreateTrainingPipeline);
-            _callGetTrainingPipeline = clientHelper.BuildApiCall<GetTrainingPipelineRequest, TrainingPipeline>(grpcClient.GetTrainingPipelineAsync, grpcClient.GetTrainingPipeline, effectiveSettings.GetTrainingPipelineSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetTrainingPipeline = clientHelper.BuildApiCall<GetTrainingPipelineRequest, TrainingPipeline>("GetTrainingPipeline", grpcClient.GetTrainingPipelineAsync, grpcClient.GetTrainingPipeline, effectiveSettings.GetTrainingPipelineSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetTrainingPipeline);
             Modify_GetTrainingPipelineApiCall(ref _callGetTrainingPipeline);
-            _callListTrainingPipelines = clientHelper.BuildApiCall<ListTrainingPipelinesRequest, ListTrainingPipelinesResponse>(grpcClient.ListTrainingPipelinesAsync, grpcClient.ListTrainingPipelines, effectiveSettings.ListTrainingPipelinesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListTrainingPipelines = clientHelper.BuildApiCall<ListTrainingPipelinesRequest, ListTrainingPipelinesResponse>("ListTrainingPipelines", grpcClient.ListTrainingPipelinesAsync, grpcClient.ListTrainingPipelines, effectiveSettings.ListTrainingPipelinesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListTrainingPipelines);
             Modify_ListTrainingPipelinesApiCall(ref _callListTrainingPipelines);
-            _callDeleteTrainingPipeline = clientHelper.BuildApiCall<DeleteTrainingPipelineRequest, lro::Operation>(grpcClient.DeleteTrainingPipelineAsync, grpcClient.DeleteTrainingPipeline, effectiveSettings.DeleteTrainingPipelineSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteTrainingPipeline = clientHelper.BuildApiCall<DeleteTrainingPipelineRequest, lro::Operation>("DeleteTrainingPipeline", grpcClient.DeleteTrainingPipelineAsync, grpcClient.DeleteTrainingPipeline, effectiveSettings.DeleteTrainingPipelineSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteTrainingPipeline);
             Modify_DeleteTrainingPipelineApiCall(ref _callDeleteTrainingPipeline);
-            _callCancelTrainingPipeline = clientHelper.BuildApiCall<CancelTrainingPipelineRequest, wkt::Empty>(grpcClient.CancelTrainingPipelineAsync, grpcClient.CancelTrainingPipeline, effectiveSettings.CancelTrainingPipelineSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callCancelTrainingPipeline = clientHelper.BuildApiCall<CancelTrainingPipelineRequest, wkt::Empty>("CancelTrainingPipeline", grpcClient.CancelTrainingPipelineAsync, grpcClient.CancelTrainingPipeline, effectiveSettings.CancelTrainingPipelineSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCancelTrainingPipeline);
             Modify_CancelTrainingPipelineApiCall(ref _callCancelTrainingPipeline);
-            _callCreatePipelineJob = clientHelper.BuildApiCall<CreatePipelineJobRequest, PipelineJob>(grpcClient.CreatePipelineJobAsync, grpcClient.CreatePipelineJob, effectiveSettings.CreatePipelineJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreatePipelineJob = clientHelper.BuildApiCall<CreatePipelineJobRequest, PipelineJob>("CreatePipelineJob", grpcClient.CreatePipelineJobAsync, grpcClient.CreatePipelineJob, effectiveSettings.CreatePipelineJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreatePipelineJob);
             Modify_CreatePipelineJobApiCall(ref _callCreatePipelineJob);
-            _callGetPipelineJob = clientHelper.BuildApiCall<GetPipelineJobRequest, PipelineJob>(grpcClient.GetPipelineJobAsync, grpcClient.GetPipelineJob, effectiveSettings.GetPipelineJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetPipelineJob = clientHelper.BuildApiCall<GetPipelineJobRequest, PipelineJob>("GetPipelineJob", grpcClient.GetPipelineJobAsync, grpcClient.GetPipelineJob, effectiveSettings.GetPipelineJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetPipelineJob);
             Modify_GetPipelineJobApiCall(ref _callGetPipelineJob);
-            _callListPipelineJobs = clientHelper.BuildApiCall<ListPipelineJobsRequest, ListPipelineJobsResponse>(grpcClient.ListPipelineJobsAsync, grpcClient.ListPipelineJobs, effectiveSettings.ListPipelineJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListPipelineJobs = clientHelper.BuildApiCall<ListPipelineJobsRequest, ListPipelineJobsResponse>("ListPipelineJobs", grpcClient.ListPipelineJobsAsync, grpcClient.ListPipelineJobs, effectiveSettings.ListPipelineJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListPipelineJobs);
             Modify_ListPipelineJobsApiCall(ref _callListPipelineJobs);
-            _callDeletePipelineJob = clientHelper.BuildApiCall<DeletePipelineJobRequest, lro::Operation>(grpcClient.DeletePipelineJobAsync, grpcClient.DeletePipelineJob, effectiveSettings.DeletePipelineJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeletePipelineJob = clientHelper.BuildApiCall<DeletePipelineJobRequest, lro::Operation>("DeletePipelineJob", grpcClient.DeletePipelineJobAsync, grpcClient.DeletePipelineJob, effectiveSettings.DeletePipelineJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeletePipelineJob);
             Modify_DeletePipelineJobApiCall(ref _callDeletePipelineJob);
-            _callCancelPipelineJob = clientHelper.BuildApiCall<CancelPipelineJobRequest, wkt::Empty>(grpcClient.CancelPipelineJobAsync, grpcClient.CancelPipelineJob, effectiveSettings.CancelPipelineJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callCancelPipelineJob = clientHelper.BuildApiCall<CancelPipelineJobRequest, wkt::Empty>("CancelPipelineJob", grpcClient.CancelPipelineJobAsync, grpcClient.CancelPipelineJob, effectiveSettings.CancelPipelineJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCancelPipelineJob);
             Modify_CancelPipelineJobApiCall(ref _callCancelPipelineJob);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
@@ -1968,6 +1972,12 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>The underlying gRPC PipelineService client</summary>
         public override PipelineService.PipelineServiceClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
         partial void Modify_CreateTrainingPipelineRequest(ref CreateTrainingPipelineRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2309,6 +2319,32 @@ namespace Google.Cloud.AIPlatform.V1
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class PipelineService
+    {
+        public partial class PipelineServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
+
+            /// <summary>
+            /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gciv::IAMPolicy.IAMPolicyClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gciv::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() =>
+                new gciv::IAMPolicy.IAMPolicyClient(CallInvoker);
         }
     }
 }

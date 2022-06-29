@@ -14,7 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -33,6 +35,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<TestCases.TestCasesClient> mockGrpcClient = new moq::Mock<TestCases.TestCasesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             BatchDeleteTestCasesRequest request = new BatchDeleteTestCasesRequest
             {
                 ParentAsAgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
@@ -43,7 +46,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.BatchDeleteTestCases(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null);
+            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null, null);
             client.BatchDeleteTestCases(request);
             mockGrpcClient.VerifyAll();
         }
@@ -53,6 +56,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<TestCases.TestCasesClient> mockGrpcClient = new moq::Mock<TestCases.TestCasesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             BatchDeleteTestCasesRequest request = new BatchDeleteTestCasesRequest
             {
                 ParentAsAgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
@@ -63,7 +67,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.BatchDeleteTestCasesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null);
+            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null, null);
             await client.BatchDeleteTestCasesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.BatchDeleteTestCasesAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -74,13 +78,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<TestCases.TestCasesClient> mockGrpcClient = new moq::Mock<TestCases.TestCasesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             BatchDeleteTestCasesRequest request = new BatchDeleteTestCasesRequest
             {
                 ParentAsAgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.BatchDeleteTestCases(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null);
+            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null, null);
             client.BatchDeleteTestCases(request.Parent);
             mockGrpcClient.VerifyAll();
         }
@@ -90,13 +95,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<TestCases.TestCasesClient> mockGrpcClient = new moq::Mock<TestCases.TestCasesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             BatchDeleteTestCasesRequest request = new BatchDeleteTestCasesRequest
             {
                 ParentAsAgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.BatchDeleteTestCasesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null);
+            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null, null);
             await client.BatchDeleteTestCasesAsync(request.Parent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.BatchDeleteTestCasesAsync(request.Parent, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -107,13 +113,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<TestCases.TestCasesClient> mockGrpcClient = new moq::Mock<TestCases.TestCasesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             BatchDeleteTestCasesRequest request = new BatchDeleteTestCasesRequest
             {
                 ParentAsAgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.BatchDeleteTestCases(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null);
+            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null, null);
             client.BatchDeleteTestCases(request.ParentAsAgentName);
             mockGrpcClient.VerifyAll();
         }
@@ -123,13 +130,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<TestCases.TestCasesClient> mockGrpcClient = new moq::Mock<TestCases.TestCasesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             BatchDeleteTestCasesRequest request = new BatchDeleteTestCasesRequest
             {
                 ParentAsAgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.BatchDeleteTestCasesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null);
+            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null, null);
             await client.BatchDeleteTestCasesAsync(request.ParentAsAgentName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.BatchDeleteTestCasesAsync(request.ParentAsAgentName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -140,6 +148,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<TestCases.TestCasesClient> mockGrpcClient = new moq::Mock<TestCases.TestCasesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetTestCaseRequest request = new GetTestCaseRequest
             {
                 TestCaseName = TestCaseName.FromProjectLocationAgentTestCase("[PROJECT]", "[LOCATION]", "[AGENT]", "[TEST_CASE]"),
@@ -159,7 +168,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 TestConfig = new TestConfig(),
             };
             mockGrpcClient.Setup(x => x.GetTestCase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null);
+            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null, null);
             TestCase response = client.GetTestCase(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -170,6 +179,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<TestCases.TestCasesClient> mockGrpcClient = new moq::Mock<TestCases.TestCasesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetTestCaseRequest request = new GetTestCaseRequest
             {
                 TestCaseName = TestCaseName.FromProjectLocationAgentTestCase("[PROJECT]", "[LOCATION]", "[AGENT]", "[TEST_CASE]"),
@@ -189,7 +199,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 TestConfig = new TestConfig(),
             };
             mockGrpcClient.Setup(x => x.GetTestCaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TestCase>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null);
+            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null, null);
             TestCase responseCallSettings = await client.GetTestCaseAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TestCase responseCancellationToken = await client.GetTestCaseAsync(request, st::CancellationToken.None);
@@ -202,6 +212,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<TestCases.TestCasesClient> mockGrpcClient = new moq::Mock<TestCases.TestCasesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetTestCaseRequest request = new GetTestCaseRequest
             {
                 TestCaseName = TestCaseName.FromProjectLocationAgentTestCase("[PROJECT]", "[LOCATION]", "[AGENT]", "[TEST_CASE]"),
@@ -221,7 +232,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 TestConfig = new TestConfig(),
             };
             mockGrpcClient.Setup(x => x.GetTestCase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null);
+            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null, null);
             TestCase response = client.GetTestCase(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -232,6 +243,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<TestCases.TestCasesClient> mockGrpcClient = new moq::Mock<TestCases.TestCasesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetTestCaseRequest request = new GetTestCaseRequest
             {
                 TestCaseName = TestCaseName.FromProjectLocationAgentTestCase("[PROJECT]", "[LOCATION]", "[AGENT]", "[TEST_CASE]"),
@@ -251,7 +263,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 TestConfig = new TestConfig(),
             };
             mockGrpcClient.Setup(x => x.GetTestCaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TestCase>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null);
+            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null, null);
             TestCase responseCallSettings = await client.GetTestCaseAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TestCase responseCancellationToken = await client.GetTestCaseAsync(request.Name, st::CancellationToken.None);
@@ -264,6 +276,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<TestCases.TestCasesClient> mockGrpcClient = new moq::Mock<TestCases.TestCasesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetTestCaseRequest request = new GetTestCaseRequest
             {
                 TestCaseName = TestCaseName.FromProjectLocationAgentTestCase("[PROJECT]", "[LOCATION]", "[AGENT]", "[TEST_CASE]"),
@@ -283,7 +296,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 TestConfig = new TestConfig(),
             };
             mockGrpcClient.Setup(x => x.GetTestCase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null);
+            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null, null);
             TestCase response = client.GetTestCase(request.TestCaseName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -294,6 +307,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<TestCases.TestCasesClient> mockGrpcClient = new moq::Mock<TestCases.TestCasesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetTestCaseRequest request = new GetTestCaseRequest
             {
                 TestCaseName = TestCaseName.FromProjectLocationAgentTestCase("[PROJECT]", "[LOCATION]", "[AGENT]", "[TEST_CASE]"),
@@ -313,7 +327,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 TestConfig = new TestConfig(),
             };
             mockGrpcClient.Setup(x => x.GetTestCaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TestCase>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null);
+            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null, null);
             TestCase responseCallSettings = await client.GetTestCaseAsync(request.TestCaseName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TestCase responseCancellationToken = await client.GetTestCaseAsync(request.TestCaseName, st::CancellationToken.None);
@@ -326,6 +340,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<TestCases.TestCasesClient> mockGrpcClient = new moq::Mock<TestCases.TestCasesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateTestCaseRequest request = new CreateTestCaseRequest
             {
                 ParentAsAgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
@@ -346,7 +361,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 TestConfig = new TestConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateTestCase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null);
+            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null, null);
             TestCase response = client.CreateTestCase(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -357,6 +372,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<TestCases.TestCasesClient> mockGrpcClient = new moq::Mock<TestCases.TestCasesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateTestCaseRequest request = new CreateTestCaseRequest
             {
                 ParentAsAgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
@@ -377,7 +393,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 TestConfig = new TestConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateTestCaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TestCase>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null);
+            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null, null);
             TestCase responseCallSettings = await client.CreateTestCaseAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TestCase responseCancellationToken = await client.CreateTestCaseAsync(request, st::CancellationToken.None);
@@ -390,6 +406,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<TestCases.TestCasesClient> mockGrpcClient = new moq::Mock<TestCases.TestCasesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateTestCaseRequest request = new CreateTestCaseRequest
             {
                 ParentAsAgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
@@ -410,7 +427,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 TestConfig = new TestConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateTestCase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null);
+            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null, null);
             TestCase response = client.CreateTestCase(request.Parent, request.TestCase);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -421,6 +438,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<TestCases.TestCasesClient> mockGrpcClient = new moq::Mock<TestCases.TestCasesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateTestCaseRequest request = new CreateTestCaseRequest
             {
                 ParentAsAgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
@@ -441,7 +459,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 TestConfig = new TestConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateTestCaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TestCase>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null);
+            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null, null);
             TestCase responseCallSettings = await client.CreateTestCaseAsync(request.Parent, request.TestCase, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TestCase responseCancellationToken = await client.CreateTestCaseAsync(request.Parent, request.TestCase, st::CancellationToken.None);
@@ -454,6 +472,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<TestCases.TestCasesClient> mockGrpcClient = new moq::Mock<TestCases.TestCasesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateTestCaseRequest request = new CreateTestCaseRequest
             {
                 ParentAsAgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
@@ -474,7 +493,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 TestConfig = new TestConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateTestCase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null);
+            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null, null);
             TestCase response = client.CreateTestCase(request.ParentAsAgentName, request.TestCase);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -485,6 +504,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<TestCases.TestCasesClient> mockGrpcClient = new moq::Mock<TestCases.TestCasesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateTestCaseRequest request = new CreateTestCaseRequest
             {
                 ParentAsAgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
@@ -505,7 +525,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 TestConfig = new TestConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateTestCaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TestCase>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null);
+            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null, null);
             TestCase responseCallSettings = await client.CreateTestCaseAsync(request.ParentAsAgentName, request.TestCase, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TestCase responseCancellationToken = await client.CreateTestCaseAsync(request.ParentAsAgentName, request.TestCase, st::CancellationToken.None);
@@ -518,6 +538,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<TestCases.TestCasesClient> mockGrpcClient = new moq::Mock<TestCases.TestCasesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateTestCaseRequest request = new UpdateTestCaseRequest
             {
                 TestCase = new TestCase(),
@@ -538,7 +559,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 TestConfig = new TestConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateTestCase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null);
+            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null, null);
             TestCase response = client.UpdateTestCase(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -549,6 +570,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<TestCases.TestCasesClient> mockGrpcClient = new moq::Mock<TestCases.TestCasesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateTestCaseRequest request = new UpdateTestCaseRequest
             {
                 TestCase = new TestCase(),
@@ -569,7 +591,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 TestConfig = new TestConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateTestCaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TestCase>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null);
+            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null, null);
             TestCase responseCallSettings = await client.UpdateTestCaseAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TestCase responseCancellationToken = await client.UpdateTestCaseAsync(request, st::CancellationToken.None);
@@ -582,6 +604,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<TestCases.TestCasesClient> mockGrpcClient = new moq::Mock<TestCases.TestCasesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateTestCaseRequest request = new UpdateTestCaseRequest
             {
                 TestCase = new TestCase(),
@@ -602,7 +625,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 TestConfig = new TestConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateTestCase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null);
+            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null, null);
             TestCase response = client.UpdateTestCase(request.TestCase, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -613,6 +636,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<TestCases.TestCasesClient> mockGrpcClient = new moq::Mock<TestCases.TestCasesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateTestCaseRequest request = new UpdateTestCaseRequest
             {
                 TestCase = new TestCase(),
@@ -633,7 +657,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 TestConfig = new TestConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateTestCaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TestCase>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null);
+            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null, null);
             TestCase responseCallSettings = await client.UpdateTestCaseAsync(request.TestCase, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TestCase responseCancellationToken = await client.UpdateTestCaseAsync(request.TestCase, request.UpdateMask, st::CancellationToken.None);
@@ -646,6 +670,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<TestCases.TestCasesClient> mockGrpcClient = new moq::Mock<TestCases.TestCasesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CalculateCoverageRequest request = new CalculateCoverageRequest
             {
                 Type = CalculateCoverageRequest.Types.CoverageType.TransitionRouteGroup,
@@ -659,7 +684,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 RouteGroupCoverage = new TransitionRouteGroupCoverage(),
             };
             mockGrpcClient.Setup(x => x.CalculateCoverage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null);
+            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null, null);
             CalculateCoverageResponse response = client.CalculateCoverage(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -670,6 +695,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<TestCases.TestCasesClient> mockGrpcClient = new moq::Mock<TestCases.TestCasesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CalculateCoverageRequest request = new CalculateCoverageRequest
             {
                 Type = CalculateCoverageRequest.Types.CoverageType.TransitionRouteGroup,
@@ -683,7 +709,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 RouteGroupCoverage = new TransitionRouteGroupCoverage(),
             };
             mockGrpcClient.Setup(x => x.CalculateCoverageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CalculateCoverageResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null);
+            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null, null);
             CalculateCoverageResponse responseCallSettings = await client.CalculateCoverageAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CalculateCoverageResponse responseCancellationToken = await client.CalculateCoverageAsync(request, st::CancellationToken.None);
@@ -696,6 +722,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<TestCases.TestCasesClient> mockGrpcClient = new moq::Mock<TestCases.TestCasesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetTestCaseResultRequest request = new GetTestCaseResultRequest
             {
                 TestCaseResultName = TestCaseResultName.FromProjectLocationAgentTestCaseResult("[PROJECT]", "[LOCATION]", "[AGENT]", "[TEST_CASE]", "[RESULT]"),
@@ -712,7 +739,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 TestTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetTestCaseResult(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null);
+            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null, null);
             TestCaseResult response = client.GetTestCaseResult(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -723,6 +750,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<TestCases.TestCasesClient> mockGrpcClient = new moq::Mock<TestCases.TestCasesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetTestCaseResultRequest request = new GetTestCaseResultRequest
             {
                 TestCaseResultName = TestCaseResultName.FromProjectLocationAgentTestCaseResult("[PROJECT]", "[LOCATION]", "[AGENT]", "[TEST_CASE]", "[RESULT]"),
@@ -739,7 +767,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 TestTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetTestCaseResultAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TestCaseResult>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null);
+            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null, null);
             TestCaseResult responseCallSettings = await client.GetTestCaseResultAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TestCaseResult responseCancellationToken = await client.GetTestCaseResultAsync(request, st::CancellationToken.None);
@@ -752,6 +780,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<TestCases.TestCasesClient> mockGrpcClient = new moq::Mock<TestCases.TestCasesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetTestCaseResultRequest request = new GetTestCaseResultRequest
             {
                 TestCaseResultName = TestCaseResultName.FromProjectLocationAgentTestCaseResult("[PROJECT]", "[LOCATION]", "[AGENT]", "[TEST_CASE]", "[RESULT]"),
@@ -768,7 +797,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 TestTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetTestCaseResult(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null);
+            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null, null);
             TestCaseResult response = client.GetTestCaseResult(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -779,6 +808,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<TestCases.TestCasesClient> mockGrpcClient = new moq::Mock<TestCases.TestCasesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetTestCaseResultRequest request = new GetTestCaseResultRequest
             {
                 TestCaseResultName = TestCaseResultName.FromProjectLocationAgentTestCaseResult("[PROJECT]", "[LOCATION]", "[AGENT]", "[TEST_CASE]", "[RESULT]"),
@@ -795,7 +825,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 TestTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetTestCaseResultAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TestCaseResult>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null);
+            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null, null);
             TestCaseResult responseCallSettings = await client.GetTestCaseResultAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TestCaseResult responseCancellationToken = await client.GetTestCaseResultAsync(request.Name, st::CancellationToken.None);
@@ -808,6 +838,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<TestCases.TestCasesClient> mockGrpcClient = new moq::Mock<TestCases.TestCasesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetTestCaseResultRequest request = new GetTestCaseResultRequest
             {
                 TestCaseResultName = TestCaseResultName.FromProjectLocationAgentTestCaseResult("[PROJECT]", "[LOCATION]", "[AGENT]", "[TEST_CASE]", "[RESULT]"),
@@ -824,7 +855,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 TestTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetTestCaseResult(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null);
+            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null, null);
             TestCaseResult response = client.GetTestCaseResult(request.TestCaseResultName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -835,6 +866,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<TestCases.TestCasesClient> mockGrpcClient = new moq::Mock<TestCases.TestCasesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetTestCaseResultRequest request = new GetTestCaseResultRequest
             {
                 TestCaseResultName = TestCaseResultName.FromProjectLocationAgentTestCaseResult("[PROJECT]", "[LOCATION]", "[AGENT]", "[TEST_CASE]", "[RESULT]"),
@@ -851,7 +883,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 TestTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetTestCaseResultAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TestCaseResult>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null);
+            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null, null);
             TestCaseResult responseCallSettings = await client.GetTestCaseResultAsync(request.TestCaseResultName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TestCaseResult responseCancellationToken = await client.GetTestCaseResultAsync(request.TestCaseResultName, st::CancellationToken.None);

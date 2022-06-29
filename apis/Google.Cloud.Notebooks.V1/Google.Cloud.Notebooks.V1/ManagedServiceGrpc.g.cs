@@ -3,7 +3,7 @@
 //     source: google/cloud/notebooks/v1/managed_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2021 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -87,6 +87,10 @@ namespace Google.Cloud.Notebooks.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1.ResetRuntimeRequest> __Marshaller_google_cloud_notebooks_v1_ResetRuntimeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1.ResetRuntimeRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1.ReportRuntimeEventRequest> __Marshaller_google_cloud_notebooks_v1_ReportRuntimeEventRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1.ReportRuntimeEventRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalRequest> __Marshaller_google_cloud_notebooks_v1_RefreshRuntimeTokenInternalRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalResponse> __Marshaller_google_cloud_notebooks_v1_RefreshRuntimeTokenInternalResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Notebooks.V1.ListRuntimesRequest, global::Google.Cloud.Notebooks.V1.ListRuntimesResponse> __Method_ListRuntimes = new grpc::Method<global::Google.Cloud.Notebooks.V1.ListRuntimesRequest, global::Google.Cloud.Notebooks.V1.ListRuntimesResponse>(
@@ -159,6 +163,14 @@ namespace Google.Cloud.Notebooks.V1 {
         "ReportRuntimeEvent",
         __Marshaller_google_cloud_notebooks_v1_ReportRuntimeEventRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalRequest, global::Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalResponse> __Method_RefreshRuntimeTokenInternal = new grpc::Method<global::Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalRequest, global::Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RefreshRuntimeTokenInternal",
+        __Marshaller_google_cloud_notebooks_v1_RefreshRuntimeTokenInternalRequest,
+        __Marshaller_google_cloud_notebooks_v1_RefreshRuntimeTokenInternalResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -283,6 +295,19 @@ namespace Google.Cloud.Notebooks.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ReportRuntimeEvent(global::Google.Cloud.Notebooks.V1.ReportRuntimeEventRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets an access token for the consumer service account that the customer
+      /// attached to the runtime. Only accessible from the tenant instance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalResponse> RefreshRuntimeTokenInternal(global::Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -784,6 +809,58 @@ namespace Google.Cloud.Notebooks.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ReportRuntimeEvent, null, options, request);
       }
+      /// <summary>
+      /// Gets an access token for the consumer service account that the customer
+      /// attached to the runtime. Only accessible from the tenant instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalResponse RefreshRuntimeTokenInternal(global::Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RefreshRuntimeTokenInternal(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets an access token for the consumer service account that the customer
+      /// attached to the runtime. Only accessible from the tenant instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalResponse RefreshRuntimeTokenInternal(global::Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RefreshRuntimeTokenInternal, null, options, request);
+      }
+      /// <summary>
+      /// Gets an access token for the consumer service account that the customer
+      /// attached to the runtime. Only accessible from the tenant instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalResponse> RefreshRuntimeTokenInternalAsync(global::Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RefreshRuntimeTokenInternalAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets an access token for the consumer service account that the customer
+      /// attached to the runtime. Only accessible from the tenant instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalResponse> RefreshRuntimeTokenInternalAsync(global::Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RefreshRuntimeTokenInternal, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ManagedNotebookServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -806,7 +883,8 @@ namespace Google.Cloud.Notebooks.V1 {
           .AddMethod(__Method_StopRuntime, serviceImpl.StopRuntime)
           .AddMethod(__Method_SwitchRuntime, serviceImpl.SwitchRuntime)
           .AddMethod(__Method_ResetRuntime, serviceImpl.ResetRuntime)
-          .AddMethod(__Method_ReportRuntimeEvent, serviceImpl.ReportRuntimeEvent).Build();
+          .AddMethod(__Method_ReportRuntimeEvent, serviceImpl.ReportRuntimeEvent)
+          .AddMethod(__Method_RefreshRuntimeTokenInternal, serviceImpl.RefreshRuntimeTokenInternal).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -825,6 +903,7 @@ namespace Google.Cloud.Notebooks.V1 {
       serviceBinder.AddMethod(__Method_SwitchRuntime, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Notebooks.V1.SwitchRuntimeRequest, global::Google.LongRunning.Operation>(serviceImpl.SwitchRuntime));
       serviceBinder.AddMethod(__Method_ResetRuntime, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Notebooks.V1.ResetRuntimeRequest, global::Google.LongRunning.Operation>(serviceImpl.ResetRuntime));
       serviceBinder.AddMethod(__Method_ReportRuntimeEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Notebooks.V1.ReportRuntimeEventRequest, global::Google.LongRunning.Operation>(serviceImpl.ReportRuntimeEvent));
+      serviceBinder.AddMethod(__Method_RefreshRuntimeTokenInternal, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalRequest, global::Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalResponse>(serviceImpl.RefreshRuntimeTokenInternal));
     }
 
   }

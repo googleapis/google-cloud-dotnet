@@ -18,7 +18,6 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 {
     public class RateLimitingTraceOptionsFactoryTest
     {
-       
 
         [Fact]
         public void CreateOptions_ShouldTrace()

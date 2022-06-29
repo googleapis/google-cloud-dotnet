@@ -54,20 +54,19 @@ namespace Google.Cloud.Run.V2 {
             "U291cmNlEhMKBnNlY3JldBgBIAEoCUID4EECEjEKBWl0ZW1zGAIgAygLMiIu",
             "Z29vZ2xlLmNsb3VkLnJ1bi52Mi5WZXJzaW9uVG9QYXRoEhQKDGRlZmF1bHRf",
             "bW9kZRgDIAEoBSJBCg1WZXJzaW9uVG9QYXRoEhEKBHBhdGgYASABKAlCA+BB",
-            "AhIPCgd2ZXJzaW9uGAIgASgJEgwKBG1vZGUYAyABKAUiJwoQQ2xvdWRTcWxJ",
-            "bnN0YW5jZRITCgtjb25uZWN0aW9ucxgBIAMoCUL2AwoXY29tLmdvb2dsZS5j",
-            "bG91ZC5ydW4udjJCC0s4c01pblByb3RvUAFaNmdvb2dsZS5nb2xhbmcub3Jn",
-            "L2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvcnVuL3YyO3J1bupBeAohY2xv",
-            "dWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5ElNwcm9qZWN0cy97cHJv",
-            "amVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0va2V5UmluZ3Mve2tleV9yaW5n",
-            "fS9jcnlwdG9LZXlzL3tjcnlwdG9fa2V5fepBSgojc2VjcmV0bWFuYWdlci5n",
-            "b29nbGVhcGlzLmNvbS9TZWNyZXQSI3Byb2plY3RzL3twcm9qZWN0fS9zZWNy",
-            "ZXRzL3tzZWNyZXR96kFkCipzZWNyZXRtYW5hZ2VyLmdvb2dsZWFwaXMuY29t",
-            "L1NlY3JldFZlcnNpb24SNnByb2plY3RzL3twcm9qZWN0fS9zZWNyZXRzL3tz",
-            "ZWNyZXR9L3ZlcnNpb25zL3t2ZXJzaW9ufepBZAoidnBjYWNjZXNzLmdvb2ds",
-            "ZWFwaXMuY29tL0Nvbm5lY3RvchI+cHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
-            "aW9ucy97bG9jYXRpb259L2Nvbm5lY3RvcnMve2Nvbm5lY3Rvcn1iBnByb3Rv",
-            "Mw=="));
+            "AhIPCgd2ZXJzaW9uGAIgASgJEgwKBG1vZGUYAyABKAUiJQoQQ2xvdWRTcWxJ",
+            "bnN0YW5jZRIRCglpbnN0YW5jZXMYASADKAlC9gMKF2NvbS5nb29nbGUuY2xv",
+            "dWQucnVuLnYyQgtLOHNNaW5Qcm90b1ABWjZnb29nbGUuZ29sYW5nLm9yZy9n",
+            "ZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3J1bi92MjtydW7qQXgKIWNsb3Vk",
+            "a21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tleRJTcHJvamVjdHMve3Byb2pl",
+            "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2tleVJpbmdzL3trZXlfcmluZ30v",
+            "Y3J5cHRvS2V5cy97Y3J5cHRvX2tleX3qQUoKI3NlY3JldG1hbmFnZXIuZ29v",
+            "Z2xlYXBpcy5jb20vU2VjcmV0EiNwcm9qZWN0cy97cHJvamVjdH0vc2VjcmV0",
+            "cy97c2VjcmV0fepBZAoqc2VjcmV0bWFuYWdlci5nb29nbGVhcGlzLmNvbS9T",
+            "ZWNyZXRWZXJzaW9uEjZwcm9qZWN0cy97cHJvamVjdH0vc2VjcmV0cy97c2Vj",
+            "cmV0fS92ZXJzaW9ucy97dmVyc2lvbn3qQWQKInZwY2FjY2Vzcy5nb29nbGVh",
+            "cGlzLmNvbS9Db25uZWN0b3ISPnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
+            "bnMve2xvY2F0aW9ufS9jb25uZWN0b3JzL3tjb25uZWN0b3J9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -81,7 +80,7 @@ namespace Google.Cloud.Run.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Volume), global::Google.Cloud.Run.V2.Volume.Parser, new[]{ "Name", "Secret", "CloudSqlInstance" }, new[]{ "VolumeType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.SecretVolumeSource), global::Google.Cloud.Run.V2.SecretVolumeSource.Parser, new[]{ "Secret", "Items", "DefaultMode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.VersionToPath), global::Google.Cloud.Run.V2.VersionToPath.Parser, new[]{ "Path", "Version", "Mode" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.CloudSqlInstance), global::Google.Cloud.Run.V2.CloudSqlInstance.Parser, new[]{ "Connections" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.CloudSqlInstance), global::Google.Cloud.Run.V2.CloudSqlInstance.Parser, new[]{ "Instances" }, null, null, null, null)
           }));
     }
     #endregion
@@ -165,8 +164,8 @@ namespace Google.Cloud.Run.V2 {
     public const int ImageFieldNumber = 2;
     private string image_ = "";
     /// <summary>
-    /// Required. URL of the Container image in Google Container Registry or Docker
-    /// More info: https://kubernetes.io/docs/concepts/containers/images
+    /// Required. URL of the Container image in Google Container Registry or Google Artifact
+    /// Registry. More info: https://kubernetes.io/docs/concepts/containers/images
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2976,7 +2975,7 @@ namespace Google.Cloud.Run.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CloudSqlInstance(CloudSqlInstance other) : this() {
-      connections_ = other.connections_.Clone();
+      instances_ = other.instances_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2986,11 +2985,11 @@ namespace Google.Cloud.Run.V2 {
       return new CloudSqlInstance(this);
     }
 
-    /// <summary>Field number for the "connections" field.</summary>
-    public const int ConnectionsFieldNumber = 1;
-    private static readonly pb::FieldCodec<string> _repeated_connections_codec
+    /// <summary>Field number for the "instances" field.</summary>
+    public const int InstancesFieldNumber = 1;
+    private static readonly pb::FieldCodec<string> _repeated_instances_codec
         = pb::FieldCodec.ForString(10);
-    private readonly pbc::RepeatedField<string> connections_ = new pbc::RepeatedField<string>();
+    private readonly pbc::RepeatedField<string> instances_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// The Cloud SQL instance connection names, as can be found in
     /// https://console.cloud.google.com/sql/instances. Visit
@@ -3000,8 +2999,8 @@ namespace Google.Cloud.Run.V2 {
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<string> Connections {
-      get { return connections_; }
+    public pbc::RepeatedField<string> Instances {
+      get { return instances_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3019,7 +3018,7 @@ namespace Google.Cloud.Run.V2 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!connections_.Equals(other.connections_)) return false;
+      if(!instances_.Equals(other.instances_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3027,7 +3026,7 @@ namespace Google.Cloud.Run.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= connections_.GetHashCode();
+      hash ^= instances_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3046,7 +3045,7 @@ namespace Google.Cloud.Run.V2 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      connections_.WriteTo(output, _repeated_connections_codec);
+      instances_.WriteTo(output, _repeated_instances_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3057,7 +3056,7 @@ namespace Google.Cloud.Run.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      connections_.WriteTo(ref output, _repeated_connections_codec);
+      instances_.WriteTo(ref output, _repeated_instances_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3068,7 +3067,7 @@ namespace Google.Cloud.Run.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += connections_.CalculateSize(_repeated_connections_codec);
+      size += instances_.CalculateSize(_repeated_instances_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3081,7 +3080,7 @@ namespace Google.Cloud.Run.V2 {
       if (other == null) {
         return;
       }
-      connections_.Add(other.connections_);
+      instances_.Add(other.instances_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3098,7 +3097,7 @@ namespace Google.Cloud.Run.V2 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            connections_.AddEntriesFrom(input, _repeated_connections_codec);
+            instances_.AddEntriesFrom(input, _repeated_instances_codec);
             break;
           }
         }
@@ -3117,7 +3116,7 @@ namespace Google.Cloud.Run.V2 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            connections_.AddEntriesFrom(ref input, _repeated_connections_codec);
+            instances_.AddEntriesFrom(ref input, _repeated_instances_codec);
             break;
           }
         }

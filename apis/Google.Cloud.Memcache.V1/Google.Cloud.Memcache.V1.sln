@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Memcache.V1.Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Memcache.V1.GeneratedSnippets", "Google.Cloud.Memcache.V1.GeneratedSnippets\Google.Cloud.Memcache.V1.GeneratedSnippets.csproj", "{C4F82759-B70D-4E11-8BC1-39A586311860}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.LongRunning", "..\Google.LongRunning\Google.LongRunning\Google.LongRunning.csproj", "{563821FD-8B99-42A5-B6DF-E35CF1D56A01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -86,5 +88,17 @@ Global
 		{C4F82759-B70D-4E11-8BC1-39A586311860}.Release|x64.Build.0 = Release|Any CPU
 		{C4F82759-B70D-4E11-8BC1-39A586311860}.Release|x86.ActiveCfg = Release|Any CPU
 		{C4F82759-B70D-4E11-8BC1-39A586311860}.Release|x86.Build.0 = Release|Any CPU
+		{563821FD-8B99-42A5-B6DF-E35CF1D56A01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{563821FD-8B99-42A5-B6DF-E35CF1D56A01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{563821FD-8B99-42A5-B6DF-E35CF1D56A01}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{563821FD-8B99-42A5-B6DF-E35CF1D56A01}.Debug|x64.Build.0 = Debug|Any CPU
+		{563821FD-8B99-42A5-B6DF-E35CF1D56A01}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{563821FD-8B99-42A5-B6DF-E35CF1D56A01}.Debug|x86.Build.0 = Debug|Any CPU
+		{563821FD-8B99-42A5-B6DF-E35CF1D56A01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{563821FD-8B99-42A5-B6DF-E35CF1D56A01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{563821FD-8B99-42A5-B6DF-E35CF1D56A01}.Release|x64.ActiveCfg = Release|Any CPU
+		{563821FD-8B99-42A5-B6DF-E35CF1D56A01}.Release|x64.Build.0 = Release|Any CPU
+		{563821FD-8B99-42A5-B6DF-E35CF1D56A01}.Release|x86.ActiveCfg = Release|Any CPU
+		{563821FD-8B99-42A5-B6DF-E35CF1D56A01}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using ga = Google.Api;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using proto = Google.Protobuf;
@@ -46,7 +47,7 @@ namespace Google.Cloud.GkeConnect.Gateway.V1Beta1.Tests
                 Extensions = { new wkt::Any(), },
             };
             mockGrpcClient.Setup(x => x.GetResource(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GatewayServiceClient client = new GatewayServiceClientImpl(mockGrpcClient.Object, null);
+            GatewayServiceClient client = new GatewayServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::HttpBody response = client.GetResource(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -69,7 +70,7 @@ namespace Google.Cloud.GkeConnect.Gateway.V1Beta1.Tests
                 Extensions = { new wkt::Any(), },
             };
             mockGrpcClient.Setup(x => x.GetResourceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::HttpBody>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GatewayServiceClient client = new GatewayServiceClientImpl(mockGrpcClient.Object, null);
+            GatewayServiceClient client = new GatewayServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::HttpBody responseCallSettings = await client.GetResourceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ga::HttpBody responseCancellationToken = await client.GetResourceAsync(request, st::CancellationToken.None);
@@ -94,7 +95,7 @@ namespace Google.Cloud.GkeConnect.Gateway.V1Beta1.Tests
                 Extensions = { new wkt::Any(), },
             };
             mockGrpcClient.Setup(x => x.PostResource(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GatewayServiceClient client = new GatewayServiceClientImpl(mockGrpcClient.Object, null);
+            GatewayServiceClient client = new GatewayServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::HttpBody response = client.PostResource(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -117,7 +118,7 @@ namespace Google.Cloud.GkeConnect.Gateway.V1Beta1.Tests
                 Extensions = { new wkt::Any(), },
             };
             mockGrpcClient.Setup(x => x.PostResourceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::HttpBody>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GatewayServiceClient client = new GatewayServiceClientImpl(mockGrpcClient.Object, null);
+            GatewayServiceClient client = new GatewayServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::HttpBody responseCallSettings = await client.PostResourceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ga::HttpBody responseCancellationToken = await client.PostResourceAsync(request, st::CancellationToken.None);
@@ -142,7 +143,7 @@ namespace Google.Cloud.GkeConnect.Gateway.V1Beta1.Tests
                 Extensions = { new wkt::Any(), },
             };
             mockGrpcClient.Setup(x => x.DeleteResource(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GatewayServiceClient client = new GatewayServiceClientImpl(mockGrpcClient.Object, null);
+            GatewayServiceClient client = new GatewayServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::HttpBody response = client.DeleteResource(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -165,7 +166,7 @@ namespace Google.Cloud.GkeConnect.Gateway.V1Beta1.Tests
                 Extensions = { new wkt::Any(), },
             };
             mockGrpcClient.Setup(x => x.DeleteResourceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::HttpBody>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GatewayServiceClient client = new GatewayServiceClientImpl(mockGrpcClient.Object, null);
+            GatewayServiceClient client = new GatewayServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::HttpBody responseCallSettings = await client.DeleteResourceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ga::HttpBody responseCancellationToken = await client.DeleteResourceAsync(request, st::CancellationToken.None);
@@ -190,7 +191,7 @@ namespace Google.Cloud.GkeConnect.Gateway.V1Beta1.Tests
                 Extensions = { new wkt::Any(), },
             };
             mockGrpcClient.Setup(x => x.PutResource(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GatewayServiceClient client = new GatewayServiceClientImpl(mockGrpcClient.Object, null);
+            GatewayServiceClient client = new GatewayServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::HttpBody response = client.PutResource(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -213,7 +214,7 @@ namespace Google.Cloud.GkeConnect.Gateway.V1Beta1.Tests
                 Extensions = { new wkt::Any(), },
             };
             mockGrpcClient.Setup(x => x.PutResourceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::HttpBody>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GatewayServiceClient client = new GatewayServiceClientImpl(mockGrpcClient.Object, null);
+            GatewayServiceClient client = new GatewayServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::HttpBody responseCallSettings = await client.PutResourceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ga::HttpBody responseCancellationToken = await client.PutResourceAsync(request, st::CancellationToken.None);
@@ -238,7 +239,7 @@ namespace Google.Cloud.GkeConnect.Gateway.V1Beta1.Tests
                 Extensions = { new wkt::Any(), },
             };
             mockGrpcClient.Setup(x => x.PatchResource(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GatewayServiceClient client = new GatewayServiceClientImpl(mockGrpcClient.Object, null);
+            GatewayServiceClient client = new GatewayServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::HttpBody response = client.PatchResource(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -261,7 +262,7 @@ namespace Google.Cloud.GkeConnect.Gateway.V1Beta1.Tests
                 Extensions = { new wkt::Any(), },
             };
             mockGrpcClient.Setup(x => x.PatchResourceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::HttpBody>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GatewayServiceClient client = new GatewayServiceClientImpl(mockGrpcClient.Object, null);
+            GatewayServiceClient client = new GatewayServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::HttpBody responseCallSettings = await client.PatchResourceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ga::HttpBody responseCancellationToken = await client.PatchResourceAsync(request, st::CancellationToken.None);

@@ -3,7 +3,7 @@
 //     source: google/cloud/bigquery/reservation/v1/reservation.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2021 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -133,6 +133,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsResponse> __Marshaller_google_cloud_bigquery_reservation_v1_SearchAllAssignmentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.MoveAssignmentRequest> __Marshaller_google_cloud_bigquery_reservation_v1_MoveAssignmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.MoveAssignmentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.UpdateAssignmentRequest> __Marshaller_google_cloud_bigquery_reservation_v1_UpdateAssignmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.UpdateAssignmentRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.GetBiReservationRequest> __Marshaller_google_cloud_bigquery_reservation_v1_GetBiReservationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.GetBiReservationRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -282,6 +284,14 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         __ServiceName,
         "MoveAssignment",
         __Marshaller_google_cloud_bigquery_reservation_v1_MoveAssignmentRequest,
+        __Marshaller_google_cloud_bigquery_reservation_v1_Assignment);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.UpdateAssignmentRequest, global::Google.Cloud.BigQuery.Reservation.V1.Assignment> __Method_UpdateAssignment = new grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.UpdateAssignmentRequest, global::Google.Cloud.BigQuery.Reservation.V1.Assignment>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateAssignment",
+        __Marshaller_google_cloud_bigquery_reservation_v1_UpdateAssignmentRequest,
         __Marshaller_google_cloud_bigquery_reservation_v1_Assignment);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -448,7 +458,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       ///
       /// For example, in order to downgrade from 10000 slots to 8000, you might
       /// split a 10000 capacity commitment into commitments of 2000 and 8000. Then,
-      /// you would change the plan of the first one to `FLEX` and then delete it.
+      /// you delete the first one after the commitment end time passes.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -582,8 +592,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       }
 
       /// <summary>
-      /// Deprecated: Looks up assignments for a specified resource for a particular region.
-      /// If the request is about a project:
+      /// Deprecated: Looks up assignments for a specified resource for a particular
+      /// region. If the request is about a project:
       ///
       /// 1. Assignments created on the project will be returned if they exist.
       /// 2. Otherwise assignments created on the closest ancestor will be
@@ -658,6 +668,20 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.Reservation.V1.Assignment> MoveAssignment(global::Google.Cloud.BigQuery.Reservation.V1.MoveAssignmentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates an existing assignment.
+      ///
+      /// Only the `priority` field can be updated.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.Reservation.V1.Assignment> UpdateAssignment(global::Google.Cloud.BigQuery.Reservation.V1.UpdateAssignmentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1250,7 +1274,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       ///
       /// For example, in order to downgrade from 10000 slots to 8000, you might
       /// split a 10000 capacity commitment into commitments of 2000 and 8000. Then,
-      /// you would change the plan of the first one to `FLEX` and then delete it.
+      /// you delete the first one after the commitment end time passes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1270,7 +1294,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       ///
       /// For example, in order to downgrade from 10000 slots to 8000, you might
       /// split a 10000 capacity commitment into commitments of 2000 and 8000. Then,
-      /// you would change the plan of the first one to `FLEX` and then delete it.
+      /// you delete the first one after the commitment end time passes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1288,7 +1312,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       ///
       /// For example, in order to downgrade from 10000 slots to 8000, you might
       /// split a 10000 capacity commitment into commitments of 2000 and 8000. Then,
-      /// you would change the plan of the first one to `FLEX` and then delete it.
+      /// you delete the first one after the commitment end time passes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1308,7 +1332,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       ///
       /// For example, in order to downgrade from 10000 slots to 8000, you might
       /// split a 10000 capacity commitment into commitments of 2000 and 8000. Then,
-      /// you would change the plan of the first one to `FLEX` and then delete it.
+      /// you delete the first one after the commitment end time passes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1807,8 +1831,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteAssignment, null, options, request);
       }
       /// <summary>
-      /// Deprecated: Looks up assignments for a specified resource for a particular region.
-      /// If the request is about a project:
+      /// Deprecated: Looks up assignments for a specified resource for a particular
+      /// region. If the request is about a project:
       ///
       /// 1. Assignments created on the project will be returned if they exist.
       /// 2. Otherwise assignments created on the closest ancestor will be
@@ -1842,8 +1866,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         return SearchAssignments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deprecated: Looks up assignments for a specified resource for a particular region.
-      /// If the request is about a project:
+      /// Deprecated: Looks up assignments for a specified resource for a particular
+      /// region. If the request is about a project:
       ///
       /// 1. Assignments created on the project will be returned if they exist.
       /// 2. Otherwise assignments created on the closest ancestor will be
@@ -1875,8 +1899,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_SearchAssignments, null, options, request);
       }
       /// <summary>
-      /// Deprecated: Looks up assignments for a specified resource for a particular region.
-      /// If the request is about a project:
+      /// Deprecated: Looks up assignments for a specified resource for a particular
+      /// region. If the request is about a project:
       ///
       /// 1. Assignments created on the project will be returned if they exist.
       /// 2. Otherwise assignments created on the closest ancestor will be
@@ -1910,8 +1934,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         return SearchAssignmentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deprecated: Looks up assignments for a specified resource for a particular region.
-      /// If the request is about a project:
+      /// Deprecated: Looks up assignments for a specified resource for a particular
+      /// region. If the request is about a project:
       ///
       /// 1. Assignments created on the project will be returned if they exist.
       /// 2. Otherwise assignments created on the closest ancestor will be
@@ -2131,6 +2155,62 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_MoveAssignment, null, options, request);
       }
       /// <summary>
+      /// Updates an existing assignment.
+      ///
+      /// Only the `priority` field can be updated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.Reservation.V1.Assignment UpdateAssignment(global::Google.Cloud.BigQuery.Reservation.V1.UpdateAssignmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAssignment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an existing assignment.
+      ///
+      /// Only the `priority` field can be updated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.Reservation.V1.Assignment UpdateAssignment(global::Google.Cloud.BigQuery.Reservation.V1.UpdateAssignmentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateAssignment, null, options, request);
+      }
+      /// <summary>
+      /// Updates an existing assignment.
+      ///
+      /// Only the `priority` field can be updated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.Assignment> UpdateAssignmentAsync(global::Google.Cloud.BigQuery.Reservation.V1.UpdateAssignmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAssignmentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an existing assignment.
+      ///
+      /// Only the `priority` field can be updated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.Assignment> UpdateAssignmentAsync(global::Google.Cloud.BigQuery.Reservation.V1.UpdateAssignmentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateAssignment, null, options, request);
+      }
+      /// <summary>
       /// Retrieves a BI reservation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2286,6 +2366,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
           .AddMethod(__Method_SearchAssignments, serviceImpl.SearchAssignments)
           .AddMethod(__Method_SearchAllAssignments, serviceImpl.SearchAllAssignments)
           .AddMethod(__Method_MoveAssignment, serviceImpl.MoveAssignment)
+          .AddMethod(__Method_UpdateAssignment, serviceImpl.UpdateAssignment)
           .AddMethod(__Method_GetBiReservation, serviceImpl.GetBiReservation)
           .AddMethod(__Method_UpdateBiReservation, serviceImpl.UpdateBiReservation).Build();
     }
@@ -2315,6 +2396,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       serviceBinder.AddMethod(__Method_SearchAssignments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsRequest, global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsResponse>(serviceImpl.SearchAssignments));
       serviceBinder.AddMethod(__Method_SearchAllAssignments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsRequest, global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsResponse>(serviceImpl.SearchAllAssignments));
       serviceBinder.AddMethod(__Method_MoveAssignment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.Reservation.V1.MoveAssignmentRequest, global::Google.Cloud.BigQuery.Reservation.V1.Assignment>(serviceImpl.MoveAssignment));
+      serviceBinder.AddMethod(__Method_UpdateAssignment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.Reservation.V1.UpdateAssignmentRequest, global::Google.Cloud.BigQuery.Reservation.V1.Assignment>(serviceImpl.UpdateAssignment));
       serviceBinder.AddMethod(__Method_GetBiReservation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.Reservation.V1.GetBiReservationRequest, global::Google.Cloud.BigQuery.Reservation.V1.BiReservation>(serviceImpl.GetBiReservation));
       serviceBinder.AddMethod(__Method_UpdateBiReservation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.Reservation.V1.UpdateBiReservationRequest, global::Google.Cloud.BigQuery.Reservation.V1.BiReservation>(serviceImpl.UpdateBiReservation));
     }

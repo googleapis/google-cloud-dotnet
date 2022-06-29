@@ -1,5 +1,36 @@
 # Version history
 
+## Version 2.0.0, released 2022-06-08
+
+This is the first version of this package to depend on GAX v4.
+
+There are some breaking changes, both in GAX v4 and in the generated
+code. The changes that aren't specific to any given API are [described in the Google Cloud
+documentation](https://cloud.google.com/dotnet/docs/reference/help/breaking-gax4).
+We don't anticipate any changes to most customer code, but please [file a
+GitHub issue](https://github.com/googleapis/google-cloud-dotnet/issues/new/choose)
+if you run into problems.
+
+The most important change in this release is the use of the Grpc.Net.Client package
+for gRPC communication, instead of Grpc.Core. When using .NET Core 3.1 or .NET 5.0+
+this should lead to a smaller installation footprint and greater compatibility (e.g.
+with Apple M1 chips). Any significant change in a core component comes with the risk
+of incompatibility, however - so again, please let us know if you encounter any
+issues.
+
+
+## Version 1.7.0, released 2022-04-26
+
+### New features
+
+- Add API definitions for Cloud Channel Repricing APIs ([commit d654082](https://github.com/googleapis/google-cloud-dotnet/commit/d6540821516272203d41affeda5df0ef4eae31bc))
+- Add new enum value, new filter in ListCustomersRequest of Cloud Channel API ([commit dfdc095](https://github.com/googleapis/google-cloud-dotnet/commit/dfdc095dd2ee4c8a91cd9c8dd1960906052033f8))
+
+### Documentation improvements
+
+- Clarify language ([commit 1641322](https://github.com/googleapis/google-cloud-dotnet/commit/1641322b44efbd08a2d62b67468029b1ae0e565c))
+- Change description for enum default value ([commit 5a4f37b](https://github.com/googleapis/google-cloud-dotnet/commit/5a4f37bacef8f0b3cb22d9ebf466fc0ab1e50eca))
+- Change description for GCP ProvisionedService.provisioning_id value ([commit b30248e](https://github.com/googleapis/google-cloud-dotnet/commit/b30248ea2a0cc0066becda3f56eaa33fed29e157))
 ## Version 1.6.0, released 2021-12-07
 
 - [Commit 2382311](https://github.com/googleapis/google-cloud-dotnet/commit/2382311): docs: Small clarification

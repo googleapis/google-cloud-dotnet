@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using grpccore = Grpc.Core;
@@ -54,6 +55,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 DestRange = "dest_range56ada943",
                 NextHopInstance = "next_hop_instance57e80635",
                 NextHopPeering = "next_hop_peering2cca5109",
+                RouteStatus = "route_status48e2b140",
                 Description = "description2cf9da67",
                 Priority = 1546225849U,
                 SelfLink = "self_link7e87f12d",
@@ -61,7 +63,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 NextHopVpnTunnel = "next_hop_vpn_tunnela5f8e0c5",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RoutesClient client = new RoutesClientImpl(mockGrpcClient.Object, null);
+            RoutesClient client = new RoutesClientImpl(mockGrpcClient.Object, null, null);
             Route response = client.Get(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -94,6 +96,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 DestRange = "dest_range56ada943",
                 NextHopInstance = "next_hop_instance57e80635",
                 NextHopPeering = "next_hop_peering2cca5109",
+                RouteStatus = "route_status48e2b140",
                 Description = "description2cf9da67",
                 Priority = 1546225849U,
                 SelfLink = "self_link7e87f12d",
@@ -101,7 +104,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 NextHopVpnTunnel = "next_hop_vpn_tunnela5f8e0c5",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Route>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RoutesClient client = new RoutesClientImpl(mockGrpcClient.Object, null);
+            RoutesClient client = new RoutesClientImpl(mockGrpcClient.Object, null, null);
             Route responseCallSettings = await client.GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Route responseCancellationToken = await client.GetAsync(request, st::CancellationToken.None);
@@ -136,6 +139,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 DestRange = "dest_range56ada943",
                 NextHopInstance = "next_hop_instance57e80635",
                 NextHopPeering = "next_hop_peering2cca5109",
+                RouteStatus = "route_status48e2b140",
                 Description = "description2cf9da67",
                 Priority = 1546225849U,
                 SelfLink = "self_link7e87f12d",
@@ -143,7 +147,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 NextHopVpnTunnel = "next_hop_vpn_tunnela5f8e0c5",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RoutesClient client = new RoutesClientImpl(mockGrpcClient.Object, null);
+            RoutesClient client = new RoutesClientImpl(mockGrpcClient.Object, null, null);
             Route response = client.Get(request.Project, request.Route);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -176,6 +180,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 DestRange = "dest_range56ada943",
                 NextHopInstance = "next_hop_instance57e80635",
                 NextHopPeering = "next_hop_peering2cca5109",
+                RouteStatus = "route_status48e2b140",
                 Description = "description2cf9da67",
                 Priority = 1546225849U,
                 SelfLink = "self_link7e87f12d",
@@ -183,7 +188,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 NextHopVpnTunnel = "next_hop_vpn_tunnela5f8e0c5",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Route>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RoutesClient client = new RoutesClientImpl(mockGrpcClient.Object, null);
+            RoutesClient client = new RoutesClientImpl(mockGrpcClient.Object, null, null);
             Route responseCallSettings = await client.GetAsync(request.Project, request.Route, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Route responseCancellationToken = await client.GetAsync(request.Project, request.Route, st::CancellationToken.None);

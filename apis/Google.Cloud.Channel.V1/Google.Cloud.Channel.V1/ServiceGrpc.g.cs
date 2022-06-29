@@ -156,6 +156,34 @@ namespace Google.Cloud.Channel.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.UpdateChannelPartnerLinkRequest> __Marshaller_google_cloud_channel_v1_UpdateChannelPartnerLinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.UpdateChannelPartnerLinkRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.GetCustomerRepricingConfigRequest> __Marshaller_google_cloud_channel_v1_GetCustomerRepricingConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.GetCustomerRepricingConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.CustomerRepricingConfig> __Marshaller_google_cloud_channel_v1_CustomerRepricingConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.CustomerRepricingConfig.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListCustomerRepricingConfigsRequest> __Marshaller_google_cloud_channel_v1_ListCustomerRepricingConfigsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListCustomerRepricingConfigsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListCustomerRepricingConfigsResponse> __Marshaller_google_cloud_channel_v1_ListCustomerRepricingConfigsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListCustomerRepricingConfigsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.CreateCustomerRepricingConfigRequest> __Marshaller_google_cloud_channel_v1_CreateCustomerRepricingConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.CreateCustomerRepricingConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.UpdateCustomerRepricingConfigRequest> __Marshaller_google_cloud_channel_v1_UpdateCustomerRepricingConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.UpdateCustomerRepricingConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.DeleteCustomerRepricingConfigRequest> __Marshaller_google_cloud_channel_v1_DeleteCustomerRepricingConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.DeleteCustomerRepricingConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.GetChannelPartnerRepricingConfigRequest> __Marshaller_google_cloud_channel_v1_GetChannelPartnerRepricingConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.GetChannelPartnerRepricingConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig> __Marshaller_google_cloud_channel_v1_ChannelPartnerRepricingConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListChannelPartnerRepricingConfigsRequest> __Marshaller_google_cloud_channel_v1_ListChannelPartnerRepricingConfigsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListChannelPartnerRepricingConfigsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListChannelPartnerRepricingConfigsResponse> __Marshaller_google_cloud_channel_v1_ListChannelPartnerRepricingConfigsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListChannelPartnerRepricingConfigsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.CreateChannelPartnerRepricingConfigRequest> __Marshaller_google_cloud_channel_v1_CreateChannelPartnerRepricingConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.CreateChannelPartnerRepricingConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.UpdateChannelPartnerRepricingConfigRequest> __Marshaller_google_cloud_channel_v1_UpdateChannelPartnerRepricingConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.UpdateChannelPartnerRepricingConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.DeleteChannelPartnerRepricingConfigRequest> __Marshaller_google_cloud_channel_v1_DeleteChannelPartnerRepricingConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.DeleteChannelPartnerRepricingConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.LookupOfferRequest> __Marshaller_google_cloud_channel_v1_LookupOfferRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.LookupOfferRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.Offer> __Marshaller_google_cloud_channel_v1_Offer = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.Offer.Parser));
@@ -399,6 +427,86 @@ namespace Google.Cloud.Channel.V1 {
         "UpdateChannelPartnerLink",
         __Marshaller_google_cloud_channel_v1_UpdateChannelPartnerLinkRequest,
         __Marshaller_google_cloud_channel_v1_ChannelPartnerLink);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Channel.V1.GetCustomerRepricingConfigRequest, global::Google.Cloud.Channel.V1.CustomerRepricingConfig> __Method_GetCustomerRepricingConfig = new grpc::Method<global::Google.Cloud.Channel.V1.GetCustomerRepricingConfigRequest, global::Google.Cloud.Channel.V1.CustomerRepricingConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetCustomerRepricingConfig",
+        __Marshaller_google_cloud_channel_v1_GetCustomerRepricingConfigRequest,
+        __Marshaller_google_cloud_channel_v1_CustomerRepricingConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Channel.V1.ListCustomerRepricingConfigsRequest, global::Google.Cloud.Channel.V1.ListCustomerRepricingConfigsResponse> __Method_ListCustomerRepricingConfigs = new grpc::Method<global::Google.Cloud.Channel.V1.ListCustomerRepricingConfigsRequest, global::Google.Cloud.Channel.V1.ListCustomerRepricingConfigsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListCustomerRepricingConfigs",
+        __Marshaller_google_cloud_channel_v1_ListCustomerRepricingConfigsRequest,
+        __Marshaller_google_cloud_channel_v1_ListCustomerRepricingConfigsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Channel.V1.CreateCustomerRepricingConfigRequest, global::Google.Cloud.Channel.V1.CustomerRepricingConfig> __Method_CreateCustomerRepricingConfig = new grpc::Method<global::Google.Cloud.Channel.V1.CreateCustomerRepricingConfigRequest, global::Google.Cloud.Channel.V1.CustomerRepricingConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateCustomerRepricingConfig",
+        __Marshaller_google_cloud_channel_v1_CreateCustomerRepricingConfigRequest,
+        __Marshaller_google_cloud_channel_v1_CustomerRepricingConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Channel.V1.UpdateCustomerRepricingConfigRequest, global::Google.Cloud.Channel.V1.CustomerRepricingConfig> __Method_UpdateCustomerRepricingConfig = new grpc::Method<global::Google.Cloud.Channel.V1.UpdateCustomerRepricingConfigRequest, global::Google.Cloud.Channel.V1.CustomerRepricingConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateCustomerRepricingConfig",
+        __Marshaller_google_cloud_channel_v1_UpdateCustomerRepricingConfigRequest,
+        __Marshaller_google_cloud_channel_v1_CustomerRepricingConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Channel.V1.DeleteCustomerRepricingConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteCustomerRepricingConfig = new grpc::Method<global::Google.Cloud.Channel.V1.DeleteCustomerRepricingConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteCustomerRepricingConfig",
+        __Marshaller_google_cloud_channel_v1_DeleteCustomerRepricingConfigRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Channel.V1.GetChannelPartnerRepricingConfigRequest, global::Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig> __Method_GetChannelPartnerRepricingConfig = new grpc::Method<global::Google.Cloud.Channel.V1.GetChannelPartnerRepricingConfigRequest, global::Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetChannelPartnerRepricingConfig",
+        __Marshaller_google_cloud_channel_v1_GetChannelPartnerRepricingConfigRequest,
+        __Marshaller_google_cloud_channel_v1_ChannelPartnerRepricingConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Channel.V1.ListChannelPartnerRepricingConfigsRequest, global::Google.Cloud.Channel.V1.ListChannelPartnerRepricingConfigsResponse> __Method_ListChannelPartnerRepricingConfigs = new grpc::Method<global::Google.Cloud.Channel.V1.ListChannelPartnerRepricingConfigsRequest, global::Google.Cloud.Channel.V1.ListChannelPartnerRepricingConfigsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListChannelPartnerRepricingConfigs",
+        __Marshaller_google_cloud_channel_v1_ListChannelPartnerRepricingConfigsRequest,
+        __Marshaller_google_cloud_channel_v1_ListChannelPartnerRepricingConfigsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Channel.V1.CreateChannelPartnerRepricingConfigRequest, global::Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig> __Method_CreateChannelPartnerRepricingConfig = new grpc::Method<global::Google.Cloud.Channel.V1.CreateChannelPartnerRepricingConfigRequest, global::Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateChannelPartnerRepricingConfig",
+        __Marshaller_google_cloud_channel_v1_CreateChannelPartnerRepricingConfigRequest,
+        __Marshaller_google_cloud_channel_v1_ChannelPartnerRepricingConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Channel.V1.UpdateChannelPartnerRepricingConfigRequest, global::Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig> __Method_UpdateChannelPartnerRepricingConfig = new grpc::Method<global::Google.Cloud.Channel.V1.UpdateChannelPartnerRepricingConfigRequest, global::Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateChannelPartnerRepricingConfig",
+        __Marshaller_google_cloud_channel_v1_UpdateChannelPartnerRepricingConfigRequest,
+        __Marshaller_google_cloud_channel_v1_ChannelPartnerRepricingConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Channel.V1.DeleteChannelPartnerRepricingConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteChannelPartnerRepricingConfig = new grpc::Method<global::Google.Cloud.Channel.V1.DeleteChannelPartnerRepricingConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteChannelPartnerRepricingConfig",
+        __Marshaller_google_cloud_channel_v1_DeleteChannelPartnerRepricingConfigRequest,
+        __Marshaller_google_protobuf_Empty);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.LookupOfferRequest, global::Google.Cloud.Channel.V1.Offer> __Method_LookupOffer = new grpc::Method<global::Google.Cloud.Channel.V1.LookupOfferRequest, global::Google.Cloud.Channel.V1.Offer>(
@@ -1255,6 +1363,344 @@ namespace Google.Cloud.Channel.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.ChannelPartnerLink> UpdateChannelPartnerLink(global::Google.Cloud.Channel.V1.UpdateChannelPartnerLinkRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets information about how a Reseller modifies their bill before sending
+      /// it to a Customer.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] was not found.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise returns
+      /// an error.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.CustomerRepricingConfig> GetCustomerRepricingConfig(global::Google.Cloud.Channel.V1.GetCustomerRepricingConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists information about how a Reseller modifies their bill before sending
+      /// it to a Customer.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+      /// not associated with the given account.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resources. The
+      /// data for each resource is displayed in the ascending order of:
+      /// * customer ID
+      /// * [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
+      /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// * [CustomerRepricingConfig.update_time][google.cloud.channel.v1.CustomerRepricingConfig.update_time]
+      ///
+      /// If unsuccessful, returns an error.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.ListCustomerRepricingConfigsResponse> ListCustomerRepricingConfigs(global::Google.Cloud.Channel.V1.ListCustomerRepricingConfigsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a CustomerRepricingConfig. Call this method to set modifications
+      /// for a specific customer's bill. You can only create configs if the
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+      /// future month. If needed, you can create a config for the current month,
+      /// with some restrictions.
+      ///
+      /// When creating a config for a future month, make sure there are no existing
+      /// configs for that
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      ///
+      /// The following restrictions are for creating configs in the current month.
+      ///
+      /// * This functionality is reserved for recovering from an erroneous config,
+      /// and should not be used for regular business cases.
+      /// * The new config will not modify exports used with other configs.
+      /// Changes to the config may be immediate, but may take up to 24 hours.
+      /// * There is a limit of ten configs for any
+      /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
+      /// or [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      /// * The contained [CustomerRepricingConfig.repricing_config][google.cloud.channel.v1.CustomerRepricingConfig.repricing_config] vaule must be
+      /// different from the value used in the current config for a
+      /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement].
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request. Also displays if the updated config is for the current month or
+      /// past months.
+      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+      /// not associated with the given account.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the updated [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise
+      /// returns an error.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.CustomerRepricingConfig> CreateCustomerRepricingConfig(global::Google.Cloud.Channel.V1.CreateCustomerRepricingConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a CustomerRepricingConfig. Call this method to set modifications
+      /// for a specific customer's bill. This method overwrites the existing
+      /// CustomerRepricingConfig.
+      ///
+      /// You can only update configs if the
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+      /// future month. To make changes to configs for the current month, use
+      /// [CreateCustomerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateCustomerRepricingConfig], taking note of its restrictions. You
+      /// cannot update the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      ///
+      /// When updating a config in the future:
+      ///
+      /// * This config must already exist.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request. Also displays if the updated config is for the current month or
+      /// past months.
+      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+      /// not associated with the given account.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the updated [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise
+      /// returns an error.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.CustomerRepricingConfig> UpdateCustomerRepricingConfig(global::Google.Cloud.Channel.V1.UpdateCustomerRepricingConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes the given [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] permanently. You can only
+      /// delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is set
+      /// to a date after the current month.
+      ///
+      /// Possible error codes:
+      ///
+      /// * PERMISSION_DENIED: The account making the request does not own
+      /// this customer.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * FAILED_PRECONDITION: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] is active or in the
+      /// past.
+      /// * NOT_FOUND: No [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] found for the name in the
+      /// request.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCustomerRepricingConfig(global::Google.Cloud.Channel.V1.DeleteCustomerRepricingConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets information about how a Distributor modifies their bill before sending
+      /// it to a ChannelPartner.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] was not found.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource, otherwise
+      /// returns an error.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig> GetChannelPartnerRepricingConfig(global::Google.Cloud.Channel.V1.GetChannelPartnerRepricingConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists information about how a Reseller modifies their bill before sending
+      /// it to a ChannelPartner.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+      /// or is not associated with the given account.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resources.
+      /// The data for each resource is displayed in the ascending order of:
+      /// * channel partner ID
+      /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// * [ChannelPartnerRepricingConfig.update_time][google.cloud.channel.v1.ChannelPartnerRepricingConfig.update_time]
+      ///
+      /// If unsuccessful, returns an error.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.ListChannelPartnerRepricingConfigsResponse> ListChannelPartnerRepricingConfigs(global::Google.Cloud.Channel.V1.ListChannelPartnerRepricingConfigsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a ChannelPartnerRepricingConfig. Call this method to set
+      /// modifications for a specific ChannelPartner's bill. You can only create
+      /// configs if the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a future
+      /// month. If needed, you can create a config for the current month, with some
+      /// restrictions.
+      ///
+      /// When creating a config for a future month, make sure there are no existing
+      /// configs for that
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      ///
+      /// The following restrictions are for creating configs in the current month.
+      ///
+      /// * This functionality is reserved for recovering from an erroneous config,
+      /// and should not be used for regular business cases.
+      /// * The new config will not modify exports used with other configs.
+      /// Changes to the config may be immediate, but may take up to 24 hours.
+      /// * There is a limit of ten configs for any ChannelPartner or
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      /// * The contained [ChannelPartnerRepricingConfig.repricing_config][google.cloud.channel.v1.ChannelPartnerRepricingConfig.repricing_config] vaule
+      /// must be different from the value used in the current config for a
+      /// ChannelPartner.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request. Also displays if the updated config is for the current month or
+      /// past months.
+      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+      /// or is not associated with the given account.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the updated [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource,
+      /// otherwise returns an error.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig> CreateChannelPartnerRepricingConfig(global::Google.Cloud.Channel.V1.CreateChannelPartnerRepricingConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a ChannelPartnerRepricingConfig. Call this method to set
+      /// modifications for a specific ChannelPartner's bill. This method overwrites
+      /// the existing CustomerRepricingConfig.
+      ///
+      /// You can only update configs if the
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+      /// future month. To make changes to configs for the current month, use
+      /// [CreateChannelPartnerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateChannelPartnerRepricingConfig], taking note of its restrictions.
+      /// You cannot update the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      ///
+      /// When updating a config in the future:
+      ///
+      /// * This config must already exist.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request. Also displays if the updated config is for the current month or
+      /// past months.
+      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+      /// or is not associated with the given account.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the updated [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource,
+      /// otherwise returns an error.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig> UpdateChannelPartnerRepricingConfig(global::Google.Cloud.Channel.V1.UpdateChannelPartnerRepricingConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes the given [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] permanently. You can
+      /// only delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is
+      /// set to a date after the current month.
+      ///
+      /// Possible error codes:
+      ///
+      /// * PERMISSION_DENIED: The account making the request does not own
+      /// this customer.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * FAILED_PRECONDITION: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] is active or
+      /// in the past.
+      /// * NOT_FOUND: No [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] found for the name in the
+      /// request.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteChannelPartnerRepricingConfig(global::Google.Cloud.Channel.V1.DeleteChannelPartnerRepricingConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -4594,6 +5040,1358 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateChannelPartnerLink, null, options, request);
       }
       /// <summary>
+      /// Gets information about how a Reseller modifies their bill before sending
+      /// it to a Customer.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] was not found.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise returns
+      /// an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Channel.V1.CustomerRepricingConfig GetCustomerRepricingConfig(global::Google.Cloud.Channel.V1.GetCustomerRepricingConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetCustomerRepricingConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets information about how a Reseller modifies their bill before sending
+      /// it to a Customer.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] was not found.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise returns
+      /// an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Channel.V1.CustomerRepricingConfig GetCustomerRepricingConfig(global::Google.Cloud.Channel.V1.GetCustomerRepricingConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetCustomerRepricingConfig, null, options, request);
+      }
+      /// <summary>
+      /// Gets information about how a Reseller modifies their bill before sending
+      /// it to a Customer.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] was not found.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise returns
+      /// an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.CustomerRepricingConfig> GetCustomerRepricingConfigAsync(global::Google.Cloud.Channel.V1.GetCustomerRepricingConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetCustomerRepricingConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets information about how a Reseller modifies their bill before sending
+      /// it to a Customer.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] was not found.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise returns
+      /// an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.CustomerRepricingConfig> GetCustomerRepricingConfigAsync(global::Google.Cloud.Channel.V1.GetCustomerRepricingConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetCustomerRepricingConfig, null, options, request);
+      }
+      /// <summary>
+      /// Lists information about how a Reseller modifies their bill before sending
+      /// it to a Customer.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+      /// not associated with the given account.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resources. The
+      /// data for each resource is displayed in the ascending order of:
+      /// * customer ID
+      /// * [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
+      /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// * [CustomerRepricingConfig.update_time][google.cloud.channel.v1.CustomerRepricingConfig.update_time]
+      ///
+      /// If unsuccessful, returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Channel.V1.ListCustomerRepricingConfigsResponse ListCustomerRepricingConfigs(global::Google.Cloud.Channel.V1.ListCustomerRepricingConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListCustomerRepricingConfigs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists information about how a Reseller modifies their bill before sending
+      /// it to a Customer.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+      /// not associated with the given account.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resources. The
+      /// data for each resource is displayed in the ascending order of:
+      /// * customer ID
+      /// * [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
+      /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// * [CustomerRepricingConfig.update_time][google.cloud.channel.v1.CustomerRepricingConfig.update_time]
+      ///
+      /// If unsuccessful, returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Channel.V1.ListCustomerRepricingConfigsResponse ListCustomerRepricingConfigs(global::Google.Cloud.Channel.V1.ListCustomerRepricingConfigsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListCustomerRepricingConfigs, null, options, request);
+      }
+      /// <summary>
+      /// Lists information about how a Reseller modifies their bill before sending
+      /// it to a Customer.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+      /// not associated with the given account.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resources. The
+      /// data for each resource is displayed in the ascending order of:
+      /// * customer ID
+      /// * [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
+      /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// * [CustomerRepricingConfig.update_time][google.cloud.channel.v1.CustomerRepricingConfig.update_time]
+      ///
+      /// If unsuccessful, returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListCustomerRepricingConfigsResponse> ListCustomerRepricingConfigsAsync(global::Google.Cloud.Channel.V1.ListCustomerRepricingConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListCustomerRepricingConfigsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists information about how a Reseller modifies their bill before sending
+      /// it to a Customer.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+      /// not associated with the given account.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resources. The
+      /// data for each resource is displayed in the ascending order of:
+      /// * customer ID
+      /// * [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
+      /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// * [CustomerRepricingConfig.update_time][google.cloud.channel.v1.CustomerRepricingConfig.update_time]
+      ///
+      /// If unsuccessful, returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListCustomerRepricingConfigsResponse> ListCustomerRepricingConfigsAsync(global::Google.Cloud.Channel.V1.ListCustomerRepricingConfigsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListCustomerRepricingConfigs, null, options, request);
+      }
+      /// <summary>
+      /// Creates a CustomerRepricingConfig. Call this method to set modifications
+      /// for a specific customer's bill. You can only create configs if the
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+      /// future month. If needed, you can create a config for the current month,
+      /// with some restrictions.
+      ///
+      /// When creating a config for a future month, make sure there are no existing
+      /// configs for that
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      ///
+      /// The following restrictions are for creating configs in the current month.
+      ///
+      /// * This functionality is reserved for recovering from an erroneous config,
+      /// and should not be used for regular business cases.
+      /// * The new config will not modify exports used with other configs.
+      /// Changes to the config may be immediate, but may take up to 24 hours.
+      /// * There is a limit of ten configs for any
+      /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
+      /// or [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      /// * The contained [CustomerRepricingConfig.repricing_config][google.cloud.channel.v1.CustomerRepricingConfig.repricing_config] vaule must be
+      /// different from the value used in the current config for a
+      /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement].
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request. Also displays if the updated config is for the current month or
+      /// past months.
+      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+      /// not associated with the given account.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the updated [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise
+      /// returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Channel.V1.CustomerRepricingConfig CreateCustomerRepricingConfig(global::Google.Cloud.Channel.V1.CreateCustomerRepricingConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateCustomerRepricingConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a CustomerRepricingConfig. Call this method to set modifications
+      /// for a specific customer's bill. You can only create configs if the
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+      /// future month. If needed, you can create a config for the current month,
+      /// with some restrictions.
+      ///
+      /// When creating a config for a future month, make sure there are no existing
+      /// configs for that
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      ///
+      /// The following restrictions are for creating configs in the current month.
+      ///
+      /// * This functionality is reserved for recovering from an erroneous config,
+      /// and should not be used for regular business cases.
+      /// * The new config will not modify exports used with other configs.
+      /// Changes to the config may be immediate, but may take up to 24 hours.
+      /// * There is a limit of ten configs for any
+      /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
+      /// or [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      /// * The contained [CustomerRepricingConfig.repricing_config][google.cloud.channel.v1.CustomerRepricingConfig.repricing_config] vaule must be
+      /// different from the value used in the current config for a
+      /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement].
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request. Also displays if the updated config is for the current month or
+      /// past months.
+      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+      /// not associated with the given account.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the updated [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise
+      /// returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Channel.V1.CustomerRepricingConfig CreateCustomerRepricingConfig(global::Google.Cloud.Channel.V1.CreateCustomerRepricingConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateCustomerRepricingConfig, null, options, request);
+      }
+      /// <summary>
+      /// Creates a CustomerRepricingConfig. Call this method to set modifications
+      /// for a specific customer's bill. You can only create configs if the
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+      /// future month. If needed, you can create a config for the current month,
+      /// with some restrictions.
+      ///
+      /// When creating a config for a future month, make sure there are no existing
+      /// configs for that
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      ///
+      /// The following restrictions are for creating configs in the current month.
+      ///
+      /// * This functionality is reserved for recovering from an erroneous config,
+      /// and should not be used for regular business cases.
+      /// * The new config will not modify exports used with other configs.
+      /// Changes to the config may be immediate, but may take up to 24 hours.
+      /// * There is a limit of ten configs for any
+      /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
+      /// or [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      /// * The contained [CustomerRepricingConfig.repricing_config][google.cloud.channel.v1.CustomerRepricingConfig.repricing_config] vaule must be
+      /// different from the value used in the current config for a
+      /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement].
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request. Also displays if the updated config is for the current month or
+      /// past months.
+      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+      /// not associated with the given account.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the updated [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise
+      /// returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.CustomerRepricingConfig> CreateCustomerRepricingConfigAsync(global::Google.Cloud.Channel.V1.CreateCustomerRepricingConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateCustomerRepricingConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a CustomerRepricingConfig. Call this method to set modifications
+      /// for a specific customer's bill. You can only create configs if the
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+      /// future month. If needed, you can create a config for the current month,
+      /// with some restrictions.
+      ///
+      /// When creating a config for a future month, make sure there are no existing
+      /// configs for that
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      ///
+      /// The following restrictions are for creating configs in the current month.
+      ///
+      /// * This functionality is reserved for recovering from an erroneous config,
+      /// and should not be used for regular business cases.
+      /// * The new config will not modify exports used with other configs.
+      /// Changes to the config may be immediate, but may take up to 24 hours.
+      /// * There is a limit of ten configs for any
+      /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
+      /// or [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      /// * The contained [CustomerRepricingConfig.repricing_config][google.cloud.channel.v1.CustomerRepricingConfig.repricing_config] vaule must be
+      /// different from the value used in the current config for a
+      /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement].
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request. Also displays if the updated config is for the current month or
+      /// past months.
+      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+      /// not associated with the given account.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the updated [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise
+      /// returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.CustomerRepricingConfig> CreateCustomerRepricingConfigAsync(global::Google.Cloud.Channel.V1.CreateCustomerRepricingConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateCustomerRepricingConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates a CustomerRepricingConfig. Call this method to set modifications
+      /// for a specific customer's bill. This method overwrites the existing
+      /// CustomerRepricingConfig.
+      ///
+      /// You can only update configs if the
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+      /// future month. To make changes to configs for the current month, use
+      /// [CreateCustomerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateCustomerRepricingConfig], taking note of its restrictions. You
+      /// cannot update the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      ///
+      /// When updating a config in the future:
+      ///
+      /// * This config must already exist.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request. Also displays if the updated config is for the current month or
+      /// past months.
+      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+      /// not associated with the given account.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the updated [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise
+      /// returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Channel.V1.CustomerRepricingConfig UpdateCustomerRepricingConfig(global::Google.Cloud.Channel.V1.UpdateCustomerRepricingConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateCustomerRepricingConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a CustomerRepricingConfig. Call this method to set modifications
+      /// for a specific customer's bill. This method overwrites the existing
+      /// CustomerRepricingConfig.
+      ///
+      /// You can only update configs if the
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+      /// future month. To make changes to configs for the current month, use
+      /// [CreateCustomerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateCustomerRepricingConfig], taking note of its restrictions. You
+      /// cannot update the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      ///
+      /// When updating a config in the future:
+      ///
+      /// * This config must already exist.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request. Also displays if the updated config is for the current month or
+      /// past months.
+      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+      /// not associated with the given account.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the updated [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise
+      /// returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Channel.V1.CustomerRepricingConfig UpdateCustomerRepricingConfig(global::Google.Cloud.Channel.V1.UpdateCustomerRepricingConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateCustomerRepricingConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates a CustomerRepricingConfig. Call this method to set modifications
+      /// for a specific customer's bill. This method overwrites the existing
+      /// CustomerRepricingConfig.
+      ///
+      /// You can only update configs if the
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+      /// future month. To make changes to configs for the current month, use
+      /// [CreateCustomerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateCustomerRepricingConfig], taking note of its restrictions. You
+      /// cannot update the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      ///
+      /// When updating a config in the future:
+      ///
+      /// * This config must already exist.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request. Also displays if the updated config is for the current month or
+      /// past months.
+      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+      /// not associated with the given account.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the updated [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise
+      /// returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.CustomerRepricingConfig> UpdateCustomerRepricingConfigAsync(global::Google.Cloud.Channel.V1.UpdateCustomerRepricingConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateCustomerRepricingConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a CustomerRepricingConfig. Call this method to set modifications
+      /// for a specific customer's bill. This method overwrites the existing
+      /// CustomerRepricingConfig.
+      ///
+      /// You can only update configs if the
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+      /// future month. To make changes to configs for the current month, use
+      /// [CreateCustomerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateCustomerRepricingConfig], taking note of its restrictions. You
+      /// cannot update the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      ///
+      /// When updating a config in the future:
+      ///
+      /// * This config must already exist.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request. Also displays if the updated config is for the current month or
+      /// past months.
+      /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+      /// not associated with the given account.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the updated [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise
+      /// returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.CustomerRepricingConfig> UpdateCustomerRepricingConfigAsync(global::Google.Cloud.Channel.V1.UpdateCustomerRepricingConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateCustomerRepricingConfig, null, options, request);
+      }
+      /// <summary>
+      /// Deletes the given [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] permanently. You can only
+      /// delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is set
+      /// to a date after the current month.
+      ///
+      /// Possible error codes:
+      ///
+      /// * PERMISSION_DENIED: The account making the request does not own
+      /// this customer.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * FAILED_PRECONDITION: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] is active or in the
+      /// past.
+      /// * NOT_FOUND: No [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] found for the name in the
+      /// request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteCustomerRepricingConfig(global::Google.Cloud.Channel.V1.DeleteCustomerRepricingConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteCustomerRepricingConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes the given [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] permanently. You can only
+      /// delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is set
+      /// to a date after the current month.
+      ///
+      /// Possible error codes:
+      ///
+      /// * PERMISSION_DENIED: The account making the request does not own
+      /// this customer.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * FAILED_PRECONDITION: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] is active or in the
+      /// past.
+      /// * NOT_FOUND: No [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] found for the name in the
+      /// request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteCustomerRepricingConfig(global::Google.Cloud.Channel.V1.DeleteCustomerRepricingConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteCustomerRepricingConfig, null, options, request);
+      }
+      /// <summary>
+      /// Deletes the given [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] permanently. You can only
+      /// delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is set
+      /// to a date after the current month.
+      ///
+      /// Possible error codes:
+      ///
+      /// * PERMISSION_DENIED: The account making the request does not own
+      /// this customer.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * FAILED_PRECONDITION: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] is active or in the
+      /// past.
+      /// * NOT_FOUND: No [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] found for the name in the
+      /// request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCustomerRepricingConfigAsync(global::Google.Cloud.Channel.V1.DeleteCustomerRepricingConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteCustomerRepricingConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes the given [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] permanently. You can only
+      /// delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is set
+      /// to a date after the current month.
+      ///
+      /// Possible error codes:
+      ///
+      /// * PERMISSION_DENIED: The account making the request does not own
+      /// this customer.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * FAILED_PRECONDITION: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] is active or in the
+      /// past.
+      /// * NOT_FOUND: No [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] found for the name in the
+      /// request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCustomerRepricingConfigAsync(global::Google.Cloud.Channel.V1.DeleteCustomerRepricingConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteCustomerRepricingConfig, null, options, request);
+      }
+      /// <summary>
+      /// Gets information about how a Distributor modifies their bill before sending
+      /// it to a ChannelPartner.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] was not found.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource, otherwise
+      /// returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig GetChannelPartnerRepricingConfig(global::Google.Cloud.Channel.V1.GetChannelPartnerRepricingConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetChannelPartnerRepricingConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets information about how a Distributor modifies their bill before sending
+      /// it to a ChannelPartner.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] was not found.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource, otherwise
+      /// returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig GetChannelPartnerRepricingConfig(global::Google.Cloud.Channel.V1.GetChannelPartnerRepricingConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetChannelPartnerRepricingConfig, null, options, request);
+      }
+      /// <summary>
+      /// Gets information about how a Distributor modifies their bill before sending
+      /// it to a ChannelPartner.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] was not found.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource, otherwise
+      /// returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig> GetChannelPartnerRepricingConfigAsync(global::Google.Cloud.Channel.V1.GetChannelPartnerRepricingConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetChannelPartnerRepricingConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets information about how a Distributor modifies their bill before sending
+      /// it to a ChannelPartner.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] was not found.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource, otherwise
+      /// returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig> GetChannelPartnerRepricingConfigAsync(global::Google.Cloud.Channel.V1.GetChannelPartnerRepricingConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetChannelPartnerRepricingConfig, null, options, request);
+      }
+      /// <summary>
+      /// Lists information about how a Reseller modifies their bill before sending
+      /// it to a ChannelPartner.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+      /// or is not associated with the given account.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resources.
+      /// The data for each resource is displayed in the ascending order of:
+      /// * channel partner ID
+      /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// * [ChannelPartnerRepricingConfig.update_time][google.cloud.channel.v1.ChannelPartnerRepricingConfig.update_time]
+      ///
+      /// If unsuccessful, returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Channel.V1.ListChannelPartnerRepricingConfigsResponse ListChannelPartnerRepricingConfigs(global::Google.Cloud.Channel.V1.ListChannelPartnerRepricingConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListChannelPartnerRepricingConfigs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists information about how a Reseller modifies their bill before sending
+      /// it to a ChannelPartner.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+      /// or is not associated with the given account.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resources.
+      /// The data for each resource is displayed in the ascending order of:
+      /// * channel partner ID
+      /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// * [ChannelPartnerRepricingConfig.update_time][google.cloud.channel.v1.ChannelPartnerRepricingConfig.update_time]
+      ///
+      /// If unsuccessful, returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Channel.V1.ListChannelPartnerRepricingConfigsResponse ListChannelPartnerRepricingConfigs(global::Google.Cloud.Channel.V1.ListChannelPartnerRepricingConfigsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListChannelPartnerRepricingConfigs, null, options, request);
+      }
+      /// <summary>
+      /// Lists information about how a Reseller modifies their bill before sending
+      /// it to a ChannelPartner.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+      /// or is not associated with the given account.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resources.
+      /// The data for each resource is displayed in the ascending order of:
+      /// * channel partner ID
+      /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// * [ChannelPartnerRepricingConfig.update_time][google.cloud.channel.v1.ChannelPartnerRepricingConfig.update_time]
+      ///
+      /// If unsuccessful, returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListChannelPartnerRepricingConfigsResponse> ListChannelPartnerRepricingConfigsAsync(global::Google.Cloud.Channel.V1.ListChannelPartnerRepricingConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListChannelPartnerRepricingConfigsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists information about how a Reseller modifies their bill before sending
+      /// it to a ChannelPartner.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+      /// or is not associated with the given account.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resources.
+      /// The data for each resource is displayed in the ascending order of:
+      /// * channel partner ID
+      /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+      /// * [ChannelPartnerRepricingConfig.update_time][google.cloud.channel.v1.ChannelPartnerRepricingConfig.update_time]
+      ///
+      /// If unsuccessful, returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListChannelPartnerRepricingConfigsResponse> ListChannelPartnerRepricingConfigsAsync(global::Google.Cloud.Channel.V1.ListChannelPartnerRepricingConfigsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListChannelPartnerRepricingConfigs, null, options, request);
+      }
+      /// <summary>
+      /// Creates a ChannelPartnerRepricingConfig. Call this method to set
+      /// modifications for a specific ChannelPartner's bill. You can only create
+      /// configs if the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a future
+      /// month. If needed, you can create a config for the current month, with some
+      /// restrictions.
+      ///
+      /// When creating a config for a future month, make sure there are no existing
+      /// configs for that
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      ///
+      /// The following restrictions are for creating configs in the current month.
+      ///
+      /// * This functionality is reserved for recovering from an erroneous config,
+      /// and should not be used for regular business cases.
+      /// * The new config will not modify exports used with other configs.
+      /// Changes to the config may be immediate, but may take up to 24 hours.
+      /// * There is a limit of ten configs for any ChannelPartner or
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      /// * The contained [ChannelPartnerRepricingConfig.repricing_config][google.cloud.channel.v1.ChannelPartnerRepricingConfig.repricing_config] vaule
+      /// must be different from the value used in the current config for a
+      /// ChannelPartner.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request. Also displays if the updated config is for the current month or
+      /// past months.
+      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+      /// or is not associated with the given account.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the updated [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource,
+      /// otherwise returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig CreateChannelPartnerRepricingConfig(global::Google.Cloud.Channel.V1.CreateChannelPartnerRepricingConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateChannelPartnerRepricingConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a ChannelPartnerRepricingConfig. Call this method to set
+      /// modifications for a specific ChannelPartner's bill. You can only create
+      /// configs if the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a future
+      /// month. If needed, you can create a config for the current month, with some
+      /// restrictions.
+      ///
+      /// When creating a config for a future month, make sure there are no existing
+      /// configs for that
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      ///
+      /// The following restrictions are for creating configs in the current month.
+      ///
+      /// * This functionality is reserved for recovering from an erroneous config,
+      /// and should not be used for regular business cases.
+      /// * The new config will not modify exports used with other configs.
+      /// Changes to the config may be immediate, but may take up to 24 hours.
+      /// * There is a limit of ten configs for any ChannelPartner or
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      /// * The contained [ChannelPartnerRepricingConfig.repricing_config][google.cloud.channel.v1.ChannelPartnerRepricingConfig.repricing_config] vaule
+      /// must be different from the value used in the current config for a
+      /// ChannelPartner.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request. Also displays if the updated config is for the current month or
+      /// past months.
+      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+      /// or is not associated with the given account.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the updated [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource,
+      /// otherwise returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig CreateChannelPartnerRepricingConfig(global::Google.Cloud.Channel.V1.CreateChannelPartnerRepricingConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateChannelPartnerRepricingConfig, null, options, request);
+      }
+      /// <summary>
+      /// Creates a ChannelPartnerRepricingConfig. Call this method to set
+      /// modifications for a specific ChannelPartner's bill. You can only create
+      /// configs if the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a future
+      /// month. If needed, you can create a config for the current month, with some
+      /// restrictions.
+      ///
+      /// When creating a config for a future month, make sure there are no existing
+      /// configs for that
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      ///
+      /// The following restrictions are for creating configs in the current month.
+      ///
+      /// * This functionality is reserved for recovering from an erroneous config,
+      /// and should not be used for regular business cases.
+      /// * The new config will not modify exports used with other configs.
+      /// Changes to the config may be immediate, but may take up to 24 hours.
+      /// * There is a limit of ten configs for any ChannelPartner or
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      /// * The contained [ChannelPartnerRepricingConfig.repricing_config][google.cloud.channel.v1.ChannelPartnerRepricingConfig.repricing_config] vaule
+      /// must be different from the value used in the current config for a
+      /// ChannelPartner.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request. Also displays if the updated config is for the current month or
+      /// past months.
+      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+      /// or is not associated with the given account.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the updated [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource,
+      /// otherwise returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig> CreateChannelPartnerRepricingConfigAsync(global::Google.Cloud.Channel.V1.CreateChannelPartnerRepricingConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateChannelPartnerRepricingConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a ChannelPartnerRepricingConfig. Call this method to set
+      /// modifications for a specific ChannelPartner's bill. You can only create
+      /// configs if the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a future
+      /// month. If needed, you can create a config for the current month, with some
+      /// restrictions.
+      ///
+      /// When creating a config for a future month, make sure there are no existing
+      /// configs for that
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      ///
+      /// The following restrictions are for creating configs in the current month.
+      ///
+      /// * This functionality is reserved for recovering from an erroneous config,
+      /// and should not be used for regular business cases.
+      /// * The new config will not modify exports used with other configs.
+      /// Changes to the config may be immediate, but may take up to 24 hours.
+      /// * There is a limit of ten configs for any ChannelPartner or
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      /// * The contained [ChannelPartnerRepricingConfig.repricing_config][google.cloud.channel.v1.ChannelPartnerRepricingConfig.repricing_config] vaule
+      /// must be different from the value used in the current config for a
+      /// ChannelPartner.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request. Also displays if the updated config is for the current month or
+      /// past months.
+      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+      /// or is not associated with the given account.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the updated [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource,
+      /// otherwise returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig> CreateChannelPartnerRepricingConfigAsync(global::Google.Cloud.Channel.V1.CreateChannelPartnerRepricingConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateChannelPartnerRepricingConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates a ChannelPartnerRepricingConfig. Call this method to set
+      /// modifications for a specific ChannelPartner's bill. This method overwrites
+      /// the existing CustomerRepricingConfig.
+      ///
+      /// You can only update configs if the
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+      /// future month. To make changes to configs for the current month, use
+      /// [CreateChannelPartnerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateChannelPartnerRepricingConfig], taking note of its restrictions.
+      /// You cannot update the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      ///
+      /// When updating a config in the future:
+      ///
+      /// * This config must already exist.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request. Also displays if the updated config is for the current month or
+      /// past months.
+      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+      /// or is not associated with the given account.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the updated [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource,
+      /// otherwise returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig UpdateChannelPartnerRepricingConfig(global::Google.Cloud.Channel.V1.UpdateChannelPartnerRepricingConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateChannelPartnerRepricingConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a ChannelPartnerRepricingConfig. Call this method to set
+      /// modifications for a specific ChannelPartner's bill. This method overwrites
+      /// the existing CustomerRepricingConfig.
+      ///
+      /// You can only update configs if the
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+      /// future month. To make changes to configs for the current month, use
+      /// [CreateChannelPartnerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateChannelPartnerRepricingConfig], taking note of its restrictions.
+      /// You cannot update the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      ///
+      /// When updating a config in the future:
+      ///
+      /// * This config must already exist.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request. Also displays if the updated config is for the current month or
+      /// past months.
+      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+      /// or is not associated with the given account.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the updated [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource,
+      /// otherwise returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig UpdateChannelPartnerRepricingConfig(global::Google.Cloud.Channel.V1.UpdateChannelPartnerRepricingConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateChannelPartnerRepricingConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates a ChannelPartnerRepricingConfig. Call this method to set
+      /// modifications for a specific ChannelPartner's bill. This method overwrites
+      /// the existing CustomerRepricingConfig.
+      ///
+      /// You can only update configs if the
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+      /// future month. To make changes to configs for the current month, use
+      /// [CreateChannelPartnerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateChannelPartnerRepricingConfig], taking note of its restrictions.
+      /// You cannot update the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      ///
+      /// When updating a config in the future:
+      ///
+      /// * This config must already exist.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request. Also displays if the updated config is for the current month or
+      /// past months.
+      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+      /// or is not associated with the given account.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the updated [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource,
+      /// otherwise returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig> UpdateChannelPartnerRepricingConfigAsync(global::Google.Cloud.Channel.V1.UpdateChannelPartnerRepricingConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateChannelPartnerRepricingConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a ChannelPartnerRepricingConfig. Call this method to set
+      /// modifications for a specific ChannelPartner's bill. This method overwrites
+      /// the existing CustomerRepricingConfig.
+      ///
+      /// You can only update configs if the
+      /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+      /// future month. To make changes to configs for the current month, use
+      /// [CreateChannelPartnerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateChannelPartnerRepricingConfig], taking note of its restrictions.
+      /// You cannot update the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+      ///
+      /// When updating a config in the future:
+      ///
+      /// * This config must already exist.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request. Also displays if the updated config is for the current month or
+      /// past months.
+      /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+      /// or is not associated with the given account.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the updated [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource,
+      /// otherwise returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig> UpdateChannelPartnerRepricingConfigAsync(global::Google.Cloud.Channel.V1.UpdateChannelPartnerRepricingConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateChannelPartnerRepricingConfig, null, options, request);
+      }
+      /// <summary>
+      /// Deletes the given [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] permanently. You can
+      /// only delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is
+      /// set to a date after the current month.
+      ///
+      /// Possible error codes:
+      ///
+      /// * PERMISSION_DENIED: The account making the request does not own
+      /// this customer.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * FAILED_PRECONDITION: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] is active or
+      /// in the past.
+      /// * NOT_FOUND: No [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] found for the name in the
+      /// request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteChannelPartnerRepricingConfig(global::Google.Cloud.Channel.V1.DeleteChannelPartnerRepricingConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteChannelPartnerRepricingConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes the given [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] permanently. You can
+      /// only delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is
+      /// set to a date after the current month.
+      ///
+      /// Possible error codes:
+      ///
+      /// * PERMISSION_DENIED: The account making the request does not own
+      /// this customer.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * FAILED_PRECONDITION: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] is active or
+      /// in the past.
+      /// * NOT_FOUND: No [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] found for the name in the
+      /// request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteChannelPartnerRepricingConfig(global::Google.Cloud.Channel.V1.DeleteChannelPartnerRepricingConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteChannelPartnerRepricingConfig, null, options, request);
+      }
+      /// <summary>
+      /// Deletes the given [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] permanently. You can
+      /// only delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is
+      /// set to a date after the current month.
+      ///
+      /// Possible error codes:
+      ///
+      /// * PERMISSION_DENIED: The account making the request does not own
+      /// this customer.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * FAILED_PRECONDITION: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] is active or
+      /// in the past.
+      /// * NOT_FOUND: No [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] found for the name in the
+      /// request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteChannelPartnerRepricingConfigAsync(global::Google.Cloud.Channel.V1.DeleteChannelPartnerRepricingConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteChannelPartnerRepricingConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes the given [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] permanently. You can
+      /// only delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is
+      /// set to a date after the current month.
+      ///
+      /// Possible error codes:
+      ///
+      /// * PERMISSION_DENIED: The account making the request does not own
+      /// this customer.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * FAILED_PRECONDITION: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] is active or
+      /// in the past.
+      /// * NOT_FOUND: No [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] found for the name in the
+      /// request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteChannelPartnerRepricingConfigAsync(global::Google.Cloud.Channel.V1.DeleteChannelPartnerRepricingConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteChannelPartnerRepricingConfig, null, options, request);
+      }
+      /// <summary>
       /// Returns the requested [Offer][google.cloud.channel.v1.Offer] resource.
       ///
       /// Possible error codes:
@@ -5421,6 +7219,16 @@ namespace Google.Cloud.Channel.V1 {
           .AddMethod(__Method_GetChannelPartnerLink, serviceImpl.GetChannelPartnerLink)
           .AddMethod(__Method_CreateChannelPartnerLink, serviceImpl.CreateChannelPartnerLink)
           .AddMethod(__Method_UpdateChannelPartnerLink, serviceImpl.UpdateChannelPartnerLink)
+          .AddMethod(__Method_GetCustomerRepricingConfig, serviceImpl.GetCustomerRepricingConfig)
+          .AddMethod(__Method_ListCustomerRepricingConfigs, serviceImpl.ListCustomerRepricingConfigs)
+          .AddMethod(__Method_CreateCustomerRepricingConfig, serviceImpl.CreateCustomerRepricingConfig)
+          .AddMethod(__Method_UpdateCustomerRepricingConfig, serviceImpl.UpdateCustomerRepricingConfig)
+          .AddMethod(__Method_DeleteCustomerRepricingConfig, serviceImpl.DeleteCustomerRepricingConfig)
+          .AddMethod(__Method_GetChannelPartnerRepricingConfig, serviceImpl.GetChannelPartnerRepricingConfig)
+          .AddMethod(__Method_ListChannelPartnerRepricingConfigs, serviceImpl.ListChannelPartnerRepricingConfigs)
+          .AddMethod(__Method_CreateChannelPartnerRepricingConfig, serviceImpl.CreateChannelPartnerRepricingConfig)
+          .AddMethod(__Method_UpdateChannelPartnerRepricingConfig, serviceImpl.UpdateChannelPartnerRepricingConfig)
+          .AddMethod(__Method_DeleteChannelPartnerRepricingConfig, serviceImpl.DeleteChannelPartnerRepricingConfig)
           .AddMethod(__Method_LookupOffer, serviceImpl.LookupOffer)
           .AddMethod(__Method_ListProducts, serviceImpl.ListProducts)
           .AddMethod(__Method_ListSkus, serviceImpl.ListSkus)
@@ -5465,6 +7273,16 @@ namespace Google.Cloud.Channel.V1 {
       serviceBinder.AddMethod(__Method_GetChannelPartnerLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.GetChannelPartnerLinkRequest, global::Google.Cloud.Channel.V1.ChannelPartnerLink>(serviceImpl.GetChannelPartnerLink));
       serviceBinder.AddMethod(__Method_CreateChannelPartnerLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.CreateChannelPartnerLinkRequest, global::Google.Cloud.Channel.V1.ChannelPartnerLink>(serviceImpl.CreateChannelPartnerLink));
       serviceBinder.AddMethod(__Method_UpdateChannelPartnerLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.UpdateChannelPartnerLinkRequest, global::Google.Cloud.Channel.V1.ChannelPartnerLink>(serviceImpl.UpdateChannelPartnerLink));
+      serviceBinder.AddMethod(__Method_GetCustomerRepricingConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.GetCustomerRepricingConfigRequest, global::Google.Cloud.Channel.V1.CustomerRepricingConfig>(serviceImpl.GetCustomerRepricingConfig));
+      serviceBinder.AddMethod(__Method_ListCustomerRepricingConfigs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.ListCustomerRepricingConfigsRequest, global::Google.Cloud.Channel.V1.ListCustomerRepricingConfigsResponse>(serviceImpl.ListCustomerRepricingConfigs));
+      serviceBinder.AddMethod(__Method_CreateCustomerRepricingConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.CreateCustomerRepricingConfigRequest, global::Google.Cloud.Channel.V1.CustomerRepricingConfig>(serviceImpl.CreateCustomerRepricingConfig));
+      serviceBinder.AddMethod(__Method_UpdateCustomerRepricingConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.UpdateCustomerRepricingConfigRequest, global::Google.Cloud.Channel.V1.CustomerRepricingConfig>(serviceImpl.UpdateCustomerRepricingConfig));
+      serviceBinder.AddMethod(__Method_DeleteCustomerRepricingConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.DeleteCustomerRepricingConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteCustomerRepricingConfig));
+      serviceBinder.AddMethod(__Method_GetChannelPartnerRepricingConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.GetChannelPartnerRepricingConfigRequest, global::Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig>(serviceImpl.GetChannelPartnerRepricingConfig));
+      serviceBinder.AddMethod(__Method_ListChannelPartnerRepricingConfigs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.ListChannelPartnerRepricingConfigsRequest, global::Google.Cloud.Channel.V1.ListChannelPartnerRepricingConfigsResponse>(serviceImpl.ListChannelPartnerRepricingConfigs));
+      serviceBinder.AddMethod(__Method_CreateChannelPartnerRepricingConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.CreateChannelPartnerRepricingConfigRequest, global::Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig>(serviceImpl.CreateChannelPartnerRepricingConfig));
+      serviceBinder.AddMethod(__Method_UpdateChannelPartnerRepricingConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.UpdateChannelPartnerRepricingConfigRequest, global::Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig>(serviceImpl.UpdateChannelPartnerRepricingConfig));
+      serviceBinder.AddMethod(__Method_DeleteChannelPartnerRepricingConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.DeleteChannelPartnerRepricingConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteChannelPartnerRepricingConfig));
       serviceBinder.AddMethod(__Method_LookupOffer, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.LookupOfferRequest, global::Google.Cloud.Channel.V1.Offer>(serviceImpl.LookupOffer));
       serviceBinder.AddMethod(__Method_ListProducts, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.ListProductsRequest, global::Google.Cloud.Channel.V1.ListProductsResponse>(serviceImpl.ListProducts));
       serviceBinder.AddMethod(__Method_ListSkus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.ListSkusRequest, global::Google.Cloud.Channel.V1.ListSkusResponse>(serviceImpl.ListSkus));

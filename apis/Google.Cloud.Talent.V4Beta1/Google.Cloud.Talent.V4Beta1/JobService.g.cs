@@ -32,147 +32,152 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "b24ucHJvdG8aKWdvb2dsZS9jbG91ZC90YWxlbnQvdjRiZXRhMS9maWx0ZXJz",
             "LnByb3RvGitnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvaGlzdG9ncmFt",
             "LnByb3RvGiVnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvam9iLnByb3Rv",
-            "GiNnb29nbGUvbG9uZ3J1bm5pbmcvb3BlcmF0aW9ucy5wcm90bxoZZ29vZ2xl",
-            "L3Byb3RvYnVmL2FueS5wcm90bxoeZ29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9u",
-            "LnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJvdG8aIGdvb2dsZS9w",
-            "cm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGhdnb29nbGUvcnBjL3N0YXR1cy5w",
-            "cm90byJ3ChBDcmVhdGVKb2JSZXF1ZXN0Ei8KBnBhcmVudBgBIAEoCUIf4EEC",
-            "+kEZEhdqb2JzLmdvb2dsZWFwaXMuY29tL0pvYhIyCgNqb2IYAiABKAsyIC5n",
-            "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuSm9iQgPgQQIiPgoNR2V0Sm9i",
-            "UmVxdWVzdBItCgRuYW1lGAEgASgJQh/gQQL6QRkKF2pvYnMuZ29vZ2xlYXBp",
-            "cy5jb20vSm9iIncKEFVwZGF0ZUpvYlJlcXVlc3QSMgoDam9iGAEgASgLMiAu",
-            "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkpvYkID4EECEi8KC3VwZGF0",
-            "ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayJBChBE",
-            "ZWxldGVKb2JSZXF1ZXN0Ei0KBG5hbWUYASABKAlCH+BBAvpBGQoXam9icy5n",
-            "b29nbGVhcGlzLmNvbS9Kb2IiXgoWQmF0Y2hEZWxldGVKb2JzUmVxdWVzdBIv",
-            "CgZwYXJlbnQYASABKAlCH+BBAvpBGRIXam9icy5nb29nbGVhcGlzLmNvbS9K",
-            "b2ISEwoGZmlsdGVyGAIgASgJQgPgQQIitgEKD0xpc3RKb2JzUmVxdWVzdBIv",
-            "CgZwYXJlbnQYASABKAlCH+BBAvpBGRIXam9icy5nb29nbGVhcGlzLmNvbS9K",
-            "b2ISEwoGZmlsdGVyGAIgASgJQgPgQQISEgoKcGFnZV90b2tlbhgDIAEoCRIR",
-            "CglwYWdlX3NpemUYBCABKAUSNgoIam9iX3ZpZXcYBSABKA4yJC5nb29nbGUu",
-            "Y2xvdWQudGFsZW50LnY0YmV0YTEuSm9iVmlldyKcAQoQTGlzdEpvYnNSZXNw",
-            "b25zZRIuCgRqb2JzGAEgAygLMiAuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJl",
-            "dGExLkpvYhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkSPwoIbWV0YWRhdGEY",
-            "AyABKAsyLS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuUmVzcG9uc2VN",
-            "ZXRhZGF0YSLQCQoRU2VhcmNoSm9ic1JlcXVlc3QSLwoGcGFyZW50GAEgASgJ",
-            "Qh/gQQL6QRkSF2pvYnMuZ29vZ2xlYXBpcy5jb20vSm9iEk4KC3NlYXJjaF9t",
-            "b2RlGAIgASgOMjkuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlNlYXJj",
-            "aEpvYnNSZXF1ZXN0LlNlYXJjaE1vZGUSSwoQcmVxdWVzdF9tZXRhZGF0YRgD",
-            "IAEoCzIsLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5SZXF1ZXN0TWV0",
-            "YWRhdGFCA+BBAhI4Cglqb2JfcXVlcnkYBCABKAsyJS5nb29nbGUuY2xvdWQu",
-            "dGFsZW50LnY0YmV0YTEuSm9iUXVlcnkSGQoRZW5hYmxlX2Jyb2FkZW5pbmcY",
-            "BSABKAgSIwobcmVxdWlyZV9wcmVjaXNlX3Jlc3VsdF9zaXplGAYgASgIEkYK",
-            "EWhpc3RvZ3JhbV9xdWVyaWVzGAcgAygLMisuZ29vZ2xlLmNsb3VkLnRhbGVu",
-            "dC52NGJldGExLkhpc3RvZ3JhbVF1ZXJ5EjYKCGpvYl92aWV3GAggASgOMiQu",
-            "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkpvYlZpZXcSDgoGb2Zmc2V0",
-            "GAkgASgFEhEKCXBhZ2Vfc2l6ZRgKIAEoBRISCgpwYWdlX3Rva2VuGAsgASgJ",
-            "EhAKCG9yZGVyX2J5GAwgASgJEmIKFWRpdmVyc2lmaWNhdGlvbl9sZXZlbBgN",
-            "IAEoDjJDLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5TZWFyY2hKb2Jz",
-            "UmVxdWVzdC5EaXZlcnNpZmljYXRpb25MZXZlbBJdChNjdXN0b21fcmFua2lu",
-            "Z19pbmZvGA4gASgLMkAuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlNl",
-            "YXJjaEpvYnNSZXF1ZXN0LkN1c3RvbVJhbmtpbmdJbmZvEh0KFWRpc2FibGVf",
-            "a2V5d29yZF9tYXRjaBgQIAEoCBqaAgoRQ3VzdG9tUmFua2luZ0luZm8SbwoQ",
-            "aW1wb3J0YW5jZV9sZXZlbBgBIAEoDjJQLmdvb2dsZS5jbG91ZC50YWxlbnQu",
-            "djRiZXRhMS5TZWFyY2hKb2JzUmVxdWVzdC5DdXN0b21SYW5raW5nSW5mby5J",
-            "bXBvcnRhbmNlTGV2ZWxCA+BBAhIfChJyYW5raW5nX2V4cHJlc3Npb24YAiAB",
-            "KAlCA+BBAiJzCg9JbXBvcnRhbmNlTGV2ZWwSIAocSU1QT1JUQU5DRV9MRVZF",
-            "TF9VTlNQRUNJRklFRBAAEggKBE5PTkUQARIHCgNMT1cQAhIICgRNSUxEEAMS",
-            "CgoGTUVESVVNEAQSCAoESElHSBAFEgsKB0VYVFJFTUUQBiJSCgpTZWFyY2hN",
-            "b2RlEhsKF1NFQVJDSF9NT0RFX1VOU1BFQ0lGSUVEEAASDgoKSk9CX1NFQVJD",
-            "SBABEhcKE0ZFQVRVUkVEX0pPQl9TRUFSQ0gQAiJXChREaXZlcnNpZmljYXRp",
-            "b25MZXZlbBIlCiFESVZFUlNJRklDQVRJT05fTEVWRUxfVU5TUEVDSUZJRUQQ",
-            "ABIMCghESVNBQkxFRBABEgoKBlNJTVBMRRACItcGChJTZWFyY2hKb2JzUmVz",
-            "cG9uc2USUgoNbWF0Y2hpbmdfam9icxgBIAMoCzI7Lmdvb2dsZS5jbG91ZC50",
-            "YWxlbnQudjRiZXRhMS5TZWFyY2hKb2JzUmVzcG9uc2UuTWF0Y2hpbmdKb2IS",
-            "UgoXaGlzdG9ncmFtX3F1ZXJ5X3Jlc3VsdHMYAiADKAsyMS5nb29nbGUuY2xv",
-            "dWQudGFsZW50LnY0YmV0YTEuSGlzdG9ncmFtUXVlcnlSZXN1bHQSFwoPbmV4",
-            "dF9wYWdlX3Rva2VuGAMgASgJEj8KEGxvY2F0aW9uX2ZpbHRlcnMYBCADKAsy",
-            "JS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuTG9jYXRpb24SHAoUZXN0",
-            "aW1hdGVkX3RvdGFsX3NpemUYBSABKAUSEgoKdG90YWxfc2l6ZRgGIAEoBRI/",
-            "CghtZXRhZGF0YRgHIAEoCzItLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRh",
-            "MS5SZXNwb25zZU1ldGFkYXRhEiIKGmJyb2FkZW5lZF9xdWVyeV9qb2JzX2Nv",
-            "dW50GAggASgFEkkKEHNwZWxsX2NvcnJlY3Rpb24YCSABKAsyLy5nb29nbGUu",
-            "Y2xvdWQudGFsZW50LnY0YmV0YTEuU3BlbGxpbmdDb3JyZWN0aW9uGtwBCgtN",
-            "YXRjaGluZ0pvYhItCgNqb2IYASABKAsyIC5nb29nbGUuY2xvdWQudGFsZW50",
-            "LnY0YmV0YTEuSm9iEhMKC2pvYl9zdW1tYXJ5GAIgASgJEhkKEWpvYl90aXRs",
-            "ZV9zbmlwcGV0GAMgASgJEhsKE3NlYXJjaF90ZXh0X3NuaXBwZXQYBCABKAkS",
-            "UQoMY29tbXV0ZV9pbmZvGAUgASgLMjsuZ29vZ2xlLmNsb3VkLnRhbGVudC52",
-            "NGJldGExLlNlYXJjaEpvYnNSZXNwb25zZS5Db21tdXRlSW5mbxp+CgtDb21t",
-            "dXRlSW5mbxI7Cgxqb2JfbG9jYXRpb24YASABKAsyJS5nb29nbGUuY2xvdWQu",
-            "dGFsZW50LnY0YmV0YTEuTG9jYXRpb24SMgoPdHJhdmVsX2R1cmF0aW9uGAIg",
-            "ASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uIn4KFkJhdGNoQ3JlYXRl",
-            "Sm9ic1JlcXVlc3QSLwoGcGFyZW50GAEgASgJQh/gQQL6QRkSF2pvYnMuZ29v",
-            "Z2xlYXBpcy5jb20vSm9iEjMKBGpvYnMYAiADKAsyIC5nb29nbGUuY2xvdWQu",
-            "dGFsZW50LnY0YmV0YTEuSm9iQgPgQQIirwEKFkJhdGNoVXBkYXRlSm9ic1Jl",
-            "cXVlc3QSLwoGcGFyZW50GAEgASgJQh/gQQL6QRkSF2pvYnMuZ29vZ2xlYXBp",
-            "cy5jb20vSm9iEjMKBGpvYnMYAiADKAsyIC5nb29nbGUuY2xvdWQudGFsZW50",
-            "LnY0YmV0YTEuSm9iQgPgQQISLwoLdXBkYXRlX21hc2sYAyABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuRmllbGRNYXNrIsQBChJKb2JPcGVyYXRpb25SZXN1bHQS",
-            "TgoLam9iX3Jlc3VsdHMYASADKAsyOS5nb29nbGUuY2xvdWQudGFsZW50LnY0",
-            "YmV0YTEuSm9iT3BlcmF0aW9uUmVzdWx0LkpvYlJlc3VsdBpeCglKb2JSZXN1",
-            "bHQSLQoDam9iGAEgASgLMiAuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGEx",
-            "LkpvYhIiCgZzdGF0dXMYAiABKAsyEi5nb29nbGUucnBjLlN0YXR1cyp2CgdK",
-            "b2JWaWV3EhgKFEpPQl9WSUVXX1VOU1BFQ0lGSUVEEAASFAoQSk9CX1ZJRVdf",
-            "SURfT05MWRABEhQKEEpPQl9WSUVXX01JTklNQUwQAhISCg5KT0JfVklFV19T",
-            "TUFMTBADEhEKDUpPQl9WSUVXX0ZVTEwQBDLOEgoKSm9iU2VydmljZRLJAQoJ",
-            "Q3JlYXRlSm9iEi0uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkNyZWF0",
-            "ZUpvYlJlcXVlc3QaIC5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuSm9i",
-            "ImuC0+STAlgiKy92NGJldGExL3twYXJlbnQ9cHJvamVjdHMvKi90ZW5hbnRz",
-            "Lyp9L2pvYnM6ASpaJiIhL3Y0YmV0YTEve3BhcmVudD1wcm9qZWN0cy8qfS9q",
-            "b2JzOgEq2kEKcGFyZW50LGpvYhKbAgoPQmF0Y2hDcmVhdGVKb2JzEjMuZ29v",
-            "Z2xlLmNsb3VkLnRhbGVudC52NGJldGExLkJhdGNoQ3JlYXRlSm9ic1JlcXVl",
-            "c3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIrMBgtPkkwJwIjcv",
-            "djRiZXRhMS97cGFyZW50PXByb2plY3RzLyovdGVuYW50cy8qfS9qb2JzOmJh",
-            "dGNoQ3JlYXRlOgEqWjIiLS92NGJldGExL3twYXJlbnQ9cHJvamVjdHMvKn0v",
-            "am9iczpiYXRjaENyZWF0ZToBKtpBC3BhcmVudCxqb2JzykEsChJKb2JPcGVy",
-            "YXRpb25SZXN1bHQSFkJhdGNoT3BlcmF0aW9uTWV0YWRhdGEStwEKBkdldEpv",
-            "YhIqLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5HZXRKb2JSZXF1ZXN0",
-            "GiAuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkpvYiJfgtPkkwJSEisv",
-            "djRiZXRhMS97bmFtZT1wcm9qZWN0cy8qL3RlbmFudHMvKi9qb2JzLyp9WiMS",
-            "IS92NGJldGExL3tuYW1lPXByb2plY3RzLyovam9icy8qfdpBBG5hbWUSygEK",
-            "CVVwZGF0ZUpvYhItLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5VcGRh",
-            "dGVKb2JSZXF1ZXN0GiAuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkpv",
-            "YiJsgtPkkwJgMi8vdjRiZXRhMS97am9iLm5hbWU9cHJvamVjdHMvKi90ZW5h",
-            "bnRzLyovam9icy8qfToBKloqMiUvdjRiZXRhMS97am9iLm5hbWU9cHJvamVj",
-            "dHMvKi9qb2JzLyp9OgEq2kEDam9iEpsCCg9CYXRjaFVwZGF0ZUpvYnMSMy5n",
-            "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuQmF0Y2hVcGRhdGVKb2JzUmVx",
-            "dWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iswGC0+STAnAi",
-            "Ny92NGJldGExL3twYXJlbnQ9cHJvamVjdHMvKi90ZW5hbnRzLyp9L2pvYnM6",
-            "YmF0Y2hVcGRhdGU6ASpaMiItL3Y0YmV0YTEve3BhcmVudD1wcm9qZWN0cy8q",
-            "fS9qb2JzOmJhdGNoVXBkYXRlOgEq2kELcGFyZW50LGpvYnPKQSwKEkpvYk9w",
-            "ZXJhdGlvblJlc3VsdBIWQmF0Y2hPcGVyYXRpb25NZXRhZGF0YRKzAQoJRGVs",
-            "ZXRlSm9iEi0uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkRlbGV0ZUpv",
-            "YlJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiX4LT5JMCUiorL3Y0",
-            "YmV0YTEve25hbWU9cHJvamVjdHMvKi90ZW5hbnRzLyovam9icy8qfVojKiEv",
-            "djRiZXRhMS97bmFtZT1wcm9qZWN0cy8qL2pvYnMvKn3aQQRuYW1lEuQBCg9C",
-            "YXRjaERlbGV0ZUpvYnMSMy5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEu",
-            "QmF0Y2hEZWxldGVKb2JzUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0",
-            "eSKDAYLT5JMCbSI3L3Y0YmV0YTEve3BhcmVudD1wcm9qZWN0cy8qL3RlbmFu",
-            "dHMvKn0vam9iczpiYXRjaERlbGV0ZToBKlovIi0vdjRiZXRhMS97cGFyZW50",
-            "PXByb2plY3RzLyp9L2pvYnM6YmF0Y2hEZWxldGXaQQ1wYXJlbnQsZmlsdGVy",
-            "EtEBCghMaXN0Sm9icxIsLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5M",
-            "aXN0Sm9ic1JlcXVlc3QaLS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEu",
-            "TGlzdEpvYnNSZXNwb25zZSJogtPkkwJSEisvdjRiZXRhMS97cGFyZW50PXBy",
-            "b2plY3RzLyovdGVuYW50cy8qfS9qb2JzWiMSIS92NGJldGExL3twYXJlbnQ9",
-            "cHJvamVjdHMvKn0vam9ic9pBDXBhcmVudCxmaWx0ZXIS2wEKClNlYXJjaEpv",
-            "YnMSLi5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuU2VhcmNoSm9ic1Jl",
-            "cXVlc3QaLy5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuU2VhcmNoSm9i",
-            "c1Jlc3BvbnNlImyC0+STAmYiMi92NGJldGExL3twYXJlbnQ9cHJvamVjdHMv",
-            "Ki90ZW5hbnRzLyp9L2pvYnM6c2VhcmNoOgEqWi0iKC92NGJldGExL3twYXJl",
-            "bnQ9cHJvamVjdHMvKn0vam9iczpzZWFyY2g6ASoS8wEKElNlYXJjaEpvYnNG",
-            "b3JBbGVydBIuLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5TZWFyY2hK",
-            "b2JzUmVxdWVzdBovLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5TZWFy",
-            "Y2hKb2JzUmVzcG9uc2UifILT5JMCdiI6L3Y0YmV0YTEve3BhcmVudD1wcm9q",
-            "ZWN0cy8qL3RlbmFudHMvKn0vam9iczpzZWFyY2hGb3JBbGVydDoBKlo1IjAv",
-            "djRiZXRhMS97cGFyZW50PXByb2plY3RzLyp9L2pvYnM6c2VhcmNoRm9yQWxl",
-            "cnQ6ASoabMpBE2pvYnMuZ29vZ2xlYXBpcy5jb23SQVNodHRwczovL3d3dy5n",
-            "b29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8vd3d3",
-            "Lmdvb2dsZWFwaXMuY29tL2F1dGgvam9ic0J9Ch9jb20uZ29vZ2xlLmNsb3Vk",
-            "LnRhbGVudC52NGJldGExQg9Kb2JTZXJ2aWNlUHJvdG9QAVpBZ29vZ2xlLmdv",
-            "bGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC90YWxlbnQvdjRi",
-            "ZXRhMTt0YWxlbnSiAgNDVFNiBnByb3RvMw=="));
+            "GiNnb29nbGUvbG9uZ3J1bm5pbmcvb3BlcmF0aW9ucy5wcm90bxoeZ29vZ2xl",
+            "L3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1w",
+            "dHkucHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGhdn",
+            "b29nbGUvcnBjL3N0YXR1cy5wcm90byJ3ChBDcmVhdGVKb2JSZXF1ZXN0Ei8K",
+            "BnBhcmVudBgBIAEoCUIf4EEC+kEZEhdqb2JzLmdvb2dsZWFwaXMuY29tL0pv",
+            "YhIyCgNqb2IYAiABKAsyIC5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEu",
+            "Sm9iQgPgQQIiPgoNR2V0Sm9iUmVxdWVzdBItCgRuYW1lGAEgASgJQh/gQQL6",
+            "QRkKF2pvYnMuZ29vZ2xlYXBpcy5jb20vSm9iIncKEFVwZGF0ZUpvYlJlcXVl",
+            "c3QSMgoDam9iGAEgASgLMiAuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGEx",
+            "LkpvYkID4EECEi8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLkZpZWxkTWFzayJBChBEZWxldGVKb2JSZXF1ZXN0Ei0KBG5hbWUYASAB",
+            "KAlCH+BBAvpBGQoXam9icy5nb29nbGVhcGlzLmNvbS9Kb2IiXgoWQmF0Y2hE",
+            "ZWxldGVKb2JzUmVxdWVzdBIvCgZwYXJlbnQYASABKAlCH+BBAvpBGRIXam9i",
+            "cy5nb29nbGVhcGlzLmNvbS9Kb2ISEwoGZmlsdGVyGAIgASgJQgPgQQIitgEK",
+            "D0xpc3RKb2JzUmVxdWVzdBIvCgZwYXJlbnQYASABKAlCH+BBAvpBGRIXam9i",
+            "cy5nb29nbGVhcGlzLmNvbS9Kb2ISEwoGZmlsdGVyGAIgASgJQgPgQQISEgoK",
+            "cGFnZV90b2tlbhgDIAEoCRIRCglwYWdlX3NpemUYBCABKAUSNgoIam9iX3Zp",
+            "ZXcYBSABKA4yJC5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuSm9iVmll",
+            "dyKcAQoQTGlzdEpvYnNSZXNwb25zZRIuCgRqb2JzGAEgAygLMiAuZ29vZ2xl",
+            "LmNsb3VkLnRhbGVudC52NGJldGExLkpvYhIXCg9uZXh0X3BhZ2VfdG9rZW4Y",
+            "AiABKAkSPwoIbWV0YWRhdGEYAyABKAsyLS5nb29nbGUuY2xvdWQudGFsZW50",
+            "LnY0YmV0YTEuUmVzcG9uc2VNZXRhZGF0YSK7CwoRU2VhcmNoSm9ic1JlcXVl",
+            "c3QSLwoGcGFyZW50GAEgASgJQh/gQQL6QRkSF2pvYnMuZ29vZ2xlYXBpcy5j",
+            "b20vSm9iEk4KC3NlYXJjaF9tb2RlGAIgASgOMjkuZ29vZ2xlLmNsb3VkLnRh",
+            "bGVudC52NGJldGExLlNlYXJjaEpvYnNSZXF1ZXN0LlNlYXJjaE1vZGUSSwoQ",
+            "cmVxdWVzdF9tZXRhZGF0YRgDIAEoCzIsLmdvb2dsZS5jbG91ZC50YWxlbnQu",
+            "djRiZXRhMS5SZXF1ZXN0TWV0YWRhdGFCA+BBAhI4Cglqb2JfcXVlcnkYBCAB",
+            "KAsyJS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuSm9iUXVlcnkSGQoR",
+            "ZW5hYmxlX2Jyb2FkZW5pbmcYBSABKAgSJwobcmVxdWlyZV9wcmVjaXNlX3Jl",
+            "c3VsdF9zaXplGAYgASgIQgIYARJGChFoaXN0b2dyYW1fcXVlcmllcxgHIAMo",
+            "CzIrLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5IaXN0b2dyYW1RdWVy",
+            "eRI2Cghqb2JfdmlldxgIIAEoDjIkLmdvb2dsZS5jbG91ZC50YWxlbnQudjRi",
+            "ZXRhMS5Kb2JWaWV3Eg4KBm9mZnNldBgJIAEoBRIRCglwYWdlX3NpemUYCiAB",
+            "KAUSEgoKcGFnZV90b2tlbhgLIAEoCRIQCghvcmRlcl9ieRgMIAEoCRJiChVk",
+            "aXZlcnNpZmljYXRpb25fbGV2ZWwYDSABKA4yQy5nb29nbGUuY2xvdWQudGFs",
+            "ZW50LnY0YmV0YTEuU2VhcmNoSm9ic1JlcXVlc3QuRGl2ZXJzaWZpY2F0aW9u",
+            "TGV2ZWwSXQoTY3VzdG9tX3JhbmtpbmdfaW5mbxgOIAEoCzJALmdvb2dsZS5j",
+            "bG91ZC50YWxlbnQudjRiZXRhMS5TZWFyY2hKb2JzUmVxdWVzdC5DdXN0b21S",
+            "YW5raW5nSW5mbxIdChVkaXNhYmxlX2tleXdvcmRfbWF0Y2gYECABKAgSWwoS",
+            "a2V5d29yZF9tYXRjaF9tb2RlGBIgASgOMj8uZ29vZ2xlLmNsb3VkLnRhbGVu",
+            "dC52NGJldGExLlNlYXJjaEpvYnNSZXF1ZXN0LktleXdvcmRNYXRjaE1vZGUa",
+            "mgIKEUN1c3RvbVJhbmtpbmdJbmZvEm8KEGltcG9ydGFuY2VfbGV2ZWwYASAB",
+            "KA4yUC5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuU2VhcmNoSm9ic1Jl",
+            "cXVlc3QuQ3VzdG9tUmFua2luZ0luZm8uSW1wb3J0YW5jZUxldmVsQgPgQQIS",
+            "HwoScmFua2luZ19leHByZXNzaW9uGAIgASgJQgPgQQIicwoPSW1wb3J0YW5j",
+            "ZUxldmVsEiAKHElNUE9SVEFOQ0VfTEVWRUxfVU5TUEVDSUZJRUQQABIICgRO",
+            "T05FEAESBwoDTE9XEAISCAoETUlMRBADEgoKBk1FRElVTRAEEggKBEhJR0gQ",
+            "BRILCgdFWFRSRU1FEAYiUgoKU2VhcmNoTW9kZRIbChdTRUFSQ0hfTU9ERV9V",
+            "TlNQRUNJRklFRBAAEg4KCkpPQl9TRUFSQ0gQARIXChNGRUFUVVJFRF9KT0Jf",
+            "U0VBUkNIEAIiVwoURGl2ZXJzaWZpY2F0aW9uTGV2ZWwSJQohRElWRVJTSUZJ",
+            "Q0FUSU9OX0xFVkVMX1VOU1BFQ0lGSUVEEAASDAoIRElTQUJMRUQQARIKCgZT",
+            "SU1QTEUQAiKHAQoQS2V5d29yZE1hdGNoTW9kZRIiCh5LRVlXT1JEX01BVENI",
+            "X01PREVfVU5TUEVDSUZJRUQQABIaChZLRVlXT1JEX01BVENIX0RJU0FCTEVE",
+            "EAESFQoRS0VZV09SRF9NQVRDSF9BTEwQAhIcChhLRVlXT1JEX01BVENIX1RJ",
+            "VExFX09OTFkQAyLXBgoSU2VhcmNoSm9ic1Jlc3BvbnNlElIKDW1hdGNoaW5n",
+            "X2pvYnMYASADKAsyOy5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuU2Vh",
+            "cmNoSm9ic1Jlc3BvbnNlLk1hdGNoaW5nSm9iElIKF2hpc3RvZ3JhbV9xdWVy",
+            "eV9yZXN1bHRzGAIgAygLMjEuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGEx",
+            "Lkhpc3RvZ3JhbVF1ZXJ5UmVzdWx0EhcKD25leHRfcGFnZV90b2tlbhgDIAEo",
+            "CRI/ChBsb2NhdGlvbl9maWx0ZXJzGAQgAygLMiUuZ29vZ2xlLmNsb3VkLnRh",
+            "bGVudC52NGJldGExLkxvY2F0aW9uEhwKFGVzdGltYXRlZF90b3RhbF9zaXpl",
+            "GAUgASgFEhIKCnRvdGFsX3NpemUYBiABKAUSPwoIbWV0YWRhdGEYByABKAsy",
+            "LS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuUmVzcG9uc2VNZXRhZGF0",
+            "YRIiChpicm9hZGVuZWRfcXVlcnlfam9ic19jb3VudBgIIAEoBRJJChBzcGVs",
+            "bF9jb3JyZWN0aW9uGAkgASgLMi8uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJl",
+            "dGExLlNwZWxsaW5nQ29ycmVjdGlvbhrcAQoLTWF0Y2hpbmdKb2ISLQoDam9i",
+            "GAEgASgLMiAuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkpvYhITCgtq",
+            "b2Jfc3VtbWFyeRgCIAEoCRIZChFqb2JfdGl0bGVfc25pcHBldBgDIAEoCRIb",
+            "ChNzZWFyY2hfdGV4dF9zbmlwcGV0GAQgASgJElEKDGNvbW11dGVfaW5mbxgF",
+            "IAEoCzI7Lmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5TZWFyY2hKb2Jz",
+            "UmVzcG9uc2UuQ29tbXV0ZUluZm8afgoLQ29tbXV0ZUluZm8SOwoMam9iX2xv",
+            "Y2F0aW9uGAEgASgLMiUuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkxv",
+            "Y2F0aW9uEjIKD3RyYXZlbF9kdXJhdGlvbhgCIAEoCzIZLmdvb2dsZS5wcm90",
+            "b2J1Zi5EdXJhdGlvbiJ+ChZCYXRjaENyZWF0ZUpvYnNSZXF1ZXN0Ei8KBnBh",
+            "cmVudBgBIAEoCUIf4EEC+kEZEhdqb2JzLmdvb2dsZWFwaXMuY29tL0pvYhIz",
+            "CgRqb2JzGAIgAygLMiAuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkpv",
+            "YkID4EECIq8BChZCYXRjaFVwZGF0ZUpvYnNSZXF1ZXN0Ei8KBnBhcmVudBgB",
+            "IAEoCUIf4EEC+kEZEhdqb2JzLmdvb2dsZWFwaXMuY29tL0pvYhIzCgRqb2Jz",
+            "GAIgAygLMiAuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkpvYkID4EEC",
+            "Ei8KC3VwZGF0ZV9tYXNrGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxk",
+            "TWFzayLEAQoSSm9iT3BlcmF0aW9uUmVzdWx0Ek4KC2pvYl9yZXN1bHRzGAEg",
+            "AygLMjkuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkpvYk9wZXJhdGlv",
+            "blJlc3VsdC5Kb2JSZXN1bHQaXgoJSm9iUmVzdWx0Ei0KA2pvYhgBIAEoCzIg",
+            "Lmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Kb2ISIgoGc3RhdHVzGAIg",
+            "ASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXMqdgoHSm9iVmlldxIYChRKT0JfVklF",
+            "V19VTlNQRUNJRklFRBAAEhQKEEpPQl9WSUVXX0lEX09OTFkQARIUChBKT0Jf",
+            "VklFV19NSU5JTUFMEAISEgoOSk9CX1ZJRVdfU01BTEwQAxIRCg1KT0JfVklF",
+            "V19GVUxMEAQyzhIKCkpvYlNlcnZpY2USyQEKCUNyZWF0ZUpvYhItLmdvb2ds",
+            "ZS5jbG91ZC50YWxlbnQudjRiZXRhMS5DcmVhdGVKb2JSZXF1ZXN0GiAuZ29v",
+            "Z2xlLmNsb3VkLnRhbGVudC52NGJldGExLkpvYiJrgtPkkwJYIisvdjRiZXRh",
+            "MS97cGFyZW50PXByb2plY3RzLyovdGVuYW50cy8qfS9qb2JzOgEqWiYiIS92",
+            "NGJldGExL3twYXJlbnQ9cHJvamVjdHMvKn0vam9iczoBKtpBCnBhcmVudCxq",
+            "b2ISmwIKD0JhdGNoQ3JlYXRlSm9icxIzLmdvb2dsZS5jbG91ZC50YWxlbnQu",
+            "djRiZXRhMS5CYXRjaENyZWF0ZUpvYnNSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdy",
+            "dW5uaW5nLk9wZXJhdGlvbiKzAYLT5JMCcCI3L3Y0YmV0YTEve3BhcmVudD1w",
+            "cm9qZWN0cy8qL3RlbmFudHMvKn0vam9iczpiYXRjaENyZWF0ZToBKloyIi0v",
+            "djRiZXRhMS97cGFyZW50PXByb2plY3RzLyp9L2pvYnM6YmF0Y2hDcmVhdGU6",
+            "ASraQQtwYXJlbnQsam9ic8pBLAoSSm9iT3BlcmF0aW9uUmVzdWx0EhZCYXRj",
+            "aE9wZXJhdGlvbk1ldGFkYXRhErcBCgZHZXRKb2ISKi5nb29nbGUuY2xvdWQu",
+            "dGFsZW50LnY0YmV0YTEuR2V0Sm9iUmVxdWVzdBogLmdvb2dsZS5jbG91ZC50",
+            "YWxlbnQudjRiZXRhMS5Kb2IiX4LT5JMCUhIrL3Y0YmV0YTEve25hbWU9cHJv",
+            "amVjdHMvKi90ZW5hbnRzLyovam9icy8qfVojEiEvdjRiZXRhMS97bmFtZT1w",
+            "cm9qZWN0cy8qL2pvYnMvKn3aQQRuYW1lEsoBCglVcGRhdGVKb2ISLS5nb29n",
+            "bGUuY2xvdWQudGFsZW50LnY0YmV0YTEuVXBkYXRlSm9iUmVxdWVzdBogLmdv",
+            "b2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Kb2IibILT5JMCYDIvL3Y0YmV0",
+            "YTEve2pvYi5uYW1lPXByb2plY3RzLyovdGVuYW50cy8qL2pvYnMvKn06ASpa",
+            "KjIlL3Y0YmV0YTEve2pvYi5uYW1lPXByb2plY3RzLyovam9icy8qfToBKtpB",
+            "A2pvYhKbAgoPQmF0Y2hVcGRhdGVKb2JzEjMuZ29vZ2xlLmNsb3VkLnRhbGVu",
+            "dC52NGJldGExLkJhdGNoVXBkYXRlSm9ic1JlcXVlc3QaHS5nb29nbGUubG9u",
+            "Z3J1bm5pbmcuT3BlcmF0aW9uIrMBgtPkkwJwIjcvdjRiZXRhMS97cGFyZW50",
+            "PXByb2plY3RzLyovdGVuYW50cy8qfS9qb2JzOmJhdGNoVXBkYXRlOgEqWjIi",
+            "LS92NGJldGExL3twYXJlbnQ9cHJvamVjdHMvKn0vam9iczpiYXRjaFVwZGF0",
+            "ZToBKtpBC3BhcmVudCxqb2JzykEsChJKb2JPcGVyYXRpb25SZXN1bHQSFkJh",
+            "dGNoT3BlcmF0aW9uTWV0YWRhdGESswEKCURlbGV0ZUpvYhItLmdvb2dsZS5j",
+            "bG91ZC50YWxlbnQudjRiZXRhMS5EZWxldGVKb2JSZXF1ZXN0GhYuZ29vZ2xl",
+            "LnByb3RvYnVmLkVtcHR5Il+C0+STAlIqKy92NGJldGExL3tuYW1lPXByb2pl",
+            "Y3RzLyovdGVuYW50cy8qL2pvYnMvKn1aIyohL3Y0YmV0YTEve25hbWU9cHJv",
+            "amVjdHMvKi9qb2JzLyp92kEEbmFtZRLkAQoPQmF0Y2hEZWxldGVKb2JzEjMu",
+            "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkJhdGNoRGVsZXRlSm9ic1Jl",
+            "cXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkigwGC0+STAm0iNy92NGJl",
+            "dGExL3twYXJlbnQ9cHJvamVjdHMvKi90ZW5hbnRzLyp9L2pvYnM6YmF0Y2hE",
+            "ZWxldGU6ASpaLyItL3Y0YmV0YTEve3BhcmVudD1wcm9qZWN0cy8qfS9qb2Jz",
+            "OmJhdGNoRGVsZXRl2kENcGFyZW50LGZpbHRlchLRAQoITGlzdEpvYnMSLC5n",
+            "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuTGlzdEpvYnNSZXF1ZXN0Gi0u",
+            "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkxpc3RKb2JzUmVzcG9uc2Ui",
+            "aILT5JMCUhIrL3Y0YmV0YTEve3BhcmVudD1wcm9qZWN0cy8qL3RlbmFudHMv",
+            "Kn0vam9ic1ojEiEvdjRiZXRhMS97cGFyZW50PXByb2plY3RzLyp9L2pvYnPa",
+            "QQ1wYXJlbnQsZmlsdGVyEtsBCgpTZWFyY2hKb2JzEi4uZ29vZ2xlLmNsb3Vk",
+            "LnRhbGVudC52NGJldGExLlNlYXJjaEpvYnNSZXF1ZXN0Gi8uZ29vZ2xlLmNs",
+            "b3VkLnRhbGVudC52NGJldGExLlNlYXJjaEpvYnNSZXNwb25zZSJsgtPkkwJm",
+            "IjIvdjRiZXRhMS97cGFyZW50PXByb2plY3RzLyovdGVuYW50cy8qfS9qb2Jz",
+            "OnNlYXJjaDoBKlotIigvdjRiZXRhMS97cGFyZW50PXByb2plY3RzLyp9L2pv",
+            "YnM6c2VhcmNoOgEqEvMBChJTZWFyY2hKb2JzRm9yQWxlcnQSLi5nb29nbGUu",
+            "Y2xvdWQudGFsZW50LnY0YmV0YTEuU2VhcmNoSm9ic1JlcXVlc3QaLy5nb29n",
+            "bGUuY2xvdWQudGFsZW50LnY0YmV0YTEuU2VhcmNoSm9ic1Jlc3BvbnNlInyC",
+            "0+STAnYiOi92NGJldGExL3twYXJlbnQ9cHJvamVjdHMvKi90ZW5hbnRzLyp9",
+            "L2pvYnM6c2VhcmNoRm9yQWxlcnQ6ASpaNSIwL3Y0YmV0YTEve3BhcmVudD1w",
+            "cm9qZWN0cy8qfS9qb2JzOnNlYXJjaEZvckFsZXJ0OgEqGmzKQRNqb2JzLmdv",
+            "b2dsZWFwaXMuY29t0kFTaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
+            "aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
+            "dXRoL2pvYnNCfQofY29tLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMUIP",
+            "Sm9iU2VydmljZVByb3RvUAFaQWdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
+            "L2dvb2dsZWFwaXMvY2xvdWQvdGFsZW50L3Y0YmV0YTE7dGFsZW50ogIDQ1RT",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.FiltersReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.HistogramReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.JobReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.FiltersReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.HistogramReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.JobReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Talent.V4Beta1.JobView), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CreateJobRequest), global::Google.Cloud.Talent.V4Beta1.CreateJobRequest.Parser, new[]{ "Parent", "Job" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.GetJobRequest), global::Google.Cloud.Talent.V4Beta1.GetJobRequest.Parser, new[]{ "Name" }, null, null, null, null),
@@ -181,7 +186,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.BatchDeleteJobsRequest), global::Google.Cloud.Talent.V4Beta1.BatchDeleteJobsRequest.Parser, new[]{ "Parent", "Filter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ListJobsRequest), global::Google.Cloud.Talent.V4Beta1.ListJobsRequest.Parser, new[]{ "Parent", "Filter", "PageToken", "PageSize", "JobView" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ListJobsResponse), global::Google.Cloud.Talent.V4Beta1.ListJobsResponse.Parser, new[]{ "Jobs", "NextPageToken", "Metadata" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest), global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Parser, new[]{ "Parent", "SearchMode", "RequestMetadata", "JobQuery", "EnableBroadening", "RequirePreciseResultSize", "HistogramQueries", "JobView", "Offset", "PageSize", "PageToken", "OrderBy", "DiversificationLevel", "CustomRankingInfo", "DisableKeywordMatch" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.SearchMode), typeof(global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.DiversificationLevel) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.CustomRankingInfo), global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.CustomRankingInfo.Parser, new[]{ "ImportanceLevel", "RankingExpression" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.CustomRankingInfo.Types.ImportanceLevel) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest), global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Parser, new[]{ "Parent", "SearchMode", "RequestMetadata", "JobQuery", "EnableBroadening", "RequirePreciseResultSize", "HistogramQueries", "JobView", "Offset", "PageSize", "PageToken", "OrderBy", "DiversificationLevel", "CustomRankingInfo", "DisableKeywordMatch", "KeywordMatchMode" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.SearchMode), typeof(global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.DiversificationLevel), typeof(global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.KeywordMatchMode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.CustomRankingInfo), global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.CustomRankingInfo.Parser, new[]{ "ImportanceLevel", "RankingExpression" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.CustomRankingInfo.Types.ImportanceLevel) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse), global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse.Parser, new[]{ "MatchingJobs", "HistogramQueryResults", "NextPageToken", "LocationFilters", "EstimatedTotalSize", "TotalSize", "Metadata", "BroadenedQueryJobsCount", "SpellCorrection" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse.Types.MatchingJob), global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse.Types.MatchingJob.Parser, new[]{ "Job", "JobSummary", "JobTitleSnippet", "SearchTextSnippet", "CommuteInfo" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse.Types.CommuteInfo), global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse.Types.CommuteInfo.Parser, new[]{ "JobLocation", "TravelDuration" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.BatchCreateJobsRequest), global::Google.Cloud.Talent.V4Beta1.BatchCreateJobsRequest.Parser, new[]{ "Parent", "Jobs" }, null, null, null, null),
@@ -1470,10 +1475,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
     ///
     /// The fields eligible for filtering are:
     ///
-    /// * `companyName` (Required)
+    /// * `companyName`
     /// * `requisitionId`
     /// * `status` Available values: OPEN, EXPIRED, ALL. Defaults to
     /// OPEN if no value is specified.
+    ///
+    /// At least one of `companyName` and `requisitionId` must present or an
+    /// INVALID_ARGUMENT error is thrown.
     ///
     /// Sample Query:
     ///
@@ -1482,6 +1490,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// requisitionId = "req-1"
     /// * companyName = "projects/foo/tenants/bar/companies/baz" AND
     /// status = "EXPIRED"
+    /// * requisitionId = "req-1"
+    /// * requisitionId = "req-1" AND status = "EXPIRED"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2102,6 +2112,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       diversificationLevel_ = other.diversificationLevel_;
       customRankingInfo_ = other.customRankingInfo_ != null ? other.customRankingInfo_.Clone() : null;
       disableKeywordMatch_ = other.disableKeywordMatch_;
+      keywordMatchMode_ = other.keywordMatchMode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2202,16 +2213,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int RequirePreciseResultSizeFieldNumber = 6;
     private bool requirePreciseResultSize_;
     /// <summary>
-    /// Controls if the search job request requires the return of a precise
-    /// count of the first 300 results. Setting this to `true` ensures
-    /// consistency in the number of results per page. Best practice is to set this
-    /// value to true if a client allows users to jump directly to a
-    /// non-sequential search results page.
-    ///
-    /// Enabling this flag may adversely impact performance.
-    ///
-    /// Defaults to false.
+    /// This field is deprecated.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool RequirePreciseResultSize {
@@ -2237,6 +2241,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// for each distinct attribute value.
     /// * `count(numeric_histogram_facet, list of buckets)`: Count the number of
     /// matching entities within each bucket.
+    ///
+    /// A maximum of 200 histogram buckets are supported.
     ///
     /// Data types:
     ///
@@ -2264,6 +2270,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     ///   "FULL_TIME", "PART_TIME".
     /// * company_size: histogram by [CompanySize][google.cloud.talent.v4beta1.CompanySize], for example, "SMALL",
     /// "MEDIUM", "BIG".
+    /// * publish_time_in_day: histogram by the [Job.posting_publish_time][google.cloud.talent.v4beta1.Job.posting_publish_time]
+    ///   in days.
+    ///   Must specify list of numeric buckets in spec.
     /// * publish_time_in_month: histogram by the [Job.posting_publish_time][google.cloud.talent.v4beta1.Job.posting_publish_time]
     ///   in months.
     ///   Must specify list of numeric buckets in spec.
@@ -2317,7 +2326,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// bucket(100000, MAX)])`
     /// * `count(string_custom_attribute["some-string-custom-attribute"])`
     /// * `count(numeric_custom_attribute["some-numeric-custom-attribute"],
-    ///   [bucket(MIN, 0, "negative"), bucket(0, MAX, "non-negative"])`
+    ///   [bucket(MIN, 0, "negative"), bucket(0, MAX, "non-negative")])`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2506,6 +2515,14 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int DisableKeywordMatchFieldNumber = 16;
     private bool disableKeywordMatch_;
     /// <summary>
+    /// This field is deprecated. Please use
+    /// [SearchJobsRequest.keyword_match_mode][google.cloud.talent.v4beta1.SearchJobsRequest.keyword_match_mode] going forward.
+    ///
+    /// To migrate, disable_keyword_match set to false maps to
+    /// [KeywordMatchMode.KEYWORD_MATCH_ALL][google.cloud.talent.v4beta1.SearchJobsRequest.KeywordMatchMode.KEYWORD_MATCH_ALL], and disable_keyword_match set to
+    /// true maps to [KeywordMatchMode.KEYWORD_MATCH_DISABLED][google.cloud.talent.v4beta1.SearchJobsRequest.KeywordMatchMode.KEYWORD_MATCH_DISABLED]. If
+    /// [SearchJobsRequest.keyword_match_mode][google.cloud.talent.v4beta1.SearchJobsRequest.keyword_match_mode] is set, this field is ignored.
+    ///
     /// Controls whether to disable exact keyword match on [Job.title][google.cloud.talent.v4beta1.Job.title],
     /// [Job.description][google.cloud.talent.v4beta1.Job.description], [Job.company_display_name][google.cloud.talent.v4beta1.Job.company_display_name], [Job.addresses][google.cloud.talent.v4beta1.Job.addresses],
     /// [Job.qualifications][google.cloud.talent.v4beta1.Job.qualifications]. When disable keyword match is turned off, a
@@ -2532,6 +2549,24 @@ namespace Google.Cloud.Talent.V4Beta1 {
       get { return disableKeywordMatch_; }
       set {
         disableKeywordMatch_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "keyword_match_mode" field.</summary>
+    public const int KeywordMatchModeFieldNumber = 18;
+    private global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.KeywordMatchMode keywordMatchMode_ = global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.KeywordMatchMode.Unspecified;
+    /// <summary>
+    /// Controls what keyword match options to use.
+    ///
+    /// Defaults to [KeywordMatchMode.KEYWORD_MATCH_ALL][google.cloud.talent.v4beta1.SearchJobsRequest.KeywordMatchMode.KEYWORD_MATCH_ALL] if no value
+    /// is specified.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.KeywordMatchMode KeywordMatchMode {
+      get { return keywordMatchMode_; }
+      set {
+        keywordMatchMode_ = value;
       }
     }
 
@@ -2565,6 +2600,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (DiversificationLevel != other.DiversificationLevel) return false;
       if (!object.Equals(CustomRankingInfo, other.CustomRankingInfo)) return false;
       if (DisableKeywordMatch != other.DisableKeywordMatch) return false;
+      if (KeywordMatchMode != other.KeywordMatchMode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2587,6 +2623,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (DiversificationLevel != global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.DiversificationLevel.Unspecified) hash ^= DiversificationLevel.GetHashCode();
       if (customRankingInfo_ != null) hash ^= CustomRankingInfo.GetHashCode();
       if (DisableKeywordMatch != false) hash ^= DisableKeywordMatch.GetHashCode();
+      if (KeywordMatchMode != global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.KeywordMatchMode.Unspecified) hash ^= KeywordMatchMode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2662,6 +2699,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteRawTag(128, 1);
         output.WriteBool(DisableKeywordMatch);
       }
+      if (KeywordMatchMode != global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.KeywordMatchMode.Unspecified) {
+        output.WriteRawTag(144, 1);
+        output.WriteEnum((int) KeywordMatchMode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2729,6 +2770,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteRawTag(128, 1);
         output.WriteBool(DisableKeywordMatch);
       }
+      if (KeywordMatchMode != global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.KeywordMatchMode.Unspecified) {
+        output.WriteRawTag(144, 1);
+        output.WriteEnum((int) KeywordMatchMode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2781,6 +2826,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (DisableKeywordMatch != false) {
         size += 2 + 1;
+      }
+      if (KeywordMatchMode != global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.KeywordMatchMode.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) KeywordMatchMode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2845,6 +2893,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (other.DisableKeywordMatch != false) {
         DisableKeywordMatch = other.DisableKeywordMatch;
+      }
+      if (other.KeywordMatchMode != global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.KeywordMatchMode.Unspecified) {
+        KeywordMatchMode = other.KeywordMatchMode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2928,6 +2979,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           case 128: {
             DisableKeywordMatch = input.ReadBool();
+            break;
+          }
+          case 144: {
+            KeywordMatchMode = (global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.KeywordMatchMode) input.ReadEnum();
             break;
           }
         }
@@ -3014,6 +3069,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
             DisableKeywordMatch = input.ReadBool();
             break;
           }
+          case 144: {
+            KeywordMatchMode = (global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.KeywordMatchMode) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -3077,6 +3136,47 @@ namespace Google.Cloud.Talent.V4Beta1 {
         /// results are returned.
         /// </summary>
         [pbr::OriginalName("SIMPLE")] Simple = 2,
+      }
+
+      /// <summary>
+      /// Controls what keyword matching behavior the search has. When keyword
+      /// matching is enabled, a keyword match returns jobs that may not match given
+      /// category filters when there are matching keywords. For example, for the
+      /// query "program manager" with KeywordMatchMode set to KEYWORD_MATCH_ALL, a
+      /// job posting with the title "software developer," which doesn't fall into
+      /// "program manager" ontology, and "program manager" appearing in its
+      /// description will be surfaced.
+      ///
+      /// For queries like "cloud" that don't contain title or
+      /// location specific ontology, jobs with "cloud" keyword matches are returned
+      /// regardless of this enum's value.
+      ///
+      /// Use [Company.keyword_searchable_job_custom_attributes][google.cloud.talent.v4beta1.Company.keyword_searchable_job_custom_attributes] if
+      /// company-specific globally matched custom field/attribute string values are
+      /// needed. Enabling keyword match improves recall of subsequent search
+      /// requests.
+      /// </summary>
+      public enum KeywordMatchMode {
+        /// <summary>
+        /// The keyword match option isn't specified. Defaults to
+        /// [KeywordMatchMode.KEYWORD_MATCH_ALL][google.cloud.talent.v4beta1.SearchJobsRequest.KeywordMatchMode.KEYWORD_MATCH_ALL] behavior.
+        /// </summary>
+        [pbr::OriginalName("KEYWORD_MATCH_MODE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Disables keyword matching.
+        /// </summary>
+        [pbr::OriginalName("KEYWORD_MATCH_DISABLED")] KeywordMatchDisabled = 1,
+        /// <summary>
+        /// Enable keyword matching over [Job.title][google.cloud.talent.v4beta1.Job.title],
+        /// [Job.description][google.cloud.talent.v4beta1.Job.description], [Job.company_display_name][google.cloud.talent.v4beta1.Job.company_display_name], [Job.addresses][google.cloud.talent.v4beta1.Job.addresses],
+        /// [Job.qualifications][google.cloud.talent.v4beta1.Job.qualifications], and keyword searchable [Job.custom_attributes][google.cloud.talent.v4beta1.Job.custom_attributes]
+        /// fields.
+        /// </summary>
+        [pbr::OriginalName("KEYWORD_MATCH_ALL")] KeywordMatchAll = 2,
+        /// <summary>
+        /// Only enable keyword matching over [Job.title][google.cloud.talent.v4beta1.Job.title].
+        /// </summary>
+        [pbr::OriginalName("KEYWORD_MATCH_TITLE_ONLY")] KeywordMatchTitleOnly = 3,
       }
 
       /// <summary>
@@ -3162,7 +3262,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         /// integer/double value or an expression that can be evaluated to a number.
         ///
         /// Parenthesis are supported to adjust calculation precedence. The
-        /// expression must be &lt; 100 characters in length.
+        /// expression must be &lt; 200 characters in length.
         ///
         /// The expression is considered invalid for a job if the expression
         /// references custom attributes that are not populated on the job or if the
@@ -3520,7 +3620,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// An estimation of the number of jobs that match the specified query.
     ///
     /// This number isn't guaranteed to be accurate. For accurate results,
-    /// see [SearchJobsRequest.require_precise_result_size][google.cloud.talent.v4beta1.SearchJobsRequest.require_precise_result_size].
+    /// see [SearchJobsResponse.total_size][google.cloud.talent.v4beta1.SearchJobsResponse.total_size].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3535,9 +3635,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int TotalSizeFieldNumber = 6;
     private int totalSize_;
     /// <summary>
-    /// The precise result count, which is available only if the client set
-    /// [SearchJobsRequest.require_precise_result_size][google.cloud.talent.v4beta1.SearchJobsRequest.require_precise_result_size] to `true`, or if the
-    /// response is the last page of results. Otherwise, the value is `-1`.
+    /// The precise result count with limit 100,000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -34,7 +34,7 @@ namespace Google.Cloud.Notebooks.V1 {
             "eXBlQgPgQQESEAoDa2V5GAIgASgJQgPgQQESEwoGdmFsdWVzGAMgAygJQgPg",
             "QQEiXwoEVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASEgoOTk9fUkVTRVJW",
             "QVRJT04QARITCg9BTllfUkVTRVJWQVRJT04QAhIYChRTUEVDSUZJQ19SRVNF",
-            "UlZBVElPThADIssbCghJbnN0YW5jZRIRCgRuYW1lGAEgASgJQgPgQQMSNgoI",
+            "UlZBVElPThADIq0cCghJbnN0YW5jZRIRCgRuYW1lGAEgASgJQgPgQQMSNgoI",
             "dm1faW1hZ2UYAiABKAsyIi5nb29nbGUuY2xvdWQubm90ZWJvb2tzLnYxLlZt",
             "SW1hZ2VIABJECg9jb250YWluZXJfaW1hZ2UYAyABKAsyKS5nb29nbGUuY2xv",
             "dWQubm90ZWJvb2tzLnYxLkNvbnRhaW5lckltYWdlSAASGwoTcG9zdF9zdGFy",
@@ -67,62 +67,64 @@ namespace Google.Cloud.Notebooks.V1 {
             "bmNlLlVwZ3JhZGVIaXN0b3J5RW50cnkSQgoIbmljX3R5cGUYISABKA4yKy5n",
             "b29nbGUuY2xvdWQubm90ZWJvb2tzLnYxLkluc3RhbmNlLk5pY1R5cGVCA+BB",
             "ARJRChRyZXNlcnZhdGlvbl9hZmZpbml0eRgiIAEoCzIuLmdvb2dsZS5jbG91",
-            "ZC5ub3RlYm9va3MudjEuUmVzZXJ2YXRpb25BZmZpbml0eUID4EEBEjQKC2Ny",
-            "ZWF0ZV90aW1lGBcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
-            "4EEDEjQKC3VwZGF0ZV90aW1lGBggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcEID4EEDGmoKEUFjY2VsZXJhdG9yQ29uZmlnEkEKBHR5cGUYASAB",
-            "KA4yMy5nb29nbGUuY2xvdWQubm90ZWJvb2tzLnYxLkluc3RhbmNlLkFjY2Vs",
-            "ZXJhdG9yVHlwZRISCgpjb3JlX2NvdW50GAIgASgDGrYCCgREaXNrEhMKC2F1",
-            "dG9fZGVsZXRlGAEgASgIEgwKBGJvb3QYAiABKAgSEwoLZGV2aWNlX25hbWUY",
-            "AyABKAkSFAoMZGlza19zaXplX2diGAQgASgDElIKEWd1ZXN0X29zX2ZlYXR1",
-            "cmVzGAUgAygLMjcuZ29vZ2xlLmNsb3VkLm5vdGVib29rcy52MS5JbnN0YW5j",
-            "ZS5EaXNrLkd1ZXN0T3NGZWF0dXJlEg0KBWluZGV4GAYgASgDEhEKCWludGVy",
-            "ZmFjZRgHIAEoCRIMCgRraW5kGAggASgJEhAKCGxpY2Vuc2VzGAkgAygJEgwK",
-            "BG1vZGUYCiABKAkSDgoGc291cmNlGAsgASgJEgwKBHR5cGUYDCABKAkaHgoO",
-            "R3Vlc3RPc0ZlYXR1cmUSDAoEdHlwZRgBIAEoCRpuChZTaGllbGRlZEluc3Rh",
-            "bmNlQ29uZmlnEhoKEmVuYWJsZV9zZWN1cmVfYm9vdBgBIAEoCBITCgtlbmFi",
-            "bGVfdnRwbRgCIAEoCBIjChtlbmFibGVfaW50ZWdyaXR5X21vbml0b3JpbmcY",
-            "AyABKAga/AMKE1VwZ3JhZGVIaXN0b3J5RW50cnkSEAoIc25hcHNob3QYASAB",
-            "KAkSEAoIdm1faW1hZ2UYAiABKAkSFwoPY29udGFpbmVyX2ltYWdlGAMgASgJ",
-            "EhEKCWZyYW1ld29yaxgEIAEoCRIPCgd2ZXJzaW9uGAUgASgJEkwKBXN0YXRl",
-            "GAYgASgOMj0uZ29vZ2xlLmNsb3VkLm5vdGVib29rcy52MS5JbnN0YW5jZS5V",
-            "cGdyYWRlSGlzdG9yeUVudHJ5LlN0YXRlEi8KC2NyZWF0ZV90aW1lGAcgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIYCgx0YXJnZXRfaW1hZ2UY",
-            "CCABKAlCAhgBEk4KBmFjdGlvbhgJIAEoDjI+Lmdvb2dsZS5jbG91ZC5ub3Rl",
-            "Ym9va3MudjEuSW5zdGFuY2UuVXBncmFkZUhpc3RvcnlFbnRyeS5BY3Rpb24S",
-            "FgoOdGFyZ2V0X3ZlcnNpb24YCiABKAkiRgoFU3RhdGUSFQoRU1RBVEVfVU5T",
-            "UEVDSUZJRUQQABILCgdTVEFSVEVEEAESDQoJU1VDQ0VFREVEEAISCgoGRkFJ",
-            "TEVEEAMiOwoGQWN0aW9uEhYKEkFDVElPTl9VTlNQRUNJRklFRBAAEgsKB1VQ",
-            "R1JBREUQARIMCghST0xMQkFDSxACGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgB",
-            "IAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaLwoNTWV0YWRhdGFFbnRyeRILCgNr",
-            "ZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIp0CCg9BY2NlbGVyYXRvclR5",
-            "cGUSIAocQUNDRUxFUkFUT1JfVFlQRV9VTlNQRUNJRklFRBAAEhQKEE5WSURJ",
-            "QV9URVNMQV9LODAQARIVChFOVklESUFfVEVTTEFfUDEwMBACEhUKEU5WSURJ",
-            "QV9URVNMQV9WMTAwEAMSEwoPTlZJRElBX1RFU0xBX1A0EAQSEwoPTlZJRElB",
-            "X1RFU0xBX1Q0EAUSFQoRTlZJRElBX1RFU0xBX0ExMDAQCxIXChNOVklESUFf",
-            "VEVTTEFfVDRfVldTEAgSGQoVTlZJRElBX1RFU0xBX1AxMDBfVldTEAkSFwoT",
-            "TlZJRElBX1RFU0xBX1A0X1ZXUxAKEgoKBlRQVV9WMhAGEgoKBlRQVV9WMxAH",
-            "IqQBCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwKCFNUQVJUSU5H",
-            "EAESEAoMUFJPVklTSU9OSU5HEAISCgoGQUNUSVZFEAMSDAoIU1RPUFBJTkcQ",
-            "BBILCgdTVE9QUEVEEAUSCwoHREVMRVRFRBAGEg0KCVVQR1JBRElORxAHEhAK",
-            "DElOSVRJQUxJWklORxAIEg8KC1JFR0lTVEVSSU5HEAkiUwoIRGlza1R5cGUS",
-            "GQoVRElTS19UWVBFX1VOU1BFQ0lGSUVEEAASDwoLUERfU1RBTkRBUkQQARIK",
-            "CgZQRF9TU0QQAhIPCgtQRF9CQUxBTkNFRBADIkUKDkRpc2tFbmNyeXB0aW9u",
-            "Eh8KG0RJU0tfRU5DUllQVElPTl9VTlNQRUNJRklFRBAAEggKBEdNRUsQARII",
-            "CgRDTUVLEAIiPgoHTmljVHlwZRIYChRVTlNQRUNJRklFRF9OSUNfVFlQRRAA",
-            "Eg4KClZJUlRJT19ORVQQARIJCgVHVk5JQxACOk/qQUwKIW5vdGVib29rcy5n",
-            "b29nbGVhcGlzLmNvbS9JbnN0YW5jZRIncHJvamVjdHMve3Byb2plY3R9L2lu",
-            "c3RhbmNlcy97aW5zdGFuY2V9Qg0KC2Vudmlyb25tZW50QssBCh1jb20uZ29v",
-            "Z2xlLmNsb3VkLm5vdGVib29rcy52MUINSW5zdGFuY2VQcm90b1ABWkJnb29n",
-            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL25vdGVi",
-            "b29rcy92MTtub3RlYm9va3OqAhlHb29nbGUuQ2xvdWQuTm90ZWJvb2tzLlYx",
-            "ygIZR29vZ2xlXENsb3VkXE5vdGVib29rc1xWMeoCHEdvb2dsZTo6Q2xvdWQ6",
-            "Ok5vdGVib29rczo6VjFiBnByb3RvMw=="));
+            "ZC5ub3RlYm9va3MudjEuUmVzZXJ2YXRpb25BZmZpbml0eUID4EEBEhQKB2Ny",
+            "ZWF0b3IYJCABKAlCA+BBAxIbCg5jYW5faXBfZm9yd2FyZBgnIAEoCEID4EEB",
+            "EjQKC2NyZWF0ZV90aW1lGBcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGBggASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcEID4EEDGmoKEUFjY2VsZXJhdG9yQ29uZmlnEkEKBHR5",
+            "cGUYASABKA4yMy5nb29nbGUuY2xvdWQubm90ZWJvb2tzLnYxLkluc3RhbmNl",
+            "LkFjY2VsZXJhdG9yVHlwZRISCgpjb3JlX2NvdW50GAIgASgDGrYCCgREaXNr",
+            "EhMKC2F1dG9fZGVsZXRlGAEgASgIEgwKBGJvb3QYAiABKAgSEwoLZGV2aWNl",
+            "X25hbWUYAyABKAkSFAoMZGlza19zaXplX2diGAQgASgDElIKEWd1ZXN0X29z",
+            "X2ZlYXR1cmVzGAUgAygLMjcuZ29vZ2xlLmNsb3VkLm5vdGVib29rcy52MS5J",
+            "bnN0YW5jZS5EaXNrLkd1ZXN0T3NGZWF0dXJlEg0KBWluZGV4GAYgASgDEhEK",
+            "CWludGVyZmFjZRgHIAEoCRIMCgRraW5kGAggASgJEhAKCGxpY2Vuc2VzGAkg",
+            "AygJEgwKBG1vZGUYCiABKAkSDgoGc291cmNlGAsgASgJEgwKBHR5cGUYDCAB",
+            "KAkaHgoOR3Vlc3RPc0ZlYXR1cmUSDAoEdHlwZRgBIAEoCRpuChZTaGllbGRl",
+            "ZEluc3RhbmNlQ29uZmlnEhoKEmVuYWJsZV9zZWN1cmVfYm9vdBgBIAEoCBIT",
+            "CgtlbmFibGVfdnRwbRgCIAEoCBIjChtlbmFibGVfaW50ZWdyaXR5X21vbml0",
+            "b3JpbmcYAyABKAga/AMKE1VwZ3JhZGVIaXN0b3J5RW50cnkSEAoIc25hcHNo",
+            "b3QYASABKAkSEAoIdm1faW1hZ2UYAiABKAkSFwoPY29udGFpbmVyX2ltYWdl",
+            "GAMgASgJEhEKCWZyYW1ld29yaxgEIAEoCRIPCgd2ZXJzaW9uGAUgASgJEkwK",
+            "BXN0YXRlGAYgASgOMj0uZ29vZ2xlLmNsb3VkLm5vdGVib29rcy52MS5JbnN0",
+            "YW5jZS5VcGdyYWRlSGlzdG9yeUVudHJ5LlN0YXRlEi8KC2NyZWF0ZV90aW1l",
+            "GAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIYCgx0YXJnZXRf",
+            "aW1hZ2UYCCABKAlCAhgBEk4KBmFjdGlvbhgJIAEoDjI+Lmdvb2dsZS5jbG91",
+            "ZC5ub3RlYm9va3MudjEuSW5zdGFuY2UuVXBncmFkZUhpc3RvcnlFbnRyeS5B",
+            "Y3Rpb24SFgoOdGFyZ2V0X3ZlcnNpb24YCiABKAkiRgoFU3RhdGUSFQoRU1RB",
+            "VEVfVU5TUEVDSUZJRUQQABILCgdTVEFSVEVEEAESDQoJU1VDQ0VFREVEEAIS",
+            "CgoGRkFJTEVEEAMiOwoGQWN0aW9uEhYKEkFDVElPTl9VTlNQRUNJRklFRBAA",
+            "EgsKB1VQR1JBREUQARIMCghST0xMQkFDSxACGi0KC0xhYmVsc0VudHJ5EgsK",
+            "A2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaLwoNTWV0YWRhdGFFbnRy",
+            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIp0CCg9BY2NlbGVy",
+            "YXRvclR5cGUSIAocQUNDRUxFUkFUT1JfVFlQRV9VTlNQRUNJRklFRBAAEhQK",
+            "EE5WSURJQV9URVNMQV9LODAQARIVChFOVklESUFfVEVTTEFfUDEwMBACEhUK",
+            "EU5WSURJQV9URVNMQV9WMTAwEAMSEwoPTlZJRElBX1RFU0xBX1A0EAQSEwoP",
+            "TlZJRElBX1RFU0xBX1Q0EAUSFQoRTlZJRElBX1RFU0xBX0ExMDAQCxIXChNO",
+            "VklESUFfVEVTTEFfVDRfVldTEAgSGQoVTlZJRElBX1RFU0xBX1AxMDBfVldT",
+            "EAkSFwoTTlZJRElBX1RFU0xBX1A0X1ZXUxAKEgoKBlRQVV9WMhAGEgoKBlRQ",
+            "VV9WMxAHIsMBCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwKCFNU",
+            "QVJUSU5HEAESEAoMUFJPVklTSU9OSU5HEAISCgoGQUNUSVZFEAMSDAoIU1RP",
+            "UFBJTkcQBBILCgdTVE9QUEVEEAUSCwoHREVMRVRFRBAGEg0KCVVQR1JBRElO",
+            "RxAHEhAKDElOSVRJQUxJWklORxAIEg8KC1JFR0lTVEVSSU5HEAkSDgoKU1VT",
+            "UEVORElORxAKEg0KCVNVU1BFTkRFRBALImMKCERpc2tUeXBlEhkKFURJU0tf",
+            "VFlQRV9VTlNQRUNJRklFRBAAEg8KC1BEX1NUQU5EQVJEEAESCgoGUERfU1NE",
+            "EAISDwoLUERfQkFMQU5DRUQQAxIOCgpQRF9FWFRSRU1FEAQiRQoORGlza0Vu",
+            "Y3J5cHRpb24SHwobRElTS19FTkNSWVBUSU9OX1VOU1BFQ0lGSUVEEAASCAoE",
+            "R01FSxABEggKBENNRUsQAiI+CgdOaWNUeXBlEhgKFFVOU1BFQ0lGSUVEX05J",
+            "Q19UWVBFEAASDgoKVklSVElPX05FVBABEgkKBUdWTklDEAI6T+pBTAohbm90",
+            "ZWJvb2tzLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlEidwcm9qZWN0cy97cHJv",
+            "amVjdH0vaW5zdGFuY2VzL3tpbnN0YW5jZX1CDQoLZW52aXJvbm1lbnRCywEK",
+            "HWNvbS5nb29nbGUuY2xvdWQubm90ZWJvb2tzLnYxQg1JbnN0YW5jZVByb3Rv",
+            "UAFaQmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xv",
+            "dWQvbm90ZWJvb2tzL3YxO25vdGVib29rc6oCGUdvb2dsZS5DbG91ZC5Ob3Rl",
+            "Ym9va3MuVjHKAhlHb29nbGVcQ2xvdWRcTm90ZWJvb2tzXFYx6gIcR29vZ2xl",
+            "OjpDbG91ZDo6Tm90ZWJvb2tzOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Notebooks.V1.EnvironmentReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.ReservationAffinity), global::Google.Cloud.Notebooks.V1.ReservationAffinity.Parser, new[]{ "ConsumeReservationType", "Key", "Values" }, null, new[]{ typeof(global::Google.Cloud.Notebooks.V1.ReservationAffinity.Types.Type) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.Instance), global::Google.Cloud.Notebooks.V1.Instance.Parser, new[]{ "Name", "VmImage", "ContainerImage", "PostStartupScript", "ProxyUri", "InstanceOwners", "ServiceAccount", "ServiceAccountScopes", "MachineType", "AcceleratorConfig", "State", "InstallGpuDriver", "CustomGpuDriverPath", "BootDiskType", "BootDiskSizeGb", "DataDiskType", "DataDiskSizeGb", "NoRemoveDataDisk", "DiskEncryption", "KmsKey", "Disks", "ShieldedInstanceConfig", "NoPublicIp", "NoProxyAccess", "Network", "Subnet", "Labels", "Metadata", "Tags", "UpgradeHistory", "NicType", "ReservationAffinity", "CreateTime", "UpdateTime" }, new[]{ "Environment" }, new[]{ typeof(global::Google.Cloud.Notebooks.V1.Instance.Types.AcceleratorType), typeof(global::Google.Cloud.Notebooks.V1.Instance.Types.State), typeof(global::Google.Cloud.Notebooks.V1.Instance.Types.DiskType), typeof(global::Google.Cloud.Notebooks.V1.Instance.Types.DiskEncryption), typeof(global::Google.Cloud.Notebooks.V1.Instance.Types.NicType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.Instance.Types.AcceleratorConfig), global::Google.Cloud.Notebooks.V1.Instance.Types.AcceleratorConfig.Parser, new[]{ "Type", "CoreCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.Instance), global::Google.Cloud.Notebooks.V1.Instance.Parser, new[]{ "Name", "VmImage", "ContainerImage", "PostStartupScript", "ProxyUri", "InstanceOwners", "ServiceAccount", "ServiceAccountScopes", "MachineType", "AcceleratorConfig", "State", "InstallGpuDriver", "CustomGpuDriverPath", "BootDiskType", "BootDiskSizeGb", "DataDiskType", "DataDiskSizeGb", "NoRemoveDataDisk", "DiskEncryption", "KmsKey", "Disks", "ShieldedInstanceConfig", "NoPublicIp", "NoProxyAccess", "Network", "Subnet", "Labels", "Metadata", "Tags", "UpgradeHistory", "NicType", "ReservationAffinity", "Creator", "CanIpForward", "CreateTime", "UpdateTime" }, new[]{ "Environment" }, new[]{ typeof(global::Google.Cloud.Notebooks.V1.Instance.Types.AcceleratorType), typeof(global::Google.Cloud.Notebooks.V1.Instance.Types.State), typeof(global::Google.Cloud.Notebooks.V1.Instance.Types.DiskType), typeof(global::Google.Cloud.Notebooks.V1.Instance.Types.DiskEncryption), typeof(global::Google.Cloud.Notebooks.V1.Instance.Types.NicType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.Instance.Types.AcceleratorConfig), global::Google.Cloud.Notebooks.V1.Instance.Types.AcceleratorConfig.Parser, new[]{ "Type", "CoreCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.Instance.Types.Disk), global::Google.Cloud.Notebooks.V1.Instance.Types.Disk.Parser, new[]{ "AutoDelete", "Boot", "DeviceName", "DiskSizeGb", "GuestOsFeatures", "Index", "Interface", "Kind", "Licenses", "Mode", "Source", "Type" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.Instance.Types.Disk.Types.GuestOsFeature), global::Google.Cloud.Notebooks.V1.Instance.Types.Disk.Types.GuestOsFeature.Parser, new[]{ "Type" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.Instance.Types.ShieldedInstanceConfig), global::Google.Cloud.Notebooks.V1.Instance.Types.ShieldedInstanceConfig.Parser, new[]{ "EnableSecureBoot", "EnableVtpm", "EnableIntegrityMonitoring" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.Instance.Types.UpgradeHistoryEntry), global::Google.Cloud.Notebooks.V1.Instance.Types.UpgradeHistoryEntry.Parser, new[]{ "Snapshot", "VmImage", "ContainerImage", "Framework", "Version", "State", "CreateTime", "TargetImage", "Action", "TargetVersion" }, null, new[]{ typeof(global::Google.Cloud.Notebooks.V1.Instance.Types.UpgradeHistoryEntry.Types.State), typeof(global::Google.Cloud.Notebooks.V1.Instance.Types.UpgradeHistoryEntry.Types.Action) }, null, null),
@@ -495,6 +497,8 @@ namespace Google.Cloud.Notebooks.V1 {
       upgradeHistory_ = other.upgradeHistory_.Clone();
       nicType_ = other.nicType_;
       reservationAffinity_ = other.reservationAffinity_ != null ? other.reservationAffinity_.Clone() : null;
+      creator_ = other.creator_;
+      canIpForward_ = other.canIpForward_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       switch (other.EnvironmentCase) {
@@ -1043,6 +1047,37 @@ namespace Google.Cloud.Notebooks.V1 {
       }
     }
 
+    /// <summary>Field number for the "creator" field.</summary>
+    public const int CreatorFieldNumber = 36;
+    private string creator_ = "";
+    /// <summary>
+    /// Output only. Email address of entity that sent original CreateInstance request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Creator {
+      get { return creator_; }
+      set {
+        creator_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "can_ip_forward" field.</summary>
+    public const int CanIpForwardFieldNumber = 39;
+    private bool canIpForward_;
+    /// <summary>
+    /// Optional. Flag to enable ip forwarding or not, default false/off.
+    /// https://cloud.google.com/vpc/docs/using-routes#canipforward
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool CanIpForward {
+      get { return canIpForward_; }
+      set {
+        canIpForward_ = value;
+      }
+    }
+
     /// <summary>Field number for the "create_time" field.</summary>
     public const int CreateTimeFieldNumber = 23;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
@@ -1141,6 +1176,8 @@ namespace Google.Cloud.Notebooks.V1 {
       if(!upgradeHistory_.Equals(other.upgradeHistory_)) return false;
       if (NicType != other.NicType) return false;
       if (!object.Equals(ReservationAffinity, other.ReservationAffinity)) return false;
+      if (Creator != other.Creator) return false;
+      if (CanIpForward != other.CanIpForward) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (EnvironmentCase != other.EnvironmentCase) return false;
@@ -1183,6 +1220,8 @@ namespace Google.Cloud.Notebooks.V1 {
       hash ^= upgradeHistory_.GetHashCode();
       if (NicType != global::Google.Cloud.Notebooks.V1.Instance.Types.NicType.UnspecifiedNicType) hash ^= NicType.GetHashCode();
       if (reservationAffinity_ != null) hash ^= ReservationAffinity.GetHashCode();
+      if (Creator.Length != 0) hash ^= Creator.GetHashCode();
+      if (CanIpForward != false) hash ^= CanIpForward.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       hash ^= (int) environmentCase_;
@@ -1319,6 +1358,14 @@ namespace Google.Cloud.Notebooks.V1 {
         output.WriteRawTag(146, 2);
         output.WriteMessage(ReservationAffinity);
       }
+      if (Creator.Length != 0) {
+        output.WriteRawTag(162, 2);
+        output.WriteString(Creator);
+      }
+      if (CanIpForward != false) {
+        output.WriteRawTag(184, 2);
+        output.WriteBool(CanIpForward);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1444,6 +1491,14 @@ namespace Google.Cloud.Notebooks.V1 {
         output.WriteRawTag(146, 2);
         output.WriteMessage(ReservationAffinity);
       }
+      if (Creator.Length != 0) {
+        output.WriteRawTag(162, 2);
+        output.WriteString(Creator);
+      }
+      if (CanIpForward != false) {
+        output.WriteRawTag(184, 2);
+        output.WriteBool(CanIpForward);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1535,6 +1590,12 @@ namespace Google.Cloud.Notebooks.V1 {
       }
       if (reservationAffinity_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(ReservationAffinity);
+      }
+      if (Creator.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Creator);
+      }
+      if (CanIpForward != false) {
+        size += 2 + 1;
       }
       if (createTime_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
@@ -1638,6 +1699,12 @@ namespace Google.Cloud.Notebooks.V1 {
           ReservationAffinity = new global::Google.Cloud.Notebooks.V1.ReservationAffinity();
         }
         ReservationAffinity.MergeFrom(other.ReservationAffinity);
+      }
+      if (other.Creator.Length != 0) {
+        Creator = other.Creator;
+      }
+      if (other.CanIpForward != false) {
+        CanIpForward = other.CanIpForward;
       }
       if (other.createTime_ != null) {
         if (createTime_ == null) {
@@ -1842,6 +1909,14 @@ namespace Google.Cloud.Notebooks.V1 {
             input.ReadMessage(ReservationAffinity);
             break;
           }
+          case 290: {
+            Creator = input.ReadString();
+            break;
+          }
+          case 312: {
+            CanIpForward = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -2018,6 +2093,14 @@ namespace Google.Cloud.Notebooks.V1 {
             input.ReadMessage(ReservationAffinity);
             break;
           }
+          case 290: {
+            Creator = input.ReadString();
+            break;
+          }
+          case 312: {
+            CanIpForward = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -2050,7 +2133,7 @@ namespace Google.Cloud.Notebooks.V1 {
         /// </summary>
         [pbr::OriginalName("NVIDIA_TESLA_V100")] NvidiaTeslaV100 = 3,
         /// <summary>
-        /// Accelerator type is Nvidia Tesla P4 GPU.
+        /// Accelerator type is Nvidia Tesla P4.
         /// </summary>
         [pbr::OriginalName("NVIDIA_TESLA_P4")] NvidiaTeslaP4 = 4,
         /// <summary>
@@ -2070,7 +2153,7 @@ namespace Google.Cloud.Notebooks.V1 {
         /// </summary>
         [pbr::OriginalName("NVIDIA_TESLA_P100_VWS")] NvidiaTeslaP100Vws = 9,
         /// <summary>
-        /// Accelerator type is Nvidia Tesla P4 GPU Virtual Workstations.
+        /// Accelerator type is NVIDIA Tesla P4 Virtual Workstations.
         /// </summary>
         [pbr::OriginalName("NVIDIA_TESLA_P4_VWS")] NvidiaTeslaP4Vws = 10,
         /// <summary>
@@ -2128,6 +2211,14 @@ namespace Google.Cloud.Notebooks.V1 {
         /// The instance is getting registered.
         /// </summary>
         [pbr::OriginalName("REGISTERING")] Registering = 9,
+        /// <summary>
+        /// The instance is suspending.
+        /// </summary>
+        [pbr::OriginalName("SUSPENDING")] Suspending = 10,
+        /// <summary>
+        /// The instance is suspended.
+        /// </summary>
+        [pbr::OriginalName("SUSPENDED")] Suspended = 11,
       }
 
       /// <summary>
@@ -2150,6 +2241,10 @@ namespace Google.Cloud.Notebooks.V1 {
         /// Balanced persistent disk type.
         /// </summary>
         [pbr::OriginalName("PD_BALANCED")] PdBalanced = 3,
+        /// <summary>
+        /// Extreme persistent disk type.
+        /// </summary>
+        [pbr::OriginalName("PD_EXTREME")] PdExtreme = 4,
       }
 
       /// <summary>

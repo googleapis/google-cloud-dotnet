@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -50,7 +51,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateParticipant(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             Participant response = client.CreateParticipant(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -79,7 +80,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateParticipantAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Participant>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             Participant responseCallSettings = await client.CreateParticipantAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Participant responseCancellationToken = await client.CreateParticipantAsync(request, st::CancellationToken.None);
@@ -110,7 +111,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateParticipant(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             Participant response = client.CreateParticipant(request.Parent, request.Participant);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -139,7 +140,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateParticipantAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Participant>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             Participant responseCallSettings = await client.CreateParticipantAsync(request.Parent, request.Participant, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Participant responseCancellationToken = await client.CreateParticipantAsync(request.Parent, request.Participant, st::CancellationToken.None);
@@ -170,7 +171,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateParticipant(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             Participant response = client.CreateParticipant(request.ParentAsConversationName, request.Participant);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -199,7 +200,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateParticipantAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Participant>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             Participant responseCallSettings = await client.CreateParticipantAsync(request.ParentAsConversationName, request.Participant, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Participant responseCancellationToken = await client.CreateParticipantAsync(request.ParentAsConversationName, request.Participant, st::CancellationToken.None);
@@ -229,7 +230,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetParticipant(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             Participant response = client.GetParticipant(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -257,7 +258,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetParticipantAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Participant>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             Participant responseCallSettings = await client.GetParticipantAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Participant responseCancellationToken = await client.GetParticipantAsync(request, st::CancellationToken.None);
@@ -287,7 +288,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetParticipant(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             Participant response = client.GetParticipant(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -315,7 +316,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetParticipantAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Participant>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             Participant responseCallSettings = await client.GetParticipantAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Participant responseCancellationToken = await client.GetParticipantAsync(request.Name, st::CancellationToken.None);
@@ -345,7 +346,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetParticipant(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             Participant response = client.GetParticipant(request.ParticipantName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -373,7 +374,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetParticipantAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Participant>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             Participant responseCallSettings = await client.GetParticipantAsync(request.ParticipantName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Participant responseCancellationToken = await client.GetParticipantAsync(request.ParticipantName, st::CancellationToken.None);
@@ -404,7 +405,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateParticipant(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             Participant response = client.UpdateParticipant(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -433,7 +434,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateParticipantAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Participant>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             Participant responseCallSettings = await client.UpdateParticipantAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Participant responseCancellationToken = await client.UpdateParticipantAsync(request, st::CancellationToken.None);
@@ -464,7 +465,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateParticipant(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             Participant response = client.UpdateParticipant(request.Participant, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -493,7 +494,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateParticipantAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Participant>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             Participant responseCallSettings = await client.UpdateParticipantAsync(request.Participant, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Participant responseCancellationToken = await client.UpdateParticipantAsync(request.Participant, request.UpdateMask, st::CancellationToken.None);
@@ -514,6 +515,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 QueryParams = new QueryParameters(),
                 RequestId = "request_id362c8df6",
                 AssistQueryParams = new AssistQueryParameters(),
+                CxParameters = new wkt::Struct(),
             };
             AnalyzeContentResponse expectedResponse = new AnalyzeContentResponse
             {
@@ -532,7 +534,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 DtmfParameters = new DtmfParameters(),
             };
             mockGrpcClient.Setup(x => x.AnalyzeContent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             AnalyzeContentResponse response = client.AnalyzeContent(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -551,6 +553,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 QueryParams = new QueryParameters(),
                 RequestId = "request_id362c8df6",
                 AssistQueryParams = new AssistQueryParameters(),
+                CxParameters = new wkt::Struct(),
             };
             AnalyzeContentResponse expectedResponse = new AnalyzeContentResponse
             {
@@ -569,7 +572,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 DtmfParameters = new DtmfParameters(),
             };
             mockGrpcClient.Setup(x => x.AnalyzeContentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnalyzeContentResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             AnalyzeContentResponse responseCallSettings = await client.AnalyzeContentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AnalyzeContentResponse responseCancellationToken = await client.AnalyzeContentAsync(request, st::CancellationToken.None);
@@ -603,7 +606,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 DtmfParameters = new DtmfParameters(),
             };
             mockGrpcClient.Setup(x => x.AnalyzeContent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             AnalyzeContentResponse response = client.AnalyzeContent(request.Participant, request.TextInput);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -635,7 +638,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 DtmfParameters = new DtmfParameters(),
             };
             mockGrpcClient.Setup(x => x.AnalyzeContentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnalyzeContentResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             AnalyzeContentResponse responseCallSettings = await client.AnalyzeContentAsync(request.Participant, request.TextInput, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AnalyzeContentResponse responseCancellationToken = await client.AnalyzeContentAsync(request.Participant, request.TextInput, st::CancellationToken.None);
@@ -669,7 +672,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 DtmfParameters = new DtmfParameters(),
             };
             mockGrpcClient.Setup(x => x.AnalyzeContent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             AnalyzeContentResponse response = client.AnalyzeContent(request.ParticipantAsParticipantName, request.TextInput);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -701,7 +704,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 DtmfParameters = new DtmfParameters(),
             };
             mockGrpcClient.Setup(x => x.AnalyzeContentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnalyzeContentResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             AnalyzeContentResponse responseCallSettings = await client.AnalyzeContentAsync(request.ParticipantAsParticipantName, request.TextInput, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AnalyzeContentResponse responseCancellationToken = await client.AnalyzeContentAsync(request.ParticipantAsParticipantName, request.TextInput, st::CancellationToken.None);
@@ -735,7 +738,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 DtmfParameters = new DtmfParameters(),
             };
             mockGrpcClient.Setup(x => x.AnalyzeContent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             AnalyzeContentResponse response = client.AnalyzeContent(request.Participant, request.EventInput);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -767,7 +770,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 DtmfParameters = new DtmfParameters(),
             };
             mockGrpcClient.Setup(x => x.AnalyzeContentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnalyzeContentResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             AnalyzeContentResponse responseCallSettings = await client.AnalyzeContentAsync(request.Participant, request.EventInput, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AnalyzeContentResponse responseCancellationToken = await client.AnalyzeContentAsync(request.Participant, request.EventInput, st::CancellationToken.None);
@@ -801,7 +804,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 DtmfParameters = new DtmfParameters(),
             };
             mockGrpcClient.Setup(x => x.AnalyzeContent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             AnalyzeContentResponse response = client.AnalyzeContent(request.ParticipantAsParticipantName, request.EventInput);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -833,7 +836,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 DtmfParameters = new DtmfParameters(),
             };
             mockGrpcClient.Setup(x => x.AnalyzeContentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnalyzeContentResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             AnalyzeContentResponse responseCallSettings = await client.AnalyzeContentAsync(request.ParticipantAsParticipantName, request.EventInput, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AnalyzeContentResponse responseCancellationToken = await client.AnalyzeContentAsync(request.ParticipantAsParticipantName, request.EventInput, st::CancellationToken.None);
@@ -862,7 +865,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ContextSize = 1799545581,
             };
             mockGrpcClient.Setup(x => x.SuggestArticles(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             SuggestArticlesResponse response = client.SuggestArticles(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -889,7 +892,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ContextSize = 1799545581,
             };
             mockGrpcClient.Setup(x => x.SuggestArticlesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SuggestArticlesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             SuggestArticlesResponse responseCallSettings = await client.SuggestArticlesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SuggestArticlesResponse responseCancellationToken = await client.SuggestArticlesAsync(request, st::CancellationToken.None);
@@ -915,7 +918,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ContextSize = 1799545581,
             };
             mockGrpcClient.Setup(x => x.SuggestArticles(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             SuggestArticlesResponse response = client.SuggestArticles(request.Parent);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -939,7 +942,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ContextSize = 1799545581,
             };
             mockGrpcClient.Setup(x => x.SuggestArticlesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SuggestArticlesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             SuggestArticlesResponse responseCallSettings = await client.SuggestArticlesAsync(request.Parent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SuggestArticlesResponse responseCancellationToken = await client.SuggestArticlesAsync(request.Parent, st::CancellationToken.None);
@@ -965,7 +968,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ContextSize = 1799545581,
             };
             mockGrpcClient.Setup(x => x.SuggestArticles(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             SuggestArticlesResponse response = client.SuggestArticles(request.ParentAsParticipantName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -989,7 +992,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ContextSize = 1799545581,
             };
             mockGrpcClient.Setup(x => x.SuggestArticlesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SuggestArticlesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             SuggestArticlesResponse responseCallSettings = await client.SuggestArticlesAsync(request.ParentAsParticipantName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SuggestArticlesResponse responseCancellationToken = await client.SuggestArticlesAsync(request.ParentAsParticipantName, st::CancellationToken.None);
@@ -1015,7 +1018,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ContextSize = 1799545581,
             };
             mockGrpcClient.Setup(x => x.SuggestFaqAnswers(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             SuggestFaqAnswersResponse response = client.SuggestFaqAnswers(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1039,7 +1042,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ContextSize = 1799545581,
             };
             mockGrpcClient.Setup(x => x.SuggestFaqAnswersAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SuggestFaqAnswersResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             SuggestFaqAnswersResponse responseCallSettings = await client.SuggestFaqAnswersAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SuggestFaqAnswersResponse responseCancellationToken = await client.SuggestFaqAnswersAsync(request, st::CancellationToken.None);
@@ -1062,7 +1065,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ContextSize = 1799545581,
             };
             mockGrpcClient.Setup(x => x.SuggestFaqAnswers(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             SuggestFaqAnswersResponse response = client.SuggestFaqAnswers(request.Parent);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1083,7 +1086,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ContextSize = 1799545581,
             };
             mockGrpcClient.Setup(x => x.SuggestFaqAnswersAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SuggestFaqAnswersResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             SuggestFaqAnswersResponse responseCallSettings = await client.SuggestFaqAnswersAsync(request.Parent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SuggestFaqAnswersResponse responseCancellationToken = await client.SuggestFaqAnswersAsync(request.Parent, st::CancellationToken.None);
@@ -1106,7 +1109,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ContextSize = 1799545581,
             };
             mockGrpcClient.Setup(x => x.SuggestFaqAnswers(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             SuggestFaqAnswersResponse response = client.SuggestFaqAnswers(request.ParentAsParticipantName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1127,7 +1130,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ContextSize = 1799545581,
             };
             mockGrpcClient.Setup(x => x.SuggestFaqAnswersAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SuggestFaqAnswersResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             SuggestFaqAnswersResponse responseCallSettings = await client.SuggestFaqAnswersAsync(request.ParentAsParticipantName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SuggestFaqAnswersResponse responseCancellationToken = await client.SuggestFaqAnswersAsync(request.ParentAsParticipantName, st::CancellationToken.None);
@@ -1156,7 +1159,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ContextSize = 1799545581,
             };
             mockGrpcClient.Setup(x => x.SuggestSmartReplies(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             SuggestSmartRepliesResponse response = client.SuggestSmartReplies(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1183,7 +1186,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ContextSize = 1799545581,
             };
             mockGrpcClient.Setup(x => x.SuggestSmartRepliesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SuggestSmartRepliesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             SuggestSmartRepliesResponse responseCallSettings = await client.SuggestSmartRepliesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SuggestSmartRepliesResponse responseCancellationToken = await client.SuggestSmartRepliesAsync(request, st::CancellationToken.None);
@@ -1209,7 +1212,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ContextSize = 1799545581,
             };
             mockGrpcClient.Setup(x => x.SuggestSmartReplies(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             SuggestSmartRepliesResponse response = client.SuggestSmartReplies(request.Parent);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1233,7 +1236,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ContextSize = 1799545581,
             };
             mockGrpcClient.Setup(x => x.SuggestSmartRepliesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SuggestSmartRepliesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             SuggestSmartRepliesResponse responseCallSettings = await client.SuggestSmartRepliesAsync(request.Parent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SuggestSmartRepliesResponse responseCancellationToken = await client.SuggestSmartRepliesAsync(request.Parent, st::CancellationToken.None);
@@ -1259,7 +1262,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ContextSize = 1799545581,
             };
             mockGrpcClient.Setup(x => x.SuggestSmartReplies(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             SuggestSmartRepliesResponse response = client.SuggestSmartReplies(request.ParentAsParticipantName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1283,7 +1286,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 ContextSize = 1799545581,
             };
             mockGrpcClient.Setup(x => x.SuggestSmartRepliesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SuggestSmartRepliesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null, null);
             SuggestSmartRepliesResponse responseCallSettings = await client.SuggestSmartRepliesAsync(request.ParentAsParticipantName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SuggestSmartRepliesResponse responseCancellationToken = await client.SuggestSmartRepliesAsync(request.ParentAsParticipantName, st::CancellationToken.None);

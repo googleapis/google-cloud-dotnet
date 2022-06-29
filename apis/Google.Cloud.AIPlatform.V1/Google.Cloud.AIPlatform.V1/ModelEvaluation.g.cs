@@ -29,31 +29,33 @@ namespace Google.Cloud.AIPlatform.V1 {
             "aS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5w",
             "cm90bxosZ29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvZXhwbGFuYXRpb24u",
             "cHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8aH2dvb2dsZS9w",
-            "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8iqwUKD01vZGVsRXZhbHVhdGlvbhIR",
-            "CgRuYW1lGAEgASgJQgPgQQMSGgoSbWV0cmljc19zY2hlbWFfdXJpGAIgASgJ",
-            "EicKB21ldHJpY3MYAyABKAsyFi5nb29nbGUucHJvdG9idWYuVmFsdWUSNAoL",
-            "Y3JlYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "QgPgQQMSGAoQc2xpY2VfZGltZW5zaW9ucxgFIAMoCRIcChRkYXRhX2l0ZW1f",
-            "c2NoZW1hX3VyaRgGIAEoCRIdChVhbm5vdGF0aW9uX3NjaGVtYV91cmkYByAB",
-            "KAkSRwoRbW9kZWxfZXhwbGFuYXRpb24YCCABKAsyLC5nb29nbGUuY2xvdWQu",
-            "YWlwbGF0Zm9ybS52MS5Nb2RlbEV4cGxhbmF0aW9uEmUKEWV4cGxhbmF0aW9u",
-            "X3NwZWNzGAkgAygLMkouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTW9k",
-            "ZWxFdmFsdWF0aW9uLk1vZGVsRXZhbHVhdGlvbkV4cGxhbmF0aW9uU3BlYxqB",
-            "AQoeTW9kZWxFdmFsdWF0aW9uRXhwbGFuYXRpb25TcGVjEhgKEGV4cGxhbmF0",
-            "aW9uX3R5cGUYASABKAkSRQoQZXhwbGFuYXRpb25fc3BlYxgCIAEoCzIrLmdv",
-            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkV4cGxhbmF0aW9uU3BlYzp/6kF8",
-            "CilhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL01vZGVsRXZhbHVhdGlvbhJP",
-            "cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L21vZGVs",
-            "cy97bW9kZWx9L2V2YWx1YXRpb25zL3tldmFsdWF0aW9ufULYAQoeY29tLmdv",
-            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQhRNb2RlbEV2YWx1YXRpb25Qcm90",
-            "b1ABWkRnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Ns",
-            "b3VkL2FpcGxhdGZvcm0vdjE7YWlwbGF0Zm9ybaoCGkdvb2dsZS5DbG91ZC5B",
-            "SVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1H",
-            "b29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
+            "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8i6wUKD01vZGVsRXZhbHVhdGlvbhIR",
+            "CgRuYW1lGAEgASgJQgPgQQMSFAoMZGlzcGxheV9uYW1lGAogASgJEhoKEm1l",
+            "dHJpY3Nfc2NoZW1hX3VyaRgCIAEoCRInCgdtZXRyaWNzGAMgASgLMhYuZ29v",
+            "Z2xlLnByb3RvYnVmLlZhbHVlEjQKC2NyZWF0ZV90aW1lGAQgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEhgKEHNsaWNlX2RpbWVuc2lv",
+            "bnMYBSADKAkSHAoUZGF0YV9pdGVtX3NjaGVtYV91cmkYBiABKAkSHQoVYW5u",
+            "b3RhdGlvbl9zY2hlbWFfdXJpGAcgASgJEkcKEW1vZGVsX2V4cGxhbmF0aW9u",
+            "GAggASgLMiwuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTW9kZWxFeHBs",
+            "YW5hdGlvbhJlChFleHBsYW5hdGlvbl9zcGVjcxgJIAMoCzJKLmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxLk1vZGVsRXZhbHVhdGlvbi5Nb2RlbEV2YWx1",
+            "YXRpb25FeHBsYW5hdGlvblNwZWMSKAoIbWV0YWRhdGEYCyABKAsyFi5nb29n",
+            "bGUucHJvdG9idWYuVmFsdWUagQEKHk1vZGVsRXZhbHVhdGlvbkV4cGxhbmF0",
+            "aW9uU3BlYxIYChBleHBsYW5hdGlvbl90eXBlGAEgASgJEkUKEGV4cGxhbmF0",
+            "aW9uX3NwZWMYAiABKAsyKy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5F",
+            "eHBsYW5hdGlvblNwZWM6f+pBfAopYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNv",
+            "bS9Nb2RlbEV2YWx1YXRpb24ST3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
+            "bnMve2xvY2F0aW9ufS9tb2RlbHMve21vZGVsfS9ldmFsdWF0aW9ucy97ZXZh",
+            "bHVhdGlvbn1C2AEKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIU",
+            "TW9kZWxFdmFsdWF0aW9uUHJvdG9QAVpEZ29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
+            "cHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9haXBsYXRmb3JtL3YxO2FpcGxhdGZv",
+            "cm2qAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91",
+            "ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6",
+            "VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ExplanationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelEvaluation), global::Google.Cloud.AIPlatform.V1.ModelEvaluation.Parser, new[]{ "Name", "MetricsSchemaUri", "Metrics", "CreateTime", "SliceDimensions", "DataItemSchemaUri", "AnnotationSchemaUri", "ModelExplanation", "ExplanationSpecs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelEvaluation.Types.ModelEvaluationExplanationSpec), global::Google.Cloud.AIPlatform.V1.ModelEvaluation.Types.ModelEvaluationExplanationSpec.Parser, new[]{ "ExplanationType", "ExplanationSpec" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelEvaluation), global::Google.Cloud.AIPlatform.V1.ModelEvaluation.Parser, new[]{ "Name", "DisplayName", "MetricsSchemaUri", "Metrics", "CreateTime", "SliceDimensions", "DataItemSchemaUri", "AnnotationSchemaUri", "ModelExplanation", "ExplanationSpecs", "Metadata" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelEvaluation.Types.ModelEvaluationExplanationSpec), global::Google.Cloud.AIPlatform.V1.ModelEvaluation.Types.ModelEvaluationExplanationSpec.Parser, new[]{ "ExplanationType", "ExplanationSpec" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -99,6 +101,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ModelEvaluation(ModelEvaluation other) : this() {
       name_ = other.name_;
+      displayName_ = other.displayName_;
       metricsSchemaUri_ = other.metricsSchemaUri_;
       metrics_ = other.metrics_ != null ? other.metrics_.Clone() : null;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
@@ -107,6 +110,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       annotationSchemaUri_ = other.annotationSchemaUri_;
       modelExplanation_ = other.modelExplanation_ != null ? other.modelExplanation_.Clone() : null;
       explanationSpecs_ = other.explanationSpecs_.Clone();
+      metadata_ = other.metadata_ != null ? other.metadata_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -128,6 +132,21 @@ namespace Google.Cloud.AIPlatform.V1 {
       get { return name_; }
       set {
         name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 10;
+    private string displayName_ = "";
+    /// <summary>
+    /// The display name of the ModelEvaluation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayName {
+      get { return displayName_; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -275,6 +294,24 @@ namespace Google.Cloud.AIPlatform.V1 {
       get { return explanationSpecs_; }
     }
 
+    /// <summary>Field number for the "metadata" field.</summary>
+    public const int MetadataFieldNumber = 11;
+    private global::Google.Protobuf.WellKnownTypes.Value metadata_;
+    /// <summary>
+    /// The metadata of the ModelEvaluation.
+    /// For the ModelEvaluation uploaded from Managed Pipeline, metadata contains a
+    /// structured value with keys of "pipeline_job_id", "evaluation_dataset_type",
+    /// "evaluation_dataset_path".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Value Metadata {
+      get { return metadata_; }
+      set {
+        metadata_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -291,6 +328,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         return true;
       }
       if (Name != other.Name) return false;
+      if (DisplayName != other.DisplayName) return false;
       if (MetricsSchemaUri != other.MetricsSchemaUri) return false;
       if (!object.Equals(Metrics, other.Metrics)) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
@@ -299,6 +337,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (AnnotationSchemaUri != other.AnnotationSchemaUri) return false;
       if (!object.Equals(ModelExplanation, other.ModelExplanation)) return false;
       if(!explanationSpecs_.Equals(other.explanationSpecs_)) return false;
+      if (!object.Equals(Metadata, other.Metadata)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -307,6 +346,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (MetricsSchemaUri.Length != 0) hash ^= MetricsSchemaUri.GetHashCode();
       if (metrics_ != null) hash ^= Metrics.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
@@ -315,6 +355,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (AnnotationSchemaUri.Length != 0) hash ^= AnnotationSchemaUri.GetHashCode();
       if (modelExplanation_ != null) hash ^= ModelExplanation.GetHashCode();
       hash ^= explanationSpecs_.GetHashCode();
+      if (metadata_ != null) hash ^= Metadata.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -363,6 +404,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteMessage(ModelExplanation);
       }
       explanationSpecs_.WriteTo(output, _repeated_explanationSpecs_codec);
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(DisplayName);
+      }
+      if (metadata_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(Metadata);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -403,6 +452,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteMessage(ModelExplanation);
       }
       explanationSpecs_.WriteTo(ref output, _repeated_explanationSpecs_codec);
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(DisplayName);
+      }
+      if (metadata_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(Metadata);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -415,6 +472,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       int size = 0;
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (DisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
       }
       if (MetricsSchemaUri.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(MetricsSchemaUri);
@@ -436,6 +496,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ModelExplanation);
       }
       size += explanationSpecs_.CalculateSize(_repeated_explanationSpecs_codec);
+      if (metadata_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Metadata);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -450,6 +513,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.DisplayName.Length != 0) {
+        DisplayName = other.DisplayName;
       }
       if (other.MetricsSchemaUri.Length != 0) {
         MetricsSchemaUri = other.MetricsSchemaUri;
@@ -480,6 +546,12 @@ namespace Google.Cloud.AIPlatform.V1 {
         ModelExplanation.MergeFrom(other.ModelExplanation);
       }
       explanationSpecs_.Add(other.explanationSpecs_);
+      if (other.metadata_ != null) {
+        if (metadata_ == null) {
+          Metadata = new global::Google.Protobuf.WellKnownTypes.Value();
+        }
+        Metadata.MergeFrom(other.Metadata);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -540,6 +612,17 @@ namespace Google.Cloud.AIPlatform.V1 {
             explanationSpecs_.AddEntriesFrom(input, _repeated_explanationSpecs_codec);
             break;
           }
+          case 82: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 90: {
+            if (metadata_ == null) {
+              Metadata = new global::Google.Protobuf.WellKnownTypes.Value();
+            }
+            input.ReadMessage(Metadata);
+            break;
+          }
         }
       }
     #endif
@@ -598,6 +681,17 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 74: {
             explanationSpecs_.AddEntriesFrom(ref input, _repeated_explanationSpecs_codec);
+            break;
+          }
+          case 82: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 90: {
+            if (metadata_ == null) {
+              Metadata = new global::Google.Protobuf.WellKnownTypes.Value();
+            }
+            input.ReadMessage(Metadata);
             break;
           }
         }

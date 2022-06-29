@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using grpccore = Grpc.Core;
@@ -46,6 +47,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 AuthorizationPolicy = "authorization_policyb4cd090a",
                 Region = "regionedb20d96",
+                CertificateMap = "certificate_mape115e4a1",
                 Fingerprint = "fingerprint009e6052",
                 ProxyBind = false,
                 SslPolicy = "ssl_policybf005a65",
@@ -60,7 +62,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 QuicOverride = "quic_override6404d0e0",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionTargetHttpsProxiesClient client = new RegionTargetHttpsProxiesClientImpl(mockGrpcClient.Object, null);
+            RegionTargetHttpsProxiesClient client = new RegionTargetHttpsProxiesClientImpl(mockGrpcClient.Object, null, null);
             TargetHttpsProxy response = client.Get(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -85,6 +87,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 AuthorizationPolicy = "authorization_policyb4cd090a",
                 Region = "regionedb20d96",
+                CertificateMap = "certificate_mape115e4a1",
                 Fingerprint = "fingerprint009e6052",
                 ProxyBind = false,
                 SslPolicy = "ssl_policybf005a65",
@@ -99,7 +102,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 QuicOverride = "quic_override6404d0e0",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TargetHttpsProxy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionTargetHttpsProxiesClient client = new RegionTargetHttpsProxiesClientImpl(mockGrpcClient.Object, null);
+            RegionTargetHttpsProxiesClient client = new RegionTargetHttpsProxiesClientImpl(mockGrpcClient.Object, null, null);
             TargetHttpsProxy responseCallSettings = await client.GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TargetHttpsProxy responseCancellationToken = await client.GetAsync(request, st::CancellationToken.None);
@@ -126,6 +129,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 AuthorizationPolicy = "authorization_policyb4cd090a",
                 Region = "regionedb20d96",
+                CertificateMap = "certificate_mape115e4a1",
                 Fingerprint = "fingerprint009e6052",
                 ProxyBind = false,
                 SslPolicy = "ssl_policybf005a65",
@@ -140,7 +144,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 QuicOverride = "quic_override6404d0e0",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionTargetHttpsProxiesClient client = new RegionTargetHttpsProxiesClientImpl(mockGrpcClient.Object, null);
+            RegionTargetHttpsProxiesClient client = new RegionTargetHttpsProxiesClientImpl(mockGrpcClient.Object, null, null);
             TargetHttpsProxy response = client.Get(request.Project, request.Region, request.TargetHttpsProxy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -165,6 +169,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 AuthorizationPolicy = "authorization_policyb4cd090a",
                 Region = "regionedb20d96",
+                CertificateMap = "certificate_mape115e4a1",
                 Fingerprint = "fingerprint009e6052",
                 ProxyBind = false,
                 SslPolicy = "ssl_policybf005a65",
@@ -179,7 +184,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 QuicOverride = "quic_override6404d0e0",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TargetHttpsProxy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionTargetHttpsProxiesClient client = new RegionTargetHttpsProxiesClientImpl(mockGrpcClient.Object, null);
+            RegionTargetHttpsProxiesClient client = new RegionTargetHttpsProxiesClientImpl(mockGrpcClient.Object, null, null);
             TargetHttpsProxy responseCallSettings = await client.GetAsync(request.Project, request.Region, request.TargetHttpsProxy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TargetHttpsProxy responseCancellationToken = await client.GetAsync(request.Project, request.Region, request.TargetHttpsProxy, st::CancellationToken.None);

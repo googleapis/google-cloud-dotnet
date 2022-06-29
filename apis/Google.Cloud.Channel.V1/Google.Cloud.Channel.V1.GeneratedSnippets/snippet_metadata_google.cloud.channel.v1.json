@@ -1590,6 +1590,1448 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_GetCustomerRepricingConfig_sync",
+      "title": "GetCustomerRepricingConfigRequestObject",
+      "description": "Snippet for GetCustomerRepricingConfig",
+      "file": "CloudChannelServiceClient.GetCustomerRepricingConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCustomerRepricingConfig",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.GetCustomerRepricingConfig",
+        "resultType": "Google.Cloud.Channel.V1.CustomerRepricingConfig",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "GetCustomerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.GetCustomerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_GetCustomerRepricingConfig_async",
+      "title": "GetCustomerRepricingConfigRequestObjectAsync",
+      "description": "Snippet for GetCustomerRepricingConfigAsync",
+      "file": "CloudChannelServiceClient.GetCustomerRepricingConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCustomerRepricingConfigAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.GetCustomerRepricingConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.CustomerRepricingConfig>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "GetCustomerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.GetCustomerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_GetCustomerRepricingConfig_sync_flattened",
+      "title": "GetCustomerRepricingConfig",
+      "description": "Snippet for GetCustomerRepricingConfig",
+      "file": "CloudChannelServiceClient.GetCustomerRepricingConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCustomerRepricingConfig",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.GetCustomerRepricingConfig",
+        "resultType": "Google.Cloud.Channel.V1.CustomerRepricingConfig",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "GetCustomerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.GetCustomerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_GetCustomerRepricingConfig_async_flattened",
+      "title": "GetCustomerRepricingConfigAsync",
+      "description": "Snippet for GetCustomerRepricingConfigAsync",
+      "file": "CloudChannelServiceClient.GetCustomerRepricingConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCustomerRepricingConfigAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.GetCustomerRepricingConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.CustomerRepricingConfig>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "GetCustomerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.GetCustomerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_GetCustomerRepricingConfig_sync_flattened_resourceNames",
+      "title": "GetCustomerRepricingConfigResourceNames",
+      "description": "Snippet for GetCustomerRepricingConfig",
+      "file": "CloudChannelServiceClient.GetCustomerRepricingConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCustomerRepricingConfig",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.GetCustomerRepricingConfig",
+        "resultType": "Google.Cloud.Channel.V1.CustomerRepricingConfig",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "GetCustomerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.GetCustomerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_GetCustomerRepricingConfig_async_flattened_resourceNames",
+      "title": "GetCustomerRepricingConfigResourceNamesAsync",
+      "description": "Snippet for GetCustomerRepricingConfigAsync",
+      "file": "CloudChannelServiceClient.GetCustomerRepricingConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCustomerRepricingConfigAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.GetCustomerRepricingConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.CustomerRepricingConfig>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "GetCustomerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.GetCustomerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_ListCustomerRepricingConfigs_sync",
+      "title": "ListCustomerRepricingConfigsRequestObject",
+      "description": "Snippet for ListCustomerRepricingConfigs",
+      "file": "CloudChannelServiceClient.ListCustomerRepricingConfigsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCustomerRepricingConfigs",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListCustomerRepricingConfigs",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.ListCustomerRepricingConfigsResponse, Google.Cloud.Channel.V1.CustomerRepricingConfig>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "ListCustomerRepricingConfigs",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.ListCustomerRepricingConfigs",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_ListCustomerRepricingConfigs_async",
+      "title": "ListCustomerRepricingConfigsRequestObjectAsync",
+      "description": "Snippet for ListCustomerRepricingConfigsAsync",
+      "file": "CloudChannelServiceClient.ListCustomerRepricingConfigsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCustomerRepricingConfigsAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListCustomerRepricingConfigsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.ListCustomerRepricingConfigsResponse, Google.Cloud.Channel.V1.CustomerRepricingConfig>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "ListCustomerRepricingConfigs",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.ListCustomerRepricingConfigs",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_ListCustomerRepricingConfigs_sync_flattened",
+      "title": "ListCustomerRepricingConfigs",
+      "description": "Snippet for ListCustomerRepricingConfigs",
+      "file": "CloudChannelServiceClient.ListCustomerRepricingConfigsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCustomerRepricingConfigs",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListCustomerRepricingConfigs",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.ListCustomerRepricingConfigsResponse, Google.Cloud.Channel.V1.CustomerRepricingConfig>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "ListCustomerRepricingConfigs",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.ListCustomerRepricingConfigs",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_ListCustomerRepricingConfigs_async_flattened",
+      "title": "ListCustomerRepricingConfigsAsync",
+      "description": "Snippet for ListCustomerRepricingConfigsAsync",
+      "file": "CloudChannelServiceClient.ListCustomerRepricingConfigsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCustomerRepricingConfigsAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListCustomerRepricingConfigsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.ListCustomerRepricingConfigsResponse, Google.Cloud.Channel.V1.CustomerRepricingConfig>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "ListCustomerRepricingConfigs",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.ListCustomerRepricingConfigs",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_ListCustomerRepricingConfigs_sync_flattened_resourceNames",
+      "title": "ListCustomerRepricingConfigsResourceNames",
+      "description": "Snippet for ListCustomerRepricingConfigs",
+      "file": "CloudChannelServiceClient.ListCustomerRepricingConfigsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCustomerRepricingConfigs",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListCustomerRepricingConfigs",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.ListCustomerRepricingConfigsResponse, Google.Cloud.Channel.V1.CustomerRepricingConfig>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "ListCustomerRepricingConfigs",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.ListCustomerRepricingConfigs",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_ListCustomerRepricingConfigs_async_flattened_resourceNames",
+      "title": "ListCustomerRepricingConfigsResourceNamesAsync",
+      "description": "Snippet for ListCustomerRepricingConfigsAsync",
+      "file": "CloudChannelServiceClient.ListCustomerRepricingConfigsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCustomerRepricingConfigsAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListCustomerRepricingConfigsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.ListCustomerRepricingConfigsResponse, Google.Cloud.Channel.V1.CustomerRepricingConfig>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "ListCustomerRepricingConfigs",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.ListCustomerRepricingConfigs",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_CreateCustomerRepricingConfig_sync",
+      "title": "CreateCustomerRepricingConfigRequestObject",
+      "description": "Snippet for CreateCustomerRepricingConfig",
+      "file": "CloudChannelServiceClient.CreateCustomerRepricingConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCustomerRepricingConfig",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.CreateCustomerRepricingConfig",
+        "resultType": "Google.Cloud.Channel.V1.CustomerRepricingConfig",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCustomerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.CreateCustomerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_CreateCustomerRepricingConfig_async",
+      "title": "CreateCustomerRepricingConfigRequestObjectAsync",
+      "description": "Snippet for CreateCustomerRepricingConfigAsync",
+      "file": "CloudChannelServiceClient.CreateCustomerRepricingConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCustomerRepricingConfigAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.CreateCustomerRepricingConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.CustomerRepricingConfig>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCustomerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.CreateCustomerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_CreateCustomerRepricingConfig_sync_flattened",
+      "title": "CreateCustomerRepricingConfig",
+      "description": "Snippet for CreateCustomerRepricingConfig",
+      "file": "CloudChannelServiceClient.CreateCustomerRepricingConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCustomerRepricingConfig",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.CreateCustomerRepricingConfig",
+        "resultType": "Google.Cloud.Channel.V1.CustomerRepricingConfig",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCustomerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.CreateCustomerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_CreateCustomerRepricingConfig_async_flattened",
+      "title": "CreateCustomerRepricingConfigAsync",
+      "description": "Snippet for CreateCustomerRepricingConfigAsync",
+      "file": "CloudChannelServiceClient.CreateCustomerRepricingConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCustomerRepricingConfigAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.CreateCustomerRepricingConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.CustomerRepricingConfig>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCustomerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.CreateCustomerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_CreateCustomerRepricingConfig_sync_flattened_resourceNames",
+      "title": "CreateCustomerRepricingConfigResourceNames",
+      "description": "Snippet for CreateCustomerRepricingConfig",
+      "file": "CloudChannelServiceClient.CreateCustomerRepricingConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCustomerRepricingConfig",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.CreateCustomerRepricingConfig",
+        "resultType": "Google.Cloud.Channel.V1.CustomerRepricingConfig",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCustomerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.CreateCustomerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_CreateCustomerRepricingConfig_async_flattened_resourceNames",
+      "title": "CreateCustomerRepricingConfigResourceNamesAsync",
+      "description": "Snippet for CreateCustomerRepricingConfigAsync",
+      "file": "CloudChannelServiceClient.CreateCustomerRepricingConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCustomerRepricingConfigAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.CreateCustomerRepricingConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.CustomerRepricingConfig>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCustomerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.CreateCustomerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_UpdateCustomerRepricingConfig_sync",
+      "title": "UpdateCustomerRepricingConfigRequestObject",
+      "description": "Snippet for UpdateCustomerRepricingConfig",
+      "file": "CloudChannelServiceClient.UpdateCustomerRepricingConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCustomerRepricingConfig",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.UpdateCustomerRepricingConfig",
+        "resultType": "Google.Cloud.Channel.V1.CustomerRepricingConfig",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCustomerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.UpdateCustomerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_UpdateCustomerRepricingConfig_async",
+      "title": "UpdateCustomerRepricingConfigRequestObjectAsync",
+      "description": "Snippet for UpdateCustomerRepricingConfigAsync",
+      "file": "CloudChannelServiceClient.UpdateCustomerRepricingConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCustomerRepricingConfigAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.UpdateCustomerRepricingConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.CustomerRepricingConfig>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCustomerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.UpdateCustomerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_UpdateCustomerRepricingConfig_sync_flattened",
+      "title": "UpdateCustomerRepricingConfig",
+      "description": "Snippet for UpdateCustomerRepricingConfig",
+      "file": "CloudChannelServiceClient.UpdateCustomerRepricingConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCustomerRepricingConfig",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.UpdateCustomerRepricingConfig",
+        "resultType": "Google.Cloud.Channel.V1.CustomerRepricingConfig",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCustomerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.UpdateCustomerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_UpdateCustomerRepricingConfig_async_flattened",
+      "title": "UpdateCustomerRepricingConfigAsync",
+      "description": "Snippet for UpdateCustomerRepricingConfigAsync",
+      "file": "CloudChannelServiceClient.UpdateCustomerRepricingConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCustomerRepricingConfigAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.UpdateCustomerRepricingConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.CustomerRepricingConfig>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCustomerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.UpdateCustomerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_DeleteCustomerRepricingConfig_sync",
+      "title": "DeleteCustomerRepricingConfigRequestObject",
+      "description": "Snippet for DeleteCustomerRepricingConfig",
+      "file": "CloudChannelServiceClient.DeleteCustomerRepricingConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCustomerRepricingConfig",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.DeleteCustomerRepricingConfig",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCustomerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.DeleteCustomerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_DeleteCustomerRepricingConfig_async",
+      "title": "DeleteCustomerRepricingConfigRequestObjectAsync",
+      "description": "Snippet for DeleteCustomerRepricingConfigAsync",
+      "file": "CloudChannelServiceClient.DeleteCustomerRepricingConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCustomerRepricingConfigAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.DeleteCustomerRepricingConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCustomerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.DeleteCustomerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_DeleteCustomerRepricingConfig_sync_flattened",
+      "title": "DeleteCustomerRepricingConfig",
+      "description": "Snippet for DeleteCustomerRepricingConfig",
+      "file": "CloudChannelServiceClient.DeleteCustomerRepricingConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCustomerRepricingConfig",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.DeleteCustomerRepricingConfig",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCustomerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.DeleteCustomerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_DeleteCustomerRepricingConfig_async_flattened",
+      "title": "DeleteCustomerRepricingConfigAsync",
+      "description": "Snippet for DeleteCustomerRepricingConfigAsync",
+      "file": "CloudChannelServiceClient.DeleteCustomerRepricingConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCustomerRepricingConfigAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.DeleteCustomerRepricingConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCustomerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.DeleteCustomerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_DeleteCustomerRepricingConfig_sync_flattened_resourceNames",
+      "title": "DeleteCustomerRepricingConfigResourceNames",
+      "description": "Snippet for DeleteCustomerRepricingConfig",
+      "file": "CloudChannelServiceClient.DeleteCustomerRepricingConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCustomerRepricingConfig",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.DeleteCustomerRepricingConfig",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCustomerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.DeleteCustomerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_DeleteCustomerRepricingConfig_async_flattened_resourceNames",
+      "title": "DeleteCustomerRepricingConfigResourceNamesAsync",
+      "description": "Snippet for DeleteCustomerRepricingConfigAsync",
+      "file": "CloudChannelServiceClient.DeleteCustomerRepricingConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCustomerRepricingConfigAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.DeleteCustomerRepricingConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCustomerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.DeleteCustomerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_GetChannelPartnerRepricingConfig_sync",
+      "title": "GetChannelPartnerRepricingConfigRequestObject",
+      "description": "Snippet for GetChannelPartnerRepricingConfig",
+      "file": "CloudChannelServiceClient.GetChannelPartnerRepricingConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetChannelPartnerRepricingConfig",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.GetChannelPartnerRepricingConfig",
+        "resultType": "Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "GetChannelPartnerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.GetChannelPartnerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_GetChannelPartnerRepricingConfig_async",
+      "title": "GetChannelPartnerRepricingConfigRequestObjectAsync",
+      "description": "Snippet for GetChannelPartnerRepricingConfigAsync",
+      "file": "CloudChannelServiceClient.GetChannelPartnerRepricingConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetChannelPartnerRepricingConfigAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.GetChannelPartnerRepricingConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "GetChannelPartnerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.GetChannelPartnerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_GetChannelPartnerRepricingConfig_sync_flattened",
+      "title": "GetChannelPartnerRepricingConfig",
+      "description": "Snippet for GetChannelPartnerRepricingConfig",
+      "file": "CloudChannelServiceClient.GetChannelPartnerRepricingConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetChannelPartnerRepricingConfig",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.GetChannelPartnerRepricingConfig",
+        "resultType": "Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "GetChannelPartnerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.GetChannelPartnerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_GetChannelPartnerRepricingConfig_async_flattened",
+      "title": "GetChannelPartnerRepricingConfigAsync",
+      "description": "Snippet for GetChannelPartnerRepricingConfigAsync",
+      "file": "CloudChannelServiceClient.GetChannelPartnerRepricingConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetChannelPartnerRepricingConfigAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.GetChannelPartnerRepricingConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "GetChannelPartnerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.GetChannelPartnerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_GetChannelPartnerRepricingConfig_sync_flattened_resourceNames",
+      "title": "GetChannelPartnerRepricingConfigResourceNames",
+      "description": "Snippet for GetChannelPartnerRepricingConfig",
+      "file": "CloudChannelServiceClient.GetChannelPartnerRepricingConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetChannelPartnerRepricingConfig",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.GetChannelPartnerRepricingConfig",
+        "resultType": "Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "GetChannelPartnerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.GetChannelPartnerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_GetChannelPartnerRepricingConfig_async_flattened_resourceNames",
+      "title": "GetChannelPartnerRepricingConfigResourceNamesAsync",
+      "description": "Snippet for GetChannelPartnerRepricingConfigAsync",
+      "file": "CloudChannelServiceClient.GetChannelPartnerRepricingConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetChannelPartnerRepricingConfigAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.GetChannelPartnerRepricingConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "GetChannelPartnerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.GetChannelPartnerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_ListChannelPartnerRepricingConfigs_sync",
+      "title": "ListChannelPartnerRepricingConfigsRequestObject",
+      "description": "Snippet for ListChannelPartnerRepricingConfigs",
+      "file": "CloudChannelServiceClient.ListChannelPartnerRepricingConfigsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListChannelPartnerRepricingConfigs",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListChannelPartnerRepricingConfigs",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.ListChannelPartnerRepricingConfigsResponse, Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "ListChannelPartnerRepricingConfigs",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.ListChannelPartnerRepricingConfigs",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_ListChannelPartnerRepricingConfigs_async",
+      "title": "ListChannelPartnerRepricingConfigsRequestObjectAsync",
+      "description": "Snippet for ListChannelPartnerRepricingConfigsAsync",
+      "file": "CloudChannelServiceClient.ListChannelPartnerRepricingConfigsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListChannelPartnerRepricingConfigsAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListChannelPartnerRepricingConfigsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.ListChannelPartnerRepricingConfigsResponse, Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "ListChannelPartnerRepricingConfigs",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.ListChannelPartnerRepricingConfigs",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_ListChannelPartnerRepricingConfigs_sync_flattened",
+      "title": "ListChannelPartnerRepricingConfigs",
+      "description": "Snippet for ListChannelPartnerRepricingConfigs",
+      "file": "CloudChannelServiceClient.ListChannelPartnerRepricingConfigsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListChannelPartnerRepricingConfigs",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListChannelPartnerRepricingConfigs",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.ListChannelPartnerRepricingConfigsResponse, Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "ListChannelPartnerRepricingConfigs",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.ListChannelPartnerRepricingConfigs",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_ListChannelPartnerRepricingConfigs_async_flattened",
+      "title": "ListChannelPartnerRepricingConfigsAsync",
+      "description": "Snippet for ListChannelPartnerRepricingConfigsAsync",
+      "file": "CloudChannelServiceClient.ListChannelPartnerRepricingConfigsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListChannelPartnerRepricingConfigsAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListChannelPartnerRepricingConfigsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.ListChannelPartnerRepricingConfigsResponse, Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "ListChannelPartnerRepricingConfigs",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.ListChannelPartnerRepricingConfigs",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_ListChannelPartnerRepricingConfigs_sync_flattened_resourceNames",
+      "title": "ListChannelPartnerRepricingConfigsResourceNames",
+      "description": "Snippet for ListChannelPartnerRepricingConfigs",
+      "file": "CloudChannelServiceClient.ListChannelPartnerRepricingConfigsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListChannelPartnerRepricingConfigs",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListChannelPartnerRepricingConfigs",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.ListChannelPartnerRepricingConfigsResponse, Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "ListChannelPartnerRepricingConfigs",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.ListChannelPartnerRepricingConfigs",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_ListChannelPartnerRepricingConfigs_async_flattened_resourceNames",
+      "title": "ListChannelPartnerRepricingConfigsResourceNamesAsync",
+      "description": "Snippet for ListChannelPartnerRepricingConfigsAsync",
+      "file": "CloudChannelServiceClient.ListChannelPartnerRepricingConfigsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListChannelPartnerRepricingConfigsAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListChannelPartnerRepricingConfigsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.ListChannelPartnerRepricingConfigsResponse, Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "ListChannelPartnerRepricingConfigs",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.ListChannelPartnerRepricingConfigs",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_CreateChannelPartnerRepricingConfig_sync",
+      "title": "CreateChannelPartnerRepricingConfigRequestObject",
+      "description": "Snippet for CreateChannelPartnerRepricingConfig",
+      "file": "CloudChannelServiceClient.CreateChannelPartnerRepricingConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateChannelPartnerRepricingConfig",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.CreateChannelPartnerRepricingConfig",
+        "resultType": "Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "CreateChannelPartnerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.CreateChannelPartnerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_CreateChannelPartnerRepricingConfig_async",
+      "title": "CreateChannelPartnerRepricingConfigRequestObjectAsync",
+      "description": "Snippet for CreateChannelPartnerRepricingConfigAsync",
+      "file": "CloudChannelServiceClient.CreateChannelPartnerRepricingConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateChannelPartnerRepricingConfigAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.CreateChannelPartnerRepricingConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "CreateChannelPartnerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.CreateChannelPartnerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_CreateChannelPartnerRepricingConfig_sync_flattened",
+      "title": "CreateChannelPartnerRepricingConfig",
+      "description": "Snippet for CreateChannelPartnerRepricingConfig",
+      "file": "CloudChannelServiceClient.CreateChannelPartnerRepricingConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateChannelPartnerRepricingConfig",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.CreateChannelPartnerRepricingConfig",
+        "resultType": "Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "CreateChannelPartnerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.CreateChannelPartnerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_CreateChannelPartnerRepricingConfig_async_flattened",
+      "title": "CreateChannelPartnerRepricingConfigAsync",
+      "description": "Snippet for CreateChannelPartnerRepricingConfigAsync",
+      "file": "CloudChannelServiceClient.CreateChannelPartnerRepricingConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateChannelPartnerRepricingConfigAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.CreateChannelPartnerRepricingConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "CreateChannelPartnerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.CreateChannelPartnerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_CreateChannelPartnerRepricingConfig_sync_flattened_resourceNames",
+      "title": "CreateChannelPartnerRepricingConfigResourceNames",
+      "description": "Snippet for CreateChannelPartnerRepricingConfig",
+      "file": "CloudChannelServiceClient.CreateChannelPartnerRepricingConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateChannelPartnerRepricingConfig",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.CreateChannelPartnerRepricingConfig",
+        "resultType": "Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "CreateChannelPartnerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.CreateChannelPartnerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_CreateChannelPartnerRepricingConfig_async_flattened_resourceNames",
+      "title": "CreateChannelPartnerRepricingConfigResourceNamesAsync",
+      "description": "Snippet for CreateChannelPartnerRepricingConfigAsync",
+      "file": "CloudChannelServiceClient.CreateChannelPartnerRepricingConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateChannelPartnerRepricingConfigAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.CreateChannelPartnerRepricingConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "CreateChannelPartnerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.CreateChannelPartnerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_UpdateChannelPartnerRepricingConfig_sync",
+      "title": "UpdateChannelPartnerRepricingConfigRequestObject",
+      "description": "Snippet for UpdateChannelPartnerRepricingConfig",
+      "file": "CloudChannelServiceClient.UpdateChannelPartnerRepricingConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateChannelPartnerRepricingConfig",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.UpdateChannelPartnerRepricingConfig",
+        "resultType": "Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateChannelPartnerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.UpdateChannelPartnerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_UpdateChannelPartnerRepricingConfig_async",
+      "title": "UpdateChannelPartnerRepricingConfigRequestObjectAsync",
+      "description": "Snippet for UpdateChannelPartnerRepricingConfigAsync",
+      "file": "CloudChannelServiceClient.UpdateChannelPartnerRepricingConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateChannelPartnerRepricingConfigAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.UpdateChannelPartnerRepricingConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateChannelPartnerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.UpdateChannelPartnerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_UpdateChannelPartnerRepricingConfig_sync_flattened",
+      "title": "UpdateChannelPartnerRepricingConfig",
+      "description": "Snippet for UpdateChannelPartnerRepricingConfig",
+      "file": "CloudChannelServiceClient.UpdateChannelPartnerRepricingConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateChannelPartnerRepricingConfig",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.UpdateChannelPartnerRepricingConfig",
+        "resultType": "Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateChannelPartnerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.UpdateChannelPartnerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_UpdateChannelPartnerRepricingConfig_async_flattened",
+      "title": "UpdateChannelPartnerRepricingConfigAsync",
+      "description": "Snippet for UpdateChannelPartnerRepricingConfigAsync",
+      "file": "CloudChannelServiceClient.UpdateChannelPartnerRepricingConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateChannelPartnerRepricingConfigAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.UpdateChannelPartnerRepricingConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateChannelPartnerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.UpdateChannelPartnerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_DeleteChannelPartnerRepricingConfig_sync",
+      "title": "DeleteChannelPartnerRepricingConfigRequestObject",
+      "description": "Snippet for DeleteChannelPartnerRepricingConfig",
+      "file": "CloudChannelServiceClient.DeleteChannelPartnerRepricingConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteChannelPartnerRepricingConfig",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.DeleteChannelPartnerRepricingConfig",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteChannelPartnerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.DeleteChannelPartnerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_DeleteChannelPartnerRepricingConfig_async",
+      "title": "DeleteChannelPartnerRepricingConfigRequestObjectAsync",
+      "description": "Snippet for DeleteChannelPartnerRepricingConfigAsync",
+      "file": "CloudChannelServiceClient.DeleteChannelPartnerRepricingConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteChannelPartnerRepricingConfigAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.DeleteChannelPartnerRepricingConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteChannelPartnerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.DeleteChannelPartnerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_DeleteChannelPartnerRepricingConfig_sync_flattened",
+      "title": "DeleteChannelPartnerRepricingConfig",
+      "description": "Snippet for DeleteChannelPartnerRepricingConfig",
+      "file": "CloudChannelServiceClient.DeleteChannelPartnerRepricingConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteChannelPartnerRepricingConfig",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.DeleteChannelPartnerRepricingConfig",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteChannelPartnerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.DeleteChannelPartnerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_DeleteChannelPartnerRepricingConfig_async_flattened",
+      "title": "DeleteChannelPartnerRepricingConfigAsync",
+      "description": "Snippet for DeleteChannelPartnerRepricingConfigAsync",
+      "file": "CloudChannelServiceClient.DeleteChannelPartnerRepricingConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteChannelPartnerRepricingConfigAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.DeleteChannelPartnerRepricingConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteChannelPartnerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.DeleteChannelPartnerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_DeleteChannelPartnerRepricingConfig_sync_flattened_resourceNames",
+      "title": "DeleteChannelPartnerRepricingConfigResourceNames",
+      "description": "Snippet for DeleteChannelPartnerRepricingConfig",
+      "file": "CloudChannelServiceClient.DeleteChannelPartnerRepricingConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteChannelPartnerRepricingConfig",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.DeleteChannelPartnerRepricingConfig",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteChannelPartnerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.DeleteChannelPartnerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_DeleteChannelPartnerRepricingConfig_async_flattened_resourceNames",
+      "title": "DeleteChannelPartnerRepricingConfigResourceNamesAsync",
+      "description": "Snippet for DeleteChannelPartnerRepricingConfigAsync",
+      "file": "CloudChannelServiceClient.DeleteChannelPartnerRepricingConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteChannelPartnerRepricingConfigAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.DeleteChannelPartnerRepricingConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteChannelPartnerRepricingConfig",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.DeleteChannelPartnerRepricingConfig",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "cloudchannel_v1_generated_CloudChannelService_LookupOffer_sync",
       "title": "LookupOfferRequestObject",
       "description": "Snippet for LookupOffer",

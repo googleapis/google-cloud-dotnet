@@ -19,7 +19,6 @@ namespace Google.Cloud.Run.V2.Snippets
     // [START run_v2_generated_Services_UpdateService_async]
     using Google.Cloud.Run.V2;
     using Google.LongRunning;
-    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedServicesClientSnippets
@@ -37,7 +36,6 @@ namespace Google.Cloud.Run.V2.Snippets
             UpdateServiceRequest request = new UpdateServiceRequest
             {
                 Service = new Service(),
-                UpdateMask = new FieldMask(),
                 ValidateOnly = false,
                 AllowMissing = false,
             };

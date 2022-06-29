@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gcwcv = Google.Cloud.Workflows.Common.V1Beta;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -49,7 +50,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
             };
             mockGrpcClient.Setup(x => x.CreateExecution(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null);
+            ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null, null);
             Execution response = client.CreateExecution(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -76,7 +77,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
             };
             mockGrpcClient.Setup(x => x.CreateExecutionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Execution>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null);
+            ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null, null);
             Execution responseCallSettings = await client.CreateExecutionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Execution responseCancellationToken = await client.CreateExecutionAsync(request, st::CancellationToken.None);
@@ -105,7 +106,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
             };
             mockGrpcClient.Setup(x => x.CreateExecution(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null);
+            ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null, null);
             Execution response = client.CreateExecution(request.Parent, request.Execution);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -132,7 +133,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
             };
             mockGrpcClient.Setup(x => x.CreateExecutionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Execution>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null);
+            ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null, null);
             Execution responseCallSettings = await client.CreateExecutionAsync(request.Parent, request.Execution, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Execution responseCancellationToken = await client.CreateExecutionAsync(request.Parent, request.Execution, st::CancellationToken.None);
@@ -161,7 +162,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
             };
             mockGrpcClient.Setup(x => x.CreateExecution(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null);
+            ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null, null);
             Execution response = client.CreateExecution(request.ParentAsWorkflowName, request.Execution);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -188,7 +189,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
             };
             mockGrpcClient.Setup(x => x.CreateExecutionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Execution>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null);
+            ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null, null);
             Execution responseCallSettings = await client.CreateExecutionAsync(request.ParentAsWorkflowName, request.Execution, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Execution responseCancellationToken = await client.CreateExecutionAsync(request.ParentAsWorkflowName, request.Execution, st::CancellationToken.None);
@@ -217,7 +218,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
             };
             mockGrpcClient.Setup(x => x.GetExecution(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null);
+            ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null, null);
             Execution response = client.GetExecution(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -244,7 +245,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
             };
             mockGrpcClient.Setup(x => x.GetExecutionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Execution>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null);
+            ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null, null);
             Execution responseCallSettings = await client.GetExecutionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Execution responseCancellationToken = await client.GetExecutionAsync(request, st::CancellationToken.None);
@@ -272,7 +273,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
             };
             mockGrpcClient.Setup(x => x.GetExecution(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null);
+            ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null, null);
             Execution response = client.GetExecution(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -298,7 +299,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
             };
             mockGrpcClient.Setup(x => x.GetExecutionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Execution>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null);
+            ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null, null);
             Execution responseCallSettings = await client.GetExecutionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Execution responseCancellationToken = await client.GetExecutionAsync(request.Name, st::CancellationToken.None);
@@ -326,7 +327,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
             };
             mockGrpcClient.Setup(x => x.GetExecution(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null);
+            ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null, null);
             Execution response = client.GetExecution(request.ExecutionName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -352,7 +353,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
             };
             mockGrpcClient.Setup(x => x.GetExecutionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Execution>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null);
+            ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null, null);
             Execution responseCallSettings = await client.GetExecutionAsync(request.ExecutionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Execution responseCancellationToken = await client.GetExecutionAsync(request.ExecutionName, st::CancellationToken.None);
@@ -380,7 +381,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
             };
             mockGrpcClient.Setup(x => x.CancelExecution(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null);
+            ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null, null);
             Execution response = client.CancelExecution(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -406,7 +407,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
             };
             mockGrpcClient.Setup(x => x.CancelExecutionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Execution>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null);
+            ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null, null);
             Execution responseCallSettings = await client.CancelExecutionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Execution responseCancellationToken = await client.CancelExecutionAsync(request, st::CancellationToken.None);
@@ -434,7 +435,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
             };
             mockGrpcClient.Setup(x => x.CancelExecution(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null);
+            ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null, null);
             Execution response = client.CancelExecution(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -460,7 +461,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
             };
             mockGrpcClient.Setup(x => x.CancelExecutionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Execution>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null);
+            ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null, null);
             Execution responseCallSettings = await client.CancelExecutionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Execution responseCancellationToken = await client.CancelExecutionAsync(request.Name, st::CancellationToken.None);
@@ -488,7 +489,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
             };
             mockGrpcClient.Setup(x => x.CancelExecution(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null);
+            ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null, null);
             Execution response = client.CancelExecution(request.ExecutionName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -514,7 +515,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
             };
             mockGrpcClient.Setup(x => x.CancelExecutionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Execution>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null);
+            ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null, null);
             Execution responseCallSettings = await client.CancelExecutionAsync(request.ExecutionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Execution responseCancellationToken = await client.CancelExecutionAsync(request.ExecutionName, st::CancellationToken.None);

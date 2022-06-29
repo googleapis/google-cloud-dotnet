@@ -38,6 +38,7 @@ namespace Google.Cloud.Notebooks.V1.Snippets
                 Name = "",
                 MachineType = "",
                 AcceleratorConfig = new RuntimeAcceleratorConfig(),
+                RequestId = "",
             };
             // Make the request
             Operation<Runtime, OperationMetadata> response = await managedNotebookServiceClient.SwitchRuntimeAsync(request);

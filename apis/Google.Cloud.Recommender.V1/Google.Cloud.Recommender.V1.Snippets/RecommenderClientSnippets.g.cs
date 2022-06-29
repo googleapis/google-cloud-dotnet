@@ -17,6 +17,7 @@
 namespace Google.Cloud.Recommender.V1.Snippets
 {
     using Google.Api.Gax;
+    using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -1332,6 +1333,312 @@ namespace Google.Cloud.Recommender.V1.Snippets
             string etag = "";
             // Make the request
             Recommendation response = await recommenderClient.MarkRecommendationFailedAsync(name, stateMetadata, etag);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRecommenderConfig</summary>
+        public void GetRecommenderConfigRequestObject()
+        {
+            // Snippet: GetRecommenderConfig(GetRecommenderConfigRequest, CallSettings)
+            // Create client
+            RecommenderClient recommenderClient = RecommenderClient.Create();
+            // Initialize request argument(s)
+            GetRecommenderConfigRequest request = new GetRecommenderConfigRequest
+            {
+                RecommenderConfigName = RecommenderConfigName.FromProjectLocationRecommender("[PROJECT]", "[LOCATION]", "[RECOMMENDER]"),
+            };
+            // Make the request
+            RecommenderConfig response = recommenderClient.GetRecommenderConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRecommenderConfigAsync</summary>
+        public async Task GetRecommenderConfigRequestObjectAsync()
+        {
+            // Snippet: GetRecommenderConfigAsync(GetRecommenderConfigRequest, CallSettings)
+            // Additional: GetRecommenderConfigAsync(GetRecommenderConfigRequest, CancellationToken)
+            // Create client
+            RecommenderClient recommenderClient = await RecommenderClient.CreateAsync();
+            // Initialize request argument(s)
+            GetRecommenderConfigRequest request = new GetRecommenderConfigRequest
+            {
+                RecommenderConfigName = RecommenderConfigName.FromProjectLocationRecommender("[PROJECT]", "[LOCATION]", "[RECOMMENDER]"),
+            };
+            // Make the request
+            RecommenderConfig response = await recommenderClient.GetRecommenderConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRecommenderConfig</summary>
+        public void GetRecommenderConfig()
+        {
+            // Snippet: GetRecommenderConfig(string, CallSettings)
+            // Create client
+            RecommenderClient recommenderClient = RecommenderClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/recommenders/[RECOMMENDER]/config";
+            // Make the request
+            RecommenderConfig response = recommenderClient.GetRecommenderConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRecommenderConfigAsync</summary>
+        public async Task GetRecommenderConfigAsync()
+        {
+            // Snippet: GetRecommenderConfigAsync(string, CallSettings)
+            // Additional: GetRecommenderConfigAsync(string, CancellationToken)
+            // Create client
+            RecommenderClient recommenderClient = await RecommenderClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/recommenders/[RECOMMENDER]/config";
+            // Make the request
+            RecommenderConfig response = await recommenderClient.GetRecommenderConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRecommenderConfig</summary>
+        public void GetRecommenderConfigResourceNames()
+        {
+            // Snippet: GetRecommenderConfig(RecommenderConfigName, CallSettings)
+            // Create client
+            RecommenderClient recommenderClient = RecommenderClient.Create();
+            // Initialize request argument(s)
+            RecommenderConfigName name = RecommenderConfigName.FromProjectLocationRecommender("[PROJECT]", "[LOCATION]", "[RECOMMENDER]");
+            // Make the request
+            RecommenderConfig response = recommenderClient.GetRecommenderConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRecommenderConfigAsync</summary>
+        public async Task GetRecommenderConfigResourceNamesAsync()
+        {
+            // Snippet: GetRecommenderConfigAsync(RecommenderConfigName, CallSettings)
+            // Additional: GetRecommenderConfigAsync(RecommenderConfigName, CancellationToken)
+            // Create client
+            RecommenderClient recommenderClient = await RecommenderClient.CreateAsync();
+            // Initialize request argument(s)
+            RecommenderConfigName name = RecommenderConfigName.FromProjectLocationRecommender("[PROJECT]", "[LOCATION]", "[RECOMMENDER]");
+            // Make the request
+            RecommenderConfig response = await recommenderClient.GetRecommenderConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateRecommenderConfig</summary>
+        public void UpdateRecommenderConfigRequestObject()
+        {
+            // Snippet: UpdateRecommenderConfig(UpdateRecommenderConfigRequest, CallSettings)
+            // Create client
+            RecommenderClient recommenderClient = RecommenderClient.Create();
+            // Initialize request argument(s)
+            UpdateRecommenderConfigRequest request = new UpdateRecommenderConfigRequest
+            {
+                RecommenderConfig = new RecommenderConfig(),
+                UpdateMask = new FieldMask(),
+                ValidateOnly = false,
+            };
+            // Make the request
+            RecommenderConfig response = recommenderClient.UpdateRecommenderConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateRecommenderConfigAsync</summary>
+        public async Task UpdateRecommenderConfigRequestObjectAsync()
+        {
+            // Snippet: UpdateRecommenderConfigAsync(UpdateRecommenderConfigRequest, CallSettings)
+            // Additional: UpdateRecommenderConfigAsync(UpdateRecommenderConfigRequest, CancellationToken)
+            // Create client
+            RecommenderClient recommenderClient = await RecommenderClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateRecommenderConfigRequest request = new UpdateRecommenderConfigRequest
+            {
+                RecommenderConfig = new RecommenderConfig(),
+                UpdateMask = new FieldMask(),
+                ValidateOnly = false,
+            };
+            // Make the request
+            RecommenderConfig response = await recommenderClient.UpdateRecommenderConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateRecommenderConfig</summary>
+        public void UpdateRecommenderConfig()
+        {
+            // Snippet: UpdateRecommenderConfig(RecommenderConfig, FieldMask, CallSettings)
+            // Create client
+            RecommenderClient recommenderClient = RecommenderClient.Create();
+            // Initialize request argument(s)
+            RecommenderConfig recommenderConfig = new RecommenderConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            RecommenderConfig response = recommenderClient.UpdateRecommenderConfig(recommenderConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateRecommenderConfigAsync</summary>
+        public async Task UpdateRecommenderConfigAsync()
+        {
+            // Snippet: UpdateRecommenderConfigAsync(RecommenderConfig, FieldMask, CallSettings)
+            // Additional: UpdateRecommenderConfigAsync(RecommenderConfig, FieldMask, CancellationToken)
+            // Create client
+            RecommenderClient recommenderClient = await RecommenderClient.CreateAsync();
+            // Initialize request argument(s)
+            RecommenderConfig recommenderConfig = new RecommenderConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            RecommenderConfig response = await recommenderClient.UpdateRecommenderConfigAsync(recommenderConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetInsightTypeConfig</summary>
+        public void GetInsightTypeConfigRequestObject()
+        {
+            // Snippet: GetInsightTypeConfig(GetInsightTypeConfigRequest, CallSettings)
+            // Create client
+            RecommenderClient recommenderClient = RecommenderClient.Create();
+            // Initialize request argument(s)
+            GetInsightTypeConfigRequest request = new GetInsightTypeConfigRequest
+            {
+                InsightTypeConfigName = InsightTypeConfigName.FromProjectLocationInsightType("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]"),
+            };
+            // Make the request
+            InsightTypeConfig response = recommenderClient.GetInsightTypeConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetInsightTypeConfigAsync</summary>
+        public async Task GetInsightTypeConfigRequestObjectAsync()
+        {
+            // Snippet: GetInsightTypeConfigAsync(GetInsightTypeConfigRequest, CallSettings)
+            // Additional: GetInsightTypeConfigAsync(GetInsightTypeConfigRequest, CancellationToken)
+            // Create client
+            RecommenderClient recommenderClient = await RecommenderClient.CreateAsync();
+            // Initialize request argument(s)
+            GetInsightTypeConfigRequest request = new GetInsightTypeConfigRequest
+            {
+                InsightTypeConfigName = InsightTypeConfigName.FromProjectLocationInsightType("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]"),
+            };
+            // Make the request
+            InsightTypeConfig response = await recommenderClient.GetInsightTypeConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetInsightTypeConfig</summary>
+        public void GetInsightTypeConfig()
+        {
+            // Snippet: GetInsightTypeConfig(string, CallSettings)
+            // Create client
+            RecommenderClient recommenderClient = RecommenderClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE]/config";
+            // Make the request
+            InsightTypeConfig response = recommenderClient.GetInsightTypeConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetInsightTypeConfigAsync</summary>
+        public async Task GetInsightTypeConfigAsync()
+        {
+            // Snippet: GetInsightTypeConfigAsync(string, CallSettings)
+            // Additional: GetInsightTypeConfigAsync(string, CancellationToken)
+            // Create client
+            RecommenderClient recommenderClient = await RecommenderClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE]/config";
+            // Make the request
+            InsightTypeConfig response = await recommenderClient.GetInsightTypeConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetInsightTypeConfig</summary>
+        public void GetInsightTypeConfigResourceNames()
+        {
+            // Snippet: GetInsightTypeConfig(InsightTypeConfigName, CallSettings)
+            // Create client
+            RecommenderClient recommenderClient = RecommenderClient.Create();
+            // Initialize request argument(s)
+            InsightTypeConfigName name = InsightTypeConfigName.FromProjectLocationInsightType("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]");
+            // Make the request
+            InsightTypeConfig response = recommenderClient.GetInsightTypeConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetInsightTypeConfigAsync</summary>
+        public async Task GetInsightTypeConfigResourceNamesAsync()
+        {
+            // Snippet: GetInsightTypeConfigAsync(InsightTypeConfigName, CallSettings)
+            // Additional: GetInsightTypeConfigAsync(InsightTypeConfigName, CancellationToken)
+            // Create client
+            RecommenderClient recommenderClient = await RecommenderClient.CreateAsync();
+            // Initialize request argument(s)
+            InsightTypeConfigName name = InsightTypeConfigName.FromProjectLocationInsightType("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]");
+            // Make the request
+            InsightTypeConfig response = await recommenderClient.GetInsightTypeConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateInsightTypeConfig</summary>
+        public void UpdateInsightTypeConfigRequestObject()
+        {
+            // Snippet: UpdateInsightTypeConfig(UpdateInsightTypeConfigRequest, CallSettings)
+            // Create client
+            RecommenderClient recommenderClient = RecommenderClient.Create();
+            // Initialize request argument(s)
+            UpdateInsightTypeConfigRequest request = new UpdateInsightTypeConfigRequest
+            {
+                InsightTypeConfig = new InsightTypeConfig(),
+                UpdateMask = new FieldMask(),
+                ValidateOnly = false,
+            };
+            // Make the request
+            InsightTypeConfig response = recommenderClient.UpdateInsightTypeConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateInsightTypeConfigAsync</summary>
+        public async Task UpdateInsightTypeConfigRequestObjectAsync()
+        {
+            // Snippet: UpdateInsightTypeConfigAsync(UpdateInsightTypeConfigRequest, CallSettings)
+            // Additional: UpdateInsightTypeConfigAsync(UpdateInsightTypeConfigRequest, CancellationToken)
+            // Create client
+            RecommenderClient recommenderClient = await RecommenderClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateInsightTypeConfigRequest request = new UpdateInsightTypeConfigRequest
+            {
+                InsightTypeConfig = new InsightTypeConfig(),
+                UpdateMask = new FieldMask(),
+                ValidateOnly = false,
+            };
+            // Make the request
+            InsightTypeConfig response = await recommenderClient.UpdateInsightTypeConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateInsightTypeConfig</summary>
+        public void UpdateInsightTypeConfig()
+        {
+            // Snippet: UpdateInsightTypeConfig(InsightTypeConfig, FieldMask, CallSettings)
+            // Create client
+            RecommenderClient recommenderClient = RecommenderClient.Create();
+            // Initialize request argument(s)
+            InsightTypeConfig insightTypeConfig = new InsightTypeConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            InsightTypeConfig response = recommenderClient.UpdateInsightTypeConfig(insightTypeConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateInsightTypeConfigAsync</summary>
+        public async Task UpdateInsightTypeConfigAsync()
+        {
+            // Snippet: UpdateInsightTypeConfigAsync(InsightTypeConfig, FieldMask, CallSettings)
+            // Additional: UpdateInsightTypeConfigAsync(InsightTypeConfig, FieldMask, CancellationToken)
+            // Create client
+            RecommenderClient recommenderClient = await RecommenderClient.CreateAsync();
+            // Initialize request argument(s)
+            InsightTypeConfig insightTypeConfig = new InsightTypeConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            InsightTypeConfig response = await recommenderClient.UpdateInsightTypeConfigAsync(insightTypeConfig, updateMask);
             // End snippet
         }
     }

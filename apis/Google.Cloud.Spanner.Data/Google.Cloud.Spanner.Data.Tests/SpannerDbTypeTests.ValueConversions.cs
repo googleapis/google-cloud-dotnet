@@ -518,7 +518,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 try
                 {
                     string expected = expectedJsonValue;
-                    var jsonValue = spannerDbType.ToProtobufValue(clrValue, options: null);
+                    var jsonValue = spannerDbType.ToProtobufValue(clrValue);
                     string actual = jsonValue.ToString();
                     if (expected != actual)
                     {
@@ -683,7 +683,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             var exceptionCaught = false;
             try
             {
-                type.ToProtobufValue(value, options: null);
+                type.ToProtobufValue(value);
             }
             catch (Exception e) when (e is OverflowException || e is InvalidCastException || e is FormatException || e is ArgumentException)
             {

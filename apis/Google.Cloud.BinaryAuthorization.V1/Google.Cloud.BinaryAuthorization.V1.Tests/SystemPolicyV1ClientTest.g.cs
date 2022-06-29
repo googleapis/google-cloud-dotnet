@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -76,7 +77,7 @@ namespace Google.Cloud.BinaryAuthorization.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetSystemPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SystemPolicyV1Client client = new SystemPolicyV1ClientImpl(mockGrpcClient.Object, null);
+            SystemPolicyV1Client client = new SystemPolicyV1ClientImpl(mockGrpcClient.Object, null, null);
             Policy response = client.GetSystemPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -131,7 +132,7 @@ namespace Google.Cloud.BinaryAuthorization.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetSystemPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SystemPolicyV1Client client = new SystemPolicyV1ClientImpl(mockGrpcClient.Object, null);
+            SystemPolicyV1Client client = new SystemPolicyV1ClientImpl(mockGrpcClient.Object, null, null);
             Policy responseCallSettings = await client.GetSystemPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Policy responseCancellationToken = await client.GetSystemPolicyAsync(request, st::CancellationToken.None);
@@ -188,7 +189,7 @@ namespace Google.Cloud.BinaryAuthorization.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetSystemPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SystemPolicyV1Client client = new SystemPolicyV1ClientImpl(mockGrpcClient.Object, null);
+            SystemPolicyV1Client client = new SystemPolicyV1ClientImpl(mockGrpcClient.Object, null, null);
             Policy response = client.GetSystemPolicy(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -243,7 +244,7 @@ namespace Google.Cloud.BinaryAuthorization.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetSystemPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SystemPolicyV1Client client = new SystemPolicyV1ClientImpl(mockGrpcClient.Object, null);
+            SystemPolicyV1Client client = new SystemPolicyV1ClientImpl(mockGrpcClient.Object, null, null);
             Policy responseCallSettings = await client.GetSystemPolicyAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Policy responseCancellationToken = await client.GetSystemPolicyAsync(request.Name, st::CancellationToken.None);
@@ -300,7 +301,7 @@ namespace Google.Cloud.BinaryAuthorization.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetSystemPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SystemPolicyV1Client client = new SystemPolicyV1ClientImpl(mockGrpcClient.Object, null);
+            SystemPolicyV1Client client = new SystemPolicyV1ClientImpl(mockGrpcClient.Object, null, null);
             Policy response = client.GetSystemPolicy(request.PolicyName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -355,7 +356,7 @@ namespace Google.Cloud.BinaryAuthorization.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetSystemPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SystemPolicyV1Client client = new SystemPolicyV1ClientImpl(mockGrpcClient.Object, null);
+            SystemPolicyV1Client client = new SystemPolicyV1ClientImpl(mockGrpcClient.Object, null, null);
             Policy responseCallSettings = await client.GetSystemPolicyAsync(request.PolicyName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Policy responseCancellationToken = await client.GetSystemPolicyAsync(request.PolicyName, st::CancellationToken.None);

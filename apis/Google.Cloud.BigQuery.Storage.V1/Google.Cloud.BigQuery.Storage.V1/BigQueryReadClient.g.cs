@@ -14,13 +14,14 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -115,9 +116,8 @@ namespace Google.Cloud.BigQuery.Storage.V1
         public BigQueryReadSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public BigQueryReadClientBuilder()
+        public BigQueryReadClientBuilder() : base(BigQueryReadClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = BigQueryReadClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref BigQueryReadClient client);
@@ -144,29 +144,18 @@ namespace Google.Cloud.BigQuery.Storage.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return BigQueryReadClient.Create(callInvoker, Settings);
+            return BigQueryReadClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<BigQueryReadClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return BigQueryReadClient.Create(callInvoker, Settings);
+            return BigQueryReadClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => BigQueryReadClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => BigQueryReadClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => BigQueryReadClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>BigQueryRead client wrapper, for convenient use.</summary>
@@ -197,19 +186,10 @@ namespace Google.Cloud.BigQuery.Storage.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(BigQueryRead.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="BigQueryReadClient"/> using the default credentials, endpoint and
@@ -236,8 +216,9 @@ namespace Google.Cloud.BigQuery.Storage.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="BigQueryReadSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="BigQueryReadClient"/>.</returns>
-        internal static BigQueryReadClient Create(grpccore::CallInvoker callInvoker, BigQueryReadSettings settings = null)
+        internal static BigQueryReadClient Create(grpccore::CallInvoker callInvoker, BigQueryReadSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -246,7 +227,7 @@ namespace Google.Cloud.BigQuery.Storage.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             BigQueryRead.BigQueryReadClient grpcClient = new BigQueryRead.BigQueryReadClient(callInvoker);
-            return new BigQueryReadClientImpl(grpcClient, settings);
+            return new BigQueryReadClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -378,11 +359,13 @@ namespace Google.Cloud.BigQuery.Storage.V1
         /// Max initial number of streams. If unset or zero, the server will
         /// provide a value of streams so as to produce reasonable throughput. Must be
         /// non-negative. The number of streams may be lower than the requested number,
-        /// depending on the amount parallelism that is reasonable for the table. Error
-        /// will be returned if the max count is greater than the current system
-        /// max limit of 1,000.
+        /// depending on the amount parallelism that is reasonable for the table.
+        /// There is a default system max limit of 1,000.
         /// 
-        /// Streams must be read starting from offset 0.
+        /// This must be greater than or equal to preferred_min_stream_count.
+        /// Typically, clients should either leave this unset to let the system to
+        /// determine an upper bound OR set this a size for the maximum "units of work"
+        /// it can gracefully handle.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -426,11 +409,13 @@ namespace Google.Cloud.BigQuery.Storage.V1
         /// Max initial number of streams. If unset or zero, the server will
         /// provide a value of streams so as to produce reasonable throughput. Must be
         /// non-negative. The number of streams may be lower than the requested number,
-        /// depending on the amount parallelism that is reasonable for the table. Error
-        /// will be returned if the max count is greater than the current system
-        /// max limit of 1,000.
+        /// depending on the amount parallelism that is reasonable for the table.
+        /// There is a default system max limit of 1,000.
         /// 
-        /// Streams must be read starting from offset 0.
+        /// This must be greater than or equal to preferred_min_stream_count.
+        /// Typically, clients should either leave this unset to let the system to
+        /// determine an upper bound OR set this a size for the maximum "units of work"
+        /// it can gracefully handle.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -474,11 +459,13 @@ namespace Google.Cloud.BigQuery.Storage.V1
         /// Max initial number of streams. If unset or zero, the server will
         /// provide a value of streams so as to produce reasonable throughput. Must be
         /// non-negative. The number of streams may be lower than the requested number,
-        /// depending on the amount parallelism that is reasonable for the table. Error
-        /// will be returned if the max count is greater than the current system
-        /// max limit of 1,000.
+        /// depending on the amount parallelism that is reasonable for the table.
+        /// There is a default system max limit of 1,000.
         /// 
-        /// Streams must be read starting from offset 0.
+        /// This must be greater than or equal to preferred_min_stream_count.
+        /// Typically, clients should either leave this unset to let the system to
+        /// determine an upper bound OR set this a size for the maximum "units of work"
+        /// it can gracefully handle.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -517,11 +504,13 @@ namespace Google.Cloud.BigQuery.Storage.V1
         /// Max initial number of streams. If unset or zero, the server will
         /// provide a value of streams so as to produce reasonable throughput. Must be
         /// non-negative. The number of streams may be lower than the requested number,
-        /// depending on the amount parallelism that is reasonable for the table. Error
-        /// will be returned if the max count is greater than the current system
-        /// max limit of 1,000.
+        /// depending on the amount parallelism that is reasonable for the table.
+        /// There is a default system max limit of 1,000.
         /// 
-        /// Streams must be read starting from offset 0.
+        /// This must be greater than or equal to preferred_min_stream_count.
+        /// Typically, clients should either leave this unset to let the system to
+        /// determine an upper bound OR set this a size for the maximum "units of work"
+        /// it can gracefully handle.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -565,11 +554,13 @@ namespace Google.Cloud.BigQuery.Storage.V1
         /// Max initial number of streams. If unset or zero, the server will
         /// provide a value of streams so as to produce reasonable throughput. Must be
         /// non-negative. The number of streams may be lower than the requested number,
-        /// depending on the amount parallelism that is reasonable for the table. Error
-        /// will be returned if the max count is greater than the current system
-        /// max limit of 1,000.
+        /// depending on the amount parallelism that is reasonable for the table.
+        /// There is a default system max limit of 1,000.
         /// 
-        /// Streams must be read starting from offset 0.
+        /// This must be greater than or equal to preferred_min_stream_count.
+        /// Typically, clients should either leave this unset to let the system to
+        /// determine an upper bound OR set this a size for the maximum "units of work"
+        /// it can gracefully handle.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -613,11 +604,13 @@ namespace Google.Cloud.BigQuery.Storage.V1
         /// Max initial number of streams. If unset or zero, the server will
         /// provide a value of streams so as to produce reasonable throughput. Must be
         /// non-negative. The number of streams may be lower than the requested number,
-        /// depending on the amount parallelism that is reasonable for the table. Error
-        /// will be returned if the max count is greater than the current system
-        /// max limit of 1,000.
+        /// depending on the amount parallelism that is reasonable for the table.
+        /// There is a default system max limit of 1,000.
         /// 
-        /// Streams must be read starting from offset 0.
+        /// This must be greater than or equal to preferred_min_stream_count.
+        /// Typically, clients should either leave this unset to let the system to
+        /// determine an upper bound OR set this a size for the maximum "units of work"
+        /// it can gracefully handle.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -778,18 +771,19 @@ namespace Google.Cloud.BigQuery.Storage.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="BigQueryReadSettings"/> used within this client.</param>
-        public BigQueryReadClientImpl(BigQueryRead.BigQueryReadClient grpcClient, BigQueryReadSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public BigQueryReadClientImpl(BigQueryRead.BigQueryReadClient grpcClient, BigQueryReadSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             BigQueryReadSettings effectiveSettings = settings ?? BigQueryReadSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callCreateReadSession = clientHelper.BuildApiCall<CreateReadSessionRequest, ReadSession>(grpcClient.CreateReadSessionAsync, grpcClient.CreateReadSession, effectiveSettings.CreateReadSessionSettings).WithGoogleRequestParam("read_session.table", request => request.ReadSession?.Table);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callCreateReadSession = clientHelper.BuildApiCall<CreateReadSessionRequest, ReadSession>("CreateReadSession", grpcClient.CreateReadSessionAsync, grpcClient.CreateReadSession, effectiveSettings.CreateReadSessionSettings).WithGoogleRequestParam("read_session.table", request => request.ReadSession?.Table);
             Modify_ApiCall(ref _callCreateReadSession);
             Modify_CreateReadSessionApiCall(ref _callCreateReadSession);
-            _callReadRows = clientHelper.BuildApiCall<ReadRowsRequest, ReadRowsResponse>(grpcClient.ReadRows, effectiveSettings.ReadRowsSettings).WithGoogleRequestParam("read_stream", request => request.ReadStream);
+            _callReadRows = clientHelper.BuildApiCall<ReadRowsRequest, ReadRowsResponse>("ReadRows", grpcClient.ReadRows, effectiveSettings.ReadRowsSettings).WithGoogleRequestParam("read_stream", request => request.ReadStream);
             Modify_ApiCall(ref _callReadRows);
             Modify_ReadRowsApiCall(ref _callReadRows);
-            _callSplitReadStream = clientHelper.BuildApiCall<SplitReadStreamRequest, SplitReadStreamResponse>(grpcClient.SplitReadStreamAsync, grpcClient.SplitReadStream, effectiveSettings.SplitReadStreamSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callSplitReadStream = clientHelper.BuildApiCall<SplitReadStreamRequest, SplitReadStreamResponse>("SplitReadStream", grpcClient.SplitReadStreamAsync, grpcClient.SplitReadStream, effectiveSettings.SplitReadStreamSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callSplitReadStream);
             Modify_SplitReadStreamApiCall(ref _callSplitReadStream);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

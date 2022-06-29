@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using ga = Google.Api;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
@@ -65,22 +66,21 @@ namespace Google.Cloud.Run.V2.Tests
                 ServiceAsServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
                 Scaling = new RevisionScaling(),
                 VpcAccess = new VpcAccess(),
-                ContainerConcurrency = -1256870318,
                 Timeout = new wkt::Duration(),
                 ServiceAccount = "service_accounta3c1b923",
                 Containers = { new Container(), },
                 Volumes = { new Volume(), },
-                Confidential = true,
                 ExecutionEnvironment = ExecutionEnvironment.Unspecified,
                 EncryptionKeyAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
                 Reconciling = false,
                 Conditions = { new Condition(), },
                 ObservedGeneration = -4521268473882310455L,
                 LogUri = "log_urid89ae442",
+                MaxInstanceRequestConcurrency = 584931825,
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetRevision(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RevisionsClient client = new RevisionsClientImpl(mockGrpcClient.Object, null);
+            RevisionsClient client = new RevisionsClientImpl(mockGrpcClient.Object, null, null);
             Revision response = client.GetRevision(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -122,22 +122,21 @@ namespace Google.Cloud.Run.V2.Tests
                 ServiceAsServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
                 Scaling = new RevisionScaling(),
                 VpcAccess = new VpcAccess(),
-                ContainerConcurrency = -1256870318,
                 Timeout = new wkt::Duration(),
                 ServiceAccount = "service_accounta3c1b923",
                 Containers = { new Container(), },
                 Volumes = { new Volume(), },
-                Confidential = true,
                 ExecutionEnvironment = ExecutionEnvironment.Unspecified,
                 EncryptionKeyAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
                 Reconciling = false,
                 Conditions = { new Condition(), },
                 ObservedGeneration = -4521268473882310455L,
                 LogUri = "log_urid89ae442",
+                MaxInstanceRequestConcurrency = 584931825,
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetRevisionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Revision>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RevisionsClient client = new RevisionsClientImpl(mockGrpcClient.Object, null);
+            RevisionsClient client = new RevisionsClientImpl(mockGrpcClient.Object, null, null);
             Revision responseCallSettings = await client.GetRevisionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Revision responseCancellationToken = await client.GetRevisionAsync(request, st::CancellationToken.None);
@@ -181,22 +180,21 @@ namespace Google.Cloud.Run.V2.Tests
                 ServiceAsServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
                 Scaling = new RevisionScaling(),
                 VpcAccess = new VpcAccess(),
-                ContainerConcurrency = -1256870318,
                 Timeout = new wkt::Duration(),
                 ServiceAccount = "service_accounta3c1b923",
                 Containers = { new Container(), },
                 Volumes = { new Volume(), },
-                Confidential = true,
                 ExecutionEnvironment = ExecutionEnvironment.Unspecified,
                 EncryptionKeyAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
                 Reconciling = false,
                 Conditions = { new Condition(), },
                 ObservedGeneration = -4521268473882310455L,
                 LogUri = "log_urid89ae442",
+                MaxInstanceRequestConcurrency = 584931825,
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetRevision(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RevisionsClient client = new RevisionsClientImpl(mockGrpcClient.Object, null);
+            RevisionsClient client = new RevisionsClientImpl(mockGrpcClient.Object, null, null);
             Revision response = client.GetRevision(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -238,22 +236,21 @@ namespace Google.Cloud.Run.V2.Tests
                 ServiceAsServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
                 Scaling = new RevisionScaling(),
                 VpcAccess = new VpcAccess(),
-                ContainerConcurrency = -1256870318,
                 Timeout = new wkt::Duration(),
                 ServiceAccount = "service_accounta3c1b923",
                 Containers = { new Container(), },
                 Volumes = { new Volume(), },
-                Confidential = true,
                 ExecutionEnvironment = ExecutionEnvironment.Unspecified,
                 EncryptionKeyAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
                 Reconciling = false,
                 Conditions = { new Condition(), },
                 ObservedGeneration = -4521268473882310455L,
                 LogUri = "log_urid89ae442",
+                MaxInstanceRequestConcurrency = 584931825,
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetRevisionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Revision>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RevisionsClient client = new RevisionsClientImpl(mockGrpcClient.Object, null);
+            RevisionsClient client = new RevisionsClientImpl(mockGrpcClient.Object, null, null);
             Revision responseCallSettings = await client.GetRevisionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Revision responseCancellationToken = await client.GetRevisionAsync(request.Name, st::CancellationToken.None);
@@ -297,22 +294,21 @@ namespace Google.Cloud.Run.V2.Tests
                 ServiceAsServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
                 Scaling = new RevisionScaling(),
                 VpcAccess = new VpcAccess(),
-                ContainerConcurrency = -1256870318,
                 Timeout = new wkt::Duration(),
                 ServiceAccount = "service_accounta3c1b923",
                 Containers = { new Container(), },
                 Volumes = { new Volume(), },
-                Confidential = true,
                 ExecutionEnvironment = ExecutionEnvironment.Unspecified,
                 EncryptionKeyAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
                 Reconciling = false,
                 Conditions = { new Condition(), },
                 ObservedGeneration = -4521268473882310455L,
                 LogUri = "log_urid89ae442",
+                MaxInstanceRequestConcurrency = 584931825,
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetRevision(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RevisionsClient client = new RevisionsClientImpl(mockGrpcClient.Object, null);
+            RevisionsClient client = new RevisionsClientImpl(mockGrpcClient.Object, null, null);
             Revision response = client.GetRevision(request.RevisionName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -354,22 +350,21 @@ namespace Google.Cloud.Run.V2.Tests
                 ServiceAsServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
                 Scaling = new RevisionScaling(),
                 VpcAccess = new VpcAccess(),
-                ContainerConcurrency = -1256870318,
                 Timeout = new wkt::Duration(),
                 ServiceAccount = "service_accounta3c1b923",
                 Containers = { new Container(), },
                 Volumes = { new Volume(), },
-                Confidential = true,
                 ExecutionEnvironment = ExecutionEnvironment.Unspecified,
                 EncryptionKeyAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
                 Reconciling = false,
                 Conditions = { new Condition(), },
                 ObservedGeneration = -4521268473882310455L,
                 LogUri = "log_urid89ae442",
+                MaxInstanceRequestConcurrency = 584931825,
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetRevisionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Revision>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RevisionsClient client = new RevisionsClientImpl(mockGrpcClient.Object, null);
+            RevisionsClient client = new RevisionsClientImpl(mockGrpcClient.Object, null, null);
             Revision responseCallSettings = await client.GetRevisionAsync(request.RevisionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Revision responseCancellationToken = await client.GetRevisionAsync(request.RevisionName, st::CancellationToken.None);

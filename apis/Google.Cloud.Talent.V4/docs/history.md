@@ -1,5 +1,38 @@
 # Version history
 
+## Version 2.0.0, released 2022-06-08
+
+This is the first version of this package to depend on GAX v4.
+
+There are some breaking changes, both in GAX v4 and in the generated
+code. The changes that aren't specific to any given API are [described in the Google Cloud
+documentation](https://cloud.google.com/dotnet/docs/reference/help/breaking-gax4).
+We don't anticipate any changes to most customer code, but please [file a
+GitHub issue](https://github.com/googleapis/google-cloud-dotnet/issues/new/choose)
+if you run into problems.
+
+The most important change in this release is the use of the Grpc.Net.Client package
+for gRPC communication, instead of Grpc.Core. When using .NET Core 3.1 or .NET 5.0+
+this should lead to a smaller installation footprint and greater compatibility (e.g.
+with Apple M1 chips). Any significant change in a core component comes with the risk
+of incompatibility, however - so again, please let us know if you encounter any
+issues.
+
+### New features
+
+- Add a new operator on companyDisplayNames filter to further support fuzzy match by treating input value as a multi word token ([commit 1de79aa](https://github.com/googleapis/google-cloud-dotnet/commit/1de79aa011a02033e0505a0adb6a38c683e82116))
+- Add a new option TELECOMMUTE_JOBS_EXCLUDED under enum TelecommutePreference to completely filter out the telecommute jobs in response ([commit 1de79aa](https://github.com/googleapis/google-cloud-dotnet/commit/1de79aa011a02033e0505a0adb6a38c683e82116))
+
+### Deprecations
+
+- Deprecate option TELECOMMUTE_EXCLUDED under enum TelecommutePreference ([commit 1de79aa](https://github.com/googleapis/google-cloud-dotnet/commit/1de79aa011a02033e0505a0adb6a38c683e82116))
+
+## Version 1.4.0, released 2022-04-26
+
+### Documentation improvements
+
+- Added functionality in the companyDisplayNames filter to support fuzzy matching ([commit 349a1e3](https://github.com/googleapis/google-cloud-dotnet/commit/349a1e3f81e7bd4fa3bfad4543889146523ac57a))
+
 ## Version 1.3.0, released 2021-12-07
 
 - [Commit 10ebf7f](https://github.com/googleapis/google-cloud-dotnet/commit/10ebf7f): docs: fix docstring formatting

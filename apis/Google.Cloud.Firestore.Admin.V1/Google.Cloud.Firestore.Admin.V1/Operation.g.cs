@@ -27,62 +27,68 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             "Cilnb29nbGUvZmlyZXN0b3JlL2FkbWluL3YxL29wZXJhdGlvbi5wcm90bxIZ",
             "Z29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MRolZ29vZ2xlL2ZpcmVzdG9yZS9h",
             "ZG1pbi92MS9pbmRleC5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFt",
-            "cC5wcm90bxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byK9AgoWSW5k",
-            "ZXhPcGVyYXRpb25NZXRhZGF0YRIuCgpzdGFydF90aW1lGAEgASgLMhouZ29v",
+            "cC5wcm90byK9AgoWSW5kZXhPcGVyYXRpb25NZXRhZGF0YRIuCgpzdGFydF90",
+            "aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghlbmRf",
+            "dGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASDQoFaW5k",
+            "ZXgYAyABKAkSOAoFc3RhdGUYBCABKA4yKS5nb29nbGUuZmlyZXN0b3JlLmFk",
+            "bWluLnYxLk9wZXJhdGlvblN0YXRlEj8KEnByb2dyZXNzX2RvY3VtZW50cxgF",
+            "IAEoCzIjLmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjEuUHJvZ3Jlc3MSOwoO",
+            "cHJvZ3Jlc3NfYnl0ZXMYBiABKAsyIy5nb29nbGUuZmlyZXN0b3JlLmFkbWlu",
+            "LnYxLlByb2dyZXNzIpkHChZGaWVsZE9wZXJhdGlvbk1ldGFkYXRhEi4KCnN0",
+            "YXJ0X3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwK",
+            "CGVuZF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIN",
+            "CgVmaWVsZBgDIAEoCRJfChNpbmRleF9jb25maWdfZGVsdGFzGAQgAygLMkIu",
+            "Z29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5GaWVsZE9wZXJhdGlvbk1ldGFk",
+            "YXRhLkluZGV4Q29uZmlnRGVsdGESOAoFc3RhdGUYBSABKA4yKS5nb29nbGUu",
+            "ZmlyZXN0b3JlLmFkbWluLnYxLk9wZXJhdGlvblN0YXRlEj8KEnByb2dyZXNz",
+            "X2RvY3VtZW50cxgGIAEoCzIjLmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjEu",
+            "UHJvZ3Jlc3MSOwoOcHJvZ3Jlc3NfYnl0ZXMYByABKAsyIy5nb29nbGUuZmly",
+            "ZXN0b3JlLmFkbWluLnYxLlByb2dyZXNzEloKEHR0bF9jb25maWdfZGVsdGEY",
+            "CCABKAsyQC5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLkZpZWxkT3BlcmF0",
+            "aW9uTWV0YWRhdGEuVHRsQ29uZmlnRGVsdGEa5wEKEEluZGV4Q29uZmlnRGVs",
+            "dGESYgoLY2hhbmdlX3R5cGUYASABKA4yTS5nb29nbGUuZmlyZXN0b3JlLmFk",
+            "bWluLnYxLkZpZWxkT3BlcmF0aW9uTWV0YWRhdGEuSW5kZXhDb25maWdEZWx0",
+            "YS5DaGFuZ2VUeXBlEi8KBWluZGV4GAIgASgLMiAuZ29vZ2xlLmZpcmVzdG9y",
+            "ZS5hZG1pbi52MS5JbmRleCI+CgpDaGFuZ2VUeXBlEhsKF0NIQU5HRV9UWVBF",
+            "X1VOU1BFQ0lGSUVEEAASBwoDQUREEAESCgoGUkVNT1ZFEAIasgEKDlR0bENv",
+            "bmZpZ0RlbHRhEmAKC2NoYW5nZV90eXBlGAEgASgOMksuZ29vZ2xlLmZpcmVz",
+            "dG9yZS5hZG1pbi52MS5GaWVsZE9wZXJhdGlvbk1ldGFkYXRhLlR0bENvbmZp",
+            "Z0RlbHRhLkNoYW5nZVR5cGUiPgoKQ2hhbmdlVHlwZRIbChdDSEFOR0VfVFlQ",
+            "RV9VTlNQRUNJRklFRBAAEgcKA0FERBABEgoKBlJFTU9WRRACIuwCChdFeHBv",
+            "cnREb2N1bWVudHNNZXRhZGF0YRIuCgpzdGFydF90aW1lGAEgASgLMhouZ29v",
             "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghlbmRfdGltZRgCIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASDQoFaW5kZXgYAyABKAkSOAoFc3Rh",
-            "dGUYBCABKA4yKS5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLk9wZXJhdGlv",
-            "blN0YXRlEj8KEnByb2dyZXNzX2RvY3VtZW50cxgFIAEoCzIjLmdvb2dsZS5m",
-            "aXJlc3RvcmUuYWRtaW4udjEuUHJvZ3Jlc3MSOwoOcHJvZ3Jlc3NfYnl0ZXMY",
-            "BiABKAsyIy5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLlByb2dyZXNzIogF",
-            "ChZGaWVsZE9wZXJhdGlvbk1ldGFkYXRhEi4KCnN0YXJ0X3RpbWUYASABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVuZF90aW1lGAIgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBINCgVmaWVsZBgDIAEoCRJf",
-            "ChNpbmRleF9jb25maWdfZGVsdGFzGAQgAygLMkIuZ29vZ2xlLmZpcmVzdG9y",
-            "ZS5hZG1pbi52MS5GaWVsZE9wZXJhdGlvbk1ldGFkYXRhLkluZGV4Q29uZmln",
-            "RGVsdGESOAoFc3RhdGUYBSABKA4yKS5nb29nbGUuZmlyZXN0b3JlLmFkbWlu",
-            "LnYxLk9wZXJhdGlvblN0YXRlEj8KEnByb2dyZXNzX2RvY3VtZW50cxgGIAEo",
-            "CzIjLmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjEuUHJvZ3Jlc3MSOwoOcHJv",
-            "Z3Jlc3NfYnl0ZXMYByABKAsyIy5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYx",
-            "LlByb2dyZXNzGucBChBJbmRleENvbmZpZ0RlbHRhEmIKC2NoYW5nZV90eXBl",
-            "GAEgASgOMk0uZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5GaWVsZE9wZXJh",
-            "dGlvbk1ldGFkYXRhLkluZGV4Q29uZmlnRGVsdGEuQ2hhbmdlVHlwZRIvCgVp",
-            "bmRleBgCIAEoCzIgLmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjEuSW5kZXgi",
-            "PgoKQ2hhbmdlVHlwZRIbChdDSEFOR0VfVFlQRV9VTlNQRUNJRklFRBAAEgcK",
-            "A0FERBABEgoKBlJFTU9WRRACIuwCChdFeHBvcnREb2N1bWVudHNNZXRhZGF0",
-            "YRIuCgpzdGFydF90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcBIsCghlbmRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXASQgoPb3BlcmF0aW9uX3N0YXRlGAMgASgOMikuZ29vZ2xlLmZpcmVz",
-            "dG9yZS5hZG1pbi52MS5PcGVyYXRpb25TdGF0ZRI/ChJwcm9ncmVzc19kb2N1",
-            "bWVudHMYBCABKAsyIy5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLlByb2dy",
-            "ZXNzEjsKDnByb2dyZXNzX2J5dGVzGAUgASgLMiMuZ29vZ2xlLmZpcmVzdG9y",
-            "ZS5hZG1pbi52MS5Qcm9ncmVzcxIWCg5jb2xsZWN0aW9uX2lkcxgGIAMoCRIZ",
-            "ChFvdXRwdXRfdXJpX3ByZWZpeBgHIAEoCSLrAgoXSW1wb3J0RG9jdW1lbnRz",
-            "TWV0YWRhdGESLgoKc3RhcnRfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wEkIKD29wZXJhdGlvbl9zdGF0ZRgDIAEoDjIpLmdvb2ds",
-            "ZS5maXJlc3RvcmUuYWRtaW4udjEuT3BlcmF0aW9uU3RhdGUSPwoScHJvZ3Jl",
-            "c3NfZG9jdW1lbnRzGAQgASgLMiMuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52",
-            "MS5Qcm9ncmVzcxI7Cg5wcm9ncmVzc19ieXRlcxgFIAEoCzIjLmdvb2dsZS5m",
-            "aXJlc3RvcmUuYWRtaW4udjEuUHJvZ3Jlc3MSFgoOY29sbGVjdGlvbl9pZHMY",
-            "BiADKAkSGAoQaW5wdXRfdXJpX3ByZWZpeBgHIAEoCSI0ChdFeHBvcnREb2N1",
-            "bWVudHNSZXNwb25zZRIZChFvdXRwdXRfdXJpX3ByZWZpeBgBIAEoCSI6CghQ",
-            "cm9ncmVzcxIWCg5lc3RpbWF0ZWRfd29yaxgBIAEoAxIWCg5jb21wbGV0ZWRf",
-            "d29yaxgCIAEoAyqeAQoOT3BlcmF0aW9uU3RhdGUSHwobT1BFUkFUSU9OX1NU",
-            "QVRFX1VOU1BFQ0lGSUVEEAASEAoMSU5JVElBTElaSU5HEAESDgoKUFJPQ0VT",
-            "U0lORxACEg4KCkNBTkNFTExJTkcQAxIOCgpGSU5BTElaSU5HEAQSDgoKU1VD",
-            "Q0VTU0ZVTBAFEgoKBkZBSUxFRBAGEg0KCUNBTkNFTExFRBAHQuIBCh1jb20u",
-            "Z29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MUIOT3BlcmF0aW9uUHJvdG9QAVo+",
-            "Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9maXJlc3Rv",
-            "cmUvYWRtaW4vdjE7YWRtaW6iAgRHQ0ZTqgIfR29vZ2xlLkNsb3VkLkZpcmVz",
-            "dG9yZS5BZG1pbi5WMcoCH0dvb2dsZVxDbG91ZFxGaXJlc3RvcmVcQWRtaW5c",
-            "VjHqAiNHb29nbGU6OkNsb3VkOjpGaXJlc3RvcmU6OkFkbWluOjpWMWIGcHJv",
-            "dG8z"));
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASQgoPb3BlcmF0aW9uX3N0YXRlGAMg",
+            "ASgOMikuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5PcGVyYXRpb25TdGF0",
+            "ZRI/ChJwcm9ncmVzc19kb2N1bWVudHMYBCABKAsyIy5nb29nbGUuZmlyZXN0",
+            "b3JlLmFkbWluLnYxLlByb2dyZXNzEjsKDnByb2dyZXNzX2J5dGVzGAUgASgL",
+            "MiMuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5Qcm9ncmVzcxIWCg5jb2xs",
+            "ZWN0aW9uX2lkcxgGIAMoCRIZChFvdXRwdXRfdXJpX3ByZWZpeBgHIAEoCSLr",
+            "AgoXSW1wb3J0RG9jdW1lbnRzTWV0YWRhdGESLgoKc3RhcnRfdGltZRgBIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYAiAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEkIKD29wZXJhdGlvbl9z",
+            "dGF0ZRgDIAEoDjIpLmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjEuT3BlcmF0",
+            "aW9uU3RhdGUSPwoScHJvZ3Jlc3NfZG9jdW1lbnRzGAQgASgLMiMuZ29vZ2xl",
+            "LmZpcmVzdG9yZS5hZG1pbi52MS5Qcm9ncmVzcxI7Cg5wcm9ncmVzc19ieXRl",
+            "cxgFIAEoCzIjLmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjEuUHJvZ3Jlc3MS",
+            "FgoOY29sbGVjdGlvbl9pZHMYBiADKAkSGAoQaW5wdXRfdXJpX3ByZWZpeBgH",
+            "IAEoCSI0ChdFeHBvcnREb2N1bWVudHNSZXNwb25zZRIZChFvdXRwdXRfdXJp",
+            "X3ByZWZpeBgBIAEoCSI6CghQcm9ncmVzcxIWCg5lc3RpbWF0ZWRfd29yaxgB",
+            "IAEoAxIWCg5jb21wbGV0ZWRfd29yaxgCIAEoAyqeAQoOT3BlcmF0aW9uU3Rh",
+            "dGUSHwobT1BFUkFUSU9OX1NUQVRFX1VOU1BFQ0lGSUVEEAASEAoMSU5JVElB",
+            "TElaSU5HEAESDgoKUFJPQ0VTU0lORxACEg4KCkNBTkNFTExJTkcQAxIOCgpG",
+            "SU5BTElaSU5HEAQSDgoKU1VDQ0VTU0ZVTBAFEgoKBkZBSUxFRBAGEg0KCUNB",
+            "TkNFTExFRBAHQuIBCh1jb20uZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MUIO",
+            "T3BlcmF0aW9uUHJvdG9QAVo+Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8v",
+            "Z29vZ2xlYXBpcy9maXJlc3RvcmUvYWRtaW4vdjE7YWRtaW6iAgRHQ0ZTqgIf",
+            "R29vZ2xlLkNsb3VkLkZpcmVzdG9yZS5BZG1pbi5WMcoCH0dvb2dsZVxDbG91",
+            "ZFxGaXJlc3RvcmVcQWRtaW5cVjHqAiNHb29nbGU6OkNsb3VkOjpGaXJlc3Rv",
+            "cmU6OkFkbWluOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Cloud.Firestore.Admin.V1.IndexReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Cloud.Firestore.Admin.V1.IndexReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Firestore.Admin.V1.OperationState), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.IndexOperationMetadata), global::Google.Cloud.Firestore.Admin.V1.IndexOperationMetadata.Parser, new[]{ "StartTime", "EndTime", "Index", "State", "ProgressDocuments", "ProgressBytes" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata), global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Parser, new[]{ "StartTime", "EndTime", "Field", "IndexConfigDeltas", "State", "ProgressDocuments", "ProgressBytes" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.IndexConfigDelta), global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.IndexConfigDelta.Parser, new[]{ "ChangeType", "Index" }, null, new[]{ typeof(global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.IndexConfigDelta.Types.ChangeType) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata), global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Parser, new[]{ "StartTime", "EndTime", "Field", "IndexConfigDeltas", "State", "ProgressDocuments", "ProgressBytes", "TtlConfigDelta" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.IndexConfigDelta), global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.IndexConfigDelta.Parser, new[]{ "ChangeType", "Index" }, null, new[]{ typeof(global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.IndexConfigDelta.Types.ChangeType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.TtlConfigDelta), global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.TtlConfigDelta.Parser, new[]{ "ChangeType" }, null, new[]{ typeof(global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.TtlConfigDelta.Types.ChangeType) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsMetadata), global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsMetadata.Parser, new[]{ "StartTime", "EndTime", "OperationState", "ProgressDocuments", "ProgressBytes", "CollectionIds", "OutputUriPrefix" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.ImportDocumentsMetadata), global::Google.Cloud.Firestore.Admin.V1.ImportDocumentsMetadata.Parser, new[]{ "StartTime", "EndTime", "OperationState", "ProgressDocuments", "ProgressBytes", "CollectionIds", "InputUriPrefix" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsResponse), global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsResponse.Parser, new[]{ "OutputUriPrefix" }, null, null, null, null),
@@ -615,6 +621,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       state_ = other.state_;
       progressDocuments_ = other.progressDocuments_ != null ? other.progressDocuments_.Clone() : null;
       progressBytes_ = other.progressBytes_ != null ? other.progressBytes_.Clone() : null;
+      ttlConfigDelta_ = other.ttlConfigDelta_ != null ? other.ttlConfigDelta_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -731,6 +738,21 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       }
     }
 
+    /// <summary>Field number for the "ttl_config_delta" field.</summary>
+    public const int TtlConfigDeltaFieldNumber = 8;
+    private global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.TtlConfigDelta ttlConfigDelta_;
+    /// <summary>
+    /// Describes the deltas of TTL configuration.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.TtlConfigDelta TtlConfigDelta {
+      get { return ttlConfigDelta_; }
+      set {
+        ttlConfigDelta_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -753,6 +775,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       if (State != other.State) return false;
       if (!object.Equals(ProgressDocuments, other.ProgressDocuments)) return false;
       if (!object.Equals(ProgressBytes, other.ProgressBytes)) return false;
+      if (!object.Equals(TtlConfigDelta, other.TtlConfigDelta)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -767,6 +790,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       if (State != global::Google.Cloud.Firestore.Admin.V1.OperationState.Unspecified) hash ^= State.GetHashCode();
       if (progressDocuments_ != null) hash ^= ProgressDocuments.GetHashCode();
       if (progressBytes_ != null) hash ^= ProgressBytes.GetHashCode();
+      if (ttlConfigDelta_ != null) hash ^= TtlConfigDelta.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -810,6 +834,10 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(ProgressBytes);
       }
+      if (ttlConfigDelta_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(TtlConfigDelta);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -845,6 +873,10 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(ProgressBytes);
       }
+      if (ttlConfigDelta_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(TtlConfigDelta);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -873,6 +905,9 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       }
       if (progressBytes_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ProgressBytes);
+      }
+      if (ttlConfigDelta_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TtlConfigDelta);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -916,6 +951,12 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           ProgressBytes = new global::Google.Cloud.Firestore.Admin.V1.Progress();
         }
         ProgressBytes.MergeFrom(other.ProgressBytes);
+      }
+      if (other.ttlConfigDelta_ != null) {
+        if (ttlConfigDelta_ == null) {
+          TtlConfigDelta = new global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.TtlConfigDelta();
+        }
+        TtlConfigDelta.MergeFrom(other.TtlConfigDelta);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -972,6 +1013,13 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             input.ReadMessage(ProgressBytes);
             break;
           }
+          case 66: {
+            if (ttlConfigDelta_ == null) {
+              TtlConfigDelta = new global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.TtlConfigDelta();
+            }
+            input.ReadMessage(TtlConfigDelta);
+            break;
+          }
         }
       }
     #endif
@@ -1025,6 +1073,13 @@ namespace Google.Cloud.Firestore.Admin.V1 {
               ProgressBytes = new global::Google.Cloud.Firestore.Admin.V1.Progress();
             }
             input.ReadMessage(ProgressBytes);
+            break;
+          }
+          case 66: {
+            if (ttlConfigDelta_ == null) {
+              TtlConfigDelta = new global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.TtlConfigDelta();
+            }
+            input.ReadMessage(TtlConfigDelta);
             break;
           }
         }
@@ -1298,6 +1353,227 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             [pbr::OriginalName("ADD")] Add = 1,
             /// <summary>
             /// The single field index is being removed.
+            /// </summary>
+            [pbr::OriginalName("REMOVE")] Remove = 2,
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
+      /// Information about an TTL configuration change.
+      /// </summary>
+      public sealed partial class TtlConfigDelta : pb::IMessage<TtlConfigDelta>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<TtlConfigDelta> _parser = new pb::MessageParser<TtlConfigDelta>(() => new TtlConfigDelta());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<TtlConfigDelta> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TtlConfigDelta() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TtlConfigDelta(TtlConfigDelta other) : this() {
+          changeType_ = other.changeType_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TtlConfigDelta Clone() {
+          return new TtlConfigDelta(this);
+        }
+
+        /// <summary>Field number for the "change_type" field.</summary>
+        public const int ChangeTypeFieldNumber = 1;
+        private global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.TtlConfigDelta.Types.ChangeType changeType_ = global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.TtlConfigDelta.Types.ChangeType.Unspecified;
+        /// <summary>
+        /// Specifies how the TTL configuration is changing.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.TtlConfigDelta.Types.ChangeType ChangeType {
+          get { return changeType_; }
+          set {
+            changeType_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as TtlConfigDelta);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(TtlConfigDelta other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (ChangeType != other.ChangeType) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (ChangeType != global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.TtlConfigDelta.Types.ChangeType.Unspecified) hash ^= ChangeType.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (ChangeType != global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.TtlConfigDelta.Types.ChangeType.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) ChangeType);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (ChangeType != global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.TtlConfigDelta.Types.ChangeType.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) ChangeType);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (ChangeType != global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.TtlConfigDelta.Types.ChangeType.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ChangeType);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(TtlConfigDelta other) {
+          if (other == null) {
+            return;
+          }
+          if (other.ChangeType != global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.TtlConfigDelta.Types.ChangeType.Unspecified) {
+            ChangeType = other.ChangeType;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                ChangeType = (global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.TtlConfigDelta.Types.ChangeType) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                ChangeType = (global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.TtlConfigDelta.Types.ChangeType) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the TtlConfigDelta message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Specifies how the TTL config is changing.
+          /// </summary>
+          public enum ChangeType {
+            /// <summary>
+            /// The type of change is not specified or known.
+            /// </summary>
+            [pbr::OriginalName("CHANGE_TYPE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// The TTL config is being added.
+            /// </summary>
+            [pbr::OriginalName("ADD")] Add = 1,
+            /// <summary>
+            /// The TTL config is being removed.
             /// </summary>
             [pbr::OriginalName("REMOVE")] Remove = 2,
           }

@@ -64,6 +64,12 @@
                 "ListDatasetsAsync"
               ]
             },
+            "ListSavedQueries": {
+              "methods": [
+                "ListSavedQueries",
+                "ListSavedQueriesAsync"
+              ]
+            },
             "UpdateDataset": {
               "methods": [
                 "UpdateDataset",
@@ -769,10 +775,22 @@
         "grpc": {
           "libraryClient": "ModelServiceClient",
           "rpcs": {
+            "BatchImportModelEvaluationSlices": {
+              "methods": [
+                "BatchImportModelEvaluationSlices",
+                "BatchImportModelEvaluationSlicesAsync"
+              ]
+            },
             "DeleteModel": {
               "methods": [
                 "DeleteModel",
                 "DeleteModelAsync"
+              ]
+            },
+            "DeleteModelVersion": {
+              "methods": [
+                "DeleteModelVersion",
+                "DeleteModelVersionAsync"
               ]
             },
             "ExportModel": {
@@ -817,10 +835,22 @@
                 "ListModelEvaluationsAsync"
               ]
             },
+            "ListModelVersions": {
+              "methods": [
+                "ListModelVersions",
+                "ListModelVersionsAsync"
+              ]
+            },
             "ListModels": {
               "methods": [
                 "ListModels",
                 "ListModelsAsync"
+              ]
+            },
+            "MergeVersionAliases": {
+              "methods": [
+                "MergeVersionAliases",
+                "MergeVersionAliasesAsync"
               ]
             },
             "UpdateModel": {

@@ -47,7 +47,10 @@ for api in $apis
 do  
   if [[ -d tmpgit/apis/$api/$api && -d apis/$api/$api ]]
   then
-    targetVersion="netstandard2.0"
+    # We expect almost all libraries to support netstandard2.1.
+    # When moving from GAX v3 to GAX v4 this will fail as we used to target
+    # netstandard2.0, but that's a single PR (which we expect to have breaking changes anyway).
+    targetVersion="netstandard2.1"
     if [[ $api == "Google.Cloud.Diagnostics.AspNetCore3" ]]
     then
       targetVersion="netcoreapp3.1"
@@ -62,8 +65,7 @@ do
   fi
 done
 
-echo ""
-
+releasedApis=()
 for api in $apis
 do  
   log_header "Detecting changes for $api"
@@ -75,7 +77,8 @@ do
   then
     echo "$api was deleted"
   else
-    dotnet run --no-build -p tools/Google.Cloud.Tools.CompareVersions -- --file1=tmpgit/old/$api.dll --file2=tmpgit/new/$api.dll
+    releasedApis+=($api)
+    dotnet run --no-build --project tools/Google.Cloud.Tools.CompareVersions -- --file1=tmpgit/old/$api.dll --file2=tmpgit/new/$api.dll
   fi
 done  
 
@@ -84,4 +87,4 @@ log_header "Checking compatibility with previous releases"
 # Make sure all the tags are available for checking compatibility
 git fetch --tags -q
 
-dotnet run --no-build -p tools/Google.Cloud.Tools.ReleaseManager -- check-version-compatibility $apis || maybe_fail
+dotnet run --no-build --project tools/Google.Cloud.Tools.ReleaseManager -- check-version-compatibility "${releasedApis[@]}" || maybe_fail

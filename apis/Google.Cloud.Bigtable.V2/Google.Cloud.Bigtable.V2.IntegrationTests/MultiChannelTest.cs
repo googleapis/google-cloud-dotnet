@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.ClientTesting;
+#if NET462_OR_GREATER
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xunit;
@@ -26,13 +26,10 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
 
         public MultiChannelTest(BigtableFixture fixture) => _fixture = fixture;
 
-        [Fact(Skip = "See issue 2675")]
+        [SkippableFact]
         public async Task SeparateSubchannels()
         {
-            if (_fixture.EmulatorCallInvoker != null)
-            {
-                return;
-            }
+            Skip.If(_fixture.RunningAgainstEmulator);
 
             int originalSubchannelCount = GrpcInfo.SubchannelCount;
             int clientCount = 2;
@@ -57,3 +54,4 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         }
     }
 }
+#endif

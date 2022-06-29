@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -47,7 +48,7 @@ namespace Google.Identity.AccessContextManager.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetAccessPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null);
+            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null, null);
             AccessPolicy response = client.GetAccessPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -72,7 +73,7 @@ namespace Google.Identity.AccessContextManager.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetAccessPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AccessPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null);
+            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null, null);
             AccessPolicy responseCallSettings = await client.GetAccessPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AccessPolicy responseCancellationToken = await client.GetAccessPolicyAsync(request, st::CancellationToken.None);
@@ -99,7 +100,7 @@ namespace Google.Identity.AccessContextManager.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetAccessPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null);
+            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null, null);
             AccessPolicy response = client.GetAccessPolicy(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -124,7 +125,7 @@ namespace Google.Identity.AccessContextManager.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetAccessPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AccessPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null);
+            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null, null);
             AccessPolicy responseCallSettings = await client.GetAccessPolicyAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AccessPolicy responseCancellationToken = await client.GetAccessPolicyAsync(request.Name, st::CancellationToken.None);
@@ -151,7 +152,7 @@ namespace Google.Identity.AccessContextManager.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetAccessPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null);
+            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null, null);
             AccessPolicy response = client.GetAccessPolicy(request.AccessPolicyName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -176,7 +177,7 @@ namespace Google.Identity.AccessContextManager.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetAccessPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AccessPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null);
+            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null, null);
             AccessPolicy responseCallSettings = await client.GetAccessPolicyAsync(request.AccessPolicyName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AccessPolicy responseCancellationToken = await client.GetAccessPolicyAsync(request.AccessPolicyName, st::CancellationToken.None);
@@ -205,7 +206,7 @@ namespace Google.Identity.AccessContextManager.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetAccessLevel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null);
+            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null, null);
             AccessLevel response = client.GetAccessLevel(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -232,7 +233,7 @@ namespace Google.Identity.AccessContextManager.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetAccessLevelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AccessLevel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null);
+            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null, null);
             AccessLevel responseCallSettings = await client.GetAccessLevelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AccessLevel responseCancellationToken = await client.GetAccessLevelAsync(request, st::CancellationToken.None);
@@ -260,7 +261,7 @@ namespace Google.Identity.AccessContextManager.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetAccessLevel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null);
+            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null, null);
             AccessLevel response = client.GetAccessLevel(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -286,7 +287,7 @@ namespace Google.Identity.AccessContextManager.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetAccessLevelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AccessLevel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null);
+            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null, null);
             AccessLevel responseCallSettings = await client.GetAccessLevelAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AccessLevel responseCancellationToken = await client.GetAccessLevelAsync(request.Name, st::CancellationToken.None);
@@ -314,7 +315,7 @@ namespace Google.Identity.AccessContextManager.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetAccessLevel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null);
+            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null, null);
             AccessLevel response = client.GetAccessLevel(request.AccessLevelName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -340,7 +341,7 @@ namespace Google.Identity.AccessContextManager.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetAccessLevelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AccessLevel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null);
+            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null, null);
             AccessLevel responseCallSettings = await client.GetAccessLevelAsync(request.AccessLevelName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AccessLevel responseCancellationToken = await client.GetAccessLevelAsync(request.AccessLevelName, st::CancellationToken.None);
@@ -370,7 +371,7 @@ namespace Google.Identity.AccessContextManager.V1.Tests
                 UseExplicitDryRunSpec = true,
             };
             mockGrpcClient.Setup(x => x.GetServicePerimeter(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null);
+            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null, null);
             ServicePerimeter response = client.GetServicePerimeter(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -398,7 +399,7 @@ namespace Google.Identity.AccessContextManager.V1.Tests
                 UseExplicitDryRunSpec = true,
             };
             mockGrpcClient.Setup(x => x.GetServicePerimeterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServicePerimeter>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null);
+            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null, null);
             ServicePerimeter responseCallSettings = await client.GetServicePerimeterAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ServicePerimeter responseCancellationToken = await client.GetServicePerimeterAsync(request, st::CancellationToken.None);
@@ -428,7 +429,7 @@ namespace Google.Identity.AccessContextManager.V1.Tests
                 UseExplicitDryRunSpec = true,
             };
             mockGrpcClient.Setup(x => x.GetServicePerimeter(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null);
+            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null, null);
             ServicePerimeter response = client.GetServicePerimeter(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -456,7 +457,7 @@ namespace Google.Identity.AccessContextManager.V1.Tests
                 UseExplicitDryRunSpec = true,
             };
             mockGrpcClient.Setup(x => x.GetServicePerimeterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServicePerimeter>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null);
+            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null, null);
             ServicePerimeter responseCallSettings = await client.GetServicePerimeterAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ServicePerimeter responseCancellationToken = await client.GetServicePerimeterAsync(request.Name, st::CancellationToken.None);
@@ -486,7 +487,7 @@ namespace Google.Identity.AccessContextManager.V1.Tests
                 UseExplicitDryRunSpec = true,
             };
             mockGrpcClient.Setup(x => x.GetServicePerimeter(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null);
+            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null, null);
             ServicePerimeter response = client.GetServicePerimeter(request.ServicePerimeterName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -514,7 +515,7 @@ namespace Google.Identity.AccessContextManager.V1.Tests
                 UseExplicitDryRunSpec = true,
             };
             mockGrpcClient.Setup(x => x.GetServicePerimeterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServicePerimeter>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null);
+            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null, null);
             ServicePerimeter responseCallSettings = await client.GetServicePerimeterAsync(request.ServicePerimeterName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ServicePerimeter responseCancellationToken = await client.GetServicePerimeterAsync(request.ServicePerimeterName, st::CancellationToken.None);
@@ -541,7 +542,7 @@ namespace Google.Identity.AccessContextManager.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetGcpUserAccessBinding(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null);
+            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null, null);
             GcpUserAccessBinding response = client.GetGcpUserAccessBinding(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -566,7 +567,7 @@ namespace Google.Identity.AccessContextManager.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetGcpUserAccessBindingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GcpUserAccessBinding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null);
+            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null, null);
             GcpUserAccessBinding responseCallSettings = await client.GetGcpUserAccessBindingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GcpUserAccessBinding responseCancellationToken = await client.GetGcpUserAccessBindingAsync(request, st::CancellationToken.None);
@@ -593,7 +594,7 @@ namespace Google.Identity.AccessContextManager.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetGcpUserAccessBinding(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null);
+            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null, null);
             GcpUserAccessBinding response = client.GetGcpUserAccessBinding(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -618,7 +619,7 @@ namespace Google.Identity.AccessContextManager.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetGcpUserAccessBindingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GcpUserAccessBinding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null);
+            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null, null);
             GcpUserAccessBinding responseCallSettings = await client.GetGcpUserAccessBindingAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GcpUserAccessBinding responseCancellationToken = await client.GetGcpUserAccessBindingAsync(request.Name, st::CancellationToken.None);
@@ -645,7 +646,7 @@ namespace Google.Identity.AccessContextManager.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetGcpUserAccessBinding(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null);
+            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null, null);
             GcpUserAccessBinding response = client.GetGcpUserAccessBinding(request.GcpUserAccessBindingName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -670,7 +671,7 @@ namespace Google.Identity.AccessContextManager.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetGcpUserAccessBindingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GcpUserAccessBinding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null);
+            AccessContextManagerClient client = new AccessContextManagerClientImpl(mockGrpcClient.Object, null, null);
             GcpUserAccessBinding responseCallSettings = await client.GetGcpUserAccessBindingAsync(request.GcpUserAccessBindingName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GcpUserAccessBinding responseCancellationToken = await client.GetGcpUserAccessBindingAsync(request.GcpUserAccessBindingName, st::CancellationToken.None);

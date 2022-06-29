@@ -1,5 +1,38 @@
 # Version history
 
+## Version 3.0.0, released 2022-06-08
+
+This is the first version of this package to depend on GAX v4.
+
+There are some breaking changes, both in GAX v4 and in the generated
+code. The changes that aren't specific to any given API are [described in the Google Cloud
+documentation](https://cloud.google.com/dotnet/docs/reference/help/breaking-gax4).
+We don't anticipate any changes to most customer code, but please [file a
+GitHub issue](https://github.com/googleapis/google-cloud-dotnet/issues/new/choose)
+if you run into problems.
+
+The most important change in this release is the use of the Grpc.Net.Client package
+for gRPC communication, instead of Grpc.Core. When using .NET Core 3.1 or .NET 5.0+
+this should lead to a smaller installation footprint and greater compatibility (e.g.
+with Apple M1 chips). Any significant change in a core component comes with the risk
+of incompatibility, however - so again, please let us know if you encounter any
+issues.
+
+
+## Version 2.9.0, released 2022-05-24
+
+### New features
+
+- Add adaptation proto for v1 api ([commit 1c5ae72](https://github.com/googleapis/google-cloud-dotnet/commit/1c5ae72d726a594e08e92a3a652f61a2263bbdc2))
+
+### Documentation improvements
+
+- Add documentation for latest models to RecognitionConfig ([commit f50b641](https://github.com/googleapis/google-cloud-dotnet/commit/f50b641216be4dc3847aa954fb291fcccfed4101))
+
+## Version 2.8.0, released 2022-04-26
+
+No API surface changes; just dependency updates.
+
 ## Version 2.7.0, released 2021-12-07
 
 - [Commit cbbd9a3](https://github.com/googleapis/google-cloud-dotnet/commit/cbbd9a3):

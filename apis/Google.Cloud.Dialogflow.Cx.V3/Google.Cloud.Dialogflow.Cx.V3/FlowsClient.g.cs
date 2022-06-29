@@ -14,14 +14,16 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -59,6 +61,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             ImportFlowOperationsSettings = existing.ImportFlowOperationsSettings.Clone();
             ExportFlowSettings = existing.ExportFlowSettings;
             ExportFlowOperationsSettings = existing.ExportFlowOperationsSettings.Clone();
+            LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
 
@@ -298,6 +301,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
 
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="FlowsSettings"/> object.</returns>
         public FlowsSettings Clone() => new FlowsSettings(this);
@@ -312,9 +320,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         public FlowsSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public FlowsClientBuilder()
+        public FlowsClientBuilder() : base(FlowsClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = FlowsClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref FlowsClient client);
@@ -341,29 +348,18 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return FlowsClient.Create(callInvoker, Settings);
+            return FlowsClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<FlowsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return FlowsClient.Create(callInvoker, Settings);
+            return FlowsClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => FlowsClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => FlowsClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => FlowsClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>Flows client wrapper, for convenient use.</summary>
@@ -392,19 +388,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             "https://www.googleapis.com/auth/dialogflow",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Flows.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="FlowsClient"/> using the default credentials, endpoint and settings. To
@@ -431,8 +418,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="FlowsSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="FlowsClient"/>.</returns>
-        internal static FlowsClient Create(grpccore::CallInvoker callInvoker, FlowsSettings settings = null)
+        internal static FlowsClient Create(grpccore::CallInvoker callInvoker, FlowsSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -441,7 +429,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             Flows.FlowsClient grpcClient = new Flows.FlowsClient(callInvoker);
-            return new FlowsClientImpl(grpcClient, settings);
+            return new FlowsClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -459,6 +447,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>The underlying gRPC Flows client</summary>
         public virtual Flows.FlowsClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Creates a flow in the specified agent.
@@ -1720,42 +1711,44 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="FlowsSettings"/> used within this client.</param>
-        public FlowsClientImpl(Flows.FlowsClient grpcClient, FlowsSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public FlowsClientImpl(Flows.FlowsClient grpcClient, FlowsSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             FlowsSettings effectiveSettings = settings ?? FlowsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            TrainFlowOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.TrainFlowOperationsSettings);
-            ImportFlowOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportFlowOperationsSettings);
-            ExportFlowOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportFlowOperationsSettings);
-            _callCreateFlow = clientHelper.BuildApiCall<CreateFlowRequest, Flow>(grpcClient.CreateFlowAsync, grpcClient.CreateFlow, effectiveSettings.CreateFlowSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            TrainFlowOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.TrainFlowOperationsSettings, logger);
+            ImportFlowOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportFlowOperationsSettings, logger);
+            ExportFlowOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportFlowOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
+            _callCreateFlow = clientHelper.BuildApiCall<CreateFlowRequest, Flow>("CreateFlow", grpcClient.CreateFlowAsync, grpcClient.CreateFlow, effectiveSettings.CreateFlowSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateFlow);
             Modify_CreateFlowApiCall(ref _callCreateFlow);
-            _callDeleteFlow = clientHelper.BuildApiCall<DeleteFlowRequest, wkt::Empty>(grpcClient.DeleteFlowAsync, grpcClient.DeleteFlow, effectiveSettings.DeleteFlowSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteFlow = clientHelper.BuildApiCall<DeleteFlowRequest, wkt::Empty>("DeleteFlow", grpcClient.DeleteFlowAsync, grpcClient.DeleteFlow, effectiveSettings.DeleteFlowSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteFlow);
             Modify_DeleteFlowApiCall(ref _callDeleteFlow);
-            _callListFlows = clientHelper.BuildApiCall<ListFlowsRequest, ListFlowsResponse>(grpcClient.ListFlowsAsync, grpcClient.ListFlows, effectiveSettings.ListFlowsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListFlows = clientHelper.BuildApiCall<ListFlowsRequest, ListFlowsResponse>("ListFlows", grpcClient.ListFlowsAsync, grpcClient.ListFlows, effectiveSettings.ListFlowsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListFlows);
             Modify_ListFlowsApiCall(ref _callListFlows);
-            _callGetFlow = clientHelper.BuildApiCall<GetFlowRequest, Flow>(grpcClient.GetFlowAsync, grpcClient.GetFlow, effectiveSettings.GetFlowSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetFlow = clientHelper.BuildApiCall<GetFlowRequest, Flow>("GetFlow", grpcClient.GetFlowAsync, grpcClient.GetFlow, effectiveSettings.GetFlowSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetFlow);
             Modify_GetFlowApiCall(ref _callGetFlow);
-            _callUpdateFlow = clientHelper.BuildApiCall<UpdateFlowRequest, Flow>(grpcClient.UpdateFlowAsync, grpcClient.UpdateFlow, effectiveSettings.UpdateFlowSettings).WithGoogleRequestParam("flow.name", request => request.Flow?.Name);
+            _callUpdateFlow = clientHelper.BuildApiCall<UpdateFlowRequest, Flow>("UpdateFlow", grpcClient.UpdateFlowAsync, grpcClient.UpdateFlow, effectiveSettings.UpdateFlowSettings).WithGoogleRequestParam("flow.name", request => request.Flow?.Name);
             Modify_ApiCall(ref _callUpdateFlow);
             Modify_UpdateFlowApiCall(ref _callUpdateFlow);
-            _callTrainFlow = clientHelper.BuildApiCall<TrainFlowRequest, lro::Operation>(grpcClient.TrainFlowAsync, grpcClient.TrainFlow, effectiveSettings.TrainFlowSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callTrainFlow = clientHelper.BuildApiCall<TrainFlowRequest, lro::Operation>("TrainFlow", grpcClient.TrainFlowAsync, grpcClient.TrainFlow, effectiveSettings.TrainFlowSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callTrainFlow);
             Modify_TrainFlowApiCall(ref _callTrainFlow);
-            _callValidateFlow = clientHelper.BuildApiCall<ValidateFlowRequest, FlowValidationResult>(grpcClient.ValidateFlowAsync, grpcClient.ValidateFlow, effectiveSettings.ValidateFlowSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callValidateFlow = clientHelper.BuildApiCall<ValidateFlowRequest, FlowValidationResult>("ValidateFlow", grpcClient.ValidateFlowAsync, grpcClient.ValidateFlow, effectiveSettings.ValidateFlowSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callValidateFlow);
             Modify_ValidateFlowApiCall(ref _callValidateFlow);
-            _callGetFlowValidationResult = clientHelper.BuildApiCall<GetFlowValidationResultRequest, FlowValidationResult>(grpcClient.GetFlowValidationResultAsync, grpcClient.GetFlowValidationResult, effectiveSettings.GetFlowValidationResultSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetFlowValidationResult = clientHelper.BuildApiCall<GetFlowValidationResultRequest, FlowValidationResult>("GetFlowValidationResult", grpcClient.GetFlowValidationResultAsync, grpcClient.GetFlowValidationResult, effectiveSettings.GetFlowValidationResultSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetFlowValidationResult);
             Modify_GetFlowValidationResultApiCall(ref _callGetFlowValidationResult);
-            _callImportFlow = clientHelper.BuildApiCall<ImportFlowRequest, lro::Operation>(grpcClient.ImportFlowAsync, grpcClient.ImportFlow, effectiveSettings.ImportFlowSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callImportFlow = clientHelper.BuildApiCall<ImportFlowRequest, lro::Operation>("ImportFlow", grpcClient.ImportFlowAsync, grpcClient.ImportFlow, effectiveSettings.ImportFlowSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callImportFlow);
             Modify_ImportFlowApiCall(ref _callImportFlow);
-            _callExportFlow = clientHelper.BuildApiCall<ExportFlowRequest, lro::Operation>(grpcClient.ExportFlowAsync, grpcClient.ExportFlow, effectiveSettings.ExportFlowSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callExportFlow = clientHelper.BuildApiCall<ExportFlowRequest, lro::Operation>("ExportFlow", grpcClient.ExportFlowAsync, grpcClient.ExportFlow, effectiveSettings.ExportFlowSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callExportFlow);
             Modify_ExportFlowApiCall(ref _callExportFlow);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
@@ -1787,6 +1780,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>The underlying gRPC Flows client</summary>
         public override Flows.FlowsClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
 
         partial void Modify_CreateFlowRequest(ref CreateFlowRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2177,6 +2173,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class Flows
+    {
+        public partial class FlowsClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
         }
     }
 }

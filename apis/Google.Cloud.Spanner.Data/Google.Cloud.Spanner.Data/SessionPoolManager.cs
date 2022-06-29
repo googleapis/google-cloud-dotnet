@@ -13,19 +13,21 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
+using Google.Api.Gax.Grpc.Gcp;
 using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Grpc.Core;
-using Grpc.Gcp;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using static Grpc.Gcp.AffinityConfig.Types;
+using static Google.Api.Gax.Grpc.Gcp.AffinityConfig.Types;
 
 namespace Google.Cloud.Spanner.Data
 {
@@ -35,7 +37,13 @@ namespace Google.Cloud.Spanner.Data
     /// required.
     /// </summary>
     public sealed class SessionPoolManager
-    {
+    {        
+        // TODO: Should these be configurable?
+        private static readonly GrpcChannelOptions s_grpcChannelOptions = GrpcChannelOptions.Empty
+            .WithKeepAliveTime(TimeSpan.FromMinutes(1))
+            .WithEnableServiceConfigResolution(false)
+            .WithMaxReceiveMessageSize(int.MaxValue);
+
         /// <summary>
         /// Static constructor to ensure that the static initializers aren't run before the first explicit
         /// reference to the class. This in turn ensures that a call to <see cref="Logger.SetDefaultLogger(Logger)" />
@@ -298,29 +306,21 @@ namespace Google.Cloud.Spanner.Data
         };
 
         /// <inheritdoc />
-        private static async Task<SpannerClient> CreateClientAsync(SpannerClientCreationOptions channelOptions, SpannerSettings spannerSettings, Logger logger)
+        private static async Task<SpannerClient> CreateClientAsync(SpannerClientCreationOptions clientCreationOptions, SpannerSettings spannerSettings, Logger logger)
         {
-            var credentials = await channelOptions.GetCredentialsAsync().ConfigureAwait(false);
+            var credentials = await clientCreationOptions.GetCredentialsAsync().ConfigureAwait(false);
 
             var apiConfig = new ApiConfig
             {
                 ChannelPool = new ChannelPoolConfig
                 {
-                    MaxSize = (uint)channelOptions.MaximumGrpcChannels,
-                    MaxConcurrentStreamsLowWatermark = channelOptions.MaximumConcurrentStreamsLowWatermark
+                    MaxSize = (uint)clientCreationOptions.MaximumGrpcChannels,
+                    MaxConcurrentStreamsLowWatermark = clientCreationOptions.MaximumConcurrentStreamsLowWatermark
                 },
                 Method = { s_methodConfigs }
             };
 
-            var grpcOptions = new List<ChannelOption>
-            {
-                // Keep the channel alive for streaming requests.
-                new ChannelOption("grpc.keepalive_time_ms", 60_000),
-                new ChannelOption(GcpCallInvoker.ApiConfigChannelArg, apiConfig.ToString())
-            };
-
-            var callInvoker = new GcpCallInvoker(channelOptions.Endpoint, credentials, grpcOptions);
-
+            var callInvoker = new GcpCallInvoker(SpannerClient.ServiceMetadata, clientCreationOptions.Endpoint, credentials, s_grpcChannelOptions, apiConfig, clientCreationOptions.GrpcAdapter);
             return new SpannerClientBuilder
             {
                 CallInvoker = callInvoker,

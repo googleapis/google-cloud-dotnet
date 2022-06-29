@@ -14,16 +14,18 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
+using gcbcv = Google.Cloud.Bigtable.Common.V2;
 using gciv = Google.Cloud.Iam.V1;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -348,20 +350,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
-        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings PartialUpdateClusterSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+        public gaxgrpc::CallSettings PartialUpdateClusterSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>BigtableInstanceAdminClient.PartialUpdateCluster</c> and
@@ -594,9 +587,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         public BigtableInstanceAdminSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public BigtableInstanceAdminClientBuilder()
+        public BigtableInstanceAdminClientBuilder() : base(BigtableInstanceAdminClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = BigtableInstanceAdminClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref BigtableInstanceAdminClient client);
@@ -623,29 +615,18 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return BigtableInstanceAdminClient.Create(callInvoker, Settings);
+            return BigtableInstanceAdminClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<BigtableInstanceAdminClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return BigtableInstanceAdminClient.Create(callInvoker, Settings);
+            return BigtableInstanceAdminClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => BigtableInstanceAdminClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => BigtableInstanceAdminClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => BigtableInstanceAdminClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>BigtableInstanceAdmin client wrapper, for convenient use.</summary>
@@ -686,19 +667,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
             "https://www.googleapis.com/auth/cloud-platform.read-only",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(BigtableInstanceAdmin.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="BigtableInstanceAdminClient"/> using the default credentials, endpoint
@@ -728,8 +700,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="BigtableInstanceAdminSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="BigtableInstanceAdminClient"/>.</returns>
-        internal static BigtableInstanceAdminClient Create(grpccore::CallInvoker callInvoker, BigtableInstanceAdminSettings settings = null)
+        internal static BigtableInstanceAdminClient Create(grpccore::CallInvoker callInvoker, BigtableInstanceAdminSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -738,7 +711,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             BigtableInstanceAdmin.BigtableInstanceAdminClient grpcClient = new BigtableInstanceAdmin.BigtableInstanceAdminClient(callInvoker);
-            return new BigtableInstanceAdminClientImpl(grpcClient, settings);
+            return new BigtableInstanceAdminClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1146,7 +1119,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Instance GetInstance(InstanceName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual Instance GetInstance(gcbcv::InstanceName name, gaxgrpc::CallSettings callSettings = null) =>
             GetInstance(new GetInstanceRequest
             {
                 InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -1161,7 +1134,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Instance> GetInstanceAsync(InstanceName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<Instance> GetInstanceAsync(gcbcv::InstanceName name, gaxgrpc::CallSettings callSettings = null) =>
             GetInstanceAsync(new GetInstanceRequest
             {
                 InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -1176,7 +1149,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Instance> GetInstanceAsync(InstanceName name, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<Instance> GetInstanceAsync(gcbcv::InstanceName name, st::CancellationToken cancellationToken) =>
             GetInstanceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1514,7 +1487,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual void DeleteInstance(InstanceName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual void DeleteInstance(gcbcv::InstanceName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteInstance(new DeleteInstanceRequest
             {
                 InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -1529,7 +1502,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteInstanceAsync(InstanceName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task DeleteInstanceAsync(gcbcv::InstanceName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteInstanceAsync(new DeleteInstanceRequest
             {
                 InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -1544,7 +1517,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteInstanceAsync(InstanceName name, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task DeleteInstanceAsync(gcbcv::InstanceName name, st::CancellationToken cancellationToken) =>
             DeleteInstanceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1737,7 +1710,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<Cluster, CreateClusterMetadata> CreateCluster(InstanceName parent, string clusterId, Cluster cluster, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Cluster, CreateClusterMetadata> CreateCluster(gcbcv::InstanceName parent, string clusterId, Cluster cluster, gaxgrpc::CallSettings callSettings = null) =>
             CreateCluster(new CreateClusterRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -1770,7 +1743,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Cluster, CreateClusterMetadata>> CreateClusterAsync(InstanceName parent, string clusterId, Cluster cluster, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Cluster, CreateClusterMetadata>> CreateClusterAsync(gcbcv::InstanceName parent, string clusterId, Cluster cluster, gaxgrpc::CallSettings callSettings = null) =>
             CreateClusterAsync(new CreateClusterRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -1803,7 +1776,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Cluster, CreateClusterMetadata>> CreateClusterAsync(InstanceName parent, string clusterId, Cluster cluster, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Cluster, CreateClusterMetadata>> CreateClusterAsync(gcbcv::InstanceName parent, string clusterId, Cluster cluster, st::CancellationToken cancellationToken) =>
             CreateClusterAsync(parent, clusterId, cluster, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2003,7 +1976,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual ListClustersResponse ListClusters(InstanceName parent, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual ListClustersResponse ListClusters(gcbcv::InstanceName parent, gaxgrpc::CallSettings callSettings = null) =>
             ListClusters(new ListClustersRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -2020,7 +1993,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ListClustersResponse> ListClustersAsync(InstanceName parent, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<ListClustersResponse> ListClustersAsync(gcbcv::InstanceName parent, gaxgrpc::CallSettings callSettings = null) =>
             ListClustersAsync(new ListClustersRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -2037,7 +2010,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ListClustersResponse> ListClustersAsync(InstanceName parent, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<ListClustersResponse> ListClustersAsync(gcbcv::InstanceName parent, st::CancellationToken cancellationToken) =>
             ListClustersAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2511,7 +2484,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual AppProfile CreateAppProfile(InstanceName parent, string appProfileId, AppProfile appProfile, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual AppProfile CreateAppProfile(gcbcv::InstanceName parent, string appProfileId, AppProfile appProfile, gaxgrpc::CallSettings callSettings = null) =>
             CreateAppProfile(new CreateAppProfileRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -2538,7 +2511,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<AppProfile> CreateAppProfileAsync(InstanceName parent, string appProfileId, AppProfile appProfile, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<AppProfile> CreateAppProfileAsync(gcbcv::InstanceName parent, string appProfileId, AppProfile appProfile, gaxgrpc::CallSettings callSettings = null) =>
             CreateAppProfileAsync(new CreateAppProfileRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -2565,7 +2538,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<AppProfile> CreateAppProfileAsync(InstanceName parent, string appProfileId, AppProfile appProfile, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<AppProfile> CreateAppProfileAsync(gcbcv::InstanceName parent, string appProfileId, AppProfile appProfile, st::CancellationToken cancellationToken) =>
             CreateAppProfileAsync(parent, appProfileId, appProfile, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2773,7 +2746,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AppProfile"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfiles(InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual gax::PagedEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfiles(gcbcv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListAppProfiles(new ListAppProfilesRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -2801,7 +2774,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AppProfile"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfilesAsync(InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual gax::PagedAsyncEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfilesAsync(gcbcv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListAppProfilesAsync(new ListAppProfilesRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -3654,78 +3627,79 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="BigtableInstanceAdminSettings"/> used within this client.</param>
-        public BigtableInstanceAdminClientImpl(BigtableInstanceAdmin.BigtableInstanceAdminClient grpcClient, BigtableInstanceAdminSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public BigtableInstanceAdminClientImpl(BigtableInstanceAdmin.BigtableInstanceAdminClient grpcClient, BigtableInstanceAdminSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             BigtableInstanceAdminSettings effectiveSettings = settings ?? BigtableInstanceAdminSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateInstanceOperationsSettings);
-            PartialUpdateInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PartialUpdateInstanceOperationsSettings);
-            CreateClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateClusterOperationsSettings);
-            UpdateClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateClusterOperationsSettings);
-            PartialUpdateClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PartialUpdateClusterOperationsSettings);
-            UpdateAppProfileOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAppProfileOperationsSettings);
-            _callCreateInstance = clientHelper.BuildApiCall<CreateInstanceRequest, lro::Operation>(grpcClient.CreateInstanceAsync, grpcClient.CreateInstance, effectiveSettings.CreateInstanceSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateInstanceOperationsSettings, logger);
+            PartialUpdateInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PartialUpdateInstanceOperationsSettings, logger);
+            CreateClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateClusterOperationsSettings, logger);
+            UpdateClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateClusterOperationsSettings, logger);
+            PartialUpdateClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PartialUpdateClusterOperationsSettings, logger);
+            UpdateAppProfileOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAppProfileOperationsSettings, logger);
+            _callCreateInstance = clientHelper.BuildApiCall<CreateInstanceRequest, lro::Operation>("CreateInstance", grpcClient.CreateInstanceAsync, grpcClient.CreateInstance, effectiveSettings.CreateInstanceSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateInstance);
             Modify_CreateInstanceApiCall(ref _callCreateInstance);
-            _callGetInstance = clientHelper.BuildApiCall<GetInstanceRequest, Instance>(grpcClient.GetInstanceAsync, grpcClient.GetInstance, effectiveSettings.GetInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetInstance = clientHelper.BuildApiCall<GetInstanceRequest, Instance>("GetInstance", grpcClient.GetInstanceAsync, grpcClient.GetInstance, effectiveSettings.GetInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetInstance);
             Modify_GetInstanceApiCall(ref _callGetInstance);
-            _callListInstances = clientHelper.BuildApiCall<ListInstancesRequest, ListInstancesResponse>(grpcClient.ListInstancesAsync, grpcClient.ListInstances, effectiveSettings.ListInstancesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListInstances = clientHelper.BuildApiCall<ListInstancesRequest, ListInstancesResponse>("ListInstances", grpcClient.ListInstancesAsync, grpcClient.ListInstances, effectiveSettings.ListInstancesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListInstances);
             Modify_ListInstancesApiCall(ref _callListInstances);
-            _callUpdateInstance = clientHelper.BuildApiCall<Instance, Instance>(grpcClient.UpdateInstanceAsync, grpcClient.UpdateInstance, effectiveSettings.UpdateInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUpdateInstance = clientHelper.BuildApiCall<Instance, Instance>("UpdateInstance", grpcClient.UpdateInstanceAsync, grpcClient.UpdateInstance, effectiveSettings.UpdateInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUpdateInstance);
             Modify_UpdateInstanceApiCall(ref _callUpdateInstance);
-            _callPartialUpdateInstance = clientHelper.BuildApiCall<PartialUpdateInstanceRequest, lro::Operation>(grpcClient.PartialUpdateInstanceAsync, grpcClient.PartialUpdateInstance, effectiveSettings.PartialUpdateInstanceSettings).WithGoogleRequestParam("instance.name", request => request.Instance?.Name);
+            _callPartialUpdateInstance = clientHelper.BuildApiCall<PartialUpdateInstanceRequest, lro::Operation>("PartialUpdateInstance", grpcClient.PartialUpdateInstanceAsync, grpcClient.PartialUpdateInstance, effectiveSettings.PartialUpdateInstanceSettings).WithGoogleRequestParam("instance.name", request => request.Instance?.Name);
             Modify_ApiCall(ref _callPartialUpdateInstance);
             Modify_PartialUpdateInstanceApiCall(ref _callPartialUpdateInstance);
-            _callDeleteInstance = clientHelper.BuildApiCall<DeleteInstanceRequest, wkt::Empty>(grpcClient.DeleteInstanceAsync, grpcClient.DeleteInstance, effectiveSettings.DeleteInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteInstance = clientHelper.BuildApiCall<DeleteInstanceRequest, wkt::Empty>("DeleteInstance", grpcClient.DeleteInstanceAsync, grpcClient.DeleteInstance, effectiveSettings.DeleteInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteInstance);
             Modify_DeleteInstanceApiCall(ref _callDeleteInstance);
-            _callCreateCluster = clientHelper.BuildApiCall<CreateClusterRequest, lro::Operation>(grpcClient.CreateClusterAsync, grpcClient.CreateCluster, effectiveSettings.CreateClusterSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateCluster = clientHelper.BuildApiCall<CreateClusterRequest, lro::Operation>("CreateCluster", grpcClient.CreateClusterAsync, grpcClient.CreateCluster, effectiveSettings.CreateClusterSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateCluster);
             Modify_CreateClusterApiCall(ref _callCreateCluster);
-            _callGetCluster = clientHelper.BuildApiCall<GetClusterRequest, Cluster>(grpcClient.GetClusterAsync, grpcClient.GetCluster, effectiveSettings.GetClusterSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetCluster = clientHelper.BuildApiCall<GetClusterRequest, Cluster>("GetCluster", grpcClient.GetClusterAsync, grpcClient.GetCluster, effectiveSettings.GetClusterSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetCluster);
             Modify_GetClusterApiCall(ref _callGetCluster);
-            _callListClusters = clientHelper.BuildApiCall<ListClustersRequest, ListClustersResponse>(grpcClient.ListClustersAsync, grpcClient.ListClusters, effectiveSettings.ListClustersSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListClusters = clientHelper.BuildApiCall<ListClustersRequest, ListClustersResponse>("ListClusters", grpcClient.ListClustersAsync, grpcClient.ListClusters, effectiveSettings.ListClustersSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListClusters);
             Modify_ListClustersApiCall(ref _callListClusters);
-            _callUpdateCluster = clientHelper.BuildApiCall<Cluster, lro::Operation>(grpcClient.UpdateClusterAsync, grpcClient.UpdateCluster, effectiveSettings.UpdateClusterSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUpdateCluster = clientHelper.BuildApiCall<Cluster, lro::Operation>("UpdateCluster", grpcClient.UpdateClusterAsync, grpcClient.UpdateCluster, effectiveSettings.UpdateClusterSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUpdateCluster);
             Modify_UpdateClusterApiCall(ref _callUpdateCluster);
-            _callPartialUpdateCluster = clientHelper.BuildApiCall<PartialUpdateClusterRequest, lro::Operation>(grpcClient.PartialUpdateClusterAsync, grpcClient.PartialUpdateCluster, effectiveSettings.PartialUpdateClusterSettings).WithGoogleRequestParam("cluster.name", request => request.Cluster?.Name);
+            _callPartialUpdateCluster = clientHelper.BuildApiCall<PartialUpdateClusterRequest, lro::Operation>("PartialUpdateCluster", grpcClient.PartialUpdateClusterAsync, grpcClient.PartialUpdateCluster, effectiveSettings.PartialUpdateClusterSettings).WithGoogleRequestParam("cluster.name", request => request.Cluster?.Name);
             Modify_ApiCall(ref _callPartialUpdateCluster);
             Modify_PartialUpdateClusterApiCall(ref _callPartialUpdateCluster);
-            _callDeleteCluster = clientHelper.BuildApiCall<DeleteClusterRequest, wkt::Empty>(grpcClient.DeleteClusterAsync, grpcClient.DeleteCluster, effectiveSettings.DeleteClusterSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteCluster = clientHelper.BuildApiCall<DeleteClusterRequest, wkt::Empty>("DeleteCluster", grpcClient.DeleteClusterAsync, grpcClient.DeleteCluster, effectiveSettings.DeleteClusterSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteCluster);
             Modify_DeleteClusterApiCall(ref _callDeleteCluster);
-            _callCreateAppProfile = clientHelper.BuildApiCall<CreateAppProfileRequest, AppProfile>(grpcClient.CreateAppProfileAsync, grpcClient.CreateAppProfile, effectiveSettings.CreateAppProfileSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateAppProfile = clientHelper.BuildApiCall<CreateAppProfileRequest, AppProfile>("CreateAppProfile", grpcClient.CreateAppProfileAsync, grpcClient.CreateAppProfile, effectiveSettings.CreateAppProfileSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateAppProfile);
             Modify_CreateAppProfileApiCall(ref _callCreateAppProfile);
-            _callGetAppProfile = clientHelper.BuildApiCall<GetAppProfileRequest, AppProfile>(grpcClient.GetAppProfileAsync, grpcClient.GetAppProfile, effectiveSettings.GetAppProfileSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetAppProfile = clientHelper.BuildApiCall<GetAppProfileRequest, AppProfile>("GetAppProfile", grpcClient.GetAppProfileAsync, grpcClient.GetAppProfile, effectiveSettings.GetAppProfileSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetAppProfile);
             Modify_GetAppProfileApiCall(ref _callGetAppProfile);
-            _callListAppProfiles = clientHelper.BuildApiCall<ListAppProfilesRequest, ListAppProfilesResponse>(grpcClient.ListAppProfilesAsync, grpcClient.ListAppProfiles, effectiveSettings.ListAppProfilesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListAppProfiles = clientHelper.BuildApiCall<ListAppProfilesRequest, ListAppProfilesResponse>("ListAppProfiles", grpcClient.ListAppProfilesAsync, grpcClient.ListAppProfiles, effectiveSettings.ListAppProfilesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListAppProfiles);
             Modify_ListAppProfilesApiCall(ref _callListAppProfiles);
-            _callUpdateAppProfile = clientHelper.BuildApiCall<UpdateAppProfileRequest, lro::Operation>(grpcClient.UpdateAppProfileAsync, grpcClient.UpdateAppProfile, effectiveSettings.UpdateAppProfileSettings).WithGoogleRequestParam("app_profile.name", request => request.AppProfile?.Name);
+            _callUpdateAppProfile = clientHelper.BuildApiCall<UpdateAppProfileRequest, lro::Operation>("UpdateAppProfile", grpcClient.UpdateAppProfileAsync, grpcClient.UpdateAppProfile, effectiveSettings.UpdateAppProfileSettings).WithGoogleRequestParam("app_profile.name", request => request.AppProfile?.Name);
             Modify_ApiCall(ref _callUpdateAppProfile);
             Modify_UpdateAppProfileApiCall(ref _callUpdateAppProfile);
-            _callDeleteAppProfile = clientHelper.BuildApiCall<DeleteAppProfileRequest, wkt::Empty>(grpcClient.DeleteAppProfileAsync, grpcClient.DeleteAppProfile, effectiveSettings.DeleteAppProfileSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteAppProfile = clientHelper.BuildApiCall<DeleteAppProfileRequest, wkt::Empty>("DeleteAppProfile", grpcClient.DeleteAppProfileAsync, grpcClient.DeleteAppProfile, effectiveSettings.DeleteAppProfileSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteAppProfile);
             Modify_DeleteAppProfileApiCall(ref _callDeleteAppProfile);
-            _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>(grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>("GetIamPolicy", grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callGetIamPolicy);
             Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
-            _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>(grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>("SetIamPolicy", grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callSetIamPolicy);
             Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);
-            _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>(grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callTestIamPermissions);
             Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
-            _callListHotTablets = clientHelper.BuildApiCall<ListHotTabletsRequest, ListHotTabletsResponse>(grpcClient.ListHotTabletsAsync, grpcClient.ListHotTablets, effectiveSettings.ListHotTabletsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListHotTablets = clientHelper.BuildApiCall<ListHotTabletsRequest, ListHotTabletsResponse>("ListHotTablets", grpcClient.ListHotTabletsAsync, grpcClient.ListHotTablets, effectiveSettings.ListHotTabletsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListHotTablets);
             Modify_ListHotTabletsApiCall(ref _callListHotTablets);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

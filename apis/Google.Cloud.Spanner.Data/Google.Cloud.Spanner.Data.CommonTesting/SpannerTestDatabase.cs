@@ -124,6 +124,11 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
         {
             if (SpannerClientCreationOptions.UsesEmulator)
             {
+#if NETSTANDARD2_1
+                // On .NET Core 3.1 (but not .NET 6) Grpc.Net.Client needs an additional switch
+                // to allow an insecure channel in HTTP/2.
+                AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
+#endif
                 // Try to create an instance on the emulator and ignore any AlreadyExists error.
                 var adminClientBuilder = new InstanceAdminClientBuilder
                 {
@@ -157,7 +162,11 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
         public SpannerConnection GetConnection() => new SpannerConnection(ConnectionString);
 
         // Creates a SpannerConnection with a specific logger.
-        public SpannerConnection GetConnection(Logger logger) =>
-            new SpannerConnection(new SpannerConnectionStringBuilder(ConnectionString) { SessionPoolManager = SessionPoolManager.Create(new V1.SessionPoolOptions(), logger) });
+        public SpannerConnection GetConnection(Logger logger, bool logCommitStats = false) =>
+            new SpannerConnection(new SpannerConnectionStringBuilder(ConnectionString)
+            { 
+                SessionPoolManager = SessionPoolManager.Create(new V1.SessionPoolOptions(), logger),
+                LogCommitStats = logCommitStats
+            });
     }
 }

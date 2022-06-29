@@ -14,15 +14,18 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -64,6 +67,8 @@ namespace Google.Cloud.AIPlatform.V1
             CheckTrialEarlyStoppingStateOperationsSettings = existing.CheckTrialEarlyStoppingStateOperationsSettings.Clone();
             StopTrialSettings = existing.StopTrialSettings;
             ListOptimalTrialsSettings = existing.ListOptimalTrialsSettings;
+            LocationsSettings = existing.LocationsSettings;
+            IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
@@ -286,6 +291,16 @@ namespace Google.Cloud.AIPlatform.V1
         /// </remarks>
         public gaxgrpc::CallSettings ListOptimalTrialsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
+        /// <summary>
+        /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
+        /// </summary>
+        public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="VizierServiceSettings"/> object.</returns>
         public VizierServiceSettings Clone() => new VizierServiceSettings(this);
@@ -301,9 +316,8 @@ namespace Google.Cloud.AIPlatform.V1
         public VizierServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public VizierServiceClientBuilder()
+        public VizierServiceClientBuilder() : base(VizierServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = VizierServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref VizierServiceClient client);
@@ -330,29 +344,18 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return VizierServiceClient.Create(callInvoker, Settings);
+            return VizierServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<VizierServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return VizierServiceClient.Create(callInvoker, Settings);
+            return VizierServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => VizierServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => VizierServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => VizierServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>VizierService client wrapper, for convenient use.</summary>
@@ -383,19 +386,10 @@ namespace Google.Cloud.AIPlatform.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(VizierService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="VizierServiceClient"/> using the default credentials, endpoint and
@@ -422,8 +416,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="VizierServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="VizierServiceClient"/>.</returns>
-        internal static VizierServiceClient Create(grpccore::CallInvoker callInvoker, VizierServiceSettings settings = null)
+        internal static VizierServiceClient Create(grpccore::CallInvoker callInvoker, VizierServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -432,7 +427,7 @@ namespace Google.Cloud.AIPlatform.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             VizierService.VizierServiceClient grpcClient = new VizierService.VizierServiceClient(callInvoker);
-            return new VizierServiceClientImpl(grpcClient, settings);
+            return new VizierServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -450,6 +445,12 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>The underlying gRPC VizierService client</summary>
         public virtual VizierService.VizierServiceClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Creates a Study. A resource name will be generated after creation of the
@@ -1928,56 +1929,59 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="VizierServiceSettings"/> used within this client.</param>
-        public VizierServiceClientImpl(VizierService.VizierServiceClient grpcClient, VizierServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public VizierServiceClientImpl(VizierService.VizierServiceClient grpcClient, VizierServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             VizierServiceSettings effectiveSettings = settings ?? VizierServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            SuggestTrialsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SuggestTrialsOperationsSettings);
-            CheckTrialEarlyStoppingStateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CheckTrialEarlyStoppingStateOperationsSettings);
-            _callCreateStudy = clientHelper.BuildApiCall<CreateStudyRequest, Study>(grpcClient.CreateStudyAsync, grpcClient.CreateStudy, effectiveSettings.CreateStudySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            SuggestTrialsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SuggestTrialsOperationsSettings, logger);
+            CheckTrialEarlyStoppingStateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CheckTrialEarlyStoppingStateOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
+            _callCreateStudy = clientHelper.BuildApiCall<CreateStudyRequest, Study>("CreateStudy", grpcClient.CreateStudyAsync, grpcClient.CreateStudy, effectiveSettings.CreateStudySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateStudy);
             Modify_CreateStudyApiCall(ref _callCreateStudy);
-            _callGetStudy = clientHelper.BuildApiCall<GetStudyRequest, Study>(grpcClient.GetStudyAsync, grpcClient.GetStudy, effectiveSettings.GetStudySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetStudy = clientHelper.BuildApiCall<GetStudyRequest, Study>("GetStudy", grpcClient.GetStudyAsync, grpcClient.GetStudy, effectiveSettings.GetStudySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetStudy);
             Modify_GetStudyApiCall(ref _callGetStudy);
-            _callListStudies = clientHelper.BuildApiCall<ListStudiesRequest, ListStudiesResponse>(grpcClient.ListStudiesAsync, grpcClient.ListStudies, effectiveSettings.ListStudiesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListStudies = clientHelper.BuildApiCall<ListStudiesRequest, ListStudiesResponse>("ListStudies", grpcClient.ListStudiesAsync, grpcClient.ListStudies, effectiveSettings.ListStudiesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListStudies);
             Modify_ListStudiesApiCall(ref _callListStudies);
-            _callDeleteStudy = clientHelper.BuildApiCall<DeleteStudyRequest, wkt::Empty>(grpcClient.DeleteStudyAsync, grpcClient.DeleteStudy, effectiveSettings.DeleteStudySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteStudy = clientHelper.BuildApiCall<DeleteStudyRequest, wkt::Empty>("DeleteStudy", grpcClient.DeleteStudyAsync, grpcClient.DeleteStudy, effectiveSettings.DeleteStudySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteStudy);
             Modify_DeleteStudyApiCall(ref _callDeleteStudy);
-            _callLookupStudy = clientHelper.BuildApiCall<LookupStudyRequest, Study>(grpcClient.LookupStudyAsync, grpcClient.LookupStudy, effectiveSettings.LookupStudySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callLookupStudy = clientHelper.BuildApiCall<LookupStudyRequest, Study>("LookupStudy", grpcClient.LookupStudyAsync, grpcClient.LookupStudy, effectiveSettings.LookupStudySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callLookupStudy);
             Modify_LookupStudyApiCall(ref _callLookupStudy);
-            _callSuggestTrials = clientHelper.BuildApiCall<SuggestTrialsRequest, lro::Operation>(grpcClient.SuggestTrialsAsync, grpcClient.SuggestTrials, effectiveSettings.SuggestTrialsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callSuggestTrials = clientHelper.BuildApiCall<SuggestTrialsRequest, lro::Operation>("SuggestTrials", grpcClient.SuggestTrialsAsync, grpcClient.SuggestTrials, effectiveSettings.SuggestTrialsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callSuggestTrials);
             Modify_SuggestTrialsApiCall(ref _callSuggestTrials);
-            _callCreateTrial = clientHelper.BuildApiCall<CreateTrialRequest, Trial>(grpcClient.CreateTrialAsync, grpcClient.CreateTrial, effectiveSettings.CreateTrialSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateTrial = clientHelper.BuildApiCall<CreateTrialRequest, Trial>("CreateTrial", grpcClient.CreateTrialAsync, grpcClient.CreateTrial, effectiveSettings.CreateTrialSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateTrial);
             Modify_CreateTrialApiCall(ref _callCreateTrial);
-            _callGetTrial = clientHelper.BuildApiCall<GetTrialRequest, Trial>(grpcClient.GetTrialAsync, grpcClient.GetTrial, effectiveSettings.GetTrialSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetTrial = clientHelper.BuildApiCall<GetTrialRequest, Trial>("GetTrial", grpcClient.GetTrialAsync, grpcClient.GetTrial, effectiveSettings.GetTrialSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetTrial);
             Modify_GetTrialApiCall(ref _callGetTrial);
-            _callListTrials = clientHelper.BuildApiCall<ListTrialsRequest, ListTrialsResponse>(grpcClient.ListTrialsAsync, grpcClient.ListTrials, effectiveSettings.ListTrialsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListTrials = clientHelper.BuildApiCall<ListTrialsRequest, ListTrialsResponse>("ListTrials", grpcClient.ListTrialsAsync, grpcClient.ListTrials, effectiveSettings.ListTrialsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListTrials);
             Modify_ListTrialsApiCall(ref _callListTrials);
-            _callAddTrialMeasurement = clientHelper.BuildApiCall<AddTrialMeasurementRequest, Trial>(grpcClient.AddTrialMeasurementAsync, grpcClient.AddTrialMeasurement, effectiveSettings.AddTrialMeasurementSettings).WithGoogleRequestParam("trial_name", request => request.TrialName);
+            _callAddTrialMeasurement = clientHelper.BuildApiCall<AddTrialMeasurementRequest, Trial>("AddTrialMeasurement", grpcClient.AddTrialMeasurementAsync, grpcClient.AddTrialMeasurement, effectiveSettings.AddTrialMeasurementSettings).WithGoogleRequestParam("trial_name", request => request.TrialName);
             Modify_ApiCall(ref _callAddTrialMeasurement);
             Modify_AddTrialMeasurementApiCall(ref _callAddTrialMeasurement);
-            _callCompleteTrial = clientHelper.BuildApiCall<CompleteTrialRequest, Trial>(grpcClient.CompleteTrialAsync, grpcClient.CompleteTrial, effectiveSettings.CompleteTrialSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callCompleteTrial = clientHelper.BuildApiCall<CompleteTrialRequest, Trial>("CompleteTrial", grpcClient.CompleteTrialAsync, grpcClient.CompleteTrial, effectiveSettings.CompleteTrialSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCompleteTrial);
             Modify_CompleteTrialApiCall(ref _callCompleteTrial);
-            _callDeleteTrial = clientHelper.BuildApiCall<DeleteTrialRequest, wkt::Empty>(grpcClient.DeleteTrialAsync, grpcClient.DeleteTrial, effectiveSettings.DeleteTrialSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteTrial = clientHelper.BuildApiCall<DeleteTrialRequest, wkt::Empty>("DeleteTrial", grpcClient.DeleteTrialAsync, grpcClient.DeleteTrial, effectiveSettings.DeleteTrialSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteTrial);
             Modify_DeleteTrialApiCall(ref _callDeleteTrial);
-            _callCheckTrialEarlyStoppingState = clientHelper.BuildApiCall<CheckTrialEarlyStoppingStateRequest, lro::Operation>(grpcClient.CheckTrialEarlyStoppingStateAsync, grpcClient.CheckTrialEarlyStoppingState, effectiveSettings.CheckTrialEarlyStoppingStateSettings).WithGoogleRequestParam("trial_name", request => request.TrialName);
+            _callCheckTrialEarlyStoppingState = clientHelper.BuildApiCall<CheckTrialEarlyStoppingStateRequest, lro::Operation>("CheckTrialEarlyStoppingState", grpcClient.CheckTrialEarlyStoppingStateAsync, grpcClient.CheckTrialEarlyStoppingState, effectiveSettings.CheckTrialEarlyStoppingStateSettings).WithGoogleRequestParam("trial_name", request => request.TrialName);
             Modify_ApiCall(ref _callCheckTrialEarlyStoppingState);
             Modify_CheckTrialEarlyStoppingStateApiCall(ref _callCheckTrialEarlyStoppingState);
-            _callStopTrial = clientHelper.BuildApiCall<StopTrialRequest, Trial>(grpcClient.StopTrialAsync, grpcClient.StopTrial, effectiveSettings.StopTrialSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callStopTrial = clientHelper.BuildApiCall<StopTrialRequest, Trial>("StopTrial", grpcClient.StopTrialAsync, grpcClient.StopTrial, effectiveSettings.StopTrialSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callStopTrial);
             Modify_StopTrialApiCall(ref _callStopTrial);
-            _callListOptimalTrials = clientHelper.BuildApiCall<ListOptimalTrialsRequest, ListOptimalTrialsResponse>(grpcClient.ListOptimalTrialsAsync, grpcClient.ListOptimalTrials, effectiveSettings.ListOptimalTrialsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListOptimalTrials = clientHelper.BuildApiCall<ListOptimalTrialsRequest, ListOptimalTrialsResponse>("ListOptimalTrials", grpcClient.ListOptimalTrialsAsync, grpcClient.ListOptimalTrials, effectiveSettings.ListOptimalTrialsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListOptimalTrials);
             Modify_ListOptimalTrialsApiCall(ref _callListOptimalTrials);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
@@ -2019,6 +2023,12 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>The underlying gRPC VizierService client</summary>
         public override VizierService.VizierServiceClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
         partial void Modify_CreateStudyRequest(ref CreateStudyRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2478,6 +2488,32 @@ namespace Google.Cloud.AIPlatform.V1
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class VizierService
+    {
+        public partial class VizierServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
+
+            /// <summary>
+            /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gciv::IAMPolicy.IAMPolicyClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gciv::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() =>
+                new gciv::IAMPolicy.IAMPolicyClient(CallInvoker);
         }
     }
 }

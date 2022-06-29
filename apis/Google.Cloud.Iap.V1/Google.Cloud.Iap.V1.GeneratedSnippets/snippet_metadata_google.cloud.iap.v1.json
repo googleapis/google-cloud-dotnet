@@ -276,6 +276,727 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "iap_v1_generated_IdentityAwareProxyAdminService_ListTunnelDestGroups_sync",
+      "title": "ListTunnelDestGroupsRequestObject",
+      "description": "Snippet for ListTunnelDestGroups",
+      "file": "IdentityAwareProxyAdminServiceClient.ListTunnelDestGroupsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTunnelDestGroups",
+        "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.ListTunnelDestGroups",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Iap.V1.ListTunnelDestGroupsResponse, Google.Cloud.Iap.V1.TunnelDestGroup>",
+        "client": {
+          "shortName": "IdentityAwareProxyAdminServiceClient",
+          "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListTunnelDestGroups",
+          "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService.ListTunnelDestGroups",
+          "service": {
+            "shortName": "IdentityAwareProxyAdminService",
+            "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iap_v1_generated_IdentityAwareProxyAdminService_ListTunnelDestGroups_async",
+      "title": "ListTunnelDestGroupsRequestObjectAsync",
+      "description": "Snippet for ListTunnelDestGroupsAsync",
+      "file": "IdentityAwareProxyAdminServiceClient.ListTunnelDestGroupsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTunnelDestGroupsAsync",
+        "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.ListTunnelDestGroupsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Iap.V1.ListTunnelDestGroupsResponse, Google.Cloud.Iap.V1.TunnelDestGroup>",
+        "client": {
+          "shortName": "IdentityAwareProxyAdminServiceClient",
+          "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListTunnelDestGroups",
+          "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService.ListTunnelDestGroups",
+          "service": {
+            "shortName": "IdentityAwareProxyAdminService",
+            "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iap_v1_generated_IdentityAwareProxyAdminService_ListTunnelDestGroups_sync_flattened",
+      "title": "ListTunnelDestGroups",
+      "description": "Snippet for ListTunnelDestGroups",
+      "file": "IdentityAwareProxyAdminServiceClient.ListTunnelDestGroupsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTunnelDestGroups",
+        "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.ListTunnelDestGroups",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Iap.V1.ListTunnelDestGroupsResponse, Google.Cloud.Iap.V1.TunnelDestGroup>",
+        "client": {
+          "shortName": "IdentityAwareProxyAdminServiceClient",
+          "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListTunnelDestGroups",
+          "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService.ListTunnelDestGroups",
+          "service": {
+            "shortName": "IdentityAwareProxyAdminService",
+            "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iap_v1_generated_IdentityAwareProxyAdminService_ListTunnelDestGroups_async_flattened",
+      "title": "ListTunnelDestGroupsAsync",
+      "description": "Snippet for ListTunnelDestGroupsAsync",
+      "file": "IdentityAwareProxyAdminServiceClient.ListTunnelDestGroupsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTunnelDestGroupsAsync",
+        "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.ListTunnelDestGroupsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Iap.V1.ListTunnelDestGroupsResponse, Google.Cloud.Iap.V1.TunnelDestGroup>",
+        "client": {
+          "shortName": "IdentityAwareProxyAdminServiceClient",
+          "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListTunnelDestGroups",
+          "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService.ListTunnelDestGroups",
+          "service": {
+            "shortName": "IdentityAwareProxyAdminService",
+            "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iap_v1_generated_IdentityAwareProxyAdminService_ListTunnelDestGroups_sync_flattened_resourceNames",
+      "title": "ListTunnelDestGroupsResourceNames",
+      "description": "Snippet for ListTunnelDestGroups",
+      "file": "IdentityAwareProxyAdminServiceClient.ListTunnelDestGroupsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTunnelDestGroups",
+        "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.ListTunnelDestGroups",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Iap.V1.ListTunnelDestGroupsResponse, Google.Cloud.Iap.V1.TunnelDestGroup>",
+        "client": {
+          "shortName": "IdentityAwareProxyAdminServiceClient",
+          "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListTunnelDestGroups",
+          "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService.ListTunnelDestGroups",
+          "service": {
+            "shortName": "IdentityAwareProxyAdminService",
+            "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iap_v1_generated_IdentityAwareProxyAdminService_ListTunnelDestGroups_async_flattened_resourceNames",
+      "title": "ListTunnelDestGroupsResourceNamesAsync",
+      "description": "Snippet for ListTunnelDestGroupsAsync",
+      "file": "IdentityAwareProxyAdminServiceClient.ListTunnelDestGroupsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTunnelDestGroupsAsync",
+        "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.ListTunnelDestGroupsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Iap.V1.ListTunnelDestGroupsResponse, Google.Cloud.Iap.V1.TunnelDestGroup>",
+        "client": {
+          "shortName": "IdentityAwareProxyAdminServiceClient",
+          "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListTunnelDestGroups",
+          "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService.ListTunnelDestGroups",
+          "service": {
+            "shortName": "IdentityAwareProxyAdminService",
+            "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iap_v1_generated_IdentityAwareProxyAdminService_CreateTunnelDestGroup_sync",
+      "title": "CreateTunnelDestGroupRequestObject",
+      "description": "Snippet for CreateTunnelDestGroup",
+      "file": "IdentityAwareProxyAdminServiceClient.CreateTunnelDestGroupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTunnelDestGroup",
+        "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.CreateTunnelDestGroup",
+        "resultType": "Google.Cloud.Iap.V1.TunnelDestGroup",
+        "client": {
+          "shortName": "IdentityAwareProxyAdminServiceClient",
+          "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateTunnelDestGroup",
+          "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService.CreateTunnelDestGroup",
+          "service": {
+            "shortName": "IdentityAwareProxyAdminService",
+            "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iap_v1_generated_IdentityAwareProxyAdminService_CreateTunnelDestGroup_async",
+      "title": "CreateTunnelDestGroupRequestObjectAsync",
+      "description": "Snippet for CreateTunnelDestGroupAsync",
+      "file": "IdentityAwareProxyAdminServiceClient.CreateTunnelDestGroupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTunnelDestGroupAsync",
+        "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.CreateTunnelDestGroupAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iap.V1.TunnelDestGroup>",
+        "client": {
+          "shortName": "IdentityAwareProxyAdminServiceClient",
+          "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateTunnelDestGroup",
+          "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService.CreateTunnelDestGroup",
+          "service": {
+            "shortName": "IdentityAwareProxyAdminService",
+            "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iap_v1_generated_IdentityAwareProxyAdminService_CreateTunnelDestGroup_sync_flattened",
+      "title": "CreateTunnelDestGroup",
+      "description": "Snippet for CreateTunnelDestGroup",
+      "file": "IdentityAwareProxyAdminServiceClient.CreateTunnelDestGroupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTunnelDestGroup",
+        "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.CreateTunnelDestGroup",
+        "resultType": "Google.Cloud.Iap.V1.TunnelDestGroup",
+        "client": {
+          "shortName": "IdentityAwareProxyAdminServiceClient",
+          "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateTunnelDestGroup",
+          "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService.CreateTunnelDestGroup",
+          "service": {
+            "shortName": "IdentityAwareProxyAdminService",
+            "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iap_v1_generated_IdentityAwareProxyAdminService_CreateTunnelDestGroup_async_flattened",
+      "title": "CreateTunnelDestGroupAsync",
+      "description": "Snippet for CreateTunnelDestGroupAsync",
+      "file": "IdentityAwareProxyAdminServiceClient.CreateTunnelDestGroupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTunnelDestGroupAsync",
+        "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.CreateTunnelDestGroupAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iap.V1.TunnelDestGroup>",
+        "client": {
+          "shortName": "IdentityAwareProxyAdminServiceClient",
+          "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateTunnelDestGroup",
+          "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService.CreateTunnelDestGroup",
+          "service": {
+            "shortName": "IdentityAwareProxyAdminService",
+            "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iap_v1_generated_IdentityAwareProxyAdminService_CreateTunnelDestGroup_sync_flattened_resourceNames",
+      "title": "CreateTunnelDestGroupResourceNames",
+      "description": "Snippet for CreateTunnelDestGroup",
+      "file": "IdentityAwareProxyAdminServiceClient.CreateTunnelDestGroupResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTunnelDestGroup",
+        "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.CreateTunnelDestGroup",
+        "resultType": "Google.Cloud.Iap.V1.TunnelDestGroup",
+        "client": {
+          "shortName": "IdentityAwareProxyAdminServiceClient",
+          "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateTunnelDestGroup",
+          "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService.CreateTunnelDestGroup",
+          "service": {
+            "shortName": "IdentityAwareProxyAdminService",
+            "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iap_v1_generated_IdentityAwareProxyAdminService_CreateTunnelDestGroup_async_flattened_resourceNames",
+      "title": "CreateTunnelDestGroupResourceNamesAsync",
+      "description": "Snippet for CreateTunnelDestGroupAsync",
+      "file": "IdentityAwareProxyAdminServiceClient.CreateTunnelDestGroupResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTunnelDestGroupAsync",
+        "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.CreateTunnelDestGroupAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iap.V1.TunnelDestGroup>",
+        "client": {
+          "shortName": "IdentityAwareProxyAdminServiceClient",
+          "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateTunnelDestGroup",
+          "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService.CreateTunnelDestGroup",
+          "service": {
+            "shortName": "IdentityAwareProxyAdminService",
+            "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iap_v1_generated_IdentityAwareProxyAdminService_GetTunnelDestGroup_sync",
+      "title": "GetTunnelDestGroupRequestObject",
+      "description": "Snippet for GetTunnelDestGroup",
+      "file": "IdentityAwareProxyAdminServiceClient.GetTunnelDestGroupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTunnelDestGroup",
+        "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.GetTunnelDestGroup",
+        "resultType": "Google.Cloud.Iap.V1.TunnelDestGroup",
+        "client": {
+          "shortName": "IdentityAwareProxyAdminServiceClient",
+          "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetTunnelDestGroup",
+          "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService.GetTunnelDestGroup",
+          "service": {
+            "shortName": "IdentityAwareProxyAdminService",
+            "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iap_v1_generated_IdentityAwareProxyAdminService_GetTunnelDestGroup_async",
+      "title": "GetTunnelDestGroupRequestObjectAsync",
+      "description": "Snippet for GetTunnelDestGroupAsync",
+      "file": "IdentityAwareProxyAdminServiceClient.GetTunnelDestGroupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTunnelDestGroupAsync",
+        "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.GetTunnelDestGroupAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iap.V1.TunnelDestGroup>",
+        "client": {
+          "shortName": "IdentityAwareProxyAdminServiceClient",
+          "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetTunnelDestGroup",
+          "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService.GetTunnelDestGroup",
+          "service": {
+            "shortName": "IdentityAwareProxyAdminService",
+            "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iap_v1_generated_IdentityAwareProxyAdminService_GetTunnelDestGroup_sync_flattened",
+      "title": "GetTunnelDestGroup",
+      "description": "Snippet for GetTunnelDestGroup",
+      "file": "IdentityAwareProxyAdminServiceClient.GetTunnelDestGroupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTunnelDestGroup",
+        "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.GetTunnelDestGroup",
+        "resultType": "Google.Cloud.Iap.V1.TunnelDestGroup",
+        "client": {
+          "shortName": "IdentityAwareProxyAdminServiceClient",
+          "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetTunnelDestGroup",
+          "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService.GetTunnelDestGroup",
+          "service": {
+            "shortName": "IdentityAwareProxyAdminService",
+            "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iap_v1_generated_IdentityAwareProxyAdminService_GetTunnelDestGroup_async_flattened",
+      "title": "GetTunnelDestGroupAsync",
+      "description": "Snippet for GetTunnelDestGroupAsync",
+      "file": "IdentityAwareProxyAdminServiceClient.GetTunnelDestGroupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTunnelDestGroupAsync",
+        "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.GetTunnelDestGroupAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iap.V1.TunnelDestGroup>",
+        "client": {
+          "shortName": "IdentityAwareProxyAdminServiceClient",
+          "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetTunnelDestGroup",
+          "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService.GetTunnelDestGroup",
+          "service": {
+            "shortName": "IdentityAwareProxyAdminService",
+            "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iap_v1_generated_IdentityAwareProxyAdminService_GetTunnelDestGroup_sync_flattened_resourceNames",
+      "title": "GetTunnelDestGroupResourceNames",
+      "description": "Snippet for GetTunnelDestGroup",
+      "file": "IdentityAwareProxyAdminServiceClient.GetTunnelDestGroupResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTunnelDestGroup",
+        "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.GetTunnelDestGroup",
+        "resultType": "Google.Cloud.Iap.V1.TunnelDestGroup",
+        "client": {
+          "shortName": "IdentityAwareProxyAdminServiceClient",
+          "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetTunnelDestGroup",
+          "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService.GetTunnelDestGroup",
+          "service": {
+            "shortName": "IdentityAwareProxyAdminService",
+            "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iap_v1_generated_IdentityAwareProxyAdminService_GetTunnelDestGroup_async_flattened_resourceNames",
+      "title": "GetTunnelDestGroupResourceNamesAsync",
+      "description": "Snippet for GetTunnelDestGroupAsync",
+      "file": "IdentityAwareProxyAdminServiceClient.GetTunnelDestGroupResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTunnelDestGroupAsync",
+        "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.GetTunnelDestGroupAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iap.V1.TunnelDestGroup>",
+        "client": {
+          "shortName": "IdentityAwareProxyAdminServiceClient",
+          "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetTunnelDestGroup",
+          "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService.GetTunnelDestGroup",
+          "service": {
+            "shortName": "IdentityAwareProxyAdminService",
+            "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iap_v1_generated_IdentityAwareProxyAdminService_DeleteTunnelDestGroup_sync",
+      "title": "DeleteTunnelDestGroupRequestObject",
+      "description": "Snippet for DeleteTunnelDestGroup",
+      "file": "IdentityAwareProxyAdminServiceClient.DeleteTunnelDestGroupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTunnelDestGroup",
+        "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.DeleteTunnelDestGroup",
+        "client": {
+          "shortName": "IdentityAwareProxyAdminServiceClient",
+          "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteTunnelDestGroup",
+          "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService.DeleteTunnelDestGroup",
+          "service": {
+            "shortName": "IdentityAwareProxyAdminService",
+            "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iap_v1_generated_IdentityAwareProxyAdminService_DeleteTunnelDestGroup_async",
+      "title": "DeleteTunnelDestGroupRequestObjectAsync",
+      "description": "Snippet for DeleteTunnelDestGroupAsync",
+      "file": "IdentityAwareProxyAdminServiceClient.DeleteTunnelDestGroupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTunnelDestGroupAsync",
+        "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.DeleteTunnelDestGroupAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "IdentityAwareProxyAdminServiceClient",
+          "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteTunnelDestGroup",
+          "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService.DeleteTunnelDestGroup",
+          "service": {
+            "shortName": "IdentityAwareProxyAdminService",
+            "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iap_v1_generated_IdentityAwareProxyAdminService_DeleteTunnelDestGroup_sync_flattened",
+      "title": "DeleteTunnelDestGroup",
+      "description": "Snippet for DeleteTunnelDestGroup",
+      "file": "IdentityAwareProxyAdminServiceClient.DeleteTunnelDestGroupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTunnelDestGroup",
+        "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.DeleteTunnelDestGroup",
+        "client": {
+          "shortName": "IdentityAwareProxyAdminServiceClient",
+          "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteTunnelDestGroup",
+          "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService.DeleteTunnelDestGroup",
+          "service": {
+            "shortName": "IdentityAwareProxyAdminService",
+            "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iap_v1_generated_IdentityAwareProxyAdminService_DeleteTunnelDestGroup_async_flattened",
+      "title": "DeleteTunnelDestGroupAsync",
+      "description": "Snippet for DeleteTunnelDestGroupAsync",
+      "file": "IdentityAwareProxyAdminServiceClient.DeleteTunnelDestGroupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTunnelDestGroupAsync",
+        "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.DeleteTunnelDestGroupAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "IdentityAwareProxyAdminServiceClient",
+          "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteTunnelDestGroup",
+          "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService.DeleteTunnelDestGroup",
+          "service": {
+            "shortName": "IdentityAwareProxyAdminService",
+            "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iap_v1_generated_IdentityAwareProxyAdminService_DeleteTunnelDestGroup_sync_flattened_resourceNames",
+      "title": "DeleteTunnelDestGroupResourceNames",
+      "description": "Snippet for DeleteTunnelDestGroup",
+      "file": "IdentityAwareProxyAdminServiceClient.DeleteTunnelDestGroupResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTunnelDestGroup",
+        "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.DeleteTunnelDestGroup",
+        "client": {
+          "shortName": "IdentityAwareProxyAdminServiceClient",
+          "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteTunnelDestGroup",
+          "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService.DeleteTunnelDestGroup",
+          "service": {
+            "shortName": "IdentityAwareProxyAdminService",
+            "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iap_v1_generated_IdentityAwareProxyAdminService_DeleteTunnelDestGroup_async_flattened_resourceNames",
+      "title": "DeleteTunnelDestGroupResourceNamesAsync",
+      "description": "Snippet for DeleteTunnelDestGroupAsync",
+      "file": "IdentityAwareProxyAdminServiceClient.DeleteTunnelDestGroupResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTunnelDestGroupAsync",
+        "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.DeleteTunnelDestGroupAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "IdentityAwareProxyAdminServiceClient",
+          "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteTunnelDestGroup",
+          "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService.DeleteTunnelDestGroup",
+          "service": {
+            "shortName": "IdentityAwareProxyAdminService",
+            "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iap_v1_generated_IdentityAwareProxyAdminService_UpdateTunnelDestGroup_sync",
+      "title": "UpdateTunnelDestGroupRequestObject",
+      "description": "Snippet for UpdateTunnelDestGroup",
+      "file": "IdentityAwareProxyAdminServiceClient.UpdateTunnelDestGroupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTunnelDestGroup",
+        "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.UpdateTunnelDestGroup",
+        "resultType": "Google.Cloud.Iap.V1.TunnelDestGroup",
+        "client": {
+          "shortName": "IdentityAwareProxyAdminServiceClient",
+          "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateTunnelDestGroup",
+          "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService.UpdateTunnelDestGroup",
+          "service": {
+            "shortName": "IdentityAwareProxyAdminService",
+            "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iap_v1_generated_IdentityAwareProxyAdminService_UpdateTunnelDestGroup_async",
+      "title": "UpdateTunnelDestGroupRequestObjectAsync",
+      "description": "Snippet for UpdateTunnelDestGroupAsync",
+      "file": "IdentityAwareProxyAdminServiceClient.UpdateTunnelDestGroupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTunnelDestGroupAsync",
+        "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.UpdateTunnelDestGroupAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iap.V1.TunnelDestGroup>",
+        "client": {
+          "shortName": "IdentityAwareProxyAdminServiceClient",
+          "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateTunnelDestGroup",
+          "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService.UpdateTunnelDestGroup",
+          "service": {
+            "shortName": "IdentityAwareProxyAdminService",
+            "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iap_v1_generated_IdentityAwareProxyAdminService_UpdateTunnelDestGroup_sync_flattened",
+      "title": "UpdateTunnelDestGroup",
+      "description": "Snippet for UpdateTunnelDestGroup",
+      "file": "IdentityAwareProxyAdminServiceClient.UpdateTunnelDestGroupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTunnelDestGroup",
+        "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.UpdateTunnelDestGroup",
+        "resultType": "Google.Cloud.Iap.V1.TunnelDestGroup",
+        "client": {
+          "shortName": "IdentityAwareProxyAdminServiceClient",
+          "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateTunnelDestGroup",
+          "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService.UpdateTunnelDestGroup",
+          "service": {
+            "shortName": "IdentityAwareProxyAdminService",
+            "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "iap_v1_generated_IdentityAwareProxyAdminService_UpdateTunnelDestGroup_async_flattened",
+      "title": "UpdateTunnelDestGroupAsync",
+      "description": "Snippet for UpdateTunnelDestGroupAsync",
+      "file": "IdentityAwareProxyAdminServiceClient.UpdateTunnelDestGroupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTunnelDestGroupAsync",
+        "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.UpdateTunnelDestGroupAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iap.V1.TunnelDestGroup>",
+        "client": {
+          "shortName": "IdentityAwareProxyAdminServiceClient",
+          "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateTunnelDestGroup",
+          "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService.UpdateTunnelDestGroup",
+          "service": {
+            "shortName": "IdentityAwareProxyAdminService",
+            "fullName": "google.cloud.iap.v1.IdentityAwareProxyAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "iap_v1_generated_IdentityAwareProxyOAuthService_ListBrands_sync",
       "title": "ListBrandsRequestObject",
       "description": "Snippet for ListBrands",

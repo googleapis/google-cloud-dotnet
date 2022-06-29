@@ -14,14 +14,16 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -55,6 +57,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             LoadVersionSettings = existing.LoadVersionSettings;
             LoadVersionOperationsSettings = existing.LoadVersionOperationsSettings.Clone();
             CompareVersionsSettings = existing.CompareVersionsSettings;
+            LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
 
@@ -222,6 +225,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </remarks>
         public gaxgrpc::CallSettings CompareVersionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="VersionsSettings"/> object.</returns>
         public VersionsSettings Clone() => new VersionsSettings(this);
@@ -236,9 +244,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         public VersionsSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public VersionsClientBuilder()
+        public VersionsClientBuilder() : base(VersionsClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = VersionsClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref VersionsClient client);
@@ -265,29 +272,18 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return VersionsClient.Create(callInvoker, Settings);
+            return VersionsClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<VersionsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return VersionsClient.Create(callInvoker, Settings);
+            return VersionsClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => VersionsClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => VersionsClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => VersionsClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>Versions client wrapper, for convenient use.</summary>
@@ -316,19 +312,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             "https://www.googleapis.com/auth/dialogflow",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Versions.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="VersionsClient"/> using the default credentials, endpoint and settings. 
@@ -355,8 +342,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="VersionsSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="VersionsClient"/>.</returns>
-        internal static VersionsClient Create(grpccore::CallInvoker callInvoker, VersionsSettings settings = null)
+        internal static VersionsClient Create(grpccore::CallInvoker callInvoker, VersionsSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -365,7 +353,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             Versions.VersionsClient grpcClient = new Versions.VersionsClient(callInvoker);
-            return new VersionsClientImpl(grpcClient, settings);
+            return new VersionsClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -383,6 +371,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>The underlying gRPC Versions client</summary>
         public virtual Versions.VersionsClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Returns the list of all versions in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
@@ -1427,32 +1418,34 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="VersionsSettings"/> used within this client.</param>
-        public VersionsClientImpl(Versions.VersionsClient grpcClient, VersionsSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public VersionsClientImpl(Versions.VersionsClient grpcClient, VersionsSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             VersionsSettings effectiveSettings = settings ?? VersionsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateVersionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateVersionOperationsSettings);
-            LoadVersionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.LoadVersionOperationsSettings);
-            _callListVersions = clientHelper.BuildApiCall<ListVersionsRequest, ListVersionsResponse>(grpcClient.ListVersionsAsync, grpcClient.ListVersions, effectiveSettings.ListVersionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateVersionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateVersionOperationsSettings, logger);
+            LoadVersionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.LoadVersionOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
+            _callListVersions = clientHelper.BuildApiCall<ListVersionsRequest, ListVersionsResponse>("ListVersions", grpcClient.ListVersionsAsync, grpcClient.ListVersions, effectiveSettings.ListVersionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListVersions);
             Modify_ListVersionsApiCall(ref _callListVersions);
-            _callGetVersion = clientHelper.BuildApiCall<GetVersionRequest, Version>(grpcClient.GetVersionAsync, grpcClient.GetVersion, effectiveSettings.GetVersionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetVersion = clientHelper.BuildApiCall<GetVersionRequest, Version>("GetVersion", grpcClient.GetVersionAsync, grpcClient.GetVersion, effectiveSettings.GetVersionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetVersion);
             Modify_GetVersionApiCall(ref _callGetVersion);
-            _callCreateVersion = clientHelper.BuildApiCall<CreateVersionRequest, lro::Operation>(grpcClient.CreateVersionAsync, grpcClient.CreateVersion, effectiveSettings.CreateVersionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateVersion = clientHelper.BuildApiCall<CreateVersionRequest, lro::Operation>("CreateVersion", grpcClient.CreateVersionAsync, grpcClient.CreateVersion, effectiveSettings.CreateVersionSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateVersion);
             Modify_CreateVersionApiCall(ref _callCreateVersion);
-            _callUpdateVersion = clientHelper.BuildApiCall<UpdateVersionRequest, Version>(grpcClient.UpdateVersionAsync, grpcClient.UpdateVersion, effectiveSettings.UpdateVersionSettings).WithGoogleRequestParam("version.name", request => request.Version?.Name);
+            _callUpdateVersion = clientHelper.BuildApiCall<UpdateVersionRequest, Version>("UpdateVersion", grpcClient.UpdateVersionAsync, grpcClient.UpdateVersion, effectiveSettings.UpdateVersionSettings).WithGoogleRequestParam("version.name", request => request.Version?.Name);
             Modify_ApiCall(ref _callUpdateVersion);
             Modify_UpdateVersionApiCall(ref _callUpdateVersion);
-            _callDeleteVersion = clientHelper.BuildApiCall<DeleteVersionRequest, wkt::Empty>(grpcClient.DeleteVersionAsync, grpcClient.DeleteVersion, effectiveSettings.DeleteVersionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteVersion = clientHelper.BuildApiCall<DeleteVersionRequest, wkt::Empty>("DeleteVersion", grpcClient.DeleteVersionAsync, grpcClient.DeleteVersion, effectiveSettings.DeleteVersionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteVersion);
             Modify_DeleteVersionApiCall(ref _callDeleteVersion);
-            _callLoadVersion = clientHelper.BuildApiCall<LoadVersionRequest, lro::Operation>(grpcClient.LoadVersionAsync, grpcClient.LoadVersion, effectiveSettings.LoadVersionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callLoadVersion = clientHelper.BuildApiCall<LoadVersionRequest, lro::Operation>("LoadVersion", grpcClient.LoadVersionAsync, grpcClient.LoadVersion, effectiveSettings.LoadVersionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callLoadVersion);
             Modify_LoadVersionApiCall(ref _callLoadVersion);
-            _callCompareVersions = clientHelper.BuildApiCall<CompareVersionsRequest, CompareVersionsResponse>(grpcClient.CompareVersionsAsync, grpcClient.CompareVersions, effectiveSettings.CompareVersionsSettings).WithGoogleRequestParam("base_version", request => request.BaseVersion);
+            _callCompareVersions = clientHelper.BuildApiCall<CompareVersionsRequest, CompareVersionsResponse>("CompareVersions", grpcClient.CompareVersionsAsync, grpcClient.CompareVersions, effectiveSettings.CompareVersionsSettings).WithGoogleRequestParam("base_version", request => request.BaseVersion);
             Modify_ApiCall(ref _callCompareVersions);
             Modify_CompareVersionsApiCall(ref _callCompareVersions);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
@@ -1478,6 +1471,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>The underlying gRPC Versions client</summary>
         public override Versions.VersionsClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
 
         partial void Modify_ListVersionsRequest(ref ListVersionsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1723,6 +1719,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class Versions
+    {
+        public partial class VersionsClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
         }
     }
 }

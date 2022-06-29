@@ -81,10 +81,9 @@ namespace Google.Cloud.PubSub.V1
         {
             // Note: no need to try to detect the channel pool here, as we know we don't want to use it.
             var effectiveBuilder = MaybeCreateEmulatorClientBuilder() ?? this;
-            var endpoint = effectiveBuilder.Endpoint ?? GetDefaultEndpoint();
+            var endpoint = effectiveBuilder.Endpoint ?? ServiceMetadata.DefaultEndpoint;
             var credentials = await effectiveBuilder.GetChannelCredentialsAsync(cancellationToken).ConfigureAwait(false);
-            var grpcAdapter = GrpcAdapter ?? DefaultGrpcAdapter;
-            return grpcAdapter.CreateChannel(endpoint, credentials, effectiveBuilder.GetChannelOptions());
+            return effectiveBuilder.CreateChannel(endpoint, credentials);
         }
 
         /// <summary>
@@ -95,10 +94,9 @@ namespace Google.Cloud.PubSub.V1
         {
             // Note: no need to try to detect the channel pool here, as we know we don't want to use it.
             var effectiveBuilder = MaybeCreateEmulatorClientBuilder() ?? this;
-            var endpoint = effectiveBuilder.Endpoint ?? GetDefaultEndpoint();
+            var endpoint = effectiveBuilder.Endpoint ?? ServiceMetadata.DefaultEndpoint;
             var credentials = effectiveBuilder.GetChannelCredentials();
-            var grpcAdapter = GrpcAdapter ?? DefaultGrpcAdapter;
-            return grpcAdapter.CreateChannel(endpoint, credentials, effectiveBuilder.GetChannelOptions());
+            return effectiveBuilder.CreateChannel(endpoint, credentials);
         }
     }
 }

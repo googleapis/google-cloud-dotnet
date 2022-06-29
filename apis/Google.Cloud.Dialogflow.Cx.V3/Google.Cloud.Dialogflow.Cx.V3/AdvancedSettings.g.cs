@@ -25,19 +25,19 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjVnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy9jeC92My9hZHZhbmNlZF9zZXR0",
-            "aW5ncy5wcm90bxIdZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMiyAEK",
-            "EEFkdmFuY2VkU2V0dGluZ3MSWQoQbG9nZ2luZ19zZXR0aW5ncxgGIAEoCzI/",
-            "Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkFkdmFuY2VkU2V0dGlu",
-            "Z3MuTG9nZ2luZ1NldHRpbmdzGlkKD0xvZ2dpbmdTZXR0aW5ncxIiChplbmFi",
-            "bGVfc3RhY2tkcml2ZXJfbG9nZ2luZxgCIAEoCBIiChplbmFibGVfaW50ZXJh",
-            "Y3Rpb25fbG9nZ2luZxgDIAEoCELJAQohY29tLmdvb2dsZS5jbG91ZC5kaWFs",
-            "b2dmbG93LmN4LnYzQhVBZHZhbmNlZFNldHRpbmdzUHJvdG9QAVo/Z29vZ2xl",
-            "LmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9kaWFsb2dm",
-            "bG93L2N4L3YzO2N4+AEBogICREaqAh1Hb29nbGUuQ2xvdWQuRGlhbG9nZmxv",
-            "dy5DeC5WM+oCIUdvb2dsZTo6Q2xvdWQ6OkRpYWxvZ2Zsb3c6OkNYOjpWM2IG",
-            "cHJvdG8z"));
+            "aW5ncy5wcm90bxIdZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMaH2dv",
+            "b2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8iyAEKEEFkdmFuY2VkU2V0",
+            "dGluZ3MSWQoQbG9nZ2luZ19zZXR0aW5ncxgGIAEoCzI/Lmdvb2dsZS5jbG91",
+            "ZC5kaWFsb2dmbG93LmN4LnYzLkFkdmFuY2VkU2V0dGluZ3MuTG9nZ2luZ1Nl",
+            "dHRpbmdzGlkKD0xvZ2dpbmdTZXR0aW5ncxIiChplbmFibGVfc3RhY2tkcml2",
+            "ZXJfbG9nZ2luZxgCIAEoCBIiChplbmFibGVfaW50ZXJhY3Rpb25fbG9nZ2lu",
+            "ZxgDIAEoCELJAQohY29tLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYz",
+            "QhVBZHZhbmNlZFNldHRpbmdzUHJvdG9QAVo/Z29vZ2xlLmdvbGFuZy5vcmcv",
+            "Z2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9kaWFsb2dmbG93L2N4L3YzO2N4",
+            "+AEBogICREaqAh1Hb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5DeC5WM+oCIUdv",
+            "b2dsZTo6Q2xvdWQ6OkRpYWxvZ2Zsb3c6OkNYOjpWM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettings), global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettings.Parser, new[]{ "LoggingSettings" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettings.Types.LoggingSettings), global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettings.Types.LoggingSettings.Parser, new[]{ "EnableStackdriverLogging", "EnableInteractionLogging" }, null, null, null, null)})
           }));

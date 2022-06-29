@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gcbcv = Google.Cloud.Bigtable.Common.V2;
 using proto = Google.Protobuf;
@@ -41,7 +42,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             };
             MutateRowResponse expectedResponse = new MutateRowResponse { };
             mockGrpcClient.Setup(x => x.MutateRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             MutateRowResponse response = client.MutateRow(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -60,7 +61,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             };
             MutateRowResponse expectedResponse = new MutateRowResponse { };
             mockGrpcClient.Setup(x => x.MutateRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MutateRowResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             MutateRowResponse responseCallSettings = await client.MutateRowAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MutateRowResponse responseCancellationToken = await client.MutateRowAsync(request, st::CancellationToken.None);
@@ -80,7 +81,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             };
             MutateRowResponse expectedResponse = new MutateRowResponse { };
             mockGrpcClient.Setup(x => x.MutateRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             MutateRowResponse response = client.MutateRow(request.TableName, request.RowKey, request.Mutations);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -98,7 +99,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             };
             MutateRowResponse expectedResponse = new MutateRowResponse { };
             mockGrpcClient.Setup(x => x.MutateRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MutateRowResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             MutateRowResponse responseCallSettings = await client.MutateRowAsync(request.TableName, request.RowKey, request.Mutations, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MutateRowResponse responseCancellationToken = await client.MutateRowAsync(request.TableName, request.RowKey, request.Mutations, st::CancellationToken.None);
@@ -118,7 +119,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             };
             MutateRowResponse expectedResponse = new MutateRowResponse { };
             mockGrpcClient.Setup(x => x.MutateRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             MutateRowResponse response = client.MutateRow(request.TableNameAsTableName, request.RowKey, request.Mutations);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -136,7 +137,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             };
             MutateRowResponse expectedResponse = new MutateRowResponse { };
             mockGrpcClient.Setup(x => x.MutateRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MutateRowResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             MutateRowResponse responseCallSettings = await client.MutateRowAsync(request.TableNameAsTableName, request.RowKey, request.Mutations, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MutateRowResponse responseCancellationToken = await client.MutateRowAsync(request.TableNameAsTableName, request.RowKey, request.Mutations, st::CancellationToken.None);
@@ -157,7 +158,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             };
             MutateRowResponse expectedResponse = new MutateRowResponse { };
             mockGrpcClient.Setup(x => x.MutateRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             MutateRowResponse response = client.MutateRow(request.TableName, request.RowKey, request.Mutations, request.AppProfileId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -176,7 +177,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             };
             MutateRowResponse expectedResponse = new MutateRowResponse { };
             mockGrpcClient.Setup(x => x.MutateRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MutateRowResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             MutateRowResponse responseCallSettings = await client.MutateRowAsync(request.TableName, request.RowKey, request.Mutations, request.AppProfileId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MutateRowResponse responseCancellationToken = await client.MutateRowAsync(request.TableName, request.RowKey, request.Mutations, request.AppProfileId, st::CancellationToken.None);
@@ -197,7 +198,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             };
             MutateRowResponse expectedResponse = new MutateRowResponse { };
             mockGrpcClient.Setup(x => x.MutateRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             MutateRowResponse response = client.MutateRow(request.TableNameAsTableName, request.RowKey, request.Mutations, request.AppProfileId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -216,7 +217,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             };
             MutateRowResponse expectedResponse = new MutateRowResponse { };
             mockGrpcClient.Setup(x => x.MutateRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MutateRowResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             MutateRowResponse responseCallSettings = await client.MutateRowAsync(request.TableNameAsTableName, request.RowKey, request.Mutations, request.AppProfileId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MutateRowResponse responseCancellationToken = await client.MutateRowAsync(request.TableNameAsTableName, request.RowKey, request.Mutations, request.AppProfileId, st::CancellationToken.None);
@@ -242,7 +243,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 PredicateMatched = true,
             };
             mockGrpcClient.Setup(x => x.CheckAndMutateRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             CheckAndMutateRowResponse response = client.CheckAndMutateRow(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -266,7 +267,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 PredicateMatched = true,
             };
             mockGrpcClient.Setup(x => x.CheckAndMutateRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CheckAndMutateRowResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             CheckAndMutateRowResponse responseCallSettings = await client.CheckAndMutateRowAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CheckAndMutateRowResponse responseCancellationToken = await client.CheckAndMutateRowAsync(request, st::CancellationToken.None);
@@ -291,7 +292,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 PredicateMatched = true,
             };
             mockGrpcClient.Setup(x => x.CheckAndMutateRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             CheckAndMutateRowResponse response = client.CheckAndMutateRow(request.TableName, request.RowKey, request.PredicateFilter, request.TrueMutations, request.FalseMutations);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -314,7 +315,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 PredicateMatched = true,
             };
             mockGrpcClient.Setup(x => x.CheckAndMutateRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CheckAndMutateRowResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             CheckAndMutateRowResponse responseCallSettings = await client.CheckAndMutateRowAsync(request.TableName, request.RowKey, request.PredicateFilter, request.TrueMutations, request.FalseMutations, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CheckAndMutateRowResponse responseCancellationToken = await client.CheckAndMutateRowAsync(request.TableName, request.RowKey, request.PredicateFilter, request.TrueMutations, request.FalseMutations, st::CancellationToken.None);
@@ -339,7 +340,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 PredicateMatched = true,
             };
             mockGrpcClient.Setup(x => x.CheckAndMutateRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             CheckAndMutateRowResponse response = client.CheckAndMutateRow(request.TableNameAsTableName, request.RowKey, request.PredicateFilter, request.TrueMutations, request.FalseMutations);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -362,7 +363,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 PredicateMatched = true,
             };
             mockGrpcClient.Setup(x => x.CheckAndMutateRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CheckAndMutateRowResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             CheckAndMutateRowResponse responseCallSettings = await client.CheckAndMutateRowAsync(request.TableNameAsTableName, request.RowKey, request.PredicateFilter, request.TrueMutations, request.FalseMutations, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CheckAndMutateRowResponse responseCancellationToken = await client.CheckAndMutateRowAsync(request.TableNameAsTableName, request.RowKey, request.PredicateFilter, request.TrueMutations, request.FalseMutations, st::CancellationToken.None);
@@ -388,7 +389,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 PredicateMatched = true,
             };
             mockGrpcClient.Setup(x => x.CheckAndMutateRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             CheckAndMutateRowResponse response = client.CheckAndMutateRow(request.TableName, request.RowKey, request.PredicateFilter, request.TrueMutations, request.FalseMutations, request.AppProfileId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -412,7 +413,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 PredicateMatched = true,
             };
             mockGrpcClient.Setup(x => x.CheckAndMutateRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CheckAndMutateRowResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             CheckAndMutateRowResponse responseCallSettings = await client.CheckAndMutateRowAsync(request.TableName, request.RowKey, request.PredicateFilter, request.TrueMutations, request.FalseMutations, request.AppProfileId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CheckAndMutateRowResponse responseCancellationToken = await client.CheckAndMutateRowAsync(request.TableName, request.RowKey, request.PredicateFilter, request.TrueMutations, request.FalseMutations, request.AppProfileId, st::CancellationToken.None);
@@ -438,7 +439,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 PredicateMatched = true,
             };
             mockGrpcClient.Setup(x => x.CheckAndMutateRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             CheckAndMutateRowResponse response = client.CheckAndMutateRow(request.TableNameAsTableName, request.RowKey, request.PredicateFilter, request.TrueMutations, request.FalseMutations, request.AppProfileId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -462,7 +463,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 PredicateMatched = true,
             };
             mockGrpcClient.Setup(x => x.CheckAndMutateRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CheckAndMutateRowResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             CheckAndMutateRowResponse responseCallSettings = await client.CheckAndMutateRowAsync(request.TableNameAsTableName, request.RowKey, request.PredicateFilter, request.TrueMutations, request.FalseMutations, request.AppProfileId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CheckAndMutateRowResponse responseCancellationToken = await client.CheckAndMutateRowAsync(request.TableNameAsTableName, request.RowKey, request.PredicateFilter, request.TrueMutations, request.FalseMutations, request.AppProfileId, st::CancellationToken.None);
@@ -476,12 +477,12 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             PingAndWarmRequest request = new PingAndWarmRequest
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 AppProfileId = "app_profile_id57fb0442",
             };
             PingAndWarmResponse expectedResponse = new PingAndWarmResponse { };
             mockGrpcClient.Setup(x => x.PingAndWarm(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             PingAndWarmResponse response = client.PingAndWarm(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -493,12 +494,12 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             PingAndWarmRequest request = new PingAndWarmRequest
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 AppProfileId = "app_profile_id57fb0442",
             };
             PingAndWarmResponse expectedResponse = new PingAndWarmResponse { };
             mockGrpcClient.Setup(x => x.PingAndWarmAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PingAndWarmResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             PingAndWarmResponse responseCallSettings = await client.PingAndWarmAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PingAndWarmResponse responseCancellationToken = await client.PingAndWarmAsync(request, st::CancellationToken.None);
@@ -512,11 +513,11 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             PingAndWarmRequest request = new PingAndWarmRequest
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
             };
             PingAndWarmResponse expectedResponse = new PingAndWarmResponse { };
             mockGrpcClient.Setup(x => x.PingAndWarm(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             PingAndWarmResponse response = client.PingAndWarm(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -528,11 +529,11 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             PingAndWarmRequest request = new PingAndWarmRequest
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
             };
             PingAndWarmResponse expectedResponse = new PingAndWarmResponse { };
             mockGrpcClient.Setup(x => x.PingAndWarmAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PingAndWarmResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             PingAndWarmResponse responseCallSettings = await client.PingAndWarmAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PingAndWarmResponse responseCancellationToken = await client.PingAndWarmAsync(request.Name, st::CancellationToken.None);
@@ -546,11 +547,11 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             PingAndWarmRequest request = new PingAndWarmRequest
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
             };
             PingAndWarmResponse expectedResponse = new PingAndWarmResponse { };
             mockGrpcClient.Setup(x => x.PingAndWarm(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             PingAndWarmResponse response = client.PingAndWarm(request.InstanceName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -562,11 +563,11 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             PingAndWarmRequest request = new PingAndWarmRequest
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
             };
             PingAndWarmResponse expectedResponse = new PingAndWarmResponse { };
             mockGrpcClient.Setup(x => x.PingAndWarmAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PingAndWarmResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             PingAndWarmResponse responseCallSettings = await client.PingAndWarmAsync(request.InstanceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PingAndWarmResponse responseCancellationToken = await client.PingAndWarmAsync(request.InstanceName, st::CancellationToken.None);
@@ -580,12 +581,12 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             PingAndWarmRequest request = new PingAndWarmRequest
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 AppProfileId = "app_profile_id57fb0442",
             };
             PingAndWarmResponse expectedResponse = new PingAndWarmResponse { };
             mockGrpcClient.Setup(x => x.PingAndWarm(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             PingAndWarmResponse response = client.PingAndWarm(request.Name, request.AppProfileId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -597,12 +598,12 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             PingAndWarmRequest request = new PingAndWarmRequest
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 AppProfileId = "app_profile_id57fb0442",
             };
             PingAndWarmResponse expectedResponse = new PingAndWarmResponse { };
             mockGrpcClient.Setup(x => x.PingAndWarmAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PingAndWarmResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             PingAndWarmResponse responseCallSettings = await client.PingAndWarmAsync(request.Name, request.AppProfileId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PingAndWarmResponse responseCancellationToken = await client.PingAndWarmAsync(request.Name, request.AppProfileId, st::CancellationToken.None);
@@ -616,12 +617,12 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             PingAndWarmRequest request = new PingAndWarmRequest
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 AppProfileId = "app_profile_id57fb0442",
             };
             PingAndWarmResponse expectedResponse = new PingAndWarmResponse { };
             mockGrpcClient.Setup(x => x.PingAndWarm(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             PingAndWarmResponse response = client.PingAndWarm(request.InstanceName, request.AppProfileId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -633,12 +634,12 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             PingAndWarmRequest request = new PingAndWarmRequest
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 AppProfileId = "app_profile_id57fb0442",
             };
             PingAndWarmResponse expectedResponse = new PingAndWarmResponse { };
             mockGrpcClient.Setup(x => x.PingAndWarmAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PingAndWarmResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             PingAndWarmResponse responseCallSettings = await client.PingAndWarmAsync(request.InstanceName, request.AppProfileId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PingAndWarmResponse responseCancellationToken = await client.PingAndWarmAsync(request.InstanceName, request.AppProfileId, st::CancellationToken.None);
@@ -662,7 +663,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             };
             ReadModifyWriteRowResponse expectedResponse = new ReadModifyWriteRowResponse { Row = new Row(), };
             mockGrpcClient.Setup(x => x.ReadModifyWriteRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             ReadModifyWriteRowResponse response = client.ReadModifyWriteRow(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -684,7 +685,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             };
             ReadModifyWriteRowResponse expectedResponse = new ReadModifyWriteRowResponse { Row = new Row(), };
             mockGrpcClient.Setup(x => x.ReadModifyWriteRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReadModifyWriteRowResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             ReadModifyWriteRowResponse responseCallSettings = await client.ReadModifyWriteRowAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ReadModifyWriteRowResponse responseCancellationToken = await client.ReadModifyWriteRowAsync(request, st::CancellationToken.None);
@@ -707,7 +708,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             };
             ReadModifyWriteRowResponse expectedResponse = new ReadModifyWriteRowResponse { Row = new Row(), };
             mockGrpcClient.Setup(x => x.ReadModifyWriteRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             ReadModifyWriteRowResponse response = client.ReadModifyWriteRow(request.TableName, request.RowKey, request.Rules);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -728,7 +729,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             };
             ReadModifyWriteRowResponse expectedResponse = new ReadModifyWriteRowResponse { Row = new Row(), };
             mockGrpcClient.Setup(x => x.ReadModifyWriteRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReadModifyWriteRowResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             ReadModifyWriteRowResponse responseCallSettings = await client.ReadModifyWriteRowAsync(request.TableName, request.RowKey, request.Rules, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ReadModifyWriteRowResponse responseCancellationToken = await client.ReadModifyWriteRowAsync(request.TableName, request.RowKey, request.Rules, st::CancellationToken.None);
@@ -751,7 +752,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             };
             ReadModifyWriteRowResponse expectedResponse = new ReadModifyWriteRowResponse { Row = new Row(), };
             mockGrpcClient.Setup(x => x.ReadModifyWriteRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             ReadModifyWriteRowResponse response = client.ReadModifyWriteRow(request.TableNameAsTableName, request.RowKey, request.Rules);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -772,7 +773,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             };
             ReadModifyWriteRowResponse expectedResponse = new ReadModifyWriteRowResponse { Row = new Row(), };
             mockGrpcClient.Setup(x => x.ReadModifyWriteRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReadModifyWriteRowResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             ReadModifyWriteRowResponse responseCallSettings = await client.ReadModifyWriteRowAsync(request.TableNameAsTableName, request.RowKey, request.Rules, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ReadModifyWriteRowResponse responseCancellationToken = await client.ReadModifyWriteRowAsync(request.TableNameAsTableName, request.RowKey, request.Rules, st::CancellationToken.None);
@@ -796,7 +797,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             };
             ReadModifyWriteRowResponse expectedResponse = new ReadModifyWriteRowResponse { Row = new Row(), };
             mockGrpcClient.Setup(x => x.ReadModifyWriteRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             ReadModifyWriteRowResponse response = client.ReadModifyWriteRow(request.TableName, request.RowKey, request.Rules, request.AppProfileId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -818,7 +819,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             };
             ReadModifyWriteRowResponse expectedResponse = new ReadModifyWriteRowResponse { Row = new Row(), };
             mockGrpcClient.Setup(x => x.ReadModifyWriteRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReadModifyWriteRowResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             ReadModifyWriteRowResponse responseCallSettings = await client.ReadModifyWriteRowAsync(request.TableName, request.RowKey, request.Rules, request.AppProfileId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ReadModifyWriteRowResponse responseCancellationToken = await client.ReadModifyWriteRowAsync(request.TableName, request.RowKey, request.Rules, request.AppProfileId, st::CancellationToken.None);
@@ -842,7 +843,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             };
             ReadModifyWriteRowResponse expectedResponse = new ReadModifyWriteRowResponse { Row = new Row(), };
             mockGrpcClient.Setup(x => x.ReadModifyWriteRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             ReadModifyWriteRowResponse response = client.ReadModifyWriteRow(request.TableNameAsTableName, request.RowKey, request.Rules, request.AppProfileId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -864,7 +865,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             };
             ReadModifyWriteRowResponse expectedResponse = new ReadModifyWriteRowResponse { Row = new Row(), };
             mockGrpcClient.Setup(x => x.ReadModifyWriteRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReadModifyWriteRowResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null, null);
             ReadModifyWriteRowResponse responseCallSettings = await client.ReadModifyWriteRowAsync(request.TableNameAsTableName, request.RowKey, request.Rules, request.AppProfileId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ReadModifyWriteRowResponse responseCancellationToken = await client.ReadModifyWriteRowAsync(request.TableNameAsTableName, request.RowKey, request.Rules, request.AppProfileId, st::CancellationToken.None);

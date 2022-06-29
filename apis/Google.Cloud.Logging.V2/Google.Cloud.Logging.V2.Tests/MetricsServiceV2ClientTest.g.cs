@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using ga = Google.Api;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
@@ -60,7 +61,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.GetLogMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
+            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogMetric response = client.GetLogMetric(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -97,7 +98,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.GetLogMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
+            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogMetric responseCallSettings = await client.GetLogMetricAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogMetric responseCancellationToken = await client.GetLogMetricAsync(request, st::CancellationToken.None);
@@ -136,7 +137,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.GetLogMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
+            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogMetric response = client.GetLogMetric(request.MetricName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -173,7 +174,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.GetLogMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
+            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogMetric responseCallSettings = await client.GetLogMetricAsync(request.MetricName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogMetric responseCancellationToken = await client.GetLogMetricAsync(request.MetricName, st::CancellationToken.None);
@@ -212,7 +213,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.GetLogMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
+            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogMetric response = client.GetLogMetric(request.MetricNameAsLogMetricName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -249,7 +250,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.GetLogMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
+            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogMetric responseCallSettings = await client.GetLogMetricAsync(request.MetricNameAsLogMetricName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogMetric responseCancellationToken = await client.GetLogMetricAsync(request.MetricNameAsLogMetricName, st::CancellationToken.None);
@@ -289,7 +290,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.CreateLogMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
+            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogMetric response = client.CreateLogMetric(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -327,7 +328,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.CreateLogMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
+            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogMetric responseCallSettings = await client.CreateLogMetricAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogMetric responseCancellationToken = await client.CreateLogMetricAsync(request, st::CancellationToken.None);
@@ -367,7 +368,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.CreateLogMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
+            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogMetric response = client.CreateLogMetric(request.Parent, request.Metric);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -405,7 +406,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.CreateLogMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
+            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogMetric responseCallSettings = await client.CreateLogMetricAsync(request.Parent, request.Metric, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogMetric responseCancellationToken = await client.CreateLogMetricAsync(request.Parent, request.Metric, st::CancellationToken.None);
@@ -445,7 +446,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.CreateLogMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
+            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogMetric response = client.CreateLogMetric(request.ParentAsProjectName, request.Metric);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -483,7 +484,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.CreateLogMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
+            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogMetric responseCallSettings = await client.CreateLogMetricAsync(request.ParentAsProjectName, request.Metric, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogMetric responseCancellationToken = await client.CreateLogMetricAsync(request.ParentAsProjectName, request.Metric, st::CancellationToken.None);
@@ -523,7 +524,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.UpdateLogMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
+            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogMetric response = client.UpdateLogMetric(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -561,7 +562,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.UpdateLogMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
+            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogMetric responseCallSettings = await client.UpdateLogMetricAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogMetric responseCancellationToken = await client.UpdateLogMetricAsync(request, st::CancellationToken.None);
@@ -601,7 +602,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.UpdateLogMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
+            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogMetric response = client.UpdateLogMetric(request.MetricName, request.Metric);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -639,7 +640,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.UpdateLogMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
+            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogMetric responseCallSettings = await client.UpdateLogMetricAsync(request.MetricName, request.Metric, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogMetric responseCancellationToken = await client.UpdateLogMetricAsync(request.MetricName, request.Metric, st::CancellationToken.None);
@@ -679,7 +680,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.UpdateLogMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
+            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogMetric response = client.UpdateLogMetric(request.MetricNameAsLogMetricName, request.Metric);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -717,7 +718,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.UpdateLogMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
+            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             LogMetric responseCallSettings = await client.UpdateLogMetricAsync(request.MetricNameAsLogMetricName, request.Metric, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogMetric responseCancellationToken = await client.UpdateLogMetricAsync(request.MetricNameAsLogMetricName, request.Metric, st::CancellationToken.None);
@@ -735,7 +736,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteLogMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
+            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteLogMetric(request);
             mockGrpcClient.VerifyAll();
         }
@@ -750,7 +751,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteLogMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
+            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteLogMetricAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteLogMetricAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -766,7 +767,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteLogMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
+            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteLogMetric(request.MetricName);
             mockGrpcClient.VerifyAll();
         }
@@ -781,7 +782,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteLogMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
+            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteLogMetricAsync(request.MetricName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteLogMetricAsync(request.MetricName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -797,7 +798,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteLogMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
+            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteLogMetric(request.MetricNameAsLogMetricName);
             mockGrpcClient.VerifyAll();
         }
@@ -812,7 +813,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteLogMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
+            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteLogMetricAsync(request.MetricNameAsLogMetricName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteLogMetricAsync(request.MetricNameAsLogMetricName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();

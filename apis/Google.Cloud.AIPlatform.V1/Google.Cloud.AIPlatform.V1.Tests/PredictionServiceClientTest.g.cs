@@ -14,8 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using ga = Google.Api;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -33,6 +36,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         public void PredictRequestObject()
         {
             moq::Mock<PredictionService.PredictionServiceClient> mockGrpcClient = new moq::Mock<PredictionService.PredictionServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             PredictRequest request = new PredictRequest
             {
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
@@ -45,9 +50,10 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DeployedModelId = "deployed_model_idf0bd41af",
                 ModelAsModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
                 ModelDisplayName = "model_display_name8ef9ce34",
+                ModelVersionId = "model_version_idcaf4b810",
             };
             mockGrpcClient.Setup(x => x.Predict(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
+            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null, null);
             PredictResponse response = client.Predict(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -57,6 +63,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         public async stt::Task PredictRequestObjectAsync()
         {
             moq::Mock<PredictionService.PredictionServiceClient> mockGrpcClient = new moq::Mock<PredictionService.PredictionServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             PredictRequest request = new PredictRequest
             {
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
@@ -69,9 +77,10 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DeployedModelId = "deployed_model_idf0bd41af",
                 ModelAsModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
                 ModelDisplayName = "model_display_name8ef9ce34",
+                ModelVersionId = "model_version_idcaf4b810",
             };
             mockGrpcClient.Setup(x => x.PredictAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PredictResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
+            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null, null);
             PredictResponse responseCallSettings = await client.PredictAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PredictResponse responseCancellationToken = await client.PredictAsync(request, st::CancellationToken.None);
@@ -83,6 +92,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         public void Predict()
         {
             moq::Mock<PredictionService.PredictionServiceClient> mockGrpcClient = new moq::Mock<PredictionService.PredictionServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             PredictRequest request = new PredictRequest
             {
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
@@ -95,9 +106,10 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DeployedModelId = "deployed_model_idf0bd41af",
                 ModelAsModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
                 ModelDisplayName = "model_display_name8ef9ce34",
+                ModelVersionId = "model_version_idcaf4b810",
             };
             mockGrpcClient.Setup(x => x.Predict(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
+            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null, null);
             PredictResponse response = client.Predict(request.Endpoint, request.Instances, request.Parameters);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -107,6 +119,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         public async stt::Task PredictAsync()
         {
             moq::Mock<PredictionService.PredictionServiceClient> mockGrpcClient = new moq::Mock<PredictionService.PredictionServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             PredictRequest request = new PredictRequest
             {
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
@@ -119,9 +133,10 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DeployedModelId = "deployed_model_idf0bd41af",
                 ModelAsModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
                 ModelDisplayName = "model_display_name8ef9ce34",
+                ModelVersionId = "model_version_idcaf4b810",
             };
             mockGrpcClient.Setup(x => x.PredictAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PredictResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
+            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null, null);
             PredictResponse responseCallSettings = await client.PredictAsync(request.Endpoint, request.Instances, request.Parameters, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PredictResponse responseCancellationToken = await client.PredictAsync(request.Endpoint, request.Instances, request.Parameters, st::CancellationToken.None);
@@ -133,6 +148,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         public void PredictResourceNames()
         {
             moq::Mock<PredictionService.PredictionServiceClient> mockGrpcClient = new moq::Mock<PredictionService.PredictionServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             PredictRequest request = new PredictRequest
             {
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
@@ -145,9 +162,10 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DeployedModelId = "deployed_model_idf0bd41af",
                 ModelAsModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
                 ModelDisplayName = "model_display_name8ef9ce34",
+                ModelVersionId = "model_version_idcaf4b810",
             };
             mockGrpcClient.Setup(x => x.Predict(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
+            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null, null);
             PredictResponse response = client.Predict(request.EndpointAsEndpointName, request.Instances, request.Parameters);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -157,6 +175,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         public async stt::Task PredictResourceNamesAsync()
         {
             moq::Mock<PredictionService.PredictionServiceClient> mockGrpcClient = new moq::Mock<PredictionService.PredictionServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             PredictRequest request = new PredictRequest
             {
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
@@ -169,9 +189,10 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DeployedModelId = "deployed_model_idf0bd41af",
                 ModelAsModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
                 ModelDisplayName = "model_display_name8ef9ce34",
+                ModelVersionId = "model_version_idcaf4b810",
             };
             mockGrpcClient.Setup(x => x.PredictAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PredictResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
+            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null, null);
             PredictResponse responseCallSettings = await client.PredictAsync(request.EndpointAsEndpointName, request.Instances, request.Parameters, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PredictResponse responseCancellationToken = await client.PredictAsync(request.EndpointAsEndpointName, request.Instances, request.Parameters, st::CancellationToken.None);
@@ -183,6 +204,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         public void RawPredictRequestObject()
         {
             moq::Mock<PredictionService.PredictionServiceClient> mockGrpcClient = new moq::Mock<PredictionService.PredictionServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             RawPredictRequest request = new RawPredictRequest
             {
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
@@ -195,7 +218,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Extensions = { new wkt::Any(), },
             };
             mockGrpcClient.Setup(x => x.RawPredict(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
+            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::HttpBody response = client.RawPredict(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -205,6 +228,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         public async stt::Task RawPredictRequestObjectAsync()
         {
             moq::Mock<PredictionService.PredictionServiceClient> mockGrpcClient = new moq::Mock<PredictionService.PredictionServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             RawPredictRequest request = new RawPredictRequest
             {
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
@@ -217,7 +242,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Extensions = { new wkt::Any(), },
             };
             mockGrpcClient.Setup(x => x.RawPredictAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::HttpBody>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
+            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::HttpBody responseCallSettings = await client.RawPredictAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ga::HttpBody responseCancellationToken = await client.RawPredictAsync(request, st::CancellationToken.None);
@@ -229,6 +254,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         public void RawPredict()
         {
             moq::Mock<PredictionService.PredictionServiceClient> mockGrpcClient = new moq::Mock<PredictionService.PredictionServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             RawPredictRequest request = new RawPredictRequest
             {
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
@@ -241,7 +268,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Extensions = { new wkt::Any(), },
             };
             mockGrpcClient.Setup(x => x.RawPredict(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
+            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::HttpBody response = client.RawPredict(request.Endpoint, request.HttpBody);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -251,6 +278,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         public async stt::Task RawPredictAsync()
         {
             moq::Mock<PredictionService.PredictionServiceClient> mockGrpcClient = new moq::Mock<PredictionService.PredictionServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             RawPredictRequest request = new RawPredictRequest
             {
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
@@ -263,7 +292,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Extensions = { new wkt::Any(), },
             };
             mockGrpcClient.Setup(x => x.RawPredictAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::HttpBody>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
+            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::HttpBody responseCallSettings = await client.RawPredictAsync(request.Endpoint, request.HttpBody, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ga::HttpBody responseCancellationToken = await client.RawPredictAsync(request.Endpoint, request.HttpBody, st::CancellationToken.None);
@@ -275,6 +304,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         public void RawPredictResourceNames()
         {
             moq::Mock<PredictionService.PredictionServiceClient> mockGrpcClient = new moq::Mock<PredictionService.PredictionServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             RawPredictRequest request = new RawPredictRequest
             {
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
@@ -287,7 +318,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Extensions = { new wkt::Any(), },
             };
             mockGrpcClient.Setup(x => x.RawPredict(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
+            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::HttpBody response = client.RawPredict(request.EndpointAsEndpointName, request.HttpBody);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -297,6 +328,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         public async stt::Task RawPredictResourceNamesAsync()
         {
             moq::Mock<PredictionService.PredictionServiceClient> mockGrpcClient = new moq::Mock<PredictionService.PredictionServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             RawPredictRequest request = new RawPredictRequest
             {
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
@@ -309,7 +342,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Extensions = { new wkt::Any(), },
             };
             mockGrpcClient.Setup(x => x.RawPredictAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::HttpBody>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
+            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null, null);
             ga::HttpBody responseCallSettings = await client.RawPredictAsync(request.EndpointAsEndpointName, request.HttpBody, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ga::HttpBody responseCancellationToken = await client.RawPredictAsync(request.EndpointAsEndpointName, request.HttpBody, st::CancellationToken.None);
@@ -321,6 +354,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         public void ExplainRequestObject()
         {
             moq::Mock<PredictionService.PredictionServiceClient> mockGrpcClient = new moq::Mock<PredictionService.PredictionServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ExplainRequest request = new ExplainRequest
             {
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
@@ -336,7 +371,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Predictions = { new wkt::Value(), },
             };
             mockGrpcClient.Setup(x => x.Explain(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
+            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null, null);
             ExplainResponse response = client.Explain(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -346,6 +381,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         public async stt::Task ExplainRequestObjectAsync()
         {
             moq::Mock<PredictionService.PredictionServiceClient> mockGrpcClient = new moq::Mock<PredictionService.PredictionServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ExplainRequest request = new ExplainRequest
             {
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
@@ -361,7 +398,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Predictions = { new wkt::Value(), },
             };
             mockGrpcClient.Setup(x => x.ExplainAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ExplainResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
+            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null, null);
             ExplainResponse responseCallSettings = await client.ExplainAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ExplainResponse responseCancellationToken = await client.ExplainAsync(request, st::CancellationToken.None);
@@ -373,6 +410,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         public void Explain()
         {
             moq::Mock<PredictionService.PredictionServiceClient> mockGrpcClient = new moq::Mock<PredictionService.PredictionServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ExplainRequest request = new ExplainRequest
             {
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
@@ -387,7 +426,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Predictions = { new wkt::Value(), },
             };
             mockGrpcClient.Setup(x => x.Explain(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
+            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null, null);
             ExplainResponse response = client.Explain(request.Endpoint, request.Instances, request.Parameters, request.DeployedModelId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -397,6 +436,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         public async stt::Task ExplainAsync()
         {
             moq::Mock<PredictionService.PredictionServiceClient> mockGrpcClient = new moq::Mock<PredictionService.PredictionServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ExplainRequest request = new ExplainRequest
             {
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
@@ -411,7 +452,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Predictions = { new wkt::Value(), },
             };
             mockGrpcClient.Setup(x => x.ExplainAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ExplainResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
+            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null, null);
             ExplainResponse responseCallSettings = await client.ExplainAsync(request.Endpoint, request.Instances, request.Parameters, request.DeployedModelId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ExplainResponse responseCancellationToken = await client.ExplainAsync(request.Endpoint, request.Instances, request.Parameters, request.DeployedModelId, st::CancellationToken.None);
@@ -423,6 +464,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         public void ExplainResourceNames()
         {
             moq::Mock<PredictionService.PredictionServiceClient> mockGrpcClient = new moq::Mock<PredictionService.PredictionServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ExplainRequest request = new ExplainRequest
             {
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
@@ -437,7 +480,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Predictions = { new wkt::Value(), },
             };
             mockGrpcClient.Setup(x => x.Explain(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
+            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null, null);
             ExplainResponse response = client.Explain(request.EndpointAsEndpointName, request.Instances, request.Parameters, request.DeployedModelId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -447,6 +490,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         public async stt::Task ExplainResourceNamesAsync()
         {
             moq::Mock<PredictionService.PredictionServiceClient> mockGrpcClient = new moq::Mock<PredictionService.PredictionServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ExplainRequest request = new ExplainRequest
             {
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
@@ -461,7 +506,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Predictions = { new wkt::Value(), },
             };
             mockGrpcClient.Setup(x => x.ExplainAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ExplainResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
+            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null, null);
             ExplainResponse responseCallSettings = await client.ExplainAsync(request.EndpointAsEndpointName, request.Instances, request.Parameters, request.DeployedModelId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ExplainResponse responseCancellationToken = await client.ExplainAsync(request.EndpointAsEndpointName, request.Instances, request.Parameters, request.DeployedModelId, st::CancellationToken.None);

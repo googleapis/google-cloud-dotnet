@@ -34,6 +34,12 @@
                 "ListRuntimesAsync"
               ]
             },
+            "RefreshRuntimeTokenInternal": {
+              "methods": [
+                "RefreshRuntimeTokenInternal",
+                "RefreshRuntimeTokenInternalAsync"
+              ]
+            },
             "ReportRuntimeEvent": {
               "methods": [
                 "ReportRuntimeEvent",
@@ -245,6 +251,12 @@
               "methods": [
                 "UpdateInstanceConfig",
                 "UpdateInstanceConfigAsync"
+              ]
+            },
+            "UpdateInstanceMetadataItems": {
+              "methods": [
+                "UpdateInstanceMetadataItems",
+                "UpdateInstanceMetadataItemsAsync"
               ]
             },
             "UpdateShieldedInstanceConfig": {

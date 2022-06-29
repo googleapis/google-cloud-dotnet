@@ -1459,6 +1459,316 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "eventarc_v1_generated_Eventarc_GetProvider_sync",
+      "title": "GetProviderRequestObject",
+      "description": "Snippet for GetProvider",
+      "file": "EventarcClient.GetProviderRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProvider",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetProvider",
+        "resultType": "Google.Cloud.Eventarc.V1.Provider",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "GetProvider",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.GetProvider",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_GetProvider_async",
+      "title": "GetProviderRequestObjectAsync",
+      "description": "Snippet for GetProviderAsync",
+      "file": "EventarcClient.GetProviderRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProviderAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetProviderAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.V1.Provider>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "GetProvider",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.GetProvider",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_GetProvider_sync_flattened",
+      "title": "GetProvider",
+      "description": "Snippet for GetProvider",
+      "file": "EventarcClient.GetProviderSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProvider",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetProvider",
+        "resultType": "Google.Cloud.Eventarc.V1.Provider",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "GetProvider",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.GetProvider",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_GetProvider_async_flattened",
+      "title": "GetProviderAsync",
+      "description": "Snippet for GetProviderAsync",
+      "file": "EventarcClient.GetProviderAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProviderAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetProviderAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.V1.Provider>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "GetProvider",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.GetProvider",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_GetProvider_sync_flattened_resourceNames",
+      "title": "GetProviderResourceNames",
+      "description": "Snippet for GetProvider",
+      "file": "EventarcClient.GetProviderResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProvider",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetProvider",
+        "resultType": "Google.Cloud.Eventarc.V1.Provider",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "GetProvider",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.GetProvider",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_GetProvider_async_flattened_resourceNames",
+      "title": "GetProviderResourceNamesAsync",
+      "description": "Snippet for GetProviderAsync",
+      "file": "EventarcClient.GetProviderResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProviderAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetProviderAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.V1.Provider>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "GetProvider",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.GetProvider",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_ListProviders_sync",
+      "title": "ListProvidersRequestObject",
+      "description": "Snippet for ListProviders",
+      "file": "EventarcClient.ListProvidersRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProviders",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListProviders",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Eventarc.V1.ListProvidersResponse, Google.Cloud.Eventarc.V1.Provider>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "ListProviders",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.ListProviders",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_ListProviders_async",
+      "title": "ListProvidersRequestObjectAsync",
+      "description": "Snippet for ListProvidersAsync",
+      "file": "EventarcClient.ListProvidersRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProvidersAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListProvidersAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Eventarc.V1.ListProvidersResponse, Google.Cloud.Eventarc.V1.Provider>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "ListProviders",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.ListProviders",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_ListProviders_sync_flattened",
+      "title": "ListProviders",
+      "description": "Snippet for ListProviders",
+      "file": "EventarcClient.ListProvidersSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProviders",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListProviders",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Eventarc.V1.ListProvidersResponse, Google.Cloud.Eventarc.V1.Provider>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "ListProviders",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.ListProviders",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_ListProviders_async_flattened",
+      "title": "ListProvidersAsync",
+      "description": "Snippet for ListProvidersAsync",
+      "file": "EventarcClient.ListProvidersAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProvidersAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListProvidersAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Eventarc.V1.ListProvidersResponse, Google.Cloud.Eventarc.V1.Provider>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "ListProviders",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.ListProviders",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_ListProviders_sync_flattened_resourceNames",
+      "title": "ListProvidersResourceNames",
+      "description": "Snippet for ListProviders",
+      "file": "EventarcClient.ListProvidersResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProviders",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListProviders",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Eventarc.V1.ListProvidersResponse, Google.Cloud.Eventarc.V1.Provider>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "ListProviders",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.ListProviders",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_ListProviders_async_flattened_resourceNames",
+      "title": "ListProvidersResourceNamesAsync",
+      "description": "Snippet for ListProvidersAsync",
+      "file": "EventarcClient.ListProvidersResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProvidersAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListProvidersAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Eventarc.V1.ListProvidersResponse, Google.Cloud.Eventarc.V1.Provider>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "ListProviders",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.ListProviders",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "eventarc_v1_generated_Eventarc_GetChannelConnection_sync",
       "title": "GetChannelConnectionRequestObject",
       "description": "Snippet for GetChannelConnection",

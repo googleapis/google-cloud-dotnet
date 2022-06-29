@@ -15,6 +15,7 @@
 using Google.Cloud.Tools.Common;
 using LibGit2Sharp;
 using Newtonsoft.Json;
+using System;
 using System.IO;
 using System.Linq;
 
@@ -52,7 +53,12 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
 
             var catalog = ApiCatalog.Load();
             var criterion = criteria[0];
-            var proposals = criterion.GetProposals(catalog);
+            Func<string, StructuredVersion, StructuredVersion> versionIncrementer =
+                config.PostMajorVersion
+                ? (id, sv) => sv.AfterMajorVersion(id)
+                : (id, sv) => sv.AfterIncrement();
+            string defaultMessage = config.DefaultHistoryMessageFile is null ? null : File.ReadAllText(config.DefaultHistoryMessageFile);
+            var proposals = criterion.GetProposals(catalog, versionIncrementer, defaultMessage);
 
             foreach (var proposal in proposals)
             {

@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -53,7 +54,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateAutoscalingPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AutoscalingPolicy response = client.CreateAutoscalingPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -84,7 +85,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateAutoscalingPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AutoscalingPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AutoscalingPolicy responseCallSettings = await client.CreateAutoscalingPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AutoscalingPolicy responseCancellationToken = await client.CreateAutoscalingPolicyAsync(request, st::CancellationToken.None);
@@ -117,7 +118,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateAutoscalingPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AutoscalingPolicy response = client.CreateAutoscalingPolicy(request.Parent, request.Policy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -148,7 +149,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateAutoscalingPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AutoscalingPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AutoscalingPolicy responseCallSettings = await client.CreateAutoscalingPolicyAsync(request.Parent, request.Policy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AutoscalingPolicy responseCancellationToken = await client.CreateAutoscalingPolicyAsync(request.Parent, request.Policy, st::CancellationToken.None);
@@ -181,7 +182,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateAutoscalingPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AutoscalingPolicy response = client.CreateAutoscalingPolicy(request.ParentAsLocationName, request.Policy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -212,7 +213,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateAutoscalingPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AutoscalingPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AutoscalingPolicy responseCallSettings = await client.CreateAutoscalingPolicyAsync(request.ParentAsLocationName, request.Policy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AutoscalingPolicy responseCancellationToken = await client.CreateAutoscalingPolicyAsync(request.ParentAsLocationName, request.Policy, st::CancellationToken.None);
@@ -245,7 +246,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateAutoscalingPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AutoscalingPolicy response = client.CreateAutoscalingPolicy(request.ParentAsRegionName, request.Policy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -276,7 +277,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateAutoscalingPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AutoscalingPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AutoscalingPolicy responseCallSettings = await client.CreateAutoscalingPolicyAsync(request.ParentAsRegionName, request.Policy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AutoscalingPolicy responseCancellationToken = await client.CreateAutoscalingPolicyAsync(request.ParentAsRegionName, request.Policy, st::CancellationToken.None);
@@ -308,7 +309,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateAutoscalingPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AutoscalingPolicy response = client.UpdateAutoscalingPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -338,7 +339,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateAutoscalingPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AutoscalingPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AutoscalingPolicy responseCallSettings = await client.UpdateAutoscalingPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AutoscalingPolicy responseCancellationToken = await client.UpdateAutoscalingPolicyAsync(request, st::CancellationToken.None);
@@ -370,7 +371,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateAutoscalingPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AutoscalingPolicy response = client.UpdateAutoscalingPolicy(request.Policy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -400,7 +401,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateAutoscalingPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AutoscalingPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AutoscalingPolicy responseCallSettings = await client.UpdateAutoscalingPolicyAsync(request.Policy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AutoscalingPolicy responseCancellationToken = await client.UpdateAutoscalingPolicyAsync(request.Policy, st::CancellationToken.None);
@@ -432,7 +433,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetAutoscalingPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AutoscalingPolicy response = client.GetAutoscalingPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -462,7 +463,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetAutoscalingPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AutoscalingPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AutoscalingPolicy responseCallSettings = await client.GetAutoscalingPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AutoscalingPolicy responseCancellationToken = await client.GetAutoscalingPolicyAsync(request, st::CancellationToken.None);
@@ -494,7 +495,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetAutoscalingPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AutoscalingPolicy response = client.GetAutoscalingPolicy(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -524,7 +525,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetAutoscalingPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AutoscalingPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AutoscalingPolicy responseCallSettings = await client.GetAutoscalingPolicyAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AutoscalingPolicy responseCancellationToken = await client.GetAutoscalingPolicyAsync(request.Name, st::CancellationToken.None);
@@ -556,7 +557,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetAutoscalingPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AutoscalingPolicy response = client.GetAutoscalingPolicy(request.AutoscalingPolicyName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -586,7 +587,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetAutoscalingPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AutoscalingPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             AutoscalingPolicy responseCallSettings = await client.GetAutoscalingPolicyAsync(request.AutoscalingPolicyName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AutoscalingPolicy responseCancellationToken = await client.GetAutoscalingPolicyAsync(request.AutoscalingPolicyName, st::CancellationToken.None);
@@ -604,7 +605,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAutoscalingPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteAutoscalingPolicy(request);
             mockGrpcClient.VerifyAll();
         }
@@ -619,7 +620,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAutoscalingPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteAutoscalingPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteAutoscalingPolicyAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -635,7 +636,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAutoscalingPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteAutoscalingPolicy(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -650,7 +651,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAutoscalingPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteAutoscalingPolicyAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteAutoscalingPolicyAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -666,7 +667,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAutoscalingPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteAutoscalingPolicy(request.AutoscalingPolicyName);
             mockGrpcClient.VerifyAll();
         }
@@ -681,7 +682,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAutoscalingPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteAutoscalingPolicyAsync(request.AutoscalingPolicyName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteAutoscalingPolicyAsync(request.AutoscalingPolicyName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();

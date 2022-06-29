@@ -1,5 +1,24 @@
 # Version history
 
+## Version 4.0.0, released 2022-06-08
+
+This is the first version of this package to depend on GAX v4.
+
+There are some breaking changes, both in GAX v4 and in the generated
+code. The changes that aren't specific to any given API are [described in the Google Cloud
+documentation](https://cloud.google.com/dotnet/docs/reference/help/breaking-gax4).
+We don't anticipate any changes to most customer code, but please [file a
+GitHub issue](https://github.com/googleapis/google-cloud-dotnet/issues/new/choose)
+if you run into problems.
+
+### New features
+
+- Provide metadata for the object that has been downloaded. Fixes [issue 7897](https://github.com/googleapis/google-cloud-dotnet/issues/7897) ([commit e60a0d4](https://github.com/googleapis/google-cloud-dotnet/commit/e60a0d4405e4f6e25faca2e227e9276cc3fc11d0))
+- Operations are retried automatically where appropriate
+
+### Breaking changes
+
+- Changes to IBlogSigner to support HMAC signing. ([commit b82fed2](https://github.com/googleapis/google-cloud-dotnet/commit/b82fed27f2ebeb3c345290b477c7f53ff3c0148e))
 ## Version 3.7.0, released 2022-01-27
 
 No API surface changes; just dependency updates.

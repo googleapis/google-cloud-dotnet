@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -46,7 +47,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 AkamaiCdnKey = new AkamaiCdnKey(),
             };
             mockGrpcClient.Setup(x => x.CreateCdnKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             CdnKey response = client.CreateCdnKey(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -70,7 +71,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 AkamaiCdnKey = new AkamaiCdnKey(),
             };
             mockGrpcClient.Setup(x => x.CreateCdnKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CdnKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             CdnKey responseCallSettings = await client.CreateCdnKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CdnKey responseCancellationToken = await client.CreateCdnKeyAsync(request, st::CancellationToken.None);
@@ -96,7 +97,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 AkamaiCdnKey = new AkamaiCdnKey(),
             };
             mockGrpcClient.Setup(x => x.CreateCdnKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             CdnKey response = client.CreateCdnKey(request.Parent, request.CdnKey, request.CdnKeyId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -120,7 +121,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 AkamaiCdnKey = new AkamaiCdnKey(),
             };
             mockGrpcClient.Setup(x => x.CreateCdnKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CdnKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             CdnKey responseCallSettings = await client.CreateCdnKeyAsync(request.Parent, request.CdnKey, request.CdnKeyId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CdnKey responseCancellationToken = await client.CreateCdnKeyAsync(request.Parent, request.CdnKey, request.CdnKeyId, st::CancellationToken.None);
@@ -146,7 +147,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 AkamaiCdnKey = new AkamaiCdnKey(),
             };
             mockGrpcClient.Setup(x => x.CreateCdnKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             CdnKey response = client.CreateCdnKey(request.ParentAsLocationName, request.CdnKey, request.CdnKeyId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -170,7 +171,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 AkamaiCdnKey = new AkamaiCdnKey(),
             };
             mockGrpcClient.Setup(x => x.CreateCdnKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CdnKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             CdnKey responseCallSettings = await client.CreateCdnKeyAsync(request.ParentAsLocationName, request.CdnKey, request.CdnKeyId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CdnKey responseCancellationToken = await client.CreateCdnKeyAsync(request.ParentAsLocationName, request.CdnKey, request.CdnKeyId, st::CancellationToken.None);
@@ -194,7 +195,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 AkamaiCdnKey = new AkamaiCdnKey(),
             };
             mockGrpcClient.Setup(x => x.GetCdnKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             CdnKey response = client.GetCdnKey(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -216,7 +217,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 AkamaiCdnKey = new AkamaiCdnKey(),
             };
             mockGrpcClient.Setup(x => x.GetCdnKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CdnKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             CdnKey responseCallSettings = await client.GetCdnKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CdnKey responseCancellationToken = await client.GetCdnKeyAsync(request, st::CancellationToken.None);
@@ -240,7 +241,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 AkamaiCdnKey = new AkamaiCdnKey(),
             };
             mockGrpcClient.Setup(x => x.GetCdnKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             CdnKey response = client.GetCdnKey(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -262,7 +263,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 AkamaiCdnKey = new AkamaiCdnKey(),
             };
             mockGrpcClient.Setup(x => x.GetCdnKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CdnKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             CdnKey responseCallSettings = await client.GetCdnKeyAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CdnKey responseCancellationToken = await client.GetCdnKeyAsync(request.Name, st::CancellationToken.None);
@@ -286,7 +287,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 AkamaiCdnKey = new AkamaiCdnKey(),
             };
             mockGrpcClient.Setup(x => x.GetCdnKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             CdnKey response = client.GetCdnKey(request.CdnKeyName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -308,7 +309,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 AkamaiCdnKey = new AkamaiCdnKey(),
             };
             mockGrpcClient.Setup(x => x.GetCdnKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CdnKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             CdnKey responseCallSettings = await client.GetCdnKeyAsync(request.CdnKeyName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CdnKey responseCancellationToken = await client.GetCdnKeyAsync(request.CdnKeyName, st::CancellationToken.None);
@@ -326,7 +327,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteCdnKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteCdnKey(request);
             mockGrpcClient.VerifyAll();
         }
@@ -341,7 +342,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteCdnKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteCdnKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteCdnKeyAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -357,7 +358,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteCdnKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteCdnKey(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -372,7 +373,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteCdnKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteCdnKeyAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteCdnKeyAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -388,7 +389,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteCdnKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteCdnKey(request.CdnKeyName);
             mockGrpcClient.VerifyAll();
         }
@@ -403,7 +404,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteCdnKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteCdnKeyAsync(request.CdnKeyName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteCdnKeyAsync(request.CdnKeyName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -426,7 +427,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 AkamaiCdnKey = new AkamaiCdnKey(),
             };
             mockGrpcClient.Setup(x => x.UpdateCdnKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             CdnKey response = client.UpdateCdnKey(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -449,7 +450,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 AkamaiCdnKey = new AkamaiCdnKey(),
             };
             mockGrpcClient.Setup(x => x.UpdateCdnKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CdnKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             CdnKey responseCallSettings = await client.UpdateCdnKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CdnKey responseCancellationToken = await client.UpdateCdnKeyAsync(request, st::CancellationToken.None);
@@ -474,7 +475,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 AkamaiCdnKey = new AkamaiCdnKey(),
             };
             mockGrpcClient.Setup(x => x.UpdateCdnKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             CdnKey response = client.UpdateCdnKey(request.CdnKey, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -497,7 +498,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 AkamaiCdnKey = new AkamaiCdnKey(),
             };
             mockGrpcClient.Setup(x => x.UpdateCdnKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CdnKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             CdnKey responseCallSettings = await client.UpdateCdnKeyAsync(request.CdnKey, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CdnKey responseCancellationToken = await client.UpdateCdnKeyAsync(request.CdnKey, request.UpdateMask, st::CancellationToken.None);
@@ -530,9 +531,10 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 ManifestOptions = new ManifestOptions(),
+                AssetId = "asset_iddbd5c651",
             };
             mockGrpcClient.Setup(x => x.CreateVodSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             VodSession response = client.CreateVodSession(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -563,9 +565,10 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 ManifestOptions = new ManifestOptions(),
+                AssetId = "asset_iddbd5c651",
             };
             mockGrpcClient.Setup(x => x.CreateVodSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<VodSession>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             VodSession responseCallSettings = await client.CreateVodSessionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             VodSession responseCancellationToken = await client.CreateVodSessionAsync(request, st::CancellationToken.None);
@@ -598,9 +601,10 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 ManifestOptions = new ManifestOptions(),
+                AssetId = "asset_iddbd5c651",
             };
             mockGrpcClient.Setup(x => x.CreateVodSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             VodSession response = client.CreateVodSession(request.Parent, request.VodSession);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -631,9 +635,10 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 ManifestOptions = new ManifestOptions(),
+                AssetId = "asset_iddbd5c651",
             };
             mockGrpcClient.Setup(x => x.CreateVodSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<VodSession>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             VodSession responseCallSettings = await client.CreateVodSessionAsync(request.Parent, request.VodSession, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             VodSession responseCancellationToken = await client.CreateVodSessionAsync(request.Parent, request.VodSession, st::CancellationToken.None);
@@ -666,9 +671,10 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 ManifestOptions = new ManifestOptions(),
+                AssetId = "asset_iddbd5c651",
             };
             mockGrpcClient.Setup(x => x.CreateVodSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             VodSession response = client.CreateVodSession(request.ParentAsLocationName, request.VodSession);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -699,9 +705,10 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 ManifestOptions = new ManifestOptions(),
+                AssetId = "asset_iddbd5c651",
             };
             mockGrpcClient.Setup(x => x.CreateVodSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<VodSession>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             VodSession responseCallSettings = await client.CreateVodSessionAsync(request.ParentAsLocationName, request.VodSession, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             VodSession responseCancellationToken = await client.CreateVodSessionAsync(request.ParentAsLocationName, request.VodSession, st::CancellationToken.None);
@@ -733,9 +740,10 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 ManifestOptions = new ManifestOptions(),
+                AssetId = "asset_iddbd5c651",
             };
             mockGrpcClient.Setup(x => x.GetVodSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             VodSession response = client.GetVodSession(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -765,9 +773,10 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 ManifestOptions = new ManifestOptions(),
+                AssetId = "asset_iddbd5c651",
             };
             mockGrpcClient.Setup(x => x.GetVodSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<VodSession>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             VodSession responseCallSettings = await client.GetVodSessionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             VodSession responseCancellationToken = await client.GetVodSessionAsync(request, st::CancellationToken.None);
@@ -799,9 +808,10 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 ManifestOptions = new ManifestOptions(),
+                AssetId = "asset_iddbd5c651",
             };
             mockGrpcClient.Setup(x => x.GetVodSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             VodSession response = client.GetVodSession(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -831,9 +841,10 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 ManifestOptions = new ManifestOptions(),
+                AssetId = "asset_iddbd5c651",
             };
             mockGrpcClient.Setup(x => x.GetVodSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<VodSession>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             VodSession responseCallSettings = await client.GetVodSessionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             VodSession responseCancellationToken = await client.GetVodSessionAsync(request.Name, st::CancellationToken.None);
@@ -865,9 +876,10 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 ManifestOptions = new ManifestOptions(),
+                AssetId = "asset_iddbd5c651",
             };
             mockGrpcClient.Setup(x => x.GetVodSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             VodSession response = client.GetVodSession(request.VodSessionName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -897,9 +909,10 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 ManifestOptions = new ManifestOptions(),
+                AssetId = "asset_iddbd5c651",
             };
             mockGrpcClient.Setup(x => x.GetVodSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<VodSession>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             VodSession responseCallSettings = await client.GetVodSessionAsync(request.VodSessionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             VodSession responseCancellationToken = await client.GetVodSessionAsync(request.VodSessionName, st::CancellationToken.None);
@@ -924,7 +937,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetVodStitchDetail(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             VodStitchDetail response = client.GetVodStitchDetail(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -947,7 +960,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetVodStitchDetailAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<VodStitchDetail>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             VodStitchDetail responseCallSettings = await client.GetVodStitchDetailAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             VodStitchDetail responseCancellationToken = await client.GetVodStitchDetailAsync(request, st::CancellationToken.None);
@@ -972,7 +985,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetVodStitchDetail(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             VodStitchDetail response = client.GetVodStitchDetail(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -995,7 +1008,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetVodStitchDetailAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<VodStitchDetail>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             VodStitchDetail responseCallSettings = await client.GetVodStitchDetailAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             VodStitchDetail responseCancellationToken = await client.GetVodStitchDetailAsync(request.Name, st::CancellationToken.None);
@@ -1020,7 +1033,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetVodStitchDetail(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             VodStitchDetail response = client.GetVodStitchDetail(request.VodStitchDetailName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1043,7 +1056,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetVodStitchDetailAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<VodStitchDetail>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             VodStitchDetail responseCallSettings = await client.GetVodStitchDetailAsync(request.VodStitchDetailName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             VodStitchDetail responseCancellationToken = await client.GetVodStitchDetailAsync(request.VodStitchDetailName, st::CancellationToken.None);
@@ -1065,7 +1078,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 AdRequests = { new AdRequest(), },
             };
             mockGrpcClient.Setup(x => x.GetVodAdTagDetail(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             VodAdTagDetail response = client.GetVodAdTagDetail(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1085,7 +1098,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 AdRequests = { new AdRequest(), },
             };
             mockGrpcClient.Setup(x => x.GetVodAdTagDetailAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<VodAdTagDetail>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             VodAdTagDetail responseCallSettings = await client.GetVodAdTagDetailAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             VodAdTagDetail responseCancellationToken = await client.GetVodAdTagDetailAsync(request, st::CancellationToken.None);
@@ -1107,7 +1120,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 AdRequests = { new AdRequest(), },
             };
             mockGrpcClient.Setup(x => x.GetVodAdTagDetail(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             VodAdTagDetail response = client.GetVodAdTagDetail(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1127,7 +1140,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 AdRequests = { new AdRequest(), },
             };
             mockGrpcClient.Setup(x => x.GetVodAdTagDetailAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<VodAdTagDetail>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             VodAdTagDetail responseCallSettings = await client.GetVodAdTagDetailAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             VodAdTagDetail responseCancellationToken = await client.GetVodAdTagDetailAsync(request.Name, st::CancellationToken.None);
@@ -1149,7 +1162,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 AdRequests = { new AdRequest(), },
             };
             mockGrpcClient.Setup(x => x.GetVodAdTagDetail(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             VodAdTagDetail response = client.GetVodAdTagDetail(request.VodAdTagDetailName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1169,7 +1182,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 AdRequests = { new AdRequest(), },
             };
             mockGrpcClient.Setup(x => x.GetVodAdTagDetailAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<VodAdTagDetail>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             VodAdTagDetail responseCallSettings = await client.GetVodAdTagDetailAsync(request.VodAdTagDetailName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             VodAdTagDetail responseCancellationToken = await client.GetVodAdTagDetailAsync(request.VodAdTagDetailName, st::CancellationToken.None);
@@ -1191,7 +1204,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 AdRequests = { new AdRequest(), },
             };
             mockGrpcClient.Setup(x => x.GetLiveAdTagDetail(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             LiveAdTagDetail response = client.GetLiveAdTagDetail(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1211,7 +1224,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 AdRequests = { new AdRequest(), },
             };
             mockGrpcClient.Setup(x => x.GetLiveAdTagDetailAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LiveAdTagDetail>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             LiveAdTagDetail responseCallSettings = await client.GetLiveAdTagDetailAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LiveAdTagDetail responseCancellationToken = await client.GetLiveAdTagDetailAsync(request, st::CancellationToken.None);
@@ -1233,7 +1246,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 AdRequests = { new AdRequest(), },
             };
             mockGrpcClient.Setup(x => x.GetLiveAdTagDetail(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             LiveAdTagDetail response = client.GetLiveAdTagDetail(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1253,7 +1266,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 AdRequests = { new AdRequest(), },
             };
             mockGrpcClient.Setup(x => x.GetLiveAdTagDetailAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LiveAdTagDetail>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             LiveAdTagDetail responseCallSettings = await client.GetLiveAdTagDetailAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LiveAdTagDetail responseCancellationToken = await client.GetLiveAdTagDetailAsync(request.Name, st::CancellationToken.None);
@@ -1275,7 +1288,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 AdRequests = { new AdRequest(), },
             };
             mockGrpcClient.Setup(x => x.GetLiveAdTagDetail(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             LiveAdTagDetail response = client.GetLiveAdTagDetail(request.LiveAdTagDetailName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1295,7 +1308,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 AdRequests = { new AdRequest(), },
             };
             mockGrpcClient.Setup(x => x.GetLiveAdTagDetailAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LiveAdTagDetail>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             LiveAdTagDetail responseCallSettings = await client.GetLiveAdTagDetailAsync(request.LiveAdTagDetailName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LiveAdTagDetail responseCancellationToken = await client.GetLiveAdTagDetailAsync(request.LiveAdTagDetailName, st::CancellationToken.None);
@@ -1319,7 +1332,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 Uri = "uri3db70593",
             };
             mockGrpcClient.Setup(x => x.CreateSlate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             Slate response = client.CreateSlate(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1341,7 +1354,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 Uri = "uri3db70593",
             };
             mockGrpcClient.Setup(x => x.CreateSlateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Slate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             Slate responseCallSettings = await client.CreateSlateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Slate responseCancellationToken = await client.CreateSlateAsync(request, st::CancellationToken.None);
@@ -1365,7 +1378,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 Uri = "uri3db70593",
             };
             mockGrpcClient.Setup(x => x.CreateSlate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             Slate response = client.CreateSlate(request.Parent, request.Slate, request.SlateId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1387,7 +1400,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 Uri = "uri3db70593",
             };
             mockGrpcClient.Setup(x => x.CreateSlateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Slate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             Slate responseCallSettings = await client.CreateSlateAsync(request.Parent, request.Slate, request.SlateId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Slate responseCancellationToken = await client.CreateSlateAsync(request.Parent, request.Slate, request.SlateId, st::CancellationToken.None);
@@ -1411,7 +1424,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 Uri = "uri3db70593",
             };
             mockGrpcClient.Setup(x => x.CreateSlate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             Slate response = client.CreateSlate(request.ParentAsLocationName, request.Slate, request.SlateId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1433,7 +1446,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 Uri = "uri3db70593",
             };
             mockGrpcClient.Setup(x => x.CreateSlateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Slate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             Slate responseCallSettings = await client.CreateSlateAsync(request.ParentAsLocationName, request.Slate, request.SlateId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Slate responseCancellationToken = await client.CreateSlateAsync(request.ParentAsLocationName, request.Slate, request.SlateId, st::CancellationToken.None);
@@ -1455,7 +1468,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 Uri = "uri3db70593",
             };
             mockGrpcClient.Setup(x => x.GetSlate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             Slate response = client.GetSlate(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1475,7 +1488,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 Uri = "uri3db70593",
             };
             mockGrpcClient.Setup(x => x.GetSlateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Slate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             Slate responseCallSettings = await client.GetSlateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Slate responseCancellationToken = await client.GetSlateAsync(request, st::CancellationToken.None);
@@ -1497,7 +1510,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 Uri = "uri3db70593",
             };
             mockGrpcClient.Setup(x => x.GetSlate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             Slate response = client.GetSlate(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1517,7 +1530,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 Uri = "uri3db70593",
             };
             mockGrpcClient.Setup(x => x.GetSlateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Slate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             Slate responseCallSettings = await client.GetSlateAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Slate responseCancellationToken = await client.GetSlateAsync(request.Name, st::CancellationToken.None);
@@ -1539,7 +1552,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 Uri = "uri3db70593",
             };
             mockGrpcClient.Setup(x => x.GetSlate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             Slate response = client.GetSlate(request.SlateName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1559,7 +1572,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 Uri = "uri3db70593",
             };
             mockGrpcClient.Setup(x => x.GetSlateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Slate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             Slate responseCallSettings = await client.GetSlateAsync(request.SlateName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Slate responseCancellationToken = await client.GetSlateAsync(request.SlateName, st::CancellationToken.None);
@@ -1582,7 +1595,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 Uri = "uri3db70593",
             };
             mockGrpcClient.Setup(x => x.UpdateSlate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             Slate response = client.UpdateSlate(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1603,7 +1616,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 Uri = "uri3db70593",
             };
             mockGrpcClient.Setup(x => x.UpdateSlateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Slate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             Slate responseCallSettings = await client.UpdateSlateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Slate responseCancellationToken = await client.UpdateSlateAsync(request, st::CancellationToken.None);
@@ -1626,7 +1639,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 Uri = "uri3db70593",
             };
             mockGrpcClient.Setup(x => x.UpdateSlate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             Slate response = client.UpdateSlate(request.Slate, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1647,7 +1660,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 Uri = "uri3db70593",
             };
             mockGrpcClient.Setup(x => x.UpdateSlateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Slate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             Slate responseCallSettings = await client.UpdateSlateAsync(request.Slate, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Slate responseCancellationToken = await client.UpdateSlateAsync(request.Slate, request.UpdateMask, st::CancellationToken.None);
@@ -1665,7 +1678,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSlate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteSlate(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1680,7 +1693,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSlateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteSlateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteSlateAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1696,7 +1709,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSlate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteSlate(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -1711,7 +1724,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSlateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteSlateAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteSlateAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1727,7 +1740,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSlate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteSlate(request.SlateName);
             mockGrpcClient.VerifyAll();
         }
@@ -1742,7 +1755,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSlateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteSlateAsync(request.SlateName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteSlateAsync(request.SlateName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1779,11 +1792,12 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 DefaultSlateId = "default_slate_id07c41bba",
-                StitchingPolicy = LiveSession.Types.StitchingPolicy.Unspecified,
+                StitchingPolicy = LiveSession.Types.StitchingPolicy.CutCurrent,
                 ManifestOptions = new ManifestOptions(),
+                StreamId = "stream_idb4d31f47",
             };
             mockGrpcClient.Setup(x => x.CreateLiveSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             LiveSession response = client.CreateLiveSession(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1820,11 +1834,12 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 DefaultSlateId = "default_slate_id07c41bba",
-                StitchingPolicy = LiveSession.Types.StitchingPolicy.Unspecified,
+                StitchingPolicy = LiveSession.Types.StitchingPolicy.CutCurrent,
                 ManifestOptions = new ManifestOptions(),
+                StreamId = "stream_idb4d31f47",
             };
             mockGrpcClient.Setup(x => x.CreateLiveSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LiveSession>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             LiveSession responseCallSettings = await client.CreateLiveSessionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LiveSession responseCancellationToken = await client.CreateLiveSessionAsync(request, st::CancellationToken.None);
@@ -1863,11 +1878,12 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 DefaultSlateId = "default_slate_id07c41bba",
-                StitchingPolicy = LiveSession.Types.StitchingPolicy.Unspecified,
+                StitchingPolicy = LiveSession.Types.StitchingPolicy.CutCurrent,
                 ManifestOptions = new ManifestOptions(),
+                StreamId = "stream_idb4d31f47",
             };
             mockGrpcClient.Setup(x => x.CreateLiveSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             LiveSession response = client.CreateLiveSession(request.Parent, request.LiveSession);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1904,11 +1920,12 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 DefaultSlateId = "default_slate_id07c41bba",
-                StitchingPolicy = LiveSession.Types.StitchingPolicy.Unspecified,
+                StitchingPolicy = LiveSession.Types.StitchingPolicy.CutCurrent,
                 ManifestOptions = new ManifestOptions(),
+                StreamId = "stream_idb4d31f47",
             };
             mockGrpcClient.Setup(x => x.CreateLiveSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LiveSession>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             LiveSession responseCallSettings = await client.CreateLiveSessionAsync(request.Parent, request.LiveSession, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LiveSession responseCancellationToken = await client.CreateLiveSessionAsync(request.Parent, request.LiveSession, st::CancellationToken.None);
@@ -1947,11 +1964,12 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 DefaultSlateId = "default_slate_id07c41bba",
-                StitchingPolicy = LiveSession.Types.StitchingPolicy.Unspecified,
+                StitchingPolicy = LiveSession.Types.StitchingPolicy.CutCurrent,
                 ManifestOptions = new ManifestOptions(),
+                StreamId = "stream_idb4d31f47",
             };
             mockGrpcClient.Setup(x => x.CreateLiveSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             LiveSession response = client.CreateLiveSession(request.ParentAsLiveSessionName, request.LiveSession);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1988,11 +2006,12 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 DefaultSlateId = "default_slate_id07c41bba",
-                StitchingPolicy = LiveSession.Types.StitchingPolicy.Unspecified,
+                StitchingPolicy = LiveSession.Types.StitchingPolicy.CutCurrent,
                 ManifestOptions = new ManifestOptions(),
+                StreamId = "stream_idb4d31f47",
             };
             mockGrpcClient.Setup(x => x.CreateLiveSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LiveSession>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             LiveSession responseCallSettings = await client.CreateLiveSessionAsync(request.ParentAsLiveSessionName, request.LiveSession, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LiveSession responseCancellationToken = await client.CreateLiveSessionAsync(request.ParentAsLiveSessionName, request.LiveSession, st::CancellationToken.None);
@@ -2030,11 +2049,12 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 DefaultSlateId = "default_slate_id07c41bba",
-                StitchingPolicy = LiveSession.Types.StitchingPolicy.Unspecified,
+                StitchingPolicy = LiveSession.Types.StitchingPolicy.CutCurrent,
                 ManifestOptions = new ManifestOptions(),
+                StreamId = "stream_idb4d31f47",
             };
             mockGrpcClient.Setup(x => x.GetLiveSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             LiveSession response = client.GetLiveSession(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2070,11 +2090,12 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 DefaultSlateId = "default_slate_id07c41bba",
-                StitchingPolicy = LiveSession.Types.StitchingPolicy.Unspecified,
+                StitchingPolicy = LiveSession.Types.StitchingPolicy.CutCurrent,
                 ManifestOptions = new ManifestOptions(),
+                StreamId = "stream_idb4d31f47",
             };
             mockGrpcClient.Setup(x => x.GetLiveSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LiveSession>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             LiveSession responseCallSettings = await client.GetLiveSessionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LiveSession responseCancellationToken = await client.GetLiveSessionAsync(request, st::CancellationToken.None);
@@ -2112,11 +2133,12 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 DefaultSlateId = "default_slate_id07c41bba",
-                StitchingPolicy = LiveSession.Types.StitchingPolicy.Unspecified,
+                StitchingPolicy = LiveSession.Types.StitchingPolicy.CutCurrent,
                 ManifestOptions = new ManifestOptions(),
+                StreamId = "stream_idb4d31f47",
             };
             mockGrpcClient.Setup(x => x.GetLiveSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             LiveSession response = client.GetLiveSession(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2152,11 +2174,12 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 DefaultSlateId = "default_slate_id07c41bba",
-                StitchingPolicy = LiveSession.Types.StitchingPolicy.Unspecified,
+                StitchingPolicy = LiveSession.Types.StitchingPolicy.CutCurrent,
                 ManifestOptions = new ManifestOptions(),
+                StreamId = "stream_idb4d31f47",
             };
             mockGrpcClient.Setup(x => x.GetLiveSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LiveSession>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             LiveSession responseCallSettings = await client.GetLiveSessionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LiveSession responseCancellationToken = await client.GetLiveSessionAsync(request.Name, st::CancellationToken.None);
@@ -2194,11 +2217,12 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 DefaultSlateId = "default_slate_id07c41bba",
-                StitchingPolicy = LiveSession.Types.StitchingPolicy.Unspecified,
+                StitchingPolicy = LiveSession.Types.StitchingPolicy.CutCurrent,
                 ManifestOptions = new ManifestOptions(),
+                StreamId = "stream_idb4d31f47",
             };
             mockGrpcClient.Setup(x => x.GetLiveSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             LiveSession response = client.GetLiveSession(request.LiveSessionName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2234,11 +2258,12 @@ namespace Google.Cloud.Video.Stitcher.V1.Tests
                 },
                 ClientAdTracking = false,
                 DefaultSlateId = "default_slate_id07c41bba",
-                StitchingPolicy = LiveSession.Types.StitchingPolicy.Unspecified,
+                StitchingPolicy = LiveSession.Types.StitchingPolicy.CutCurrent,
                 ManifestOptions = new ManifestOptions(),
+                StreamId = "stream_idb4d31f47",
             };
             mockGrpcClient.Setup(x => x.GetLiveSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LiveSession>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null);
+            VideoStitcherServiceClient client = new VideoStitcherServiceClientImpl(mockGrpcClient.Object, null, null);
             LiveSession responseCallSettings = await client.GetLiveSessionAsync(request.LiveSessionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LiveSession responseCancellationToken = await client.GetLiveSessionAsync(request.LiveSessionName, st::CancellationToken.None);

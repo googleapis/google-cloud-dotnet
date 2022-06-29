@@ -14,8 +14,10 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -34,6 +36,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
         {
             moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetIndexRequest request = new GetIndexRequest
             {
                 IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
@@ -49,7 +52,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
                 State = Index.Types.State.Ready,
             };
             mockGrpcClient.Setup(x => x.GetIndex(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null, null);
             Index response = client.GetIndex(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -60,6 +63,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
         {
             moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetIndexRequest request = new GetIndexRequest
             {
                 IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
@@ -75,7 +79,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
                 State = Index.Types.State.Ready,
             };
             mockGrpcClient.Setup(x => x.GetIndexAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Index>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null, null);
             Index responseCallSettings = await client.GetIndexAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Index responseCancellationToken = await client.GetIndexAsync(request, st::CancellationToken.None);
@@ -88,6 +92,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
         {
             moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetIndexRequest request = new GetIndexRequest
             {
                 IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
@@ -103,7 +108,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
                 State = Index.Types.State.Ready,
             };
             mockGrpcClient.Setup(x => x.GetIndex(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null, null);
             Index response = client.GetIndex(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -114,6 +119,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
         {
             moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetIndexRequest request = new GetIndexRequest
             {
                 IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
@@ -129,7 +135,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
                 State = Index.Types.State.Ready,
             };
             mockGrpcClient.Setup(x => x.GetIndexAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Index>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null, null);
             Index responseCallSettings = await client.GetIndexAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Index responseCancellationToken = await client.GetIndexAsync(request.Name, st::CancellationToken.None);
@@ -142,6 +148,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
         {
             moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetIndexRequest request = new GetIndexRequest
             {
                 IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
@@ -157,7 +164,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
                 State = Index.Types.State.Ready,
             };
             mockGrpcClient.Setup(x => x.GetIndex(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null, null);
             Index response = client.GetIndex(request.IndexName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -168,6 +175,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
         {
             moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetIndexRequest request = new GetIndexRequest
             {
                 IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
@@ -183,7 +191,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
                 State = Index.Types.State.Ready,
             };
             mockGrpcClient.Setup(x => x.GetIndexAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Index>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null, null);
             Index responseCallSettings = await client.GetIndexAsync(request.IndexName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Index responseCancellationToken = await client.GetIndexAsync(request.IndexName, st::CancellationToken.None);
@@ -196,13 +204,14 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
         {
             moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteIndexRequest request = new DeleteIndexRequest
             {
                 IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteIndex(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteIndex(request);
             mockGrpcClient.VerifyAll();
         }
@@ -212,13 +221,14 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
         {
             moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteIndexRequest request = new DeleteIndexRequest
             {
                 IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteIndexAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteIndexAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteIndexAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -229,13 +239,14 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
         {
             moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteIndexRequest request = new DeleteIndexRequest
             {
                 IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteIndex(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteIndex(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -245,13 +256,14 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
         {
             moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteIndexRequest request = new DeleteIndexRequest
             {
                 IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteIndexAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteIndexAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteIndexAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -262,13 +274,14 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
         {
             moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteIndexRequest request = new DeleteIndexRequest
             {
                 IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteIndex(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteIndex(request.IndexName);
             mockGrpcClient.VerifyAll();
         }
@@ -278,13 +291,14 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
         {
             moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteIndexRequest request = new DeleteIndexRequest
             {
                 IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteIndexAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteIndexAsync(request.IndexName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteIndexAsync(request.IndexName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -295,6 +309,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
         {
             moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetFieldRequest request = new GetFieldRequest
             {
                 FieldName = FieldName.FromProjectDatabaseCollectionField("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[FIELD]"),
@@ -303,9 +318,10 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
             {
                 FieldName = FieldName.FromProjectDatabaseCollectionField("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[FIELD]"),
                 IndexConfig = new Field.Types.IndexConfig(),
+                TtlConfig = new Field.Types.TtlConfig(),
             };
             mockGrpcClient.Setup(x => x.GetField(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null, null);
             Field response = client.GetField(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -316,6 +332,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
         {
             moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetFieldRequest request = new GetFieldRequest
             {
                 FieldName = FieldName.FromProjectDatabaseCollectionField("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[FIELD]"),
@@ -324,9 +341,10 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
             {
                 FieldName = FieldName.FromProjectDatabaseCollectionField("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[FIELD]"),
                 IndexConfig = new Field.Types.IndexConfig(),
+                TtlConfig = new Field.Types.TtlConfig(),
             };
             mockGrpcClient.Setup(x => x.GetFieldAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Field>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null, null);
             Field responseCallSettings = await client.GetFieldAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Field responseCancellationToken = await client.GetFieldAsync(request, st::CancellationToken.None);
@@ -339,6 +357,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
         {
             moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetFieldRequest request = new GetFieldRequest
             {
                 FieldName = FieldName.FromProjectDatabaseCollectionField("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[FIELD]"),
@@ -347,9 +366,10 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
             {
                 FieldName = FieldName.FromProjectDatabaseCollectionField("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[FIELD]"),
                 IndexConfig = new Field.Types.IndexConfig(),
+                TtlConfig = new Field.Types.TtlConfig(),
             };
             mockGrpcClient.Setup(x => x.GetField(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null, null);
             Field response = client.GetField(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -360,6 +380,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
         {
             moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetFieldRequest request = new GetFieldRequest
             {
                 FieldName = FieldName.FromProjectDatabaseCollectionField("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[FIELD]"),
@@ -368,9 +389,10 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
             {
                 FieldName = FieldName.FromProjectDatabaseCollectionField("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[FIELD]"),
                 IndexConfig = new Field.Types.IndexConfig(),
+                TtlConfig = new Field.Types.TtlConfig(),
             };
             mockGrpcClient.Setup(x => x.GetFieldAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Field>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null, null);
             Field responseCallSettings = await client.GetFieldAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Field responseCancellationToken = await client.GetFieldAsync(request.Name, st::CancellationToken.None);
@@ -383,6 +405,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
         {
             moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetFieldRequest request = new GetFieldRequest
             {
                 FieldName = FieldName.FromProjectDatabaseCollectionField("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[FIELD]"),
@@ -391,9 +414,10 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
             {
                 FieldName = FieldName.FromProjectDatabaseCollectionField("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[FIELD]"),
                 IndexConfig = new Field.Types.IndexConfig(),
+                TtlConfig = new Field.Types.TtlConfig(),
             };
             mockGrpcClient.Setup(x => x.GetField(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null, null);
             Field response = client.GetField(request.FieldName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -404,6 +428,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
         {
             moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetFieldRequest request = new GetFieldRequest
             {
                 FieldName = FieldName.FromProjectDatabaseCollectionField("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[FIELD]"),
@@ -412,9 +437,10 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
             {
                 FieldName = FieldName.FromProjectDatabaseCollectionField("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[FIELD]"),
                 IndexConfig = new Field.Types.IndexConfig(),
+                TtlConfig = new Field.Types.TtlConfig(),
             };
             mockGrpcClient.Setup(x => x.GetFieldAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Field>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null, null);
             Field responseCallSettings = await client.GetFieldAsync(request.FieldName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Field responseCancellationToken = await client.GetFieldAsync(request.FieldName, st::CancellationToken.None);
@@ -427,6 +453,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
         {
             moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDatabaseRequest request = new GetDatabaseRequest
             {
                 DatabaseName = DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
@@ -437,10 +464,12 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
                 LocationId = "location_iddaa574e2",
                 Type = Database.Types.DatabaseType.Unspecified,
                 ConcurrencyMode = Database.Types.ConcurrencyMode.OptimisticWithEntityGroups,
+                AppEngineIntegrationMode = Database.Types.AppEngineIntegrationMode.Enabled,
+                KeyPrefix = "key_prefixea304933",
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetDatabase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null, null);
             Database response = client.GetDatabase(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -451,6 +480,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
         {
             moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDatabaseRequest request = new GetDatabaseRequest
             {
                 DatabaseName = DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
@@ -461,10 +491,12 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
                 LocationId = "location_iddaa574e2",
                 Type = Database.Types.DatabaseType.Unspecified,
                 ConcurrencyMode = Database.Types.ConcurrencyMode.OptimisticWithEntityGroups,
+                AppEngineIntegrationMode = Database.Types.AppEngineIntegrationMode.Enabled,
+                KeyPrefix = "key_prefixea304933",
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetDatabaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Database>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null, null);
             Database responseCallSettings = await client.GetDatabaseAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Database responseCancellationToken = await client.GetDatabaseAsync(request, st::CancellationToken.None);
@@ -477,6 +509,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
         {
             moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDatabaseRequest request = new GetDatabaseRequest
             {
                 DatabaseName = DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
@@ -487,10 +520,12 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
                 LocationId = "location_iddaa574e2",
                 Type = Database.Types.DatabaseType.Unspecified,
                 ConcurrencyMode = Database.Types.ConcurrencyMode.OptimisticWithEntityGroups,
+                AppEngineIntegrationMode = Database.Types.AppEngineIntegrationMode.Enabled,
+                KeyPrefix = "key_prefixea304933",
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetDatabase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null, null);
             Database response = client.GetDatabase(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -501,6 +536,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
         {
             moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDatabaseRequest request = new GetDatabaseRequest
             {
                 DatabaseName = DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
@@ -511,10 +547,12 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
                 LocationId = "location_iddaa574e2",
                 Type = Database.Types.DatabaseType.Unspecified,
                 ConcurrencyMode = Database.Types.ConcurrencyMode.OptimisticWithEntityGroups,
+                AppEngineIntegrationMode = Database.Types.AppEngineIntegrationMode.Enabled,
+                KeyPrefix = "key_prefixea304933",
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetDatabaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Database>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null, null);
             Database responseCallSettings = await client.GetDatabaseAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Database responseCancellationToken = await client.GetDatabaseAsync(request.Name, st::CancellationToken.None);
@@ -527,6 +565,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
         {
             moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDatabaseRequest request = new GetDatabaseRequest
             {
                 DatabaseName = DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
@@ -537,10 +576,12 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
                 LocationId = "location_iddaa574e2",
                 Type = Database.Types.DatabaseType.Unspecified,
                 ConcurrencyMode = Database.Types.ConcurrencyMode.OptimisticWithEntityGroups,
+                AppEngineIntegrationMode = Database.Types.AppEngineIntegrationMode.Enabled,
+                KeyPrefix = "key_prefixea304933",
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetDatabase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null, null);
             Database response = client.GetDatabase(request.DatabaseName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -551,6 +592,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
         {
             moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDatabaseRequest request = new GetDatabaseRequest
             {
                 DatabaseName = DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
@@ -561,10 +603,12 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
                 LocationId = "location_iddaa574e2",
                 Type = Database.Types.DatabaseType.Unspecified,
                 ConcurrencyMode = Database.Types.ConcurrencyMode.OptimisticWithEntityGroups,
+                AppEngineIntegrationMode = Database.Types.AppEngineIntegrationMode.Enabled,
+                KeyPrefix = "key_prefixea304933",
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetDatabaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Database>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null, null);
             Database responseCallSettings = await client.GetDatabaseAsync(request.DatabaseName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Database responseCancellationToken = await client.GetDatabaseAsync(request.DatabaseName, st::CancellationToken.None);
@@ -577,6 +621,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
         {
             moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             ListDatabasesRequest request = new ListDatabasesRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -586,7 +631,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
                 Databases = { new Database(), },
             };
             mockGrpcClient.Setup(x => x.ListDatabases(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null, null);
             ListDatabasesResponse response = client.ListDatabases(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -597,6 +642,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
         {
             moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             ListDatabasesRequest request = new ListDatabasesRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -606,7 +652,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
                 Databases = { new Database(), },
             };
             mockGrpcClient.Setup(x => x.ListDatabasesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListDatabasesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null, null);
             ListDatabasesResponse responseCallSettings = await client.ListDatabasesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ListDatabasesResponse responseCancellationToken = await client.ListDatabasesAsync(request, st::CancellationToken.None);
@@ -619,6 +665,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
         {
             moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             ListDatabasesRequest request = new ListDatabasesRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -628,7 +675,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
                 Databases = { new Database(), },
             };
             mockGrpcClient.Setup(x => x.ListDatabases(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null, null);
             ListDatabasesResponse response = client.ListDatabases(request.Parent);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -639,6 +686,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
         {
             moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             ListDatabasesRequest request = new ListDatabasesRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -648,7 +696,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
                 Databases = { new Database(), },
             };
             mockGrpcClient.Setup(x => x.ListDatabasesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListDatabasesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null, null);
             ListDatabasesResponse responseCallSettings = await client.ListDatabasesAsync(request.Parent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ListDatabasesResponse responseCancellationToken = await client.ListDatabasesAsync(request.Parent, st::CancellationToken.None);
@@ -661,6 +709,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
         {
             moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             ListDatabasesRequest request = new ListDatabasesRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -670,7 +719,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
                 Databases = { new Database(), },
             };
             mockGrpcClient.Setup(x => x.ListDatabases(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null, null);
             ListDatabasesResponse response = client.ListDatabases(request.ParentAsProjectName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -681,6 +730,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
         {
             moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             ListDatabasesRequest request = new ListDatabasesRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -690,7 +740,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
                 Databases = { new Database(), },
             };
             mockGrpcClient.Setup(x => x.ListDatabasesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListDatabasesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null, null);
             ListDatabasesResponse responseCallSettings = await client.ListDatabasesAsync(request.ParentAsProjectName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ListDatabasesResponse responseCancellationToken = await client.ListDatabasesAsync(request.ParentAsProjectName, st::CancellationToken.None);

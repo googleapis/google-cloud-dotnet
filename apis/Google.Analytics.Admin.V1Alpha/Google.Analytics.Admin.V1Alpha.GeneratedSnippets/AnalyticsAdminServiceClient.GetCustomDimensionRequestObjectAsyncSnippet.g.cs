@@ -34,7 +34,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Initialize request argument(s)
             GetCustomDimensionRequest request = new GetCustomDimensionRequest
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
             };
             // Make the request
             CustomDimension response = await analyticsAdminServiceClient.GetCustomDimensionAsync(request);

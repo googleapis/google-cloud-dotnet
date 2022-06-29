@@ -56,6 +56,8 @@ namespace Google.Cloud.Retail.V2.Snippets
                 CanonicalFilter = "",
                 SearchMode = SearchRequest.Types.SearchMode.Unspecified,
                 PersonalizationSpec = new SearchRequest.Types.PersonalizationSpec(),
+                Labels = { { "", "" }, },
+                SpellCorrectionSpec = new SearchRequest.Types.SpellCorrectionSpec(),
             };
             // Make the request
             PagedAsyncEnumerable<SearchResponse, SearchResponse.Types.SearchResult> response = searchServiceClient.SearchAsync(request);

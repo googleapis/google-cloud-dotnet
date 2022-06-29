@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using Google.Cloud.Spanner.Admin.Database.V1;
 using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1;
@@ -25,7 +26,6 @@ using System.Data.Common;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using static Google.Cloud.Spanner.V1.TransactionOptions.Types;
 
 namespace Google.Cloud.Spanner.Data
 {
@@ -41,9 +41,6 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         private class ExecutableCommand
         {
-            private static readonly TransactionOptions s_partitionedDmlTransactionOptions = new TransactionOptions { PartitionedDml = new PartitionedDml() };
-            private static readonly TransactionOptions s_readWriteOptions = new TransactionOptions { ReadWrite = new ReadWrite() };
-
             private static readonly DatabaseAdminSettings s_databaseAdminSettings = CreateDatabaseAdminSettings();
 
             private static DatabaseAdminSettings CreateDatabaseAdminSettings()
@@ -66,6 +63,7 @@ namespace Google.Cloud.Spanner.Data
             internal QueryOptions QueryOptions { get; }
             internal Priority Priority { get; }
             internal string Tag { get; }
+            internal SpannerConversionOptions ConversionOptions => SpannerConversionOptions.ForConnection(Connection);
 
             public ExecutableCommand(SpannerCommand command)
             {
@@ -125,17 +123,16 @@ namespace Google.Cloud.Spanner.Data
                 {
                     throw new InvalidOperationException("singleUseReadSettings cannot be used within another transaction.");
                 }
-                effectiveTransaction = effectiveTransaction ?? new EphemeralTransaction(Connection, null, Priority);
+                effectiveTransaction = effectiveTransaction ?? new EphemeralTransaction(Connection, Priority);
 
                 var resultSet = await ExecuteReadOrQueryRequestAsync(singleUseReadSettings, effectiveTransaction, cancellationToken)
                         .ConfigureAwait(false);
 
-                var conversionOptions = SpannerConversionOptions.ForConnection(Connection);
                 var enableGetSchemaTable = Connection.Builder.EnableGetSchemaTable;
                 // When the data reader is closed, we may need to dispose of the connection.
                 IDisposable resourceToClose = (behavior & CommandBehavior.CloseConnection) == CommandBehavior.CloseConnection ? Connection : null;
 
-                return new SpannerDataReader(Connection.Logger, resultSet, Transaction?.ReadTimestamp, resourceToClose, conversionOptions, enableGetSchemaTable, CommandTimeout);
+                return new SpannerDataReader(Connection.Logger, resultSet, Transaction?.ReadTimestamp, resourceToClose, ConversionOptions, enableGetSchemaTable, CommandTimeout);
             }
 
             private Task<ReliableStreamReader> ExecuteReadOrQueryRequestAsync(TimestampBound singleUseReadSettings, ISpannerTransaction effectiveTransaction, CancellationToken cancellationToken)
@@ -205,9 +202,9 @@ namespace Google.Cloud.Spanner.Data
                 await Connection.EnsureIsOpenAsync(cancellationToken).ConfigureAwait(false);
                 ExecuteSqlRequest request = GetExecuteSqlRequest();
 
-                var transaction = new EphemeralTransaction(Connection, s_partitionedDmlTransactionOptions, Priority);
+                var transaction = new EphemeralTransaction(Connection, Priority);
                 // Note: no commit here. PDML transactions are implicitly committed as they go along.
-                return await transaction.ExecuteDmlAsync(request, cancellationToken, CommandTimeout).ConfigureAwait(false);
+                return await transaction.ExecutePartitionedDmlAsync(request, cancellationToken, CommandTimeout).ConfigureAwait(false);
             }
 
             private void ValidateConnectionAndCommandTextBuilder()
@@ -219,7 +216,7 @@ namespace Google.Cloud.Spanner.Data
             private async Task<int> ExecuteDmlAsync(CancellationToken cancellationToken)
             {
                 await Connection.EnsureIsOpenAsync(cancellationToken).ConfigureAwait(false);
-                var transaction = Transaction ?? Connection.AmbientTransaction ?? new EphemeralTransaction(Connection, s_readWriteOptions, Priority);
+                var transaction = Transaction ?? Connection.AmbientTransaction ?? new EphemeralTransaction(Connection, Priority);
                 ExecuteSqlRequest request = GetExecuteSqlRequest();
                 long count = await transaction.ExecuteDmlAsync(request, cancellationToken, CommandTimeout).ConfigureAwait(false);
                 // This cannot currently exceed int.MaxValue due to Spanner commit limitations anyway.
@@ -232,15 +229,20 @@ namespace Google.Cloud.Spanner.Data
                 var builder = Connection.Builder;
                 var channelOptions = new SpannerClientCreationOptions(builder);
                 var credentials = await channelOptions.GetCredentialsAsync().ConfigureAwait(false);
-                var channel = new Channel(channelOptions.Endpoint, credentials);
+
+                // Create the builder separately from actually building, so we can note the channel that it created.
+                // (This is fairly unpleasant, but we'll try to improve this in the next version of GAX.)
+                var databaseAdminClientBuilder = new DatabaseAdminClientBuilder
+                {
+                    // Note: deliberately not copying EmulatorDetection, as that's handled in SpannerClientCreationOptions
+                    Settings = s_databaseAdminSettings,
+                    Endpoint = channelOptions.Endpoint,
+                    ChannelCredentials = credentials
+                };
+                var databaseAdminClient = databaseAdminClientBuilder.Build();
+                var channel = databaseAdminClientBuilder.LastCreatedChannel;
                 try
                 {
-                    var databaseAdminClient = new DatabaseAdminClientBuilder
-                    {
-                        // Note: deliberately not copying EmulatorDetection, as that's handled in SpannerClientCreationOptions
-                        CallInvoker = channel?.CreateCallInvoker(),
-                        Settings = s_databaseAdminSettings,
-                    }.Build();
                     if (CommandTextBuilder.IsCreateDatabaseCommand)
                     {
                         var parent = new InstanceName(Connection.Project, Connection.SpannerInstance);
@@ -296,7 +298,7 @@ namespace Google.Cloud.Spanner.Data
                 }
                 finally
                 {
-                    await channel.ShutdownAsync().ConfigureAwait(false);
+                    channel?.Shutdown();
                 }
 
                 return 0;
@@ -306,7 +308,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 await Connection.EnsureIsOpenAsync(cancellationToken).ConfigureAwait(false);
                 var mutations = GetMutations();
-                var transaction = Transaction ?? Connection.AmbientTransaction ?? new EphemeralTransaction(Connection, s_readWriteOptions, Priority);
+                var transaction = Transaction ?? Connection.AmbientTransaction ?? new EphemeralTransaction(Connection, Priority);
                 // Make the request. This will commit immediately or not depending on whether a transaction was explicitly created.
                 await transaction.ExecuteMutationsAsync(mutations, cancellationToken, CommandTimeout).ConfigureAwait(false);
                 // Return the number of records affected.
@@ -315,17 +317,12 @@ namespace Google.Cloud.Spanner.Data
 
             private List<Mutation> GetMutations()
             {
-                // Currently, ToProtobufValue doesn't use the options it's provided. They're only
-                // required to prevent us from accidentally adding call sites that wouldn't be able to obtain
-                // valid options. For efficiency, we just pass in null for now. If we ever need real options
-                // from the connection string, uncomment the following line to initialize the options from the connection.
-                // SpannerConversionOptions options = SpannerConversionOptions.ForConnection(SpannerConnection);
-                SpannerConversionOptions conversionOptions = null;
-
+                // Avoid calling method multiple times in the loop.
+                var conversionOptions = ConversionOptions;
                 // Whatever we do with the parameters, we'll need them in a ListValue.
                 var listValue = new ListValue
                 {
-                    Values = { Parameters.Select(x => x.SpannerDbType.ToProtobufValue(x.GetValidatedValue(), conversionOptions)) }
+                    Values = { Parameters.Select(x => x.GetConfiguredSpannerDbType(conversionOptions).ToProtobufValue(x.GetValidatedValue())) }
                 };
 
                 if (CommandTextBuilder.SpannerCommandType != SpannerCommandType.Delete)
@@ -403,9 +400,7 @@ namespace Google.Cloud.Spanner.Data
                     RequestOptions = BuildRequestOptions()
                 };
 
-                // See comment at the start of GetMutations.
-                SpannerConversionOptions options = null;
-                Parameters.FillSpannerCommandParams(out var parameters, request.ParamTypes, options);
+                Parameters.FillSpannerCommandParams(out var parameters, request.ParamTypes, ConversionOptions);
                 request.Params = parameters;
 
                 return request;
@@ -419,7 +414,7 @@ namespace Google.Cloud.Spanner.Data
                     Table = CommandTextBuilder.TargetTable,
                     Index = CommandTextBuilder.ReadOptions.IndexName ?? "",
                     Limit = CommandTextBuilder.ReadOptions.Limit ?? 0L,
-                    KeySet = KeySet.Protobuf,
+                    KeySet = KeySet.ToProtobuf(ConversionOptions),
                     Columns = { CommandTextBuilder.ReadOptions.Columns },
                     RequestOptions = BuildRequestOptions()
                 };

@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gcscv = Google.Cloud.Spanner.Common.V1;
 
 namespace Google.Cloud.Spanner.Admin.Database.V1

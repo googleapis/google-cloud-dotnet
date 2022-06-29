@@ -14,12 +14,13 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -61,20 +62,20 @@ namespace Google.Cloud.BigQuery.Storage.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Initial retry delay: 10000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Retry maximum delay: 120000 milliseconds.</description></item>
         /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
         /// <description>
         /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.ResourceExhausted"/>.
         /// </description>
         /// </item>
-        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// <item><description>Timeout: 1200 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateWriteStreamSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings CreateWriteStreamSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(1200000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(10000), maxBackoff: sys::TimeSpan.FromMilliseconds(120000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable, grpccore::StatusCode.ResourceExhausted)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -190,9 +191,8 @@ namespace Google.Cloud.BigQuery.Storage.V1
         public BigQueryWriteSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public BigQueryWriteClientBuilder()
+        public BigQueryWriteClientBuilder() : base(BigQueryWriteClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = BigQueryWriteClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref BigQueryWriteClient client);
@@ -219,29 +219,18 @@ namespace Google.Cloud.BigQuery.Storage.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return BigQueryWriteClient.Create(callInvoker, Settings);
+            return BigQueryWriteClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<BigQueryWriteClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return BigQueryWriteClient.Create(callInvoker, Settings);
+            return BigQueryWriteClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => BigQueryWriteClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => BigQueryWriteClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => BigQueryWriteClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>BigQueryWrite client wrapper, for convenient use.</summary>
@@ -277,19 +266,10 @@ namespace Google.Cloud.BigQuery.Storage.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(BigQueryWrite.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="BigQueryWriteClient"/> using the default credentials, endpoint and
@@ -316,8 +296,9 @@ namespace Google.Cloud.BigQuery.Storage.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="BigQueryWriteSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="BigQueryWriteClient"/>.</returns>
-        internal static BigQueryWriteClient Create(grpccore::CallInvoker callInvoker, BigQueryWriteSettings settings = null)
+        internal static BigQueryWriteClient Create(grpccore::CallInvoker callInvoker, BigQueryWriteSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -326,7 +307,7 @@ namespace Google.Cloud.BigQuery.Storage.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             BigQueryWrite.BigQueryWriteClient grpcClient = new BigQueryWrite.BigQueryWriteClient(callInvoker);
-            return new BigQueryWriteClientImpl(grpcClient, settings);
+            return new BigQueryWriteClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1161,27 +1142,28 @@ namespace Google.Cloud.BigQuery.Storage.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="BigQueryWriteSettings"/> used within this client.</param>
-        public BigQueryWriteClientImpl(BigQueryWrite.BigQueryWriteClient grpcClient, BigQueryWriteSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public BigQueryWriteClientImpl(BigQueryWrite.BigQueryWriteClient grpcClient, BigQueryWriteSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             BigQueryWriteSettings effectiveSettings = settings ?? BigQueryWriteSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callCreateWriteStream = clientHelper.BuildApiCall<CreateWriteStreamRequest, WriteStream>(grpcClient.CreateWriteStreamAsync, grpcClient.CreateWriteStream, effectiveSettings.CreateWriteStreamSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callCreateWriteStream = clientHelper.BuildApiCall<CreateWriteStreamRequest, WriteStream>("CreateWriteStream", grpcClient.CreateWriteStreamAsync, grpcClient.CreateWriteStream, effectiveSettings.CreateWriteStreamSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateWriteStream);
             Modify_CreateWriteStreamApiCall(ref _callCreateWriteStream);
-            _callAppendRows = clientHelper.BuildApiCall<AppendRowsRequest, AppendRowsResponse>(grpcClient.AppendRows, effectiveSettings.AppendRowsSettings, effectiveSettings.AppendRowsStreamingSettings);
+            _callAppendRows = clientHelper.BuildApiCall<AppendRowsRequest, AppendRowsResponse>("AppendRows", grpcClient.AppendRows, effectiveSettings.AppendRowsSettings, effectiveSettings.AppendRowsStreamingSettings);
             Modify_ApiCall(ref _callAppendRows);
             Modify_AppendRowsApiCall(ref _callAppendRows);
-            _callGetWriteStream = clientHelper.BuildApiCall<GetWriteStreamRequest, WriteStream>(grpcClient.GetWriteStreamAsync, grpcClient.GetWriteStream, effectiveSettings.GetWriteStreamSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetWriteStream = clientHelper.BuildApiCall<GetWriteStreamRequest, WriteStream>("GetWriteStream", grpcClient.GetWriteStreamAsync, grpcClient.GetWriteStream, effectiveSettings.GetWriteStreamSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetWriteStream);
             Modify_GetWriteStreamApiCall(ref _callGetWriteStream);
-            _callFinalizeWriteStream = clientHelper.BuildApiCall<FinalizeWriteStreamRequest, FinalizeWriteStreamResponse>(grpcClient.FinalizeWriteStreamAsync, grpcClient.FinalizeWriteStream, effectiveSettings.FinalizeWriteStreamSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callFinalizeWriteStream = clientHelper.BuildApiCall<FinalizeWriteStreamRequest, FinalizeWriteStreamResponse>("FinalizeWriteStream", grpcClient.FinalizeWriteStreamAsync, grpcClient.FinalizeWriteStream, effectiveSettings.FinalizeWriteStreamSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callFinalizeWriteStream);
             Modify_FinalizeWriteStreamApiCall(ref _callFinalizeWriteStream);
-            _callBatchCommitWriteStreams = clientHelper.BuildApiCall<BatchCommitWriteStreamsRequest, BatchCommitWriteStreamsResponse>(grpcClient.BatchCommitWriteStreamsAsync, grpcClient.BatchCommitWriteStreams, effectiveSettings.BatchCommitWriteStreamsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callBatchCommitWriteStreams = clientHelper.BuildApiCall<BatchCommitWriteStreamsRequest, BatchCommitWriteStreamsResponse>("BatchCommitWriteStreams", grpcClient.BatchCommitWriteStreamsAsync, grpcClient.BatchCommitWriteStreams, effectiveSettings.BatchCommitWriteStreamsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callBatchCommitWriteStreams);
             Modify_BatchCommitWriteStreamsApiCall(ref _callBatchCommitWriteStreams);
-            _callFlushRows = clientHelper.BuildApiCall<FlushRowsRequest, FlushRowsResponse>(grpcClient.FlushRowsAsync, grpcClient.FlushRows, effectiveSettings.FlushRowsSettings).WithGoogleRequestParam("write_stream", request => request.WriteStream);
+            _callFlushRows = clientHelper.BuildApiCall<FlushRowsRequest, FlushRowsResponse>("FlushRows", grpcClient.FlushRowsAsync, grpcClient.FlushRows, effectiveSettings.FlushRowsSettings).WithGoogleRequestParam("write_stream", request => request.WriteStream);
             Modify_ApiCall(ref _callFlushRows);
             Modify_FlushRowsApiCall(ref _callFlushRows);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

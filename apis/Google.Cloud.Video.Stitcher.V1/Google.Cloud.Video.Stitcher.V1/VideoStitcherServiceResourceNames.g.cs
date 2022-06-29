@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gagr = Google.Api.Gax.ResourceNames;
 using gcvsv = Google.Cloud.Video.Stitcher.V1;
 

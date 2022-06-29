@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -45,7 +46,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 Deleted = true,
             };
             mockGrpcClient.Setup(x => x.GetAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             Account response = client.GetAccount(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -69,7 +70,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 Deleted = true,
             };
             mockGrpcClient.Setup(x => x.GetAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Account>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             Account responseCallSettings = await client.GetAccountAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Account responseCancellationToken = await client.GetAccountAsync(request, st::CancellationToken.None);
@@ -95,7 +96,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 Deleted = true,
             };
             mockGrpcClient.Setup(x => x.GetAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             Account response = client.GetAccount(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -119,7 +120,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 Deleted = true,
             };
             mockGrpcClient.Setup(x => x.GetAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Account>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             Account responseCallSettings = await client.GetAccountAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Account responseCancellationToken = await client.GetAccountAsync(request.Name, st::CancellationToken.None);
@@ -145,7 +146,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 Deleted = true,
             };
             mockGrpcClient.Setup(x => x.GetAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             Account response = client.GetAccount(request.AccountName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -169,7 +170,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 Deleted = true,
             };
             mockGrpcClient.Setup(x => x.GetAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Account>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             Account responseCallSettings = await client.GetAccountAsync(request.AccountName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Account responseCancellationToken = await client.GetAccountAsync(request.AccountName, st::CancellationToken.None);
@@ -187,7 +188,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteAccount(request);
             mockGrpcClient.VerifyAll();
         }
@@ -202,7 +203,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteAccountAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteAccountAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -218,7 +219,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteAccount(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -233,7 +234,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteAccountAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteAccountAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -249,7 +250,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteAccount(request.AccountName);
             mockGrpcClient.VerifyAll();
         }
@@ -264,7 +265,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteAccountAsync(request.AccountName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteAccountAsync(request.AccountName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -289,7 +290,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 Deleted = true,
             };
             mockGrpcClient.Setup(x => x.UpdateAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             Account response = client.UpdateAccount(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -314,7 +315,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 Deleted = true,
             };
             mockGrpcClient.Setup(x => x.UpdateAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Account>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             Account responseCallSettings = await client.UpdateAccountAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Account responseCancellationToken = await client.UpdateAccountAsync(request, st::CancellationToken.None);
@@ -341,7 +342,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 Deleted = true,
             };
             mockGrpcClient.Setup(x => x.UpdateAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             Account response = client.UpdateAccount(request.Account, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -366,7 +367,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 Deleted = true,
             };
             mockGrpcClient.Setup(x => x.UpdateAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Account>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             Account responseCallSettings = await client.UpdateAccountAsync(request.Account, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Account responseCancellationToken = await client.UpdateAccountAsync(request.Account, request.UpdateMask, st::CancellationToken.None);
@@ -388,7 +389,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 AccountTicketId = "account_ticket_id75d82eaa",
             };
             mockGrpcClient.Setup(x => x.ProvisionAccountTicket(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             ProvisionAccountTicketResponse response = client.ProvisionAccountTicket(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -408,7 +409,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 AccountTicketId = "account_ticket_id75d82eaa",
             };
             mockGrpcClient.Setup(x => x.ProvisionAccountTicketAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ProvisionAccountTicketResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             ProvisionAccountTicketResponse responseCallSettings = await client.ProvisionAccountTicketAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ProvisionAccountTicketResponse responseCancellationToken = await client.ProvisionAccountTicketAsync(request, st::CancellationToken.None);
@@ -440,7 +441,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 AccountAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
             };
             mockGrpcClient.Setup(x => x.GetProperty(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             Property response = client.GetProperty(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -470,7 +471,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 AccountAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
             };
             mockGrpcClient.Setup(x => x.GetPropertyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Property>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             Property responseCallSettings = await client.GetPropertyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Property responseCancellationToken = await client.GetPropertyAsync(request, st::CancellationToken.None);
@@ -502,7 +503,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 AccountAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
             };
             mockGrpcClient.Setup(x => x.GetProperty(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             Property response = client.GetProperty(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -532,7 +533,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 AccountAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
             };
             mockGrpcClient.Setup(x => x.GetPropertyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Property>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             Property responseCallSettings = await client.GetPropertyAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Property responseCancellationToken = await client.GetPropertyAsync(request.Name, st::CancellationToken.None);
@@ -564,7 +565,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 AccountAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
             };
             mockGrpcClient.Setup(x => x.GetProperty(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             Property response = client.GetProperty(request.PropertyName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -594,7 +595,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 AccountAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
             };
             mockGrpcClient.Setup(x => x.GetPropertyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Property>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             Property responseCallSettings = await client.GetPropertyAsync(request.PropertyName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Property responseCancellationToken = await client.GetPropertyAsync(request.PropertyName, st::CancellationToken.None);
@@ -626,7 +627,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 AccountAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
             };
             mockGrpcClient.Setup(x => x.CreateProperty(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             Property response = client.CreateProperty(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -656,7 +657,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 AccountAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
             };
             mockGrpcClient.Setup(x => x.CreatePropertyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Property>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             Property responseCallSettings = await client.CreatePropertyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Property responseCancellationToken = await client.CreatePropertyAsync(request, st::CancellationToken.None);
@@ -688,7 +689,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 AccountAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
             };
             mockGrpcClient.Setup(x => x.CreateProperty(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             Property response = client.CreateProperty(request.Property);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -718,7 +719,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 AccountAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
             };
             mockGrpcClient.Setup(x => x.CreatePropertyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Property>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             Property responseCallSettings = await client.CreatePropertyAsync(request.Property, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Property responseCancellationToken = await client.CreatePropertyAsync(request.Property, st::CancellationToken.None);
@@ -750,7 +751,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 AccountAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
             };
             mockGrpcClient.Setup(x => x.DeleteProperty(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             Property response = client.DeleteProperty(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -780,7 +781,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 AccountAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
             };
             mockGrpcClient.Setup(x => x.DeletePropertyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Property>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             Property responseCallSettings = await client.DeletePropertyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Property responseCancellationToken = await client.DeletePropertyAsync(request, st::CancellationToken.None);
@@ -812,7 +813,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 AccountAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
             };
             mockGrpcClient.Setup(x => x.DeleteProperty(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             Property response = client.DeleteProperty(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -842,7 +843,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 AccountAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
             };
             mockGrpcClient.Setup(x => x.DeletePropertyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Property>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             Property responseCallSettings = await client.DeletePropertyAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Property responseCancellationToken = await client.DeletePropertyAsync(request.Name, st::CancellationToken.None);
@@ -874,7 +875,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 AccountAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
             };
             mockGrpcClient.Setup(x => x.DeleteProperty(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             Property response = client.DeleteProperty(request.PropertyName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -904,7 +905,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 AccountAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
             };
             mockGrpcClient.Setup(x => x.DeletePropertyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Property>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             Property responseCallSettings = await client.DeletePropertyAsync(request.PropertyName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Property responseCancellationToken = await client.DeletePropertyAsync(request.PropertyName, st::CancellationToken.None);
@@ -937,7 +938,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 AccountAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
             };
             mockGrpcClient.Setup(x => x.UpdateProperty(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             Property response = client.UpdateProperty(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -968,7 +969,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 AccountAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
             };
             mockGrpcClient.Setup(x => x.UpdatePropertyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Property>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             Property responseCallSettings = await client.UpdatePropertyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Property responseCancellationToken = await client.UpdatePropertyAsync(request, st::CancellationToken.None);
@@ -1001,7 +1002,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 AccountAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
             };
             mockGrpcClient.Setup(x => x.UpdateProperty(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             Property response = client.UpdateProperty(request.Property, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1032,7 +1033,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 AccountAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
             };
             mockGrpcClient.Setup(x => x.UpdatePropertyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Property>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             Property responseCallSettings = await client.UpdatePropertyAsync(request.Property, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Property responseCancellationToken = await client.UpdatePropertyAsync(request.Property, request.UpdateMask, st::CancellationToken.None);
@@ -1058,7 +1059,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetUserLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             UserLink response = client.GetUserLink(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1082,7 +1083,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetUserLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UserLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             UserLink responseCallSettings = await client.GetUserLinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UserLink responseCancellationToken = await client.GetUserLinkAsync(request, st::CancellationToken.None);
@@ -1108,7 +1109,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetUserLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             UserLink response = client.GetUserLink(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1132,7 +1133,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetUserLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UserLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             UserLink responseCallSettings = await client.GetUserLinkAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UserLink responseCancellationToken = await client.GetUserLinkAsync(request.Name, st::CancellationToken.None);
@@ -1158,7 +1159,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetUserLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             UserLink response = client.GetUserLink(request.UserLinkName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1182,7 +1183,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetUserLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UserLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             UserLink responseCallSettings = await client.GetUserLinkAsync(request.UserLinkName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UserLink responseCancellationToken = await client.GetUserLinkAsync(request.UserLinkName, st::CancellationToken.None);
@@ -1207,7 +1208,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 UserLinks = { new UserLink(), },
             };
             mockGrpcClient.Setup(x => x.BatchGetUserLinks(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchGetUserLinksResponse response = client.BatchGetUserLinks(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1230,7 +1231,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 UserLinks = { new UserLink(), },
             };
             mockGrpcClient.Setup(x => x.BatchGetUserLinksAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchGetUserLinksResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchGetUserLinksResponse responseCallSettings = await client.BatchGetUserLinksAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchGetUserLinksResponse responseCancellationToken = await client.BatchGetUserLinksAsync(request, st::CancellationToken.None);
@@ -1258,7 +1259,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateUserLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             UserLink response = client.CreateUserLink(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1284,7 +1285,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateUserLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UserLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             UserLink responseCallSettings = await client.CreateUserLinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UserLink responseCancellationToken = await client.CreateUserLinkAsync(request, st::CancellationToken.None);
@@ -1311,7 +1312,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateUserLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             UserLink response = client.CreateUserLink(request.Parent, request.UserLink);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1336,7 +1337,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateUserLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UserLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             UserLink responseCallSettings = await client.CreateUserLinkAsync(request.Parent, request.UserLink, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UserLink responseCancellationToken = await client.CreateUserLinkAsync(request.Parent, request.UserLink, st::CancellationToken.None);
@@ -1363,7 +1364,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateUserLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             UserLink response = client.CreateUserLink(request.ParentAsAccountName, request.UserLink);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1388,7 +1389,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateUserLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UserLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             UserLink responseCallSettings = await client.CreateUserLinkAsync(request.ParentAsAccountName, request.UserLink, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UserLink responseCancellationToken = await client.CreateUserLinkAsync(request.ParentAsAccountName, request.UserLink, st::CancellationToken.None);
@@ -1415,7 +1416,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateUserLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             UserLink response = client.CreateUserLink(request.ParentAsPropertyName, request.UserLink);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1440,7 +1441,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateUserLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UserLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             UserLink responseCallSettings = await client.CreateUserLinkAsync(request.ParentAsPropertyName, request.UserLink, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UserLink responseCancellationToken = await client.CreateUserLinkAsync(request.ParentAsPropertyName, request.UserLink, st::CancellationToken.None);
@@ -1466,7 +1467,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 UserLinks = { new UserLink(), },
             };
             mockGrpcClient.Setup(x => x.BatchCreateUserLinks(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchCreateUserLinksResponse response = client.BatchCreateUserLinks(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1490,7 +1491,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 UserLinks = { new UserLink(), },
             };
             mockGrpcClient.Setup(x => x.BatchCreateUserLinksAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchCreateUserLinksResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchCreateUserLinksResponse responseCallSettings = await client.BatchCreateUserLinksAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchCreateUserLinksResponse responseCancellationToken = await client.BatchCreateUserLinksAsync(request, st::CancellationToken.None);
@@ -1516,7 +1517,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateUserLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             UserLink response = client.UpdateUserLink(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1540,7 +1541,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateUserLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UserLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             UserLink responseCallSettings = await client.UpdateUserLinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UserLink responseCancellationToken = await client.UpdateUserLinkAsync(request, st::CancellationToken.None);
@@ -1566,7 +1567,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateUserLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             UserLink response = client.UpdateUserLink(request.UserLink);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1590,7 +1591,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateUserLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UserLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             UserLink responseCallSettings = await client.UpdateUserLinkAsync(request.UserLink, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UserLink responseCancellationToken = await client.UpdateUserLinkAsync(request.UserLink, st::CancellationToken.None);
@@ -1615,7 +1616,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 UserLinks = { new UserLink(), },
             };
             mockGrpcClient.Setup(x => x.BatchUpdateUserLinks(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchUpdateUserLinksResponse response = client.BatchUpdateUserLinks(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1638,7 +1639,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 UserLinks = { new UserLink(), },
             };
             mockGrpcClient.Setup(x => x.BatchUpdateUserLinksAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchUpdateUserLinksResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchUpdateUserLinksResponse responseCallSettings = await client.BatchUpdateUserLinksAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchUpdateUserLinksResponse responseCancellationToken = await client.BatchUpdateUserLinksAsync(request, st::CancellationToken.None);
@@ -1656,7 +1657,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteUserLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteUserLink(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1671,7 +1672,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteUserLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteUserLinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteUserLinkAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1687,7 +1688,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteUserLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteUserLink(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -1702,7 +1703,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteUserLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteUserLinkAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteUserLinkAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1718,7 +1719,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteUserLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteUserLink(request.UserLinkName);
             mockGrpcClient.VerifyAll();
         }
@@ -1733,7 +1734,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteUserLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteUserLinkAsync(request.UserLinkName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteUserLinkAsync(request.UserLinkName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1753,7 +1754,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.BatchDeleteUserLinks(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             client.BatchDeleteUserLinks(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1772,7 +1773,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.BatchDeleteUserLinksAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.BatchDeleteUserLinksAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.BatchDeleteUserLinksAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1794,7 +1795,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateFirebaseLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             FirebaseLink response = client.CreateFirebaseLink(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1816,7 +1817,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateFirebaseLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FirebaseLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             FirebaseLink responseCallSettings = await client.CreateFirebaseLinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             FirebaseLink responseCancellationToken = await client.CreateFirebaseLinkAsync(request, st::CancellationToken.None);
@@ -1840,7 +1841,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateFirebaseLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             FirebaseLink response = client.CreateFirebaseLink(request.Parent, request.FirebaseLink);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1862,7 +1863,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateFirebaseLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FirebaseLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             FirebaseLink responseCallSettings = await client.CreateFirebaseLinkAsync(request.Parent, request.FirebaseLink, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             FirebaseLink responseCancellationToken = await client.CreateFirebaseLinkAsync(request.Parent, request.FirebaseLink, st::CancellationToken.None);
@@ -1886,7 +1887,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateFirebaseLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             FirebaseLink response = client.CreateFirebaseLink(request.ParentAsPropertyName, request.FirebaseLink);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1908,7 +1909,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateFirebaseLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FirebaseLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             FirebaseLink responseCallSettings = await client.CreateFirebaseLinkAsync(request.ParentAsPropertyName, request.FirebaseLink, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             FirebaseLink responseCancellationToken = await client.CreateFirebaseLinkAsync(request.ParentAsPropertyName, request.FirebaseLink, st::CancellationToken.None);
@@ -1926,7 +1927,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteFirebaseLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteFirebaseLink(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1941,7 +1942,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteFirebaseLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteFirebaseLinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteFirebaseLinkAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1957,7 +1958,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteFirebaseLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteFirebaseLink(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -1972,7 +1973,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteFirebaseLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteFirebaseLinkAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteFirebaseLinkAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1988,7 +1989,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteFirebaseLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteFirebaseLink(request.FirebaseLinkName);
             mockGrpcClient.VerifyAll();
         }
@@ -2003,7 +2004,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteFirebaseLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteFirebaseLinkAsync(request.FirebaseLinkName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteFirebaseLinkAsync(request.FirebaseLinkName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -2023,7 +2024,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 Snippet = "snippet5e4cde54",
             };
             mockGrpcClient.Setup(x => x.GetGlobalSiteTag(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             GlobalSiteTag response = client.GetGlobalSiteTag(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2043,7 +2044,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 Snippet = "snippet5e4cde54",
             };
             mockGrpcClient.Setup(x => x.GetGlobalSiteTagAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GlobalSiteTag>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             GlobalSiteTag responseCallSettings = await client.GetGlobalSiteTagAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GlobalSiteTag responseCancellationToken = await client.GetGlobalSiteTagAsync(request, st::CancellationToken.None);
@@ -2065,7 +2066,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 Snippet = "snippet5e4cde54",
             };
             mockGrpcClient.Setup(x => x.GetGlobalSiteTag(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             GlobalSiteTag response = client.GetGlobalSiteTag(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2085,7 +2086,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 Snippet = "snippet5e4cde54",
             };
             mockGrpcClient.Setup(x => x.GetGlobalSiteTagAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GlobalSiteTag>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             GlobalSiteTag responseCallSettings = await client.GetGlobalSiteTagAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GlobalSiteTag responseCancellationToken = await client.GetGlobalSiteTagAsync(request.Name, st::CancellationToken.None);
@@ -2107,7 +2108,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 Snippet = "snippet5e4cde54",
             };
             mockGrpcClient.Setup(x => x.GetGlobalSiteTag(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             GlobalSiteTag response = client.GetGlobalSiteTag(request.GlobalSiteTagName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2127,7 +2128,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 Snippet = "snippet5e4cde54",
             };
             mockGrpcClient.Setup(x => x.GetGlobalSiteTagAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GlobalSiteTag>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             GlobalSiteTag responseCallSettings = await client.GetGlobalSiteTagAsync(request.GlobalSiteTagName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GlobalSiteTag responseCancellationToken = await client.GetGlobalSiteTagAsync(request.GlobalSiteTagName, st::CancellationToken.None);
@@ -2155,7 +2156,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CreatorEmailAddress = "creator_email_address113105e5",
             };
             mockGrpcClient.Setup(x => x.CreateGoogleAdsLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             GoogleAdsLink response = client.CreateGoogleAdsLink(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2181,7 +2182,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CreatorEmailAddress = "creator_email_address113105e5",
             };
             mockGrpcClient.Setup(x => x.CreateGoogleAdsLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GoogleAdsLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             GoogleAdsLink responseCallSettings = await client.CreateGoogleAdsLinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GoogleAdsLink responseCancellationToken = await client.CreateGoogleAdsLinkAsync(request, st::CancellationToken.None);
@@ -2209,7 +2210,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CreatorEmailAddress = "creator_email_address113105e5",
             };
             mockGrpcClient.Setup(x => x.CreateGoogleAdsLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             GoogleAdsLink response = client.CreateGoogleAdsLink(request.Parent, request.GoogleAdsLink);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2235,7 +2236,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CreatorEmailAddress = "creator_email_address113105e5",
             };
             mockGrpcClient.Setup(x => x.CreateGoogleAdsLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GoogleAdsLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             GoogleAdsLink responseCallSettings = await client.CreateGoogleAdsLinkAsync(request.Parent, request.GoogleAdsLink, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GoogleAdsLink responseCancellationToken = await client.CreateGoogleAdsLinkAsync(request.Parent, request.GoogleAdsLink, st::CancellationToken.None);
@@ -2263,7 +2264,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CreatorEmailAddress = "creator_email_address113105e5",
             };
             mockGrpcClient.Setup(x => x.CreateGoogleAdsLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             GoogleAdsLink response = client.CreateGoogleAdsLink(request.ParentAsPropertyName, request.GoogleAdsLink);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2289,7 +2290,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CreatorEmailAddress = "creator_email_address113105e5",
             };
             mockGrpcClient.Setup(x => x.CreateGoogleAdsLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GoogleAdsLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             GoogleAdsLink responseCallSettings = await client.CreateGoogleAdsLinkAsync(request.ParentAsPropertyName, request.GoogleAdsLink, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GoogleAdsLink responseCancellationToken = await client.CreateGoogleAdsLinkAsync(request.ParentAsPropertyName, request.GoogleAdsLink, st::CancellationToken.None);
@@ -2317,7 +2318,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CreatorEmailAddress = "creator_email_address113105e5",
             };
             mockGrpcClient.Setup(x => x.UpdateGoogleAdsLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             GoogleAdsLink response = client.UpdateGoogleAdsLink(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2343,7 +2344,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CreatorEmailAddress = "creator_email_address113105e5",
             };
             mockGrpcClient.Setup(x => x.UpdateGoogleAdsLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GoogleAdsLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             GoogleAdsLink responseCallSettings = await client.UpdateGoogleAdsLinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GoogleAdsLink responseCancellationToken = await client.UpdateGoogleAdsLinkAsync(request, st::CancellationToken.None);
@@ -2371,7 +2372,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CreatorEmailAddress = "creator_email_address113105e5",
             };
             mockGrpcClient.Setup(x => x.UpdateGoogleAdsLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             GoogleAdsLink response = client.UpdateGoogleAdsLink(request.GoogleAdsLink, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2397,7 +2398,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CreatorEmailAddress = "creator_email_address113105e5",
             };
             mockGrpcClient.Setup(x => x.UpdateGoogleAdsLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GoogleAdsLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             GoogleAdsLink responseCallSettings = await client.UpdateGoogleAdsLinkAsync(request.GoogleAdsLink, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GoogleAdsLink responseCancellationToken = await client.UpdateGoogleAdsLinkAsync(request.GoogleAdsLink, request.UpdateMask, st::CancellationToken.None);
@@ -2415,7 +2416,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteGoogleAdsLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteGoogleAdsLink(request);
             mockGrpcClient.VerifyAll();
         }
@@ -2430,7 +2431,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteGoogleAdsLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteGoogleAdsLinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteGoogleAdsLinkAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -2446,7 +2447,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteGoogleAdsLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteGoogleAdsLink(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -2461,7 +2462,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteGoogleAdsLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteGoogleAdsLinkAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteGoogleAdsLinkAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -2477,7 +2478,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteGoogleAdsLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteGoogleAdsLink(request.GoogleAdsLinkName);
             mockGrpcClient.VerifyAll();
         }
@@ -2492,7 +2493,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteGoogleAdsLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteGoogleAdsLinkAsync(request.GoogleAdsLinkName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteGoogleAdsLinkAsync(request.GoogleAdsLinkName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -2516,7 +2517,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 SharingWithOthersEnabled = true,
             };
             mockGrpcClient.Setup(x => x.GetDataSharingSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DataSharingSettings response = client.GetDataSharingSettings(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2540,7 +2541,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 SharingWithOthersEnabled = true,
             };
             mockGrpcClient.Setup(x => x.GetDataSharingSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataSharingSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DataSharingSettings responseCallSettings = await client.GetDataSharingSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DataSharingSettings responseCancellationToken = await client.GetDataSharingSettingsAsync(request, st::CancellationToken.None);
@@ -2566,7 +2567,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 SharingWithOthersEnabled = true,
             };
             mockGrpcClient.Setup(x => x.GetDataSharingSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DataSharingSettings response = client.GetDataSharingSettings(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2590,7 +2591,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 SharingWithOthersEnabled = true,
             };
             mockGrpcClient.Setup(x => x.GetDataSharingSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataSharingSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DataSharingSettings responseCallSettings = await client.GetDataSharingSettingsAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DataSharingSettings responseCancellationToken = await client.GetDataSharingSettingsAsync(request.Name, st::CancellationToken.None);
@@ -2616,7 +2617,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 SharingWithOthersEnabled = true,
             };
             mockGrpcClient.Setup(x => x.GetDataSharingSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DataSharingSettings response = client.GetDataSharingSettings(request.DataSharingSettingsName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2640,7 +2641,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 SharingWithOthersEnabled = true,
             };
             mockGrpcClient.Setup(x => x.GetDataSharingSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataSharingSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DataSharingSettings responseCallSettings = await client.GetDataSharingSettingsAsync(request.DataSharingSettingsName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DataSharingSettings responseCancellationToken = await client.GetDataSharingSettingsAsync(request.DataSharingSettingsName, st::CancellationToken.None);
@@ -2663,7 +2664,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 SecretValue = "secret_valueaa711688",
             };
             mockGrpcClient.Setup(x => x.GetMeasurementProtocolSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             MeasurementProtocolSecret response = client.GetMeasurementProtocolSecret(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2684,7 +2685,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 SecretValue = "secret_valueaa711688",
             };
             mockGrpcClient.Setup(x => x.GetMeasurementProtocolSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MeasurementProtocolSecret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             MeasurementProtocolSecret responseCallSettings = await client.GetMeasurementProtocolSecretAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MeasurementProtocolSecret responseCancellationToken = await client.GetMeasurementProtocolSecretAsync(request, st::CancellationToken.None);
@@ -2707,7 +2708,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 SecretValue = "secret_valueaa711688",
             };
             mockGrpcClient.Setup(x => x.GetMeasurementProtocolSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             MeasurementProtocolSecret response = client.GetMeasurementProtocolSecret(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2728,7 +2729,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 SecretValue = "secret_valueaa711688",
             };
             mockGrpcClient.Setup(x => x.GetMeasurementProtocolSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MeasurementProtocolSecret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             MeasurementProtocolSecret responseCallSettings = await client.GetMeasurementProtocolSecretAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MeasurementProtocolSecret responseCancellationToken = await client.GetMeasurementProtocolSecretAsync(request.Name, st::CancellationToken.None);
@@ -2751,7 +2752,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 SecretValue = "secret_valueaa711688",
             };
             mockGrpcClient.Setup(x => x.GetMeasurementProtocolSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             MeasurementProtocolSecret response = client.GetMeasurementProtocolSecret(request.MeasurementProtocolSecretName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2772,7 +2773,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 SecretValue = "secret_valueaa711688",
             };
             mockGrpcClient.Setup(x => x.GetMeasurementProtocolSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MeasurementProtocolSecret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             MeasurementProtocolSecret responseCallSettings = await client.GetMeasurementProtocolSecretAsync(request.MeasurementProtocolSecretName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MeasurementProtocolSecret responseCancellationToken = await client.GetMeasurementProtocolSecretAsync(request.MeasurementProtocolSecretName, st::CancellationToken.None);
@@ -2796,7 +2797,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 SecretValue = "secret_valueaa711688",
             };
             mockGrpcClient.Setup(x => x.CreateMeasurementProtocolSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             MeasurementProtocolSecret response = client.CreateMeasurementProtocolSecret(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2818,7 +2819,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 SecretValue = "secret_valueaa711688",
             };
             mockGrpcClient.Setup(x => x.CreateMeasurementProtocolSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MeasurementProtocolSecret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             MeasurementProtocolSecret responseCallSettings = await client.CreateMeasurementProtocolSecretAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MeasurementProtocolSecret responseCancellationToken = await client.CreateMeasurementProtocolSecretAsync(request, st::CancellationToken.None);
@@ -2842,7 +2843,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 SecretValue = "secret_valueaa711688",
             };
             mockGrpcClient.Setup(x => x.CreateMeasurementProtocolSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             MeasurementProtocolSecret response = client.CreateMeasurementProtocolSecret(request.Parent, request.MeasurementProtocolSecret);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2864,7 +2865,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 SecretValue = "secret_valueaa711688",
             };
             mockGrpcClient.Setup(x => x.CreateMeasurementProtocolSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MeasurementProtocolSecret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             MeasurementProtocolSecret responseCallSettings = await client.CreateMeasurementProtocolSecretAsync(request.Parent, request.MeasurementProtocolSecret, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MeasurementProtocolSecret responseCancellationToken = await client.CreateMeasurementProtocolSecretAsync(request.Parent, request.MeasurementProtocolSecret, st::CancellationToken.None);
@@ -2888,7 +2889,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 SecretValue = "secret_valueaa711688",
             };
             mockGrpcClient.Setup(x => x.CreateMeasurementProtocolSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             MeasurementProtocolSecret response = client.CreateMeasurementProtocolSecret(request.ParentAsDataStreamName, request.MeasurementProtocolSecret);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2910,7 +2911,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 SecretValue = "secret_valueaa711688",
             };
             mockGrpcClient.Setup(x => x.CreateMeasurementProtocolSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MeasurementProtocolSecret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             MeasurementProtocolSecret responseCallSettings = await client.CreateMeasurementProtocolSecretAsync(request.ParentAsDataStreamName, request.MeasurementProtocolSecret, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MeasurementProtocolSecret responseCancellationToken = await client.CreateMeasurementProtocolSecretAsync(request.ParentAsDataStreamName, request.MeasurementProtocolSecret, st::CancellationToken.None);
@@ -2928,7 +2929,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteMeasurementProtocolSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteMeasurementProtocolSecret(request);
             mockGrpcClient.VerifyAll();
         }
@@ -2943,7 +2944,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteMeasurementProtocolSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteMeasurementProtocolSecretAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteMeasurementProtocolSecretAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -2959,7 +2960,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteMeasurementProtocolSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteMeasurementProtocolSecret(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -2974,7 +2975,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteMeasurementProtocolSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteMeasurementProtocolSecretAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteMeasurementProtocolSecretAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -2990,7 +2991,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteMeasurementProtocolSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteMeasurementProtocolSecret(request.MeasurementProtocolSecretName);
             mockGrpcClient.VerifyAll();
         }
@@ -3005,7 +3006,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteMeasurementProtocolSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteMeasurementProtocolSecretAsync(request.MeasurementProtocolSecretName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteMeasurementProtocolSecretAsync(request.MeasurementProtocolSecretName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -3027,7 +3028,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 SecretValue = "secret_valueaa711688",
             };
             mockGrpcClient.Setup(x => x.UpdateMeasurementProtocolSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             MeasurementProtocolSecret response = client.UpdateMeasurementProtocolSecret(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3049,7 +3050,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 SecretValue = "secret_valueaa711688",
             };
             mockGrpcClient.Setup(x => x.UpdateMeasurementProtocolSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MeasurementProtocolSecret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             MeasurementProtocolSecret responseCallSettings = await client.UpdateMeasurementProtocolSecretAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MeasurementProtocolSecret responseCancellationToken = await client.UpdateMeasurementProtocolSecretAsync(request, st::CancellationToken.None);
@@ -3073,7 +3074,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 SecretValue = "secret_valueaa711688",
             };
             mockGrpcClient.Setup(x => x.UpdateMeasurementProtocolSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             MeasurementProtocolSecret response = client.UpdateMeasurementProtocolSecret(request.MeasurementProtocolSecret, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3095,7 +3096,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 SecretValue = "secret_valueaa711688",
             };
             mockGrpcClient.Setup(x => x.UpdateMeasurementProtocolSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MeasurementProtocolSecret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             MeasurementProtocolSecret responseCallSettings = await client.UpdateMeasurementProtocolSecretAsync(request.MeasurementProtocolSecret, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MeasurementProtocolSecret responseCancellationToken = await client.UpdateMeasurementProtocolSecretAsync(request.MeasurementProtocolSecret, request.UpdateMask, st::CancellationToken.None);
@@ -3114,7 +3115,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             AcknowledgeUserDataCollectionResponse expectedResponse = new AcknowledgeUserDataCollectionResponse { };
             mockGrpcClient.Setup(x => x.AcknowledgeUserDataCollection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             AcknowledgeUserDataCollectionResponse response = client.AcknowledgeUserDataCollection(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3131,7 +3132,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             AcknowledgeUserDataCollectionResponse expectedResponse = new AcknowledgeUserDataCollectionResponse { };
             mockGrpcClient.Setup(x => x.AcknowledgeUserDataCollectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AcknowledgeUserDataCollectionResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             AcknowledgeUserDataCollectionResponse responseCallSettings = await client.AcknowledgeUserDataCollectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AcknowledgeUserDataCollectionResponse responseCancellationToken = await client.AcknowledgeUserDataCollectionAsync(request, st::CancellationToken.None);
@@ -3154,7 +3155,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 Consent = GoogleSignalsConsent.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetGoogleSignalsSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             GoogleSignalsSettings response = client.GetGoogleSignalsSettings(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3175,7 +3176,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 Consent = GoogleSignalsConsent.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetGoogleSignalsSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GoogleSignalsSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             GoogleSignalsSettings responseCallSettings = await client.GetGoogleSignalsSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GoogleSignalsSettings responseCancellationToken = await client.GetGoogleSignalsSettingsAsync(request, st::CancellationToken.None);
@@ -3198,7 +3199,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 Consent = GoogleSignalsConsent.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetGoogleSignalsSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             GoogleSignalsSettings response = client.GetGoogleSignalsSettings(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3219,7 +3220,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 Consent = GoogleSignalsConsent.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetGoogleSignalsSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GoogleSignalsSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             GoogleSignalsSettings responseCallSettings = await client.GetGoogleSignalsSettingsAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GoogleSignalsSettings responseCancellationToken = await client.GetGoogleSignalsSettingsAsync(request.Name, st::CancellationToken.None);
@@ -3242,7 +3243,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 Consent = GoogleSignalsConsent.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetGoogleSignalsSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             GoogleSignalsSettings response = client.GetGoogleSignalsSettings(request.GoogleSignalsSettingsName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3263,7 +3264,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 Consent = GoogleSignalsConsent.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetGoogleSignalsSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GoogleSignalsSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             GoogleSignalsSettings responseCallSettings = await client.GetGoogleSignalsSettingsAsync(request.GoogleSignalsSettingsName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GoogleSignalsSettings responseCancellationToken = await client.GetGoogleSignalsSettingsAsync(request.GoogleSignalsSettingsName, st::CancellationToken.None);
@@ -3287,7 +3288,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 Consent = GoogleSignalsConsent.Unspecified,
             };
             mockGrpcClient.Setup(x => x.UpdateGoogleSignalsSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             GoogleSignalsSettings response = client.UpdateGoogleSignalsSettings(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3309,7 +3310,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 Consent = GoogleSignalsConsent.Unspecified,
             };
             mockGrpcClient.Setup(x => x.UpdateGoogleSignalsSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GoogleSignalsSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             GoogleSignalsSettings responseCallSettings = await client.UpdateGoogleSignalsSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GoogleSignalsSettings responseCancellationToken = await client.UpdateGoogleSignalsSettingsAsync(request, st::CancellationToken.None);
@@ -3333,7 +3334,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 Consent = GoogleSignalsConsent.Unspecified,
             };
             mockGrpcClient.Setup(x => x.UpdateGoogleSignalsSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             GoogleSignalsSettings response = client.UpdateGoogleSignalsSettings(request.GoogleSignalsSettings, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3355,7 +3356,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 Consent = GoogleSignalsConsent.Unspecified,
             };
             mockGrpcClient.Setup(x => x.UpdateGoogleSignalsSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GoogleSignalsSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             GoogleSignalsSettings responseCallSettings = await client.UpdateGoogleSignalsSettingsAsync(request.GoogleSignalsSettings, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GoogleSignalsSettings responseCancellationToken = await client.UpdateGoogleSignalsSettingsAsync(request.GoogleSignalsSettings, request.UpdateMask, st::CancellationToken.None);
@@ -3381,7 +3382,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 Custom = false,
             };
             mockGrpcClient.Setup(x => x.CreateConversionEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             ConversionEvent response = client.CreateConversionEvent(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3405,7 +3406,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 Custom = false,
             };
             mockGrpcClient.Setup(x => x.CreateConversionEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversionEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             ConversionEvent responseCallSettings = await client.CreateConversionEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ConversionEvent responseCancellationToken = await client.CreateConversionEventAsync(request, st::CancellationToken.None);
@@ -3431,7 +3432,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 Custom = false,
             };
             mockGrpcClient.Setup(x => x.CreateConversionEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             ConversionEvent response = client.CreateConversionEvent(request.Parent, request.ConversionEvent);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3455,7 +3456,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 Custom = false,
             };
             mockGrpcClient.Setup(x => x.CreateConversionEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversionEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             ConversionEvent responseCallSettings = await client.CreateConversionEventAsync(request.Parent, request.ConversionEvent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ConversionEvent responseCancellationToken = await client.CreateConversionEventAsync(request.Parent, request.ConversionEvent, st::CancellationToken.None);
@@ -3481,7 +3482,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 Custom = false,
             };
             mockGrpcClient.Setup(x => x.CreateConversionEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             ConversionEvent response = client.CreateConversionEvent(request.ParentAsPropertyName, request.ConversionEvent);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3505,7 +3506,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 Custom = false,
             };
             mockGrpcClient.Setup(x => x.CreateConversionEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversionEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             ConversionEvent responseCallSettings = await client.CreateConversionEventAsync(request.ParentAsPropertyName, request.ConversionEvent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ConversionEvent responseCancellationToken = await client.CreateConversionEventAsync(request.ParentAsPropertyName, request.ConversionEvent, st::CancellationToken.None);
@@ -3530,7 +3531,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 Custom = false,
             };
             mockGrpcClient.Setup(x => x.GetConversionEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             ConversionEvent response = client.GetConversionEvent(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3553,7 +3554,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 Custom = false,
             };
             mockGrpcClient.Setup(x => x.GetConversionEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversionEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             ConversionEvent responseCallSettings = await client.GetConversionEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ConversionEvent responseCancellationToken = await client.GetConversionEventAsync(request, st::CancellationToken.None);
@@ -3578,7 +3579,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 Custom = false,
             };
             mockGrpcClient.Setup(x => x.GetConversionEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             ConversionEvent response = client.GetConversionEvent(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3601,7 +3602,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 Custom = false,
             };
             mockGrpcClient.Setup(x => x.GetConversionEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversionEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             ConversionEvent responseCallSettings = await client.GetConversionEventAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ConversionEvent responseCancellationToken = await client.GetConversionEventAsync(request.Name, st::CancellationToken.None);
@@ -3626,7 +3627,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 Custom = false,
             };
             mockGrpcClient.Setup(x => x.GetConversionEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             ConversionEvent response = client.GetConversionEvent(request.ConversionEventName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3649,7 +3650,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 Custom = false,
             };
             mockGrpcClient.Setup(x => x.GetConversionEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversionEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             ConversionEvent responseCallSettings = await client.GetConversionEventAsync(request.ConversionEventName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ConversionEvent responseCancellationToken = await client.GetConversionEventAsync(request.ConversionEventName, st::CancellationToken.None);
@@ -3667,7 +3668,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteConversionEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteConversionEvent(request);
             mockGrpcClient.VerifyAll();
         }
@@ -3682,7 +3683,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteConversionEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteConversionEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteConversionEventAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -3698,7 +3699,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteConversionEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteConversionEvent(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -3713,7 +3714,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteConversionEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteConversionEventAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteConversionEventAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -3729,7 +3730,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteConversionEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteConversionEvent(request.ConversionEventName);
             mockGrpcClient.VerifyAll();
         }
@@ -3744,7 +3745,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteConversionEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteConversionEventAsync(request.ConversionEventName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteConversionEventAsync(request.ConversionEventName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -3768,7 +3769,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CostDataSharingEnabled = true,
             };
             mockGrpcClient.Setup(x => x.GetDisplayVideo360AdvertiserLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DisplayVideo360AdvertiserLink response = client.GetDisplayVideo360AdvertiserLink(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3792,7 +3793,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CostDataSharingEnabled = true,
             };
             mockGrpcClient.Setup(x => x.GetDisplayVideo360AdvertiserLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DisplayVideo360AdvertiserLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DisplayVideo360AdvertiserLink responseCallSettings = await client.GetDisplayVideo360AdvertiserLinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DisplayVideo360AdvertiserLink responseCancellationToken = await client.GetDisplayVideo360AdvertiserLinkAsync(request, st::CancellationToken.None);
@@ -3818,7 +3819,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CostDataSharingEnabled = true,
             };
             mockGrpcClient.Setup(x => x.GetDisplayVideo360AdvertiserLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DisplayVideo360AdvertiserLink response = client.GetDisplayVideo360AdvertiserLink(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3842,7 +3843,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CostDataSharingEnabled = true,
             };
             mockGrpcClient.Setup(x => x.GetDisplayVideo360AdvertiserLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DisplayVideo360AdvertiserLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DisplayVideo360AdvertiserLink responseCallSettings = await client.GetDisplayVideo360AdvertiserLinkAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DisplayVideo360AdvertiserLink responseCancellationToken = await client.GetDisplayVideo360AdvertiserLinkAsync(request.Name, st::CancellationToken.None);
@@ -3868,7 +3869,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CostDataSharingEnabled = true,
             };
             mockGrpcClient.Setup(x => x.GetDisplayVideo360AdvertiserLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DisplayVideo360AdvertiserLink response = client.GetDisplayVideo360AdvertiserLink(request.DisplayVideo360AdvertiserLinkName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3892,7 +3893,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CostDataSharingEnabled = true,
             };
             mockGrpcClient.Setup(x => x.GetDisplayVideo360AdvertiserLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DisplayVideo360AdvertiserLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DisplayVideo360AdvertiserLink responseCallSettings = await client.GetDisplayVideo360AdvertiserLinkAsync(request.DisplayVideo360AdvertiserLinkName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DisplayVideo360AdvertiserLink responseCancellationToken = await client.GetDisplayVideo360AdvertiserLinkAsync(request.DisplayVideo360AdvertiserLinkName, st::CancellationToken.None);
@@ -3919,7 +3920,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CostDataSharingEnabled = true,
             };
             mockGrpcClient.Setup(x => x.CreateDisplayVideo360AdvertiserLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DisplayVideo360AdvertiserLink response = client.CreateDisplayVideo360AdvertiserLink(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3944,7 +3945,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CostDataSharingEnabled = true,
             };
             mockGrpcClient.Setup(x => x.CreateDisplayVideo360AdvertiserLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DisplayVideo360AdvertiserLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DisplayVideo360AdvertiserLink responseCallSettings = await client.CreateDisplayVideo360AdvertiserLinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DisplayVideo360AdvertiserLink responseCancellationToken = await client.CreateDisplayVideo360AdvertiserLinkAsync(request, st::CancellationToken.None);
@@ -3971,7 +3972,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CostDataSharingEnabled = true,
             };
             mockGrpcClient.Setup(x => x.CreateDisplayVideo360AdvertiserLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DisplayVideo360AdvertiserLink response = client.CreateDisplayVideo360AdvertiserLink(request.Parent, request.DisplayVideo360AdvertiserLink);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3996,7 +3997,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CostDataSharingEnabled = true,
             };
             mockGrpcClient.Setup(x => x.CreateDisplayVideo360AdvertiserLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DisplayVideo360AdvertiserLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DisplayVideo360AdvertiserLink responseCallSettings = await client.CreateDisplayVideo360AdvertiserLinkAsync(request.Parent, request.DisplayVideo360AdvertiserLink, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DisplayVideo360AdvertiserLink responseCancellationToken = await client.CreateDisplayVideo360AdvertiserLinkAsync(request.Parent, request.DisplayVideo360AdvertiserLink, st::CancellationToken.None);
@@ -4023,7 +4024,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CostDataSharingEnabled = true,
             };
             mockGrpcClient.Setup(x => x.CreateDisplayVideo360AdvertiserLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DisplayVideo360AdvertiserLink response = client.CreateDisplayVideo360AdvertiserLink(request.ParentAsPropertyName, request.DisplayVideo360AdvertiserLink);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -4048,7 +4049,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CostDataSharingEnabled = true,
             };
             mockGrpcClient.Setup(x => x.CreateDisplayVideo360AdvertiserLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DisplayVideo360AdvertiserLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DisplayVideo360AdvertiserLink responseCallSettings = await client.CreateDisplayVideo360AdvertiserLinkAsync(request.ParentAsPropertyName, request.DisplayVideo360AdvertiserLink, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DisplayVideo360AdvertiserLink responseCancellationToken = await client.CreateDisplayVideo360AdvertiserLinkAsync(request.ParentAsPropertyName, request.DisplayVideo360AdvertiserLink, st::CancellationToken.None);
@@ -4066,7 +4067,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDisplayVideo360AdvertiserLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteDisplayVideo360AdvertiserLink(request);
             mockGrpcClient.VerifyAll();
         }
@@ -4081,7 +4082,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDisplayVideo360AdvertiserLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteDisplayVideo360AdvertiserLinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteDisplayVideo360AdvertiserLinkAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -4097,7 +4098,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDisplayVideo360AdvertiserLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteDisplayVideo360AdvertiserLink(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -4112,7 +4113,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDisplayVideo360AdvertiserLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteDisplayVideo360AdvertiserLinkAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteDisplayVideo360AdvertiserLinkAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -4128,7 +4129,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDisplayVideo360AdvertiserLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteDisplayVideo360AdvertiserLink(request.DisplayVideo360AdvertiserLinkName);
             mockGrpcClient.VerifyAll();
         }
@@ -4143,7 +4144,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDisplayVideo360AdvertiserLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteDisplayVideo360AdvertiserLinkAsync(request.DisplayVideo360AdvertiserLinkName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteDisplayVideo360AdvertiserLinkAsync(request.DisplayVideo360AdvertiserLinkName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -4168,7 +4169,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CostDataSharingEnabled = true,
             };
             mockGrpcClient.Setup(x => x.UpdateDisplayVideo360AdvertiserLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DisplayVideo360AdvertiserLink response = client.UpdateDisplayVideo360AdvertiserLink(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -4193,7 +4194,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CostDataSharingEnabled = true,
             };
             mockGrpcClient.Setup(x => x.UpdateDisplayVideo360AdvertiserLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DisplayVideo360AdvertiserLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DisplayVideo360AdvertiserLink responseCallSettings = await client.UpdateDisplayVideo360AdvertiserLinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DisplayVideo360AdvertiserLink responseCancellationToken = await client.UpdateDisplayVideo360AdvertiserLinkAsync(request, st::CancellationToken.None);
@@ -4220,7 +4221,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CostDataSharingEnabled = true,
             };
             mockGrpcClient.Setup(x => x.UpdateDisplayVideo360AdvertiserLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DisplayVideo360AdvertiserLink response = client.UpdateDisplayVideo360AdvertiserLink(request.DisplayVideo360AdvertiserLink, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -4245,7 +4246,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CostDataSharingEnabled = true,
             };
             mockGrpcClient.Setup(x => x.UpdateDisplayVideo360AdvertiserLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DisplayVideo360AdvertiserLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DisplayVideo360AdvertiserLink responseCallSettings = await client.UpdateDisplayVideo360AdvertiserLinkAsync(request.DisplayVideo360AdvertiserLink, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DisplayVideo360AdvertiserLink responseCancellationToken = await client.UpdateDisplayVideo360AdvertiserLinkAsync(request.DisplayVideo360AdvertiserLink, request.UpdateMask, st::CancellationToken.None);
@@ -4273,7 +4274,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CostDataSharingEnabled = true,
             };
             mockGrpcClient.Setup(x => x.GetDisplayVideo360AdvertiserLinkProposal(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DisplayVideo360AdvertiserLinkProposal response = client.GetDisplayVideo360AdvertiserLinkProposal(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -4299,7 +4300,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CostDataSharingEnabled = true,
             };
             mockGrpcClient.Setup(x => x.GetDisplayVideo360AdvertiserLinkProposalAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DisplayVideo360AdvertiserLinkProposal>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DisplayVideo360AdvertiserLinkProposal responseCallSettings = await client.GetDisplayVideo360AdvertiserLinkProposalAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DisplayVideo360AdvertiserLinkProposal responseCancellationToken = await client.GetDisplayVideo360AdvertiserLinkProposalAsync(request, st::CancellationToken.None);
@@ -4327,7 +4328,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CostDataSharingEnabled = true,
             };
             mockGrpcClient.Setup(x => x.GetDisplayVideo360AdvertiserLinkProposal(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DisplayVideo360AdvertiserLinkProposal response = client.GetDisplayVideo360AdvertiserLinkProposal(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -4353,7 +4354,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CostDataSharingEnabled = true,
             };
             mockGrpcClient.Setup(x => x.GetDisplayVideo360AdvertiserLinkProposalAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DisplayVideo360AdvertiserLinkProposal>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DisplayVideo360AdvertiserLinkProposal responseCallSettings = await client.GetDisplayVideo360AdvertiserLinkProposalAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DisplayVideo360AdvertiserLinkProposal responseCancellationToken = await client.GetDisplayVideo360AdvertiserLinkProposalAsync(request.Name, st::CancellationToken.None);
@@ -4381,7 +4382,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CostDataSharingEnabled = true,
             };
             mockGrpcClient.Setup(x => x.GetDisplayVideo360AdvertiserLinkProposal(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DisplayVideo360AdvertiserLinkProposal response = client.GetDisplayVideo360AdvertiserLinkProposal(request.DisplayVideo360AdvertiserLinkProposalName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -4407,7 +4408,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CostDataSharingEnabled = true,
             };
             mockGrpcClient.Setup(x => x.GetDisplayVideo360AdvertiserLinkProposalAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DisplayVideo360AdvertiserLinkProposal>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DisplayVideo360AdvertiserLinkProposal responseCallSettings = await client.GetDisplayVideo360AdvertiserLinkProposalAsync(request.DisplayVideo360AdvertiserLinkProposalName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DisplayVideo360AdvertiserLinkProposal responseCancellationToken = await client.GetDisplayVideo360AdvertiserLinkProposalAsync(request.DisplayVideo360AdvertiserLinkProposalName, st::CancellationToken.None);
@@ -4436,7 +4437,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CostDataSharingEnabled = true,
             };
             mockGrpcClient.Setup(x => x.CreateDisplayVideo360AdvertiserLinkProposal(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DisplayVideo360AdvertiserLinkProposal response = client.CreateDisplayVideo360AdvertiserLinkProposal(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -4463,7 +4464,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CostDataSharingEnabled = true,
             };
             mockGrpcClient.Setup(x => x.CreateDisplayVideo360AdvertiserLinkProposalAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DisplayVideo360AdvertiserLinkProposal>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DisplayVideo360AdvertiserLinkProposal responseCallSettings = await client.CreateDisplayVideo360AdvertiserLinkProposalAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DisplayVideo360AdvertiserLinkProposal responseCancellationToken = await client.CreateDisplayVideo360AdvertiserLinkProposalAsync(request, st::CancellationToken.None);
@@ -4492,7 +4493,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CostDataSharingEnabled = true,
             };
             mockGrpcClient.Setup(x => x.CreateDisplayVideo360AdvertiserLinkProposal(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DisplayVideo360AdvertiserLinkProposal response = client.CreateDisplayVideo360AdvertiserLinkProposal(request.Parent, request.DisplayVideo360AdvertiserLinkProposal);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -4519,7 +4520,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CostDataSharingEnabled = true,
             };
             mockGrpcClient.Setup(x => x.CreateDisplayVideo360AdvertiserLinkProposalAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DisplayVideo360AdvertiserLinkProposal>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DisplayVideo360AdvertiserLinkProposal responseCallSettings = await client.CreateDisplayVideo360AdvertiserLinkProposalAsync(request.Parent, request.DisplayVideo360AdvertiserLinkProposal, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DisplayVideo360AdvertiserLinkProposal responseCancellationToken = await client.CreateDisplayVideo360AdvertiserLinkProposalAsync(request.Parent, request.DisplayVideo360AdvertiserLinkProposal, st::CancellationToken.None);
@@ -4548,7 +4549,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CostDataSharingEnabled = true,
             };
             mockGrpcClient.Setup(x => x.CreateDisplayVideo360AdvertiserLinkProposal(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DisplayVideo360AdvertiserLinkProposal response = client.CreateDisplayVideo360AdvertiserLinkProposal(request.ParentAsPropertyName, request.DisplayVideo360AdvertiserLinkProposal);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -4575,7 +4576,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CostDataSharingEnabled = true,
             };
             mockGrpcClient.Setup(x => x.CreateDisplayVideo360AdvertiserLinkProposalAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DisplayVideo360AdvertiserLinkProposal>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DisplayVideo360AdvertiserLinkProposal responseCallSettings = await client.CreateDisplayVideo360AdvertiserLinkProposalAsync(request.ParentAsPropertyName, request.DisplayVideo360AdvertiserLinkProposal, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DisplayVideo360AdvertiserLinkProposal responseCancellationToken = await client.CreateDisplayVideo360AdvertiserLinkProposalAsync(request.ParentAsPropertyName, request.DisplayVideo360AdvertiserLinkProposal, st::CancellationToken.None);
@@ -4593,7 +4594,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDisplayVideo360AdvertiserLinkProposal(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteDisplayVideo360AdvertiserLinkProposal(request);
             mockGrpcClient.VerifyAll();
         }
@@ -4608,7 +4609,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDisplayVideo360AdvertiserLinkProposalAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteDisplayVideo360AdvertiserLinkProposalAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteDisplayVideo360AdvertiserLinkProposalAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -4624,7 +4625,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDisplayVideo360AdvertiserLinkProposal(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteDisplayVideo360AdvertiserLinkProposal(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -4639,7 +4640,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDisplayVideo360AdvertiserLinkProposalAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteDisplayVideo360AdvertiserLinkProposalAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteDisplayVideo360AdvertiserLinkProposalAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -4655,7 +4656,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDisplayVideo360AdvertiserLinkProposal(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteDisplayVideo360AdvertiserLinkProposal(request.DisplayVideo360AdvertiserLinkProposalName);
             mockGrpcClient.VerifyAll();
         }
@@ -4670,7 +4671,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDisplayVideo360AdvertiserLinkProposalAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteDisplayVideo360AdvertiserLinkProposalAsync(request.DisplayVideo360AdvertiserLinkProposalName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteDisplayVideo360AdvertiserLinkProposalAsync(request.DisplayVideo360AdvertiserLinkProposalName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -4689,7 +4690,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 DisplayVideo360AdvertiserLink = new DisplayVideo360AdvertiserLink(),
             };
             mockGrpcClient.Setup(x => x.ApproveDisplayVideo360AdvertiserLinkProposal(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             ApproveDisplayVideo360AdvertiserLinkProposalResponse response = client.ApproveDisplayVideo360AdvertiserLinkProposal(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -4708,7 +4709,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 DisplayVideo360AdvertiserLink = new DisplayVideo360AdvertiserLink(),
             };
             mockGrpcClient.Setup(x => x.ApproveDisplayVideo360AdvertiserLinkProposalAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ApproveDisplayVideo360AdvertiserLinkProposalResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             ApproveDisplayVideo360AdvertiserLinkProposalResponse responseCallSettings = await client.ApproveDisplayVideo360AdvertiserLinkProposalAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ApproveDisplayVideo360AdvertiserLinkProposalResponse responseCancellationToken = await client.ApproveDisplayVideo360AdvertiserLinkProposalAsync(request, st::CancellationToken.None);
@@ -4736,7 +4737,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CostDataSharingEnabled = true,
             };
             mockGrpcClient.Setup(x => x.CancelDisplayVideo360AdvertiserLinkProposal(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DisplayVideo360AdvertiserLinkProposal response = client.CancelDisplayVideo360AdvertiserLinkProposal(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -4762,7 +4763,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CostDataSharingEnabled = true,
             };
             mockGrpcClient.Setup(x => x.CancelDisplayVideo360AdvertiserLinkProposalAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DisplayVideo360AdvertiserLinkProposal>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DisplayVideo360AdvertiserLinkProposal responseCallSettings = await client.CancelDisplayVideo360AdvertiserLinkProposalAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DisplayVideo360AdvertiserLinkProposal responseCancellationToken = await client.CancelDisplayVideo360AdvertiserLinkProposalAsync(request, st::CancellationToken.None);
@@ -4781,7 +4782,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomDimension expectedResponse = new CustomDimension
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -4789,7 +4790,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 DisallowAdsPersonalization = true,
             };
             mockGrpcClient.Setup(x => x.CreateCustomDimension(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomDimension response = client.CreateCustomDimension(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -4806,7 +4807,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomDimension expectedResponse = new CustomDimension
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -4814,7 +4815,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 DisallowAdsPersonalization = true,
             };
             mockGrpcClient.Setup(x => x.CreateCustomDimensionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomDimension>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomDimension responseCallSettings = await client.CreateCustomDimensionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CustomDimension responseCancellationToken = await client.CreateCustomDimensionAsync(request, st::CancellationToken.None);
@@ -4833,7 +4834,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomDimension expectedResponse = new CustomDimension
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -4841,7 +4842,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 DisallowAdsPersonalization = true,
             };
             mockGrpcClient.Setup(x => x.CreateCustomDimension(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomDimension response = client.CreateCustomDimension(request.Parent, request.CustomDimension);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -4858,7 +4859,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomDimension expectedResponse = new CustomDimension
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -4866,7 +4867,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 DisallowAdsPersonalization = true,
             };
             mockGrpcClient.Setup(x => x.CreateCustomDimensionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomDimension>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomDimension responseCallSettings = await client.CreateCustomDimensionAsync(request.Parent, request.CustomDimension, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CustomDimension responseCancellationToken = await client.CreateCustomDimensionAsync(request.Parent, request.CustomDimension, st::CancellationToken.None);
@@ -4885,7 +4886,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomDimension expectedResponse = new CustomDimension
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -4893,7 +4894,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 DisallowAdsPersonalization = true,
             };
             mockGrpcClient.Setup(x => x.CreateCustomDimension(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomDimension response = client.CreateCustomDimension(request.ParentAsPropertyName, request.CustomDimension);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -4910,7 +4911,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomDimension expectedResponse = new CustomDimension
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -4918,7 +4919,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 DisallowAdsPersonalization = true,
             };
             mockGrpcClient.Setup(x => x.CreateCustomDimensionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomDimension>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomDimension responseCallSettings = await client.CreateCustomDimensionAsync(request.ParentAsPropertyName, request.CustomDimension, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CustomDimension responseCancellationToken = await client.CreateCustomDimensionAsync(request.ParentAsPropertyName, request.CustomDimension, st::CancellationToken.None);
@@ -4937,7 +4938,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomDimension expectedResponse = new CustomDimension
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -4945,7 +4946,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 DisallowAdsPersonalization = true,
             };
             mockGrpcClient.Setup(x => x.UpdateCustomDimension(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomDimension response = client.UpdateCustomDimension(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -4962,7 +4963,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomDimension expectedResponse = new CustomDimension
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -4970,7 +4971,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 DisallowAdsPersonalization = true,
             };
             mockGrpcClient.Setup(x => x.UpdateCustomDimensionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomDimension>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomDimension responseCallSettings = await client.UpdateCustomDimensionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CustomDimension responseCancellationToken = await client.UpdateCustomDimensionAsync(request, st::CancellationToken.None);
@@ -4989,7 +4990,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomDimension expectedResponse = new CustomDimension
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -4997,7 +4998,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 DisallowAdsPersonalization = true,
             };
             mockGrpcClient.Setup(x => x.UpdateCustomDimension(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomDimension response = client.UpdateCustomDimension(request.CustomDimension, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -5014,7 +5015,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomDimension expectedResponse = new CustomDimension
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5022,7 +5023,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 DisallowAdsPersonalization = true,
             };
             mockGrpcClient.Setup(x => x.UpdateCustomDimensionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomDimension>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomDimension responseCallSettings = await client.UpdateCustomDimensionAsync(request.CustomDimension, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CustomDimension responseCancellationToken = await client.UpdateCustomDimensionAsync(request.CustomDimension, request.UpdateMask, st::CancellationToken.None);
@@ -5036,11 +5037,11 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             ArchiveCustomDimensionRequest request = new ArchiveCustomDimensionRequest
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ArchiveCustomDimension(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             client.ArchiveCustomDimension(request);
             mockGrpcClient.VerifyAll();
         }
@@ -5051,11 +5052,11 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             ArchiveCustomDimensionRequest request = new ArchiveCustomDimensionRequest
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ArchiveCustomDimensionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.ArchiveCustomDimensionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.ArchiveCustomDimensionAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -5067,11 +5068,11 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             ArchiveCustomDimensionRequest request = new ArchiveCustomDimensionRequest
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ArchiveCustomDimension(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             client.ArchiveCustomDimension(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -5082,11 +5083,11 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             ArchiveCustomDimensionRequest request = new ArchiveCustomDimensionRequest
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ArchiveCustomDimensionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.ArchiveCustomDimensionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.ArchiveCustomDimensionAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -5098,11 +5099,11 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             ArchiveCustomDimensionRequest request = new ArchiveCustomDimensionRequest
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ArchiveCustomDimension(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             client.ArchiveCustomDimension(request.CustomDimensionName);
             mockGrpcClient.VerifyAll();
         }
@@ -5113,11 +5114,11 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             ArchiveCustomDimensionRequest request = new ArchiveCustomDimensionRequest
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ArchiveCustomDimensionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.ArchiveCustomDimensionAsync(request.CustomDimensionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.ArchiveCustomDimensionAsync(request.CustomDimensionName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -5129,11 +5130,11 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             GetCustomDimensionRequest request = new GetCustomDimensionRequest
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
             };
             CustomDimension expectedResponse = new CustomDimension
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5141,7 +5142,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 DisallowAdsPersonalization = true,
             };
             mockGrpcClient.Setup(x => x.GetCustomDimension(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomDimension response = client.GetCustomDimension(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -5153,11 +5154,11 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             GetCustomDimensionRequest request = new GetCustomDimensionRequest
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
             };
             CustomDimension expectedResponse = new CustomDimension
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5165,7 +5166,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 DisallowAdsPersonalization = true,
             };
             mockGrpcClient.Setup(x => x.GetCustomDimensionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomDimension>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomDimension responseCallSettings = await client.GetCustomDimensionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CustomDimension responseCancellationToken = await client.GetCustomDimensionAsync(request, st::CancellationToken.None);
@@ -5179,11 +5180,11 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             GetCustomDimensionRequest request = new GetCustomDimensionRequest
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
             };
             CustomDimension expectedResponse = new CustomDimension
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5191,7 +5192,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 DisallowAdsPersonalization = true,
             };
             mockGrpcClient.Setup(x => x.GetCustomDimension(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomDimension response = client.GetCustomDimension(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -5203,11 +5204,11 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             GetCustomDimensionRequest request = new GetCustomDimensionRequest
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
             };
             CustomDimension expectedResponse = new CustomDimension
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5215,7 +5216,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 DisallowAdsPersonalization = true,
             };
             mockGrpcClient.Setup(x => x.GetCustomDimensionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomDimension>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomDimension responseCallSettings = await client.GetCustomDimensionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CustomDimension responseCancellationToken = await client.GetCustomDimensionAsync(request.Name, st::CancellationToken.None);
@@ -5229,11 +5230,11 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             GetCustomDimensionRequest request = new GetCustomDimensionRequest
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
             };
             CustomDimension expectedResponse = new CustomDimension
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5241,7 +5242,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 DisallowAdsPersonalization = true,
             };
             mockGrpcClient.Setup(x => x.GetCustomDimension(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomDimension response = client.GetCustomDimension(request.CustomDimensionName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -5253,11 +5254,11 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             GetCustomDimensionRequest request = new GetCustomDimensionRequest
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
             };
             CustomDimension expectedResponse = new CustomDimension
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5265,7 +5266,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 DisallowAdsPersonalization = true,
             };
             mockGrpcClient.Setup(x => x.GetCustomDimensionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomDimension>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomDimension responseCallSettings = await client.GetCustomDimensionAsync(request.CustomDimensionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CustomDimension responseCancellationToken = await client.GetCustomDimensionAsync(request.CustomDimensionName, st::CancellationToken.None);
@@ -5284,7 +5285,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomMetric expectedResponse = new CustomMetric
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5296,7 +5297,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateCustomMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomMetric response = client.CreateCustomMetric(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -5313,7 +5314,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomMetric expectedResponse = new CustomMetric
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5325,7 +5326,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateCustomMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomMetric responseCallSettings = await client.CreateCustomMetricAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CustomMetric responseCancellationToken = await client.CreateCustomMetricAsync(request, st::CancellationToken.None);
@@ -5344,7 +5345,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomMetric expectedResponse = new CustomMetric
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5356,7 +5357,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateCustomMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomMetric response = client.CreateCustomMetric(request.Parent, request.CustomMetric);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -5373,7 +5374,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomMetric expectedResponse = new CustomMetric
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5385,7 +5386,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateCustomMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomMetric responseCallSettings = await client.CreateCustomMetricAsync(request.Parent, request.CustomMetric, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CustomMetric responseCancellationToken = await client.CreateCustomMetricAsync(request.Parent, request.CustomMetric, st::CancellationToken.None);
@@ -5404,7 +5405,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomMetric expectedResponse = new CustomMetric
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5416,7 +5417,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateCustomMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomMetric response = client.CreateCustomMetric(request.ParentAsPropertyName, request.CustomMetric);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -5433,7 +5434,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomMetric expectedResponse = new CustomMetric
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5445,7 +5446,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateCustomMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomMetric responseCallSettings = await client.CreateCustomMetricAsync(request.ParentAsPropertyName, request.CustomMetric, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CustomMetric responseCancellationToken = await client.CreateCustomMetricAsync(request.ParentAsPropertyName, request.CustomMetric, st::CancellationToken.None);
@@ -5464,7 +5465,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomMetric expectedResponse = new CustomMetric
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5476,7 +5477,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateCustomMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomMetric response = client.UpdateCustomMetric(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -5493,7 +5494,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomMetric expectedResponse = new CustomMetric
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5505,7 +5506,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateCustomMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomMetric responseCallSettings = await client.UpdateCustomMetricAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CustomMetric responseCancellationToken = await client.UpdateCustomMetricAsync(request, st::CancellationToken.None);
@@ -5524,7 +5525,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomMetric expectedResponse = new CustomMetric
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5536,7 +5537,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateCustomMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomMetric response = client.UpdateCustomMetric(request.CustomMetric, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -5553,7 +5554,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             CustomMetric expectedResponse = new CustomMetric
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5565,7 +5566,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateCustomMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomMetric responseCallSettings = await client.UpdateCustomMetricAsync(request.CustomMetric, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CustomMetric responseCancellationToken = await client.UpdateCustomMetricAsync(request.CustomMetric, request.UpdateMask, st::CancellationToken.None);
@@ -5579,11 +5580,11 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             ArchiveCustomMetricRequest request = new ArchiveCustomMetricRequest
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ArchiveCustomMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             client.ArchiveCustomMetric(request);
             mockGrpcClient.VerifyAll();
         }
@@ -5594,11 +5595,11 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             ArchiveCustomMetricRequest request = new ArchiveCustomMetricRequest
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ArchiveCustomMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.ArchiveCustomMetricAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.ArchiveCustomMetricAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -5610,11 +5611,11 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             ArchiveCustomMetricRequest request = new ArchiveCustomMetricRequest
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ArchiveCustomMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             client.ArchiveCustomMetric(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -5625,11 +5626,11 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             ArchiveCustomMetricRequest request = new ArchiveCustomMetricRequest
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ArchiveCustomMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.ArchiveCustomMetricAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.ArchiveCustomMetricAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -5641,11 +5642,11 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             ArchiveCustomMetricRequest request = new ArchiveCustomMetricRequest
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ArchiveCustomMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             client.ArchiveCustomMetric(request.CustomMetricName);
             mockGrpcClient.VerifyAll();
         }
@@ -5656,11 +5657,11 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             ArchiveCustomMetricRequest request = new ArchiveCustomMetricRequest
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ArchiveCustomMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.ArchiveCustomMetricAsync(request.CustomMetricName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.ArchiveCustomMetricAsync(request.CustomMetricName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -5672,11 +5673,11 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             GetCustomMetricRequest request = new GetCustomMetricRequest
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
             };
             CustomMetric expectedResponse = new CustomMetric
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5688,7 +5689,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetCustomMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomMetric response = client.GetCustomMetric(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -5700,11 +5701,11 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             GetCustomMetricRequest request = new GetCustomMetricRequest
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
             };
             CustomMetric expectedResponse = new CustomMetric
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5716,7 +5717,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetCustomMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomMetric responseCallSettings = await client.GetCustomMetricAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CustomMetric responseCancellationToken = await client.GetCustomMetricAsync(request, st::CancellationToken.None);
@@ -5730,11 +5731,11 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             GetCustomMetricRequest request = new GetCustomMetricRequest
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
             };
             CustomMetric expectedResponse = new CustomMetric
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5746,7 +5747,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetCustomMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomMetric response = client.GetCustomMetric(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -5758,11 +5759,11 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             GetCustomMetricRequest request = new GetCustomMetricRequest
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
             };
             CustomMetric expectedResponse = new CustomMetric
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5774,7 +5775,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetCustomMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomMetric responseCallSettings = await client.GetCustomMetricAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CustomMetric responseCancellationToken = await client.GetCustomMetricAsync(request.Name, st::CancellationToken.None);
@@ -5788,11 +5789,11 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             GetCustomMetricRequest request = new GetCustomMetricRequest
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
             };
             CustomMetric expectedResponse = new CustomMetric
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5804,7 +5805,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetCustomMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomMetric response = client.GetCustomMetric(request.CustomMetricName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -5816,11 +5817,11 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             GetCustomMetricRequest request = new GetCustomMetricRequest
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
             };
             CustomMetric expectedResponse = new CustomMetric
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
                 ParameterName = "parameter_name7d56d532",
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
@@ -5832,7 +5833,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetCustomMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomMetric responseCallSettings = await client.GetCustomMetricAsync(request.CustomMetricName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CustomMetric responseCancellationToken = await client.GetCustomMetricAsync(request.CustomMetricName, st::CancellationToken.None);
@@ -5855,7 +5856,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 ResetUserDataOnNewActivity = false,
             };
             mockGrpcClient.Setup(x => x.GetDataRetentionSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DataRetentionSettings response = client.GetDataRetentionSettings(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -5876,7 +5877,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 ResetUserDataOnNewActivity = false,
             };
             mockGrpcClient.Setup(x => x.GetDataRetentionSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataRetentionSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DataRetentionSettings responseCallSettings = await client.GetDataRetentionSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DataRetentionSettings responseCancellationToken = await client.GetDataRetentionSettingsAsync(request, st::CancellationToken.None);
@@ -5899,7 +5900,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 ResetUserDataOnNewActivity = false,
             };
             mockGrpcClient.Setup(x => x.GetDataRetentionSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DataRetentionSettings response = client.GetDataRetentionSettings(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -5920,7 +5921,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 ResetUserDataOnNewActivity = false,
             };
             mockGrpcClient.Setup(x => x.GetDataRetentionSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataRetentionSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DataRetentionSettings responseCallSettings = await client.GetDataRetentionSettingsAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DataRetentionSettings responseCancellationToken = await client.GetDataRetentionSettingsAsync(request.Name, st::CancellationToken.None);
@@ -5943,7 +5944,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 ResetUserDataOnNewActivity = false,
             };
             mockGrpcClient.Setup(x => x.GetDataRetentionSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DataRetentionSettings response = client.GetDataRetentionSettings(request.DataRetentionSettingsName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -5964,7 +5965,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 ResetUserDataOnNewActivity = false,
             };
             mockGrpcClient.Setup(x => x.GetDataRetentionSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataRetentionSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DataRetentionSettings responseCallSettings = await client.GetDataRetentionSettingsAsync(request.DataRetentionSettingsName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DataRetentionSettings responseCancellationToken = await client.GetDataRetentionSettingsAsync(request.DataRetentionSettingsName, st::CancellationToken.None);
@@ -5988,7 +5989,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 ResetUserDataOnNewActivity = false,
             };
             mockGrpcClient.Setup(x => x.UpdateDataRetentionSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DataRetentionSettings response = client.UpdateDataRetentionSettings(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -6010,7 +6011,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 ResetUserDataOnNewActivity = false,
             };
             mockGrpcClient.Setup(x => x.UpdateDataRetentionSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataRetentionSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DataRetentionSettings responseCallSettings = await client.UpdateDataRetentionSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DataRetentionSettings responseCancellationToken = await client.UpdateDataRetentionSettingsAsync(request, st::CancellationToken.None);
@@ -6034,7 +6035,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 ResetUserDataOnNewActivity = false,
             };
             mockGrpcClient.Setup(x => x.UpdateDataRetentionSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DataRetentionSettings response = client.UpdateDataRetentionSettings(request.DataRetentionSettings, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -6056,7 +6057,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 ResetUserDataOnNewActivity = false,
             };
             mockGrpcClient.Setup(x => x.UpdateDataRetentionSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataRetentionSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DataRetentionSettings responseCallSettings = await client.UpdateDataRetentionSettingsAsync(request.DataRetentionSettings, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DataRetentionSettings responseCancellationToken = await client.UpdateDataRetentionSettingsAsync(request.DataRetentionSettings, request.UpdateMask, st::CancellationToken.None);
@@ -6085,7 +6086,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IosAppStreamData = new DataStream.Types.IosAppStreamData(),
             };
             mockGrpcClient.Setup(x => x.CreateDataStream(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DataStream response = client.CreateDataStream(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -6112,7 +6113,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IosAppStreamData = new DataStream.Types.IosAppStreamData(),
             };
             mockGrpcClient.Setup(x => x.CreateDataStreamAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataStream>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DataStream responseCallSettings = await client.CreateDataStreamAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DataStream responseCancellationToken = await client.CreateDataStreamAsync(request, st::CancellationToken.None);
@@ -6141,7 +6142,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IosAppStreamData = new DataStream.Types.IosAppStreamData(),
             };
             mockGrpcClient.Setup(x => x.CreateDataStream(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DataStream response = client.CreateDataStream(request.Parent, request.DataStream);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -6168,7 +6169,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IosAppStreamData = new DataStream.Types.IosAppStreamData(),
             };
             mockGrpcClient.Setup(x => x.CreateDataStreamAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataStream>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DataStream responseCallSettings = await client.CreateDataStreamAsync(request.Parent, request.DataStream, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DataStream responseCancellationToken = await client.CreateDataStreamAsync(request.Parent, request.DataStream, st::CancellationToken.None);
@@ -6197,7 +6198,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IosAppStreamData = new DataStream.Types.IosAppStreamData(),
             };
             mockGrpcClient.Setup(x => x.CreateDataStream(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DataStream response = client.CreateDataStream(request.ParentAsPropertyName, request.DataStream);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -6224,7 +6225,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IosAppStreamData = new DataStream.Types.IosAppStreamData(),
             };
             mockGrpcClient.Setup(x => x.CreateDataStreamAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataStream>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DataStream responseCallSettings = await client.CreateDataStreamAsync(request.ParentAsPropertyName, request.DataStream, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DataStream responseCancellationToken = await client.CreateDataStreamAsync(request.ParentAsPropertyName, request.DataStream, st::CancellationToken.None);
@@ -6242,7 +6243,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDataStream(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteDataStream(request);
             mockGrpcClient.VerifyAll();
         }
@@ -6257,7 +6258,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDataStreamAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteDataStreamAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteDataStreamAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -6273,7 +6274,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDataStream(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteDataStream(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -6288,7 +6289,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDataStreamAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteDataStreamAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteDataStreamAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -6304,7 +6305,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDataStream(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteDataStream(request.DataStreamName);
             mockGrpcClient.VerifyAll();
         }
@@ -6319,7 +6320,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDataStreamAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteDataStreamAsync(request.DataStreamName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteDataStreamAsync(request.DataStreamName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -6346,7 +6347,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IosAppStreamData = new DataStream.Types.IosAppStreamData(),
             };
             mockGrpcClient.Setup(x => x.UpdateDataStream(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DataStream response = client.UpdateDataStream(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -6373,7 +6374,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IosAppStreamData = new DataStream.Types.IosAppStreamData(),
             };
             mockGrpcClient.Setup(x => x.UpdateDataStreamAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataStream>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DataStream responseCallSettings = await client.UpdateDataStreamAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DataStream responseCancellationToken = await client.UpdateDataStreamAsync(request, st::CancellationToken.None);
@@ -6402,7 +6403,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IosAppStreamData = new DataStream.Types.IosAppStreamData(),
             };
             mockGrpcClient.Setup(x => x.UpdateDataStream(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DataStream response = client.UpdateDataStream(request.DataStream, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -6429,7 +6430,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IosAppStreamData = new DataStream.Types.IosAppStreamData(),
             };
             mockGrpcClient.Setup(x => x.UpdateDataStreamAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataStream>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DataStream responseCallSettings = await client.UpdateDataStreamAsync(request.DataStream, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DataStream responseCancellationToken = await client.UpdateDataStreamAsync(request.DataStream, request.UpdateMask, st::CancellationToken.None);
@@ -6457,7 +6458,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IosAppStreamData = new DataStream.Types.IosAppStreamData(),
             };
             mockGrpcClient.Setup(x => x.GetDataStream(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DataStream response = client.GetDataStream(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -6483,7 +6484,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IosAppStreamData = new DataStream.Types.IosAppStreamData(),
             };
             mockGrpcClient.Setup(x => x.GetDataStreamAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataStream>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DataStream responseCallSettings = await client.GetDataStreamAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DataStream responseCancellationToken = await client.GetDataStreamAsync(request, st::CancellationToken.None);
@@ -6511,7 +6512,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IosAppStreamData = new DataStream.Types.IosAppStreamData(),
             };
             mockGrpcClient.Setup(x => x.GetDataStream(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DataStream response = client.GetDataStream(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -6537,7 +6538,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IosAppStreamData = new DataStream.Types.IosAppStreamData(),
             };
             mockGrpcClient.Setup(x => x.GetDataStreamAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataStream>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DataStream responseCallSettings = await client.GetDataStreamAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DataStream responseCancellationToken = await client.GetDataStreamAsync(request.Name, st::CancellationToken.None);
@@ -6565,7 +6566,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IosAppStreamData = new DataStream.Types.IosAppStreamData(),
             };
             mockGrpcClient.Setup(x => x.GetDataStream(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DataStream response = client.GetDataStream(request.DataStreamName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -6591,7 +6592,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IosAppStreamData = new DataStream.Types.IosAppStreamData(),
             };
             mockGrpcClient.Setup(x => x.GetDataStreamAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataStream>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             DataStream responseCallSettings = await client.GetDataStreamAsync(request.DataStreamName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DataStream responseCancellationToken = await client.GetDataStreamAsync(request.DataStreamName, st::CancellationToken.None);

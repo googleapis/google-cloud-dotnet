@@ -3,7 +3,7 @@
 //     source: google/cloud/notebooks/v1/service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2021 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -87,6 +87,10 @@ namespace Google.Cloud.Notebooks.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1.UpdateShieldedInstanceConfigRequest> __Marshaller_google_cloud_notebooks_v1_UpdateShieldedInstanceConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1.UpdateShieldedInstanceConfigRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1.SetInstanceLabelsRequest> __Marshaller_google_cloud_notebooks_v1_SetInstanceLabelsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1.SetInstanceLabelsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1.UpdateInstanceMetadataItemsRequest> __Marshaller_google_cloud_notebooks_v1_UpdateInstanceMetadataItemsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1.UpdateInstanceMetadataItemsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1.UpdateInstanceMetadataItemsResponse> __Marshaller_google_cloud_notebooks_v1_UpdateInstanceMetadataItemsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1.UpdateInstanceMetadataItemsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1.DeleteInstanceRequest> __Marshaller_google_cloud_notebooks_v1_DeleteInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1.DeleteInstanceRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -221,6 +225,14 @@ namespace Google.Cloud.Notebooks.V1 {
         "SetInstanceLabels",
         __Marshaller_google_cloud_notebooks_v1_SetInstanceLabelsRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Notebooks.V1.UpdateInstanceMetadataItemsRequest, global::Google.Cloud.Notebooks.V1.UpdateInstanceMetadataItemsResponse> __Method_UpdateInstanceMetadataItems = new grpc::Method<global::Google.Cloud.Notebooks.V1.UpdateInstanceMetadataItemsRequest, global::Google.Cloud.Notebooks.V1.UpdateInstanceMetadataItemsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateInstanceMetadataItems",
+        __Marshaller_google_cloud_notebooks_v1_UpdateInstanceMetadataItemsRequest,
+        __Marshaller_google_cloud_notebooks_v1_UpdateInstanceMetadataItemsResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Notebooks.V1.DeleteInstanceRequest, global::Google.LongRunning.Operation> __Method_DeleteInstance = new grpc::Method<global::Google.Cloud.Notebooks.V1.DeleteInstanceRequest, global::Google.LongRunning.Operation>(
@@ -528,6 +540,18 @@ namespace Google.Cloud.Notebooks.V1 {
       }
 
       /// <summary>
+      /// Add/update metadata items for an instance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Notebooks.V1.UpdateInstanceMetadataItemsResponse> UpdateInstanceMetadataItems(global::Google.Cloud.Notebooks.V1.UpdateInstanceMetadataItemsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Deletes a single Instance.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -796,7 +820,7 @@ namespace Google.Cloud.Notebooks.V1 {
       }
 
       /// <summary>
-      /// Creates a new Scheduled Notebook in a given project and location.
+      /// Creates a new Execution in a given project and location.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1279,6 +1303,54 @@ namespace Google.Cloud.Notebooks.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> SetInstanceLabelsAsync(global::Google.Cloud.Notebooks.V1.SetInstanceLabelsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SetInstanceLabels, null, options, request);
+      }
+      /// <summary>
+      /// Add/update metadata items for an instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Notebooks.V1.UpdateInstanceMetadataItemsResponse UpdateInstanceMetadataItems(global::Google.Cloud.Notebooks.V1.UpdateInstanceMetadataItemsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateInstanceMetadataItems(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Add/update metadata items for an instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Notebooks.V1.UpdateInstanceMetadataItemsResponse UpdateInstanceMetadataItems(global::Google.Cloud.Notebooks.V1.UpdateInstanceMetadataItemsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateInstanceMetadataItems, null, options, request);
+      }
+      /// <summary>
+      /// Add/update metadata items for an instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Notebooks.V1.UpdateInstanceMetadataItemsResponse> UpdateInstanceMetadataItemsAsync(global::Google.Cloud.Notebooks.V1.UpdateInstanceMetadataItemsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateInstanceMetadataItemsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Add/update metadata items for an instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Notebooks.V1.UpdateInstanceMetadataItemsResponse> UpdateInstanceMetadataItemsAsync(global::Google.Cloud.Notebooks.V1.UpdateInstanceMetadataItemsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateInstanceMetadataItems, null, options, request);
       }
       /// <summary>
       /// Deletes a single Instance.
@@ -2353,7 +2425,7 @@ namespace Google.Cloud.Notebooks.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteExecution, null, options, request);
       }
       /// <summary>
-      /// Creates a new Scheduled Notebook in a given project and location.
+      /// Creates a new Execution in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2366,7 +2438,7 @@ namespace Google.Cloud.Notebooks.V1 {
         return CreateExecution(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new Scheduled Notebook in a given project and location.
+      /// Creates a new Execution in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2377,7 +2449,7 @@ namespace Google.Cloud.Notebooks.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateExecution, null, options, request);
       }
       /// <summary>
-      /// Creates a new Scheduled Notebook in a given project and location.
+      /// Creates a new Execution in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2390,7 +2462,7 @@ namespace Google.Cloud.Notebooks.V1 {
         return CreateExecutionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new Scheduled Notebook in a given project and location.
+      /// Creates a new Execution in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2423,6 +2495,7 @@ namespace Google.Cloud.Notebooks.V1 {
           .AddMethod(__Method_UpdateInstanceConfig, serviceImpl.UpdateInstanceConfig)
           .AddMethod(__Method_UpdateShieldedInstanceConfig, serviceImpl.UpdateShieldedInstanceConfig)
           .AddMethod(__Method_SetInstanceLabels, serviceImpl.SetInstanceLabels)
+          .AddMethod(__Method_UpdateInstanceMetadataItems, serviceImpl.UpdateInstanceMetadataItems)
           .AddMethod(__Method_DeleteInstance, serviceImpl.DeleteInstance)
           .AddMethod(__Method_StartInstance, serviceImpl.StartInstance)
           .AddMethod(__Method_StopInstance, serviceImpl.StopInstance)
@@ -2464,6 +2537,7 @@ namespace Google.Cloud.Notebooks.V1 {
       serviceBinder.AddMethod(__Method_UpdateInstanceConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Notebooks.V1.UpdateInstanceConfigRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateInstanceConfig));
       serviceBinder.AddMethod(__Method_UpdateShieldedInstanceConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Notebooks.V1.UpdateShieldedInstanceConfigRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateShieldedInstanceConfig));
       serviceBinder.AddMethod(__Method_SetInstanceLabels, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Notebooks.V1.SetInstanceLabelsRequest, global::Google.LongRunning.Operation>(serviceImpl.SetInstanceLabels));
+      serviceBinder.AddMethod(__Method_UpdateInstanceMetadataItems, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Notebooks.V1.UpdateInstanceMetadataItemsRequest, global::Google.Cloud.Notebooks.V1.UpdateInstanceMetadataItemsResponse>(serviceImpl.UpdateInstanceMetadataItems));
       serviceBinder.AddMethod(__Method_DeleteInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Notebooks.V1.DeleteInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteInstance));
       serviceBinder.AddMethod(__Method_StartInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Notebooks.V1.StartInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.StartInstance));
       serviceBinder.AddMethod(__Method_StopInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Notebooks.V1.StopInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.StopInstance));

@@ -18,12 +18,20 @@
 # It's usually built automatically via google cloud build, but you can also
 # manually build with:
 #   docker build -t gcr.io/cloud-devrel-public-resources/owlbot-dotnet .
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1-bionic
+FROM mcr.microsoft.com/dotnet/sdk:6.0-focal
 
 # Additional tooling required to regenerate.
+
+# Temporarily, install .NET Core 3.1 as well as .NET 6
+# This (and the apt-get install of dotnet-sdk-3.1) can
+# be removed when the generator is updated to use .NET 6
+RUN wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+RUN dpkg -i packages-microsoft-prod.deb
+
 RUN apt-get update
 RUN apt-get install -y unzip
 RUN apt-get install -y python3
+RUN apt-get install -y dotnet-sdk-3.1
 
 # Note: main.sh is not packed into the docker image.  This command
 # invokes the current main.sh in the repo.

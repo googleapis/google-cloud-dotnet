@@ -732,1293 +732,6 @@
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "dataplex_v1_generated_MetadataService_CreateEntity_sync",
-      "title": "CreateEntityRequestObject",
-      "description": "Snippet for CreateEntity",
-      "file": "MetadataServiceClient.CreateEntityRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreateEntity",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.CreateEntity",
-        "resultType": "Google.Cloud.Dataplex.V1.Entity",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "CreateEntity",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.CreateEntity",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_CreateEntity_async",
-      "title": "CreateEntityRequestObjectAsync",
-      "description": "Snippet for CreateEntityAsync",
-      "file": "MetadataServiceClient.CreateEntityRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreateEntityAsync",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.CreateEntityAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Entity>",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "CreateEntity",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.CreateEntity",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_CreateEntity_sync_flattened",
-      "title": "CreateEntity",
-      "description": "Snippet for CreateEntity",
-      "file": "MetadataServiceClient.CreateEntitySnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreateEntity",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.CreateEntity",
-        "resultType": "Google.Cloud.Dataplex.V1.Entity",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "CreateEntity",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.CreateEntity",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_CreateEntity_async_flattened",
-      "title": "CreateEntityAsync",
-      "description": "Snippet for CreateEntityAsync",
-      "file": "MetadataServiceClient.CreateEntityAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreateEntityAsync",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.CreateEntityAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Entity>",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "CreateEntity",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.CreateEntity",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_CreateEntity_sync_flattened_resourceNames",
-      "title": "CreateEntityResourceNames",
-      "description": "Snippet for CreateEntity",
-      "file": "MetadataServiceClient.CreateEntityResourceNamesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreateEntity",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.CreateEntity",
-        "resultType": "Google.Cloud.Dataplex.V1.Entity",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "CreateEntity",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.CreateEntity",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_CreateEntity_async_flattened_resourceNames",
-      "title": "CreateEntityResourceNamesAsync",
-      "description": "Snippet for CreateEntityAsync",
-      "file": "MetadataServiceClient.CreateEntityResourceNamesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreateEntityAsync",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.CreateEntityAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Entity>",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "CreateEntity",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.CreateEntity",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_UpdateEntity_sync",
-      "title": "UpdateEntityRequestObject",
-      "description": "Snippet for UpdateEntity",
-      "file": "MetadataServiceClient.UpdateEntityRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "UpdateEntity",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.UpdateEntity",
-        "resultType": "Google.Cloud.Dataplex.V1.Entity",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "UpdateEntity",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.UpdateEntity",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_UpdateEntity_async",
-      "title": "UpdateEntityRequestObjectAsync",
-      "description": "Snippet for UpdateEntityAsync",
-      "file": "MetadataServiceClient.UpdateEntityRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "UpdateEntityAsync",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.UpdateEntityAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Entity>",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "UpdateEntity",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.UpdateEntity",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_DeleteEntity_sync",
-      "title": "DeleteEntityRequestObject",
-      "description": "Snippet for DeleteEntity",
-      "file": "MetadataServiceClient.DeleteEntityRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteEntity",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.DeleteEntity",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "DeleteEntity",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.DeleteEntity",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_DeleteEntity_async",
-      "title": "DeleteEntityRequestObjectAsync",
-      "description": "Snippet for DeleteEntityAsync",
-      "file": "MetadataServiceClient.DeleteEntityRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteEntityAsync",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.DeleteEntityAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "DeleteEntity",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.DeleteEntity",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_DeleteEntity_sync_flattened",
-      "title": "DeleteEntity",
-      "description": "Snippet for DeleteEntity",
-      "file": "MetadataServiceClient.DeleteEntitySnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteEntity",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.DeleteEntity",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "DeleteEntity",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.DeleteEntity",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_DeleteEntity_async_flattened",
-      "title": "DeleteEntityAsync",
-      "description": "Snippet for DeleteEntityAsync",
-      "file": "MetadataServiceClient.DeleteEntityAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteEntityAsync",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.DeleteEntityAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "DeleteEntity",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.DeleteEntity",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_DeleteEntity_sync_flattened_resourceNames",
-      "title": "DeleteEntityResourceNames",
-      "description": "Snippet for DeleteEntity",
-      "file": "MetadataServiceClient.DeleteEntityResourceNamesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteEntity",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.DeleteEntity",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "DeleteEntity",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.DeleteEntity",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_DeleteEntity_async_flattened_resourceNames",
-      "title": "DeleteEntityResourceNamesAsync",
-      "description": "Snippet for DeleteEntityAsync",
-      "file": "MetadataServiceClient.DeleteEntityResourceNamesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteEntityAsync",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.DeleteEntityAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "DeleteEntity",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.DeleteEntity",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_GetEntity_sync",
-      "title": "GetEntityRequestObject",
-      "description": "Snippet for GetEntity",
-      "file": "MetadataServiceClient.GetEntityRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "GetEntity",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.GetEntity",
-        "resultType": "Google.Cloud.Dataplex.V1.Entity",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "GetEntity",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.GetEntity",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_GetEntity_async",
-      "title": "GetEntityRequestObjectAsync",
-      "description": "Snippet for GetEntityAsync",
-      "file": "MetadataServiceClient.GetEntityRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "GetEntityAsync",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.GetEntityAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Entity>",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "GetEntity",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.GetEntity",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_GetEntity_sync_flattened",
-      "title": "GetEntity",
-      "description": "Snippet for GetEntity",
-      "file": "MetadataServiceClient.GetEntitySnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "GetEntity",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.GetEntity",
-        "resultType": "Google.Cloud.Dataplex.V1.Entity",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "GetEntity",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.GetEntity",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_GetEntity_async_flattened",
-      "title": "GetEntityAsync",
-      "description": "Snippet for GetEntityAsync",
-      "file": "MetadataServiceClient.GetEntityAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "GetEntityAsync",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.GetEntityAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Entity>",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "GetEntity",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.GetEntity",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_GetEntity_sync_flattened_resourceNames",
-      "title": "GetEntityResourceNames",
-      "description": "Snippet for GetEntity",
-      "file": "MetadataServiceClient.GetEntityResourceNamesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "GetEntity",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.GetEntity",
-        "resultType": "Google.Cloud.Dataplex.V1.Entity",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "GetEntity",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.GetEntity",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_GetEntity_async_flattened_resourceNames",
-      "title": "GetEntityResourceNamesAsync",
-      "description": "Snippet for GetEntityAsync",
-      "file": "MetadataServiceClient.GetEntityResourceNamesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "GetEntityAsync",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.GetEntityAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Entity>",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "GetEntity",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.GetEntity",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_ListEntities_sync",
-      "title": "ListEntitiesRequestObject",
-      "description": "Snippet for ListEntities",
-      "file": "MetadataServiceClient.ListEntitiesRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListEntities",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.ListEntities",
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListEntitiesResponse, Google.Cloud.Dataplex.V1.Entity>",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "ListEntities",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.ListEntities",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_ListEntities_async",
-      "title": "ListEntitiesRequestObjectAsync",
-      "description": "Snippet for ListEntitiesAsync",
-      "file": "MetadataServiceClient.ListEntitiesRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListEntitiesAsync",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.ListEntitiesAsync",
-        "async": true,
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListEntitiesResponse, Google.Cloud.Dataplex.V1.Entity>",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "ListEntities",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.ListEntities",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_ListEntities_sync_flattened",
-      "title": "ListEntities",
-      "description": "Snippet for ListEntities",
-      "file": "MetadataServiceClient.ListEntitiesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListEntities",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.ListEntities",
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListEntitiesResponse, Google.Cloud.Dataplex.V1.Entity>",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "ListEntities",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.ListEntities",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_ListEntities_async_flattened",
-      "title": "ListEntitiesAsync",
-      "description": "Snippet for ListEntitiesAsync",
-      "file": "MetadataServiceClient.ListEntitiesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListEntitiesAsync",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.ListEntitiesAsync",
-        "async": true,
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListEntitiesResponse, Google.Cloud.Dataplex.V1.Entity>",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "ListEntities",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.ListEntities",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_ListEntities_sync_flattened_resourceNames",
-      "title": "ListEntitiesResourceNames",
-      "description": "Snippet for ListEntities",
-      "file": "MetadataServiceClient.ListEntitiesResourceNamesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListEntities",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.ListEntities",
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListEntitiesResponse, Google.Cloud.Dataplex.V1.Entity>",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "ListEntities",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.ListEntities",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_ListEntities_async_flattened_resourceNames",
-      "title": "ListEntitiesResourceNamesAsync",
-      "description": "Snippet for ListEntitiesAsync",
-      "file": "MetadataServiceClient.ListEntitiesResourceNamesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListEntitiesAsync",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.ListEntitiesAsync",
-        "async": true,
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListEntitiesResponse, Google.Cloud.Dataplex.V1.Entity>",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "ListEntities",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.ListEntities",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_CreatePartition_sync",
-      "title": "CreatePartitionRequestObject",
-      "description": "Snippet for CreatePartition",
-      "file": "MetadataServiceClient.CreatePartitionRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreatePartition",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.CreatePartition",
-        "resultType": "Google.Cloud.Dataplex.V1.Partition",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "CreatePartition",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.CreatePartition",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_CreatePartition_async",
-      "title": "CreatePartitionRequestObjectAsync",
-      "description": "Snippet for CreatePartitionAsync",
-      "file": "MetadataServiceClient.CreatePartitionRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreatePartitionAsync",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.CreatePartitionAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Partition>",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "CreatePartition",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.CreatePartition",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_CreatePartition_sync_flattened",
-      "title": "CreatePartition",
-      "description": "Snippet for CreatePartition",
-      "file": "MetadataServiceClient.CreatePartitionSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreatePartition",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.CreatePartition",
-        "resultType": "Google.Cloud.Dataplex.V1.Partition",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "CreatePartition",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.CreatePartition",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_CreatePartition_async_flattened",
-      "title": "CreatePartitionAsync",
-      "description": "Snippet for CreatePartitionAsync",
-      "file": "MetadataServiceClient.CreatePartitionAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreatePartitionAsync",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.CreatePartitionAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Partition>",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "CreatePartition",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.CreatePartition",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_CreatePartition_sync_flattened_resourceNames",
-      "title": "CreatePartitionResourceNames",
-      "description": "Snippet for CreatePartition",
-      "file": "MetadataServiceClient.CreatePartitionResourceNamesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreatePartition",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.CreatePartition",
-        "resultType": "Google.Cloud.Dataplex.V1.Partition",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "CreatePartition",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.CreatePartition",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_CreatePartition_async_flattened_resourceNames",
-      "title": "CreatePartitionResourceNamesAsync",
-      "description": "Snippet for CreatePartitionAsync",
-      "file": "MetadataServiceClient.CreatePartitionResourceNamesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreatePartitionAsync",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.CreatePartitionAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Partition>",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "CreatePartition",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.CreatePartition",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_DeletePartition_sync",
-      "title": "DeletePartitionRequestObject",
-      "description": "Snippet for DeletePartition",
-      "file": "MetadataServiceClient.DeletePartitionRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeletePartition",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.DeletePartition",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "DeletePartition",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.DeletePartition",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_DeletePartition_async",
-      "title": "DeletePartitionRequestObjectAsync",
-      "description": "Snippet for DeletePartitionAsync",
-      "file": "MetadataServiceClient.DeletePartitionRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeletePartitionAsync",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.DeletePartitionAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "DeletePartition",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.DeletePartition",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_DeletePartition_sync_flattened",
-      "title": "DeletePartition",
-      "description": "Snippet for DeletePartition",
-      "file": "MetadataServiceClient.DeletePartitionSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeletePartition",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.DeletePartition",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "DeletePartition",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.DeletePartition",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_DeletePartition_async_flattened",
-      "title": "DeletePartitionAsync",
-      "description": "Snippet for DeletePartitionAsync",
-      "file": "MetadataServiceClient.DeletePartitionAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeletePartitionAsync",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.DeletePartitionAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "DeletePartition",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.DeletePartition",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_DeletePartition_sync_flattened_resourceNames",
-      "title": "DeletePartitionResourceNames",
-      "description": "Snippet for DeletePartition",
-      "file": "MetadataServiceClient.DeletePartitionResourceNamesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeletePartition",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.DeletePartition",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "DeletePartition",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.DeletePartition",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_DeletePartition_async_flattened_resourceNames",
-      "title": "DeletePartitionResourceNamesAsync",
-      "description": "Snippet for DeletePartitionAsync",
-      "file": "MetadataServiceClient.DeletePartitionResourceNamesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeletePartitionAsync",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.DeletePartitionAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "DeletePartition",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.DeletePartition",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_GetPartition_sync",
-      "title": "GetPartitionRequestObject",
-      "description": "Snippet for GetPartition",
-      "file": "MetadataServiceClient.GetPartitionRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "GetPartition",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.GetPartition",
-        "resultType": "Google.Cloud.Dataplex.V1.Partition",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "GetPartition",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.GetPartition",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_GetPartition_async",
-      "title": "GetPartitionRequestObjectAsync",
-      "description": "Snippet for GetPartitionAsync",
-      "file": "MetadataServiceClient.GetPartitionRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "GetPartitionAsync",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.GetPartitionAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Partition>",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "GetPartition",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.GetPartition",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_GetPartition_sync_flattened",
-      "title": "GetPartition",
-      "description": "Snippet for GetPartition",
-      "file": "MetadataServiceClient.GetPartitionSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "GetPartition",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.GetPartition",
-        "resultType": "Google.Cloud.Dataplex.V1.Partition",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "GetPartition",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.GetPartition",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_GetPartition_async_flattened",
-      "title": "GetPartitionAsync",
-      "description": "Snippet for GetPartitionAsync",
-      "file": "MetadataServiceClient.GetPartitionAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "GetPartitionAsync",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.GetPartitionAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Partition>",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "GetPartition",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.GetPartition",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_GetPartition_sync_flattened_resourceNames",
-      "title": "GetPartitionResourceNames",
-      "description": "Snippet for GetPartition",
-      "file": "MetadataServiceClient.GetPartitionResourceNamesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "GetPartition",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.GetPartition",
-        "resultType": "Google.Cloud.Dataplex.V1.Partition",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "GetPartition",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.GetPartition",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_GetPartition_async_flattened_resourceNames",
-      "title": "GetPartitionResourceNamesAsync",
-      "description": "Snippet for GetPartitionAsync",
-      "file": "MetadataServiceClient.GetPartitionResourceNamesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "GetPartitionAsync",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.GetPartitionAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Partition>",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "GetPartition",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.GetPartition",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_ListPartitions_sync",
-      "title": "ListPartitionsRequestObject",
-      "description": "Snippet for ListPartitions",
-      "file": "MetadataServiceClient.ListPartitionsRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListPartitions",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.ListPartitions",
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListPartitionsResponse, Google.Cloud.Dataplex.V1.Partition>",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "ListPartitions",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.ListPartitions",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_ListPartitions_async",
-      "title": "ListPartitionsRequestObjectAsync",
-      "description": "Snippet for ListPartitionsAsync",
-      "file": "MetadataServiceClient.ListPartitionsRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListPartitionsAsync",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.ListPartitionsAsync",
-        "async": true,
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListPartitionsResponse, Google.Cloud.Dataplex.V1.Partition>",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "ListPartitions",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.ListPartitions",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_ListPartitions_sync_flattened",
-      "title": "ListPartitions",
-      "description": "Snippet for ListPartitions",
-      "file": "MetadataServiceClient.ListPartitionsSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListPartitions",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.ListPartitions",
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListPartitionsResponse, Google.Cloud.Dataplex.V1.Partition>",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "ListPartitions",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.ListPartitions",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_ListPartitions_async_flattened",
-      "title": "ListPartitionsAsync",
-      "description": "Snippet for ListPartitionsAsync",
-      "file": "MetadataServiceClient.ListPartitionsAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListPartitionsAsync",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.ListPartitionsAsync",
-        "async": true,
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListPartitionsResponse, Google.Cloud.Dataplex.V1.Partition>",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "ListPartitions",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.ListPartitions",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_ListPartitions_sync_flattened_resourceNames",
-      "title": "ListPartitionsResourceNames",
-      "description": "Snippet for ListPartitions",
-      "file": "MetadataServiceClient.ListPartitionsResourceNamesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListPartitions",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.ListPartitions",
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListPartitionsResponse, Google.Cloud.Dataplex.V1.Partition>",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "ListPartitions",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.ListPartitions",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataplex_v1_generated_MetadataService_ListPartitions_async_flattened_resourceNames",
-      "title": "ListPartitionsResourceNamesAsync",
-      "description": "Snippet for ListPartitionsAsync",
-      "file": "MetadataServiceClient.ListPartitionsResourceNamesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListPartitionsAsync",
-        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.ListPartitionsAsync",
-        "async": true,
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListPartitionsResponse, Google.Cloud.Dataplex.V1.Partition>",
-        "client": {
-          "shortName": "MetadataServiceClient",
-          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
-        },
-        "method": {
-          "shortName": "ListPartitions",
-          "fullName": "google.cloud.dataplex.v1.MetadataService.ListPartitions",
-          "service": {
-            "shortName": "MetadataService",
-            "fullName": "google.cloud.dataplex.v1.MetadataService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
       "regionTag": "dataplex_v1_generated_DataplexService_CreateLake_sync",
       "title": "CreateLakeRequestObject",
       "description": "Snippet for CreateLake",
@@ -6715,6 +5428,1293 @@
           "service": {
             "shortName": "DataplexService",
             "fullName": "google.cloud.dataplex.v1.DataplexService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_CreateEntity_sync",
+      "title": "CreateEntityRequestObject",
+      "description": "Snippet for CreateEntity",
+      "file": "MetadataServiceClient.CreateEntityRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEntity",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.CreateEntity",
+        "resultType": "Google.Cloud.Dataplex.V1.Entity",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEntity",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.CreateEntity",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_CreateEntity_async",
+      "title": "CreateEntityRequestObjectAsync",
+      "description": "Snippet for CreateEntityAsync",
+      "file": "MetadataServiceClient.CreateEntityRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEntityAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.CreateEntityAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Entity>",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEntity",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.CreateEntity",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_CreateEntity_sync_flattened",
+      "title": "CreateEntity",
+      "description": "Snippet for CreateEntity",
+      "file": "MetadataServiceClient.CreateEntitySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEntity",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.CreateEntity",
+        "resultType": "Google.Cloud.Dataplex.V1.Entity",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEntity",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.CreateEntity",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_CreateEntity_async_flattened",
+      "title": "CreateEntityAsync",
+      "description": "Snippet for CreateEntityAsync",
+      "file": "MetadataServiceClient.CreateEntityAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEntityAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.CreateEntityAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Entity>",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEntity",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.CreateEntity",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_CreateEntity_sync_flattened_resourceNames",
+      "title": "CreateEntityResourceNames",
+      "description": "Snippet for CreateEntity",
+      "file": "MetadataServiceClient.CreateEntityResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEntity",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.CreateEntity",
+        "resultType": "Google.Cloud.Dataplex.V1.Entity",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEntity",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.CreateEntity",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_CreateEntity_async_flattened_resourceNames",
+      "title": "CreateEntityResourceNamesAsync",
+      "description": "Snippet for CreateEntityAsync",
+      "file": "MetadataServiceClient.CreateEntityResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEntityAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.CreateEntityAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Entity>",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEntity",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.CreateEntity",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_UpdateEntity_sync",
+      "title": "UpdateEntityRequestObject",
+      "description": "Snippet for UpdateEntity",
+      "file": "MetadataServiceClient.UpdateEntityRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEntity",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.UpdateEntity",
+        "resultType": "Google.Cloud.Dataplex.V1.Entity",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateEntity",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.UpdateEntity",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_UpdateEntity_async",
+      "title": "UpdateEntityRequestObjectAsync",
+      "description": "Snippet for UpdateEntityAsync",
+      "file": "MetadataServiceClient.UpdateEntityRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEntityAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.UpdateEntityAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Entity>",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateEntity",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.UpdateEntity",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_DeleteEntity_sync",
+      "title": "DeleteEntityRequestObject",
+      "description": "Snippet for DeleteEntity",
+      "file": "MetadataServiceClient.DeleteEntityRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEntity",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.DeleteEntity",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEntity",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.DeleteEntity",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_DeleteEntity_async",
+      "title": "DeleteEntityRequestObjectAsync",
+      "description": "Snippet for DeleteEntityAsync",
+      "file": "MetadataServiceClient.DeleteEntityRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEntityAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.DeleteEntityAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEntity",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.DeleteEntity",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_DeleteEntity_sync_flattened",
+      "title": "DeleteEntity",
+      "description": "Snippet for DeleteEntity",
+      "file": "MetadataServiceClient.DeleteEntitySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEntity",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.DeleteEntity",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEntity",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.DeleteEntity",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_DeleteEntity_async_flattened",
+      "title": "DeleteEntityAsync",
+      "description": "Snippet for DeleteEntityAsync",
+      "file": "MetadataServiceClient.DeleteEntityAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEntityAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.DeleteEntityAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEntity",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.DeleteEntity",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_DeleteEntity_sync_flattened_resourceNames",
+      "title": "DeleteEntityResourceNames",
+      "description": "Snippet for DeleteEntity",
+      "file": "MetadataServiceClient.DeleteEntityResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEntity",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.DeleteEntity",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEntity",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.DeleteEntity",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_DeleteEntity_async_flattened_resourceNames",
+      "title": "DeleteEntityResourceNamesAsync",
+      "description": "Snippet for DeleteEntityAsync",
+      "file": "MetadataServiceClient.DeleteEntityResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEntityAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.DeleteEntityAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEntity",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.DeleteEntity",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_GetEntity_sync",
+      "title": "GetEntityRequestObject",
+      "description": "Snippet for GetEntity",
+      "file": "MetadataServiceClient.GetEntityRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEntity",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.GetEntity",
+        "resultType": "Google.Cloud.Dataplex.V1.Entity",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "GetEntity",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.GetEntity",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_GetEntity_async",
+      "title": "GetEntityRequestObjectAsync",
+      "description": "Snippet for GetEntityAsync",
+      "file": "MetadataServiceClient.GetEntityRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEntityAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.GetEntityAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Entity>",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "GetEntity",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.GetEntity",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_GetEntity_sync_flattened",
+      "title": "GetEntity",
+      "description": "Snippet for GetEntity",
+      "file": "MetadataServiceClient.GetEntitySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEntity",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.GetEntity",
+        "resultType": "Google.Cloud.Dataplex.V1.Entity",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "GetEntity",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.GetEntity",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_GetEntity_async_flattened",
+      "title": "GetEntityAsync",
+      "description": "Snippet for GetEntityAsync",
+      "file": "MetadataServiceClient.GetEntityAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEntityAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.GetEntityAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Entity>",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "GetEntity",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.GetEntity",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_GetEntity_sync_flattened_resourceNames",
+      "title": "GetEntityResourceNames",
+      "description": "Snippet for GetEntity",
+      "file": "MetadataServiceClient.GetEntityResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEntity",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.GetEntity",
+        "resultType": "Google.Cloud.Dataplex.V1.Entity",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "GetEntity",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.GetEntity",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_GetEntity_async_flattened_resourceNames",
+      "title": "GetEntityResourceNamesAsync",
+      "description": "Snippet for GetEntityAsync",
+      "file": "MetadataServiceClient.GetEntityResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEntityAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.GetEntityAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Entity>",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "GetEntity",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.GetEntity",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_ListEntities_sync",
+      "title": "ListEntitiesRequestObject",
+      "description": "Snippet for ListEntities",
+      "file": "MetadataServiceClient.ListEntitiesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEntities",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.ListEntities",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListEntitiesResponse, Google.Cloud.Dataplex.V1.Entity>",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "ListEntities",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.ListEntities",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_ListEntities_async",
+      "title": "ListEntitiesRequestObjectAsync",
+      "description": "Snippet for ListEntitiesAsync",
+      "file": "MetadataServiceClient.ListEntitiesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEntitiesAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.ListEntitiesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListEntitiesResponse, Google.Cloud.Dataplex.V1.Entity>",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "ListEntities",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.ListEntities",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_ListEntities_sync_flattened",
+      "title": "ListEntities",
+      "description": "Snippet for ListEntities",
+      "file": "MetadataServiceClient.ListEntitiesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEntities",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.ListEntities",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListEntitiesResponse, Google.Cloud.Dataplex.V1.Entity>",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "ListEntities",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.ListEntities",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_ListEntities_async_flattened",
+      "title": "ListEntitiesAsync",
+      "description": "Snippet for ListEntitiesAsync",
+      "file": "MetadataServiceClient.ListEntitiesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEntitiesAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.ListEntitiesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListEntitiesResponse, Google.Cloud.Dataplex.V1.Entity>",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "ListEntities",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.ListEntities",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_ListEntities_sync_flattened_resourceNames",
+      "title": "ListEntitiesResourceNames",
+      "description": "Snippet for ListEntities",
+      "file": "MetadataServiceClient.ListEntitiesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEntities",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.ListEntities",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListEntitiesResponse, Google.Cloud.Dataplex.V1.Entity>",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "ListEntities",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.ListEntities",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_ListEntities_async_flattened_resourceNames",
+      "title": "ListEntitiesResourceNamesAsync",
+      "description": "Snippet for ListEntitiesAsync",
+      "file": "MetadataServiceClient.ListEntitiesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEntitiesAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.ListEntitiesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListEntitiesResponse, Google.Cloud.Dataplex.V1.Entity>",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "ListEntities",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.ListEntities",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_CreatePartition_sync",
+      "title": "CreatePartitionRequestObject",
+      "description": "Snippet for CreatePartition",
+      "file": "MetadataServiceClient.CreatePartitionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePartition",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.CreatePartition",
+        "resultType": "Google.Cloud.Dataplex.V1.Partition",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "CreatePartition",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.CreatePartition",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_CreatePartition_async",
+      "title": "CreatePartitionRequestObjectAsync",
+      "description": "Snippet for CreatePartitionAsync",
+      "file": "MetadataServiceClient.CreatePartitionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePartitionAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.CreatePartitionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Partition>",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "CreatePartition",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.CreatePartition",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_CreatePartition_sync_flattened",
+      "title": "CreatePartition",
+      "description": "Snippet for CreatePartition",
+      "file": "MetadataServiceClient.CreatePartitionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePartition",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.CreatePartition",
+        "resultType": "Google.Cloud.Dataplex.V1.Partition",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "CreatePartition",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.CreatePartition",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_CreatePartition_async_flattened",
+      "title": "CreatePartitionAsync",
+      "description": "Snippet for CreatePartitionAsync",
+      "file": "MetadataServiceClient.CreatePartitionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePartitionAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.CreatePartitionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Partition>",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "CreatePartition",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.CreatePartition",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_CreatePartition_sync_flattened_resourceNames",
+      "title": "CreatePartitionResourceNames",
+      "description": "Snippet for CreatePartition",
+      "file": "MetadataServiceClient.CreatePartitionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePartition",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.CreatePartition",
+        "resultType": "Google.Cloud.Dataplex.V1.Partition",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "CreatePartition",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.CreatePartition",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_CreatePartition_async_flattened_resourceNames",
+      "title": "CreatePartitionResourceNamesAsync",
+      "description": "Snippet for CreatePartitionAsync",
+      "file": "MetadataServiceClient.CreatePartitionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePartitionAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.CreatePartitionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Partition>",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "CreatePartition",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.CreatePartition",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_DeletePartition_sync",
+      "title": "DeletePartitionRequestObject",
+      "description": "Snippet for DeletePartition",
+      "file": "MetadataServiceClient.DeletePartitionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePartition",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.DeletePartition",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "DeletePartition",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.DeletePartition",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_DeletePartition_async",
+      "title": "DeletePartitionRequestObjectAsync",
+      "description": "Snippet for DeletePartitionAsync",
+      "file": "MetadataServiceClient.DeletePartitionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePartitionAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.DeletePartitionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "DeletePartition",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.DeletePartition",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_DeletePartition_sync_flattened",
+      "title": "DeletePartition",
+      "description": "Snippet for DeletePartition",
+      "file": "MetadataServiceClient.DeletePartitionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePartition",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.DeletePartition",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "DeletePartition",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.DeletePartition",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_DeletePartition_async_flattened",
+      "title": "DeletePartitionAsync",
+      "description": "Snippet for DeletePartitionAsync",
+      "file": "MetadataServiceClient.DeletePartitionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePartitionAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.DeletePartitionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "DeletePartition",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.DeletePartition",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_DeletePartition_sync_flattened_resourceNames",
+      "title": "DeletePartitionResourceNames",
+      "description": "Snippet for DeletePartition",
+      "file": "MetadataServiceClient.DeletePartitionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePartition",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.DeletePartition",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "DeletePartition",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.DeletePartition",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_DeletePartition_async_flattened_resourceNames",
+      "title": "DeletePartitionResourceNamesAsync",
+      "description": "Snippet for DeletePartitionAsync",
+      "file": "MetadataServiceClient.DeletePartitionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePartitionAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.DeletePartitionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "DeletePartition",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.DeletePartition",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_GetPartition_sync",
+      "title": "GetPartitionRequestObject",
+      "description": "Snippet for GetPartition",
+      "file": "MetadataServiceClient.GetPartitionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPartition",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.GetPartition",
+        "resultType": "Google.Cloud.Dataplex.V1.Partition",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "GetPartition",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.GetPartition",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_GetPartition_async",
+      "title": "GetPartitionRequestObjectAsync",
+      "description": "Snippet for GetPartitionAsync",
+      "file": "MetadataServiceClient.GetPartitionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPartitionAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.GetPartitionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Partition>",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "GetPartition",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.GetPartition",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_GetPartition_sync_flattened",
+      "title": "GetPartition",
+      "description": "Snippet for GetPartition",
+      "file": "MetadataServiceClient.GetPartitionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPartition",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.GetPartition",
+        "resultType": "Google.Cloud.Dataplex.V1.Partition",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "GetPartition",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.GetPartition",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_GetPartition_async_flattened",
+      "title": "GetPartitionAsync",
+      "description": "Snippet for GetPartitionAsync",
+      "file": "MetadataServiceClient.GetPartitionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPartitionAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.GetPartitionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Partition>",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "GetPartition",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.GetPartition",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_GetPartition_sync_flattened_resourceNames",
+      "title": "GetPartitionResourceNames",
+      "description": "Snippet for GetPartition",
+      "file": "MetadataServiceClient.GetPartitionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPartition",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.GetPartition",
+        "resultType": "Google.Cloud.Dataplex.V1.Partition",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "GetPartition",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.GetPartition",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_GetPartition_async_flattened_resourceNames",
+      "title": "GetPartitionResourceNamesAsync",
+      "description": "Snippet for GetPartitionAsync",
+      "file": "MetadataServiceClient.GetPartitionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPartitionAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.GetPartitionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Partition>",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "GetPartition",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.GetPartition",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_ListPartitions_sync",
+      "title": "ListPartitionsRequestObject",
+      "description": "Snippet for ListPartitions",
+      "file": "MetadataServiceClient.ListPartitionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPartitions",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.ListPartitions",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListPartitionsResponse, Google.Cloud.Dataplex.V1.Partition>",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "ListPartitions",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.ListPartitions",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_ListPartitions_async",
+      "title": "ListPartitionsRequestObjectAsync",
+      "description": "Snippet for ListPartitionsAsync",
+      "file": "MetadataServiceClient.ListPartitionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPartitionsAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.ListPartitionsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListPartitionsResponse, Google.Cloud.Dataplex.V1.Partition>",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "ListPartitions",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.ListPartitions",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_ListPartitions_sync_flattened",
+      "title": "ListPartitions",
+      "description": "Snippet for ListPartitions",
+      "file": "MetadataServiceClient.ListPartitionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPartitions",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.ListPartitions",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListPartitionsResponse, Google.Cloud.Dataplex.V1.Partition>",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "ListPartitions",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.ListPartitions",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_ListPartitions_async_flattened",
+      "title": "ListPartitionsAsync",
+      "description": "Snippet for ListPartitionsAsync",
+      "file": "MetadataServiceClient.ListPartitionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPartitionsAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.ListPartitionsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListPartitionsResponse, Google.Cloud.Dataplex.V1.Partition>",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "ListPartitions",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.ListPartitions",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_ListPartitions_sync_flattened_resourceNames",
+      "title": "ListPartitionsResourceNames",
+      "description": "Snippet for ListPartitions",
+      "file": "MetadataServiceClient.ListPartitionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPartitions",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.ListPartitions",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListPartitionsResponse, Google.Cloud.Dataplex.V1.Partition>",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "ListPartitions",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.ListPartitions",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_ListPartitions_async_flattened_resourceNames",
+      "title": "ListPartitionsResourceNamesAsync",
+      "description": "Snippet for ListPartitionsAsync",
+      "file": "MetadataServiceClient.ListPartitionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPartitionsAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.ListPartitionsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListPartitionsResponse, Google.Cloud.Dataplex.V1.Partition>",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "ListPartitions",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.ListPartitions",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
           }
         }
       },

@@ -1,5 +1,45 @@
 # Version history
 
+## Version 2.0.0, released 2022-06-08
+
+This is the first version of this package to depend on GAX v4.
+
+There are some breaking changes, both in GAX v4 and in the generated
+code. The changes that aren't specific to any given API are [described in the Google Cloud
+documentation](https://cloud.google.com/dotnet/docs/reference/help/breaking-gax4).
+We don't anticipate any changes to most customer code, but please [file a
+GitHub issue](https://github.com/googleapis/google-cloud-dotnet/issues/new/choose)
+if you run into problems.
+
+The most important change in this release is the use of the Grpc.Net.Client package
+for gRPC communication, instead of Grpc.Core. When using .NET Core 3.1 or .NET 5.0+
+this should lead to a smaller installation footprint and greater compatibility (e.g.
+with Apple M1 chips). Any significant change in a core component comes with the risk
+of incompatibility, however - so again, please let us know if you encounter any
+issues.
+
+### New features also in this release
+
+- Add monitor_window to ModelDeploymentMonitoringScheduleConfig proto in aiplatform v1/v1beta1 model_deployment_monitoring_job.proto ([commit 4a6d865](https://github.com/googleapis/google-cloud-dotnet/commit/4a6d865f55d52f480e4d5f792d0ff3bf0b68b620))
+- Add failure_policy to PipelineJob in aiplatform v1 & v1beta1 pipeline_job.proto ([commit 660482a](https://github.com/googleapis/google-cloud-dotnet/commit/660482a467778c562889b98c382edfaded70446c))
+- Add latent_space_source to ExplanationMetadata in aiplatform v1 explanation_metadata.proto ([commit ce1e55d](https://github.com/googleapis/google-cloud-dotnet/commit/ce1e55d51e8e8837f572b470001a6772db87ddab))
+- Add scaling to OnlineServingConfig in aiplatform v1 featurestore.proto ([commit ce1e55d](https://github.com/googleapis/google-cloud-dotnet/commit/ce1e55d51e8e8837f572b470001a6772db87ddab))
+- Add template_metadata to PipelineJob in aiplatform v1 pipeline_job.proto ([commit ce1e55d](https://github.com/googleapis/google-cloud-dotnet/commit/ce1e55d51e8e8837f572b470001a6772db87ddab))
+
+## Version 1.8.0, released 2022-05-24
+
+### New features
+
+- Add display_name and metadata to ModelEvaluation in aiplatform model_evaluation.proto ([commit f3160c5](https://github.com/googleapis/google-cloud-dotnet/commit/f3160c58825803c39dcd24d73777caebd5d49481))
+## Version 1.7.0, released 2022-04-26
+
+### New features
+
+- Add reserved_ip_ranges to CustomJobSpec in aiplatform v1 custom_job.proto ([commit c6626c7](https://github.com/googleapis/google-cloud-dotnet/commit/c6626c775e5c896d2e89f46f1fee8910bb0911f9))
+- Add nfs_mounts to WorkPoolSpec in aiplatform v1 custom_job.proto ([commit c6626c7](https://github.com/googleapis/google-cloud-dotnet/commit/c6626c775e5c896d2e89f46f1fee8910bb0911f9))
+- Add JOB_STATE_UPDATING to JobState in aiplatform v1 job_state.proto ([commit c6626c7](https://github.com/googleapis/google-cloud-dotnet/commit/c6626c775e5c896d2e89f46f1fee8910bb0911f9))
+- Add MfsMount in aiplatform v1 machine_resources.proto ([commit c6626c7](https://github.com/googleapis/google-cloud-dotnet/commit/c6626c775e5c896d2e89f46f1fee8910bb0911f9))
+- Add ConvexAutomatedStoppingSpec to StudySpec in aiplatform v1 study.proto ([commit c6626c7](https://github.com/googleapis/google-cloud-dotnet/commit/c6626c775e5c896d2e89f46f1fee8910bb0911f9))
 ## Version 1.6.0, released 2022-04-04
 
 ### New features

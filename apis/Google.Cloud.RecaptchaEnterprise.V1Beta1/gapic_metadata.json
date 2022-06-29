@@ -21,36 +21,6 @@
                 "CreateAssessment",
                 "CreateAssessmentAsync"
               ]
-            },
-            "CreateKey": {
-              "methods": [
-                "CreateKey",
-                "CreateKeyAsync"
-              ]
-            },
-            "DeleteKey": {
-              "methods": [
-                "DeleteKey",
-                "DeleteKeyAsync"
-              ]
-            },
-            "GetKey": {
-              "methods": [
-                "GetKey",
-                "GetKeyAsync"
-              ]
-            },
-            "ListKeys": {
-              "methods": [
-                "ListKeys",
-                "ListKeysAsync"
-              ]
-            },
-            "UpdateKey": {
-              "methods": [
-                "UpdateKey",
-                "UpdateKeyAsync"
-              ]
             }
           }
         }

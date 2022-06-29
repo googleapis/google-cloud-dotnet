@@ -14,6 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace Google.Cloud.Dialogflow.V2.Snippets
 {
     // [START dialogflow_v2_generated_Versions_ListVersions_sync_flattened]

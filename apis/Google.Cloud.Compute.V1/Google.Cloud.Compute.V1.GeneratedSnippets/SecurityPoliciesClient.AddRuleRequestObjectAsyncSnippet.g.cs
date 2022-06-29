@@ -14,6 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace Google.Cloud.Compute.V1.Snippets
 {
     // [START compute_v1_generated_SecurityPolicies_AddRule_async]
@@ -37,6 +39,7 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 SecurityPolicy = "",
                 Project = "",
+                ValidateOnly = false,
                 SecurityPolicyRuleResource = new SecurityPolicyRule(),
             };
             // Make the request

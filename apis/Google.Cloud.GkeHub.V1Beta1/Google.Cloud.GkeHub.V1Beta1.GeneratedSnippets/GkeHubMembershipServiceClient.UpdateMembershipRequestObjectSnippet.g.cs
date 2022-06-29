@@ -35,7 +35,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             // Initialize request argument(s)
             UpdateMembershipRequest request = new UpdateMembershipRequest
             {
-                Name = "",
+                MembershipName = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]"),
                 UpdateMask = new FieldMask(),
                 Resource = new Membership(),
                 RequestId = "",

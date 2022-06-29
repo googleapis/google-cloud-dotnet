@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using grpccore = Grpc.Core;
@@ -86,7 +87,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 GoogleReferenceId = "google_reference_id815b6ab4",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InterconnectAttachmentsClient client = new InterconnectAttachmentsClientImpl(mockGrpcClient.Object, null);
+            InterconnectAttachmentsClient client = new InterconnectAttachmentsClientImpl(mockGrpcClient.Object, null, null);
             InterconnectAttachment response = client.Get(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -151,7 +152,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 GoogleReferenceId = "google_reference_id815b6ab4",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InterconnectAttachment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InterconnectAttachmentsClient client = new InterconnectAttachmentsClientImpl(mockGrpcClient.Object, null);
+            InterconnectAttachmentsClient client = new InterconnectAttachmentsClientImpl(mockGrpcClient.Object, null, null);
             InterconnectAttachment responseCallSettings = await client.GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             InterconnectAttachment responseCancellationToken = await client.GetAsync(request, st::CancellationToken.None);
@@ -218,7 +219,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 GoogleReferenceId = "google_reference_id815b6ab4",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InterconnectAttachmentsClient client = new InterconnectAttachmentsClientImpl(mockGrpcClient.Object, null);
+            InterconnectAttachmentsClient client = new InterconnectAttachmentsClientImpl(mockGrpcClient.Object, null, null);
             InterconnectAttachment response = client.Get(request.Project, request.Region, request.InterconnectAttachment);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -283,7 +284,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 GoogleReferenceId = "google_reference_id815b6ab4",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InterconnectAttachment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InterconnectAttachmentsClient client = new InterconnectAttachmentsClientImpl(mockGrpcClient.Object, null);
+            InterconnectAttachmentsClient client = new InterconnectAttachmentsClientImpl(mockGrpcClient.Object, null, null);
             InterconnectAttachment responseCallSettings = await client.GetAsync(request.Project, request.Region, request.InterconnectAttachment, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             InterconnectAttachment responseCancellationToken = await client.GetAsync(request.Project, request.Region, request.InterconnectAttachment, st::CancellationToken.None);

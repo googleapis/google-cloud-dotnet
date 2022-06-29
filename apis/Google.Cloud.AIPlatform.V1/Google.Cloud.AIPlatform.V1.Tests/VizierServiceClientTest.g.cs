@@ -14,8 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -34,6 +37,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateStudyRequest request = new CreateStudyRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -49,7 +54,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InactiveReason = "inactive_reason229b079f",
             };
             mockGrpcClient.Setup(x => x.CreateStudy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             Study response = client.CreateStudy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -60,6 +65,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateStudyRequest request = new CreateStudyRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -75,7 +82,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InactiveReason = "inactive_reason229b079f",
             };
             mockGrpcClient.Setup(x => x.CreateStudyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Study>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             Study responseCallSettings = await client.CreateStudyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Study responseCancellationToken = await client.CreateStudyAsync(request, st::CancellationToken.None);
@@ -88,6 +95,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateStudyRequest request = new CreateStudyRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -103,7 +112,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InactiveReason = "inactive_reason229b079f",
             };
             mockGrpcClient.Setup(x => x.CreateStudy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             Study response = client.CreateStudy(request.Parent, request.Study);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -114,6 +123,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateStudyRequest request = new CreateStudyRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -129,7 +140,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InactiveReason = "inactive_reason229b079f",
             };
             mockGrpcClient.Setup(x => x.CreateStudyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Study>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             Study responseCallSettings = await client.CreateStudyAsync(request.Parent, request.Study, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Study responseCancellationToken = await client.CreateStudyAsync(request.Parent, request.Study, st::CancellationToken.None);
@@ -142,6 +153,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateStudyRequest request = new CreateStudyRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -157,7 +170,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InactiveReason = "inactive_reason229b079f",
             };
             mockGrpcClient.Setup(x => x.CreateStudy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             Study response = client.CreateStudy(request.ParentAsLocationName, request.Study);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -168,6 +181,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateStudyRequest request = new CreateStudyRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -183,7 +198,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InactiveReason = "inactive_reason229b079f",
             };
             mockGrpcClient.Setup(x => x.CreateStudyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Study>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             Study responseCallSettings = await client.CreateStudyAsync(request.ParentAsLocationName, request.Study, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Study responseCancellationToken = await client.CreateStudyAsync(request.ParentAsLocationName, request.Study, st::CancellationToken.None);
@@ -196,6 +211,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetStudyRequest request = new GetStudyRequest
             {
                 StudyName = StudyName.FromProjectLocationStudy("[PROJECT]", "[LOCATION]", "[STUDY]"),
@@ -210,7 +227,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InactiveReason = "inactive_reason229b079f",
             };
             mockGrpcClient.Setup(x => x.GetStudy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             Study response = client.GetStudy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -221,6 +238,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetStudyRequest request = new GetStudyRequest
             {
                 StudyName = StudyName.FromProjectLocationStudy("[PROJECT]", "[LOCATION]", "[STUDY]"),
@@ -235,7 +254,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InactiveReason = "inactive_reason229b079f",
             };
             mockGrpcClient.Setup(x => x.GetStudyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Study>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             Study responseCallSettings = await client.GetStudyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Study responseCancellationToken = await client.GetStudyAsync(request, st::CancellationToken.None);
@@ -248,6 +267,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetStudyRequest request = new GetStudyRequest
             {
                 StudyName = StudyName.FromProjectLocationStudy("[PROJECT]", "[LOCATION]", "[STUDY]"),
@@ -262,7 +283,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InactiveReason = "inactive_reason229b079f",
             };
             mockGrpcClient.Setup(x => x.GetStudy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             Study response = client.GetStudy(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -273,6 +294,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetStudyRequest request = new GetStudyRequest
             {
                 StudyName = StudyName.FromProjectLocationStudy("[PROJECT]", "[LOCATION]", "[STUDY]"),
@@ -287,7 +310,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InactiveReason = "inactive_reason229b079f",
             };
             mockGrpcClient.Setup(x => x.GetStudyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Study>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             Study responseCallSettings = await client.GetStudyAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Study responseCancellationToken = await client.GetStudyAsync(request.Name, st::CancellationToken.None);
@@ -300,6 +323,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetStudyRequest request = new GetStudyRequest
             {
                 StudyName = StudyName.FromProjectLocationStudy("[PROJECT]", "[LOCATION]", "[STUDY]"),
@@ -314,7 +339,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InactiveReason = "inactive_reason229b079f",
             };
             mockGrpcClient.Setup(x => x.GetStudy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             Study response = client.GetStudy(request.StudyName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -325,6 +350,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetStudyRequest request = new GetStudyRequest
             {
                 StudyName = StudyName.FromProjectLocationStudy("[PROJECT]", "[LOCATION]", "[STUDY]"),
@@ -339,7 +366,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InactiveReason = "inactive_reason229b079f",
             };
             mockGrpcClient.Setup(x => x.GetStudyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Study>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             Study responseCallSettings = await client.GetStudyAsync(request.StudyName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Study responseCancellationToken = await client.GetStudyAsync(request.StudyName, st::CancellationToken.None);
@@ -352,13 +379,15 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteStudyRequest request = new DeleteStudyRequest
             {
                 StudyName = StudyName.FromProjectLocationStudy("[PROJECT]", "[LOCATION]", "[STUDY]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteStudy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteStudy(request);
             mockGrpcClient.VerifyAll();
         }
@@ -368,13 +397,15 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteStudyRequest request = new DeleteStudyRequest
             {
                 StudyName = StudyName.FromProjectLocationStudy("[PROJECT]", "[LOCATION]", "[STUDY]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteStudyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteStudyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteStudyAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -385,13 +416,15 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteStudyRequest request = new DeleteStudyRequest
             {
                 StudyName = StudyName.FromProjectLocationStudy("[PROJECT]", "[LOCATION]", "[STUDY]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteStudy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteStudy(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -401,13 +434,15 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteStudyRequest request = new DeleteStudyRequest
             {
                 StudyName = StudyName.FromProjectLocationStudy("[PROJECT]", "[LOCATION]", "[STUDY]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteStudyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteStudyAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteStudyAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -418,13 +453,15 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteStudyRequest request = new DeleteStudyRequest
             {
                 StudyName = StudyName.FromProjectLocationStudy("[PROJECT]", "[LOCATION]", "[STUDY]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteStudy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteStudy(request.StudyName);
             mockGrpcClient.VerifyAll();
         }
@@ -434,13 +471,15 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteStudyRequest request = new DeleteStudyRequest
             {
                 StudyName = StudyName.FromProjectLocationStudy("[PROJECT]", "[LOCATION]", "[STUDY]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteStudyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteStudyAsync(request.StudyName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteStudyAsync(request.StudyName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -451,6 +490,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             LookupStudyRequest request = new LookupStudyRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -466,7 +507,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InactiveReason = "inactive_reason229b079f",
             };
             mockGrpcClient.Setup(x => x.LookupStudy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             Study response = client.LookupStudy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -477,6 +518,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             LookupStudyRequest request = new LookupStudyRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -492,7 +535,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InactiveReason = "inactive_reason229b079f",
             };
             mockGrpcClient.Setup(x => x.LookupStudyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Study>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             Study responseCallSettings = await client.LookupStudyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Study responseCancellationToken = await client.LookupStudyAsync(request, st::CancellationToken.None);
@@ -505,6 +548,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             LookupStudyRequest request = new LookupStudyRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -519,7 +564,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InactiveReason = "inactive_reason229b079f",
             };
             mockGrpcClient.Setup(x => x.LookupStudy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             Study response = client.LookupStudy(request.Parent);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -530,6 +575,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             LookupStudyRequest request = new LookupStudyRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -544,7 +591,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InactiveReason = "inactive_reason229b079f",
             };
             mockGrpcClient.Setup(x => x.LookupStudyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Study>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             Study responseCallSettings = await client.LookupStudyAsync(request.Parent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Study responseCancellationToken = await client.LookupStudyAsync(request.Parent, st::CancellationToken.None);
@@ -557,6 +604,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             LookupStudyRequest request = new LookupStudyRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -571,7 +620,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InactiveReason = "inactive_reason229b079f",
             };
             mockGrpcClient.Setup(x => x.LookupStudy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             Study response = client.LookupStudy(request.ParentAsLocationName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -582,6 +631,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             LookupStudyRequest request = new LookupStudyRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -596,7 +647,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InactiveReason = "inactive_reason229b079f",
             };
             mockGrpcClient.Setup(x => x.LookupStudyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Study>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             Study responseCallSettings = await client.LookupStudyAsync(request.ParentAsLocationName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Study responseCancellationToken = await client.LookupStudyAsync(request.ParentAsLocationName, st::CancellationToken.None);
@@ -609,6 +660,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTrialRequest request = new CreateTrialRequest
             {
                 ParentAsStudyName = StudyName.FromProjectLocationStudy("[PROJECT]", "[LOCATION]", "[STUDY]"),
@@ -639,7 +692,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateTrial(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             Trial response = client.CreateTrial(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -650,6 +703,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTrialRequest request = new CreateTrialRequest
             {
                 ParentAsStudyName = StudyName.FromProjectLocationStudy("[PROJECT]", "[LOCATION]", "[STUDY]"),
@@ -680,7 +735,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateTrialAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Trial>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             Trial responseCallSettings = await client.CreateTrialAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Trial responseCancellationToken = await client.CreateTrialAsync(request, st::CancellationToken.None);
@@ -693,6 +748,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTrialRequest request = new CreateTrialRequest
             {
                 ParentAsStudyName = StudyName.FromProjectLocationStudy("[PROJECT]", "[LOCATION]", "[STUDY]"),
@@ -723,7 +780,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateTrial(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             Trial response = client.CreateTrial(request.Parent, request.Trial);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -734,6 +791,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTrialRequest request = new CreateTrialRequest
             {
                 ParentAsStudyName = StudyName.FromProjectLocationStudy("[PROJECT]", "[LOCATION]", "[STUDY]"),
@@ -764,7 +823,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateTrialAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Trial>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             Trial responseCallSettings = await client.CreateTrialAsync(request.Parent, request.Trial, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Trial responseCancellationToken = await client.CreateTrialAsync(request.Parent, request.Trial, st::CancellationToken.None);
@@ -777,6 +836,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTrialRequest request = new CreateTrialRequest
             {
                 ParentAsStudyName = StudyName.FromProjectLocationStudy("[PROJECT]", "[LOCATION]", "[STUDY]"),
@@ -807,7 +868,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateTrial(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             Trial response = client.CreateTrial(request.ParentAsStudyName, request.Trial);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -818,6 +879,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateTrialRequest request = new CreateTrialRequest
             {
                 ParentAsStudyName = StudyName.FromProjectLocationStudy("[PROJECT]", "[LOCATION]", "[STUDY]"),
@@ -848,7 +911,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateTrialAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Trial>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             Trial responseCallSettings = await client.CreateTrialAsync(request.ParentAsStudyName, request.Trial, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Trial responseCancellationToken = await client.CreateTrialAsync(request.ParentAsStudyName, request.Trial, st::CancellationToken.None);
@@ -861,6 +924,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTrialRequest request = new GetTrialRequest
             {
                 TrialName = TrialName.FromProjectLocationStudyTrial("[PROJECT]", "[LOCATION]", "[STUDY]", "[TRIAL]"),
@@ -890,7 +955,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetTrial(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             Trial response = client.GetTrial(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -901,6 +966,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTrialRequest request = new GetTrialRequest
             {
                 TrialName = TrialName.FromProjectLocationStudyTrial("[PROJECT]", "[LOCATION]", "[STUDY]", "[TRIAL]"),
@@ -930,7 +997,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetTrialAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Trial>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             Trial responseCallSettings = await client.GetTrialAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Trial responseCancellationToken = await client.GetTrialAsync(request, st::CancellationToken.None);
@@ -943,6 +1010,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTrialRequest request = new GetTrialRequest
             {
                 TrialName = TrialName.FromProjectLocationStudyTrial("[PROJECT]", "[LOCATION]", "[STUDY]", "[TRIAL]"),
@@ -972,7 +1041,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetTrial(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             Trial response = client.GetTrial(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -983,6 +1052,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTrialRequest request = new GetTrialRequest
             {
                 TrialName = TrialName.FromProjectLocationStudyTrial("[PROJECT]", "[LOCATION]", "[STUDY]", "[TRIAL]"),
@@ -1012,7 +1083,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetTrialAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Trial>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             Trial responseCallSettings = await client.GetTrialAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Trial responseCancellationToken = await client.GetTrialAsync(request.Name, st::CancellationToken.None);
@@ -1025,6 +1096,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTrialRequest request = new GetTrialRequest
             {
                 TrialName = TrialName.FromProjectLocationStudyTrial("[PROJECT]", "[LOCATION]", "[STUDY]", "[TRIAL]"),
@@ -1054,7 +1127,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetTrial(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             Trial response = client.GetTrial(request.TrialName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1065,6 +1138,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTrialRequest request = new GetTrialRequest
             {
                 TrialName = TrialName.FromProjectLocationStudyTrial("[PROJECT]", "[LOCATION]", "[STUDY]", "[TRIAL]"),
@@ -1094,7 +1169,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetTrialAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Trial>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             Trial responseCallSettings = await client.GetTrialAsync(request.TrialName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Trial responseCancellationToken = await client.GetTrialAsync(request.TrialName, st::CancellationToken.None);
@@ -1107,6 +1182,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             AddTrialMeasurementRequest request = new AddTrialMeasurementRequest
             {
                 TrialNameAsTrialName = TrialName.FromProjectLocationStudyTrial("[PROJECT]", "[LOCATION]", "[STUDY]", "[TRIAL]"),
@@ -1137,7 +1214,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.AddTrialMeasurement(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             Trial response = client.AddTrialMeasurement(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1148,6 +1225,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             AddTrialMeasurementRequest request = new AddTrialMeasurementRequest
             {
                 TrialNameAsTrialName = TrialName.FromProjectLocationStudyTrial("[PROJECT]", "[LOCATION]", "[STUDY]", "[TRIAL]"),
@@ -1178,7 +1257,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.AddTrialMeasurementAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Trial>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             Trial responseCallSettings = await client.AddTrialMeasurementAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Trial responseCancellationToken = await client.AddTrialMeasurementAsync(request, st::CancellationToken.None);
@@ -1191,6 +1270,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CompleteTrialRequest request = new CompleteTrialRequest
             {
                 TrialName = TrialName.FromProjectLocationStudyTrial("[PROJECT]", "[LOCATION]", "[STUDY]", "[TRIAL]"),
@@ -1223,7 +1304,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CompleteTrial(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             Trial response = client.CompleteTrial(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1234,6 +1315,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CompleteTrialRequest request = new CompleteTrialRequest
             {
                 TrialName = TrialName.FromProjectLocationStudyTrial("[PROJECT]", "[LOCATION]", "[STUDY]", "[TRIAL]"),
@@ -1266,7 +1349,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CompleteTrialAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Trial>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             Trial responseCallSettings = await client.CompleteTrialAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Trial responseCancellationToken = await client.CompleteTrialAsync(request, st::CancellationToken.None);
@@ -1279,13 +1362,15 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteTrialRequest request = new DeleteTrialRequest
             {
                 TrialName = TrialName.FromProjectLocationStudyTrial("[PROJECT]", "[LOCATION]", "[STUDY]", "[TRIAL]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTrial(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteTrial(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1295,13 +1380,15 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteTrialRequest request = new DeleteTrialRequest
             {
                 TrialName = TrialName.FromProjectLocationStudyTrial("[PROJECT]", "[LOCATION]", "[STUDY]", "[TRIAL]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTrialAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteTrialAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteTrialAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1312,13 +1399,15 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteTrialRequest request = new DeleteTrialRequest
             {
                 TrialName = TrialName.FromProjectLocationStudyTrial("[PROJECT]", "[LOCATION]", "[STUDY]", "[TRIAL]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTrial(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteTrial(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -1328,13 +1417,15 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteTrialRequest request = new DeleteTrialRequest
             {
                 TrialName = TrialName.FromProjectLocationStudyTrial("[PROJECT]", "[LOCATION]", "[STUDY]", "[TRIAL]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTrialAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteTrialAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteTrialAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1345,13 +1436,15 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteTrialRequest request = new DeleteTrialRequest
             {
                 TrialName = TrialName.FromProjectLocationStudyTrial("[PROJECT]", "[LOCATION]", "[STUDY]", "[TRIAL]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTrial(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteTrial(request.TrialName);
             mockGrpcClient.VerifyAll();
         }
@@ -1361,13 +1454,15 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteTrialRequest request = new DeleteTrialRequest
             {
                 TrialName = TrialName.FromProjectLocationStudyTrial("[PROJECT]", "[LOCATION]", "[STUDY]", "[TRIAL]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTrialAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteTrialAsync(request.TrialName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteTrialAsync(request.TrialName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1378,6 +1473,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             StopTrialRequest request = new StopTrialRequest
             {
                 TrialName = TrialName.FromProjectLocationStudyTrial("[PROJECT]", "[LOCATION]", "[STUDY]", "[TRIAL]"),
@@ -1407,7 +1504,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.StopTrial(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             Trial response = client.StopTrial(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1418,6 +1515,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             StopTrialRequest request = new StopTrialRequest
             {
                 TrialName = TrialName.FromProjectLocationStudyTrial("[PROJECT]", "[LOCATION]", "[STUDY]", "[TRIAL]"),
@@ -1447,7 +1546,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.StopTrialAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Trial>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             Trial responseCallSettings = await client.StopTrialAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Trial responseCancellationToken = await client.StopTrialAsync(request, st::CancellationToken.None);
@@ -1460,6 +1559,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ListOptimalTrialsRequest request = new ListOptimalTrialsRequest
             {
                 ParentAsStudyName = StudyName.FromProjectLocationStudy("[PROJECT]", "[LOCATION]", "[STUDY]"),
@@ -1469,7 +1570,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 OptimalTrials = { new Trial(), },
             };
             mockGrpcClient.Setup(x => x.ListOptimalTrials(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             ListOptimalTrialsResponse response = client.ListOptimalTrials(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1480,6 +1581,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ListOptimalTrialsRequest request = new ListOptimalTrialsRequest
             {
                 ParentAsStudyName = StudyName.FromProjectLocationStudy("[PROJECT]", "[LOCATION]", "[STUDY]"),
@@ -1489,7 +1592,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 OptimalTrials = { new Trial(), },
             };
             mockGrpcClient.Setup(x => x.ListOptimalTrialsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListOptimalTrialsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             ListOptimalTrialsResponse responseCallSettings = await client.ListOptimalTrialsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ListOptimalTrialsResponse responseCancellationToken = await client.ListOptimalTrialsAsync(request, st::CancellationToken.None);
@@ -1502,6 +1605,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ListOptimalTrialsRequest request = new ListOptimalTrialsRequest
             {
                 ParentAsStudyName = StudyName.FromProjectLocationStudy("[PROJECT]", "[LOCATION]", "[STUDY]"),
@@ -1511,7 +1616,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 OptimalTrials = { new Trial(), },
             };
             mockGrpcClient.Setup(x => x.ListOptimalTrials(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             ListOptimalTrialsResponse response = client.ListOptimalTrials(request.Parent);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1522,6 +1627,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ListOptimalTrialsRequest request = new ListOptimalTrialsRequest
             {
                 ParentAsStudyName = StudyName.FromProjectLocationStudy("[PROJECT]", "[LOCATION]", "[STUDY]"),
@@ -1531,7 +1638,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 OptimalTrials = { new Trial(), },
             };
             mockGrpcClient.Setup(x => x.ListOptimalTrialsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListOptimalTrialsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             ListOptimalTrialsResponse responseCallSettings = await client.ListOptimalTrialsAsync(request.Parent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ListOptimalTrialsResponse responseCancellationToken = await client.ListOptimalTrialsAsync(request.Parent, st::CancellationToken.None);
@@ -1544,6 +1651,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ListOptimalTrialsRequest request = new ListOptimalTrialsRequest
             {
                 ParentAsStudyName = StudyName.FromProjectLocationStudy("[PROJECT]", "[LOCATION]", "[STUDY]"),
@@ -1553,7 +1662,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 OptimalTrials = { new Trial(), },
             };
             mockGrpcClient.Setup(x => x.ListOptimalTrials(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             ListOptimalTrialsResponse response = client.ListOptimalTrials(request.ParentAsStudyName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1564,6 +1673,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<VizierService.VizierServiceClient> mockGrpcClient = new moq::Mock<VizierService.VizierServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ListOptimalTrialsRequest request = new ListOptimalTrialsRequest
             {
                 ParentAsStudyName = StudyName.FromProjectLocationStudy("[PROJECT]", "[LOCATION]", "[STUDY]"),
@@ -1573,7 +1684,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 OptimalTrials = { new Trial(), },
             };
             mockGrpcClient.Setup(x => x.ListOptimalTrialsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListOptimalTrialsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null);
+            VizierServiceClient client = new VizierServiceClientImpl(mockGrpcClient.Object, null, null);
             ListOptimalTrialsResponse responseCallSettings = await client.ListOptimalTrialsAsync(request.ParentAsStudyName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ListOptimalTrialsResponse responseCancellationToken = await client.ListOptimalTrialsAsync(request.ParentAsStudyName, st::CancellationToken.None);

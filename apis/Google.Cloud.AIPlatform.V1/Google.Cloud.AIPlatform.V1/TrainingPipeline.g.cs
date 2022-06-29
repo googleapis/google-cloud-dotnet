@@ -33,63 +33,65 @@ namespace Google.Cloud.AIPlatform.V1 {
             "b29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9waXBlbGluZV9zdGF0ZS5wcm90",
             "bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90bxofZ29vZ2xlL3Byb3Rv",
             "YnVmL3RpbWVzdGFtcC5wcm90bxoXZ29vZ2xlL3JwYy9zdGF0dXMucHJvdG8i",
-            "3AcKEFRyYWluaW5nUGlwZWxpbmUSEQoEbmFtZRgBIAEoCUID4EEDEhkKDGRp",
+            "jggKEFRyYWluaW5nUGlwZWxpbmUSEQoEbmFtZRgBIAEoCUID4EEDEhkKDGRp",
             "c3BsYXlfbmFtZRgCIAEoCUID4EECEkYKEWlucHV0X2RhdGFfY29uZmlnGAMg",
             "ASgLMisuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuSW5wdXREYXRhQ29u",
             "ZmlnEiUKGHRyYWluaW5nX3Rhc2tfZGVmaW5pdGlvbhgEIAEoCUID4EECEjkK",
             "FHRyYWluaW5nX3Rhc2tfaW5wdXRzGAUgASgLMhYuZ29vZ2xlLnByb3RvYnVm",
             "LlZhbHVlQgPgQQISOwoWdHJhaW5pbmdfdGFza19tZXRhZGF0YRgGIAEoCzIW",
             "Lmdvb2dsZS5wcm90b2J1Zi5WYWx1ZUID4EEDEjoKD21vZGVsX3RvX3VwbG9h",
-            "ZBgHIAEoCzIhLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1vZGVsEj0K",
-            "BXN0YXRlGAkgASgOMikuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuUGlw",
-            "ZWxpbmVTdGF0ZUID4EEDEiYKBWVycm9yGAogASgLMhIuZ29vZ2xlLnJwYy5T",
-            "dGF0dXNCA+BBAxI0CgtjcmVhdGVfdGltZRgLIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXBCA+BBAxIzCgpzdGFydF90aW1lGAwgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjEKCGVuZF90aW1lGA0gASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90",
-            "aW1lGA4gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkgK",
-            "BmxhYmVscxgPIAMoCzI4Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlRy",
-            "YWluaW5nUGlwZWxpbmUuTGFiZWxzRW50cnkSQwoPZW5jcnlwdGlvbl9zcGVj",
-            "GBIgASgLMiouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRW5jcnlwdGlv",
-            "blNwZWMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIg",
-            "ASgJOgI4ATp+6kF7CiphaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL1RyYWlu",
-            "aW5nUGlwZWxpbmUSTXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
-            "Y2F0aW9ufS90cmFpbmluZ1BpcGVsaW5lcy97dHJhaW5pbmdfcGlwZWxpbmV9",
-            "IvQECg9JbnB1dERhdGFDb25maWcSQwoOZnJhY3Rpb25fc3BsaXQYAiABKAsy",
-            "KS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5GcmFjdGlvblNwbGl0SAAS",
-            "PwoMZmlsdGVyX3NwbGl0GAMgASgLMicuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
-            "cm0udjEuRmlsdGVyU3BsaXRIABJHChBwcmVkZWZpbmVkX3NwbGl0GAQgASgL",
-            "MisuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuUHJlZGVmaW5lZFNwbGl0",
-            "SAASRQoPdGltZXN0YW1wX3NwbGl0GAUgASgLMiouZ29vZ2xlLmNsb3VkLmFp",
-            "cGxhdGZvcm0udjEuVGltZXN0YW1wU3BsaXRIABJHChBzdHJhdGlmaWVkX3Nw",
-            "bGl0GAwgASgLMisuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU3RyYXRp",
-            "ZmllZFNwbGl0SAASRQoPZ2NzX2Rlc3RpbmF0aW9uGAggASgLMiouZ29vZ2xl",
-            "LmNsb3VkLmFpcGxhdGZvcm0udjEuR2NzRGVzdGluYXRpb25IARJPChRiaWdx",
-            "dWVyeV9kZXN0aW5hdGlvbhgKIAEoCzIvLmdvb2dsZS5jbG91ZC5haXBsYXRm",
-            "b3JtLnYxLkJpZ1F1ZXJ5RGVzdGluYXRpb25IARIXCgpkYXRhc2V0X2lkGAEg",
-            "ASgJQgPgQQISGgoSYW5ub3RhdGlvbnNfZmlsdGVyGAYgASgJEh0KFWFubm90",
-            "YXRpb25fc2NoZW1hX3VyaRgJIAEoCUIHCgVzcGxpdEINCgtkZXN0aW5hdGlv",
-            "biJeCg1GcmFjdGlvblNwbGl0EhkKEXRyYWluaW5nX2ZyYWN0aW9uGAEgASgB",
-            "EhsKE3ZhbGlkYXRpb25fZnJhY3Rpb24YAiABKAESFQoNdGVzdF9mcmFjdGlv",
-            "bhgDIAEoASJlCgtGaWx0ZXJTcGxpdBIcCg90cmFpbmluZ19maWx0ZXIYASAB",
-            "KAlCA+BBAhIeChF2YWxpZGF0aW9uX2ZpbHRlchgCIAEoCUID4EECEhgKC3Rl",
-            "c3RfZmlsdGVyGAMgASgJQgPgQQIiIwoPUHJlZGVmaW5lZFNwbGl0EhAKA2tl",
-            "eRgBIAEoCUID4EECInEKDlRpbWVzdGFtcFNwbGl0EhkKEXRyYWluaW5nX2Zy",
-            "YWN0aW9uGAEgASgBEhsKE3ZhbGlkYXRpb25fZnJhY3Rpb24YAiABKAESFQoN",
-            "dGVzdF9mcmFjdGlvbhgDIAEoARIQCgNrZXkYBCABKAlCA+BBAiJyCg9TdHJh",
-            "dGlmaWVkU3BsaXQSGQoRdHJhaW5pbmdfZnJhY3Rpb24YASABKAESGwoTdmFs",
-            "aWRhdGlvbl9mcmFjdGlvbhgCIAEoARIVCg10ZXN0X2ZyYWN0aW9uGAMgASgB",
-            "EhAKA2tleRgEIAEoCUID4EECQtkBCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxh",
-            "dGZvcm0udjFCFVRyYWluaW5nUGlwZWxpbmVQcm90b1ABWkRnb29nbGUuZ29s",
-            "YW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2FpcGxhdGZvcm0v",
-            "djE7YWlwbGF0Zm9ybaoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIa",
-            "R29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpB",
-            "SVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
+            "ZBgHIAEoCzIhLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1vZGVsEhUK",
+            "CG1vZGVsX2lkGBYgASgJQgPgQQESGQoMcGFyZW50X21vZGVsGBUgASgJQgPg",
+            "QQESPQoFc3RhdGUYCSABKA4yKS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
+            "MS5QaXBlbGluZVN0YXRlQgPgQQMSJgoFZXJyb3IYCiABKAsyEi5nb29nbGUu",
+            "cnBjLlN0YXR1c0ID4EEDEjQKC2NyZWF0ZV90aW1lGAsgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjMKCnN0YXJ0X3RpbWUYDCABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSMQoIZW5kX3RpbWUY",
+            "DSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBk",
+            "YXRlX3RpbWUYDiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
+            "QQMSSAoGbGFiZWxzGA8gAygLMjguZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
+            "djEuVHJhaW5pbmdQaXBlbGluZS5MYWJlbHNFbnRyeRJDCg9lbmNyeXB0aW9u",
+            "X3NwZWMYEiABKAsyKi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5FbmNy",
+            "eXB0aW9uU3BlYxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFs",
+            "dWUYAiABKAk6AjgBOn7qQXsKKmFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20v",
+            "VHJhaW5pbmdQaXBlbGluZRJNcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
+            "cy97bG9jYXRpb259L3RyYWluaW5nUGlwZWxpbmVzL3t0cmFpbmluZ19waXBl",
+            "bGluZX0ijAUKD0lucHV0RGF0YUNvbmZpZxJDCg5mcmFjdGlvbl9zcGxpdBgC",
+            "IAEoCzIpLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZyYWN0aW9uU3Bs",
+            "aXRIABI/CgxmaWx0ZXJfc3BsaXQYAyABKAsyJy5nb29nbGUuY2xvdWQuYWlw",
+            "bGF0Zm9ybS52MS5GaWx0ZXJTcGxpdEgAEkcKEHByZWRlZmluZWRfc3BsaXQY",
+            "BCABKAsyKy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5QcmVkZWZpbmVk",
+            "U3BsaXRIABJFCg90aW1lc3RhbXBfc3BsaXQYBSABKAsyKi5nb29nbGUuY2xv",
+            "dWQuYWlwbGF0Zm9ybS52MS5UaW1lc3RhbXBTcGxpdEgAEkcKEHN0cmF0aWZp",
+            "ZWRfc3BsaXQYDCABKAsyKy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5T",
+            "dHJhdGlmaWVkU3BsaXRIABJFCg9nY3NfZGVzdGluYXRpb24YCCABKAsyKi5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5HY3NEZXN0aW5hdGlvbkgBEk8K",
+            "FGJpZ3F1ZXJ5X2Rlc3RpbmF0aW9uGAogASgLMi8uZ29vZ2xlLmNsb3VkLmFp",
+            "cGxhdGZvcm0udjEuQmlnUXVlcnlEZXN0aW5hdGlvbkgBEhcKCmRhdGFzZXRf",
+            "aWQYASABKAlCA+BBAhIaChJhbm5vdGF0aW9uc19maWx0ZXIYBiABKAkSHQoV",
+            "YW5ub3RhdGlvbl9zY2hlbWFfdXJpGAkgASgJEhYKDnNhdmVkX3F1ZXJ5X2lk",
+            "GAcgASgJQgcKBXNwbGl0Qg0KC2Rlc3RpbmF0aW9uIl4KDUZyYWN0aW9uU3Bs",
+            "aXQSGQoRdHJhaW5pbmdfZnJhY3Rpb24YASABKAESGwoTdmFsaWRhdGlvbl9m",
+            "cmFjdGlvbhgCIAEoARIVCg10ZXN0X2ZyYWN0aW9uGAMgASgBImUKC0ZpbHRl",
+            "clNwbGl0EhwKD3RyYWluaW5nX2ZpbHRlchgBIAEoCUID4EECEh4KEXZhbGlk",
+            "YXRpb25fZmlsdGVyGAIgASgJQgPgQQISGAoLdGVzdF9maWx0ZXIYAyABKAlC",
+            "A+BBAiIjCg9QcmVkZWZpbmVkU3BsaXQSEAoDa2V5GAEgASgJQgPgQQIicQoO",
+            "VGltZXN0YW1wU3BsaXQSGQoRdHJhaW5pbmdfZnJhY3Rpb24YASABKAESGwoT",
+            "dmFsaWRhdGlvbl9mcmFjdGlvbhgCIAEoARIVCg10ZXN0X2ZyYWN0aW9uGAMg",
+            "ASgBEhAKA2tleRgEIAEoCUID4EECInIKD1N0cmF0aWZpZWRTcGxpdBIZChF0",
+            "cmFpbmluZ19mcmFjdGlvbhgBIAEoARIbChN2YWxpZGF0aW9uX2ZyYWN0aW9u",
+            "GAIgASgBEhUKDXRlc3RfZnJhY3Rpb24YAyABKAESEAoDa2V5GAQgASgJQgPg",
+            "QQJC2QEKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIVVHJhaW5p",
+            "bmdQaXBlbGluZVByb3RvUAFaRGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
+            "L2dvb2dsZWFwaXMvY2xvdWQvYWlwbGF0Zm9ybS92MTthaXBsYXRmb3JtqgIa",
+            "R29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQ",
+            "bGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ModelReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.PipelineStateReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.TrainingPipeline), global::Google.Cloud.AIPlatform.V1.TrainingPipeline.Parser, new[]{ "Name", "DisplayName", "InputDataConfig", "TrainingTaskDefinition", "TrainingTaskInputs", "TrainingTaskMetadata", "ModelToUpload", "State", "Error", "CreateTime", "StartTime", "EndTime", "UpdateTime", "Labels", "EncryptionSpec" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.InputDataConfig), global::Google.Cloud.AIPlatform.V1.InputDataConfig.Parser, new[]{ "FractionSplit", "FilterSplit", "PredefinedSplit", "TimestampSplit", "StratifiedSplit", "GcsDestination", "BigqueryDestination", "DatasetId", "AnnotationsFilter", "AnnotationSchemaUri" }, new[]{ "Split", "Destination" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.TrainingPipeline), global::Google.Cloud.AIPlatform.V1.TrainingPipeline.Parser, new[]{ "Name", "DisplayName", "InputDataConfig", "TrainingTaskDefinition", "TrainingTaskInputs", "TrainingTaskMetadata", "ModelToUpload", "ModelId", "ParentModel", "State", "Error", "CreateTime", "StartTime", "EndTime", "UpdateTime", "Labels", "EncryptionSpec" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.InputDataConfig), global::Google.Cloud.AIPlatform.V1.InputDataConfig.Parser, new[]{ "FractionSplit", "FilterSplit", "PredefinedSplit", "TimestampSplit", "StratifiedSplit", "GcsDestination", "BigqueryDestination", "DatasetId", "AnnotationsFilter", "AnnotationSchemaUri", "SavedQueryId" }, new[]{ "Split", "Destination" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FractionSplit), global::Google.Cloud.AIPlatform.V1.FractionSplit.Parser, new[]{ "TrainingFraction", "ValidationFraction", "TestFraction" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FilterSplit), global::Google.Cloud.AIPlatform.V1.FilterSplit.Parser, new[]{ "TrainingFilter", "ValidationFilter", "TestFilter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PredefinedSplit), global::Google.Cloud.AIPlatform.V1.PredefinedSplit.Parser, new[]{ "Key" }, null, null, null, null),
@@ -149,6 +151,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       trainingTaskInputs_ = other.trainingTaskInputs_ != null ? other.trainingTaskInputs_.Clone() : null;
       trainingTaskMetadata_ = other.trainingTaskMetadata_ != null ? other.trainingTaskMetadata_.Clone() : null;
       modelToUpload_ = other.modelToUpload_ != null ? other.modelToUpload_.Clone() : null;
+      modelId_ = other.modelId_;
+      parentModel_ = other.parentModel_;
       state_ = other.state_;
       error_ = other.error_ != null ? other.error_.Clone() : null;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
@@ -298,6 +302,41 @@ namespace Google.Cloud.AIPlatform.V1 {
       get { return modelToUpload_; }
       set {
         modelToUpload_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "model_id" field.</summary>
+    public const int ModelIdFieldNumber = 22;
+    private string modelId_ = "";
+    /// <summary>
+    /// Optional. The ID to use for the uploaded Model, which will become the final
+    /// component of the model resource name.
+    ///
+    /// This value may be up to 63 characters, and valid characters are
+    /// `[a-z0-9_-]`. The first character cannot be a number or hyphen.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ModelId {
+      get { return modelId_; }
+      set {
+        modelId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "parent_model" field.</summary>
+    public const int ParentModelFieldNumber = 21;
+    private string parentModel_ = "";
+    /// <summary>
+    /// Optional. When specify this field, the `model_to_upload` will not be uploaded as a
+    /// new model, instead, it will become a new version of this `parent_model`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ParentModel {
+      get { return parentModel_; }
+      set {
+        parentModel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -456,6 +495,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (!object.Equals(TrainingTaskInputs, other.TrainingTaskInputs)) return false;
       if (!object.Equals(TrainingTaskMetadata, other.TrainingTaskMetadata)) return false;
       if (!object.Equals(ModelToUpload, other.ModelToUpload)) return false;
+      if (ModelId != other.ModelId) return false;
+      if (ParentModel != other.ParentModel) return false;
       if (State != other.State) return false;
       if (!object.Equals(Error, other.Error)) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
@@ -478,6 +519,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (trainingTaskInputs_ != null) hash ^= TrainingTaskInputs.GetHashCode();
       if (trainingTaskMetadata_ != null) hash ^= TrainingTaskMetadata.GetHashCode();
       if (modelToUpload_ != null) hash ^= ModelToUpload.GetHashCode();
+      if (ModelId.Length != 0) hash ^= ModelId.GetHashCode();
+      if (ParentModel.Length != 0) hash ^= ParentModel.GetHashCode();
       if (State != global::Google.Cloud.AIPlatform.V1.PipelineState.Unspecified) hash ^= State.GetHashCode();
       if (error_ != null) hash ^= Error.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
@@ -561,6 +604,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(146, 1);
         output.WriteMessage(EncryptionSpec);
       }
+      if (ParentModel.Length != 0) {
+        output.WriteRawTag(170, 1);
+        output.WriteString(ParentModel);
+      }
+      if (ModelId.Length != 0) {
+        output.WriteRawTag(178, 1);
+        output.WriteString(ModelId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -628,6 +679,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(146, 1);
         output.WriteMessage(EncryptionSpec);
       }
+      if (ParentModel.Length != 0) {
+        output.WriteRawTag(170, 1);
+        output.WriteString(ParentModel);
+      }
+      if (ModelId.Length != 0) {
+        output.WriteRawTag(178, 1);
+        output.WriteString(ModelId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -658,6 +717,12 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (modelToUpload_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ModelToUpload);
+      }
+      if (ModelId.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(ModelId);
+      }
+      if (ParentModel.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(ParentModel);
       }
       if (State != global::Google.Cloud.AIPlatform.V1.PipelineState.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
@@ -725,6 +790,12 @@ namespace Google.Cloud.AIPlatform.V1 {
           ModelToUpload = new global::Google.Cloud.AIPlatform.V1.Model();
         }
         ModelToUpload.MergeFrom(other.ModelToUpload);
+      }
+      if (other.ModelId.Length != 0) {
+        ModelId = other.ModelId;
+      }
+      if (other.ParentModel.Length != 0) {
+        ParentModel = other.ParentModel;
       }
       if (other.State != global::Google.Cloud.AIPlatform.V1.PipelineState.Unspecified) {
         State = other.State;
@@ -871,6 +942,14 @@ namespace Google.Cloud.AIPlatform.V1 {
             input.ReadMessage(EncryptionSpec);
             break;
           }
+          case 170: {
+            ParentModel = input.ReadString();
+            break;
+          }
+          case 178: {
+            ModelId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -976,6 +1055,14 @@ namespace Google.Cloud.AIPlatform.V1 {
             input.ReadMessage(EncryptionSpec);
             break;
           }
+          case 170: {
+            ParentModel = input.ReadString();
+            break;
+          }
+          case 178: {
+            ModelId = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -1024,6 +1111,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       datasetId_ = other.datasetId_;
       annotationsFilter_ = other.annotationsFilter_;
       annotationSchemaUri_ = other.annotationSchemaUri_;
+      savedQueryId_ = other.savedQueryId_;
       switch (other.SplitCase) {
         case SplitOneofCase.FractionSplit:
           FractionSplit = other.FractionSplit.Clone();
@@ -1286,6 +1374,32 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "saved_query_id" field.</summary>
+    public const int SavedQueryIdFieldNumber = 7;
+    private string savedQueryId_ = "";
+    /// <summary>
+    /// Only applicable to Datasets that have SavedQueries.
+    ///
+    /// The ID of a SavedQuery (annotation set) under the Dataset specified by
+    /// [dataset_id][google.cloud.aiplatform.v1.InputDataConfig.dataset_id] used for filtering Annotations for training.
+    ///
+    /// Only Annotations that are associated with this SavedQuery are used in
+    /// respectively training. When used in conjunction with
+    /// [annotations_filter][google.cloud.aiplatform.v1.InputDataConfig.annotations_filter], the Annotations used for training are filtered by
+    /// both [saved_query_id][google.cloud.aiplatform.v1.InputDataConfig.saved_query_id] and [annotations_filter][google.cloud.aiplatform.v1.InputDataConfig.annotations_filter].
+    ///
+    /// Only one of [saved_query_id][google.cloud.aiplatform.v1.InputDataConfig.saved_query_id] and [annotation_schema_uri][google.cloud.aiplatform.v1.InputDataConfig.annotation_schema_uri] should be
+    /// specified as both of them represent the same thing: problem type.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SavedQueryId {
+      get { return savedQueryId_; }
+      set {
+        savedQueryId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     private object split_;
     /// <summary>Enum of possible cases for the "split" oneof.</summary>
     public enum SplitOneofCase {
@@ -1356,6 +1470,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (DatasetId != other.DatasetId) return false;
       if (AnnotationsFilter != other.AnnotationsFilter) return false;
       if (AnnotationSchemaUri != other.AnnotationSchemaUri) return false;
+      if (SavedQueryId != other.SavedQueryId) return false;
       if (SplitCase != other.SplitCase) return false;
       if (DestinationCase != other.DestinationCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -1375,6 +1490,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (DatasetId.Length != 0) hash ^= DatasetId.GetHashCode();
       if (AnnotationsFilter.Length != 0) hash ^= AnnotationsFilter.GetHashCode();
       if (AnnotationSchemaUri.Length != 0) hash ^= AnnotationSchemaUri.GetHashCode();
+      if (SavedQueryId.Length != 0) hash ^= SavedQueryId.GetHashCode();
       hash ^= (int) splitCase_;
       hash ^= (int) destinationCase_;
       if (_unknownFields != null) {
@@ -1418,6 +1534,10 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (AnnotationsFilter.Length != 0) {
         output.WriteRawTag(50);
         output.WriteString(AnnotationsFilter);
+      }
+      if (SavedQueryId.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(SavedQueryId);
       }
       if (destinationCase_ == DestinationOneofCase.GcsDestination) {
         output.WriteRawTag(66);
@@ -1468,6 +1588,10 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (AnnotationsFilter.Length != 0) {
         output.WriteRawTag(50);
         output.WriteString(AnnotationsFilter);
+      }
+      if (SavedQueryId.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(SavedQueryId);
       }
       if (destinationCase_ == DestinationOneofCase.GcsDestination) {
         output.WriteRawTag(66);
@@ -1525,6 +1649,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (AnnotationSchemaUri.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AnnotationSchemaUri);
       }
+      if (SavedQueryId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SavedQueryId);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1545,6 +1672,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (other.AnnotationSchemaUri.Length != 0) {
         AnnotationSchemaUri = other.AnnotationSchemaUri;
+      }
+      if (other.SavedQueryId.Length != 0) {
+        SavedQueryId = other.SavedQueryId;
       }
       switch (other.SplitCase) {
         case SplitOneofCase.FractionSplit:
@@ -1653,6 +1783,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             AnnotationsFilter = input.ReadString();
             break;
           }
+          case 58: {
+            SavedQueryId = input.ReadString();
+            break;
+          }
           case 66: {
             global::Google.Cloud.AIPlatform.V1.GcsDestination subBuilder = new global::Google.Cloud.AIPlatform.V1.GcsDestination();
             if (destinationCase_ == DestinationOneofCase.GcsDestination) {
@@ -1741,6 +1875,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 50: {
             AnnotationsFilter = input.ReadString();
+            break;
+          }
+          case 58: {
+            SavedQueryId = input.ReadString();
             break;
           }
           case 66: {

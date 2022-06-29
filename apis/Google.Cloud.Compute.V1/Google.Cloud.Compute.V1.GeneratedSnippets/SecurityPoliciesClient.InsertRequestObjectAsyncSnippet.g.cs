@@ -14,6 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace Google.Cloud.Compute.V1.Snippets
 {
     // [START compute_v1_generated_SecurityPolicies_Insert_async]
@@ -38,6 +40,7 @@ namespace Google.Cloud.Compute.V1.Snippets
                 RequestId = "",
                 SecurityPolicyResource = new SecurityPolicy(),
                 Project = "",
+                ValidateOnly = false,
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await securityPoliciesClient.InsertAsync(request);

@@ -105,7 +105,7 @@ namespace Google.Cloud.Spanner.Data
         public override System.Type GetFieldType(int i)
         {
             var fieldMetadata = PopulateMetadata().RowType.Fields[i];
-            return SpannerDbType.FromProtobufType(fieldMetadata.Type).DefaultClrType;
+            return SpannerDbType.FromProtobufType(fieldMetadata.Type).GetConfiguredClrType(_conversionOptions);
         }
 
         /// <inheritdoc />
@@ -235,6 +235,13 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="i">The index of the column to retrieve.</param>
         /// <returns>The value converted to a <see cref="PgNumeric"/>.</returns>
         public PgNumeric GetPgNumeric(int i) => GetFieldValue<PgNumeric>(i);
+
+        /// <summary>
+        /// Gets the value of the specified column as type <see cref="SpannerDate"/>.
+        /// </summary>
+        /// <param name="i">The index of the column to retrieve.</param>
+        /// <returns>The value converted to a <see cref="SpannerDate"/>.</returns>
+        public SpannerDate GetSpannerDate(int i) => GetFieldValue<SpannerDate>(i);
 
         /// <inheritdoc />
         public override object GetValue(int i) => this[i];
@@ -581,7 +588,7 @@ namespace Google.Cloud.Spanner.Data
 
                 row["ColumnName"] = field.Name;
                 row["ColumnOrdinal"] = ordinal;
-                row["DataType"] = dbType.DefaultClrType;
+                row["DataType"] = dbType.GetConfiguredClrType(_conversionOptions);
                 row["ProviderType"] = dbType;
                 table.Rows.Add(row);
 

@@ -34,16 +34,34 @@
                 "BatchGetAssetsHistoryAsync"
               ]
             },
+            "BatchGetEffectiveIamPolicies": {
+              "methods": [
+                "BatchGetEffectiveIamPolicies",
+                "BatchGetEffectiveIamPoliciesAsync"
+              ]
+            },
             "CreateFeed": {
               "methods": [
                 "CreateFeed",
                 "CreateFeedAsync"
               ]
             },
+            "CreateSavedQuery": {
+              "methods": [
+                "CreateSavedQuery",
+                "CreateSavedQueryAsync"
+              ]
+            },
             "DeleteFeed": {
               "methods": [
                 "DeleteFeed",
                 "DeleteFeedAsync"
+              ]
+            },
+            "DeleteSavedQuery": {
+              "methods": [
+                "DeleteSavedQuery",
+                "DeleteSavedQueryAsync"
               ]
             },
             "ExportAssets": {
@@ -58,6 +76,12 @@
                 "GetFeedAsync"
               ]
             },
+            "GetSavedQuery": {
+              "methods": [
+                "GetSavedQuery",
+                "GetSavedQueryAsync"
+              ]
+            },
             "ListAssets": {
               "methods": [
                 "ListAssets",
@@ -68,6 +92,12 @@
               "methods": [
                 "ListFeeds",
                 "ListFeedsAsync"
+              ]
+            },
+            "ListSavedQueries": {
+              "methods": [
+                "ListSavedQueries",
+                "ListSavedQueriesAsync"
               ]
             },
             "SearchAllIamPolicies": {
@@ -86,6 +116,12 @@
               "methods": [
                 "UpdateFeed",
                 "UpdateFeedAsync"
+              ]
+            },
+            "UpdateSavedQuery": {
+              "methods": [
+                "UpdateSavedQuery",
+                "UpdateSavedQueryAsync"
               ]
             }
           }

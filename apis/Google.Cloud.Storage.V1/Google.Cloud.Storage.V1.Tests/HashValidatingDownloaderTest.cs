@@ -72,7 +72,8 @@ namespace Google.Cloud.Storage.V1.Tests
         private static HashValidatingDownloader CreateDownloader(Func<HttpRequestMessage, HttpResponseMessage> handler)
         {
             var service = new MockableService(handler);
-            return new HashValidatingDownloader(service);
+            var metadata = new Apis.Storage.v1.Data.Object();
+            return new HashValidatingDownloader(metadata, service);
         }
 
         class MockableService : BaseClientService

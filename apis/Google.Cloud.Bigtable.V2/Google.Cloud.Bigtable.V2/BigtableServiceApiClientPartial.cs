@@ -15,13 +15,9 @@
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Api.Gax.Grpc.Gcp;
-using Google.Api.Gax.Grpc.GrpcCore;
 using Grpc.Core;
-using Grpc.Gcp;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -134,30 +130,10 @@ namespace Google.Cloud.Bigtable.V2
     /// </summary>
     public static class BigtableServiceApiSettingsExtensions
     {
-        private static readonly Lazy<GrpcChannelOptions> s_defaultChannelOptions =
-            new Lazy<GrpcChannelOptions>(() => BigtableServiceApiSettings.GetDefault().CreateChannelOptionsImpl());
-
-        /// <summary>
-        /// Creates a collection of <see cref="ChannelOption"/> instances which can be used to create a <see cref="Channel"/>
-        /// or <see cref="GcpCallInvoker"/> pre-configured based on the specified settings (or the default settings if they
-        /// are null).
-        /// </summary>
-        /// <remarks>
-        /// <para>
-        /// Note that if the options returned are used to create a <see cref="Channel"/>, the <see cref="BigtableServiceApiSettings.MaxChannels"/>
-        /// and <see cref="BigtableServiceApiSettings.PreferredMaxStreamsPerChannel"/> settings values will be ignored.
-        /// </para>
-        /// </remarks>
-        /// <param name="settings">
-        /// The settings with which to create channel options. May be null, in which case the default settings will be used.
-        /// </param>
-        /// <returns>A collection of <see cref="ChannelOption"/> instances.</returns>
-        public static GrpcChannelOptions CreateChannelOptions(this BigtableServiceApiSettings settings) =>
-            settings is null ? s_defaultChannelOptions.Value : CreateChannelOptionsImpl(settings);
-
-        private static GrpcChannelOptions CreateChannelOptionsImpl(this BigtableServiceApiSettings settings)
+        internal static ApiConfig CreateApiConfig(this BigtableServiceApiSettings settings)
         {
-            var apiConfig = new ApiConfig
+            settings = settings ?? BigtableServiceApiSettings.GetDefault();
+            return new ApiConfig
             {
                 ChannelPool = new ChannelPoolConfig
                 {
@@ -165,65 +141,131 @@ namespace Google.Cloud.Bigtable.V2
                     MaxConcurrentStreamsLowWatermark = settings.PreferredMaxStreamsPerChannel
                 }
             };
-
-            return GrpcChannelOptions.Empty
-                .WithPrimaryUserAgent(BigtableClient.UserAgent)
-                .WithMaxSendMessageSize(-1)
-                .WithMaxReceiveMessageSize(-1)
-                .WithKeepAliveTime(TimeSpan.FromSeconds(30))
-                .WithCustomOption(GcpCallInvoker.ApiConfigChannelArg, apiConfig.ToString());
         }
     }
 
     public sealed partial class BigtableServiceApiClientBuilder : ClientBuilderBase<BigtableServiceApiClient>
     {
-        internal BigtableServiceApiClientBuilder(BigtableClientBuilder builder)
+        private const string s_emulatorHostEnvironmentVariable = "BIGTABLE_EMULATOR_HOST";
+        private static readonly string[] s_emulatorEnvironmentVariables = { s_emulatorHostEnvironmentVariable };
+
+        private static readonly GrpcChannelOptions s_bigtableDefaultOptions = DefaultOptions
+            .WithPrimaryUserAgent(BigtableClient.UserAgent)
+            // Note: these were previously -1, which was treated as infinity by Grpc.Core, but is treated
+            // as "too small for any message" by Grpc.Net.Client. We could potentially hide that difference
+            // in the adapter instead of here, but using int.MaxValue feels more sensible anyway.
+            .WithMaxSendMessageSize(int.MaxValue)
+            .WithMaxReceiveMessageSize(int.MaxValue)
+            .WithKeepAliveTime(TimeSpan.FromSeconds(30));
+
+        /// <summary>
+        /// Specifies how the builder responds to the presence of emulator environment variables.
+        /// </summary>
+        /// <remarks>
+        /// This property defaults to <see cref="EmulatorDetection.None"/>, meaning that
+        /// environment variables are ignored.
+        /// </remarks>
+        public new EmulatorDetection EmulatorDetection
+        {
+            get => base.EmulatorDetection;
+            set => base.EmulatorDetection = value;
+        }
+
+        internal BigtableServiceApiClientBuilder(BigtableClientBuilder builder) : base(BigtableServiceApiClient.ServiceMetadata)
         {
             Settings = builder.Settings;
             CopyCommonSettings(builder);
         }
 
-        /// <inheritdoc />
-        protected override CallInvoker CreateCallInvoker()
+        partial void InterceptBuild(ref BigtableServiceApiClient client) => client = MaybeCreateEmulatorClientBuilder()?.Build();
+
+        partial void InterceptBuildAsync(CancellationToken cancellationToken, ref Task<BigtableServiceApiClient> task) =>
+            task = MaybeCreateEmulatorClientBuilder()?.BuildAsync(cancellationToken);
+
+        private BigtableServiceApiClientBuilder MaybeCreateEmulatorClientBuilder()
         {
-            if (CallInvoker != null)
+            var emulatorEnvironment = GetEmulatorEnvironment(s_emulatorEnvironmentVariables, s_emulatorEnvironmentVariables);
+            if (emulatorEnvironment is null)
             {
-                return CallInvoker;
+                return null;
             }
-            var endpoint = Endpoint ?? GetDefaultEndpoint();
-            var channelOptions = GetChannelOptions().MergedWith(Settings.CreateChannelOptions());
+            // We don't set the EmulatorDetection property here to avoid recursively calling
+            // MaybeCreateEmulatorClientBuilder().
+            var builder = new BigtableServiceApiClientBuilder
+            {
+                Settings = Settings,
+                Endpoint = emulatorEnvironment[s_emulatorHostEnvironmentVariable],
+                ChannelCredentials = ChannelCredentials.Insecure
+            };
+            builder.CopySettingsForEmulator(this);
+            return builder;
+        }
+
+        /// <inheritdoc />
+        protected override CallInvoker CreateCallInvoker() => CallInvoker ?? CreateGcpCallInvoker();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public GcpCallInvoker CreateGcpCallInvoker()
+        {
+            GaxPreconditions.CheckState(CallInvoker is null,
+                "Cannot call {0} on a builder that already has {1} set.", nameof(CreateGcpCallInvoker), nameof(CallInvoker));
+            var endpoint = Endpoint ?? ServiceMetadata.DefaultEndpoint;
+            var channelOptions = GetChannelOptions();
+            var apiConfig = Settings.CreateApiConfig();
+            var grpcAdapter = EffectiveGrpcAdapter;
             // Although *we* never allow the use of the channel pool, we can use the call invoker pool if and
             // only if the base class thinks it can use the channel pool - i.e. it's only using default credentials.
             if (base.CanUseChannelPool)
             {
-                return CallInvokerPool.GetCallInvoker(endpoint, channelOptions);
+                return CallInvokerPool.GetCallInvoker(endpoint, channelOptions, apiConfig, grpcAdapter);
             }
             else
             {
                 var credentials = GetChannelCredentials();
-                return new GcpCallInvoker(endpoint.ToString(), credentials, GrpcCoreAdapter.Instance.ConvertOptions(channelOptions));
+                return new GcpCallInvoker(ServiceMetadata, endpoint, credentials, channelOptions, apiConfig, grpcAdapter);
             }
         }
 
         /// <inheritdoc />
-        protected override async Task<CallInvoker> CreateCallInvokerAsync(CancellationToken cancellationToken)
+        protected override GrpcChannelOptions GetChannelOptions()
         {
-            if (CallInvoker != null)
+            var options = UserAgent is null ? s_bigtableDefaultOptions : s_bigtableDefaultOptions.WithPrimaryUserAgent(UserAgent);
+            if (GrpcChannelOptions is object)
             {
-                return CallInvoker;
+                options = options.MergedWith(GrpcChannelOptions);
             }
-            var endpoint = Endpoint ?? GetDefaultEndpoint();
-            var channelOptions = GetChannelOptions().MergedWith(Settings.CreateChannelOptions());
+            return options;
+        }
+
+        /// <inheritdoc />
+        protected override async Task<CallInvoker> CreateCallInvokerAsync(CancellationToken cancellationToken) =>
+            CallInvoker ?? await CreateGcpCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public async Task<GcpCallInvoker> CreateGcpCallInvokerAsync(CancellationToken cancellationToken)
+        {
+            GaxPreconditions.CheckState(CallInvoker is null,
+                "Cannot call {0} on a builder that already has {1} set.", nameof(CreateGcpCallInvoker), nameof(CallInvoker));
+            var endpoint = Endpoint ?? ServiceMetadata.DefaultEndpoint;
+            var channelOptions = GetChannelOptions();
+            var apiConfig = Settings.CreateApiConfig();
+            var grpcAdapter = EffectiveGrpcAdapter;
             // Although *we* never allow the use of the channel pool, we can use the call invoker pool if and
             // only if the base class thinks it can use the channel pool - i.e. it's only using default credentials.
             if (base.CanUseChannelPool)
             {
-                return await CallInvokerPool.GetCallInvokerAsync(endpoint, channelOptions).ConfigureAwait(false);
+                return await CallInvokerPool.GetCallInvokerAsync(endpoint, channelOptions, apiConfig, grpcAdapter).ConfigureAwait(false);
             }
             else
             {
-                var credentials = GetChannelCredentials();
-                return new GcpCallInvoker(endpoint.ToString(), credentials, GrpcCoreAdapter.Instance.ConvertOptions(channelOptions));
+                var credentials = await GetChannelCredentialsAsync(cancellationToken).ConfigureAwait(false);
+                return new GcpCallInvoker(ServiceMetadata, endpoint, credentials, channelOptions, apiConfig, grpcAdapter);
             }
         }
 
@@ -238,7 +280,7 @@ namespace Google.Cloud.Bigtable.V2
 
     public partial class BigtableServiceApiClient
     {
-        internal static GcpCallInvokerPool CallInvokerPool { get; } = new GcpCallInvokerPool(DefaultScopes, UseJwtAccessWithScopes);
+        internal static GcpCallInvokerPool CallInvokerPool { get; } = new GcpCallInvokerPool(ServiceMetadata);
 
         /// <summary>
         /// Gets the value which specifies routing for replication.

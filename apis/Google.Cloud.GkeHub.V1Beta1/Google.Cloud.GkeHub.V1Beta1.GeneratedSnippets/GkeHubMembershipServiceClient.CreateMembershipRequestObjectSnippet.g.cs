@@ -17,6 +17,7 @@
 namespace Google.Cloud.GkeHub.V1Beta1.Snippets
 {
     // [START gkehub_v1beta1_generated_GkeHubMembershipService_CreateMembership_sync]
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.GkeHub.V1Beta1;
     using Google.LongRunning;
 
@@ -34,7 +35,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             // Initialize request argument(s)
             CreateMembershipRequest request = new CreateMembershipRequest
             {
-                Parent = "",
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 MembershipId = "",
                 Resource = new Membership(),
                 RequestId = "",

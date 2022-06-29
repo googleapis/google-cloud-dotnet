@@ -14,6 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
 {
     using Google.Api.Gax;

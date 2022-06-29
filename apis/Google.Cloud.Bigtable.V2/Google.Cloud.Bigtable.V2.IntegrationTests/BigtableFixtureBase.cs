@@ -12,17 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax.Grpc.GrpcCore;
+using Google.Api.Gax;
 using Google.Api.Gax.ResourceNames;
 using Google.Cloud.Bigtable.Admin.V2;
 using Google.Cloud.Bigtable.Common.V2;
 using Google.Cloud.ClientTesting;
-using Google.Rpc;
 using Grpc.Core;
-using Grpc.Gcp;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -35,33 +32,33 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         private const string TestProjectEnvironmentVariable = TestEnvironment.TestProjectEnvironmentVariable;
 
         public ProjectName ProjectName { get; private set; }
-        public Admin.V2.InstanceName InstanceName { get; private set; }
+        public InstanceName InstanceName { get; private set; }
         public TableName TableName { get; private set; }
 
-        public BigtableInstanceAdminClient InstanceAdminClient { get; private set; }
         public BigtableTableAdminClient TableAdminClient { get; private set; }
         public BigtableClient TableClient { get; private set; }
 
         public List<TableName> CreatedTables { get; } = new List<TableName>();
-        public CallInvoker EmulatorCallInvoker { get; }
+        public bool RunningAgainstEmulator { get; }
 
         public BigtableFixtureBase()
         {
+#if NET462_OR_GREATER            
             GrpcInfo.EnableSubchannelCounting();
-
-            string emulatorHost = Environment.GetEnvironmentVariable(EmulatorEnvironmentVariable);
+#endif
+            RunningAgainstEmulator = !string.IsNullOrEmpty(Environment.GetEnvironmentVariable(EmulatorEnvironmentVariable));
 
             string projectId;
             string instanceId;
-            if (!string.IsNullOrEmpty(emulatorHost))
+            if (RunningAgainstEmulator)
             {
                 projectId = "emulator-test-project";
-                EmulatorCallInvoker = new GcpCallInvoker(
-                    emulatorHost,
-                    ChannelCredentials.Insecure,
-                    GrpcCoreAdapter.Instance.ConvertOptions(BigtableServiceApiSettings.GetDefault().CreateChannelOptions()));
-
                 instanceId = "doesnt-matter";
+#if NETCOREAPP3_1
+                // On .NET Core 3.1 (but not .NET 6) Grpc.Net.Client needs an additional switch
+                // to allow an insecure channel in HTTP/2.
+                AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
+#endif
             }
             else
             {
@@ -81,7 +78,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             }
 
             ProjectName = new ProjectName(projectId);
-            InstanceName = new Admin.V2.InstanceName(projectId, instanceId);
+            InstanceName = new InstanceName(projectId, instanceId);
 
             Task.Run(InitBigtableInstanceAndTable).Wait();
         }
@@ -93,7 +90,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             var tableName = new TableName(ProjectName.ProjectId, InstanceName.InstanceId, IdGenerator.FromGuid());
             CreatedTables.Add(tableName);
             await TableAdminClient.CreateTableAsync(
-                new Admin.V2.InstanceName(tableName.ProjectId, tableName.InstanceId),
+                new InstanceName(tableName.ProjectId, tableName.InstanceId),
                 tableName.TableId,
                 CreateDefaultTable());
             return tableName;
@@ -101,25 +98,20 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
 
         private async Task InitBigtableInstanceAndTable()
         {
-            if (EmulatorCallInvoker == null)
-            {
-                InstanceAdminClient = BigtableInstanceAdminClient.Create();
-                TableAdminClient = BigtableTableAdminClient.Create();
-                TableClient = BigtableClient.Create();
+            TableAdminClient = new BigtableTableAdminClientBuilder { EmulatorDetection = EmulatorDetection.EmulatorOrProduction }.Build();
+            TableClient = new BigtableClientBuilder { EmulatorDetection = EmulatorDetection.EmulatorOrProduction }.Build();
 
+            if (!RunningAgainstEmulator)
+            {
+                var instanceAdminClient = BigtableInstanceAdminClient.Create();
                 try
                 {
-                    await InstanceAdminClient.GetInstanceAsync(InstanceName);
+                    await instanceAdminClient.GetInstanceAsync(InstanceName);
                 }
                 catch (RpcException e) when (e.Status.StatusCode == StatusCode.NotFound)
                 {
                     Assert.True(false, $"The Bigtable instance for testing does not exist: {InstanceName}");
                 }
-            }
-            else
-            {
-                TableAdminClient = new BigtableTableAdminClientBuilder { CallInvoker = EmulatorCallInvoker }.Build();
-                TableClient = new BigtableClientBuilder { CallInvoker = EmulatorCallInvoker }.Build();
             }
 
             TableName = await CreateTable();

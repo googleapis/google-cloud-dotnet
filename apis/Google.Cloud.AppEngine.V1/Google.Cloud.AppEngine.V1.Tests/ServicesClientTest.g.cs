@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using grpccore = Grpc.Core;
@@ -41,10 +42,17 @@ namespace Google.Cloud.AppEngine.V1.Tests
                 Name = "name1c9368b0",
                 Id = "id74b70bb8",
                 Split = new TrafficSplit(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
                 NetworkSettings = new NetworkSettings(),
             };
             mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ServicesClient client = new ServicesClientImpl(mockGrpcClient.Object, null);
+            ServicesClient client = new ServicesClientImpl(mockGrpcClient.Object, null, null);
             Service response = client.GetService(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -64,10 +72,17 @@ namespace Google.Cloud.AppEngine.V1.Tests
                 Name = "name1c9368b0",
                 Id = "id74b70bb8",
                 Split = new TrafficSplit(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
                 NetworkSettings = new NetworkSettings(),
             };
             mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ServicesClient client = new ServicesClientImpl(mockGrpcClient.Object, null);
+            ServicesClient client = new ServicesClientImpl(mockGrpcClient.Object, null, null);
             Service responseCallSettings = await client.GetServiceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Service responseCancellationToken = await client.GetServiceAsync(request, st::CancellationToken.None);

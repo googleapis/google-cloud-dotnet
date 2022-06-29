@@ -14,13 +14,15 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
+using gcl = Google.Cloud.Location;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -52,6 +54,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             DeleteExperimentSettings = existing.DeleteExperimentSettings;
             StartExperimentSettings = existing.StartExperimentSettings;
             StopExperimentSettings = existing.StopExperimentSettings;
+            LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
 
@@ -183,6 +186,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </remarks>
         public gaxgrpc::CallSettings StopExperimentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="ExperimentsSettings"/> object.</returns>
         public ExperimentsSettings Clone() => new ExperimentsSettings(this);
@@ -197,9 +205,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         public ExperimentsSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public ExperimentsClientBuilder()
+        public ExperimentsClientBuilder() : base(ExperimentsClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = ExperimentsClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref ExperimentsClient client);
@@ -226,29 +233,18 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ExperimentsClient.Create(callInvoker, Settings);
+            return ExperimentsClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<ExperimentsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ExperimentsClient.Create(callInvoker, Settings);
+            return ExperimentsClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => ExperimentsClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => ExperimentsClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => ExperimentsClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>Experiments client wrapper, for convenient use.</summary>
@@ -277,19 +273,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             "https://www.googleapis.com/auth/dialogflow",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Experiments.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="ExperimentsClient"/> using the default credentials, endpoint and
@@ -316,8 +303,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="ExperimentsSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="ExperimentsClient"/>.</returns>
-        internal static ExperimentsClient Create(grpccore::CallInvoker callInvoker, ExperimentsSettings settings = null)
+        internal static ExperimentsClient Create(grpccore::CallInvoker callInvoker, ExperimentsSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -326,7 +314,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             Experiments.ExperimentsClient grpcClient = new Experiments.ExperimentsClient(callInvoker);
-            return new ExperimentsClientImpl(grpcClient, settings);
+            return new ExperimentsClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -344,6 +332,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>The underlying gRPC Experiments client</summary>
         public virtual Experiments.ExperimentsClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Returns the list of all experiments in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
@@ -1195,30 +1186,32 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="ExperimentsSettings"/> used within this client.</param>
-        public ExperimentsClientImpl(Experiments.ExperimentsClient grpcClient, ExperimentsSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public ExperimentsClientImpl(Experiments.ExperimentsClient grpcClient, ExperimentsSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             ExperimentsSettings effectiveSettings = settings ?? ExperimentsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListExperiments = clientHelper.BuildApiCall<ListExperimentsRequest, ListExperimentsResponse>(grpcClient.ListExperimentsAsync, grpcClient.ListExperiments, effectiveSettings.ListExperimentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
+            _callListExperiments = clientHelper.BuildApiCall<ListExperimentsRequest, ListExperimentsResponse>("ListExperiments", grpcClient.ListExperimentsAsync, grpcClient.ListExperiments, effectiveSettings.ListExperimentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListExperiments);
             Modify_ListExperimentsApiCall(ref _callListExperiments);
-            _callGetExperiment = clientHelper.BuildApiCall<GetExperimentRequest, Experiment>(grpcClient.GetExperimentAsync, grpcClient.GetExperiment, effectiveSettings.GetExperimentSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetExperiment = clientHelper.BuildApiCall<GetExperimentRequest, Experiment>("GetExperiment", grpcClient.GetExperimentAsync, grpcClient.GetExperiment, effectiveSettings.GetExperimentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetExperiment);
             Modify_GetExperimentApiCall(ref _callGetExperiment);
-            _callCreateExperiment = clientHelper.BuildApiCall<CreateExperimentRequest, Experiment>(grpcClient.CreateExperimentAsync, grpcClient.CreateExperiment, effectiveSettings.CreateExperimentSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateExperiment = clientHelper.BuildApiCall<CreateExperimentRequest, Experiment>("CreateExperiment", grpcClient.CreateExperimentAsync, grpcClient.CreateExperiment, effectiveSettings.CreateExperimentSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateExperiment);
             Modify_CreateExperimentApiCall(ref _callCreateExperiment);
-            _callUpdateExperiment = clientHelper.BuildApiCall<UpdateExperimentRequest, Experiment>(grpcClient.UpdateExperimentAsync, grpcClient.UpdateExperiment, effectiveSettings.UpdateExperimentSettings).WithGoogleRequestParam("experiment.name", request => request.Experiment?.Name);
+            _callUpdateExperiment = clientHelper.BuildApiCall<UpdateExperimentRequest, Experiment>("UpdateExperiment", grpcClient.UpdateExperimentAsync, grpcClient.UpdateExperiment, effectiveSettings.UpdateExperimentSettings).WithGoogleRequestParam("experiment.name", request => request.Experiment?.Name);
             Modify_ApiCall(ref _callUpdateExperiment);
             Modify_UpdateExperimentApiCall(ref _callUpdateExperiment);
-            _callDeleteExperiment = clientHelper.BuildApiCall<DeleteExperimentRequest, wkt::Empty>(grpcClient.DeleteExperimentAsync, grpcClient.DeleteExperiment, effectiveSettings.DeleteExperimentSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteExperiment = clientHelper.BuildApiCall<DeleteExperimentRequest, wkt::Empty>("DeleteExperiment", grpcClient.DeleteExperimentAsync, grpcClient.DeleteExperiment, effectiveSettings.DeleteExperimentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteExperiment);
             Modify_DeleteExperimentApiCall(ref _callDeleteExperiment);
-            _callStartExperiment = clientHelper.BuildApiCall<StartExperimentRequest, Experiment>(grpcClient.StartExperimentAsync, grpcClient.StartExperiment, effectiveSettings.StartExperimentSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callStartExperiment = clientHelper.BuildApiCall<StartExperimentRequest, Experiment>("StartExperiment", grpcClient.StartExperimentAsync, grpcClient.StartExperiment, effectiveSettings.StartExperimentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callStartExperiment);
             Modify_StartExperimentApiCall(ref _callStartExperiment);
-            _callStopExperiment = clientHelper.BuildApiCall<StopExperimentRequest, Experiment>(grpcClient.StopExperimentAsync, grpcClient.StopExperiment, effectiveSettings.StopExperimentSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callStopExperiment = clientHelper.BuildApiCall<StopExperimentRequest, Experiment>("StopExperiment", grpcClient.StopExperimentAsync, grpcClient.StopExperiment, effectiveSettings.StopExperimentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callStopExperiment);
             Modify_StopExperimentApiCall(ref _callStopExperiment);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
@@ -1244,6 +1237,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>The underlying gRPC Experiments client</summary>
         public override Experiments.ExperimentsClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
 
         partial void Modify_ListExperimentsRequest(ref ListExperimentsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1442,5 +1438,21 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         public scg::IEnumerator<Experiment> GetEnumerator() => Experiments.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public static partial class Experiments
+    {
+        public partial class ExperimentsClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
+        }
     }
 }

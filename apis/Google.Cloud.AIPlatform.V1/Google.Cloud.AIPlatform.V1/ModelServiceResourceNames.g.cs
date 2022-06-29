@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gagr = Google.Api.Gax.ResourceNames;
 using gcav = Google.Cloud.AIPlatform.V1;
 
@@ -65,7 +66,43 @@ namespace Google.Cloud.AIPlatform.V1
         }
     }
 
+    public partial class ListModelVersionsRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::ModelName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::ModelName ModelName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::ModelName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class DeleteModelRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::ModelName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::ModelName ModelName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::ModelName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteModelVersionRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::ModelName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::ModelName ModelName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::ModelName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class MergeVersionAliasesRequest
     {
         /// <summary>
         /// <see cref="gcav::ModelName"/>-typed view over the <see cref="Name"/> resource name property.
@@ -95,6 +132,18 @@ namespace Google.Cloud.AIPlatform.V1
         public ModelName ParentAsModelName
         {
             get => string.IsNullOrEmpty(Parent) ? null : ModelName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BatchImportModelEvaluationSlicesRequest
+    {
+        /// <summary>
+        /// <see cref="ModelEvaluationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ModelEvaluationName ParentAsModelEvaluationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : ModelEvaluationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }

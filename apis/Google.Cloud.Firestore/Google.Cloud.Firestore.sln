@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29009.5
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Firestore", "Google.Cloud.Firestore\Google.Cloud.Firestore.csproj", "{0CE6F762-3B85-47A5-8450-19725847E635}"
 EndProject
@@ -18,8 +18,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Firestore.V1", "..\Google.Cloud.Firestore.V1\Google.Cloud.Firestore.V1\Google.Cloud.Firestore.V1.csproj", "{CB33B137-E474-4F53-8545-E7597BAC1C58}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Firestore.CleanTestData", "Google.Cloud.Firestore.CleanTestData\Google.Cloud.Firestore.CleanTestData.csproj", "{AB66C09D-C8D2-4BC0-9B89-69B80E957D0B}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Firestore.IntegrationBenchmarks", "Google.Cloud.Firestore.IntegrationBenchmarks\Google.Cloud.Firestore.IntegrationBenchmarks.csproj", "{7729665A-FD01-4DD7-B85E-81D7A1E6E0A4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.LongRunning", "..\Google.LongRunning\Google.LongRunning\Google.LongRunning.csproj", "{BDB380A3-EEBA-49CB-A93C-9F1FDB44A2AA}"
 EndProject
@@ -129,18 +127,6 @@ Global
 		{AB66C09D-C8D2-4BC0-9B89-69B80E957D0B}.Release|x64.Build.0 = Release|Any CPU
 		{AB66C09D-C8D2-4BC0-9B89-69B80E957D0B}.Release|x86.ActiveCfg = Release|Any CPU
 		{AB66C09D-C8D2-4BC0-9B89-69B80E957D0B}.Release|x86.Build.0 = Release|Any CPU
-		{7729665A-FD01-4DD7-B85E-81D7A1E6E0A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7729665A-FD01-4DD7-B85E-81D7A1E6E0A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7729665A-FD01-4DD7-B85E-81D7A1E6E0A4}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{7729665A-FD01-4DD7-B85E-81D7A1E6E0A4}.Debug|x64.Build.0 = Debug|Any CPU
-		{7729665A-FD01-4DD7-B85E-81D7A1E6E0A4}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{7729665A-FD01-4DD7-B85E-81D7A1E6E0A4}.Debug|x86.Build.0 = Debug|Any CPU
-		{7729665A-FD01-4DD7-B85E-81D7A1E6E0A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7729665A-FD01-4DD7-B85E-81D7A1E6E0A4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7729665A-FD01-4DD7-B85E-81D7A1E6E0A4}.Release|x64.ActiveCfg = Release|Any CPU
-		{7729665A-FD01-4DD7-B85E-81D7A1E6E0A4}.Release|x64.Build.0 = Release|Any CPU
-		{7729665A-FD01-4DD7-B85E-81D7A1E6E0A4}.Release|x86.ActiveCfg = Release|Any CPU
-		{7729665A-FD01-4DD7-B85E-81D7A1E6E0A4}.Release|x86.Build.0 = Release|Any CPU
 		{BDB380A3-EEBA-49CB-A93C-9F1FDB44A2AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BDB380A3-EEBA-49CB-A93C-9F1FDB44A2AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDB380A3-EEBA-49CB-A93C-9F1FDB44A2AA}.Debug|x64.ActiveCfg = Debug|Any CPU

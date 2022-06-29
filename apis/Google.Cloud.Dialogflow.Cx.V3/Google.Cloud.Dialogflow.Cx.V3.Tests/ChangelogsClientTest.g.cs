@@ -14,7 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -31,6 +33,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void GetChangelogRequestObject()
         {
             moq::Mock<Changelogs.ChangelogsClient> mockGrpcClient = new moq::Mock<Changelogs.ChangelogsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetChangelogRequest request = new GetChangelogRequest
             {
                 ChangelogName = ChangelogName.FromProjectLocationAgentChangelog("[PROJECT]", "[LOCATION]", "[AGENT]", "[CHANGELOG]"),
@@ -46,7 +49,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 Action = "action09558c41",
             };
             mockGrpcClient.Setup(x => x.GetChangelog(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ChangelogsClient client = new ChangelogsClientImpl(mockGrpcClient.Object, null);
+            ChangelogsClient client = new ChangelogsClientImpl(mockGrpcClient.Object, null, null);
             Changelog response = client.GetChangelog(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -56,6 +59,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task GetChangelogRequestObjectAsync()
         {
             moq::Mock<Changelogs.ChangelogsClient> mockGrpcClient = new moq::Mock<Changelogs.ChangelogsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetChangelogRequest request = new GetChangelogRequest
             {
                 ChangelogName = ChangelogName.FromProjectLocationAgentChangelog("[PROJECT]", "[LOCATION]", "[AGENT]", "[CHANGELOG]"),
@@ -71,7 +75,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 Action = "action09558c41",
             };
             mockGrpcClient.Setup(x => x.GetChangelogAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Changelog>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ChangelogsClient client = new ChangelogsClientImpl(mockGrpcClient.Object, null);
+            ChangelogsClient client = new ChangelogsClientImpl(mockGrpcClient.Object, null, null);
             Changelog responseCallSettings = await client.GetChangelogAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Changelog responseCancellationToken = await client.GetChangelogAsync(request, st::CancellationToken.None);
@@ -83,6 +87,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void GetChangelog()
         {
             moq::Mock<Changelogs.ChangelogsClient> mockGrpcClient = new moq::Mock<Changelogs.ChangelogsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetChangelogRequest request = new GetChangelogRequest
             {
                 ChangelogName = ChangelogName.FromProjectLocationAgentChangelog("[PROJECT]", "[LOCATION]", "[AGENT]", "[CHANGELOG]"),
@@ -98,7 +103,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 Action = "action09558c41",
             };
             mockGrpcClient.Setup(x => x.GetChangelog(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ChangelogsClient client = new ChangelogsClientImpl(mockGrpcClient.Object, null);
+            ChangelogsClient client = new ChangelogsClientImpl(mockGrpcClient.Object, null, null);
             Changelog response = client.GetChangelog(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -108,6 +113,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task GetChangelogAsync()
         {
             moq::Mock<Changelogs.ChangelogsClient> mockGrpcClient = new moq::Mock<Changelogs.ChangelogsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetChangelogRequest request = new GetChangelogRequest
             {
                 ChangelogName = ChangelogName.FromProjectLocationAgentChangelog("[PROJECT]", "[LOCATION]", "[AGENT]", "[CHANGELOG]"),
@@ -123,7 +129,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 Action = "action09558c41",
             };
             mockGrpcClient.Setup(x => x.GetChangelogAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Changelog>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ChangelogsClient client = new ChangelogsClientImpl(mockGrpcClient.Object, null);
+            ChangelogsClient client = new ChangelogsClientImpl(mockGrpcClient.Object, null, null);
             Changelog responseCallSettings = await client.GetChangelogAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Changelog responseCancellationToken = await client.GetChangelogAsync(request.Name, st::CancellationToken.None);
@@ -135,6 +141,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void GetChangelogResourceNames()
         {
             moq::Mock<Changelogs.ChangelogsClient> mockGrpcClient = new moq::Mock<Changelogs.ChangelogsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetChangelogRequest request = new GetChangelogRequest
             {
                 ChangelogName = ChangelogName.FromProjectLocationAgentChangelog("[PROJECT]", "[LOCATION]", "[AGENT]", "[CHANGELOG]"),
@@ -150,7 +157,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 Action = "action09558c41",
             };
             mockGrpcClient.Setup(x => x.GetChangelog(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ChangelogsClient client = new ChangelogsClientImpl(mockGrpcClient.Object, null);
+            ChangelogsClient client = new ChangelogsClientImpl(mockGrpcClient.Object, null, null);
             Changelog response = client.GetChangelog(request.ChangelogName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -160,6 +167,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task GetChangelogResourceNamesAsync()
         {
             moq::Mock<Changelogs.ChangelogsClient> mockGrpcClient = new moq::Mock<Changelogs.ChangelogsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetChangelogRequest request = new GetChangelogRequest
             {
                 ChangelogName = ChangelogName.FromProjectLocationAgentChangelog("[PROJECT]", "[LOCATION]", "[AGENT]", "[CHANGELOG]"),
@@ -175,7 +183,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 Action = "action09558c41",
             };
             mockGrpcClient.Setup(x => x.GetChangelogAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Changelog>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ChangelogsClient client = new ChangelogsClientImpl(mockGrpcClient.Object, null);
+            ChangelogsClient client = new ChangelogsClientImpl(mockGrpcClient.Object, null, null);
             Changelog responseCallSettings = await client.GetChangelogAsync(request.ChangelogName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Changelog responseCancellationToken = await client.GetChangelogAsync(request.ChangelogName, st::CancellationToken.None);

@@ -559,19 +559,18 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         }
 
         [SkippableFact]
-        public async Task ReturnCommitStats()
+        public async Task ReturnCommitStats_ExplicitTransaction()
         {
             Skip.If(_fixture.RunningOnEmulator, "Emulator does not yet support CommitStats");
             CommitStatsCapturerLogger logger = new CommitStatsCapturerLogger();
             string key = IdGenerator.FromGuid();
             await RetryHelpers.ExecuteWithRetryAsync(async () =>
             {
-                using (var connection = _fixture.GetConnection(logger))
+                using (var connection = _fixture.GetConnection(logger, logCommitStats: true))
                 {
                     await connection.OpenAsync();
                     using (var transaction = connection.BeginTransaction())
                     {
-                        transaction.LogCommitStats = true;
                         using (var cmd1 = connection.CreateInsertCommand(_fixture.TableName))
                         {
                             cmd1.Transaction = transaction;
@@ -592,6 +591,31 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                         // MutationCount == 4, as we inserted 2 rows with 2 columns each.
                         Assert.Equal(4, logger.LastCommitResponse?.CommitStats?.MutationCount);
                     }
+                }
+            });
+        }
+
+        [SkippableFact]
+        public async Task ReturnCommitStats_EphemeralTransaction()
+        {
+            Skip.If(_fixture.RunningOnEmulator, "Emulator does not yet support CommitStats");
+            CommitStatsCapturerLogger logger = new CommitStatsCapturerLogger();
+            string key = IdGenerator.FromGuid();
+            await RetryHelpers.ExecuteWithRetryAsync(async () =>
+            {
+                using (var connection = _fixture.GetConnection(logger, logCommitStats: true))
+                {
+                    await connection.OpenAsync();
+
+                    using (var cmd1 = connection.CreateInsertCommand(_fixture.TableName))
+                    {
+                        cmd1.Parameters.Add("K", SpannerDbType.String).Value = key;
+                        cmd1.Parameters.Add("StringValue", SpannerDbType.String).Value = "text";
+                        await cmd1.ExecuteNonQueryAsync();
+                    }
+
+                    // MutationCount == 2, as we inserted 1 row with 2 columns each.
+                    Assert.Equal(2, logger.LastCommitResponse?.CommitStats?.MutationCount);
                 }
             });
         }

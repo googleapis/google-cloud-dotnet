@@ -153,9 +153,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// Threshold for numerical features of anomaly detection.
     /// This is shared by all objectives of Featurestore Monitoring for numerical
-    /// features (i.e. Features with type
-    /// ([Feature.ValueType][google.cloud.aiplatform.v1.Feature.ValueType]) DOUBLE
-    /// or INT64).
+    /// features (i.e. Features with type ([Feature.ValueType][google.cloud.aiplatform.v1.Feature.ValueType]) DOUBLE or INT64).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -172,9 +170,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// Threshold for categorical features of anomaly detection.
     /// This is shared by all types of Featurestore Monitoring for categorical
-    /// features (i.e. Features with type
-    /// ([Feature.ValueType][google.cloud.aiplatform.v1.Feature.ValueType]) BOOL or
-    /// STRING).
+    /// features (i.e. Features with type ([Feature.ValueType][google.cloud.aiplatform.v1.Feature.ValueType]) BOOL or STRING).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

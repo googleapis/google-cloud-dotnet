@@ -14,7 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -33,6 +35,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Environments.EnvironmentsClient> mockGrpcClient = new moq::Mock<Environments.EnvironmentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetEnvironmentRequest request = new GetEnvironmentRequest
             {
                 EnvironmentName = EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]"),
@@ -48,9 +51,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     new Environment.Types.VersionConfig(),
                 },
                 TestCasesConfig = new Environment.Types.TestCasesConfig(),
+                WebhookConfig = new Environment.Types.WebhookConfig(),
             };
             mockGrpcClient.Setup(x => x.GetEnvironment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null);
+            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null, null);
             Environment response = client.GetEnvironment(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -61,6 +65,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Environments.EnvironmentsClient> mockGrpcClient = new moq::Mock<Environments.EnvironmentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetEnvironmentRequest request = new GetEnvironmentRequest
             {
                 EnvironmentName = EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]"),
@@ -76,9 +81,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     new Environment.Types.VersionConfig(),
                 },
                 TestCasesConfig = new Environment.Types.TestCasesConfig(),
+                WebhookConfig = new Environment.Types.WebhookConfig(),
             };
             mockGrpcClient.Setup(x => x.GetEnvironmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Environment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null);
+            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null, null);
             Environment responseCallSettings = await client.GetEnvironmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Environment responseCancellationToken = await client.GetEnvironmentAsync(request, st::CancellationToken.None);
@@ -91,6 +97,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Environments.EnvironmentsClient> mockGrpcClient = new moq::Mock<Environments.EnvironmentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetEnvironmentRequest request = new GetEnvironmentRequest
             {
                 EnvironmentName = EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]"),
@@ -106,9 +113,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     new Environment.Types.VersionConfig(),
                 },
                 TestCasesConfig = new Environment.Types.TestCasesConfig(),
+                WebhookConfig = new Environment.Types.WebhookConfig(),
             };
             mockGrpcClient.Setup(x => x.GetEnvironment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null);
+            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null, null);
             Environment response = client.GetEnvironment(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -119,6 +127,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Environments.EnvironmentsClient> mockGrpcClient = new moq::Mock<Environments.EnvironmentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetEnvironmentRequest request = new GetEnvironmentRequest
             {
                 EnvironmentName = EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]"),
@@ -134,9 +143,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     new Environment.Types.VersionConfig(),
                 },
                 TestCasesConfig = new Environment.Types.TestCasesConfig(),
+                WebhookConfig = new Environment.Types.WebhookConfig(),
             };
             mockGrpcClient.Setup(x => x.GetEnvironmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Environment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null);
+            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null, null);
             Environment responseCallSettings = await client.GetEnvironmentAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Environment responseCancellationToken = await client.GetEnvironmentAsync(request.Name, st::CancellationToken.None);
@@ -149,6 +159,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Environments.EnvironmentsClient> mockGrpcClient = new moq::Mock<Environments.EnvironmentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetEnvironmentRequest request = new GetEnvironmentRequest
             {
                 EnvironmentName = EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]"),
@@ -164,9 +175,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     new Environment.Types.VersionConfig(),
                 },
                 TestCasesConfig = new Environment.Types.TestCasesConfig(),
+                WebhookConfig = new Environment.Types.WebhookConfig(),
             };
             mockGrpcClient.Setup(x => x.GetEnvironment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null);
+            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null, null);
             Environment response = client.GetEnvironment(request.EnvironmentName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -177,6 +189,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Environments.EnvironmentsClient> mockGrpcClient = new moq::Mock<Environments.EnvironmentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetEnvironmentRequest request = new GetEnvironmentRequest
             {
                 EnvironmentName = EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]"),
@@ -192,9 +205,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     new Environment.Types.VersionConfig(),
                 },
                 TestCasesConfig = new Environment.Types.TestCasesConfig(),
+                WebhookConfig = new Environment.Types.WebhookConfig(),
             };
             mockGrpcClient.Setup(x => x.GetEnvironmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Environment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null);
+            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null, null);
             Environment responseCallSettings = await client.GetEnvironmentAsync(request.EnvironmentName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Environment responseCancellationToken = await client.GetEnvironmentAsync(request.EnvironmentName, st::CancellationToken.None);
@@ -207,13 +221,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Environments.EnvironmentsClient> mockGrpcClient = new moq::Mock<Environments.EnvironmentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteEnvironmentRequest request = new DeleteEnvironmentRequest
             {
                 EnvironmentName = EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteEnvironment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null);
+            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteEnvironment(request);
             mockGrpcClient.VerifyAll();
         }
@@ -223,13 +238,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Environments.EnvironmentsClient> mockGrpcClient = new moq::Mock<Environments.EnvironmentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteEnvironmentRequest request = new DeleteEnvironmentRequest
             {
                 EnvironmentName = EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteEnvironmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null);
+            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteEnvironmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteEnvironmentAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -240,13 +256,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Environments.EnvironmentsClient> mockGrpcClient = new moq::Mock<Environments.EnvironmentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteEnvironmentRequest request = new DeleteEnvironmentRequest
             {
                 EnvironmentName = EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteEnvironment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null);
+            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteEnvironment(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -256,13 +273,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Environments.EnvironmentsClient> mockGrpcClient = new moq::Mock<Environments.EnvironmentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteEnvironmentRequest request = new DeleteEnvironmentRequest
             {
                 EnvironmentName = EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteEnvironmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null);
+            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteEnvironmentAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteEnvironmentAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -273,13 +291,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Environments.EnvironmentsClient> mockGrpcClient = new moq::Mock<Environments.EnvironmentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteEnvironmentRequest request = new DeleteEnvironmentRequest
             {
                 EnvironmentName = EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteEnvironment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null);
+            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteEnvironment(request.EnvironmentName);
             mockGrpcClient.VerifyAll();
         }
@@ -289,13 +308,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Environments.EnvironmentsClient> mockGrpcClient = new moq::Mock<Environments.EnvironmentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteEnvironmentRequest request = new DeleteEnvironmentRequest
             {
                 EnvironmentName = EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteEnvironmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null);
+            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteEnvironmentAsync(request.EnvironmentName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteEnvironmentAsync(request.EnvironmentName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();

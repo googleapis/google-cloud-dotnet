@@ -17,7 +17,7 @@ have been self-describing using the [Google API Discovery Service](https://devel
 which has been used to generate per-API packages under the umbrella of the
 ["API Client Library for .NET"](https://developers.google.com/api-client-library/dotnet).
 
-In November 2014, Google introduce gRPC, a new RPC framework offering efficient multi-plexing,
+In November 2014, Google introduced gRPC, a new RPC framework offering efficient multi-plexing,
 bidirectional streaming and many other features. New APIs are now being provided with access via
 either the REST-based HTTP 1.1 and JSON, or gRPC over HTTP 2.0 and
 [Protocol Buffers](https://developers.google.com/protocol-buffers/).

@@ -32,7 +32,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             // Create client
             GkeHubMembershipServiceClient gkeHubMembershipServiceClient = GkeHubMembershipServiceClient.Create();
             // Initialize request argument(s)
-            string parent = "";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
             Membership resource = new Membership();
             string membershipId = "";
             // Make the request

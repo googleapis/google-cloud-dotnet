@@ -14,6 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace Google.Cloud.Compute.V1.Snippets
 {
     // [START compute_v1_generated_RegionDisks_SetLabels_sync_flattened]

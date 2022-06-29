@@ -3,7 +3,7 @@
 //     source: google/appengine/v1/appengine.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2021 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -154,6 +154,7 @@ namespace Google.Cloud.AppEngine.V1 {
       ///
       /// * `auth_domain` - Google authentication domain for controlling user access to the application.
       /// * `default_cookie_expiration` - Cookie expiration policy for the application.
+      /// * `iap` - Identity-Aware Proxy properties for the application.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -340,6 +341,7 @@ namespace Google.Cloud.AppEngine.V1 {
       ///
       /// * `auth_domain` - Google authentication domain for controlling user access to the application.
       /// * `default_cookie_expiration` - Cookie expiration policy for the application.
+      /// * `iap` - Identity-Aware Proxy properties for the application.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -357,6 +359,7 @@ namespace Google.Cloud.AppEngine.V1 {
       ///
       /// * `auth_domain` - Google authentication domain for controlling user access to the application.
       /// * `default_cookie_expiration` - Cookie expiration policy for the application.
+      /// * `iap` - Identity-Aware Proxy properties for the application.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -372,6 +375,7 @@ namespace Google.Cloud.AppEngine.V1 {
       ///
       /// * `auth_domain` - Google authentication domain for controlling user access to the application.
       /// * `default_cookie_expiration` - Cookie expiration policy for the application.
+      /// * `iap` - Identity-Aware Proxy properties for the application.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -389,6 +393,7 @@ namespace Google.Cloud.AppEngine.V1 {
       ///
       /// * `auth_domain` - Google authentication domain for controlling user access to the application.
       /// * `default_cookie_expiration` - Cookie expiration policy for the application.
+      /// * `iap` - Identity-Aware Proxy properties for the application.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using grpccore = Grpc.Core;
@@ -44,10 +45,12 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 Type = "typee2cc9d59",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                DdosProtectionConfig = new SecurityPolicyDdosProtectionConfig(),
                 Rules =
                 {
                     new SecurityPolicyRule(),
                 },
+                Region = "regionedb20d96",
                 AdaptiveProtectionConfig = new SecurityPolicyAdaptiveProtectionConfig(),
                 Fingerprint = "fingerprint009e6052",
                 Description = "description2cf9da67",
@@ -56,7 +59,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 RecaptchaOptionsConfig = new SecurityPolicyRecaptchaOptionsConfig(),
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityPoliciesClient client = new SecurityPoliciesClientImpl(mockGrpcClient.Object, null);
+            SecurityPoliciesClient client = new SecurityPoliciesClientImpl(mockGrpcClient.Object, null, null);
             SecurityPolicy response = client.Get(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -79,10 +82,12 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 Type = "typee2cc9d59",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                DdosProtectionConfig = new SecurityPolicyDdosProtectionConfig(),
                 Rules =
                 {
                     new SecurityPolicyRule(),
                 },
+                Region = "regionedb20d96",
                 AdaptiveProtectionConfig = new SecurityPolicyAdaptiveProtectionConfig(),
                 Fingerprint = "fingerprint009e6052",
                 Description = "description2cf9da67",
@@ -91,7 +96,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 RecaptchaOptionsConfig = new SecurityPolicyRecaptchaOptionsConfig(),
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecurityPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityPoliciesClient client = new SecurityPoliciesClientImpl(mockGrpcClient.Object, null);
+            SecurityPoliciesClient client = new SecurityPoliciesClientImpl(mockGrpcClient.Object, null, null);
             SecurityPolicy responseCallSettings = await client.GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecurityPolicy responseCancellationToken = await client.GetAsync(request, st::CancellationToken.None);
@@ -116,10 +121,12 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 Type = "typee2cc9d59",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                DdosProtectionConfig = new SecurityPolicyDdosProtectionConfig(),
                 Rules =
                 {
                     new SecurityPolicyRule(),
                 },
+                Region = "regionedb20d96",
                 AdaptiveProtectionConfig = new SecurityPolicyAdaptiveProtectionConfig(),
                 Fingerprint = "fingerprint009e6052",
                 Description = "description2cf9da67",
@@ -128,7 +135,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 RecaptchaOptionsConfig = new SecurityPolicyRecaptchaOptionsConfig(),
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityPoliciesClient client = new SecurityPoliciesClientImpl(mockGrpcClient.Object, null);
+            SecurityPoliciesClient client = new SecurityPoliciesClientImpl(mockGrpcClient.Object, null, null);
             SecurityPolicy response = client.Get(request.Project, request.SecurityPolicy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -151,10 +158,12 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 Type = "typee2cc9d59",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                DdosProtectionConfig = new SecurityPolicyDdosProtectionConfig(),
                 Rules =
                 {
                     new SecurityPolicyRule(),
                 },
+                Region = "regionedb20d96",
                 AdaptiveProtectionConfig = new SecurityPolicyAdaptiveProtectionConfig(),
                 Fingerprint = "fingerprint009e6052",
                 Description = "description2cf9da67",
@@ -163,7 +172,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 RecaptchaOptionsConfig = new SecurityPolicyRecaptchaOptionsConfig(),
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecurityPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityPoliciesClient client = new SecurityPoliciesClientImpl(mockGrpcClient.Object, null);
+            SecurityPoliciesClient client = new SecurityPoliciesClientImpl(mockGrpcClient.Object, null, null);
             SecurityPolicy responseCallSettings = await client.GetAsync(request.Project, request.SecurityPolicy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecurityPolicy responseCancellationToken = await client.GetAsync(request.Project, request.SecurityPolicy, st::CancellationToken.None);
@@ -195,7 +204,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Priority = 1546225849,
             };
             mockGrpcClient.Setup(x => x.GetRule(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityPoliciesClient client = new SecurityPoliciesClientImpl(mockGrpcClient.Object, null);
+            SecurityPoliciesClient client = new SecurityPoliciesClientImpl(mockGrpcClient.Object, null, null);
             SecurityPolicyRule response = client.GetRule(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -225,7 +234,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Priority = 1546225849,
             };
             mockGrpcClient.Setup(x => x.GetRuleAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecurityPolicyRule>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityPoliciesClient client = new SecurityPoliciesClientImpl(mockGrpcClient.Object, null);
+            SecurityPoliciesClient client = new SecurityPoliciesClientImpl(mockGrpcClient.Object, null, null);
             SecurityPolicyRule responseCallSettings = await client.GetRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecurityPolicyRule responseCancellationToken = await client.GetRuleAsync(request, st::CancellationToken.None);
@@ -256,7 +265,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Priority = 1546225849,
             };
             mockGrpcClient.Setup(x => x.GetRule(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityPoliciesClient client = new SecurityPoliciesClientImpl(mockGrpcClient.Object, null);
+            SecurityPoliciesClient client = new SecurityPoliciesClientImpl(mockGrpcClient.Object, null, null);
             SecurityPolicyRule response = client.GetRule(request.Project, request.SecurityPolicy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -285,7 +294,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Priority = 1546225849,
             };
             mockGrpcClient.Setup(x => x.GetRuleAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecurityPolicyRule>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityPoliciesClient client = new SecurityPoliciesClientImpl(mockGrpcClient.Object, null);
+            SecurityPoliciesClient client = new SecurityPoliciesClientImpl(mockGrpcClient.Object, null, null);
             SecurityPolicyRule responseCallSettings = await client.GetRuleAsync(request.Project, request.SecurityPolicy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecurityPolicyRule responseCancellationToken = await client.GetRuleAsync(request.Project, request.SecurityPolicy, st::CancellationToken.None);
@@ -312,7 +321,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 PreconfiguredExpressionSets = new SecurityPoliciesWafConfig(),
             };
             mockGrpcClient.Setup(x => x.ListPreconfiguredExpressionSets(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityPoliciesClient client = new SecurityPoliciesClientImpl(mockGrpcClient.Object, null);
+            SecurityPoliciesClient client = new SecurityPoliciesClientImpl(mockGrpcClient.Object, null, null);
             SecurityPoliciesListPreconfiguredExpressionSetsResponse response = client.ListPreconfiguredExpressionSets(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -337,7 +346,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 PreconfiguredExpressionSets = new SecurityPoliciesWafConfig(),
             };
             mockGrpcClient.Setup(x => x.ListPreconfiguredExpressionSetsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecurityPoliciesListPreconfiguredExpressionSetsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityPoliciesClient client = new SecurityPoliciesClientImpl(mockGrpcClient.Object, null);
+            SecurityPoliciesClient client = new SecurityPoliciesClientImpl(mockGrpcClient.Object, null, null);
             SecurityPoliciesListPreconfiguredExpressionSetsResponse responseCallSettings = await client.ListPreconfiguredExpressionSetsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecurityPoliciesListPreconfiguredExpressionSetsResponse responseCancellationToken = await client.ListPreconfiguredExpressionSetsAsync(request, st::CancellationToken.None);
@@ -359,7 +368,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 PreconfiguredExpressionSets = new SecurityPoliciesWafConfig(),
             };
             mockGrpcClient.Setup(x => x.ListPreconfiguredExpressionSets(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityPoliciesClient client = new SecurityPoliciesClientImpl(mockGrpcClient.Object, null);
+            SecurityPoliciesClient client = new SecurityPoliciesClientImpl(mockGrpcClient.Object, null, null);
             SecurityPoliciesListPreconfiguredExpressionSetsResponse response = client.ListPreconfiguredExpressionSets(request.Project);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -379,7 +388,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 PreconfiguredExpressionSets = new SecurityPoliciesWafConfig(),
             };
             mockGrpcClient.Setup(x => x.ListPreconfiguredExpressionSetsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecurityPoliciesListPreconfiguredExpressionSetsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityPoliciesClient client = new SecurityPoliciesClientImpl(mockGrpcClient.Object, null);
+            SecurityPoliciesClient client = new SecurityPoliciesClientImpl(mockGrpcClient.Object, null, null);
             SecurityPoliciesListPreconfiguredExpressionSetsResponse responseCallSettings = await client.ListPreconfiguredExpressionSetsAsync(request.Project, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecurityPoliciesListPreconfiguredExpressionSetsResponse responseCancellationToken = await client.ListPreconfiguredExpressionSetsAsync(request.Project, st::CancellationToken.None);

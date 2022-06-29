@@ -15,6 +15,7 @@
 using Google.Cloud.Tools.Common;
 using Google.Cloud.Tools.ReleaseManager.History;
 using LibGit2Sharp;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -34,7 +35,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
         /// </summary>
         public HashSet<string> Commits { get; set; }
 
-        IEnumerable<ReleaseProposal> IBatchCriterion.GetProposals(ApiCatalog catalog)
+        IEnumerable<ReleaseProposal> IBatchCriterion.GetProposals(ApiCatalog catalog, Func<string, StructuredVersion, StructuredVersion> versionIncrementer, string defaultMessage)
         {
             var root = DirectoryLayout.DetermineRootDirectory();
             using var repo = new Repository(root);
@@ -48,8 +49,8 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
                 {
                     continue;
                 }
-                var newVersion = api.StructuredVersion.AfterIncrement();
-                var proposal = ReleaseProposal.CreateFromHistory(repo, api.Id, newVersion);
+                var newVersion = versionIncrementer(api.Id, api.StructuredVersion);
+                var proposal = ReleaseProposal.CreateFromHistory(repo, api.Id, newVersion, defaultMessage);
 
                 // Potentially replace the natural history with an override
                 if (!string.IsNullOrEmpty(HistoryOverride) && proposal.NewHistorySection is HistoryFile.Section newSection)

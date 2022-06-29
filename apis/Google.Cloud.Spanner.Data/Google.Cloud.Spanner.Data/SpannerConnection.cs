@@ -20,13 +20,12 @@ using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf;
 using Grpc.Core;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.Common;
 using System.Threading;
 using System.Threading.Tasks;
-
+using static Google.Cloud.Spanner.V1.TransactionOptions.Types;
 using Transaction = System.Transactions.Transaction;
 
 namespace Google.Cloud.Spanner.Data
@@ -48,8 +47,9 @@ namespace Google.Cloud.Spanner.Data
     /// </summary>
     public sealed class SpannerConnection : DbConnection
     {
-        // Read/write transaction options; no additional state, so can be reused.
-        internal static readonly TransactionOptions s_readWriteTransactionOptions = new TransactionOptions { ReadWrite = new TransactionOptions.Types.ReadWrite() };
+        // Transaction options; no additional state, so can be reused.
+        internal static TransactionOptions ReadWriteTransactionOptions { get; } = new TransactionOptions { ReadWrite = new ReadWrite() };
+        internal static TransactionOptions PartitionedDmlTransactionOptions { get; } = new TransactionOptions { PartitionedDml = new PartitionedDml() };
 
         private readonly object _sync = new object();
 
@@ -273,14 +273,30 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public new SpannerTransaction BeginTransaction() => (SpannerTransaction)base.BeginTransaction();
 
+#if NETSTANDARD2_1_OR_GREATER
+        /// <inheritdoc />
+        protected override async ValueTask<DbTransaction> BeginDbTransactionAsync(IsolationLevel isolationLevel, CancellationToken cancellationToken)
+        {
+            if (isolationLevel != IsolationLevel.Unspecified && isolationLevel != IsolationLevel.Serializable)
+            {
+                throw new NotSupportedException(
+                    $"Cloud Spanner only supports isolation levels {IsolationLevel.Serializable} and {IsolationLevel.Unspecified}.");
+            }
+            return await BeginTransactionAsync(cancellationToken).ConfigureAwait(false);
+        }
+#endif
         /// <summary>
         /// Begins a new read/write transaction.
         /// This method is thread safe.
         /// </summary>
         /// <param name="cancellationToken">An optional token for canceling the call.</param>
         /// <returns>A new <see cref="SpannerTransaction" /></returns>
+#if NET462
         public Task<SpannerTransaction> BeginTransactionAsync(CancellationToken cancellationToken = default) =>
-            BeginTransactionImplAsync(s_readWriteTransactionOptions, TransactionMode.ReadWrite, cancellationToken);
+#else
+        public new Task<SpannerTransaction> BeginTransactionAsync(CancellationToken cancellationToken = default) =>
+#endif
+            BeginTransactionImplAsync(ReadWriteTransactionOptions, TransactionMode.ReadWrite, cancellationToken);
 
         /// <summary>
         /// Executes a read-write transaction, with retries as necessary.
@@ -774,7 +790,7 @@ namespace Google.Cloud.Spanner.Data
         }
 
         internal async Task<PooledSession> AcquireReadWriteSessionAsync(CancellationToken cancellationToken) =>
-            await AcquireSessionAsync(s_readWriteTransactionOptions, cancellationToken).ConfigureAwait(false);
+            await AcquireSessionAsync(ReadWriteTransactionOptions, cancellationToken).ConfigureAwait(false);
 
         internal Task<PooledSession> AcquireSessionAsync(TransactionOptions options, CancellationToken cancellationToken)
         {
@@ -804,7 +820,7 @@ namespace Google.Cloud.Spanner.Data
                 {
                     await OpenAsync(cancellationToken).ConfigureAwait(false);
                     var session = await AcquireSessionAsync(transactionOptions, cancellationToken).ConfigureAwait(false);
-                    return new SpannerTransaction(this, transactionMode, session, targetReadTimestamp) { LogCommitStats = LogCommitStats };
+                    return new SpannerTransaction(this, transactionMode, session, targetReadTimestamp);
                 }, "SpannerConnection.BeginTransaction", Logger);
         }
 

@@ -4267,7 +4267,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
   /// design pattern.
   ///
   /// This singleton resource can be accessed at:
-  /// `projects/{project_id}/datastore-firestore-migration`
+  /// "projects/{project_id}/operations/datastore-firestore-migration"
   /// </summary>
   public sealed partial class DatastoreFirestoreMigrationMetadata : pb::IMessage<DatastoreFirestoreMigrationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

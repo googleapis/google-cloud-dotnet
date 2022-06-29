@@ -1,5 +1,72 @@
 # Version history
 
+## Version 4.0.0, released 2022-06-22
+
+First GA release of v4.0. Please see release notes for 4.0.0-beta01 and 4.0.0-beta02 for details of breaking changes since v3.x
+
+### Bug fixes
+
+- Fix ToDecimal truncation for SpannerNumeric. ([commit 2be4686](https://github.com/googleapis/google-cloud-dotnet/commit/2be4686f77e94f03a8198490769c40da41166ad2))
+- Fixes ToDecimal truncation for PgNumeric. ([commit 3ff15fb](https://github.com/googleapis/google-cloud-dotnet/commit/3ff15fb663ec9d1f7b2b3eef796d910d8767c673))
+
+## Version 4.0.0-beta02, released 2022-06-13
+
+### New features
+
+- Add connection string options support to Keys ([commit 65920aa](https://github.com/googleapis/google-cloud-dotnet/commit/65920aa1e6f44751ebe5295b99cdd63b5763a503))
+
+BREAKING CHANGE: The Key classes (Key, KeyRange, KeySet) used to be
+immutable, and support equality as well as overriding ToString. As
+conversions from CLR to Spanner values now depend on the connection
+string, there's now an overload for ToString accepting a
+ConnectioStringBuilder, but no support for equality. We don't
+anticipate this breaking customers except perhaps for testing
+purposes.
+
+## Version 4.0.0-beta01, released 2022-06-09
+
+This is the first version of this package to depend on GAX v4.
+
+There are some breaking changes, both in GAX v4 and in the generated
+code. The changes that aren't specific to any given API are [described in the Google Cloud
+documentation](https://cloud.google.com/dotnet/docs/reference/help/breaking-gax4).
+We don't anticipate any changes to most customer code, but please [file a
+GitHub issue](https://github.com/googleapis/google-cloud-dotnet/issues/new/choose)
+if you run into problems.
+
+The most important change in this release is the use of the Grpc.Net.Client package
+for gRPC communication, instead of Grpc.Core. When using .NET Core 3.1 or .NET 5.0+
+this should lead to a smaller installation footprint and greater compatibility (e.g.
+with Apple M1 chips). Any significant change in a core component comes with the risk
+of incompatibility, however - so again, please let us know if you encounter any
+issues.
+
+### New features
+
+- Add an adapter for an ILogger to a Spanner Logger ([commit 5b7556b](https://github.com/googleapis/google-cloud-dotnet/commit/5b7556b84be5e708d6ae69ace2e32e2299ef2ae1))
+  - This is an interim step to allow logs to be easily unified (to ILogger) before we eventually remove the Spanner internal logging system entirely.
+- Use self-signed JWTs in Spanner clients ([commit d465906](https://github.com/googleapis/google-cloud-dotnet/commit/d465906a562719eb4d0ddb8574110cf47ffc71ca))
+- Add Session creator role ([commit ffa9c84](https://github.com/googleapis/google-cloud-dotnet/commit/ffa9c8456626be0270836428b7ff19408e8c9d2d))
+- Allow default conversions between Spanner and the CLR to be specified via connection string options
+
+### Documentation improvements
+
+- Clarify transaction semantics ([commit ffa9c84](https://github.com/googleapis/google-cloud-dotnet/commit/ffa9c8456626be0270836428b7ff19408e8c9d2d))
+
+## Version 3.15.1, released 2022-05-05
+
+### Bug fixes
+
+- Make SpannerTransaction pick up SpannerConnection.LogCommitStats as documented. ([commit db5c55d](https://github.com/googleapis/google-cloud-dotnet/commit/db5c55d16cc4fc1dfd33db8dcb949b86861b1507))
+
+## Version 3.15.0, released 2022-05-04
+
+### New features
+
+- Make ephemeral transactions retry on abort. ([commit 97faf1c](https://github.com/googleapis/google-cloud-dotnet/commit/97faf1c96266fc0e7d45706a4c29acc7d63b43ff))
+- Introduced `SpannerDate` struct for date-only values. (The default type for `DATE` columns is still `DateTime`.) ([commit 4e3b94e](https://github.com/googleapis/google-cloud-dotnet/commit/4e3b94e66a2776b6eefbefb69f5e7769cff8f794))
+- Introduced `PgNumeric` struct for support of the `NUMERIC` data type in the Postgres dialect. ([commit 87c3306](https://github.com/googleapis/google-cloud-dotnet/commit/87c330666cc096085f8cfa2e1e5b2cacb25e3585))
+
 ## Version 3.14.0, released 2022-03-28
 
 ### New features

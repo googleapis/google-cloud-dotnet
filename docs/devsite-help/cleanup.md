@@ -35,6 +35,8 @@ when either the application domain is unloaded, or the process exits. For most a
 perfectly adequate; explicit shutdown is only required when your application needs to ensure that
 it has handled all requests appropriately before exiting.
 
+For more information, see the [client lifecycle documentation](client-lifecycle.md)
+
 ## REST-based APIs
 
 Summary: Use a single client if you can. Clients are threads-safe,

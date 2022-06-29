@@ -1,5 +1,49 @@
 # Version history
 
+## Version 3.0.0, released 2022-06-08
+
+This is the first version of this package to depend on GAX v4.
+
+There are some breaking changes, both in GAX v4 and in the generated
+code. The changes that aren't specific to any given API are [described in the Google Cloud
+documentation](https://cloud.google.com/dotnet/docs/reference/help/breaking-gax4).
+We don't anticipate any changes to most customer code, but please [file a
+GitHub issue](https://github.com/googleapis/google-cloud-dotnet/issues/new/choose)
+if you run into problems.
+
+The most important change in this release is the use of the Grpc.Net.Client package
+for gRPC communication, instead of Grpc.Core. When using .NET Core 3.1 or .NET 5.0+
+this should lead to a smaller installation footprint and greater compatibility (e.g.
+with Apple M1 chips). Any significant change in a core component comes with the risk
+of incompatibility, however - so again, please let us know if you encounter any
+issues.
+
+### Bug fixes
+
+- Numeric truncation. ([commit 13ae78a](https://github.com/googleapis/google-cloud-dotnet/commit/13ae78ae3234173745c985fb6264c36911de2f04))
+
+### New features
+
+- Add BigQueryJob.ThrowOnFatalError ([commit 788a4d0](https://github.com/googleapis/google-cloud-dotnet/commit/788a4d01dde3b34f2ca799a634f5d971d91828a5))
+  - The existing BigQueryJob.ThrowOnAnyError will throw an exception if
+    *any* errors are detected, even if the job goes on to complete
+    successfully. This can happen in a query job against an external
+    data source which has been configured to permit a certain number of
+    "bad" rows, for example. The new method is a convenient way of
+    throwing an exception for a genuinely-failed job, as indicated by the
+    JobStatus.ErrorResult
+    property.
+## Version 2.4.0, released 2022-05-05
+
+GA release of the features previously in beta: support for BigNumeric, and more detailed exceptions.
+
+## Version 2.4.0-beta02, released 2022-04-26
+
+### New features
+
+- Include more information on GoogleApiException.Message when possible. ([commit 2057c2e](https://github.com/googleapis/google-cloud-dotnet/commit/2057c2eea72f205fd79860094d7d28a4ae056eac))
+
+BREAKING CHANGE: If calling code depended on the exact exception message, it could be broken by this change. Customers are strongly encouraged not to depend on error message text.
 ## Version 2.4.0-beta01, released 2022-02-07
 
 ### New features

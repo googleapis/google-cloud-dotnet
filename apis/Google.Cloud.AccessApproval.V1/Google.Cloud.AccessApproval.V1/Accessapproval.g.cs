@@ -32,148 +32,187 @@ namespace Google.Cloud.AccessApproval.V1 {
             "cm90bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8aH2dvb2ds",
             "ZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8iYAoPQWNjZXNzTG9jYXRpb25z",
             "EiAKGHByaW5jaXBhbF9vZmZpY2VfY291bnRyeRgBIAEoCRIrCiNwcmluY2lw",
-            "YWxfcGh5c2ljYWxfbG9jYXRpb25fY291bnRyeRgCIAEoCSLYAQoMQWNjZXNz",
+            "YWxfcGh5c2ljYWxfbG9jYXRpb25fY291bnRyeRgCIAEoCSKgAgoMQWNjZXNz",
             "UmVhc29uEj8KBHR5cGUYASABKA4yMS5nb29nbGUuY2xvdWQuYWNjZXNzYXBw",
-            "cm92YWwudjEuQWNjZXNzUmVhc29uLlR5cGUSDgoGZGV0YWlsGAIgASgJIncK",
-            "BFR5cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAAEh4KGkNVU1RPTUVSX0lOSVRJ",
-            "QVRFRF9TVVBQT1JUEAESHAoYR09PR0xFX0lOSVRJQVRFRF9TRVJWSUNFEAIS",
-            "GwoXR09PR0xFX0lOSVRJQVRFRF9SRVZJRVcQAyJ0Cg9BcHByb3ZlRGVjaXNp",
-            "b24SMAoMYXBwcm92ZV90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcBIvCgtleHBpcmVfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5UaW1lc3RhbXAiVQoPRGlzbWlzc0RlY2lzaW9uEjAKDGRpc21pc3NfdGlt",
-            "ZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEAoIaW1wbGlj",
-            "aXQYAiABKAgiMgoSUmVzb3VyY2VQcm9wZXJ0aWVzEhwKFGV4Y2x1ZGVzX2Rl",
-            "c2NlbmRhbnRzGAEgASgIIpcGCg9BcHByb3ZhbFJlcXVlc3QSDAoEbmFtZRgB",
-            "IAEoCRIfChdyZXF1ZXN0ZWRfcmVzb3VyY2VfbmFtZRgCIAEoCRJZCh1yZXF1",
-            "ZXN0ZWRfcmVzb3VyY2VfcHJvcGVydGllcxgJIAEoCzIyLmdvb2dsZS5jbG91",
-            "ZC5hY2Nlc3NhcHByb3ZhbC52MS5SZXNvdXJjZVByb3BlcnRpZXMSRgoQcmVx",
-            "dWVzdGVkX3JlYXNvbhgDIAEoCzIsLmdvb2dsZS5jbG91ZC5hY2Nlc3NhcHBy",
-            "b3ZhbC52MS5BY2Nlc3NSZWFzb24STAoTcmVxdWVzdGVkX2xvY2F0aW9ucxgE",
-            "IAEoCzIvLmdvb2dsZS5jbG91ZC5hY2Nlc3NhcHByb3ZhbC52MS5BY2Nlc3NM",
-            "b2NhdGlvbnMSMAoMcmVxdWVzdF90aW1lGAUgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcBI4ChRyZXF1ZXN0ZWRfZXhwaXJhdGlvbhgGIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASQgoHYXBwcm92ZRgHIAEoCzIv",
-            "Lmdvb2dsZS5jbG91ZC5hY2Nlc3NhcHByb3ZhbC52MS5BcHByb3ZlRGVjaXNp",
-            "b25IABJCCgdkaXNtaXNzGAggASgLMi8uZ29vZ2xlLmNsb3VkLmFjY2Vzc2Fw",
-            "cHJvdmFsLnYxLkRpc21pc3NEZWNpc2lvbkgAOuMB6kHfAQotYWNjZXNzYXBw",
-            "cm92YWwuZ29vZ2xlYXBpcy5jb20vQXBwcm92YWxSZXF1ZXN0EjZwcm9qZWN0",
-            "cy97cHJvamVjdH0vYXBwcm92YWxSZXF1ZXN0cy97YXBwcm92YWxfcmVxdWVz",
-            "dH0SNGZvbGRlcnMve2ZvbGRlcn0vYXBwcm92YWxSZXF1ZXN0cy97YXBwcm92",
-            "YWxfcmVxdWVzdH0SQG9yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vYXBw",
-            "cm92YWxSZXF1ZXN0cy97YXBwcm92YWxfcmVxdWVzdH1CCgoIZGVjaXNpb24i",
-            "cwoPRW5yb2xsZWRTZXJ2aWNlEhUKDWNsb3VkX3Byb2R1Y3QYASABKAkSSQoQ",
-            "ZW5yb2xsbWVudF9sZXZlbBgCIAEoDjIvLmdvb2dsZS5jbG91ZC5hY2Nlc3Nh",
-            "cHByb3ZhbC52MS5FbnJvbGxtZW50TGV2ZWwisAMKFkFjY2Vzc0FwcHJvdmFs",
-            "U2V0dGluZ3MSRwoEbmFtZRgBIAEoCUI5+kE2CjRhY2Nlc3NhcHByb3ZhbC5n",
-            "b29nbGVhcGlzLmNvbS9BY2Nlc3NBcHByb3ZhbFNldHRpbmdzEhsKE25vdGlm",
-            "aWNhdGlvbl9lbWFpbHMYAiADKAkSSgoRZW5yb2xsZWRfc2VydmljZXMYAyAD",
-            "KAsyLy5nb29nbGUuY2xvdWQuYWNjZXNzYXBwcm92YWwudjEuRW5yb2xsZWRT",
-            "ZXJ2aWNlEh4KEWVucm9sbGVkX2FuY2VzdG9yGAQgASgIQgPgQQM6wwHqQb8B",
-            "CjRhY2Nlc3NhcHByb3ZhbC5nb29nbGVhcGlzLmNvbS9BY2Nlc3NBcHByb3Zh",
-            "bFNldHRpbmdzEilwcm9qZWN0cy97cHJvamVjdH0vYWNjZXNzQXBwcm92YWxT",
-            "ZXR0aW5ncxInZm9sZGVycy97Zm9sZGVyfS9hY2Nlc3NBcHByb3ZhbFNldHRp",
-            "bmdzEjNvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L2FjY2Vzc0FwcHJv",
-            "dmFsU2V0dGluZ3MimAEKG0xpc3RBcHByb3ZhbFJlcXVlc3RzTWVzc2FnZRJC",
-            "CgZwYXJlbnQYASABKAlCMvpBLxItYWNjZXNzYXBwcm92YWwuZ29vZ2xlYXBp",
-            "cy5jb20vQXBwcm92YWxSZXF1ZXN0Eg4KBmZpbHRlchgCIAEoCRIRCglwYWdl",
-            "X3NpemUYAyABKAUSEgoKcGFnZV90b2tlbhgEIAEoCSKDAQocTGlzdEFwcHJv",
-            "dmFsUmVxdWVzdHNSZXNwb25zZRJKChFhcHByb3ZhbF9yZXF1ZXN0cxgBIAMo",
-            "CzIvLmdvb2dsZS5jbG91ZC5hY2Nlc3NhcHByb3ZhbC52MS5BcHByb3ZhbFJl",
-            "cXVlc3QSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIl0KGUdldEFwcHJvdmFs",
-            "UmVxdWVzdE1lc3NhZ2USQAoEbmFtZRgBIAEoCUIy+kEvCi1hY2Nlc3NhcHBy",
-            "b3ZhbC5nb29nbGVhcGlzLmNvbS9BcHByb3ZhbFJlcXVlc3QikgEKHUFwcHJv",
-            "dmVBcHByb3ZhbFJlcXVlc3RNZXNzYWdlEkAKBG5hbWUYASABKAlCMvpBLwot",
-            "YWNjZXNzYXBwcm92YWwuZ29vZ2xlYXBpcy5jb20vQXBwcm92YWxSZXF1ZXN0",
-            "Ei8KC2V4cGlyZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcCJhCh1EaXNtaXNzQXBwcm92YWxSZXF1ZXN0TWVzc2FnZRJACgRuYW1l",
-            "GAEgASgJQjL6QS8KLWFjY2Vzc2FwcHJvdmFsLmdvb2dsZWFwaXMuY29tL0Fw",
-            "cHJvdmFsUmVxdWVzdCJrCiBHZXRBY2Nlc3NBcHByb3ZhbFNldHRpbmdzTWVz",
-            "c2FnZRJHCgRuYW1lGAEgASgJQjn6QTYKNGFjY2Vzc2FwcHJvdmFsLmdvb2ds",
-            "ZWFwaXMuY29tL0FjY2Vzc0FwcHJvdmFsU2V0dGluZ3MioAEKI1VwZGF0ZUFj",
-            "Y2Vzc0FwcHJvdmFsU2V0dGluZ3NNZXNzYWdlEkgKCHNldHRpbmdzGAEgASgL",
-            "MjYuZ29vZ2xlLmNsb3VkLmFjY2Vzc2FwcHJvdmFsLnYxLkFjY2Vzc0FwcHJv",
-            "dmFsU2V0dGluZ3MSLwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuRmllbGRNYXNrIm4KI0RlbGV0ZUFjY2Vzc0FwcHJvdmFsU2V0dGlu",
-            "Z3NNZXNzYWdlEkcKBG5hbWUYASABKAlCOfpBNgo0YWNjZXNzYXBwcm92YWwu",
-            "Z29vZ2xlYXBpcy5jb20vQWNjZXNzQXBwcm92YWxTZXR0aW5ncypCCg9FbnJv",
-            "bGxtZW50TGV2ZWwSIAocRU5ST0xMTUVOVF9MRVZFTF9VTlNQRUNJRklFRBAA",
-            "Eg0KCUJMT0NLX0FMTBABMogSCg5BY2Nlc3NBcHByb3ZhbBKqAgoUTGlzdEFw",
-            "cHJvdmFsUmVxdWVzdHMSOy5nb29nbGUuY2xvdWQuYWNjZXNzYXBwcm92YWwu",
-            "djEuTGlzdEFwcHJvdmFsUmVxdWVzdHNNZXNzYWdlGjwuZ29vZ2xlLmNsb3Vk",
-            "LmFjY2Vzc2FwcHJvdmFsLnYxLkxpc3RBcHByb3ZhbFJlcXVlc3RzUmVzcG9u",
-            "c2UilgGC0+STAoYBEigvdjEve3BhcmVudD1wcm9qZWN0cy8qfS9hcHByb3Zh",
-            "bFJlcXVlc3RzWikSJy92MS97cGFyZW50PWZvbGRlcnMvKn0vYXBwcm92YWxS",
-            "ZXF1ZXN0c1ovEi0vdjEve3BhcmVudD1vcmdhbml6YXRpb25zLyp9L2FwcHJv",
-            "dmFsUmVxdWVzdHPaQQZwYXJlbnQSlwIKEkdldEFwcHJvdmFsUmVxdWVzdBI5",
-            "Lmdvb2dsZS5jbG91ZC5hY2Nlc3NhcHByb3ZhbC52MS5HZXRBcHByb3ZhbFJl",
-            "cXVlc3RNZXNzYWdlGi8uZ29vZ2xlLmNsb3VkLmFjY2Vzc2FwcHJvdmFsLnYx",
-            "LkFwcHJvdmFsUmVxdWVzdCKUAYLT5JMChgESKC92MS97bmFtZT1wcm9qZWN0",
-            "cy8qL2FwcHJvdmFsUmVxdWVzdHMvKn1aKRInL3YxL3tuYW1lPWZvbGRlcnMv",
-            "Ki9hcHByb3ZhbFJlcXVlc3RzLyp9Wi8SLS92MS97bmFtZT1vcmdhbml6YXRp",
-            "b25zLyovYXBwcm92YWxSZXF1ZXN0cy8qfdpBBG5hbWUSuQIKFkFwcHJvdmVB",
-            "cHByb3ZhbFJlcXVlc3QSPS5nb29nbGUuY2xvdWQuYWNjZXNzYXBwcm92YWwu",
-            "djEuQXBwcm92ZUFwcHJvdmFsUmVxdWVzdE1lc3NhZ2UaLy5nb29nbGUuY2xv",
-            "dWQuYWNjZXNzYXBwcm92YWwudjEuQXBwcm92YWxSZXF1ZXN0Iq4BgtPkkwKn",
-            "ASIwL3YxL3tuYW1lPXByb2plY3RzLyovYXBwcm92YWxSZXF1ZXN0cy8qfTph",
-            "cHByb3ZlOgEqWjQiLy92MS97bmFtZT1mb2xkZXJzLyovYXBwcm92YWxSZXF1",
-            "ZXN0cy8qfTphcHByb3ZlOgEqWjoiNS92MS97bmFtZT1vcmdhbml6YXRpb25z",
-            "LyovYXBwcm92YWxSZXF1ZXN0cy8qfTphcHByb3ZlOgEqErkCChZEaXNtaXNz",
-            "QXBwcm92YWxSZXF1ZXN0Ej0uZ29vZ2xlLmNsb3VkLmFjY2Vzc2FwcHJvdmFs",
-            "LnYxLkRpc21pc3NBcHByb3ZhbFJlcXVlc3RNZXNzYWdlGi8uZ29vZ2xlLmNs",
-            "b3VkLmFjY2Vzc2FwcHJvdmFsLnYxLkFwcHJvdmFsUmVxdWVzdCKuAYLT5JMC",
-            "pwEiMC92MS97bmFtZT1wcm9qZWN0cy8qL2FwcHJvdmFsUmVxdWVzdHMvKn06",
-            "ZGlzbWlzczoBKlo0Ii8vdjEve25hbWU9Zm9sZGVycy8qL2FwcHJvdmFsUmVx",
-            "dWVzdHMvKn06ZGlzbWlzczoBKlo6IjUvdjEve25hbWU9b3JnYW5pemF0aW9u",
-            "cy8qL2FwcHJvdmFsUmVxdWVzdHMvKn06ZGlzbWlzczoBKhK4AgoZR2V0QWNj",
-            "ZXNzQXBwcm92YWxTZXR0aW5ncxJALmdvb2dsZS5jbG91ZC5hY2Nlc3NhcHBy",
-            "b3ZhbC52MS5HZXRBY2Nlc3NBcHByb3ZhbFNldHRpbmdzTWVzc2FnZRo2Lmdv",
-            "b2dsZS5jbG91ZC5hY2Nlc3NhcHByb3ZhbC52MS5BY2Nlc3NBcHByb3ZhbFNl",
-            "dHRpbmdzIqABgtPkkwKSARIsL3YxL3tuYW1lPXByb2plY3RzLyovYWNjZXNz",
-            "QXBwcm92YWxTZXR0aW5nc31aLRIrL3YxL3tuYW1lPWZvbGRlcnMvKi9hY2Nl",
-            "c3NBcHByb3ZhbFNldHRpbmdzfVozEjEvdjEve25hbWU9b3JnYW5pemF0aW9u",
-            "cy8qL2FjY2Vzc0FwcHJvdmFsU2V0dGluZ3N92kEEbmFtZRKHAwocVXBkYXRl",
-            "QWNjZXNzQXBwcm92YWxTZXR0aW5ncxJDLmdvb2dsZS5jbG91ZC5hY2Nlc3Nh",
-            "cHByb3ZhbC52MS5VcGRhdGVBY2Nlc3NBcHByb3ZhbFNldHRpbmdzTWVzc2Fn",
-            "ZRo2Lmdvb2dsZS5jbG91ZC5hY2Nlc3NhcHByb3ZhbC52MS5BY2Nlc3NBcHBy",
-            "b3ZhbFNldHRpbmdzIukBgtPkkwLLATI1L3YxL3tzZXR0aW5ncy5uYW1lPXBy",
-            "b2plY3RzLyovYWNjZXNzQXBwcm92YWxTZXR0aW5nc306CHNldHRpbmdzWkAy",
-            "NC92MS97c2V0dGluZ3MubmFtZT1mb2xkZXJzLyovYWNjZXNzQXBwcm92YWxT",
-            "ZXR0aW5nc306CHNldHRpbmdzWkYyOi92MS97c2V0dGluZ3MubmFtZT1vcmdh",
-            "bml6YXRpb25zLyovYWNjZXNzQXBwcm92YWxTZXR0aW5nc306CHNldHRpbmdz",
-            "2kEUc2V0dGluZ3MsdXBkYXRlX21hc2sSngIKHERlbGV0ZUFjY2Vzc0FwcHJv",
-            "dmFsU2V0dGluZ3MSQy5nb29nbGUuY2xvdWQuYWNjZXNzYXBwcm92YWwudjEu",
-            "RGVsZXRlQWNjZXNzQXBwcm92YWxTZXR0aW5nc01lc3NhZ2UaFi5nb29nbGUu",
-            "cHJvdG9idWYuRW1wdHkioAGC0+STApIBKiwvdjEve25hbWU9cHJvamVjdHMv",
-            "Ki9hY2Nlc3NBcHByb3ZhbFNldHRpbmdzfVotKisvdjEve25hbWU9Zm9sZGVy",
-            "cy8qL2FjY2Vzc0FwcHJvdmFsU2V0dGluZ3N9WjMqMS92MS97bmFtZT1vcmdh",
-            "bml6YXRpb25zLyovYWNjZXNzQXBwcm92YWxTZXR0aW5nc33aQQRuYW1lGlHK",
-            "QR1hY2Nlc3NhcHByb3ZhbC5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3",
-            "Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C7wEKImNvbS5n",
-            "b29nbGUuY2xvdWQuYWNjZXNzYXBwcm92YWwudjFCE0FjY2Vzc0FwcHJvdmFs",
-            "UHJvdG9QAVpMZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
-            "cy9jbG91ZC9hY2Nlc3NhcHByb3ZhbC92MTthY2Nlc3NhcHByb3ZhbKoCHkdv",
-            "b2dsZS5DbG91ZC5BY2Nlc3NBcHByb3ZhbC5WMcoCHkdvb2dsZVxDbG91ZFxB",
-            "Y2Nlc3NBcHByb3ZhbFxWMeoCIUdvb2dsZTo6Q2xvdWQ6OkFjY2Vzc0FwcHJv",
-            "dmFsOjpWMWIGcHJvdG8z"));
+            "cm92YWwudjEuQWNjZXNzUmVhc29uLlR5cGUSDgoGZGV0YWlsGAIgASgJIr4B",
+            "CgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABIeChpDVVNUT01FUl9JTklU",
+            "SUFURURfU1VQUE9SVBABEhwKGEdPT0dMRV9JTklUSUFURURfU0VSVklDRRAC",
+            "EhsKF0dPT0dMRV9JTklUSUFURURfUkVWSUVXEAMSHAoYVEhJUkRfUEFSVFlf",
+            "REFUQV9SRVFVRVNUEAQSJwojR09PR0xFX1JFU1BPTlNFX1RPX1BST0RVQ1RJ",
+            "T05fQUxFUlQQBSJ8Cg1TaWduYXR1cmVJbmZvEhEKCXNpZ25hdHVyZRgBIAEo",
+            "DBIfChVnb29nbGVfcHVibGljX2tleV9wZW0YAiABKAlIABIiChhjdXN0b21l",
+            "cl9rbXNfa2V5X3ZlcnNpb24YAyABKAlIAEITChF2ZXJpZmljYXRpb25faW5m",
+            "byKHAgoPQXBwcm92ZURlY2lzaW9uEjAKDGFwcHJvdmVfdGltZRgBIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoLZXhwaXJlX3RpbWUYAiAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjMKD2ludmFsaWRhdGVf",
+            "dGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASRQoOc2ln",
+            "bmF0dXJlX2luZm8YBCABKAsyLS5nb29nbGUuY2xvdWQuYWNjZXNzYXBwcm92",
+            "YWwudjEuU2lnbmF0dXJlSW5mbxIVCg1hdXRvX2FwcHJvdmVkGAUgASgIIlUK",
+            "D0Rpc21pc3NEZWNpc2lvbhIwCgxkaXNtaXNzX3RpbWUYASABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wEhAKCGltcGxpY2l0GAIgASgIIjIKElJl",
+            "c291cmNlUHJvcGVydGllcxIcChRleGNsdWRlc19kZXNjZW5kYW50cxgBIAEo",
+            "CCKXBgoPQXBwcm92YWxSZXF1ZXN0EgwKBG5hbWUYASABKAkSHwoXcmVxdWVz",
+            "dGVkX3Jlc291cmNlX25hbWUYAiABKAkSWQodcmVxdWVzdGVkX3Jlc291cmNl",
+            "X3Byb3BlcnRpZXMYCSABKAsyMi5nb29nbGUuY2xvdWQuYWNjZXNzYXBwcm92",
+            "YWwudjEuUmVzb3VyY2VQcm9wZXJ0aWVzEkYKEHJlcXVlc3RlZF9yZWFzb24Y",
+            "AyABKAsyLC5nb29nbGUuY2xvdWQuYWNjZXNzYXBwcm92YWwudjEuQWNjZXNz",
+            "UmVhc29uEkwKE3JlcXVlc3RlZF9sb2NhdGlvbnMYBCABKAsyLy5nb29nbGUu",
+            "Y2xvdWQuYWNjZXNzYXBwcm92YWwudjEuQWNjZXNzTG9jYXRpb25zEjAKDHJl",
+            "cXVlc3RfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
+            "OAoUcmVxdWVzdGVkX2V4cGlyYXRpb24YBiABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wEkIKB2FwcHJvdmUYByABKAsyLy5nb29nbGUuY2xvdWQu",
+            "YWNjZXNzYXBwcm92YWwudjEuQXBwcm92ZURlY2lzaW9uSAASQgoHZGlzbWlz",
+            "cxgIIAEoCzIvLmdvb2dsZS5jbG91ZC5hY2Nlc3NhcHByb3ZhbC52MS5EaXNt",
+            "aXNzRGVjaXNpb25IADrjAepB3wEKLWFjY2Vzc2FwcHJvdmFsLmdvb2dsZWFw",
+            "aXMuY29tL0FwcHJvdmFsUmVxdWVzdBI2cHJvamVjdHMve3Byb2plY3R9L2Fw",
+            "cHJvdmFsUmVxdWVzdHMve2FwcHJvdmFsX3JlcXVlc3R9EjRmb2xkZXJzL3tm",
+            "b2xkZXJ9L2FwcHJvdmFsUmVxdWVzdHMve2FwcHJvdmFsX3JlcXVlc3R9EkBv",
+            "cmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L2FwcHJvdmFsUmVxdWVzdHMv",
+            "e2FwcHJvdmFsX3JlcXVlc3R9QgoKCGRlY2lzaW9uInMKD0Vucm9sbGVkU2Vy",
+            "dmljZRIVCg1jbG91ZF9wcm9kdWN0GAEgASgJEkkKEGVucm9sbG1lbnRfbGV2",
+            "ZWwYAiABKA4yLy5nb29nbGUuY2xvdWQuYWNjZXNzYXBwcm92YWwudjEuRW5y",
+            "b2xsbWVudExldmVsIpwEChZBY2Nlc3NBcHByb3ZhbFNldHRpbmdzEkcKBG5h",
+            "bWUYASABKAlCOfpBNgo0YWNjZXNzYXBwcm92YWwuZ29vZ2xlYXBpcy5jb20v",
+            "QWNjZXNzQXBwcm92YWxTZXR0aW5ncxIbChNub3RpZmljYXRpb25fZW1haWxz",
+            "GAIgAygJEkoKEWVucm9sbGVkX3NlcnZpY2VzGAMgAygLMi8uZ29vZ2xlLmNs",
+            "b3VkLmFjY2Vzc2FwcHJvdmFsLnYxLkVucm9sbGVkU2VydmljZRIeChFlbnJv",
+            "bGxlZF9hbmNlc3RvchgEIAEoCEID4EEDEhoKEmFjdGl2ZV9rZXlfdmVyc2lv",
+            "bhgGIAEoCRIsCh9hbmNlc3Rvcl9oYXNfYWN0aXZlX2tleV92ZXJzaW9uGAcg",
+            "ASgIQgPgQQMSIAoTaW52YWxpZF9rZXlfdmVyc2lvbhgIIAEoCEID4EEDOsMB",
+            "6kG/AQo0YWNjZXNzYXBwcm92YWwuZ29vZ2xlYXBpcy5jb20vQWNjZXNzQXBw",
+            "cm92YWxTZXR0aW5ncxIpcHJvamVjdHMve3Byb2plY3R9L2FjY2Vzc0FwcHJv",
+            "dmFsU2V0dGluZ3MSJ2ZvbGRlcnMve2ZvbGRlcn0vYWNjZXNzQXBwcm92YWxT",
+            "ZXR0aW5ncxIzb3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9hY2Nlc3NB",
+            "cHByb3ZhbFNldHRpbmdzIrgCChxBY2Nlc3NBcHByb3ZhbFNlcnZpY2VBY2Nv",
+            "dW50Ek0KBG5hbWUYASABKAlCP/pBPAo6YWNjZXNzYXBwcm92YWwuZ29vZ2xl",
+            "YXBpcy5jb20vQWNjZXNzQXBwcm92YWxTZXJ2aWNlQWNjb3VudBIVCg1hY2Nv",
+            "dW50X2VtYWlsGAIgASgJOrEB6kGtAQo6YWNjZXNzYXBwcm92YWwuZ29vZ2xl",
+            "YXBpcy5jb20vQWNjZXNzQXBwcm92YWxTZXJ2aWNlQWNjb3VudBIhcHJvamVj",
+            "dHMve3Byb2plY3R9L3NlcnZpY2VBY2NvdW50Eh9mb2xkZXJzL3tmb2xkZXJ9",
+            "L3NlcnZpY2VBY2NvdW50Eitvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259",
+            "L3NlcnZpY2VBY2NvdW50IpgBChtMaXN0QXBwcm92YWxSZXF1ZXN0c01lc3Nh",
+            "Z2USQgoGcGFyZW50GAEgASgJQjL6QS8SLWFjY2Vzc2FwcHJvdmFsLmdvb2ds",
+            "ZWFwaXMuY29tL0FwcHJvdmFsUmVxdWVzdBIOCgZmaWx0ZXIYAiABKAkSEQoJ",
+            "cGFnZV9zaXplGAMgASgFEhIKCnBhZ2VfdG9rZW4YBCABKAkigwEKHExpc3RB",
+            "cHByb3ZhbFJlcXVlc3RzUmVzcG9uc2USSgoRYXBwcm92YWxfcmVxdWVzdHMY",
+            "ASADKAsyLy5nb29nbGUuY2xvdWQuYWNjZXNzYXBwcm92YWwudjEuQXBwcm92",
+            "YWxSZXF1ZXN0EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJdChlHZXRBcHBy",
+            "b3ZhbFJlcXVlc3RNZXNzYWdlEkAKBG5hbWUYASABKAlCMvpBLwotYWNjZXNz",
+            "YXBwcm92YWwuZ29vZ2xlYXBpcy5jb20vQXBwcm92YWxSZXF1ZXN0IpIBCh1B",
+            "cHByb3ZlQXBwcm92YWxSZXF1ZXN0TWVzc2FnZRJACgRuYW1lGAEgASgJQjL6",
+            "QS8KLWFjY2Vzc2FwcHJvdmFsLmdvb2dsZWFwaXMuY29tL0FwcHJvdmFsUmVx",
+            "dWVzdBIvCgtleHBpcmVfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXAiYQodRGlzbWlzc0FwcHJvdmFsUmVxdWVzdE1lc3NhZ2USQAoE",
+            "bmFtZRgBIAEoCUIy+kEvCi1hY2Nlc3NhcHByb3ZhbC5nb29nbGVhcGlzLmNv",
+            "bS9BcHByb3ZhbFJlcXVlc3QiZAogSW52YWxpZGF0ZUFwcHJvdmFsUmVxdWVz",
+            "dE1lc3NhZ2USQAoEbmFtZRgBIAEoCUIy+kEvCi1hY2Nlc3NhcHByb3ZhbC5n",
+            "b29nbGVhcGlzLmNvbS9BcHByb3ZhbFJlcXVlc3QiawogR2V0QWNjZXNzQXBw",
+            "cm92YWxTZXR0aW5nc01lc3NhZ2USRwoEbmFtZRgBIAEoCUI5+kE2CjRhY2Nl",
+            "c3NhcHByb3ZhbC5nb29nbGVhcGlzLmNvbS9BY2Nlc3NBcHByb3ZhbFNldHRp",
+            "bmdzIqABCiNVcGRhdGVBY2Nlc3NBcHByb3ZhbFNldHRpbmdzTWVzc2FnZRJI",
+            "CghzZXR0aW5ncxgBIAEoCzI2Lmdvb2dsZS5jbG91ZC5hY2Nlc3NhcHByb3Zh",
+            "bC52MS5BY2Nlc3NBcHByb3ZhbFNldHRpbmdzEi8KC3VwZGF0ZV9tYXNrGAIg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayJuCiNEZWxldGVBY2Nl",
+            "c3NBcHByb3ZhbFNldHRpbmdzTWVzc2FnZRJHCgRuYW1lGAEgASgJQjn6QTYK",
+            "NGFjY2Vzc2FwcHJvdmFsLmdvb2dsZWFwaXMuY29tL0FjY2Vzc0FwcHJvdmFs",
+            "U2V0dGluZ3MiNgomR2V0QWNjZXNzQXBwcm92YWxTZXJ2aWNlQWNjb3VudE1l",
+            "c3NhZ2USDAoEbmFtZRgBIAEoCSpCCg9FbnJvbGxtZW50TGV2ZWwSIAocRU5S",
+            "T0xMTUVOVF9MRVZFTF9VTlNQRUNJRklFRBAAEg0KCUJMT0NLX0FMTBABMocX",
+            "Cg5BY2Nlc3NBcHByb3ZhbBKqAgoUTGlzdEFwcHJvdmFsUmVxdWVzdHMSOy5n",
+            "b29nbGUuY2xvdWQuYWNjZXNzYXBwcm92YWwudjEuTGlzdEFwcHJvdmFsUmVx",
+            "dWVzdHNNZXNzYWdlGjwuZ29vZ2xlLmNsb3VkLmFjY2Vzc2FwcHJvdmFsLnYx",
+            "Lkxpc3RBcHByb3ZhbFJlcXVlc3RzUmVzcG9uc2UilgGC0+STAoYBEigvdjEv",
+            "e3BhcmVudD1wcm9qZWN0cy8qfS9hcHByb3ZhbFJlcXVlc3RzWikSJy92MS97",
+            "cGFyZW50PWZvbGRlcnMvKn0vYXBwcm92YWxSZXF1ZXN0c1ovEi0vdjEve3Bh",
+            "cmVudD1vcmdhbml6YXRpb25zLyp9L2FwcHJvdmFsUmVxdWVzdHPaQQZwYXJl",
+            "bnQSlwIKEkdldEFwcHJvdmFsUmVxdWVzdBI5Lmdvb2dsZS5jbG91ZC5hY2Nl",
+            "c3NhcHByb3ZhbC52MS5HZXRBcHByb3ZhbFJlcXVlc3RNZXNzYWdlGi8uZ29v",
+            "Z2xlLmNsb3VkLmFjY2Vzc2FwcHJvdmFsLnYxLkFwcHJvdmFsUmVxdWVzdCKU",
+            "AYLT5JMChgESKC92MS97bmFtZT1wcm9qZWN0cy8qL2FwcHJvdmFsUmVxdWVz",
+            "dHMvKn1aKRInL3YxL3tuYW1lPWZvbGRlcnMvKi9hcHByb3ZhbFJlcXVlc3Rz",
+            "Lyp9Wi8SLS92MS97bmFtZT1vcmdhbml6YXRpb25zLyovYXBwcm92YWxSZXF1",
+            "ZXN0cy8qfdpBBG5hbWUSuQIKFkFwcHJvdmVBcHByb3ZhbFJlcXVlc3QSPS5n",
+            "b29nbGUuY2xvdWQuYWNjZXNzYXBwcm92YWwudjEuQXBwcm92ZUFwcHJvdmFs",
+            "UmVxdWVzdE1lc3NhZ2UaLy5nb29nbGUuY2xvdWQuYWNjZXNzYXBwcm92YWwu",
+            "djEuQXBwcm92YWxSZXF1ZXN0Iq4BgtPkkwKnASIwL3YxL3tuYW1lPXByb2pl",
+            "Y3RzLyovYXBwcm92YWxSZXF1ZXN0cy8qfTphcHByb3ZlOgEqWjQiLy92MS97",
+            "bmFtZT1mb2xkZXJzLyovYXBwcm92YWxSZXF1ZXN0cy8qfTphcHByb3ZlOgEq",
+            "WjoiNS92MS97bmFtZT1vcmdhbml6YXRpb25zLyovYXBwcm92YWxSZXF1ZXN0",
+            "cy8qfTphcHByb3ZlOgEqErkCChZEaXNtaXNzQXBwcm92YWxSZXF1ZXN0Ej0u",
+            "Z29vZ2xlLmNsb3VkLmFjY2Vzc2FwcHJvdmFsLnYxLkRpc21pc3NBcHByb3Zh",
+            "bFJlcXVlc3RNZXNzYWdlGi8uZ29vZ2xlLmNsb3VkLmFjY2Vzc2FwcHJvdmFs",
+            "LnYxLkFwcHJvdmFsUmVxdWVzdCKuAYLT5JMCpwEiMC92MS97bmFtZT1wcm9q",
+            "ZWN0cy8qL2FwcHJvdmFsUmVxdWVzdHMvKn06ZGlzbWlzczoBKlo0Ii8vdjEv",
+            "e25hbWU9Zm9sZGVycy8qL2FwcHJvdmFsUmVxdWVzdHMvKn06ZGlzbWlzczoB",
+            "Klo6IjUvdjEve25hbWU9b3JnYW5pemF0aW9ucy8qL2FwcHJvdmFsUmVxdWVz",
+            "dHMvKn06ZGlzbWlzczoBKhLIAgoZSW52YWxpZGF0ZUFwcHJvdmFsUmVxdWVz",
+            "dBJALmdvb2dsZS5jbG91ZC5hY2Nlc3NhcHByb3ZhbC52MS5JbnZhbGlkYXRl",
+            "QXBwcm92YWxSZXF1ZXN0TWVzc2FnZRovLmdvb2dsZS5jbG91ZC5hY2Nlc3Nh",
+            "cHByb3ZhbC52MS5BcHByb3ZhbFJlcXVlc3QitwGC0+STArABIjMvdjEve25h",
+            "bWU9cHJvamVjdHMvKi9hcHByb3ZhbFJlcXVlc3RzLyp9OmludmFsaWRhdGU6",
+            "ASpaNyIyL3YxL3tuYW1lPWZvbGRlcnMvKi9hcHByb3ZhbFJlcXVlc3RzLyp9",
+            "OmludmFsaWRhdGU6ASpaPSI4L3YxL3tuYW1lPW9yZ2FuaXphdGlvbnMvKi9h",
+            "cHByb3ZhbFJlcXVlc3RzLyp9OmludmFsaWRhdGU6ASoSuAIKGUdldEFjY2Vz",
+            "c0FwcHJvdmFsU2V0dGluZ3MSQC5nb29nbGUuY2xvdWQuYWNjZXNzYXBwcm92",
+            "YWwudjEuR2V0QWNjZXNzQXBwcm92YWxTZXR0aW5nc01lc3NhZ2UaNi5nb29n",
+            "bGUuY2xvdWQuYWNjZXNzYXBwcm92YWwudjEuQWNjZXNzQXBwcm92YWxTZXR0",
+            "aW5ncyKgAYLT5JMCkgESLC92MS97bmFtZT1wcm9qZWN0cy8qL2FjY2Vzc0Fw",
+            "cHJvdmFsU2V0dGluZ3N9Wi0SKy92MS97bmFtZT1mb2xkZXJzLyovYWNjZXNz",
+            "QXBwcm92YWxTZXR0aW5nc31aMxIxL3YxL3tuYW1lPW9yZ2FuaXphdGlvbnMv",
+            "Ki9hY2Nlc3NBcHByb3ZhbFNldHRpbmdzfdpBBG5hbWUShwMKHFVwZGF0ZUFj",
+            "Y2Vzc0FwcHJvdmFsU2V0dGluZ3MSQy5nb29nbGUuY2xvdWQuYWNjZXNzYXBw",
+            "cm92YWwudjEuVXBkYXRlQWNjZXNzQXBwcm92YWxTZXR0aW5nc01lc3NhZ2Ua",
+            "Ni5nb29nbGUuY2xvdWQuYWNjZXNzYXBwcm92YWwudjEuQWNjZXNzQXBwcm92",
+            "YWxTZXR0aW5ncyLpAYLT5JMCywEyNS92MS97c2V0dGluZ3MubmFtZT1wcm9q",
+            "ZWN0cy8qL2FjY2Vzc0FwcHJvdmFsU2V0dGluZ3N9OghzZXR0aW5nc1pAMjQv",
+            "djEve3NldHRpbmdzLm5hbWU9Zm9sZGVycy8qL2FjY2Vzc0FwcHJvdmFsU2V0",
+            "dGluZ3N9OghzZXR0aW5nc1pGMjovdjEve3NldHRpbmdzLm5hbWU9b3JnYW5p",
+            "emF0aW9ucy8qL2FjY2Vzc0FwcHJvdmFsU2V0dGluZ3N9OghzZXR0aW5nc9pB",
+            "FHNldHRpbmdzLHVwZGF0ZV9tYXNrEp4CChxEZWxldGVBY2Nlc3NBcHByb3Zh",
+            "bFNldHRpbmdzEkMuZ29vZ2xlLmNsb3VkLmFjY2Vzc2FwcHJvdmFsLnYxLkRl",
+            "bGV0ZUFjY2Vzc0FwcHJvdmFsU2V0dGluZ3NNZXNzYWdlGhYuZ29vZ2xlLnBy",
+            "b3RvYnVmLkVtcHR5IqABgtPkkwKSASosL3YxL3tuYW1lPXByb2plY3RzLyov",
+            "YWNjZXNzQXBwcm92YWxTZXR0aW5nc31aLSorL3YxL3tuYW1lPWZvbGRlcnMv",
+            "Ki9hY2Nlc3NBcHByb3ZhbFNldHRpbmdzfVozKjEvdjEve25hbWU9b3JnYW5p",
+            "emF0aW9ucy8qL2FjY2Vzc0FwcHJvdmFsU2V0dGluZ3N92kEEbmFtZRKxAgof",
+            "R2V0QWNjZXNzQXBwcm92YWxTZXJ2aWNlQWNjb3VudBJGLmdvb2dsZS5jbG91",
+            "ZC5hY2Nlc3NhcHByb3ZhbC52MS5HZXRBY2Nlc3NBcHByb3ZhbFNlcnZpY2VB",
+            "Y2NvdW50TWVzc2FnZRo8Lmdvb2dsZS5jbG91ZC5hY2Nlc3NhcHByb3ZhbC52",
+            "MS5BY2Nlc3NBcHByb3ZhbFNlcnZpY2VBY2NvdW50IocBgtPkkwJ6EiQvdjEv",
+            "e25hbWU9cHJvamVjdHMvKi9zZXJ2aWNlQWNjb3VudH1aJRIjL3YxL3tuYW1l",
+            "PWZvbGRlcnMvKi9zZXJ2aWNlQWNjb3VudH1aKxIpL3YxL3tuYW1lPW9yZ2Fu",
+            "aXphdGlvbnMvKi9zZXJ2aWNlQWNjb3VudH3aQQRuYW1lGlHKQR1hY2Nlc3Nh",
+            "cHByb3ZhbC5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFw",
+            "aXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C7wEKImNvbS5nb29nbGUuY2xv",
+            "dWQuYWNjZXNzYXBwcm92YWwudjFCE0FjY2Vzc0FwcHJvdmFsUHJvdG9QAVpM",
+            "Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9h",
+            "Y2Nlc3NhcHByb3ZhbC92MTthY2Nlc3NhcHByb3ZhbKoCHkdvb2dsZS5DbG91",
+            "ZC5BY2Nlc3NBcHByb3ZhbC5WMcoCHkdvb2dsZVxDbG91ZFxBY2Nlc3NBcHBy",
+            "b3ZhbFxWMeoCIUdvb2dsZTo6Q2xvdWQ6OkFjY2Vzc0FwcHJvdmFsOjpWMWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AccessApproval.V1.EnrollmentLevel), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AccessApproval.V1.AccessLocations), global::Google.Cloud.AccessApproval.V1.AccessLocations.Parser, new[]{ "PrincipalOfficeCountry", "PrincipalPhysicalLocationCountry" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AccessApproval.V1.AccessReason), global::Google.Cloud.AccessApproval.V1.AccessReason.Parser, new[]{ "Type", "Detail" }, null, new[]{ typeof(global::Google.Cloud.AccessApproval.V1.AccessReason.Types.Type) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AccessApproval.V1.ApproveDecision), global::Google.Cloud.AccessApproval.V1.ApproveDecision.Parser, new[]{ "ApproveTime", "ExpireTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AccessApproval.V1.SignatureInfo), global::Google.Cloud.AccessApproval.V1.SignatureInfo.Parser, new[]{ "Signature", "GooglePublicKeyPem", "CustomerKmsKeyVersion" }, new[]{ "VerificationInfo" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AccessApproval.V1.ApproveDecision), global::Google.Cloud.AccessApproval.V1.ApproveDecision.Parser, new[]{ "ApproveTime", "ExpireTime", "InvalidateTime", "SignatureInfo", "AutoApproved" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AccessApproval.V1.DismissDecision), global::Google.Cloud.AccessApproval.V1.DismissDecision.Parser, new[]{ "DismissTime", "Implicit" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AccessApproval.V1.ResourceProperties), global::Google.Cloud.AccessApproval.V1.ResourceProperties.Parser, new[]{ "ExcludesDescendants" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AccessApproval.V1.ApprovalRequest), global::Google.Cloud.AccessApproval.V1.ApprovalRequest.Parser, new[]{ "Name", "RequestedResourceName", "RequestedResourceProperties", "RequestedReason", "RequestedLocations", "RequestTime", "RequestedExpiration", "Approve", "Dismiss" }, new[]{ "Decision" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AccessApproval.V1.EnrolledService), global::Google.Cloud.AccessApproval.V1.EnrolledService.Parser, new[]{ "CloudProduct", "EnrollmentLevel" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AccessApproval.V1.AccessApprovalSettings), global::Google.Cloud.AccessApproval.V1.AccessApprovalSettings.Parser, new[]{ "Name", "NotificationEmails", "EnrolledServices", "EnrolledAncestor" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AccessApproval.V1.AccessApprovalSettings), global::Google.Cloud.AccessApproval.V1.AccessApprovalSettings.Parser, new[]{ "Name", "NotificationEmails", "EnrolledServices", "EnrolledAncestor", "ActiveKeyVersion", "AncestorHasActiveKeyVersion", "InvalidKeyVersion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AccessApproval.V1.AccessApprovalServiceAccount), global::Google.Cloud.AccessApproval.V1.AccessApprovalServiceAccount.Parser, new[]{ "Name", "AccountEmail" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AccessApproval.V1.ListApprovalRequestsMessage), global::Google.Cloud.AccessApproval.V1.ListApprovalRequestsMessage.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AccessApproval.V1.ListApprovalRequestsResponse), global::Google.Cloud.AccessApproval.V1.ListApprovalRequestsResponse.Parser, new[]{ "ApprovalRequests", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AccessApproval.V1.GetApprovalRequestMessage), global::Google.Cloud.AccessApproval.V1.GetApprovalRequestMessage.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AccessApproval.V1.ApproveApprovalRequestMessage), global::Google.Cloud.AccessApproval.V1.ApproveApprovalRequestMessage.Parser, new[]{ "Name", "ExpireTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AccessApproval.V1.DismissApprovalRequestMessage), global::Google.Cloud.AccessApproval.V1.DismissApprovalRequestMessage.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AccessApproval.V1.InvalidateApprovalRequestMessage), global::Google.Cloud.AccessApproval.V1.InvalidateApprovalRequestMessage.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AccessApproval.V1.GetAccessApprovalSettingsMessage), global::Google.Cloud.AccessApproval.V1.GetAccessApprovalSettingsMessage.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AccessApproval.V1.UpdateAccessApprovalSettingsMessage), global::Google.Cloud.AccessApproval.V1.UpdateAccessApprovalSettingsMessage.Parser, new[]{ "Settings", "UpdateMask" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AccessApproval.V1.DeleteAccessApprovalSettingsMessage), global::Google.Cloud.AccessApproval.V1.DeleteAccessApprovalSettingsMessage.Parser, new[]{ "Name" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AccessApproval.V1.DeleteAccessApprovalSettingsMessage), global::Google.Cloud.AccessApproval.V1.DeleteAccessApprovalSettingsMessage.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AccessApproval.V1.GetAccessApprovalServiceAccountMessage), global::Google.Cloud.AccessApproval.V1.GetAccessApprovalServiceAccountMessage.Parser, new[]{ "Name" }, null, null, null, null)
           }));
     }
     #endregion
@@ -715,9 +754,9 @@ namespace Google.Cloud.AccessApproval.V1 {
         [pbr::OriginalName("CUSTOMER_INITIATED_SUPPORT")] CustomerInitiatedSupport = 1,
         /// <summary>
         /// The principal accessed customer data in order to diagnose or resolve a
-        /// suspected issue in services or a known outage. Often this access is used
-        /// to confirm that customers are not affected by a suspected service issue
-        /// or to remediate a reversible system issue.
+        /// suspected issue in services. Often this access is used to confirm that
+        /// customers are not affected by a suspected service issue or to remediate a
+        /// reversible system issue.
         /// </summary>
         [pbr::OriginalName("GOOGLE_INITIATED_SERVICE")] GoogleInitiatedService = 2,
         /// <summary>
@@ -725,10 +764,331 @@ namespace Google.Cloud.AccessApproval.V1 {
         /// purposes.
         /// </summary>
         [pbr::OriginalName("GOOGLE_INITIATED_REVIEW")] GoogleInitiatedReview = 3,
+        /// <summary>
+        /// The principal was compelled to access customer data in order to respond
+        /// to a legal third party data request or process, including legal processes
+        /// from customers themselves.
+        /// </summary>
+        [pbr::OriginalName("THIRD_PARTY_DATA_REQUEST")] ThirdPartyDataRequest = 4,
+        /// <summary>
+        /// The principal accessed customer data in order to diagnose or resolve a
+        /// suspected issue in services or a known outage.
+        /// </summary>
+        [pbr::OriginalName("GOOGLE_RESPONSE_TO_PRODUCTION_ALERT")] GoogleResponseToProductionAlert = 5,
       }
 
     }
     #endregion
+
+  }
+
+  /// <summary>
+  /// Information about the digital signature of the resource.
+  /// </summary>
+  public sealed partial class SignatureInfo : pb::IMessage<SignatureInfo>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SignatureInfo> _parser = new pb::MessageParser<SignatureInfo>(() => new SignatureInfo());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SignatureInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AccessApproval.V1.AccessapprovalReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SignatureInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SignatureInfo(SignatureInfo other) : this() {
+      signature_ = other.signature_;
+      switch (other.VerificationInfoCase) {
+        case VerificationInfoOneofCase.GooglePublicKeyPem:
+          GooglePublicKeyPem = other.GooglePublicKeyPem;
+          break;
+        case VerificationInfoOneofCase.CustomerKmsKeyVersion:
+          CustomerKmsKeyVersion = other.CustomerKmsKeyVersion;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SignatureInfo Clone() {
+      return new SignatureInfo(this);
+    }
+
+    /// <summary>Field number for the "signature" field.</summary>
+    public const int SignatureFieldNumber = 1;
+    private pb::ByteString signature_ = pb::ByteString.Empty;
+    /// <summary>
+    /// The digital signature.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pb::ByteString Signature {
+      get { return signature_; }
+      set {
+        signature_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "google_public_key_pem" field.</summary>
+    public const int GooglePublicKeyPemFieldNumber = 2;
+    /// <summary>
+    /// The public key for the Google default signing, encoded in PEM format. The
+    /// signature was created using a private key which may be verified using
+    /// this public key.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string GooglePublicKeyPem {
+      get { return verificationInfoCase_ == VerificationInfoOneofCase.GooglePublicKeyPem ? (string) verificationInfo_ : ""; }
+      set {
+        verificationInfo_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        verificationInfoCase_ = VerificationInfoOneofCase.GooglePublicKeyPem;
+      }
+    }
+
+    /// <summary>Field number for the "customer_kms_key_version" field.</summary>
+    public const int CustomerKmsKeyVersionFieldNumber = 3;
+    /// <summary>
+    /// The resource name of the customer CryptoKeyVersion used for signing.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CustomerKmsKeyVersion {
+      get { return verificationInfoCase_ == VerificationInfoOneofCase.CustomerKmsKeyVersion ? (string) verificationInfo_ : ""; }
+      set {
+        verificationInfo_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        verificationInfoCase_ = VerificationInfoOneofCase.CustomerKmsKeyVersion;
+      }
+    }
+
+    private object verificationInfo_;
+    /// <summary>Enum of possible cases for the "verification_info" oneof.</summary>
+    public enum VerificationInfoOneofCase {
+      None = 0,
+      GooglePublicKeyPem = 2,
+      CustomerKmsKeyVersion = 3,
+    }
+    private VerificationInfoOneofCase verificationInfoCase_ = VerificationInfoOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VerificationInfoOneofCase VerificationInfoCase {
+      get { return verificationInfoCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearVerificationInfo() {
+      verificationInfoCase_ = VerificationInfoOneofCase.None;
+      verificationInfo_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SignatureInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SignatureInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Signature != other.Signature) return false;
+      if (GooglePublicKeyPem != other.GooglePublicKeyPem) return false;
+      if (CustomerKmsKeyVersion != other.CustomerKmsKeyVersion) return false;
+      if (VerificationInfoCase != other.VerificationInfoCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Signature.Length != 0) hash ^= Signature.GetHashCode();
+      if (verificationInfoCase_ == VerificationInfoOneofCase.GooglePublicKeyPem) hash ^= GooglePublicKeyPem.GetHashCode();
+      if (verificationInfoCase_ == VerificationInfoOneofCase.CustomerKmsKeyVersion) hash ^= CustomerKmsKeyVersion.GetHashCode();
+      hash ^= (int) verificationInfoCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Signature.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(Signature);
+      }
+      if (verificationInfoCase_ == VerificationInfoOneofCase.GooglePublicKeyPem) {
+        output.WriteRawTag(18);
+        output.WriteString(GooglePublicKeyPem);
+      }
+      if (verificationInfoCase_ == VerificationInfoOneofCase.CustomerKmsKeyVersion) {
+        output.WriteRawTag(26);
+        output.WriteString(CustomerKmsKeyVersion);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Signature.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(Signature);
+      }
+      if (verificationInfoCase_ == VerificationInfoOneofCase.GooglePublicKeyPem) {
+        output.WriteRawTag(18);
+        output.WriteString(GooglePublicKeyPem);
+      }
+      if (verificationInfoCase_ == VerificationInfoOneofCase.CustomerKmsKeyVersion) {
+        output.WriteRawTag(26);
+        output.WriteString(CustomerKmsKeyVersion);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Signature.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Signature);
+      }
+      if (verificationInfoCase_ == VerificationInfoOneofCase.GooglePublicKeyPem) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(GooglePublicKeyPem);
+      }
+      if (verificationInfoCase_ == VerificationInfoOneofCase.CustomerKmsKeyVersion) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomerKmsKeyVersion);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SignatureInfo other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Signature.Length != 0) {
+        Signature = other.Signature;
+      }
+      switch (other.VerificationInfoCase) {
+        case VerificationInfoOneofCase.GooglePublicKeyPem:
+          GooglePublicKeyPem = other.GooglePublicKeyPem;
+          break;
+        case VerificationInfoOneofCase.CustomerKmsKeyVersion:
+          CustomerKmsKeyVersion = other.CustomerKmsKeyVersion;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Signature = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            GooglePublicKeyPem = input.ReadString();
+            break;
+          }
+          case 26: {
+            CustomerKmsKeyVersion = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Signature = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            GooglePublicKeyPem = input.ReadString();
+            break;
+          }
+          case 26: {
+            CustomerKmsKeyVersion = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -749,7 +1109,7 @@ namespace Google.Cloud.AccessApproval.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AccessApproval.V1.AccessapprovalReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.AccessApproval.V1.AccessapprovalReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -771,6 +1131,9 @@ namespace Google.Cloud.AccessApproval.V1 {
     public ApproveDecision(ApproveDecision other) : this() {
       approveTime_ = other.approveTime_ != null ? other.approveTime_.Clone() : null;
       expireTime_ = other.expireTime_ != null ? other.expireTime_.Clone() : null;
+      invalidateTime_ = other.invalidateTime_ != null ? other.invalidateTime_.Clone() : null;
+      signatureInfo_ = other.signatureInfo_ != null ? other.signatureInfo_.Clone() : null;
+      autoApproved_ = other.autoApproved_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -810,6 +1173,51 @@ namespace Google.Cloud.AccessApproval.V1 {
       }
     }
 
+    /// <summary>Field number for the "invalidate_time" field.</summary>
+    public const int InvalidateTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp invalidateTime_;
+    /// <summary>
+    /// If set, denotes the timestamp at which the approval is invalidated.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp InvalidateTime {
+      get { return invalidateTime_; }
+      set {
+        invalidateTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "signature_info" field.</summary>
+    public const int SignatureInfoFieldNumber = 4;
+    private global::Google.Cloud.AccessApproval.V1.SignatureInfo signatureInfo_;
+    /// <summary>
+    /// The signature for the ApprovalRequest and details on how it was signed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AccessApproval.V1.SignatureInfo SignatureInfo {
+      get { return signatureInfo_; }
+      set {
+        signatureInfo_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "auto_approved" field.</summary>
+    public const int AutoApprovedFieldNumber = 5;
+    private bool autoApproved_;
+    /// <summary>
+    /// True when the request has been auto-approved.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AutoApproved {
+      get { return autoApproved_; }
+      set {
+        autoApproved_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -827,6 +1235,9 @@ namespace Google.Cloud.AccessApproval.V1 {
       }
       if (!object.Equals(ApproveTime, other.ApproveTime)) return false;
       if (!object.Equals(ExpireTime, other.ExpireTime)) return false;
+      if (!object.Equals(InvalidateTime, other.InvalidateTime)) return false;
+      if (!object.Equals(SignatureInfo, other.SignatureInfo)) return false;
+      if (AutoApproved != other.AutoApproved) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -836,6 +1247,9 @@ namespace Google.Cloud.AccessApproval.V1 {
       int hash = 1;
       if (approveTime_ != null) hash ^= ApproveTime.GetHashCode();
       if (expireTime_ != null) hash ^= ExpireTime.GetHashCode();
+      if (invalidateTime_ != null) hash ^= InvalidateTime.GetHashCode();
+      if (signatureInfo_ != null) hash ^= SignatureInfo.GetHashCode();
+      if (AutoApproved != false) hash ^= AutoApproved.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -862,6 +1276,18 @@ namespace Google.Cloud.AccessApproval.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(ExpireTime);
       }
+      if (invalidateTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(InvalidateTime);
+      }
+      if (signatureInfo_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(SignatureInfo);
+      }
+      if (AutoApproved != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(AutoApproved);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -880,6 +1306,18 @@ namespace Google.Cloud.AccessApproval.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(ExpireTime);
       }
+      if (invalidateTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(InvalidateTime);
+      }
+      if (signatureInfo_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(SignatureInfo);
+      }
+      if (AutoApproved != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(AutoApproved);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -895,6 +1333,15 @@ namespace Google.Cloud.AccessApproval.V1 {
       }
       if (expireTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExpireTime);
+      }
+      if (invalidateTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InvalidateTime);
+      }
+      if (signatureInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SignatureInfo);
+      }
+      if (AutoApproved != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -919,6 +1366,21 @@ namespace Google.Cloud.AccessApproval.V1 {
           ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         ExpireTime.MergeFrom(other.ExpireTime);
+      }
+      if (other.invalidateTime_ != null) {
+        if (invalidateTime_ == null) {
+          InvalidateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        InvalidateTime.MergeFrom(other.InvalidateTime);
+      }
+      if (other.signatureInfo_ != null) {
+        if (signatureInfo_ == null) {
+          SignatureInfo = new global::Google.Cloud.AccessApproval.V1.SignatureInfo();
+        }
+        SignatureInfo.MergeFrom(other.SignatureInfo);
+      }
+      if (other.AutoApproved != false) {
+        AutoApproved = other.AutoApproved;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -947,6 +1409,24 @@ namespace Google.Cloud.AccessApproval.V1 {
               ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(ExpireTime);
+            break;
+          }
+          case 26: {
+            if (invalidateTime_ == null) {
+              InvalidateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(InvalidateTime);
+            break;
+          }
+          case 34: {
+            if (signatureInfo_ == null) {
+              SignatureInfo = new global::Google.Cloud.AccessApproval.V1.SignatureInfo();
+            }
+            input.ReadMessage(SignatureInfo);
+            break;
+          }
+          case 40: {
+            AutoApproved = input.ReadBool();
             break;
           }
         }
@@ -978,6 +1458,24 @@ namespace Google.Cloud.AccessApproval.V1 {
             input.ReadMessage(ExpireTime);
             break;
           }
+          case 26: {
+            if (invalidateTime_ == null) {
+              InvalidateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(InvalidateTime);
+            break;
+          }
+          case 34: {
+            if (signatureInfo_ == null) {
+              SignatureInfo = new global::Google.Cloud.AccessApproval.V1.SignatureInfo();
+            }
+            input.ReadMessage(SignatureInfo);
+            break;
+          }
+          case 40: {
+            AutoApproved = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -1002,7 +1500,7 @@ namespace Google.Cloud.AccessApproval.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AccessApproval.V1.AccessapprovalReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.AccessApproval.V1.AccessapprovalReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1052,8 +1550,8 @@ namespace Google.Cloud.AccessApproval.V1 {
     public const int ImplicitFieldNumber = 2;
     private bool implicit_;
     /// <summary>
-    /// This field will be true if the ApprovalRequest was implcitly dismissed
-    /// due to inaction by the access approval approvers (the request is not acted
+    /// This field will be true if the ApprovalRequest was implicitly dismissed due
+    /// to inaction by the access approval approvers (the request is not acted
     /// on by the approvers before the exiration time).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1248,7 +1746,7 @@ namespace Google.Cloud.AccessApproval.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AccessApproval.V1.AccessapprovalReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.AccessApproval.V1.AccessapprovalReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1444,7 +1942,7 @@ namespace Google.Cloud.AccessApproval.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AccessApproval.V1.AccessapprovalReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.AccessApproval.V1.AccessapprovalReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2071,7 +2569,7 @@ namespace Google.Cloud.AccessApproval.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AccessApproval.V1.AccessapprovalReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.AccessApproval.V1.AccessapprovalReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2363,7 +2861,7 @@ namespace Google.Cloud.AccessApproval.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AccessApproval.V1.AccessapprovalReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.AccessApproval.V1.AccessapprovalReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2387,6 +2885,9 @@ namespace Google.Cloud.AccessApproval.V1 {
       notificationEmails_ = other.notificationEmails_.Clone();
       enrolledServices_ = other.enrolledServices_.Clone();
       enrolledAncestor_ = other.enrolledAncestor_;
+      activeKeyVersion_ = other.activeKeyVersion_;
+      ancestorHasActiveKeyVersion_ = other.ancestorHasActiveKeyVersion_;
+      invalidKeyVersion_ = other.invalidKeyVersion_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2475,6 +2976,63 @@ namespace Google.Cloud.AccessApproval.V1 {
       }
     }
 
+    /// <summary>Field number for the "active_key_version" field.</summary>
+    public const int ActiveKeyVersionFieldNumber = 6;
+    private string activeKeyVersion_ = "";
+    /// <summary>
+    /// The asymmetric crypto key version to use for signing approval requests.
+    /// Empty active_key_version indicates that a Google-managed key should be used
+    /// for signing. This property will be ignored if set by an ancestor of this
+    /// resource, and new non-empty values may not be set.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ActiveKeyVersion {
+      get { return activeKeyVersion_; }
+      set {
+        activeKeyVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ancestor_has_active_key_version" field.</summary>
+    public const int AncestorHasActiveKeyVersionFieldNumber = 7;
+    private bool ancestorHasActiveKeyVersion_;
+    /// <summary>
+    /// Output only. This field is read only (not settable via UpdateAccessApprovalSettings
+    /// method). If the field is true, that indicates that an ancestor of this
+    /// Project or Folder has set active_key_version (this field will always be
+    /// unset for the organization since organizations do not have ancestors).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AncestorHasActiveKeyVersion {
+      get { return ancestorHasActiveKeyVersion_; }
+      set {
+        ancestorHasActiveKeyVersion_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "invalid_key_version" field.</summary>
+    public const int InvalidKeyVersionFieldNumber = 8;
+    private bool invalidKeyVersion_;
+    /// <summary>
+    /// Output only. This field is read only (not settable via UpdateAccessApprovalSettings
+    /// method). If the field is true, that indicates that there is some
+    /// configuration issue with the active_key_version configured at this level in
+    /// the resource hierarchy (e.g. it doesn't exist or the Access Approval
+    /// service account doesn't have the correct permissions on it, etc.) This key
+    /// version is not necessarily the effective key version at this level, as key
+    /// versions are inherited top-down.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool InvalidKeyVersion {
+      get { return invalidKeyVersion_; }
+      set {
+        invalidKeyVersion_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2494,6 +3052,9 @@ namespace Google.Cloud.AccessApproval.V1 {
       if(!notificationEmails_.Equals(other.notificationEmails_)) return false;
       if(!enrolledServices_.Equals(other.enrolledServices_)) return false;
       if (EnrolledAncestor != other.EnrolledAncestor) return false;
+      if (ActiveKeyVersion != other.ActiveKeyVersion) return false;
+      if (AncestorHasActiveKeyVersion != other.AncestorHasActiveKeyVersion) return false;
+      if (InvalidKeyVersion != other.InvalidKeyVersion) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2505,6 +3066,9 @@ namespace Google.Cloud.AccessApproval.V1 {
       hash ^= notificationEmails_.GetHashCode();
       hash ^= enrolledServices_.GetHashCode();
       if (EnrolledAncestor != false) hash ^= EnrolledAncestor.GetHashCode();
+      if (ActiveKeyVersion.Length != 0) hash ^= ActiveKeyVersion.GetHashCode();
+      if (AncestorHasActiveKeyVersion != false) hash ^= AncestorHasActiveKeyVersion.GetHashCode();
+      if (InvalidKeyVersion != false) hash ^= InvalidKeyVersion.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2533,6 +3097,18 @@ namespace Google.Cloud.AccessApproval.V1 {
         output.WriteRawTag(32);
         output.WriteBool(EnrolledAncestor);
       }
+      if (ActiveKeyVersion.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(ActiveKeyVersion);
+      }
+      if (AncestorHasActiveKeyVersion != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(AncestorHasActiveKeyVersion);
+      }
+      if (InvalidKeyVersion != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(InvalidKeyVersion);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2553,6 +3129,18 @@ namespace Google.Cloud.AccessApproval.V1 {
         output.WriteRawTag(32);
         output.WriteBool(EnrolledAncestor);
       }
+      if (ActiveKeyVersion.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(ActiveKeyVersion);
+      }
+      if (AncestorHasActiveKeyVersion != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(AncestorHasActiveKeyVersion);
+      }
+      if (InvalidKeyVersion != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(InvalidKeyVersion);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2569,6 +3157,15 @@ namespace Google.Cloud.AccessApproval.V1 {
       size += notificationEmails_.CalculateSize(_repeated_notificationEmails_codec);
       size += enrolledServices_.CalculateSize(_repeated_enrolledServices_codec);
       if (EnrolledAncestor != false) {
+        size += 1 + 1;
+      }
+      if (ActiveKeyVersion.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ActiveKeyVersion);
+      }
+      if (AncestorHasActiveKeyVersion != false) {
+        size += 1 + 1;
+      }
+      if (InvalidKeyVersion != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -2590,6 +3187,15 @@ namespace Google.Cloud.AccessApproval.V1 {
       enrolledServices_.Add(other.enrolledServices_);
       if (other.EnrolledAncestor != false) {
         EnrolledAncestor = other.EnrolledAncestor;
+      }
+      if (other.ActiveKeyVersion.Length != 0) {
+        ActiveKeyVersion = other.ActiveKeyVersion;
+      }
+      if (other.AncestorHasActiveKeyVersion != false) {
+        AncestorHasActiveKeyVersion = other.AncestorHasActiveKeyVersion;
+      }
+      if (other.InvalidKeyVersion != false) {
+        InvalidKeyVersion = other.InvalidKeyVersion;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2620,6 +3226,18 @@ namespace Google.Cloud.AccessApproval.V1 {
           }
           case 32: {
             EnrolledAncestor = input.ReadBool();
+            break;
+          }
+          case 50: {
+            ActiveKeyVersion = input.ReadString();
+            break;
+          }
+          case 56: {
+            AncestorHasActiveKeyVersion = input.ReadBool();
+            break;
+          }
+          case 64: {
+            InvalidKeyVersion = input.ReadBool();
             break;
           }
         }
@@ -2653,6 +3271,257 @@ namespace Google.Cloud.AccessApproval.V1 {
             EnrolledAncestor = input.ReadBool();
             break;
           }
+          case 50: {
+            ActiveKeyVersion = input.ReadString();
+            break;
+          }
+          case 56: {
+            AncestorHasActiveKeyVersion = input.ReadBool();
+            break;
+          }
+          case 64: {
+            InvalidKeyVersion = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Access Approval service account related to a project/folder/organization.
+  /// </summary>
+  public sealed partial class AccessApprovalServiceAccount : pb::IMessage<AccessApprovalServiceAccount>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AccessApprovalServiceAccount> _parser = new pb::MessageParser<AccessApprovalServiceAccount>(() => new AccessApprovalServiceAccount());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AccessApprovalServiceAccount> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AccessApproval.V1.AccessapprovalReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AccessApprovalServiceAccount() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AccessApprovalServiceAccount(AccessApprovalServiceAccount other) : this() {
+      name_ = other.name_;
+      accountEmail_ = other.accountEmail_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AccessApprovalServiceAccount Clone() {
+      return new AccessApprovalServiceAccount(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// The resource name of the Access Approval service account. Format is one of:
+    ///
+    ///   * "projects/{project}/serviceAccount"
+    ///   * "folders/{folder}/serviceAccount"
+    ///   * "organizations/{organization}/serviceAccount"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "account_email" field.</summary>
+    public const int AccountEmailFieldNumber = 2;
+    private string accountEmail_ = "";
+    /// <summary>
+    /// Email address of the service account.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AccountEmail {
+      get { return accountEmail_; }
+      set {
+        accountEmail_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AccessApprovalServiceAccount);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AccessApprovalServiceAccount other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (AccountEmail != other.AccountEmail) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (AccountEmail.Length != 0) hash ^= AccountEmail.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (AccountEmail.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(AccountEmail);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (AccountEmail.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(AccountEmail);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (AccountEmail.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AccountEmail);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AccessApprovalServiceAccount other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.AccountEmail.Length != 0) {
+        AccountEmail = other.AccountEmail;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            AccountEmail = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            AccountEmail = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -2677,7 +3546,7 @@ namespace Google.Cloud.AccessApproval.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AccessApproval.V1.AccessapprovalReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.AccessApproval.V1.AccessapprovalReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3004,7 +3873,7 @@ namespace Google.Cloud.AccessApproval.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AccessApproval.V1.AccessapprovalReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.AccessApproval.V1.AccessapprovalReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3228,7 +4097,7 @@ namespace Google.Cloud.AccessApproval.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AccessApproval.V1.AccessapprovalReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.AccessApproval.V1.AccessapprovalReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3425,7 +4294,7 @@ namespace Google.Cloud.AccessApproval.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AccessApproval.V1.AccessapprovalReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.AccessApproval.V1.AccessapprovalReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3669,7 +4538,7 @@ namespace Google.Cloud.AccessApproval.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AccessApproval.V1.AccessapprovalReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.AccessApproval.V1.AccessapprovalReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3848,6 +4717,201 @@ namespace Google.Cloud.AccessApproval.V1 {
   }
 
   /// <summary>
+  /// Request to invalidate an existing approval.
+  /// </summary>
+  public sealed partial class InvalidateApprovalRequestMessage : pb::IMessage<InvalidateApprovalRequestMessage>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<InvalidateApprovalRequestMessage> _parser = new pb::MessageParser<InvalidateApprovalRequestMessage>(() => new InvalidateApprovalRequestMessage());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<InvalidateApprovalRequestMessage> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AccessApproval.V1.AccessapprovalReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InvalidateApprovalRequestMessage() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InvalidateApprovalRequestMessage(InvalidateApprovalRequestMessage other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InvalidateApprovalRequestMessage Clone() {
+      return new InvalidateApprovalRequestMessage(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Name of the ApprovalRequest to invalidate.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as InvalidateApprovalRequestMessage);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(InvalidateApprovalRequestMessage other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(InvalidateApprovalRequestMessage other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Request to get access approval settings.
   /// </summary>
   public sealed partial class GetAccessApprovalSettingsMessage : pb::IMessage<GetAccessApprovalSettingsMessage>
@@ -3864,7 +4928,7 @@ namespace Google.Cloud.AccessApproval.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AccessApproval.V1.AccessapprovalReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.AccessApproval.V1.AccessapprovalReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4060,7 +5124,7 @@ namespace Google.Cloud.AccessApproval.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AccessApproval.V1.AccessapprovalReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.AccessApproval.V1.AccessapprovalReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4322,7 +5386,7 @@ namespace Google.Cloud.AccessApproval.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AccessApproval.V1.AccessapprovalReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.AccessApproval.V1.AccessapprovalReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4449,6 +5513,201 @@ namespace Google.Cloud.AccessApproval.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DeleteAccessApprovalSettingsMessage other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request to get an Access Approval service account.
+  /// </summary>
+  public sealed partial class GetAccessApprovalServiceAccountMessage : pb::IMessage<GetAccessApprovalServiceAccountMessage>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetAccessApprovalServiceAccountMessage> _parser = new pb::MessageParser<GetAccessApprovalServiceAccountMessage>(() => new GetAccessApprovalServiceAccountMessage());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GetAccessApprovalServiceAccountMessage> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AccessApproval.V1.AccessapprovalReflection.Descriptor.MessageTypes[19]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetAccessApprovalServiceAccountMessage() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetAccessApprovalServiceAccountMessage(GetAccessApprovalServiceAccountMessage other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetAccessApprovalServiceAccountMessage Clone() {
+      return new GetAccessApprovalServiceAccountMessage(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Name of the AccessApprovalServiceAccount to retrieve.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GetAccessApprovalServiceAccountMessage);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GetAccessApprovalServiceAccountMessage other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GetAccessApprovalServiceAccountMessage other) {
       if (other == null) {
         return;
       }

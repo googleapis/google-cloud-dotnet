@@ -31,7 +31,10 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             // Create client
             GkeHubMembershipServiceClient gkeHubMembershipServiceClient = GkeHubMembershipServiceClient.Create();
             // Initialize request argument(s)
-            GetMembershipRequest request = new GetMembershipRequest { Name = "", };
+            GetMembershipRequest request = new GetMembershipRequest
+            {
+                MembershipName = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]"),
+            };
             // Make the request
             Membership response = gkeHubMembershipServiceClient.GetMembership(request);
         }

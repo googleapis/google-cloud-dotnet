@@ -1,5 +1,35 @@
 # Version history
 
+## Version 3.0.0, released 2022-06-08
+
+This is the first version of this package to depend on GAX v4.
+
+There are some breaking changes, both in GAX v4 and in the generated
+code. The changes that aren't specific to any given API are [described in the Google Cloud
+documentation](https://cloud.google.com/dotnet/docs/reference/help/breaking-gax4).
+We don't anticipate any changes to most customer code, but please [file a
+GitHub issue](https://github.com/googleapis/google-cloud-dotnet/issues/new/choose)
+if you run into problems.
+
+The most important change in this release is the use of the Grpc.Net.Client package
+for gRPC communication, instead of Grpc.Core. When using .NET Core 3.1 or .NET 5.0+
+this should lead to a smaller installation footprint and greater compatibility (e.g.
+with Apple M1 chips). Any significant change in a core component comes with the risk
+of incompatibility, however - so again, please let us know if you encounter any
+issues.
+
+### New features
+
+- Add compliances, processes and exfiltration fields to findings attributes. They contain compliance information about a security standard indicating unmet recommendations, represents operating system processes, and data exfiltration attempt of one or more source(s) to one or more target(s).  Source(s) represent the source of data that is exfiltrated, and Target(s) represents the destination the data was copied to ([commit f8ec4a3](https://github.com/googleapis/google-cloud-dotnet/commit/f8ec4a3919a59023d593c39ae68bf9b9bcb9abb7))
+
+## Version 2.13.0, released 2022-04-26
+
+### New features
+
+- Add connection and description field to finding's list of attributes ([commit a6bcaf5](https://github.com/googleapis/google-cloud-dotnet/commit/a6bcaf53ae63e568318902b157607ef4061455e9))
+- Add next_steps field to finding's list of attributes ([commit 8d16471](https://github.com/googleapis/google-cloud-dotnet/commit/8d16471a1bfc243c84e22e0b5206e7d96b4fe7d2))
+- Add iam_binding field to findings attributes. It represents particular IAM bindings, which captures a member's role addition, removal, or state ([commit b341824](https://github.com/googleapis/google-cloud-dotnet/commit/b341824885e0f7f3900447ab66565f14d20d8505))
+
 ## Version 2.12.0, released 2022-03-14
 
 ### New features

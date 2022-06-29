@@ -38,6 +38,8 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Model = new Model(),
+                ParentModel = "",
+                ModelId = "",
             };
             // Make the request
             Operation<UploadModelResponse, UploadModelOperationMetadata> response = await modelServiceClient.UploadModelAsync(request);

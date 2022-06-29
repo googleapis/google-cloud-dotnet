@@ -65,7 +65,7 @@ namespace Google.Cloud.Spanner.Data
             if (targetClrType == typeof(object))
             {
                 //then we decide the type for you
-                targetClrType = DefaultClrType;
+                targetClrType = GetConfiguredClrType(options);
             }
             var possibleUnderlyingType = Nullable.GetUnderlyingType(targetClrType);
             if (possibleUnderlyingType != null)
@@ -117,9 +117,7 @@ namespace Google.Cloud.Spanner.Data
             return ConvertToClrTypeImpl(protobufValue, targetClrType, options);
         }
 
-        // Note: the options can *currently* be null because we're not using them, but
-        // every call site should check that it could provide options if they become required.
-        internal Value ToProtobufValue(object value, SpannerConversionOptions options)
+        internal Value ToProtobufValue(object value)
         {
             if (value == null || value is DBNull)
             {
@@ -179,6 +177,10 @@ namespace Google.Cloud.Spanner.Data
                         StringValue = XmlConvert.ToString(Convert.ToDateTime(value, InvariantCulture), XmlDateTimeSerializationMode.Utc)
                     };
                 case TypeCode.Date:
+                    if(value is SpannerDate spannerDate)
+                    {
+                        return new Value { StringValue = spannerDate.ToString() };
+                    }
                     if (value is DateTime date && date.Kind == DateTimeKind.Local)
                     {
                         // If the DateTime is local the value should be changed to unspecified
@@ -196,7 +198,7 @@ namespace Google.Cloud.Spanner.Data
                     {
                         return Value.ForList(
                             enumerable.Cast<object>()
-                                .Select(x => ArrayElementType.ToProtobufValue(x, options)).ToArray());
+                                .Select(x => ArrayElementType.ToProtobufValue(x)).ToArray());
                     }
                     throw new ArgumentException("The given array instance needs to implement IEnumerable.");
                 case TypeCode.Struct:
@@ -206,7 +208,7 @@ namespace Google.Cloud.Spanner.Data
                         {
                             ListValue = new ListValue
                             {
-                                Values = { spannerStruct.Select(f => f.Type.ToProtobufValue(f.Value, options)) }
+                                Values = { spannerStruct.Select(f => f.Type.ToProtobufValue(f.Value)) }
                             }
                         };
                     }
@@ -252,12 +254,13 @@ namespace Google.Cloud.Spanner.Data
                         }
                         if (value is float || value is double || value is decimal)
                         {
+                            // TODO: Check with Jon if LossOfPrecisionHandling needs to be changed.
                             // We throw if there's a loss of precision. We could use
                             // LossOfPrecisionHandling.Truncate but GoogleSQL documentation requests to
                             // use half-away-from-zero rounding but the SpannerNumeric implementation
                             // truncates instead.
                             return Value.ForString(SpannerNumeric.FromDecimal(
-                                Convert.ToDecimal(value, InvariantCulture), LossOfPrecisionHandling.Throw).ToString());
+                                Convert.ToDecimal(value, InvariantCulture), LossOfPrecisionHandling.Truncate).ToString());
                         }
                         if (value is sbyte || value is short || value is int || value is long)
                         {
@@ -438,6 +441,20 @@ namespace Google.Cloud.Spanner.Data
                 }
             }
 
+            if (targetClrType == typeof(SpannerDate))
+            {
+                switch (wireValue.KindCase)
+                {
+                    case Value.KindOneofCase.NullValue:
+                        return null;
+                    case Value.KindOneofCase.StringValue:
+                        return SpannerDate.Parse(wireValue.StringValue);
+                    default:
+                        throw new InvalidOperationException(
+                            $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}");
+                }
+            }
+
             if (targetClrType == typeof(Timestamp))
             {
                 switch (wireValue.KindCase)
@@ -594,9 +611,9 @@ namespace Google.Cloud.Spanner.Data
             }
             if (targetClrType == typeof(PgNumeric))
             {
-                if (TypeCode != TypeCode.Numeric || TypeAnnotationCode != TypeAnnotationCode.PgNumeric)
+                if (TypeAnnotationCode != TypeAnnotationCode.PgNumeric)
                 {
-                    throw new ArgumentException($"{targetClrType.FullName} can only be used for numeric results");
+                    throw new ArgumentException($"{targetClrType.FullName} can only be used for numeric results and only when working with a PostgreSQL dialect.");
                 }
                 switch (wireValue.KindCase)
                 {

@@ -93,6 +93,29 @@ namespace Google.Cloud.Spanner.Data.Snippets
         }
 
         [Fact]
+        public async Task EphemeralRetry()
+        {
+            string connectionString = _fixture.ConnectionString;
+
+            // Sample: EphemeralRetry
+            using (SpannerConnection connection = new SpannerConnection(connectionString))
+            {
+                await connection.OpenAsync();
+
+                // The following commands will be executed within an exclusive ephemeral transaction.
+                // If the transaction is aborted, execution of the command will be automatically retried.
+                SpannerCommand cmd = connection.CreateInsertCommand("TestTable");
+                cmd.Parameters.Add("Key", SpannerDbType.String, Guid.NewGuid().ToString("N"));
+                cmd.Parameters.Add("StringValue", SpannerDbType.String, "hello");
+                cmd.Parameters.Add("Int64Value", SpannerDbType.Int64, 8);
+
+                int rowsAffected = await cmd.ExecuteNonQueryAsync();
+                Console.WriteLine($"{rowsAffected} rows written...");
+            }
+            // End sample
+        }
+
+        [Fact]
         public async Task InsertDataAsync()
         {
             string connectionString = _fixture.ConnectionString;

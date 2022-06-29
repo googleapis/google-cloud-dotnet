@@ -14,6 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace Google.Cloud.Notebooks.V1Beta1.Snippets
 {
     // [START notebooks_v1beta1_generated_NotebookService_ListEnvironments_sync]

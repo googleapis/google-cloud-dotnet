@@ -14,7 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Cloud.ClientTesting;
+using Google.Cloud.Iam.V1;
 using Grpc.Core;
 using System;
 using System.Collections.Concurrent;
@@ -42,6 +42,17 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
         }
 
         private readonly PubsubFixture _fixture;
+
+#if NETCOREAPP3_1
+        static PubSubClientTest()
+        {
+            // On .NET Core 3.1 (but not .NET 6) Grpc.Net.Client needs an additional switch
+            // to allow an insecure channel in HTTP/2.
+            // We can't trivially tell whether we're running on the emulator or not, but it doesn't
+            // really matter as we won't be trying to use an unencrypted channel in production.
+            AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
+        }
+#endif
 
         // Factory methods for clients, as a centralized place to apply default settings.
         private static Task<PublisherServiceApiClient> CreatePublisherServiceApiClientAsync() =>
@@ -459,37 +470,6 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             Console.WriteLine("pub+sub completed.");
         }
 
-        [SkippableFact]
-        public async Task SeparateSubchannels()
-        {
-            // This test fails on some Linux platforms.
-            // The failures are due to changes made to the GRPC_VERBOSITY and GRPC_TRACE
-            // environment variables in GrpcInfo.cs not being picked up by the gRPC logging code.
-            // TODO: Determine why this fails and fix.
-            TestEnvironment.SkipIfVpcSc();
-
-            var topicId = _fixture.CreateTopicId();
-            var subscriptionId = _fixture.CreateSubscriptionId();
-            var topicName = new TopicName(_fixture.ProjectId, topicId);
-            var subscriptionName = new SubscriptionName(_fixture.ProjectId, subscriptionId);
-            await CreateTopicAndSubscription(topicName, subscriptionName);
-
-            int originalSubchannelCount = GrpcInfo.SubchannelCount;
-            await RunBulkMessagingImpl(
-                topicName,
-                subscriptionName,
-                messageCount: 2_000,
-                minMessageSize: 4,
-                maxMessageSize: 4,
-                maxMessagesInFlight: 100,
-                initialNackCount: 0,
-                publisherChannelCount: 3,
-                clientCount: 4);
-
-            int subchannelsCreated = GrpcInfo.SubchannelCount - originalSubchannelCount;
-            Assert.Equal(7, subchannelsCreated);
-        }
-
         [Fact]
         public async Task DeadLetterQueueAndDeliveryAttempt()
         {
@@ -511,15 +491,19 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             await publisherApi.CreateTopicAsync(topicName).ConfigureAwait(false);
             await publisherApi.CreateTopicAsync(dlqTopicName).ConfigureAwait(false);
             // Allow pubsub-managed service account to publish to the DLQ topic.
-            await publisherApi.SetIamPolicyAsync(dlqTopicName.ToString(), new Iam.V1.Policy
+            await publisherApi.IAMPolicyClient.SetIamPolicyAsync(new SetIamPolicyRequest
             {
-                Bindings =
+                ResourceAsResourceName = dlqTopicName,
+                Policy = new Policy
                 {
-                    new Iam.V1.Binding
+                    Bindings =
                     {
-                        Members = { $"serviceAccount:{pubsubServiceAccount}" },
-                        Role = "roles/pubsub.publisher",
-                    },
+                        new Binding
+                        {
+                            Members = { $"serviceAccount:{pubsubServiceAccount}" },
+                            Role = "roles/pubsub.publisher",
+                        },
+                    }
                 }
             }).ConfigureAwait(false);
 
@@ -538,14 +522,18 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                 AckDeadlineSeconds = 60,
             }).ConfigureAwait(false);
             // Allow pubsub-managed service account to ACK message in subscription (so it won't be sent to client again).
-            await subscriberApi.SetIamPolicyAsync(subscriptionName.ToString(), new Iam.V1.Policy
+            await subscriberApi.IAMPolicyClient.SetIamPolicyAsync(new SetIamPolicyRequest
             {
-                Bindings =
+                ResourceAsResourceName = subscriptionName,
+                Policy = new Iam.V1.Policy
                 {
-                    new Iam.V1.Binding
+                    Bindings =
                     {
-                        Members = { $"serviceAccount:{pubsubServiceAccount}" },
-                        Role = "roles/pubsub.subscriber",
+                        new Iam.V1.Binding
+                        {
+                            Members = { $"serviceAccount:{pubsubServiceAccount}" },
+                            Role = "roles/pubsub.subscriber",
+                        }
                     }
                 }
             }).ConfigureAwait(false);

@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gcav = Google.Cloud.AutoML.V1;
 
 namespace Google.Cloud.AutoML.V1

@@ -71,7 +71,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "ZmFjdBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkioQEKFVVwZGF0ZUFydGlm",
             "YWN0UmVxdWVzdBI7CghhcnRpZmFjdBgBIAEoCzIkLmdvb2dsZS5jbG91ZC5h",
             "aXBsYXRmb3JtLnYxLkFydGlmYWN0QgPgQQISNAoLdXBkYXRlX21hc2sYAiAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQISFQoNYWxsb3df",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQESFQoNYWxsb3df",
             "bWlzc2luZxgDIAEoCCJkChVEZWxldGVBcnRpZmFjdFJlcXVlc3QSOAoEbmFt",
             "ZRgBIAEoCUIq4EEC+kEkCiJhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0Fy",
             "dGlmYWN0EhEKBGV0YWcYAiABKAlCA+BBASJ8ChVQdXJnZUFydGlmYWN0c1Jl",
@@ -96,7 +96,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "CSKeAQoUVXBkYXRlQ29udGV4dFJlcXVlc3QSOQoHY29udGV4dBgBIAEoCzIj",
             "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkNvbnRleHRCA+BBAhI0Cgt1",
             "cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tC",
-            "A+BBAhIVCg1hbGxvd19taXNzaW5nGAMgASgIInEKFERlbGV0ZUNvbnRleHRS",
+            "A+BBARIVCg1hbGxvd19taXNzaW5nGAMgASgIInEKFERlbGV0ZUNvbnRleHRS",
             "ZXF1ZXN0EjcKBG5hbWUYASABKAlCKeBBAvpBIwohYWlwbGF0Zm9ybS5nb29n",
             "bGVhcGlzLmNvbS9Db250ZXh0Eg0KBWZvcmNlGAIgASgIEhEKBGV0YWcYAyAB",
             "KAlCA+BBASJ6ChRQdXJnZUNvbnRleHRzUmVxdWVzdBI5CgZwYXJlbnQYASAB",
@@ -133,7 +133,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "X3Rva2VuGAIgASgJIqQBChZVcGRhdGVFeGVjdXRpb25SZXF1ZXN0Ej0KCWV4",
             "ZWN1dGlvbhgBIAEoCzIlLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkV4",
             "ZWN1dGlvbkID4EECEjQKC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnBy",
-            "b3RvYnVmLkZpZWxkTWFza0ID4EECEhUKDWFsbG93X21pc3NpbmcYAyABKAgi",
+            "b3RvYnVmLkZpZWxkTWFza0ID4EEBEhUKDWFsbG93X21pc3NpbmcYAyABKAgi",
             "ZgoWRGVsZXRlRXhlY3V0aW9uUmVxdWVzdBI5CgRuYW1lGAEgASgJQivgQQL6",
             "QSUKI2FpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vRXhlY3V0aW9uEhEKBGV0",
             "YWcYAiABKAlCA+BBASJ+ChZQdXJnZUV4ZWN1dGlvbnNSZXF1ZXN0EjsKBnBh",
@@ -3172,7 +3172,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int UpdateMaskFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
-    /// Required. A FieldMask indicating which fields should be updated.
+    /// Optional. A FieldMask indicating which fields should be updated.
     /// Functionality of this field is not yet supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5490,7 +5490,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int UpdateMaskFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
-    /// Required. A FieldMask indicating which fields should be updated.
+    /// Optional. A FieldMask indicating which fields should be updated.
     /// Functionality of this field is not yet supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8847,7 +8847,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int UpdateMaskFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
-    /// Required. A FieldMask indicating which fields should be updated.
+    /// Optional. A FieldMask indicating which fields should be updated.
     /// Functionality of this field is not yet supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

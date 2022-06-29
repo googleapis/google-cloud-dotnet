@@ -14,6 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace Google.Cloud.AppEngine.V1.Snippets
 {
     // [START appengine_v1_generated_Versions_ListVersions_async]

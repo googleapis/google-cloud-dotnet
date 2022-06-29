@@ -1,5 +1,17 @@
 # Version history
 
+## Version 2.0.0, released 2022-06-08
+
+### Documentation improvements
+
+- Updating comments ([commit dc72a89](https://github.com/googleapis/google-cloud-dotnet/commit/dc72a89ff01ed2eb919c50881520956afa6558c3))
+
+## Version 1.3.0, released 2022-04-26
+
+### Documentation improvements
+
+- Clarify comments of ConversationView enum ([commit 386897f](https://github.com/googleapis/google-cloud-dotnet/commit/386897f1e70a91bcdbe262a7b0c4dc51f7229b92))
+
 ## Version 1.2.0, released 2022-01-17
 
 ### New features

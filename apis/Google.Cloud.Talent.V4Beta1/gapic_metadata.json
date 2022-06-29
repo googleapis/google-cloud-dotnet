@@ -5,45 +5,6 @@
   "protoPackage": "google.cloud.talent.v4beta1",
   "libraryPackage": "Google.Cloud.Talent.V4Beta1",
   "services": {
-    "ApplicationService": {
-      "clients": {
-        "grpc": {
-          "libraryClient": "ApplicationServiceClient",
-          "rpcs": {
-            "CreateApplication": {
-              "methods": [
-                "CreateApplication",
-                "CreateApplicationAsync"
-              ]
-            },
-            "DeleteApplication": {
-              "methods": [
-                "DeleteApplication",
-                "DeleteApplicationAsync"
-              ]
-            },
-            "GetApplication": {
-              "methods": [
-                "GetApplication",
-                "GetApplicationAsync"
-              ]
-            },
-            "ListApplications": {
-              "methods": [
-                "ListApplications",
-                "ListApplicationsAsync"
-              ]
-            },
-            "UpdateApplication": {
-              "methods": [
-                "UpdateApplication",
-                "UpdateApplicationAsync"
-              ]
-            }
-          }
-        }
-      }
-    },
     "CompanyService": {
       "clients": {
         "grpc": {
@@ -176,51 +137,6 @@
               "methods": [
                 "UpdateJob",
                 "UpdateJobAsync"
-              ]
-            }
-          }
-        }
-      }
-    },
-    "ProfileService": {
-      "clients": {
-        "grpc": {
-          "libraryClient": "ProfileServiceClient",
-          "rpcs": {
-            "CreateProfile": {
-              "methods": [
-                "CreateProfile",
-                "CreateProfileAsync"
-              ]
-            },
-            "DeleteProfile": {
-              "methods": [
-                "DeleteProfile",
-                "DeleteProfileAsync"
-              ]
-            },
-            "GetProfile": {
-              "methods": [
-                "GetProfile",
-                "GetProfileAsync"
-              ]
-            },
-            "ListProfiles": {
-              "methods": [
-                "ListProfiles",
-                "ListProfilesAsync"
-              ]
-            },
-            "SearchProfiles": {
-              "methods": [
-                "SearchProfiles",
-                "SearchProfilesAsync"
-              ]
-            },
-            "UpdateProfile": {
-              "methods": [
-                "UpdateProfile",
-                "UpdateProfileAsync"
               ]
             }
           }

@@ -769,6 +769,11 @@ namespace Google.Cloud.Retail.V2 {
     ///
     /// If an unsupported or unknown field is provided, an INVALID_ARGUMENT error
     /// is returned.
+    ///
+    /// The attribute key can be updated by setting the mask path as
+    /// "attributes.${key_name}". If a key name is present in the mask but not in
+    /// the patching product from the request, this key will be deleted after the
+    /// update.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2590,7 +2595,9 @@ namespace Google.Cloud.Retail.V2 {
   }
 
   /// <summary>
-  /// Request message for [AddFulfillmentPlaces][] method.
+  /// Request message for
+  /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces]
+  /// method.
   /// </summary>
   public sealed partial class AddFulfillmentPlacesRequest : pb::IMessage<AddFulfillmentPlacesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2990,7 +2997,8 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Metadata related to the progress of the AddFulfillmentPlaces operation.
   /// Currently empty because there is no meaningful metadata populated from the
-  /// [AddFulfillmentPlaces][] method.
+  /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces]
+  /// method.
   /// </summary>
   public sealed partial class AddFulfillmentPlacesMetadata : pb::IMessage<AddFulfillmentPlacesMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3146,7 +3154,8 @@ namespace Google.Cloud.Retail.V2 {
 
   /// <summary>
   /// Response of the AddFulfillmentPlacesRequest.  Currently empty because
-  /// there is no meaningful response populated from the [AddFulfillmentPlaces][]
+  /// there is no meaningful response populated from the
+  /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces]
   /// method.
   /// </summary>
   public sealed partial class AddFulfillmentPlacesResponse : pb::IMessage<AddFulfillmentPlacesResponse>
@@ -3302,7 +3311,9 @@ namespace Google.Cloud.Retail.V2 {
   }
 
   /// <summary>
-  /// Request message for [AddLocalInventories][] method.
+  /// Request message for
+  /// [ProductService.AddLocalInventories][google.cloud.retail.v2.ProductService.AddLocalInventories]
+  /// method.
   /// </summary>
   public sealed partial class AddLocalInventoriesRequest : pb::IMessage<AddLocalInventoriesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3694,7 +3705,8 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Metadata related to the progress of the AddLocalInventories operation.
   /// Currently empty because there is no meaningful metadata populated from the
-  /// [AddLocalInventories][] method.
+  /// [ProductService.AddLocalInventories][google.cloud.retail.v2.ProductService.AddLocalInventories]
+  /// method.
   /// </summary>
   public sealed partial class AddLocalInventoriesMetadata : pb::IMessage<AddLocalInventoriesMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3849,8 +3861,11 @@ namespace Google.Cloud.Retail.V2 {
   }
 
   /// <summary>
-  /// Response of the [AddLocalInventories][] API.  Currently empty because
-  /// there is no meaningful response populated from the [AddLocalInventories][]
+  /// Response of the
+  /// [ProductService.AddLocalInventories][google.cloud.retail.v2.ProductService.AddLocalInventories]
+  /// API.  Currently empty because there is no meaningful response populated from
+  /// the
+  /// [ProductService.AddLocalInventories][google.cloud.retail.v2.ProductService.AddLocalInventories]
   /// method.
   /// </summary>
   public sealed partial class AddLocalInventoriesResponse : pb::IMessage<AddLocalInventoriesResponse>
@@ -4740,7 +4755,8 @@ namespace Google.Cloud.Retail.V2 {
     /// If this field is set to an invalid value other than these, an
     /// INVALID_ARGUMENT error is returned.
     ///
-    /// This field directly corresponds to [Product.fulfillment_info.type][].
+    /// This field directly corresponds to
+    /// [Product.fulfillment_info.type][google.cloud.retail.v2.FulfillmentInfo.type].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

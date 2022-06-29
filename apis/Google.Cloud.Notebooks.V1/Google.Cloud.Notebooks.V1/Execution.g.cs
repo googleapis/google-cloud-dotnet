@@ -27,7 +27,7 @@ namespace Google.Cloud.Notebooks.V1 {
             "Cilnb29nbGUvY2xvdWQvbm90ZWJvb2tzL3YxL2V4ZWN1dGlvbi5wcm90bxIZ",
             "Z29vZ2xlLmNsb3VkLm5vdGVib29rcy52MRofZ29vZ2xlL2FwaS9maWVsZF9i",
             "ZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxofZ29v",
-            "Z2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLxCQoRRXhlY3V0aW9uVGVt",
+            "Z2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLqDAoRRXhlY3V0aW9uVGVt",
             "cGxhdGUSUQoKc2NhbGVfdGllchgBIAEoDjI2Lmdvb2dsZS5jbG91ZC5ub3Rl",
             "Ym9va3MudjEuRXhlY3V0aW9uVGVtcGxhdGUuU2NhbGVUaWVyQgUYAeBBAhIT",
             "CgttYXN0ZXJfdHlwZRgCIAEoCRJjChJhY2NlbGVyYXRvcl9jb25maWcYAyAB",
@@ -41,43 +41,55 @@ namespace Google.Cloud.Notebooks.V1 {
             "b2JfdHlwZRgLIAEoDjI0Lmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjEuRXhl",
             "Y3V0aW9uVGVtcGxhdGUuSm9iVHlwZRJeChNkYXRhcHJvY19wYXJhbWV0ZXJz",
             "GAwgASgLMj8uZ29vZ2xlLmNsb3VkLm5vdGVib29rcy52MS5FeGVjdXRpb25U",
-            "ZW1wbGF0ZS5EYXRhcHJvY1BhcmFtZXRlcnNIABqFAQoaU2NoZWR1bGVyQWNj",
-            "ZWxlcmF0b3JDb25maWcSUwoEdHlwZRgBIAEoDjJFLmdvb2dsZS5jbG91ZC5u",
-            "b3RlYm9va3MudjEuRXhlY3V0aW9uVGVtcGxhdGUuU2NoZWR1bGVyQWNjZWxl",
-            "cmF0b3JUeXBlEhIKCmNvcmVfY291bnQYAiABKAMaJQoSRGF0YXByb2NQYXJh",
-            "bWV0ZXJzEg8KB2NsdXN0ZXIYASABKAkaLQoLTGFiZWxzRW50cnkSCwoDa2V5",
-            "GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJ7CglTY2FsZVRpZXISGgoWU0NB",
-            "TEVfVElFUl9VTlNQRUNJRklFRBAAEgkKBUJBU0lDEAESDgoKU1RBTkRBUkRf",
-            "MRACEg0KCVBSRU1JVU1fMRADEg0KCUJBU0lDX0dQVRAEEg0KCUJBU0lDX1RQ",
-            "VRAFEgoKBkNVU1RPTRAGIswBChhTY2hlZHVsZXJBY2NlbGVyYXRvclR5cGUS",
-            "KgomU0NIRURVTEVSX0FDQ0VMRVJBVE9SX1RZUEVfVU5TUEVDSUZJRUQQABIU",
-            "ChBOVklESUFfVEVTTEFfSzgwEAESFQoRTlZJRElBX1RFU0xBX1AxMDAQAhIV",
-            "ChFOVklESUFfVEVTTEFfVjEwMBADEhMKD05WSURJQV9URVNMQV9QNBAEEhMK",
-            "D05WSURJQV9URVNMQV9UNBAFEgoKBlRQVV9WMhAGEgoKBlRQVV9WMxAHIkAK",
-            "B0pvYlR5cGUSGAoUSk9CX1RZUEVfVU5TUEVDSUZJRUQQABINCglWRVJURVhf",
-            "QUkQARIMCghEQVRBUFJPQxACQhAKDmpvYl9wYXJhbWV0ZXJzIoIFCglFeGVj",
-            "dXRpb24SSAoSZXhlY3V0aW9uX3RlbXBsYXRlGAEgASgLMiwuZ29vZ2xlLmNs",
-            "b3VkLm5vdGVib29rcy52MS5FeGVjdXRpb25UZW1wbGF0ZRIRCgRuYW1lGAIg",
-            "ASgJQgPgQQMSGQoMZGlzcGxheV9uYW1lGAMgASgJQgPgQQMSEwoLZGVzY3Jp",
-            "cHRpb24YBCABKAkSNAoLY3JlYXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBiABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSPgoFc3RhdGUYByABKA4y",
-            "Ki5nb29nbGUuY2xvdWQubm90ZWJvb2tzLnYxLkV4ZWN1dGlvbi5TdGF0ZUID",
-            "4EEDEhwKFG91dHB1dF9ub3RlYm9va19maWxlGAggASgJEhQKB2pvYl91cmkY",
-            "CSABKAlCA+BBAyKfAQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIK",
-            "CgZRVUVVRUQQARINCglQUkVQQVJJTkcQAhILCgdSVU5OSU5HEAMSDQoJU1VD",
-            "Q0VFREVEEAQSCgoGRkFJTEVEEAUSDgoKQ0FOQ0VMTElORxAGEg0KCUNBTkNF",
-            "TExFRBAHEgsKB0VYUElSRUQQCRIQCgxJTklUSUFMSVpJTkcQCjpm6kFjCiJu",
-            "b3RlYm9va3MuZ29vZ2xlYXBpcy5jb20vRXhlY3V0aW9uEj1wcm9qZWN0cy97",
-            "cHJvamVjdH0vbG9jYXRpb24ve2xvY2F0aW9ufS9leGVjdXRpb25zL3tleGVj",
-            "dXRpb259QnUKHWNvbS5nb29nbGUuY2xvdWQubm90ZWJvb2tzLnYxQg5FeGVj",
-            "dXRpb25Qcm90b1ABWkJnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29n",
-            "bGVhcGlzL2Nsb3VkL25vdGVib29rcy92MTtub3RlYm9va3NiBnByb3RvMw=="));
+            "ZW1wbGF0ZS5EYXRhcHJvY1BhcmFtZXRlcnNIABJfChR2ZXJ0ZXhfYWlfcGFy",
+            "YW1ldGVycxgNIAEoCzI/Lmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjEuRXhl",
+            "Y3V0aW9uVGVtcGxhdGUuVmVydGV4QUlQYXJhbWV0ZXJzSAASEwoLa2VybmVs",
+            "X3NwZWMYDiABKAkSPwoLdGVuc29yYm9hcmQYDyABKAlCKvpBJwolYWlwbGF0",
+            "Zm9ybS5nb29nbGVhcGlzLmNvbS9UZW5zb3Jib2FyZBqFAQoaU2NoZWR1bGVy",
+            "QWNjZWxlcmF0b3JDb25maWcSUwoEdHlwZRgBIAEoDjJFLmdvb2dsZS5jbG91",
+            "ZC5ub3RlYm9va3MudjEuRXhlY3V0aW9uVGVtcGxhdGUuU2NoZWR1bGVyQWNj",
+            "ZWxlcmF0b3JUeXBlEhIKCmNvcmVfY291bnQYAiABKAMaJQoSRGF0YXByb2NQ",
+            "YXJhbWV0ZXJzEg8KB2NsdXN0ZXIYASABKAkaqAEKElZlcnRleEFJUGFyYW1l",
+            "dGVycxIPCgduZXR3b3JrGAEgASgJElUKA2VudhgCIAMoCzJILmdvb2dsZS5j",
+            "bG91ZC5ub3RlYm9va3MudjEuRXhlY3V0aW9uVGVtcGxhdGUuVmVydGV4QUlQ",
+            "YXJhbWV0ZXJzLkVudkVudHJ5GioKCEVudkVudHJ5EgsKA2tleRgBIAEoCRIN",
+            "CgV2YWx1ZRgCIAEoCToCOAEaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJ",
+            "Eg0KBXZhbHVlGAIgASgJOgI4ASJ7CglTY2FsZVRpZXISGgoWU0NBTEVfVElF",
+            "Ul9VTlNQRUNJRklFRBAAEgkKBUJBU0lDEAESDgoKU1RBTkRBUkRfMRACEg0K",
+            "CVBSRU1JVU1fMRADEg0KCUJBU0lDX0dQVRAEEg0KCUJBU0lDX1RQVRAFEgoK",
+            "BkNVU1RPTRAGIuMBChhTY2hlZHVsZXJBY2NlbGVyYXRvclR5cGUSKgomU0NI",
+            "RURVTEVSX0FDQ0VMRVJBVE9SX1RZUEVfVU5TUEVDSUZJRUQQABIUChBOVklE",
+            "SUFfVEVTTEFfSzgwEAESFQoRTlZJRElBX1RFU0xBX1AxMDAQAhIVChFOVklE",
+            "SUFfVEVTTEFfVjEwMBADEhMKD05WSURJQV9URVNMQV9QNBAEEhMKD05WSURJ",
+            "QV9URVNMQV9UNBAFEhUKEU5WSURJQV9URVNMQV9BMTAwEAoSCgoGVFBVX1Yy",
+            "EAYSCgoGVFBVX1YzEAciQAoHSm9iVHlwZRIYChRKT0JfVFlQRV9VTlNQRUNJ",
+            "RklFRBAAEg0KCVZFUlRFWF9BSRABEgwKCERBVEFQUk9DEAJCEAoOam9iX3Bh",
+            "cmFtZXRlcnMiggUKCUV4ZWN1dGlvbhJIChJleGVjdXRpb25fdGVtcGxhdGUY",
+            "ASABKAsyLC5nb29nbGUuY2xvdWQubm90ZWJvb2tzLnYxLkV4ZWN1dGlvblRl",
+            "bXBsYXRlEhEKBG5hbWUYAiABKAlCA+BBAxIZCgxkaXNwbGF5X25hbWUYAyAB",
+            "KAlCA+BBAxITCgtkZXNjcmlwdGlvbhgEIAEoCRI0CgtjcmVhdGVfdGltZRgF",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRh",
+            "dGVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
+            "AxI+CgVzdGF0ZRgHIAEoDjIqLmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjEu",
+            "RXhlY3V0aW9uLlN0YXRlQgPgQQMSHAoUb3V0cHV0X25vdGVib29rX2ZpbGUY",
+            "CCABKAkSFAoHam9iX3VyaRgJIAEoCUID4EEDIp8BCgVTdGF0ZRIVChFTVEFU",
+            "RV9VTlNQRUNJRklFRBAAEgoKBlFVRVVFRBABEg0KCVBSRVBBUklORxACEgsK",
+            "B1JVTk5JTkcQAxINCglTVUNDRUVERUQQBBIKCgZGQUlMRUQQBRIOCgpDQU5D",
+            "RUxMSU5HEAYSDQoJQ0FOQ0VMTEVEEAcSCwoHRVhQSVJFRBAJEhAKDElOSVRJ",
+            "QUxJWklORxAKOmbqQWMKIm5vdGVib29rcy5nb29nbGVhcGlzLmNvbS9FeGVj",
+            "dXRpb24SPXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbi97bG9jYXRpb259",
+            "L2V4ZWN1dGlvbnMve2V4ZWN1dGlvbn1C4wEKHWNvbS5nb29nbGUuY2xvdWQu",
+            "bm90ZWJvb2tzLnYxQg5FeGVjdXRpb25Qcm90b1ABWkJnb29nbGUuZ29sYW5n",
+            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL25vdGVib29rcy92MTtu",
+            "b3RlYm9va3PqQWsKJWFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vVGVuc29y",
+            "Ym9hcmQSQnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9u",
+            "fS90ZW5zb3Jib2FyZHMve3RlbnNvcmJvYXJkfWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.ExecutionTemplate), global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Parser, new[]{ "ScaleTier", "MasterType", "AcceleratorConfig", "Labels", "InputNotebookFile", "ContainerImageUri", "OutputNotebookFolder", "ParamsYamlFile", "Parameters", "ServiceAccount", "JobType", "DataprocParameters" }, new[]{ "JobParameters" }, new[]{ typeof(global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Types.ScaleTier), typeof(global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Types.SchedulerAcceleratorType), typeof(global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Types.JobType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Types.SchedulerAcceleratorConfig), global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Types.SchedulerAcceleratorConfig.Parser, new[]{ "Type", "CoreCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.ExecutionTemplate), global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Parser, new[]{ "ScaleTier", "MasterType", "AcceleratorConfig", "Labels", "InputNotebookFile", "ContainerImageUri", "OutputNotebookFolder", "ParamsYamlFile", "Parameters", "ServiceAccount", "JobType", "DataprocParameters", "VertexAiParameters", "KernelSpec", "Tensorboard" }, new[]{ "JobParameters" }, new[]{ typeof(global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Types.ScaleTier), typeof(global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Types.SchedulerAcceleratorType), typeof(global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Types.JobType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Types.SchedulerAcceleratorConfig), global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Types.SchedulerAcceleratorConfig.Parser, new[]{ "Type", "CoreCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Types.DataprocParameters), global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Types.DataprocParameters.Parser, new[]{ "Cluster" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Types.VertexAIParameters), global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Types.VertexAIParameters.Parser, new[]{ "Network", "Env" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.Execution), global::Google.Cloud.Notebooks.V1.Execution.Parser, new[]{ "ExecutionTemplate", "Name", "DisplayName", "Description", "CreateTime", "UpdateTime", "State", "OutputNotebookFile", "JobUri" }, null, new[]{ typeof(global::Google.Cloud.Notebooks.V1.Execution.Types.State) }, null, null)
           }));
@@ -134,9 +146,14 @@ namespace Google.Cloud.Notebooks.V1 {
       parameters_ = other.parameters_;
       serviceAccount_ = other.serviceAccount_;
       jobType_ = other.jobType_;
+      kernelSpec_ = other.kernelSpec_;
+      tensorboard_ = other.tensorboard_;
       switch (other.JobParametersCase) {
         case JobParametersOneofCase.DataprocParameters:
           DataprocParameters = other.DataprocParameters.Clone();
+          break;
+        case JobParametersOneofCase.VertexAiParameters:
+          VertexAiParameters = other.VertexAiParameters.Clone();
           break;
       }
 
@@ -214,7 +231,8 @@ namespace Google.Cloud.Notebooks.V1 {
     ///
     /// Finally, if you want to use a TPU for training, specify `cloud_tpu` in this
     /// field. Learn more about the [special configuration options for training
-    /// with TPU.
+    /// with
+    /// TPU](https://cloud.google.com/ai-platform/training/docs/using-tpus#configuring_a_custom_tpu_machine).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -265,7 +283,7 @@ namespace Google.Cloud.Notebooks.V1 {
     /// <summary>
     /// Path to the notebook file to execute.
     /// Must be in a Google Cloud Storage bucket.
-    /// Format: `gs://{project_id}/{folder}/{notebook_file_name}`
+    /// Format: `gs://{bucket_name}/{folder}/{notebook_file_name}`
     /// Ex: `gs://notebook_user/scheduled_notebooks/sentiment_notebook.ipynb`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -301,7 +319,7 @@ namespace Google.Cloud.Notebooks.V1 {
     /// <summary>
     /// Path to the notebook folder to write to.
     /// Must be in a Google Cloud Storage bucket path.
-    /// Format: `gs://{project_id}/{folder}`
+    /// Format: `gs://{bucket_name}/{folder}`
     /// Ex: `gs://notebook_user/scheduled_notebooks`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -394,11 +412,62 @@ namespace Google.Cloud.Notebooks.V1 {
       }
     }
 
+    /// <summary>Field number for the "vertex_ai_parameters" field.</summary>
+    public const int VertexAiParametersFieldNumber = 13;
+    /// <summary>
+    /// Parameters used in Vertex AI JobType executions.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Types.VertexAIParameters VertexAiParameters {
+      get { return jobParametersCase_ == JobParametersOneofCase.VertexAiParameters ? (global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Types.VertexAIParameters) jobParameters_ : null; }
+      set {
+        jobParameters_ = value;
+        jobParametersCase_ = value == null ? JobParametersOneofCase.None : JobParametersOneofCase.VertexAiParameters;
+      }
+    }
+
+    /// <summary>Field number for the "kernel_spec" field.</summary>
+    public const int KernelSpecFieldNumber = 14;
+    private string kernelSpec_ = "";
+    /// <summary>
+    /// Name of the kernel spec to use. This must be specified if the
+    /// kernel spec name on the execution target does not match the name in the
+    /// input notebook file.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string KernelSpec {
+      get { return kernelSpec_; }
+      set {
+        kernelSpec_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "tensorboard" field.</summary>
+    public const int TensorboardFieldNumber = 15;
+    private string tensorboard_ = "";
+    /// <summary>
+    /// The name of a Vertex AI [Tensorboard] resource to which this execution
+    /// will upload Tensorboard logs.
+    /// Format:
+    /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Tensorboard {
+      get { return tensorboard_; }
+      set {
+        tensorboard_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     private object jobParameters_;
     /// <summary>Enum of possible cases for the "job_parameters" oneof.</summary>
     public enum JobParametersOneofCase {
       None = 0,
       DataprocParameters = 12,
+      VertexAiParameters = 13,
     }
     private JobParametersOneofCase jobParametersCase_ = JobParametersOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -441,6 +510,9 @@ namespace Google.Cloud.Notebooks.V1 {
       if (ServiceAccount != other.ServiceAccount) return false;
       if (JobType != other.JobType) return false;
       if (!object.Equals(DataprocParameters, other.DataprocParameters)) return false;
+      if (!object.Equals(VertexAiParameters, other.VertexAiParameters)) return false;
+      if (KernelSpec != other.KernelSpec) return false;
+      if (Tensorboard != other.Tensorboard) return false;
       if (JobParametersCase != other.JobParametersCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -461,6 +533,9 @@ namespace Google.Cloud.Notebooks.V1 {
       if (ServiceAccount.Length != 0) hash ^= ServiceAccount.GetHashCode();
       if (JobType != global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Types.JobType.Unspecified) hash ^= JobType.GetHashCode();
       if (jobParametersCase_ == JobParametersOneofCase.DataprocParameters) hash ^= DataprocParameters.GetHashCode();
+      if (jobParametersCase_ == JobParametersOneofCase.VertexAiParameters) hash ^= VertexAiParameters.GetHashCode();
+      if (KernelSpec.Length != 0) hash ^= KernelSpec.GetHashCode();
+      if (Tensorboard.Length != 0) hash ^= Tensorboard.GetHashCode();
       hash ^= (int) jobParametersCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -525,6 +600,18 @@ namespace Google.Cloud.Notebooks.V1 {
         output.WriteRawTag(98);
         output.WriteMessage(DataprocParameters);
       }
+      if (jobParametersCase_ == JobParametersOneofCase.VertexAiParameters) {
+        output.WriteRawTag(106);
+        output.WriteMessage(VertexAiParameters);
+      }
+      if (KernelSpec.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(KernelSpec);
+      }
+      if (Tensorboard.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(Tensorboard);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -580,6 +667,18 @@ namespace Google.Cloud.Notebooks.V1 {
         output.WriteRawTag(98);
         output.WriteMessage(DataprocParameters);
       }
+      if (jobParametersCase_ == JobParametersOneofCase.VertexAiParameters) {
+        output.WriteRawTag(106);
+        output.WriteMessage(VertexAiParameters);
+      }
+      if (KernelSpec.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(KernelSpec);
+      }
+      if (Tensorboard.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(Tensorboard);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -623,6 +722,15 @@ namespace Google.Cloud.Notebooks.V1 {
       }
       if (jobParametersCase_ == JobParametersOneofCase.DataprocParameters) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DataprocParameters);
+      }
+      if (jobParametersCase_ == JobParametersOneofCase.VertexAiParameters) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(VertexAiParameters);
+      }
+      if (KernelSpec.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(KernelSpec);
+      }
+      if (Tensorboard.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Tensorboard);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -670,12 +778,24 @@ namespace Google.Cloud.Notebooks.V1 {
       if (other.JobType != global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Types.JobType.Unspecified) {
         JobType = other.JobType;
       }
+      if (other.KernelSpec.Length != 0) {
+        KernelSpec = other.KernelSpec;
+      }
+      if (other.Tensorboard.Length != 0) {
+        Tensorboard = other.Tensorboard;
+      }
       switch (other.JobParametersCase) {
         case JobParametersOneofCase.DataprocParameters:
           if (DataprocParameters == null) {
             DataprocParameters = new global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Types.DataprocParameters();
           }
           DataprocParameters.MergeFrom(other.DataprocParameters);
+          break;
+        case JobParametersOneofCase.VertexAiParameters:
+          if (VertexAiParameters == null) {
+            VertexAiParameters = new global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Types.VertexAIParameters();
+          }
+          VertexAiParameters.MergeFrom(other.VertexAiParameters);
           break;
       }
 
@@ -750,6 +870,23 @@ namespace Google.Cloud.Notebooks.V1 {
             DataprocParameters = subBuilder;
             break;
           }
+          case 106: {
+            global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Types.VertexAIParameters subBuilder = new global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Types.VertexAIParameters();
+            if (jobParametersCase_ == JobParametersOneofCase.VertexAiParameters) {
+              subBuilder.MergeFrom(VertexAiParameters);
+            }
+            input.ReadMessage(subBuilder);
+            VertexAiParameters = subBuilder;
+            break;
+          }
+          case 114: {
+            KernelSpec = input.ReadString();
+            break;
+          }
+          case 122: {
+            Tensorboard = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -821,6 +958,23 @@ namespace Google.Cloud.Notebooks.V1 {
             DataprocParameters = subBuilder;
             break;
           }
+          case 106: {
+            global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Types.VertexAIParameters subBuilder = new global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Types.VertexAIParameters();
+            if (jobParametersCase_ == JobParametersOneofCase.VertexAiParameters) {
+              subBuilder.MergeFrom(VertexAiParameters);
+            }
+            input.ReadMessage(subBuilder);
+            VertexAiParameters = subBuilder;
+            break;
+          }
+          case 114: {
+            KernelSpec = input.ReadString();
+            break;
+          }
+          case 122: {
+            Tensorboard = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -866,25 +1020,9 @@ namespace Google.Cloud.Notebooks.V1 {
         /// own cluster specification. When you use this tier, set values to
         /// configure your processing cluster according to these guidelines:
         ///
-        /// *   You _must_ set `TrainingInput.masterType` to specify the type
+        /// *   You _must_ set `ExecutionTemplate.masterType` to specify the type
         ///     of machine to use for your master node. This is the only required
         ///     setting.
-        ///
-        /// *   You _may_ set `TrainingInput.workerCount` to specify the number of
-        ///     workers to use. If you specify one or more workers, you _must_ also
-        ///     set `TrainingInput.workerType` to specify the type of machine to use
-        ///     for your worker nodes.
-        ///
-        /// *   You _may_ set `TrainingInput.parameterServerCount` to specify the
-        ///     number of parameter servers to use. If you specify one or more
-        ///     parameter servers, you _must_ also set
-        ///     `TrainingInput.parameterServerType` to specify the type of machine to
-        ///     use for your parameter servers.
-        ///
-        /// Note that all of your workers must use the same machine type, which can
-        /// be different from your parameter server type and master type. Your
-        /// parameter servers must likewise use the same machine type, which can be
-        /// different from your worker type and master type.
         /// </summary>
         [pbr::OriginalName("CUSTOM")] Custom = 6,
       }
@@ -918,6 +1056,10 @@ namespace Google.Cloud.Notebooks.V1 {
         /// </summary>
         [pbr::OriginalName("NVIDIA_TESLA_T4")] NvidiaTeslaT4 = 5,
         /// <summary>
+        /// Nvidia Tesla A100 GPU.
+        /// </summary>
+        [pbr::OriginalName("NVIDIA_TESLA_A100")] NvidiaTeslaA100 = 10,
+        /// <summary>
         /// TPU v2.
         /// </summary>
         [pbr::OriginalName("TPU_V2")] TpuV2 = 6,
@@ -949,8 +1091,8 @@ namespace Google.Cloud.Notebooks.V1 {
 
       /// <summary>
       /// Definition of a hardware accelerator. Note that not all combinations
-      /// of `type` and `core_count` are valid. Check GPUs on
-      /// Compute Engine to find a valid
+      /// of `type` and `core_count` are valid. Check [GPUs on
+      /// Compute Engine](https://cloud.google.com/compute/docs/gpus) to find a valid
       /// combination. TPUs are not supported.
       /// </summary>
       public sealed partial class SchedulerAcceleratorConfig : pb::IMessage<SchedulerAcceleratorConfig>
@@ -1381,6 +1523,241 @@ namespace Google.Cloud.Notebooks.V1 {
 
       }
 
+      /// <summary>
+      /// Parameters used in Vertex AI JobType executions.
+      /// </summary>
+      public sealed partial class VertexAIParameters : pb::IMessage<VertexAIParameters>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<VertexAIParameters> _parser = new pb::MessageParser<VertexAIParameters>(() => new VertexAIParameters());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<VertexAIParameters> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public VertexAIParameters() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public VertexAIParameters(VertexAIParameters other) : this() {
+          network_ = other.network_;
+          env_ = other.env_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public VertexAIParameters Clone() {
+          return new VertexAIParameters(this);
+        }
+
+        /// <summary>Field number for the "network" field.</summary>
+        public const int NetworkFieldNumber = 1;
+        private string network_ = "";
+        /// <summary>
+        /// The full name of the Compute Engine
+        /// [network](/compute/docs/networks-and-firewalls#networks) to which the Job
+        /// should be peered. For example, `projects/12345/global/networks/myVPC`.
+        /// [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert)
+        /// is of the form `projects/{project}/global/networks/{network}`.
+        /// Where {project} is a project number, as in `12345`, and {network} is a
+        /// network name.
+        ///
+        /// Private services access must already be configured for the network. If
+        /// left unspecified, the job is not peered with any network.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Network {
+          get { return network_; }
+          set {
+            network_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "env" field.</summary>
+        public const int EnvFieldNumber = 2;
+        private static readonly pbc::MapField<string, string>.Codec _map_env_codec
+            = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 18);
+        private readonly pbc::MapField<string, string> env_ = new pbc::MapField<string, string>();
+        /// <summary>
+        /// Environment variables.
+        ///  At most 100 environment variables can be specified and unique.
+        /// Example: GCP_BUCKET=gs://my-bucket/samples/
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::MapField<string, string> Env {
+          get { return env_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as VertexAIParameters);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(VertexAIParameters other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Network != other.Network) return false;
+          if (!Env.Equals(other.Env)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Network.Length != 0) hash ^= Network.GetHashCode();
+          hash ^= Env.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Network.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Network);
+          }
+          env_.WriteTo(output, _map_env_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Network.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Network);
+          }
+          env_.WriteTo(ref output, _map_env_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Network.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Network);
+          }
+          size += env_.CalculateSize(_map_env_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(VertexAIParameters other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Network.Length != 0) {
+            Network = other.Network;
+          }
+          env_.Add(other.env_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Network = input.ReadString();
+                break;
+              }
+              case 18: {
+                env_.AddEntriesFrom(input, _map_env_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Network = input.ReadString();
+                break;
+              }
+              case 18: {
+                env_.AddEntriesFrom(ref input, _map_env_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
     }
     #endregion
 
@@ -1461,7 +1838,7 @@ namespace Google.Cloud.Notebooks.V1 {
     private string name_ = "";
     /// <summary>
     /// Output only. The resource name of the execute. Format:
-    /// `projects/{project_id}/locations/{location}/execution/{execution_id}`
+    /// `projects/{project_id}/locations/{location}/executions/{execution_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1973,7 +2350,7 @@ namespace Google.Cloud.Notebooks.V1 {
         /// </summary>
         [pbr::OriginalName("CANCELLED")] Cancelled = 7,
         /// <summary>
-        /// The jobs has become expired (added for uCAIP jobs)
+        /// The job has become expired (relevant to Vertex AI jobs)
         /// https://cloud.google.com/vertex-ai/docs/reference/rest/v1/JobState
         /// </summary>
         [pbr::OriginalName("EXPIRED")] Expired = 9,

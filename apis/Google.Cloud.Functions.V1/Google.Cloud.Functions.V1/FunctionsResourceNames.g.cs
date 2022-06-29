@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gagr = Google.Api.Gax.ResourceNames;
 using gcfv = Google.Cloud.Functions.V1;
@@ -837,6 +838,18 @@ namespace Google.Cloud.Functions.V1
         {
             get => string.IsNullOrEmpty(Name) ? null : gcfv::CloudFunctionName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GenerateUploadUrlRequest
+    {
+        /// <summary>
+        /// <see cref="CryptoKeyName"/>-typed view over the <see cref="KmsKeyName"/> resource name property.
+        /// </summary>
+        public CryptoKeyName KmsKeyNameAsCryptoKeyName
+        {
+            get => string.IsNullOrEmpty(KmsKeyName) ? null : CryptoKeyName.Parse(KmsKeyName, allowUnparsed: true);
+            set => KmsKeyName = value?.ToString() ?? "";
         }
     }
 }

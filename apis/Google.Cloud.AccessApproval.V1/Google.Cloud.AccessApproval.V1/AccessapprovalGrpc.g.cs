@@ -108,6 +108,8 @@ namespace Google.Cloud.AccessApproval.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AccessApproval.V1.DismissApprovalRequestMessage> __Marshaller_google_cloud_accessapproval_v1_DismissApprovalRequestMessage = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AccessApproval.V1.DismissApprovalRequestMessage.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AccessApproval.V1.InvalidateApprovalRequestMessage> __Marshaller_google_cloud_accessapproval_v1_InvalidateApprovalRequestMessage = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AccessApproval.V1.InvalidateApprovalRequestMessage.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AccessApproval.V1.GetAccessApprovalSettingsMessage> __Marshaller_google_cloud_accessapproval_v1_GetAccessApprovalSettingsMessage = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AccessApproval.V1.GetAccessApprovalSettingsMessage.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AccessApproval.V1.AccessApprovalSettings> __Marshaller_google_cloud_accessapproval_v1_AccessApprovalSettings = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AccessApproval.V1.AccessApprovalSettings.Parser));
@@ -117,6 +119,10 @@ namespace Google.Cloud.AccessApproval.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.AccessApproval.V1.DeleteAccessApprovalSettingsMessage> __Marshaller_google_cloud_accessapproval_v1_DeleteAccessApprovalSettingsMessage = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AccessApproval.V1.DeleteAccessApprovalSettingsMessage.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AccessApproval.V1.GetAccessApprovalServiceAccountMessage> __Marshaller_google_cloud_accessapproval_v1_GetAccessApprovalServiceAccountMessage = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AccessApproval.V1.GetAccessApprovalServiceAccountMessage.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AccessApproval.V1.AccessApprovalServiceAccount> __Marshaller_google_cloud_accessapproval_v1_AccessApprovalServiceAccount = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AccessApproval.V1.AccessApprovalServiceAccount.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AccessApproval.V1.ListApprovalRequestsMessage, global::Google.Cloud.AccessApproval.V1.ListApprovalRequestsResponse> __Method_ListApprovalRequests = new grpc::Method<global::Google.Cloud.AccessApproval.V1.ListApprovalRequestsMessage, global::Google.Cloud.AccessApproval.V1.ListApprovalRequestsResponse>(
@@ -151,6 +157,14 @@ namespace Google.Cloud.AccessApproval.V1 {
         __Marshaller_google_cloud_accessapproval_v1_ApprovalRequest);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AccessApproval.V1.InvalidateApprovalRequestMessage, global::Google.Cloud.AccessApproval.V1.ApprovalRequest> __Method_InvalidateApprovalRequest = new grpc::Method<global::Google.Cloud.AccessApproval.V1.InvalidateApprovalRequestMessage, global::Google.Cloud.AccessApproval.V1.ApprovalRequest>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "InvalidateApprovalRequest",
+        __Marshaller_google_cloud_accessapproval_v1_InvalidateApprovalRequestMessage,
+        __Marshaller_google_cloud_accessapproval_v1_ApprovalRequest);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AccessApproval.V1.GetAccessApprovalSettingsMessage, global::Google.Cloud.AccessApproval.V1.AccessApprovalSettings> __Method_GetAccessApprovalSettings = new grpc::Method<global::Google.Cloud.AccessApproval.V1.GetAccessApprovalSettingsMessage, global::Google.Cloud.AccessApproval.V1.AccessApprovalSettings>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -173,6 +187,14 @@ namespace Google.Cloud.AccessApproval.V1 {
         "DeleteAccessApprovalSettings",
         __Marshaller_google_cloud_accessapproval_v1_DeleteAccessApprovalSettingsMessage,
         __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AccessApproval.V1.GetAccessApprovalServiceAccountMessage, global::Google.Cloud.AccessApproval.V1.AccessApprovalServiceAccount> __Method_GetAccessApprovalServiceAccount = new grpc::Method<global::Google.Cloud.AccessApproval.V1.GetAccessApprovalServiceAccountMessage, global::Google.Cloud.AccessApproval.V1.AccessApprovalServiceAccount>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAccessApprovalServiceAccount",
+        __Marshaller_google_cloud_accessapproval_v1_GetAccessApprovalServiceAccountMessage,
+        __Marshaller_google_cloud_accessapproval_v1_AccessApprovalServiceAccount);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -247,6 +269,25 @@ namespace Google.Cloud.AccessApproval.V1 {
       }
 
       /// <summary>
+      /// Invalidates an existing ApprovalRequest. Returns the updated
+      /// ApprovalRequest.
+      ///
+      /// NOTE: This does not deny access to the resource if another request has been
+      /// made and approved. It only invalidates a single approval.
+      ///
+      /// Returns FAILED_PRECONDITION if the request exists but is not in an approved
+      /// state.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AccessApproval.V1.ApprovalRequest> InvalidateApprovalRequest(global::Google.Cloud.AccessApproval.V1.InvalidateApprovalRequestMessage request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Gets the settings associated with a project, folder, or organization.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -284,6 +325,19 @@ namespace Google.Cloud.AccessApproval.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAccessApprovalSettings(global::Google.Cloud.AccessApproval.V1.DeleteAccessApprovalSettingsMessage request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retrieves the service account that is used by Access Approval to access KMS
+      /// keys for signing approved approval requests.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AccessApproval.V1.AccessApprovalServiceAccount> GetAccessApprovalServiceAccount(global::Google.Cloud.AccessApproval.V1.GetAccessApprovalServiceAccountMessage request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -566,6 +620,82 @@ namespace Google.Cloud.AccessApproval.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DismissApprovalRequest, null, options, request);
       }
       /// <summary>
+      /// Invalidates an existing ApprovalRequest. Returns the updated
+      /// ApprovalRequest.
+      ///
+      /// NOTE: This does not deny access to the resource if another request has been
+      /// made and approved. It only invalidates a single approval.
+      ///
+      /// Returns FAILED_PRECONDITION if the request exists but is not in an approved
+      /// state.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AccessApproval.V1.ApprovalRequest InvalidateApprovalRequest(global::Google.Cloud.AccessApproval.V1.InvalidateApprovalRequestMessage request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return InvalidateApprovalRequest(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Invalidates an existing ApprovalRequest. Returns the updated
+      /// ApprovalRequest.
+      ///
+      /// NOTE: This does not deny access to the resource if another request has been
+      /// made and approved. It only invalidates a single approval.
+      ///
+      /// Returns FAILED_PRECONDITION if the request exists but is not in an approved
+      /// state.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AccessApproval.V1.ApprovalRequest InvalidateApprovalRequest(global::Google.Cloud.AccessApproval.V1.InvalidateApprovalRequestMessage request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_InvalidateApprovalRequest, null, options, request);
+      }
+      /// <summary>
+      /// Invalidates an existing ApprovalRequest. Returns the updated
+      /// ApprovalRequest.
+      ///
+      /// NOTE: This does not deny access to the resource if another request has been
+      /// made and approved. It only invalidates a single approval.
+      ///
+      /// Returns FAILED_PRECONDITION if the request exists but is not in an approved
+      /// state.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AccessApproval.V1.ApprovalRequest> InvalidateApprovalRequestAsync(global::Google.Cloud.AccessApproval.V1.InvalidateApprovalRequestMessage request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return InvalidateApprovalRequestAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Invalidates an existing ApprovalRequest. Returns the updated
+      /// ApprovalRequest.
+      ///
+      /// NOTE: This does not deny access to the resource if another request has been
+      /// made and approved. It only invalidates a single approval.
+      ///
+      /// Returns FAILED_PRECONDITION if the request exists but is not in an approved
+      /// state.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AccessApproval.V1.ApprovalRequest> InvalidateApprovalRequestAsync(global::Google.Cloud.AccessApproval.V1.InvalidateApprovalRequestMessage request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_InvalidateApprovalRequest, null, options, request);
+      }
+      /// <summary>
       /// Gets the settings associated with a project, folder, or organization.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -733,6 +863,58 @@ namespace Google.Cloud.AccessApproval.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteAccessApprovalSettings, null, options, request);
       }
+      /// <summary>
+      /// Retrieves the service account that is used by Access Approval to access KMS
+      /// keys for signing approved approval requests.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AccessApproval.V1.AccessApprovalServiceAccount GetAccessApprovalServiceAccount(global::Google.Cloud.AccessApproval.V1.GetAccessApprovalServiceAccountMessage request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAccessApprovalServiceAccount(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves the service account that is used by Access Approval to access KMS
+      /// keys for signing approved approval requests.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AccessApproval.V1.AccessApprovalServiceAccount GetAccessApprovalServiceAccount(global::Google.Cloud.AccessApproval.V1.GetAccessApprovalServiceAccountMessage request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAccessApprovalServiceAccount, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves the service account that is used by Access Approval to access KMS
+      /// keys for signing approved approval requests.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AccessApproval.V1.AccessApprovalServiceAccount> GetAccessApprovalServiceAccountAsync(global::Google.Cloud.AccessApproval.V1.GetAccessApprovalServiceAccountMessage request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAccessApprovalServiceAccountAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves the service account that is used by Access Approval to access KMS
+      /// keys for signing approved approval requests.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AccessApproval.V1.AccessApprovalServiceAccount> GetAccessApprovalServiceAccountAsync(global::Google.Cloud.AccessApproval.V1.GetAccessApprovalServiceAccountMessage request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAccessApprovalServiceAccount, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override AccessApprovalClient NewInstance(ClientBaseConfiguration configuration)
@@ -751,9 +933,11 @@ namespace Google.Cloud.AccessApproval.V1 {
           .AddMethod(__Method_GetApprovalRequest, serviceImpl.GetApprovalRequest)
           .AddMethod(__Method_ApproveApprovalRequest, serviceImpl.ApproveApprovalRequest)
           .AddMethod(__Method_DismissApprovalRequest, serviceImpl.DismissApprovalRequest)
+          .AddMethod(__Method_InvalidateApprovalRequest, serviceImpl.InvalidateApprovalRequest)
           .AddMethod(__Method_GetAccessApprovalSettings, serviceImpl.GetAccessApprovalSettings)
           .AddMethod(__Method_UpdateAccessApprovalSettings, serviceImpl.UpdateAccessApprovalSettings)
-          .AddMethod(__Method_DeleteAccessApprovalSettings, serviceImpl.DeleteAccessApprovalSettings).Build();
+          .AddMethod(__Method_DeleteAccessApprovalSettings, serviceImpl.DeleteAccessApprovalSettings)
+          .AddMethod(__Method_GetAccessApprovalServiceAccount, serviceImpl.GetAccessApprovalServiceAccount).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -767,9 +951,11 @@ namespace Google.Cloud.AccessApproval.V1 {
       serviceBinder.AddMethod(__Method_GetApprovalRequest, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AccessApproval.V1.GetApprovalRequestMessage, global::Google.Cloud.AccessApproval.V1.ApprovalRequest>(serviceImpl.GetApprovalRequest));
       serviceBinder.AddMethod(__Method_ApproveApprovalRequest, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AccessApproval.V1.ApproveApprovalRequestMessage, global::Google.Cloud.AccessApproval.V1.ApprovalRequest>(serviceImpl.ApproveApprovalRequest));
       serviceBinder.AddMethod(__Method_DismissApprovalRequest, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AccessApproval.V1.DismissApprovalRequestMessage, global::Google.Cloud.AccessApproval.V1.ApprovalRequest>(serviceImpl.DismissApprovalRequest));
+      serviceBinder.AddMethod(__Method_InvalidateApprovalRequest, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AccessApproval.V1.InvalidateApprovalRequestMessage, global::Google.Cloud.AccessApproval.V1.ApprovalRequest>(serviceImpl.InvalidateApprovalRequest));
       serviceBinder.AddMethod(__Method_GetAccessApprovalSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AccessApproval.V1.GetAccessApprovalSettingsMessage, global::Google.Cloud.AccessApproval.V1.AccessApprovalSettings>(serviceImpl.GetAccessApprovalSettings));
       serviceBinder.AddMethod(__Method_UpdateAccessApprovalSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AccessApproval.V1.UpdateAccessApprovalSettingsMessage, global::Google.Cloud.AccessApproval.V1.AccessApprovalSettings>(serviceImpl.UpdateAccessApprovalSettings));
       serviceBinder.AddMethod(__Method_DeleteAccessApprovalSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AccessApproval.V1.DeleteAccessApprovalSettingsMessage, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteAccessApprovalSettings));
+      serviceBinder.AddMethod(__Method_GetAccessApprovalServiceAccount, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AccessApproval.V1.GetAccessApprovalServiceAccountMessage, global::Google.Cloud.AccessApproval.V1.AccessApprovalServiceAccount>(serviceImpl.GetAccessApprovalServiceAccount));
     }
 
   }

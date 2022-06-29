@@ -271,6 +271,12 @@
                 "TestIamPermissionsAsync"
               ]
             },
+            "UndeleteTable": {
+              "methods": [
+                "UndeleteTable",
+                "UndeleteTableAsync"
+              ]
+            },
             "UpdateBackup": {
               "methods": [
                 "UpdateBackup",

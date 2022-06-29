@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -54,7 +55,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 ProductMetadata = new ProductCatalogItem(),
             };
             mockGrpcClient.Setup(x => x.CreateCatalogItem(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             CatalogItem response = client.CreateCatalogItem(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -86,7 +87,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 ProductMetadata = new ProductCatalogItem(),
             };
             mockGrpcClient.Setup(x => x.CreateCatalogItemAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CatalogItem>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             CatalogItem responseCallSettings = await client.CreateCatalogItemAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CatalogItem responseCancellationToken = await client.CreateCatalogItemAsync(request, st::CancellationToken.None);
@@ -120,7 +121,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 ProductMetadata = new ProductCatalogItem(),
             };
             mockGrpcClient.Setup(x => x.CreateCatalogItem(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             CatalogItem response = client.CreateCatalogItem(request.Parent, request.CatalogItem);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -152,7 +153,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 ProductMetadata = new ProductCatalogItem(),
             };
             mockGrpcClient.Setup(x => x.CreateCatalogItemAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CatalogItem>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             CatalogItem responseCallSettings = await client.CreateCatalogItemAsync(request.Parent, request.CatalogItem, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CatalogItem responseCancellationToken = await client.CreateCatalogItemAsync(request.Parent, request.CatalogItem, st::CancellationToken.None);
@@ -186,7 +187,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 ProductMetadata = new ProductCatalogItem(),
             };
             mockGrpcClient.Setup(x => x.CreateCatalogItem(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             CatalogItem response = client.CreateCatalogItem(request.ParentAsCatalogName, request.CatalogItem);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -218,7 +219,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 ProductMetadata = new ProductCatalogItem(),
             };
             mockGrpcClient.Setup(x => x.CreateCatalogItemAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CatalogItem>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             CatalogItem responseCallSettings = await client.CreateCatalogItemAsync(request.ParentAsCatalogName, request.CatalogItem, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CatalogItem responseCancellationToken = await client.CreateCatalogItemAsync(request.ParentAsCatalogName, request.CatalogItem, st::CancellationToken.None);
@@ -251,7 +252,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 ProductMetadata = new ProductCatalogItem(),
             };
             mockGrpcClient.Setup(x => x.GetCatalogItem(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             CatalogItem response = client.GetCatalogItem(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -282,7 +283,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 ProductMetadata = new ProductCatalogItem(),
             };
             mockGrpcClient.Setup(x => x.GetCatalogItemAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CatalogItem>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             CatalogItem responseCallSettings = await client.GetCatalogItemAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CatalogItem responseCancellationToken = await client.GetCatalogItemAsync(request, st::CancellationToken.None);
@@ -315,7 +316,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 ProductMetadata = new ProductCatalogItem(),
             };
             mockGrpcClient.Setup(x => x.GetCatalogItem(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             CatalogItem response = client.GetCatalogItem(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -346,7 +347,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 ProductMetadata = new ProductCatalogItem(),
             };
             mockGrpcClient.Setup(x => x.GetCatalogItemAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CatalogItem>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             CatalogItem responseCallSettings = await client.GetCatalogItemAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CatalogItem responseCancellationToken = await client.GetCatalogItemAsync(request.Name, st::CancellationToken.None);
@@ -379,7 +380,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 ProductMetadata = new ProductCatalogItem(),
             };
             mockGrpcClient.Setup(x => x.GetCatalogItem(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             CatalogItem response = client.GetCatalogItem(request.CatalogItemPathName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -410,7 +411,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 ProductMetadata = new ProductCatalogItem(),
             };
             mockGrpcClient.Setup(x => x.GetCatalogItemAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CatalogItem>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             CatalogItem responseCallSettings = await client.GetCatalogItemAsync(request.CatalogItemPathName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CatalogItem responseCancellationToken = await client.GetCatalogItemAsync(request.CatalogItemPathName, st::CancellationToken.None);
@@ -445,7 +446,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 ProductMetadata = new ProductCatalogItem(),
             };
             mockGrpcClient.Setup(x => x.UpdateCatalogItem(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             CatalogItem response = client.UpdateCatalogItem(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -478,7 +479,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 ProductMetadata = new ProductCatalogItem(),
             };
             mockGrpcClient.Setup(x => x.UpdateCatalogItemAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CatalogItem>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             CatalogItem responseCallSettings = await client.UpdateCatalogItemAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CatalogItem responseCancellationToken = await client.UpdateCatalogItemAsync(request, st::CancellationToken.None);
@@ -513,7 +514,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 ProductMetadata = new ProductCatalogItem(),
             };
             mockGrpcClient.Setup(x => x.UpdateCatalogItem(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             CatalogItem response = client.UpdateCatalogItem(request.Name, request.CatalogItem, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -546,7 +547,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 ProductMetadata = new ProductCatalogItem(),
             };
             mockGrpcClient.Setup(x => x.UpdateCatalogItemAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CatalogItem>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             CatalogItem responseCallSettings = await client.UpdateCatalogItemAsync(request.Name, request.CatalogItem, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CatalogItem responseCancellationToken = await client.UpdateCatalogItemAsync(request.Name, request.CatalogItem, request.UpdateMask, st::CancellationToken.None);
@@ -581,7 +582,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 ProductMetadata = new ProductCatalogItem(),
             };
             mockGrpcClient.Setup(x => x.UpdateCatalogItem(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             CatalogItem response = client.UpdateCatalogItem(request.CatalogItemPathName, request.CatalogItem, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -614,7 +615,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 ProductMetadata = new ProductCatalogItem(),
             };
             mockGrpcClient.Setup(x => x.UpdateCatalogItemAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CatalogItem>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             CatalogItem responseCallSettings = await client.UpdateCatalogItemAsync(request.CatalogItemPathName, request.CatalogItem, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CatalogItem responseCancellationToken = await client.UpdateCatalogItemAsync(request.CatalogItemPathName, request.CatalogItem, request.UpdateMask, st::CancellationToken.None);
@@ -633,7 +634,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteCatalogItem(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteCatalogItem(request);
             mockGrpcClient.VerifyAll();
         }
@@ -649,7 +650,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteCatalogItemAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteCatalogItemAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteCatalogItemAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -666,7 +667,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteCatalogItem(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteCatalogItem(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -682,7 +683,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteCatalogItemAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteCatalogItemAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteCatalogItemAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -699,7 +700,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteCatalogItem(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteCatalogItem(request.CatalogItemPathName);
             mockGrpcClient.VerifyAll();
         }
@@ -715,7 +716,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteCatalogItemAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteCatalogItemAsync(request.CatalogItemPathName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteCatalogItemAsync(request.CatalogItemPathName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();

@@ -560,6 +560,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
                 QueryParams = new QueryParameters(),
                 RequestId = "",
                 AssistQueryParams = new AssistQueryParameters(),
+                CxParameters = new Struct(),
             };
             // Make the request
             AnalyzeContentResponse response = participantsClient.AnalyzeContent(request);
@@ -582,6 +583,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
                 QueryParams = new QueryParameters(),
                 RequestId = "",
                 AssistQueryParams = new AssistQueryParameters(),
+                CxParameters = new Struct(),
             };
             // Make the request
             AnalyzeContentResponse response = await participantsClient.AnalyzeContentAsync(request);

@@ -14,7 +14,6 @@
 
 using Google.Api.Gax;
 using Google.Cloud.Spanner.V1;
-using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -29,44 +28,54 @@ namespace Google.Cloud.Spanner.Data
     internal sealed class EphemeralTransaction : ISpannerTransaction
     {
         private readonly SpannerConnection _connection;
-        private readonly TransactionOptions _transactionOptions;
         private readonly Priority _commitPriority;
 
-        internal EphemeralTransaction(SpannerConnection connection, TransactionOptions transactionOptions, Priority commitPriority)
+        internal EphemeralTransaction(SpannerConnection connection, Priority commitPriority)
         {
             _connection = GaxPreconditions.CheckNotNull(connection, nameof(connection));
-            _transactionOptions = transactionOptions;
             _commitPriority = commitPriority;
         }
 
         public Task<long> ExecuteDmlAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
         {
-            return ExecuteHelper.WithErrorTranslationAndProfiling(Impl, "EphemeralTransaction.ExecuteDmlAsync", _connection.Logger);
+            return ExecuteHelper.WithErrorTranslationAndProfiling(
+                () => _connection.RunWithRetriableTransactionAsync(Impl, cancellationToken), "EphemeralTransaction.ExecuteDmlAsync", _connection.Logger);
+
+            async Task<long> Impl(SpannerTransaction transaction)
+            {
+                transaction.CommitTimeout = timeoutSeconds;
+                transaction.CommitPriority = _commitPriority;
+
+                return await ((ISpannerTransaction)transaction)
+                    .ExecuteDmlAsync(request, cancellationToken, timeoutSeconds)
+                    .ConfigureAwait(false);
+            }
+        }
+
+        // Note that this method is not in ISpannerTransaction because PartitionedDml can only be executed through ephemeral transactions.
+        internal Task<long> ExecutePartitionedDmlAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
+        {
+            return ExecuteHelper.WithErrorTranslationAndProfiling(Impl, "EphemeralTransaction.ExecutePartitionedDmlAsync", _connection.Logger);
 
             async Task<long> Impl()
             {
-                using (var transaction = await _connection.BeginTransactionImplAsync(_transactionOptions, TransactionMode.ReadWrite, cancellationToken).ConfigureAwait(false))
+                using (var transaction = await _connection.BeginTransactionImplAsync(
+                    SpannerConnection.PartitionedDmlTransactionOptions, TransactionMode.ReadWrite, cancellationToken).ConfigureAwait(false))
                 {
                     transaction.CommitTimeout = timeoutSeconds;
                     transaction.CommitPriority = _commitPriority;
+
                     while (true)
                     {
                         try
                         {
-                            long count = await ((ISpannerTransaction)transaction)
+                            return await ((ISpannerTransaction)transaction)
                                 .ExecuteDmlAsync(request, cancellationToken, timeoutSeconds)
                                 .ConfigureAwait(false);
 
-                            // This is somewhat ugly. PDML commits as it goes, so we don't need to, whereas non-partitioned
-                            // DML needs the commit afterwards to finish up.
-                            if (_transactionOptions.ModeCase != TransactionOptions.ModeOneofCase.PartitionedDml)
-                            {
-                                await transaction.CommitAsync(cancellationToken).ConfigureAwait(false);
-                            }
-                            return count;
+                            // PDML commits as it goes, so we don't need to explicitly commit.
                         }
                         catch (SpannerException e) when (
-                            _transactionOptions.ModeCase == TransactionOptions.ModeOneofCase.PartitionedDml &&
                             e.ErrorCode == ErrorCode.Internal &&
                             e.Message.Contains("Received unexpected EOS on DATA frame from server"))
                         {
@@ -81,25 +90,17 @@ namespace Google.Cloud.Spanner.Data
 
         public Task<IEnumerable<long>> ExecuteBatchDmlAsync(ExecuteBatchDmlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
         {
-            return ExecuteHelper.WithErrorTranslationAndProfiling(Impl, "EphemeralTransaction.ExecuteBatchDmlAsync", _connection.Logger);
+            return ExecuteHelper.WithErrorTranslationAndProfiling(
+                () => _connection.RunWithRetriableTransactionAsync(Impl, cancellationToken), "EphemeralTransaction.ExecuteBatchDmlAsync", _connection.Logger);
 
-            async Task<IEnumerable<long>> Impl()
+            async Task<IEnumerable<long>> Impl(SpannerTransaction transaction)
             {
-                using (var transaction = await _connection.BeginTransactionImplAsync(_transactionOptions, TransactionMode.ReadWrite, cancellationToken).ConfigureAwait(false))
-                {
-                    transaction.CommitTimeout = timeoutSeconds;
-                    transaction.CommitPriority = _commitPriority;
+                transaction.CommitTimeout = timeoutSeconds;
+                transaction.CommitPriority = _commitPriority;
 
-                    IEnumerable<long> result;
-
-                    result = await ((ISpannerTransaction)transaction)
-                        .ExecuteBatchDmlAsync(request, cancellationToken, timeoutSeconds)
-                        .ConfigureAwait(false);
-
-                    await transaction.CommitAsync(cancellationToken).ConfigureAwait(false);
-
-                    return result;
-                }
+                return await ((ISpannerTransaction)transaction)
+                    .ExecuteBatchDmlAsync(request, cancellationToken, timeoutSeconds)
+                    .ConfigureAwait(false);
             }
         }
 
@@ -115,23 +116,20 @@ namespace Google.Cloud.Spanner.Data
         /// <returns>The number of rows modified.</returns>
         public Task<int> ExecuteMutationsAsync(List<Mutation> mutations, CancellationToken cancellationToken, int timeoutSeconds)
         {
-            return ExecuteHelper.WithErrorTranslationAndProfiling(Impl, "EphemeralTransaction.ExecuteMutationsAsync", _connection.Logger);
+            return ExecuteHelper.WithErrorTranslationAndProfiling(
+                () => _connection.RunWithRetriableTransactionAsync(Impl, cancellationToken), "EphemeralTransaction.ExecuteMutationsAsync", _connection.Logger);
 
-            async Task<int> Impl()
+            async Task<int> Impl(SpannerTransaction transaction)
             {
-                using (var transaction = await _connection.BeginTransactionImplAsync(_transactionOptions, TransactionMode.ReadWrite, cancellationToken).ConfigureAwait(false))
-                {
-                    // Importantly, we need to set timeout on the transaction, because
-                    // ExecuteMutations on SpannerTransaction doesnt actually hit the network
-                    // until you commit or rollback.
-                    transaction.CommitTimeout = timeoutSeconds;
-                    transaction.CommitPriority = _commitPriority;
-                    int count = await ((ISpannerTransaction)transaction)
-                        .ExecuteMutationsAsync(mutations, cancellationToken, timeoutSeconds)
-                        .ConfigureAwait(false);
-                    await transaction.CommitAsync(cancellationToken).ConfigureAwait(false);
-                    return count;
-                }
+                // Importantly, we need to set timeout on the transaction, because
+                // ExecuteMutations on SpannerTransaction doesnt actually hit the network
+                // until you commit or rollback.
+                transaction.CommitTimeout = timeoutSeconds;
+                transaction.CommitPriority = _commitPriority;
+
+                return await ((ISpannerTransaction)transaction)
+                    .ExecuteMutationsAsync(mutations, cancellationToken, timeoutSeconds)
+                    .ConfigureAwait(false);
             }
         }
 
@@ -141,7 +139,7 @@ namespace Google.Cloud.Spanner.Data
 
             async Task<ReliableStreamReader> Impl()
             {
-                PooledSession session = await _connection.AcquireSessionAsync(_transactionOptions, cancellationToken).ConfigureAwait(false);
+                PooledSession session = await _connection.AcquireSessionAsync(null, cancellationToken).ConfigureAwait(false);
                 var callSettings = _connection.CreateCallSettings(
                     request.GetCallSettings,
                     cancellationToken);

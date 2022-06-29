@@ -11,831 +11,6 @@
   },
   "snippets": [
     {
-      "regionTag": "pubsub_v1_generated_SchemaService_CreateSchema_sync",
-      "title": "CreateSchemaRequestObject",
-      "description": "Snippet for CreateSchema",
-      "file": "SchemaServiceClient.CreateSchemaRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreateSchema",
-        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.CreateSchema",
-        "resultType": "Google.Cloud.PubSub.V1.Schema",
-        "client": {
-          "shortName": "SchemaServiceClient",
-          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
-        },
-        "method": {
-          "shortName": "CreateSchema",
-          "fullName": "google.pubsub.v1.SchemaService.CreateSchema",
-          "service": {
-            "shortName": "SchemaService",
-            "fullName": "google.pubsub.v1.SchemaService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "pubsub_v1_generated_SchemaService_CreateSchema_async",
-      "title": "CreateSchemaRequestObjectAsync",
-      "description": "Snippet for CreateSchemaAsync",
-      "file": "SchemaServiceClient.CreateSchemaRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreateSchemaAsync",
-        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.CreateSchemaAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
-        "client": {
-          "shortName": "SchemaServiceClient",
-          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
-        },
-        "method": {
-          "shortName": "CreateSchema",
-          "fullName": "google.pubsub.v1.SchemaService.CreateSchema",
-          "service": {
-            "shortName": "SchemaService",
-            "fullName": "google.pubsub.v1.SchemaService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "pubsub_v1_generated_SchemaService_CreateSchema_sync_flattened",
-      "title": "CreateSchema",
-      "description": "Snippet for CreateSchema",
-      "file": "SchemaServiceClient.CreateSchemaSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreateSchema",
-        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.CreateSchema",
-        "resultType": "Google.Cloud.PubSub.V1.Schema",
-        "client": {
-          "shortName": "SchemaServiceClient",
-          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
-        },
-        "method": {
-          "shortName": "CreateSchema",
-          "fullName": "google.pubsub.v1.SchemaService.CreateSchema",
-          "service": {
-            "shortName": "SchemaService",
-            "fullName": "google.pubsub.v1.SchemaService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "pubsub_v1_generated_SchemaService_CreateSchema_async_flattened",
-      "title": "CreateSchemaAsync",
-      "description": "Snippet for CreateSchemaAsync",
-      "file": "SchemaServiceClient.CreateSchemaAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreateSchemaAsync",
-        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.CreateSchemaAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
-        "client": {
-          "shortName": "SchemaServiceClient",
-          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
-        },
-        "method": {
-          "shortName": "CreateSchema",
-          "fullName": "google.pubsub.v1.SchemaService.CreateSchema",
-          "service": {
-            "shortName": "SchemaService",
-            "fullName": "google.pubsub.v1.SchemaService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "pubsub_v1_generated_SchemaService_CreateSchema_sync_flattened_resourceNames",
-      "title": "CreateSchemaResourceNames",
-      "description": "Snippet for CreateSchema",
-      "file": "SchemaServiceClient.CreateSchemaResourceNamesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreateSchema",
-        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.CreateSchema",
-        "resultType": "Google.Cloud.PubSub.V1.Schema",
-        "client": {
-          "shortName": "SchemaServiceClient",
-          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
-        },
-        "method": {
-          "shortName": "CreateSchema",
-          "fullName": "google.pubsub.v1.SchemaService.CreateSchema",
-          "service": {
-            "shortName": "SchemaService",
-            "fullName": "google.pubsub.v1.SchemaService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "pubsub_v1_generated_SchemaService_CreateSchema_async_flattened_resourceNames",
-      "title": "CreateSchemaResourceNamesAsync",
-      "description": "Snippet for CreateSchemaAsync",
-      "file": "SchemaServiceClient.CreateSchemaResourceNamesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreateSchemaAsync",
-        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.CreateSchemaAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
-        "client": {
-          "shortName": "SchemaServiceClient",
-          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
-        },
-        "method": {
-          "shortName": "CreateSchema",
-          "fullName": "google.pubsub.v1.SchemaService.CreateSchema",
-          "service": {
-            "shortName": "SchemaService",
-            "fullName": "google.pubsub.v1.SchemaService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "pubsub_v1_generated_SchemaService_GetSchema_sync",
-      "title": "GetSchemaRequestObject",
-      "description": "Snippet for GetSchema",
-      "file": "SchemaServiceClient.GetSchemaRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "GetSchema",
-        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.GetSchema",
-        "resultType": "Google.Cloud.PubSub.V1.Schema",
-        "client": {
-          "shortName": "SchemaServiceClient",
-          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
-        },
-        "method": {
-          "shortName": "GetSchema",
-          "fullName": "google.pubsub.v1.SchemaService.GetSchema",
-          "service": {
-            "shortName": "SchemaService",
-            "fullName": "google.pubsub.v1.SchemaService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "pubsub_v1_generated_SchemaService_GetSchema_async",
-      "title": "GetSchemaRequestObjectAsync",
-      "description": "Snippet for GetSchemaAsync",
-      "file": "SchemaServiceClient.GetSchemaRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "GetSchemaAsync",
-        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.GetSchemaAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
-        "client": {
-          "shortName": "SchemaServiceClient",
-          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
-        },
-        "method": {
-          "shortName": "GetSchema",
-          "fullName": "google.pubsub.v1.SchemaService.GetSchema",
-          "service": {
-            "shortName": "SchemaService",
-            "fullName": "google.pubsub.v1.SchemaService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "pubsub_v1_generated_SchemaService_GetSchema_sync_flattened",
-      "title": "GetSchema",
-      "description": "Snippet for GetSchema",
-      "file": "SchemaServiceClient.GetSchemaSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "GetSchema",
-        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.GetSchema",
-        "resultType": "Google.Cloud.PubSub.V1.Schema",
-        "client": {
-          "shortName": "SchemaServiceClient",
-          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
-        },
-        "method": {
-          "shortName": "GetSchema",
-          "fullName": "google.pubsub.v1.SchemaService.GetSchema",
-          "service": {
-            "shortName": "SchemaService",
-            "fullName": "google.pubsub.v1.SchemaService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "pubsub_v1_generated_SchemaService_GetSchema_async_flattened",
-      "title": "GetSchemaAsync",
-      "description": "Snippet for GetSchemaAsync",
-      "file": "SchemaServiceClient.GetSchemaAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "GetSchemaAsync",
-        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.GetSchemaAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
-        "client": {
-          "shortName": "SchemaServiceClient",
-          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
-        },
-        "method": {
-          "shortName": "GetSchema",
-          "fullName": "google.pubsub.v1.SchemaService.GetSchema",
-          "service": {
-            "shortName": "SchemaService",
-            "fullName": "google.pubsub.v1.SchemaService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "pubsub_v1_generated_SchemaService_GetSchema_sync_flattened_resourceNames",
-      "title": "GetSchemaResourceNames",
-      "description": "Snippet for GetSchema",
-      "file": "SchemaServiceClient.GetSchemaResourceNamesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "GetSchema",
-        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.GetSchema",
-        "resultType": "Google.Cloud.PubSub.V1.Schema",
-        "client": {
-          "shortName": "SchemaServiceClient",
-          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
-        },
-        "method": {
-          "shortName": "GetSchema",
-          "fullName": "google.pubsub.v1.SchemaService.GetSchema",
-          "service": {
-            "shortName": "SchemaService",
-            "fullName": "google.pubsub.v1.SchemaService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "pubsub_v1_generated_SchemaService_GetSchema_async_flattened_resourceNames",
-      "title": "GetSchemaResourceNamesAsync",
-      "description": "Snippet for GetSchemaAsync",
-      "file": "SchemaServiceClient.GetSchemaResourceNamesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "GetSchemaAsync",
-        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.GetSchemaAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
-        "client": {
-          "shortName": "SchemaServiceClient",
-          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
-        },
-        "method": {
-          "shortName": "GetSchema",
-          "fullName": "google.pubsub.v1.SchemaService.GetSchema",
-          "service": {
-            "shortName": "SchemaService",
-            "fullName": "google.pubsub.v1.SchemaService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "pubsub_v1_generated_SchemaService_ListSchemas_sync",
-      "title": "ListSchemasRequestObject",
-      "description": "Snippet for ListSchemas",
-      "file": "SchemaServiceClient.ListSchemasRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListSchemas",
-        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ListSchemas",
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListSchemasResponse, Google.Cloud.PubSub.V1.Schema>",
-        "client": {
-          "shortName": "SchemaServiceClient",
-          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
-        },
-        "method": {
-          "shortName": "ListSchemas",
-          "fullName": "google.pubsub.v1.SchemaService.ListSchemas",
-          "service": {
-            "shortName": "SchemaService",
-            "fullName": "google.pubsub.v1.SchemaService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "pubsub_v1_generated_SchemaService_ListSchemas_async",
-      "title": "ListSchemasRequestObjectAsync",
-      "description": "Snippet for ListSchemasAsync",
-      "file": "SchemaServiceClient.ListSchemasRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListSchemasAsync",
-        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ListSchemasAsync",
-        "async": true,
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListSchemasResponse, Google.Cloud.PubSub.V1.Schema>",
-        "client": {
-          "shortName": "SchemaServiceClient",
-          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
-        },
-        "method": {
-          "shortName": "ListSchemas",
-          "fullName": "google.pubsub.v1.SchemaService.ListSchemas",
-          "service": {
-            "shortName": "SchemaService",
-            "fullName": "google.pubsub.v1.SchemaService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "pubsub_v1_generated_SchemaService_ListSchemas_sync_flattened",
-      "title": "ListSchemas",
-      "description": "Snippet for ListSchemas",
-      "file": "SchemaServiceClient.ListSchemasSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListSchemas",
-        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ListSchemas",
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListSchemasResponse, Google.Cloud.PubSub.V1.Schema>",
-        "client": {
-          "shortName": "SchemaServiceClient",
-          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
-        },
-        "method": {
-          "shortName": "ListSchemas",
-          "fullName": "google.pubsub.v1.SchemaService.ListSchemas",
-          "service": {
-            "shortName": "SchemaService",
-            "fullName": "google.pubsub.v1.SchemaService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "pubsub_v1_generated_SchemaService_ListSchemas_async_flattened",
-      "title": "ListSchemasAsync",
-      "description": "Snippet for ListSchemasAsync",
-      "file": "SchemaServiceClient.ListSchemasAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListSchemasAsync",
-        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ListSchemasAsync",
-        "async": true,
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListSchemasResponse, Google.Cloud.PubSub.V1.Schema>",
-        "client": {
-          "shortName": "SchemaServiceClient",
-          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
-        },
-        "method": {
-          "shortName": "ListSchemas",
-          "fullName": "google.pubsub.v1.SchemaService.ListSchemas",
-          "service": {
-            "shortName": "SchemaService",
-            "fullName": "google.pubsub.v1.SchemaService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "pubsub_v1_generated_SchemaService_ListSchemas_sync_flattened_resourceNames",
-      "title": "ListSchemasResourceNames",
-      "description": "Snippet for ListSchemas",
-      "file": "SchemaServiceClient.ListSchemasResourceNamesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListSchemas",
-        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ListSchemas",
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListSchemasResponse, Google.Cloud.PubSub.V1.Schema>",
-        "client": {
-          "shortName": "SchemaServiceClient",
-          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
-        },
-        "method": {
-          "shortName": "ListSchemas",
-          "fullName": "google.pubsub.v1.SchemaService.ListSchemas",
-          "service": {
-            "shortName": "SchemaService",
-            "fullName": "google.pubsub.v1.SchemaService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "pubsub_v1_generated_SchemaService_ListSchemas_async_flattened_resourceNames",
-      "title": "ListSchemasResourceNamesAsync",
-      "description": "Snippet for ListSchemasAsync",
-      "file": "SchemaServiceClient.ListSchemasResourceNamesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListSchemasAsync",
-        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ListSchemasAsync",
-        "async": true,
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListSchemasResponse, Google.Cloud.PubSub.V1.Schema>",
-        "client": {
-          "shortName": "SchemaServiceClient",
-          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
-        },
-        "method": {
-          "shortName": "ListSchemas",
-          "fullName": "google.pubsub.v1.SchemaService.ListSchemas",
-          "service": {
-            "shortName": "SchemaService",
-            "fullName": "google.pubsub.v1.SchemaService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "pubsub_v1_generated_SchemaService_DeleteSchema_sync",
-      "title": "DeleteSchemaRequestObject",
-      "description": "Snippet for DeleteSchema",
-      "file": "SchemaServiceClient.DeleteSchemaRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteSchema",
-        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.DeleteSchema",
-        "client": {
-          "shortName": "SchemaServiceClient",
-          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
-        },
-        "method": {
-          "shortName": "DeleteSchema",
-          "fullName": "google.pubsub.v1.SchemaService.DeleteSchema",
-          "service": {
-            "shortName": "SchemaService",
-            "fullName": "google.pubsub.v1.SchemaService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "pubsub_v1_generated_SchemaService_DeleteSchema_async",
-      "title": "DeleteSchemaRequestObjectAsync",
-      "description": "Snippet for DeleteSchemaAsync",
-      "file": "SchemaServiceClient.DeleteSchemaRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteSchemaAsync",
-        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.DeleteSchemaAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task",
-        "client": {
-          "shortName": "SchemaServiceClient",
-          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
-        },
-        "method": {
-          "shortName": "DeleteSchema",
-          "fullName": "google.pubsub.v1.SchemaService.DeleteSchema",
-          "service": {
-            "shortName": "SchemaService",
-            "fullName": "google.pubsub.v1.SchemaService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "pubsub_v1_generated_SchemaService_DeleteSchema_sync_flattened",
-      "title": "DeleteSchema",
-      "description": "Snippet for DeleteSchema",
-      "file": "SchemaServiceClient.DeleteSchemaSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteSchema",
-        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.DeleteSchema",
-        "client": {
-          "shortName": "SchemaServiceClient",
-          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
-        },
-        "method": {
-          "shortName": "DeleteSchema",
-          "fullName": "google.pubsub.v1.SchemaService.DeleteSchema",
-          "service": {
-            "shortName": "SchemaService",
-            "fullName": "google.pubsub.v1.SchemaService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "pubsub_v1_generated_SchemaService_DeleteSchema_async_flattened",
-      "title": "DeleteSchemaAsync",
-      "description": "Snippet for DeleteSchemaAsync",
-      "file": "SchemaServiceClient.DeleteSchemaAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteSchemaAsync",
-        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.DeleteSchemaAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task",
-        "client": {
-          "shortName": "SchemaServiceClient",
-          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
-        },
-        "method": {
-          "shortName": "DeleteSchema",
-          "fullName": "google.pubsub.v1.SchemaService.DeleteSchema",
-          "service": {
-            "shortName": "SchemaService",
-            "fullName": "google.pubsub.v1.SchemaService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "pubsub_v1_generated_SchemaService_DeleteSchema_sync_flattened_resourceNames",
-      "title": "DeleteSchemaResourceNames",
-      "description": "Snippet for DeleteSchema",
-      "file": "SchemaServiceClient.DeleteSchemaResourceNamesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteSchema",
-        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.DeleteSchema",
-        "client": {
-          "shortName": "SchemaServiceClient",
-          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
-        },
-        "method": {
-          "shortName": "DeleteSchema",
-          "fullName": "google.pubsub.v1.SchemaService.DeleteSchema",
-          "service": {
-            "shortName": "SchemaService",
-            "fullName": "google.pubsub.v1.SchemaService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "pubsub_v1_generated_SchemaService_DeleteSchema_async_flattened_resourceNames",
-      "title": "DeleteSchemaResourceNamesAsync",
-      "description": "Snippet for DeleteSchemaAsync",
-      "file": "SchemaServiceClient.DeleteSchemaResourceNamesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteSchemaAsync",
-        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.DeleteSchemaAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task",
-        "client": {
-          "shortName": "SchemaServiceClient",
-          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
-        },
-        "method": {
-          "shortName": "DeleteSchema",
-          "fullName": "google.pubsub.v1.SchemaService.DeleteSchema",
-          "service": {
-            "shortName": "SchemaService",
-            "fullName": "google.pubsub.v1.SchemaService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "pubsub_v1_generated_SchemaService_ValidateSchema_sync",
-      "title": "ValidateSchemaRequestObject",
-      "description": "Snippet for ValidateSchema",
-      "file": "SchemaServiceClient.ValidateSchemaRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ValidateSchema",
-        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ValidateSchema",
-        "resultType": "Google.Cloud.PubSub.V1.ValidateSchemaResponse",
-        "client": {
-          "shortName": "SchemaServiceClient",
-          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
-        },
-        "method": {
-          "shortName": "ValidateSchema",
-          "fullName": "google.pubsub.v1.SchemaService.ValidateSchema",
-          "service": {
-            "shortName": "SchemaService",
-            "fullName": "google.pubsub.v1.SchemaService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "pubsub_v1_generated_SchemaService_ValidateSchema_async",
-      "title": "ValidateSchemaRequestObjectAsync",
-      "description": "Snippet for ValidateSchemaAsync",
-      "file": "SchemaServiceClient.ValidateSchemaRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ValidateSchemaAsync",
-        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ValidateSchemaAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.ValidateSchemaResponse>",
-        "client": {
-          "shortName": "SchemaServiceClient",
-          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
-        },
-        "method": {
-          "shortName": "ValidateSchema",
-          "fullName": "google.pubsub.v1.SchemaService.ValidateSchema",
-          "service": {
-            "shortName": "SchemaService",
-            "fullName": "google.pubsub.v1.SchemaService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "pubsub_v1_generated_SchemaService_ValidateSchema_sync_flattened",
-      "title": "ValidateSchema",
-      "description": "Snippet for ValidateSchema",
-      "file": "SchemaServiceClient.ValidateSchemaSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ValidateSchema",
-        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ValidateSchema",
-        "resultType": "Google.Cloud.PubSub.V1.ValidateSchemaResponse",
-        "client": {
-          "shortName": "SchemaServiceClient",
-          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
-        },
-        "method": {
-          "shortName": "ValidateSchema",
-          "fullName": "google.pubsub.v1.SchemaService.ValidateSchema",
-          "service": {
-            "shortName": "SchemaService",
-            "fullName": "google.pubsub.v1.SchemaService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "pubsub_v1_generated_SchemaService_ValidateSchema_async_flattened",
-      "title": "ValidateSchemaAsync",
-      "description": "Snippet for ValidateSchemaAsync",
-      "file": "SchemaServiceClient.ValidateSchemaAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ValidateSchemaAsync",
-        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ValidateSchemaAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.ValidateSchemaResponse>",
-        "client": {
-          "shortName": "SchemaServiceClient",
-          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
-        },
-        "method": {
-          "shortName": "ValidateSchema",
-          "fullName": "google.pubsub.v1.SchemaService.ValidateSchema",
-          "service": {
-            "shortName": "SchemaService",
-            "fullName": "google.pubsub.v1.SchemaService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "pubsub_v1_generated_SchemaService_ValidateSchema_sync_flattened_resourceNames",
-      "title": "ValidateSchemaResourceNames",
-      "description": "Snippet for ValidateSchema",
-      "file": "SchemaServiceClient.ValidateSchemaResourceNamesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ValidateSchema",
-        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ValidateSchema",
-        "resultType": "Google.Cloud.PubSub.V1.ValidateSchemaResponse",
-        "client": {
-          "shortName": "SchemaServiceClient",
-          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
-        },
-        "method": {
-          "shortName": "ValidateSchema",
-          "fullName": "google.pubsub.v1.SchemaService.ValidateSchema",
-          "service": {
-            "shortName": "SchemaService",
-            "fullName": "google.pubsub.v1.SchemaService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "pubsub_v1_generated_SchemaService_ValidateSchema_async_flattened_resourceNames",
-      "title": "ValidateSchemaResourceNamesAsync",
-      "description": "Snippet for ValidateSchemaAsync",
-      "file": "SchemaServiceClient.ValidateSchemaResourceNamesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ValidateSchemaAsync",
-        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ValidateSchemaAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.ValidateSchemaResponse>",
-        "client": {
-          "shortName": "SchemaServiceClient",
-          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
-        },
-        "method": {
-          "shortName": "ValidateSchema",
-          "fullName": "google.pubsub.v1.SchemaService.ValidateSchema",
-          "service": {
-            "shortName": "SchemaService",
-            "fullName": "google.pubsub.v1.SchemaService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "pubsub_v1_generated_SchemaService_ValidateMessage_sync",
-      "title": "ValidateMessageRequestObject",
-      "description": "Snippet for ValidateMessage",
-      "file": "SchemaServiceClient.ValidateMessageRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ValidateMessage",
-        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ValidateMessage",
-        "resultType": "Google.Cloud.PubSub.V1.ValidateMessageResponse",
-        "client": {
-          "shortName": "SchemaServiceClient",
-          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
-        },
-        "method": {
-          "shortName": "ValidateMessage",
-          "fullName": "google.pubsub.v1.SchemaService.ValidateMessage",
-          "service": {
-            "shortName": "SchemaService",
-            "fullName": "google.pubsub.v1.SchemaService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "pubsub_v1_generated_SchemaService_ValidateMessage_async",
-      "title": "ValidateMessageRequestObjectAsync",
-      "description": "Snippet for ValidateMessageAsync",
-      "file": "SchemaServiceClient.ValidateMessageRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ValidateMessageAsync",
-        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ValidateMessageAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.ValidateMessageResponse>",
-        "client": {
-          "shortName": "SchemaServiceClient",
-          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
-        },
-        "method": {
-          "shortName": "ValidateMessage",
-          "fullName": "google.pubsub.v1.SchemaService.ValidateMessage",
-          "service": {
-            "shortName": "SchemaService",
-            "fullName": "google.pubsub.v1.SchemaService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
       "regionTag": "pubsub_v1_generated_PublisherServiceApi_CreateTopic_sync",
       "title": "CreateTopicRequestObject",
       "description": "Snippet for CreateTopic",
@@ -2017,6 +1192,831 @@
           "service": {
             "shortName": "PublisherServiceApi",
             "fullName": "google.pubsub.v1.PublisherServiceApi"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_CreateSchema_sync",
+      "title": "CreateSchemaRequestObject",
+      "description": "Snippet for CreateSchema",
+      "file": "SchemaServiceClient.CreateSchemaRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSchema",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.CreateSchema",
+        "resultType": "Google.Cloud.PubSub.V1.Schema",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSchema",
+          "fullName": "google.pubsub.v1.SchemaService.CreateSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_CreateSchema_async",
+      "title": "CreateSchemaRequestObjectAsync",
+      "description": "Snippet for CreateSchemaAsync",
+      "file": "SchemaServiceClient.CreateSchemaRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSchemaAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.CreateSchemaAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSchema",
+          "fullName": "google.pubsub.v1.SchemaService.CreateSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_CreateSchema_sync_flattened",
+      "title": "CreateSchema",
+      "description": "Snippet for CreateSchema",
+      "file": "SchemaServiceClient.CreateSchemaSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSchema",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.CreateSchema",
+        "resultType": "Google.Cloud.PubSub.V1.Schema",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSchema",
+          "fullName": "google.pubsub.v1.SchemaService.CreateSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_CreateSchema_async_flattened",
+      "title": "CreateSchemaAsync",
+      "description": "Snippet for CreateSchemaAsync",
+      "file": "SchemaServiceClient.CreateSchemaAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSchemaAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.CreateSchemaAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSchema",
+          "fullName": "google.pubsub.v1.SchemaService.CreateSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_CreateSchema_sync_flattened_resourceNames",
+      "title": "CreateSchemaResourceNames",
+      "description": "Snippet for CreateSchema",
+      "file": "SchemaServiceClient.CreateSchemaResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSchema",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.CreateSchema",
+        "resultType": "Google.Cloud.PubSub.V1.Schema",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSchema",
+          "fullName": "google.pubsub.v1.SchemaService.CreateSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_CreateSchema_async_flattened_resourceNames",
+      "title": "CreateSchemaResourceNamesAsync",
+      "description": "Snippet for CreateSchemaAsync",
+      "file": "SchemaServiceClient.CreateSchemaResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSchemaAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.CreateSchemaAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSchema",
+          "fullName": "google.pubsub.v1.SchemaService.CreateSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_GetSchema_sync",
+      "title": "GetSchemaRequestObject",
+      "description": "Snippet for GetSchema",
+      "file": "SchemaServiceClient.GetSchemaRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSchema",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.GetSchema",
+        "resultType": "Google.Cloud.PubSub.V1.Schema",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "GetSchema",
+          "fullName": "google.pubsub.v1.SchemaService.GetSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_GetSchema_async",
+      "title": "GetSchemaRequestObjectAsync",
+      "description": "Snippet for GetSchemaAsync",
+      "file": "SchemaServiceClient.GetSchemaRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSchemaAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.GetSchemaAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "GetSchema",
+          "fullName": "google.pubsub.v1.SchemaService.GetSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_GetSchema_sync_flattened",
+      "title": "GetSchema",
+      "description": "Snippet for GetSchema",
+      "file": "SchemaServiceClient.GetSchemaSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSchema",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.GetSchema",
+        "resultType": "Google.Cloud.PubSub.V1.Schema",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "GetSchema",
+          "fullName": "google.pubsub.v1.SchemaService.GetSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_GetSchema_async_flattened",
+      "title": "GetSchemaAsync",
+      "description": "Snippet for GetSchemaAsync",
+      "file": "SchemaServiceClient.GetSchemaAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSchemaAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.GetSchemaAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "GetSchema",
+          "fullName": "google.pubsub.v1.SchemaService.GetSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_GetSchema_sync_flattened_resourceNames",
+      "title": "GetSchemaResourceNames",
+      "description": "Snippet for GetSchema",
+      "file": "SchemaServiceClient.GetSchemaResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSchema",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.GetSchema",
+        "resultType": "Google.Cloud.PubSub.V1.Schema",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "GetSchema",
+          "fullName": "google.pubsub.v1.SchemaService.GetSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_GetSchema_async_flattened_resourceNames",
+      "title": "GetSchemaResourceNamesAsync",
+      "description": "Snippet for GetSchemaAsync",
+      "file": "SchemaServiceClient.GetSchemaResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSchemaAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.GetSchemaAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "GetSchema",
+          "fullName": "google.pubsub.v1.SchemaService.GetSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_ListSchemas_sync",
+      "title": "ListSchemasRequestObject",
+      "description": "Snippet for ListSchemas",
+      "file": "SchemaServiceClient.ListSchemasRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSchemas",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ListSchemas",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListSchemasResponse, Google.Cloud.PubSub.V1.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ListSchemas",
+          "fullName": "google.pubsub.v1.SchemaService.ListSchemas",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_ListSchemas_async",
+      "title": "ListSchemasRequestObjectAsync",
+      "description": "Snippet for ListSchemasAsync",
+      "file": "SchemaServiceClient.ListSchemasRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSchemasAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ListSchemasAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListSchemasResponse, Google.Cloud.PubSub.V1.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ListSchemas",
+          "fullName": "google.pubsub.v1.SchemaService.ListSchemas",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_ListSchemas_sync_flattened",
+      "title": "ListSchemas",
+      "description": "Snippet for ListSchemas",
+      "file": "SchemaServiceClient.ListSchemasSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSchemas",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ListSchemas",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListSchemasResponse, Google.Cloud.PubSub.V1.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ListSchemas",
+          "fullName": "google.pubsub.v1.SchemaService.ListSchemas",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_ListSchemas_async_flattened",
+      "title": "ListSchemasAsync",
+      "description": "Snippet for ListSchemasAsync",
+      "file": "SchemaServiceClient.ListSchemasAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSchemasAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ListSchemasAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListSchemasResponse, Google.Cloud.PubSub.V1.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ListSchemas",
+          "fullName": "google.pubsub.v1.SchemaService.ListSchemas",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_ListSchemas_sync_flattened_resourceNames",
+      "title": "ListSchemasResourceNames",
+      "description": "Snippet for ListSchemas",
+      "file": "SchemaServiceClient.ListSchemasResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSchemas",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ListSchemas",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListSchemasResponse, Google.Cloud.PubSub.V1.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ListSchemas",
+          "fullName": "google.pubsub.v1.SchemaService.ListSchemas",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_ListSchemas_async_flattened_resourceNames",
+      "title": "ListSchemasResourceNamesAsync",
+      "description": "Snippet for ListSchemasAsync",
+      "file": "SchemaServiceClient.ListSchemasResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSchemasAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ListSchemasAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListSchemasResponse, Google.Cloud.PubSub.V1.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ListSchemas",
+          "fullName": "google.pubsub.v1.SchemaService.ListSchemas",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_DeleteSchema_sync",
+      "title": "DeleteSchemaRequestObject",
+      "description": "Snippet for DeleteSchema",
+      "file": "SchemaServiceClient.DeleteSchemaRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSchema",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.DeleteSchema",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSchema",
+          "fullName": "google.pubsub.v1.SchemaService.DeleteSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_DeleteSchema_async",
+      "title": "DeleteSchemaRequestObjectAsync",
+      "description": "Snippet for DeleteSchemaAsync",
+      "file": "SchemaServiceClient.DeleteSchemaRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSchemaAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.DeleteSchemaAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSchema",
+          "fullName": "google.pubsub.v1.SchemaService.DeleteSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_DeleteSchema_sync_flattened",
+      "title": "DeleteSchema",
+      "description": "Snippet for DeleteSchema",
+      "file": "SchemaServiceClient.DeleteSchemaSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSchema",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.DeleteSchema",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSchema",
+          "fullName": "google.pubsub.v1.SchemaService.DeleteSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_DeleteSchema_async_flattened",
+      "title": "DeleteSchemaAsync",
+      "description": "Snippet for DeleteSchemaAsync",
+      "file": "SchemaServiceClient.DeleteSchemaAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSchemaAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.DeleteSchemaAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSchema",
+          "fullName": "google.pubsub.v1.SchemaService.DeleteSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_DeleteSchema_sync_flattened_resourceNames",
+      "title": "DeleteSchemaResourceNames",
+      "description": "Snippet for DeleteSchema",
+      "file": "SchemaServiceClient.DeleteSchemaResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSchema",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.DeleteSchema",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSchema",
+          "fullName": "google.pubsub.v1.SchemaService.DeleteSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_DeleteSchema_async_flattened_resourceNames",
+      "title": "DeleteSchemaResourceNamesAsync",
+      "description": "Snippet for DeleteSchemaAsync",
+      "file": "SchemaServiceClient.DeleteSchemaResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSchemaAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.DeleteSchemaAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSchema",
+          "fullName": "google.pubsub.v1.SchemaService.DeleteSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_ValidateSchema_sync",
+      "title": "ValidateSchemaRequestObject",
+      "description": "Snippet for ValidateSchema",
+      "file": "SchemaServiceClient.ValidateSchemaRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ValidateSchema",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ValidateSchema",
+        "resultType": "Google.Cloud.PubSub.V1.ValidateSchemaResponse",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ValidateSchema",
+          "fullName": "google.pubsub.v1.SchemaService.ValidateSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_ValidateSchema_async",
+      "title": "ValidateSchemaRequestObjectAsync",
+      "description": "Snippet for ValidateSchemaAsync",
+      "file": "SchemaServiceClient.ValidateSchemaRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ValidateSchemaAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ValidateSchemaAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.ValidateSchemaResponse>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ValidateSchema",
+          "fullName": "google.pubsub.v1.SchemaService.ValidateSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_ValidateSchema_sync_flattened",
+      "title": "ValidateSchema",
+      "description": "Snippet for ValidateSchema",
+      "file": "SchemaServiceClient.ValidateSchemaSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ValidateSchema",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ValidateSchema",
+        "resultType": "Google.Cloud.PubSub.V1.ValidateSchemaResponse",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ValidateSchema",
+          "fullName": "google.pubsub.v1.SchemaService.ValidateSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_ValidateSchema_async_flattened",
+      "title": "ValidateSchemaAsync",
+      "description": "Snippet for ValidateSchemaAsync",
+      "file": "SchemaServiceClient.ValidateSchemaAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ValidateSchemaAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ValidateSchemaAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.ValidateSchemaResponse>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ValidateSchema",
+          "fullName": "google.pubsub.v1.SchemaService.ValidateSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_ValidateSchema_sync_flattened_resourceNames",
+      "title": "ValidateSchemaResourceNames",
+      "description": "Snippet for ValidateSchema",
+      "file": "SchemaServiceClient.ValidateSchemaResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ValidateSchema",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ValidateSchema",
+        "resultType": "Google.Cloud.PubSub.V1.ValidateSchemaResponse",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ValidateSchema",
+          "fullName": "google.pubsub.v1.SchemaService.ValidateSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_ValidateSchema_async_flattened_resourceNames",
+      "title": "ValidateSchemaResourceNamesAsync",
+      "description": "Snippet for ValidateSchemaAsync",
+      "file": "SchemaServiceClient.ValidateSchemaResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ValidateSchemaAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ValidateSchemaAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.ValidateSchemaResponse>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ValidateSchema",
+          "fullName": "google.pubsub.v1.SchemaService.ValidateSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_ValidateMessage_sync",
+      "title": "ValidateMessageRequestObject",
+      "description": "Snippet for ValidateMessage",
+      "file": "SchemaServiceClient.ValidateMessageRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ValidateMessage",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ValidateMessage",
+        "resultType": "Google.Cloud.PubSub.V1.ValidateMessageResponse",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ValidateMessage",
+          "fullName": "google.pubsub.v1.SchemaService.ValidateMessage",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_ValidateMessage_async",
+      "title": "ValidateMessageRequestObjectAsync",
+      "description": "Snippet for ValidateMessageAsync",
+      "file": "SchemaServiceClient.ValidateMessageRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ValidateMessageAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ValidateMessageAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.ValidateMessageResponse>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ValidateMessage",
+          "fullName": "google.pubsub.v1.SchemaService.ValidateMessage",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
           }
         }
       },

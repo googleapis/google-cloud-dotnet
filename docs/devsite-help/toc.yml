@@ -2,6 +2,12 @@
   items:
   - name: Getting started
     href: getting-started.md
+  - name: Client configuration
+    href: client-configuration.md
+  - name: Client lifecycle
+    href: client-lifecycle.md
+  - name: Transport selection
+    href: transports.md
   - name: Troubleshooting
     href: troubleshooting.md
   - name: Emulator support
@@ -22,3 +28,5 @@
     href: cleanup.md
   - name: Versioning
     href: versioning.md
+  - name: GAX v4 breaking changes
+    href: breaking-gax4.md

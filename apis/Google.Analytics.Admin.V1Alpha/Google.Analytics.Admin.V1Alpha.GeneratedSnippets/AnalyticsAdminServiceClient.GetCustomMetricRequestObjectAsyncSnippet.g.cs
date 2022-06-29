@@ -34,7 +34,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Initialize request argument(s)
             GetCustomMetricRequest request = new GetCustomMetricRequest
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
             };
             // Make the request
             CustomMetric response = await analyticsAdminServiceClient.GetCustomMetricAsync(request);

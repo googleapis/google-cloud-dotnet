@@ -14,14 +14,16 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -62,6 +64,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             ExportTestCasesOperationsSettings = existing.ExportTestCasesOperationsSettings.Clone();
             ListTestCaseResultsSettings = existing.ListTestCaseResultsSettings;
             GetTestCaseResultSettings = existing.GetTestCaseResultSettings;
+            LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
 
@@ -355,6 +358,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </remarks>
         public gaxgrpc::CallSettings GetTestCaseResultSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="TestCasesSettings"/> object.</returns>
         public TestCasesSettings Clone() => new TestCasesSettings(this);
@@ -369,9 +377,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         public TestCasesSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public TestCasesClientBuilder()
+        public TestCasesClientBuilder() : base(TestCasesClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = TestCasesClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref TestCasesClient client);
@@ -398,29 +405,18 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return TestCasesClient.Create(callInvoker, Settings);
+            return TestCasesClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<TestCasesClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return TestCasesClient.Create(callInvoker, Settings);
+            return TestCasesClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => TestCasesClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => TestCasesClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => TestCasesClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>TestCases client wrapper, for convenient use.</summary>
@@ -450,19 +446,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             "https://www.googleapis.com/auth/dialogflow",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(TestCases.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="TestCasesClient"/> using the default credentials, endpoint and settings.
@@ -489,8 +476,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="TestCasesSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="TestCasesClient"/>.</returns>
-        internal static TestCasesClient Create(grpccore::CallInvoker callInvoker, TestCasesSettings settings = null)
+        internal static TestCasesClient Create(grpccore::CallInvoker callInvoker, TestCasesSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -499,7 +487,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             TestCases.TestCasesClient grpcClient = new TestCases.TestCasesClient(callInvoker);
-            return new TestCasesClientImpl(grpcClient, settings);
+            return new TestCasesClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -517,6 +505,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>The underlying gRPC TestCases client</summary>
         public virtual TestCases.TestCasesClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Fetches a list of test cases for a given agent.
@@ -1258,7 +1249,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Imports the test cases from a Cloud Storage bucket or a local file. It
-        /// always creates new test cases and won't overwite any existing ones. The
+        /// always creates new test cases and won't overwrite any existing ones. The
         /// provided ID in the imported test case is neglected.
         /// 
         /// This method is a [long-running
@@ -1276,7 +1267,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Imports the test cases from a Cloud Storage bucket or a local file. It
-        /// always creates new test cases and won't overwite any existing ones. The
+        /// always creates new test cases and won't overwrite any existing ones. The
         /// provided ID in the imported test case is neglected.
         /// 
         /// This method is a [long-running
@@ -1294,7 +1285,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Imports the test cases from a Cloud Storage bucket or a local file. It
-        /// always creates new test cases and won't overwite any existing ones. The
+        /// always creates new test cases and won't overwrite any existing ones. The
         /// provided ID in the imported test case is neglected.
         /// 
         /// This method is a [long-running
@@ -1693,49 +1684,51 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="TestCasesSettings"/> used within this client.</param>
-        public TestCasesClientImpl(TestCases.TestCasesClient grpcClient, TestCasesSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public TestCasesClientImpl(TestCases.TestCasesClient grpcClient, TestCasesSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             TestCasesSettings effectiveSettings = settings ?? TestCasesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            RunTestCaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RunTestCaseOperationsSettings);
-            BatchRunTestCasesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchRunTestCasesOperationsSettings);
-            ImportTestCasesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportTestCasesOperationsSettings);
-            ExportTestCasesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportTestCasesOperationsSettings);
-            _callListTestCases = clientHelper.BuildApiCall<ListTestCasesRequest, ListTestCasesResponse>(grpcClient.ListTestCasesAsync, grpcClient.ListTestCases, effectiveSettings.ListTestCasesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            RunTestCaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RunTestCaseOperationsSettings, logger);
+            BatchRunTestCasesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchRunTestCasesOperationsSettings, logger);
+            ImportTestCasesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportTestCasesOperationsSettings, logger);
+            ExportTestCasesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportTestCasesOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
+            _callListTestCases = clientHelper.BuildApiCall<ListTestCasesRequest, ListTestCasesResponse>("ListTestCases", grpcClient.ListTestCasesAsync, grpcClient.ListTestCases, effectiveSettings.ListTestCasesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListTestCases);
             Modify_ListTestCasesApiCall(ref _callListTestCases);
-            _callBatchDeleteTestCases = clientHelper.BuildApiCall<BatchDeleteTestCasesRequest, wkt::Empty>(grpcClient.BatchDeleteTestCasesAsync, grpcClient.BatchDeleteTestCases, effectiveSettings.BatchDeleteTestCasesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callBatchDeleteTestCases = clientHelper.BuildApiCall<BatchDeleteTestCasesRequest, wkt::Empty>("BatchDeleteTestCases", grpcClient.BatchDeleteTestCasesAsync, grpcClient.BatchDeleteTestCases, effectiveSettings.BatchDeleteTestCasesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callBatchDeleteTestCases);
             Modify_BatchDeleteTestCasesApiCall(ref _callBatchDeleteTestCases);
-            _callGetTestCase = clientHelper.BuildApiCall<GetTestCaseRequest, TestCase>(grpcClient.GetTestCaseAsync, grpcClient.GetTestCase, effectiveSettings.GetTestCaseSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetTestCase = clientHelper.BuildApiCall<GetTestCaseRequest, TestCase>("GetTestCase", grpcClient.GetTestCaseAsync, grpcClient.GetTestCase, effectiveSettings.GetTestCaseSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetTestCase);
             Modify_GetTestCaseApiCall(ref _callGetTestCase);
-            _callCreateTestCase = clientHelper.BuildApiCall<CreateTestCaseRequest, TestCase>(grpcClient.CreateTestCaseAsync, grpcClient.CreateTestCase, effectiveSettings.CreateTestCaseSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateTestCase = clientHelper.BuildApiCall<CreateTestCaseRequest, TestCase>("CreateTestCase", grpcClient.CreateTestCaseAsync, grpcClient.CreateTestCase, effectiveSettings.CreateTestCaseSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateTestCase);
             Modify_CreateTestCaseApiCall(ref _callCreateTestCase);
-            _callUpdateTestCase = clientHelper.BuildApiCall<UpdateTestCaseRequest, TestCase>(grpcClient.UpdateTestCaseAsync, grpcClient.UpdateTestCase, effectiveSettings.UpdateTestCaseSettings).WithGoogleRequestParam("test_case.name", request => request.TestCase?.Name);
+            _callUpdateTestCase = clientHelper.BuildApiCall<UpdateTestCaseRequest, TestCase>("UpdateTestCase", grpcClient.UpdateTestCaseAsync, grpcClient.UpdateTestCase, effectiveSettings.UpdateTestCaseSettings).WithGoogleRequestParam("test_case.name", request => request.TestCase?.Name);
             Modify_ApiCall(ref _callUpdateTestCase);
             Modify_UpdateTestCaseApiCall(ref _callUpdateTestCase);
-            _callRunTestCase = clientHelper.BuildApiCall<RunTestCaseRequest, lro::Operation>(grpcClient.RunTestCaseAsync, grpcClient.RunTestCase, effectiveSettings.RunTestCaseSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callRunTestCase = clientHelper.BuildApiCall<RunTestCaseRequest, lro::Operation>("RunTestCase", grpcClient.RunTestCaseAsync, grpcClient.RunTestCase, effectiveSettings.RunTestCaseSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callRunTestCase);
             Modify_RunTestCaseApiCall(ref _callRunTestCase);
-            _callBatchRunTestCases = clientHelper.BuildApiCall<BatchRunTestCasesRequest, lro::Operation>(grpcClient.BatchRunTestCasesAsync, grpcClient.BatchRunTestCases, effectiveSettings.BatchRunTestCasesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callBatchRunTestCases = clientHelper.BuildApiCall<BatchRunTestCasesRequest, lro::Operation>("BatchRunTestCases", grpcClient.BatchRunTestCasesAsync, grpcClient.BatchRunTestCases, effectiveSettings.BatchRunTestCasesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callBatchRunTestCases);
             Modify_BatchRunTestCasesApiCall(ref _callBatchRunTestCases);
-            _callCalculateCoverage = clientHelper.BuildApiCall<CalculateCoverageRequest, CalculateCoverageResponse>(grpcClient.CalculateCoverageAsync, grpcClient.CalculateCoverage, effectiveSettings.CalculateCoverageSettings).WithGoogleRequestParam("agent", request => request.Agent);
+            _callCalculateCoverage = clientHelper.BuildApiCall<CalculateCoverageRequest, CalculateCoverageResponse>("CalculateCoverage", grpcClient.CalculateCoverageAsync, grpcClient.CalculateCoverage, effectiveSettings.CalculateCoverageSettings).WithGoogleRequestParam("agent", request => request.Agent);
             Modify_ApiCall(ref _callCalculateCoverage);
             Modify_CalculateCoverageApiCall(ref _callCalculateCoverage);
-            _callImportTestCases = clientHelper.BuildApiCall<ImportTestCasesRequest, lro::Operation>(grpcClient.ImportTestCasesAsync, grpcClient.ImportTestCases, effectiveSettings.ImportTestCasesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callImportTestCases = clientHelper.BuildApiCall<ImportTestCasesRequest, lro::Operation>("ImportTestCases", grpcClient.ImportTestCasesAsync, grpcClient.ImportTestCases, effectiveSettings.ImportTestCasesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callImportTestCases);
             Modify_ImportTestCasesApiCall(ref _callImportTestCases);
-            _callExportTestCases = clientHelper.BuildApiCall<ExportTestCasesRequest, lro::Operation>(grpcClient.ExportTestCasesAsync, grpcClient.ExportTestCases, effectiveSettings.ExportTestCasesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callExportTestCases = clientHelper.BuildApiCall<ExportTestCasesRequest, lro::Operation>("ExportTestCases", grpcClient.ExportTestCasesAsync, grpcClient.ExportTestCases, effectiveSettings.ExportTestCasesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callExportTestCases);
             Modify_ExportTestCasesApiCall(ref _callExportTestCases);
-            _callListTestCaseResults = clientHelper.BuildApiCall<ListTestCaseResultsRequest, ListTestCaseResultsResponse>(grpcClient.ListTestCaseResultsAsync, grpcClient.ListTestCaseResults, effectiveSettings.ListTestCaseResultsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListTestCaseResults = clientHelper.BuildApiCall<ListTestCaseResultsRequest, ListTestCaseResultsResponse>("ListTestCaseResults", grpcClient.ListTestCaseResultsAsync, grpcClient.ListTestCaseResults, effectiveSettings.ListTestCaseResultsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListTestCaseResults);
             Modify_ListTestCaseResultsApiCall(ref _callListTestCaseResults);
-            _callGetTestCaseResult = clientHelper.BuildApiCall<GetTestCaseResultRequest, TestCaseResult>(grpcClient.GetTestCaseResultAsync, grpcClient.GetTestCaseResult, effectiveSettings.GetTestCaseResultSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetTestCaseResult = clientHelper.BuildApiCall<GetTestCaseResultRequest, TestCaseResult>("GetTestCaseResult", grpcClient.GetTestCaseResultAsync, grpcClient.GetTestCaseResult, effectiveSettings.GetTestCaseResultSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetTestCaseResult);
             Modify_GetTestCaseResultApiCall(ref _callGetTestCaseResult);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
@@ -1771,6 +1764,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>The underlying gRPC TestCases client</summary>
         public override TestCases.TestCasesClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
 
         partial void Modify_ListTestCasesRequest(ref ListTestCasesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2027,7 +2023,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Imports the test cases from a Cloud Storage bucket or a local file. It
-        /// always creates new test cases and won't overwite any existing ones. The
+        /// always creates new test cases and won't overwrite any existing ones. The
         /// provided ID in the imported test case is neglected.
         /// 
         /// This method is a [long-running
@@ -2048,7 +2044,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Imports the test cases from a Cloud Storage bucket or a local file. It
-        /// always creates new test cases and won't overwite any existing ones. The
+        /// always creates new test cases and won't overwrite any existing ones. The
         /// provided ID in the imported test case is neglected.
         /// 
         /// This method is a [long-running
@@ -2194,6 +2190,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class TestCases
+    {
+        public partial class TestCasesClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
         }
     }
 }

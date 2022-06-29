@@ -33,7 +33,12 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Create client
             NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            UpgradeInstanceInternalRequest request = new UpgradeInstanceInternalRequest { Name = "", VmId = "", };
+            UpgradeInstanceInternalRequest request = new UpgradeInstanceInternalRequest
+            {
+                Name = "",
+                VmId = "",
+                Type = UpgradeType.Unspecified,
+            };
             // Make the request
             Operation<Instance, OperationMetadata> response = await notebookServiceClient.UpgradeInstanceInternalAsync(request);
 

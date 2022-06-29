@@ -30,89 +30,105 @@ namespace Google.Cloud.Notebooks.V1 {
             "b2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVz",
             "b3VyY2UucHJvdG8aJWdvb2dsZS9jbG91ZC9ub3RlYm9va3MvdjEvZXZlbnQu",
             "cHJvdG8aJ2dvb2dsZS9jbG91ZC9ub3RlYm9va3MvdjEvcnVudGltZS5wcm90",
-            "bxojZ29vZ2xlL2xvbmdydW5uaW5nL29wZXJhdGlvbnMucHJvdG8idgoTTGlz",
-            "dFJ1bnRpbWVzUmVxdWVzdBI4CgZwYXJlbnQYASABKAlCKOBBAvpBIhIgbm90",
-            "ZWJvb2tzLmdvb2dsZWFwaXMuY29tL1J1bnRpbWUSEQoJcGFnZV9zaXplGAIg",
-            "ASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkiegoUTGlzdFJ1bnRpbWVzUmVzcG9u",
-            "c2USNAoIcnVudGltZXMYASADKAsyIi5nb29nbGUuY2xvdWQubm90ZWJvb2tz",
-            "LnYxLlJ1bnRpbWUSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhMKC3VucmVh",
-            "Y2hhYmxlGAMgAygJIksKEUdldFJ1bnRpbWVSZXF1ZXN0EjYKBG5hbWUYASAB",
-            "KAlCKOBBAvpBIgogbm90ZWJvb2tzLmdvb2dsZWFwaXMuY29tL1J1bnRpbWUi",
-            "owEKFENyZWF0ZVJ1bnRpbWVSZXF1ZXN0EjgKBnBhcmVudBgBIAEoCUIo4EEC",
-            "+kEiCiBub3RlYm9va3MuZ29vZ2xlYXBpcy5jb20vUnVudGltZRIXCgpydW50",
-            "aW1lX2lkGAIgASgJQgPgQQISOAoHcnVudGltZRgDIAEoCzIiLmdvb2dsZS5j",
-            "bG91ZC5ub3RlYm9va3MudjEuUnVudGltZUID4EECIk4KFERlbGV0ZVJ1bnRp",
-            "bWVSZXF1ZXN0EjYKBG5hbWUYASABKAlCKOBBAvpBIgogbm90ZWJvb2tzLmdv",
-            "b2dsZWFwaXMuY29tL1J1bnRpbWUiKAoTU3RhcnRSdW50aW1lUmVxdWVzdBIR",
-            "CgRuYW1lGAEgASgJQgPgQQIiJwoSU3RvcFJ1bnRpbWVSZXF1ZXN0EhEKBG5h",
-            "bWUYASABKAlCA+BBAiKQAQoUU3dpdGNoUnVudGltZVJlcXVlc3QSEQoEbmFt",
-            "ZRgBIAEoCUID4EECEhQKDG1hY2hpbmVfdHlwZRgCIAEoCRJPChJhY2NlbGVy",
-            "YXRvcl9jb25maWcYAyABKAsyMy5nb29nbGUuY2xvdWQubm90ZWJvb2tzLnYx",
-            "LlJ1bnRpbWVBY2NlbGVyYXRvckNvbmZpZyIoChNSZXNldFJ1bnRpbWVSZXF1",
-            "ZXN0EhEKBG5hbWUYASABKAlCA+BBAiKdAQoZUmVwb3J0UnVudGltZUV2ZW50",
-            "UmVxdWVzdBI2CgRuYW1lGAEgASgJQijgQQL6QSIKIG5vdGVib29rcy5nb29n",
-            "bGVhcGlzLmNvbS9SdW50aW1lEhIKBXZtX2lkGAIgASgJQgPgQQISNAoFZXZl",
-            "bnQYAyABKAsyIC5nb29nbGUuY2xvdWQubm90ZWJvb2tzLnYxLkV2ZW50QgPg",
-            "QQIyyA4KFk1hbmFnZWROb3RlYm9va1NlcnZpY2USrgEKDExpc3RSdW50aW1l",
-            "cxIuLmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjEuTGlzdFJ1bnRpbWVzUmVx",
-            "dWVzdBovLmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjEuTGlzdFJ1bnRpbWVz",
-            "UmVzcG9uc2UiPYLT5JMCLhIsL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2Nh",
-            "dGlvbnMvKn0vcnVudGltZXPaQQZwYXJlbnQSmwEKCkdldFJ1bnRpbWUSLC5n",
-            "b29nbGUuY2xvdWQubm90ZWJvb2tzLnYxLkdldFJ1bnRpbWVSZXF1ZXN0GiIu",
-            "Z29vZ2xlLmNsb3VkLm5vdGVib29rcy52MS5SdW50aW1lIjuC0+STAi4SLC92",
-            "MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3J1bnRpbWVzLyp92kEE",
-            "bmFtZRLZAQoNQ3JlYXRlUnVudGltZRIvLmdvb2dsZS5jbG91ZC5ub3RlYm9v",
-            "a3MudjEuQ3JlYXRlUnVudGltZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5p",
-            "bmcuT3BlcmF0aW9uIniC0+STAjciLC92MS97cGFyZW50PXByb2plY3RzLyov",
-            "bG9jYXRpb25zLyp9L3J1bnRpbWVzOgdydW50aW1l2kEZcGFyZW50LHJ1bnRp",
-            "bWVfaWQscnVudGltZcpBHAoHUnVudGltZRIRT3BlcmF0aW9uTWV0YWRhdGES",
-            "yQEKDURlbGV0ZVJ1bnRpbWUSLy5nb29nbGUuY2xvdWQubm90ZWJvb2tzLnYx",
-            "LkRlbGV0ZVJ1bnRpbWVSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9w",
-            "ZXJhdGlvbiJogtPkkwIuKiwvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
-            "bnMvKi9ydW50aW1lcy8qfdpBBG5hbWXKQSoKFWdvb2dsZS5wcm90b2J1Zi5F",
-            "bXB0eRIRT3BlcmF0aW9uTWV0YWRhdGESwgEKDFN0YXJ0UnVudGltZRIuLmdv",
-            "b2dsZS5jbG91ZC5ub3RlYm9va3MudjEuU3RhcnRSdW50aW1lUmVxdWVzdBod",
-            "Lmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iY4LT5JMCNyIyL3YxL3tu",
-            "YW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcnVudGltZXMvKn06c3RhcnQ6",
-            "ASraQQRuYW1lykEcCgdSdW50aW1lEhFPcGVyYXRpb25NZXRhZGF0YRK/AQoL",
-            "U3RvcFJ1bnRpbWUSLS5nb29nbGUuY2xvdWQubm90ZWJvb2tzLnYxLlN0b3BS",
-            "dW50aW1lUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24i",
-            "YoLT5JMCNiIxL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcnVu",
-            "dGltZXMvKn06c3RvcDoBKtpBBG5hbWXKQRwKB1J1bnRpbWUSEU9wZXJhdGlv",
-            "bk1ldGFkYXRhEsUBCg1Td2l0Y2hSdW50aW1lEi8uZ29vZ2xlLmNsb3VkLm5v",
-            "dGVib29rcy52MS5Td2l0Y2hSdW50aW1lUmVxdWVzdBodLmdvb2dsZS5sb25n",
-            "cnVubmluZy5PcGVyYXRpb24iZILT5JMCOCIzL3YxL3tuYW1lPXByb2plY3Rz",
-            "LyovbG9jYXRpb25zLyovcnVudGltZXMvKn06c3dpdGNoOgEq2kEEbmFtZcpB",
-            "HAoHUnVudGltZRIRT3BlcmF0aW9uTWV0YWRhdGESwgEKDFJlc2V0UnVudGlt",
-            "ZRIuLmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjEuUmVzZXRSdW50aW1lUmVx",
-            "dWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iY4LT5JMCNyIy",
-            "L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcnVudGltZXMvKn06",
-            "cmVzZXQ6ASraQQRuYW1lykEcCgdSdW50aW1lEhFPcGVyYXRpb25NZXRhZGF0",
-            "YRLUAQoSUmVwb3J0UnVudGltZUV2ZW50EjQuZ29vZ2xlLmNsb3VkLm5vdGVi",
-            "b29rcy52MS5SZXBvcnRSdW50aW1lRXZlbnRSZXF1ZXN0Gh0uZ29vZ2xlLmxv",
-            "bmdydW5uaW5nLk9wZXJhdGlvbiJpgtPkkwI9IjgvdjEve25hbWU9cHJvamVj",
-            "dHMvKi9sb2NhdGlvbnMvKi9ydW50aW1lcy8qfTpyZXBvcnRFdmVudDoBKtpB",
-            "BG5hbWXKQRwKB1J1bnRpbWUSEU9wZXJhdGlvbk1ldGFkYXRhGkzKQRhub3Rl",
-            "Ym9va3MuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlz",
-            "LmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQtMBCh1jb20uZ29vZ2xlLmNsb3Vk",
-            "Lm5vdGVib29rcy52MUIVTWFuYWdlZE5vdGVib29rc1Byb3RvUAFaQmdvb2ds",
-            "ZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvbm90ZWJv",
-            "b2tzL3YxO25vdGVib29rc6oCGUdvb2dsZS5DbG91ZC5Ob3RlYm9va3MuVjHK",
-            "AhlHb29nbGVcQ2xvdWRcTm90ZWJvb2tzXFYx6gIcR29vZ2xlOjpDbG91ZDo6",
-            "Tm90ZWJvb2tzOjpWMWIGcHJvdG8z"));
+            "bxojZ29vZ2xlL2xvbmdydW5uaW5nL29wZXJhdGlvbnMucHJvdG8aH2dvb2ds",
+            "ZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8idgoTTGlzdFJ1bnRpbWVzUmVx",
+            "dWVzdBI4CgZwYXJlbnQYASABKAlCKOBBAvpBIhIgbm90ZWJvb2tzLmdvb2ds",
+            "ZWFwaXMuY29tL1J1bnRpbWUSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2Vf",
+            "dG9rZW4YAyABKAkiegoUTGlzdFJ1bnRpbWVzUmVzcG9uc2USNAoIcnVudGlt",
+            "ZXMYASADKAsyIi5nb29nbGUuY2xvdWQubm90ZWJvb2tzLnYxLlJ1bnRpbWUS",
+            "FwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhMKC3VucmVhY2hhYmxlGAMgAygJ",
+            "IksKEUdldFJ1bnRpbWVSZXF1ZXN0EjYKBG5hbWUYASABKAlCKOBBAvpBIgog",
+            "bm90ZWJvb2tzLmdvb2dsZWFwaXMuY29tL1J1bnRpbWUitwEKFENyZWF0ZVJ1",
+            "bnRpbWVSZXF1ZXN0EjgKBnBhcmVudBgBIAEoCUIo4EEC+kEiCiBub3RlYm9v",
+            "a3MuZ29vZ2xlYXBpcy5jb20vUnVudGltZRIXCgpydW50aW1lX2lkGAIgASgJ",
+            "QgPgQQISOAoHcnVudGltZRgDIAEoCzIiLmdvb2dsZS5jbG91ZC5ub3RlYm9v",
+            "a3MudjEuUnVudGltZUID4EECEhIKCnJlcXVlc3RfaWQYBCABKAkiYgoURGVs",
+            "ZXRlUnVudGltZVJlcXVlc3QSNgoEbmFtZRgBIAEoCUIo4EEC+kEiCiBub3Rl",
+            "Ym9va3MuZ29vZ2xlYXBpcy5jb20vUnVudGltZRISCgpyZXF1ZXN0X2lkGAIg",
+            "ASgJIjwKE1N0YXJ0UnVudGltZVJlcXVlc3QSEQoEbmFtZRgBIAEoCUID4EEC",
+            "EhIKCnJlcXVlc3RfaWQYAiABKAkiOwoSU3RvcFJ1bnRpbWVSZXF1ZXN0EhEK",
+            "BG5hbWUYASABKAlCA+BBAhISCgpyZXF1ZXN0X2lkGAIgASgJIqQBChRTd2l0",
+            "Y2hSdW50aW1lUmVxdWVzdBIRCgRuYW1lGAEgASgJQgPgQQISFAoMbWFjaGlu",
+            "ZV90eXBlGAIgASgJEk8KEmFjY2VsZXJhdG9yX2NvbmZpZxgDIAEoCzIzLmdv",
+            "b2dsZS5jbG91ZC5ub3RlYm9va3MudjEuUnVudGltZUFjY2VsZXJhdG9yQ29u",
+            "ZmlnEhIKCnJlcXVlc3RfaWQYBCABKAkiPAoTUmVzZXRSdW50aW1lUmVxdWVz",
+            "dBIRCgRuYW1lGAEgASgJQgPgQQISEgoKcmVxdWVzdF9pZBgCIAEoCSKdAQoZ",
+            "UmVwb3J0UnVudGltZUV2ZW50UmVxdWVzdBI2CgRuYW1lGAEgASgJQijgQQL6",
+            "QSIKIG5vdGVib29rcy5nb29nbGVhcGlzLmNvbS9SdW50aW1lEhIKBXZtX2lk",
+            "GAIgASgJQgPgQQISNAoFZXZlbnQYAyABKAsyIC5nb29nbGUuY2xvdWQubm90",
+            "ZWJvb2tzLnYxLkV2ZW50QgPgQQIicAoiUmVmcmVzaFJ1bnRpbWVUb2tlbklu",
+            "dGVybmFsUmVxdWVzdBI2CgRuYW1lGAEgASgJQijgQQL6QSIKIG5vdGVib29r",
+            "cy5nb29nbGVhcGlzLmNvbS9SdW50aW1lEhIKBXZtX2lkGAIgASgJQgPgQQIi",
+            "cQojUmVmcmVzaFJ1bnRpbWVUb2tlbkludGVybmFsUmVzcG9uc2USFAoMYWNj",
+            "ZXNzX3Rva2VuGAEgASgJEjQKC2V4cGlyZV90aW1lGAIgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDMskQChZNYW5hZ2VkTm90ZWJvb2tT",
+            "ZXJ2aWNlEq4BCgxMaXN0UnVudGltZXMSLi5nb29nbGUuY2xvdWQubm90ZWJv",
+            "b2tzLnYxLkxpc3RSdW50aW1lc1JlcXVlc3QaLy5nb29nbGUuY2xvdWQubm90",
+            "ZWJvb2tzLnYxLkxpc3RSdW50aW1lc1Jlc3BvbnNlIj2C0+STAi4SLC92MS97",
+            "cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L3J1bnRpbWVz2kEGcGFy",
+            "ZW50EpsBCgpHZXRSdW50aW1lEiwuZ29vZ2xlLmNsb3VkLm5vdGVib29rcy52",
+            "MS5HZXRSdW50aW1lUmVxdWVzdBoiLmdvb2dsZS5jbG91ZC5ub3RlYm9va3Mu",
+            "djEuUnVudGltZSI7gtPkkwIuEiwvdjEve25hbWU9cHJvamVjdHMvKi9sb2Nh",
+            "dGlvbnMvKi9ydW50aW1lcy8qfdpBBG5hbWUS2QEKDUNyZWF0ZVJ1bnRpbWUS",
+            "Ly5nb29nbGUuY2xvdWQubm90ZWJvb2tzLnYxLkNyZWF0ZVJ1bnRpbWVSZXF1",
+            "ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJ4gtPkkwI3Iiwv",
+            "djEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9ydW50aW1lczoH",
+            "cnVudGltZdpBGXBhcmVudCxydW50aW1lX2lkLHJ1bnRpbWXKQRwKB1J1bnRp",
+            "bWUSEU9wZXJhdGlvbk1ldGFkYXRhEskBCg1EZWxldGVSdW50aW1lEi8uZ29v",
+            "Z2xlLmNsb3VkLm5vdGVib29rcy52MS5EZWxldGVSdW50aW1lUmVxdWVzdBod",
+            "Lmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iaILT5JMCLiosL3YxL3tu",
+            "YW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcnVudGltZXMvKn3aQQRuYW1l",
+            "ykEqChVnb29nbGUucHJvdG9idWYuRW1wdHkSEU9wZXJhdGlvbk1ldGFkYXRh",
+            "EsIBCgxTdGFydFJ1bnRpbWUSLi5nb29nbGUuY2xvdWQubm90ZWJvb2tzLnYx",
+            "LlN0YXJ0UnVudGltZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3Bl",
+            "cmF0aW9uImOC0+STAjciMi92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qL3J1bnRpbWVzLyp9OnN0YXJ0OgEq2kEEbmFtZcpBHAoHUnVudGltZRIR",
+            "T3BlcmF0aW9uTWV0YWRhdGESvwEKC1N0b3BSdW50aW1lEi0uZ29vZ2xlLmNs",
+            "b3VkLm5vdGVib29rcy52MS5TdG9wUnVudGltZVJlcXVlc3QaHS5nb29nbGUu",
+            "bG9uZ3J1bm5pbmcuT3BlcmF0aW9uImKC0+STAjYiMS92MS97bmFtZT1wcm9q",
+            "ZWN0cy8qL2xvY2F0aW9ucy8qL3J1bnRpbWVzLyp9OnN0b3A6ASraQQRuYW1l",
+            "ykEcCgdSdW50aW1lEhFPcGVyYXRpb25NZXRhZGF0YRLFAQoNU3dpdGNoUnVu",
+            "dGltZRIvLmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjEuU3dpdGNoUnVudGlt",
+            "ZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImSC0+ST",
+            "AjgiMy92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3J1bnRpbWVz",
+            "Lyp9OnN3aXRjaDoBKtpBBG5hbWXKQRwKB1J1bnRpbWUSEU9wZXJhdGlvbk1l",
+            "dGFkYXRhEsIBCgxSZXNldFJ1bnRpbWUSLi5nb29nbGUuY2xvdWQubm90ZWJv",
+            "b2tzLnYxLlJlc2V0UnVudGltZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5p",
+            "bmcuT3BlcmF0aW9uImOC0+STAjciMi92MS97bmFtZT1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qL3J1bnRpbWVzLyp9OnJlc2V0OgEq2kEEbmFtZcpBHAoHUnVu",
+            "dGltZRIRT3BlcmF0aW9uTWV0YWRhdGES1AEKElJlcG9ydFJ1bnRpbWVFdmVu",
+            "dBI0Lmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjEuUmVwb3J0UnVudGltZUV2",
+            "ZW50UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iaYLT",
+            "5JMCPSI4L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcnVudGlt",
+            "ZXMvKn06cmVwb3J0RXZlbnQ6ASraQQRuYW1lykEcCgdSdW50aW1lEhFPcGVy",
+            "YXRpb25NZXRhZGF0YRL+AQobUmVmcmVzaFJ1bnRpbWVUb2tlbkludGVybmFs",
+            "Ej0uZ29vZ2xlLmNsb3VkLm5vdGVib29rcy52MS5SZWZyZXNoUnVudGltZVRv",
+            "a2VuSW50ZXJuYWxSZXF1ZXN0Gj4uZ29vZ2xlLmNsb3VkLm5vdGVib29rcy52",
+            "MS5SZWZyZXNoUnVudGltZVRva2VuSW50ZXJuYWxSZXNwb25zZSJggtPkkwJN",
+            "IkgvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9ydW50aW1lcy8q",
+            "fTpyZWZyZXNoUnVudGltZVRva2VuSW50ZXJuYWw6ASraQQpuYW1lLHZtX2lk",
+            "GkzKQRhub3RlYm9va3MuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5n",
+            "b29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQtMBCh1jb20uZ29v",
+            "Z2xlLmNsb3VkLm5vdGVib29rcy52MUIVTWFuYWdlZE5vdGVib29rc1Byb3Rv",
+            "UAFaQmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xv",
+            "dWQvbm90ZWJvb2tzL3YxO25vdGVib29rc6oCGUdvb2dsZS5DbG91ZC5Ob3Rl",
+            "Ym9va3MuVjHKAhlHb29nbGVcQ2xvdWRcTm90ZWJvb2tzXFYx6gIcR29vZ2xl",
+            "OjpDbG91ZDo6Tm90ZWJvb2tzOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Notebooks.V1.EventReflection.Descriptor, global::Google.Cloud.Notebooks.V1.RuntimeReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Notebooks.V1.EventReflection.Descriptor, global::Google.Cloud.Notebooks.V1.RuntimeReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.ListRuntimesRequest), global::Google.Cloud.Notebooks.V1.ListRuntimesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.ListRuntimesResponse), global::Google.Cloud.Notebooks.V1.ListRuntimesResponse.Parser, new[]{ "Runtimes", "NextPageToken", "Unreachable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.GetRuntimeRequest), global::Google.Cloud.Notebooks.V1.GetRuntimeRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.CreateRuntimeRequest), global::Google.Cloud.Notebooks.V1.CreateRuntimeRequest.Parser, new[]{ "Parent", "RuntimeId", "Runtime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.DeleteRuntimeRequest), global::Google.Cloud.Notebooks.V1.DeleteRuntimeRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.StartRuntimeRequest), global::Google.Cloud.Notebooks.V1.StartRuntimeRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.StopRuntimeRequest), global::Google.Cloud.Notebooks.V1.StopRuntimeRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.SwitchRuntimeRequest), global::Google.Cloud.Notebooks.V1.SwitchRuntimeRequest.Parser, new[]{ "Name", "MachineType", "AcceleratorConfig" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.ResetRuntimeRequest), global::Google.Cloud.Notebooks.V1.ResetRuntimeRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.ReportRuntimeEventRequest), global::Google.Cloud.Notebooks.V1.ReportRuntimeEventRequest.Parser, new[]{ "Name", "VmId", "Event" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.CreateRuntimeRequest), global::Google.Cloud.Notebooks.V1.CreateRuntimeRequest.Parser, new[]{ "Parent", "RuntimeId", "Runtime", "RequestId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.DeleteRuntimeRequest), global::Google.Cloud.Notebooks.V1.DeleteRuntimeRequest.Parser, new[]{ "Name", "RequestId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.StartRuntimeRequest), global::Google.Cloud.Notebooks.V1.StartRuntimeRequest.Parser, new[]{ "Name", "RequestId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.StopRuntimeRequest), global::Google.Cloud.Notebooks.V1.StopRuntimeRequest.Parser, new[]{ "Name", "RequestId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.SwitchRuntimeRequest), global::Google.Cloud.Notebooks.V1.SwitchRuntimeRequest.Parser, new[]{ "Name", "MachineType", "AcceleratorConfig", "RequestId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.ResetRuntimeRequest), global::Google.Cloud.Notebooks.V1.ResetRuntimeRequest.Parser, new[]{ "Name", "RequestId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.ReportRuntimeEventRequest), global::Google.Cloud.Notebooks.V1.ReportRuntimeEventRequest.Parser, new[]{ "Name", "VmId", "Event" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalRequest), global::Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalRequest.Parser, new[]{ "Name", "VmId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalResponse), global::Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalResponse.Parser, new[]{ "AccessToken", "ExpireTime" }, null, null, null, null)
           }));
     }
     #endregion
@@ -888,6 +904,7 @@ namespace Google.Cloud.Notebooks.V1 {
       parent_ = other.parent_;
       runtimeId_ = other.runtimeId_;
       runtime_ = other.runtime_ != null ? other.runtime_.Clone() : null;
+      requestId_ = other.requestId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -943,6 +960,21 @@ namespace Google.Cloud.Notebooks.V1 {
       }
     }
 
+    /// <summary>Field number for the "request_id" field.</summary>
+    public const int RequestIdFieldNumber = 4;
+    private string requestId_ = "";
+    /// <summary>
+    /// Idempotent request UUID.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -961,6 +993,7 @@ namespace Google.Cloud.Notebooks.V1 {
       if (Parent != other.Parent) return false;
       if (RuntimeId != other.RuntimeId) return false;
       if (!object.Equals(Runtime, other.Runtime)) return false;
+      if (RequestId != other.RequestId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -971,6 +1004,7 @@ namespace Google.Cloud.Notebooks.V1 {
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (RuntimeId.Length != 0) hash ^= RuntimeId.GetHashCode();
       if (runtime_ != null) hash ^= Runtime.GetHashCode();
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1001,6 +1035,10 @@ namespace Google.Cloud.Notebooks.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(Runtime);
       }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(RequestId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1023,6 +1061,10 @@ namespace Google.Cloud.Notebooks.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(Runtime);
       }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(RequestId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1041,6 +1083,9 @@ namespace Google.Cloud.Notebooks.V1 {
       }
       if (runtime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Runtime);
+      }
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1065,6 +1110,9 @@ namespace Google.Cloud.Notebooks.V1 {
           Runtime = new global::Google.Cloud.Notebooks.V1.Runtime();
         }
         Runtime.MergeFrom(other.Runtime);
+      }
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1096,6 +1144,10 @@ namespace Google.Cloud.Notebooks.V1 {
             input.ReadMessage(Runtime);
             break;
           }
+          case 34: {
+            RequestId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1124,6 +1176,10 @@ namespace Google.Cloud.Notebooks.V1 {
               Runtime = new global::Google.Cloud.Notebooks.V1.Runtime();
             }
             input.ReadMessage(Runtime);
+            break;
+          }
+          case 34: {
+            RequestId = input.ReadString();
             break;
           }
         }
@@ -1171,6 +1227,7 @@ namespace Google.Cloud.Notebooks.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteRuntimeRequest(DeleteRuntimeRequest other) : this() {
       name_ = other.name_;
+      requestId_ = other.requestId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1196,6 +1253,21 @@ namespace Google.Cloud.Notebooks.V1 {
       }
     }
 
+    /// <summary>Field number for the "request_id" field.</summary>
+    public const int RequestIdFieldNumber = 2;
+    private string requestId_ = "";
+    /// <summary>
+    /// Idempotent request UUID.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1212,6 +1284,7 @@ namespace Google.Cloud.Notebooks.V1 {
         return true;
       }
       if (Name != other.Name) return false;
+      if (RequestId != other.RequestId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1220,6 +1293,7 @@ namespace Google.Cloud.Notebooks.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1242,6 +1316,10 @@ namespace Google.Cloud.Notebooks.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(RequestId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1256,6 +1334,10 @@ namespace Google.Cloud.Notebooks.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(RequestId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1268,6 +1350,9 @@ namespace Google.Cloud.Notebooks.V1 {
       int size = 0;
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1283,6 +1368,9 @@ namespace Google.Cloud.Notebooks.V1 {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1303,6 +1391,10 @@ namespace Google.Cloud.Notebooks.V1 {
             Name = input.ReadString();
             break;
           }
+          case 18: {
+            RequestId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1320,6 +1412,10 @@ namespace Google.Cloud.Notebooks.V1 {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            RequestId = input.ReadString();
             break;
           }
         }
@@ -1367,6 +1463,7 @@ namespace Google.Cloud.Notebooks.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StartRuntimeRequest(StartRuntimeRequest other) : this() {
       name_ = other.name_;
+      requestId_ = other.requestId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1392,6 +1489,21 @@ namespace Google.Cloud.Notebooks.V1 {
       }
     }
 
+    /// <summary>Field number for the "request_id" field.</summary>
+    public const int RequestIdFieldNumber = 2;
+    private string requestId_ = "";
+    /// <summary>
+    /// Idempotent request UUID.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1408,6 +1520,7 @@ namespace Google.Cloud.Notebooks.V1 {
         return true;
       }
       if (Name != other.Name) return false;
+      if (RequestId != other.RequestId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1416,6 +1529,7 @@ namespace Google.Cloud.Notebooks.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1438,6 +1552,10 @@ namespace Google.Cloud.Notebooks.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(RequestId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1452,6 +1570,10 @@ namespace Google.Cloud.Notebooks.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(RequestId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1464,6 +1586,9 @@ namespace Google.Cloud.Notebooks.V1 {
       int size = 0;
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1479,6 +1604,9 @@ namespace Google.Cloud.Notebooks.V1 {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1499,6 +1627,10 @@ namespace Google.Cloud.Notebooks.V1 {
             Name = input.ReadString();
             break;
           }
+          case 18: {
+            RequestId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1516,6 +1648,10 @@ namespace Google.Cloud.Notebooks.V1 {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            RequestId = input.ReadString();
             break;
           }
         }
@@ -1563,6 +1699,7 @@ namespace Google.Cloud.Notebooks.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StopRuntimeRequest(StopRuntimeRequest other) : this() {
       name_ = other.name_;
+      requestId_ = other.requestId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1588,6 +1725,21 @@ namespace Google.Cloud.Notebooks.V1 {
       }
     }
 
+    /// <summary>Field number for the "request_id" field.</summary>
+    public const int RequestIdFieldNumber = 2;
+    private string requestId_ = "";
+    /// <summary>
+    /// Idempotent request UUID.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1604,6 +1756,7 @@ namespace Google.Cloud.Notebooks.V1 {
         return true;
       }
       if (Name != other.Name) return false;
+      if (RequestId != other.RequestId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1612,6 +1765,7 @@ namespace Google.Cloud.Notebooks.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1634,6 +1788,10 @@ namespace Google.Cloud.Notebooks.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(RequestId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1648,6 +1806,10 @@ namespace Google.Cloud.Notebooks.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(RequestId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1660,6 +1822,9 @@ namespace Google.Cloud.Notebooks.V1 {
       int size = 0;
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1675,6 +1840,9 @@ namespace Google.Cloud.Notebooks.V1 {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1695,6 +1863,10 @@ namespace Google.Cloud.Notebooks.V1 {
             Name = input.ReadString();
             break;
           }
+          case 18: {
+            RequestId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1712,6 +1884,10 @@ namespace Google.Cloud.Notebooks.V1 {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            RequestId = input.ReadString();
             break;
           }
         }
@@ -1761,6 +1937,7 @@ namespace Google.Cloud.Notebooks.V1 {
       name_ = other.name_;
       machineType_ = other.machineType_;
       acceleratorConfig_ = other.acceleratorConfig_ != null ? other.acceleratorConfig_.Clone() : null;
+      requestId_ = other.requestId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1816,6 +1993,21 @@ namespace Google.Cloud.Notebooks.V1 {
       }
     }
 
+    /// <summary>Field number for the "request_id" field.</summary>
+    public const int RequestIdFieldNumber = 4;
+    private string requestId_ = "";
+    /// <summary>
+    /// Idempotent request UUID.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1834,6 +2026,7 @@ namespace Google.Cloud.Notebooks.V1 {
       if (Name != other.Name) return false;
       if (MachineType != other.MachineType) return false;
       if (!object.Equals(AcceleratorConfig, other.AcceleratorConfig)) return false;
+      if (RequestId != other.RequestId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1844,6 +2037,7 @@ namespace Google.Cloud.Notebooks.V1 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (MachineType.Length != 0) hash ^= MachineType.GetHashCode();
       if (acceleratorConfig_ != null) hash ^= AcceleratorConfig.GetHashCode();
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1874,6 +2068,10 @@ namespace Google.Cloud.Notebooks.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(AcceleratorConfig);
       }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(RequestId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1896,6 +2094,10 @@ namespace Google.Cloud.Notebooks.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(AcceleratorConfig);
       }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(RequestId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1914,6 +2116,9 @@ namespace Google.Cloud.Notebooks.V1 {
       }
       if (acceleratorConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(AcceleratorConfig);
+      }
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1938,6 +2143,9 @@ namespace Google.Cloud.Notebooks.V1 {
           AcceleratorConfig = new global::Google.Cloud.Notebooks.V1.RuntimeAcceleratorConfig();
         }
         AcceleratorConfig.MergeFrom(other.AcceleratorConfig);
+      }
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1967,6 +2175,10 @@ namespace Google.Cloud.Notebooks.V1 {
               AcceleratorConfig = new global::Google.Cloud.Notebooks.V1.RuntimeAcceleratorConfig();
             }
             input.ReadMessage(AcceleratorConfig);
+            break;
+          }
+          case 34: {
+            RequestId = input.ReadString();
             break;
           }
         }
@@ -1999,6 +2211,10 @@ namespace Google.Cloud.Notebooks.V1 {
             input.ReadMessage(AcceleratorConfig);
             break;
           }
+          case 34: {
+            RequestId = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -2007,7 +2223,7 @@ namespace Google.Cloud.Notebooks.V1 {
   }
 
   /// <summary>
-  /// Request for reseting a Managed Notebook Runtime.
+  /// Request for resetting a Managed Notebook Runtime.
   /// </summary>
   public sealed partial class ResetRuntimeRequest : pb::IMessage<ResetRuntimeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2044,6 +2260,7 @@ namespace Google.Cloud.Notebooks.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ResetRuntimeRequest(ResetRuntimeRequest other) : this() {
       name_ = other.name_;
+      requestId_ = other.requestId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2069,6 +2286,21 @@ namespace Google.Cloud.Notebooks.V1 {
       }
     }
 
+    /// <summary>Field number for the "request_id" field.</summary>
+    public const int RequestIdFieldNumber = 2;
+    private string requestId_ = "";
+    /// <summary>
+    /// Idempotent request UUID.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2085,6 +2317,7 @@ namespace Google.Cloud.Notebooks.V1 {
         return true;
       }
       if (Name != other.Name) return false;
+      if (RequestId != other.RequestId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2093,6 +2326,7 @@ namespace Google.Cloud.Notebooks.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2115,6 +2349,10 @@ namespace Google.Cloud.Notebooks.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(RequestId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2129,6 +2367,10 @@ namespace Google.Cloud.Notebooks.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(RequestId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2141,6 +2383,9 @@ namespace Google.Cloud.Notebooks.V1 {
       int size = 0;
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2156,6 +2401,9 @@ namespace Google.Cloud.Notebooks.V1 {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2176,6 +2424,10 @@ namespace Google.Cloud.Notebooks.V1 {
             Name = input.ReadString();
             break;
           }
+          case 18: {
+            RequestId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -2193,6 +2445,10 @@ namespace Google.Cloud.Notebooks.V1 {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            RequestId = input.ReadString();
             break;
           }
         }
@@ -2479,6 +2735,487 @@ namespace Google.Cloud.Notebooks.V1 {
               Event = new global::Google.Cloud.Notebooks.V1.Event();
             }
             input.ReadMessage(Event);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request for getting a new access token.
+  /// </summary>
+  public sealed partial class RefreshRuntimeTokenInternalRequest : pb::IMessage<RefreshRuntimeTokenInternalRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RefreshRuntimeTokenInternalRequest> _parser = new pb::MessageParser<RefreshRuntimeTokenInternalRequest>(() => new RefreshRuntimeTokenInternalRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RefreshRuntimeTokenInternalRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Notebooks.V1.ManagedServiceReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RefreshRuntimeTokenInternalRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RefreshRuntimeTokenInternalRequest(RefreshRuntimeTokenInternalRequest other) : this() {
+      name_ = other.name_;
+      vmId_ = other.vmId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RefreshRuntimeTokenInternalRequest Clone() {
+      return new RefreshRuntimeTokenInternalRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. Format:
+    /// `projects/{project_id}/locations/{location}/runtimes/{runtime_id}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "vm_id" field.</summary>
+    public const int VmIdFieldNumber = 2;
+    private string vmId_ = "";
+    /// <summary>
+    /// Required. The VM hardware token for authenticating the VM.
+    /// https://cloud.google.com/compute/docs/instances/verifying-instance-identity
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VmId {
+      get { return vmId_; }
+      set {
+        vmId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RefreshRuntimeTokenInternalRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RefreshRuntimeTokenInternalRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (VmId != other.VmId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (VmId.Length != 0) hash ^= VmId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (VmId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(VmId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (VmId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(VmId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (VmId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VmId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RefreshRuntimeTokenInternalRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.VmId.Length != 0) {
+        VmId = other.VmId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            VmId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            VmId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response with a new access token.
+  /// </summary>
+  public sealed partial class RefreshRuntimeTokenInternalResponse : pb::IMessage<RefreshRuntimeTokenInternalResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RefreshRuntimeTokenInternalResponse> _parser = new pb::MessageParser<RefreshRuntimeTokenInternalResponse>(() => new RefreshRuntimeTokenInternalResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RefreshRuntimeTokenInternalResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Notebooks.V1.ManagedServiceReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RefreshRuntimeTokenInternalResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RefreshRuntimeTokenInternalResponse(RefreshRuntimeTokenInternalResponse other) : this() {
+      accessToken_ = other.accessToken_;
+      expireTime_ = other.expireTime_ != null ? other.expireTime_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RefreshRuntimeTokenInternalResponse Clone() {
+      return new RefreshRuntimeTokenInternalResponse(this);
+    }
+
+    /// <summary>Field number for the "access_token" field.</summary>
+    public const int AccessTokenFieldNumber = 1;
+    private string accessToken_ = "";
+    /// <summary>
+    /// The OAuth 2.0 access token.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AccessToken {
+      get { return accessToken_; }
+      set {
+        accessToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "expire_time" field.</summary>
+    public const int ExpireTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp expireTime_;
+    /// <summary>
+    /// Output only. Token expiration time.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ExpireTime {
+      get { return expireTime_; }
+      set {
+        expireTime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RefreshRuntimeTokenInternalResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RefreshRuntimeTokenInternalResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (AccessToken != other.AccessToken) return false;
+      if (!object.Equals(ExpireTime, other.ExpireTime)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (AccessToken.Length != 0) hash ^= AccessToken.GetHashCode();
+      if (expireTime_ != null) hash ^= ExpireTime.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (AccessToken.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(AccessToken);
+      }
+      if (expireTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ExpireTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (AccessToken.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(AccessToken);
+      }
+      if (expireTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ExpireTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (AccessToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AccessToken);
+      }
+      if (expireTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExpireTime);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RefreshRuntimeTokenInternalResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.AccessToken.Length != 0) {
+        AccessToken = other.AccessToken;
+      }
+      if (other.expireTime_ != null) {
+        if (expireTime_ == null) {
+          ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        ExpireTime.MergeFrom(other.ExpireTime);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            AccessToken = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (expireTime_ == null) {
+              ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ExpireTime);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            AccessToken = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (expireTime_ == null) {
+              ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ExpireTime);
             break;
           }
         }

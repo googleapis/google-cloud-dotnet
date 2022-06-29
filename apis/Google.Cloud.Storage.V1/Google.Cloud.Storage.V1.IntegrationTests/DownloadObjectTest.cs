@@ -51,6 +51,44 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         }
 
         [Fact]
+        public async Task MetadataReturned_Simple()
+        {
+            var expected = await _fixture.Client.GetObjectAsync(_fixture.ReadBucket, _fixture.SmallObject);
+            var actual = await _fixture.Client.DownloadObjectAsync(_fixture.ReadBucket, _fixture.SmallObject, Stream.Null);
+
+            // Just test the values we expect to be populated
+            Assert.Equal(expected.Name, actual.Name);
+            Assert.Equal(expected.Bucket, actual.Bucket);
+            Assert.Equal(expected.Generation, actual.Generation);
+            Assert.Equal(expected.Metageneration, actual.Metageneration);
+            Assert.Equal(expected.ETag, actual.ETag);
+            Assert.Equal(expected.Crc32c, actual.Crc32c);
+            Assert.Equal(expected.Md5Hash, actual.Md5Hash);
+            Assert.Equal(expected.ContentType, actual.ContentType);
+        }
+
+        [Fact]
+        public void MetadataReturned_WithRange()
+        {
+            var expected = _fixture.Client.GetObject(_fixture.ReadBucket, _fixture.SmallObject);
+            var options = new DownloadObjectOptions { Range = new RangeHeaderValue(0, 3) };
+            var actual = _fixture.Client.DownloadObject(_fixture.ReadBucket, _fixture.SmallObject, Stream.Null, options);
+
+            // The CRC32C hash will be just for the range downloaded
+            Assert.NotEqual(expected.Crc32c, actual.Crc32c);
+            // The MD5 won't be populated at all
+            Assert.Null(actual.Md5Hash);
+
+            // Simple values are still populated.
+            Assert.Equal(expected.Name, actual.Name);
+            Assert.Equal(expected.Bucket, actual.Bucket);
+            Assert.Equal(expected.Generation, actual.Generation);
+            Assert.Equal(expected.Metageneration, actual.Metageneration);
+            Assert.Equal(expected.ETag, actual.ETag);
+            Assert.Equal(expected.ContentType, actual.ContentType);
+        }
+
+        [Fact]
         public void WrongObjectName() => ValidateNotFound(_fixture.ReadBucket, "doesntexist");
 
         [Fact]

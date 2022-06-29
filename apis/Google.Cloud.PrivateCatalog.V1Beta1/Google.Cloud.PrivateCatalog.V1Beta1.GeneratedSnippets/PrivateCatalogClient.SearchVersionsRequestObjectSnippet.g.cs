@@ -14,6 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace Google.Cloud.PrivateCatalog.V1Beta1.Snippets
 {
     // [START cloudprivatecatalog_v1beta1_generated_PrivateCatalog_SearchVersions_sync]

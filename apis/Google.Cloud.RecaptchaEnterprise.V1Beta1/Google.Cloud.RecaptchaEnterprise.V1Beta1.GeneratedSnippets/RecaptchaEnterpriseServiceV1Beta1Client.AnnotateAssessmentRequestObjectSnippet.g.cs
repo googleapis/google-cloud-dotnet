@@ -18,6 +18,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
 {
     // [START recaptchaenterprise_v1beta1_generated_RecaptchaEnterpriseServiceV1Beta1_AnnotateAssessment_sync]
     using Google.Cloud.RecaptchaEnterprise.V1Beta1;
+    using Google.Protobuf;
 
     public sealed partial class GeneratedRecaptchaEnterpriseServiceV1Beta1ClientSnippets
     {
@@ -35,6 +36,11 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
             {
                 AssessmentName = AssessmentName.FromProjectAssessment("[PROJECT]", "[ASSESSMENT]"),
                 Annotation = AnnotateAssessmentRequest.Types.Annotation.Unspecified,
+                Reasons =
+                {
+                    AnnotateAssessmentRequest.Types.Reason.Unspecified,
+                },
+                HashedAccountId = ByteString.Empty,
             };
             // Make the request
             AnnotateAssessmentResponse response = recaptchaEnterpriseServiceV1Beta1Client.AnnotateAssessment(request);

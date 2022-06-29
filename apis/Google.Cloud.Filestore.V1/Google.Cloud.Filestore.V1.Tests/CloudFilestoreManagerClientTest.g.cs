@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -64,7 +65,7 @@ namespace Google.Cloud.Filestore.V1.Tests
                 SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.GetInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudFilestoreManagerClient client = new CloudFilestoreManagerClientImpl(mockGrpcClient.Object, null);
+            CloudFilestoreManagerClient client = new CloudFilestoreManagerClientImpl(mockGrpcClient.Object, null, null);
             Instance response = client.GetInstance(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -106,7 +107,7 @@ namespace Google.Cloud.Filestore.V1.Tests
                 SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.GetInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudFilestoreManagerClient client = new CloudFilestoreManagerClientImpl(mockGrpcClient.Object, null);
+            CloudFilestoreManagerClient client = new CloudFilestoreManagerClientImpl(mockGrpcClient.Object, null, null);
             Instance responseCallSettings = await client.GetInstanceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Instance responseCancellationToken = await client.GetInstanceAsync(request, st::CancellationToken.None);
@@ -150,7 +151,7 @@ namespace Google.Cloud.Filestore.V1.Tests
                 SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.GetInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudFilestoreManagerClient client = new CloudFilestoreManagerClientImpl(mockGrpcClient.Object, null);
+            CloudFilestoreManagerClient client = new CloudFilestoreManagerClientImpl(mockGrpcClient.Object, null, null);
             Instance response = client.GetInstance(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -192,7 +193,7 @@ namespace Google.Cloud.Filestore.V1.Tests
                 SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.GetInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudFilestoreManagerClient client = new CloudFilestoreManagerClientImpl(mockGrpcClient.Object, null);
+            CloudFilestoreManagerClient client = new CloudFilestoreManagerClientImpl(mockGrpcClient.Object, null, null);
             Instance responseCallSettings = await client.GetInstanceAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Instance responseCancellationToken = await client.GetInstanceAsync(request.Name, st::CancellationToken.None);
@@ -236,7 +237,7 @@ namespace Google.Cloud.Filestore.V1.Tests
                 SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.GetInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudFilestoreManagerClient client = new CloudFilestoreManagerClientImpl(mockGrpcClient.Object, null);
+            CloudFilestoreManagerClient client = new CloudFilestoreManagerClientImpl(mockGrpcClient.Object, null, null);
             Instance response = client.GetInstance(request.InstanceName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -278,7 +279,7 @@ namespace Google.Cloud.Filestore.V1.Tests
                 SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.GetInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudFilestoreManagerClient client = new CloudFilestoreManagerClientImpl(mockGrpcClient.Object, null);
+            CloudFilestoreManagerClient client = new CloudFilestoreManagerClientImpl(mockGrpcClient.Object, null, null);
             Instance responseCallSettings = await client.GetInstanceAsync(request.InstanceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Instance responseCancellationToken = await client.GetInstanceAsync(request.InstanceName, st::CancellationToken.None);
@@ -317,7 +318,7 @@ namespace Google.Cloud.Filestore.V1.Tests
                 SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.GetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudFilestoreManagerClient client = new CloudFilestoreManagerClientImpl(mockGrpcClient.Object, null);
+            CloudFilestoreManagerClient client = new CloudFilestoreManagerClientImpl(mockGrpcClient.Object, null, null);
             Backup response = client.GetBackup(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -354,7 +355,7 @@ namespace Google.Cloud.Filestore.V1.Tests
                 SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.GetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudFilestoreManagerClient client = new CloudFilestoreManagerClientImpl(mockGrpcClient.Object, null);
+            CloudFilestoreManagerClient client = new CloudFilestoreManagerClientImpl(mockGrpcClient.Object, null, null);
             Backup responseCallSettings = await client.GetBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Backup responseCancellationToken = await client.GetBackupAsync(request, st::CancellationToken.None);
@@ -393,7 +394,7 @@ namespace Google.Cloud.Filestore.V1.Tests
                 SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.GetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudFilestoreManagerClient client = new CloudFilestoreManagerClientImpl(mockGrpcClient.Object, null);
+            CloudFilestoreManagerClient client = new CloudFilestoreManagerClientImpl(mockGrpcClient.Object, null, null);
             Backup response = client.GetBackup(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -430,7 +431,7 @@ namespace Google.Cloud.Filestore.V1.Tests
                 SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.GetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudFilestoreManagerClient client = new CloudFilestoreManagerClientImpl(mockGrpcClient.Object, null);
+            CloudFilestoreManagerClient client = new CloudFilestoreManagerClientImpl(mockGrpcClient.Object, null, null);
             Backup responseCallSettings = await client.GetBackupAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Backup responseCancellationToken = await client.GetBackupAsync(request.Name, st::CancellationToken.None);
@@ -469,7 +470,7 @@ namespace Google.Cloud.Filestore.V1.Tests
                 SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.GetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudFilestoreManagerClient client = new CloudFilestoreManagerClientImpl(mockGrpcClient.Object, null);
+            CloudFilestoreManagerClient client = new CloudFilestoreManagerClientImpl(mockGrpcClient.Object, null, null);
             Backup response = client.GetBackup(request.BackupName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -506,7 +507,7 @@ namespace Google.Cloud.Filestore.V1.Tests
                 SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.GetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudFilestoreManagerClient client = new CloudFilestoreManagerClientImpl(mockGrpcClient.Object, null);
+            CloudFilestoreManagerClient client = new CloudFilestoreManagerClientImpl(mockGrpcClient.Object, null, null);
             Backup responseCallSettings = await client.GetBackupAsync(request.BackupName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Backup responseCancellationToken = await client.GetBackupAsync(request.BackupName, st::CancellationToken.None);

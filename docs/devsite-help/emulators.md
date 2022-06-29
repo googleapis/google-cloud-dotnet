@@ -9,9 +9,16 @@ variables are set, but the Google Cloud Libraries for .NET
 deliberately do not do this, to avoid accidentally using an emulator
 when production was expected or vice versa.
 
-Where emulators are directly supported by the libraries, the client
-builder type has an `EmulatorDetection` property which can be set to
-one of the following values:
+The packages for the following APIs support emulators directly in the way described below:
+
+- PubSub
+- Firestore
+- Bigtable
+- Spanner
+- Datastore
+
+In these packages, the client builder type has an `EmulatorDetection`
+property which can be set to one of the following values:
 
 - `None` (the default): Ignores the presence or absence of emulator configuration.
 - `ProductionOnly`: Always connects to the production servers, but
@@ -56,3 +63,32 @@ to `ChannelCredentials.Insecure`.
 Example for PubSub (although the techniques above are preferred):
 
 [!code-cs[](../examples/help.Emulator.txt#ManualConnection)]
+
+## Grpc.Net.Client and .NET Core 3.1
+
+As of GAX v4, the default gRPC implementation (where available) is Grpc.Net.Client.
+(See the [transport selection documentation](transports.md) for more details.) By default, .NET Core 3.1
+does not support unencrypted HTTP/2 connections - whereas this is required for emulator
+connections.
+
+Without any additional code, .NET Core 3.1 connections to the emulator will fail
+with a variety of error messages, including:
+
+> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+
+and
+
+> Grpc.Core.RpcException : Status(StatusCode="Internal", Detail="Bad gRPC response. Response protocol downgraded to HTTP/1.1.")
+
+This can easily be fixed using an [AppContext switch](https://docs.microsoft.com/en-us/dotnet/api/system.appcontext?view=net-6.0):
+
+```csharp
+AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
+```
+
+This code is deliberately *not* included in the client libraries, as it is an application-wide
+switch that you should consider carefully before enabling. In most cases we expect that it's safe
+and appropriate when testing an application against an emulator, but that's not a decision
+that the client libraries can reasonably take for themselves.
+
+This switch is not required when running .NET 6.

@@ -11,6 +11,422 @@
   },
   "snippets": [
     {
+      "regionTag": "vision_v1_generated_ImageAnnotator_BatchAnnotateImages_sync",
+      "title": "BatchAnnotateImagesRequestObject",
+      "description": "Snippet for BatchAnnotateImages",
+      "file": "ImageAnnotatorClient.BatchAnnotateImagesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchAnnotateImages",
+        "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateImages",
+        "resultType": "Google.Cloud.Vision.V1.BatchAnnotateImagesResponse",
+        "client": {
+          "shortName": "ImageAnnotatorClient",
+          "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient"
+        },
+        "method": {
+          "shortName": "BatchAnnotateImages",
+          "fullName": "google.cloud.vision.v1.ImageAnnotator.BatchAnnotateImages",
+          "service": {
+            "shortName": "ImageAnnotator",
+            "fullName": "google.cloud.vision.v1.ImageAnnotator"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "vision_v1_generated_ImageAnnotator_BatchAnnotateImages_async",
+      "title": "BatchAnnotateImagesRequestObjectAsync",
+      "description": "Snippet for BatchAnnotateImagesAsync",
+      "file": "ImageAnnotatorClient.BatchAnnotateImagesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchAnnotateImagesAsync",
+        "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateImagesAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Vision.V1.BatchAnnotateImagesResponse>",
+        "client": {
+          "shortName": "ImageAnnotatorClient",
+          "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient"
+        },
+        "method": {
+          "shortName": "BatchAnnotateImages",
+          "fullName": "google.cloud.vision.v1.ImageAnnotator.BatchAnnotateImages",
+          "service": {
+            "shortName": "ImageAnnotator",
+            "fullName": "google.cloud.vision.v1.ImageAnnotator"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "vision_v1_generated_ImageAnnotator_BatchAnnotateImages_sync_flattened",
+      "title": "BatchAnnotateImages",
+      "description": "Snippet for BatchAnnotateImages",
+      "file": "ImageAnnotatorClient.BatchAnnotateImagesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchAnnotateImages",
+        "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateImages",
+        "resultType": "Google.Cloud.Vision.V1.BatchAnnotateImagesResponse",
+        "client": {
+          "shortName": "ImageAnnotatorClient",
+          "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient"
+        },
+        "method": {
+          "shortName": "BatchAnnotateImages",
+          "fullName": "google.cloud.vision.v1.ImageAnnotator.BatchAnnotateImages",
+          "service": {
+            "shortName": "ImageAnnotator",
+            "fullName": "google.cloud.vision.v1.ImageAnnotator"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "vision_v1_generated_ImageAnnotator_BatchAnnotateImages_async_flattened",
+      "title": "BatchAnnotateImagesAsync",
+      "description": "Snippet for BatchAnnotateImagesAsync",
+      "file": "ImageAnnotatorClient.BatchAnnotateImagesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchAnnotateImagesAsync",
+        "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateImagesAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Vision.V1.BatchAnnotateImagesResponse>",
+        "client": {
+          "shortName": "ImageAnnotatorClient",
+          "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient"
+        },
+        "method": {
+          "shortName": "BatchAnnotateImages",
+          "fullName": "google.cloud.vision.v1.ImageAnnotator.BatchAnnotateImages",
+          "service": {
+            "shortName": "ImageAnnotator",
+            "fullName": "google.cloud.vision.v1.ImageAnnotator"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "vision_v1_generated_ImageAnnotator_BatchAnnotateFiles_sync",
+      "title": "BatchAnnotateFilesRequestObject",
+      "description": "Snippet for BatchAnnotateFiles",
+      "file": "ImageAnnotatorClient.BatchAnnotateFilesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchAnnotateFiles",
+        "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateFiles",
+        "resultType": "Google.Cloud.Vision.V1.BatchAnnotateFilesResponse",
+        "client": {
+          "shortName": "ImageAnnotatorClient",
+          "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient"
+        },
+        "method": {
+          "shortName": "BatchAnnotateFiles",
+          "fullName": "google.cloud.vision.v1.ImageAnnotator.BatchAnnotateFiles",
+          "service": {
+            "shortName": "ImageAnnotator",
+            "fullName": "google.cloud.vision.v1.ImageAnnotator"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "vision_v1_generated_ImageAnnotator_BatchAnnotateFiles_async",
+      "title": "BatchAnnotateFilesRequestObjectAsync",
+      "description": "Snippet for BatchAnnotateFilesAsync",
+      "file": "ImageAnnotatorClient.BatchAnnotateFilesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchAnnotateFilesAsync",
+        "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateFilesAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Vision.V1.BatchAnnotateFilesResponse>",
+        "client": {
+          "shortName": "ImageAnnotatorClient",
+          "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient"
+        },
+        "method": {
+          "shortName": "BatchAnnotateFiles",
+          "fullName": "google.cloud.vision.v1.ImageAnnotator.BatchAnnotateFiles",
+          "service": {
+            "shortName": "ImageAnnotator",
+            "fullName": "google.cloud.vision.v1.ImageAnnotator"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "vision_v1_generated_ImageAnnotator_BatchAnnotateFiles_sync_flattened",
+      "title": "BatchAnnotateFiles",
+      "description": "Snippet for BatchAnnotateFiles",
+      "file": "ImageAnnotatorClient.BatchAnnotateFilesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchAnnotateFiles",
+        "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateFiles",
+        "resultType": "Google.Cloud.Vision.V1.BatchAnnotateFilesResponse",
+        "client": {
+          "shortName": "ImageAnnotatorClient",
+          "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient"
+        },
+        "method": {
+          "shortName": "BatchAnnotateFiles",
+          "fullName": "google.cloud.vision.v1.ImageAnnotator.BatchAnnotateFiles",
+          "service": {
+            "shortName": "ImageAnnotator",
+            "fullName": "google.cloud.vision.v1.ImageAnnotator"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "vision_v1_generated_ImageAnnotator_BatchAnnotateFiles_async_flattened",
+      "title": "BatchAnnotateFilesAsync",
+      "description": "Snippet for BatchAnnotateFilesAsync",
+      "file": "ImageAnnotatorClient.BatchAnnotateFilesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchAnnotateFilesAsync",
+        "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateFilesAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Vision.V1.BatchAnnotateFilesResponse>",
+        "client": {
+          "shortName": "ImageAnnotatorClient",
+          "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient"
+        },
+        "method": {
+          "shortName": "BatchAnnotateFiles",
+          "fullName": "google.cloud.vision.v1.ImageAnnotator.BatchAnnotateFiles",
+          "service": {
+            "shortName": "ImageAnnotator",
+            "fullName": "google.cloud.vision.v1.ImageAnnotator"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "vision_v1_generated_ImageAnnotator_AsyncBatchAnnotateImages_sync",
+      "title": "AsyncBatchAnnotateImagesRequestObject",
+      "description": "Snippet for AsyncBatchAnnotateImages",
+      "file": "ImageAnnotatorClient.AsyncBatchAnnotateImagesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AsyncBatchAnnotateImages",
+        "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.AsyncBatchAnnotateImages",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Vision.V1.AsyncBatchAnnotateImagesResponse, Google.Cloud.Vision.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ImageAnnotatorClient",
+          "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient"
+        },
+        "method": {
+          "shortName": "AsyncBatchAnnotateImages",
+          "fullName": "google.cloud.vision.v1.ImageAnnotator.AsyncBatchAnnotateImages",
+          "service": {
+            "shortName": "ImageAnnotator",
+            "fullName": "google.cloud.vision.v1.ImageAnnotator"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "vision_v1_generated_ImageAnnotator_AsyncBatchAnnotateImages_async",
+      "title": "AsyncBatchAnnotateImagesRequestObjectAsync",
+      "description": "Snippet for AsyncBatchAnnotateImagesAsync",
+      "file": "ImageAnnotatorClient.AsyncBatchAnnotateImagesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AsyncBatchAnnotateImagesAsync",
+        "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.AsyncBatchAnnotateImagesAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Vision.V1.AsyncBatchAnnotateImagesResponse, Google.Cloud.Vision.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ImageAnnotatorClient",
+          "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient"
+        },
+        "method": {
+          "shortName": "AsyncBatchAnnotateImages",
+          "fullName": "google.cloud.vision.v1.ImageAnnotator.AsyncBatchAnnotateImages",
+          "service": {
+            "shortName": "ImageAnnotator",
+            "fullName": "google.cloud.vision.v1.ImageAnnotator"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "vision_v1_generated_ImageAnnotator_AsyncBatchAnnotateImages_sync_flattened",
+      "title": "AsyncBatchAnnotateImages",
+      "description": "Snippet for AsyncBatchAnnotateImages",
+      "file": "ImageAnnotatorClient.AsyncBatchAnnotateImagesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AsyncBatchAnnotateImages",
+        "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.AsyncBatchAnnotateImages",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Vision.V1.AsyncBatchAnnotateImagesResponse, Google.Cloud.Vision.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ImageAnnotatorClient",
+          "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient"
+        },
+        "method": {
+          "shortName": "AsyncBatchAnnotateImages",
+          "fullName": "google.cloud.vision.v1.ImageAnnotator.AsyncBatchAnnotateImages",
+          "service": {
+            "shortName": "ImageAnnotator",
+            "fullName": "google.cloud.vision.v1.ImageAnnotator"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "vision_v1_generated_ImageAnnotator_AsyncBatchAnnotateImages_async_flattened",
+      "title": "AsyncBatchAnnotateImagesAsync",
+      "description": "Snippet for AsyncBatchAnnotateImagesAsync",
+      "file": "ImageAnnotatorClient.AsyncBatchAnnotateImagesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AsyncBatchAnnotateImagesAsync",
+        "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.AsyncBatchAnnotateImagesAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Vision.V1.AsyncBatchAnnotateImagesResponse, Google.Cloud.Vision.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ImageAnnotatorClient",
+          "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient"
+        },
+        "method": {
+          "shortName": "AsyncBatchAnnotateImages",
+          "fullName": "google.cloud.vision.v1.ImageAnnotator.AsyncBatchAnnotateImages",
+          "service": {
+            "shortName": "ImageAnnotator",
+            "fullName": "google.cloud.vision.v1.ImageAnnotator"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "vision_v1_generated_ImageAnnotator_AsyncBatchAnnotateFiles_sync",
+      "title": "AsyncBatchAnnotateFilesRequestObject",
+      "description": "Snippet for AsyncBatchAnnotateFiles",
+      "file": "ImageAnnotatorClient.AsyncBatchAnnotateFilesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AsyncBatchAnnotateFiles",
+        "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.AsyncBatchAnnotateFiles",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesResponse, Google.Cloud.Vision.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ImageAnnotatorClient",
+          "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient"
+        },
+        "method": {
+          "shortName": "AsyncBatchAnnotateFiles",
+          "fullName": "google.cloud.vision.v1.ImageAnnotator.AsyncBatchAnnotateFiles",
+          "service": {
+            "shortName": "ImageAnnotator",
+            "fullName": "google.cloud.vision.v1.ImageAnnotator"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "vision_v1_generated_ImageAnnotator_AsyncBatchAnnotateFiles_async",
+      "title": "AsyncBatchAnnotateFilesRequestObjectAsync",
+      "description": "Snippet for AsyncBatchAnnotateFilesAsync",
+      "file": "ImageAnnotatorClient.AsyncBatchAnnotateFilesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AsyncBatchAnnotateFilesAsync",
+        "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.AsyncBatchAnnotateFilesAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesResponse, Google.Cloud.Vision.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ImageAnnotatorClient",
+          "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient"
+        },
+        "method": {
+          "shortName": "AsyncBatchAnnotateFiles",
+          "fullName": "google.cloud.vision.v1.ImageAnnotator.AsyncBatchAnnotateFiles",
+          "service": {
+            "shortName": "ImageAnnotator",
+            "fullName": "google.cloud.vision.v1.ImageAnnotator"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "vision_v1_generated_ImageAnnotator_AsyncBatchAnnotateFiles_sync_flattened",
+      "title": "AsyncBatchAnnotateFiles",
+      "description": "Snippet for AsyncBatchAnnotateFiles",
+      "file": "ImageAnnotatorClient.AsyncBatchAnnotateFilesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AsyncBatchAnnotateFiles",
+        "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.AsyncBatchAnnotateFiles",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesResponse, Google.Cloud.Vision.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ImageAnnotatorClient",
+          "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient"
+        },
+        "method": {
+          "shortName": "AsyncBatchAnnotateFiles",
+          "fullName": "google.cloud.vision.v1.ImageAnnotator.AsyncBatchAnnotateFiles",
+          "service": {
+            "shortName": "ImageAnnotator",
+            "fullName": "google.cloud.vision.v1.ImageAnnotator"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "vision_v1_generated_ImageAnnotator_AsyncBatchAnnotateFiles_async_flattened",
+      "title": "AsyncBatchAnnotateFilesAsync",
+      "description": "Snippet for AsyncBatchAnnotateFilesAsync",
+      "file": "ImageAnnotatorClient.AsyncBatchAnnotateFilesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AsyncBatchAnnotateFilesAsync",
+        "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.AsyncBatchAnnotateFilesAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesResponse, Google.Cloud.Vision.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ImageAnnotatorClient",
+          "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient"
+        },
+        "method": {
+          "shortName": "AsyncBatchAnnotateFiles",
+          "fullName": "google.cloud.vision.v1.ImageAnnotator.AsyncBatchAnnotateFiles",
+          "service": {
+            "shortName": "ImageAnnotator",
+            "fullName": "google.cloud.vision.v1.ImageAnnotator"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "vision_v1_generated_ProductSearch_CreateProductSet_sync",
       "title": "CreateProductSetRequestObject",
       "description": "Snippet for CreateProductSet",
@@ -2833,422 +3249,6 @@
           "service": {
             "shortName": "ProductSearch",
             "fullName": "google.cloud.vision.v1.ProductSearch"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "vision_v1_generated_ImageAnnotator_BatchAnnotateImages_sync",
-      "title": "BatchAnnotateImagesRequestObject",
-      "description": "Snippet for BatchAnnotateImages",
-      "file": "ImageAnnotatorClient.BatchAnnotateImagesRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "BatchAnnotateImages",
-        "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateImages",
-        "resultType": "Google.Cloud.Vision.V1.BatchAnnotateImagesResponse",
-        "client": {
-          "shortName": "ImageAnnotatorClient",
-          "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient"
-        },
-        "method": {
-          "shortName": "BatchAnnotateImages",
-          "fullName": "google.cloud.vision.v1.ImageAnnotator.BatchAnnotateImages",
-          "service": {
-            "shortName": "ImageAnnotator",
-            "fullName": "google.cloud.vision.v1.ImageAnnotator"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "vision_v1_generated_ImageAnnotator_BatchAnnotateImages_async",
-      "title": "BatchAnnotateImagesRequestObjectAsync",
-      "description": "Snippet for BatchAnnotateImagesAsync",
-      "file": "ImageAnnotatorClient.BatchAnnotateImagesRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "BatchAnnotateImagesAsync",
-        "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateImagesAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Vision.V1.BatchAnnotateImagesResponse>",
-        "client": {
-          "shortName": "ImageAnnotatorClient",
-          "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient"
-        },
-        "method": {
-          "shortName": "BatchAnnotateImages",
-          "fullName": "google.cloud.vision.v1.ImageAnnotator.BatchAnnotateImages",
-          "service": {
-            "shortName": "ImageAnnotator",
-            "fullName": "google.cloud.vision.v1.ImageAnnotator"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "vision_v1_generated_ImageAnnotator_BatchAnnotateImages_sync_flattened",
-      "title": "BatchAnnotateImages",
-      "description": "Snippet for BatchAnnotateImages",
-      "file": "ImageAnnotatorClient.BatchAnnotateImagesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "BatchAnnotateImages",
-        "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateImages",
-        "resultType": "Google.Cloud.Vision.V1.BatchAnnotateImagesResponse",
-        "client": {
-          "shortName": "ImageAnnotatorClient",
-          "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient"
-        },
-        "method": {
-          "shortName": "BatchAnnotateImages",
-          "fullName": "google.cloud.vision.v1.ImageAnnotator.BatchAnnotateImages",
-          "service": {
-            "shortName": "ImageAnnotator",
-            "fullName": "google.cloud.vision.v1.ImageAnnotator"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "vision_v1_generated_ImageAnnotator_BatchAnnotateImages_async_flattened",
-      "title": "BatchAnnotateImagesAsync",
-      "description": "Snippet for BatchAnnotateImagesAsync",
-      "file": "ImageAnnotatorClient.BatchAnnotateImagesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "BatchAnnotateImagesAsync",
-        "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateImagesAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Vision.V1.BatchAnnotateImagesResponse>",
-        "client": {
-          "shortName": "ImageAnnotatorClient",
-          "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient"
-        },
-        "method": {
-          "shortName": "BatchAnnotateImages",
-          "fullName": "google.cloud.vision.v1.ImageAnnotator.BatchAnnotateImages",
-          "service": {
-            "shortName": "ImageAnnotator",
-            "fullName": "google.cloud.vision.v1.ImageAnnotator"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "vision_v1_generated_ImageAnnotator_BatchAnnotateFiles_sync",
-      "title": "BatchAnnotateFilesRequestObject",
-      "description": "Snippet for BatchAnnotateFiles",
-      "file": "ImageAnnotatorClient.BatchAnnotateFilesRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "BatchAnnotateFiles",
-        "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateFiles",
-        "resultType": "Google.Cloud.Vision.V1.BatchAnnotateFilesResponse",
-        "client": {
-          "shortName": "ImageAnnotatorClient",
-          "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient"
-        },
-        "method": {
-          "shortName": "BatchAnnotateFiles",
-          "fullName": "google.cloud.vision.v1.ImageAnnotator.BatchAnnotateFiles",
-          "service": {
-            "shortName": "ImageAnnotator",
-            "fullName": "google.cloud.vision.v1.ImageAnnotator"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "vision_v1_generated_ImageAnnotator_BatchAnnotateFiles_async",
-      "title": "BatchAnnotateFilesRequestObjectAsync",
-      "description": "Snippet for BatchAnnotateFilesAsync",
-      "file": "ImageAnnotatorClient.BatchAnnotateFilesRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "BatchAnnotateFilesAsync",
-        "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateFilesAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Vision.V1.BatchAnnotateFilesResponse>",
-        "client": {
-          "shortName": "ImageAnnotatorClient",
-          "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient"
-        },
-        "method": {
-          "shortName": "BatchAnnotateFiles",
-          "fullName": "google.cloud.vision.v1.ImageAnnotator.BatchAnnotateFiles",
-          "service": {
-            "shortName": "ImageAnnotator",
-            "fullName": "google.cloud.vision.v1.ImageAnnotator"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "vision_v1_generated_ImageAnnotator_BatchAnnotateFiles_sync_flattened",
-      "title": "BatchAnnotateFiles",
-      "description": "Snippet for BatchAnnotateFiles",
-      "file": "ImageAnnotatorClient.BatchAnnotateFilesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "BatchAnnotateFiles",
-        "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateFiles",
-        "resultType": "Google.Cloud.Vision.V1.BatchAnnotateFilesResponse",
-        "client": {
-          "shortName": "ImageAnnotatorClient",
-          "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient"
-        },
-        "method": {
-          "shortName": "BatchAnnotateFiles",
-          "fullName": "google.cloud.vision.v1.ImageAnnotator.BatchAnnotateFiles",
-          "service": {
-            "shortName": "ImageAnnotator",
-            "fullName": "google.cloud.vision.v1.ImageAnnotator"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "vision_v1_generated_ImageAnnotator_BatchAnnotateFiles_async_flattened",
-      "title": "BatchAnnotateFilesAsync",
-      "description": "Snippet for BatchAnnotateFilesAsync",
-      "file": "ImageAnnotatorClient.BatchAnnotateFilesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "BatchAnnotateFilesAsync",
-        "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateFilesAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Vision.V1.BatchAnnotateFilesResponse>",
-        "client": {
-          "shortName": "ImageAnnotatorClient",
-          "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient"
-        },
-        "method": {
-          "shortName": "BatchAnnotateFiles",
-          "fullName": "google.cloud.vision.v1.ImageAnnotator.BatchAnnotateFiles",
-          "service": {
-            "shortName": "ImageAnnotator",
-            "fullName": "google.cloud.vision.v1.ImageAnnotator"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "vision_v1_generated_ImageAnnotator_AsyncBatchAnnotateImages_sync",
-      "title": "AsyncBatchAnnotateImagesRequestObject",
-      "description": "Snippet for AsyncBatchAnnotateImages",
-      "file": "ImageAnnotatorClient.AsyncBatchAnnotateImagesRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "AsyncBatchAnnotateImages",
-        "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.AsyncBatchAnnotateImages",
-        "resultType": "Google.LongRunning.Operation<Google.Cloud.Vision.V1.AsyncBatchAnnotateImagesResponse, Google.Cloud.Vision.V1.OperationMetadata>",
-        "client": {
-          "shortName": "ImageAnnotatorClient",
-          "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient"
-        },
-        "method": {
-          "shortName": "AsyncBatchAnnotateImages",
-          "fullName": "google.cloud.vision.v1.ImageAnnotator.AsyncBatchAnnotateImages",
-          "service": {
-            "shortName": "ImageAnnotator",
-            "fullName": "google.cloud.vision.v1.ImageAnnotator"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "vision_v1_generated_ImageAnnotator_AsyncBatchAnnotateImages_async",
-      "title": "AsyncBatchAnnotateImagesRequestObjectAsync",
-      "description": "Snippet for AsyncBatchAnnotateImagesAsync",
-      "file": "ImageAnnotatorClient.AsyncBatchAnnotateImagesRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "AsyncBatchAnnotateImagesAsync",
-        "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.AsyncBatchAnnotateImagesAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Vision.V1.AsyncBatchAnnotateImagesResponse, Google.Cloud.Vision.V1.OperationMetadata>>",
-        "client": {
-          "shortName": "ImageAnnotatorClient",
-          "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient"
-        },
-        "method": {
-          "shortName": "AsyncBatchAnnotateImages",
-          "fullName": "google.cloud.vision.v1.ImageAnnotator.AsyncBatchAnnotateImages",
-          "service": {
-            "shortName": "ImageAnnotator",
-            "fullName": "google.cloud.vision.v1.ImageAnnotator"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "vision_v1_generated_ImageAnnotator_AsyncBatchAnnotateImages_sync_flattened",
-      "title": "AsyncBatchAnnotateImages",
-      "description": "Snippet for AsyncBatchAnnotateImages",
-      "file": "ImageAnnotatorClient.AsyncBatchAnnotateImagesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "AsyncBatchAnnotateImages",
-        "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.AsyncBatchAnnotateImages",
-        "resultType": "Google.LongRunning.Operation<Google.Cloud.Vision.V1.AsyncBatchAnnotateImagesResponse, Google.Cloud.Vision.V1.OperationMetadata>",
-        "client": {
-          "shortName": "ImageAnnotatorClient",
-          "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient"
-        },
-        "method": {
-          "shortName": "AsyncBatchAnnotateImages",
-          "fullName": "google.cloud.vision.v1.ImageAnnotator.AsyncBatchAnnotateImages",
-          "service": {
-            "shortName": "ImageAnnotator",
-            "fullName": "google.cloud.vision.v1.ImageAnnotator"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "vision_v1_generated_ImageAnnotator_AsyncBatchAnnotateImages_async_flattened",
-      "title": "AsyncBatchAnnotateImagesAsync",
-      "description": "Snippet for AsyncBatchAnnotateImagesAsync",
-      "file": "ImageAnnotatorClient.AsyncBatchAnnotateImagesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "AsyncBatchAnnotateImagesAsync",
-        "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.AsyncBatchAnnotateImagesAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Vision.V1.AsyncBatchAnnotateImagesResponse, Google.Cloud.Vision.V1.OperationMetadata>>",
-        "client": {
-          "shortName": "ImageAnnotatorClient",
-          "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient"
-        },
-        "method": {
-          "shortName": "AsyncBatchAnnotateImages",
-          "fullName": "google.cloud.vision.v1.ImageAnnotator.AsyncBatchAnnotateImages",
-          "service": {
-            "shortName": "ImageAnnotator",
-            "fullName": "google.cloud.vision.v1.ImageAnnotator"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "vision_v1_generated_ImageAnnotator_AsyncBatchAnnotateFiles_sync",
-      "title": "AsyncBatchAnnotateFilesRequestObject",
-      "description": "Snippet for AsyncBatchAnnotateFiles",
-      "file": "ImageAnnotatorClient.AsyncBatchAnnotateFilesRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "AsyncBatchAnnotateFiles",
-        "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.AsyncBatchAnnotateFiles",
-        "resultType": "Google.LongRunning.Operation<Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesResponse, Google.Cloud.Vision.V1.OperationMetadata>",
-        "client": {
-          "shortName": "ImageAnnotatorClient",
-          "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient"
-        },
-        "method": {
-          "shortName": "AsyncBatchAnnotateFiles",
-          "fullName": "google.cloud.vision.v1.ImageAnnotator.AsyncBatchAnnotateFiles",
-          "service": {
-            "shortName": "ImageAnnotator",
-            "fullName": "google.cloud.vision.v1.ImageAnnotator"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "vision_v1_generated_ImageAnnotator_AsyncBatchAnnotateFiles_async",
-      "title": "AsyncBatchAnnotateFilesRequestObjectAsync",
-      "description": "Snippet for AsyncBatchAnnotateFilesAsync",
-      "file": "ImageAnnotatorClient.AsyncBatchAnnotateFilesRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "AsyncBatchAnnotateFilesAsync",
-        "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.AsyncBatchAnnotateFilesAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesResponse, Google.Cloud.Vision.V1.OperationMetadata>>",
-        "client": {
-          "shortName": "ImageAnnotatorClient",
-          "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient"
-        },
-        "method": {
-          "shortName": "AsyncBatchAnnotateFiles",
-          "fullName": "google.cloud.vision.v1.ImageAnnotator.AsyncBatchAnnotateFiles",
-          "service": {
-            "shortName": "ImageAnnotator",
-            "fullName": "google.cloud.vision.v1.ImageAnnotator"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "vision_v1_generated_ImageAnnotator_AsyncBatchAnnotateFiles_sync_flattened",
-      "title": "AsyncBatchAnnotateFiles",
-      "description": "Snippet for AsyncBatchAnnotateFiles",
-      "file": "ImageAnnotatorClient.AsyncBatchAnnotateFilesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "AsyncBatchAnnotateFiles",
-        "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.AsyncBatchAnnotateFiles",
-        "resultType": "Google.LongRunning.Operation<Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesResponse, Google.Cloud.Vision.V1.OperationMetadata>",
-        "client": {
-          "shortName": "ImageAnnotatorClient",
-          "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient"
-        },
-        "method": {
-          "shortName": "AsyncBatchAnnotateFiles",
-          "fullName": "google.cloud.vision.v1.ImageAnnotator.AsyncBatchAnnotateFiles",
-          "service": {
-            "shortName": "ImageAnnotator",
-            "fullName": "google.cloud.vision.v1.ImageAnnotator"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "vision_v1_generated_ImageAnnotator_AsyncBatchAnnotateFiles_async_flattened",
-      "title": "AsyncBatchAnnotateFilesAsync",
-      "description": "Snippet for AsyncBatchAnnotateFilesAsync",
-      "file": "ImageAnnotatorClient.AsyncBatchAnnotateFilesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "AsyncBatchAnnotateFilesAsync",
-        "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.AsyncBatchAnnotateFilesAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesResponse, Google.Cloud.Vision.V1.OperationMetadata>>",
-        "client": {
-          "shortName": "ImageAnnotatorClient",
-          "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient"
-        },
-        "method": {
-          "shortName": "AsyncBatchAnnotateFiles",
-          "fullName": "google.cloud.vision.v1.ImageAnnotator.AsyncBatchAnnotateFiles",
-          "service": {
-            "shortName": "ImageAnnotator",
-            "fullName": "google.cloud.vision.v1.ImageAnnotator"
           }
         }
       },

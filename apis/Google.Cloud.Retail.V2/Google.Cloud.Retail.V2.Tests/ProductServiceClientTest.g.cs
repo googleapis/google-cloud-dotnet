@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -100,7 +101,7 @@ namespace Google.Cloud.Retail.V2.Tests
                 Promotions = { new Promotion(), },
             };
             mockGrpcClient.Setup(x => x.CreateProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null);
+            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null, null);
             Product response = client.CreateProduct(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -178,7 +179,7 @@ namespace Google.Cloud.Retail.V2.Tests
                 Promotions = { new Promotion(), },
             };
             mockGrpcClient.Setup(x => x.CreateProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null);
+            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null, null);
             Product responseCallSettings = await client.CreateProductAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Product responseCancellationToken = await client.CreateProductAsync(request, st::CancellationToken.None);
@@ -258,7 +259,7 @@ namespace Google.Cloud.Retail.V2.Tests
                 Promotions = { new Promotion(), },
             };
             mockGrpcClient.Setup(x => x.CreateProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null);
+            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null, null);
             Product response = client.CreateProduct(request.Parent, request.Product, request.ProductId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -336,7 +337,7 @@ namespace Google.Cloud.Retail.V2.Tests
                 Promotions = { new Promotion(), },
             };
             mockGrpcClient.Setup(x => x.CreateProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null);
+            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null, null);
             Product responseCallSettings = await client.CreateProductAsync(request.Parent, request.Product, request.ProductId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Product responseCancellationToken = await client.CreateProductAsync(request.Parent, request.Product, request.ProductId, st::CancellationToken.None);
@@ -416,7 +417,7 @@ namespace Google.Cloud.Retail.V2.Tests
                 Promotions = { new Promotion(), },
             };
             mockGrpcClient.Setup(x => x.CreateProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null);
+            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null, null);
             Product response = client.CreateProduct(request.ParentAsBranchName, request.Product, request.ProductId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -494,7 +495,7 @@ namespace Google.Cloud.Retail.V2.Tests
                 Promotions = { new Promotion(), },
             };
             mockGrpcClient.Setup(x => x.CreateProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null);
+            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null, null);
             Product responseCallSettings = await client.CreateProductAsync(request.ParentAsBranchName, request.Product, request.ProductId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Product responseCancellationToken = await client.CreateProductAsync(request.ParentAsBranchName, request.Product, request.ProductId, st::CancellationToken.None);
@@ -572,7 +573,7 @@ namespace Google.Cloud.Retail.V2.Tests
                 Promotions = { new Promotion(), },
             };
             mockGrpcClient.Setup(x => x.GetProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null);
+            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null, null);
             Product response = client.GetProduct(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -648,7 +649,7 @@ namespace Google.Cloud.Retail.V2.Tests
                 Promotions = { new Promotion(), },
             };
             mockGrpcClient.Setup(x => x.GetProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null);
+            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null, null);
             Product responseCallSettings = await client.GetProductAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Product responseCancellationToken = await client.GetProductAsync(request, st::CancellationToken.None);
@@ -726,7 +727,7 @@ namespace Google.Cloud.Retail.V2.Tests
                 Promotions = { new Promotion(), },
             };
             mockGrpcClient.Setup(x => x.GetProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null);
+            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null, null);
             Product response = client.GetProduct(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -802,7 +803,7 @@ namespace Google.Cloud.Retail.V2.Tests
                 Promotions = { new Promotion(), },
             };
             mockGrpcClient.Setup(x => x.GetProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null);
+            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null, null);
             Product responseCallSettings = await client.GetProductAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Product responseCancellationToken = await client.GetProductAsync(request.Name, st::CancellationToken.None);
@@ -880,7 +881,7 @@ namespace Google.Cloud.Retail.V2.Tests
                 Promotions = { new Promotion(), },
             };
             mockGrpcClient.Setup(x => x.GetProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null);
+            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null, null);
             Product response = client.GetProduct(request.ProductName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -956,7 +957,7 @@ namespace Google.Cloud.Retail.V2.Tests
                 Promotions = { new Promotion(), },
             };
             mockGrpcClient.Setup(x => x.GetProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null);
+            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null, null);
             Product responseCallSettings = await client.GetProductAsync(request.ProductName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Product responseCancellationToken = await client.GetProductAsync(request.ProductName, st::CancellationToken.None);
@@ -1036,7 +1037,7 @@ namespace Google.Cloud.Retail.V2.Tests
                 Promotions = { new Promotion(), },
             };
             mockGrpcClient.Setup(x => x.UpdateProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null);
+            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null, null);
             Product response = client.UpdateProduct(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1114,7 +1115,7 @@ namespace Google.Cloud.Retail.V2.Tests
                 Promotions = { new Promotion(), },
             };
             mockGrpcClient.Setup(x => x.UpdateProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null);
+            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null, null);
             Product responseCallSettings = await client.UpdateProductAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Product responseCancellationToken = await client.UpdateProductAsync(request, st::CancellationToken.None);
@@ -1193,7 +1194,7 @@ namespace Google.Cloud.Retail.V2.Tests
                 Promotions = { new Promotion(), },
             };
             mockGrpcClient.Setup(x => x.UpdateProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null);
+            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null, null);
             Product response = client.UpdateProduct(request.Product, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1270,7 +1271,7 @@ namespace Google.Cloud.Retail.V2.Tests
                 Promotions = { new Promotion(), },
             };
             mockGrpcClient.Setup(x => x.UpdateProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null);
+            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null, null);
             Product responseCallSettings = await client.UpdateProductAsync(request.Product, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Product responseCancellationToken = await client.UpdateProductAsync(request.Product, request.UpdateMask, st::CancellationToken.None);
@@ -1289,7 +1290,7 @@ namespace Google.Cloud.Retail.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null);
+            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteProduct(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1305,7 +1306,7 @@ namespace Google.Cloud.Retail.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null);
+            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteProductAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteProductAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1322,7 +1323,7 @@ namespace Google.Cloud.Retail.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null);
+            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteProduct(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -1338,7 +1339,7 @@ namespace Google.Cloud.Retail.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null);
+            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteProductAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteProductAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1355,7 +1356,7 @@ namespace Google.Cloud.Retail.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null);
+            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteProduct(request.ProductName);
             mockGrpcClient.VerifyAll();
         }
@@ -1371,7 +1372,7 @@ namespace Google.Cloud.Retail.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null);
+            ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteProductAsync(request.ProductName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteProductAsync(request.ProductName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();

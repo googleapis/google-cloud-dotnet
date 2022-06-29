@@ -14,12 +14,14 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
+using gcl = Google.Cloud.Location;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -48,6 +50,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             StreamingDetectIntentStreamingSettings = existing.StreamingDetectIntentStreamingSettings;
             MatchIntentSettings = existing.MatchIntentSettings;
             FulfillIntentSettings = existing.FulfillIntentSettings;
+            LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
 
@@ -126,6 +129,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </remarks>
         public gaxgrpc::CallSettings FulfillIntentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="SessionsSettings"/> object.</returns>
         public SessionsSettings Clone() => new SessionsSettings(this);
@@ -140,9 +148,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         public SessionsSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public SessionsClientBuilder()
+        public SessionsClientBuilder() : base(SessionsClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = SessionsClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref SessionsClient client);
@@ -169,29 +176,18 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return SessionsClient.Create(callInvoker, Settings);
+            return SessionsClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<SessionsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return SessionsClient.Create(callInvoker, Settings);
+            return SessionsClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => SessionsClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => SessionsClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => SessionsClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>Sessions client wrapper, for convenient use.</summary>
@@ -222,19 +218,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             "https://www.googleapis.com/auth/dialogflow",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Sessions.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="SessionsClient"/> using the default credentials, endpoint and settings. 
@@ -261,8 +248,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="SessionsSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="SessionsClient"/>.</returns>
-        internal static SessionsClient Create(grpccore::CallInvoker callInvoker, SessionsSettings settings = null)
+        internal static SessionsClient Create(grpccore::CallInvoker callInvoker, SessionsSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -271,7 +259,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             Sessions.SessionsClient grpcClient = new Sessions.SessionsClient(callInvoker);
-            return new SessionsClientImpl(grpcClient, settings);
+            return new SessionsClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -289,6 +277,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>The underlying gRPC Sessions client</summary>
         public virtual Sessions.SessionsClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Processes a natural language query and returns structured, actionable data
@@ -446,21 +437,23 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="SessionsSettings"/> used within this client.</param>
-        public SessionsClientImpl(Sessions.SessionsClient grpcClient, SessionsSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public SessionsClientImpl(Sessions.SessionsClient grpcClient, SessionsSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             SessionsSettings effectiveSettings = settings ?? SessionsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callDetectIntent = clientHelper.BuildApiCall<DetectIntentRequest, DetectIntentResponse>(grpcClient.DetectIntentAsync, grpcClient.DetectIntent, effectiveSettings.DetectIntentSettings).WithGoogleRequestParam("session", request => request.Session);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
+            _callDetectIntent = clientHelper.BuildApiCall<DetectIntentRequest, DetectIntentResponse>("DetectIntent", grpcClient.DetectIntentAsync, grpcClient.DetectIntent, effectiveSettings.DetectIntentSettings).WithGoogleRequestParam("session", request => request.Session);
             Modify_ApiCall(ref _callDetectIntent);
             Modify_DetectIntentApiCall(ref _callDetectIntent);
-            _callStreamingDetectIntent = clientHelper.BuildApiCall<StreamingDetectIntentRequest, StreamingDetectIntentResponse>(grpcClient.StreamingDetectIntent, effectiveSettings.StreamingDetectIntentSettings, effectiveSettings.StreamingDetectIntentStreamingSettings);
+            _callStreamingDetectIntent = clientHelper.BuildApiCall<StreamingDetectIntentRequest, StreamingDetectIntentResponse>("StreamingDetectIntent", grpcClient.StreamingDetectIntent, effectiveSettings.StreamingDetectIntentSettings, effectiveSettings.StreamingDetectIntentStreamingSettings);
             Modify_ApiCall(ref _callStreamingDetectIntent);
             Modify_StreamingDetectIntentApiCall(ref _callStreamingDetectIntent);
-            _callMatchIntent = clientHelper.BuildApiCall<MatchIntentRequest, MatchIntentResponse>(grpcClient.MatchIntentAsync, grpcClient.MatchIntent, effectiveSettings.MatchIntentSettings).WithGoogleRequestParam("session", request => request.Session);
+            _callMatchIntent = clientHelper.BuildApiCall<MatchIntentRequest, MatchIntentResponse>("MatchIntent", grpcClient.MatchIntentAsync, grpcClient.MatchIntent, effectiveSettings.MatchIntentSettings).WithGoogleRequestParam("session", request => request.Session);
             Modify_ApiCall(ref _callMatchIntent);
             Modify_MatchIntentApiCall(ref _callMatchIntent);
-            _callFulfillIntent = clientHelper.BuildApiCall<FulfillIntentRequest, FulfillIntentResponse>(grpcClient.FulfillIntentAsync, grpcClient.FulfillIntent, effectiveSettings.FulfillIntentSettings).WithGoogleRequestParam("match_intent_request.session", request => request.MatchIntentRequest?.Session);
+            _callFulfillIntent = clientHelper.BuildApiCall<FulfillIntentRequest, FulfillIntentResponse>("FulfillIntent", grpcClient.FulfillIntentAsync, grpcClient.FulfillIntent, effectiveSettings.FulfillIntentSettings).WithGoogleRequestParam("match_intent_request.session", request => request.MatchIntentRequest?.Session);
             Modify_ApiCall(ref _callFulfillIntent);
             Modify_FulfillIntentApiCall(ref _callFulfillIntent);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
@@ -482,6 +475,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>The underlying gRPC Sessions client</summary>
         public override Sessions.SessionsClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
 
         partial void Modify_DetectIntentRequest(ref DetectIntentRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -649,6 +645,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             Modify_FulfillIntentRequest(ref request, ref callSettings);
             return _callFulfillIntent.Async(request, callSettings);
+        }
+    }
+
+    public static partial class Sessions
+    {
+        public partial class SessionsClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
         }
     }
 }

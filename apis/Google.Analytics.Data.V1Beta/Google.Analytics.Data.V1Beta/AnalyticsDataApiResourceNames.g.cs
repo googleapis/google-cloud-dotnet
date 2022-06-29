@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gadv = Google.Analytics.Data.V1Beta;
 using gax = Google.Api.Gax;
 using sys = System;

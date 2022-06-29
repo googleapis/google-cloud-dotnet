@@ -62,6 +62,59 @@
       },
       "canonical": true,
       "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "eventarcpublishing_v1_generated_Publisher_PublishEvents_sync",
+      "title": "PublishEventsRequestObject",
+      "description": "Snippet for PublishEvents",
+      "file": "PublisherClient.PublishEventsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PublishEvents",
+        "fullName": "Google.Cloud.Eventarc.Publishing.V1.PublisherClient.PublishEvents",
+        "resultType": "Google.Cloud.Eventarc.Publishing.V1.PublishEventsResponse",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.Eventarc.Publishing.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "PublishEvents",
+          "fullName": "google.cloud.eventarc.publishing.v1.Publisher.PublishEvents",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.cloud.eventarc.publishing.v1.Publisher"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "eventarcpublishing_v1_generated_Publisher_PublishEvents_async",
+      "title": "PublishEventsRequestObjectAsync",
+      "description": "Snippet for PublishEventsAsync",
+      "file": "PublisherClient.PublishEventsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PublishEventsAsync",
+        "fullName": "Google.Cloud.Eventarc.Publishing.V1.PublisherClient.PublishEventsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.Publishing.V1.PublishEventsResponse>",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.Eventarc.Publishing.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "PublishEvents",
+          "fullName": "google.cloud.eventarc.publishing.v1.Publisher.PublishEvents",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.cloud.eventarc.publishing.v1.Publisher"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
     }
   ]
 }

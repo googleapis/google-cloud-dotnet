@@ -21,9 +21,6 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.Diagnostics.Common
 {
-    // TODO: Marking as obsolete so that we can make this class internal. It cannot go away as this is now the correct
-    // way to handle outgoing traces, but once TraceHeaderPropagatingHandler (already marked as obsolete) is gone
-    // there's no need for this one to be public.
     /// <summary>
     /// Class for tracing outgoing HTTP requests and propagating the trace context.
     /// </summary>
@@ -38,11 +35,7 @@ namespace Google.Cloud.Diagnostics.Common
     /// System.Net.Http.IHttpClientFactory defined in Microsoft.Extensions.Http.
     /// </para>
     /// </remarks>
-    [Obsolete(
-        "Use Google.Cloud.Diagnostics.Common.HttpClientBuilderExtensions.AddOutgoingGoogleTraceHandler insted. " +
-        "For more information see " +
-        "https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests")]
-    public class UnchainedTraceHeaderPropagatingHandler : DelegatingHandler
+    internal class UnchainedTraceHeaderPropagatingHandler : DelegatingHandler
     {
         private readonly Func<IManagedTracer> _managedTracerFactory;
         private readonly Action<HttpRequestMessage, ITraceContext> _traceContextPropagator;

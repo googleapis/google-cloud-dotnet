@@ -99,14 +99,11 @@ case $1 in
     declare -a PROJECTS=(
       'Google.Api.Gax'
       'Google.Api.Gax.Grpc'
-      'Google.Api.Gax.Grpc.Gcp'
-      'Google.Api.Gax.Grpc.GrpcCore'
-      'Google.Api.Gax.Grpc.GrpcNetClient'
       'Google.Api.Gax.Grpc.Testing'
       'Google.Api.Gax.Rest'
       'Google.Api.Gax.Testing'
     )
-    declare -r TARGET_FRAMEWORK=net461
+    declare -r TARGET_FRAMEWORK=net462
     declare -a XREFS=(
       'Google.Protobuf'
       'Google.Api.CommonProtos'
@@ -159,7 +156,7 @@ do
 done
 
 echo 'Regenerating TOC'
-dotnet run -p ../../tools/Google.Cloud.Tools.RegenerateToc -- devsite/api
+dotnet run --project ../../tools/Google.Cloud.Tools.RegenerateToc -- devsite/api
 
 cd devsite
 

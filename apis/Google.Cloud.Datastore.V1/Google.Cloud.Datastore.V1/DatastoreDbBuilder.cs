@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Grpc.Core;
 using System;
 using System.Collections.Generic;
 using System.Threading;
@@ -30,6 +31,11 @@ namespace Google.Cloud.Datastore.V1
         internal const string s_emulatorProjectVariable = "DATASTORE_PROJECT_ID";
         private static readonly string[] s_requiredEmulatorVariables = { s_emulatorHostVariable };
         private static readonly string[] s_allEmulatorVariables = { s_emulatorHostVariable, s_emulatorProjectVariable };
+
+        /// <summary>Creates a new builder with default settings.</summary>
+        public DatastoreDbBuilder() : base(DatastoreClient.ServiceMetadata)
+        {
+        }
 
         /// <summary>
         /// The settings to use for RPCs, or null for the default settings.
@@ -62,28 +68,27 @@ namespace Google.Cloud.Datastore.V1
         public string NamespaceId { get; set; }
 
         /// <inheritdoc />
-        public override DatastoreDb Build() => PrepareBuilder().Build();
+        public override DatastoreDb Build()
+        {
+            var builder = PrepareBuilder();
+            var db = builder.Build();
+            LastCreatedChannel = builder.LastCreatedChannel;
+            return db;
+        }
 
         /// <inheritdoc />
-        public override Task<DatastoreDb> BuildAsync(CancellationToken cancellationToken = default) =>
-            PrepareBuilder().BuildAsync(cancellationToken);
+        public override async Task<DatastoreDb> BuildAsync(CancellationToken cancellationToken = default)
+        {
+            var builder = PrepareBuilder();
+            var db = await builder.BuildAsync(cancellationToken).ConfigureAwait(false);
+            LastCreatedChannel = builder.LastCreatedChannel;
+            return db;
+        }
 
-        // We never end up using these methods, at least with the current implementation
-        /// <inheritdoc />
-        protected override string GetDefaultEndpoint() =>
-            throw new InvalidOperationException($"This method should never execute in {nameof(DatastoreDbBuilder)}");
-
-        /// <inheritdoc />
-        protected override IReadOnlyList<string> GetDefaultScopes() =>
-            throw new InvalidOperationException($"This method should never execute in {nameof(DatastoreDbBuilder)}");
-
+        // We never end up using this method, at least with the current implementation
         /// <inheritdoc />
         protected override ChannelPool GetChannelPool() =>
             throw new InvalidOperationException($"This method should never execute in {nameof(DatastoreDbBuilder)}");
-
-        /// <inheritdoc />
-        protected override GrpcAdapter DefaultGrpcAdapter =>
-            throw new InvalidOperationException($"This property should never execute in {nameof(DatastoreDbBuilder)}");
 
         /// <summary>
         /// Common code for handling project ID, namespace ID and emulator detection.
@@ -119,6 +124,8 @@ namespace Google.Cloud.Datastore.V1
             private string _projectId;
             private string _namespaceId;
             private DatastoreClientBuilder _clientBuilder;
+
+            internal ChannelBase LastCreatedChannel => _clientBuilder.LastCreatedChannel;
 
             internal ConfiguredBuilder(string projectId, string namespaceId, DatastoreClientBuilder clientBuilder)
             {

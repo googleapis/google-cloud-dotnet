@@ -29,7 +29,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
             "aS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5w",
             "cm90bxovZ29vZ2xlL2Nsb3VkL3ZpZGVvL3N0aXRjaGVyL3YxL2NvbXBhbmlv",
             "bnMucHJvdG8aK2dvb2dsZS9jbG91ZC92aWRlby9zdGl0Y2hlci92MS9ldmVu",
-            "dHMucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90byKaBAoK",
+            "dHMucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90byKxBAoK",
             "Vm9kU2Vzc2lvbhIRCgRuYW1lGAEgASgJQgPgQQMSSQoNaW50ZXJzdGl0aWFs",
             "cxgCIAEoCzItLmdvb2dsZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MS5JbnRl",
             "cnN0aXRpYWxzQgPgQQMSFQoIcGxheV91cmkYBCABKAlCA+BBAxIXCgpzb3Vy",
@@ -38,64 +38,64 @@ namespace Google.Cloud.Video.Stitcher.V1 {
             "c3RpdGNoZXIudjEuVm9kU2Vzc2lvbi5BZFRhZ01hY3JvTWFwRW50cnkSGgoS",
             "Y2xpZW50X2FkX3RyYWNraW5nGAggASgIEkkKEG1hbmlmZXN0X29wdGlvbnMY",
             "CSABKAsyLy5nb29nbGUuY2xvdWQudmlkZW8uc3RpdGNoZXIudjEuTWFuaWZl",
-            "c3RPcHRpb25zGjQKEkFkVGFnTWFjcm9NYXBFbnRyeRILCgNrZXkYASABKAkS",
-            "DQoFdmFsdWUYAiABKAk6AjgBOm/qQWwKJ3ZpZGVvc3RpdGNoZXIuZ29vZ2xl",
-            "YXBpcy5jb20vVm9kU2Vzc2lvbhJBcHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
-            "aW9ucy97bG9jYXRpb259L3ZvZFNlc3Npb25zL3t2b2Rfc2Vzc2lvbn0ioQEK",
-            "DUludGVyc3RpdGlhbHMSRAoJYWRfYnJlYWtzGAEgAygLMjEuZ29vZ2xlLmNs",
-            "b3VkLnZpZGVvLnN0aXRjaGVyLnYxLlZvZFNlc3Npb25BZEJyZWFrEkoKD3Nl",
-            "c3Npb25fY29udGVudBgCIAEoCzIxLmdvb2dsZS5jbG91ZC52aWRlby5zdGl0",
-            "Y2hlci52MS5Wb2RTZXNzaW9uQ29udGVudCLAAQoMVm9kU2Vzc2lvbkFkEisK",
-            "CGR1cmF0aW9uGAEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEkMK",
-            "DWNvbXBhbmlvbl9hZHMYAiABKAsyLC5nb29nbGUuY2xvdWQudmlkZW8uc3Rp",
-            "dGNoZXIudjEuQ29tcGFuaW9uQWRzEj4KD2FjdGl2aXR5X2V2ZW50cxgDIAMo",
-            "CzIlLmdvb2dsZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MS5FdmVudCJAChFW",
-            "b2RTZXNzaW9uQ29udGVudBIrCghkdXJhdGlvbhgBIAEoCzIZLmdvb2dsZS5w",
-            "cm90b2J1Zi5EdXJhdGlvbiKAAgoRVm9kU2Vzc2lvbkFkQnJlYWsSRgoPcHJv",
-            "Z3Jlc3NfZXZlbnRzGAEgAygLMi0uZ29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRj",
-            "aGVyLnYxLlByb2dyZXNzRXZlbnQSOQoDYWRzGAIgAygLMiwuZ29vZ2xlLmNs",
-            "b3VkLnZpZGVvLnN0aXRjaGVyLnYxLlZvZFNlc3Npb25BZBIyCg9lbmRfdGlt",
-            "ZV9vZmZzZXQYAyABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SNAoR",
-            "c3RhcnRfdGltZV9vZmZzZXQYBCABKAsyGS5nb29nbGUucHJvdG9idWYuRHVy",
-            "YXRpb24iywYKC0xpdmVTZXNzaW9uEhEKBG5hbWUYASABKAlCA+BBAxIVCghw",
-            "bGF5X3VyaRgCIAEoCUID4EEDEhIKCnNvdXJjZV91cmkYAyABKAkSGQoRZGVm",
-            "YXVsdF9hZF90YWdfaWQYBCABKAkSTQoKYWRfdGFnX21hcBgFIAMoCzI5Lmdv",
-            "b2dsZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MS5MaXZlU2Vzc2lvbi5BZFRh",
-            "Z01hcEVudHJ5ElMKDWFkX3RhZ19tYWNyb3MYBiADKAsyPC5nb29nbGUuY2xv",
-            "dWQudmlkZW8uc3RpdGNoZXIudjEuTGl2ZVNlc3Npb24uQWRUYWdNYWNyb3NF",
-            "bnRyeRIaChJjbGllbnRfYWRfdHJhY2tpbmcYByABKAgSGAoQZGVmYXVsdF9z",
-            "bGF0ZV9pZBgIIAEoCRJVChBzdGl0Y2hpbmdfcG9saWN5GAkgASgOMjsuZ29v",
-            "Z2xlLmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYxLkxpdmVTZXNzaW9uLlN0aXRj",
-            "aGluZ1BvbGljeRJJChBtYW5pZmVzdF9vcHRpb25zGAogASgLMi8uZ29vZ2xl",
-            "LmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYxLk1hbmlmZXN0T3B0aW9ucxpWCg1B",
-            "ZFRhZ01hcEVudHJ5EgsKA2tleRgBIAEoCRI0CgV2YWx1ZRgCIAEoCzIlLmdv",
-            "b2dsZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MS5BZFRhZzoCOAEaMgoQQWRU",
-            "YWdNYWNyb3NFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgB",
-            "ImcKD1N0aXRjaGluZ1BvbGljeRIgChxTVElUQ0hJTkdfUE9MSUNZX1VOU1BF",
-            "Q0lGSUVEEAASDwoLQ09NUExFVEVfQUQQARIQCgxDT01QTEVURV9QT0QQAhIP",
-            "CgtDVVRfQ1VSUkVOVBADOnLqQW8KKHZpZGVvc3RpdGNoZXIuZ29vZ2xlYXBp",
-            "cy5jb20vTGl2ZVNlc3Npb24SQ3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
-            "bnMve2xvY2F0aW9ufS9saXZlU2Vzc2lvbnMve2xpdmVfc2Vzc2lvbn0iFAoF",
-            "QWRUYWcSCwoDdXJpGAEgASgJIv4BCg9NYW5pZmVzdE9wdGlvbnMSSwoSaW5j",
-            "bHVkZV9yZW5kaXRpb25zGAEgAygLMi8uZ29vZ2xlLmNsb3VkLnZpZGVvLnN0",
-            "aXRjaGVyLnYxLlJlbmRpdGlvbkZpbHRlchJSCg1iaXRyYXRlX29yZGVyGAIg",
-            "ASgOMjsuZ29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYxLk1hbmlmZXN0",
-            "T3B0aW9ucy5PcmRlclBvbGljeSJKCgtPcmRlclBvbGljeRIcChhPUkRFUl9Q",
-            "T0xJQ1lfVU5TUEVDSUZJRUQQABINCglBU0NFTkRJTkcQARIOCgpERVNDRU5E",
-            "SU5HEAIiNgoPUmVuZGl0aW9uRmlsdGVyEhMKC2JpdHJhdGVfYnBzGAEgASgF",
-            "Eg4KBmNvZGVjcxgCIAEoCUJ9CiJjb20uZ29vZ2xlLmNsb3VkLnZpZGVvLnN0",
-            "aXRjaGVyLnYxQg1TZXNzaW9uc1Byb3RvUAFaRmdvb2dsZS5nb2xhbmcub3Jn",
-            "L2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvdmlkZW8vc3RpdGNoZXIvdjE7",
-            "c3RpdGNoZXJiBnByb3RvMw=="));
+            "c3RPcHRpb25zEhUKCGFzc2V0X2lkGAogASgJQgPgQQMaNAoSQWRUYWdNYWNy",
+            "b01hcEVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAE6b+pB",
+            "bAondmlkZW9zdGl0Y2hlci5nb29nbGVhcGlzLmNvbS9Wb2RTZXNzaW9uEkFw",
+            "cm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vdm9kU2Vz",
+            "c2lvbnMve3ZvZF9zZXNzaW9ufSKhAQoNSW50ZXJzdGl0aWFscxJECglhZF9i",
+            "cmVha3MYASADKAsyMS5nb29nbGUuY2xvdWQudmlkZW8uc3RpdGNoZXIudjEu",
+            "Vm9kU2Vzc2lvbkFkQnJlYWsSSgoPc2Vzc2lvbl9jb250ZW50GAIgASgLMjEu",
+            "Z29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYxLlZvZFNlc3Npb25Db250",
+            "ZW50IsABCgxWb2RTZXNzaW9uQWQSKwoIZHVyYXRpb24YASABKAsyGS5nb29n",
+            "bGUucHJvdG9idWYuRHVyYXRpb24SQwoNY29tcGFuaW9uX2FkcxgCIAEoCzIs",
+            "Lmdvb2dsZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MS5Db21wYW5pb25BZHMS",
+            "PgoPYWN0aXZpdHlfZXZlbnRzGAMgAygLMiUuZ29vZ2xlLmNsb3VkLnZpZGVv",
+            "LnN0aXRjaGVyLnYxLkV2ZW50IkAKEVZvZFNlc3Npb25Db250ZW50EisKCGR1",
+            "cmF0aW9uGAEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uIoACChFW",
+            "b2RTZXNzaW9uQWRCcmVhaxJGCg9wcm9ncmVzc19ldmVudHMYASADKAsyLS5n",
+            "b29nbGUuY2xvdWQudmlkZW8uc3RpdGNoZXIudjEuUHJvZ3Jlc3NFdmVudBI5",
+            "CgNhZHMYAiADKAsyLC5nb29nbGUuY2xvdWQudmlkZW8uc3RpdGNoZXIudjEu",
+            "Vm9kU2Vzc2lvbkFkEjIKD2VuZF90aW1lX29mZnNldBgDIAEoCzIZLmdvb2ds",
+            "ZS5wcm90b2J1Zi5EdXJhdGlvbhI0ChFzdGFydF90aW1lX29mZnNldBgEIAEo",
+            "CzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbiLRBgoLTGl2ZVNlc3Npb24S",
+            "EQoEbmFtZRgBIAEoCUID4EEDEhUKCHBsYXlfdXJpGAIgASgJQgPgQQMSEgoK",
+            "c291cmNlX3VyaRgDIAEoCRIZChFkZWZhdWx0X2FkX3RhZ19pZBgEIAEoCRJN",
+            "CgphZF90YWdfbWFwGAUgAygLMjkuZ29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRj",
+            "aGVyLnYxLkxpdmVTZXNzaW9uLkFkVGFnTWFwRW50cnkSUwoNYWRfdGFnX21h",
+            "Y3JvcxgGIAMoCzI8Lmdvb2dsZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MS5M",
+            "aXZlU2Vzc2lvbi5BZFRhZ01hY3Jvc0VudHJ5EhoKEmNsaWVudF9hZF90cmFj",
+            "a2luZxgHIAEoCBIYChBkZWZhdWx0X3NsYXRlX2lkGAggASgJElUKEHN0aXRj",
+            "aGluZ19wb2xpY3kYCSABKA4yOy5nb29nbGUuY2xvdWQudmlkZW8uc3RpdGNo",
+            "ZXIudjEuTGl2ZVNlc3Npb24uU3RpdGNoaW5nUG9saWN5EkkKEG1hbmlmZXN0",
+            "X29wdGlvbnMYCiABKAsyLy5nb29nbGUuY2xvdWQudmlkZW8uc3RpdGNoZXIu",
+            "djEuTWFuaWZlc3RPcHRpb25zEhYKCXN0cmVhbV9pZBgLIAEoCUID4EEDGlYK",
+            "DUFkVGFnTWFwRW50cnkSCwoDa2V5GAEgASgJEjQKBXZhbHVlGAIgASgLMiUu",
+            "Z29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYxLkFkVGFnOgI4ARoyChBB",
+            "ZFRhZ01hY3Jvc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToC",
+            "OAEiVQoPU3RpdGNoaW5nUG9saWN5EiAKHFNUSVRDSElOR19QT0xJQ1lfVU5T",
+            "UEVDSUZJRUQQABIPCgtDT01QTEVURV9BRBABEg8KC0NVVF9DVVJSRU5UEAM6",
+            "cupBbwoodmlkZW9zdGl0Y2hlci5nb29nbGVhcGlzLmNvbS9MaXZlU2Vzc2lv",
+            "bhJDcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2xp",
+            "dmVTZXNzaW9ucy97bGl2ZV9zZXNzaW9ufSIUCgVBZFRhZxILCgN1cmkYASAB",
+            "KAki/gEKD01hbmlmZXN0T3B0aW9ucxJLChJpbmNsdWRlX3JlbmRpdGlvbnMY",
+            "ASADKAsyLy5nb29nbGUuY2xvdWQudmlkZW8uc3RpdGNoZXIudjEuUmVuZGl0",
+            "aW9uRmlsdGVyElIKDWJpdHJhdGVfb3JkZXIYAiABKA4yOy5nb29nbGUuY2xv",
+            "dWQudmlkZW8uc3RpdGNoZXIudjEuTWFuaWZlc3RPcHRpb25zLk9yZGVyUG9s",
+            "aWN5IkoKC09yZGVyUG9saWN5EhwKGE9SREVSX1BPTElDWV9VTlNQRUNJRklF",
+            "RBAAEg0KCUFTQ0VORElORxABEg4KCkRFU0NFTkRJTkcQAiI2Cg9SZW5kaXRp",
+            "b25GaWx0ZXISEwoLYml0cmF0ZV9icHMYASABKAUSDgoGY29kZWNzGAIgASgJ",
+            "Qn0KImNvbS5nb29nbGUuY2xvdWQudmlkZW8uc3RpdGNoZXIudjFCDVNlc3Np",
+            "b25zUHJvdG9QAVpGZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xl",
+            "YXBpcy9jbG91ZC92aWRlby9zdGl0Y2hlci92MTtzdGl0Y2hlcmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Video.Stitcher.V1.CompanionsReflection.Descriptor, global::Google.Cloud.Video.Stitcher.V1.EventsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.VodSession), global::Google.Cloud.Video.Stitcher.V1.VodSession.Parser, new[]{ "Name", "Interstitials", "PlayUri", "SourceUri", "AdTagUri", "AdTagMacroMap", "ClientAdTracking", "ManifestOptions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.VodSession), global::Google.Cloud.Video.Stitcher.V1.VodSession.Parser, new[]{ "Name", "Interstitials", "PlayUri", "SourceUri", "AdTagUri", "AdTagMacroMap", "ClientAdTracking", "ManifestOptions", "AssetId" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.Interstitials), global::Google.Cloud.Video.Stitcher.V1.Interstitials.Parser, new[]{ "AdBreaks", "SessionContent" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.VodSessionAd), global::Google.Cloud.Video.Stitcher.V1.VodSessionAd.Parser, new[]{ "Duration", "CompanionAds", "ActivityEvents" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.VodSessionContent), global::Google.Cloud.Video.Stitcher.V1.VodSessionContent.Parser, new[]{ "Duration" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.VodSessionAdBreak), global::Google.Cloud.Video.Stitcher.V1.VodSessionAdBreak.Parser, new[]{ "ProgressEvents", "Ads", "EndTimeOffset", "StartTimeOffset" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.LiveSession), global::Google.Cloud.Video.Stitcher.V1.LiveSession.Parser, new[]{ "Name", "PlayUri", "SourceUri", "DefaultAdTagId", "AdTagMap", "AdTagMacros", "ClientAdTracking", "DefaultSlateId", "StitchingPolicy", "ManifestOptions" }, null, new[]{ typeof(global::Google.Cloud.Video.Stitcher.V1.LiveSession.Types.StitchingPolicy) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.LiveSession), global::Google.Cloud.Video.Stitcher.V1.LiveSession.Parser, new[]{ "Name", "PlayUri", "SourceUri", "DefaultAdTagId", "AdTagMap", "AdTagMacros", "ClientAdTracking", "DefaultSlateId", "StitchingPolicy", "ManifestOptions", "StreamId" }, null, new[]{ typeof(global::Google.Cloud.Video.Stitcher.V1.LiveSession.Types.StitchingPolicy) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.AdTag), global::Google.Cloud.Video.Stitcher.V1.AdTag.Parser, new[]{ "Uri" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.ManifestOptions), global::Google.Cloud.Video.Stitcher.V1.ManifestOptions.Parser, new[]{ "IncludeRenditions", "BitrateOrder" }, null, new[]{ typeof(global::Google.Cloud.Video.Stitcher.V1.ManifestOptions.Types.OrderPolicy) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.RenditionFilter), global::Google.Cloud.Video.Stitcher.V1.RenditionFilter.Parser, new[]{ "BitrateBps", "Codecs" }, null, null, null, null)
@@ -150,6 +150,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       adTagMacroMap_ = other.adTagMacroMap_.Clone();
       clientAdTracking_ = other.clientAdTracking_;
       manifestOptions_ = other.manifestOptions_ != null ? other.manifestOptions_.Clone() : null;
+      assetId_ = other.assetId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -295,6 +296,21 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       }
     }
 
+    /// <summary>Field number for the "asset_id" field.</summary>
+    public const int AssetIdFieldNumber = 10;
+    private string assetId_ = "";
+    /// <summary>
+    /// Output only. The generated ID of the VodSession's source media.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AssetId {
+      get { return assetId_; }
+      set {
+        assetId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -318,6 +334,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       if (!AdTagMacroMap.Equals(other.AdTagMacroMap)) return false;
       if (ClientAdTracking != other.ClientAdTracking) return false;
       if (!object.Equals(ManifestOptions, other.ManifestOptions)) return false;
+      if (AssetId != other.AssetId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -333,6 +350,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       hash ^= AdTagMacroMap.GetHashCode();
       if (ClientAdTracking != false) hash ^= ClientAdTracking.GetHashCode();
       if (manifestOptions_ != null) hash ^= ManifestOptions.GetHashCode();
+      if (AssetId.Length != 0) hash ^= AssetId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -380,6 +398,10 @@ namespace Google.Cloud.Video.Stitcher.V1 {
         output.WriteRawTag(74);
         output.WriteMessage(ManifestOptions);
       }
+      if (AssetId.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(AssetId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -419,6 +441,10 @@ namespace Google.Cloud.Video.Stitcher.V1 {
         output.WriteRawTag(74);
         output.WriteMessage(ManifestOptions);
       }
+      if (AssetId.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(AssetId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -450,6 +476,9 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       }
       if (manifestOptions_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ManifestOptions);
+      }
+      if (AssetId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AssetId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -490,6 +519,9 @@ namespace Google.Cloud.Video.Stitcher.V1 {
           ManifestOptions = new global::Google.Cloud.Video.Stitcher.V1.ManifestOptions();
         }
         ManifestOptions.MergeFrom(other.ManifestOptions);
+      }
+      if (other.AssetId.Length != 0) {
+        AssetId = other.AssetId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -544,6 +576,10 @@ namespace Google.Cloud.Video.Stitcher.V1 {
             input.ReadMessage(ManifestOptions);
             break;
           }
+          case 82: {
+            AssetId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -595,6 +631,10 @@ namespace Google.Cloud.Video.Stitcher.V1 {
               ManifestOptions = new global::Google.Cloud.Video.Stitcher.V1.ManifestOptions();
             }
             input.ReadMessage(ManifestOptions);
+            break;
+          }
+          case 82: {
+            AssetId = input.ReadString();
             break;
           }
         }
@@ -1686,6 +1726,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       defaultSlateId_ = other.defaultSlateId_;
       stitchingPolicy_ = other.stitchingPolicy_;
       manifestOptions_ = other.manifestOptions_ != null ? other.manifestOptions_.Clone() : null;
+      streamId_ = other.streamId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1868,6 +1909,21 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       }
     }
 
+    /// <summary>Field number for the "stream_id" field.</summary>
+    public const int StreamIdFieldNumber = 11;
+    private string streamId_ = "";
+    /// <summary>
+    /// Output only. The generated ID of the LiveSession's source stream.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string StreamId {
+      get { return streamId_; }
+      set {
+        streamId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1893,6 +1949,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       if (DefaultSlateId != other.DefaultSlateId) return false;
       if (StitchingPolicy != other.StitchingPolicy) return false;
       if (!object.Equals(ManifestOptions, other.ManifestOptions)) return false;
+      if (StreamId != other.StreamId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1910,6 +1967,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       if (DefaultSlateId.Length != 0) hash ^= DefaultSlateId.GetHashCode();
       if (StitchingPolicy != global::Google.Cloud.Video.Stitcher.V1.LiveSession.Types.StitchingPolicy.Unspecified) hash ^= StitchingPolicy.GetHashCode();
       if (manifestOptions_ != null) hash ^= ManifestOptions.GetHashCode();
+      if (StreamId.Length != 0) hash ^= StreamId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1962,6 +2020,10 @@ namespace Google.Cloud.Video.Stitcher.V1 {
         output.WriteRawTag(82);
         output.WriteMessage(ManifestOptions);
       }
+      if (StreamId.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(StreamId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2006,6 +2068,10 @@ namespace Google.Cloud.Video.Stitcher.V1 {
         output.WriteRawTag(82);
         output.WriteMessage(ManifestOptions);
       }
+      if (StreamId.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(StreamId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2041,6 +2107,9 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       }
       if (manifestOptions_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ManifestOptions);
+      }
+      if (StreamId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(StreamId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2082,6 +2151,9 @@ namespace Google.Cloud.Video.Stitcher.V1 {
           ManifestOptions = new global::Google.Cloud.Video.Stitcher.V1.ManifestOptions();
         }
         ManifestOptions.MergeFrom(other.ManifestOptions);
+      }
+      if (other.StreamId.Length != 0) {
+        StreamId = other.StreamId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2139,6 +2211,10 @@ namespace Google.Cloud.Video.Stitcher.V1 {
               ManifestOptions = new global::Google.Cloud.Video.Stitcher.V1.ManifestOptions();
             }
             input.ReadMessage(ManifestOptions);
+            break;
+          }
+          case 90: {
+            StreamId = input.ReadString();
             break;
           }
         }
@@ -2199,6 +2275,10 @@ namespace Google.Cloud.Video.Stitcher.V1 {
             input.ReadMessage(ManifestOptions);
             break;
           }
+          case 90: {
+            StreamId = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -2222,10 +2302,6 @@ namespace Google.Cloud.Video.Stitcher.V1 {
         /// Finishes stitching the current ad before returning to content.
         /// </summary>
         [pbr::OriginalName("COMPLETE_AD")] CompleteAd = 1,
-        /// <summary>
-        /// Finishes stitching the current pod before returning to content.
-        /// </summary>
-        [pbr::OriginalName("COMPLETE_POD")] CompletePod = 2,
         /// <summary>
         /// Cuts an ad short and returns to content in the middle of the ad.
         /// </summary>

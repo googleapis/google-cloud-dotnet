@@ -35,7 +35,7 @@ namespace Google.Cloud.Retail.V2.Snippets
             // Initialize request argument(s)
             PurgeUserEventsRequest request = new PurgeUserEventsRequest
             {
-                Parent = "",
+                ParentAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
                 Filter = "",
                 Force = false,
             };

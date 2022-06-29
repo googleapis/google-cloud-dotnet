@@ -28,6 +28,12 @@
                 "DismissApprovalRequestAsync"
               ]
             },
+            "GetAccessApprovalServiceAccount": {
+              "methods": [
+                "GetAccessApprovalServiceAccount",
+                "GetAccessApprovalServiceAccountAsync"
+              ]
+            },
             "GetAccessApprovalSettings": {
               "methods": [
                 "GetAccessApprovalSettings",
@@ -38,6 +44,12 @@
               "methods": [
                 "GetApprovalRequest",
                 "GetApprovalRequestAsync"
+              ]
+            },
+            "InvalidateApprovalRequest": {
+              "methods": [
+                "InvalidateApprovalRequest",
+                "InvalidateApprovalRequestAsync"
               ]
             },
             "ListApprovalRequests": {

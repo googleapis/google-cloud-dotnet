@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
 using Google.Cloud.Spanner.V1;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
@@ -28,12 +27,36 @@ using System.Threading.Tasks;
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>
+    /// Base class for SpannerTransaction, used for compatibility purposes with <see cref="DbTransaction"/>.
+    /// (This class is able to override a new method added to <see cref="DbTransaction"/>, even if it clashes
+    /// with an existing method declaration in <see cref="SpannerTransaction"/>.)
+    /// </summary>
+    public abstract class SpannerTransactionBase : DbTransaction
+    {
+        // Ensure we only derive from this class within the same assembly.
+        private protected SpannerTransactionBase()
+        {
+        }
+
+        /// <summary>
+        /// Commits the database transaction asynchronously.
+        /// </summary>
+        /// <param name="cancellationToken">A cancellation token used for this task.</param>
+        /// <returns>A task representing the asynchronous operation.</returns>
+        public
+#if NETSTANDARD2_1_OR_GREATER
+        override
+#endif
+        Task CommitAsync(CancellationToken cancellationToken = default) => ((SpannerTransaction) this).CommitAsync(cancellationToken);
+    }
+
+    /// <summary>
     /// Represents a SQL transaction to be made in a Spanner database.
     /// A transaction in Cloud Spanner is a set of reads and writes that execute
     /// atomically at a single logical point in time across columns, rows, and
     /// tables in a database.
     /// </summary>
-    public sealed class SpannerTransaction : DbTransaction, ISpannerTransaction
+    public sealed class SpannerTransaction : SpannerTransactionBase, ISpannerTransaction
     {
         private readonly List<Mutation> _mutations = new List<Mutation>();
         private DisposeBehavior _disposeBehavior = DisposeBehavior.ReleaseToPool;
@@ -173,6 +196,7 @@ namespace Google.Cloud.Spanner.Data
         {
             SpannerConnection = GaxPreconditions.CheckNotNull(connection, nameof(connection));
             CommitTimeout = SpannerConnection.Builder.Timeout;
+            LogCommitStats = SpannerConnection.LogCommitStats;
             Mode = mode;
             _session = GaxPreconditions.CheckNotNull(session, nameof(session));
             TimestampBound = timestampBound;
@@ -355,11 +379,11 @@ namespace Google.Cloud.Spanner.Data
         public void Commit(out DateTime timestamp) => timestamp = Task.Run(() => CommitAsync(default)).ResultWithUnwrappedExceptions();
 
         /// <summary>
-        /// Commits the database transaction asynchronously.
+        /// Commits the database transaction asynchronously, returning the commit timestamp.
         /// </summary>
         /// <param name="cancellationToken">A cancellation token used for this task.</param>
         /// <returns>Returns the UTC timestamp when the data was written to the database.</returns>
-        public Task<DateTime> CommitAsync(CancellationToken cancellationToken = default)
+        public new Task<DateTime> CommitAsync(CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckState(Mode != TransactionMode.ReadOnly, "You cannot commit a readonly transaction.");
             var request = new CommitRequest { Mutations = { _mutations }, ReturnCommitStats = LogCommitStats, RequestOptions = BuildCommitRequestOptions() };
@@ -389,7 +413,11 @@ namespace Google.Cloud.Spanner.Data
         /// Rolls back a transaction asynchronously.
         /// </summary>
         /// <param name="cancellationToken">A cancellation token used for this task.</param>
+#if NET462
         public Task RollbackAsync(CancellationToken cancellationToken = default)
+#else
+        public override Task RollbackAsync(CancellationToken cancellationToken = default)
+#endif
         {
             GaxPreconditions.CheckState(Mode != TransactionMode.ReadOnly, "You cannot roll back a readonly transaction.");
             var callSettings = SpannerConnection.CreateCallSettings(settings => settings.RollbackSettings, CommitTimeout, cancellationToken);

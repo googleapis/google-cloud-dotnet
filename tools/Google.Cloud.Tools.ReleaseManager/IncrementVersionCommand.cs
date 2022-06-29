@@ -15,7 +15,6 @@
 using Google.Cloud.Tools.Common;
 using System;
 using System.Linq;
-using System.Text.RegularExpressions;
 
 namespace Google.Cloud.Tools.ReleaseManager
 {

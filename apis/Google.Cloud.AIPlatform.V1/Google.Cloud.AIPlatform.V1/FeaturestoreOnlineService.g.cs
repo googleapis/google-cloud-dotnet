@@ -1900,7 +1900,6 @@ namespace Google.Cloud.AIPlatform.V1 {
 
   /// <summary>
   /// Value for a feature.
-  /// NEXT ID: 15
   /// </summary>
   public sealed partial class FeatureValue : pb::IMessage<FeatureValue>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

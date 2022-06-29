@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using grpccore = Grpc.Core;
@@ -47,7 +48,7 @@ namespace Google.Cloud.AppEngine.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetDomainMapping(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DomainMappingsClient client = new DomainMappingsClientImpl(mockGrpcClient.Object, null);
+            DomainMappingsClient client = new DomainMappingsClientImpl(mockGrpcClient.Object, null, null);
             DomainMapping response = client.GetDomainMapping(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -73,7 +74,7 @@ namespace Google.Cloud.AppEngine.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetDomainMappingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DomainMapping>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DomainMappingsClient client = new DomainMappingsClientImpl(mockGrpcClient.Object, null);
+            DomainMappingsClient client = new DomainMappingsClientImpl(mockGrpcClient.Object, null, null);
             DomainMapping responseCallSettings = await client.GetDomainMappingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DomainMapping responseCancellationToken = await client.GetDomainMappingAsync(request, st::CancellationToken.None);

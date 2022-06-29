@@ -98,7 +98,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             var builderType = clientType.Assembly.GetType(clientType.FullName + "Builder");
             var builder = Activator.CreateInstance(builderType);
             builderType.GetProperty("Endpoint").SetValue(builder, Endpoint);
-            return builderType.GetMethod("Build").Invoke(builder, new object[0]);
+            return builderType.GetMethod("Build", Type.EmptyTypes, null).Invoke(builder, new object[0]);
         }
 
         private MethodInfo FindMethod(Type client)

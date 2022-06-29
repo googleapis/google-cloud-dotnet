@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using grpccore = Grpc.Core;
@@ -51,7 +52,7 @@ namespace Google.Cloud.VpcAccess.V1.Tests
                 Subnet = new Connector.Types.Subnet(),
             };
             mockGrpcClient.Setup(x => x.GetConnector(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VpcAccessServiceClient client = new VpcAccessServiceClientImpl(mockGrpcClient.Object, null);
+            VpcAccessServiceClient client = new VpcAccessServiceClientImpl(mockGrpcClient.Object, null, null);
             Connector response = client.GetConnector(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -81,7 +82,7 @@ namespace Google.Cloud.VpcAccess.V1.Tests
                 Subnet = new Connector.Types.Subnet(),
             };
             mockGrpcClient.Setup(x => x.GetConnectorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Connector>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VpcAccessServiceClient client = new VpcAccessServiceClientImpl(mockGrpcClient.Object, null);
+            VpcAccessServiceClient client = new VpcAccessServiceClientImpl(mockGrpcClient.Object, null, null);
             Connector responseCallSettings = await client.GetConnectorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Connector responseCancellationToken = await client.GetConnectorAsync(request, st::CancellationToken.None);
@@ -113,7 +114,7 @@ namespace Google.Cloud.VpcAccess.V1.Tests
                 Subnet = new Connector.Types.Subnet(),
             };
             mockGrpcClient.Setup(x => x.GetConnector(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VpcAccessServiceClient client = new VpcAccessServiceClientImpl(mockGrpcClient.Object, null);
+            VpcAccessServiceClient client = new VpcAccessServiceClientImpl(mockGrpcClient.Object, null, null);
             Connector response = client.GetConnector(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -143,7 +144,7 @@ namespace Google.Cloud.VpcAccess.V1.Tests
                 Subnet = new Connector.Types.Subnet(),
             };
             mockGrpcClient.Setup(x => x.GetConnectorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Connector>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VpcAccessServiceClient client = new VpcAccessServiceClientImpl(mockGrpcClient.Object, null);
+            VpcAccessServiceClient client = new VpcAccessServiceClientImpl(mockGrpcClient.Object, null, null);
             Connector responseCallSettings = await client.GetConnectorAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Connector responseCancellationToken = await client.GetConnectorAsync(request.Name, st::CancellationToken.None);
@@ -175,7 +176,7 @@ namespace Google.Cloud.VpcAccess.V1.Tests
                 Subnet = new Connector.Types.Subnet(),
             };
             mockGrpcClient.Setup(x => x.GetConnector(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VpcAccessServiceClient client = new VpcAccessServiceClientImpl(mockGrpcClient.Object, null);
+            VpcAccessServiceClient client = new VpcAccessServiceClientImpl(mockGrpcClient.Object, null, null);
             Connector response = client.GetConnector(request.ConnectorName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -205,7 +206,7 @@ namespace Google.Cloud.VpcAccess.V1.Tests
                 Subnet = new Connector.Types.Subnet(),
             };
             mockGrpcClient.Setup(x => x.GetConnectorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Connector>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VpcAccessServiceClient client = new VpcAccessServiceClientImpl(mockGrpcClient.Object, null);
+            VpcAccessServiceClient client = new VpcAccessServiceClientImpl(mockGrpcClient.Object, null, null);
             Connector responseCallSettings = await client.GetConnectorAsync(request.ConnectorName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Connector responseCancellationToken = await client.GetConnectorAsync(request.ConnectorName, st::CancellationToken.None);

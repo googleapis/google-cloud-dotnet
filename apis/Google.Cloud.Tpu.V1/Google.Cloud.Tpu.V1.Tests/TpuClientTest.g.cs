@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -73,7 +74,7 @@ namespace Google.Cloud.Tpu.V1.Tests
                 Symptoms = { new Symptom(), },
             };
             mockGrpcClient.Setup(x => x.GetNode(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TpuClient client = new TpuClientImpl(mockGrpcClient.Object, null);
+            TpuClient client = new TpuClientImpl(mockGrpcClient.Object, null, null);
             Node response = client.GetNode(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -124,7 +125,7 @@ namespace Google.Cloud.Tpu.V1.Tests
                 Symptoms = { new Symptom(), },
             };
             mockGrpcClient.Setup(x => x.GetNodeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Node>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TpuClient client = new TpuClientImpl(mockGrpcClient.Object, null);
+            TpuClient client = new TpuClientImpl(mockGrpcClient.Object, null, null);
             Node responseCallSettings = await client.GetNodeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Node responseCancellationToken = await client.GetNodeAsync(request, st::CancellationToken.None);
@@ -177,7 +178,7 @@ namespace Google.Cloud.Tpu.V1.Tests
                 Symptoms = { new Symptom(), },
             };
             mockGrpcClient.Setup(x => x.GetNode(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TpuClient client = new TpuClientImpl(mockGrpcClient.Object, null);
+            TpuClient client = new TpuClientImpl(mockGrpcClient.Object, null, null);
             Node response = client.GetNode(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -228,7 +229,7 @@ namespace Google.Cloud.Tpu.V1.Tests
                 Symptoms = { new Symptom(), },
             };
             mockGrpcClient.Setup(x => x.GetNodeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Node>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TpuClient client = new TpuClientImpl(mockGrpcClient.Object, null);
+            TpuClient client = new TpuClientImpl(mockGrpcClient.Object, null, null);
             Node responseCallSettings = await client.GetNodeAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Node responseCancellationToken = await client.GetNodeAsync(request.Name, st::CancellationToken.None);
@@ -281,7 +282,7 @@ namespace Google.Cloud.Tpu.V1.Tests
                 Symptoms = { new Symptom(), },
             };
             mockGrpcClient.Setup(x => x.GetNode(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TpuClient client = new TpuClientImpl(mockGrpcClient.Object, null);
+            TpuClient client = new TpuClientImpl(mockGrpcClient.Object, null, null);
             Node response = client.GetNode(request.NodeName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -332,7 +333,7 @@ namespace Google.Cloud.Tpu.V1.Tests
                 Symptoms = { new Symptom(), },
             };
             mockGrpcClient.Setup(x => x.GetNodeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Node>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TpuClient client = new TpuClientImpl(mockGrpcClient.Object, null);
+            TpuClient client = new TpuClientImpl(mockGrpcClient.Object, null, null);
             Node responseCallSettings = await client.GetNodeAsync(request.NodeName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Node responseCancellationToken = await client.GetNodeAsync(request.NodeName, st::CancellationToken.None);
@@ -355,7 +356,7 @@ namespace Google.Cloud.Tpu.V1.Tests
                 Version = "version102ff72a",
             };
             mockGrpcClient.Setup(x => x.GetTensorFlowVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TpuClient client = new TpuClientImpl(mockGrpcClient.Object, null);
+            TpuClient client = new TpuClientImpl(mockGrpcClient.Object, null, null);
             TensorFlowVersion response = client.GetTensorFlowVersion(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -376,7 +377,7 @@ namespace Google.Cloud.Tpu.V1.Tests
                 Version = "version102ff72a",
             };
             mockGrpcClient.Setup(x => x.GetTensorFlowVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TensorFlowVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TpuClient client = new TpuClientImpl(mockGrpcClient.Object, null);
+            TpuClient client = new TpuClientImpl(mockGrpcClient.Object, null, null);
             TensorFlowVersion responseCallSettings = await client.GetTensorFlowVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TensorFlowVersion responseCancellationToken = await client.GetTensorFlowVersionAsync(request, st::CancellationToken.None);
@@ -399,7 +400,7 @@ namespace Google.Cloud.Tpu.V1.Tests
                 Version = "version102ff72a",
             };
             mockGrpcClient.Setup(x => x.GetTensorFlowVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TpuClient client = new TpuClientImpl(mockGrpcClient.Object, null);
+            TpuClient client = new TpuClientImpl(mockGrpcClient.Object, null, null);
             TensorFlowVersion response = client.GetTensorFlowVersion(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -420,7 +421,7 @@ namespace Google.Cloud.Tpu.V1.Tests
                 Version = "version102ff72a",
             };
             mockGrpcClient.Setup(x => x.GetTensorFlowVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TensorFlowVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TpuClient client = new TpuClientImpl(mockGrpcClient.Object, null);
+            TpuClient client = new TpuClientImpl(mockGrpcClient.Object, null, null);
             TensorFlowVersion responseCallSettings = await client.GetTensorFlowVersionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TensorFlowVersion responseCancellationToken = await client.GetTensorFlowVersionAsync(request.Name, st::CancellationToken.None);
@@ -443,7 +444,7 @@ namespace Google.Cloud.Tpu.V1.Tests
                 Version = "version102ff72a",
             };
             mockGrpcClient.Setup(x => x.GetTensorFlowVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TpuClient client = new TpuClientImpl(mockGrpcClient.Object, null);
+            TpuClient client = new TpuClientImpl(mockGrpcClient.Object, null, null);
             TensorFlowVersion response = client.GetTensorFlowVersion(request.TensorFlowVersionName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -464,7 +465,7 @@ namespace Google.Cloud.Tpu.V1.Tests
                 Version = "version102ff72a",
             };
             mockGrpcClient.Setup(x => x.GetTensorFlowVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TensorFlowVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TpuClient client = new TpuClientImpl(mockGrpcClient.Object, null);
+            TpuClient client = new TpuClientImpl(mockGrpcClient.Object, null, null);
             TensorFlowVersion responseCallSettings = await client.GetTensorFlowVersionAsync(request.TensorFlowVersionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TensorFlowVersion responseCancellationToken = await client.GetTensorFlowVersionAsync(request.TensorFlowVersionName, st::CancellationToken.None);
@@ -487,7 +488,7 @@ namespace Google.Cloud.Tpu.V1.Tests
                 Type = "typee2cc9d59",
             };
             mockGrpcClient.Setup(x => x.GetAcceleratorType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TpuClient client = new TpuClientImpl(mockGrpcClient.Object, null);
+            TpuClient client = new TpuClientImpl(mockGrpcClient.Object, null, null);
             AcceleratorType response = client.GetAcceleratorType(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -508,7 +509,7 @@ namespace Google.Cloud.Tpu.V1.Tests
                 Type = "typee2cc9d59",
             };
             mockGrpcClient.Setup(x => x.GetAcceleratorTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AcceleratorType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TpuClient client = new TpuClientImpl(mockGrpcClient.Object, null);
+            TpuClient client = new TpuClientImpl(mockGrpcClient.Object, null, null);
             AcceleratorType responseCallSettings = await client.GetAcceleratorTypeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AcceleratorType responseCancellationToken = await client.GetAcceleratorTypeAsync(request, st::CancellationToken.None);
@@ -531,7 +532,7 @@ namespace Google.Cloud.Tpu.V1.Tests
                 Type = "typee2cc9d59",
             };
             mockGrpcClient.Setup(x => x.GetAcceleratorType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TpuClient client = new TpuClientImpl(mockGrpcClient.Object, null);
+            TpuClient client = new TpuClientImpl(mockGrpcClient.Object, null, null);
             AcceleratorType response = client.GetAcceleratorType(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -552,7 +553,7 @@ namespace Google.Cloud.Tpu.V1.Tests
                 Type = "typee2cc9d59",
             };
             mockGrpcClient.Setup(x => x.GetAcceleratorTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AcceleratorType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TpuClient client = new TpuClientImpl(mockGrpcClient.Object, null);
+            TpuClient client = new TpuClientImpl(mockGrpcClient.Object, null, null);
             AcceleratorType responseCallSettings = await client.GetAcceleratorTypeAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AcceleratorType responseCancellationToken = await client.GetAcceleratorTypeAsync(request.Name, st::CancellationToken.None);
@@ -575,7 +576,7 @@ namespace Google.Cloud.Tpu.V1.Tests
                 Type = "typee2cc9d59",
             };
             mockGrpcClient.Setup(x => x.GetAcceleratorType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TpuClient client = new TpuClientImpl(mockGrpcClient.Object, null);
+            TpuClient client = new TpuClientImpl(mockGrpcClient.Object, null, null);
             AcceleratorType response = client.GetAcceleratorType(request.AcceleratorTypeName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -596,7 +597,7 @@ namespace Google.Cloud.Tpu.V1.Tests
                 Type = "typee2cc9d59",
             };
             mockGrpcClient.Setup(x => x.GetAcceleratorTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AcceleratorType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TpuClient client = new TpuClientImpl(mockGrpcClient.Object, null);
+            TpuClient client = new TpuClientImpl(mockGrpcClient.Object, null, null);
             AcceleratorType responseCallSettings = await client.GetAcceleratorTypeAsync(request.AcceleratorTypeName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AcceleratorType responseCancellationToken = await client.GetAcceleratorTypeAsync(request.AcceleratorTypeName, st::CancellationToken.None);

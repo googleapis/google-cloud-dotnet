@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gctv = Google.Cloud.Tasks.V2Beta3;
 using sys = System;

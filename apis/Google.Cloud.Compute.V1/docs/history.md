@@ -1,5 +1,56 @@
 # Version history
 
+## Version 2.0.0, released 2022-06-08
+
+This is the first version of this package to depend on GAX v4.
+
+There are some breaking changes, both in GAX v4 and in the generated
+code. The changes that aren't specific to any given API are [described in the Google Cloud
+documentation](https://cloud.google.com/dotnet/docs/reference/help/breaking-gax4).
+We don't anticipate any changes to most customer code, but please [file a
+GitHub issue](https://github.com/googleapis/google-cloud-dotnet/issues/new/choose)
+if you run into problems.
+
+The most important change in this release is the use of the Grpc.Net.Client package
+for gRPC communication, instead of Grpc.Core. When using .NET Core 3.1 or .NET 5.0+
+this should lead to a smaller installation footprint and greater compatibility (e.g.
+with Apple M1 chips). Any significant change in a core component comes with the risk
+of incompatibility, however - so again, please let us know if you encounter any
+issues.
+
+### New features
+
+- Update Compute Engine API to revision 20220526 ([issue 722](https://github.com/googleapis/google-cloud-dotnet/issues/722)) ([commit 5d75c04](https://github.com/googleapis/google-cloud-dotnet/commit/5d75c04f14b957c75bcb490276470c79dc60c827))
+## Version 1.4.0, released 2022-04-21
+
+### Bug fixes
+
+- Revert proto3_optional, required removal on parent_id ([issue 714](https://github.com/googleapis/google-cloud-dotnet/issues/714)) ([commit a6d7f74](https://github.com/googleapis/google-cloud-dotnet/commit/a6d7f74ce3b8d0e15c5965a6afdf64355cb59942))
+
+BREAKING CHANGE: The above change is breaking, in terms of
+removing the `HasParentId` and `ClearParentId()` members. We are
+releasing as a minor version as these members were only introduced
+recently, and the change will definitely be needed long-term.
+
+## Version 1.3.0, released 2022-04-13
+
+### Bug fixes
+
+- Remove proto3_optional from parent_id ([issue 712](https://github.com/googleapis/google-cloud-dotnet/issues/712)) ([commit eabc9ef](https://github.com/googleapis/google-cloud-dotnet/commit/eabc9efd1841d18c0637650905c7276865c8b56a))
+- Replace missing REQUIRED for parent_id ([issue 711](https://github.com/googleapis/google-cloud-dotnet/issues/711)) ([commit d2b3623](https://github.com/googleapis/google-cloud-dotnet/commit/d2b362398918387d2586c26c240d5e05b16b4b08))
+
+BREAKING CHANGES: The above changes are breaking, in terms of
+removing the `HasParentId` and `ClearParentId()` members. We are
+releasing as a minor version as these members were only introduced
+less than a week ago, and the change will definitely be needed
+long-term.
+
+## Version 1.2.0, released 2022-04-08
+
+### New features
+
+- Update compute API to revision 20220322 ([issue 710](https://github.com/googleapis/google-cloud-dotnet/issues/710)) ([commit 282c421](https://github.com/googleapis/google-cloud-dotnet/commit/282c421c1e5a76ed5734d9e7bf6440610e27db0c))
+
 ## Version 1.1.0, released 2022-02-14
 
 ### New features

@@ -253,10 +253,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int DisableMonitoringFieldNumber = 12;
     private bool disableMonitoring_;
     /// <summary>
-    /// Optional. If not set, use the monitoring_config defined for the EntityType
-    /// this Feature belongs to. Only Features with type
-    /// ([Feature.ValueType][google.cloud.aiplatform.v1.Feature.ValueType]) BOOL,
-    /// STRING, DOUBLE or INT64 can enable monitoring.
+    /// Optional. If not set, use the monitoring_config defined for the EntityType this
+    /// Feature belongs to.
+    /// Only Features with type ([Feature.ValueType][google.cloud.aiplatform.v1.Feature.ValueType]) BOOL, STRING, DOUBLE or
+    /// INT64 can enable monitoring.
     ///
     /// If set to true, all types of data monitoring are disabled despite the
     /// config on EntityType.
@@ -276,8 +276,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         = pb::FieldCodec.ForMessage(90, global::Google.Cloud.AIPlatform.V1.Feature.Types.MonitoringStatsAnomaly.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.Feature.Types.MonitoringStatsAnomaly> monitoringStatsAnomalies_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.Feature.Types.MonitoringStatsAnomaly>();
     /// <summary>
-    /// Output only. The list of historical stats and anomalies with specified
-    /// objectives.
+    /// Output only. The list of historical stats and anomalies with specified objectives.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -661,9 +660,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// A list of historical [Snapshot
       /// Analysis][FeaturestoreMonitoringConfig.SnapshotAnalysis] or [Import Feature
       /// Analysis] [FeaturestoreMonitoringConfig.ImportFeatureAnalysis] stats
-      /// requested by user, sorted by
-      /// [FeatureStatsAnomaly.start_time][google.cloud.aiplatform.v1.FeatureStatsAnomaly.start_time]
-      /// descending.
+      /// requested by user, sorted by [FeatureStatsAnomaly.start_time][google.cloud.aiplatform.v1.FeatureStatsAnomaly.start_time] descending.
       /// </summary>
       public sealed partial class MonitoringStatsAnomaly : pb::IMessage<MonitoringStatsAnomaly>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

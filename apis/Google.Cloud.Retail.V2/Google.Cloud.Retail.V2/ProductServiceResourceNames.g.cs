@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gcrv = Google.Cloud.Retail.V2;
 
 namespace Google.Cloud.Retail.V2

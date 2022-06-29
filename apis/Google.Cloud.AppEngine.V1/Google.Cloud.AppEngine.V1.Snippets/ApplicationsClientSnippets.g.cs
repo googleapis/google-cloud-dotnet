@@ -50,6 +50,33 @@ namespace Google.Cloud.AppEngine.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetApplication</summary>
+        public void GetApplication()
+        {
+            // Snippet: GetApplication(string, CallSettings)
+            // Create client
+            ApplicationsClient applicationsClient = ApplicationsClient.Create();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            Application response = applicationsClient.GetApplication(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetApplicationAsync</summary>
+        public async Task GetApplicationAsync()
+        {
+            // Snippet: GetApplicationAsync(string, CallSettings)
+            // Additional: GetApplicationAsync(string, CancellationToken)
+            // Create client
+            ApplicationsClient applicationsClient = await ApplicationsClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            Application response = await applicationsClient.GetApplicationAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for CreateApplication</summary>
         public void CreateApplicationRequestObject()
         {

@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -58,7 +59,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1.Tests
                 State = State.Active,
             };
             mockGrpcClient.Setup(x => x.GetHub(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            HubServiceClient client = new HubServiceClientImpl(mockGrpcClient.Object, null);
+            HubServiceClient client = new HubServiceClientImpl(mockGrpcClient.Object, null, null);
             Hub response = client.GetHub(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -94,7 +95,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1.Tests
                 State = State.Active,
             };
             mockGrpcClient.Setup(x => x.GetHubAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Hub>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            HubServiceClient client = new HubServiceClientImpl(mockGrpcClient.Object, null);
+            HubServiceClient client = new HubServiceClientImpl(mockGrpcClient.Object, null, null);
             Hub responseCallSettings = await client.GetHubAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Hub responseCancellationToken = await client.GetHubAsync(request, st::CancellationToken.None);
@@ -132,7 +133,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1.Tests
                 State = State.Active,
             };
             mockGrpcClient.Setup(x => x.GetHub(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            HubServiceClient client = new HubServiceClientImpl(mockGrpcClient.Object, null);
+            HubServiceClient client = new HubServiceClientImpl(mockGrpcClient.Object, null, null);
             Hub response = client.GetHub(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -168,7 +169,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1.Tests
                 State = State.Active,
             };
             mockGrpcClient.Setup(x => x.GetHubAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Hub>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            HubServiceClient client = new HubServiceClientImpl(mockGrpcClient.Object, null);
+            HubServiceClient client = new HubServiceClientImpl(mockGrpcClient.Object, null, null);
             Hub responseCallSettings = await client.GetHubAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Hub responseCancellationToken = await client.GetHubAsync(request.Name, st::CancellationToken.None);
@@ -206,7 +207,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1.Tests
                 State = State.Active,
             };
             mockGrpcClient.Setup(x => x.GetHub(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            HubServiceClient client = new HubServiceClientImpl(mockGrpcClient.Object, null);
+            HubServiceClient client = new HubServiceClientImpl(mockGrpcClient.Object, null, null);
             Hub response = client.GetHub(request.HubName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -242,7 +243,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1.Tests
                 State = State.Active,
             };
             mockGrpcClient.Setup(x => x.GetHubAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Hub>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            HubServiceClient client = new HubServiceClientImpl(mockGrpcClient.Object, null);
+            HubServiceClient client = new HubServiceClientImpl(mockGrpcClient.Object, null, null);
             Hub responseCallSettings = await client.GetHubAsync(request.HubName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Hub responseCancellationToken = await client.GetHubAsync(request.HubName, st::CancellationToken.None);
@@ -289,7 +290,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1.Tests
                 State = State.Active,
             };
             mockGrpcClient.Setup(x => x.GetSpoke(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            HubServiceClient client = new HubServiceClientImpl(mockGrpcClient.Object, null);
+            HubServiceClient client = new HubServiceClientImpl(mockGrpcClient.Object, null, null);
             Spoke response = client.GetSpoke(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -334,7 +335,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1.Tests
                 State = State.Active,
             };
             mockGrpcClient.Setup(x => x.GetSpokeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Spoke>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            HubServiceClient client = new HubServiceClientImpl(mockGrpcClient.Object, null);
+            HubServiceClient client = new HubServiceClientImpl(mockGrpcClient.Object, null, null);
             Spoke responseCallSettings = await client.GetSpokeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Spoke responseCancellationToken = await client.GetSpokeAsync(request, st::CancellationToken.None);
@@ -381,7 +382,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1.Tests
                 State = State.Active,
             };
             mockGrpcClient.Setup(x => x.GetSpoke(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            HubServiceClient client = new HubServiceClientImpl(mockGrpcClient.Object, null);
+            HubServiceClient client = new HubServiceClientImpl(mockGrpcClient.Object, null, null);
             Spoke response = client.GetSpoke(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -426,7 +427,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1.Tests
                 State = State.Active,
             };
             mockGrpcClient.Setup(x => x.GetSpokeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Spoke>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            HubServiceClient client = new HubServiceClientImpl(mockGrpcClient.Object, null);
+            HubServiceClient client = new HubServiceClientImpl(mockGrpcClient.Object, null, null);
             Spoke responseCallSettings = await client.GetSpokeAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Spoke responseCancellationToken = await client.GetSpokeAsync(request.Name, st::CancellationToken.None);
@@ -473,7 +474,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1.Tests
                 State = State.Active,
             };
             mockGrpcClient.Setup(x => x.GetSpoke(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            HubServiceClient client = new HubServiceClientImpl(mockGrpcClient.Object, null);
+            HubServiceClient client = new HubServiceClientImpl(mockGrpcClient.Object, null, null);
             Spoke response = client.GetSpoke(request.SpokeName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -518,7 +519,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1.Tests
                 State = State.Active,
             };
             mockGrpcClient.Setup(x => x.GetSpokeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Spoke>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            HubServiceClient client = new HubServiceClientImpl(mockGrpcClient.Object, null);
+            HubServiceClient client = new HubServiceClientImpl(mockGrpcClient.Object, null, null);
             Spoke responseCallSettings = await client.GetSpokeAsync(request.SpokeName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Spoke responseCancellationToken = await client.GetSpokeAsync(request.SpokeName, st::CancellationToken.None);

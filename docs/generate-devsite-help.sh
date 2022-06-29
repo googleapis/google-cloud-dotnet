@@ -8,6 +8,10 @@ then
   exit 1
 fi
 
+source ../toolversions.sh
+
+install_docfx
+
 if [[ "$2" != "" ]]
 then
   declare -r SERVICE_ACCOUNT_JSON=$2
@@ -19,7 +23,7 @@ declare -r DEVSITE_STAGING_BUCKET=docs-staging-v2
 declare -r VERSION=$1
 
 # Build the snippets for the help docset
-dotnet run -p ../tools/Google.Cloud.Tools.GenerateSnippetMarkdown -- help
+dotnet run --project ../tools/Google.Cloud.Tools.GenerateSnippetMarkdown -- help
 
 rm -rf output/devsite-help
 mkdir -p output/devsite-help/api
@@ -62,5 +66,9 @@ else
 fi
 
 cd ../..
+
+echo 'Building site for local debugging purposes'
+cp devsite-help-docfx.json output/devsite-help/docfx.json
+$DOCFX build --disableGitFeatures output/devsite-help/docfx.json
 
 echo 'Done'

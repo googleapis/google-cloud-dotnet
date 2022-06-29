@@ -6124,7 +6124,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Initialize request argument(s)
             ArchiveCustomDimensionRequest request = new ArchiveCustomDimensionRequest
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
             };
             // Make the request
             analyticsAdminServiceClient.ArchiveCustomDimension(request);
@@ -6141,7 +6141,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Initialize request argument(s)
             ArchiveCustomDimensionRequest request = new ArchiveCustomDimensionRequest
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
             };
             // Make the request
             await analyticsAdminServiceClient.ArchiveCustomDimensionAsync(request);
@@ -6155,7 +6155,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
             // Initialize request argument(s)
-            string name = "properties/[PROPERTY]/customDimensions";
+            string name = "properties/[PROPERTY]/customDimensions/[CUSTOM_DIMENSION]";
             // Make the request
             analyticsAdminServiceClient.ArchiveCustomDimension(name);
             // End snippet
@@ -6169,7 +6169,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "properties/[PROPERTY]/customDimensions";
+            string name = "properties/[PROPERTY]/customDimensions/[CUSTOM_DIMENSION]";
             // Make the request
             await analyticsAdminServiceClient.ArchiveCustomDimensionAsync(name);
             // End snippet
@@ -6182,7 +6182,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
             // Initialize request argument(s)
-            CustomDimensionName name = CustomDimensionName.FromProperty("[PROPERTY]");
+            CustomDimensionName name = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]");
             // Make the request
             analyticsAdminServiceClient.ArchiveCustomDimension(name);
             // End snippet
@@ -6196,7 +6196,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
             // Initialize request argument(s)
-            CustomDimensionName name = CustomDimensionName.FromProperty("[PROPERTY]");
+            CustomDimensionName name = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]");
             // Make the request
             await analyticsAdminServiceClient.ArchiveCustomDimensionAsync(name);
             // End snippet
@@ -6211,7 +6211,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Initialize request argument(s)
             GetCustomDimensionRequest request = new GetCustomDimensionRequest
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
             };
             // Make the request
             CustomDimension response = analyticsAdminServiceClient.GetCustomDimension(request);
@@ -6228,7 +6228,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Initialize request argument(s)
             GetCustomDimensionRequest request = new GetCustomDimensionRequest
             {
-                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                CustomDimensionName = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]"),
             };
             // Make the request
             CustomDimension response = await analyticsAdminServiceClient.GetCustomDimensionAsync(request);
@@ -6242,7 +6242,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
             // Initialize request argument(s)
-            string name = "properties/[PROPERTY]/customDimensions";
+            string name = "properties/[PROPERTY]/customDimensions/[CUSTOM_DIMENSION]";
             // Make the request
             CustomDimension response = analyticsAdminServiceClient.GetCustomDimension(name);
             // End snippet
@@ -6256,7 +6256,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "properties/[PROPERTY]/customDimensions";
+            string name = "properties/[PROPERTY]/customDimensions/[CUSTOM_DIMENSION]";
             // Make the request
             CustomDimension response = await analyticsAdminServiceClient.GetCustomDimensionAsync(name);
             // End snippet
@@ -6269,7 +6269,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
             // Initialize request argument(s)
-            CustomDimensionName name = CustomDimensionName.FromProperty("[PROPERTY]");
+            CustomDimensionName name = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]");
             // Make the request
             CustomDimension response = analyticsAdminServiceClient.GetCustomDimension(name);
             // End snippet
@@ -6283,7 +6283,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
             // Initialize request argument(s)
-            CustomDimensionName name = CustomDimensionName.FromProperty("[PROPERTY]");
+            CustomDimensionName name = CustomDimensionName.FromPropertyCustomDimension("[PROPERTY]", "[CUSTOM_DIMENSION]");
             // Make the request
             CustomDimension response = await analyticsAdminServiceClient.GetCustomDimensionAsync(name);
             // End snippet
@@ -6731,7 +6731,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Initialize request argument(s)
             ArchiveCustomMetricRequest request = new ArchiveCustomMetricRequest
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
             };
             // Make the request
             analyticsAdminServiceClient.ArchiveCustomMetric(request);
@@ -6748,7 +6748,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Initialize request argument(s)
             ArchiveCustomMetricRequest request = new ArchiveCustomMetricRequest
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
             };
             // Make the request
             await analyticsAdminServiceClient.ArchiveCustomMetricAsync(request);
@@ -6762,7 +6762,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
             // Initialize request argument(s)
-            string name = "properties/[PROPERTY]/customMetrics";
+            string name = "properties/[PROPERTY]/customMetrics/[CUSTOM_METRIC]";
             // Make the request
             analyticsAdminServiceClient.ArchiveCustomMetric(name);
             // End snippet
@@ -6776,7 +6776,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "properties/[PROPERTY]/customMetrics";
+            string name = "properties/[PROPERTY]/customMetrics/[CUSTOM_METRIC]";
             // Make the request
             await analyticsAdminServiceClient.ArchiveCustomMetricAsync(name);
             // End snippet
@@ -6789,7 +6789,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
             // Initialize request argument(s)
-            CustomMetricName name = CustomMetricName.FromProperty("[PROPERTY]");
+            CustomMetricName name = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]");
             // Make the request
             analyticsAdminServiceClient.ArchiveCustomMetric(name);
             // End snippet
@@ -6803,7 +6803,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
             // Initialize request argument(s)
-            CustomMetricName name = CustomMetricName.FromProperty("[PROPERTY]");
+            CustomMetricName name = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]");
             // Make the request
             await analyticsAdminServiceClient.ArchiveCustomMetricAsync(name);
             // End snippet
@@ -6818,7 +6818,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Initialize request argument(s)
             GetCustomMetricRequest request = new GetCustomMetricRequest
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
             };
             // Make the request
             CustomMetric response = analyticsAdminServiceClient.GetCustomMetric(request);
@@ -6835,7 +6835,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Initialize request argument(s)
             GetCustomMetricRequest request = new GetCustomMetricRequest
             {
-                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                CustomMetricName = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]"),
             };
             // Make the request
             CustomMetric response = await analyticsAdminServiceClient.GetCustomMetricAsync(request);
@@ -6849,7 +6849,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
             // Initialize request argument(s)
-            string name = "properties/[PROPERTY]/customMetrics";
+            string name = "properties/[PROPERTY]/customMetrics/[CUSTOM_METRIC]";
             // Make the request
             CustomMetric response = analyticsAdminServiceClient.GetCustomMetric(name);
             // End snippet
@@ -6863,7 +6863,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "properties/[PROPERTY]/customMetrics";
+            string name = "properties/[PROPERTY]/customMetrics/[CUSTOM_METRIC]";
             // Make the request
             CustomMetric response = await analyticsAdminServiceClient.GetCustomMetricAsync(name);
             // End snippet
@@ -6876,7 +6876,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
             // Initialize request argument(s)
-            CustomMetricName name = CustomMetricName.FromProperty("[PROPERTY]");
+            CustomMetricName name = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]");
             // Make the request
             CustomMetric response = analyticsAdminServiceClient.GetCustomMetric(name);
             // End snippet
@@ -6890,7 +6890,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
             // Initialize request argument(s)
-            CustomMetricName name = CustomMetricName.FromProperty("[PROPERTY]");
+            CustomMetricName name = CustomMetricName.FromPropertyCustomMetric("[PROPERTY]", "[CUSTOM_METRIC]");
             // Make the request
             CustomMetric response = await analyticsAdminServiceClient.GetCustomMetricAsync(name);
             // End snippet

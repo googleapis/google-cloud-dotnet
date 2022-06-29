@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using grpccore = Grpc.Core;
@@ -70,7 +71,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 TargetVpnGateway = "target_vpn_gateway6c481371",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VpnTunnelsClient client = new VpnTunnelsClientImpl(mockGrpcClient.Object, null);
+            VpnTunnelsClient client = new VpnTunnelsClientImpl(mockGrpcClient.Object, null, null);
             VpnTunnel response = client.Get(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -119,7 +120,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 TargetVpnGateway = "target_vpn_gateway6c481371",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<VpnTunnel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VpnTunnelsClient client = new VpnTunnelsClientImpl(mockGrpcClient.Object, null);
+            VpnTunnelsClient client = new VpnTunnelsClientImpl(mockGrpcClient.Object, null, null);
             VpnTunnel responseCallSettings = await client.GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             VpnTunnel responseCancellationToken = await client.GetAsync(request, st::CancellationToken.None);
@@ -170,7 +171,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 TargetVpnGateway = "target_vpn_gateway6c481371",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            VpnTunnelsClient client = new VpnTunnelsClientImpl(mockGrpcClient.Object, null);
+            VpnTunnelsClient client = new VpnTunnelsClientImpl(mockGrpcClient.Object, null, null);
             VpnTunnel response = client.Get(request.Project, request.Region, request.VpnTunnel);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -219,7 +220,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 TargetVpnGateway = "target_vpn_gateway6c481371",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<VpnTunnel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            VpnTunnelsClient client = new VpnTunnelsClientImpl(mockGrpcClient.Object, null);
+            VpnTunnelsClient client = new VpnTunnelsClientImpl(mockGrpcClient.Object, null, null);
             VpnTunnel responseCallSettings = await client.GetAsync(request.Project, request.Region, request.VpnTunnel, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             VpnTunnel responseCancellationToken = await client.GetAsync(request.Project, request.Region, request.VpnTunnel, st::CancellationToken.None);

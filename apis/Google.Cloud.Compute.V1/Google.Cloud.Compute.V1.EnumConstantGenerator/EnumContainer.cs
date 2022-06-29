@@ -84,10 +84,15 @@ namespace Google.Cloud.Compute.V1.EnumConstantGenerator
                 MaybeWriteLineBetweenElements(writer, ref first);
                 var wireValue = formatMethod.Invoke(null, new object[] { field.GetValue(null) });
                 // TODO: It would be nice to generate the comment for the enum value as well, but that's quite tricky.
-                Console.WriteLine($"{moreIndentation}/// <summary>Wire representation of <see cref=\"global::{enumType.FullName.Replace("+", ".")}.{field.Name}\"/>.</summary>");
-                Console.WriteLine($"{moreIndentation}public const string {field.Name} = \"{wireValue}\";");
+                writer.WriteLine($"{moreIndentation}/// <summary>Wire representation of <see cref=\"global::{enumType.FullName.Replace("+", ".")}.{field.Name}\"/>.</summary>");
+                string maybeUnderscore = NeedsUnderscore(field.Name) ? "_" : "";
+                writer.WriteLine($"{moreIndentation}public const string {field.Name}{maybeUnderscore} = \"{wireValue}\";");
             }
             writer.WriteLine($"{indentation}}}");
+
+            // Initially only Equals needs "escaping". It's unlikely that we'll get ToString or GetHashCode as field names,
+            // but there may be other cases. Just add them here as needed.
+            bool NeedsUnderscore(string name) => name == "Equals";
         }
 
         private static void MaybeWriteLineBetweenElements(TextWriter writer, ref bool firstElement)

@@ -600,7 +600,6 @@ namespace Google.Cloud.Run.V2.Snippets
             UpdateServiceRequest request = new UpdateServiceRequest
             {
                 Service = new Service(),
-                UpdateMask = new FieldMask(),
                 ValidateOnly = false,
                 AllowMissing = false,
             };
@@ -636,7 +635,6 @@ namespace Google.Cloud.Run.V2.Snippets
             UpdateServiceRequest request = new UpdateServiceRequest
             {
                 Service = new Service(),
-                UpdateMask = new FieldMask(),
                 ValidateOnly = false,
                 AllowMissing = false,
             };
@@ -664,14 +662,13 @@ namespace Google.Cloud.Run.V2.Snippets
         /// <summary>Snippet for UpdateService</summary>
         public void UpdateService()
         {
-            // Snippet: UpdateService(Service, FieldMask, CallSettings)
+            // Snippet: UpdateService(Service, CallSettings)
             // Create client
             ServicesClient servicesClient = ServicesClient.Create();
             // Initialize request argument(s)
             Service service = new Service();
-            FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation<Service, Service> response = servicesClient.UpdateService(service, updateMask);
+            Operation<Service, Service> response = servicesClient.UpdateService(service);
 
             // Poll until the returned long-running operation is complete
             Operation<Service, Service> completedResponse = response.PollUntilCompleted();
@@ -694,15 +691,14 @@ namespace Google.Cloud.Run.V2.Snippets
         /// <summary>Snippet for UpdateServiceAsync</summary>
         public async Task UpdateServiceAsync()
         {
-            // Snippet: UpdateServiceAsync(Service, FieldMask, CallSettings)
-            // Additional: UpdateServiceAsync(Service, FieldMask, CancellationToken)
+            // Snippet: UpdateServiceAsync(Service, CallSettings)
+            // Additional: UpdateServiceAsync(Service, CancellationToken)
             // Create client
             ServicesClient servicesClient = await ServicesClient.CreateAsync();
             // Initialize request argument(s)
             Service service = new Service();
-            FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation<Service, Service> response = await servicesClient.UpdateServiceAsync(service, updateMask);
+            Operation<Service, Service> response = await servicesClient.UpdateServiceAsync(service);
 
             // Poll until the returned long-running operation is complete
             Operation<Service, Service> completedResponse = await response.PollUntilCompletedAsync();

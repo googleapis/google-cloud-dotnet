@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -54,7 +55,7 @@ namespace Google.Cloud.Gaming.V1.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetRealm(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RealmsServiceClient client = new RealmsServiceClientImpl(mockGrpcClient.Object, null);
+            RealmsServiceClient client = new RealmsServiceClientImpl(mockGrpcClient.Object, null, null);
             Realm response = client.GetRealm(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -86,7 +87,7 @@ namespace Google.Cloud.Gaming.V1.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetRealmAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Realm>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RealmsServiceClient client = new RealmsServiceClientImpl(mockGrpcClient.Object, null);
+            RealmsServiceClient client = new RealmsServiceClientImpl(mockGrpcClient.Object, null, null);
             Realm responseCallSettings = await client.GetRealmAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Realm responseCancellationToken = await client.GetRealmAsync(request, st::CancellationToken.None);
@@ -120,7 +121,7 @@ namespace Google.Cloud.Gaming.V1.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetRealm(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RealmsServiceClient client = new RealmsServiceClientImpl(mockGrpcClient.Object, null);
+            RealmsServiceClient client = new RealmsServiceClientImpl(mockGrpcClient.Object, null, null);
             Realm response = client.GetRealm(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -152,7 +153,7 @@ namespace Google.Cloud.Gaming.V1.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetRealmAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Realm>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RealmsServiceClient client = new RealmsServiceClientImpl(mockGrpcClient.Object, null);
+            RealmsServiceClient client = new RealmsServiceClientImpl(mockGrpcClient.Object, null, null);
             Realm responseCallSettings = await client.GetRealmAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Realm responseCancellationToken = await client.GetRealmAsync(request.Name, st::CancellationToken.None);
@@ -186,7 +187,7 @@ namespace Google.Cloud.Gaming.V1.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetRealm(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RealmsServiceClient client = new RealmsServiceClientImpl(mockGrpcClient.Object, null);
+            RealmsServiceClient client = new RealmsServiceClientImpl(mockGrpcClient.Object, null, null);
             Realm response = client.GetRealm(request.RealmName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -218,7 +219,7 @@ namespace Google.Cloud.Gaming.V1.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetRealmAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Realm>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RealmsServiceClient client = new RealmsServiceClientImpl(mockGrpcClient.Object, null);
+            RealmsServiceClient client = new RealmsServiceClientImpl(mockGrpcClient.Object, null, null);
             Realm responseCallSettings = await client.GetRealmAsync(request.RealmName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Realm responseCancellationToken = await client.GetRealmAsync(request.RealmName, st::CancellationToken.None);
@@ -243,7 +244,7 @@ namespace Google.Cloud.Gaming.V1.Tests
                 TargetState = new TargetState(),
             };
             mockGrpcClient.Setup(x => x.PreviewRealmUpdate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RealmsServiceClient client = new RealmsServiceClientImpl(mockGrpcClient.Object, null);
+            RealmsServiceClient client = new RealmsServiceClientImpl(mockGrpcClient.Object, null, null);
             PreviewRealmUpdateResponse response = client.PreviewRealmUpdate(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -266,7 +267,7 @@ namespace Google.Cloud.Gaming.V1.Tests
                 TargetState = new TargetState(),
             };
             mockGrpcClient.Setup(x => x.PreviewRealmUpdateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PreviewRealmUpdateResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RealmsServiceClient client = new RealmsServiceClientImpl(mockGrpcClient.Object, null);
+            RealmsServiceClient client = new RealmsServiceClientImpl(mockGrpcClient.Object, null, null);
             PreviewRealmUpdateResponse responseCallSettings = await client.PreviewRealmUpdateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PreviewRealmUpdateResponse responseCancellationToken = await client.PreviewRealmUpdateAsync(request, st::CancellationToken.None);

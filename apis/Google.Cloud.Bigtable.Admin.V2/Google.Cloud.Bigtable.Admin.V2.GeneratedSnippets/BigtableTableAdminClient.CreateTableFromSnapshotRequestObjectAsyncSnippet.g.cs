@@ -18,6 +18,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
 {
     // [START bigtableadmin_v2_generated_BigtableTableAdmin_CreateTableFromSnapshot_async]
     using Google.Cloud.Bigtable.Admin.V2;
+    using Google.Cloud.Bigtable.Common.V2;
     using Google.LongRunning;
     using System.Threading.Tasks;
 

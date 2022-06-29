@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
@@ -53,7 +54,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3.Tests
                 HumanReviewStatus = new HumanReviewStatus(),
             };
             mockGrpcClient.Setup(x => x.ProcessDocument(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DocumentProcessorServiceClient client = new DocumentProcessorServiceClientImpl(mockGrpcClient.Object, null);
+            DocumentProcessorServiceClient client = new DocumentProcessorServiceClientImpl(mockGrpcClient.Object, null, null);
             ProcessResponse response = client.ProcessDocument(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -83,7 +84,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3.Tests
                 HumanReviewStatus = new HumanReviewStatus(),
             };
             mockGrpcClient.Setup(x => x.ProcessDocumentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ProcessResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DocumentProcessorServiceClient client = new DocumentProcessorServiceClientImpl(mockGrpcClient.Object, null);
+            DocumentProcessorServiceClient client = new DocumentProcessorServiceClientImpl(mockGrpcClient.Object, null, null);
             ProcessResponse responseCallSettings = await client.ProcessDocumentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ProcessResponse responseCancellationToken = await client.ProcessDocumentAsync(request, st::CancellationToken.None);
@@ -109,7 +110,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3.Tests
                 HumanReviewStatus = new HumanReviewStatus(),
             };
             mockGrpcClient.Setup(x => x.ProcessDocument(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DocumentProcessorServiceClient client = new DocumentProcessorServiceClientImpl(mockGrpcClient.Object, null);
+            DocumentProcessorServiceClient client = new DocumentProcessorServiceClientImpl(mockGrpcClient.Object, null, null);
             ProcessResponse response = client.ProcessDocument(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -133,7 +134,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3.Tests
                 HumanReviewStatus = new HumanReviewStatus(),
             };
             mockGrpcClient.Setup(x => x.ProcessDocumentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ProcessResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DocumentProcessorServiceClient client = new DocumentProcessorServiceClientImpl(mockGrpcClient.Object, null);
+            DocumentProcessorServiceClient client = new DocumentProcessorServiceClientImpl(mockGrpcClient.Object, null, null);
             ProcessResponse responseCallSettings = await client.ProcessDocumentAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ProcessResponse responseCancellationToken = await client.ProcessDocumentAsync(request.Name, st::CancellationToken.None);
@@ -159,7 +160,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3.Tests
                 HumanReviewStatus = new HumanReviewStatus(),
             };
             mockGrpcClient.Setup(x => x.ProcessDocument(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DocumentProcessorServiceClient client = new DocumentProcessorServiceClientImpl(mockGrpcClient.Object, null);
+            DocumentProcessorServiceClient client = new DocumentProcessorServiceClientImpl(mockGrpcClient.Object, null, null);
             ProcessResponse response = client.ProcessDocument(request.ProcessorName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -183,7 +184,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3.Tests
                 HumanReviewStatus = new HumanReviewStatus(),
             };
             mockGrpcClient.Setup(x => x.ProcessDocumentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ProcessResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DocumentProcessorServiceClient client = new DocumentProcessorServiceClientImpl(mockGrpcClient.Object, null);
+            DocumentProcessorServiceClient client = new DocumentProcessorServiceClientImpl(mockGrpcClient.Object, null, null);
             ProcessResponse responseCallSettings = await client.ProcessDocumentAsync(request.ProcessorName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ProcessResponse responseCancellationToken = await client.ProcessDocumentAsync(request.ProcessorName, st::CancellationToken.None);
@@ -208,7 +209,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.FetchProcessorTypes(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DocumentProcessorServiceClient client = new DocumentProcessorServiceClientImpl(mockGrpcClient.Object, null);
+            DocumentProcessorServiceClient client = new DocumentProcessorServiceClientImpl(mockGrpcClient.Object, null, null);
             FetchProcessorTypesResponse response = client.FetchProcessorTypes(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -231,7 +232,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.FetchProcessorTypesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FetchProcessorTypesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DocumentProcessorServiceClient client = new DocumentProcessorServiceClientImpl(mockGrpcClient.Object, null);
+            DocumentProcessorServiceClient client = new DocumentProcessorServiceClientImpl(mockGrpcClient.Object, null, null);
             FetchProcessorTypesResponse responseCallSettings = await client.FetchProcessorTypesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             FetchProcessorTypesResponse responseCancellationToken = await client.FetchProcessorTypesAsync(request, st::CancellationToken.None);
@@ -256,7 +257,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.FetchProcessorTypes(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DocumentProcessorServiceClient client = new DocumentProcessorServiceClientImpl(mockGrpcClient.Object, null);
+            DocumentProcessorServiceClient client = new DocumentProcessorServiceClientImpl(mockGrpcClient.Object, null, null);
             FetchProcessorTypesResponse response = client.FetchProcessorTypes(request.Parent);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -279,7 +280,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.FetchProcessorTypesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FetchProcessorTypesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DocumentProcessorServiceClient client = new DocumentProcessorServiceClientImpl(mockGrpcClient.Object, null);
+            DocumentProcessorServiceClient client = new DocumentProcessorServiceClientImpl(mockGrpcClient.Object, null, null);
             FetchProcessorTypesResponse responseCallSettings = await client.FetchProcessorTypesAsync(request.Parent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             FetchProcessorTypesResponse responseCancellationToken = await client.FetchProcessorTypesAsync(request.Parent, st::CancellationToken.None);
@@ -304,7 +305,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.FetchProcessorTypes(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DocumentProcessorServiceClient client = new DocumentProcessorServiceClientImpl(mockGrpcClient.Object, null);
+            DocumentProcessorServiceClient client = new DocumentProcessorServiceClientImpl(mockGrpcClient.Object, null, null);
             FetchProcessorTypesResponse response = client.FetchProcessorTypes(request.ParentAsLocationName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -327,7 +328,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.FetchProcessorTypesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FetchProcessorTypesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DocumentProcessorServiceClient client = new DocumentProcessorServiceClientImpl(mockGrpcClient.Object, null);
+            DocumentProcessorServiceClient client = new DocumentProcessorServiceClientImpl(mockGrpcClient.Object, null, null);
             FetchProcessorTypesResponse responseCallSettings = await client.FetchProcessorTypesAsync(request.ParentAsLocationName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             FetchProcessorTypesResponse responseCancellationToken = await client.FetchProcessorTypesAsync(request.ParentAsLocationName, st::CancellationToken.None);
@@ -357,7 +358,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3.Tests
                 DefaultProcessorVersion = "default_processor_versiona99cda5e",
             };
             mockGrpcClient.Setup(x => x.CreateProcessor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DocumentProcessorServiceClient client = new DocumentProcessorServiceClientImpl(mockGrpcClient.Object, null);
+            DocumentProcessorServiceClient client = new DocumentProcessorServiceClientImpl(mockGrpcClient.Object, null, null);
             Processor response = client.CreateProcessor(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -385,7 +386,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3.Tests
                 DefaultProcessorVersion = "default_processor_versiona99cda5e",
             };
             mockGrpcClient.Setup(x => x.CreateProcessorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Processor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DocumentProcessorServiceClient client = new DocumentProcessorServiceClientImpl(mockGrpcClient.Object, null);
+            DocumentProcessorServiceClient client = new DocumentProcessorServiceClientImpl(mockGrpcClient.Object, null, null);
             Processor responseCallSettings = await client.CreateProcessorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Processor responseCancellationToken = await client.CreateProcessorAsync(request, st::CancellationToken.None);
@@ -415,7 +416,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3.Tests
                 DefaultProcessorVersion = "default_processor_versiona99cda5e",
             };
             mockGrpcClient.Setup(x => x.CreateProcessor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DocumentProcessorServiceClient client = new DocumentProcessorServiceClientImpl(mockGrpcClient.Object, null);
+            DocumentProcessorServiceClient client = new DocumentProcessorServiceClientImpl(mockGrpcClient.Object, null, null);
             Processor response = client.CreateProcessor(request.Parent, request.Processor);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -443,7 +444,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3.Tests
                 DefaultProcessorVersion = "default_processor_versiona99cda5e",
             };
             mockGrpcClient.Setup(x => x.CreateProcessorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Processor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DocumentProcessorServiceClient client = new DocumentProcessorServiceClientImpl(mockGrpcClient.Object, null);
+            DocumentProcessorServiceClient client = new DocumentProcessorServiceClientImpl(mockGrpcClient.Object, null, null);
             Processor responseCallSettings = await client.CreateProcessorAsync(request.Parent, request.Processor, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Processor responseCancellationToken = await client.CreateProcessorAsync(request.Parent, request.Processor, st::CancellationToken.None);
@@ -473,7 +474,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3.Tests
                 DefaultProcessorVersion = "default_processor_versiona99cda5e",
             };
             mockGrpcClient.Setup(x => x.CreateProcessor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DocumentProcessorServiceClient client = new DocumentProcessorServiceClientImpl(mockGrpcClient.Object, null);
+            DocumentProcessorServiceClient client = new DocumentProcessorServiceClientImpl(mockGrpcClient.Object, null, null);
             Processor response = client.CreateProcessor(request.ParentAsLocationName, request.Processor);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -501,7 +502,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3.Tests
                 DefaultProcessorVersion = "default_processor_versiona99cda5e",
             };
             mockGrpcClient.Setup(x => x.CreateProcessorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Processor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DocumentProcessorServiceClient client = new DocumentProcessorServiceClientImpl(mockGrpcClient.Object, null);
+            DocumentProcessorServiceClient client = new DocumentProcessorServiceClientImpl(mockGrpcClient.Object, null, null);
             Processor responseCallSettings = await client.CreateProcessorAsync(request.ParentAsLocationName, request.Processor, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Processor responseCancellationToken = await client.CreateProcessorAsync(request.ParentAsLocationName, request.Processor, st::CancellationToken.None);

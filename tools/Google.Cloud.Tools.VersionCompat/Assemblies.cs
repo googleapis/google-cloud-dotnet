@@ -22,6 +22,7 @@ using System.Collections.Immutable;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Google.Cloud.Tools.VersionCompat
@@ -76,44 +77,73 @@ namespace Google.Cloud.Tools.VersionCompat
         /// </summary>
         /// <param name="package">The name of the package to load. Must not be null.</param>
         /// <param name="version">The version of the package to load. May be null, in which case the latest stable version is downloaded.</param>
-        /// <param name="tfm">The target framework to find within the package. May be null, in which case "netstandard2.0" is assumed.</param>
+        /// <param name="tfm">The target framework to find within the package. May be null, in which case we check the archive to find a reasonable TFM.</param>
         /// <param name="assemblyName">The name of the assembly to find within the package. May be null, in which case it's assumed to be the same as the package.</param>
         /// <returns>The assembly definition loaded from the given package.</returns>
         public async static Task<AssemblyDefinition> LoadPackageAsync(string package, string version, string tfm, string assemblyName)
         {
-            tfm = tfm ?? "netstandard2.0";
-            assemblyName = assemblyName ?? package;
-            using (var client = new HttpClient())
+            var bytes = await LoadPackageData();
+
+            assemblyName ??= package;
+            
+            Regex pattern = new Regex($@"lib/([a-z0-9.]+)/{Regex.Escape(assemblyName)}\.dll");
+            var tfms = new List<string>();
+            using (var zip = ZipArchive.Open(new MemoryStream(bytes)))
             {
-                // Handily, this automatically loads the latest stable release if version is null.
-                var url = $"https://www.nuget.org/api/v2/package/{package}/{version}";
-                var response = await client.GetAsync(url).ConfigureAwait(false);
-                response.EnsureSuccessStatusCode();
-                var bytes = await response.Content.ReadAsByteArrayAsync().ConfigureAwait(false);
-
-                string expectedPath = $"lib/{tfm}/{assemblyName}.dll";
-
-                using (var zip = ZipArchive.Open(new MemoryStream(bytes)))
+                foreach (var entry in zip.Entries)
                 {
-                    foreach (var entry in zip.Entries)
+                    if (pattern.Match(entry.Key) is Match { Success: true } match)
                     {
-                        if (entry.Key == expectedPath)
+                        tfms.Add(match.Groups[1].Value);
+                    }
+                }
+            }
+
+            if (tfm is not null && !tfms.Contains(tfm))
+            {
+                throw new InvalidOperationException($"Can't find TFM '{tfm}' in package '{package}' version '{version ?? "latest"}'. Available TFMs: {string.Join(", ", tfms)}");
+            }
+            else if (tfm is null)
+            {
+                var tfmsToFind = new string[] { "netstandard2.1", "netstandard2.0", "net6.0", "netcoreapp2.1", "net462", "net461", "net452" };
+                tfm = tfmsToFind.Intersect(tfms).FirstOrDefault();
+                if (tfm is null)
+                {
+                    throw new InvalidOperationException($"No expected TFM in package '{package}' version '{version ?? "latest"}'. Available TFMs: {string.Join(", ", tfms)}");
+                }
+            }
+            string expectedPath = $"lib/{tfm}/{assemblyName}.dll";
+
+            using (var zip = ZipArchive.Open(new MemoryStream(bytes)))
+            {
+                foreach (var entry in zip.Entries)
+                {
+                    if (entry.Key == expectedPath)
+                    {
+                        var path = entry.Key.Substring(4);
+                        string targetFramework = Path.GetDirectoryName(path);
+                        using (var stream = entry.OpenEntryStream())
                         {
-                            var path = entry.Key.Substring(4);
-                            string targetFramework = Path.GetDirectoryName(path);
-                            using (var stream = entry.OpenEntryStream())
-                            {
-                                // Mono.Cecil requires the stream to be seekable. It's simplest
-                                // just to copy the whole DLL to a MemoryStream and pass that to Cecil.
-                                var ms = new MemoryStream();
-                                await stream.CopyToAsync(ms).ConfigureAwait(false);
-                                ms.Position = 0;
-                                return AssemblyDefinition.ReadAssembly(ms);
-                            }
+                            // Mono.Cecil requires the stream to be seekable. It's simplest
+                            // just to copy the whole DLL to a MemoryStream and pass that to Cecil.
+                            var ms = new MemoryStream();
+                            await stream.CopyToAsync(ms).ConfigureAwait(false);
+                            ms.Position = 0;
+                            return AssemblyDefinition.ReadAssembly(ms);
                         }
                     }
                 }
-                throw new InvalidOperationException($"Unable to find entry '{expectedPath}' in package");
+            }
+            throw new InvalidOperationException($"Unable to find entry '{expectedPath}' in package");
+
+            async Task<byte[]> LoadPackageData()
+            {
+                // Handily, this automatically loads the latest stable release if version is null.
+                var url = $"https://www.nuget.org/api/v2/package/{package}/{version}";
+                using var client = new HttpClient();
+                var response = await client.GetAsync(url).ConfigureAwait(false);
+                response.EnsureSuccessStatusCode();
+                return await response.Content.ReadAsByteArrayAsync().ConfigureAwait(false);
             }
         }
 

@@ -14,7 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -31,6 +33,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void GetTransitionRouteGroupRequestObject()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetTransitionRouteGroupRequest request = new GetTransitionRouteGroupRequest
             {
                 TransitionRouteGroupName = TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
@@ -46,7 +49,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetTransitionRouteGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             TransitionRouteGroup response = client.GetTransitionRouteGroup(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -56,6 +59,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task GetTransitionRouteGroupRequestObjectAsync()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetTransitionRouteGroupRequest request = new GetTransitionRouteGroupRequest
             {
                 TransitionRouteGroupName = TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
@@ -71,7 +75,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetTransitionRouteGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransitionRouteGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             TransitionRouteGroup responseCallSettings = await client.GetTransitionRouteGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TransitionRouteGroup responseCancellationToken = await client.GetTransitionRouteGroupAsync(request, st::CancellationToken.None);
@@ -83,6 +87,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void GetTransitionRouteGroup()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetTransitionRouteGroupRequest request = new GetTransitionRouteGroupRequest
             {
                 TransitionRouteGroupName = TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
@@ -97,7 +102,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetTransitionRouteGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             TransitionRouteGroup response = client.GetTransitionRouteGroup(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -107,6 +112,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task GetTransitionRouteGroupAsync()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetTransitionRouteGroupRequest request = new GetTransitionRouteGroupRequest
             {
                 TransitionRouteGroupName = TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
@@ -121,7 +127,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetTransitionRouteGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransitionRouteGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             TransitionRouteGroup responseCallSettings = await client.GetTransitionRouteGroupAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TransitionRouteGroup responseCancellationToken = await client.GetTransitionRouteGroupAsync(request.Name, st::CancellationToken.None);
@@ -133,6 +139,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void GetTransitionRouteGroupResourceNames()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetTransitionRouteGroupRequest request = new GetTransitionRouteGroupRequest
             {
                 TransitionRouteGroupName = TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
@@ -147,7 +154,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetTransitionRouteGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             TransitionRouteGroup response = client.GetTransitionRouteGroup(request.TransitionRouteGroupName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -157,6 +164,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task GetTransitionRouteGroupResourceNamesAsync()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetTransitionRouteGroupRequest request = new GetTransitionRouteGroupRequest
             {
                 TransitionRouteGroupName = TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
@@ -171,7 +179,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetTransitionRouteGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransitionRouteGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             TransitionRouteGroup responseCallSettings = await client.GetTransitionRouteGroupAsync(request.TransitionRouteGroupName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TransitionRouteGroup responseCancellationToken = await client.GetTransitionRouteGroupAsync(request.TransitionRouteGroupName, st::CancellationToken.None);
@@ -183,6 +191,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void CreateTransitionRouteGroupRequestObject()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateTransitionRouteGroupRequest request = new CreateTransitionRouteGroupRequest
             {
                 ParentAsFlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
@@ -199,7 +208,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateTransitionRouteGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             TransitionRouteGroup response = client.CreateTransitionRouteGroup(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -209,6 +218,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task CreateTransitionRouteGroupRequestObjectAsync()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateTransitionRouteGroupRequest request = new CreateTransitionRouteGroupRequest
             {
                 ParentAsFlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
@@ -225,7 +235,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateTransitionRouteGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransitionRouteGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             TransitionRouteGroup responseCallSettings = await client.CreateTransitionRouteGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TransitionRouteGroup responseCancellationToken = await client.CreateTransitionRouteGroupAsync(request, st::CancellationToken.None);
@@ -237,6 +247,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void CreateTransitionRouteGroup()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateTransitionRouteGroupRequest request = new CreateTransitionRouteGroupRequest
             {
                 ParentAsFlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
@@ -252,7 +263,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateTransitionRouteGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             TransitionRouteGroup response = client.CreateTransitionRouteGroup(request.Parent, request.TransitionRouteGroup);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -262,6 +273,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task CreateTransitionRouteGroupAsync()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateTransitionRouteGroupRequest request = new CreateTransitionRouteGroupRequest
             {
                 ParentAsFlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
@@ -277,7 +289,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateTransitionRouteGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransitionRouteGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             TransitionRouteGroup responseCallSettings = await client.CreateTransitionRouteGroupAsync(request.Parent, request.TransitionRouteGroup, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TransitionRouteGroup responseCancellationToken = await client.CreateTransitionRouteGroupAsync(request.Parent, request.TransitionRouteGroup, st::CancellationToken.None);
@@ -289,6 +301,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void CreateTransitionRouteGroupResourceNames()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateTransitionRouteGroupRequest request = new CreateTransitionRouteGroupRequest
             {
                 ParentAsFlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
@@ -304,7 +317,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateTransitionRouteGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             TransitionRouteGroup response = client.CreateTransitionRouteGroup(request.ParentAsFlowName, request.TransitionRouteGroup);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -314,6 +327,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task CreateTransitionRouteGroupResourceNamesAsync()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateTransitionRouteGroupRequest request = new CreateTransitionRouteGroupRequest
             {
                 ParentAsFlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
@@ -329,7 +343,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateTransitionRouteGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransitionRouteGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             TransitionRouteGroup responseCallSettings = await client.CreateTransitionRouteGroupAsync(request.ParentAsFlowName, request.TransitionRouteGroup, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TransitionRouteGroup responseCancellationToken = await client.CreateTransitionRouteGroupAsync(request.ParentAsFlowName, request.TransitionRouteGroup, st::CancellationToken.None);
@@ -341,6 +355,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void UpdateTransitionRouteGroupRequestObject()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateTransitionRouteGroupRequest request = new UpdateTransitionRouteGroupRequest
             {
                 TransitionRouteGroup = new TransitionRouteGroup(),
@@ -357,7 +372,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateTransitionRouteGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             TransitionRouteGroup response = client.UpdateTransitionRouteGroup(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -367,6 +382,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task UpdateTransitionRouteGroupRequestObjectAsync()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateTransitionRouteGroupRequest request = new UpdateTransitionRouteGroupRequest
             {
                 TransitionRouteGroup = new TransitionRouteGroup(),
@@ -383,7 +399,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateTransitionRouteGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransitionRouteGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             TransitionRouteGroup responseCallSettings = await client.UpdateTransitionRouteGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TransitionRouteGroup responseCancellationToken = await client.UpdateTransitionRouteGroupAsync(request, st::CancellationToken.None);
@@ -395,6 +411,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void UpdateTransitionRouteGroup()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateTransitionRouteGroupRequest request = new UpdateTransitionRouteGroupRequest
             {
                 TransitionRouteGroup = new TransitionRouteGroup(),
@@ -410,7 +427,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateTransitionRouteGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             TransitionRouteGroup response = client.UpdateTransitionRouteGroup(request.TransitionRouteGroup, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -420,6 +437,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task UpdateTransitionRouteGroupAsync()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateTransitionRouteGroupRequest request = new UpdateTransitionRouteGroupRequest
             {
                 TransitionRouteGroup = new TransitionRouteGroup(),
@@ -435,7 +453,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateTransitionRouteGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransitionRouteGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             TransitionRouteGroup responseCallSettings = await client.UpdateTransitionRouteGroupAsync(request.TransitionRouteGroup, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TransitionRouteGroup responseCancellationToken = await client.UpdateTransitionRouteGroupAsync(request.TransitionRouteGroup, request.UpdateMask, st::CancellationToken.None);
@@ -447,6 +465,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void DeleteTransitionRouteGroupRequestObject()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteTransitionRouteGroupRequest request = new DeleteTransitionRouteGroupRequest
             {
                 TransitionRouteGroupName = TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
@@ -454,7 +473,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTransitionRouteGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteTransitionRouteGroup(request);
             mockGrpcClient.VerifyAll();
         }
@@ -463,6 +482,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task DeleteTransitionRouteGroupRequestObjectAsync()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteTransitionRouteGroupRequest request = new DeleteTransitionRouteGroupRequest
             {
                 TransitionRouteGroupName = TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
@@ -470,7 +490,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTransitionRouteGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteTransitionRouteGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteTransitionRouteGroupAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -480,13 +500,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void DeleteTransitionRouteGroup()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteTransitionRouteGroupRequest request = new DeleteTransitionRouteGroupRequest
             {
                 TransitionRouteGroupName = TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTransitionRouteGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteTransitionRouteGroup(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -495,13 +516,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task DeleteTransitionRouteGroupAsync()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteTransitionRouteGroupRequest request = new DeleteTransitionRouteGroupRequest
             {
                 TransitionRouteGroupName = TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTransitionRouteGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteTransitionRouteGroupAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteTransitionRouteGroupAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -511,13 +533,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void DeleteTransitionRouteGroupResourceNames()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteTransitionRouteGroupRequest request = new DeleteTransitionRouteGroupRequest
             {
                 TransitionRouteGroupName = TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTransitionRouteGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteTransitionRouteGroup(request.TransitionRouteGroupName);
             mockGrpcClient.VerifyAll();
         }
@@ -526,13 +549,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task DeleteTransitionRouteGroupResourceNamesAsync()
         {
             moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient> mockGrpcClient = new moq::Mock<TransitionRouteGroups.TransitionRouteGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteTransitionRouteGroupRequest request = new DeleteTransitionRouteGroupRequest
             {
                 TransitionRouteGroupName = TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTransitionRouteGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteTransitionRouteGroupAsync(request.TransitionRouteGroupName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteTransitionRouteGroupAsync(request.TransitionRouteGroupName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();

@@ -17,7 +17,6 @@ using Google.Api.Gax.Grpc;
 using Google.Cloud.Firestore.V1;
 using Grpc.Core;
 using System;
-using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -34,6 +33,11 @@ namespace Google.Cloud.Firestore
         private static readonly CallSettings BearerOwnerSettings = CallSettings.FromHeader("Authorization", "Bearer owner");
 
         private static readonly FirestoreSettings s_defaultSettings = AddGcclVersionHeader(new FirestoreSettings());
+
+        /// <summary>Creates a new builder with default settings.</summary>
+        public FirestoreDbBuilder() : base(FirestoreClient.ServiceMetadata)
+        {
+        }
 
         /// <summary>
         /// The settings to use for RPCs, or null for the default settings.
@@ -86,9 +90,12 @@ namespace Google.Cloud.Firestore
             var emulatorBuilder = MaybeUseEmulator();
             if (emulatorBuilder is object)
             {
-                return emulatorBuilder.Build();
+                var ret = emulatorBuilder.Build();
+                LastCreatedChannel = emulatorBuilder.LastCreatedChannel;
+                return ret;
             }
 
+            LastCreatedChannel = null;
             var projectId = ProjectId ?? Platform.Instance().ProjectId;
             var client = Client;
             if (client == null)
@@ -96,6 +103,7 @@ namespace Google.Cloud.Firestore
                 var clientBuilder = FirestoreClientBuilder.FromOtherBuilder(this);
                 clientBuilder.Settings = GetEffectiveSettings();
                 client = clientBuilder.Build();
+                LastCreatedChannel = clientBuilder.LastCreatedChannel;
             }
             return BuildFromClient(projectId, client);
         }
@@ -106,37 +114,28 @@ namespace Google.Cloud.Firestore
             var emulatorBuilder = MaybeUseEmulator();
             if (emulatorBuilder is object)
             {
-                return await emulatorBuilder.BuildAsync(cancellationToken).ConfigureAwait(false);
+                var ret = await emulatorBuilder.BuildAsync(cancellationToken).ConfigureAwait(false);
+                LastCreatedChannel = emulatorBuilder.LastCreatedChannel;
+                return ret;
             }
 
+            LastCreatedChannel = null;
             var projectId = ProjectId ?? (await Platform.InstanceAsync().ConfigureAwait(false)).ProjectId;
-
             var client = Client;
             if (client == null)
             {
                 var clientBuilder = FirestoreClientBuilder.FromOtherBuilder(this);
                 clientBuilder.Settings = GetEffectiveSettings();
                 client = await clientBuilder.BuildAsync(cancellationToken).ConfigureAwait(false);
+                LastCreatedChannel = clientBuilder.LastCreatedChannel;
             }
             return BuildFromClient(projectId, client);
         }
 
-        // We never end up using these methods, at least with the current implementation
-        /// <inheritdoc />
-        protected override string GetDefaultEndpoint() =>
-            throw new InvalidOperationException($"This method should never execute in {nameof(FirestoreDbBuilder)}");
-
-        /// <inheritdoc />
-        protected override IReadOnlyList<string> GetDefaultScopes() =>
-            throw new InvalidOperationException($"This method should never execute in {nameof(FirestoreDbBuilder)}");
-
+        // We never end up using this method, at least with the current implementation
         /// <inheritdoc />
         protected override ChannelPool GetChannelPool() =>
             throw new InvalidOperationException($"This method should never execute in {nameof(FirestoreDbBuilder)}");
-
-        /// <inheritdoc />
-        protected override GrpcAdapter DefaultGrpcAdapter =>
-            throw new InvalidOperationException($"This property should never execute in {nameof(FirestoreDbBuilder)}");
 
         private FirestoreDb BuildFromClient(string projectId, FirestoreClient client) =>
             FirestoreDb.Create(projectId, DatabaseId, client, WarningLogger, ConverterRegistry);

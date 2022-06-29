@@ -14,15 +14,18 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -59,8 +62,11 @@ namespace Google.Cloud.AIPlatform.V1
             ExportDataSettings = existing.ExportDataSettings;
             ExportDataOperationsSettings = existing.ExportDataOperationsSettings.Clone();
             ListDataItemsSettings = existing.ListDataItemsSettings;
+            ListSavedQueriesSettings = existing.ListSavedQueriesSettings;
             GetAnnotationSpecSettings = existing.GetAnnotationSpecSettings;
             ListAnnotationsSettings = existing.ListAnnotationsSettings;
+            LocationsSettings = existing.LocationsSettings;
+            IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
@@ -236,6 +242,18 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DatasetServiceClient.ListSavedQueries</c> and <c>DatasetServiceClient.ListSavedQueriesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListSavedQueriesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DatasetServiceClient.GetAnnotationSpec</c> and <c>DatasetServiceClient.GetAnnotationSpecAsync</c>.
         /// </summary>
         /// <remarks>
@@ -258,6 +276,16 @@ namespace Google.Cloud.AIPlatform.V1
         /// </remarks>
         public gaxgrpc::CallSettings ListAnnotationsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
+        /// <summary>
+        /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
+        /// </summary>
+        public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="DatasetServiceSettings"/> object.</returns>
         public DatasetServiceSettings Clone() => new DatasetServiceSettings(this);
@@ -273,9 +301,8 @@ namespace Google.Cloud.AIPlatform.V1
         public DatasetServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public DatasetServiceClientBuilder()
+        public DatasetServiceClientBuilder() : base(DatasetServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = DatasetServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref DatasetServiceClient client);
@@ -302,36 +329,24 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return DatasetServiceClient.Create(callInvoker, Settings);
+            return DatasetServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<DatasetServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return DatasetServiceClient.Create(callInvoker, Settings);
+            return DatasetServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => DatasetServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => DatasetServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => DatasetServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>DatasetService client wrapper, for convenient use.</summary>
     /// <remarks>
     /// The service that handles the CRUD of Vertex AI Dataset and its child
     /// resources.
-    /// Service for managing datasets.
     /// </remarks>
     public abstract partial class DatasetServiceClient
     {
@@ -353,19 +368,10 @@ namespace Google.Cloud.AIPlatform.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(DatasetService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="DatasetServiceClient"/> using the default credentials, endpoint and
@@ -392,8 +398,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="DatasetServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="DatasetServiceClient"/>.</returns>
-        internal static DatasetServiceClient Create(grpccore::CallInvoker callInvoker, DatasetServiceSettings settings = null)
+        internal static DatasetServiceClient Create(grpccore::CallInvoker callInvoker, DatasetServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -402,7 +409,7 @@ namespace Google.Cloud.AIPlatform.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             DatasetService.DatasetServiceClient grpcClient = new DatasetService.DatasetServiceClient(callInvoker);
-            return new DatasetServiceClientImpl(grpcClient, settings);
+            return new DatasetServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -420,6 +427,12 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>The underlying gRPC DatasetService client</summary>
         public virtual DatasetService.DatasetServiceClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Creates a Dataset.
@@ -1512,6 +1525,128 @@ namespace Google.Cloud.AIPlatform.V1
             }, callSettings);
 
         /// <summary>
+        /// Lists SavedQueries in a Dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SavedQuery"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueries(ListSavedQueriesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists SavedQueries in a Dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SavedQuery"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueriesAsync(ListSavedQueriesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists SavedQueries in a Dataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Dataset to list SavedQueries from.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SavedQuery"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueries(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSavedQueries(new ListSavedQueriesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists SavedQueries in a Dataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Dataset to list SavedQueries from.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SavedQuery"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueriesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSavedQueriesAsync(new ListSavedQueriesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists SavedQueries in a Dataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Dataset to list SavedQueries from.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SavedQuery"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueries(DatasetName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSavedQueries(new ListSavedQueriesRequest
+            {
+                ParentAsDatasetName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists SavedQueries in a Dataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Dataset to list SavedQueries from.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SavedQuery"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueriesAsync(DatasetName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSavedQueriesAsync(new ListSavedQueriesRequest
+            {
+                ParentAsDatasetName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
         /// Gets an AnnotationSpec.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1755,7 +1890,6 @@ namespace Google.Cloud.AIPlatform.V1
     /// <remarks>
     /// The service that handles the CRUD of Vertex AI Dataset and its child
     /// resources.
-    /// Service for managing datasets.
     /// </remarks>
     public sealed partial class DatasetServiceClientImpl : DatasetServiceClient
     {
@@ -1775,6 +1909,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         private readonly gaxgrpc::ApiCall<ListDataItemsRequest, ListDataItemsResponse> _callListDataItems;
 
+        private readonly gaxgrpc::ApiCall<ListSavedQueriesRequest, ListSavedQueriesResponse> _callListSavedQueries;
+
         private readonly gaxgrpc::ApiCall<GetAnnotationSpecRequest, AnnotationSpec> _callGetAnnotationSpec;
 
         private readonly gaxgrpc::ApiCall<ListAnnotationsRequest, ListAnnotationsResponse> _callListAnnotations;
@@ -1784,43 +1920,49 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="DatasetServiceSettings"/> used within this client.</param>
-        public DatasetServiceClientImpl(DatasetService.DatasetServiceClient grpcClient, DatasetServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public DatasetServiceClientImpl(DatasetService.DatasetServiceClient grpcClient, DatasetServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             DatasetServiceSettings effectiveSettings = settings ?? DatasetServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateDatasetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateDatasetOperationsSettings);
-            DeleteDatasetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDatasetOperationsSettings);
-            ImportDataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportDataOperationsSettings);
-            ExportDataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportDataOperationsSettings);
-            _callCreateDataset = clientHelper.BuildApiCall<CreateDatasetRequest, lro::Operation>(grpcClient.CreateDatasetAsync, grpcClient.CreateDataset, effectiveSettings.CreateDatasetSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateDatasetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateDatasetOperationsSettings, logger);
+            DeleteDatasetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDatasetOperationsSettings, logger);
+            ImportDataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportDataOperationsSettings, logger);
+            ExportDataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportDataOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
+            _callCreateDataset = clientHelper.BuildApiCall<CreateDatasetRequest, lro::Operation>("CreateDataset", grpcClient.CreateDatasetAsync, grpcClient.CreateDataset, effectiveSettings.CreateDatasetSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateDataset);
             Modify_CreateDatasetApiCall(ref _callCreateDataset);
-            _callGetDataset = clientHelper.BuildApiCall<GetDatasetRequest, Dataset>(grpcClient.GetDatasetAsync, grpcClient.GetDataset, effectiveSettings.GetDatasetSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetDataset = clientHelper.BuildApiCall<GetDatasetRequest, Dataset>("GetDataset", grpcClient.GetDatasetAsync, grpcClient.GetDataset, effectiveSettings.GetDatasetSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDataset);
             Modify_GetDatasetApiCall(ref _callGetDataset);
-            _callUpdateDataset = clientHelper.BuildApiCall<UpdateDatasetRequest, Dataset>(grpcClient.UpdateDatasetAsync, grpcClient.UpdateDataset, effectiveSettings.UpdateDatasetSettings).WithGoogleRequestParam("dataset.name", request => request.Dataset?.Name);
+            _callUpdateDataset = clientHelper.BuildApiCall<UpdateDatasetRequest, Dataset>("UpdateDataset", grpcClient.UpdateDatasetAsync, grpcClient.UpdateDataset, effectiveSettings.UpdateDatasetSettings).WithGoogleRequestParam("dataset.name", request => request.Dataset?.Name);
             Modify_ApiCall(ref _callUpdateDataset);
             Modify_UpdateDatasetApiCall(ref _callUpdateDataset);
-            _callListDatasets = clientHelper.BuildApiCall<ListDatasetsRequest, ListDatasetsResponse>(grpcClient.ListDatasetsAsync, grpcClient.ListDatasets, effectiveSettings.ListDatasetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListDatasets = clientHelper.BuildApiCall<ListDatasetsRequest, ListDatasetsResponse>("ListDatasets", grpcClient.ListDatasetsAsync, grpcClient.ListDatasets, effectiveSettings.ListDatasetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDatasets);
             Modify_ListDatasetsApiCall(ref _callListDatasets);
-            _callDeleteDataset = clientHelper.BuildApiCall<DeleteDatasetRequest, lro::Operation>(grpcClient.DeleteDatasetAsync, grpcClient.DeleteDataset, effectiveSettings.DeleteDatasetSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteDataset = clientHelper.BuildApiCall<DeleteDatasetRequest, lro::Operation>("DeleteDataset", grpcClient.DeleteDatasetAsync, grpcClient.DeleteDataset, effectiveSettings.DeleteDatasetSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteDataset);
             Modify_DeleteDatasetApiCall(ref _callDeleteDataset);
-            _callImportData = clientHelper.BuildApiCall<ImportDataRequest, lro::Operation>(grpcClient.ImportDataAsync, grpcClient.ImportData, effectiveSettings.ImportDataSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callImportData = clientHelper.BuildApiCall<ImportDataRequest, lro::Operation>("ImportData", grpcClient.ImportDataAsync, grpcClient.ImportData, effectiveSettings.ImportDataSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callImportData);
             Modify_ImportDataApiCall(ref _callImportData);
-            _callExportData = clientHelper.BuildApiCall<ExportDataRequest, lro::Operation>(grpcClient.ExportDataAsync, grpcClient.ExportData, effectiveSettings.ExportDataSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callExportData = clientHelper.BuildApiCall<ExportDataRequest, lro::Operation>("ExportData", grpcClient.ExportDataAsync, grpcClient.ExportData, effectiveSettings.ExportDataSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callExportData);
             Modify_ExportDataApiCall(ref _callExportData);
-            _callListDataItems = clientHelper.BuildApiCall<ListDataItemsRequest, ListDataItemsResponse>(grpcClient.ListDataItemsAsync, grpcClient.ListDataItems, effectiveSettings.ListDataItemsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListDataItems = clientHelper.BuildApiCall<ListDataItemsRequest, ListDataItemsResponse>("ListDataItems", grpcClient.ListDataItemsAsync, grpcClient.ListDataItems, effectiveSettings.ListDataItemsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDataItems);
             Modify_ListDataItemsApiCall(ref _callListDataItems);
-            _callGetAnnotationSpec = clientHelper.BuildApiCall<GetAnnotationSpecRequest, AnnotationSpec>(grpcClient.GetAnnotationSpecAsync, grpcClient.GetAnnotationSpec, effectiveSettings.GetAnnotationSpecSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callListSavedQueries = clientHelper.BuildApiCall<ListSavedQueriesRequest, ListSavedQueriesResponse>("ListSavedQueries", grpcClient.ListSavedQueriesAsync, grpcClient.ListSavedQueries, effectiveSettings.ListSavedQueriesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListSavedQueries);
+            Modify_ListSavedQueriesApiCall(ref _callListSavedQueries);
+            _callGetAnnotationSpec = clientHelper.BuildApiCall<GetAnnotationSpecRequest, AnnotationSpec>("GetAnnotationSpec", grpcClient.GetAnnotationSpecAsync, grpcClient.GetAnnotationSpec, effectiveSettings.GetAnnotationSpecSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetAnnotationSpec);
             Modify_GetAnnotationSpecApiCall(ref _callGetAnnotationSpec);
-            _callListAnnotations = clientHelper.BuildApiCall<ListAnnotationsRequest, ListAnnotationsResponse>(grpcClient.ListAnnotationsAsync, grpcClient.ListAnnotations, effectiveSettings.ListAnnotationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListAnnotations = clientHelper.BuildApiCall<ListAnnotationsRequest, ListAnnotationsResponse>("ListAnnotations", grpcClient.ListAnnotationsAsync, grpcClient.ListAnnotations, effectiveSettings.ListAnnotationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListAnnotations);
             Modify_ListAnnotationsApiCall(ref _callListAnnotations);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
@@ -1844,6 +1986,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         partial void Modify_ListDataItemsApiCall(ref gaxgrpc::ApiCall<ListDataItemsRequest, ListDataItemsResponse> call);
 
+        partial void Modify_ListSavedQueriesApiCall(ref gaxgrpc::ApiCall<ListSavedQueriesRequest, ListSavedQueriesResponse> call);
+
         partial void Modify_GetAnnotationSpecApiCall(ref gaxgrpc::ApiCall<GetAnnotationSpecRequest, AnnotationSpec> call);
 
         partial void Modify_ListAnnotationsApiCall(ref gaxgrpc::ApiCall<ListAnnotationsRequest, ListAnnotationsResponse> call);
@@ -1852,6 +1996,12 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>The underlying gRPC DatasetService client</summary>
         public override DatasetService.DatasetServiceClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
         partial void Modify_CreateDatasetRequest(ref CreateDatasetRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1868,6 +2018,8 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_ExportDataRequest(ref ExportDataRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListDataItemsRequest(ref ListDataItemsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListSavedQueriesRequest(ref ListSavedQueriesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetAnnotationSpecRequest(ref GetAnnotationSpecRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2078,6 +2230,30 @@ namespace Google.Cloud.AIPlatform.V1
         }
 
         /// <summary>
+        /// Lists SavedQueries in a Dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SavedQuery"/> resources.</returns>
+        public override gax::PagedEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueries(ListSavedQueriesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSavedQueriesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListSavedQueriesRequest, ListSavedQueriesResponse, SavedQuery>(_callListSavedQueries, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists SavedQueries in a Dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SavedQuery"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueriesAsync(ListSavedQueriesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSavedQueriesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListSavedQueriesRequest, ListSavedQueriesResponse, SavedQuery>(_callListSavedQueries, request, callSettings);
+        }
+
+        /// <summary>
         /// Gets an AnnotationSpec.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2134,6 +2310,10 @@ namespace Google.Cloud.AIPlatform.V1
     {
     }
 
+    public partial class ListSavedQueriesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListAnnotationsRequest : gaxgrpc::IPageRequest
     {
     }
@@ -2150,6 +2330,14 @@ namespace Google.Cloud.AIPlatform.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<DataItem> GetEnumerator() => DataItems.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListSavedQueriesResponse : gaxgrpc::IPageResponse<SavedQuery>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<SavedQuery> GetEnumerator() => SavedQueries.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
@@ -2173,6 +2361,32 @@ namespace Google.Cloud.AIPlatform.V1
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class DatasetService
+    {
+        public partial class DatasetServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
+
+            /// <summary>
+            /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gciv::IAMPolicy.IAMPolicyClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gciv::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() =>
+                new gciv::IAMPolicy.IAMPolicyClient(CallInvoker);
         }
     }
 }

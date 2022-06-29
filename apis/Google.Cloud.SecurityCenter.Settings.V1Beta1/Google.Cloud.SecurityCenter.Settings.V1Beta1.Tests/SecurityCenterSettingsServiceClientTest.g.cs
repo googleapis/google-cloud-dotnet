@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -42,7 +43,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 ServiceAccount_ = "service_accounta3c1b923",
             };
             mockGrpcClient.Setup(x => x.GetServiceAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             ServiceAccount response = client.GetServiceAccount(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -62,7 +63,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 ServiceAccount_ = "service_accounta3c1b923",
             };
             mockGrpcClient.Setup(x => x.GetServiceAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceAccount>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             ServiceAccount responseCallSettings = await client.GetServiceAccountAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ServiceAccount responseCancellationToken = await client.GetServiceAccountAsync(request, st::CancellationToken.None);
@@ -84,7 +85,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 ServiceAccount_ = "service_accounta3c1b923",
             };
             mockGrpcClient.Setup(x => x.GetServiceAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             ServiceAccount response = client.GetServiceAccount(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -104,7 +105,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 ServiceAccount_ = "service_accounta3c1b923",
             };
             mockGrpcClient.Setup(x => x.GetServiceAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceAccount>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             ServiceAccount responseCallSettings = await client.GetServiceAccountAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ServiceAccount responseCancellationToken = await client.GetServiceAccountAsync(request.Name, st::CancellationToken.None);
@@ -126,7 +127,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 ServiceAccount_ = "service_accounta3c1b923",
             };
             mockGrpcClient.Setup(x => x.GetServiceAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             ServiceAccount response = client.GetServiceAccount(request.ServiceAccountName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -146,7 +147,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 ServiceAccount_ = "service_accounta3c1b923",
             };
             mockGrpcClient.Setup(x => x.GetServiceAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceAccount>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             ServiceAccount responseCallSettings = await client.GetServiceAccountAsync(request.ServiceAccountName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ServiceAccount responseCancellationToken = await client.GetServiceAccountAsync(request.ServiceAccountName, st::CancellationToken.None);
@@ -187,7 +188,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             Settings response = client.GetSettings(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -226,7 +227,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Settings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             Settings responseCallSettings = await client.GetSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Settings responseCancellationToken = await client.GetSettingsAsync(request, st::CancellationToken.None);
@@ -267,7 +268,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             Settings response = client.GetSettings(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -306,7 +307,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Settings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             Settings responseCallSettings = await client.GetSettingsAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Settings responseCancellationToken = await client.GetSettingsAsync(request.Name, st::CancellationToken.None);
@@ -347,7 +348,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             Settings response = client.GetSettings(request.SettingsName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -386,7 +387,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Settings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             Settings responseCallSettings = await client.GetSettingsAsync(request.SettingsName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Settings responseCancellationToken = await client.GetSettingsAsync(request.SettingsName, st::CancellationToken.None);
@@ -428,7 +429,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             Settings response = client.UpdateSettings(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -468,7 +469,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Settings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             Settings responseCallSettings = await client.UpdateSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Settings responseCancellationToken = await client.UpdateSettingsAsync(request, st::CancellationToken.None);
@@ -510,7 +511,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             Settings response = client.UpdateSettings(request.Settings, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -550,7 +551,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Settings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             Settings responseCallSettings = await client.UpdateSettingsAsync(request.Settings, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Settings responseCancellationToken = await client.UpdateSettingsAsync(request.Settings, request.UpdateMask, st::CancellationToken.None);
@@ -569,7 +570,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ResetSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             client.ResetSettings(request);
             mockGrpcClient.VerifyAll();
         }
@@ -585,7 +586,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ResetSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.ResetSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.ResetSettingsAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -605,7 +606,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 Settings = { new Settings(), },
             };
             mockGrpcClient.Setup(x => x.BatchGetSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchGetSettingsResponse response = client.BatchGetSettings(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -625,7 +626,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 Settings = { new Settings(), },
             };
             mockGrpcClient.Setup(x => x.BatchGetSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchGetSettingsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchGetSettingsResponse responseCallSettings = await client.BatchGetSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchGetSettingsResponse responseCancellationToken = await client.BatchGetSettingsAsync(request, st::CancellationToken.None);
@@ -666,7 +667,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CalculateEffectiveSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             Settings response = client.CalculateEffectiveSettings(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -705,7 +706,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CalculateEffectiveSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Settings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             Settings responseCallSettings = await client.CalculateEffectiveSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Settings responseCancellationToken = await client.CalculateEffectiveSettingsAsync(request, st::CancellationToken.None);
@@ -746,7 +747,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CalculateEffectiveSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             Settings response = client.CalculateEffectiveSettings(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -785,7 +786,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CalculateEffectiveSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Settings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             Settings responseCallSettings = await client.CalculateEffectiveSettingsAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Settings responseCancellationToken = await client.CalculateEffectiveSettingsAsync(request.Name, st::CancellationToken.None);
@@ -826,7 +827,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CalculateEffectiveSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             Settings response = client.CalculateEffectiveSettings(request.SettingsName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -865,7 +866,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CalculateEffectiveSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Settings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             Settings responseCallSettings = await client.CalculateEffectiveSettingsAsync(request.SettingsName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Settings responseCancellationToken = await client.CalculateEffectiveSettingsAsync(request.SettingsName, st::CancellationToken.None);
@@ -890,7 +891,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 Settings = { new Settings(), },
             };
             mockGrpcClient.Setup(x => x.BatchCalculateEffectiveSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchCalculateEffectiveSettingsResponse response = client.BatchCalculateEffectiveSettings(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -913,7 +914,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 Settings = { new Settings(), },
             };
             mockGrpcClient.Setup(x => x.BatchCalculateEffectiveSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchCalculateEffectiveSettingsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchCalculateEffectiveSettingsResponse responseCallSettings = await client.BatchCalculateEffectiveSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchCalculateEffectiveSettingsResponse responseCancellationToken = await client.BatchCalculateEffectiveSettingsAsync(request, st::CancellationToken.None);
@@ -949,7 +950,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings(),
             };
             mockGrpcClient.Setup(x => x.GetComponentSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             ComponentSettings response = client.GetComponentSettings(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -983,7 +984,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings(),
             };
             mockGrpcClient.Setup(x => x.GetComponentSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ComponentSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             ComponentSettings responseCallSettings = await client.GetComponentSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ComponentSettings responseCancellationToken = await client.GetComponentSettingsAsync(request, st::CancellationToken.None);
@@ -1019,7 +1020,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings(),
             };
             mockGrpcClient.Setup(x => x.GetComponentSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             ComponentSettings response = client.GetComponentSettings(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1053,7 +1054,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings(),
             };
             mockGrpcClient.Setup(x => x.GetComponentSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ComponentSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             ComponentSettings responseCallSettings = await client.GetComponentSettingsAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ComponentSettings responseCancellationToken = await client.GetComponentSettingsAsync(request.Name, st::CancellationToken.None);
@@ -1089,7 +1090,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings(),
             };
             mockGrpcClient.Setup(x => x.GetComponentSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             ComponentSettings response = client.GetComponentSettings(request.ComponentSettingsName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1123,7 +1124,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings(),
             };
             mockGrpcClient.Setup(x => x.GetComponentSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ComponentSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             ComponentSettings responseCallSettings = await client.GetComponentSettingsAsync(request.ComponentSettingsName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ComponentSettings responseCancellationToken = await client.GetComponentSettingsAsync(request.ComponentSettingsName, st::CancellationToken.None);
@@ -1160,7 +1161,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings(),
             };
             mockGrpcClient.Setup(x => x.UpdateComponentSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             ComponentSettings response = client.UpdateComponentSettings(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1195,7 +1196,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings(),
             };
             mockGrpcClient.Setup(x => x.UpdateComponentSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ComponentSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             ComponentSettings responseCallSettings = await client.UpdateComponentSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ComponentSettings responseCancellationToken = await client.UpdateComponentSettingsAsync(request, st::CancellationToken.None);
@@ -1232,7 +1233,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings(),
             };
             mockGrpcClient.Setup(x => x.UpdateComponentSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             ComponentSettings response = client.UpdateComponentSettings(request.ComponentSettings, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1267,7 +1268,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings(),
             };
             mockGrpcClient.Setup(x => x.UpdateComponentSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ComponentSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             ComponentSettings responseCallSettings = await client.UpdateComponentSettingsAsync(request.ComponentSettings, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ComponentSettings responseCancellationToken = await client.UpdateComponentSettingsAsync(request.ComponentSettings, request.UpdateMask, st::CancellationToken.None);
@@ -1286,7 +1287,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ResetComponentSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             client.ResetComponentSettings(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1302,7 +1303,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ResetComponentSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.ResetComponentSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.ResetComponentSettingsAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1336,7 +1337,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings(),
             };
             mockGrpcClient.Setup(x => x.CalculateEffectiveComponentSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             ComponentSettings response = client.CalculateEffectiveComponentSettings(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1370,7 +1371,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings(),
             };
             mockGrpcClient.Setup(x => x.CalculateEffectiveComponentSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ComponentSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             ComponentSettings responseCallSettings = await client.CalculateEffectiveComponentSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ComponentSettings responseCancellationToken = await client.CalculateEffectiveComponentSettingsAsync(request, st::CancellationToken.None);
@@ -1406,7 +1407,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings(),
             };
             mockGrpcClient.Setup(x => x.CalculateEffectiveComponentSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             ComponentSettings response = client.CalculateEffectiveComponentSettings(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1440,7 +1441,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings(),
             };
             mockGrpcClient.Setup(x => x.CalculateEffectiveComponentSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ComponentSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             ComponentSettings responseCallSettings = await client.CalculateEffectiveComponentSettingsAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ComponentSettings responseCancellationToken = await client.CalculateEffectiveComponentSettingsAsync(request.Name, st::CancellationToken.None);
@@ -1476,7 +1477,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings(),
             };
             mockGrpcClient.Setup(x => x.CalculateEffectiveComponentSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             ComponentSettings response = client.CalculateEffectiveComponentSettings(request.ComponentSettingsName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1510,7 +1511,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings(),
             };
             mockGrpcClient.Setup(x => x.CalculateEffectiveComponentSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ComponentSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             ComponentSettings responseCallSettings = await client.CalculateEffectiveComponentSettingsAsync(request.ComponentSettingsName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ComponentSettings responseCancellationToken = await client.CalculateEffectiveComponentSettingsAsync(request.ComponentSettingsName, st::CancellationToken.None);

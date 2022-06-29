@@ -14,7 +14,10 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -33,6 +36,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<IndexEndpointService.IndexEndpointServiceClient> mockGrpcClient = new moq::Mock<IndexEndpointService.IndexEndpointServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetIndexEndpointRequest request = new GetIndexEndpointRequest
             {
                 IndexEndpointName = IndexEndpointName.FromProjectLocationIndexEndpoint("[PROJECT]", "[LOCATION]", "[INDEX_ENDPOINT]"),
@@ -57,10 +62,12 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Network = "networkd22ce091",
+#pragma warning disable CS0612
                 EnablePrivateServiceConnect = false,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetIndexEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null);
+            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null, null);
             IndexEndpoint response = client.GetIndexEndpoint(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -71,6 +78,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<IndexEndpointService.IndexEndpointServiceClient> mockGrpcClient = new moq::Mock<IndexEndpointService.IndexEndpointServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetIndexEndpointRequest request = new GetIndexEndpointRequest
             {
                 IndexEndpointName = IndexEndpointName.FromProjectLocationIndexEndpoint("[PROJECT]", "[LOCATION]", "[INDEX_ENDPOINT]"),
@@ -95,10 +104,12 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Network = "networkd22ce091",
+#pragma warning disable CS0612
                 EnablePrivateServiceConnect = false,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetIndexEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<IndexEndpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null);
+            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null, null);
             IndexEndpoint responseCallSettings = await client.GetIndexEndpointAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             IndexEndpoint responseCancellationToken = await client.GetIndexEndpointAsync(request, st::CancellationToken.None);
@@ -111,6 +122,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<IndexEndpointService.IndexEndpointServiceClient> mockGrpcClient = new moq::Mock<IndexEndpointService.IndexEndpointServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetIndexEndpointRequest request = new GetIndexEndpointRequest
             {
                 IndexEndpointName = IndexEndpointName.FromProjectLocationIndexEndpoint("[PROJECT]", "[LOCATION]", "[INDEX_ENDPOINT]"),
@@ -135,10 +148,12 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Network = "networkd22ce091",
+#pragma warning disable CS0612
                 EnablePrivateServiceConnect = false,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetIndexEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null);
+            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null, null);
             IndexEndpoint response = client.GetIndexEndpoint(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -149,6 +164,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<IndexEndpointService.IndexEndpointServiceClient> mockGrpcClient = new moq::Mock<IndexEndpointService.IndexEndpointServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetIndexEndpointRequest request = new GetIndexEndpointRequest
             {
                 IndexEndpointName = IndexEndpointName.FromProjectLocationIndexEndpoint("[PROJECT]", "[LOCATION]", "[INDEX_ENDPOINT]"),
@@ -173,10 +190,12 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Network = "networkd22ce091",
+#pragma warning disable CS0612
                 EnablePrivateServiceConnect = false,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetIndexEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<IndexEndpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null);
+            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null, null);
             IndexEndpoint responseCallSettings = await client.GetIndexEndpointAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             IndexEndpoint responseCancellationToken = await client.GetIndexEndpointAsync(request.Name, st::CancellationToken.None);
@@ -189,6 +208,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<IndexEndpointService.IndexEndpointServiceClient> mockGrpcClient = new moq::Mock<IndexEndpointService.IndexEndpointServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetIndexEndpointRequest request = new GetIndexEndpointRequest
             {
                 IndexEndpointName = IndexEndpointName.FromProjectLocationIndexEndpoint("[PROJECT]", "[LOCATION]", "[INDEX_ENDPOINT]"),
@@ -213,10 +234,12 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Network = "networkd22ce091",
+#pragma warning disable CS0612
                 EnablePrivateServiceConnect = false,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetIndexEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null);
+            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null, null);
             IndexEndpoint response = client.GetIndexEndpoint(request.IndexEndpointName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -227,6 +250,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<IndexEndpointService.IndexEndpointServiceClient> mockGrpcClient = new moq::Mock<IndexEndpointService.IndexEndpointServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetIndexEndpointRequest request = new GetIndexEndpointRequest
             {
                 IndexEndpointName = IndexEndpointName.FromProjectLocationIndexEndpoint("[PROJECT]", "[LOCATION]", "[INDEX_ENDPOINT]"),
@@ -251,10 +276,12 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Network = "networkd22ce091",
+#pragma warning disable CS0612
                 EnablePrivateServiceConnect = false,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetIndexEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<IndexEndpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null);
+            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null, null);
             IndexEndpoint responseCallSettings = await client.GetIndexEndpointAsync(request.IndexEndpointName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             IndexEndpoint responseCancellationToken = await client.GetIndexEndpointAsync(request.IndexEndpointName, st::CancellationToken.None);
@@ -267,6 +294,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<IndexEndpointService.IndexEndpointServiceClient> mockGrpcClient = new moq::Mock<IndexEndpointService.IndexEndpointServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateIndexEndpointRequest request = new UpdateIndexEndpointRequest
             {
                 IndexEndpoint = new IndexEndpoint(),
@@ -292,10 +321,12 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Network = "networkd22ce091",
+#pragma warning disable CS0612
                 EnablePrivateServiceConnect = false,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.UpdateIndexEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null);
+            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null, null);
             IndexEndpoint response = client.UpdateIndexEndpoint(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -306,6 +337,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<IndexEndpointService.IndexEndpointServiceClient> mockGrpcClient = new moq::Mock<IndexEndpointService.IndexEndpointServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateIndexEndpointRequest request = new UpdateIndexEndpointRequest
             {
                 IndexEndpoint = new IndexEndpoint(),
@@ -331,10 +364,12 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Network = "networkd22ce091",
+#pragma warning disable CS0612
                 EnablePrivateServiceConnect = false,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.UpdateIndexEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<IndexEndpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null);
+            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null, null);
             IndexEndpoint responseCallSettings = await client.UpdateIndexEndpointAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             IndexEndpoint responseCancellationToken = await client.UpdateIndexEndpointAsync(request, st::CancellationToken.None);
@@ -347,6 +382,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<IndexEndpointService.IndexEndpointServiceClient> mockGrpcClient = new moq::Mock<IndexEndpointService.IndexEndpointServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateIndexEndpointRequest request = new UpdateIndexEndpointRequest
             {
                 IndexEndpoint = new IndexEndpoint(),
@@ -372,10 +409,12 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Network = "networkd22ce091",
+#pragma warning disable CS0612
                 EnablePrivateServiceConnect = false,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.UpdateIndexEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null);
+            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null, null);
             IndexEndpoint response = client.UpdateIndexEndpoint(request.IndexEndpoint, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -386,6 +425,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<IndexEndpointService.IndexEndpointServiceClient> mockGrpcClient = new moq::Mock<IndexEndpointService.IndexEndpointServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateIndexEndpointRequest request = new UpdateIndexEndpointRequest
             {
                 IndexEndpoint = new IndexEndpoint(),
@@ -411,10 +452,12 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Network = "networkd22ce091",
+#pragma warning disable CS0612
                 EnablePrivateServiceConnect = false,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.UpdateIndexEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<IndexEndpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null);
+            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null, null);
             IndexEndpoint responseCallSettings = await client.UpdateIndexEndpointAsync(request.IndexEndpoint, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             IndexEndpoint responseCancellationToken = await client.UpdateIndexEndpointAsync(request.IndexEndpoint, request.UpdateMask, st::CancellationToken.None);

@@ -28,7 +28,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "dG8SGmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxGh9nb29nbGUvYXBpL2Zp",
             "ZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3Rv",
             "GjBnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9lbmNyeXB0aW9uX3NwZWMu",
-            "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i6AUKDEZl",
+            "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8igAcKDEZl",
             "YXR1cmVzdG9yZRIRCgRuYW1lGAEgASgJQgPgQQMSNAoLY3JlYXRlX3RpbWUY",
             "AyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBk",
             "YXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
@@ -36,25 +36,28 @@ namespace Google.Cloud.AIPlatform.V1 {
             "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZlYXR1cmVzdG9yZS5MYWJlbHNFbnRy",
             "eUID4EEBEmAKFW9ubGluZV9zZXJ2aW5nX2NvbmZpZxgHIAEoCzI8Lmdvb2ds",
             "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZlYXR1cmVzdG9yZS5PbmxpbmVTZXJ2",
-            "aW5nQ29uZmlnQgPgQQISQgoFc3RhdGUYCCABKA4yLi5nb29nbGUuY2xvdWQu",
+            "aW5nQ29uZmlnQgPgQQESQgoFc3RhdGUYCCABKA4yLi5nb29nbGUuY2xvdWQu",
             "YWlwbGF0Zm9ybS52MS5GZWF0dXJlc3RvcmUuU3RhdGVCA+BBAxJICg9lbmNy",
             "eXB0aW9uX3NwZWMYCiABKAsyKi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
-            "MS5FbmNyeXB0aW9uU3BlY0ID4EEBGi8KE09ubGluZVNlcnZpbmdDb25maWcS",
-            "GAoQZml4ZWRfbm9kZV9jb3VudBgCIAEoBRotCgtMYWJlbHNFbnRyeRILCgNr",
-            "ZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIjgKBVN0YXRlEhUKEVNUQVRF",
-            "X1VOU1BFQ0lGSUVEEAASCgoGU1RBQkxFEAESDAoIVVBEQVRJTkcQAjpx6kFu",
-            "CiZhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0ZlYXR1cmVzdG9yZRJEcHJv",
-            "amVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2ZlYXR1cmVz",
-            "dG9yZXMve2ZlYXR1cmVzdG9yZX1C1QEKHmNvbS5nb29nbGUuY2xvdWQuYWlw",
-            "bGF0Zm9ybS52MUIRRmVhdHVyZXN0b3JlUHJvdG9QAVpEZ29vZ2xlLmdvbGFu",
-            "Zy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9haXBsYXRmb3JtL3Yx",
-            "O2FpcGxhdGZvcm2qAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdv",
-            "b2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQ",
-            "bGF0Zm9ybTo6VjFiBnByb3RvMw=="));
+            "MS5FbmNyeXB0aW9uU3BlY0ID4EEBGsYBChNPbmxpbmVTZXJ2aW5nQ29uZmln",
+            "EhgKEGZpeGVkX25vZGVfY291bnQYAiABKAUSVQoHc2NhbGluZxgEIAEoCzJE",
+            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZlYXR1cmVzdG9yZS5Pbmxp",
+            "bmVTZXJ2aW5nQ29uZmlnLlNjYWxpbmcaPgoHU2NhbGluZxIbCg5taW5fbm9k",
+            "ZV9jb3VudBgBIAEoBUID4EECEhYKDm1heF9ub2RlX2NvdW50GAIgASgFGi0K",
+            "C0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEi",
+            "OAoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIKCgZTVEFCTEUQARIM",
+            "CghVUERBVElORxACOnHqQW4KJmFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20v",
+            "RmVhdHVyZXN0b3JlEkRwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
+            "b2NhdGlvbn0vZmVhdHVyZXN0b3Jlcy97ZmVhdHVyZXN0b3JlfULVAQoeY29t",
+            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQhFGZWF0dXJlc3RvcmVQcm90",
+            "b1ABWkRnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Ns",
+            "b3VkL2FpcGxhdGZvcm0vdjE7YWlwbGF0Zm9ybaoCGkdvb2dsZS5DbG91ZC5B",
+            "SVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1H",
+            "b29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Featurestore), global::Google.Cloud.AIPlatform.V1.Featurestore.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Etag", "Labels", "OnlineServingConfig", "State", "EncryptionSpec" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Featurestore.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Featurestore.Types.OnlineServingConfig), global::Google.Cloud.AIPlatform.V1.Featurestore.Types.OnlineServingConfig.Parser, new[]{ "FixedNodeCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Featurestore), global::Google.Cloud.AIPlatform.V1.Featurestore.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Etag", "Labels", "OnlineServingConfig", "State", "EncryptionSpec" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Featurestore.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Featurestore.Types.OnlineServingConfig), global::Google.Cloud.AIPlatform.V1.Featurestore.Types.OnlineServingConfig.Parser, new[]{ "FixedNodeCount", "Scaling" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Featurestore.Types.OnlineServingConfig.Types.Scaling), global::Google.Cloud.AIPlatform.V1.Featurestore.Types.OnlineServingConfig.Types.Scaling.Parser, new[]{ "MinNodeCount", "MaxNodeCount" }, null, null, null, null)}),
             null, })
           }));
     }
@@ -208,7 +211,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int OnlineServingConfigFieldNumber = 7;
     private global::Google.Cloud.AIPlatform.V1.Featurestore.Types.OnlineServingConfig onlineServingConfig_;
     /// <summary>
-    /// Required. Config for online serving resources.
+    /// Optional. Config for online storage resources. If unset, the featurestore will
+    /// not have an online store and cannot be used for online serving.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -581,7 +585,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// Possible states a Featurestore can have.
+      /// Possible states a featurestore can have.
       /// </summary>
       public enum State {
         /// <summary>
@@ -589,20 +593,22 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// </summary>
         [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// State when the Featurestore configuration is not being updated and the
-        /// fields reflect the current configuration of the Featurestore. The
-        /// Featurestore is usable in this state.
+        /// State when the featurestore configuration is not being updated and the
+        /// fields reflect the current configuration of the featurestore. The
+        /// featurestore is usable in this state.
         /// </summary>
         [pbr::OriginalName("STABLE")] Stable = 1,
         /// <summary>
-        /// State when the Featurestore configuration is being updated and the fields
-        /// reflect the updated configuration of the Featurestore, not the current
-        /// one. For example, `online_serving_config.fixed_node_count` can take
-        /// minutes to update. While the update is in progress, the Featurestore
-        /// will be in the UPDATING state and the value of `fixed_node_count` will be
-        /// the updated value. Until the update completes, the actual number of nodes
-        /// can still be the original value of `fixed_node_count`. The Featurestore
-        /// is still usable in this state.
+        /// The state of the featurestore configuration when it is being updated.
+        /// During an update, the fields reflect either the original configuration
+        /// or the updated configuration of the featurestore. For example,
+        /// `online_serving_config.fixed_node_count` can take minutes to update.
+        /// While the update is in progress, the featurestore is in the UPDATING
+        /// state, and the value of `fixed_node_count` can be the original value or
+        /// the updated value, depending on the progress of the operation. Until the
+        /// update completes, the actual number of nodes can still be the original
+        /// value of `fixed_node_count`. The featurestore is still usable in this
+        /// state.
         /// </summary>
         [pbr::OriginalName("UPDATING")] Updating = 2,
       }
@@ -646,6 +652,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public OnlineServingConfig(OnlineServingConfig other) : this() {
           fixedNodeCount_ = other.fixedNodeCount_;
+          scaling_ = other.scaling_ != null ? other.scaling_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -659,11 +666,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         public const int FixedNodeCountFieldNumber = 2;
         private int fixedNodeCount_;
         /// <summary>
-        /// The number of nodes for each cluster. The number of nodes will not
-        /// scale automatically but can be scaled manually by providing different
-        /// values when updating.
-        /// Only one of `fixed_node_count` and `scaling` can be set. Setting one will
-        /// reset the other.
+        /// The number of nodes for the online store. The number of nodes doesn't
+        /// scale automatically, but you can manually update the number of
+        /// nodes. If set to 0, the featurestore will not have an
+        /// online store and cannot be used for online serving.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -671,6 +677,23 @@ namespace Google.Cloud.AIPlatform.V1 {
           get { return fixedNodeCount_; }
           set {
             fixedNodeCount_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "scaling" field.</summary>
+        public const int ScalingFieldNumber = 4;
+        private global::Google.Cloud.AIPlatform.V1.Featurestore.Types.OnlineServingConfig.Types.Scaling scaling_;
+        /// <summary>
+        /// Online serving scaling configuration.
+        /// Only one of `fixed_node_count` and `scaling` can be set. Setting one will
+        /// reset the other.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1.Featurestore.Types.OnlineServingConfig.Types.Scaling Scaling {
+          get { return scaling_; }
+          set {
+            scaling_ = value;
           }
         }
 
@@ -690,6 +713,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             return true;
           }
           if (FixedNodeCount != other.FixedNodeCount) return false;
+          if (!object.Equals(Scaling, other.Scaling)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -698,6 +722,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         public override int GetHashCode() {
           int hash = 1;
           if (FixedNodeCount != 0) hash ^= FixedNodeCount.GetHashCode();
+          if (scaling_ != null) hash ^= Scaling.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -720,6 +745,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteRawTag(16);
             output.WriteInt32(FixedNodeCount);
           }
+          if (scaling_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(Scaling);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -734,6 +763,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteRawTag(16);
             output.WriteInt32(FixedNodeCount);
           }
+          if (scaling_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(Scaling);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -746,6 +779,9 @@ namespace Google.Cloud.AIPlatform.V1 {
           int size = 0;
           if (FixedNodeCount != 0) {
             size += 1 + pb::CodedOutputStream.ComputeInt32Size(FixedNodeCount);
+          }
+          if (scaling_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Scaling);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -761,6 +797,12 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           if (other.FixedNodeCount != 0) {
             FixedNodeCount = other.FixedNodeCount;
+          }
+          if (other.scaling_ != null) {
+            if (scaling_ == null) {
+              Scaling = new global::Google.Cloud.AIPlatform.V1.Featurestore.Types.OnlineServingConfig.Types.Scaling();
+            }
+            Scaling.MergeFrom(other.Scaling);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -779,6 +821,13 @@ namespace Google.Cloud.AIPlatform.V1 {
                 break;
               case 16: {
                 FixedNodeCount = input.ReadInt32();
+                break;
+              }
+              case 34: {
+                if (scaling_ == null) {
+                  Scaling = new global::Google.Cloud.AIPlatform.V1.Featurestore.Types.OnlineServingConfig.Types.Scaling();
+                }
+                input.ReadMessage(Scaling);
                 break;
               }
             }
@@ -800,10 +849,264 @@ namespace Google.Cloud.AIPlatform.V1 {
                 FixedNodeCount = input.ReadInt32();
                 break;
               }
+              case 34: {
+                if (scaling_ == null) {
+                  Scaling = new global::Google.Cloud.AIPlatform.V1.Featurestore.Types.OnlineServingConfig.Types.Scaling();
+                }
+                input.ReadMessage(Scaling);
+                break;
+              }
             }
           }
         }
         #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the OnlineServingConfig message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Online serving scaling configuration. If min_node_count and
+          /// max_node_count are set to the same value, the cluster will be configured
+          /// with the fixed number of node (no auto-scaling).
+          /// </summary>
+          public sealed partial class Scaling : pb::IMessage<Scaling>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<Scaling> _parser = new pb::MessageParser<Scaling>(() => new Scaling());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<Scaling> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.AIPlatform.V1.Featurestore.Types.OnlineServingConfig.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public Scaling() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public Scaling(Scaling other) : this() {
+              minNodeCount_ = other.minNodeCount_;
+              maxNodeCount_ = other.maxNodeCount_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public Scaling Clone() {
+              return new Scaling(this);
+            }
+
+            /// <summary>Field number for the "min_node_count" field.</summary>
+            public const int MinNodeCountFieldNumber = 1;
+            private int minNodeCount_;
+            /// <summary>
+            /// Required. The minimum number of nodes to scale down to. Must be greater than or
+            /// equal to 1.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int MinNodeCount {
+              get { return minNodeCount_; }
+              set {
+                minNodeCount_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "max_node_count" field.</summary>
+            public const int MaxNodeCountFieldNumber = 2;
+            private int maxNodeCount_;
+            /// <summary>
+            /// The maximum number of nodes to scale up to. Must be greater than
+            /// min_node_count, and less than or equal to 10 times of 'min_node_count'.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int MaxNodeCount {
+              get { return maxNodeCount_; }
+              set {
+                maxNodeCount_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as Scaling);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(Scaling other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (MinNodeCount != other.MinNodeCount) return false;
+              if (MaxNodeCount != other.MaxNodeCount) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (MinNodeCount != 0) hash ^= MinNodeCount.GetHashCode();
+              if (MaxNodeCount != 0) hash ^= MaxNodeCount.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (MinNodeCount != 0) {
+                output.WriteRawTag(8);
+                output.WriteInt32(MinNodeCount);
+              }
+              if (MaxNodeCount != 0) {
+                output.WriteRawTag(16);
+                output.WriteInt32(MaxNodeCount);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (MinNodeCount != 0) {
+                output.WriteRawTag(8);
+                output.WriteInt32(MinNodeCount);
+              }
+              if (MaxNodeCount != 0) {
+                output.WriteRawTag(16);
+                output.WriteInt32(MaxNodeCount);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (MinNodeCount != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeInt32Size(MinNodeCount);
+              }
+              if (MaxNodeCount != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxNodeCount);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(Scaling other) {
+              if (other == null) {
+                return;
+              }
+              if (other.MinNodeCount != 0) {
+                MinNodeCount = other.MinNodeCount;
+              }
+              if (other.MaxNodeCount != 0) {
+                MaxNodeCount = other.MaxNodeCount;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 8: {
+                    MinNodeCount = input.ReadInt32();
+                    break;
+                  }
+                  case 16: {
+                    MaxNodeCount = input.ReadInt32();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 8: {
+                    MinNodeCount = input.ReadInt32();
+                    break;
+                  }
+                  case 16: {
+                    MaxNodeCount = input.ReadInt32();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
 
       }
 

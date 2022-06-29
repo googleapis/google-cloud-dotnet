@@ -14,7 +14,10 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -33,6 +36,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<DatasetService.DatasetServiceClient> mockGrpcClient = new moq::Mock<DatasetService.DatasetServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetDatasetRequest request = new GetDatasetRequest
             {
                 DatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
@@ -58,7 +63,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetDataset(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null);
+            DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null, null);
             Dataset response = client.GetDataset(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -69,6 +74,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<DatasetService.DatasetServiceClient> mockGrpcClient = new moq::Mock<DatasetService.DatasetServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetDatasetRequest request = new GetDatasetRequest
             {
                 DatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
@@ -94,7 +101,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetDatasetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Dataset>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null);
+            DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null, null);
             Dataset responseCallSettings = await client.GetDatasetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Dataset responseCancellationToken = await client.GetDatasetAsync(request, st::CancellationToken.None);
@@ -107,6 +114,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<DatasetService.DatasetServiceClient> mockGrpcClient = new moq::Mock<DatasetService.DatasetServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetDatasetRequest request = new GetDatasetRequest
             {
                 DatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
@@ -131,7 +140,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetDataset(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null);
+            DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null, null);
             Dataset response = client.GetDataset(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -142,6 +151,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<DatasetService.DatasetServiceClient> mockGrpcClient = new moq::Mock<DatasetService.DatasetServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetDatasetRequest request = new GetDatasetRequest
             {
                 DatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
@@ -166,7 +177,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetDatasetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Dataset>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null);
+            DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null, null);
             Dataset responseCallSettings = await client.GetDatasetAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Dataset responseCancellationToken = await client.GetDatasetAsync(request.Name, st::CancellationToken.None);
@@ -179,6 +190,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<DatasetService.DatasetServiceClient> mockGrpcClient = new moq::Mock<DatasetService.DatasetServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetDatasetRequest request = new GetDatasetRequest
             {
                 DatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
@@ -203,7 +216,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetDataset(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null);
+            DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null, null);
             Dataset response = client.GetDataset(request.DatasetName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -214,6 +227,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<DatasetService.DatasetServiceClient> mockGrpcClient = new moq::Mock<DatasetService.DatasetServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetDatasetRequest request = new GetDatasetRequest
             {
                 DatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
@@ -238,7 +253,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetDatasetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Dataset>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null);
+            DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null, null);
             Dataset responseCallSettings = await client.GetDatasetAsync(request.DatasetName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Dataset responseCancellationToken = await client.GetDatasetAsync(request.DatasetName, st::CancellationToken.None);
@@ -251,6 +266,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<DatasetService.DatasetServiceClient> mockGrpcClient = new moq::Mock<DatasetService.DatasetServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateDatasetRequest request = new UpdateDatasetRequest
             {
                 Dataset = new Dataset(),
@@ -276,7 +293,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.UpdateDataset(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null);
+            DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null, null);
             Dataset response = client.UpdateDataset(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -287,6 +304,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<DatasetService.DatasetServiceClient> mockGrpcClient = new moq::Mock<DatasetService.DatasetServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateDatasetRequest request = new UpdateDatasetRequest
             {
                 Dataset = new Dataset(),
@@ -312,7 +331,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.UpdateDatasetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Dataset>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null);
+            DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null, null);
             Dataset responseCallSettings = await client.UpdateDatasetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Dataset responseCancellationToken = await client.UpdateDatasetAsync(request, st::CancellationToken.None);
@@ -325,6 +344,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<DatasetService.DatasetServiceClient> mockGrpcClient = new moq::Mock<DatasetService.DatasetServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateDatasetRequest request = new UpdateDatasetRequest
             {
                 Dataset = new Dataset(),
@@ -350,7 +371,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.UpdateDataset(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null);
+            DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null, null);
             Dataset response = client.UpdateDataset(request.Dataset, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -361,6 +382,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<DatasetService.DatasetServiceClient> mockGrpcClient = new moq::Mock<DatasetService.DatasetServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateDatasetRequest request = new UpdateDatasetRequest
             {
                 Dataset = new Dataset(),
@@ -386,7 +409,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.UpdateDatasetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Dataset>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null);
+            DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null, null);
             Dataset responseCallSettings = await client.UpdateDatasetAsync(request.Dataset, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Dataset responseCancellationToken = await client.UpdateDatasetAsync(request.Dataset, request.UpdateMask, st::CancellationToken.None);
@@ -399,6 +422,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<DatasetService.DatasetServiceClient> mockGrpcClient = new moq::Mock<DatasetService.DatasetServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetAnnotationSpecRequest request = new GetAnnotationSpecRequest
             {
                 AnnotationSpecName = AnnotationSpecName.FromProjectLocationDatasetAnnotationSpec("[PROJECT]", "[LOCATION]", "[DATASET]", "[ANNOTATION_SPEC]"),
@@ -413,7 +438,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetAnnotationSpec(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null);
+            DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null, null);
             AnnotationSpec response = client.GetAnnotationSpec(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -424,6 +449,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<DatasetService.DatasetServiceClient> mockGrpcClient = new moq::Mock<DatasetService.DatasetServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetAnnotationSpecRequest request = new GetAnnotationSpecRequest
             {
                 AnnotationSpecName = AnnotationSpecName.FromProjectLocationDatasetAnnotationSpec("[PROJECT]", "[LOCATION]", "[DATASET]", "[ANNOTATION_SPEC]"),
@@ -438,7 +465,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetAnnotationSpecAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnnotationSpec>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null);
+            DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null, null);
             AnnotationSpec responseCallSettings = await client.GetAnnotationSpecAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AnnotationSpec responseCancellationToken = await client.GetAnnotationSpecAsync(request, st::CancellationToken.None);
@@ -451,6 +478,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<DatasetService.DatasetServiceClient> mockGrpcClient = new moq::Mock<DatasetService.DatasetServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetAnnotationSpecRequest request = new GetAnnotationSpecRequest
             {
                 AnnotationSpecName = AnnotationSpecName.FromProjectLocationDatasetAnnotationSpec("[PROJECT]", "[LOCATION]", "[DATASET]", "[ANNOTATION_SPEC]"),
@@ -464,7 +493,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetAnnotationSpec(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null);
+            DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null, null);
             AnnotationSpec response = client.GetAnnotationSpec(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -475,6 +504,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<DatasetService.DatasetServiceClient> mockGrpcClient = new moq::Mock<DatasetService.DatasetServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetAnnotationSpecRequest request = new GetAnnotationSpecRequest
             {
                 AnnotationSpecName = AnnotationSpecName.FromProjectLocationDatasetAnnotationSpec("[PROJECT]", "[LOCATION]", "[DATASET]", "[ANNOTATION_SPEC]"),
@@ -488,7 +519,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetAnnotationSpecAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnnotationSpec>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null);
+            DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null, null);
             AnnotationSpec responseCallSettings = await client.GetAnnotationSpecAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AnnotationSpec responseCancellationToken = await client.GetAnnotationSpecAsync(request.Name, st::CancellationToken.None);
@@ -501,6 +532,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<DatasetService.DatasetServiceClient> mockGrpcClient = new moq::Mock<DatasetService.DatasetServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetAnnotationSpecRequest request = new GetAnnotationSpecRequest
             {
                 AnnotationSpecName = AnnotationSpecName.FromProjectLocationDatasetAnnotationSpec("[PROJECT]", "[LOCATION]", "[DATASET]", "[ANNOTATION_SPEC]"),
@@ -514,7 +547,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetAnnotationSpec(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null);
+            DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null, null);
             AnnotationSpec response = client.GetAnnotationSpec(request.AnnotationSpecName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -525,6 +558,8 @@ namespace Google.Cloud.AIPlatform.V1.Tests
         {
             moq::Mock<DatasetService.DatasetServiceClient> mockGrpcClient = new moq::Mock<DatasetService.DatasetServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetAnnotationSpecRequest request = new GetAnnotationSpecRequest
             {
                 AnnotationSpecName = AnnotationSpecName.FromProjectLocationDatasetAnnotationSpec("[PROJECT]", "[LOCATION]", "[DATASET]", "[ANNOTATION_SPEC]"),
@@ -538,7 +573,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetAnnotationSpecAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnnotationSpec>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null);
+            DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null, null);
             AnnotationSpec responseCallSettings = await client.GetAnnotationSpecAsync(request.AnnotationSpecName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AnnotationSpec responseCancellationToken = await client.GetAnnotationSpecAsync(request.AnnotationSpecName, st::CancellationToken.None);

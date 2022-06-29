@@ -56,9 +56,6 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public IEnumerable<KeyRange> Ranges { get; }
 
-        private Lazy<V1.KeySet> LazyProtobuf => new Lazy<V1.KeySet>(ToProtobuf);
-        internal V1.KeySet Protobuf => LazyProtobuf.Value;
-
         /// <summary>
         /// Returns a key set that selects all keys in the table or index.
         /// </summary>
@@ -99,15 +96,14 @@ namespace Google.Cloud.Spanner.Data
             Ranges = ranges;
         }
 
-        /// <inheritdoc/>
-        public override bool Equals(object other)
-            => other is KeySet keySet && Protobuf.Equals(keySet.Protobuf);
-
-        /// <inheritdoc/>
-        public override int GetHashCode() => Protobuf.GetHashCode();
-
-        /// <inheritdoc/>
-        public override string ToString()
+        /// <summary>
+        /// Returns the string representation of this KeySet using the type conversion options specified in 
+        /// <see cref="SpannerConnectionStringBuilder"/>. The string representation is only for diagnostic purposes
+        /// and the implementation may change over time.
+        /// </summary>
+        /// <param name="builder">The <see cref="SpannerConnectionStringBuilder"/> instance used to derive default conversion options.</param>
+        /// <returns>A string that represents the current KeySet.</returns>
+        public string ToString(SpannerConnectionStringBuilder builder)
         {
             if (AllKeys)
             {
@@ -117,19 +113,19 @@ namespace Google.Cloud.Spanner.Data
             // The KeySet is a collection of individual keys.
             if (Keys != null)
             {
-                return $"KeySet {{Keys = [{string.Join(", ", Keys)}]}}";
+                return $"KeySet {{Keys = [{string.Join(", ", Keys.Select(key => key.ToString(builder)))}]}}";
             }
 
             // The KeySet is a collection of key ranges.
             if (Ranges != null)
             {
-                return $"KeySet {{Ranges = [{string.Join(", ", Ranges)}]}}";
+                return $"KeySet {{Ranges = [{string.Join(", ", Ranges.Select(range => range.ToString(builder)))}]}}";
             }
 
             throw new InvalidOperationException("Implementation error, we should never have gotten here.");
         }
 
-        private V1.KeySet ToProtobuf()
+        internal V1.KeySet ToProtobuf(SpannerConversionOptions conversionOptions)
         {
             if (AllKeys)
             {
@@ -139,14 +135,14 @@ namespace Google.Cloud.Spanner.Data
             // The KeySet is a collection of individual keys.
             if (Keys != null)
             {
-                var protobufKeys = Keys.Select(k => k.KeyParts);
+                var protobufKeys = Keys.Select(k => k.ToProtobuf(conversionOptions));
                 return new V1.KeySet { Keys = { protobufKeys } };
             }
 
             // The KeySet is a collection of key ranges.
             if (Ranges != null)
             {
-                var protobufRanges = Ranges.Select(r => r.Protobuf);
+                var protobufRanges = Ranges.Select(r => r.ToProtobuf(conversionOptions));
                 return new V1.KeySet { Ranges = { protobufRanges } };
             }
 
@@ -178,9 +174,6 @@ namespace Google.Cloud.Spanner.Data
         /// True if the end of the key range is inclusive, and false if the end is exclusive.
         /// </summary>
         public bool EndInclusive { get; }
-
-        private Lazy<V1.KeyRange> LazyProtobuf => new Lazy<V1.KeyRange>(ToProtobuf);
-        internal V1.KeyRange Protobuf => LazyProtobuf.Value;
 
         /// <summary>
         /// Creates a new KeyRange with an inclusive begin and exclusive end.
@@ -226,45 +219,41 @@ namespace Google.Cloud.Spanner.Data
             EndInclusive = endInclusive;
         }
 
-        /// <inheritdoc/>
-        public override bool Equals(object other)
-            => other is KeyRange range && Protobuf.Equals(range.Protobuf);
+        /// <summary>
+        /// Returns the string representation of this KeyRange using the type conversion options specified in 
+        /// <see cref="SpannerConnectionStringBuilder"/>. The string representation is only for diagnostic purposes
+        /// and the implementation may change over time.
+        /// </summary>
+        /// <param name="builder">The <see cref="SpannerConnectionStringBuilder"/> instance.</param>
+        /// <returns>A string that represents the current KeyRange.</returns>
+        public string ToString(SpannerConnectionStringBuilder builder) =>
+            new StringBuilder()
+                .Append(BeginInclusive ? '[' : '(')
+                .Append(BeginAt.ToString(builder))
+                .Append(", ")
+                .Append(End.ToString(builder))
+                .Append(EndInclusive ? ']' : ')')
+                .ToString();
 
-        /// <inheritdoc/>
-        public override int GetHashCode() => Protobuf.GetHashCode();
-
-        /// <inheritdoc/>
-        public override string ToString()
-        {
-            var builder = new StringBuilder();
-            builder.Append(BeginInclusive ? '[' : '(');
-            builder.Append(BeginAt.KeyParts);
-            builder.Append(", ");
-            builder.Append(End.KeyParts);
-            builder.Append(EndInclusive ? ']' : ')');
-
-            return builder.ToString();
-        }
-
-        private V1.KeyRange ToProtobuf()
+        internal V1.KeyRange ToProtobuf(SpannerConversionOptions options)
         {
             var range = new V1.KeyRange();
             if (BeginInclusive)
             {
-                range.StartClosed = BeginAt.KeyParts;
+                range.StartClosed = BeginAt.ToProtobuf(options);
             }
             else
             {
-                range.StartOpen = BeginAt.KeyParts;
+                range.StartOpen = BeginAt.ToProtobuf(options);
             }
 
             if (EndInclusive)
             {
-                range.EndClosed = End.KeyParts;
+                range.EndClosed = End.ToProtobuf(options);
             }
             else
             {
-                range.EndOpen = End.KeyParts;
+                range.EndOpen = End.ToProtobuf(options);
             }
             return range;
         }
@@ -275,54 +264,49 @@ namespace Google.Cloud.Spanner.Data
     /// </summary>
     public sealed class Key
     {
-        /// <summary>
-        /// The values of this key.
-        /// </summary>
-        internal ListValue KeyParts { get; }
+        internal SpannerParameterCollection Parameters { get; }
 
         /// <summary>
         /// Creates a key from the values in the parameter collection.
+        /// A reference to <paramref name="keyParts"/> is stored in this class so,
+        /// changes to the parameter collection will be visible when the key is used.
         /// </summary>
         /// <param name="keyParts">The values that define the key</param>
         internal Key(SpannerParameterCollection keyParts)
         {
-            KeyParts = ToListValue(keyParts);
+            Parameters = keyParts;
         }
 
         /// <summary>
         /// Creates a key consisting of the given key parts.
         /// </summary>
         /// <param name="keyParts">The values that define the key</param>
-        public Key(params object[] keyParts)
+        public Key(params object[] keyParts) : this(new SpannerParameterCollection(keyParts.Select(keyPart => new SpannerParameter { Value = keyPart })))
         {
-            var protobufValues = keyParts.Select(
-                v => SpannerDbType.FromClrType(v?.GetType())?.ToProtobufValue(v, SpannerConversionOptions.Default) ?? Value.ForNull());
-            KeyParts = new ListValue { Values = { protobufValues } };
         }
 
-        /// <inheritdoc/>
-        public override bool Equals(object other)
-            => other is Key key && KeyParts.Equals(key.KeyParts);
+        /// <summary>
+        /// Returns the string representation of this key using the type conversion options specified in 
+        /// <see cref="SpannerConnectionStringBuilder"/>. The string representation is only for diagnostic purposes
+        /// and the implementation may change over time.
+        /// </summary>
+        /// <param name="builder">The <see cref="SpannerConnectionStringBuilder"/> instance.</param>
+        /// <returns>A string that represents the current key.</returns>
+        public string ToString(SpannerConnectionStringBuilder builder) => ToProtobuf(builder.ConversionOptions).ToString();
 
-        /// <inheritdoc/>
-        public override int GetHashCode() => KeyParts.GetHashCode();
-
-        /// <inheritdoc/>
-        public override string ToString() => KeyParts.ToString();
-
-        private static ListValue ToListValue(SpannerParameterCollection parameters)
-        {
-            // See comment at the top of GetMutations in SpannerCommand.ExecutableCommand.
-            // These options are currently not in use, but are required in the API.
-            SpannerConversionOptions options = null;
-            return new ListValue
+        /// <summary>
+        /// Converts this key to a protobuf value, with default type conversion options as supplied in <paramref name="options" />.
+        /// </summary>
+        /// <param name="options">The options for conversion between protobuf and CLR types.</param>
+        /// <returns>The values of this Key.</returns>
+        internal ListValue ToProtobuf(SpannerConversionOptions options) =>
+            new ListValue
             {
                 Values =
                 {
-                    parameters.Select(
-                        x => x.SpannerDbType.ToProtobufValue(x.GetValidatedValue(), options))
+                    Parameters.Select(
+                        x => x.GetConfiguredSpannerDbType(options).ToProtobufValue(x.GetValidatedValue()))
                 }
             };
-        }
     }
 }

@@ -786,6 +786,189 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UndeleteTable</summary>
+        public void UndeleteTableRequestObject()
+        {
+            // Snippet: UndeleteTable(UndeleteTableRequest, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            UndeleteTableRequest request = new UndeleteTableRequest
+            {
+                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+            };
+            // Make the request
+            Operation<Table, UndeleteTableMetadata> response = bigtableTableAdminClient.UndeleteTable(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Table, UndeleteTableMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Table result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Table, UndeleteTableMetadata> retrievedResponse = bigtableTableAdminClient.PollOnceUndeleteTable(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Table retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UndeleteTableAsync</summary>
+        public async Task UndeleteTableRequestObjectAsync()
+        {
+            // Snippet: UndeleteTableAsync(UndeleteTableRequest, CallSettings)
+            // Additional: UndeleteTableAsync(UndeleteTableRequest, CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            UndeleteTableRequest request = new UndeleteTableRequest
+            {
+                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+            };
+            // Make the request
+            Operation<Table, UndeleteTableMetadata> response = await bigtableTableAdminClient.UndeleteTableAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Table, UndeleteTableMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Table result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Table, UndeleteTableMetadata> retrievedResponse = await bigtableTableAdminClient.PollOnceUndeleteTableAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Table retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UndeleteTable</summary>
+        public void UndeleteTable()
+        {
+            // Snippet: UndeleteTable(string, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
+            // Make the request
+            Operation<Table, UndeleteTableMetadata> response = bigtableTableAdminClient.UndeleteTable(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Table, UndeleteTableMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Table result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Table, UndeleteTableMetadata> retrievedResponse = bigtableTableAdminClient.PollOnceUndeleteTable(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Table retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UndeleteTableAsync</summary>
+        public async Task UndeleteTableAsync()
+        {
+            // Snippet: UndeleteTableAsync(string, CallSettings)
+            // Additional: UndeleteTableAsync(string, CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
+            // Make the request
+            Operation<Table, UndeleteTableMetadata> response = await bigtableTableAdminClient.UndeleteTableAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Table, UndeleteTableMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Table result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Table, UndeleteTableMetadata> retrievedResponse = await bigtableTableAdminClient.PollOnceUndeleteTableAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Table retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UndeleteTable</summary>
+        public void UndeleteTableResourceNames()
+        {
+            // Snippet: UndeleteTable(TableName, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            TableName name = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            // Make the request
+            Operation<Table, UndeleteTableMetadata> response = bigtableTableAdminClient.UndeleteTable(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Table, UndeleteTableMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Table result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Table, UndeleteTableMetadata> retrievedResponse = bigtableTableAdminClient.PollOnceUndeleteTable(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Table retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UndeleteTableAsync</summary>
+        public async Task UndeleteTableResourceNamesAsync()
+        {
+            // Snippet: UndeleteTableAsync(TableName, CallSettings)
+            // Additional: UndeleteTableAsync(TableName, CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            TableName name = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            // Make the request
+            Operation<Table, UndeleteTableMetadata> response = await bigtableTableAdminClient.UndeleteTableAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Table, UndeleteTableMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Table result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Table, UndeleteTableMetadata> retrievedResponse = await bigtableTableAdminClient.PollOnceUndeleteTableAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Table retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for ModifyColumnFamilies</summary>
         public void ModifyColumnFamiliesRequestObject()
         {

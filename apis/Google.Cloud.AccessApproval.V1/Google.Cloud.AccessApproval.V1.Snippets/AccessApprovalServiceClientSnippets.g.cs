@@ -639,6 +639,39 @@ namespace Google.Cloud.AccessApproval.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for InvalidateApprovalRequest</summary>
+        public void InvalidateApprovalRequestRequestObject()
+        {
+            // Snippet: InvalidateApprovalRequest(InvalidateApprovalRequestMessage, CallSettings)
+            // Create client
+            AccessApprovalServiceClient accessApprovalServiceClient = AccessApprovalServiceClient.Create();
+            // Initialize request argument(s)
+            InvalidateApprovalRequestMessage request = new InvalidateApprovalRequestMessage
+            {
+                ApprovalRequestName = ApprovalRequestName.FromProjectApprovalRequest("[PROJECT]", "[APPROVAL_REQUEST]"),
+            };
+            // Make the request
+            ApprovalRequest response = accessApprovalServiceClient.InvalidateApprovalRequest(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for InvalidateApprovalRequestAsync</summary>
+        public async Task InvalidateApprovalRequestRequestObjectAsync()
+        {
+            // Snippet: InvalidateApprovalRequestAsync(InvalidateApprovalRequestMessage, CallSettings)
+            // Additional: InvalidateApprovalRequestAsync(InvalidateApprovalRequestMessage, CancellationToken)
+            // Create client
+            AccessApprovalServiceClient accessApprovalServiceClient = await AccessApprovalServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            InvalidateApprovalRequestMessage request = new InvalidateApprovalRequestMessage
+            {
+                ApprovalRequestName = ApprovalRequestName.FromProjectApprovalRequest("[PROJECT]", "[APPROVAL_REQUEST]"),
+            };
+            // Make the request
+            ApprovalRequest response = await accessApprovalServiceClient.InvalidateApprovalRequestAsync(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for GetAccessApprovalSettings</summary>
         public void GetAccessApprovalSettingsRequestObject()
         {
@@ -874,6 +907,60 @@ namespace Google.Cloud.AccessApproval.V1.Snippets
             AccessApprovalSettingsName name = AccessApprovalSettingsName.FromProject("[PROJECT]");
             // Make the request
             await accessApprovalServiceClient.DeleteAccessApprovalSettingsAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAccessApprovalServiceAccount</summary>
+        public void GetAccessApprovalServiceAccountRequestObject()
+        {
+            // Snippet: GetAccessApprovalServiceAccount(GetAccessApprovalServiceAccountMessage, CallSettings)
+            // Create client
+            AccessApprovalServiceClient accessApprovalServiceClient = AccessApprovalServiceClient.Create();
+            // Initialize request argument(s)
+            GetAccessApprovalServiceAccountMessage request = new GetAccessApprovalServiceAccountMessage { Name = "", };
+            // Make the request
+            AccessApprovalServiceAccount response = accessApprovalServiceClient.GetAccessApprovalServiceAccount(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAccessApprovalServiceAccountAsync</summary>
+        public async Task GetAccessApprovalServiceAccountRequestObjectAsync()
+        {
+            // Snippet: GetAccessApprovalServiceAccountAsync(GetAccessApprovalServiceAccountMessage, CallSettings)
+            // Additional: GetAccessApprovalServiceAccountAsync(GetAccessApprovalServiceAccountMessage, CancellationToken)
+            // Create client
+            AccessApprovalServiceClient accessApprovalServiceClient = await AccessApprovalServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetAccessApprovalServiceAccountMessage request = new GetAccessApprovalServiceAccountMessage { Name = "", };
+            // Make the request
+            AccessApprovalServiceAccount response = await accessApprovalServiceClient.GetAccessApprovalServiceAccountAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAccessApprovalServiceAccount</summary>
+        public void GetAccessApprovalServiceAccount()
+        {
+            // Snippet: GetAccessApprovalServiceAccount(string, CallSettings)
+            // Create client
+            AccessApprovalServiceClient accessApprovalServiceClient = AccessApprovalServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            AccessApprovalServiceAccount response = accessApprovalServiceClient.GetAccessApprovalServiceAccount(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAccessApprovalServiceAccountAsync</summary>
+        public async Task GetAccessApprovalServiceAccountAsync()
+        {
+            // Snippet: GetAccessApprovalServiceAccountAsync(string, CallSettings)
+            // Additional: GetAccessApprovalServiceAccountAsync(string, CancellationToken)
+            // Create client
+            AccessApprovalServiceClient accessApprovalServiceClient = await AccessApprovalServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            AccessApprovalServiceAccount response = await accessApprovalServiceClient.GetAccessApprovalServiceAccountAsync(name);
             // End snippet
         }
     }

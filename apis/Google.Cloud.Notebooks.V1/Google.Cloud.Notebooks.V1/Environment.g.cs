@@ -627,7 +627,7 @@ namespace Google.Cloud.Notebooks.V1 {
     private string project_ = "";
     /// <summary>
     /// Required. The name of the Google Cloud project that this VM image belongs to.
-    /// Format: `projects/{project_id}`
+    /// Format: `{project_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

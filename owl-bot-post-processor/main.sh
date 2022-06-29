@@ -112,7 +112,7 @@ copy_one_api() {
     (cd $PACKAGE_DIR; ./postgeneration.sh)
   fi
 
-  if [[ $(grep -E "^namespace" apis/$1/$1/*.cs | grep -Ev "namespace ${1}[[:space:]{]*\$") ]]; then
+  if [[ $(grep -E "^namespace" apis/$1/$1/*.cs | grep -v "namespace Microsoft.Extensions.DependencyInjection" | grep -Ev "namespace ${1}[[:space:]{]*\$") ]]; then
     # We know Google.LongRunning contains a proto in Google.Cloud.
     if [[ $1 == "Google.LongRunning" ]]; then
       echo "Ignoring broken namespaces in $1"
@@ -122,6 +122,10 @@ copy_one_api() {
     fi
   fi
 }
+
+# Avoid .NET complaining about submodules being missing
+git config --global --add safe.directory /repo
+git submodule update --init --recursive
 
 # Iterate over all the apis in the /owl-bot-staging directory, and copy
 # the files into the /apis directory.

@@ -239,7 +239,7 @@ namespace Google.Cloud.Spanner.Data
             SpannerConversionOptions options)
         {
             FillSpannerInternalValues(valueDictionary, options);
-            FillSpannerInternalTypes(requestParamTypes);
+            FillSpannerInternalTypes(requestParamTypes, options);
         }
 
         /// <summary>
@@ -254,16 +254,16 @@ namespace Google.Cloud.Spanner.Data
             foreach (var parameter in _innerList)
             {
                 valueDictionary[GetCorrectedParameterName(parameter.ParameterName)]
-                    = parameter.SpannerDbType.ToProtobufValue(parameter.GetValidatedValue(), options);
+                    = parameter.GetConfiguredSpannerDbType(options).ToProtobufValue(parameter.GetValidatedValue());
             }
         }
 
-        private void FillSpannerInternalTypes(MapField<string, V1.Type> typeDictionary)
+        private void FillSpannerInternalTypes(MapField<string, V1.Type> typeDictionary, SpannerConversionOptions options)
         {
             foreach (var parameter in _innerList)
             {
                 typeDictionary[GetCorrectedParameterName(parameter.ParameterName)]
-                    = parameter.SpannerDbType.ToProtobufType();
+                    = parameter.GetConfiguredSpannerDbType(options).ToProtobufType();
             }
         }
 

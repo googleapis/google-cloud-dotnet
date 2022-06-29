@@ -32,85 +32,85 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             "ZUluZm8SQAoLc291cmNlX3R5cGUYASABKA4yKy5nb29nbGUuYmlndGFibGUu",
             "YWRtaW4udjIuUmVzdG9yZVNvdXJjZVR5cGUSOwoLYmFja3VwX2luZm8YAiAB",
             "KAsyJC5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuQmFja3VwSW5mb0gAQg0K",
-            "C3NvdXJjZV9pbmZvIt0ICgVUYWJsZRIMCgRuYW1lGAEgASgJEkoKDmNsdXN0",
+            "C3NvdXJjZV9pbmZvIvEICgVUYWJsZRIMCgRuYW1lGAEgASgJEk8KDmNsdXN0",
             "ZXJfc3RhdGVzGAIgAygLMjIuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLlRh",
-            "YmxlLkNsdXN0ZXJTdGF0ZXNFbnRyeRJMCg9jb2x1bW5fZmFtaWxpZXMYAyAD",
-            "KAsyMy5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuVGFibGUuQ29sdW1uRmFt",
-            "aWxpZXNFbnRyeRJJCgtncmFudWxhcml0eRgEIAEoDjI0Lmdvb2dsZS5iaWd0",
-            "YWJsZS5hZG1pbi52Mi5UYWJsZS5UaW1lc3RhbXBHcmFudWxhcml0eRI7Cgxy",
-            "ZXN0b3JlX2luZm8YBiABKAsyJS5nb29nbGUuYmlndGFibGUuYWRtaW4udjIu",
-            "UmVzdG9yZUluZm8awQIKDENsdXN0ZXJTdGF0ZRJYChFyZXBsaWNhdGlvbl9z",
-            "dGF0ZRgBIAEoDjI9Lmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5UYWJsZS5D",
-            "bHVzdGVyU3RhdGUuUmVwbGljYXRpb25TdGF0ZRJGCg9lbmNyeXB0aW9uX2lu",
-            "Zm8YAiADKAsyKC5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuRW5jcnlwdGlv",
-            "bkluZm9CA+BBAyKOAQoQUmVwbGljYXRpb25TdGF0ZRITCg9TVEFURV9OT1Rf",
-            "S05PV04QABIQCgxJTklUSUFMSVpJTkcQARIXChNQTEFOTkVEX01BSU5URU5B",
-            "TkNFEAISGQoVVU5QTEFOTkVEX01BSU5URU5BTkNFEAMSCQoFUkVBRFkQBBIU",
-            "ChBSRUFEWV9PUFRJTUlaSU5HEAUaYgoSQ2x1c3RlclN0YXRlc0VudHJ5EgsK",
-            "A2tleRgBIAEoCRI7CgV2YWx1ZRgCIAEoCzIsLmdvb2dsZS5iaWd0YWJsZS5h",
-            "ZG1pbi52Mi5UYWJsZS5DbHVzdGVyU3RhdGU6AjgBGl0KE0NvbHVtbkZhbWls",
-            "aWVzRW50cnkSCwoDa2V5GAEgASgJEjUKBXZhbHVlGAIgASgLMiYuZ29vZ2xl",
-            "LmJpZ3RhYmxlLmFkbWluLnYyLkNvbHVtbkZhbWlseToCOAEiSQoUVGltZXN0",
-            "YW1wR3JhbnVsYXJpdHkSJQohVElNRVNUQU1QX0dSQU5VTEFSSVRZX1VOU1BF",
-            "Q0lGSUVEEAASCgoGTUlMTElTEAEicQoEVmlldxIUChBWSUVXX1VOU1BFQ0lG",
-            "SUVEEAASDQoJTkFNRV9PTkxZEAESDwoLU0NIRU1BX1ZJRVcQAhIUChBSRVBM",
-            "SUNBVElPTl9WSUVXEAMSEwoPRU5DUllQVElPTl9WSUVXEAUSCAoERlVMTBAE",
-            "Ol/qQVwKImJpZ3RhYmxlYWRtaW4uZ29vZ2xlYXBpcy5jb20vVGFibGUSNnBy",
-            "b2plY3RzL3twcm9qZWN0fS9pbnN0YW5jZXMve2luc3RhbmNlfS90YWJsZXMv",
-            "e3RhYmxlfSJBCgxDb2x1bW5GYW1pbHkSMQoHZ2NfcnVsZRgBIAEoCzIgLmdv",
-            "b2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5HY1J1bGUi1QIKBkdjUnVsZRIaChBt",
-            "YXhfbnVtX3ZlcnNpb25zGAEgASgFSAASLAoHbWF4X2FnZRgCIAEoCzIZLmdv",
-            "b2dsZS5wcm90b2J1Zi5EdXJhdGlvbkgAEkUKDGludGVyc2VjdGlvbhgDIAEo",
-            "CzItLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5HY1J1bGUuSW50ZXJzZWN0",
-            "aW9uSAASNwoFdW5pb24YBCABKAsyJi5nb29nbGUuYmlndGFibGUuYWRtaW4u",
-            "djIuR2NSdWxlLlVuaW9uSAAaPwoMSW50ZXJzZWN0aW9uEi8KBXJ1bGVzGAEg",
-            "AygLMiAuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkdjUnVsZRo4CgVVbmlv",
-            "bhIvCgVydWxlcxgBIAMoCzIgLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5H",
-            "Y1J1bGVCBgoEcnVsZSLZAgoORW5jcnlwdGlvbkluZm8SVQoPZW5jcnlwdGlv",
-            "bl90eXBlGAMgASgOMjcuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkVuY3J5",
-            "cHRpb25JbmZvLkVuY3J5cHRpb25UeXBlQgPgQQMSMgoRZW5jcnlwdGlvbl9z",
-            "dGF0dXMYBCABKAsyEi5nb29nbGUucnBjLlN0YXR1c0ID4EEDEkkKD2ttc19r",
-            "ZXlfdmVyc2lvbhgCIAEoCUIw4EED+kEqCihjbG91ZGttcy5nb29nbGVhcGlz",
-            "LmNvbS9DcnlwdG9LZXlWZXJzaW9uInEKDkVuY3J5cHRpb25UeXBlEh8KG0VO",
-            "Q1JZUFRJT05fVFlQRV9VTlNQRUNJRklFRBAAEh0KGUdPT0dMRV9ERUZBVUxU",
-            "X0VOQ1JZUFRJT04QARIfChtDVVNUT01FUl9NQU5BR0VEX0VOQ1JZUFRJT04Q",
-            "AiLMAwoIU25hcHNob3QSDAoEbmFtZRgBIAEoCRI1Cgxzb3VyY2VfdGFibGUY",
-            "AiABKAsyHy5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuVGFibGUSFwoPZGF0",
-            "YV9zaXplX2J5dGVzGAMgASgDEi8KC2NyZWF0ZV90aW1lGAQgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgtkZWxldGVfdGltZRgFIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASNwoFc3RhdGUYBiABKA4yKC5n",
-            "b29nbGUuYmlndGFibGUuYWRtaW4udjIuU25hcHNob3QuU3RhdGUSEwoLZGVz",
-            "Y3JpcHRpb24YByABKAkiNQoFU3RhdGUSEwoPU1RBVEVfTk9UX0tOT1dOEAAS",
-            "CQoFUkVBRFkQARIMCghDUkVBVElORxACOnvqQXgKJWJpZ3RhYmxlYWRtaW4u",
-            "Z29vZ2xlYXBpcy5jb20vU25hcHNob3QST3Byb2plY3RzL3twcm9qZWN0fS9p",
-            "bnN0YW5jZXMve2luc3RhbmNlfS9jbHVzdGVycy97Y2x1c3Rlcn0vc25hcHNo",
-            "b3RzL3tzbmFwc2hvdH0ipAQKBkJhY2t1cBIRCgRuYW1lGAEgASgJQgPgQQMS",
-            "HAoMc291cmNlX3RhYmxlGAIgASgJQgbgQQXgQQISNAoLZXhwaXJlX3RpbWUY",
-            "AyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQISMwoKc3Rh",
-            "cnRfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
-            "AxIxCghlbmRfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
-            "bXBCA+BBAxIXCgpzaXplX2J5dGVzGAYgASgDQgPgQQMSOgoFc3RhdGUYByAB",
-            "KA4yJi5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuQmFja3VwLlN0YXRlQgPg",
-            "QQMSRgoPZW5jcnlwdGlvbl9pbmZvGAkgASgLMiguZ29vZ2xlLmJpZ3RhYmxl",
-            "LmFkbWluLnYyLkVuY3J5cHRpb25JbmZvQgPgQQMiNwoFU3RhdGUSFQoRU1RB",
-            "VEVfVU5TUEVDSUZJRUQQABIMCghDUkVBVElORxABEgkKBVJFQURZEAI6depB",
-            "cgojYmlndGFibGVhZG1pbi5nb29nbGVhcGlzLmNvbS9CYWNrdXASS3Byb2pl",
-            "Y3RzL3twcm9qZWN0fS9pbnN0YW5jZXMve2luc3RhbmNlfS9jbHVzdGVycy97",
-            "Y2x1c3Rlcn0vYmFja3Vwcy97YmFja3VwfSKkAQoKQmFja3VwSW5mbxITCgZi",
-            "YWNrdXAYASABKAlCA+BBAxIzCgpzdGFydF90aW1lGAIgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjEKCGVuZF90aW1lGAMgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEhkKDHNvdXJjZV90YWJs",
-            "ZRgEIAEoCUID4EEDKkQKEVJlc3RvcmVTb3VyY2VUeXBlEiMKH1JFU1RPUkVf",
-            "U09VUkNFX1RZUEVfVU5TUEVDSUZJRUQQABIKCgZCQUNLVVAQAUL8AgocY29t",
-            "Lmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52MkIKVGFibGVQcm90b1ABWj1nb29n",
-            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2JpZ3RhYmxlL2Fk",
-            "bWluL3YyO2FkbWluqgIeR29vZ2xlLkNsb3VkLkJpZ3RhYmxlLkFkbWluLlYy",
-            "ygIeR29vZ2xlXENsb3VkXEJpZ3RhYmxlXEFkbWluXFYy6gIiR29vZ2xlOjpD",
-            "bG91ZDo6QmlndGFibGU6OkFkbWluOjpWMupBpgEKKGNsb3Vka21zLmdvb2ds",
-            "ZWFwaXMuY29tL0NyeXB0b0tleVZlcnNpb24SenByb2plY3RzL3twcm9qZWN0",
-            "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9rZXlSaW5ncy97a2V5X3Jpbmd9L2Ny",
-            "eXB0b0tleXMve2NyeXB0b19rZXl9L2NyeXB0b0tleVZlcnNpb25zL3tjcnlw",
-            "dG9fa2V5X3ZlcnNpb259YgZwcm90bzM="));
+            "YmxlLkNsdXN0ZXJTdGF0ZXNFbnRyeUID4EEDEkwKD2NvbHVtbl9mYW1pbGll",
+            "cxgDIAMoCzIzLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5UYWJsZS5Db2x1",
+            "bW5GYW1pbGllc0VudHJ5Ek4KC2dyYW51bGFyaXR5GAQgASgOMjQuZ29vZ2xl",
+            "LmJpZ3RhYmxlLmFkbWluLnYyLlRhYmxlLlRpbWVzdGFtcEdyYW51bGFyaXR5",
+            "QgPgQQUSQAoMcmVzdG9yZV9pbmZvGAYgASgLMiUuZ29vZ2xlLmJpZ3RhYmxl",
+            "LmFkbWluLnYyLlJlc3RvcmVJbmZvQgPgQQMaxgIKDENsdXN0ZXJTdGF0ZRJd",
+            "ChFyZXBsaWNhdGlvbl9zdGF0ZRgBIAEoDjI9Lmdvb2dsZS5iaWd0YWJsZS5h",
+            "ZG1pbi52Mi5UYWJsZS5DbHVzdGVyU3RhdGUuUmVwbGljYXRpb25TdGF0ZUID",
+            "4EEDEkYKD2VuY3J5cHRpb25faW5mbxgCIAMoCzIoLmdvb2dsZS5iaWd0YWJs",
+            "ZS5hZG1pbi52Mi5FbmNyeXB0aW9uSW5mb0ID4EEDIo4BChBSZXBsaWNhdGlv",
+            "blN0YXRlEhMKD1NUQVRFX05PVF9LTk9XThAAEhAKDElOSVRJQUxJWklORxAB",
+            "EhcKE1BMQU5ORURfTUFJTlRFTkFOQ0UQAhIZChVVTlBMQU5ORURfTUFJTlRF",
+            "TkFOQ0UQAxIJCgVSRUFEWRAEEhQKEFJFQURZX09QVElNSVpJTkcQBRpiChJD",
+            "bHVzdGVyU3RhdGVzRW50cnkSCwoDa2V5GAEgASgJEjsKBXZhbHVlGAIgASgL",
+            "MiwuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLlRhYmxlLkNsdXN0ZXJTdGF0",
+            "ZToCOAEaXQoTQ29sdW1uRmFtaWxpZXNFbnRyeRILCgNrZXkYASABKAkSNQoF",
+            "dmFsdWUYAiABKAsyJi5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuQ29sdW1u",
+            "RmFtaWx5OgI4ASJJChRUaW1lc3RhbXBHcmFudWxhcml0eRIlCiFUSU1FU1RB",
+            "TVBfR1JBTlVMQVJJVFlfVU5TUEVDSUZJRUQQABIKCgZNSUxMSVMQASJxCgRW",
+            "aWV3EhQKEFZJRVdfVU5TUEVDSUZJRUQQABINCglOQU1FX09OTFkQARIPCgtT",
+            "Q0hFTUFfVklFVxACEhQKEFJFUExJQ0FUSU9OX1ZJRVcQAxITCg9FTkNSWVBU",
+            "SU9OX1ZJRVcQBRIICgRGVUxMEAQ6X+pBXAoiYmlndGFibGVhZG1pbi5nb29n",
+            "bGVhcGlzLmNvbS9UYWJsZRI2cHJvamVjdHMve3Byb2plY3R9L2luc3RhbmNl",
+            "cy97aW5zdGFuY2V9L3RhYmxlcy97dGFibGV9IkEKDENvbHVtbkZhbWlseRIx",
+            "CgdnY19ydWxlGAEgASgLMiAuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkdj",
+            "UnVsZSLVAgoGR2NSdWxlEhoKEG1heF9udW1fdmVyc2lvbnMYASABKAVIABIs",
+            "CgdtYXhfYWdlGAIgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uSAAS",
+            "RQoMaW50ZXJzZWN0aW9uGAMgASgLMi0uZ29vZ2xlLmJpZ3RhYmxlLmFkbWlu",
+            "LnYyLkdjUnVsZS5JbnRlcnNlY3Rpb25IABI3CgV1bmlvbhgEIAEoCzImLmdv",
+            "b2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5HY1J1bGUuVW5pb25IABo/CgxJbnRl",
+            "cnNlY3Rpb24SLwoFcnVsZXMYASADKAsyIC5nb29nbGUuYmlndGFibGUuYWRt",
+            "aW4udjIuR2NSdWxlGjgKBVVuaW9uEi8KBXJ1bGVzGAEgAygLMiAuZ29vZ2xl",
+            "LmJpZ3RhYmxlLmFkbWluLnYyLkdjUnVsZUIGCgRydWxlItkCCg5FbmNyeXB0",
+            "aW9uSW5mbxJVCg9lbmNyeXB0aW9uX3R5cGUYAyABKA4yNy5nb29nbGUuYmln",
+            "dGFibGUuYWRtaW4udjIuRW5jcnlwdGlvbkluZm8uRW5jcnlwdGlvblR5cGVC",
+            "A+BBAxIyChFlbmNyeXB0aW9uX3N0YXR1cxgEIAEoCzISLmdvb2dsZS5ycGMu",
+            "U3RhdHVzQgPgQQMSSQoPa21zX2tleV92ZXJzaW9uGAIgASgJQjDgQQP6QSoK",
+            "KGNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tleVZlcnNpb24icQoO",
+            "RW5jcnlwdGlvblR5cGUSHwobRU5DUllQVElPTl9UWVBFX1VOU1BFQ0lGSUVE",
+            "EAASHQoZR09PR0xFX0RFRkFVTFRfRU5DUllQVElPThABEh8KG0NVU1RPTUVS",
+            "X01BTkFHRURfRU5DUllQVElPThACIswDCghTbmFwc2hvdBIMCgRuYW1lGAEg",
+            "ASgJEjUKDHNvdXJjZV90YWJsZRgCIAEoCzIfLmdvb2dsZS5iaWd0YWJsZS5h",
+            "ZG1pbi52Mi5UYWJsZRIXCg9kYXRhX3NpemVfYnl0ZXMYAyABKAMSLwoLY3Jl",
+            "YXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8K",
+            "C2RlbGV0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cBI3CgVzdGF0ZRgGIAEoDjIoLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5T",
+            "bmFwc2hvdC5TdGF0ZRITCgtkZXNjcmlwdGlvbhgHIAEoCSI1CgVTdGF0ZRIT",
+            "Cg9TVEFURV9OT1RfS05PV04QABIJCgVSRUFEWRABEgwKCENSRUFUSU5HEAI6",
+            "e+pBeAolYmlndGFibGVhZG1pbi5nb29nbGVhcGlzLmNvbS9TbmFwc2hvdBJP",
+            "cHJvamVjdHMve3Byb2plY3R9L2luc3RhbmNlcy97aW5zdGFuY2V9L2NsdXN0",
+            "ZXJzL3tjbHVzdGVyfS9zbmFwc2hvdHMve3NuYXBzaG90fSKfBAoGQmFja3Vw",
+            "EgwKBG5hbWUYASABKAkSHAoMc291cmNlX3RhYmxlGAIgASgJQgbgQQXgQQIS",
+            "NAoLZXhwaXJlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wQgPgQQISMwoKc3RhcnRfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXBCA+BBAxIxCghlbmRfdGltZRgFIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIXCgpzaXplX2J5dGVzGAYgASgDQgPg",
+            "QQMSOgoFc3RhdGUYByABKA4yJi5nb29nbGUuYmlndGFibGUuYWRtaW4udjIu",
+            "QmFja3VwLlN0YXRlQgPgQQMSRgoPZW5jcnlwdGlvbl9pbmZvGAkgASgLMigu",
+            "Z29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkVuY3J5cHRpb25JbmZvQgPgQQMi",
+            "NwoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIMCghDUkVBVElORxAB",
+            "EgkKBVJFQURZEAI6depBcgojYmlndGFibGVhZG1pbi5nb29nbGVhcGlzLmNv",
+            "bS9CYWNrdXASS3Byb2plY3RzL3twcm9qZWN0fS9pbnN0YW5jZXMve2luc3Rh",
+            "bmNlfS9jbHVzdGVycy97Y2x1c3Rlcn0vYmFja3Vwcy97YmFja3VwfSKkAQoK",
+            "QmFja3VwSW5mbxITCgZiYWNrdXAYASABKAlCA+BBAxIzCgpzdGFydF90aW1l",
+            "GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjEKCGVu",
+            "ZF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EED",
+            "EhkKDHNvdXJjZV90YWJsZRgEIAEoCUID4EEDKkQKEVJlc3RvcmVTb3VyY2VU",
+            "eXBlEiMKH1JFU1RPUkVfU09VUkNFX1RZUEVfVU5TUEVDSUZJRUQQABIKCgZC",
+            "QUNLVVAQAUL8AgocY29tLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52MkIKVGFi",
+            "bGVQcm90b1ABWj1nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVh",
+            "cGlzL2JpZ3RhYmxlL2FkbWluL3YyO2FkbWluqgIeR29vZ2xlLkNsb3VkLkJp",
+            "Z3RhYmxlLkFkbWluLlYyygIeR29vZ2xlXENsb3VkXEJpZ3RhYmxlXEFkbWlu",
+            "XFYy6gIiR29vZ2xlOjpDbG91ZDo6QmlndGFibGU6OkFkbWluOjpWMupBpgEK",
+            "KGNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tleVZlcnNpb24SenBy",
+            "b2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9rZXlSaW5n",
+            "cy97a2V5X3Jpbmd9L2NyeXB0b0tleXMve2NyeXB0b19rZXl9L2NyeXB0b0tl",
+            "eVZlcnNpb25zL3tjcnlwdG9fa2V5X3ZlcnNpb259YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Bigtable.Admin.V2.RestoreSourceType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -519,7 +519,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         = new pbc::MapField<string, global::Google.Cloud.Bigtable.Admin.V2.ColumnFamily>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Bigtable.Admin.V2.ColumnFamily.Parser), 26);
     private readonly pbc::MapField<string, global::Google.Cloud.Bigtable.Admin.V2.ColumnFamily> columnFamilies_ = new pbc::MapField<string, global::Google.Cloud.Bigtable.Admin.V2.ColumnFamily>();
     /// <summary>
-    /// (`CreationOnly`)
     /// The column families configured for this table, mapped by column family ID.
     /// Views: `SCHEMA_VIEW`, `FULL`
     /// </summary>
@@ -533,9 +532,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int GranularityFieldNumber = 4;
     private global::Google.Cloud.Bigtable.Admin.V2.Table.Types.TimestampGranularity granularity_ = global::Google.Cloud.Bigtable.Admin.V2.Table.Types.TimestampGranularity.Unspecified;
     /// <summary>
-    /// (`CreationOnly`)
-    /// The granularity (i.e. `MILLIS`) at which timestamps are stored in
-    /// this table. Timestamps not matching the granularity will be rejected.
+    /// Immutable. The granularity (i.e. `MILLIS`) at which timestamps are stored in this
+    /// table. Timestamps not matching the granularity will be rejected.
     /// If unspecified at creation time, the value will be set to `MILLIS`.
     /// Views: `SCHEMA_VIEW`, `FULL`.
     /// </summary>
@@ -552,8 +550,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int RestoreInfoFieldNumber = 6;
     private global::Google.Cloud.Bigtable.Admin.V2.RestoreInfo restoreInfo_;
     /// <summary>
-    /// Output only. If this table was restored from another data source (e.g. a
-    /// backup), this field will be populated with information about the restore.
+    /// Output only. If this table was restored from another data source (e.g. a backup), this
+    /// field will be populated with information about the restore.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -823,7 +821,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         /// </summary>
         [pbr::OriginalName("REPLICATION_VIEW")] ReplicationView = 3,
         /// <summary>
-        /// Only populates 'name' and fields related to the table's encryption state.
+        /// Only populates `name` and fields related to the table's encryption state.
         /// </summary>
         [pbr::OriginalName("ENCRYPTION_VIEW")] EncryptionView = 5,
         /// <summary>
@@ -2162,9 +2160,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int EncryptionStatusFieldNumber = 4;
     private global::Google.Rpc.Status encryptionStatus_;
     /// <summary>
-    /// Output only. The status of encrypt/decrypt calls on underlying data for
-    /// this resource. Regardless of status, the existing data is always encrypted
-    /// at rest.
+    /// Output only. The status of encrypt/decrypt calls on underlying data for this resource.
+    /// Regardless of status, the existing data is always encrypted at rest.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2179,8 +2176,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int KmsKeyVersionFieldNumber = 2;
     private string kmsKeyVersion_ = "";
     /// <summary>
-    /// Output only. The version of the Cloud KMS key specified in the parent
-    /// cluster that is in use for the data underlying this table.
+    /// Output only. The version of the Cloud KMS key specified in the parent cluster that is
+    /// in use for the data underlying this table.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2976,7 +2973,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. A globally unique identifier for the backup which cannot be
+    /// A globally unique identifier for the backup which cannot be
     /// changed. Values are of the form
     /// `projects/{project}/instances/{instance}/clusters/{cluster}/
     ///    backups/[_a-zA-Z0-9][-_.a-zA-Z0-9]*`
@@ -3000,8 +2997,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int SourceTableFieldNumber = 2;
     private string sourceTable_ = "";
     /// <summary>
-    /// Required. Immutable. Name of the table from which this backup was created.
-    /// This needs to be in the same instance as the backup. Values are of the form
+    /// Required. Immutable. Name of the table from which this backup was created. This needs
+    /// to be in the same instance as the backup. Values are of the form
     /// `projects/{project}/instances/{instance}/tables/{source_table}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3038,9 +3035,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     /// <summary>
     /// Output only. `start_time` is the time that the backup was started
     /// (i.e. approximately the time the
-    /// [CreateBackup][google.bigtable.admin.v2.BigtableTableAdmin.CreateBackup]
-    /// request is received).  The row data in this backup will be no older than
-    /// this timestamp.
+    /// [CreateBackup][google.bigtable.admin.v2.BigtableTableAdmin.CreateBackup] request is received).  The
+    /// row data in this backup will be no older than this timestamp.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

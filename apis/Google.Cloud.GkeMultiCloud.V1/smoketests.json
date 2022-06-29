@@ -1,0 +1,26 @@
+[
+  {
+    "endpoint": "us-west1-gkemulticloud.googleapis.com",
+    "method": "ListAwsClusters",
+    "client": "AwsClustersClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-west1"
+    }
+  },
+  {
+    "endpoint": "us-west1-gkemulticloud.googleapis.com",
+    "method": "ListAzureClients",
+    "client": "AzureClustersClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-west1"
+    }
+  },
+  {
+    "endpoint": "us-west1-gkemulticloud.googleapis.com",
+    "method": "ListAzureClusters",
+    "client": "AzureClustersClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-west1"
+    }
+  }
+]

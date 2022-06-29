@@ -97,9 +97,12 @@ namespace Google.Cloud.Spanner.Data.Ycsb
 
         protected virtual void InitializeSettings()
         {
+#if NET462
+            // Grpc.Core configuration
             GrpcEnvironment.SetCompletionQueueCount(GetOption<int>(NumWorker));
             GrpcEnvironment.SetThreadPoolSize(GetOption<int>(NumWorker));
             GrpcEnvironment.SetHandlerInlining(GetOptionWithDefault(GrpcInline, false));
+#endif
             AppDomain.CurrentDomain.UnhandledException += (sender, eventArgs) =>
             {
                 Console.Error.WriteLine($"ERROR {eventArgs.ExceptionObject.ToString()}");

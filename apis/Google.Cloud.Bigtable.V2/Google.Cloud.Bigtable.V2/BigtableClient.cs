@@ -14,13 +14,14 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gcbcv = Google.Cloud.Bigtable.Common.V2;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -316,7 +317,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual PingAndWarmResponse PingAndWarm(InstanceName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual PingAndWarmResponse PingAndWarm(gcbcv::InstanceName name, gaxgrpc::CallSettings callSettings = null) =>
             PingAndWarm(new PingAndWarmRequest
             {
                 InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -332,7 +333,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<PingAndWarmResponse> PingAndWarmAsync(InstanceName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<PingAndWarmResponse> PingAndWarmAsync(gcbcv::InstanceName name, gaxgrpc::CallSettings callSettings = null) =>
             PingAndWarmAsync(new PingAndWarmRequest
             {
                 InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -348,7 +349,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<PingAndWarmResponse> PingAndWarmAsync(InstanceName name, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<PingAndWarmResponse> PingAndWarmAsync(gcbcv::InstanceName name, st::CancellationToken cancellationToken) =>
             PingAndWarmAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -424,7 +425,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual PingAndWarmResponse PingAndWarm(InstanceName name, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual PingAndWarmResponse PingAndWarm(gcbcv::InstanceName name, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
             PingAndWarm(new PingAndWarmRequest
             {
                 InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -445,7 +446,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<PingAndWarmResponse> PingAndWarmAsync(InstanceName name, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<PingAndWarmResponse> PingAndWarmAsync(gcbcv::InstanceName name, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
             PingAndWarmAsync(new PingAndWarmRequest
             {
                 InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -466,7 +467,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<PingAndWarmResponse> PingAndWarmAsync(InstanceName name, string appProfileId, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<PingAndWarmResponse> PingAndWarmAsync(gcbcv::InstanceName name, string appProfileId, st::CancellationToken cancellationToken) =>
             PingAndWarmAsync(name, appProfileId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>

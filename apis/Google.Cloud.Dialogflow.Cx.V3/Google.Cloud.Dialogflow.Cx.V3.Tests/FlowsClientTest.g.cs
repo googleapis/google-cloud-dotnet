@@ -14,7 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -33,6 +35,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Flows.FlowsClient> mockGrpcClient = new moq::Mock<Flows.FlowsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateFlowRequest request = new CreateFlowRequest
             {
                 ParentAsAgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
@@ -56,7 +59,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateFlow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
+            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null, null);
             Flow response = client.CreateFlow(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -67,6 +70,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Flows.FlowsClient> mockGrpcClient = new moq::Mock<Flows.FlowsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateFlowRequest request = new CreateFlowRequest
             {
                 ParentAsAgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
@@ -90,7 +94,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateFlowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Flow>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
+            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null, null);
             Flow responseCallSettings = await client.CreateFlowAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Flow responseCancellationToken = await client.CreateFlowAsync(request, st::CancellationToken.None);
@@ -103,6 +107,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Flows.FlowsClient> mockGrpcClient = new moq::Mock<Flows.FlowsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateFlowRequest request = new CreateFlowRequest
             {
                 ParentAsAgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
@@ -125,7 +130,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateFlow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
+            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null, null);
             Flow response = client.CreateFlow(request.Parent, request.Flow);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -136,6 +141,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Flows.FlowsClient> mockGrpcClient = new moq::Mock<Flows.FlowsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateFlowRequest request = new CreateFlowRequest
             {
                 ParentAsAgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
@@ -158,7 +164,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateFlowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Flow>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
+            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null, null);
             Flow responseCallSettings = await client.CreateFlowAsync(request.Parent, request.Flow, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Flow responseCancellationToken = await client.CreateFlowAsync(request.Parent, request.Flow, st::CancellationToken.None);
@@ -171,6 +177,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Flows.FlowsClient> mockGrpcClient = new moq::Mock<Flows.FlowsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateFlowRequest request = new CreateFlowRequest
             {
                 ParentAsAgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
@@ -193,7 +200,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateFlow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
+            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null, null);
             Flow response = client.CreateFlow(request.ParentAsAgentName, request.Flow);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -204,6 +211,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Flows.FlowsClient> mockGrpcClient = new moq::Mock<Flows.FlowsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateFlowRequest request = new CreateFlowRequest
             {
                 ParentAsAgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
@@ -226,7 +234,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateFlowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Flow>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
+            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null, null);
             Flow responseCallSettings = await client.CreateFlowAsync(request.ParentAsAgentName, request.Flow, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Flow responseCancellationToken = await client.CreateFlowAsync(request.ParentAsAgentName, request.Flow, st::CancellationToken.None);
@@ -239,6 +247,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Flows.FlowsClient> mockGrpcClient = new moq::Mock<Flows.FlowsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteFlowRequest request = new DeleteFlowRequest
             {
                 FlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
@@ -246,7 +255,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteFlow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
+            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteFlow(request);
             mockGrpcClient.VerifyAll();
         }
@@ -256,6 +265,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Flows.FlowsClient> mockGrpcClient = new moq::Mock<Flows.FlowsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteFlowRequest request = new DeleteFlowRequest
             {
                 FlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
@@ -263,7 +273,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteFlowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
+            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteFlowAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteFlowAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -274,13 +284,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Flows.FlowsClient> mockGrpcClient = new moq::Mock<Flows.FlowsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteFlowRequest request = new DeleteFlowRequest
             {
                 FlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteFlow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
+            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteFlow(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -290,13 +301,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Flows.FlowsClient> mockGrpcClient = new moq::Mock<Flows.FlowsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteFlowRequest request = new DeleteFlowRequest
             {
                 FlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteFlowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
+            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteFlowAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteFlowAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -307,13 +319,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Flows.FlowsClient> mockGrpcClient = new moq::Mock<Flows.FlowsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteFlowRequest request = new DeleteFlowRequest
             {
                 FlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteFlow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
+            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteFlow(request.FlowName);
             mockGrpcClient.VerifyAll();
         }
@@ -323,13 +336,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Flows.FlowsClient> mockGrpcClient = new moq::Mock<Flows.FlowsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteFlowRequest request = new DeleteFlowRequest
             {
                 FlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteFlowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
+            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteFlowAsync(request.FlowName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteFlowAsync(request.FlowName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -340,6 +354,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Flows.FlowsClient> mockGrpcClient = new moq::Mock<Flows.FlowsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetFlowRequest request = new GetFlowRequest
             {
                 FlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
@@ -362,7 +377,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetFlow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
+            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null, null);
             Flow response = client.GetFlow(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -373,6 +388,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Flows.FlowsClient> mockGrpcClient = new moq::Mock<Flows.FlowsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetFlowRequest request = new GetFlowRequest
             {
                 FlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
@@ -395,7 +411,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetFlowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Flow>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
+            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null, null);
             Flow responseCallSettings = await client.GetFlowAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Flow responseCancellationToken = await client.GetFlowAsync(request, st::CancellationToken.None);
@@ -408,6 +424,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Flows.FlowsClient> mockGrpcClient = new moq::Mock<Flows.FlowsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetFlowRequest request = new GetFlowRequest
             {
                 FlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
@@ -429,7 +446,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetFlow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
+            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null, null);
             Flow response = client.GetFlow(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -440,6 +457,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Flows.FlowsClient> mockGrpcClient = new moq::Mock<Flows.FlowsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetFlowRequest request = new GetFlowRequest
             {
                 FlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
@@ -461,7 +479,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetFlowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Flow>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
+            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null, null);
             Flow responseCallSettings = await client.GetFlowAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Flow responseCancellationToken = await client.GetFlowAsync(request.Name, st::CancellationToken.None);
@@ -474,6 +492,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Flows.FlowsClient> mockGrpcClient = new moq::Mock<Flows.FlowsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetFlowRequest request = new GetFlowRequest
             {
                 FlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
@@ -495,7 +514,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetFlow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
+            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null, null);
             Flow response = client.GetFlow(request.FlowName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -506,6 +525,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Flows.FlowsClient> mockGrpcClient = new moq::Mock<Flows.FlowsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetFlowRequest request = new GetFlowRequest
             {
                 FlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
@@ -527,7 +547,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetFlowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Flow>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
+            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null, null);
             Flow responseCallSettings = await client.GetFlowAsync(request.FlowName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Flow responseCancellationToken = await client.GetFlowAsync(request.FlowName, st::CancellationToken.None);
@@ -540,6 +560,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Flows.FlowsClient> mockGrpcClient = new moq::Mock<Flows.FlowsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateFlowRequest request = new UpdateFlowRequest
             {
                 Flow = new Flow(),
@@ -563,7 +584,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateFlow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
+            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null, null);
             Flow response = client.UpdateFlow(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -574,6 +595,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Flows.FlowsClient> mockGrpcClient = new moq::Mock<Flows.FlowsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateFlowRequest request = new UpdateFlowRequest
             {
                 Flow = new Flow(),
@@ -597,7 +619,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateFlowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Flow>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
+            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null, null);
             Flow responseCallSettings = await client.UpdateFlowAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Flow responseCancellationToken = await client.UpdateFlowAsync(request, st::CancellationToken.None);
@@ -610,6 +632,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Flows.FlowsClient> mockGrpcClient = new moq::Mock<Flows.FlowsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateFlowRequest request = new UpdateFlowRequest
             {
                 Flow = new Flow(),
@@ -632,7 +655,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateFlow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
+            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null, null);
             Flow response = client.UpdateFlow(request.Flow, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -643,6 +666,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Flows.FlowsClient> mockGrpcClient = new moq::Mock<Flows.FlowsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateFlowRequest request = new UpdateFlowRequest
             {
                 Flow = new Flow(),
@@ -665,7 +689,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateFlowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Flow>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
+            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null, null);
             Flow responseCallSettings = await client.UpdateFlowAsync(request.Flow, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Flow responseCancellationToken = await client.UpdateFlowAsync(request.Flow, request.UpdateMask, st::CancellationToken.None);
@@ -678,6 +702,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Flows.FlowsClient> mockGrpcClient = new moq::Mock<Flows.FlowsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             ValidateFlowRequest request = new ValidateFlowRequest
             {
                 FlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
@@ -693,7 +718,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.ValidateFlow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
+            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null, null);
             FlowValidationResult response = client.ValidateFlow(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -704,6 +729,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Flows.FlowsClient> mockGrpcClient = new moq::Mock<Flows.FlowsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             ValidateFlowRequest request = new ValidateFlowRequest
             {
                 FlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
@@ -719,7 +745,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.ValidateFlowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FlowValidationResult>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
+            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null, null);
             FlowValidationResult responseCallSettings = await client.ValidateFlowAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             FlowValidationResult responseCancellationToken = await client.ValidateFlowAsync(request, st::CancellationToken.None);
@@ -732,6 +758,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Flows.FlowsClient> mockGrpcClient = new moq::Mock<Flows.FlowsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetFlowValidationResultRequest request = new GetFlowValidationResultRequest
             {
                 FlowValidationResultName = FlowValidationResultName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
@@ -747,7 +774,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetFlowValidationResult(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
+            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null, null);
             FlowValidationResult response = client.GetFlowValidationResult(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -758,6 +785,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Flows.FlowsClient> mockGrpcClient = new moq::Mock<Flows.FlowsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetFlowValidationResultRequest request = new GetFlowValidationResultRequest
             {
                 FlowValidationResultName = FlowValidationResultName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
@@ -773,7 +801,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetFlowValidationResultAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FlowValidationResult>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
+            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null, null);
             FlowValidationResult responseCallSettings = await client.GetFlowValidationResultAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             FlowValidationResult responseCancellationToken = await client.GetFlowValidationResultAsync(request, st::CancellationToken.None);
@@ -786,6 +814,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Flows.FlowsClient> mockGrpcClient = new moq::Mock<Flows.FlowsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetFlowValidationResultRequest request = new GetFlowValidationResultRequest
             {
                 FlowValidationResultName = FlowValidationResultName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
@@ -800,7 +829,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetFlowValidationResult(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
+            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null, null);
             FlowValidationResult response = client.GetFlowValidationResult(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -811,6 +840,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Flows.FlowsClient> mockGrpcClient = new moq::Mock<Flows.FlowsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetFlowValidationResultRequest request = new GetFlowValidationResultRequest
             {
                 FlowValidationResultName = FlowValidationResultName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
@@ -825,7 +855,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetFlowValidationResultAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FlowValidationResult>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
+            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null, null);
             FlowValidationResult responseCallSettings = await client.GetFlowValidationResultAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             FlowValidationResult responseCancellationToken = await client.GetFlowValidationResultAsync(request.Name, st::CancellationToken.None);
@@ -838,6 +868,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Flows.FlowsClient> mockGrpcClient = new moq::Mock<Flows.FlowsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetFlowValidationResultRequest request = new GetFlowValidationResultRequest
             {
                 FlowValidationResultName = FlowValidationResultName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
@@ -852,7 +883,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetFlowValidationResult(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
+            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null, null);
             FlowValidationResult response = client.GetFlowValidationResult(request.FlowValidationResultName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -863,6 +894,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         {
             moq::Mock<Flows.FlowsClient> mockGrpcClient = new moq::Mock<Flows.FlowsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetFlowValidationResultRequest request = new GetFlowValidationResultRequest
             {
                 FlowValidationResultName = FlowValidationResultName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
@@ -877,7 +909,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetFlowValidationResultAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FlowValidationResult>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
+            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null, null);
             FlowValidationResult responseCallSettings = await client.GetFlowValidationResultAsync(request.FlowValidationResultName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             FlowValidationResult responseCancellationToken = await client.GetFlowValidationResultAsync(request.FlowValidationResultName, st::CancellationToken.None);

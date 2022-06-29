@@ -14,14 +14,15 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -424,9 +425,8 @@ namespace Google.Cloud.Retail.V2
         public ProductServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public ProductServiceClientBuilder()
+        public ProductServiceClientBuilder() : base(ProductServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = ProductServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref ProductServiceClient client);
@@ -453,29 +453,18 @@ namespace Google.Cloud.Retail.V2
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ProductServiceClient.Create(callInvoker, Settings);
+            return ProductServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<ProductServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ProductServiceClient.Create(callInvoker, Settings);
+            return ProductServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => ProductServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => ProductServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => ProductServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>ProductService client wrapper, for convenient use.</summary>
@@ -503,19 +492,10 @@ namespace Google.Cloud.Retail.V2
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(ProductService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="ProductServiceClient"/> using the default credentials, endpoint and
@@ -542,8 +522,9 @@ namespace Google.Cloud.Retail.V2
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="ProductServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="ProductServiceClient"/>.</returns>
-        internal static ProductServiceClient Create(grpccore::CallInvoker callInvoker, ProductServiceSettings settings = null)
+        internal static ProductServiceClient Create(grpccore::CallInvoker callInvoker, ProductServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -552,7 +533,7 @@ namespace Google.Cloud.Retail.V2
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             ProductService.ProductServiceClient grpcClient = new ProductService.ProductServiceClient(callInvoker);
-            return new ProductServiceClientImpl(grpcClient, settings);
+            return new ProductServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1161,6 +1142,11 @@ namespace Google.Cloud.Retail.V2
         /// 
         /// If an unsupported or unknown field is provided, an INVALID_ARGUMENT error
         /// is returned.
+        /// 
+        /// The attribute key can be updated by setting the mask path as
+        /// "attributes.${key_name}". If a key name is present in the mask but not in
+        /// the patching product from the request, this key will be deleted after the
+        /// update.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1194,6 +1180,11 @@ namespace Google.Cloud.Retail.V2
         /// 
         /// If an unsupported or unknown field is provided, an INVALID_ARGUMENT error
         /// is returned.
+        /// 
+        /// The attribute key can be updated by setting the mask path as
+        /// "attributes.${key_name}". If a key name is present in the mask but not in
+        /// the patching product from the request, this key will be deleted after the
+        /// update.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1227,6 +1218,11 @@ namespace Google.Cloud.Retail.V2
         /// 
         /// If an unsupported or unknown field is provided, an INVALID_ARGUMENT error
         /// is returned.
+        /// 
+        /// The attribute key can be updated by setting the mask path as
+        /// "attributes.${key_name}". If a key name is present in the mask but not in
+        /// the patching product from the request, this key will be deleted after the
+        /// update.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1461,7 +1457,7 @@ namespace Google.Cloud.Retail.V2
         /// <summary>
         /// Bulk import of multiple [Product][google.cloud.retail.v2.Product]s.
         /// 
-        /// Request processing may be synchronous. No partial updating is supported.
+        /// Request processing may be synchronous.
         /// Non-existing items are created.
         /// 
         /// Note that it is possible for a subset of the
@@ -1476,7 +1472,7 @@ namespace Google.Cloud.Retail.V2
         /// <summary>
         /// Bulk import of multiple [Product][google.cloud.retail.v2.Product]s.
         /// 
-        /// Request processing may be synchronous. No partial updating is supported.
+        /// Request processing may be synchronous.
         /// Non-existing items are created.
         /// 
         /// Note that it is possible for a subset of the
@@ -1491,7 +1487,7 @@ namespace Google.Cloud.Retail.V2
         /// <summary>
         /// Bulk import of multiple [Product][google.cloud.retail.v2.Product]s.
         /// 
-        /// Request processing may be synchronous. No partial updating is supported.
+        /// Request processing may be synchronous.
         /// Non-existing items are created.
         /// 
         /// Note that it is possible for a subset of the
@@ -1564,7 +1560,7 @@ namespace Google.Cloud.Retail.V2
         /// 
         /// Pre-existing inventory information can only be updated with
         /// [SetInventory][google.cloud.retail.v2.ProductService.SetInventory],
-        /// [AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces],
+        /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces],
         /// and
         /// [RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
         /// 
@@ -1612,7 +1608,7 @@ namespace Google.Cloud.Retail.V2
         /// 
         /// Pre-existing inventory information can only be updated with
         /// [SetInventory][google.cloud.retail.v2.ProductService.SetInventory],
-        /// [AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces],
+        /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces],
         /// and
         /// [RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
         /// 
@@ -1660,7 +1656,7 @@ namespace Google.Cloud.Retail.V2
         /// 
         /// Pre-existing inventory information can only be updated with
         /// [SetInventory][google.cloud.retail.v2.ProductService.SetInventory],
-        /// [AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces],
+        /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces],
         /// and
         /// [RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
         /// 
@@ -1734,7 +1730,7 @@ namespace Google.Cloud.Retail.V2
         /// 
         /// Pre-existing inventory information can only be updated with
         /// [SetInventory][google.cloud.retail.v2.ProductService.SetInventory],
-        /// [AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces],
+        /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces],
         /// and
         /// [RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
         /// 
@@ -1849,7 +1845,7 @@ namespace Google.Cloud.Retail.V2
         /// 
         /// Pre-existing inventory information can only be updated with
         /// [SetInventory][google.cloud.retail.v2.ProductService.SetInventory],
-        /// [AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces],
+        /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces],
         /// and
         /// [RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
         /// 
@@ -1964,7 +1960,7 @@ namespace Google.Cloud.Retail.V2
         /// 
         /// Pre-existing inventory information can only be updated with
         /// [SetInventory][google.cloud.retail.v2.ProductService.SetInventory],
-        /// [AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces],
+        /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces],
         /// and
         /// [RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
         /// 
@@ -3305,48 +3301,49 @@ namespace Google.Cloud.Retail.V2
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="ProductServiceSettings"/> used within this client.</param>
-        public ProductServiceClientImpl(ProductService.ProductServiceClient grpcClient, ProductServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public ProductServiceClientImpl(ProductService.ProductServiceClient grpcClient, ProductServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             ProductServiceSettings effectiveSettings = settings ?? ProductServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            ImportProductsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportProductsOperationsSettings);
-            SetInventoryOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SetInventoryOperationsSettings);
-            AddFulfillmentPlacesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AddFulfillmentPlacesOperationsSettings);
-            RemoveFulfillmentPlacesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RemoveFulfillmentPlacesOperationsSettings);
-            AddLocalInventoriesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AddLocalInventoriesOperationsSettings);
-            RemoveLocalInventoriesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RemoveLocalInventoriesOperationsSettings);
-            _callCreateProduct = clientHelper.BuildApiCall<CreateProductRequest, Product>(grpcClient.CreateProductAsync, grpcClient.CreateProduct, effectiveSettings.CreateProductSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            ImportProductsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportProductsOperationsSettings, logger);
+            SetInventoryOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SetInventoryOperationsSettings, logger);
+            AddFulfillmentPlacesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AddFulfillmentPlacesOperationsSettings, logger);
+            RemoveFulfillmentPlacesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RemoveFulfillmentPlacesOperationsSettings, logger);
+            AddLocalInventoriesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AddLocalInventoriesOperationsSettings, logger);
+            RemoveLocalInventoriesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RemoveLocalInventoriesOperationsSettings, logger);
+            _callCreateProduct = clientHelper.BuildApiCall<CreateProductRequest, Product>("CreateProduct", grpcClient.CreateProductAsync, grpcClient.CreateProduct, effectiveSettings.CreateProductSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateProduct);
             Modify_CreateProductApiCall(ref _callCreateProduct);
-            _callGetProduct = clientHelper.BuildApiCall<GetProductRequest, Product>(grpcClient.GetProductAsync, grpcClient.GetProduct, effectiveSettings.GetProductSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetProduct = clientHelper.BuildApiCall<GetProductRequest, Product>("GetProduct", grpcClient.GetProductAsync, grpcClient.GetProduct, effectiveSettings.GetProductSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetProduct);
             Modify_GetProductApiCall(ref _callGetProduct);
-            _callListProducts = clientHelper.BuildApiCall<ListProductsRequest, ListProductsResponse>(grpcClient.ListProductsAsync, grpcClient.ListProducts, effectiveSettings.ListProductsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListProducts = clientHelper.BuildApiCall<ListProductsRequest, ListProductsResponse>("ListProducts", grpcClient.ListProductsAsync, grpcClient.ListProducts, effectiveSettings.ListProductsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListProducts);
             Modify_ListProductsApiCall(ref _callListProducts);
-            _callUpdateProduct = clientHelper.BuildApiCall<UpdateProductRequest, Product>(grpcClient.UpdateProductAsync, grpcClient.UpdateProduct, effectiveSettings.UpdateProductSettings).WithGoogleRequestParam("product.name", request => request.Product?.Name);
+            _callUpdateProduct = clientHelper.BuildApiCall<UpdateProductRequest, Product>("UpdateProduct", grpcClient.UpdateProductAsync, grpcClient.UpdateProduct, effectiveSettings.UpdateProductSettings).WithGoogleRequestParam("product.name", request => request.Product?.Name);
             Modify_ApiCall(ref _callUpdateProduct);
             Modify_UpdateProductApiCall(ref _callUpdateProduct);
-            _callDeleteProduct = clientHelper.BuildApiCall<DeleteProductRequest, wkt::Empty>(grpcClient.DeleteProductAsync, grpcClient.DeleteProduct, effectiveSettings.DeleteProductSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteProduct = clientHelper.BuildApiCall<DeleteProductRequest, wkt::Empty>("DeleteProduct", grpcClient.DeleteProductAsync, grpcClient.DeleteProduct, effectiveSettings.DeleteProductSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteProduct);
             Modify_DeleteProductApiCall(ref _callDeleteProduct);
-            _callImportProducts = clientHelper.BuildApiCall<ImportProductsRequest, lro::Operation>(grpcClient.ImportProductsAsync, grpcClient.ImportProducts, effectiveSettings.ImportProductsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callImportProducts = clientHelper.BuildApiCall<ImportProductsRequest, lro::Operation>("ImportProducts", grpcClient.ImportProductsAsync, grpcClient.ImportProducts, effectiveSettings.ImportProductsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callImportProducts);
             Modify_ImportProductsApiCall(ref _callImportProducts);
-            _callSetInventory = clientHelper.BuildApiCall<SetInventoryRequest, lro::Operation>(grpcClient.SetInventoryAsync, grpcClient.SetInventory, effectiveSettings.SetInventorySettings).WithGoogleRequestParam("inventory.name", request => request.Inventory?.Name);
+            _callSetInventory = clientHelper.BuildApiCall<SetInventoryRequest, lro::Operation>("SetInventory", grpcClient.SetInventoryAsync, grpcClient.SetInventory, effectiveSettings.SetInventorySettings).WithGoogleRequestParam("inventory.name", request => request.Inventory?.Name);
             Modify_ApiCall(ref _callSetInventory);
             Modify_SetInventoryApiCall(ref _callSetInventory);
-            _callAddFulfillmentPlaces = clientHelper.BuildApiCall<AddFulfillmentPlacesRequest, lro::Operation>(grpcClient.AddFulfillmentPlacesAsync, grpcClient.AddFulfillmentPlaces, effectiveSettings.AddFulfillmentPlacesSettings).WithGoogleRequestParam("product", request => request.Product);
+            _callAddFulfillmentPlaces = clientHelper.BuildApiCall<AddFulfillmentPlacesRequest, lro::Operation>("AddFulfillmentPlaces", grpcClient.AddFulfillmentPlacesAsync, grpcClient.AddFulfillmentPlaces, effectiveSettings.AddFulfillmentPlacesSettings).WithGoogleRequestParam("product", request => request.Product);
             Modify_ApiCall(ref _callAddFulfillmentPlaces);
             Modify_AddFulfillmentPlacesApiCall(ref _callAddFulfillmentPlaces);
-            _callRemoveFulfillmentPlaces = clientHelper.BuildApiCall<RemoveFulfillmentPlacesRequest, lro::Operation>(grpcClient.RemoveFulfillmentPlacesAsync, grpcClient.RemoveFulfillmentPlaces, effectiveSettings.RemoveFulfillmentPlacesSettings).WithGoogleRequestParam("product", request => request.Product);
+            _callRemoveFulfillmentPlaces = clientHelper.BuildApiCall<RemoveFulfillmentPlacesRequest, lro::Operation>("RemoveFulfillmentPlaces", grpcClient.RemoveFulfillmentPlacesAsync, grpcClient.RemoveFulfillmentPlaces, effectiveSettings.RemoveFulfillmentPlacesSettings).WithGoogleRequestParam("product", request => request.Product);
             Modify_ApiCall(ref _callRemoveFulfillmentPlaces);
             Modify_RemoveFulfillmentPlacesApiCall(ref _callRemoveFulfillmentPlaces);
-            _callAddLocalInventories = clientHelper.BuildApiCall<AddLocalInventoriesRequest, lro::Operation>(grpcClient.AddLocalInventoriesAsync, grpcClient.AddLocalInventories, effectiveSettings.AddLocalInventoriesSettings).WithGoogleRequestParam("product", request => request.Product);
+            _callAddLocalInventories = clientHelper.BuildApiCall<AddLocalInventoriesRequest, lro::Operation>("AddLocalInventories", grpcClient.AddLocalInventoriesAsync, grpcClient.AddLocalInventories, effectiveSettings.AddLocalInventoriesSettings).WithGoogleRequestParam("product", request => request.Product);
             Modify_ApiCall(ref _callAddLocalInventories);
             Modify_AddLocalInventoriesApiCall(ref _callAddLocalInventories);
-            _callRemoveLocalInventories = clientHelper.BuildApiCall<RemoveLocalInventoriesRequest, lro::Operation>(grpcClient.RemoveLocalInventoriesAsync, grpcClient.RemoveLocalInventories, effectiveSettings.RemoveLocalInventoriesSettings).WithGoogleRequestParam("product", request => request.Product);
+            _callRemoveLocalInventories = clientHelper.BuildApiCall<RemoveLocalInventoriesRequest, lro::Operation>("RemoveLocalInventories", grpcClient.RemoveLocalInventoriesAsync, grpcClient.RemoveLocalInventories, effectiveSettings.RemoveLocalInventoriesSettings).WithGoogleRequestParam("product", request => request.Product);
             Modify_ApiCall(ref _callRemoveLocalInventories);
             Modify_RemoveLocalInventoriesApiCall(ref _callRemoveLocalInventories);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
@@ -3529,7 +3526,7 @@ namespace Google.Cloud.Retail.V2
         /// <summary>
         /// Bulk import of multiple [Product][google.cloud.retail.v2.Product]s.
         /// 
-        /// Request processing may be synchronous. No partial updating is supported.
+        /// Request processing may be synchronous.
         /// Non-existing items are created.
         /// 
         /// Note that it is possible for a subset of the
@@ -3547,7 +3544,7 @@ namespace Google.Cloud.Retail.V2
         /// <summary>
         /// Bulk import of multiple [Product][google.cloud.retail.v2.Product]s.
         /// 
-        /// Request processing may be synchronous. No partial updating is supported.
+        /// Request processing may be synchronous.
         /// Non-existing items are created.
         /// 
         /// Note that it is possible for a subset of the
@@ -3600,7 +3597,7 @@ namespace Google.Cloud.Retail.V2
         /// 
         /// Pre-existing inventory information can only be updated with
         /// [SetInventory][google.cloud.retail.v2.ProductService.SetInventory],
-        /// [AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces],
+        /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces],
         /// and
         /// [RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
         /// 
@@ -3651,7 +3648,7 @@ namespace Google.Cloud.Retail.V2
         /// 
         /// Pre-existing inventory information can only be updated with
         /// [SetInventory][google.cloud.retail.v2.ProductService.SetInventory],
-        /// [AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces],
+        /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces],
         /// and
         /// [RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
         /// 

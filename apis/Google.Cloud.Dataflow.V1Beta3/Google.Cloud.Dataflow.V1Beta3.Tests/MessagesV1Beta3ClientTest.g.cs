@@ -14,6 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace Google.Cloud.Dataflow.V1Beta3.Tests
 {
     /// <summary>Generated unit tests.</summary>

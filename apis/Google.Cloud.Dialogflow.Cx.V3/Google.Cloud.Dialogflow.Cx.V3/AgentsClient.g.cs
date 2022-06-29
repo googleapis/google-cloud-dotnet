@@ -14,15 +14,17 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -58,6 +60,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             RestoreAgentOperationsSettings = existing.RestoreAgentOperationsSettings.Clone();
             ValidateAgentSettings = existing.ValidateAgentSettings;
             GetAgentValidationResultSettings = existing.GetAgentValidationResultSettings;
+            LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
 
@@ -261,6 +264,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </remarks>
         public gaxgrpc::CallSettings GetAgentValidationResultSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="AgentsSettings"/> object.</returns>
         public AgentsSettings Clone() => new AgentsSettings(this);
@@ -275,9 +283,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         public AgentsSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public AgentsClientBuilder()
+        public AgentsClientBuilder() : base(AgentsClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = AgentsClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref AgentsClient client);
@@ -304,29 +311,18 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return AgentsClient.Create(callInvoker, Settings);
+            return AgentsClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<AgentsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return AgentsClient.Create(callInvoker, Settings);
+            return AgentsClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => AgentsClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => AgentsClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => AgentsClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>Agents client wrapper, for convenient use.</summary>
@@ -355,19 +351,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             "https://www.googleapis.com/auth/dialogflow",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Agents.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="AgentsClient"/> using the default credentials, endpoint and settings. To
@@ -394,8 +381,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="AgentsSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="AgentsClient"/>.</returns>
-        internal static AgentsClient Create(grpccore::CallInvoker callInvoker, AgentsSettings settings = null)
+        internal static AgentsClient Create(grpccore::CallInvoker callInvoker, AgentsSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -404,7 +392,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             Agents.AgentsClient grpcClient = new Agents.AgentsClient(callInvoker);
-            return new AgentsClientImpl(grpcClient, settings);
+            return new AgentsClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -422,6 +410,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>The underlying gRPC Agents client</summary>
         public virtual Agents.AgentsClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Returns the list of all agents in the specified location.
@@ -1403,38 +1394,40 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="AgentsSettings"/> used within this client.</param>
-        public AgentsClientImpl(Agents.AgentsClient grpcClient, AgentsSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public AgentsClientImpl(Agents.AgentsClient grpcClient, AgentsSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             AgentsSettings effectiveSettings = settings ?? AgentsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            ExportAgentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportAgentOperationsSettings);
-            RestoreAgentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RestoreAgentOperationsSettings);
-            _callListAgents = clientHelper.BuildApiCall<ListAgentsRequest, ListAgentsResponse>(grpcClient.ListAgentsAsync, grpcClient.ListAgents, effectiveSettings.ListAgentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            ExportAgentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportAgentOperationsSettings, logger);
+            RestoreAgentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RestoreAgentOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
+            _callListAgents = clientHelper.BuildApiCall<ListAgentsRequest, ListAgentsResponse>("ListAgents", grpcClient.ListAgentsAsync, grpcClient.ListAgents, effectiveSettings.ListAgentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListAgents);
             Modify_ListAgentsApiCall(ref _callListAgents);
-            _callGetAgent = clientHelper.BuildApiCall<GetAgentRequest, Agent>(grpcClient.GetAgentAsync, grpcClient.GetAgent, effectiveSettings.GetAgentSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetAgent = clientHelper.BuildApiCall<GetAgentRequest, Agent>("GetAgent", grpcClient.GetAgentAsync, grpcClient.GetAgent, effectiveSettings.GetAgentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetAgent);
             Modify_GetAgentApiCall(ref _callGetAgent);
-            _callCreateAgent = clientHelper.BuildApiCall<CreateAgentRequest, Agent>(grpcClient.CreateAgentAsync, grpcClient.CreateAgent, effectiveSettings.CreateAgentSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateAgent = clientHelper.BuildApiCall<CreateAgentRequest, Agent>("CreateAgent", grpcClient.CreateAgentAsync, grpcClient.CreateAgent, effectiveSettings.CreateAgentSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateAgent);
             Modify_CreateAgentApiCall(ref _callCreateAgent);
-            _callUpdateAgent = clientHelper.BuildApiCall<UpdateAgentRequest, Agent>(grpcClient.UpdateAgentAsync, grpcClient.UpdateAgent, effectiveSettings.UpdateAgentSettings).WithGoogleRequestParam("agent.name", request => request.Agent?.Name);
+            _callUpdateAgent = clientHelper.BuildApiCall<UpdateAgentRequest, Agent>("UpdateAgent", grpcClient.UpdateAgentAsync, grpcClient.UpdateAgent, effectiveSettings.UpdateAgentSettings).WithGoogleRequestParam("agent.name", request => request.Agent?.Name);
             Modify_ApiCall(ref _callUpdateAgent);
             Modify_UpdateAgentApiCall(ref _callUpdateAgent);
-            _callDeleteAgent = clientHelper.BuildApiCall<DeleteAgentRequest, wkt::Empty>(grpcClient.DeleteAgentAsync, grpcClient.DeleteAgent, effectiveSettings.DeleteAgentSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteAgent = clientHelper.BuildApiCall<DeleteAgentRequest, wkt::Empty>("DeleteAgent", grpcClient.DeleteAgentAsync, grpcClient.DeleteAgent, effectiveSettings.DeleteAgentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteAgent);
             Modify_DeleteAgentApiCall(ref _callDeleteAgent);
-            _callExportAgent = clientHelper.BuildApiCall<ExportAgentRequest, lro::Operation>(grpcClient.ExportAgentAsync, grpcClient.ExportAgent, effectiveSettings.ExportAgentSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callExportAgent = clientHelper.BuildApiCall<ExportAgentRequest, lro::Operation>("ExportAgent", grpcClient.ExportAgentAsync, grpcClient.ExportAgent, effectiveSettings.ExportAgentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callExportAgent);
             Modify_ExportAgentApiCall(ref _callExportAgent);
-            _callRestoreAgent = clientHelper.BuildApiCall<RestoreAgentRequest, lro::Operation>(grpcClient.RestoreAgentAsync, grpcClient.RestoreAgent, effectiveSettings.RestoreAgentSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callRestoreAgent = clientHelper.BuildApiCall<RestoreAgentRequest, lro::Operation>("RestoreAgent", grpcClient.RestoreAgentAsync, grpcClient.RestoreAgent, effectiveSettings.RestoreAgentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callRestoreAgent);
             Modify_RestoreAgentApiCall(ref _callRestoreAgent);
-            _callValidateAgent = clientHelper.BuildApiCall<ValidateAgentRequest, AgentValidationResult>(grpcClient.ValidateAgentAsync, grpcClient.ValidateAgent, effectiveSettings.ValidateAgentSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callValidateAgent = clientHelper.BuildApiCall<ValidateAgentRequest, AgentValidationResult>("ValidateAgent", grpcClient.ValidateAgentAsync, grpcClient.ValidateAgent, effectiveSettings.ValidateAgentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callValidateAgent);
             Modify_ValidateAgentApiCall(ref _callValidateAgent);
-            _callGetAgentValidationResult = clientHelper.BuildApiCall<GetAgentValidationResultRequest, AgentValidationResult>(grpcClient.GetAgentValidationResultAsync, grpcClient.GetAgentValidationResult, effectiveSettings.GetAgentValidationResultSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetAgentValidationResult = clientHelper.BuildApiCall<GetAgentValidationResultRequest, AgentValidationResult>("GetAgentValidationResult", grpcClient.GetAgentValidationResultAsync, grpcClient.GetAgentValidationResult, effectiveSettings.GetAgentValidationResultSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetAgentValidationResult);
             Modify_GetAgentValidationResultApiCall(ref _callGetAgentValidationResult);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
@@ -1464,6 +1457,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>The underlying gRPC Agents client</summary>
         public override Agents.AgentsClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
 
         partial void Modify_ListAgentsRequest(ref ListAgentsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1799,6 +1795,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class Agents
+    {
+        public partial class AgentsClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
         }
     }
 }

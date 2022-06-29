@@ -14,8 +14,10 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using gcl = Google.Cloud.Location;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -32,6 +34,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void CreateSecuritySettingsRequestObject()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateSecuritySettingsRequest request = new CreateSecuritySettingsRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -49,11 +52,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplateAsInspectTemplateName = InspectTemplateName.FromOrganizationLocationInspectTemplate("[ORGANIZATION]", "[LOCATION]", "[INSPECT_TEMPLATE]"),
+                AudioExportSettings = new SecuritySettings.Types.AudioExportSettings(),
                 InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
             mockGrpcClient.Setup(x => x.CreateSecuritySettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             SecuritySettings response = client.CreateSecuritySettings(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -63,6 +67,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task CreateSecuritySettingsRequestObjectAsync()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateSecuritySettingsRequest request = new CreateSecuritySettingsRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -80,11 +85,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplateAsInspectTemplateName = InspectTemplateName.FromOrganizationLocationInspectTemplate("[ORGANIZATION]", "[LOCATION]", "[INSPECT_TEMPLATE]"),
+                AudioExportSettings = new SecuritySettings.Types.AudioExportSettings(),
                 InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
             mockGrpcClient.Setup(x => x.CreateSecuritySettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecuritySettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             SecuritySettings responseCallSettings = await client.CreateSecuritySettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecuritySettings responseCancellationToken = await client.CreateSecuritySettingsAsync(request, st::CancellationToken.None);
@@ -96,6 +102,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void CreateSecuritySettings()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateSecuritySettingsRequest request = new CreateSecuritySettingsRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -113,11 +120,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplateAsInspectTemplateName = InspectTemplateName.FromOrganizationLocationInspectTemplate("[ORGANIZATION]", "[LOCATION]", "[INSPECT_TEMPLATE]"),
+                AudioExportSettings = new SecuritySettings.Types.AudioExportSettings(),
                 InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
             mockGrpcClient.Setup(x => x.CreateSecuritySettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             SecuritySettings response = client.CreateSecuritySettings(request.Parent, request.SecuritySettings);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -127,6 +135,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task CreateSecuritySettingsAsync()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateSecuritySettingsRequest request = new CreateSecuritySettingsRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -144,11 +153,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplateAsInspectTemplateName = InspectTemplateName.FromOrganizationLocationInspectTemplate("[ORGANIZATION]", "[LOCATION]", "[INSPECT_TEMPLATE]"),
+                AudioExportSettings = new SecuritySettings.Types.AudioExportSettings(),
                 InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
             mockGrpcClient.Setup(x => x.CreateSecuritySettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecuritySettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             SecuritySettings responseCallSettings = await client.CreateSecuritySettingsAsync(request.Parent, request.SecuritySettings, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecuritySettings responseCancellationToken = await client.CreateSecuritySettingsAsync(request.Parent, request.SecuritySettings, st::CancellationToken.None);
@@ -160,6 +170,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void CreateSecuritySettingsResourceNames()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateSecuritySettingsRequest request = new CreateSecuritySettingsRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -177,11 +188,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplateAsInspectTemplateName = InspectTemplateName.FromOrganizationLocationInspectTemplate("[ORGANIZATION]", "[LOCATION]", "[INSPECT_TEMPLATE]"),
+                AudioExportSettings = new SecuritySettings.Types.AudioExportSettings(),
                 InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
             mockGrpcClient.Setup(x => x.CreateSecuritySettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             SecuritySettings response = client.CreateSecuritySettings(request.ParentAsLocationName, request.SecuritySettings);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -191,6 +203,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task CreateSecuritySettingsResourceNamesAsync()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateSecuritySettingsRequest request = new CreateSecuritySettingsRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -208,11 +221,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplateAsInspectTemplateName = InspectTemplateName.FromOrganizationLocationInspectTemplate("[ORGANIZATION]", "[LOCATION]", "[INSPECT_TEMPLATE]"),
+                AudioExportSettings = new SecuritySettings.Types.AudioExportSettings(),
                 InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
             mockGrpcClient.Setup(x => x.CreateSecuritySettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecuritySettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             SecuritySettings responseCallSettings = await client.CreateSecuritySettingsAsync(request.ParentAsLocationName, request.SecuritySettings, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecuritySettings responseCancellationToken = await client.CreateSecuritySettingsAsync(request.ParentAsLocationName, request.SecuritySettings, st::CancellationToken.None);
@@ -224,6 +238,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void GetSecuritySettingsRequestObject()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetSecuritySettingsRequest request = new GetSecuritySettingsRequest
             {
                 SecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
@@ -240,11 +255,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplateAsInspectTemplateName = InspectTemplateName.FromOrganizationLocationInspectTemplate("[ORGANIZATION]", "[LOCATION]", "[INSPECT_TEMPLATE]"),
+                AudioExportSettings = new SecuritySettings.Types.AudioExportSettings(),
                 InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
             mockGrpcClient.Setup(x => x.GetSecuritySettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             SecuritySettings response = client.GetSecuritySettings(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -254,6 +270,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task GetSecuritySettingsRequestObjectAsync()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetSecuritySettingsRequest request = new GetSecuritySettingsRequest
             {
                 SecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
@@ -270,11 +287,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplateAsInspectTemplateName = InspectTemplateName.FromOrganizationLocationInspectTemplate("[ORGANIZATION]", "[LOCATION]", "[INSPECT_TEMPLATE]"),
+                AudioExportSettings = new SecuritySettings.Types.AudioExportSettings(),
                 InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
             mockGrpcClient.Setup(x => x.GetSecuritySettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecuritySettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             SecuritySettings responseCallSettings = await client.GetSecuritySettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecuritySettings responseCancellationToken = await client.GetSecuritySettingsAsync(request, st::CancellationToken.None);
@@ -286,6 +304,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void GetSecuritySettings()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetSecuritySettingsRequest request = new GetSecuritySettingsRequest
             {
                 SecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
@@ -302,11 +321,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplateAsInspectTemplateName = InspectTemplateName.FromOrganizationLocationInspectTemplate("[ORGANIZATION]", "[LOCATION]", "[INSPECT_TEMPLATE]"),
+                AudioExportSettings = new SecuritySettings.Types.AudioExportSettings(),
                 InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
             mockGrpcClient.Setup(x => x.GetSecuritySettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             SecuritySettings response = client.GetSecuritySettings(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -316,6 +336,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task GetSecuritySettingsAsync()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetSecuritySettingsRequest request = new GetSecuritySettingsRequest
             {
                 SecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
@@ -332,11 +353,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplateAsInspectTemplateName = InspectTemplateName.FromOrganizationLocationInspectTemplate("[ORGANIZATION]", "[LOCATION]", "[INSPECT_TEMPLATE]"),
+                AudioExportSettings = new SecuritySettings.Types.AudioExportSettings(),
                 InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
             mockGrpcClient.Setup(x => x.GetSecuritySettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecuritySettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             SecuritySettings responseCallSettings = await client.GetSecuritySettingsAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecuritySettings responseCancellationToken = await client.GetSecuritySettingsAsync(request.Name, st::CancellationToken.None);
@@ -348,6 +370,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void GetSecuritySettingsResourceNames()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetSecuritySettingsRequest request = new GetSecuritySettingsRequest
             {
                 SecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
@@ -364,11 +387,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplateAsInspectTemplateName = InspectTemplateName.FromOrganizationLocationInspectTemplate("[ORGANIZATION]", "[LOCATION]", "[INSPECT_TEMPLATE]"),
+                AudioExportSettings = new SecuritySettings.Types.AudioExportSettings(),
                 InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
             mockGrpcClient.Setup(x => x.GetSecuritySettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             SecuritySettings response = client.GetSecuritySettings(request.SecuritySettingsName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -378,6 +402,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task GetSecuritySettingsResourceNamesAsync()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetSecuritySettingsRequest request = new GetSecuritySettingsRequest
             {
                 SecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
@@ -394,11 +419,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplateAsInspectTemplateName = InspectTemplateName.FromOrganizationLocationInspectTemplate("[ORGANIZATION]", "[LOCATION]", "[INSPECT_TEMPLATE]"),
+                AudioExportSettings = new SecuritySettings.Types.AudioExportSettings(),
                 InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
             mockGrpcClient.Setup(x => x.GetSecuritySettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecuritySettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             SecuritySettings responseCallSettings = await client.GetSecuritySettingsAsync(request.SecuritySettingsName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecuritySettings responseCancellationToken = await client.GetSecuritySettingsAsync(request.SecuritySettingsName, st::CancellationToken.None);
@@ -410,6 +436,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void UpdateSecuritySettingsRequestObject()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateSecuritySettingsRequest request = new UpdateSecuritySettingsRequest
             {
                 SecuritySettings = new SecuritySettings(),
@@ -427,11 +454,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplateAsInspectTemplateName = InspectTemplateName.FromOrganizationLocationInspectTemplate("[ORGANIZATION]", "[LOCATION]", "[INSPECT_TEMPLATE]"),
+                AudioExportSettings = new SecuritySettings.Types.AudioExportSettings(),
                 InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
             mockGrpcClient.Setup(x => x.UpdateSecuritySettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             SecuritySettings response = client.UpdateSecuritySettings(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -441,6 +469,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task UpdateSecuritySettingsRequestObjectAsync()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateSecuritySettingsRequest request = new UpdateSecuritySettingsRequest
             {
                 SecuritySettings = new SecuritySettings(),
@@ -458,11 +487,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplateAsInspectTemplateName = InspectTemplateName.FromOrganizationLocationInspectTemplate("[ORGANIZATION]", "[LOCATION]", "[INSPECT_TEMPLATE]"),
+                AudioExportSettings = new SecuritySettings.Types.AudioExportSettings(),
                 InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
             mockGrpcClient.Setup(x => x.UpdateSecuritySettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecuritySettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             SecuritySettings responseCallSettings = await client.UpdateSecuritySettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecuritySettings responseCancellationToken = await client.UpdateSecuritySettingsAsync(request, st::CancellationToken.None);
@@ -474,6 +504,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void UpdateSecuritySettings()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateSecuritySettingsRequest request = new UpdateSecuritySettingsRequest
             {
                 SecuritySettings = new SecuritySettings(),
@@ -491,11 +522,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplateAsInspectTemplateName = InspectTemplateName.FromOrganizationLocationInspectTemplate("[ORGANIZATION]", "[LOCATION]", "[INSPECT_TEMPLATE]"),
+                AudioExportSettings = new SecuritySettings.Types.AudioExportSettings(),
                 InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
             mockGrpcClient.Setup(x => x.UpdateSecuritySettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             SecuritySettings response = client.UpdateSecuritySettings(request.SecuritySettings, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -505,6 +537,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task UpdateSecuritySettingsAsync()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateSecuritySettingsRequest request = new UpdateSecuritySettingsRequest
             {
                 SecuritySettings = new SecuritySettings(),
@@ -522,11 +555,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplateAsInspectTemplateName = InspectTemplateName.FromOrganizationLocationInspectTemplate("[ORGANIZATION]", "[LOCATION]", "[INSPECT_TEMPLATE]"),
+                AudioExportSettings = new SecuritySettings.Types.AudioExportSettings(),
                 InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
             mockGrpcClient.Setup(x => x.UpdateSecuritySettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecuritySettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             SecuritySettings responseCallSettings = await client.UpdateSecuritySettingsAsync(request.SecuritySettings, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecuritySettings responseCancellationToken = await client.UpdateSecuritySettingsAsync(request.SecuritySettings, request.UpdateMask, st::CancellationToken.None);
@@ -538,13 +572,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void DeleteSecuritySettingsRequestObject()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteSecuritySettingsRequest request = new DeleteSecuritySettingsRequest
             {
                 SecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSecuritySettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteSecuritySettings(request);
             mockGrpcClient.VerifyAll();
         }
@@ -553,13 +588,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task DeleteSecuritySettingsRequestObjectAsync()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteSecuritySettingsRequest request = new DeleteSecuritySettingsRequest
             {
                 SecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSecuritySettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteSecuritySettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteSecuritySettingsAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -569,13 +605,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void DeleteSecuritySettings()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteSecuritySettingsRequest request = new DeleteSecuritySettingsRequest
             {
                 SecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSecuritySettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteSecuritySettings(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -584,13 +621,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task DeleteSecuritySettingsAsync()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteSecuritySettingsRequest request = new DeleteSecuritySettingsRequest
             {
                 SecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSecuritySettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteSecuritySettingsAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteSecuritySettingsAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -600,13 +638,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public void DeleteSecuritySettingsResourceNames()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteSecuritySettingsRequest request = new DeleteSecuritySettingsRequest
             {
                 SecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSecuritySettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteSecuritySettings(request.SecuritySettingsName);
             mockGrpcClient.VerifyAll();
         }
@@ -615,13 +654,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
         public async stt::Task DeleteSecuritySettingsResourceNamesAsync()
         {
             moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient> mockGrpcClient = new moq::Mock<SecuritySettingsService.SecuritySettingsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteSecuritySettingsRequest request = new DeleteSecuritySettingsRequest
             {
                 SecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSecuritySettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
+            SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteSecuritySettingsAsync(request.SecuritySettingsName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteSecuritySettingsAsync(request.SecuritySettingsName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();

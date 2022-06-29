@@ -188,7 +188,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string displayName_ = "";
     /// <summary>
     /// Required. The human-readable name of the transition route group, unique within
-    /// the [Agent][google.cloud.dialogflow.cx.v3.Agent]. The display name can be no longer than 30 characters.
+    /// the flow. The display name can be no longer than 30 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -42,11 +43,10 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 EventId = "event_idaccf3744",
                 CreateTime = new wkt::Timestamp(),
                 JobEvent = new JobEvent(),
-                ProfileEvent = new ProfileEvent(),
                 EventNotes = "event_notes102ba330",
             };
             mockGrpcClient.Setup(x => x.CreateClientEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EventServiceClient client = new EventServiceClientImpl(mockGrpcClient.Object, null);
+            EventServiceClient client = new EventServiceClientImpl(mockGrpcClient.Object, null, null);
             ClientEvent response = client.CreateClientEvent(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -67,11 +67,10 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 EventId = "event_idaccf3744",
                 CreateTime = new wkt::Timestamp(),
                 JobEvent = new JobEvent(),
-                ProfileEvent = new ProfileEvent(),
                 EventNotes = "event_notes102ba330",
             };
             mockGrpcClient.Setup(x => x.CreateClientEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ClientEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EventServiceClient client = new EventServiceClientImpl(mockGrpcClient.Object, null);
+            EventServiceClient client = new EventServiceClientImpl(mockGrpcClient.Object, null, null);
             ClientEvent responseCallSettings = await client.CreateClientEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ClientEvent responseCancellationToken = await client.CreateClientEventAsync(request, st::CancellationToken.None);
@@ -94,11 +93,10 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 EventId = "event_idaccf3744",
                 CreateTime = new wkt::Timestamp(),
                 JobEvent = new JobEvent(),
-                ProfileEvent = new ProfileEvent(),
                 EventNotes = "event_notes102ba330",
             };
             mockGrpcClient.Setup(x => x.CreateClientEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EventServiceClient client = new EventServiceClientImpl(mockGrpcClient.Object, null);
+            EventServiceClient client = new EventServiceClientImpl(mockGrpcClient.Object, null, null);
             ClientEvent response = client.CreateClientEvent(request.Parent, request.ClientEvent);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -119,11 +117,10 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 EventId = "event_idaccf3744",
                 CreateTime = new wkt::Timestamp(),
                 JobEvent = new JobEvent(),
-                ProfileEvent = new ProfileEvent(),
                 EventNotes = "event_notes102ba330",
             };
             mockGrpcClient.Setup(x => x.CreateClientEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ClientEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EventServiceClient client = new EventServiceClientImpl(mockGrpcClient.Object, null);
+            EventServiceClient client = new EventServiceClientImpl(mockGrpcClient.Object, null, null);
             ClientEvent responseCallSettings = await client.CreateClientEventAsync(request.Parent, request.ClientEvent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ClientEvent responseCancellationToken = await client.CreateClientEventAsync(request.Parent, request.ClientEvent, st::CancellationToken.None);
@@ -146,11 +143,10 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 EventId = "event_idaccf3744",
                 CreateTime = new wkt::Timestamp(),
                 JobEvent = new JobEvent(),
-                ProfileEvent = new ProfileEvent(),
                 EventNotes = "event_notes102ba330",
             };
             mockGrpcClient.Setup(x => x.CreateClientEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EventServiceClient client = new EventServiceClientImpl(mockGrpcClient.Object, null);
+            EventServiceClient client = new EventServiceClientImpl(mockGrpcClient.Object, null, null);
             ClientEvent response = client.CreateClientEvent(request.ParentAsTenantName, request.ClientEvent);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -171,11 +167,10 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 EventId = "event_idaccf3744",
                 CreateTime = new wkt::Timestamp(),
                 JobEvent = new JobEvent(),
-                ProfileEvent = new ProfileEvent(),
                 EventNotes = "event_notes102ba330",
             };
             mockGrpcClient.Setup(x => x.CreateClientEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ClientEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EventServiceClient client = new EventServiceClientImpl(mockGrpcClient.Object, null);
+            EventServiceClient client = new EventServiceClientImpl(mockGrpcClient.Object, null, null);
             ClientEvent responseCallSettings = await client.CreateClientEventAsync(request.ParentAsTenantName, request.ClientEvent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ClientEvent responseCancellationToken = await client.CreateClientEventAsync(request.ParentAsTenantName, request.ClientEvent, st::CancellationToken.None);
@@ -198,11 +193,10 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 EventId = "event_idaccf3744",
                 CreateTime = new wkt::Timestamp(),
                 JobEvent = new JobEvent(),
-                ProfileEvent = new ProfileEvent(),
                 EventNotes = "event_notes102ba330",
             };
             mockGrpcClient.Setup(x => x.CreateClientEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EventServiceClient client = new EventServiceClientImpl(mockGrpcClient.Object, null);
+            EventServiceClient client = new EventServiceClientImpl(mockGrpcClient.Object, null, null);
             ClientEvent response = client.CreateClientEvent(request.ParentAsProjectName, request.ClientEvent);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -223,11 +217,10 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 EventId = "event_idaccf3744",
                 CreateTime = new wkt::Timestamp(),
                 JobEvent = new JobEvent(),
-                ProfileEvent = new ProfileEvent(),
                 EventNotes = "event_notes102ba330",
             };
             mockGrpcClient.Setup(x => x.CreateClientEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ClientEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EventServiceClient client = new EventServiceClientImpl(mockGrpcClient.Object, null);
+            EventServiceClient client = new EventServiceClientImpl(mockGrpcClient.Object, null, null);
             ClientEvent responseCallSettings = await client.CreateClientEventAsync(request.ParentAsProjectName, request.ClientEvent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ClientEvent responseCancellationToken = await client.CreateClientEventAsync(request.ParentAsProjectName, request.ClientEvent, st::CancellationToken.None);

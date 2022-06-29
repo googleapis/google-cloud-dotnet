@@ -1,4 +1,10 @@
-# Major Version Changes (Q1 2020)
+# Major Version Changes
+
+## Changes for GAX v4 (Q2 2022)
+
+See [GAX v4 breaking changes](breaking-gax4.md) for details.
+
+## Changes for GAX v3 (Q1 2020)
 
 Google Cloud client libraries released earlier than February 17th 2020
 are incompatible with Grpc.Core.Api 2.x - which means they're

@@ -21,6 +21,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
+    using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
 
@@ -38,6 +39,8 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Model = new Model(),
+                ParentModel = "",
+                ModelId = "",
             };
             // Make the request
             Operation<UploadModelResponse, UploadModelOperationMetadata> response = modelServiceClient.UploadModel(request);
@@ -72,6 +75,8 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Model = new Model(),
+                ParentModel = "",
+                ModelId = "",
             };
             // Make the request
             Operation<UploadModelResponse, UploadModelOperationMetadata> response = await modelServiceClient.UploadModelAsync(request);
@@ -585,6 +590,286 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListModelVersions</summary>
+        public void ListModelVersionsRequestObject()
+        {
+            // Snippet: ListModelVersions(ListModelVersionsRequest, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = ModelServiceClient.Create();
+            // Initialize request argument(s)
+            ListModelVersionsRequest request = new ListModelVersionsRequest
+            {
+                ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                Filter = "",
+                ReadMask = new FieldMask(),
+            };
+            // Make the request
+            PagedEnumerable<ListModelVersionsResponse, Model> response = modelServiceClient.ListModelVersions(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Model item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListModelVersionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Model item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Model> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Model item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListModelVersionsAsync</summary>
+        public async Task ListModelVersionsRequestObjectAsync()
+        {
+            // Snippet: ListModelVersionsAsync(ListModelVersionsRequest, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = await ModelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListModelVersionsRequest request = new ListModelVersionsRequest
+            {
+                ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                Filter = "",
+                ReadMask = new FieldMask(),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListModelVersionsResponse, Model> response = modelServiceClient.ListModelVersionsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Model item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListModelVersionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Model item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Model> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Model item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListModelVersions</summary>
+        public void ListModelVersions()
+        {
+            // Snippet: ListModelVersions(string, string, int?, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = ModelServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/models/[MODEL]";
+            // Make the request
+            PagedEnumerable<ListModelVersionsResponse, Model> response = modelServiceClient.ListModelVersions(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Model item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListModelVersionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Model item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Model> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Model item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListModelVersionsAsync</summary>
+        public async Task ListModelVersionsAsync()
+        {
+            // Snippet: ListModelVersionsAsync(string, string, int?, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = await ModelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/models/[MODEL]";
+            // Make the request
+            PagedAsyncEnumerable<ListModelVersionsResponse, Model> response = modelServiceClient.ListModelVersionsAsync(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Model item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListModelVersionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Model item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Model> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Model item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListModelVersions</summary>
+        public void ListModelVersionsResourceNames()
+        {
+            // Snippet: ListModelVersions(ModelName, string, int?, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = ModelServiceClient.Create();
+            // Initialize request argument(s)
+            ModelName name = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]");
+            // Make the request
+            PagedEnumerable<ListModelVersionsResponse, Model> response = modelServiceClient.ListModelVersions(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Model item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListModelVersionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Model item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Model> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Model item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListModelVersionsAsync</summary>
+        public async Task ListModelVersionsResourceNamesAsync()
+        {
+            // Snippet: ListModelVersionsAsync(ModelName, string, int?, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = await ModelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ModelName name = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]");
+            // Make the request
+            PagedAsyncEnumerable<ListModelVersionsResponse, Model> response = modelServiceClient.ListModelVersionsAsync(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Model item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListModelVersionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Model item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Model> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Model item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         /// <summary>Snippet for UpdateModel</summary>
         public void UpdateModelRequestObject()
         {
@@ -829,6 +1114,282 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
                 // If it has completed, then access the result
                 Empty retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteModelVersion</summary>
+        public void DeleteModelVersionRequestObject()
+        {
+            // Snippet: DeleteModelVersion(DeleteModelVersionRequest, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = ModelServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteModelVersionRequest request = new DeleteModelVersionRequest
+            {
+                ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+            };
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = modelServiceClient.DeleteModelVersion(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = modelServiceClient.PollOnceDeleteModelVersion(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteModelVersionAsync</summary>
+        public async Task DeleteModelVersionRequestObjectAsync()
+        {
+            // Snippet: DeleteModelVersionAsync(DeleteModelVersionRequest, CallSettings)
+            // Additional: DeleteModelVersionAsync(DeleteModelVersionRequest, CancellationToken)
+            // Create client
+            ModelServiceClient modelServiceClient = await ModelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteModelVersionRequest request = new DeleteModelVersionRequest
+            {
+                ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+            };
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = await modelServiceClient.DeleteModelVersionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = await modelServiceClient.PollOnceDeleteModelVersionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteModelVersion</summary>
+        public void DeleteModelVersion()
+        {
+            // Snippet: DeleteModelVersion(string, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = ModelServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/models/[MODEL]";
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = modelServiceClient.DeleteModelVersion(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = modelServiceClient.PollOnceDeleteModelVersion(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteModelVersionAsync</summary>
+        public async Task DeleteModelVersionAsync()
+        {
+            // Snippet: DeleteModelVersionAsync(string, CallSettings)
+            // Additional: DeleteModelVersionAsync(string, CancellationToken)
+            // Create client
+            ModelServiceClient modelServiceClient = await ModelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/models/[MODEL]";
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = await modelServiceClient.DeleteModelVersionAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = await modelServiceClient.PollOnceDeleteModelVersionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteModelVersion</summary>
+        public void DeleteModelVersionResourceNames()
+        {
+            // Snippet: DeleteModelVersion(ModelName, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = ModelServiceClient.Create();
+            // Initialize request argument(s)
+            ModelName name = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]");
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = modelServiceClient.DeleteModelVersion(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = modelServiceClient.PollOnceDeleteModelVersion(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteModelVersionAsync</summary>
+        public async Task DeleteModelVersionResourceNamesAsync()
+        {
+            // Snippet: DeleteModelVersionAsync(ModelName, CallSettings)
+            // Additional: DeleteModelVersionAsync(ModelName, CancellationToken)
+            // Create client
+            ModelServiceClient modelServiceClient = await ModelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ModelName name = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]");
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = await modelServiceClient.DeleteModelVersionAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = await modelServiceClient.PollOnceDeleteModelVersionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for MergeVersionAliases</summary>
+        public void MergeVersionAliasesRequestObject()
+        {
+            // Snippet: MergeVersionAliases(MergeVersionAliasesRequest, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = ModelServiceClient.Create();
+            // Initialize request argument(s)
+            MergeVersionAliasesRequest request = new MergeVersionAliasesRequest
+            {
+                ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                VersionAliases = { "", },
+            };
+            // Make the request
+            Model response = modelServiceClient.MergeVersionAliases(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for MergeVersionAliasesAsync</summary>
+        public async Task MergeVersionAliasesRequestObjectAsync()
+        {
+            // Snippet: MergeVersionAliasesAsync(MergeVersionAliasesRequest, CallSettings)
+            // Additional: MergeVersionAliasesAsync(MergeVersionAliasesRequest, CancellationToken)
+            // Create client
+            ModelServiceClient modelServiceClient = await ModelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            MergeVersionAliasesRequest request = new MergeVersionAliasesRequest
+            {
+                ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                VersionAliases = { "", },
+            };
+            // Make the request
+            Model response = await modelServiceClient.MergeVersionAliasesAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for MergeVersionAliases</summary>
+        public void MergeVersionAliases()
+        {
+            // Snippet: MergeVersionAliases(string, IEnumerable<string>, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = ModelServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/models/[MODEL]";
+            IEnumerable<string> versionAliases = new string[] { "", };
+            // Make the request
+            Model response = modelServiceClient.MergeVersionAliases(name, versionAliases);
+            // End snippet
+        }
+
+        /// <summary>Snippet for MergeVersionAliasesAsync</summary>
+        public async Task MergeVersionAliasesAsync()
+        {
+            // Snippet: MergeVersionAliasesAsync(string, IEnumerable<string>, CallSettings)
+            // Additional: MergeVersionAliasesAsync(string, IEnumerable<string>, CancellationToken)
+            // Create client
+            ModelServiceClient modelServiceClient = await ModelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/models/[MODEL]";
+            IEnumerable<string> versionAliases = new string[] { "", };
+            // Make the request
+            Model response = await modelServiceClient.MergeVersionAliasesAsync(name, versionAliases);
+            // End snippet
+        }
+
+        /// <summary>Snippet for MergeVersionAliases</summary>
+        public void MergeVersionAliasesResourceNames()
+        {
+            // Snippet: MergeVersionAliases(ModelName, IEnumerable<string>, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = ModelServiceClient.Create();
+            // Initialize request argument(s)
+            ModelName name = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]");
+            IEnumerable<string> versionAliases = new string[] { "", };
+            // Make the request
+            Model response = modelServiceClient.MergeVersionAliases(name, versionAliases);
+            // End snippet
+        }
+
+        /// <summary>Snippet for MergeVersionAliasesAsync</summary>
+        public async Task MergeVersionAliasesResourceNamesAsync()
+        {
+            // Snippet: MergeVersionAliasesAsync(ModelName, IEnumerable<string>, CallSettings)
+            // Additional: MergeVersionAliasesAsync(ModelName, IEnumerable<string>, CancellationToken)
+            // Create client
+            ModelServiceClient modelServiceClient = await ModelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ModelName name = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]");
+            IEnumerable<string> versionAliases = new string[] { "", };
+            // Make the request
+            Model response = await modelServiceClient.MergeVersionAliasesAsync(name, versionAliases);
             // End snippet
         }
 
@@ -1111,6 +1672,117 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             ModelEvaluation modelEvaluation = new ModelEvaluation();
             // Make the request
             ModelEvaluation response = await modelServiceClient.ImportModelEvaluationAsync(parent, modelEvaluation);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchImportModelEvaluationSlices</summary>
+        public void BatchImportModelEvaluationSlicesRequestObject()
+        {
+            // Snippet: BatchImportModelEvaluationSlices(BatchImportModelEvaluationSlicesRequest, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = ModelServiceClient.Create();
+            // Initialize request argument(s)
+            BatchImportModelEvaluationSlicesRequest request = new BatchImportModelEvaluationSlicesRequest
+            {
+                ParentAsModelEvaluationName = ModelEvaluationName.FromProjectLocationModelEvaluation("[PROJECT]", "[LOCATION]", "[MODEL]", "[EVALUATION]"),
+                ModelEvaluationSlices =
+                {
+                    new ModelEvaluationSlice(),
+                },
+            };
+            // Make the request
+            BatchImportModelEvaluationSlicesResponse response = modelServiceClient.BatchImportModelEvaluationSlices(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchImportModelEvaluationSlicesAsync</summary>
+        public async Task BatchImportModelEvaluationSlicesRequestObjectAsync()
+        {
+            // Snippet: BatchImportModelEvaluationSlicesAsync(BatchImportModelEvaluationSlicesRequest, CallSettings)
+            // Additional: BatchImportModelEvaluationSlicesAsync(BatchImportModelEvaluationSlicesRequest, CancellationToken)
+            // Create client
+            ModelServiceClient modelServiceClient = await ModelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchImportModelEvaluationSlicesRequest request = new BatchImportModelEvaluationSlicesRequest
+            {
+                ParentAsModelEvaluationName = ModelEvaluationName.FromProjectLocationModelEvaluation("[PROJECT]", "[LOCATION]", "[MODEL]", "[EVALUATION]"),
+                ModelEvaluationSlices =
+                {
+                    new ModelEvaluationSlice(),
+                },
+            };
+            // Make the request
+            BatchImportModelEvaluationSlicesResponse response = await modelServiceClient.BatchImportModelEvaluationSlicesAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchImportModelEvaluationSlices</summary>
+        public void BatchImportModelEvaluationSlices()
+        {
+            // Snippet: BatchImportModelEvaluationSlices(string, IEnumerable<ModelEvaluationSlice>, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = ModelServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/models/[MODEL]/evaluations/[EVALUATION]";
+            IEnumerable<ModelEvaluationSlice> modelEvaluationSlices = new ModelEvaluationSlice[]
+            {
+                new ModelEvaluationSlice(),
+            };
+            // Make the request
+            BatchImportModelEvaluationSlicesResponse response = modelServiceClient.BatchImportModelEvaluationSlices(parent, modelEvaluationSlices);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchImportModelEvaluationSlicesAsync</summary>
+        public async Task BatchImportModelEvaluationSlicesAsync()
+        {
+            // Snippet: BatchImportModelEvaluationSlicesAsync(string, IEnumerable<ModelEvaluationSlice>, CallSettings)
+            // Additional: BatchImportModelEvaluationSlicesAsync(string, IEnumerable<ModelEvaluationSlice>, CancellationToken)
+            // Create client
+            ModelServiceClient modelServiceClient = await ModelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/models/[MODEL]/evaluations/[EVALUATION]";
+            IEnumerable<ModelEvaluationSlice> modelEvaluationSlices = new ModelEvaluationSlice[]
+            {
+                new ModelEvaluationSlice(),
+            };
+            // Make the request
+            BatchImportModelEvaluationSlicesResponse response = await modelServiceClient.BatchImportModelEvaluationSlicesAsync(parent, modelEvaluationSlices);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchImportModelEvaluationSlices</summary>
+        public void BatchImportModelEvaluationSlicesResourceNames()
+        {
+            // Snippet: BatchImportModelEvaluationSlices(ModelEvaluationName, IEnumerable<ModelEvaluationSlice>, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = ModelServiceClient.Create();
+            // Initialize request argument(s)
+            ModelEvaluationName parent = ModelEvaluationName.FromProjectLocationModelEvaluation("[PROJECT]", "[LOCATION]", "[MODEL]", "[EVALUATION]");
+            IEnumerable<ModelEvaluationSlice> modelEvaluationSlices = new ModelEvaluationSlice[]
+            {
+                new ModelEvaluationSlice(),
+            };
+            // Make the request
+            BatchImportModelEvaluationSlicesResponse response = modelServiceClient.BatchImportModelEvaluationSlices(parent, modelEvaluationSlices);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchImportModelEvaluationSlicesAsync</summary>
+        public async Task BatchImportModelEvaluationSlicesResourceNamesAsync()
+        {
+            // Snippet: BatchImportModelEvaluationSlicesAsync(ModelEvaluationName, IEnumerable<ModelEvaluationSlice>, CallSettings)
+            // Additional: BatchImportModelEvaluationSlicesAsync(ModelEvaluationName, IEnumerable<ModelEvaluationSlice>, CancellationToken)
+            // Create client
+            ModelServiceClient modelServiceClient = await ModelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ModelEvaluationName parent = ModelEvaluationName.FromProjectLocationModelEvaluation("[PROJECT]", "[LOCATION]", "[MODEL]", "[EVALUATION]");
+            IEnumerable<ModelEvaluationSlice> modelEvaluationSlices = new ModelEvaluationSlice[]
+            {
+                new ModelEvaluationSlice(),
+            };
+            // Make the request
+            BatchImportModelEvaluationSlicesResponse response = await modelServiceClient.BatchImportModelEvaluationSlicesAsync(parent, modelEvaluationSlices);
             // End snippet
         }
 

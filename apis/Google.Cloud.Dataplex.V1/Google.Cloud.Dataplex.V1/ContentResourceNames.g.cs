@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gcdv = Google.Cloud.Dataplex.V1;
 
 namespace Google.Cloud.Dataplex.V1

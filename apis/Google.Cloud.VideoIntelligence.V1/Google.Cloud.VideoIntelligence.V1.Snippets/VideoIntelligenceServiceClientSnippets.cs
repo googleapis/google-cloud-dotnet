@@ -86,7 +86,8 @@ namespace Google.Cloud.VideoIntelligence.V1.Snippets
             IEnumerable<string> allTranscripts = result.SpeechTranscriptions
                 .SelectMany(st => st.Alternatives)
                 .Select(alt => alt.Transcript);
-            Assert.Contains(allTranscripts, t => t.Contains("Paris is special because"));
+            
+            Assert.Contains(allTranscripts, t => t.Contains("shows the will of Google to invest for long-term in France"));
         }
     }
 }

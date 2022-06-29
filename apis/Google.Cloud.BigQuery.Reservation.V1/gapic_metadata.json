@@ -112,6 +112,12 @@
                 "SplitCapacityCommitmentAsync"
               ]
             },
+            "UpdateAssignment": {
+              "methods": [
+                "UpdateAssignment",
+                "UpdateAssignmentAsync"
+              ]
+            },
             "UpdateBiReservation": {
               "methods": [
                 "UpdateBiReservation",

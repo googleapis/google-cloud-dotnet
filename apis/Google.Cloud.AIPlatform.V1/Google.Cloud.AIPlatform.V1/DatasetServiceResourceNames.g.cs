@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gagr = Google.Api.Gax.ResourceNames;
 using gcav = Google.Cloud.AIPlatform.V1;
 
@@ -92,6 +93,18 @@ namespace Google.Cloud.AIPlatform.V1
     }
 
     public partial class ListDataItemsRequest
+    {
+        /// <summary>
+        /// <see cref="DatasetName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public DatasetName ParentAsDatasetName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : DatasetName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListSavedQueriesRequest
     {
         /// <summary>
         /// <see cref="DatasetName"/>-typed view over the <see cref="Parent"/> resource name property.

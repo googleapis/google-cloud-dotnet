@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -89,7 +90,7 @@ namespace Google.Cloud.Talent.V4.Tests
                 ProcessingOptions = new Job.Types.ProcessingOptions(),
             };
             mockGrpcClient.Setup(x => x.CreateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             Job response = client.CreateJob(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -156,7 +157,7 @@ namespace Google.Cloud.Talent.V4.Tests
                 ProcessingOptions = new Job.Types.ProcessingOptions(),
             };
             mockGrpcClient.Setup(x => x.CreateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             Job responseCallSettings = await client.CreateJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Job responseCancellationToken = await client.CreateJobAsync(request, st::CancellationToken.None);
@@ -225,7 +226,7 @@ namespace Google.Cloud.Talent.V4.Tests
                 ProcessingOptions = new Job.Types.ProcessingOptions(),
             };
             mockGrpcClient.Setup(x => x.CreateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             Job response = client.CreateJob(request.Parent, request.Job);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -292,7 +293,7 @@ namespace Google.Cloud.Talent.V4.Tests
                 ProcessingOptions = new Job.Types.ProcessingOptions(),
             };
             mockGrpcClient.Setup(x => x.CreateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             Job responseCallSettings = await client.CreateJobAsync(request.Parent, request.Job, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Job responseCancellationToken = await client.CreateJobAsync(request.Parent, request.Job, st::CancellationToken.None);
@@ -361,7 +362,7 @@ namespace Google.Cloud.Talent.V4.Tests
                 ProcessingOptions = new Job.Types.ProcessingOptions(),
             };
             mockGrpcClient.Setup(x => x.CreateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             Job response = client.CreateJob(request.ParentAsTenantName, request.Job);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -428,7 +429,7 @@ namespace Google.Cloud.Talent.V4.Tests
                 ProcessingOptions = new Job.Types.ProcessingOptions(),
             };
             mockGrpcClient.Setup(x => x.CreateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             Job responseCallSettings = await client.CreateJobAsync(request.ParentAsTenantName, request.Job, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Job responseCancellationToken = await client.CreateJobAsync(request.ParentAsTenantName, request.Job, st::CancellationToken.None);
@@ -496,7 +497,7 @@ namespace Google.Cloud.Talent.V4.Tests
                 ProcessingOptions = new Job.Types.ProcessingOptions(),
             };
             mockGrpcClient.Setup(x => x.GetJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             Job response = client.GetJob(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -562,7 +563,7 @@ namespace Google.Cloud.Talent.V4.Tests
                 ProcessingOptions = new Job.Types.ProcessingOptions(),
             };
             mockGrpcClient.Setup(x => x.GetJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             Job responseCallSettings = await client.GetJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Job responseCancellationToken = await client.GetJobAsync(request, st::CancellationToken.None);
@@ -630,7 +631,7 @@ namespace Google.Cloud.Talent.V4.Tests
                 ProcessingOptions = new Job.Types.ProcessingOptions(),
             };
             mockGrpcClient.Setup(x => x.GetJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             Job response = client.GetJob(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -696,7 +697,7 @@ namespace Google.Cloud.Talent.V4.Tests
                 ProcessingOptions = new Job.Types.ProcessingOptions(),
             };
             mockGrpcClient.Setup(x => x.GetJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             Job responseCallSettings = await client.GetJobAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Job responseCancellationToken = await client.GetJobAsync(request.Name, st::CancellationToken.None);
@@ -764,7 +765,7 @@ namespace Google.Cloud.Talent.V4.Tests
                 ProcessingOptions = new Job.Types.ProcessingOptions(),
             };
             mockGrpcClient.Setup(x => x.GetJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             Job response = client.GetJob(request.JobName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -830,7 +831,7 @@ namespace Google.Cloud.Talent.V4.Tests
                 ProcessingOptions = new Job.Types.ProcessingOptions(),
             };
             mockGrpcClient.Setup(x => x.GetJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             Job responseCallSettings = await client.GetJobAsync(request.JobName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Job responseCancellationToken = await client.GetJobAsync(request.JobName, st::CancellationToken.None);
@@ -899,7 +900,7 @@ namespace Google.Cloud.Talent.V4.Tests
                 ProcessingOptions = new Job.Types.ProcessingOptions(),
             };
             mockGrpcClient.Setup(x => x.UpdateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             Job response = client.UpdateJob(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -966,7 +967,7 @@ namespace Google.Cloud.Talent.V4.Tests
                 ProcessingOptions = new Job.Types.ProcessingOptions(),
             };
             mockGrpcClient.Setup(x => x.UpdateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             Job responseCallSettings = await client.UpdateJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Job responseCancellationToken = await client.UpdateJobAsync(request, st::CancellationToken.None);
@@ -1035,7 +1036,7 @@ namespace Google.Cloud.Talent.V4.Tests
                 ProcessingOptions = new Job.Types.ProcessingOptions(),
             };
             mockGrpcClient.Setup(x => x.UpdateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             Job response = client.UpdateJob(request.Job, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1102,7 +1103,7 @@ namespace Google.Cloud.Talent.V4.Tests
                 ProcessingOptions = new Job.Types.ProcessingOptions(),
             };
             mockGrpcClient.Setup(x => x.UpdateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             Job responseCallSettings = await client.UpdateJobAsync(request.Job, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Job responseCancellationToken = await client.UpdateJobAsync(request.Job, request.UpdateMask, st::CancellationToken.None);
@@ -1121,7 +1122,7 @@ namespace Google.Cloud.Talent.V4.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteJob(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1137,7 +1138,7 @@ namespace Google.Cloud.Talent.V4.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteJobAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1154,7 +1155,7 @@ namespace Google.Cloud.Talent.V4.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteJob(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -1170,7 +1171,7 @@ namespace Google.Cloud.Talent.V4.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteJobAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteJobAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1187,7 +1188,7 @@ namespace Google.Cloud.Talent.V4.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteJob(request.JobName);
             mockGrpcClient.VerifyAll();
         }
@@ -1203,7 +1204,7 @@ namespace Google.Cloud.Talent.V4.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteJobAsync(request.JobName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteJobAsync(request.JobName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1255,7 +1256,7 @@ namespace Google.Cloud.Talent.V4.Tests
                 SpellCorrection = new SpellingCorrection(),
             };
             mockGrpcClient.Setup(x => x.SearchJobs(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             SearchJobsResponse response = client.SearchJobs(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1307,7 +1308,7 @@ namespace Google.Cloud.Talent.V4.Tests
                 SpellCorrection = new SpellingCorrection(),
             };
             mockGrpcClient.Setup(x => x.SearchJobsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SearchJobsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             SearchJobsResponse responseCallSettings = await client.SearchJobsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SearchJobsResponse responseCancellationToken = await client.SearchJobsAsync(request, st::CancellationToken.None);
@@ -1361,7 +1362,7 @@ namespace Google.Cloud.Talent.V4.Tests
                 SpellCorrection = new SpellingCorrection(),
             };
             mockGrpcClient.Setup(x => x.SearchJobsForAlert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             SearchJobsResponse response = client.SearchJobsForAlert(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1413,7 +1414,7 @@ namespace Google.Cloud.Talent.V4.Tests
                 SpellCorrection = new SpellingCorrection(),
             };
             mockGrpcClient.Setup(x => x.SearchJobsForAlertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SearchJobsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             SearchJobsResponse responseCallSettings = await client.SearchJobsForAlertAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SearchJobsResponse responseCancellationToken = await client.SearchJobsForAlertAsync(request, st::CancellationToken.None);

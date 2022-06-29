@@ -14,15 +14,18 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -78,6 +81,8 @@ namespace Google.Cloud.AIPlatform.V1
             ExportFeatureValuesSettings = existing.ExportFeatureValuesSettings;
             ExportFeatureValuesOperationsSettings = existing.ExportFeatureValuesOperationsSettings.Clone();
             SearchFeaturesSettings = existing.SearchFeaturesSettings;
+            LocationsSettings = existing.LocationsSettings;
+            IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
@@ -532,6 +537,16 @@ namespace Google.Cloud.AIPlatform.V1
         /// </remarks>
         public gaxgrpc::CallSettings SearchFeaturesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
+        /// <summary>
+        /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
+        /// </summary>
+        public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="FeaturestoreServiceSettings"/> object.</returns>
         public FeaturestoreServiceSettings Clone() => new FeaturestoreServiceSettings(this);
@@ -547,9 +562,8 @@ namespace Google.Cloud.AIPlatform.V1
         public FeaturestoreServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public FeaturestoreServiceClientBuilder()
+        public FeaturestoreServiceClientBuilder() : base(FeaturestoreServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = FeaturestoreServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref FeaturestoreServiceClient client);
@@ -576,29 +590,18 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return FeaturestoreServiceClient.Create(callInvoker, Settings);
+            return FeaturestoreServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<FeaturestoreServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return FeaturestoreServiceClient.Create(callInvoker, Settings);
+            return FeaturestoreServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => FeaturestoreServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => FeaturestoreServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => FeaturestoreServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>FeaturestoreService client wrapper, for convenient use.</summary>
@@ -625,19 +628,10 @@ namespace Google.Cloud.AIPlatform.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(FeaturestoreService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="FeaturestoreServiceClient"/> using the default credentials, endpoint and
@@ -667,8 +661,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="FeaturestoreServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="FeaturestoreServiceClient"/>.</returns>
-        internal static FeaturestoreServiceClient Create(grpccore::CallInvoker callInvoker, FeaturestoreServiceSettings settings = null)
+        internal static FeaturestoreServiceClient Create(grpccore::CallInvoker callInvoker, FeaturestoreServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -677,7 +672,7 @@ namespace Google.Cloud.AIPlatform.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             FeaturestoreService.FeaturestoreServiceClient grpcClient = new FeaturestoreService.FeaturestoreServiceClient(callInvoker);
-            return new FeaturestoreServiceClientImpl(grpcClient, settings);
+            return new FeaturestoreServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -695,6 +690,12 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>The underlying gRPC FeaturestoreService client</summary>
         public virtual FeaturestoreService.FeaturestoreServiceClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Creates a new Featurestore in a given project and location.
@@ -1335,6 +1336,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// * `labels`
         /// * `online_serving_config.fixed_node_count`
+        /// * `online_serving_config.scaling`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1367,6 +1369,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// * `labels`
         /// * `online_serving_config.fixed_node_count`
+        /// * `online_serving_config.scaling`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1399,6 +1402,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// * `labels`
         /// * `online_serving_config.fixed_node_count`
+        /// * `online_serving_config.scaling`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4888,80 +4892,83 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="FeaturestoreServiceSettings"/> used within this client.</param>
-        public FeaturestoreServiceClientImpl(FeaturestoreService.FeaturestoreServiceClient grpcClient, FeaturestoreServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public FeaturestoreServiceClientImpl(FeaturestoreService.FeaturestoreServiceClient grpcClient, FeaturestoreServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             FeaturestoreServiceSettings effectiveSettings = settings ?? FeaturestoreServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateFeaturestoreOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateFeaturestoreOperationsSettings);
-            UpdateFeaturestoreOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateFeaturestoreOperationsSettings);
-            DeleteFeaturestoreOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteFeaturestoreOperationsSettings);
-            CreateEntityTypeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateEntityTypeOperationsSettings);
-            DeleteEntityTypeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteEntityTypeOperationsSettings);
-            CreateFeatureOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateFeatureOperationsSettings);
-            BatchCreateFeaturesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchCreateFeaturesOperationsSettings);
-            DeleteFeatureOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteFeatureOperationsSettings);
-            ImportFeatureValuesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportFeatureValuesOperationsSettings);
-            BatchReadFeatureValuesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchReadFeatureValuesOperationsSettings);
-            ExportFeatureValuesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportFeatureValuesOperationsSettings);
-            _callCreateFeaturestore = clientHelper.BuildApiCall<CreateFeaturestoreRequest, lro::Operation>(grpcClient.CreateFeaturestoreAsync, grpcClient.CreateFeaturestore, effectiveSettings.CreateFeaturestoreSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateFeaturestoreOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateFeaturestoreOperationsSettings, logger);
+            UpdateFeaturestoreOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateFeaturestoreOperationsSettings, logger);
+            DeleteFeaturestoreOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteFeaturestoreOperationsSettings, logger);
+            CreateEntityTypeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateEntityTypeOperationsSettings, logger);
+            DeleteEntityTypeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteEntityTypeOperationsSettings, logger);
+            CreateFeatureOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateFeatureOperationsSettings, logger);
+            BatchCreateFeaturesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchCreateFeaturesOperationsSettings, logger);
+            DeleteFeatureOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteFeatureOperationsSettings, logger);
+            ImportFeatureValuesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportFeatureValuesOperationsSettings, logger);
+            BatchReadFeatureValuesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchReadFeatureValuesOperationsSettings, logger);
+            ExportFeatureValuesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportFeatureValuesOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
+            _callCreateFeaturestore = clientHelper.BuildApiCall<CreateFeaturestoreRequest, lro::Operation>("CreateFeaturestore", grpcClient.CreateFeaturestoreAsync, grpcClient.CreateFeaturestore, effectiveSettings.CreateFeaturestoreSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateFeaturestore);
             Modify_CreateFeaturestoreApiCall(ref _callCreateFeaturestore);
-            _callGetFeaturestore = clientHelper.BuildApiCall<GetFeaturestoreRequest, Featurestore>(grpcClient.GetFeaturestoreAsync, grpcClient.GetFeaturestore, effectiveSettings.GetFeaturestoreSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetFeaturestore = clientHelper.BuildApiCall<GetFeaturestoreRequest, Featurestore>("GetFeaturestore", grpcClient.GetFeaturestoreAsync, grpcClient.GetFeaturestore, effectiveSettings.GetFeaturestoreSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetFeaturestore);
             Modify_GetFeaturestoreApiCall(ref _callGetFeaturestore);
-            _callListFeaturestores = clientHelper.BuildApiCall<ListFeaturestoresRequest, ListFeaturestoresResponse>(grpcClient.ListFeaturestoresAsync, grpcClient.ListFeaturestores, effectiveSettings.ListFeaturestoresSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListFeaturestores = clientHelper.BuildApiCall<ListFeaturestoresRequest, ListFeaturestoresResponse>("ListFeaturestores", grpcClient.ListFeaturestoresAsync, grpcClient.ListFeaturestores, effectiveSettings.ListFeaturestoresSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListFeaturestores);
             Modify_ListFeaturestoresApiCall(ref _callListFeaturestores);
-            _callUpdateFeaturestore = clientHelper.BuildApiCall<UpdateFeaturestoreRequest, lro::Operation>(grpcClient.UpdateFeaturestoreAsync, grpcClient.UpdateFeaturestore, effectiveSettings.UpdateFeaturestoreSettings).WithGoogleRequestParam("featurestore.name", request => request.Featurestore?.Name);
+            _callUpdateFeaturestore = clientHelper.BuildApiCall<UpdateFeaturestoreRequest, lro::Operation>("UpdateFeaturestore", grpcClient.UpdateFeaturestoreAsync, grpcClient.UpdateFeaturestore, effectiveSettings.UpdateFeaturestoreSettings).WithGoogleRequestParam("featurestore.name", request => request.Featurestore?.Name);
             Modify_ApiCall(ref _callUpdateFeaturestore);
             Modify_UpdateFeaturestoreApiCall(ref _callUpdateFeaturestore);
-            _callDeleteFeaturestore = clientHelper.BuildApiCall<DeleteFeaturestoreRequest, lro::Operation>(grpcClient.DeleteFeaturestoreAsync, grpcClient.DeleteFeaturestore, effectiveSettings.DeleteFeaturestoreSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteFeaturestore = clientHelper.BuildApiCall<DeleteFeaturestoreRequest, lro::Operation>("DeleteFeaturestore", grpcClient.DeleteFeaturestoreAsync, grpcClient.DeleteFeaturestore, effectiveSettings.DeleteFeaturestoreSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteFeaturestore);
             Modify_DeleteFeaturestoreApiCall(ref _callDeleteFeaturestore);
-            _callCreateEntityType = clientHelper.BuildApiCall<CreateEntityTypeRequest, lro::Operation>(grpcClient.CreateEntityTypeAsync, grpcClient.CreateEntityType, effectiveSettings.CreateEntityTypeSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateEntityType = clientHelper.BuildApiCall<CreateEntityTypeRequest, lro::Operation>("CreateEntityType", grpcClient.CreateEntityTypeAsync, grpcClient.CreateEntityType, effectiveSettings.CreateEntityTypeSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateEntityType);
             Modify_CreateEntityTypeApiCall(ref _callCreateEntityType);
-            _callGetEntityType = clientHelper.BuildApiCall<GetEntityTypeRequest, EntityType>(grpcClient.GetEntityTypeAsync, grpcClient.GetEntityType, effectiveSettings.GetEntityTypeSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetEntityType = clientHelper.BuildApiCall<GetEntityTypeRequest, EntityType>("GetEntityType", grpcClient.GetEntityTypeAsync, grpcClient.GetEntityType, effectiveSettings.GetEntityTypeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetEntityType);
             Modify_GetEntityTypeApiCall(ref _callGetEntityType);
-            _callListEntityTypes = clientHelper.BuildApiCall<ListEntityTypesRequest, ListEntityTypesResponse>(grpcClient.ListEntityTypesAsync, grpcClient.ListEntityTypes, effectiveSettings.ListEntityTypesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListEntityTypes = clientHelper.BuildApiCall<ListEntityTypesRequest, ListEntityTypesResponse>("ListEntityTypes", grpcClient.ListEntityTypesAsync, grpcClient.ListEntityTypes, effectiveSettings.ListEntityTypesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListEntityTypes);
             Modify_ListEntityTypesApiCall(ref _callListEntityTypes);
-            _callUpdateEntityType = clientHelper.BuildApiCall<UpdateEntityTypeRequest, EntityType>(grpcClient.UpdateEntityTypeAsync, grpcClient.UpdateEntityType, effectiveSettings.UpdateEntityTypeSettings).WithGoogleRequestParam("entity_type.name", request => request.EntityType?.Name);
+            _callUpdateEntityType = clientHelper.BuildApiCall<UpdateEntityTypeRequest, EntityType>("UpdateEntityType", grpcClient.UpdateEntityTypeAsync, grpcClient.UpdateEntityType, effectiveSettings.UpdateEntityTypeSettings).WithGoogleRequestParam("entity_type.name", request => request.EntityType?.Name);
             Modify_ApiCall(ref _callUpdateEntityType);
             Modify_UpdateEntityTypeApiCall(ref _callUpdateEntityType);
-            _callDeleteEntityType = clientHelper.BuildApiCall<DeleteEntityTypeRequest, lro::Operation>(grpcClient.DeleteEntityTypeAsync, grpcClient.DeleteEntityType, effectiveSettings.DeleteEntityTypeSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteEntityType = clientHelper.BuildApiCall<DeleteEntityTypeRequest, lro::Operation>("DeleteEntityType", grpcClient.DeleteEntityTypeAsync, grpcClient.DeleteEntityType, effectiveSettings.DeleteEntityTypeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteEntityType);
             Modify_DeleteEntityTypeApiCall(ref _callDeleteEntityType);
-            _callCreateFeature = clientHelper.BuildApiCall<CreateFeatureRequest, lro::Operation>(grpcClient.CreateFeatureAsync, grpcClient.CreateFeature, effectiveSettings.CreateFeatureSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateFeature = clientHelper.BuildApiCall<CreateFeatureRequest, lro::Operation>("CreateFeature", grpcClient.CreateFeatureAsync, grpcClient.CreateFeature, effectiveSettings.CreateFeatureSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateFeature);
             Modify_CreateFeatureApiCall(ref _callCreateFeature);
-            _callBatchCreateFeatures = clientHelper.BuildApiCall<BatchCreateFeaturesRequest, lro::Operation>(grpcClient.BatchCreateFeaturesAsync, grpcClient.BatchCreateFeatures, effectiveSettings.BatchCreateFeaturesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callBatchCreateFeatures = clientHelper.BuildApiCall<BatchCreateFeaturesRequest, lro::Operation>("BatchCreateFeatures", grpcClient.BatchCreateFeaturesAsync, grpcClient.BatchCreateFeatures, effectiveSettings.BatchCreateFeaturesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callBatchCreateFeatures);
             Modify_BatchCreateFeaturesApiCall(ref _callBatchCreateFeatures);
-            _callGetFeature = clientHelper.BuildApiCall<GetFeatureRequest, Feature>(grpcClient.GetFeatureAsync, grpcClient.GetFeature, effectiveSettings.GetFeatureSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetFeature = clientHelper.BuildApiCall<GetFeatureRequest, Feature>("GetFeature", grpcClient.GetFeatureAsync, grpcClient.GetFeature, effectiveSettings.GetFeatureSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetFeature);
             Modify_GetFeatureApiCall(ref _callGetFeature);
-            _callListFeatures = clientHelper.BuildApiCall<ListFeaturesRequest, ListFeaturesResponse>(grpcClient.ListFeaturesAsync, grpcClient.ListFeatures, effectiveSettings.ListFeaturesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListFeatures = clientHelper.BuildApiCall<ListFeaturesRequest, ListFeaturesResponse>("ListFeatures", grpcClient.ListFeaturesAsync, grpcClient.ListFeatures, effectiveSettings.ListFeaturesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListFeatures);
             Modify_ListFeaturesApiCall(ref _callListFeatures);
-            _callUpdateFeature = clientHelper.BuildApiCall<UpdateFeatureRequest, Feature>(grpcClient.UpdateFeatureAsync, grpcClient.UpdateFeature, effectiveSettings.UpdateFeatureSettings).WithGoogleRequestParam("feature.name", request => request.Feature?.Name);
+            _callUpdateFeature = clientHelper.BuildApiCall<UpdateFeatureRequest, Feature>("UpdateFeature", grpcClient.UpdateFeatureAsync, grpcClient.UpdateFeature, effectiveSettings.UpdateFeatureSettings).WithGoogleRequestParam("feature.name", request => request.Feature?.Name);
             Modify_ApiCall(ref _callUpdateFeature);
             Modify_UpdateFeatureApiCall(ref _callUpdateFeature);
-            _callDeleteFeature = clientHelper.BuildApiCall<DeleteFeatureRequest, lro::Operation>(grpcClient.DeleteFeatureAsync, grpcClient.DeleteFeature, effectiveSettings.DeleteFeatureSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteFeature = clientHelper.BuildApiCall<DeleteFeatureRequest, lro::Operation>("DeleteFeature", grpcClient.DeleteFeatureAsync, grpcClient.DeleteFeature, effectiveSettings.DeleteFeatureSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteFeature);
             Modify_DeleteFeatureApiCall(ref _callDeleteFeature);
-            _callImportFeatureValues = clientHelper.BuildApiCall<ImportFeatureValuesRequest, lro::Operation>(grpcClient.ImportFeatureValuesAsync, grpcClient.ImportFeatureValues, effectiveSettings.ImportFeatureValuesSettings).WithGoogleRequestParam("entity_type", request => request.EntityType);
+            _callImportFeatureValues = clientHelper.BuildApiCall<ImportFeatureValuesRequest, lro::Operation>("ImportFeatureValues", grpcClient.ImportFeatureValuesAsync, grpcClient.ImportFeatureValues, effectiveSettings.ImportFeatureValuesSettings).WithGoogleRequestParam("entity_type", request => request.EntityType);
             Modify_ApiCall(ref _callImportFeatureValues);
             Modify_ImportFeatureValuesApiCall(ref _callImportFeatureValues);
-            _callBatchReadFeatureValues = clientHelper.BuildApiCall<BatchReadFeatureValuesRequest, lro::Operation>(grpcClient.BatchReadFeatureValuesAsync, grpcClient.BatchReadFeatureValues, effectiveSettings.BatchReadFeatureValuesSettings).WithGoogleRequestParam("featurestore", request => request.Featurestore);
+            _callBatchReadFeatureValues = clientHelper.BuildApiCall<BatchReadFeatureValuesRequest, lro::Operation>("BatchReadFeatureValues", grpcClient.BatchReadFeatureValuesAsync, grpcClient.BatchReadFeatureValues, effectiveSettings.BatchReadFeatureValuesSettings).WithGoogleRequestParam("featurestore", request => request.Featurestore);
             Modify_ApiCall(ref _callBatchReadFeatureValues);
             Modify_BatchReadFeatureValuesApiCall(ref _callBatchReadFeatureValues);
-            _callExportFeatureValues = clientHelper.BuildApiCall<ExportFeatureValuesRequest, lro::Operation>(grpcClient.ExportFeatureValuesAsync, grpcClient.ExportFeatureValues, effectiveSettings.ExportFeatureValuesSettings).WithGoogleRequestParam("entity_type", request => request.EntityType);
+            _callExportFeatureValues = clientHelper.BuildApiCall<ExportFeatureValuesRequest, lro::Operation>("ExportFeatureValues", grpcClient.ExportFeatureValuesAsync, grpcClient.ExportFeatureValues, effectiveSettings.ExportFeatureValuesSettings).WithGoogleRequestParam("entity_type", request => request.EntityType);
             Modify_ApiCall(ref _callExportFeatureValues);
             Modify_ExportFeatureValuesApiCall(ref _callExportFeatureValues);
-            _callSearchFeatures = clientHelper.BuildApiCall<SearchFeaturesRequest, SearchFeaturesResponse>(grpcClient.SearchFeaturesAsync, grpcClient.SearchFeatures, effectiveSettings.SearchFeaturesSettings).WithGoogleRequestParam("location", request => request.Location);
+            _callSearchFeatures = clientHelper.BuildApiCall<SearchFeaturesRequest, SearchFeaturesResponse>("SearchFeatures", grpcClient.SearchFeaturesAsync, grpcClient.SearchFeatures, effectiveSettings.SearchFeaturesSettings).WithGoogleRequestParam("location", request => request.Location);
             Modify_ApiCall(ref _callSearchFeatures);
             Modify_SearchFeaturesApiCall(ref _callSearchFeatures);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
@@ -5013,6 +5020,12 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>The underlying gRPC FeaturestoreService client</summary>
         public override FeaturestoreService.FeaturestoreServiceClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
         partial void Modify_CreateFeaturestoreRequest(ref CreateFeaturestoreRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -5679,6 +5692,32 @@ namespace Google.Cloud.AIPlatform.V1
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class FeaturestoreService
+    {
+        public partial class FeaturestoreServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
+
+            /// <summary>
+            /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gciv::IAMPolicy.IAMPolicyClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gciv::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() =>
+                new gciv::IAMPolicy.IAMPolicyClient(CallInvoker);
         }
     }
 }

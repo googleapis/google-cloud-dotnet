@@ -109,26 +109,6 @@ then
   fi
 fi
 
-# If we are building Google.Cloud.Diagnostics.AspNetCore we also need to build
-# Google.Cloud.Diagnostics.AspNetCore3 since they share code files.
-hasCore=false
-hasCore3=false
-for api in ${apis[*]}
-do
-  if [[ "$api" == "Google.Cloud.Diagnostics.AspNetCore" ]]
-  then
-    hasCore=true
-  elif [[ "$api" == "Google.Cloud.Diagnostics.AspNetCore3" ]]
-  then
-    hasCore3=true
-  fi
-done
-if [[ "$hasCore" == "true" ]] && [[ "$hasCore3" == "false" ]]
-then
-  apis+=("Google.Cloud.Diagnostics.AspNetCore3")
-fi
-
-
 if [[ "$nobuild" == "true" ]]
 then
   echo "APIs that would be built:"
@@ -139,11 +119,7 @@ then
   exit 0
 fi
 
-# First build the analyzers, for use in everything else.
 log_build_action "(Start) build.sh"
-log_build_action "Building analyzers"
-
-dotnet publish -nologo -clp:NoSummary -v quiet -c Release -f netstandard2.0 tools/Google.Cloud.Tools.Analyzers
 
 # Then build the requested APIs, working out the test projects as we go.
 > AllTests.txt

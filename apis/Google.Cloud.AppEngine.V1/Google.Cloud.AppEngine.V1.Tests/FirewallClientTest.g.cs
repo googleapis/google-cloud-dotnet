@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -41,7 +42,7 @@ namespace Google.Cloud.AppEngine.V1.Tests
                 IngressRules = { new FirewallRule(), },
             };
             mockGrpcClient.Setup(x => x.BatchUpdateIngressRules(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirewallClient client = new FirewallClientImpl(mockGrpcClient.Object, null);
+            FirewallClient client = new FirewallClientImpl(mockGrpcClient.Object, null, null);
             BatchUpdateIngressRulesResponse response = client.BatchUpdateIngressRules(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -61,7 +62,7 @@ namespace Google.Cloud.AppEngine.V1.Tests
                 IngressRules = { new FirewallRule(), },
             };
             mockGrpcClient.Setup(x => x.BatchUpdateIngressRulesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchUpdateIngressRulesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirewallClient client = new FirewallClientImpl(mockGrpcClient.Object, null);
+            FirewallClient client = new FirewallClientImpl(mockGrpcClient.Object, null, null);
             BatchUpdateIngressRulesResponse responseCallSettings = await client.BatchUpdateIngressRulesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchUpdateIngressRulesResponse responseCancellationToken = await client.BatchUpdateIngressRulesAsync(request, st::CancellationToken.None);
@@ -86,7 +87,7 @@ namespace Google.Cloud.AppEngine.V1.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.CreateIngressRule(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirewallClient client = new FirewallClientImpl(mockGrpcClient.Object, null);
+            FirewallClient client = new FirewallClientImpl(mockGrpcClient.Object, null, null);
             FirewallRule response = client.CreateIngressRule(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -109,7 +110,7 @@ namespace Google.Cloud.AppEngine.V1.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.CreateIngressRuleAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FirewallRule>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirewallClient client = new FirewallClientImpl(mockGrpcClient.Object, null);
+            FirewallClient client = new FirewallClientImpl(mockGrpcClient.Object, null, null);
             FirewallRule responseCallSettings = await client.CreateIngressRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             FirewallRule responseCancellationToken = await client.CreateIngressRuleAsync(request, st::CancellationToken.None);
@@ -133,7 +134,7 @@ namespace Google.Cloud.AppEngine.V1.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetIngressRule(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirewallClient client = new FirewallClientImpl(mockGrpcClient.Object, null);
+            FirewallClient client = new FirewallClientImpl(mockGrpcClient.Object, null, null);
             FirewallRule response = client.GetIngressRule(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -155,7 +156,7 @@ namespace Google.Cloud.AppEngine.V1.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetIngressRuleAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FirewallRule>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirewallClient client = new FirewallClientImpl(mockGrpcClient.Object, null);
+            FirewallClient client = new FirewallClientImpl(mockGrpcClient.Object, null, null);
             FirewallRule responseCallSettings = await client.GetIngressRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             FirewallRule responseCancellationToken = await client.GetIngressRuleAsync(request, st::CancellationToken.None);
@@ -181,7 +182,7 @@ namespace Google.Cloud.AppEngine.V1.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.UpdateIngressRule(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirewallClient client = new FirewallClientImpl(mockGrpcClient.Object, null);
+            FirewallClient client = new FirewallClientImpl(mockGrpcClient.Object, null, null);
             FirewallRule response = client.UpdateIngressRule(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -205,7 +206,7 @@ namespace Google.Cloud.AppEngine.V1.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.UpdateIngressRuleAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FirewallRule>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirewallClient client = new FirewallClientImpl(mockGrpcClient.Object, null);
+            FirewallClient client = new FirewallClientImpl(mockGrpcClient.Object, null, null);
             FirewallRule responseCallSettings = await client.UpdateIngressRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             FirewallRule responseCancellationToken = await client.UpdateIngressRuleAsync(request, st::CancellationToken.None);
@@ -223,7 +224,7 @@ namespace Google.Cloud.AppEngine.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteIngressRule(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirewallClient client = new FirewallClientImpl(mockGrpcClient.Object, null);
+            FirewallClient client = new FirewallClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteIngressRule(request);
             mockGrpcClient.VerifyAll();
         }
@@ -238,7 +239,7 @@ namespace Google.Cloud.AppEngine.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteIngressRuleAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirewallClient client = new FirewallClientImpl(mockGrpcClient.Object, null);
+            FirewallClient client = new FirewallClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteIngressRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteIngressRuleAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
