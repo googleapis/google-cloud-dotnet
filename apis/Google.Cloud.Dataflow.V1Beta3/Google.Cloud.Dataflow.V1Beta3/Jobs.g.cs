@@ -521,7 +521,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     /// existing Job.
     ///
     /// The name must match the regular expression
-    /// `[a-z]([-a-z0-9]{0,38}[a-z0-9])?`
+    /// `[a-z]([-a-z0-9]{0,1022}[a-z0-9])?`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
