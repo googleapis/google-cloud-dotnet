@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -120,7 +120,19 @@ namespace Google.Cloud.PubSub.V1
                 PublisherServiceApiSettings publisherServiceApiSettings = null,
                 ChannelCredentials credentials = null,
                 string serviceEndpoint = null)
-                : this(clientCount, publisherServiceApiSettings, credentials, serviceEndpoint, EmulatorDetection.None)
+                : this(clientCount, publisherServiceApiSettings, credentials, serviceEndpoint, EmulatorDetection.None, null)
+            {
+            }
+
+            // TODO: Allow null?
+
+            /// <summary>
+            /// Creates a settings object which executes the specified configuration action
+            /// on a client builder after applying other settings.
+            /// </summary>
+            /// <param name="configureAction">The configuration action. Must not be null.</param>
+            public ClientCreationSettings(Action<PublisherServiceApiClientBuilder> configureAction)
+                : this(null, null, null, null, EmulatorDetection.None, configureAction)
             {
             }
 
@@ -129,14 +141,22 @@ namespace Google.Cloud.PubSub.V1
                 PublisherServiceApiSettings publisherServiceApiSettings,
                 ChannelCredentials credentials,
                 string serviceEndpoint,
-                EmulatorDetection emulatorDetection)
+                EmulatorDetection emulatorDetection,
+                Action<PublisherServiceApiClientBuilder> configureAction)
             {
                 ClientCount = clientCount;
                 PublisherServiceApiSettings = publisherServiceApiSettings;
                 Credentials = credentials;
                 ServiceEndpoint = serviceEndpoint;
                 EmulatorDetection = emulatorDetection;
+                ConfigureAction = configureAction;
             }
+
+            /// <summary>
+            /// The configuration action to perform on the client builder after all other properties
+            /// in these settings have been applied.
+            /// </summary>
+            public Action<PublisherServiceApiClientBuilder> ConfigureAction { get; }
 
             /// <summary>
             /// Creates a new instance of this type with the specified emulator detection value.
@@ -146,7 +166,18 @@ namespace Google.Cloud.PubSub.V1
             public ClientCreationSettings WithEmulatorDetection(EmulatorDetection emulatorDetection)
             {
                 GaxPreconditions.CheckEnumValue(emulatorDetection, nameof(emulatorDetection));
-                return new ClientCreationSettings(ClientCount, PublisherServiceApiSettings, Credentials, ServiceEndpoint, emulatorDetection);
+                return new ClientCreationSettings(ClientCount, PublisherServiceApiSettings, Credentials, ServiceEndpoint, emulatorDetection, ConfigureAction);
+            }
+
+            /// <summary>
+            /// Creates a new instance of this type with the specified client count.
+            /// </summary>
+            /// <param name="clientCount">The new client count, or null to reset to the default</param>
+            /// <returns>The new instance</returns>
+            public ClientCreationSettings WithClientCount(int? clientCount)
+            {
+                GaxPreconditions.CheckArgumentRange(clientCount ?? 1, nameof(clientCount), 1, 256);
+                return new ClientCreationSettings(clientCount, PublisherServiceApiSettings, Credentials, ServiceEndpoint, EmulatorDetection, ConfigureAction);
             }
 
             /// <summary>
@@ -274,6 +305,8 @@ namespace Google.Cloud.PubSub.V1
                     Settings = clientCreationSettings?.PublisherServiceApiSettings,
                     ChannelOptions = grpcChannelOptions
                 };
+                clientCreationSettings?.ConfigureAction?.Invoke(builder);
+
                 var channel = isAsync ?
                     await builder.CreateChannelAsync(cancellationToken: default).ConfigureAwait(false) :
                     builder.CreateChannel();
