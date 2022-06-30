@@ -47,7 +47,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.FedrampHigh,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Il4,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
                 Etag = "etage8ad7218",
@@ -93,7 +93,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.FedrampHigh,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Il4,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
                 Etag = "etage8ad7218",
@@ -141,7 +141,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.FedrampHigh,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Il4,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
                 Etag = "etage8ad7218",
@@ -187,7 +187,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.FedrampHigh,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Il4,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
                 Etag = "etage8ad7218",
@@ -335,7 +335,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.FedrampHigh,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Il4,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
                 Etag = "etage8ad7218",
@@ -380,7 +380,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.FedrampHigh,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Il4,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
                 Etag = "etage8ad7218",
@@ -427,7 +427,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.FedrampHigh,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Il4,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
                 Etag = "etage8ad7218",
@@ -472,7 +472,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.FedrampHigh,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Il4,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
                 Etag = "etage8ad7218",
@@ -519,7 +519,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.FedrampHigh,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Il4,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
                 Etag = "etage8ad7218",
@@ -564,7 +564,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.FedrampHigh,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Il4,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
                 Etag = "etage8ad7218",
