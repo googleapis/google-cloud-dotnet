@@ -1,0 +1,16 @@
+[
+  {
+    "method": "ListFunctions",
+    "client": "FunctionServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  },
+  {
+    "method": "ListRuntimes",
+    "client": "FunctionServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  }
+]
