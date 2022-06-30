@@ -1574,7 +1574,7 @@
       "type": "grpc",
       "productName": "Cloud Functions",
       "productUrl": "https://cloud.google.com/functions",
-      "description": "Recommended Google client library to access the Google Cloud Functions API, which manages lightweight user-provided functions executed in response to events.",
+      "description": "Recommended Google client library to access the Google Cloud Functions API (v1), which manages lightweight user-provided functions executed in response to events.",
       "tags": [
         "functions"
       ],
@@ -1588,6 +1588,26 @@
       "protoPath": "google/cloud/functions/v1",
       "shortName": "cloudfunctions",
       "serviceConfigFile": "cloudfunctions_v1.yaml"
+    },
+    {
+      "id": "Google.Cloud.Functions.V2Beta",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Cloud Functions",
+      "productUrl": "https://cloud.google.com/functions",
+      "description": "Recommended Google client library to access the Google Cloud Functions API (v2beta), which manages lightweight user-provided functions executed in response to events.",
+      "tags": [
+        "functions"
+      ],
+      "dependencies": {
+        "Google.Cloud.Iam.V1": "3.0.0",
+        "Google.Cloud.Location": "2.0.0",
+        "Google.LongRunning": "3.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/functions/v2beta",
+      "shortName": "cloudfunctions",
+      "serviceConfigFile": "cloudfunctions_v2beta.yaml"
     },
     {
       "id": "Google.Cloud.GSuiteAddOns.V1",
