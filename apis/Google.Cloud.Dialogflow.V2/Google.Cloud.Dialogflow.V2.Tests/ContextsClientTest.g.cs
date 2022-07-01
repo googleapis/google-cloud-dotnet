@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -32,6 +33,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void GetContextRequestObject()
         {
             moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetContextRequest request = new GetContextRequest
             {
                 ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
@@ -53,6 +55,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task GetContextRequestObjectAsync()
         {
             moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetContextRequest request = new GetContextRequest
             {
                 ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
@@ -76,6 +79,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void GetContext()
         {
             moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetContextRequest request = new GetContextRequest
             {
                 ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
@@ -97,6 +101,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task GetContextAsync()
         {
             moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetContextRequest request = new GetContextRequest
             {
                 ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
@@ -120,6 +125,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void GetContextResourceNames()
         {
             moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetContextRequest request = new GetContextRequest
             {
                 ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
@@ -141,6 +147,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task GetContextResourceNamesAsync()
         {
             moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetContextRequest request = new GetContextRequest
             {
                 ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
@@ -164,6 +171,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void CreateContextRequestObject()
         {
             moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateContextRequest request = new CreateContextRequest
             {
                 ParentAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
@@ -186,6 +194,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task CreateContextRequestObjectAsync()
         {
             moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateContextRequest request = new CreateContextRequest
             {
                 ParentAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
@@ -210,6 +219,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void CreateContext()
         {
             moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateContextRequest request = new CreateContextRequest
             {
                 ParentAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
@@ -232,6 +242,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task CreateContextAsync()
         {
             moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateContextRequest request = new CreateContextRequest
             {
                 ParentAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
@@ -256,6 +267,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void CreateContextResourceNames()
         {
             moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateContextRequest request = new CreateContextRequest
             {
                 ParentAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
@@ -278,6 +290,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task CreateContextResourceNamesAsync()
         {
             moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateContextRequest request = new CreateContextRequest
             {
                 ParentAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
@@ -302,6 +315,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void UpdateContextRequestObject()
         {
             moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateContextRequest request = new UpdateContextRequest
             {
                 Context = new Context(),
@@ -324,6 +338,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task UpdateContextRequestObjectAsync()
         {
             moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateContextRequest request = new UpdateContextRequest
             {
                 Context = new Context(),
@@ -348,6 +363,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void UpdateContext()
         {
             moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateContextRequest request = new UpdateContextRequest
             {
                 Context = new Context(),
@@ -370,6 +386,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task UpdateContextAsync()
         {
             moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateContextRequest request = new UpdateContextRequest
             {
                 Context = new Context(),
@@ -394,6 +411,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void DeleteContextRequestObject()
         {
             moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteContextRequest request = new DeleteContextRequest
             {
                 ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
@@ -409,6 +427,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task DeleteContextRequestObjectAsync()
         {
             moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteContextRequest request = new DeleteContextRequest
             {
                 ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
@@ -425,6 +444,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void DeleteContext()
         {
             moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteContextRequest request = new DeleteContextRequest
             {
                 ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
@@ -440,6 +460,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task DeleteContextAsync()
         {
             moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteContextRequest request = new DeleteContextRequest
             {
                 ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
@@ -456,6 +477,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void DeleteContextResourceNames()
         {
             moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteContextRequest request = new DeleteContextRequest
             {
                 ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
@@ -471,6 +493,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task DeleteContextResourceNamesAsync()
         {
             moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteContextRequest request = new DeleteContextRequest
             {
                 ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
@@ -487,6 +510,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void DeleteAllContextsRequestObject()
         {
             moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteAllContextsRequest request = new DeleteAllContextsRequest
             {
                 ParentAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
@@ -502,6 +526,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task DeleteAllContextsRequestObjectAsync()
         {
             moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteAllContextsRequest request = new DeleteAllContextsRequest
             {
                 ParentAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
@@ -518,6 +543,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void DeleteAllContexts()
         {
             moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteAllContextsRequest request = new DeleteAllContextsRequest
             {
                 ParentAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
@@ -533,6 +559,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task DeleteAllContextsAsync()
         {
             moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteAllContextsRequest request = new DeleteAllContextsRequest
             {
                 ParentAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
@@ -549,6 +576,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void DeleteAllContextsResourceNames()
         {
             moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteAllContextsRequest request = new DeleteAllContextsRequest
             {
                 ParentAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
@@ -564,6 +592,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task DeleteAllContextsResourceNamesAsync()
         {
             moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteAllContextsRequest request = new DeleteAllContextsRequest
             {
                 ParentAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),

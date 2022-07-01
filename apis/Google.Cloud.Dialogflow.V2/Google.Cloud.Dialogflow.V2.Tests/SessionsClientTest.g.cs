@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using gr = Google.Rpc;
@@ -34,6 +35,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void DetectIntentRequestObject()
         {
             moq::Mock<Sessions.SessionsClient> mockGrpcClient = new moq::Mock<Sessions.SessionsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DetectIntentRequest request = new DetectIntentRequest
             {
                 SessionAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
@@ -62,6 +64,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task DetectIntentRequestObjectAsync()
         {
             moq::Mock<Sessions.SessionsClient> mockGrpcClient = new moq::Mock<Sessions.SessionsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DetectIntentRequest request = new DetectIntentRequest
             {
                 SessionAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
@@ -92,6 +95,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void DetectIntent()
         {
             moq::Mock<Sessions.SessionsClient> mockGrpcClient = new moq::Mock<Sessions.SessionsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DetectIntentRequest request = new DetectIntentRequest
             {
                 SessionAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
@@ -116,6 +120,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task DetectIntentAsync()
         {
             moq::Mock<Sessions.SessionsClient> mockGrpcClient = new moq::Mock<Sessions.SessionsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DetectIntentRequest request = new DetectIntentRequest
             {
                 SessionAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
@@ -142,6 +147,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void DetectIntentResourceNames()
         {
             moq::Mock<Sessions.SessionsClient> mockGrpcClient = new moq::Mock<Sessions.SessionsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DetectIntentRequest request = new DetectIntentRequest
             {
                 SessionAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
@@ -166,6 +172,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task DetectIntentResourceNamesAsync()
         {
             moq::Mock<Sessions.SessionsClient> mockGrpcClient = new moq::Mock<Sessions.SessionsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DetectIntentRequest request = new DetectIntentRequest
             {
                 SessionAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),

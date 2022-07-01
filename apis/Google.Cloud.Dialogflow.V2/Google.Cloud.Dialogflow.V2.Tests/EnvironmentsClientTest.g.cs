@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -32,6 +33,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void GetEnvironmentRequestObject()
         {
             moq::Mock<Environments.EnvironmentsClient> mockGrpcClient = new moq::Mock<Environments.EnvironmentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetEnvironmentRequest request = new GetEnvironmentRequest
             {
                 EnvironmentName = EnvironmentName.FromProjectEnvironment("[PROJECT]", "[ENVIRONMENT]"),
@@ -57,6 +59,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task GetEnvironmentRequestObjectAsync()
         {
             moq::Mock<Environments.EnvironmentsClient> mockGrpcClient = new moq::Mock<Environments.EnvironmentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetEnvironmentRequest request = new GetEnvironmentRequest
             {
                 EnvironmentName = EnvironmentName.FromProjectEnvironment("[PROJECT]", "[ENVIRONMENT]"),
@@ -84,6 +87,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void CreateEnvironmentRequestObject()
         {
             moq::Mock<Environments.EnvironmentsClient> mockGrpcClient = new moq::Mock<Environments.EnvironmentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateEnvironmentRequest request = new CreateEnvironmentRequest
             {
                 ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
@@ -111,6 +115,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task CreateEnvironmentRequestObjectAsync()
         {
             moq::Mock<Environments.EnvironmentsClient> mockGrpcClient = new moq::Mock<Environments.EnvironmentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateEnvironmentRequest request = new CreateEnvironmentRequest
             {
                 ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
@@ -140,6 +145,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void UpdateEnvironmentRequestObject()
         {
             moq::Mock<Environments.EnvironmentsClient> mockGrpcClient = new moq::Mock<Environments.EnvironmentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateEnvironmentRequest request = new UpdateEnvironmentRequest
             {
                 Environment = new Environment(),
@@ -167,6 +173,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task UpdateEnvironmentRequestObjectAsync()
         {
             moq::Mock<Environments.EnvironmentsClient> mockGrpcClient = new moq::Mock<Environments.EnvironmentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateEnvironmentRequest request = new UpdateEnvironmentRequest
             {
                 Environment = new Environment(),
@@ -196,6 +203,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void DeleteEnvironmentRequestObject()
         {
             moq::Mock<Environments.EnvironmentsClient> mockGrpcClient = new moq::Mock<Environments.EnvironmentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteEnvironmentRequest request = new DeleteEnvironmentRequest
             {
                 EnvironmentName = EnvironmentName.FromProjectEnvironment("[PROJECT]", "[ENVIRONMENT]"),
@@ -211,6 +219,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task DeleteEnvironmentRequestObjectAsync()
         {
             moq::Mock<Environments.EnvironmentsClient> mockGrpcClient = new moq::Mock<Environments.EnvironmentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteEnvironmentRequest request = new DeleteEnvironmentRequest
             {
                 EnvironmentName = EnvironmentName.FromProjectEnvironment("[PROJECT]", "[ENVIRONMENT]"),

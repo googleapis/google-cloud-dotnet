@@ -39,7 +39,6 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             ListAnswerRecordsRequest request = new ListAnswerRecordsRequest
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
-                Filter = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListAnswerRecordsResponse, AnswerRecord> response = answerRecordsClient.ListAnswerRecordsAsync(request);

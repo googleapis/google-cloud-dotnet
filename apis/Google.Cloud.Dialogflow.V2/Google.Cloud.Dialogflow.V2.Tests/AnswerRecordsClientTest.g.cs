@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -32,6 +33,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void UpdateAnswerRecordRequestObject()
         {
             moq::Mock<AnswerRecords.AnswerRecordsClient> mockGrpcClient = new moq::Mock<AnswerRecords.AnswerRecordsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateAnswerRecordRequest request = new UpdateAnswerRecordRequest
             {
                 AnswerRecord = new AnswerRecord(),
@@ -54,6 +56,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task UpdateAnswerRecordRequestObjectAsync()
         {
             moq::Mock<AnswerRecords.AnswerRecordsClient> mockGrpcClient = new moq::Mock<AnswerRecords.AnswerRecordsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateAnswerRecordRequest request = new UpdateAnswerRecordRequest
             {
                 AnswerRecord = new AnswerRecord(),
@@ -78,6 +81,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void UpdateAnswerRecord()
         {
             moq::Mock<AnswerRecords.AnswerRecordsClient> mockGrpcClient = new moq::Mock<AnswerRecords.AnswerRecordsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateAnswerRecordRequest request = new UpdateAnswerRecordRequest
             {
                 AnswerRecord = new AnswerRecord(),
@@ -100,6 +104,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task UpdateAnswerRecordAsync()
         {
             moq::Mock<AnswerRecords.AnswerRecordsClient> mockGrpcClient = new moq::Mock<AnswerRecords.AnswerRecordsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateAnswerRecordRequest request = new UpdateAnswerRecordRequest
             {
                 AnswerRecord = new AnswerRecord(),

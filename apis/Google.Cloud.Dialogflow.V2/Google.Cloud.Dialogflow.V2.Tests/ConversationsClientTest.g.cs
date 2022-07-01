@@ -17,6 +17,7 @@
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using gcl = Google.Cloud.Location;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -33,6 +34,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void CreateConversationRequestObject()
         {
             moq::Mock<Conversations.ConversationsClient> mockGrpcClient = new moq::Mock<Conversations.ConversationsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateConversationRequest request = new CreateConversationRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -60,6 +62,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task CreateConversationRequestObjectAsync()
         {
             moq::Mock<Conversations.ConversationsClient> mockGrpcClient = new moq::Mock<Conversations.ConversationsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateConversationRequest request = new CreateConversationRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -89,6 +92,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void CreateConversation()
         {
             moq::Mock<Conversations.ConversationsClient> mockGrpcClient = new moq::Mock<Conversations.ConversationsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateConversationRequest request = new CreateConversationRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -115,6 +119,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task CreateConversationAsync()
         {
             moq::Mock<Conversations.ConversationsClient> mockGrpcClient = new moq::Mock<Conversations.ConversationsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateConversationRequest request = new CreateConversationRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -143,6 +148,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void CreateConversationResourceNames1()
         {
             moq::Mock<Conversations.ConversationsClient> mockGrpcClient = new moq::Mock<Conversations.ConversationsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateConversationRequest request = new CreateConversationRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -169,6 +175,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task CreateConversationResourceNames1Async()
         {
             moq::Mock<Conversations.ConversationsClient> mockGrpcClient = new moq::Mock<Conversations.ConversationsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateConversationRequest request = new CreateConversationRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -197,6 +204,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void CreateConversationResourceNames2()
         {
             moq::Mock<Conversations.ConversationsClient> mockGrpcClient = new moq::Mock<Conversations.ConversationsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateConversationRequest request = new CreateConversationRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -223,6 +231,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task CreateConversationResourceNames2Async()
         {
             moq::Mock<Conversations.ConversationsClient> mockGrpcClient = new moq::Mock<Conversations.ConversationsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateConversationRequest request = new CreateConversationRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -251,6 +260,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void GetConversationRequestObject()
         {
             moq::Mock<Conversations.ConversationsClient> mockGrpcClient = new moq::Mock<Conversations.ConversationsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetConversationRequest request = new GetConversationRequest
             {
                 ConversationName = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]"),
@@ -276,6 +286,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task GetConversationRequestObjectAsync()
         {
             moq::Mock<Conversations.ConversationsClient> mockGrpcClient = new moq::Mock<Conversations.ConversationsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetConversationRequest request = new GetConversationRequest
             {
                 ConversationName = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]"),
@@ -303,6 +314,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void GetConversation()
         {
             moq::Mock<Conversations.ConversationsClient> mockGrpcClient = new moq::Mock<Conversations.ConversationsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetConversationRequest request = new GetConversationRequest
             {
                 ConversationName = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]"),
@@ -328,6 +340,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task GetConversationAsync()
         {
             moq::Mock<Conversations.ConversationsClient> mockGrpcClient = new moq::Mock<Conversations.ConversationsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetConversationRequest request = new GetConversationRequest
             {
                 ConversationName = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]"),
@@ -355,6 +368,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void GetConversationResourceNames()
         {
             moq::Mock<Conversations.ConversationsClient> mockGrpcClient = new moq::Mock<Conversations.ConversationsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetConversationRequest request = new GetConversationRequest
             {
                 ConversationName = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]"),
@@ -380,6 +394,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task GetConversationResourceNamesAsync()
         {
             moq::Mock<Conversations.ConversationsClient> mockGrpcClient = new moq::Mock<Conversations.ConversationsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetConversationRequest request = new GetConversationRequest
             {
                 ConversationName = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]"),
@@ -407,6 +422,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void CompleteConversationRequestObject()
         {
             moq::Mock<Conversations.ConversationsClient> mockGrpcClient = new moq::Mock<Conversations.ConversationsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CompleteConversationRequest request = new CompleteConversationRequest
             {
                 ConversationName = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]"),
@@ -432,6 +448,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task CompleteConversationRequestObjectAsync()
         {
             moq::Mock<Conversations.ConversationsClient> mockGrpcClient = new moq::Mock<Conversations.ConversationsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CompleteConversationRequest request = new CompleteConversationRequest
             {
                 ConversationName = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]"),
@@ -459,6 +476,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void CompleteConversation()
         {
             moq::Mock<Conversations.ConversationsClient> mockGrpcClient = new moq::Mock<Conversations.ConversationsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CompleteConversationRequest request = new CompleteConversationRequest
             {
                 ConversationName = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]"),
@@ -484,6 +502,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task CompleteConversationAsync()
         {
             moq::Mock<Conversations.ConversationsClient> mockGrpcClient = new moq::Mock<Conversations.ConversationsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CompleteConversationRequest request = new CompleteConversationRequest
             {
                 ConversationName = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]"),
@@ -511,6 +530,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void CompleteConversationResourceNames()
         {
             moq::Mock<Conversations.ConversationsClient> mockGrpcClient = new moq::Mock<Conversations.ConversationsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CompleteConversationRequest request = new CompleteConversationRequest
             {
                 ConversationName = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]"),
@@ -536,6 +556,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task CompleteConversationResourceNamesAsync()
         {
             moq::Mock<Conversations.ConversationsClient> mockGrpcClient = new moq::Mock<Conversations.ConversationsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CompleteConversationRequest request = new CompleteConversationRequest
             {
                 ConversationName = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]"),
