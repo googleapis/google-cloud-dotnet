@@ -1,4 +1,4 @@
-﻿// Copyright 2020 Google LLC
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -117,7 +117,11 @@ namespace Google.Cloud.Tools.ReleaseManager.History
                 // If we've got list elements, parse each one separately. (Sometimes that will
                 // fail and we'll get unknown elements, but that's okay.)
                 string text = line.TrimStart(' ', '-');
-                yield return ReleaseNoteElement.Parse(Hash, text);
+                var element = ReleaseNoteElement.Parse(Hash, text);
+                if (element is not null)
+                {
+                    yield return element;
+                }
             }
         }
 
