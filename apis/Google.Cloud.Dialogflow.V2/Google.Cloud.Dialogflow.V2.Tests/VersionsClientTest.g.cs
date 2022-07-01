@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -32,6 +33,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void GetVersionRequestObject()
         {
             moq::Mock<Versions.VersionsClient> mockGrpcClient = new moq::Mock<Versions.VersionsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetVersionRequest request = new GetVersionRequest
             {
                 VersionName = VersionName.FromProjectVersion("[PROJECT]", "[VERSION]"),
@@ -55,6 +57,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task GetVersionRequestObjectAsync()
         {
             moq::Mock<Versions.VersionsClient> mockGrpcClient = new moq::Mock<Versions.VersionsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetVersionRequest request = new GetVersionRequest
             {
                 VersionName = VersionName.FromProjectVersion("[PROJECT]", "[VERSION]"),
@@ -80,6 +83,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void GetVersion()
         {
             moq::Mock<Versions.VersionsClient> mockGrpcClient = new moq::Mock<Versions.VersionsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetVersionRequest request = new GetVersionRequest
             {
                 VersionName = VersionName.FromProjectVersion("[PROJECT]", "[VERSION]"),
@@ -103,6 +107,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task GetVersionAsync()
         {
             moq::Mock<Versions.VersionsClient> mockGrpcClient = new moq::Mock<Versions.VersionsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetVersionRequest request = new GetVersionRequest
             {
                 VersionName = VersionName.FromProjectVersion("[PROJECT]", "[VERSION]"),
@@ -128,6 +133,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void GetVersionResourceNames()
         {
             moq::Mock<Versions.VersionsClient> mockGrpcClient = new moq::Mock<Versions.VersionsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetVersionRequest request = new GetVersionRequest
             {
                 VersionName = VersionName.FromProjectVersion("[PROJECT]", "[VERSION]"),
@@ -151,6 +157,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task GetVersionResourceNamesAsync()
         {
             moq::Mock<Versions.VersionsClient> mockGrpcClient = new moq::Mock<Versions.VersionsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetVersionRequest request = new GetVersionRequest
             {
                 VersionName = VersionName.FromProjectVersion("[PROJECT]", "[VERSION]"),
@@ -176,6 +183,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void CreateVersionRequestObject()
         {
             moq::Mock<Versions.VersionsClient> mockGrpcClient = new moq::Mock<Versions.VersionsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateVersionRequest request = new CreateVersionRequest
             {
                 ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
@@ -200,6 +208,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task CreateVersionRequestObjectAsync()
         {
             moq::Mock<Versions.VersionsClient> mockGrpcClient = new moq::Mock<Versions.VersionsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateVersionRequest request = new CreateVersionRequest
             {
                 ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
@@ -226,6 +235,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void CreateVersion()
         {
             moq::Mock<Versions.VersionsClient> mockGrpcClient = new moq::Mock<Versions.VersionsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateVersionRequest request = new CreateVersionRequest
             {
                 ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
@@ -250,6 +260,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task CreateVersionAsync()
         {
             moq::Mock<Versions.VersionsClient> mockGrpcClient = new moq::Mock<Versions.VersionsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateVersionRequest request = new CreateVersionRequest
             {
                 ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
@@ -276,6 +287,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void CreateVersionResourceNames()
         {
             moq::Mock<Versions.VersionsClient> mockGrpcClient = new moq::Mock<Versions.VersionsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateVersionRequest request = new CreateVersionRequest
             {
                 ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
@@ -300,6 +312,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task CreateVersionResourceNamesAsync()
         {
             moq::Mock<Versions.VersionsClient> mockGrpcClient = new moq::Mock<Versions.VersionsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateVersionRequest request = new CreateVersionRequest
             {
                 ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
@@ -326,6 +339,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void UpdateVersionRequestObject()
         {
             moq::Mock<Versions.VersionsClient> mockGrpcClient = new moq::Mock<Versions.VersionsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateVersionRequest request = new UpdateVersionRequest
             {
                 Version = new Version(),
@@ -350,6 +364,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task UpdateVersionRequestObjectAsync()
         {
             moq::Mock<Versions.VersionsClient> mockGrpcClient = new moq::Mock<Versions.VersionsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateVersionRequest request = new UpdateVersionRequest
             {
                 Version = new Version(),
@@ -376,6 +391,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void UpdateVersion()
         {
             moq::Mock<Versions.VersionsClient> mockGrpcClient = new moq::Mock<Versions.VersionsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateVersionRequest request = new UpdateVersionRequest
             {
                 Version = new Version(),
@@ -400,6 +416,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task UpdateVersionAsync()
         {
             moq::Mock<Versions.VersionsClient> mockGrpcClient = new moq::Mock<Versions.VersionsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateVersionRequest request = new UpdateVersionRequest
             {
                 Version = new Version(),
@@ -426,6 +443,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void DeleteVersionRequestObject()
         {
             moq::Mock<Versions.VersionsClient> mockGrpcClient = new moq::Mock<Versions.VersionsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteVersionRequest request = new DeleteVersionRequest
             {
                 VersionName = VersionName.FromProjectVersion("[PROJECT]", "[VERSION]"),
@@ -441,6 +459,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task DeleteVersionRequestObjectAsync()
         {
             moq::Mock<Versions.VersionsClient> mockGrpcClient = new moq::Mock<Versions.VersionsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteVersionRequest request = new DeleteVersionRequest
             {
                 VersionName = VersionName.FromProjectVersion("[PROJECT]", "[VERSION]"),
@@ -457,6 +476,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void DeleteVersion()
         {
             moq::Mock<Versions.VersionsClient> mockGrpcClient = new moq::Mock<Versions.VersionsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteVersionRequest request = new DeleteVersionRequest
             {
                 VersionName = VersionName.FromProjectVersion("[PROJECT]", "[VERSION]"),
@@ -472,6 +492,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task DeleteVersionAsync()
         {
             moq::Mock<Versions.VersionsClient> mockGrpcClient = new moq::Mock<Versions.VersionsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteVersionRequest request = new DeleteVersionRequest
             {
                 VersionName = VersionName.FromProjectVersion("[PROJECT]", "[VERSION]"),
@@ -488,6 +509,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void DeleteVersionResourceNames()
         {
             moq::Mock<Versions.VersionsClient> mockGrpcClient = new moq::Mock<Versions.VersionsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteVersionRequest request = new DeleteVersionRequest
             {
                 VersionName = VersionName.FromProjectVersion("[PROJECT]", "[VERSION]"),
@@ -503,6 +525,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task DeleteVersionResourceNamesAsync()
         {
             moq::Mock<Versions.VersionsClient> mockGrpcClient = new moq::Mock<Versions.VersionsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteVersionRequest request = new DeleteVersionRequest
             {
                 VersionName = VersionName.FromProjectVersion("[PROJECT]", "[VERSION]"),

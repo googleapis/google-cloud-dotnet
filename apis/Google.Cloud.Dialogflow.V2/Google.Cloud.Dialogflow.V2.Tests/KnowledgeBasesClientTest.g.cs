@@ -17,6 +17,7 @@
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using gcl = Google.Cloud.Location;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -33,6 +34,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void GetKnowledgeBaseRequestObject()
         {
             moq::Mock<KnowledgeBases.KnowledgeBasesClient> mockGrpcClient = new moq::Mock<KnowledgeBases.KnowledgeBasesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetKnowledgeBaseRequest request = new GetKnowledgeBaseRequest
             {
                 KnowledgeBaseName = KnowledgeBaseName.FromProjectKnowledgeBase("[PROJECT]", "[KNOWLEDGE_BASE]"),
@@ -54,6 +56,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task GetKnowledgeBaseRequestObjectAsync()
         {
             moq::Mock<KnowledgeBases.KnowledgeBasesClient> mockGrpcClient = new moq::Mock<KnowledgeBases.KnowledgeBasesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetKnowledgeBaseRequest request = new GetKnowledgeBaseRequest
             {
                 KnowledgeBaseName = KnowledgeBaseName.FromProjectKnowledgeBase("[PROJECT]", "[KNOWLEDGE_BASE]"),
@@ -77,6 +80,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void GetKnowledgeBase()
         {
             moq::Mock<KnowledgeBases.KnowledgeBasesClient> mockGrpcClient = new moq::Mock<KnowledgeBases.KnowledgeBasesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetKnowledgeBaseRequest request = new GetKnowledgeBaseRequest
             {
                 KnowledgeBaseName = KnowledgeBaseName.FromProjectKnowledgeBase("[PROJECT]", "[KNOWLEDGE_BASE]"),
@@ -98,6 +102,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task GetKnowledgeBaseAsync()
         {
             moq::Mock<KnowledgeBases.KnowledgeBasesClient> mockGrpcClient = new moq::Mock<KnowledgeBases.KnowledgeBasesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetKnowledgeBaseRequest request = new GetKnowledgeBaseRequest
             {
                 KnowledgeBaseName = KnowledgeBaseName.FromProjectKnowledgeBase("[PROJECT]", "[KNOWLEDGE_BASE]"),
@@ -121,6 +126,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void GetKnowledgeBaseResourceNames()
         {
             moq::Mock<KnowledgeBases.KnowledgeBasesClient> mockGrpcClient = new moq::Mock<KnowledgeBases.KnowledgeBasesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetKnowledgeBaseRequest request = new GetKnowledgeBaseRequest
             {
                 KnowledgeBaseName = KnowledgeBaseName.FromProjectKnowledgeBase("[PROJECT]", "[KNOWLEDGE_BASE]"),
@@ -142,6 +148,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task GetKnowledgeBaseResourceNamesAsync()
         {
             moq::Mock<KnowledgeBases.KnowledgeBasesClient> mockGrpcClient = new moq::Mock<KnowledgeBases.KnowledgeBasesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetKnowledgeBaseRequest request = new GetKnowledgeBaseRequest
             {
                 KnowledgeBaseName = KnowledgeBaseName.FromProjectKnowledgeBase("[PROJECT]", "[KNOWLEDGE_BASE]"),
@@ -165,6 +172,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void CreateKnowledgeBaseRequestObject()
         {
             moq::Mock<KnowledgeBases.KnowledgeBasesClient> mockGrpcClient = new moq::Mock<KnowledgeBases.KnowledgeBasesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateKnowledgeBaseRequest request = new CreateKnowledgeBaseRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -187,6 +195,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task CreateKnowledgeBaseRequestObjectAsync()
         {
             moq::Mock<KnowledgeBases.KnowledgeBasesClient> mockGrpcClient = new moq::Mock<KnowledgeBases.KnowledgeBasesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateKnowledgeBaseRequest request = new CreateKnowledgeBaseRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -211,6 +220,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void CreateKnowledgeBase()
         {
             moq::Mock<KnowledgeBases.KnowledgeBasesClient> mockGrpcClient = new moq::Mock<KnowledgeBases.KnowledgeBasesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateKnowledgeBaseRequest request = new CreateKnowledgeBaseRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -233,6 +243,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task CreateKnowledgeBaseAsync()
         {
             moq::Mock<KnowledgeBases.KnowledgeBasesClient> mockGrpcClient = new moq::Mock<KnowledgeBases.KnowledgeBasesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateKnowledgeBaseRequest request = new CreateKnowledgeBaseRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -257,6 +268,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void CreateKnowledgeBaseResourceNames1()
         {
             moq::Mock<KnowledgeBases.KnowledgeBasesClient> mockGrpcClient = new moq::Mock<KnowledgeBases.KnowledgeBasesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateKnowledgeBaseRequest request = new CreateKnowledgeBaseRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -279,6 +291,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task CreateKnowledgeBaseResourceNames1Async()
         {
             moq::Mock<KnowledgeBases.KnowledgeBasesClient> mockGrpcClient = new moq::Mock<KnowledgeBases.KnowledgeBasesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateKnowledgeBaseRequest request = new CreateKnowledgeBaseRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -303,6 +316,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void CreateKnowledgeBaseResourceNames2()
         {
             moq::Mock<KnowledgeBases.KnowledgeBasesClient> mockGrpcClient = new moq::Mock<KnowledgeBases.KnowledgeBasesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateKnowledgeBaseRequest request = new CreateKnowledgeBaseRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -325,6 +339,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task CreateKnowledgeBaseResourceNames2Async()
         {
             moq::Mock<KnowledgeBases.KnowledgeBasesClient> mockGrpcClient = new moq::Mock<KnowledgeBases.KnowledgeBasesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateKnowledgeBaseRequest request = new CreateKnowledgeBaseRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -349,6 +364,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void DeleteKnowledgeBaseRequestObject()
         {
             moq::Mock<KnowledgeBases.KnowledgeBasesClient> mockGrpcClient = new moq::Mock<KnowledgeBases.KnowledgeBasesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteKnowledgeBaseRequest request = new DeleteKnowledgeBaseRequest
             {
                 KnowledgeBaseName = KnowledgeBaseName.FromProjectKnowledgeBase("[PROJECT]", "[KNOWLEDGE_BASE]"),
@@ -365,6 +381,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task DeleteKnowledgeBaseRequestObjectAsync()
         {
             moq::Mock<KnowledgeBases.KnowledgeBasesClient> mockGrpcClient = new moq::Mock<KnowledgeBases.KnowledgeBasesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteKnowledgeBaseRequest request = new DeleteKnowledgeBaseRequest
             {
                 KnowledgeBaseName = KnowledgeBaseName.FromProjectKnowledgeBase("[PROJECT]", "[KNOWLEDGE_BASE]"),
@@ -382,6 +399,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void DeleteKnowledgeBase()
         {
             moq::Mock<KnowledgeBases.KnowledgeBasesClient> mockGrpcClient = new moq::Mock<KnowledgeBases.KnowledgeBasesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteKnowledgeBaseRequest request = new DeleteKnowledgeBaseRequest
             {
                 KnowledgeBaseName = KnowledgeBaseName.FromProjectKnowledgeBase("[PROJECT]", "[KNOWLEDGE_BASE]"),
@@ -397,6 +415,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task DeleteKnowledgeBaseAsync()
         {
             moq::Mock<KnowledgeBases.KnowledgeBasesClient> mockGrpcClient = new moq::Mock<KnowledgeBases.KnowledgeBasesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteKnowledgeBaseRequest request = new DeleteKnowledgeBaseRequest
             {
                 KnowledgeBaseName = KnowledgeBaseName.FromProjectKnowledgeBase("[PROJECT]", "[KNOWLEDGE_BASE]"),
@@ -413,6 +432,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void DeleteKnowledgeBaseResourceNames()
         {
             moq::Mock<KnowledgeBases.KnowledgeBasesClient> mockGrpcClient = new moq::Mock<KnowledgeBases.KnowledgeBasesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteKnowledgeBaseRequest request = new DeleteKnowledgeBaseRequest
             {
                 KnowledgeBaseName = KnowledgeBaseName.FromProjectKnowledgeBase("[PROJECT]", "[KNOWLEDGE_BASE]"),
@@ -428,6 +448,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task DeleteKnowledgeBaseResourceNamesAsync()
         {
             moq::Mock<KnowledgeBases.KnowledgeBasesClient> mockGrpcClient = new moq::Mock<KnowledgeBases.KnowledgeBasesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteKnowledgeBaseRequest request = new DeleteKnowledgeBaseRequest
             {
                 KnowledgeBaseName = KnowledgeBaseName.FromProjectKnowledgeBase("[PROJECT]", "[KNOWLEDGE_BASE]"),
@@ -444,6 +465,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void UpdateKnowledgeBaseRequestObject()
         {
             moq::Mock<KnowledgeBases.KnowledgeBasesClient> mockGrpcClient = new moq::Mock<KnowledgeBases.KnowledgeBasesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateKnowledgeBaseRequest request = new UpdateKnowledgeBaseRequest
             {
                 KnowledgeBase = new KnowledgeBase(),
@@ -466,6 +488,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task UpdateKnowledgeBaseRequestObjectAsync()
         {
             moq::Mock<KnowledgeBases.KnowledgeBasesClient> mockGrpcClient = new moq::Mock<KnowledgeBases.KnowledgeBasesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateKnowledgeBaseRequest request = new UpdateKnowledgeBaseRequest
             {
                 KnowledgeBase = new KnowledgeBase(),
@@ -490,6 +513,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void UpdateKnowledgeBase()
         {
             moq::Mock<KnowledgeBases.KnowledgeBasesClient> mockGrpcClient = new moq::Mock<KnowledgeBases.KnowledgeBasesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateKnowledgeBaseRequest request = new UpdateKnowledgeBaseRequest
             {
                 KnowledgeBase = new KnowledgeBase(),
@@ -512,6 +536,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task UpdateKnowledgeBaseAsync()
         {
             moq::Mock<KnowledgeBases.KnowledgeBasesClient> mockGrpcClient = new moq::Mock<KnowledgeBases.KnowledgeBasesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateKnowledgeBaseRequest request = new UpdateKnowledgeBaseRequest
             {
                 KnowledgeBase = new KnowledgeBase(),

@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -34,6 +35,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetIntentRequest request = new GetIntentRequest
             {
                 IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
@@ -93,6 +95,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetIntentRequest request = new GetIntentRequest
             {
                 IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
@@ -154,6 +157,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetIntentRequest request = new GetIntentRequest
             {
                 IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
@@ -211,6 +215,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetIntentRequest request = new GetIntentRequest
             {
                 IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
@@ -270,6 +275,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetIntentRequest request = new GetIntentRequest
             {
                 IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
@@ -327,6 +333,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetIntentRequest request = new GetIntentRequest
             {
                 IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
@@ -386,6 +393,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetIntentRequest request = new GetIntentRequest
             {
                 IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
@@ -444,6 +452,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetIntentRequest request = new GetIntentRequest
             {
                 IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
@@ -504,6 +513,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetIntentRequest request = new GetIntentRequest
             {
                 IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
@@ -562,6 +572,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetIntentRequest request = new GetIntentRequest
             {
                 IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
@@ -622,6 +633,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateIntentRequest request = new CreateIntentRequest
             {
                 ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
@@ -682,6 +694,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateIntentRequest request = new CreateIntentRequest
             {
                 ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
@@ -744,6 +757,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateIntentRequest request = new CreateIntentRequest
             {
                 ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
@@ -802,6 +816,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateIntentRequest request = new CreateIntentRequest
             {
                 ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
@@ -862,6 +877,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateIntentRequest request = new CreateIntentRequest
             {
                 ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
@@ -920,6 +936,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateIntentRequest request = new CreateIntentRequest
             {
                 ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
@@ -980,6 +997,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateIntentRequest request = new CreateIntentRequest
             {
                 ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
@@ -1039,6 +1057,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateIntentRequest request = new CreateIntentRequest
             {
                 ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
@@ -1100,6 +1119,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateIntentRequest request = new CreateIntentRequest
             {
                 ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
@@ -1159,6 +1179,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateIntentRequest request = new CreateIntentRequest
             {
                 ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
@@ -1220,6 +1241,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateIntentRequest request = new UpdateIntentRequest
             {
                 Intent = new Intent(),
@@ -1280,6 +1302,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateIntentRequest request = new UpdateIntentRequest
             {
                 Intent = new Intent(),
@@ -1342,6 +1365,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateIntentRequest request = new UpdateIntentRequest
             {
                 Intent = new Intent(),
@@ -1400,6 +1424,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateIntentRequest request = new UpdateIntentRequest
             {
                 Intent = new Intent(),
@@ -1460,6 +1485,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateIntentRequest request = new UpdateIntentRequest
             {
                 Intent = new Intent(),
@@ -1519,6 +1545,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateIntentRequest request = new UpdateIntentRequest
             {
                 Intent = new Intent(),
@@ -1580,6 +1607,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteIntentRequest request = new DeleteIntentRequest
             {
                 IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
@@ -1596,6 +1624,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteIntentRequest request = new DeleteIntentRequest
             {
                 IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
@@ -1613,6 +1642,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteIntentRequest request = new DeleteIntentRequest
             {
                 IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
@@ -1629,6 +1659,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteIntentRequest request = new DeleteIntentRequest
             {
                 IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
@@ -1646,6 +1677,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteIntentRequest request = new DeleteIntentRequest
             {
                 IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
@@ -1662,6 +1694,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteIntentRequest request = new DeleteIntentRequest
             {
                 IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),

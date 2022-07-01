@@ -5335,7 +5335,8 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Custom conversation models used in agent assist feature.
       ///
-      /// Supported feature: ARTICLE_SUGGESTION, SMART_COMPOSE, SMART_REPLY.
+      /// Supported feature: ARTICLE_SUGGESTION, SMART_COMPOSE, SMART_REPLY,
+      /// CONVERSATION_SUMMARIZATION.
       /// </summary>
       public sealed partial class ConversationModelConfig : pb::IMessage<ConversationModelConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

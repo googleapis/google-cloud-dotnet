@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -32,6 +33,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void GetFulfillmentRequestObject()
         {
             moq::Mock<Fulfillments.FulfillmentsClient> mockGrpcClient = new moq::Mock<Fulfillments.FulfillmentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetFulfillmentRequest request = new GetFulfillmentRequest
             {
                 FulfillmentName = FulfillmentName.FromProject("[PROJECT]"),
@@ -58,6 +60,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task GetFulfillmentRequestObjectAsync()
         {
             moq::Mock<Fulfillments.FulfillmentsClient> mockGrpcClient = new moq::Mock<Fulfillments.FulfillmentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetFulfillmentRequest request = new GetFulfillmentRequest
             {
                 FulfillmentName = FulfillmentName.FromProject("[PROJECT]"),
@@ -86,6 +89,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void GetFulfillment()
         {
             moq::Mock<Fulfillments.FulfillmentsClient> mockGrpcClient = new moq::Mock<Fulfillments.FulfillmentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetFulfillmentRequest request = new GetFulfillmentRequest
             {
                 FulfillmentName = FulfillmentName.FromProject("[PROJECT]"),
@@ -112,6 +116,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task GetFulfillmentAsync()
         {
             moq::Mock<Fulfillments.FulfillmentsClient> mockGrpcClient = new moq::Mock<Fulfillments.FulfillmentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetFulfillmentRequest request = new GetFulfillmentRequest
             {
                 FulfillmentName = FulfillmentName.FromProject("[PROJECT]"),
@@ -140,6 +145,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void GetFulfillmentResourceNames()
         {
             moq::Mock<Fulfillments.FulfillmentsClient> mockGrpcClient = new moq::Mock<Fulfillments.FulfillmentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetFulfillmentRequest request = new GetFulfillmentRequest
             {
                 FulfillmentName = FulfillmentName.FromProject("[PROJECT]"),
@@ -166,6 +172,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task GetFulfillmentResourceNamesAsync()
         {
             moq::Mock<Fulfillments.FulfillmentsClient> mockGrpcClient = new moq::Mock<Fulfillments.FulfillmentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetFulfillmentRequest request = new GetFulfillmentRequest
             {
                 FulfillmentName = FulfillmentName.FromProject("[PROJECT]"),
@@ -194,6 +201,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void UpdateFulfillmentRequestObject()
         {
             moq::Mock<Fulfillments.FulfillmentsClient> mockGrpcClient = new moq::Mock<Fulfillments.FulfillmentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateFulfillmentRequest request = new UpdateFulfillmentRequest
             {
                 Fulfillment = new Fulfillment(),
@@ -221,6 +229,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task UpdateFulfillmentRequestObjectAsync()
         {
             moq::Mock<Fulfillments.FulfillmentsClient> mockGrpcClient = new moq::Mock<Fulfillments.FulfillmentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateFulfillmentRequest request = new UpdateFulfillmentRequest
             {
                 Fulfillment = new Fulfillment(),
@@ -250,6 +259,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void UpdateFulfillment()
         {
             moq::Mock<Fulfillments.FulfillmentsClient> mockGrpcClient = new moq::Mock<Fulfillments.FulfillmentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateFulfillmentRequest request = new UpdateFulfillmentRequest
             {
                 Fulfillment = new Fulfillment(),
@@ -277,6 +287,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task UpdateFulfillmentAsync()
         {
             moq::Mock<Fulfillments.FulfillmentsClient> mockGrpcClient = new moq::Mock<Fulfillments.FulfillmentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateFulfillmentRequest request = new UpdateFulfillmentRequest
             {
                 Fulfillment = new Fulfillment(),

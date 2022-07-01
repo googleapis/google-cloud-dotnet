@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
@@ -34,6 +35,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<Documents.DocumentsClient> mockGrpcClient = new moq::Mock<Documents.DocumentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDocumentRequest request = new GetDocumentRequest
             {
                 DocumentName = DocumentName.FromProjectKnowledgeBaseDocument("[PROJECT]", "[KNOWLEDGE_BASE]", "[DOCUMENT]"),
@@ -72,6 +74,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<Documents.DocumentsClient> mockGrpcClient = new moq::Mock<Documents.DocumentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDocumentRequest request = new GetDocumentRequest
             {
                 DocumentName = DocumentName.FromProjectKnowledgeBaseDocument("[PROJECT]", "[KNOWLEDGE_BASE]", "[DOCUMENT]"),
@@ -112,6 +115,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<Documents.DocumentsClient> mockGrpcClient = new moq::Mock<Documents.DocumentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDocumentRequest request = new GetDocumentRequest
             {
                 DocumentName = DocumentName.FromProjectKnowledgeBaseDocument("[PROJECT]", "[KNOWLEDGE_BASE]", "[DOCUMENT]"),
@@ -150,6 +154,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<Documents.DocumentsClient> mockGrpcClient = new moq::Mock<Documents.DocumentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDocumentRequest request = new GetDocumentRequest
             {
                 DocumentName = DocumentName.FromProjectKnowledgeBaseDocument("[PROJECT]", "[KNOWLEDGE_BASE]", "[DOCUMENT]"),
@@ -190,6 +195,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<Documents.DocumentsClient> mockGrpcClient = new moq::Mock<Documents.DocumentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDocumentRequest request = new GetDocumentRequest
             {
                 DocumentName = DocumentName.FromProjectKnowledgeBaseDocument("[PROJECT]", "[KNOWLEDGE_BASE]", "[DOCUMENT]"),
@@ -228,6 +234,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         {
             moq::Mock<Documents.DocumentsClient> mockGrpcClient = new moq::Mock<Documents.DocumentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDocumentRequest request = new GetDocumentRequest
             {
                 DocumentName = DocumentName.FromProjectKnowledgeBaseDocument("[PROJECT]", "[KNOWLEDGE_BASE]", "[DOCUMENT]"),

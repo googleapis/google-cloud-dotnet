@@ -2064,7 +2064,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     private bool cancelsSlotFilling_;
     /// <summary>
     /// Indicates whether the conversational query triggers a cancellation for slot
-    /// filling.
+    /// filling. For more information, see the [cancel slot filling
+    /// documentation](https://cloud.google.com/dialogflow/es/docs/intents-actions-parameters#cancel).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4256,6 +4257,9 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
+  /// ============================================================================
+  /// Auxiliary proto messages.
+  ///
   /// Represents the natural language text to be processed.
   /// </summary>
   public sealed partial class TextInput : pb::IMessage<TextInput>
