@@ -1,4 +1,4 @@
-﻿// Copyright 2021 Google LLC
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,12 +18,13 @@ namespace Google.Cloud.Tools.ReleaseManager.History
     /// Note: the ordering here is the order in which the results are shown in the
     /// release notes.
     /// </summary>
-    internal enum ReleaseNoteElementType
+    public enum ReleaseNoteElementType
     {
         Fix,
         Feature,
         Docs,
         Chore,
+        BreakingChange,
         Unknown,
     }
 }
