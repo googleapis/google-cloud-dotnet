@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -58,7 +58,7 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         private const string DefaultTestTargetFrameworks = "netcoreapp3.1;net462";
 
-        private static Dictionary<ApiType, string[]> PackageTypeToImplicitDependencies = new Dictionary<ApiType, string[]>
+        private static readonly Dictionary<ApiType, string[]> PackageTypeToImplicitDependencies = new Dictionary<ApiType, string[]>
         {
             {  ApiType.Rest, new[] { "Google.Api.Gax.Rest" } },
             {  ApiType.Grpc, new[] { "Grpc.Core", "Google.Api.Gax.Grpc" } },
@@ -377,7 +377,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             // TODO: Updates for unknown project types? Tricky...
         }
 
-        static void GenerateSolutionFiles(string apiRoot, ApiMetadata api)
+        private static void GenerateSolutionFiles(string apiRoot, ApiMetadata api)
         {
             var projectDirectories = Directory.GetDirectories(apiRoot)
                 .Where(pd => Path.GetFileName(pd).StartsWith(api.Id))
@@ -434,7 +434,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             }
         }
 
-        static void GenerateDocumentationStub(string apiRoot, ApiMetadata api)
+        private static void GenerateDocumentationStub(string apiRoot, ApiMetadata api)
         {
             string file = Path.Combine(apiRoot, "docs", "index.md");
             if (File.Exists(file))
