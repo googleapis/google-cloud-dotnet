@@ -31,7 +31,11 @@ namespace Google.Cloud.Container.V1.Snippets
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
-            RollbackNodePoolUpgradeRequest request = new RollbackNodePoolUpgradeRequest { Name = "", };
+            RollbackNodePoolUpgradeRequest request = new RollbackNodePoolUpgradeRequest
+            {
+                Name = "",
+                RespectPdb = false,
+            };
             // Make the request
             Operation response = clusterManagerClient.RollbackNodePoolUpgrade(request);
         }

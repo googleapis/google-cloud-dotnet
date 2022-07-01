@@ -68,6 +68,7 @@ namespace Google.Cloud.Container.V1
             GetNodePoolSettings = existing.GetNodePoolSettings;
             CreateNodePoolSettings = existing.CreateNodePoolSettings;
             DeleteNodePoolSettings = existing.DeleteNodePoolSettings;
+            CompleteNodePoolUpgradeSettings = existing.CompleteNodePoolUpgradeSettings;
             RollbackNodePoolUpgradeSettings = existing.RollbackNodePoolUpgradeSettings;
             SetNodePoolManagementSettings = existing.SetNodePoolManagementSettings;
             SetLabelsSettings = existing.SetLabelsSettings;
@@ -431,6 +432,19 @@ namespace Google.Cloud.Container.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ClusterManagerClient.CompleteNodePoolUpgrade</c> and <c>ClusterManagerClient.CompleteNodePoolUpgradeAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CompleteNodePoolUpgradeSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ClusterManagerClient.RollbackNodePoolUpgrade</c> and <c>ClusterManagerClient.RollbackNodePoolUpgradeAsync</c>
         /// .
         /// </summary>
@@ -729,7 +743,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="zone">
@@ -754,7 +768,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="zone">
@@ -779,7 +793,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="zone">
@@ -868,7 +882,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -897,7 +911,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -926,7 +940,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -1065,7 +1079,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="zone">
@@ -1107,7 +1121,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="zone">
@@ -1149,7 +1163,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="zone">
@@ -1295,7 +1309,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -1328,7 +1342,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -1361,7 +1375,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -1522,7 +1536,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -1565,7 +1579,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -1608,7 +1622,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -1755,7 +1769,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -1798,7 +1812,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -1841,7 +1855,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -1988,7 +2002,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -2022,7 +2036,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -2056,7 +2070,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -2182,7 +2196,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -2227,7 +2241,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -2272,7 +2286,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -2421,7 +2435,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -2463,7 +2477,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -2505,7 +2519,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -2713,7 +2727,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -2750,7 +2764,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -2787,7 +2801,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -2898,7 +2912,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="zone">
@@ -2922,7 +2936,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="zone">
@@ -2946,7 +2960,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="zone">
@@ -2993,7 +3007,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -3022,7 +3036,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -3051,7 +3065,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -3138,7 +3152,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -3167,7 +3181,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -3196,7 +3210,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -3283,7 +3297,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -3307,7 +3321,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -3331,7 +3345,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -3450,7 +3464,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://developers.google.com/console/help/new/#projectnumber).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="zone">
@@ -3479,7 +3493,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://developers.google.com/console/help/new/#projectnumber).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="zone">
@@ -3508,7 +3522,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://developers.google.com/console/help/new/#projectnumber).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="zone">
@@ -3531,7 +3545,7 @@ namespace Google.Cloud.Container.V1
         /// Lists the node pools for a cluster.
         /// </summary>
         /// <param name="parent">
-        /// The parent (project, location, cluster id) where the node pools will be
+        /// The parent (project, location, cluster name) where the node pools will be
         /// listed. Specified in the format `projects/*/locations/*/clusters/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3543,7 +3557,7 @@ namespace Google.Cloud.Container.V1
         /// Lists the node pools for a cluster.
         /// </summary>
         /// <param name="parent">
-        /// The parent (project, location, cluster id) where the node pools will be
+        /// The parent (project, location, cluster name) where the node pools will be
         /// listed. Specified in the format `projects/*/locations/*/clusters/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3555,7 +3569,7 @@ namespace Google.Cloud.Container.V1
         /// Lists the node pools for a cluster.
         /// </summary>
         /// <param name="parent">
-        /// The parent (project, location, cluster id) where the node pools will be
+        /// The parent (project, location, cluster name) where the node pools will be
         /// listed. Specified in the format `projects/*/locations/*/clusters/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3595,7 +3609,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://developers.google.com/console/help/new/#projectnumber).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -3629,7 +3643,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://developers.google.com/console/help/new/#projectnumber).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -3663,7 +3677,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://developers.google.com/console/help/new/#projectnumber).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -3757,7 +3771,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://developers.google.com/console/help/new/#projectnumber).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="zone">
@@ -3790,7 +3804,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://developers.google.com/console/help/new/#projectnumber).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="zone">
@@ -3823,7 +3837,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://developers.google.com/console/help/new/#projectnumber).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="zone">
@@ -3849,7 +3863,7 @@ namespace Google.Cloud.Container.V1
         /// Creates a node pool for a cluster.
         /// </summary>
         /// <param name="parent">
-        /// The parent (project, location, cluster id) where the node pool will be
+        /// The parent (project, location, cluster name) where the node pool will be
         /// created. Specified in the format
         /// `projects/*/locations/*/clusters/*`.
         /// </param>
@@ -3869,7 +3883,7 @@ namespace Google.Cloud.Container.V1
         /// Creates a node pool for a cluster.
         /// </summary>
         /// <param name="parent">
-        /// The parent (project, location, cluster id) where the node pool will be
+        /// The parent (project, location, cluster name) where the node pool will be
         /// created. Specified in the format
         /// `projects/*/locations/*/clusters/*`.
         /// </param>
@@ -3889,7 +3903,7 @@ namespace Google.Cloud.Container.V1
         /// Creates a node pool for a cluster.
         /// </summary>
         /// <param name="parent">
-        /// The parent (project, location, cluster id) where the node pool will be
+        /// The parent (project, location, cluster name) where the node pool will be
         /// created. Specified in the format
         /// `projects/*/locations/*/clusters/*`.
         /// </param>
@@ -3933,7 +3947,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://developers.google.com/console/help/new/#projectnumber).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -3967,7 +3981,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://developers.google.com/console/help/new/#projectnumber).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -4001,7 +4015,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://developers.google.com/console/help/new/#projectnumber).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -4064,6 +4078,36 @@ namespace Google.Cloud.Container.V1
             DeleteNodePoolAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// CompleteNodePoolUpgrade will signal an on-going node pool upgrade to
+        /// complete.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void CompleteNodePoolUpgrade(CompleteNodePoolUpgradeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// CompleteNodePoolUpgrade will signal an on-going node pool upgrade to
+        /// complete.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task CompleteNodePoolUpgradeAsync(CompleteNodePoolUpgradeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// CompleteNodePoolUpgrade will signal an on-going node pool upgrade to
+        /// complete.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task CompleteNodePoolUpgradeAsync(CompleteNodePoolUpgradeRequest request, st::CancellationToken cancellationToken) =>
+            CompleteNodePoolUpgradeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Rolls back a previously Aborted or Failed NodePool upgrade.
         /// This makes no changes if the last upgrade successfully completed.
         /// </summary>
@@ -4099,7 +4143,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -4134,7 +4178,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -4169,7 +4213,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -4320,7 +4364,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -4353,7 +4397,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -4386,7 +4430,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -4412,8 +4456,8 @@ namespace Google.Cloud.Container.V1
         /// Enables or disables the ABAC authorization mechanism on a cluster.
         /// </summary>
         /// <param name="name">
-        /// The name (project, location, cluster id) of the cluster to set legacy abac.
-        /// Specified in the format `projects/*/locations/*/clusters/*`.
+        /// The name (project, location, cluster name) of the cluster to set legacy
+        /// abac. Specified in the format `projects/*/locations/*/clusters/*`.
         /// </param>
         /// <param name="enabled">
         /// Required. Whether ABAC authorization will be enabled in the cluster.
@@ -4431,8 +4475,8 @@ namespace Google.Cloud.Container.V1
         /// Enables or disables the ABAC authorization mechanism on a cluster.
         /// </summary>
         /// <param name="name">
-        /// The name (project, location, cluster id) of the cluster to set legacy abac.
-        /// Specified in the format `projects/*/locations/*/clusters/*`.
+        /// The name (project, location, cluster name) of the cluster to set legacy
+        /// abac. Specified in the format `projects/*/locations/*/clusters/*`.
         /// </param>
         /// <param name="enabled">
         /// Required. Whether ABAC authorization will be enabled in the cluster.
@@ -4450,8 +4494,8 @@ namespace Google.Cloud.Container.V1
         /// Enables or disables the ABAC authorization mechanism on a cluster.
         /// </summary>
         /// <param name="name">
-        /// The name (project, location, cluster id) of the cluster to set legacy abac.
-        /// Specified in the format `projects/*/locations/*/clusters/*`.
+        /// The name (project, location, cluster name) of the cluster to set legacy
+        /// abac. Specified in the format `projects/*/locations/*/clusters/*`.
         /// </param>
         /// <param name="enabled">
         /// Required. Whether ABAC authorization will be enabled in the cluster.
@@ -4493,7 +4537,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://developers.google.com/console/help/new/#projectnumber).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -4522,7 +4566,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://developers.google.com/console/help/new/#projectnumber).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -4551,7 +4595,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://developers.google.com/console/help/new/#projectnumber).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -4574,7 +4618,7 @@ namespace Google.Cloud.Container.V1
         /// Starts master IP rotation.
         /// </summary>
         /// <param name="name">
-        /// The name (project, location, cluster id) of the cluster to start IP
+        /// The name (project, location, cluster name) of the cluster to start IP
         /// rotation. Specified in the format `projects/*/locations/*/clusters/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4586,7 +4630,7 @@ namespace Google.Cloud.Container.V1
         /// Starts master IP rotation.
         /// </summary>
         /// <param name="name">
-        /// The name (project, location, cluster id) of the cluster to start IP
+        /// The name (project, location, cluster name) of the cluster to start IP
         /// rotation. Specified in the format `projects/*/locations/*/clusters/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4598,7 +4642,7 @@ namespace Google.Cloud.Container.V1
         /// Starts master IP rotation.
         /// </summary>
         /// <param name="name">
-        /// The name (project, location, cluster id) of the cluster to start IP
+        /// The name (project, location, cluster name) of the cluster to start IP
         /// rotation. Specified in the format `projects/*/locations/*/clusters/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4638,7 +4682,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://developers.google.com/console/help/new/#projectnumber).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -4667,7 +4711,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://developers.google.com/console/help/new/#projectnumber).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -4696,7 +4740,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://developers.google.com/console/help/new/#projectnumber).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -4719,7 +4763,7 @@ namespace Google.Cloud.Container.V1
         /// Completes master IP rotation.
         /// </summary>
         /// <param name="name">
-        /// The name (project, location, cluster id) of the cluster to complete IP
+        /// The name (project, location, cluster name) of the cluster to complete IP
         /// rotation. Specified in the format `projects/*/locations/*/clusters/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4731,7 +4775,7 @@ namespace Google.Cloud.Container.V1
         /// Completes master IP rotation.
         /// </summary>
         /// <param name="name">
-        /// The name (project, location, cluster id) of the cluster to complete IP
+        /// The name (project, location, cluster name) of the cluster to complete IP
         /// rotation. Specified in the format `projects/*/locations/*/clusters/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4743,7 +4787,7 @@ namespace Google.Cloud.Container.V1
         /// Completes master IP rotation.
         /// </summary>
         /// <param name="name">
-        /// The name (project, location, cluster id) of the cluster to complete IP
+        /// The name (project, location, cluster name) of the cluster to complete IP
         /// rotation. Specified in the format `projects/*/locations/*/clusters/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4816,7 +4860,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://developers.google.com/console/help/new/#projectnumber).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -4849,7 +4893,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://developers.google.com/console/help/new/#projectnumber).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -4882,7 +4926,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Deprecated. The Google Developers Console [project ID or project
-        /// number](https://developers.google.com/console/help/new/#projectnumber).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
@@ -4908,7 +4952,7 @@ namespace Google.Cloud.Container.V1
         /// Enables or disables Network Policy for a cluster.
         /// </summary>
         /// <param name="name">
-        /// The name (project, location, cluster id) of the cluster to set networking
+        /// The name (project, location, cluster name) of the cluster to set networking
         /// policy. Specified in the format `projects/*/locations/*/clusters/*`.
         /// </param>
         /// <param name="networkPolicy">
@@ -4927,7 +4971,7 @@ namespace Google.Cloud.Container.V1
         /// Enables or disables Network Policy for a cluster.
         /// </summary>
         /// <param name="name">
-        /// The name (project, location, cluster id) of the cluster to set networking
+        /// The name (project, location, cluster name) of the cluster to set networking
         /// policy. Specified in the format `projects/*/locations/*/clusters/*`.
         /// </param>
         /// <param name="networkPolicy">
@@ -4946,7 +4990,7 @@ namespace Google.Cloud.Container.V1
         /// Enables or disables Network Policy for a cluster.
         /// </summary>
         /// <param name="name">
-        /// The name (project, location, cluster id) of the cluster to set networking
+        /// The name (project, location, cluster name) of the cluster to set networking
         /// policy. Specified in the format `projects/*/locations/*/clusters/*`.
         /// </param>
         /// <param name="networkPolicy">
@@ -4989,7 +5033,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Required. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// </param>
         /// <param name="zone">
         /// Required. The name of the Google Compute Engine
@@ -5019,7 +5063,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Required. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// </param>
         /// <param name="zone">
         /// Required. The name of the Google Compute Engine
@@ -5049,7 +5093,7 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         /// <param name="projectId">
         /// Required. The Google Developers Console [project ID or project
-        /// number](https://support.google.com/cloud/answer/6158840).
+        /// number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
         /// </param>
         /// <param name="zone">
         /// Required. The name of the Google Compute Engine
@@ -5072,8 +5116,8 @@ namespace Google.Cloud.Container.V1
         /// Sets the maintenance policy for a cluster.
         /// </summary>
         /// <param name="name">
-        /// The name (project, location, cluster id) of the cluster to set maintenance
-        /// policy.
+        /// The name (project, location, cluster name) of the cluster to set
+        /// maintenance policy.
         /// Specified in the format `projects/*/locations/*/clusters/*`.
         /// </param>
         /// <param name="maintenancePolicy">
@@ -5093,8 +5137,8 @@ namespace Google.Cloud.Container.V1
         /// Sets the maintenance policy for a cluster.
         /// </summary>
         /// <param name="name">
-        /// The name (project, location, cluster id) of the cluster to set maintenance
-        /// policy.
+        /// The name (project, location, cluster name) of the cluster to set
+        /// maintenance policy.
         /// Specified in the format `projects/*/locations/*/clusters/*`.
         /// </param>
         /// <param name="maintenancePolicy">
@@ -5114,8 +5158,8 @@ namespace Google.Cloud.Container.V1
         /// Sets the maintenance policy for a cluster.
         /// </summary>
         /// <param name="name">
-        /// The name (project, location, cluster id) of the cluster to set maintenance
-        /// policy.
+        /// The name (project, location, cluster name) of the cluster to set
+        /// maintenance policy.
         /// Specified in the format `projects/*/locations/*/clusters/*`.
         /// </param>
         /// <param name="maintenancePolicy">
@@ -5195,6 +5239,8 @@ namespace Google.Cloud.Container.V1
         private readonly gaxgrpc::ApiCall<CreateNodePoolRequest, Operation> _callCreateNodePool;
 
         private readonly gaxgrpc::ApiCall<DeleteNodePoolRequest, Operation> _callDeleteNodePool;
+
+        private readonly gaxgrpc::ApiCall<CompleteNodePoolUpgradeRequest, wkt::Empty> _callCompleteNodePoolUpgrade;
 
         private readonly gaxgrpc::ApiCall<RollbackNodePoolUpgradeRequest, Operation> _callRollbackNodePoolUpgrade;
 
@@ -5295,6 +5341,9 @@ namespace Google.Cloud.Container.V1
             _callDeleteNodePool = clientHelper.BuildApiCall<DeleteNodePoolRequest, Operation>("DeleteNodePool", grpcClient.DeleteNodePoolAsync, grpcClient.DeleteNodePool, effectiveSettings.DeleteNodePoolSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteNodePool);
             Modify_DeleteNodePoolApiCall(ref _callDeleteNodePool);
+            _callCompleteNodePoolUpgrade = clientHelper.BuildApiCall<CompleteNodePoolUpgradeRequest, wkt::Empty>("CompleteNodePoolUpgrade", grpcClient.CompleteNodePoolUpgradeAsync, grpcClient.CompleteNodePoolUpgrade, effectiveSettings.CompleteNodePoolUpgradeSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callCompleteNodePoolUpgrade);
+            Modify_CompleteNodePoolUpgradeApiCall(ref _callCompleteNodePoolUpgrade);
             _callRollbackNodePoolUpgrade = clientHelper.BuildApiCall<RollbackNodePoolUpgradeRequest, Operation>("RollbackNodePoolUpgrade", grpcClient.RollbackNodePoolUpgradeAsync, grpcClient.RollbackNodePoolUpgrade, effectiveSettings.RollbackNodePoolUpgradeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callRollbackNodePoolUpgrade);
             Modify_RollbackNodePoolUpgradeApiCall(ref _callRollbackNodePoolUpgrade);
@@ -5374,6 +5423,8 @@ namespace Google.Cloud.Container.V1
 
         partial void Modify_DeleteNodePoolApiCall(ref gaxgrpc::ApiCall<DeleteNodePoolRequest, Operation> call);
 
+        partial void Modify_CompleteNodePoolUpgradeApiCall(ref gaxgrpc::ApiCall<CompleteNodePoolUpgradeRequest, wkt::Empty> call);
+
         partial void Modify_RollbackNodePoolUpgradeApiCall(ref gaxgrpc::ApiCall<RollbackNodePoolUpgradeRequest, Operation> call);
 
         partial void Modify_SetNodePoolManagementApiCall(ref gaxgrpc::ApiCall<SetNodePoolManagementRequest, Operation> call);
@@ -5442,6 +5493,8 @@ namespace Google.Cloud.Container.V1
         partial void Modify_CreateNodePoolRequest(ref CreateNodePoolRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteNodePoolRequest(ref DeleteNodePoolRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CompleteNodePoolUpgradeRequest(ref CompleteNodePoolUpgradeRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_RollbackNodePoolUpgradeRequest(ref RollbackNodePoolUpgradeRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -6051,6 +6104,32 @@ namespace Google.Cloud.Container.V1
         {
             Modify_DeleteNodePoolRequest(ref request, ref callSettings);
             return _callDeleteNodePool.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// CompleteNodePoolUpgrade will signal an on-going node pool upgrade to
+        /// complete.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void CompleteNodePoolUpgrade(CompleteNodePoolUpgradeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CompleteNodePoolUpgradeRequest(ref request, ref callSettings);
+            _callCompleteNodePoolUpgrade.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// CompleteNodePoolUpgrade will signal an on-going node pool upgrade to
+        /// complete.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task CompleteNodePoolUpgradeAsync(CompleteNodePoolUpgradeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CompleteNodePoolUpgradeRequest(ref request, ref callSettings);
+            return _callCompleteNodePoolUpgrade.Async(request, callSettings);
         }
 
         /// <summary>

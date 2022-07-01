@@ -16,42 +16,25 @@
 
 namespace Google.Cloud.Container.V1.Snippets
 {
-    // [START container_v1_generated_ClusterManager_UpdateNodePool_sync]
+    // [START container_v1_generated_ClusterManager_CompleteNodePoolUpgrade_sync]
     using Google.Cloud.Container.V1;
 
     public sealed partial class GeneratedClusterManagerClientSnippets
     {
-        /// <summary>Snippet for UpdateNodePool</summary>
+        /// <summary>Snippet for CompleteNodePoolUpgrade</summary>
         /// <remarks>
         /// This snippet has been automatically generated for illustrative purposes only.
         /// It may require modifications to work in your environment.
         /// </remarks>
-        public void UpdateNodePoolRequestObject()
+        public void CompleteNodePoolUpgradeRequestObject()
         {
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
-            UpdateNodePoolRequest request = new UpdateNodePoolRequest
-            {
-                NodeVersion = "",
-                ImageType = "",
-                Name = "",
-                Locations = { "", },
-                WorkloadMetadataConfig = new WorkloadMetadataConfig(),
-                UpgradeSettings = new NodePool.Types.UpgradeSettings(),
-                Tags = new NetworkTags(),
-                Taints = new NodeTaints(),
-                Labels = new NodeLabels(),
-                LinuxNodeConfig = new LinuxNodeConfig(),
-                KubeletConfig = new NodeKubeletConfig(),
-                NodeNetworkConfig = new NodeNetworkConfig(),
-                GcfsConfig = new GcfsConfig(),
-                ConfidentialNodes = new ConfidentialNodes(),
-                Gvnic = new VirtualNIC(),
-            };
+            CompleteNodePoolUpgradeRequest request = new CompleteNodePoolUpgradeRequest { Name = "", };
             // Make the request
-            Operation response = clusterManagerClient.UpdateNodePool(request);
+            clusterManagerClient.CompleteNodePoolUpgrade(request);
         }
     }
-    // [END container_v1_generated_ClusterManager_UpdateNodePool_sync]
+    // [END container_v1_generated_ClusterManager_CompleteNodePoolUpgrade_sync]
 }
