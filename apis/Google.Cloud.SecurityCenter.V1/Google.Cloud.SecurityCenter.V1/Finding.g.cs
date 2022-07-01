@@ -30,75 +30,80 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "b3RvGitnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvYWNjZXNzLnBy",
             "b3RvGi9nb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvY29tcGxpYW5j",
             "ZS5wcm90bxovZ29vZ2xlL2Nsb3VkL3NlY3VyaXR5Y2VudGVyL3YxL2Nvbm5l",
-            "Y3Rpb24ucHJvdG8aMWdvb2dsZS9jbG91ZC9zZWN1cml0eWNlbnRlci92MS9l",
-            "eGZpbHRyYXRpb24ucHJvdG8aNGdvb2dsZS9jbG91ZC9zZWN1cml0eWNlbnRl",
-            "ci92MS9leHRlcm5hbF9zeXN0ZW0ucHJvdG8aMGdvb2dsZS9jbG91ZC9zZWN1",
-            "cml0eWNlbnRlci92MS9pYW1fYmluZGluZy5wcm90bxouZ29vZ2xlL2Nsb3Vk",
-            "L3NlY3VyaXR5Y2VudGVyL3YxL2luZGljYXRvci5wcm90bxoxZ29vZ2xlL2Ns",
-            "b3VkL3NlY3VyaXR5Y2VudGVyL3YxL21pdHJlX2F0dGFjay5wcm90bxosZ29v",
-            "Z2xlL2Nsb3VkL3NlY3VyaXR5Y2VudGVyL3YxL3Byb2Nlc3MucHJvdG8aM2dv",
-            "b2dsZS9jbG91ZC9zZWN1cml0eWNlbnRlci92MS9zZWN1cml0eV9tYXJrcy5w",
-            "cm90bxoyZ29vZ2xlL2Nsb3VkL3NlY3VyaXR5Y2VudGVyL3YxL3Z1bG5lcmFi",
-            "aWxpdHkucHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8aH2dv",
-            "b2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8imhEKB0ZpbmRpbmcSDAoE",
-            "bmFtZRgBIAEoCRIOCgZwYXJlbnQYAiABKAkSFQoNcmVzb3VyY2VfbmFtZRgD",
-            "IAEoCRI8CgVzdGF0ZRgEIAEoDjItLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNl",
-            "bnRlci52MS5GaW5kaW5nLlN0YXRlEhAKCGNhdGVnb3J5GAUgASgJEhQKDGV4",
-            "dGVybmFsX3VyaRgGIAEoCRJYChFzb3VyY2VfcHJvcGVydGllcxgHIAMoCzI9",
-            "Lmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5GaW5kaW5nLlNvdXJj",
-            "ZVByb3BlcnRpZXNFbnRyeRJKCg5zZWN1cml0eV9tYXJrcxgIIAEoCzItLmdv",
-            "b2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5TZWN1cml0eU1hcmtzQgPg",
-            "QQMSLgoKZXZlbnRfdGltZRgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXASLwoLY3JlYXRlX3RpbWUYCiABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wEkIKCHNldmVyaXR5GAwgASgOMjAuZ29vZ2xlLmNsb3VkLnNl",
-            "Y3VyaXR5Y2VudGVyLnYxLkZpbmRpbmcuU2V2ZXJpdHkSFgoOY2Fub25pY2Fs",
-            "X25hbWUYDiABKAkSOgoEbXV0ZRgPIAEoDjIsLmdvb2dsZS5jbG91ZC5zZWN1",
-            "cml0eWNlbnRlci52MS5GaW5kaW5nLk11dGUSSwoNZmluZGluZ19jbGFzcxgR",
-            "IAEoDjI0Lmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5GaW5kaW5n",
-            "LkZpbmRpbmdDbGFzcxI8CglpbmRpY2F0b3IYEiABKAsyKS5nb29nbGUuY2xv",
-            "dWQuc2VjdXJpdHljZW50ZXIudjEuSW5kaWNhdG9yEkQKDXZ1bG5lcmFiaWxp",
-            "dHkYFCABKAsyLS5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEuVnVs",
-            "bmVyYWJpbGl0eRI5ChBtdXRlX3VwZGF0ZV90aW1lGBUgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDElsKEGV4dGVybmFsX3N5c3RlbXMY",
-            "FiADKAsyPC5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEuRmluZGlu",
-            "Zy5FeHRlcm5hbFN5c3RlbXNFbnRyeUID4EEDEkEKDG1pdHJlX2F0dGFjaxgZ",
-            "IAEoCzIrLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5NaXRyZUF0",
-            "dGFjaxI2CgZhY2Nlc3MYGiABKAsyJi5nb29nbGUuY2xvdWQuc2VjdXJpdHlj",
-            "ZW50ZXIudjEuQWNjZXNzEj8KC2Nvbm5lY3Rpb25zGB8gAygLMiouZ29vZ2xl",
-            "LmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkNvbm5lY3Rpb24SFgoObXV0ZV9p",
-            "bml0aWF0b3IYHCABKAkSOgoJcHJvY2Vzc2VzGB4gAygLMicuZ29vZ2xlLmNs",
-            "b3VkLnNlY3VyaXR5Y2VudGVyLnYxLlByb2Nlc3MSPwoLY29tcGxpYW5jZXMY",
-            "IiADKAsyKi5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEuQ29tcGxp",
-            "YW5jZRITCgtkZXNjcmlwdGlvbhglIAEoCRJCCgxleGZpbHRyYXRpb24YJiAB",
-            "KAsyLC5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEuRXhmaWx0cmF0",
-            "aW9uEkAKDGlhbV9iaW5kaW5ncxgnIAMoCzIqLmdvb2dsZS5jbG91ZC5zZWN1",
-            "cml0eWNlbnRlci52MS5JYW1CaW5kaW5nEhIKCm5leHRfc3RlcHMYKCABKAka",
-            "TwoVU291cmNlUHJvcGVydGllc0VudHJ5EgsKA2tleRgBIAEoCRIlCgV2YWx1",
-            "ZRgCIAEoCzIWLmdvb2dsZS5wcm90b2J1Zi5WYWx1ZToCOAEaZgoURXh0ZXJu",
-            "YWxTeXN0ZW1zRW50cnkSCwoDa2V5GAEgASgJEj0KBXZhbHVlGAIgASgLMi4u",
-            "Z29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkV4dGVybmFsU3lzdGVt",
-            "OgI4ASI4CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgoKBkFDVElW",
-            "RRABEgwKCElOQUNUSVZFEAIiUQoIU2V2ZXJpdHkSGAoUU0VWRVJJVFlfVU5T",
-            "UEVDSUZJRUQQABIMCghDUklUSUNBTBABEggKBEhJR0gQAhIKCgZNRURJVU0Q",
-            "AxIHCgNMT1cQBCJDCgRNdXRlEhQKEE1VVEVfVU5TUEVDSUZJRUQQABIJCgVN",
-            "VVRFRBABEgsKB1VOTVVURUQQAhINCglVTkRFRklORUQQBCKCAQoMRmluZGlu",
-            "Z0NsYXNzEh0KGUZJTkRJTkdfQ0xBU1NfVU5TUEVDSUZJRUQQABIKCgZUSFJF",
-            "QVQQARIRCg1WVUxORVJBQklMSVRZEAISFAoQTUlTQ09ORklHVVJBVElPThAD",
-            "Eg8KC09CU0VSVkFUSU9OEAQSDQoJU0NDX0VSUk9SEAU62wHqQdcBCiVzZWN1",
-            "cml0eWNlbnRlci5nb29nbGVhcGlzLmNvbS9GaW5kaW5nEkBvcmdhbml6YXRp",
-            "b25zL3tvcmdhbml6YXRpb259L3NvdXJjZXMve3NvdXJjZX0vZmluZGluZ3Mv",
-            "e2ZpbmRpbmd9EjRmb2xkZXJzL3tmb2xkZXJ9L3NvdXJjZXMve3NvdXJjZX0v",
-            "ZmluZGluZ3Mve2ZpbmRpbmd9EjZwcm9qZWN0cy97cHJvamVjdH0vc291cmNl",
-            "cy97c291cmNlfS9maW5kaW5ncy97ZmluZGluZ31C2gEKImNvbS5nb29nbGUu",
-            "Y2xvdWQuc2VjdXJpdHljZW50ZXIudjFQAVpMZ29vZ2xlLmdvbGFuZy5vcmcv",
-            "Z2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9zZWN1cml0eWNlbnRlci92MTtz",
-            "ZWN1cml0eWNlbnRlcqoCHkdvb2dsZS5DbG91ZC5TZWN1cml0eUNlbnRlci5W",
-            "McoCHkdvb2dsZVxDbG91ZFxTZWN1cml0eUNlbnRlclxWMeoCIUdvb2dsZTo6",
-            "Q2xvdWQ6OlNlY3VyaXR5Q2VudGVyOjpWMWIGcHJvdG8z"));
+            "Y3Rpb24ucHJvdG8aNGdvb2dsZS9jbG91ZC9zZWN1cml0eWNlbnRlci92MS9j",
+            "b250YWN0X2RldGFpbHMucHJvdG8aMWdvb2dsZS9jbG91ZC9zZWN1cml0eWNl",
+            "bnRlci92MS9leGZpbHRyYXRpb24ucHJvdG8aNGdvb2dsZS9jbG91ZC9zZWN1",
+            "cml0eWNlbnRlci92MS9leHRlcm5hbF9zeXN0ZW0ucHJvdG8aMGdvb2dsZS9j",
+            "bG91ZC9zZWN1cml0eWNlbnRlci92MS9pYW1fYmluZGluZy5wcm90bxouZ29v",
+            "Z2xlL2Nsb3VkL3NlY3VyaXR5Y2VudGVyL3YxL2luZGljYXRvci5wcm90bxox",
+            "Z29vZ2xlL2Nsb3VkL3NlY3VyaXR5Y2VudGVyL3YxL21pdHJlX2F0dGFjay5w",
+            "cm90bxosZ29vZ2xlL2Nsb3VkL3NlY3VyaXR5Y2VudGVyL3YxL3Byb2Nlc3Mu",
+            "cHJvdG8aM2dvb2dsZS9jbG91ZC9zZWN1cml0eWNlbnRlci92MS9zZWN1cml0",
+            "eV9tYXJrcy5wcm90bxoyZ29vZ2xlL2Nsb3VkL3NlY3VyaXR5Y2VudGVyL3Yx",
+            "L3Z1bG5lcmFiaWxpdHkucHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9zdHJ1Y3Qu",
+            "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8iyRIKB0Zp",
+            "bmRpbmcSDAoEbmFtZRgBIAEoCRIOCgZwYXJlbnQYAiABKAkSFQoNcmVzb3Vy",
+            "Y2VfbmFtZRgDIAEoCRI8CgVzdGF0ZRgEIAEoDjItLmdvb2dsZS5jbG91ZC5z",
+            "ZWN1cml0eWNlbnRlci52MS5GaW5kaW5nLlN0YXRlEhAKCGNhdGVnb3J5GAUg",
+            "ASgJEhQKDGV4dGVybmFsX3VyaRgGIAEoCRJYChFzb3VyY2VfcHJvcGVydGll",
+            "cxgHIAMoCzI9Lmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5GaW5k",
+            "aW5nLlNvdXJjZVByb3BlcnRpZXNFbnRyeRJKCg5zZWN1cml0eV9tYXJrcxgI",
+            "IAEoCzItLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5TZWN1cml0",
+            "eU1hcmtzQgPgQQMSLgoKZXZlbnRfdGltZRgJIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXASLwoLY3JlYXRlX3RpbWUYCiABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wEkIKCHNldmVyaXR5GAwgASgOMjAuZ29vZ2xl",
+            "LmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkZpbmRpbmcuU2V2ZXJpdHkSFgoO",
+            "Y2Fub25pY2FsX25hbWUYDiABKAkSOgoEbXV0ZRgPIAEoDjIsLmdvb2dsZS5j",
+            "bG91ZC5zZWN1cml0eWNlbnRlci52MS5GaW5kaW5nLk11dGUSSwoNZmluZGlu",
+            "Z19jbGFzcxgRIAEoDjI0Lmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52",
+            "MS5GaW5kaW5nLkZpbmRpbmdDbGFzcxI8CglpbmRpY2F0b3IYEiABKAsyKS5n",
+            "b29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEuSW5kaWNhdG9yEkQKDXZ1",
+            "bG5lcmFiaWxpdHkYFCABKAsyLS5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50",
+            "ZXIudjEuVnVsbmVyYWJpbGl0eRI5ChBtdXRlX3VwZGF0ZV90aW1lGBUgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDElsKEGV4dGVybmFs",
+            "X3N5c3RlbXMYFiADKAsyPC5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIu",
+            "djEuRmluZGluZy5FeHRlcm5hbFN5c3RlbXNFbnRyeUID4EEDEkEKDG1pdHJl",
+            "X2F0dGFjaxgZIAEoCzIrLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52",
+            "MS5NaXRyZUF0dGFjaxI2CgZhY2Nlc3MYGiABKAsyJi5nb29nbGUuY2xvdWQu",
+            "c2VjdXJpdHljZW50ZXIudjEuQWNjZXNzEj8KC2Nvbm5lY3Rpb25zGB8gAygL",
+            "MiouZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkNvbm5lY3Rpb24S",
+            "FgoObXV0ZV9pbml0aWF0b3IYHCABKAkSOgoJcHJvY2Vzc2VzGB4gAygLMicu",
+            "Z29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLlByb2Nlc3MSTAoIY29u",
+            "dGFjdHMYISADKAsyNS5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEu",
+            "RmluZGluZy5Db250YWN0c0VudHJ5QgPgQQMSPwoLY29tcGxpYW5jZXMYIiAD",
+            "KAsyKi5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEuQ29tcGxpYW5j",
+            "ZRITCgtkZXNjcmlwdGlvbhglIAEoCRJCCgxleGZpbHRyYXRpb24YJiABKAsy",
+            "LC5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEuRXhmaWx0cmF0aW9u",
+            "EkAKDGlhbV9iaW5kaW5ncxgnIAMoCzIqLmdvb2dsZS5jbG91ZC5zZWN1cml0",
+            "eWNlbnRlci52MS5JYW1CaW5kaW5nEhIKCm5leHRfc3RlcHMYKCABKAkaTwoV",
+            "U291cmNlUHJvcGVydGllc0VudHJ5EgsKA2tleRgBIAEoCRIlCgV2YWx1ZRgC",
+            "IAEoCzIWLmdvb2dsZS5wcm90b2J1Zi5WYWx1ZToCOAEaZgoURXh0ZXJuYWxT",
+            "eXN0ZW1zRW50cnkSCwoDa2V5GAEgASgJEj0KBXZhbHVlGAIgASgLMi4uZ29v",
+            "Z2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkV4dGVybmFsU3lzdGVtOgI4",
+            "ARpfCg1Db250YWN0c0VudHJ5EgsKA2tleRgBIAEoCRI9CgV2YWx1ZRgCIAEo",
+            "CzIuLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5Db250YWN0RGV0",
+            "YWlsczoCOAEiOAoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIKCgZB",
+            "Q1RJVkUQARIMCghJTkFDVElWRRACIlEKCFNldmVyaXR5EhgKFFNFVkVSSVRZ",
+            "X1VOU1BFQ0lGSUVEEAASDAoIQ1JJVElDQUwQARIICgRISUdIEAISCgoGTUVE",
+            "SVVNEAMSBwoDTE9XEAQiQwoETXV0ZRIUChBNVVRFX1VOU1BFQ0lGSUVEEAAS",
+            "CQoFTVVURUQQARILCgdVTk1VVEVEEAISDQoJVU5ERUZJTkVEEAQiggEKDEZp",
+            "bmRpbmdDbGFzcxIdChlGSU5ESU5HX0NMQVNTX1VOU1BFQ0lGSUVEEAASCgoG",
+            "VEhSRUFUEAESEQoNVlVMTkVSQUJJTElUWRACEhQKEE1JU0NPTkZJR1VSQVRJ",
+            "T04QAxIPCgtPQlNFUlZBVElPThAEEg0KCVNDQ19FUlJPUhAFOtsB6kHXAQol",
+            "c2VjdXJpdHljZW50ZXIuZ29vZ2xlYXBpcy5jb20vRmluZGluZxJAb3JnYW5p",
+            "emF0aW9ucy97b3JnYW5pemF0aW9ufS9zb3VyY2VzL3tzb3VyY2V9L2ZpbmRp",
+            "bmdzL3tmaW5kaW5nfRI0Zm9sZGVycy97Zm9sZGVyfS9zb3VyY2VzL3tzb3Vy",
+            "Y2V9L2ZpbmRpbmdzL3tmaW5kaW5nfRI2cHJvamVjdHMve3Byb2plY3R9L3Nv",
+            "dXJjZXMve3NvdXJjZX0vZmluZGluZ3Mve2ZpbmRpbmd9QtoBCiJjb20uZ29v",
+            "Z2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxUAFaTGdvb2dsZS5nb2xhbmcu",
+            "b3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvc2VjdXJpdHljZW50ZXIv",
+            "djE7c2VjdXJpdHljZW50ZXKqAh5Hb29nbGUuQ2xvdWQuU2VjdXJpdHlDZW50",
+            "ZXIuVjHKAh5Hb29nbGVcQ2xvdWRcU2VjdXJpdHlDZW50ZXJcVjHqAiFHb29n",
+            "bGU6OkNsb3VkOjpTZWN1cml0eUNlbnRlcjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.AccessReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.ComplianceReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.ConnectionReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.ExfiltrationReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.ExternalSystemReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.IamBindingReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.IndicatorReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.MitreAttackReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.ProcessReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.SecurityMarksReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.VulnerabilityReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.AccessReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.ComplianceReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.ConnectionReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.ContactDetailsReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.ExfiltrationReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.ExternalSystemReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.IamBindingReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.IndicatorReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.MitreAttackReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.ProcessReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.SecurityMarksReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.VulnerabilityReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Finding), global::Google.Cloud.SecurityCenter.V1.Finding.Parser, new[]{ "Name", "Parent", "ResourceName", "State", "Category", "ExternalUri", "SourceProperties", "SecurityMarks", "EventTime", "CreateTime", "Severity", "CanonicalName", "Mute", "FindingClass", "Indicator", "Vulnerability", "MuteUpdateTime", "ExternalSystems", "MitreAttack", "Access", "Connections", "MuteInitiator", "Processes", "Compliances", "Description", "Exfiltration", "IamBindings", "NextSteps" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.State), typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.Severity), typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.Mute), typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.FindingClass) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Finding), global::Google.Cloud.SecurityCenter.V1.Finding.Parser, new[]{ "Name", "Parent", "ResourceName", "State", "Category", "ExternalUri", "SourceProperties", "SecurityMarks", "EventTime", "CreateTime", "Severity", "CanonicalName", "Mute", "FindingClass", "Indicator", "Vulnerability", "MuteUpdateTime", "ExternalSystems", "MitreAttack", "Access", "Connections", "MuteInitiator", "Processes", "Contacts", "Compliances", "Description", "Exfiltration", "IamBindings", "NextSteps" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.State), typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.Severity), typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.Mute), typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.FindingClass) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, })
           }));
     }
     #endregion
@@ -171,6 +176,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       connections_ = other.connections_.Clone();
       muteInitiator_ = other.muteInitiator_;
       processes_ = other.processes_.Clone();
+      contacts_ = other.contacts_.Clone();
       compliances_ = other.compliances_.Clone();
       description_ = other.description_;
       exfiltration_ = other.exfiltration_ != null ? other.exfiltration_.Clone() : null;
@@ -486,8 +492,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
         = new pbc::MapField<string, global::Google.Cloud.SecurityCenter.V1.ExternalSystem>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.SecurityCenter.V1.ExternalSystem.Parser), 178);
     private readonly pbc::MapField<string, global::Google.Cloud.SecurityCenter.V1.ExternalSystem> externalSystems_ = new pbc::MapField<string, global::Google.Cloud.SecurityCenter.V1.ExternalSystem>();
     /// <summary>
-    /// Output only. Third party SIEM/SOAR fields within SCC, contains external
-    /// system information and external system finding fields.
+    /// Output only. Third party SIEM/SOAR fields within SCC, contains external system
+    /// information and external system finding fields.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -571,6 +577,36 @@ namespace Google.Cloud.SecurityCenter.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V1.Process> Processes {
       get { return processes_; }
+    }
+
+    /// <summary>Field number for the "contacts" field.</summary>
+    public const int ContactsFieldNumber = 33;
+    private static readonly pbc::MapField<string, global::Google.Cloud.SecurityCenter.V1.ContactDetails>.Codec _map_contacts_codec
+        = new pbc::MapField<string, global::Google.Cloud.SecurityCenter.V1.ContactDetails>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.SecurityCenter.V1.ContactDetails.Parser), 266);
+    private readonly pbc::MapField<string, global::Google.Cloud.SecurityCenter.V1.ContactDetails> contacts_ = new pbc::MapField<string, global::Google.Cloud.SecurityCenter.V1.ContactDetails>();
+    /// <summary>
+    /// Output only. Map containing the point of contacts for the given finding. The key
+    /// represents the type of contact, while the value contains a list of all the
+    /// contacts that pertain. Please refer to:
+    /// https://cloud.google.com/resource-manager/docs/managing-notification-contacts#notification-categories
+    ///
+    ///     {
+    ///       "security": {
+    ///         "contacts": [
+    ///           {
+    ///             "email": "person1@company.com"
+    ///           },
+    ///           {
+    ///             "email": "person2@company.com"
+    ///           }
+    ///         ]
+    ///       }
+    ///     }
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, global::Google.Cloud.SecurityCenter.V1.ContactDetails> Contacts {
+      get { return contacts_; }
     }
 
     /// <summary>Field number for the "compliances" field.</summary>
@@ -685,6 +721,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if(!connections_.Equals(other.connections_)) return false;
       if (MuteInitiator != other.MuteInitiator) return false;
       if(!processes_.Equals(other.processes_)) return false;
+      if (!Contacts.Equals(other.Contacts)) return false;
       if(!compliances_.Equals(other.compliances_)) return false;
       if (Description != other.Description) return false;
       if (!object.Equals(Exfiltration, other.Exfiltration)) return false;
@@ -720,6 +757,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       hash ^= connections_.GetHashCode();
       if (MuteInitiator.Length != 0) hash ^= MuteInitiator.GetHashCode();
       hash ^= processes_.GetHashCode();
+      hash ^= Contacts.GetHashCode();
       hash ^= compliances_.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (exfiltration_ != null) hash ^= Exfiltration.GetHashCode();
@@ -823,6 +861,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
       processes_.WriteTo(output, _repeated_processes_codec);
       connections_.WriteTo(output, _repeated_connections_codec);
+      contacts_.WriteTo(output, _map_contacts_codec);
       compliances_.WriteTo(output, _repeated_compliances_codec);
       if (Description.Length != 0) {
         output.WriteRawTag(170, 2);
@@ -927,6 +966,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
       processes_.WriteTo(ref output, _repeated_processes_codec);
       connections_.WriteTo(ref output, _repeated_connections_codec);
+      contacts_.WriteTo(ref output, _map_contacts_codec);
       compliances_.WriteTo(ref output, _repeated_compliances_codec);
       if (Description.Length != 0) {
         output.WriteRawTag(170, 2);
@@ -1012,6 +1052,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(MuteInitiator);
       }
       size += processes_.CalculateSize(_repeated_processes_codec);
+      size += contacts_.CalculateSize(_map_contacts_codec);
       size += compliances_.CalculateSize(_repeated_compliances_codec);
       if (Description.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Description);
@@ -1120,6 +1161,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         MuteInitiator = other.MuteInitiator;
       }
       processes_.Add(other.processes_);
+      contacts_.Add(other.contacts_);
       compliances_.Add(other.compliances_);
       if (other.Description.Length != 0) {
         Description = other.Description;
@@ -1263,6 +1305,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
           }
           case 250: {
             connections_.AddEntriesFrom(input, _repeated_connections_codec);
+            break;
+          }
+          case 266: {
+            contacts_.AddEntriesFrom(input, _map_contacts_codec);
             break;
           }
           case 274: {
@@ -1417,6 +1463,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
           }
           case 250: {
             connections_.AddEntriesFrom(ref input, _repeated_connections_codec);
+            break;
+          }
+          case 266: {
+            contacts_.AddEntriesFrom(ref input, _map_contacts_codec);
             break;
           }
           case 274: {

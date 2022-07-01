@@ -231,6 +231,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MuteInitiator = "mute_initiator3bd7566e",
                 Processes = { new Process(), },
                 Connections = { new Connection(), },
+                Contacts =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ContactDetails()
+                    },
+                },
                 Compliances = { new Compliance(), },
                 Description = "description2cf9da67",
                 Exfiltration = new Exfiltration(),
@@ -292,6 +299,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MuteInitiator = "mute_initiator3bd7566e",
                 Processes = { new Process(), },
                 Connections = { new Connection(), },
+                Contacts =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ContactDetails()
+                    },
+                },
                 Compliances = { new Compliance(), },
                 Description = "description2cf9da67",
                 Exfiltration = new Exfiltration(),
@@ -355,6 +369,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MuteInitiator = "mute_initiator3bd7566e",
                 Processes = { new Process(), },
                 Connections = { new Connection(), },
+                Contacts =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ContactDetails()
+                    },
+                },
                 Compliances = { new Compliance(), },
                 Description = "description2cf9da67",
                 Exfiltration = new Exfiltration(),
@@ -416,6 +437,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MuteInitiator = "mute_initiator3bd7566e",
                 Processes = { new Process(), },
                 Connections = { new Connection(), },
+                Contacts =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ContactDetails()
+                    },
+                },
                 Compliances = { new Compliance(), },
                 Description = "description2cf9da67",
                 Exfiltration = new Exfiltration(),
@@ -479,6 +507,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MuteInitiator = "mute_initiator3bd7566e",
                 Processes = { new Process(), },
                 Connections = { new Connection(), },
+                Contacts =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ContactDetails()
+                    },
+                },
                 Compliances = { new Compliance(), },
                 Description = "description2cf9da67",
                 Exfiltration = new Exfiltration(),
@@ -540,6 +575,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MuteInitiator = "mute_initiator3bd7566e",
                 Processes = { new Process(), },
                 Connections = { new Connection(), },
+                Contacts =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ContactDetails()
+                    },
+                },
                 Compliances = { new Compliance(), },
                 Description = "description2cf9da67",
                 Exfiltration = new Exfiltration(),
@@ -2573,6 +2615,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MuteInitiator = "mute_initiator3bd7566e",
                 Processes = { new Process(), },
                 Connections = { new Connection(), },
+                Contacts =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ContactDetails()
+                    },
+                },
                 Compliances = { new Compliance(), },
                 Description = "description2cf9da67",
                 Exfiltration = new Exfiltration(),
@@ -2634,6 +2683,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MuteInitiator = "mute_initiator3bd7566e",
                 Processes = { new Process(), },
                 Connections = { new Connection(), },
+                Contacts =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ContactDetails()
+                    },
+                },
                 Compliances = { new Compliance(), },
                 Description = "description2cf9da67",
                 Exfiltration = new Exfiltration(),
@@ -2697,6 +2753,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MuteInitiator = "mute_initiator3bd7566e",
                 Processes = { new Process(), },
                 Connections = { new Connection(), },
+                Contacts =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ContactDetails()
+                    },
+                },
                 Compliances = { new Compliance(), },
                 Description = "description2cf9da67",
                 Exfiltration = new Exfiltration(),
@@ -2758,6 +2821,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MuteInitiator = "mute_initiator3bd7566e",
                 Processes = { new Process(), },
                 Connections = { new Connection(), },
+                Contacts =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ContactDetails()
+                    },
+                },
                 Compliances = { new Compliance(), },
                 Description = "description2cf9da67",
                 Exfiltration = new Exfiltration(),
@@ -2821,6 +2891,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MuteInitiator = "mute_initiator3bd7566e",
                 Processes = { new Process(), },
                 Connections = { new Connection(), },
+                Contacts =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ContactDetails()
+                    },
+                },
                 Compliances = { new Compliance(), },
                 Description = "description2cf9da67",
                 Exfiltration = new Exfiltration(),
@@ -2882,6 +2959,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MuteInitiator = "mute_initiator3bd7566e",
                 Processes = { new Process(), },
                 Connections = { new Connection(), },
+                Contacts =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ContactDetails()
+                    },
+                },
                 Compliances = { new Compliance(), },
                 Description = "description2cf9da67",
                 Exfiltration = new Exfiltration(),
@@ -2944,6 +3028,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MuteInitiator = "mute_initiator3bd7566e",
                 Processes = { new Process(), },
                 Connections = { new Connection(), },
+                Contacts =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ContactDetails()
+                    },
+                },
                 Compliances = { new Compliance(), },
                 Description = "description2cf9da67",
                 Exfiltration = new Exfiltration(),
@@ -3004,6 +3095,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MuteInitiator = "mute_initiator3bd7566e",
                 Processes = { new Process(), },
                 Connections = { new Connection(), },
+                Contacts =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ContactDetails()
+                    },
+                },
                 Compliances = { new Compliance(), },
                 Description = "description2cf9da67",
                 Exfiltration = new Exfiltration(),
@@ -3066,6 +3164,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MuteInitiator = "mute_initiator3bd7566e",
                 Processes = { new Process(), },
                 Connections = { new Connection(), },
+                Contacts =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ContactDetails()
+                    },
+                },
                 Compliances = { new Compliance(), },
                 Description = "description2cf9da67",
                 Exfiltration = new Exfiltration(),
@@ -3126,6 +3231,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MuteInitiator = "mute_initiator3bd7566e",
                 Processes = { new Process(), },
                 Connections = { new Connection(), },
+                Contacts =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ContactDetails()
+                    },
+                },
                 Compliances = { new Compliance(), },
                 Description = "description2cf9da67",
                 Exfiltration = new Exfiltration(),
@@ -3188,6 +3300,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MuteInitiator = "mute_initiator3bd7566e",
                 Processes = { new Process(), },
                 Connections = { new Connection(), },
+                Contacts =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ContactDetails()
+                    },
+                },
                 Compliances = { new Compliance(), },
                 Description = "description2cf9da67",
                 Exfiltration = new Exfiltration(),
@@ -3248,6 +3367,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MuteInitiator = "mute_initiator3bd7566e",
                 Processes = { new Process(), },
                 Connections = { new Connection(), },
+                Contacts =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ContactDetails()
+                    },
+                },
                 Compliances = { new Compliance(), },
                 Description = "description2cf9da67",
                 Exfiltration = new Exfiltration(),
@@ -3782,6 +3908,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MuteInitiator = "mute_initiator3bd7566e",
                 Processes = { new Process(), },
                 Connections = { new Connection(), },
+                Contacts =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ContactDetails()
+                    },
+                },
                 Compliances = { new Compliance(), },
                 Description = "description2cf9da67",
                 Exfiltration = new Exfiltration(),
@@ -3842,6 +3975,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MuteInitiator = "mute_initiator3bd7566e",
                 Processes = { new Process(), },
                 Connections = { new Connection(), },
+                Contacts =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ContactDetails()
+                    },
+                },
                 Compliances = { new Compliance(), },
                 Description = "description2cf9da67",
                 Exfiltration = new Exfiltration(),
@@ -3903,6 +4043,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MuteInitiator = "mute_initiator3bd7566e",
                 Processes = { new Process(), },
                 Connections = { new Connection(), },
+                Contacts =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ContactDetails()
+                    },
+                },
                 Compliances = { new Compliance(), },
                 Description = "description2cf9da67",
                 Exfiltration = new Exfiltration(),
@@ -3962,6 +4109,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MuteInitiator = "mute_initiator3bd7566e",
                 Processes = { new Process(), },
                 Connections = { new Connection(), },
+                Contacts =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ContactDetails()
+                    },
+                },
                 Compliances = { new Compliance(), },
                 Description = "description2cf9da67",
                 Exfiltration = new Exfiltration(),

@@ -25,18 +25,32 @@ namespace Google.Cloud.SecurityCenter.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci5nb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvaW5kaWNhdG9yLnBy",
-            "b3RvEh5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEiMgoJSW5kaWNh",
-            "dG9yEhQKDGlwX2FkZHJlc3NlcxgBIAMoCRIPCgdkb21haW5zGAIgAygJQuoB",
-            "CiJjb20uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxQg5JbmRpY2F0",
-            "b3JQcm90b1ABWkxnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVh",
-            "cGlzL2Nsb3VkL3NlY3VyaXR5Y2VudGVyL3YxO3NlY3VyaXR5Y2VudGVyqgIe",
-            "R29vZ2xlLkNsb3VkLlNlY3VyaXR5Q2VudGVyLlYxygIeR29vZ2xlXENsb3Vk",
-            "XFNlY3VyaXR5Q2VudGVyXFYx6gIhR29vZ2xlOjpDbG91ZDo6U2VjdXJpdHlD",
-            "ZW50ZXI6OlYxYgZwcm90bzM="));
+            "b3RvEh5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEigwUKCUluZGlj",
+            "YXRvchIUCgxpcF9hZGRyZXNzZXMYASADKAkSDwoHZG9tYWlucxgCIAMoCRJO",
+            "CgpzaWduYXR1cmVzGAMgAygLMjouZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2Vu",
+            "dGVyLnYxLkluZGljYXRvci5Qcm9jZXNzU2lnbmF0dXJlGv4DChBQcm9jZXNz",
+            "U2lnbmF0dXJlEm8KFW1lbW9yeV9oYXNoX3NpZ25hdHVyZRgGIAEoCzJOLmdv",
+            "b2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5JbmRpY2F0b3IuUHJvY2Vz",
+            "c1NpZ25hdHVyZS5NZW1vcnlIYXNoU2lnbmF0dXJlSAASawoTeWFyYV9ydWxl",
+            "X3NpZ25hdHVyZRgHIAEoCzJMLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRl",
+            "ci52MS5JbmRpY2F0b3IuUHJvY2Vzc1NpZ25hdHVyZS5ZYXJhUnVsZVNpZ25h",
+            "dHVyZUgAGtYBChNNZW1vcnlIYXNoU2lnbmF0dXJlEhUKDWJpbmFyeV9mYW1p",
+            "bHkYASABKAkSbAoKZGV0ZWN0aW9ucxgEIAMoCzJYLmdvb2dsZS5jbG91ZC5z",
+            "ZWN1cml0eWNlbnRlci52MS5JbmRpY2F0b3IuUHJvY2Vzc1NpZ25hdHVyZS5N",
+            "ZW1vcnlIYXNoU2lnbmF0dXJlLkRldGVjdGlvbho6CglEZXRlY3Rpb24SDgoG",
+            "YmluYXJ5GAIgASgJEh0KFXBlcmNlbnRfcGFnZXNfbWF0Y2hlZBgDIAEoARom",
+            "ChFZYXJhUnVsZVNpZ25hdHVyZRIRCgl5YXJhX3J1bGUYBSABKAlCCwoJc2ln",
+            "bmF0dXJlQuoBCiJjb20uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYx",
+            "Qg5JbmRpY2F0b3JQcm90b1ABWkxnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
+            "by9nb29nbGVhcGlzL2Nsb3VkL3NlY3VyaXR5Y2VudGVyL3YxO3NlY3VyaXR5",
+            "Y2VudGVyqgIeR29vZ2xlLkNsb3VkLlNlY3VyaXR5Q2VudGVyLlYxygIeR29v",
+            "Z2xlXENsb3VkXFNlY3VyaXR5Q2VudGVyXFYx6gIhR29vZ2xlOjpDbG91ZDo6",
+            "U2VjdXJpdHlDZW50ZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Indicator), global::Google.Cloud.SecurityCenter.V1.Indicator.Parser, new[]{ "IpAddresses", "Domains" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Indicator), global::Google.Cloud.SecurityCenter.V1.Indicator.Parser, new[]{ "IpAddresses", "Domains", "Signatures" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature), global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Parser, new[]{ "MemoryHashSignature", "YaraRuleSignature" }, new[]{ "Signature" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.MemoryHashSignature), global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.MemoryHashSignature.Parser, new[]{ "BinaryFamily", "Detections" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.MemoryHashSignature.Types.Detection), global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.MemoryHashSignature.Types.Detection.Parser, new[]{ "Binary", "PercentPagesMatched" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.YaraRuleSignature), global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.YaraRuleSignature.Parser, new[]{ "YaraRule" }, null, null, null, null)})})
           }));
     }
     #endregion
@@ -85,6 +99,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public Indicator(Indicator other) : this() {
       ipAddresses_ = other.ipAddresses_.Clone();
       domains_ = other.domains_.Clone();
+      signatures_ = other.signatures_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -122,6 +137,21 @@ namespace Google.Cloud.SecurityCenter.V1 {
       get { return domains_; }
     }
 
+    /// <summary>Field number for the "signatures" field.</summary>
+    public const int SignaturesFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature> _repeated_signatures_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature> signatures_ = new pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature>();
+    /// <summary>
+    /// The list of matched signatures indicating that the given
+    /// process is present in the environment.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature> Signatures {
+      get { return signatures_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -139,6 +169,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
       if(!ipAddresses_.Equals(other.ipAddresses_)) return false;
       if(!domains_.Equals(other.domains_)) return false;
+      if(!signatures_.Equals(other.signatures_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -148,6 +179,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       int hash = 1;
       hash ^= ipAddresses_.GetHashCode();
       hash ^= domains_.GetHashCode();
+      hash ^= signatures_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -168,6 +200,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     #else
       ipAddresses_.WriteTo(output, _repeated_ipAddresses_codec);
       domains_.WriteTo(output, _repeated_domains_codec);
+      signatures_.WriteTo(output, _repeated_signatures_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -180,6 +213,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       ipAddresses_.WriteTo(ref output, _repeated_ipAddresses_codec);
       domains_.WriteTo(ref output, _repeated_domains_codec);
+      signatures_.WriteTo(ref output, _repeated_signatures_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -192,6 +226,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       int size = 0;
       size += ipAddresses_.CalculateSize(_repeated_ipAddresses_codec);
       size += domains_.CalculateSize(_repeated_domains_codec);
+      size += signatures_.CalculateSize(_repeated_signatures_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -206,6 +241,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
       ipAddresses_.Add(other.ipAddresses_);
       domains_.Add(other.domains_);
+      signatures_.Add(other.signatures_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -227,6 +263,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
           }
           case 18: {
             domains_.AddEntriesFrom(input, _repeated_domains_codec);
+            break;
+          }
+          case 26: {
+            signatures_.AddEntriesFrom(input, _repeated_signatures_codec);
             break;
           }
         }
@@ -252,10 +292,989 @@ namespace Google.Cloud.SecurityCenter.V1 {
             domains_.AddEntriesFrom(ref input, _repeated_domains_codec);
             break;
           }
+          case 26: {
+            signatures_.AddEntriesFrom(ref input, _repeated_signatures_codec);
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the Indicator message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Indicates what signature matched this process.
+      /// </summary>
+      public sealed partial class ProcessSignature : pb::IMessage<ProcessSignature>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ProcessSignature> _parser = new pb::MessageParser<ProcessSignature>(() => new ProcessSignature());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ProcessSignature> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.SecurityCenter.V1.Indicator.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ProcessSignature() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ProcessSignature(ProcessSignature other) : this() {
+          switch (other.SignatureCase) {
+            case SignatureOneofCase.MemoryHashSignature:
+              MemoryHashSignature = other.MemoryHashSignature.Clone();
+              break;
+            case SignatureOneofCase.YaraRuleSignature:
+              YaraRuleSignature = other.YaraRuleSignature.Clone();
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ProcessSignature Clone() {
+          return new ProcessSignature(this);
+        }
+
+        /// <summary>Field number for the "memory_hash_signature" field.</summary>
+        public const int MemoryHashSignatureFieldNumber = 6;
+        /// <summary>
+        /// Signature indicating that a binary family was matched.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.MemoryHashSignature MemoryHashSignature {
+          get { return signatureCase_ == SignatureOneofCase.MemoryHashSignature ? (global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.MemoryHashSignature) signature_ : null; }
+          set {
+            signature_ = value;
+            signatureCase_ = value == null ? SignatureOneofCase.None : SignatureOneofCase.MemoryHashSignature;
+          }
+        }
+
+        /// <summary>Field number for the "yara_rule_signature" field.</summary>
+        public const int YaraRuleSignatureFieldNumber = 7;
+        /// <summary>
+        /// Signature indicating that a YARA rule was matched.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.YaraRuleSignature YaraRuleSignature {
+          get { return signatureCase_ == SignatureOneofCase.YaraRuleSignature ? (global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.YaraRuleSignature) signature_ : null; }
+          set {
+            signature_ = value;
+            signatureCase_ = value == null ? SignatureOneofCase.None : SignatureOneofCase.YaraRuleSignature;
+          }
+        }
+
+        private object signature_;
+        /// <summary>Enum of possible cases for the "signature" oneof.</summary>
+        public enum SignatureOneofCase {
+          None = 0,
+          MemoryHashSignature = 6,
+          YaraRuleSignature = 7,
+        }
+        private SignatureOneofCase signatureCase_ = SignatureOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SignatureOneofCase SignatureCase {
+          get { return signatureCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearSignature() {
+          signatureCase_ = SignatureOneofCase.None;
+          signature_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ProcessSignature);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ProcessSignature other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(MemoryHashSignature, other.MemoryHashSignature)) return false;
+          if (!object.Equals(YaraRuleSignature, other.YaraRuleSignature)) return false;
+          if (SignatureCase != other.SignatureCase) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (signatureCase_ == SignatureOneofCase.MemoryHashSignature) hash ^= MemoryHashSignature.GetHashCode();
+          if (signatureCase_ == SignatureOneofCase.YaraRuleSignature) hash ^= YaraRuleSignature.GetHashCode();
+          hash ^= (int) signatureCase_;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (signatureCase_ == SignatureOneofCase.MemoryHashSignature) {
+            output.WriteRawTag(50);
+            output.WriteMessage(MemoryHashSignature);
+          }
+          if (signatureCase_ == SignatureOneofCase.YaraRuleSignature) {
+            output.WriteRawTag(58);
+            output.WriteMessage(YaraRuleSignature);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (signatureCase_ == SignatureOneofCase.MemoryHashSignature) {
+            output.WriteRawTag(50);
+            output.WriteMessage(MemoryHashSignature);
+          }
+          if (signatureCase_ == SignatureOneofCase.YaraRuleSignature) {
+            output.WriteRawTag(58);
+            output.WriteMessage(YaraRuleSignature);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (signatureCase_ == SignatureOneofCase.MemoryHashSignature) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(MemoryHashSignature);
+          }
+          if (signatureCase_ == SignatureOneofCase.YaraRuleSignature) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(YaraRuleSignature);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ProcessSignature other) {
+          if (other == null) {
+            return;
+          }
+          switch (other.SignatureCase) {
+            case SignatureOneofCase.MemoryHashSignature:
+              if (MemoryHashSignature == null) {
+                MemoryHashSignature = new global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.MemoryHashSignature();
+              }
+              MemoryHashSignature.MergeFrom(other.MemoryHashSignature);
+              break;
+            case SignatureOneofCase.YaraRuleSignature:
+              if (YaraRuleSignature == null) {
+                YaraRuleSignature = new global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.YaraRuleSignature();
+              }
+              YaraRuleSignature.MergeFrom(other.YaraRuleSignature);
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 50: {
+                global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.MemoryHashSignature subBuilder = new global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.MemoryHashSignature();
+                if (signatureCase_ == SignatureOneofCase.MemoryHashSignature) {
+                  subBuilder.MergeFrom(MemoryHashSignature);
+                }
+                input.ReadMessage(subBuilder);
+                MemoryHashSignature = subBuilder;
+                break;
+              }
+              case 58: {
+                global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.YaraRuleSignature subBuilder = new global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.YaraRuleSignature();
+                if (signatureCase_ == SignatureOneofCase.YaraRuleSignature) {
+                  subBuilder.MergeFrom(YaraRuleSignature);
+                }
+                input.ReadMessage(subBuilder);
+                YaraRuleSignature = subBuilder;
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 50: {
+                global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.MemoryHashSignature subBuilder = new global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.MemoryHashSignature();
+                if (signatureCase_ == SignatureOneofCase.MemoryHashSignature) {
+                  subBuilder.MergeFrom(MemoryHashSignature);
+                }
+                input.ReadMessage(subBuilder);
+                MemoryHashSignature = subBuilder;
+                break;
+              }
+              case 58: {
+                global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.YaraRuleSignature subBuilder = new global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.YaraRuleSignature();
+                if (signatureCase_ == SignatureOneofCase.YaraRuleSignature) {
+                  subBuilder.MergeFrom(YaraRuleSignature);
+                }
+                input.ReadMessage(subBuilder);
+                YaraRuleSignature = subBuilder;
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the ProcessSignature message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// A signature corresponding to memory page hashes.
+          /// </summary>
+          public sealed partial class MemoryHashSignature : pb::IMessage<MemoryHashSignature>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<MemoryHashSignature> _parser = new pb::MessageParser<MemoryHashSignature>(() => new MemoryHashSignature());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<MemoryHashSignature> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public MemoryHashSignature() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public MemoryHashSignature(MemoryHashSignature other) : this() {
+              binaryFamily_ = other.binaryFamily_;
+              detections_ = other.detections_.Clone();
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public MemoryHashSignature Clone() {
+              return new MemoryHashSignature(this);
+            }
+
+            /// <summary>Field number for the "binary_family" field.</summary>
+            public const int BinaryFamilyFieldNumber = 1;
+            private string binaryFamily_ = "";
+            /// <summary>
+            /// The binary family.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string BinaryFamily {
+              get { return binaryFamily_; }
+              set {
+                binaryFamily_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "detections" field.</summary>
+            public const int DetectionsFieldNumber = 4;
+            private static readonly pb::FieldCodec<global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.MemoryHashSignature.Types.Detection> _repeated_detections_codec
+                = pb::FieldCodec.ForMessage(34, global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.MemoryHashSignature.Types.Detection.Parser);
+            private readonly pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.MemoryHashSignature.Types.Detection> detections_ = new pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.MemoryHashSignature.Types.Detection>();
+            /// <summary>
+            /// The list of memory hash detections contributing to the binary family
+            /// match.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.MemoryHashSignature.Types.Detection> Detections {
+              get { return detections_; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as MemoryHashSignature);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(MemoryHashSignature other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (BinaryFamily != other.BinaryFamily) return false;
+              if(!detections_.Equals(other.detections_)) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (BinaryFamily.Length != 0) hash ^= BinaryFamily.GetHashCode();
+              hash ^= detections_.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (BinaryFamily.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(BinaryFamily);
+              }
+              detections_.WriteTo(output, _repeated_detections_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (BinaryFamily.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(BinaryFamily);
+              }
+              detections_.WriteTo(ref output, _repeated_detections_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (BinaryFamily.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(BinaryFamily);
+              }
+              size += detections_.CalculateSize(_repeated_detections_codec);
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(MemoryHashSignature other) {
+              if (other == null) {
+                return;
+              }
+              if (other.BinaryFamily.Length != 0) {
+                BinaryFamily = other.BinaryFamily;
+              }
+              detections_.Add(other.detections_);
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    BinaryFamily = input.ReadString();
+                    break;
+                  }
+                  case 34: {
+                    detections_.AddEntriesFrom(input, _repeated_detections_codec);
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    BinaryFamily = input.ReadString();
+                    break;
+                  }
+                  case 34: {
+                    detections_.AddEntriesFrom(ref input, _repeated_detections_codec);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+            #region Nested types
+            /// <summary>Container for nested types declared in the MemoryHashSignature message type.</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static partial class Types {
+              /// <summary>
+              /// Memory hash detection contributing to the binary family match.
+              /// </summary>
+              public sealed partial class Detection : pb::IMessage<Detection>
+              #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  , pb::IBufferMessage
+              #endif
+              {
+                private static readonly pb::MessageParser<Detection> _parser = new pb::MessageParser<Detection>(() => new Detection());
+                private pb::UnknownFieldSet _unknownFields;
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pb::MessageParser<Detection> Parser { get { return _parser; } }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pbr::MessageDescriptor Descriptor {
+                  get { return global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.MemoryHashSignature.Descriptor.NestedTypes[0]; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                pbr::MessageDescriptor pb::IMessage.Descriptor {
+                  get { return Descriptor; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public Detection() {
+                  OnConstruction();
+                }
+
+                partial void OnConstruction();
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public Detection(Detection other) : this() {
+                  binary_ = other.binary_;
+                  percentPagesMatched_ = other.percentPagesMatched_;
+                  _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public Detection Clone() {
+                  return new Detection(this);
+                }
+
+                /// <summary>Field number for the "binary" field.</summary>
+                public const int BinaryFieldNumber = 2;
+                private string binary_ = "";
+                /// <summary>
+                /// The name of the binary associated with the memory hash
+                /// signature detection.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public string Binary {
+                  get { return binary_; }
+                  set {
+                    binary_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+                  }
+                }
+
+                /// <summary>Field number for the "percent_pages_matched" field.</summary>
+                public const int PercentPagesMatchedFieldNumber = 3;
+                private double percentPagesMatched_;
+                /// <summary>
+                /// The percentage of memory page hashes in the signature
+                /// that were matched.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public double PercentPagesMatched {
+                  get { return percentPagesMatched_; }
+                  set {
+                    percentPagesMatched_ = value;
+                  }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override bool Equals(object other) {
+                  return Equals(other as Detection);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Equals(Detection other) {
+                  if (ReferenceEquals(other, null)) {
+                    return false;
+                  }
+                  if (ReferenceEquals(other, this)) {
+                    return true;
+                  }
+                  if (Binary != other.Binary) return false;
+                  if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(PercentPagesMatched, other.PercentPagesMatched)) return false;
+                  return Equals(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override int GetHashCode() {
+                  int hash = 1;
+                  if (Binary.Length != 0) hash ^= Binary.GetHashCode();
+                  if (PercentPagesMatched != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(PercentPagesMatched);
+                  if (_unknownFields != null) {
+                    hash ^= _unknownFields.GetHashCode();
+                  }
+                  return hash;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override string ToString() {
+                  return pb::JsonFormatter.ToDiagnosticString(this);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void WriteTo(pb::CodedOutputStream output) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  output.WriteRawMessage(this);
+                #else
+                  if (Binary.Length != 0) {
+                    output.WriteRawTag(18);
+                    output.WriteString(Binary);
+                  }
+                  if (PercentPagesMatched != 0D) {
+                    output.WriteRawTag(25);
+                    output.WriteDouble(PercentPagesMatched);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(output);
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                  if (Binary.Length != 0) {
+                    output.WriteRawTag(18);
+                    output.WriteString(Binary);
+                  }
+                  if (PercentPagesMatched != 0D) {
+                    output.WriteRawTag(25);
+                    output.WriteDouble(PercentPagesMatched);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(ref output);
+                  }
+                }
+                #endif
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int CalculateSize() {
+                  int size = 0;
+                  if (Binary.Length != 0) {
+                    size += 1 + pb::CodedOutputStream.ComputeStringSize(Binary);
+                  }
+                  if (PercentPagesMatched != 0D) {
+                    size += 1 + 8;
+                  }
+                  if (_unknownFields != null) {
+                    size += _unknownFields.CalculateSize();
+                  }
+                  return size;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(Detection other) {
+                  if (other == null) {
+                    return;
+                  }
+                  if (other.Binary.Length != 0) {
+                    Binary = other.Binary;
+                  }
+                  if (other.PercentPagesMatched != 0D) {
+                    PercentPagesMatched = other.PercentPagesMatched;
+                  }
+                  _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(pb::CodedInputStream input) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  input.ReadRawMessage(this);
+                #else
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                        break;
+                      case 18: {
+                        Binary = input.ReadString();
+                        break;
+                      }
+                      case 25: {
+                        PercentPagesMatched = input.ReadDouble();
+                        break;
+                      }
+                    }
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                      case 18: {
+                        Binary = input.ReadString();
+                        break;
+                      }
+                      case 25: {
+                        PercentPagesMatched = input.ReadDouble();
+                        break;
+                      }
+                    }
+                  }
+                }
+                #endif
+
+              }
+
+            }
+            #endregion
+
+          }
+
+          /// <summary>
+          /// A signature corresponding to a YARA rule.
+          /// </summary>
+          public sealed partial class YaraRuleSignature : pb::IMessage<YaraRuleSignature>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<YaraRuleSignature> _parser = new pb::MessageParser<YaraRuleSignature>(() => new YaraRuleSignature());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<YaraRuleSignature> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Descriptor.NestedTypes[1]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public YaraRuleSignature() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public YaraRuleSignature(YaraRuleSignature other) : this() {
+              yaraRule_ = other.yaraRule_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public YaraRuleSignature Clone() {
+              return new YaraRuleSignature(this);
+            }
+
+            /// <summary>Field number for the "yara_rule" field.</summary>
+            public const int YaraRuleFieldNumber = 5;
+            private string yaraRule_ = "";
+            /// <summary>
+            /// The name of the YARA rule.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string YaraRule {
+              get { return yaraRule_; }
+              set {
+                yaraRule_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as YaraRuleSignature);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(YaraRuleSignature other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (YaraRule != other.YaraRule) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (YaraRule.Length != 0) hash ^= YaraRule.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (YaraRule.Length != 0) {
+                output.WriteRawTag(42);
+                output.WriteString(YaraRule);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (YaraRule.Length != 0) {
+                output.WriteRawTag(42);
+                output.WriteString(YaraRule);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (YaraRule.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(YaraRule);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(YaraRuleSignature other) {
+              if (other == null) {
+                return;
+              }
+              if (other.YaraRule.Length != 0) {
+                YaraRule = other.YaraRule;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 42: {
+                    YaraRule = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 42: {
+                    YaraRule = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
+
+      }
+
+    }
+    #endregion
 
   }
 
