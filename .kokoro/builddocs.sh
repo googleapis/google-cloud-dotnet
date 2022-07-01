@@ -19,4 +19,7 @@ git submodule update
 cd docs
 ./builddocs.sh
 cd ..
+
+# Clean up to make artifact copying quicker
+./clean.sh
 ./processbuildtiminglog.sh
