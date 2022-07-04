@@ -1438,7 +1438,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// 
         /// Authorization requires `spanner.instances.update` permission on
-        /// resource [name][google.spanner.admin.instance.v1.Instance.name].
+        /// the resource [name][google.spanner.admin.instance.v1.Instance.name].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1486,7 +1486,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// 
         /// Authorization requires `spanner.instances.update` permission on
-        /// resource [name][google.spanner.admin.instance.v1.Instance.name].
+        /// the resource [name][google.spanner.admin.instance.v1.Instance.name].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1534,7 +1534,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// 
         /// Authorization requires `spanner.instances.update` permission on
-        /// resource [name][google.spanner.admin.instance.v1.Instance.name].
+        /// the resource [name][google.spanner.admin.instance.v1.Instance.name].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1608,7 +1608,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// 
         /// Authorization requires `spanner.instances.update` permission on
-        /// resource [name][google.spanner.admin.instance.v1.Instance.name].
+        /// the resource [name][google.spanner.admin.instance.v1.Instance.name].
         /// </summary>
         /// <param name="instance">
         /// Required. The instance to update, which must always include the instance
@@ -1669,7 +1669,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// 
         /// Authorization requires `spanner.instances.update` permission on
-        /// resource [name][google.spanner.admin.instance.v1.Instance.name].
+        /// the resource [name][google.spanner.admin.instance.v1.Instance.name].
         /// </summary>
         /// <param name="instance">
         /// Required. The instance to update, which must always include the instance
@@ -1730,7 +1730,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// 
         /// Authorization requires `spanner.instances.update` permission on
-        /// resource [name][google.spanner.admin.instance.v1.Instance.name].
+        /// the resource [name][google.spanner.admin.instance.v1.Instance.name].
         /// </summary>
         /// <param name="instance">
         /// Required. The instance to update, which must always include the instance
@@ -2862,7 +2862,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// 
         /// Authorization requires `spanner.instances.update` permission on
-        /// resource [name][google.spanner.admin.instance.v1.Instance.name].
+        /// the resource [name][google.spanner.admin.instance.v1.Instance.name].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2913,7 +2913,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// 
         /// Authorization requires `spanner.instances.update` permission on
-        /// resource [name][google.spanner.admin.instance.v1.Instance.name].
+        /// the resource [name][google.spanner.admin.instance.v1.Instance.name].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
