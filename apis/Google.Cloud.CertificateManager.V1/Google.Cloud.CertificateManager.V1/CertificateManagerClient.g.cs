@@ -18,6 +18,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -80,6 +81,7 @@ namespace Google.Cloud.CertificateManager.V1
             UpdateDnsAuthorizationOperationsSettings = existing.UpdateDnsAuthorizationOperationsSettings.Clone();
             DeleteDnsAuthorizationSettings = existing.DeleteDnsAuthorizationSettings;
             DeleteDnsAuthorizationOperationsSettings = existing.DeleteDnsAuthorizationOperationsSettings.Clone();
+            LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
 
@@ -679,6 +681,11 @@ namespace Google.Cloud.CertificateManager.V1
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
 
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="CertificateManagerSettings"/> object.</returns>
         public CertificateManagerSettings Clone() => new CertificateManagerSettings(this);
@@ -847,6 +854,9 @@ namespace Google.Cloud.CertificateManager.V1
 
         /// <summary>The underlying gRPC CertificateManager client</summary>
         public virtual CertificateManager.CertificateManagerClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Lists Certificates in a given project and location.
@@ -3601,6 +3611,7 @@ namespace Google.Cloud.CertificateManager.V1
             CreateDnsAuthorizationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateDnsAuthorizationOperationsSettings, logger);
             UpdateDnsAuthorizationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDnsAuthorizationOperationsSettings, logger);
             DeleteDnsAuthorizationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDnsAuthorizationOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListCertificates = clientHelper.BuildApiCall<ListCertificatesRequest, ListCertificatesResponse>("ListCertificates", grpcClient.ListCertificatesAsync, grpcClient.ListCertificates, effectiveSettings.ListCertificatesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListCertificates);
             Modify_ListCertificatesApiCall(ref _callListCertificates);
@@ -3710,6 +3721,9 @@ namespace Google.Cloud.CertificateManager.V1
 
         /// <summary>The underlying gRPC CertificateManager client</summary>
         public override CertificateManager.CertificateManagerClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
 
         partial void Modify_ListCertificatesRequest(ref ListCertificatesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4331,6 +4345,22 @@ namespace Google.Cloud.CertificateManager.V1
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class CertificateManager
+    {
+        public partial class CertificateManagerClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
         }
     }
 }
