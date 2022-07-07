@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -34,6 +35,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
         {
             moq::Mock<CertificateManager.CertificateManagerClient> mockGrpcClient = new moq::Mock<CertificateManager.CertificateManagerClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetCertificateRequest request = new GetCertificateRequest
             {
                 CertificateName = CertificateName.FromProjectLocationCertificate("[PROJECT]", "[LOCATION]", "[CERTIFICATE]"),
@@ -73,6 +75,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
         {
             moq::Mock<CertificateManager.CertificateManagerClient> mockGrpcClient = new moq::Mock<CertificateManager.CertificateManagerClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetCertificateRequest request = new GetCertificateRequest
             {
                 CertificateName = CertificateName.FromProjectLocationCertificate("[PROJECT]", "[LOCATION]", "[CERTIFICATE]"),
@@ -114,6 +117,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
         {
             moq::Mock<CertificateManager.CertificateManagerClient> mockGrpcClient = new moq::Mock<CertificateManager.CertificateManagerClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetCertificateRequest request = new GetCertificateRequest
             {
                 CertificateName = CertificateName.FromProjectLocationCertificate("[PROJECT]", "[LOCATION]", "[CERTIFICATE]"),
@@ -153,6 +157,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
         {
             moq::Mock<CertificateManager.CertificateManagerClient> mockGrpcClient = new moq::Mock<CertificateManager.CertificateManagerClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetCertificateRequest request = new GetCertificateRequest
             {
                 CertificateName = CertificateName.FromProjectLocationCertificate("[PROJECT]", "[LOCATION]", "[CERTIFICATE]"),
@@ -194,6 +199,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
         {
             moq::Mock<CertificateManager.CertificateManagerClient> mockGrpcClient = new moq::Mock<CertificateManager.CertificateManagerClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetCertificateRequest request = new GetCertificateRequest
             {
                 CertificateName = CertificateName.FromProjectLocationCertificate("[PROJECT]", "[LOCATION]", "[CERTIFICATE]"),
@@ -233,6 +239,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
         {
             moq::Mock<CertificateManager.CertificateManagerClient> mockGrpcClient = new moq::Mock<CertificateManager.CertificateManagerClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetCertificateRequest request = new GetCertificateRequest
             {
                 CertificateName = CertificateName.FromProjectLocationCertificate("[PROJECT]", "[LOCATION]", "[CERTIFICATE]"),
@@ -274,6 +281,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
         {
             moq::Mock<CertificateManager.CertificateManagerClient> mockGrpcClient = new moq::Mock<CertificateManager.CertificateManagerClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetCertificateMapRequest request = new GetCertificateMapRequest
             {
                 CertificateMapName = CertificateMapName.FromProjectLocationCertificateMap("[PROJECT]", "[LOCATION]", "[CERTIFICATE_MAP]"),
@@ -308,6 +316,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
         {
             moq::Mock<CertificateManager.CertificateManagerClient> mockGrpcClient = new moq::Mock<CertificateManager.CertificateManagerClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetCertificateMapRequest request = new GetCertificateMapRequest
             {
                 CertificateMapName = CertificateMapName.FromProjectLocationCertificateMap("[PROJECT]", "[LOCATION]", "[CERTIFICATE_MAP]"),
@@ -344,6 +353,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
         {
             moq::Mock<CertificateManager.CertificateManagerClient> mockGrpcClient = new moq::Mock<CertificateManager.CertificateManagerClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetCertificateMapRequest request = new GetCertificateMapRequest
             {
                 CertificateMapName = CertificateMapName.FromProjectLocationCertificateMap("[PROJECT]", "[LOCATION]", "[CERTIFICATE_MAP]"),
@@ -378,6 +388,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
         {
             moq::Mock<CertificateManager.CertificateManagerClient> mockGrpcClient = new moq::Mock<CertificateManager.CertificateManagerClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetCertificateMapRequest request = new GetCertificateMapRequest
             {
                 CertificateMapName = CertificateMapName.FromProjectLocationCertificateMap("[PROJECT]", "[LOCATION]", "[CERTIFICATE_MAP]"),
@@ -414,6 +425,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
         {
             moq::Mock<CertificateManager.CertificateManagerClient> mockGrpcClient = new moq::Mock<CertificateManager.CertificateManagerClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetCertificateMapRequest request = new GetCertificateMapRequest
             {
                 CertificateMapName = CertificateMapName.FromProjectLocationCertificateMap("[PROJECT]", "[LOCATION]", "[CERTIFICATE_MAP]"),
@@ -448,6 +460,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
         {
             moq::Mock<CertificateManager.CertificateManagerClient> mockGrpcClient = new moq::Mock<CertificateManager.CertificateManagerClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetCertificateMapRequest request = new GetCertificateMapRequest
             {
                 CertificateMapName = CertificateMapName.FromProjectLocationCertificateMap("[PROJECT]", "[LOCATION]", "[CERTIFICATE_MAP]"),
@@ -484,6 +497,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
         {
             moq::Mock<CertificateManager.CertificateManagerClient> mockGrpcClient = new moq::Mock<CertificateManager.CertificateManagerClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetCertificateMapEntryRequest request = new GetCertificateMapEntryRequest
             {
                 CertificateMapEntryName = CertificateMapEntryName.FromProjectLocationCertificateMapCertificateMapEntry("[PROJECT]", "[LOCATION]", "[CERTIFICATE_MAP]", "[CERTIFICATE_MAP_ENTRY]"),
@@ -521,6 +535,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
         {
             moq::Mock<CertificateManager.CertificateManagerClient> mockGrpcClient = new moq::Mock<CertificateManager.CertificateManagerClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetCertificateMapEntryRequest request = new GetCertificateMapEntryRequest
             {
                 CertificateMapEntryName = CertificateMapEntryName.FromProjectLocationCertificateMapCertificateMapEntry("[PROJECT]", "[LOCATION]", "[CERTIFICATE_MAP]", "[CERTIFICATE_MAP_ENTRY]"),
@@ -560,6 +575,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
         {
             moq::Mock<CertificateManager.CertificateManagerClient> mockGrpcClient = new moq::Mock<CertificateManager.CertificateManagerClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetCertificateMapEntryRequest request = new GetCertificateMapEntryRequest
             {
                 CertificateMapEntryName = CertificateMapEntryName.FromProjectLocationCertificateMapCertificateMapEntry("[PROJECT]", "[LOCATION]", "[CERTIFICATE_MAP]", "[CERTIFICATE_MAP_ENTRY]"),
@@ -597,6 +613,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
         {
             moq::Mock<CertificateManager.CertificateManagerClient> mockGrpcClient = new moq::Mock<CertificateManager.CertificateManagerClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetCertificateMapEntryRequest request = new GetCertificateMapEntryRequest
             {
                 CertificateMapEntryName = CertificateMapEntryName.FromProjectLocationCertificateMapCertificateMapEntry("[PROJECT]", "[LOCATION]", "[CERTIFICATE_MAP]", "[CERTIFICATE_MAP_ENTRY]"),
@@ -636,6 +653,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
         {
             moq::Mock<CertificateManager.CertificateManagerClient> mockGrpcClient = new moq::Mock<CertificateManager.CertificateManagerClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetCertificateMapEntryRequest request = new GetCertificateMapEntryRequest
             {
                 CertificateMapEntryName = CertificateMapEntryName.FromProjectLocationCertificateMapCertificateMapEntry("[PROJECT]", "[LOCATION]", "[CERTIFICATE_MAP]", "[CERTIFICATE_MAP_ENTRY]"),
@@ -673,6 +691,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
         {
             moq::Mock<CertificateManager.CertificateManagerClient> mockGrpcClient = new moq::Mock<CertificateManager.CertificateManagerClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetCertificateMapEntryRequest request = new GetCertificateMapEntryRequest
             {
                 CertificateMapEntryName = CertificateMapEntryName.FromProjectLocationCertificateMapCertificateMapEntry("[PROJECT]", "[LOCATION]", "[CERTIFICATE_MAP]", "[CERTIFICATE_MAP_ENTRY]"),
@@ -712,6 +731,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
         {
             moq::Mock<CertificateManager.CertificateManagerClient> mockGrpcClient = new moq::Mock<CertificateManager.CertificateManagerClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDnsAuthorizationRequest request = new GetDnsAuthorizationRequest
             {
                 DnsAuthorizationName = DnsAuthorizationName.FromProjectLocationDnsAuthorization("[PROJECT]", "[LOCATION]", "[DNS_AUTHORIZATION]"),
@@ -744,6 +764,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
         {
             moq::Mock<CertificateManager.CertificateManagerClient> mockGrpcClient = new moq::Mock<CertificateManager.CertificateManagerClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDnsAuthorizationRequest request = new GetDnsAuthorizationRequest
             {
                 DnsAuthorizationName = DnsAuthorizationName.FromProjectLocationDnsAuthorization("[PROJECT]", "[LOCATION]", "[DNS_AUTHORIZATION]"),
@@ -778,6 +799,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
         {
             moq::Mock<CertificateManager.CertificateManagerClient> mockGrpcClient = new moq::Mock<CertificateManager.CertificateManagerClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDnsAuthorizationRequest request = new GetDnsAuthorizationRequest
             {
                 DnsAuthorizationName = DnsAuthorizationName.FromProjectLocationDnsAuthorization("[PROJECT]", "[LOCATION]", "[DNS_AUTHORIZATION]"),
@@ -810,6 +832,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
         {
             moq::Mock<CertificateManager.CertificateManagerClient> mockGrpcClient = new moq::Mock<CertificateManager.CertificateManagerClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDnsAuthorizationRequest request = new GetDnsAuthorizationRequest
             {
                 DnsAuthorizationName = DnsAuthorizationName.FromProjectLocationDnsAuthorization("[PROJECT]", "[LOCATION]", "[DNS_AUTHORIZATION]"),
@@ -844,6 +867,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
         {
             moq::Mock<CertificateManager.CertificateManagerClient> mockGrpcClient = new moq::Mock<CertificateManager.CertificateManagerClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDnsAuthorizationRequest request = new GetDnsAuthorizationRequest
             {
                 DnsAuthorizationName = DnsAuthorizationName.FromProjectLocationDnsAuthorization("[PROJECT]", "[LOCATION]", "[DNS_AUTHORIZATION]"),
@@ -876,6 +900,7 @@ namespace Google.Cloud.CertificateManager.V1.Tests
         {
             moq::Mock<CertificateManager.CertificateManagerClient> mockGrpcClient = new moq::Mock<CertificateManager.CertificateManagerClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDnsAuthorizationRequest request = new GetDnsAuthorizationRequest
             {
                 DnsAuthorizationName = DnsAuthorizationName.FromProjectLocationDnsAuthorization("[PROJECT]", "[LOCATION]", "[DNS_AUTHORIZATION]"),
