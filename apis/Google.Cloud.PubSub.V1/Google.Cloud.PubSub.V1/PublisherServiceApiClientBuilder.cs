@@ -1,4 +1,4 @@
-﻿// Copyright 2020 Google LLC
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,13 +24,21 @@ namespace Google.Cloud.PubSub.V1
 
     public partial class PublisherServiceApiClientBuilder
     {
+        private const string s_emulatorHostEnvironmentVariable = "PUBSUB_EMULATOR_HOST";
+        private static readonly string[] s_emulatorEnvironmentVariables = { s_emulatorHostEnvironmentVariable };
+
         /// <summary>
         /// Additional channel options to use, if any.
         /// </summary>
-        internal GrpcChannelOptions ChannelOptions { get; set; }
+        private GrpcChannelOptions ChannelOptions { get; set; }
 
         /// <inheritdoc />
         protected override GrpcChannelOptions GetChannelOptions() => base.GetChannelOptions().MergedWith(ChannelOptions ?? GrpcChannelOptions.Empty);
+
+        private bool ChannelPoolDisabled { get; set; } = false;
+
+        /// <inheritdoc />
+        protected override bool CanUseChannelPool => !ChannelPoolDisabled && base.CanUseChannelPool;
 
         /// <summary>
         /// Specifies how the builder responds to the presence of emulator environment variables.
@@ -45,8 +53,13 @@ namespace Google.Cloud.PubSub.V1
             set => base.EmulatorDetection = value;
         }
 
-        private const string s_emulatorHostEnvironmentVariable = "PUBSUB_EMULATOR_HOST";
-        private static readonly string[] s_emulatorEnvironmentVariables = { s_emulatorHostEnvironmentVariable };
+        internal PublisherServiceApiClientBuilder(PublisherClientBuilder otherBuilder, GrpcChannelOptions extraChannelOptions) : this()
+        {
+            CopyCommonSettings(otherBuilder);
+            Settings = otherBuilder.ApiSettings;
+            ChannelPoolDisabled = true;
+            ChannelOptions = extraChannelOptions;
+        }
 
         partial void InterceptBuild(ref PublisherServiceApiClient client) => client = MaybeCreateEmulatorClientBuilder()?.Build();
 
@@ -71,32 +84,6 @@ namespace Google.Cloud.PubSub.V1
             };
             builder.CopySettingsForEmulator(this);
             return builder;
-        }
-
-        /// <summary>
-        /// Creates a channel for this builder, observing any emulator configuration that has been set.
-        /// This method is used by PublisherClient, which needs the channel for shutdown purposes.
-        /// </summary>
-        internal async Task<ChannelBase> CreateChannelAsync(CancellationToken cancellationToken)
-        {
-            // Note: no need to try to detect the channel pool here, as we know we don't want to use it.
-            var effectiveBuilder = MaybeCreateEmulatorClientBuilder() ?? this;
-            var endpoint = effectiveBuilder.Endpoint ?? ServiceMetadata.DefaultEndpoint;
-            var credentials = await effectiveBuilder.GetChannelCredentialsAsync(cancellationToken).ConfigureAwait(false);
-            return effectiveBuilder.CreateChannel(endpoint, credentials);
-        }
-
-        /// <summary>
-        /// Creates a channel for this builder, observing any emulator configuration that has been set.
-        /// This method is used by PublisherClient, which needs the channel for shutdown purposes.
-        /// </summary>
-        internal ChannelBase CreateChannel()
-        {
-            // Note: no need to try to detect the channel pool here, as we know we don't want to use it.
-            var effectiveBuilder = MaybeCreateEmulatorClientBuilder() ?? this;
-            var endpoint = effectiveBuilder.Endpoint ?? ServiceMetadata.DefaultEndpoint;
-            var credentials = effectiveBuilder.GetChannelCredentials();
-            return effectiveBuilder.CreateChannel(endpoint, credentials);
         }
     }
 }
