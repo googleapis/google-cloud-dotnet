@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -942,7 +942,7 @@ namespace Google.Cloud.PubSub.V1
             private long _extendThrottleHigh = 0; // Incremented on extension, and put on extend queue items.
             private long _extendThrottleLow = 0; // Incremented after _extendQueueThrottleInterval, checked when throttling.
 
-            private readonly static RetrySettings s_pullBackoff = RetrySettings.FromExponentialBackoff(
+            private static readonly RetrySettings s_pullBackoff = RetrySettings.FromExponentialBackoff(
                 maxAttempts: int.MaxValue,
                 initialBackoff: TimeSpan.FromSeconds(0.5),
                 maxBackoff: TimeSpan.FromSeconds(30),
@@ -952,7 +952,7 @@ namespace Google.Cloud.PubSub.V1
             private TimeSpan? _pullBackoff = null;
 
             // Stream shutdown occurs after 1 minute, so ensure we're always before that.
-            private readonly static TimeSpan s_streamPingPeriod = TimeSpan.FromSeconds(25);
+            private static readonly TimeSpan s_streamPingPeriod = TimeSpan.FromSeconds(25);
 
             internal async Task StartAsync()
             {
